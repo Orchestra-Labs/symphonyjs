@@ -1,11 +1,11 @@
-import { getSigningOsmosisClient, osmosis } from '../src';
+import { getSigningSymphonyClient, symphony } from '../src';
 import { DirectSecp256k1HdWallet } from '@cosmjs/proto-signing';
 
 const mnemonic = '<mnemonic>';
 const rpcEndpoint = 'https://symphony-rpc.kleomedes.network';
 const prefix = 'symphony';
 
-const { swapSend } = osmosis.market.v1beta1.MessageComposer.withTypeUrl;
+const { swapSend } = symphony.market.v1beta1.MessageComposer.withTypeUrl;
 
 async function getWalletFromMnemonic(): Promise<DirectSecp256k1HdWallet> {
   return await DirectSecp256k1HdWallet.fromMnemonic(mnemonic, {
@@ -15,7 +15,7 @@ async function getWalletFromMnemonic(): Promise<DirectSecp256k1HdWallet> {
 
 async function run() {
   const wallet = await getWalletFromMnemonic();
-  const client = await getSigningOsmosisClient({
+  const client = await getSigningSymphonyClient({
     rpcEndpoint: rpcEndpoint,
     signer: wallet,
   });
@@ -36,7 +36,7 @@ async function run() {
     [msg], // EncodeObject[]
     {
       amount: [{ denom: 'note', amount: '1000000' }],
-      gas: '100000',
+          gas: '110000',
     },
     'swap send note to uusd',
   );

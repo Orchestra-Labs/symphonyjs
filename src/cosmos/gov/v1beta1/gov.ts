@@ -41,12 +41,12 @@ import {
   SetScalingFactorControllerProposal,
   SetScalingFactorControllerProposalProtoMsg,
   SetScalingFactorControllerProposalSDKType,
-} from '../../../osmosis/gamm/v1beta1/gov';
+} from '../../../symphony/gamm/v1beta1/gov';
 import {
   CreateGroupsProposal,
   CreateGroupsProposalProtoMsg,
   CreateGroupsProposalSDKType,
-} from '../../../osmosis/incentives/gov';
+} from '../../../symphony/incentives/gov';
 import {
   ReplacePoolIncentivesProposal,
   ReplacePoolIncentivesProposalProtoMsg,
@@ -54,7 +54,7 @@ import {
   UpdatePoolIncentivesProposal,
   UpdatePoolIncentivesProposalProtoMsg,
   UpdatePoolIncentivesProposalSDKType,
-} from '../../../osmosis/poolincentives/v1beta1/gov';
+} from '../../../symphony/poolincentives/v1beta1/gov';
 import {
   SetProtoRevEnabledProposal,
   SetProtoRevEnabledProposalProtoMsg,
@@ -62,7 +62,7 @@ import {
   SetProtoRevAdminAccountProposal,
   SetProtoRevAdminAccountProposalProtoMsg,
   SetProtoRevAdminAccountProposalSDKType,
-} from '../../../osmosis/protorev/v1beta1/gov';
+} from '../../../symphony/protorev/v1beta1/gov';
 import {
   SetSuperfluidAssetsProposal,
   SetSuperfluidAssetsProposalProtoMsg,
@@ -73,12 +73,12 @@ import {
   UpdateUnpoolWhiteListProposal,
   UpdateUnpoolWhiteListProposalProtoMsg,
   UpdateUnpoolWhiteListProposalSDKType,
-} from '../../../osmosis/superfluid/v1beta1/gov';
+} from '../../../symphony/superfluid/v1beta1/gov';
 import {
   UpdateFeeTokenProposal,
   UpdateFeeTokenProposalProtoMsg,
   UpdateFeeTokenProposalSDKType,
-} from '../../../osmosis/txfees/v1beta1/gov';
+} from '../../../symphony/txfees/v1beta1/gov';
 import {
   isSet,
   toTimestamp,

@@ -7,7 +7,7 @@ COSMOS_PROTO_VERSION := v1.0.0-beta.5
 COSMOS_PROTO_DIR := build/cosmos-proto-schema
 
 SYMPHONY_PROTO_URL := https://github.com/Orchestra-Labs/symphony
-SYMPHONY_PROTO_VERSION := v0.3.0
+SYMPHONY_PROTO_VERSION := v0.4.1
 SYMPHONY_PROTO_DIR := build/symphony-proto-schema
 
 PROTO_DIR := proto

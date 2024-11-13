@@ -1,6 +1,6 @@
 {
   "name": "@orchestra-labs/symphonyjs",
-  "version": "1.0.28",
+  "version": "1.0.29",
   "description": "Typescript Protobuf Messages for Symphony chain",
   "author": "Orchestra-Labs",
   "main": "index.js",
@@ -19,7 +19,7 @@
     "patch": " npm version patch  &&  git push",
     "minor": " npm version minor  &&  git push",
     "major": " npm version major  &&  git push",
-    "codegen": "ts-node ./scripts/codegen.ts && npm format",
+    "codegen": "ts-node ./scripts/codegen.ts && npm run format",
     "test-query": "ts-node ./scripts/symphony.ts",
     "format": "prettier '{**/*,*}.{js,ts,jsx,tsx,vue,astro}' --write"
   },
@@ -66,5 +66,6 @@
     "@protobufs/osmosis": "^0.4.0",
     "@protobufs/tendermint": "^0.0.10",
     "typescript": "^5.1.6"
-  }
+  },
+  "packageManager": "pnpm@9.9.0+sha512.60c18acd138bff695d339be6ad13f7e936eea6745660d4cc4a776d5247c540d0edee1a563695c183a66eb917ef88f2b4feb1fc25f32a7adcadc7aaf3438e99c1"
 }
