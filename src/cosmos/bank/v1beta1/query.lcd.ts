@@ -14,6 +14,10 @@ import {
   QueryTotalSupplyResponseSDKType,
   QuerySupplyOfRequest,
   QuerySupplyOfResponseSDKType,
+  QueryTotalSupplyWithoutOffsetRequest,
+  QueryTotalSupplyWithoutOffsetResponseSDKType,
+  QuerySupplyOfWithoutOffsetRequest,
+  QuerySupplyOfWithoutOffsetResponseSDKType,
   QueryParamsRequest,
   QueryParamsResponseSDKType,
   QueryDenomMetadataRequest,
@@ -39,6 +43,8 @@ export class LCDQueryClient {
     this.spendableBalanceByDenom = this.spendableBalanceByDenom.bind(this);
     this.totalSupply = this.totalSupply.bind(this);
     this.supplyOf = this.supplyOf.bind(this);
+    this.totalSupplyWithoutOffset = this.totalSupplyWithoutOffset.bind(this);
+    this.supplyOfWithoutOffset = this.supplyOfWithoutOffset.bind(this);
     this.params = this.params.bind(this);
     this.denomMetadata = this.denomMetadata.bind(this);
     this.denomMetadataByQueryString =
@@ -163,6 +169,33 @@ export class LCDQueryClient {
     }
     const endpoint = `cosmos/bank/v1beta1/supply/by_denom`;
     return await this.req.get<QuerySupplyOfResponseSDKType>(endpoint, options);
+  }
+  /* TotalSupplyWithoutOffset queries the total supply of all coins. */
+  async totalSupplyWithoutOffset(
+    params: QueryTotalSupplyWithoutOffsetRequest = {
+      pagination: undefined,
+    },
+  ): Promise<QueryTotalSupplyWithoutOffsetResponseSDKType> {
+    const options: any = {
+      params: {},
+    };
+    if (typeof params?.pagination !== 'undefined') {
+      setPaginationParams(options, params.pagination);
+    }
+    const endpoint = `cosmos/bank/v1beta1/supply_without_offset`;
+    return await this.req.get<QueryTotalSupplyWithoutOffsetResponseSDKType>(
+      endpoint,
+      options,
+    );
+  }
+  /* SupplyOf queries the supply of a single coin. */
+  async supplyOfWithoutOffset(
+    params: QuerySupplyOfWithoutOffsetRequest,
+  ): Promise<QuerySupplyOfWithoutOffsetResponseSDKType> {
+    const endpoint = `cosmos/bank/v1beta1/supply_without_offset/${params.denom}`;
+    return await this.req.get<QuerySupplyOfWithoutOffsetResponseSDKType>(
+      endpoint,
+    );
   }
   /* Params queries the parameters of x/bank module. */
   async params(

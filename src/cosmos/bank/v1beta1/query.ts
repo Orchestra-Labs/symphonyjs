@@ -436,6 +436,133 @@ export interface QuerySupplyOfResponseAminoMsg {
 export interface QuerySupplyOfResponseSDKType {
   amount: CoinSDKType;
 }
+/**
+ * QueryTotalSupplyWithoutOffsetRequest is the request type for the Query/TotalSupplyWithoutOffset RPC
+ * method.
+ */
+export interface QueryTotalSupplyWithoutOffsetRequest {
+  /**
+   * pagination defines an optional pagination for the request.
+   *
+   * Since: cosmos-sdk 0.43
+   */
+  pagination?: PageRequest;
+}
+export interface QueryTotalSupplyWithoutOffsetRequestProtoMsg {
+  typeUrl: '/cosmos.bank.v1beta1.QueryTotalSupplyWithoutOffsetRequest';
+  value: Uint8Array;
+}
+/**
+ * QueryTotalSupplyWithoutOffsetRequest is the request type for the Query/TotalSupplyWithoutOffset RPC
+ * method.
+ */
+export interface QueryTotalSupplyWithoutOffsetRequestAmino {
+  /**
+   * pagination defines an optional pagination for the request.
+   *
+   * Since: cosmos-sdk 0.43
+   */
+  pagination?: PageRequestAmino;
+}
+export interface QueryTotalSupplyWithoutOffsetRequestAminoMsg {
+  type: 'cosmos-sdk/QueryTotalSupplyWithoutOffsetRequest';
+  value: QueryTotalSupplyWithoutOffsetRequestAmino;
+}
+/**
+ * QueryTotalSupplyWithoutOffsetRequest is the request type for the Query/TotalSupplyWithoutOffset RPC
+ * method.
+ */
+export interface QueryTotalSupplyWithoutOffsetRequestSDKType {
+  pagination?: PageRequestSDKType;
+}
+/**
+ * QueryTotalSupplyWithoutOffsetResponse is the response type for the Query/TotalSupplyWithoutOffset RPC
+ * method
+ */
+export interface QueryTotalSupplyWithoutOffsetResponse {
+  /** supply is the supply of the coins */
+  supply: Coin[];
+  /**
+   * pagination defines the pagination in the response.
+   *
+   * Since: cosmos-sdk 0.43
+   */
+  pagination?: PageResponse;
+}
+export interface QueryTotalSupplyWithoutOffsetResponseProtoMsg {
+  typeUrl: '/cosmos.bank.v1beta1.QueryTotalSupplyWithoutOffsetResponse';
+  value: Uint8Array;
+}
+/**
+ * QueryTotalSupplyWithoutOffsetResponse is the response type for the Query/TotalSupplyWithoutOffset RPC
+ * method
+ */
+export interface QueryTotalSupplyWithoutOffsetResponseAmino {
+  /** supply is the supply of the coins */
+  supply: CoinAmino[];
+  /**
+   * pagination defines the pagination in the response.
+   *
+   * Since: cosmos-sdk 0.43
+   */
+  pagination?: PageResponseAmino;
+}
+export interface QueryTotalSupplyWithoutOffsetResponseAminoMsg {
+  type: 'cosmos-sdk/QueryTotalSupplyWithoutOffsetResponse';
+  value: QueryTotalSupplyWithoutOffsetResponseAmino;
+}
+/**
+ * QueryTotalSupplyWithoutOffsetResponse is the response type for the Query/TotalSupplyWithoutOffset RPC
+ * method
+ */
+export interface QueryTotalSupplyWithoutOffsetResponseSDKType {
+  supply: CoinSDKType[];
+  pagination?: PageResponseSDKType;
+}
+/** QuerySupplyOfWithoutOffsetRequest is the request type for the Query/SupplyOfWithoutOffset RPC method. */
+export interface QuerySupplyOfWithoutOffsetRequest {
+  /** denom is the coin denom to query balances for. */
+  denom: string;
+}
+export interface QuerySupplyOfWithoutOffsetRequestProtoMsg {
+  typeUrl: '/cosmos.bank.v1beta1.QuerySupplyOfWithoutOffsetRequest';
+  value: Uint8Array;
+}
+/** QuerySupplyOfWithoutOffsetRequest is the request type for the Query/SupplyOfWithoutOffset RPC method. */
+export interface QuerySupplyOfWithoutOffsetRequestAmino {
+  /** denom is the coin denom to query balances for. */
+  denom?: string;
+}
+export interface QuerySupplyOfWithoutOffsetRequestAminoMsg {
+  type: 'cosmos-sdk/QuerySupplyOfWithoutOffsetRequest';
+  value: QuerySupplyOfWithoutOffsetRequestAmino;
+}
+/** QuerySupplyOfWithoutOffsetRequest is the request type for the Query/SupplyOfWithoutOffset RPC method. */
+export interface QuerySupplyOfWithoutOffsetRequestSDKType {
+  denom: string;
+}
+/** QuerySupplyOfWithoutOffsetResponse is the response type for the Query/SupplyOfWithoutOffset RPC method. */
+export interface QuerySupplyOfWithoutOffsetResponse {
+  /** amount is the supply of the coin. */
+  amount: Coin;
+}
+export interface QuerySupplyOfWithoutOffsetResponseProtoMsg {
+  typeUrl: '/cosmos.bank.v1beta1.QuerySupplyOfWithoutOffsetResponse';
+  value: Uint8Array;
+}
+/** QuerySupplyOfWithoutOffsetResponse is the response type for the Query/SupplyOfWithoutOffset RPC method. */
+export interface QuerySupplyOfWithoutOffsetResponseAmino {
+  /** amount is the supply of the coin. */
+  amount?: CoinAmino;
+}
+export interface QuerySupplyOfWithoutOffsetResponseAminoMsg {
+  type: 'cosmos-sdk/QuerySupplyOfWithoutOffsetResponse';
+  value: QuerySupplyOfWithoutOffsetResponseAmino;
+}
+/** QuerySupplyOfWithoutOffsetResponse is the response type for the Query/SupplyOfWithoutOffset RPC method. */
+export interface QuerySupplyOfWithoutOffsetResponseSDKType {
+  amount: CoinSDKType;
+}
 /** QueryParamsRequest defines the request type for querying x/bank parameters. */
 export interface QueryParamsRequest {}
 export interface QueryParamsRequestProtoMsg {
@@ -2428,6 +2555,506 @@ GlobalDecoderRegistry.register(
 GlobalDecoderRegistry.registerAminoProtoMapping(
   QuerySupplyOfResponse.aminoType,
   QuerySupplyOfResponse.typeUrl,
+);
+function createBaseQueryTotalSupplyWithoutOffsetRequest(): QueryTotalSupplyWithoutOffsetRequest {
+  return {
+    pagination: undefined,
+  };
+}
+export const QueryTotalSupplyWithoutOffsetRequest = {
+  typeUrl: '/cosmos.bank.v1beta1.QueryTotalSupplyWithoutOffsetRequest',
+  aminoType: 'cosmos-sdk/QueryTotalSupplyWithoutOffsetRequest',
+  is(o: any): o is QueryTotalSupplyWithoutOffsetRequest {
+    return o && o.$typeUrl === QueryTotalSupplyWithoutOffsetRequest.typeUrl;
+  },
+  isSDK(o: any): o is QueryTotalSupplyWithoutOffsetRequestSDKType {
+    return o && o.$typeUrl === QueryTotalSupplyWithoutOffsetRequest.typeUrl;
+  },
+  isAmino(o: any): o is QueryTotalSupplyWithoutOffsetRequestAmino {
+    return o && o.$typeUrl === QueryTotalSupplyWithoutOffsetRequest.typeUrl;
+  },
+  encode(
+    message: QueryTotalSupplyWithoutOffsetRequest,
+    writer: BinaryWriter = BinaryWriter.create(),
+  ): BinaryWriter {
+    if (message.pagination !== undefined) {
+      PageRequest.encode(message.pagination, writer.uint32(10).fork()).ldelim();
+    }
+    return writer;
+  },
+  decode(
+    input: BinaryReader | Uint8Array,
+    length?: number,
+  ): QueryTotalSupplyWithoutOffsetRequest {
+    const reader =
+      input instanceof BinaryReader ? input : new BinaryReader(input);
+    let end = length === undefined ? reader.len : reader.pos + length;
+    const message = createBaseQueryTotalSupplyWithoutOffsetRequest();
+    while (reader.pos < end) {
+      const tag = reader.uint32();
+      switch (tag >>> 3) {
+        case 1:
+          message.pagination = PageRequest.decode(reader, reader.uint32());
+          break;
+        default:
+          reader.skipType(tag & 7);
+          break;
+      }
+    }
+    return message;
+  },
+  fromPartial(
+    object: Partial<QueryTotalSupplyWithoutOffsetRequest>,
+  ): QueryTotalSupplyWithoutOffsetRequest {
+    const message = createBaseQueryTotalSupplyWithoutOffsetRequest();
+    message.pagination =
+      object.pagination !== undefined && object.pagination !== null
+        ? PageRequest.fromPartial(object.pagination)
+        : undefined;
+    return message;
+  },
+  fromAmino(
+    object: QueryTotalSupplyWithoutOffsetRequestAmino,
+  ): QueryTotalSupplyWithoutOffsetRequest {
+    const message = createBaseQueryTotalSupplyWithoutOffsetRequest();
+    if (object.pagination !== undefined && object.pagination !== null) {
+      message.pagination = PageRequest.fromAmino(object.pagination);
+    }
+    return message;
+  },
+  toAmino(
+    message: QueryTotalSupplyWithoutOffsetRequest,
+  ): QueryTotalSupplyWithoutOffsetRequestAmino {
+    const obj: any = {};
+    obj.pagination = message.pagination
+      ? PageRequest.toAmino(message.pagination)
+      : undefined;
+    return obj;
+  },
+  fromAminoMsg(
+    object: QueryTotalSupplyWithoutOffsetRequestAminoMsg,
+  ): QueryTotalSupplyWithoutOffsetRequest {
+    return QueryTotalSupplyWithoutOffsetRequest.fromAmino(object.value);
+  },
+  toAminoMsg(
+    message: QueryTotalSupplyWithoutOffsetRequest,
+  ): QueryTotalSupplyWithoutOffsetRequestAminoMsg {
+    return {
+      type: 'cosmos-sdk/QueryTotalSupplyWithoutOffsetRequest',
+      value: QueryTotalSupplyWithoutOffsetRequest.toAmino(message),
+    };
+  },
+  fromProtoMsg(
+    message: QueryTotalSupplyWithoutOffsetRequestProtoMsg,
+  ): QueryTotalSupplyWithoutOffsetRequest {
+    return QueryTotalSupplyWithoutOffsetRequest.decode(message.value);
+  },
+  toProto(message: QueryTotalSupplyWithoutOffsetRequest): Uint8Array {
+    return QueryTotalSupplyWithoutOffsetRequest.encode(message).finish();
+  },
+  toProtoMsg(
+    message: QueryTotalSupplyWithoutOffsetRequest,
+  ): QueryTotalSupplyWithoutOffsetRequestProtoMsg {
+    return {
+      typeUrl: '/cosmos.bank.v1beta1.QueryTotalSupplyWithoutOffsetRequest',
+      value: QueryTotalSupplyWithoutOffsetRequest.encode(message).finish(),
+    };
+  },
+};
+GlobalDecoderRegistry.register(
+  QueryTotalSupplyWithoutOffsetRequest.typeUrl,
+  QueryTotalSupplyWithoutOffsetRequest,
+);
+GlobalDecoderRegistry.registerAminoProtoMapping(
+  QueryTotalSupplyWithoutOffsetRequest.aminoType,
+  QueryTotalSupplyWithoutOffsetRequest.typeUrl,
+);
+function createBaseQueryTotalSupplyWithoutOffsetResponse(): QueryTotalSupplyWithoutOffsetResponse {
+  return {
+    supply: [],
+    pagination: undefined,
+  };
+}
+export const QueryTotalSupplyWithoutOffsetResponse = {
+  typeUrl: '/cosmos.bank.v1beta1.QueryTotalSupplyWithoutOffsetResponse',
+  aminoType: 'cosmos-sdk/QueryTotalSupplyWithoutOffsetResponse',
+  is(o: any): o is QueryTotalSupplyWithoutOffsetResponse {
+    return (
+      o &&
+      (o.$typeUrl === QueryTotalSupplyWithoutOffsetResponse.typeUrl ||
+        (Array.isArray(o.supply) && (!o.supply.length || Coin.is(o.supply[0]))))
+    );
+  },
+  isSDK(o: any): o is QueryTotalSupplyWithoutOffsetResponseSDKType {
+    return (
+      o &&
+      (o.$typeUrl === QueryTotalSupplyWithoutOffsetResponse.typeUrl ||
+        (Array.isArray(o.supply) &&
+          (!o.supply.length || Coin.isSDK(o.supply[0]))))
+    );
+  },
+  isAmino(o: any): o is QueryTotalSupplyWithoutOffsetResponseAmino {
+    return (
+      o &&
+      (o.$typeUrl === QueryTotalSupplyWithoutOffsetResponse.typeUrl ||
+        (Array.isArray(o.supply) &&
+          (!o.supply.length || Coin.isAmino(o.supply[0]))))
+    );
+  },
+  encode(
+    message: QueryTotalSupplyWithoutOffsetResponse,
+    writer: BinaryWriter = BinaryWriter.create(),
+  ): BinaryWriter {
+    for (const v of message.supply) {
+      Coin.encode(v!, writer.uint32(10).fork()).ldelim();
+    }
+    if (message.pagination !== undefined) {
+      PageResponse.encode(
+        message.pagination,
+        writer.uint32(18).fork(),
+      ).ldelim();
+    }
+    return writer;
+  },
+  decode(
+    input: BinaryReader | Uint8Array,
+    length?: number,
+  ): QueryTotalSupplyWithoutOffsetResponse {
+    const reader =
+      input instanceof BinaryReader ? input : new BinaryReader(input);
+    let end = length === undefined ? reader.len : reader.pos + length;
+    const message = createBaseQueryTotalSupplyWithoutOffsetResponse();
+    while (reader.pos < end) {
+      const tag = reader.uint32();
+      switch (tag >>> 3) {
+        case 1:
+          message.supply.push(Coin.decode(reader, reader.uint32()));
+          break;
+        case 2:
+          message.pagination = PageResponse.decode(reader, reader.uint32());
+          break;
+        default:
+          reader.skipType(tag & 7);
+          break;
+      }
+    }
+    return message;
+  },
+  fromPartial(
+    object: Partial<QueryTotalSupplyWithoutOffsetResponse>,
+  ): QueryTotalSupplyWithoutOffsetResponse {
+    const message = createBaseQueryTotalSupplyWithoutOffsetResponse();
+    message.supply = object.supply?.map(e => Coin.fromPartial(e)) || [];
+    message.pagination =
+      object.pagination !== undefined && object.pagination !== null
+        ? PageResponse.fromPartial(object.pagination)
+        : undefined;
+    return message;
+  },
+  fromAmino(
+    object: QueryTotalSupplyWithoutOffsetResponseAmino,
+  ): QueryTotalSupplyWithoutOffsetResponse {
+    const message = createBaseQueryTotalSupplyWithoutOffsetResponse();
+    message.supply = object.supply?.map(e => Coin.fromAmino(e)) || [];
+    if (object.pagination !== undefined && object.pagination !== null) {
+      message.pagination = PageResponse.fromAmino(object.pagination);
+    }
+    return message;
+  },
+  toAmino(
+    message: QueryTotalSupplyWithoutOffsetResponse,
+  ): QueryTotalSupplyWithoutOffsetResponseAmino {
+    const obj: any = {};
+    if (message.supply) {
+      obj.supply = message.supply.map(e => (e ? Coin.toAmino(e) : undefined));
+    } else {
+      obj.supply = message.supply;
+    }
+    obj.pagination = message.pagination
+      ? PageResponse.toAmino(message.pagination)
+      : undefined;
+    return obj;
+  },
+  fromAminoMsg(
+    object: QueryTotalSupplyWithoutOffsetResponseAminoMsg,
+  ): QueryTotalSupplyWithoutOffsetResponse {
+    return QueryTotalSupplyWithoutOffsetResponse.fromAmino(object.value);
+  },
+  toAminoMsg(
+    message: QueryTotalSupplyWithoutOffsetResponse,
+  ): QueryTotalSupplyWithoutOffsetResponseAminoMsg {
+    return {
+      type: 'cosmos-sdk/QueryTotalSupplyWithoutOffsetResponse',
+      value: QueryTotalSupplyWithoutOffsetResponse.toAmino(message),
+    };
+  },
+  fromProtoMsg(
+    message: QueryTotalSupplyWithoutOffsetResponseProtoMsg,
+  ): QueryTotalSupplyWithoutOffsetResponse {
+    return QueryTotalSupplyWithoutOffsetResponse.decode(message.value);
+  },
+  toProto(message: QueryTotalSupplyWithoutOffsetResponse): Uint8Array {
+    return QueryTotalSupplyWithoutOffsetResponse.encode(message).finish();
+  },
+  toProtoMsg(
+    message: QueryTotalSupplyWithoutOffsetResponse,
+  ): QueryTotalSupplyWithoutOffsetResponseProtoMsg {
+    return {
+      typeUrl: '/cosmos.bank.v1beta1.QueryTotalSupplyWithoutOffsetResponse',
+      value: QueryTotalSupplyWithoutOffsetResponse.encode(message).finish(),
+    };
+  },
+};
+GlobalDecoderRegistry.register(
+  QueryTotalSupplyWithoutOffsetResponse.typeUrl,
+  QueryTotalSupplyWithoutOffsetResponse,
+);
+GlobalDecoderRegistry.registerAminoProtoMapping(
+  QueryTotalSupplyWithoutOffsetResponse.aminoType,
+  QueryTotalSupplyWithoutOffsetResponse.typeUrl,
+);
+function createBaseQuerySupplyOfWithoutOffsetRequest(): QuerySupplyOfWithoutOffsetRequest {
+  return {
+    denom: '',
+  };
+}
+export const QuerySupplyOfWithoutOffsetRequest = {
+  typeUrl: '/cosmos.bank.v1beta1.QuerySupplyOfWithoutOffsetRequest',
+  aminoType: 'cosmos-sdk/QuerySupplyOfWithoutOffsetRequest',
+  is(o: any): o is QuerySupplyOfWithoutOffsetRequest {
+    return (
+      o &&
+      (o.$typeUrl === QuerySupplyOfWithoutOffsetRequest.typeUrl ||
+        typeof o.denom === 'string')
+    );
+  },
+  isSDK(o: any): o is QuerySupplyOfWithoutOffsetRequestSDKType {
+    return (
+      o &&
+      (o.$typeUrl === QuerySupplyOfWithoutOffsetRequest.typeUrl ||
+        typeof o.denom === 'string')
+    );
+  },
+  isAmino(o: any): o is QuerySupplyOfWithoutOffsetRequestAmino {
+    return (
+      o &&
+      (o.$typeUrl === QuerySupplyOfWithoutOffsetRequest.typeUrl ||
+        typeof o.denom === 'string')
+    );
+  },
+  encode(
+    message: QuerySupplyOfWithoutOffsetRequest,
+    writer: BinaryWriter = BinaryWriter.create(),
+  ): BinaryWriter {
+    if (message.denom !== '') {
+      writer.uint32(10).string(message.denom);
+    }
+    return writer;
+  },
+  decode(
+    input: BinaryReader | Uint8Array,
+    length?: number,
+  ): QuerySupplyOfWithoutOffsetRequest {
+    const reader =
+      input instanceof BinaryReader ? input : new BinaryReader(input);
+    let end = length === undefined ? reader.len : reader.pos + length;
+    const message = createBaseQuerySupplyOfWithoutOffsetRequest();
+    while (reader.pos < end) {
+      const tag = reader.uint32();
+      switch (tag >>> 3) {
+        case 1:
+          message.denom = reader.string();
+          break;
+        default:
+          reader.skipType(tag & 7);
+          break;
+      }
+    }
+    return message;
+  },
+  fromPartial(
+    object: Partial<QuerySupplyOfWithoutOffsetRequest>,
+  ): QuerySupplyOfWithoutOffsetRequest {
+    const message = createBaseQuerySupplyOfWithoutOffsetRequest();
+    message.denom = object.denom ?? '';
+    return message;
+  },
+  fromAmino(
+    object: QuerySupplyOfWithoutOffsetRequestAmino,
+  ): QuerySupplyOfWithoutOffsetRequest {
+    const message = createBaseQuerySupplyOfWithoutOffsetRequest();
+    if (object.denom !== undefined && object.denom !== null) {
+      message.denom = object.denom;
+    }
+    return message;
+  },
+  toAmino(
+    message: QuerySupplyOfWithoutOffsetRequest,
+  ): QuerySupplyOfWithoutOffsetRequestAmino {
+    const obj: any = {};
+    obj.denom = message.denom === '' ? undefined : message.denom;
+    return obj;
+  },
+  fromAminoMsg(
+    object: QuerySupplyOfWithoutOffsetRequestAminoMsg,
+  ): QuerySupplyOfWithoutOffsetRequest {
+    return QuerySupplyOfWithoutOffsetRequest.fromAmino(object.value);
+  },
+  toAminoMsg(
+    message: QuerySupplyOfWithoutOffsetRequest,
+  ): QuerySupplyOfWithoutOffsetRequestAminoMsg {
+    return {
+      type: 'cosmos-sdk/QuerySupplyOfWithoutOffsetRequest',
+      value: QuerySupplyOfWithoutOffsetRequest.toAmino(message),
+    };
+  },
+  fromProtoMsg(
+    message: QuerySupplyOfWithoutOffsetRequestProtoMsg,
+  ): QuerySupplyOfWithoutOffsetRequest {
+    return QuerySupplyOfWithoutOffsetRequest.decode(message.value);
+  },
+  toProto(message: QuerySupplyOfWithoutOffsetRequest): Uint8Array {
+    return QuerySupplyOfWithoutOffsetRequest.encode(message).finish();
+  },
+  toProtoMsg(
+    message: QuerySupplyOfWithoutOffsetRequest,
+  ): QuerySupplyOfWithoutOffsetRequestProtoMsg {
+    return {
+      typeUrl: '/cosmos.bank.v1beta1.QuerySupplyOfWithoutOffsetRequest',
+      value: QuerySupplyOfWithoutOffsetRequest.encode(message).finish(),
+    };
+  },
+};
+GlobalDecoderRegistry.register(
+  QuerySupplyOfWithoutOffsetRequest.typeUrl,
+  QuerySupplyOfWithoutOffsetRequest,
+);
+GlobalDecoderRegistry.registerAminoProtoMapping(
+  QuerySupplyOfWithoutOffsetRequest.aminoType,
+  QuerySupplyOfWithoutOffsetRequest.typeUrl,
+);
+function createBaseQuerySupplyOfWithoutOffsetResponse(): QuerySupplyOfWithoutOffsetResponse {
+  return {
+    amount: Coin.fromPartial({}),
+  };
+}
+export const QuerySupplyOfWithoutOffsetResponse = {
+  typeUrl: '/cosmos.bank.v1beta1.QuerySupplyOfWithoutOffsetResponse',
+  aminoType: 'cosmos-sdk/QuerySupplyOfWithoutOffsetResponse',
+  is(o: any): o is QuerySupplyOfWithoutOffsetResponse {
+    return (
+      o &&
+      (o.$typeUrl === QuerySupplyOfWithoutOffsetResponse.typeUrl ||
+        Coin.is(o.amount))
+    );
+  },
+  isSDK(o: any): o is QuerySupplyOfWithoutOffsetResponseSDKType {
+    return (
+      o &&
+      (o.$typeUrl === QuerySupplyOfWithoutOffsetResponse.typeUrl ||
+        Coin.isSDK(o.amount))
+    );
+  },
+  isAmino(o: any): o is QuerySupplyOfWithoutOffsetResponseAmino {
+    return (
+      o &&
+      (o.$typeUrl === QuerySupplyOfWithoutOffsetResponse.typeUrl ||
+        Coin.isAmino(o.amount))
+    );
+  },
+  encode(
+    message: QuerySupplyOfWithoutOffsetResponse,
+    writer: BinaryWriter = BinaryWriter.create(),
+  ): BinaryWriter {
+    if (message.amount !== undefined) {
+      Coin.encode(message.amount, writer.uint32(10).fork()).ldelim();
+    }
+    return writer;
+  },
+  decode(
+    input: BinaryReader | Uint8Array,
+    length?: number,
+  ): QuerySupplyOfWithoutOffsetResponse {
+    const reader =
+      input instanceof BinaryReader ? input : new BinaryReader(input);
+    let end = length === undefined ? reader.len : reader.pos + length;
+    const message = createBaseQuerySupplyOfWithoutOffsetResponse();
+    while (reader.pos < end) {
+      const tag = reader.uint32();
+      switch (tag >>> 3) {
+        case 1:
+          message.amount = Coin.decode(reader, reader.uint32());
+          break;
+        default:
+          reader.skipType(tag & 7);
+          break;
+      }
+    }
+    return message;
+  },
+  fromPartial(
+    object: Partial<QuerySupplyOfWithoutOffsetResponse>,
+  ): QuerySupplyOfWithoutOffsetResponse {
+    const message = createBaseQuerySupplyOfWithoutOffsetResponse();
+    message.amount =
+      object.amount !== undefined && object.amount !== null
+        ? Coin.fromPartial(object.amount)
+        : undefined;
+    return message;
+  },
+  fromAmino(
+    object: QuerySupplyOfWithoutOffsetResponseAmino,
+  ): QuerySupplyOfWithoutOffsetResponse {
+    const message = createBaseQuerySupplyOfWithoutOffsetResponse();
+    if (object.amount !== undefined && object.amount !== null) {
+      message.amount = Coin.fromAmino(object.amount);
+    }
+    return message;
+  },
+  toAmino(
+    message: QuerySupplyOfWithoutOffsetResponse,
+  ): QuerySupplyOfWithoutOffsetResponseAmino {
+    const obj: any = {};
+    obj.amount = message.amount ? Coin.toAmino(message.amount) : undefined;
+    return obj;
+  },
+  fromAminoMsg(
+    object: QuerySupplyOfWithoutOffsetResponseAminoMsg,
+  ): QuerySupplyOfWithoutOffsetResponse {
+    return QuerySupplyOfWithoutOffsetResponse.fromAmino(object.value);
+  },
+  toAminoMsg(
+    message: QuerySupplyOfWithoutOffsetResponse,
+  ): QuerySupplyOfWithoutOffsetResponseAminoMsg {
+    return {
+      type: 'cosmos-sdk/QuerySupplyOfWithoutOffsetResponse',
+      value: QuerySupplyOfWithoutOffsetResponse.toAmino(message),
+    };
+  },
+  fromProtoMsg(
+    message: QuerySupplyOfWithoutOffsetResponseProtoMsg,
+  ): QuerySupplyOfWithoutOffsetResponse {
+    return QuerySupplyOfWithoutOffsetResponse.decode(message.value);
+  },
+  toProto(message: QuerySupplyOfWithoutOffsetResponse): Uint8Array {
+    return QuerySupplyOfWithoutOffsetResponse.encode(message).finish();
+  },
+  toProtoMsg(
+    message: QuerySupplyOfWithoutOffsetResponse,
+  ): QuerySupplyOfWithoutOffsetResponseProtoMsg {
+    return {
+      typeUrl: '/cosmos.bank.v1beta1.QuerySupplyOfWithoutOffsetResponse',
+      value: QuerySupplyOfWithoutOffsetResponse.encode(message).finish(),
+    };
+  },
+};
+GlobalDecoderRegistry.register(
+  QuerySupplyOfWithoutOffsetResponse.typeUrl,
+  QuerySupplyOfWithoutOffsetResponse,
+);
+GlobalDecoderRegistry.registerAminoProtoMapping(
+  QuerySupplyOfWithoutOffsetResponse.aminoType,
+  QuerySupplyOfWithoutOffsetResponse.typeUrl,
 );
 function createBaseQueryParamsRequest(): QueryParamsRequest {
   return {};

@@ -15,6 +15,10 @@ import {
   QueryTotalSupplyResponse,
   QuerySupplyOfRequest,
   QuerySupplyOfResponse,
+  QueryTotalSupplyWithoutOffsetRequest,
+  QueryTotalSupplyWithoutOffsetResponse,
+  QuerySupplyOfWithoutOffsetRequest,
+  QuerySupplyOfWithoutOffsetResponse,
   QueryParamsRequest,
   QueryParamsResponse,
   QueryDenomMetadataRequest,
@@ -83,6 +87,14 @@ export interface Query {
    * gas if the pagination field is incorrectly set.
    */
   supplyOf(request: QuerySupplyOfRequest): Promise<QuerySupplyOfResponse>;
+  /** TotalSupplyWithoutOffset queries the total supply of all coins. */
+  totalSupplyWithoutOffset(
+    request?: QueryTotalSupplyWithoutOffsetRequest,
+  ): Promise<QueryTotalSupplyWithoutOffsetResponse>;
+  /** SupplyOf queries the supply of a single coin. */
+  supplyOfWithoutOffset(
+    request: QuerySupplyOfWithoutOffsetRequest,
+  ): Promise<QuerySupplyOfWithoutOffsetResponse>;
   /** Params queries the parameters of x/bank module. */
   params(request?: QueryParamsRequest): Promise<QueryParamsResponse>;
   /** DenomMetadata queries the client metadata of a given coin denomination. */
@@ -144,6 +156,8 @@ export class QueryClientImpl implements Query {
     this.spendableBalanceByDenom = this.spendableBalanceByDenom.bind(this);
     this.totalSupply = this.totalSupply.bind(this);
     this.supplyOf = this.supplyOf.bind(this);
+    this.totalSupplyWithoutOffset = this.totalSupplyWithoutOffset.bind(this);
+    this.supplyOfWithoutOffset = this.supplyOfWithoutOffset.bind(this);
     this.params = this.params.bind(this);
     this.denomMetadata = this.denomMetadata.bind(this);
     this.denomMetadataByQueryString =
@@ -227,6 +241,34 @@ export class QueryClientImpl implements Query {
     );
     return promise.then(data =>
       QuerySupplyOfResponse.decode(new BinaryReader(data)),
+    );
+  }
+  totalSupplyWithoutOffset(
+    request: QueryTotalSupplyWithoutOffsetRequest = {
+      pagination: undefined,
+    },
+  ): Promise<QueryTotalSupplyWithoutOffsetResponse> {
+    const data = QueryTotalSupplyWithoutOffsetRequest.encode(request).finish();
+    const promise = this.rpc.request(
+      'cosmos.bank.v1beta1.Query',
+      'TotalSupplyWithoutOffset',
+      data,
+    );
+    return promise.then(data =>
+      QueryTotalSupplyWithoutOffsetResponse.decode(new BinaryReader(data)),
+    );
+  }
+  supplyOfWithoutOffset(
+    request: QuerySupplyOfWithoutOffsetRequest,
+  ): Promise<QuerySupplyOfWithoutOffsetResponse> {
+    const data = QuerySupplyOfWithoutOffsetRequest.encode(request).finish();
+    const promise = this.rpc.request(
+      'cosmos.bank.v1beta1.Query',
+      'SupplyOfWithoutOffset',
+      data,
+    );
+    return promise.then(data =>
+      QuerySupplyOfWithoutOffsetResponse.decode(new BinaryReader(data)),
     );
   }
   params(request: QueryParamsRequest = {}): Promise<QueryParamsResponse> {
@@ -351,6 +393,16 @@ export const createRpcQueryExtension = (base: QueryClient) => {
     },
     supplyOf(request: QuerySupplyOfRequest): Promise<QuerySupplyOfResponse> {
       return queryService.supplyOf(request);
+    },
+    totalSupplyWithoutOffset(
+      request?: QueryTotalSupplyWithoutOffsetRequest,
+    ): Promise<QueryTotalSupplyWithoutOffsetResponse> {
+      return queryService.totalSupplyWithoutOffset(request);
+    },
+    supplyOfWithoutOffset(
+      request: QuerySupplyOfWithoutOffsetRequest,
+    ): Promise<QuerySupplyOfWithoutOffsetResponse> {
+      return queryService.supplyOfWithoutOffset(request);
     },
     params(request?: QueryParamsRequest): Promise<QueryParamsResponse> {
       return queryService.params(request);
