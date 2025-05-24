@@ -28,6 +28,12 @@ export interface MsgCreateValidator {
   description: Description;
   commission: CommissionRates;
   minSelfDelegation: string;
+  /**
+   * Deprecated: Use of Delegator Address in MsgCreateValidator is deprecated.
+   * The validator address bytes and delegator address bytes refer to the same account while creating validator (defer
+   * only in bech32 notation).
+   */
+  /** @deprecated */
   delegatorAddress: string;
   validatorAddress: string;
   pubkey?: Any | undefined;
@@ -44,7 +50,13 @@ export type MsgCreateValidatorEncoded = Omit<MsgCreateValidator, 'pubkey'> & {
 export interface MsgCreateValidatorAmino {
   description: DescriptionAmino;
   commission: CommissionRatesAmino;
-  min_self_delegation?: string;
+  min_self_delegation: string;
+  /**
+   * Deprecated: Use of Delegator Address in MsgCreateValidator is deprecated.
+   * The validator address bytes and delegator address bytes refer to the same account while creating validator (defer
+   * only in bech32 notation).
+   */
+  /** @deprecated */
   delegator_address?: string;
   validator_address?: string;
   pubkey?: AnyAmino;
@@ -59,6 +71,7 @@ export interface MsgCreateValidatorSDKType {
   description: DescriptionSDKType;
   commission: CommissionRatesSDKType;
   min_self_delegation: string;
+  /** @deprecated */
   delegator_address: string;
   validator_address: string;
   pubkey?: AnySDKType | undefined;
@@ -278,6 +291,12 @@ export interface MsgUndelegateSDKType {
 /** MsgUndelegateResponse defines the Msg/Undelegate response type. */
 export interface MsgUndelegateResponse {
   completionTime: Date;
+  /**
+   * amount returns the amount of undelegated coins
+   *
+   * Since: cosmos-sdk 0.50
+   */
+  amount: Coin;
 }
 export interface MsgUndelegateResponseProtoMsg {
   typeUrl: '/cosmos.staking.v1beta1.MsgUndelegateResponse';
@@ -286,6 +305,12 @@ export interface MsgUndelegateResponseProtoMsg {
 /** MsgUndelegateResponse defines the Msg/Undelegate response type. */
 export interface MsgUndelegateResponseAmino {
   completion_time: string;
+  /**
+   * amount returns the amount of undelegated coins
+   *
+   * Since: cosmos-sdk 0.50
+   */
+  amount: CoinAmino;
 }
 export interface MsgUndelegateResponseAminoMsg {
   type: 'cosmos-sdk/MsgUndelegateResponse';
@@ -294,6 +319,7 @@ export interface MsgUndelegateResponseAminoMsg {
 /** MsgUndelegateResponse defines the Msg/Undelegate response type. */
 export interface MsgUndelegateResponseSDKType {
   completion_time: Date;
+  amount: CoinSDKType;
 }
 /**
  * MsgCancelUnbondingDelegation defines the SDK message for performing a cancel unbonding delegation for delegator
@@ -632,8 +658,7 @@ export const MsgCreateValidator = {
     obj.commission = message.commission
       ? CommissionRates.toAmino(message.commission)
       : CommissionRates.toAmino(CommissionRates.fromPartial({}));
-    obj.min_self_delegation =
-      message.minSelfDelegation === '' ? undefined : message.minSelfDelegation;
+    obj.min_self_delegation = message.minSelfDelegation ?? '';
     obj.delegator_address =
       message.delegatorAddress === '' ? undefined : message.delegatorAddress;
     obj.validator_address =
@@ -1692,6 +1717,7 @@ GlobalDecoderRegistry.registerAminoProtoMapping(
 function createBaseMsgUndelegateResponse(): MsgUndelegateResponse {
   return {
     completionTime: new Date(),
+    amount: Coin.fromPartial({}),
   };
 }
 export const MsgUndelegateResponse = {
@@ -1701,21 +1727,21 @@ export const MsgUndelegateResponse = {
     return (
       o &&
       (o.$typeUrl === MsgUndelegateResponse.typeUrl ||
-        Timestamp.is(o.completionTime))
+        (Timestamp.is(o.completionTime) && Coin.is(o.amount)))
     );
   },
   isSDK(o: any): o is MsgUndelegateResponseSDKType {
     return (
       o &&
       (o.$typeUrl === MsgUndelegateResponse.typeUrl ||
-        Timestamp.isSDK(o.completion_time))
+        (Timestamp.isSDK(o.completion_time) && Coin.isSDK(o.amount)))
     );
   },
   isAmino(o: any): o is MsgUndelegateResponseAmino {
     return (
       o &&
       (o.$typeUrl === MsgUndelegateResponse.typeUrl ||
-        Timestamp.isAmino(o.completion_time))
+        (Timestamp.isAmino(o.completion_time) && Coin.isAmino(o.amount)))
     );
   },
   encode(
@@ -1727,6 +1753,9 @@ export const MsgUndelegateResponse = {
         toTimestamp(message.completionTime),
         writer.uint32(10).fork(),
       ).ldelim();
+    }
+    if (message.amount !== undefined) {
+      Coin.encode(message.amount, writer.uint32(18).fork()).ldelim();
     }
     return writer;
   },
@@ -1746,6 +1775,9 @@ export const MsgUndelegateResponse = {
             Timestamp.decode(reader, reader.uint32()),
           );
           break;
+        case 2:
+          message.amount = Coin.decode(reader, reader.uint32());
+          break;
         default:
           reader.skipType(tag & 7);
           break;
@@ -1756,6 +1788,10 @@ export const MsgUndelegateResponse = {
   fromPartial(object: Partial<MsgUndelegateResponse>): MsgUndelegateResponse {
     const message = createBaseMsgUndelegateResponse();
     message.completionTime = object.completionTime ?? undefined;
+    message.amount =
+      object.amount !== undefined && object.amount !== null
+        ? Coin.fromPartial(object.amount)
+        : undefined;
     return message;
   },
   fromAmino(object: MsgUndelegateResponseAmino): MsgUndelegateResponse {
@@ -1768,6 +1804,9 @@ export const MsgUndelegateResponse = {
         Timestamp.fromAmino(object.completion_time),
       );
     }
+    if (object.amount !== undefined && object.amount !== null) {
+      message.amount = Coin.fromAmino(object.amount);
+    }
     return message;
   },
   toAmino(message: MsgUndelegateResponse): MsgUndelegateResponseAmino {
@@ -1775,6 +1814,9 @@ export const MsgUndelegateResponse = {
     obj.completion_time = message.completionTime
       ? Timestamp.toAmino(toTimestamp(message.completionTime))
       : new Date();
+    obj.amount = message.amount
+      ? Coin.toAmino(message.amount)
+      : Coin.toAmino(Coin.fromPartial({}));
     return obj;
   },
   fromAminoMsg(object: MsgUndelegateResponseAminoMsg): MsgUndelegateResponse {

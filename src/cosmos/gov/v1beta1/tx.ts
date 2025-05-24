@@ -77,11 +77,6 @@ import {
   UpdateUnpoolWhiteListProposalProtoMsg,
   UpdateUnpoolWhiteListProposalSDKType,
 } from '../../../symphony/superfluid/v1beta1/gov';
-import {
-  UpdateFeeTokenProposal,
-  UpdateFeeTokenProposalProtoMsg,
-  UpdateFeeTokenProposalSDKType,
-} from '../../../symphony/txfees/v1beta1/gov';
 import { BinaryReader, BinaryWriter } from '../../../binary';
 import { GlobalDecoderRegistry } from '../../../registry';
 import { isSet } from '../../../helpers';
@@ -109,7 +104,6 @@ export interface MsgSubmitProposal {
     | SetSuperfluidAssetsProposal
     | RemoveSuperfluidAssetsProposal
     | UpdateUnpoolWhiteListProposal
-    | UpdateFeeTokenProposal
     | Any
     | undefined;
   /** initial_deposit is the deposit value that must be paid at proposal submission. */
@@ -140,7 +134,6 @@ export type MsgSubmitProposalEncoded = Omit<MsgSubmitProposal, 'content'> & {
     | SetSuperfluidAssetsProposalProtoMsg
     | RemoveSuperfluidAssetsProposalProtoMsg
     | UpdateUnpoolWhiteListProposalProtoMsg
-    | UpdateFeeTokenProposalProtoMsg
     | AnyProtoMsg
     | undefined;
 };
@@ -183,7 +176,6 @@ export interface MsgSubmitProposalSDKType {
     | SetSuperfluidAssetsProposalSDKType
     | RemoveSuperfluidAssetsProposalSDKType
     | UpdateUnpoolWhiteListProposalSDKType
-    | UpdateFeeTokenProposalSDKType
     | AnySDKType
     | undefined;
   initial_deposit: CoinSDKType[];

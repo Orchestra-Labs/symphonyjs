@@ -5,10 +5,6 @@ import {
   QueryFeeTokensResponseSDKType,
   QueryDenomSpotPriceRequest,
   QueryDenomSpotPriceResponseSDKType,
-  QueryDenomPoolIdRequest,
-  QueryDenomPoolIdResponseSDKType,
-  QueryBaseDenomRequest,
-  QueryBaseDenomResponseSDKType,
   QueryEipBaseFeeRequest,
   QueryEipBaseFeeResponseSDKType,
 } from './query';
@@ -18,8 +14,6 @@ export class LCDQueryClient {
     this.req = requestClient;
     this.feeTokens = this.feeTokens.bind(this);
     this.denomSpotPrice = this.denomSpotPrice.bind(this);
-    this.denomPoolId = this.denomPoolId.bind(this);
-    this.baseDenom = this.baseDenom.bind(this);
     this.getEipBaseFee = this.getEipBaseFee.bind(this);
   }
   /* FeeTokens returns a list of all the whitelisted fee tokens and their
@@ -47,21 +41,7 @@ export class LCDQueryClient {
       options,
     );
   }
-  /* Returns the poolID for a specified denom input. */
-  async denomPoolId(
-    params: QueryDenomPoolIdRequest,
-  ): Promise<QueryDenomPoolIdResponseSDKType> {
-    const endpoint = `symphony/txfees/v1beta1/denom_pool_id/${params.denom}`;
-    return await this.req.get<QueryDenomPoolIdResponseSDKType>(endpoint);
-  }
-  /* Returns a list of all base denom tokens and their corresponding pools. */
-  async baseDenom(
-    _params: QueryBaseDenomRequest = {},
-  ): Promise<QueryBaseDenomResponseSDKType> {
-    const endpoint = `symphony/txfees/v1beta1/base_denom`;
-    return await this.req.get<QueryBaseDenomResponseSDKType>(endpoint);
-  }
-  /* Returns a list of all base denom tokens and their corresponding pools. */
+  /* GetEipBaseFee */
   async getEipBaseFee(
     _params: QueryEipBaseFeeRequest = {},
   ): Promise<QueryEipBaseFeeResponseSDKType> {

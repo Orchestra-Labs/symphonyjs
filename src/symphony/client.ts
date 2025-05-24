@@ -21,7 +21,6 @@ import * as symphonyProtorevV1beta1TxRegistry from './protorev/v1beta1/tx.regist
 import * as symphonySmartaccountV1beta1TxRegistry from './smartaccount/v1beta1/tx.registry';
 import * as symphonySuperfluidTxRegistry from './superfluid/tx.registry';
 import * as symphonyTokenfactoryV1beta1TxRegistry from './tokenfactory/v1beta1/tx.registry';
-import * as symphonyTxfeesV1beta1TxRegistry from './txfees/v1beta1/tx.registry';
 import * as symphonyValsetprefV1beta1TxRegistry from './valsetpref/v1beta1/tx.registry';
 import * as symphonyBridgeV1beta1TxAmino from './bridge/v1beta1/tx.amino';
 import * as symphonyConcentratedliquidityPoolmodelConcentratedV1beta1TxAmino from './concentratedliquidity/poolmodel/concentrated/v1beta1/tx.amino';
@@ -38,7 +37,6 @@ import * as symphonyProtorevV1beta1TxAmino from './protorev/v1beta1/tx.amino';
 import * as symphonySmartaccountV1beta1TxAmino from './smartaccount/v1beta1/tx.amino';
 import * as symphonySuperfluidTxAmino from './superfluid/tx.amino';
 import * as symphonyTokenfactoryV1beta1TxAmino from './tokenfactory/v1beta1/tx.amino';
-import * as symphonyTxfeesV1beta1TxAmino from './txfees/v1beta1/tx.amino';
 import * as symphonyValsetprefV1beta1TxAmino from './valsetpref/v1beta1/tx.amino';
 export const symphonyAminoConverters = {
   ...symphonyBridgeV1beta1TxAmino.AminoConverter,
@@ -56,7 +54,6 @@ export const symphonyAminoConverters = {
   ...symphonySmartaccountV1beta1TxAmino.AminoConverter,
   ...symphonySuperfluidTxAmino.AminoConverter,
   ...symphonyTokenfactoryV1beta1TxAmino.AminoConverter,
-  ...symphonyTxfeesV1beta1TxAmino.AminoConverter,
   ...symphonyValsetprefV1beta1TxAmino.AminoConverter,
 };
 export const symphonyProtoRegistry: ReadonlyArray<[string, GeneratedType]> = [
@@ -75,7 +72,6 @@ export const symphonyProtoRegistry: ReadonlyArray<[string, GeneratedType]> = [
   ...symphonySmartaccountV1beta1TxRegistry.registry,
   ...symphonySuperfluidTxRegistry.registry,
   ...symphonyTokenfactoryV1beta1TxRegistry.registry,
-  ...symphonyTxfeesV1beta1TxRegistry.registry,
   ...symphonyValsetprefV1beta1TxRegistry.registry,
 ];
 export const getSigningSymphonyClientOptions = ({

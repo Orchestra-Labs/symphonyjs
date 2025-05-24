@@ -2,5 +2,8 @@
 <project version="4">
   <component name="VcsDirectoryMappings">
     <mapping directory="" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/build/cosmos-proto-schema" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/build/cosmos-sdk-proto-schema" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/build/symphony-proto-schema" vcs="Git" />
   </component>
 </project>

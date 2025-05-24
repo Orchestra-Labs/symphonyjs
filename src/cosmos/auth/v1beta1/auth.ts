@@ -107,7 +107,7 @@ export interface ModuleCredentialAmino {
   derivation_keys?: string[];
 }
 export interface ModuleCredentialAminoMsg {
-  type: 'cosmos-sdk/ModuleCredential';
+  type: 'cosmos-sdk/GroupAccountCredential';
   value: ModuleCredentialAmino;
 }
 /**
@@ -456,7 +456,7 @@ function createBaseModuleCredential(): ModuleCredential {
 }
 export const ModuleCredential = {
   typeUrl: '/cosmos.auth.v1beta1.ModuleCredential',
-  aminoType: 'cosmos-sdk/ModuleCredential',
+  aminoType: 'cosmos-sdk/GroupAccountCredential',
   is(o: any): o is ModuleCredential {
     return (
       o &&
@@ -554,7 +554,7 @@ export const ModuleCredential = {
   },
   toAminoMsg(message: ModuleCredential): ModuleCredentialAminoMsg {
     return {
-      type: 'cosmos-sdk/ModuleCredential',
+      type: 'cosmos-sdk/GroupAccountCredential',
       value: ModuleCredential.toAmino(message),
     };
   },

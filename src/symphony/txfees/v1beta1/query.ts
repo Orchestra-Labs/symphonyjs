@@ -1,5 +1,4 @@
 //@ts-nocheck
-import { FeeToken, FeeTokenAmino, FeeTokenSDKType } from './feetoken';
 import { BinaryReader, BinaryWriter } from '../../../binary';
 import { GlobalDecoderRegistry } from '../../../registry';
 import { Decimal } from '@cosmjs/math';
@@ -15,21 +14,21 @@ export interface QueryFeeTokensRequestAminoMsg {
 }
 export interface QueryFeeTokensRequestSDKType {}
 export interface QueryFeeTokensResponse {
-  feeTokens: FeeToken[];
+  feeTokens: string[];
 }
 export interface QueryFeeTokensResponseProtoMsg {
   typeUrl: '/symphony.txfees.v1beta1.QueryFeeTokensResponse';
   value: Uint8Array;
 }
 export interface QueryFeeTokensResponseAmino {
-  fee_tokens?: FeeTokenAmino[];
+  fee_tokens?: string[];
 }
 export interface QueryFeeTokensResponseAminoMsg {
   type: '/symphony.txfees.v1beta1.QueryFeeTokensResponse';
   value: QueryFeeTokensResponseAmino;
 }
 export interface QueryFeeTokensResponseSDKType {
-  fee_tokens: FeeTokenSDKType[];
+  fee_tokens: string[];
 }
 /**
  * QueryDenomSpotPriceRequest defines grpc request structure for querying spot
@@ -65,7 +64,6 @@ export interface QueryDenomSpotPriceRequestSDKType {
  * price for the specified tx fee denom
  */
 export interface QueryDenomSpotPriceResponse {
-  poolID: bigint;
   spotPrice: string;
 }
 export interface QueryDenomSpotPriceResponseProtoMsg {
@@ -77,7 +75,6 @@ export interface QueryDenomSpotPriceResponseProtoMsg {
  * price for the specified tx fee denom
  */
 export interface QueryDenomSpotPriceResponseAmino {
-  poolID?: string;
   spot_price?: string;
 }
 export interface QueryDenomSpotPriceResponseAminoMsg {
@@ -89,70 +86,7 @@ export interface QueryDenomSpotPriceResponseAminoMsg {
  * price for the specified tx fee denom
  */
 export interface QueryDenomSpotPriceResponseSDKType {
-  poolID: bigint;
   spot_price: string;
-}
-export interface QueryDenomPoolIdRequest {
-  denom: string;
-}
-export interface QueryDenomPoolIdRequestProtoMsg {
-  typeUrl: '/symphony.txfees.v1beta1.QueryDenomPoolIdRequest';
-  value: Uint8Array;
-}
-export interface QueryDenomPoolIdRequestAmino {
-  denom?: string;
-}
-export interface QueryDenomPoolIdRequestAminoMsg {
-  type: '/symphony.txfees.v1beta1.QueryDenomPoolIdRequest';
-  value: QueryDenomPoolIdRequestAmino;
-}
-export interface QueryDenomPoolIdRequestSDKType {
-  denom: string;
-}
-export interface QueryDenomPoolIdResponse {
-  poolID: bigint;
-}
-export interface QueryDenomPoolIdResponseProtoMsg {
-  typeUrl: '/symphony.txfees.v1beta1.QueryDenomPoolIdResponse';
-  value: Uint8Array;
-}
-export interface QueryDenomPoolIdResponseAmino {
-  poolID?: string;
-}
-export interface QueryDenomPoolIdResponseAminoMsg {
-  type: '/symphony.txfees.v1beta1.QueryDenomPoolIdResponse';
-  value: QueryDenomPoolIdResponseAmino;
-}
-export interface QueryDenomPoolIdResponseSDKType {
-  poolID: bigint;
-}
-export interface QueryBaseDenomRequest {}
-export interface QueryBaseDenomRequestProtoMsg {
-  typeUrl: '/symphony.txfees.v1beta1.QueryBaseDenomRequest';
-  value: Uint8Array;
-}
-export interface QueryBaseDenomRequestAmino {}
-export interface QueryBaseDenomRequestAminoMsg {
-  type: '/symphony.txfees.v1beta1.QueryBaseDenomRequest';
-  value: QueryBaseDenomRequestAmino;
-}
-export interface QueryBaseDenomRequestSDKType {}
-export interface QueryBaseDenomResponse {
-  baseDenom: string;
-}
-export interface QueryBaseDenomResponseProtoMsg {
-  typeUrl: '/symphony.txfees.v1beta1.QueryBaseDenomResponse';
-  value: Uint8Array;
-}
-export interface QueryBaseDenomResponseAmino {
-  base_denom?: string;
-}
-export interface QueryBaseDenomResponseAminoMsg {
-  type: '/symphony.txfees.v1beta1.QueryBaseDenomResponse';
-  value: QueryBaseDenomResponseAmino;
-}
-export interface QueryBaseDenomResponseSDKType {
-  base_denom: string;
 }
 export interface QueryEipBaseFeeRequest {}
 export interface QueryEipBaseFeeRequestProtoMsg {
@@ -264,7 +198,7 @@ export const QueryFeeTokensResponse = {
       o &&
       (o.$typeUrl === QueryFeeTokensResponse.typeUrl ||
         (Array.isArray(o.feeTokens) &&
-          (!o.feeTokens.length || FeeToken.is(o.feeTokens[0]))))
+          (!o.feeTokens.length || typeof o.feeTokens[0] === 'string')))
     );
   },
   isSDK(o: any): o is QueryFeeTokensResponseSDKType {
@@ -272,7 +206,7 @@ export const QueryFeeTokensResponse = {
       o &&
       (o.$typeUrl === QueryFeeTokensResponse.typeUrl ||
         (Array.isArray(o.fee_tokens) &&
-          (!o.fee_tokens.length || FeeToken.isSDK(o.fee_tokens[0]))))
+          (!o.fee_tokens.length || typeof o.fee_tokens[0] === 'string')))
     );
   },
   isAmino(o: any): o is QueryFeeTokensResponseAmino {
@@ -280,7 +214,7 @@ export const QueryFeeTokensResponse = {
       o &&
       (o.$typeUrl === QueryFeeTokensResponse.typeUrl ||
         (Array.isArray(o.fee_tokens) &&
-          (!o.fee_tokens.length || FeeToken.isAmino(o.fee_tokens[0]))))
+          (!o.fee_tokens.length || typeof o.fee_tokens[0] === 'string')))
     );
   },
   encode(
@@ -288,7 +222,7 @@ export const QueryFeeTokensResponse = {
     writer: BinaryWriter = BinaryWriter.create(),
   ): BinaryWriter {
     for (const v of message.feeTokens) {
-      FeeToken.encode(v!, writer.uint32(10).fork()).ldelim();
+      writer.uint32(10).string(v!);
     }
     return writer;
   },
@@ -304,7 +238,7 @@ export const QueryFeeTokensResponse = {
       const tag = reader.uint32();
       switch (tag >>> 3) {
         case 1:
-          message.feeTokens.push(FeeToken.decode(reader, reader.uint32()));
+          message.feeTokens.push(reader.string());
           break;
         default:
           reader.skipType(tag & 7);
@@ -315,22 +249,18 @@ export const QueryFeeTokensResponse = {
   },
   fromPartial(object: Partial<QueryFeeTokensResponse>): QueryFeeTokensResponse {
     const message = createBaseQueryFeeTokensResponse();
-    message.feeTokens =
-      object.feeTokens?.map(e => FeeToken.fromPartial(e)) || [];
+    message.feeTokens = object.feeTokens?.map(e => e) || [];
     return message;
   },
   fromAmino(object: QueryFeeTokensResponseAmino): QueryFeeTokensResponse {
     const message = createBaseQueryFeeTokensResponse();
-    message.feeTokens =
-      object.fee_tokens?.map(e => FeeToken.fromAmino(e)) || [];
+    message.feeTokens = object.fee_tokens?.map(e => e) || [];
     return message;
   },
   toAmino(message: QueryFeeTokensResponse): QueryFeeTokensResponseAmino {
     const obj: any = {};
     if (message.feeTokens) {
-      obj.fee_tokens = message.feeTokens.map(e =>
-        e ? FeeToken.toAmino(e) : undefined,
-      );
+      obj.fee_tokens = message.feeTokens.map(e => e);
     } else {
       obj.fee_tokens = message.feeTokens;
     }
@@ -467,7 +397,6 @@ GlobalDecoderRegistry.register(
 );
 function createBaseQueryDenomSpotPriceResponse(): QueryDenomSpotPriceResponse {
   return {
-    poolID: BigInt(0),
     spotPrice: '',
   };
 }
@@ -477,33 +406,30 @@ export const QueryDenomSpotPriceResponse = {
     return (
       o &&
       (o.$typeUrl === QueryDenomSpotPriceResponse.typeUrl ||
-        (typeof o.poolID === 'bigint' && typeof o.spotPrice === 'string'))
+        typeof o.spotPrice === 'string')
     );
   },
   isSDK(o: any): o is QueryDenomSpotPriceResponseSDKType {
     return (
       o &&
       (o.$typeUrl === QueryDenomSpotPriceResponse.typeUrl ||
-        (typeof o.poolID === 'bigint' && typeof o.spot_price === 'string'))
+        typeof o.spot_price === 'string')
     );
   },
   isAmino(o: any): o is QueryDenomSpotPriceResponseAmino {
     return (
       o &&
       (o.$typeUrl === QueryDenomSpotPriceResponse.typeUrl ||
-        (typeof o.poolID === 'bigint' && typeof o.spot_price === 'string'))
+        typeof o.spot_price === 'string')
     );
   },
   encode(
     message: QueryDenomSpotPriceResponse,
     writer: BinaryWriter = BinaryWriter.create(),
   ): BinaryWriter {
-    if (message.poolID !== BigInt(0)) {
-      writer.uint32(8).uint64(message.poolID);
-    }
     if (message.spotPrice !== '') {
       writer
-        .uint32(18)
+        .uint32(10)
         .string(Decimal.fromUserInput(message.spotPrice, 18).atomics);
     }
     return writer;
@@ -520,9 +446,6 @@ export const QueryDenomSpotPriceResponse = {
       const tag = reader.uint32();
       switch (tag >>> 3) {
         case 1:
-          message.poolID = reader.uint64();
-          break;
-        case 2:
           message.spotPrice = Decimal.fromAtomics(
             reader.string(),
             18,
@@ -539,10 +462,6 @@ export const QueryDenomSpotPriceResponse = {
     object: Partial<QueryDenomSpotPriceResponse>,
   ): QueryDenomSpotPriceResponse {
     const message = createBaseQueryDenomSpotPriceResponse();
-    message.poolID =
-      object.poolID !== undefined && object.poolID !== null
-        ? BigInt(object.poolID.toString())
-        : BigInt(0);
     message.spotPrice = object.spotPrice ?? '';
     return message;
   },
@@ -550,9 +469,6 @@ export const QueryDenomSpotPriceResponse = {
     object: QueryDenomSpotPriceResponseAmino,
   ): QueryDenomSpotPriceResponse {
     const message = createBaseQueryDenomSpotPriceResponse();
-    if (object.poolID !== undefined && object.poolID !== null) {
-      message.poolID = BigInt(object.poolID);
-    }
     if (object.spot_price !== undefined && object.spot_price !== null) {
       message.spotPrice = object.spot_price;
     }
@@ -562,8 +478,6 @@ export const QueryDenomSpotPriceResponse = {
     message: QueryDenomSpotPriceResponse,
   ): QueryDenomSpotPriceResponseAmino {
     const obj: any = {};
-    obj.poolID =
-      message.poolID !== BigInt(0) ? message.poolID.toString() : undefined;
     obj.spot_price = message.spotPrice === '' ? undefined : message.spotPrice;
     return obj;
   },
@@ -592,383 +506,6 @@ export const QueryDenomSpotPriceResponse = {
 GlobalDecoderRegistry.register(
   QueryDenomSpotPriceResponse.typeUrl,
   QueryDenomSpotPriceResponse,
-);
-function createBaseQueryDenomPoolIdRequest(): QueryDenomPoolIdRequest {
-  return {
-    denom: '',
-  };
-}
-export const QueryDenomPoolIdRequest = {
-  typeUrl: '/symphony.txfees.v1beta1.QueryDenomPoolIdRequest',
-  is(o: any): o is QueryDenomPoolIdRequest {
-    return (
-      o &&
-      (o.$typeUrl === QueryDenomPoolIdRequest.typeUrl ||
-        typeof o.denom === 'string')
-    );
-  },
-  isSDK(o: any): o is QueryDenomPoolIdRequestSDKType {
-    return (
-      o &&
-      (o.$typeUrl === QueryDenomPoolIdRequest.typeUrl ||
-        typeof o.denom === 'string')
-    );
-  },
-  isAmino(o: any): o is QueryDenomPoolIdRequestAmino {
-    return (
-      o &&
-      (o.$typeUrl === QueryDenomPoolIdRequest.typeUrl ||
-        typeof o.denom === 'string')
-    );
-  },
-  encode(
-    message: QueryDenomPoolIdRequest,
-    writer: BinaryWriter = BinaryWriter.create(),
-  ): BinaryWriter {
-    if (message.denom !== '') {
-      writer.uint32(10).string(message.denom);
-    }
-    return writer;
-  },
-  decode(
-    input: BinaryReader | Uint8Array,
-    length?: number,
-  ): QueryDenomPoolIdRequest {
-    const reader =
-      input instanceof BinaryReader ? input : new BinaryReader(input);
-    let end = length === undefined ? reader.len : reader.pos + length;
-    const message = createBaseQueryDenomPoolIdRequest();
-    while (reader.pos < end) {
-      const tag = reader.uint32();
-      switch (tag >>> 3) {
-        case 1:
-          message.denom = reader.string();
-          break;
-        default:
-          reader.skipType(tag & 7);
-          break;
-      }
-    }
-    return message;
-  },
-  fromPartial(
-    object: Partial<QueryDenomPoolIdRequest>,
-  ): QueryDenomPoolIdRequest {
-    const message = createBaseQueryDenomPoolIdRequest();
-    message.denom = object.denom ?? '';
-    return message;
-  },
-  fromAmino(object: QueryDenomPoolIdRequestAmino): QueryDenomPoolIdRequest {
-    const message = createBaseQueryDenomPoolIdRequest();
-    if (object.denom !== undefined && object.denom !== null) {
-      message.denom = object.denom;
-    }
-    return message;
-  },
-  toAmino(message: QueryDenomPoolIdRequest): QueryDenomPoolIdRequestAmino {
-    const obj: any = {};
-    obj.denom = message.denom === '' ? undefined : message.denom;
-    return obj;
-  },
-  fromAminoMsg(
-    object: QueryDenomPoolIdRequestAminoMsg,
-  ): QueryDenomPoolIdRequest {
-    return QueryDenomPoolIdRequest.fromAmino(object.value);
-  },
-  fromProtoMsg(
-    message: QueryDenomPoolIdRequestProtoMsg,
-  ): QueryDenomPoolIdRequest {
-    return QueryDenomPoolIdRequest.decode(message.value);
-  },
-  toProto(message: QueryDenomPoolIdRequest): Uint8Array {
-    return QueryDenomPoolIdRequest.encode(message).finish();
-  },
-  toProtoMsg(
-    message: QueryDenomPoolIdRequest,
-  ): QueryDenomPoolIdRequestProtoMsg {
-    return {
-      typeUrl: '/symphony.txfees.v1beta1.QueryDenomPoolIdRequest',
-      value: QueryDenomPoolIdRequest.encode(message).finish(),
-    };
-  },
-};
-GlobalDecoderRegistry.register(
-  QueryDenomPoolIdRequest.typeUrl,
-  QueryDenomPoolIdRequest,
-);
-function createBaseQueryDenomPoolIdResponse(): QueryDenomPoolIdResponse {
-  return {
-    poolID: BigInt(0),
-  };
-}
-export const QueryDenomPoolIdResponse = {
-  typeUrl: '/symphony.txfees.v1beta1.QueryDenomPoolIdResponse',
-  is(o: any): o is QueryDenomPoolIdResponse {
-    return (
-      o &&
-      (o.$typeUrl === QueryDenomPoolIdResponse.typeUrl ||
-        typeof o.poolID === 'bigint')
-    );
-  },
-  isSDK(o: any): o is QueryDenomPoolIdResponseSDKType {
-    return (
-      o &&
-      (o.$typeUrl === QueryDenomPoolIdResponse.typeUrl ||
-        typeof o.poolID === 'bigint')
-    );
-  },
-  isAmino(o: any): o is QueryDenomPoolIdResponseAmino {
-    return (
-      o &&
-      (o.$typeUrl === QueryDenomPoolIdResponse.typeUrl ||
-        typeof o.poolID === 'bigint')
-    );
-  },
-  encode(
-    message: QueryDenomPoolIdResponse,
-    writer: BinaryWriter = BinaryWriter.create(),
-  ): BinaryWriter {
-    if (message.poolID !== BigInt(0)) {
-      writer.uint32(8).uint64(message.poolID);
-    }
-    return writer;
-  },
-  decode(
-    input: BinaryReader | Uint8Array,
-    length?: number,
-  ): QueryDenomPoolIdResponse {
-    const reader =
-      input instanceof BinaryReader ? input : new BinaryReader(input);
-    let end = length === undefined ? reader.len : reader.pos + length;
-    const message = createBaseQueryDenomPoolIdResponse();
-    while (reader.pos < end) {
-      const tag = reader.uint32();
-      switch (tag >>> 3) {
-        case 1:
-          message.poolID = reader.uint64();
-          break;
-        default:
-          reader.skipType(tag & 7);
-          break;
-      }
-    }
-    return message;
-  },
-  fromPartial(
-    object: Partial<QueryDenomPoolIdResponse>,
-  ): QueryDenomPoolIdResponse {
-    const message = createBaseQueryDenomPoolIdResponse();
-    message.poolID =
-      object.poolID !== undefined && object.poolID !== null
-        ? BigInt(object.poolID.toString())
-        : BigInt(0);
-    return message;
-  },
-  fromAmino(object: QueryDenomPoolIdResponseAmino): QueryDenomPoolIdResponse {
-    const message = createBaseQueryDenomPoolIdResponse();
-    if (object.poolID !== undefined && object.poolID !== null) {
-      message.poolID = BigInt(object.poolID);
-    }
-    return message;
-  },
-  toAmino(message: QueryDenomPoolIdResponse): QueryDenomPoolIdResponseAmino {
-    const obj: any = {};
-    obj.poolID =
-      message.poolID !== BigInt(0) ? message.poolID.toString() : undefined;
-    return obj;
-  },
-  fromAminoMsg(
-    object: QueryDenomPoolIdResponseAminoMsg,
-  ): QueryDenomPoolIdResponse {
-    return QueryDenomPoolIdResponse.fromAmino(object.value);
-  },
-  fromProtoMsg(
-    message: QueryDenomPoolIdResponseProtoMsg,
-  ): QueryDenomPoolIdResponse {
-    return QueryDenomPoolIdResponse.decode(message.value);
-  },
-  toProto(message: QueryDenomPoolIdResponse): Uint8Array {
-    return QueryDenomPoolIdResponse.encode(message).finish();
-  },
-  toProtoMsg(
-    message: QueryDenomPoolIdResponse,
-  ): QueryDenomPoolIdResponseProtoMsg {
-    return {
-      typeUrl: '/symphony.txfees.v1beta1.QueryDenomPoolIdResponse',
-      value: QueryDenomPoolIdResponse.encode(message).finish(),
-    };
-  },
-};
-GlobalDecoderRegistry.register(
-  QueryDenomPoolIdResponse.typeUrl,
-  QueryDenomPoolIdResponse,
-);
-function createBaseQueryBaseDenomRequest(): QueryBaseDenomRequest {
-  return {};
-}
-export const QueryBaseDenomRequest = {
-  typeUrl: '/symphony.txfees.v1beta1.QueryBaseDenomRequest',
-  is(o: any): o is QueryBaseDenomRequest {
-    return o && o.$typeUrl === QueryBaseDenomRequest.typeUrl;
-  },
-  isSDK(o: any): o is QueryBaseDenomRequestSDKType {
-    return o && o.$typeUrl === QueryBaseDenomRequest.typeUrl;
-  },
-  isAmino(o: any): o is QueryBaseDenomRequestAmino {
-    return o && o.$typeUrl === QueryBaseDenomRequest.typeUrl;
-  },
-  encode(
-    _: QueryBaseDenomRequest,
-    writer: BinaryWriter = BinaryWriter.create(),
-  ): BinaryWriter {
-    return writer;
-  },
-  decode(
-    input: BinaryReader | Uint8Array,
-    length?: number,
-  ): QueryBaseDenomRequest {
-    const reader =
-      input instanceof BinaryReader ? input : new BinaryReader(input);
-    let end = length === undefined ? reader.len : reader.pos + length;
-    const message = createBaseQueryBaseDenomRequest();
-    while (reader.pos < end) {
-      const tag = reader.uint32();
-      switch (tag >>> 3) {
-        default:
-          reader.skipType(tag & 7);
-          break;
-      }
-    }
-    return message;
-  },
-  fromPartial(_: Partial<QueryBaseDenomRequest>): QueryBaseDenomRequest {
-    const message = createBaseQueryBaseDenomRequest();
-    return message;
-  },
-  fromAmino(_: QueryBaseDenomRequestAmino): QueryBaseDenomRequest {
-    const message = createBaseQueryBaseDenomRequest();
-    return message;
-  },
-  toAmino(_: QueryBaseDenomRequest): QueryBaseDenomRequestAmino {
-    const obj: any = {};
-    return obj;
-  },
-  fromAminoMsg(object: QueryBaseDenomRequestAminoMsg): QueryBaseDenomRequest {
-    return QueryBaseDenomRequest.fromAmino(object.value);
-  },
-  fromProtoMsg(message: QueryBaseDenomRequestProtoMsg): QueryBaseDenomRequest {
-    return QueryBaseDenomRequest.decode(message.value);
-  },
-  toProto(message: QueryBaseDenomRequest): Uint8Array {
-    return QueryBaseDenomRequest.encode(message).finish();
-  },
-  toProtoMsg(message: QueryBaseDenomRequest): QueryBaseDenomRequestProtoMsg {
-    return {
-      typeUrl: '/symphony.txfees.v1beta1.QueryBaseDenomRequest',
-      value: QueryBaseDenomRequest.encode(message).finish(),
-    };
-  },
-};
-GlobalDecoderRegistry.register(
-  QueryBaseDenomRequest.typeUrl,
-  QueryBaseDenomRequest,
-);
-function createBaseQueryBaseDenomResponse(): QueryBaseDenomResponse {
-  return {
-    baseDenom: '',
-  };
-}
-export const QueryBaseDenomResponse = {
-  typeUrl: '/symphony.txfees.v1beta1.QueryBaseDenomResponse',
-  is(o: any): o is QueryBaseDenomResponse {
-    return (
-      o &&
-      (o.$typeUrl === QueryBaseDenomResponse.typeUrl ||
-        typeof o.baseDenom === 'string')
-    );
-  },
-  isSDK(o: any): o is QueryBaseDenomResponseSDKType {
-    return (
-      o &&
-      (o.$typeUrl === QueryBaseDenomResponse.typeUrl ||
-        typeof o.base_denom === 'string')
-    );
-  },
-  isAmino(o: any): o is QueryBaseDenomResponseAmino {
-    return (
-      o &&
-      (o.$typeUrl === QueryBaseDenomResponse.typeUrl ||
-        typeof o.base_denom === 'string')
-    );
-  },
-  encode(
-    message: QueryBaseDenomResponse,
-    writer: BinaryWriter = BinaryWriter.create(),
-  ): BinaryWriter {
-    if (message.baseDenom !== '') {
-      writer.uint32(10).string(message.baseDenom);
-    }
-    return writer;
-  },
-  decode(
-    input: BinaryReader | Uint8Array,
-    length?: number,
-  ): QueryBaseDenomResponse {
-    const reader =
-      input instanceof BinaryReader ? input : new BinaryReader(input);
-    let end = length === undefined ? reader.len : reader.pos + length;
-    const message = createBaseQueryBaseDenomResponse();
-    while (reader.pos < end) {
-      const tag = reader.uint32();
-      switch (tag >>> 3) {
-        case 1:
-          message.baseDenom = reader.string();
-          break;
-        default:
-          reader.skipType(tag & 7);
-          break;
-      }
-    }
-    return message;
-  },
-  fromPartial(object: Partial<QueryBaseDenomResponse>): QueryBaseDenomResponse {
-    const message = createBaseQueryBaseDenomResponse();
-    message.baseDenom = object.baseDenom ?? '';
-    return message;
-  },
-  fromAmino(object: QueryBaseDenomResponseAmino): QueryBaseDenomResponse {
-    const message = createBaseQueryBaseDenomResponse();
-    if (object.base_denom !== undefined && object.base_denom !== null) {
-      message.baseDenom = object.base_denom;
-    }
-    return message;
-  },
-  toAmino(message: QueryBaseDenomResponse): QueryBaseDenomResponseAmino {
-    const obj: any = {};
-    obj.base_denom = message.baseDenom === '' ? undefined : message.baseDenom;
-    return obj;
-  },
-  fromAminoMsg(object: QueryBaseDenomResponseAminoMsg): QueryBaseDenomResponse {
-    return QueryBaseDenomResponse.fromAmino(object.value);
-  },
-  fromProtoMsg(
-    message: QueryBaseDenomResponseProtoMsg,
-  ): QueryBaseDenomResponse {
-    return QueryBaseDenomResponse.decode(message.value);
-  },
-  toProto(message: QueryBaseDenomResponse): Uint8Array {
-    return QueryBaseDenomResponse.encode(message).finish();
-  },
-  toProtoMsg(message: QueryBaseDenomResponse): QueryBaseDenomResponseProtoMsg {
-    return {
-      typeUrl: '/symphony.txfees.v1beta1.QueryBaseDenomResponse',
-      value: QueryBaseDenomResponse.encode(message).finish(),
-    };
-  },
-};
-GlobalDecoderRegistry.register(
-  QueryBaseDenomResponse.typeUrl,
-  QueryBaseDenomResponse,
 );
 function createBaseQueryEipBaseFeeRequest(): QueryEipBaseFeeRequest {
   return {};
