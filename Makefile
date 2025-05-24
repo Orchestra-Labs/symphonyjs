@@ -1,5 +1,5 @@
-COSMOS_SDK_URL := https://github.com/cosmos/cosmos-sdk
-COSMOS_SDK_VERSION := v0.50.9
+COSMOS_SDK_URL := https://github.com/Orchestra-Labs/symphony-cosmos-sdk
+COSMOS_SDK_VERSION := v0.50.6-v26-osmo-2-symphony-3
 COSMOS_SDK_DIR := build/cosmos-sdk-proto-schema
 
 COSMOS_PROTO_URL := https://github.com/cosmos/cosmos-proto.git
