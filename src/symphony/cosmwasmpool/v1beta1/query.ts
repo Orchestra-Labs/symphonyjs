@@ -620,7 +620,7 @@ export const ContractInfoByPoolIdRequest = {
   ): ContractInfoByPoolIdRequestAmino {
     const obj: any = {};
     obj.pool_id =
-      message.poolId !== BigInt(0) ? message.poolId.toString() : undefined;
+      message.poolId !== BigInt(0) ? message.poolId?.toString() : undefined;
     return obj;
   },
   fromAminoMsg(
@@ -749,7 +749,7 @@ export const ContractInfoByPoolIdResponse = {
     obj.contract_address =
       message.contractAddress === '' ? undefined : message.contractAddress;
     obj.code_id =
-      message.codeId !== BigInt(0) ? message.codeId.toString() : undefined;
+      message.codeId !== BigInt(0) ? message.codeId?.toString() : undefined;
     return obj;
   },
   fromAminoMsg(

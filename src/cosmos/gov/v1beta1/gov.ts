@@ -1002,7 +1002,7 @@ export const Deposit = {
     const obj: any = {};
     obj.proposal_id =
       message.proposalId !== BigInt(0)
-        ? message.proposalId.toString()
+        ? message.proposalId?.toString()
         : undefined;
     obj.depositor = message.depositor === '' ? undefined : message.depositor;
     if (message.amount) {
@@ -1283,7 +1283,7 @@ export const Proposal = {
     const obj: any = {};
     obj.proposal_id =
       message.proposalId !== BigInt(0)
-        ? message.proposalId.toString()
+        ? message.proposalId?.toString()
         : undefined;
     obj.content = message.content
       ? GlobalDecoderRegistry.toAminoMsg(message.content)
@@ -1606,7 +1606,7 @@ export const Vote = {
   },
   toAmino(message: Vote): VoteAmino {
     const obj: any = {};
-    obj.proposal_id = message.proposalId ? message.proposalId.toString() : '0';
+    obj.proposal_id = message.proposalId ? message.proposalId?.toString() : '0';
     obj.voter = message.voter === '' ? undefined : message.voter;
     obj.option = message.option === 0 ? undefined : message.option;
     if (message.options) {

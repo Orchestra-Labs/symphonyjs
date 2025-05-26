@@ -512,7 +512,7 @@ export const MsgRemoveAuthenticator = {
   toAmino(message: MsgRemoveAuthenticator): MsgRemoveAuthenticatorAmino {
     const obj: any = {};
     obj.sender = message.sender === '' ? undefined : message.sender;
-    obj.id = message.id !== BigInt(0) ? message.id.toString() : undefined;
+    obj.id = message.id !== BigInt(0) ? message.id?.toString() : undefined;
     return obj;
   },
   fromAminoMsg(object: MsgRemoveAuthenticatorAminoMsg): MsgRemoveAuthenticator {

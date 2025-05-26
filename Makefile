@@ -7,7 +7,8 @@ COSMOS_PROTO_VERSION := v1.0.0-beta.5
 COSMOS_PROTO_DIR := build/cosmos-proto-schema
 
 SYMPHONY_PROTO_URL := https://github.com/Orchestra-Labs/symphony
-SYMPHONY_PROTO_VERSION := v0.5.0
+SYMPHONY_PROTO_VERSION := fix/change-upgrade-name-to-fix-testnet-migration
+SYMPHONY_COMMIT_HASH := edb91e0b436e55f87f61a4a6002e913531b4031c
 SYMPHONY_PROTO_DIR := build/symphony-proto-schema
 
 PROTO_DIR := proto
@@ -27,4 +28,4 @@ $(COSMOS_PROTO_DIR): Makefile
 $(SYMPHONY_PROTO_DIR): Makefile
 	rm -rfv $(SYMPHONY_PROTO_DIR)
 	git clone --branch $(SYMPHONY_PROTO_VERSION) --depth 1 --quiet --no-checkout --filter=blob:none $(SYMPHONY_PROTO_URL) $(SYMPHONY_PROTO_DIR)
-	cd $(SYMPHONY_PROTO_DIR) && git checkout $(SYMPHONY_PROTO_VERSION) -- $(SYMPHONY_PROTO_RELATIVE_DIRS)
+	cd $(SYMPHONY_PROTO_DIR) && git checkout $(SYMPHONY_COMMIT_HASH) -- $(SYMPHONY_PROTO_RELATIVE_DIRS)

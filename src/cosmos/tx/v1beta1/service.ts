@@ -1038,9 +1038,10 @@ export const GetTxsEventRequest = {
       ? PageRequest.toAmino(message.pagination)
       : undefined;
     obj.order_by = message.orderBy === 0 ? undefined : message.orderBy;
-    obj.page = message.page !== BigInt(0) ? message.page.toString() : undefined;
+    obj.page =
+      message.page !== BigInt(0) ? message.page?.toString() : undefined;
     obj.limit =
-      message.limit !== BigInt(0) ? message.limit.toString() : undefined;
+      message.limit !== BigInt(0) ? message.limit?.toString() : undefined;
     obj.query = message.query === '' ? undefined : message.query;
     return obj;
   },
@@ -1212,7 +1213,7 @@ export const GetTxsEventResponse = {
       ? PageResponse.toAmino(message.pagination)
       : undefined;
     obj.total =
-      message.total !== BigInt(0) ? message.total.toString() : undefined;
+      message.total !== BigInt(0) ? message.total?.toString() : undefined;
     return obj;
   },
   fromAminoMsg(object: GetTxsEventResponseAminoMsg): GetTxsEventResponse {
@@ -1985,7 +1986,7 @@ export const GetBlockWithTxsRequest = {
   toAmino(message: GetBlockWithTxsRequest): GetBlockWithTxsRequestAmino {
     const obj: any = {};
     obj.height =
-      message.height !== BigInt(0) ? message.height.toString() : undefined;
+      message.height !== BigInt(0) ? message.height?.toString() : undefined;
     obj.pagination = message.pagination
       ? PageRequest.toAmino(message.pagination)
       : undefined;

@@ -190,7 +190,7 @@ export const ValidatorSet = {
       : undefined;
     obj.total_voting_power =
       message.totalVotingPower !== BigInt(0)
-        ? message.totalVotingPower.toString()
+        ? message.totalVotingPower?.toString()
         : undefined;
     return obj;
   },
@@ -342,11 +342,11 @@ export const Validator = {
       : undefined;
     obj.voting_power =
       message.votingPower !== BigInt(0)
-        ? message.votingPower.toString()
+        ? message.votingPower?.toString()
         : undefined;
     obj.proposer_priority =
       message.proposerPriority !== BigInt(0)
-        ? message.proposerPriority.toString()
+        ? message.proposerPriority?.toString()
         : undefined;
     return obj;
   },
@@ -458,7 +458,7 @@ export const SimpleValidator = {
       : undefined;
     obj.voting_power =
       message.votingPower !== BigInt(0)
-        ? message.votingPower.toString()
+        ? message.votingPower?.toString()
         : undefined;
     return obj;
   },

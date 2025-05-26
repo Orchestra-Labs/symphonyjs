@@ -36,7 +36,7 @@ export interface Params {
    * about.
    */
   /** @deprecated */
-  authorizedQuoteDenoms: string[];
+  authorizedQuoteDenoms?: string[];
   authorizedUptimes: Duration[];
   /**
    * is_permissionless_pool_creation_enabled is a boolean that determines if
@@ -116,7 +116,7 @@ export interface ParamsSDKType {
   authorized_spread_factors: string[];
   balancer_shares_reward_discount: string;
   /** @deprecated */
-  authorized_quote_denoms: string[];
+  authorized_quote_denoms?: string[];
   authorized_uptimes: DurationSDKType[];
   is_permissionless_pool_creation_enabled: boolean;
   unrestricted_pool_creator_whitelist: string[];
@@ -147,9 +147,6 @@ export const Params = {
           (!o.authorizedSpreadFactors.length ||
             typeof o.authorizedSpreadFactors[0] === 'string') &&
           typeof o.balancerSharesRewardDiscount === 'string' &&
-          Array.isArray(o.authorizedQuoteDenoms) &&
-          (!o.authorizedQuoteDenoms.length ||
-            typeof o.authorizedQuoteDenoms[0] === 'string') &&
           Array.isArray(o.authorizedUptimes) &&
           (!o.authorizedUptimes.length ||
             Duration.is(o.authorizedUptimes[0])) &&
@@ -171,9 +168,6 @@ export const Params = {
           (!o.authorized_spread_factors.length ||
             typeof o.authorized_spread_factors[0] === 'string') &&
           typeof o.balancer_shares_reward_discount === 'string' &&
-          Array.isArray(o.authorized_quote_denoms) &&
-          (!o.authorized_quote_denoms.length ||
-            typeof o.authorized_quote_denoms[0] === 'string') &&
           Array.isArray(o.authorized_uptimes) &&
           (!o.authorized_uptimes.length ||
             Duration.isSDK(o.authorized_uptimes[0])) &&
@@ -195,9 +189,6 @@ export const Params = {
           (!o.authorized_spread_factors.length ||
             typeof o.authorized_spread_factors[0] === 'string') &&
           typeof o.balancer_shares_reward_discount === 'string' &&
-          Array.isArray(o.authorized_quote_denoms) &&
-          (!o.authorized_quote_denoms.length ||
-            typeof o.authorized_quote_denoms[0] === 'string') &&
           Array.isArray(o.authorized_uptimes) &&
           (!o.authorized_uptimes.length ||
             Duration.isAmino(o.authorized_uptimes[0])) &&
@@ -396,7 +387,7 @@ export const Params = {
     }
     obj.hook_gas_limit =
       message.hookGasLimit !== BigInt(0)
-        ? message.hookGasLimit.toString()
+        ? message.hookGasLimit?.toString()
         : undefined;
     return obj;
   },

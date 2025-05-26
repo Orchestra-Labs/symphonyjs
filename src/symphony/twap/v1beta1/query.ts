@@ -350,7 +350,7 @@ export const ArithmeticTwapRequest = {
   toAmino(message: ArithmeticTwapRequest): ArithmeticTwapRequestAmino {
     const obj: any = {};
     obj.pool_id =
-      message.poolId !== BigInt(0) ? message.poolId.toString() : undefined;
+      message.poolId !== BigInt(0) ? message.poolId?.toString() : undefined;
     obj.base_asset = message.baseAsset === '' ? undefined : message.baseAsset;
     obj.quote_asset =
       message.quoteAsset === '' ? undefined : message.quoteAsset;
@@ -617,7 +617,7 @@ export const ArithmeticTwapToNowRequest = {
   ): ArithmeticTwapToNowRequestAmino {
     const obj: any = {};
     obj.pool_id =
-      message.poolId !== BigInt(0) ? message.poolId.toString() : undefined;
+      message.poolId !== BigInt(0) ? message.poolId?.toString() : undefined;
     obj.base_asset = message.baseAsset === '' ? undefined : message.baseAsset;
     obj.quote_asset =
       message.quoteAsset === '' ? undefined : message.quoteAsset;
@@ -907,7 +907,7 @@ export const GeometricTwapRequest = {
   toAmino(message: GeometricTwapRequest): GeometricTwapRequestAmino {
     const obj: any = {};
     obj.pool_id =
-      message.poolId !== BigInt(0) ? message.poolId.toString() : undefined;
+      message.poolId !== BigInt(0) ? message.poolId?.toString() : undefined;
     obj.base_asset = message.baseAsset === '' ? undefined : message.baseAsset;
     obj.quote_asset =
       message.quoteAsset === '' ? undefined : message.quoteAsset;
@@ -1165,7 +1165,7 @@ export const GeometricTwapToNowRequest = {
   toAmino(message: GeometricTwapToNowRequest): GeometricTwapToNowRequestAmino {
     const obj: any = {};
     obj.pool_id =
-      message.poolId !== BigInt(0) ? message.poolId.toString() : undefined;
+      message.poolId !== BigInt(0) ? message.poolId?.toString() : undefined;
     obj.base_asset = message.baseAsset === '' ? undefined : message.baseAsset;
     obj.quote_asset =
       message.quoteAsset === '' ? undefined : message.quoteAsset;

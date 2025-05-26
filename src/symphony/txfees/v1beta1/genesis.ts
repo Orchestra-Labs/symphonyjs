@@ -231,7 +231,7 @@ export const TxFeesTracker = {
     }
     obj.height_accounting_starts_from =
       message.heightAccountingStartsFrom !== BigInt(0)
-        ? message.heightAccountingStartsFrom.toString()
+        ? message.heightAccountingStartsFrom?.toString()
         : undefined;
     return obj;
   },

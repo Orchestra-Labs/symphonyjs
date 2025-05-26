@@ -841,7 +841,7 @@ export const Params = {
       message.epochIdentifier === '' ? undefined : message.epochIdentifier;
     obj.reduction_period_in_epochs =
       message.reductionPeriodInEpochs !== BigInt(0)
-        ? message.reductionPeriodInEpochs.toString()
+        ? message.reductionPeriodInEpochs?.toString()
         : undefined;
     obj.reduction_factor =
       message.reductionFactor === '' ? undefined : message.reductionFactor;
@@ -859,7 +859,7 @@ export const Params = {
     }
     obj.minting_rewards_distribution_start_epoch =
       message.mintingRewardsDistributionStartEpoch !== BigInt(0)
-        ? message.mintingRewardsDistributionStartEpoch.toString()
+        ? message.mintingRewardsDistributionStartEpoch?.toString()
         : undefined;
     return obj;
   },

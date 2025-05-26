@@ -126,7 +126,7 @@ export const Module = {
     const obj: any = {};
     obj.max_metadata_len =
       message.maxMetadataLen !== BigInt(0)
-        ? message.maxMetadataLen.toString()
+        ? message.maxMetadataLen?.toString()
         : undefined;
     obj.authority = message.authority === '' ? undefined : message.authority;
     return obj;

@@ -19,8 +19,8 @@ import {
 import { Coin, CoinAmino, CoinSDKType } from '../../base/v1beta1/coin';
 import { Timestamp } from '../../../google/protobuf/timestamp';
 import { BinaryReader, BinaryWriter } from '../../../binary';
-import { encodePubkey, decodePubkey } from '@cosmjs/proto-signing';
 import { GlobalDecoderRegistry } from '../../../registry';
+import { encodePubkey, decodePubkey } from '@cosmjs/proto-signing';
 import { Decimal } from '@cosmjs/math';
 import { toTimestamp, fromTimestamp } from '../../../helpers';
 /** MsgCreateValidator defines a SDK message for creating a new validator. */
@@ -1994,7 +1994,7 @@ export const MsgCancelUnbondingDelegation = {
       : Coin.toAmino(Coin.fromPartial({}));
     obj.creation_height =
       message.creationHeight !== BigInt(0)
-        ? message.creationHeight.toString()
+        ? message.creationHeight?.toString()
         : undefined;
     return obj;
   },

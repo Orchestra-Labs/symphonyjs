@@ -5,8 +5,8 @@ import {
   CoinSDKType,
 } from '../../../../cosmos/base/v1beta1/coin';
 import { BinaryReader, BinaryWriter } from '../../../../binary';
-import { Decimal } from '@cosmjs/math';
 import { GlobalDecoderRegistry } from '../../../../registry';
+import { Decimal } from '@cosmjs/math';
 /** ===================== CalcOutAmtGivenIn */
 export interface CalcOutAmtGivenIn {
   /** token_in is the token to be sent to the pool. */

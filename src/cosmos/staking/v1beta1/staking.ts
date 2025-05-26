@@ -1844,7 +1844,7 @@ export const Validator = {
       : Description.toAmino(Description.fromPartial({}));
     obj.unbonding_height =
       message.unbondingHeight !== BigInt(0)
-        ? message.unbondingHeight.toString()
+        ? message.unbondingHeight?.toString()
         : undefined;
     obj.unbonding_time = message.unbondingTime
       ? Timestamp.toAmino(toTimestamp(message.unbondingTime))
@@ -1856,7 +1856,7 @@ export const Validator = {
       message.minSelfDelegation === '' ? undefined : message.minSelfDelegation;
     obj.unbonding_on_hold_ref_count =
       message.unbondingOnHoldRefCount !== BigInt(0)
-        ? message.unbondingOnHoldRefCount.toString()
+        ? message.unbondingOnHoldRefCount?.toString()
         : undefined;
     if (message.unbondingIds) {
       obj.unbonding_ids = message.unbondingIds.map(e => e.toString());
@@ -2952,7 +2952,7 @@ export const UnbondingDelegationEntry = {
     const obj: any = {};
     obj.creation_height =
       message.creationHeight !== BigInt(0)
-        ? message.creationHeight.toString()
+        ? message.creationHeight?.toString()
         : undefined;
     obj.completion_time = message.completionTime
       ? Timestamp.toAmino(toTimestamp(message.completionTime))
@@ -2962,11 +2962,11 @@ export const UnbondingDelegationEntry = {
     obj.balance = message.balance === '' ? undefined : message.balance;
     obj.unbonding_id =
       message.unbondingId !== BigInt(0)
-        ? message.unbondingId.toString()
+        ? message.unbondingId?.toString()
         : undefined;
     obj.unbonding_on_hold_ref_count =
       message.unbondingOnHoldRefCount !== BigInt(0)
-        ? message.unbondingOnHoldRefCount.toString()
+        ? message.unbondingOnHoldRefCount?.toString()
         : undefined;
     return obj;
   },
@@ -3186,7 +3186,7 @@ export const RedelegationEntry = {
     const obj: any = {};
     obj.creation_height =
       message.creationHeight !== BigInt(0)
-        ? message.creationHeight.toString()
+        ? message.creationHeight?.toString()
         : undefined;
     obj.completion_time = message.completionTime
       ? Timestamp.toAmino(toTimestamp(message.completionTime))
@@ -3196,11 +3196,11 @@ export const RedelegationEntry = {
     obj.shares_dst = message.sharesDst === '' ? undefined : message.sharesDst;
     obj.unbonding_id =
       message.unbondingId !== BigInt(0)
-        ? message.unbondingId.toString()
+        ? message.unbondingId?.toString()
         : undefined;
     obj.unbonding_on_hold_ref_count =
       message.unbondingOnHoldRefCount !== BigInt(0)
-        ? message.unbondingOnHoldRefCount.toString()
+        ? message.unbondingOnHoldRefCount?.toString()
         : undefined;
     return obj;
   },

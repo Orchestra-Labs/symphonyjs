@@ -893,7 +893,7 @@ export const ValidatorHistoricalRewardsRecord = {
     obj.validator_address =
       message.validatorAddress === '' ? undefined : message.validatorAddress;
     obj.period =
-      message.period !== BigInt(0) ? message.period.toString() : undefined;
+      message.period !== BigInt(0) ? message.period?.toString() : undefined;
     obj.rewards = message.rewards
       ? ValidatorHistoricalRewards.toAmino(message.rewards)
       : ValidatorHistoricalRewards.toAmino(
@@ -1406,9 +1406,9 @@ export const ValidatorSlashEventRecord = {
     obj.validator_address =
       message.validatorAddress === '' ? undefined : message.validatorAddress;
     obj.height =
-      message.height !== BigInt(0) ? message.height.toString() : undefined;
+      message.height !== BigInt(0) ? message.height?.toString() : undefined;
     obj.period =
-      message.period !== BigInt(0) ? message.period.toString() : undefined;
+      message.period !== BigInt(0) ? message.period?.toString() : undefined;
     obj.validator_slash_event = message.validatorSlashEvent
       ? ValidatorSlashEvent.toAmino(message.validatorSlashEvent)
       : ValidatorSlashEvent.toAmino(ValidatorSlashEvent.fromPartial({}));

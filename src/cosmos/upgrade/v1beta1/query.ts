@@ -731,7 +731,7 @@ export const QueryAppliedPlanResponse = {
   toAmino(message: QueryAppliedPlanResponse): QueryAppliedPlanResponseAmino {
     const obj: any = {};
     obj.height =
-      message.height !== BigInt(0) ? message.height.toString() : undefined;
+      message.height !== BigInt(0) ? message.height?.toString() : undefined;
     return obj;
   },
   fromAminoMsg(
@@ -856,7 +856,7 @@ export const QueryUpgradedConsensusStateRequest = {
     const obj: any = {};
     obj.last_height =
       message.lastHeight !== BigInt(0)
-        ? message.lastHeight.toString()
+        ? message.lastHeight?.toString()
         : undefined;
     return obj;
   },

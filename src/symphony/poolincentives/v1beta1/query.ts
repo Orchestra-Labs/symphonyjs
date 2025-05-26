@@ -311,7 +311,7 @@ export const QueryGaugeIdsRequest = {
   toAmino(message: QueryGaugeIdsRequest): QueryGaugeIdsRequestAmino {
     const obj: any = {};
     obj.pool_id =
-      message.poolId !== BigInt(0) ? message.poolId.toString() : undefined;
+      message.poolId !== BigInt(0) ? message.poolId?.toString() : undefined;
     return obj;
   },
   fromAminoMsg(object: QueryGaugeIdsRequestAminoMsg): QueryGaugeIdsRequest {
@@ -575,7 +575,7 @@ export const QueryGaugeIdsResponse_GaugeIdWithDuration = {
   ): QueryGaugeIdsResponse_GaugeIdWithDurationAmino {
     const obj: any = {};
     obj.gauge_id =
-      message.gaugeId !== BigInt(0) ? message.gaugeId.toString() : undefined;
+      message.gaugeId !== BigInt(0) ? message.gaugeId?.toString() : undefined;
     obj.duration = message.duration
       ? Duration.toAmino(message.duration)
       : undefined;
@@ -1342,12 +1342,12 @@ export const IncentivizedPool = {
   toAmino(message: IncentivizedPool): IncentivizedPoolAmino {
     const obj: any = {};
     obj.pool_id =
-      message.poolId !== BigInt(0) ? message.poolId.toString() : undefined;
+      message.poolId !== BigInt(0) ? message.poolId?.toString() : undefined;
     obj.lockable_duration = message.lockableDuration
       ? Duration.toAmino(message.lockableDuration)
       : undefined;
     obj.gauge_id =
-      message.gaugeId !== BigInt(0) ? message.gaugeId.toString() : undefined;
+      message.gaugeId !== BigInt(0) ? message.gaugeId?.toString() : undefined;
     return obj;
   },
   fromAminoMsg(object: IncentivizedPoolAminoMsg): IncentivizedPool {

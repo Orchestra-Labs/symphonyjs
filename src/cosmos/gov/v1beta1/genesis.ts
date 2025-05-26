@@ -258,7 +258,7 @@ export const GenesisState = {
     const obj: any = {};
     obj.starting_proposal_id =
       message.startingProposalId !== BigInt(0)
-        ? message.startingProposalId.toString()
+        ? message.startingProposalId?.toString()
         : undefined;
     if (message.deposits) {
       obj.deposits = message.deposits.map(e =>

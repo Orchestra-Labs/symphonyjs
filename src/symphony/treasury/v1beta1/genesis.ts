@@ -1,8 +1,8 @@
 //@ts-nocheck
 import { Params, ParamsAmino, ParamsSDKType } from './treasury';
 import { BinaryReader, BinaryWriter } from '../../../binary';
-import { Decimal } from '@cosmjs/math';
 import { GlobalDecoderRegistry } from '../../../registry';
+import { Decimal } from '@cosmjs/math';
 /** GenesisState defines the oracle module's genesis state. */
 export interface GenesisState {
   params: Params;

@@ -82,9 +82,9 @@ export interface ParamsResponseSDKType {
 export interface EstimateSwapExactAmountInRequest {
   /** DEPRECATED */
   /** @deprecated */
-  sender: string;
+  sender?: string;
   /** @deprecated */
-  poolId: bigint;
+  poolId?: bigint;
   tokenIn: string;
   routes: SwapAmountInRoute[];
 }
@@ -109,15 +109,15 @@ export interface EstimateSwapExactAmountInRequestAminoMsg {
 /** =============================== EstimateSwapExactAmountIn */
 export interface EstimateSwapExactAmountInRequestSDKType {
   /** @deprecated */
-  sender: string;
+  sender?: string;
   /** @deprecated */
-  pool_id: bigint;
+  pool_id?: bigint;
   token_in: string;
   routes: SwapAmountInRouteSDKType[];
 }
 export interface EstimateSwapExactAmountInWithPrimitiveTypesRequest {
   /** @deprecated */
-  poolId: bigint;
+  poolId?: bigint;
   tokenIn: string;
   routesPoolId: bigint[];
   routesTokenOutDenom: string[];
@@ -139,7 +139,7 @@ export interface EstimateSwapExactAmountInWithPrimitiveTypesRequestAminoMsg {
 }
 export interface EstimateSwapExactAmountInWithPrimitiveTypesRequestSDKType {
   /** @deprecated */
-  pool_id: bigint;
+  pool_id?: bigint;
   token_in: string;
   routes_pool_id: bigint[];
   routes_token_out_denom: string[];
@@ -188,9 +188,9 @@ export interface EstimateSwapExactAmountInResponseSDKType {
 export interface EstimateSwapExactAmountOutRequest {
   /** DEPRECATED */
   /** @deprecated */
-  sender: string;
+  sender?: string;
   /** @deprecated */
-  poolId: bigint;
+  poolId?: bigint;
   routes: SwapAmountOutRoute[];
   tokenOut: string;
 }
@@ -215,15 +215,15 @@ export interface EstimateSwapExactAmountOutRequestAminoMsg {
 /** =============================== EstimateSwapExactAmountOut */
 export interface EstimateSwapExactAmountOutRequestSDKType {
   /** @deprecated */
-  sender: string;
+  sender?: string;
   /** @deprecated */
-  pool_id: bigint;
+  pool_id?: bigint;
   routes: SwapAmountOutRouteSDKType[];
   token_out: string;
 }
 export interface EstimateSwapExactAmountOutWithPrimitiveTypesRequest {
   /** @deprecated */
-  poolId: bigint;
+  poolId?: bigint;
   routesPoolId: bigint[];
   routesTokenInDenom: string[];
   tokenOut: string;
@@ -245,7 +245,7 @@ export interface EstimateSwapExactAmountOutWithPrimitiveTypesRequestAminoMsg {
 }
 export interface EstimateSwapExactAmountOutWithPrimitiveTypesRequestSDKType {
   /** @deprecated */
-  pool_id: bigint;
+  pool_id?: bigint;
   routes_pool_id: bigint[];
   routes_token_in_denom: string[];
   token_out: string;
@@ -1204,8 +1204,8 @@ export const ParamsResponse = {
 GlobalDecoderRegistry.register(ParamsResponse.typeUrl, ParamsResponse);
 function createBaseEstimateSwapExactAmountInRequest(): EstimateSwapExactAmountInRequest {
   return {
-    sender: '',
-    poolId: BigInt(0),
+    sender: undefined,
+    poolId: undefined,
     tokenIn: '',
     routes: [],
   };
@@ -1216,9 +1216,7 @@ export const EstimateSwapExactAmountInRequest = {
     return (
       o &&
       (o.$typeUrl === EstimateSwapExactAmountInRequest.typeUrl ||
-        (typeof o.sender === 'string' &&
-          typeof o.poolId === 'bigint' &&
-          typeof o.tokenIn === 'string' &&
+        (typeof o.tokenIn === 'string' &&
           Array.isArray(o.routes) &&
           (!o.routes.length || SwapAmountInRoute.is(o.routes[0]))))
     );
@@ -1227,9 +1225,7 @@ export const EstimateSwapExactAmountInRequest = {
     return (
       o &&
       (o.$typeUrl === EstimateSwapExactAmountInRequest.typeUrl ||
-        (typeof o.sender === 'string' &&
-          typeof o.pool_id === 'bigint' &&
-          typeof o.token_in === 'string' &&
+        (typeof o.token_in === 'string' &&
           Array.isArray(o.routes) &&
           (!o.routes.length || SwapAmountInRoute.isSDK(o.routes[0]))))
     );
@@ -1238,9 +1234,7 @@ export const EstimateSwapExactAmountInRequest = {
     return (
       o &&
       (o.$typeUrl === EstimateSwapExactAmountInRequest.typeUrl ||
-        (typeof o.sender === 'string' &&
-          typeof o.pool_id === 'bigint' &&
-          typeof o.token_in === 'string' &&
+        (typeof o.token_in === 'string' &&
           Array.isArray(o.routes) &&
           (!o.routes.length || SwapAmountInRoute.isAmino(o.routes[0]))))
     );
@@ -1249,10 +1243,10 @@ export const EstimateSwapExactAmountInRequest = {
     message: EstimateSwapExactAmountInRequest,
     writer: BinaryWriter = BinaryWriter.create(),
   ): BinaryWriter {
-    if (message.sender !== '') {
+    if (message.sender !== undefined) {
       writer.uint32(10).string(message.sender);
     }
-    if (message.poolId !== BigInt(0)) {
+    if (message.poolId !== undefined) {
       writer.uint32(16).uint64(message.poolId);
     }
     if (message.tokenIn !== '') {
@@ -1299,11 +1293,11 @@ export const EstimateSwapExactAmountInRequest = {
     object: Partial<EstimateSwapExactAmountInRequest>,
   ): EstimateSwapExactAmountInRequest {
     const message = createBaseEstimateSwapExactAmountInRequest();
-    message.sender = object.sender ?? '';
+    message.sender = object.sender ?? undefined;
     message.poolId =
       object.poolId !== undefined && object.poolId !== null
         ? BigInt(object.poolId.toString())
-        : BigInt(0);
+        : undefined;
     message.tokenIn = object.tokenIn ?? '';
     message.routes =
       object.routes?.map(e => SwapAmountInRoute.fromPartial(e)) || [];
@@ -1330,9 +1324,9 @@ export const EstimateSwapExactAmountInRequest = {
     message: EstimateSwapExactAmountInRequest,
   ): EstimateSwapExactAmountInRequestAmino {
     const obj: any = {};
-    obj.sender = message.sender === '' ? undefined : message.sender;
+    obj.sender = message.sender === null ? undefined : message.sender;
     obj.pool_id =
-      message.poolId !== BigInt(0) ? message.poolId.toString() : undefined;
+      message.poolId !== BigInt(0) ? message.poolId?.toString() : undefined;
     obj.token_in = message.tokenIn === '' ? undefined : message.tokenIn;
     if (message.routes) {
       obj.routes = message.routes.map(e =>
@@ -1371,7 +1365,7 @@ GlobalDecoderRegistry.register(
 );
 function createBaseEstimateSwapExactAmountInWithPrimitiveTypesRequest(): EstimateSwapExactAmountInWithPrimitiveTypesRequest {
   return {
-    poolId: BigInt(0),
+    poolId: undefined,
     tokenIn: '',
     routesPoolId: [],
     routesTokenOutDenom: [],
@@ -1385,8 +1379,7 @@ export const EstimateSwapExactAmountInWithPrimitiveTypesRequest = {
       o &&
       (o.$typeUrl ===
         EstimateSwapExactAmountInWithPrimitiveTypesRequest.typeUrl ||
-        (typeof o.poolId === 'bigint' &&
-          typeof o.tokenIn === 'string' &&
+        (typeof o.tokenIn === 'string' &&
           Array.isArray(o.routesPoolId) &&
           (!o.routesPoolId.length || typeof o.routesPoolId[0] === 'bigint') &&
           Array.isArray(o.routesTokenOutDenom) &&
@@ -1401,8 +1394,7 @@ export const EstimateSwapExactAmountInWithPrimitiveTypesRequest = {
       o &&
       (o.$typeUrl ===
         EstimateSwapExactAmountInWithPrimitiveTypesRequest.typeUrl ||
-        (typeof o.pool_id === 'bigint' &&
-          typeof o.token_in === 'string' &&
+        (typeof o.token_in === 'string' &&
           Array.isArray(o.routes_pool_id) &&
           (!o.routes_pool_id.length ||
             typeof o.routes_pool_id[0] === 'bigint') &&
@@ -1418,8 +1410,7 @@ export const EstimateSwapExactAmountInWithPrimitiveTypesRequest = {
       o &&
       (o.$typeUrl ===
         EstimateSwapExactAmountInWithPrimitiveTypesRequest.typeUrl ||
-        (typeof o.pool_id === 'bigint' &&
-          typeof o.token_in === 'string' &&
+        (typeof o.token_in === 'string' &&
           Array.isArray(o.routes_pool_id) &&
           (!o.routes_pool_id.length ||
             typeof o.routes_pool_id[0] === 'bigint') &&
@@ -1432,7 +1423,7 @@ export const EstimateSwapExactAmountInWithPrimitiveTypesRequest = {
     message: EstimateSwapExactAmountInWithPrimitiveTypesRequest,
     writer: BinaryWriter = BinaryWriter.create(),
   ): BinaryWriter {
-    if (message.poolId !== BigInt(0)) {
+    if (message.poolId !== undefined) {
       writer.uint32(8).uint64(message.poolId);
     }
     if (message.tokenIn !== '') {
@@ -1494,7 +1485,7 @@ export const EstimateSwapExactAmountInWithPrimitiveTypesRequest = {
     message.poolId =
       object.poolId !== undefined && object.poolId !== null
         ? BigInt(object.poolId.toString())
-        : BigInt(0);
+        : undefined;
     message.tokenIn = object.tokenIn ?? '';
     message.routesPoolId =
       object.routesPoolId?.map(e => BigInt(e.toString())) || [];
@@ -1522,7 +1513,7 @@ export const EstimateSwapExactAmountInWithPrimitiveTypesRequest = {
   ): EstimateSwapExactAmountInWithPrimitiveTypesRequestAmino {
     const obj: any = {};
     obj.pool_id =
-      message.poolId !== BigInt(0) ? message.poolId.toString() : undefined;
+      message.poolId !== BigInt(0) ? message.poolId?.toString() : undefined;
     obj.token_in = message.tokenIn === '' ? undefined : message.tokenIn;
     if (message.routesPoolId) {
       obj.routes_pool_id = message.routesPoolId.map(e => e.toString());
@@ -1688,7 +1679,7 @@ export const EstimateSinglePoolSwapExactAmountInRequest = {
   ): EstimateSinglePoolSwapExactAmountInRequestAmino {
     const obj: any = {};
     obj.pool_id =
-      message.poolId !== BigInt(0) ? message.poolId.toString() : undefined;
+      message.poolId !== BigInt(0) ? message.poolId?.toString() : undefined;
     obj.token_in = message.tokenIn === '' ? undefined : message.tokenIn;
     obj.token_out_denom =
       message.tokenOutDenom === '' ? undefined : message.tokenOutDenom;
@@ -1836,8 +1827,8 @@ GlobalDecoderRegistry.register(
 );
 function createBaseEstimateSwapExactAmountOutRequest(): EstimateSwapExactAmountOutRequest {
   return {
-    sender: '',
-    poolId: BigInt(0),
+    sender: undefined,
+    poolId: undefined,
     routes: [],
     tokenOut: '',
   };
@@ -1848,9 +1839,7 @@ export const EstimateSwapExactAmountOutRequest = {
     return (
       o &&
       (o.$typeUrl === EstimateSwapExactAmountOutRequest.typeUrl ||
-        (typeof o.sender === 'string' &&
-          typeof o.poolId === 'bigint' &&
-          Array.isArray(o.routes) &&
+        (Array.isArray(o.routes) &&
           (!o.routes.length || SwapAmountOutRoute.is(o.routes[0])) &&
           typeof o.tokenOut === 'string'))
     );
@@ -1859,9 +1848,7 @@ export const EstimateSwapExactAmountOutRequest = {
     return (
       o &&
       (o.$typeUrl === EstimateSwapExactAmountOutRequest.typeUrl ||
-        (typeof o.sender === 'string' &&
-          typeof o.pool_id === 'bigint' &&
-          Array.isArray(o.routes) &&
+        (Array.isArray(o.routes) &&
           (!o.routes.length || SwapAmountOutRoute.isSDK(o.routes[0])) &&
           typeof o.token_out === 'string'))
     );
@@ -1870,9 +1857,7 @@ export const EstimateSwapExactAmountOutRequest = {
     return (
       o &&
       (o.$typeUrl === EstimateSwapExactAmountOutRequest.typeUrl ||
-        (typeof o.sender === 'string' &&
-          typeof o.pool_id === 'bigint' &&
-          Array.isArray(o.routes) &&
+        (Array.isArray(o.routes) &&
           (!o.routes.length || SwapAmountOutRoute.isAmino(o.routes[0])) &&
           typeof o.token_out === 'string'))
     );
@@ -1881,10 +1866,10 @@ export const EstimateSwapExactAmountOutRequest = {
     message: EstimateSwapExactAmountOutRequest,
     writer: BinaryWriter = BinaryWriter.create(),
   ): BinaryWriter {
-    if (message.sender !== '') {
+    if (message.sender !== undefined) {
       writer.uint32(10).string(message.sender);
     }
-    if (message.poolId !== BigInt(0)) {
+    if (message.poolId !== undefined) {
       writer.uint32(16).uint64(message.poolId);
     }
     for (const v of message.routes) {
@@ -1931,11 +1916,11 @@ export const EstimateSwapExactAmountOutRequest = {
     object: Partial<EstimateSwapExactAmountOutRequest>,
   ): EstimateSwapExactAmountOutRequest {
     const message = createBaseEstimateSwapExactAmountOutRequest();
-    message.sender = object.sender ?? '';
+    message.sender = object.sender ?? undefined;
     message.poolId =
       object.poolId !== undefined && object.poolId !== null
         ? BigInt(object.poolId.toString())
-        : BigInt(0);
+        : undefined;
     message.routes =
       object.routes?.map(e => SwapAmountOutRoute.fromPartial(e)) || [];
     message.tokenOut = object.tokenOut ?? '';
@@ -1962,9 +1947,9 @@ export const EstimateSwapExactAmountOutRequest = {
     message: EstimateSwapExactAmountOutRequest,
   ): EstimateSwapExactAmountOutRequestAmino {
     const obj: any = {};
-    obj.sender = message.sender === '' ? undefined : message.sender;
+    obj.sender = message.sender === null ? undefined : message.sender;
     obj.pool_id =
-      message.poolId !== BigInt(0) ? message.poolId.toString() : undefined;
+      message.poolId !== BigInt(0) ? message.poolId?.toString() : undefined;
     if (message.routes) {
       obj.routes = message.routes.map(e =>
         e ? SwapAmountOutRoute.toAmino(e) : undefined,
@@ -2004,7 +1989,7 @@ GlobalDecoderRegistry.register(
 );
 function createBaseEstimateSwapExactAmountOutWithPrimitiveTypesRequest(): EstimateSwapExactAmountOutWithPrimitiveTypesRequest {
   return {
-    poolId: BigInt(0),
+    poolId: undefined,
     routesPoolId: [],
     routesTokenInDenom: [],
     tokenOut: '',
@@ -2018,8 +2003,7 @@ export const EstimateSwapExactAmountOutWithPrimitiveTypesRequest = {
       o &&
       (o.$typeUrl ===
         EstimateSwapExactAmountOutWithPrimitiveTypesRequest.typeUrl ||
-        (typeof o.poolId === 'bigint' &&
-          Array.isArray(o.routesPoolId) &&
+        (Array.isArray(o.routesPoolId) &&
           (!o.routesPoolId.length || typeof o.routesPoolId[0] === 'bigint') &&
           Array.isArray(o.routesTokenInDenom) &&
           (!o.routesTokenInDenom.length ||
@@ -2034,8 +2018,7 @@ export const EstimateSwapExactAmountOutWithPrimitiveTypesRequest = {
       o &&
       (o.$typeUrl ===
         EstimateSwapExactAmountOutWithPrimitiveTypesRequest.typeUrl ||
-        (typeof o.pool_id === 'bigint' &&
-          Array.isArray(o.routes_pool_id) &&
+        (Array.isArray(o.routes_pool_id) &&
           (!o.routes_pool_id.length ||
             typeof o.routes_pool_id[0] === 'bigint') &&
           Array.isArray(o.routes_token_in_denom) &&
@@ -2051,8 +2034,7 @@ export const EstimateSwapExactAmountOutWithPrimitiveTypesRequest = {
       o &&
       (o.$typeUrl ===
         EstimateSwapExactAmountOutWithPrimitiveTypesRequest.typeUrl ||
-        (typeof o.pool_id === 'bigint' &&
-          Array.isArray(o.routes_pool_id) &&
+        (Array.isArray(o.routes_pool_id) &&
           (!o.routes_pool_id.length ||
             typeof o.routes_pool_id[0] === 'bigint') &&
           Array.isArray(o.routes_token_in_denom) &&
@@ -2065,7 +2047,7 @@ export const EstimateSwapExactAmountOutWithPrimitiveTypesRequest = {
     message: EstimateSwapExactAmountOutWithPrimitiveTypesRequest,
     writer: BinaryWriter = BinaryWriter.create(),
   ): BinaryWriter {
-    if (message.poolId !== BigInt(0)) {
+    if (message.poolId !== undefined) {
       writer.uint32(8).uint64(message.poolId);
     }
     writer.uint32(18).fork();
@@ -2127,7 +2109,7 @@ export const EstimateSwapExactAmountOutWithPrimitiveTypesRequest = {
     message.poolId =
       object.poolId !== undefined && object.poolId !== null
         ? BigInt(object.poolId.toString())
-        : BigInt(0);
+        : undefined;
     message.routesPoolId =
       object.routesPoolId?.map(e => BigInt(e.toString())) || [];
     message.routesTokenInDenom = object.routesTokenInDenom?.map(e => e) || [];
@@ -2155,7 +2137,7 @@ export const EstimateSwapExactAmountOutWithPrimitiveTypesRequest = {
   ): EstimateSwapExactAmountOutWithPrimitiveTypesRequestAmino {
     const obj: any = {};
     obj.pool_id =
-      message.poolId !== BigInt(0) ? message.poolId.toString() : undefined;
+      message.poolId !== BigInt(0) ? message.poolId?.toString() : undefined;
     if (message.routesPoolId) {
       obj.routes_pool_id = message.routesPoolId.map(e => e.toString());
     } else {
@@ -2318,7 +2300,7 @@ export const EstimateSinglePoolSwapExactAmountOutRequest = {
   ): EstimateSinglePoolSwapExactAmountOutRequestAmino {
     const obj: any = {};
     obj.pool_id =
-      message.poolId !== BigInt(0) ? message.poolId.toString() : undefined;
+      message.poolId !== BigInt(0) ? message.poolId?.toString() : undefined;
     obj.token_in_denom =
       message.tokenInDenom === '' ? undefined : message.tokenInDenom;
     obj.token_out = message.tokenOut === '' ? undefined : message.tokenOut;
@@ -2601,7 +2583,7 @@ export const NumPoolsResponse = {
   toAmino(message: NumPoolsResponse): NumPoolsResponseAmino {
     const obj: any = {};
     obj.num_pools =
-      message.numPools !== BigInt(0) ? message.numPools.toString() : undefined;
+      message.numPools !== BigInt(0) ? message.numPools?.toString() : undefined;
     return obj;
   },
   fromAminoMsg(object: NumPoolsResponseAminoMsg): NumPoolsResponse {
@@ -2688,7 +2670,7 @@ export const PoolRequest = {
   toAmino(message: PoolRequest): PoolRequestAmino {
     const obj: any = {};
     obj.pool_id =
-      message.poolId !== BigInt(0) ? message.poolId.toString() : undefined;
+      message.poolId !== BigInt(0) ? message.poolId?.toString() : undefined;
     return obj;
   },
   fromAminoMsg(object: PoolRequestAminoMsg): PoolRequest {
@@ -3313,7 +3295,7 @@ export const SpotPriceRequest = {
   toAmino(message: SpotPriceRequest): SpotPriceRequestAmino {
     const obj: any = {};
     obj.pool_id =
-      message.poolId !== BigInt(0) ? message.poolId.toString() : undefined;
+      message.poolId !== BigInt(0) ? message.poolId?.toString() : undefined;
     obj.base_asset_denom =
       message.baseAssetDenom === '' ? undefined : message.baseAssetDenom;
     obj.quote_asset_denom =
@@ -3504,7 +3486,7 @@ export const TotalPoolLiquidityRequest = {
   toAmino(message: TotalPoolLiquidityRequest): TotalPoolLiquidityRequestAmino {
     const obj: any = {};
     obj.pool_id =
-      message.poolId !== BigInt(0) ? message.poolId.toString() : undefined;
+      message.poolId !== BigInt(0) ? message.poolId?.toString() : undefined;
     return obj;
   },
   fromAminoMsg(
@@ -3899,7 +3881,7 @@ export const TotalVolumeForPoolRequest = {
   toAmino(message: TotalVolumeForPoolRequest): TotalVolumeForPoolRequestAmino {
     const obj: any = {};
     obj.pool_id =
-      message.poolId !== BigInt(0) ? message.poolId.toString() : undefined;
+      message.poolId !== BigInt(0) ? message.poolId?.toString() : undefined;
     return obj;
   },
   fromAminoMsg(
@@ -4430,7 +4412,7 @@ export const EstimateTradeBasedOnPriceImpactRequest = {
     obj.to_coin_denom =
       message.toCoinDenom === '' ? undefined : message.toCoinDenom;
     obj.pool_id =
-      message.poolId !== BigInt(0) ? message.poolId.toString() : undefined;
+      message.poolId !== BigInt(0) ? message.poolId?.toString() : undefined;
     obj.max_price_impact =
       message.maxPriceImpact === '' ? undefined : message.maxPriceImpact;
     obj.external_price =
@@ -5793,7 +5775,7 @@ export const RegisteredAlloyedPoolFromPoolIdRequest = {
   ): RegisteredAlloyedPoolFromPoolIdRequestAmino {
     const obj: any = {};
     obj.pool_id =
-      message.poolId !== BigInt(0) ? message.poolId.toString() : undefined;
+      message.poolId !== BigInt(0) ? message.poolId?.toString() : undefined;
     return obj;
   },
   fromAminoMsg(

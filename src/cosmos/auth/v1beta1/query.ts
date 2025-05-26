@@ -2534,10 +2534,10 @@ export const QueryAccountAddressByIDRequest = {
     message: QueryAccountAddressByIDRequest,
   ): QueryAccountAddressByIDRequestAmino {
     const obj: any = {};
-    obj.id = message.id !== BigInt(0) ? message.id.toString() : undefined;
+    obj.id = message.id !== BigInt(0) ? message.id?.toString() : undefined;
     obj.account_id =
       message.accountId !== BigInt(0)
-        ? message.accountId.toString()
+        ? message.accountId?.toString()
         : undefined;
     return obj;
   },

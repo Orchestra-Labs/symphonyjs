@@ -374,7 +374,7 @@ export const Plan = {
       ? Timestamp.toAmino(toTimestamp(message.time))
       : new Date();
     obj.height =
-      message.height !== BigInt(0) ? message.height.toString() : undefined;
+      message.height !== BigInt(0) ? message.height?.toString() : undefined;
     obj.info = message.info === '' ? undefined : message.info;
     obj.upgraded_client_state = message.upgradedClientState
       ? Any.toAmino(message.upgradedClientState)
@@ -778,7 +778,7 @@ export const ModuleVersion = {
     const obj: any = {};
     obj.name = message.name === '' ? undefined : message.name;
     obj.version =
-      message.version !== BigInt(0) ? message.version.toString() : undefined;
+      message.version !== BigInt(0) ? message.version?.toString() : undefined;
     return obj;
   },
   fromAminoMsg(object: ModuleVersionAminoMsg): ModuleVersion {

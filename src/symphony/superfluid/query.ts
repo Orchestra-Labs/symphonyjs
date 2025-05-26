@@ -1544,7 +1544,7 @@ export const SuperfluidIntermediaryAccountInfo = {
     obj.denom = message.denom === '' ? undefined : message.denom;
     obj.val_addr = message.valAddr === '' ? undefined : message.valAddr;
     obj.gauge_id =
-      message.gaugeId !== BigInt(0) ? message.gaugeId.toString() : undefined;
+      message.gaugeId !== BigInt(0) ? message.gaugeId?.toString() : undefined;
     obj.address = message.address === '' ? undefined : message.address;
     return obj;
   },
@@ -1904,7 +1904,7 @@ export const ConnectedIntermediaryAccountRequest = {
   ): ConnectedIntermediaryAccountRequestAmino {
     const obj: any = {};
     obj.lock_id =
-      message.lockId !== BigInt(0) ? message.lockId.toString() : undefined;
+      message.lockId !== BigInt(0) ? message.lockId?.toString() : undefined;
     return obj;
   },
   fromAminoMsg(

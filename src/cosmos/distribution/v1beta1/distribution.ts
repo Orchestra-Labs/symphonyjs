@@ -903,7 +903,7 @@ export const ValidatorCurrentRewards = {
       obj.rewards = message.rewards;
     }
     obj.period =
-      message.period !== BigInt(0) ? message.period.toString() : undefined;
+      message.period !== BigInt(0) ? message.period?.toString() : undefined;
     return obj;
   },
   fromAminoMsg(
@@ -1300,7 +1300,7 @@ export const ValidatorSlashEvent = {
     const obj: any = {};
     obj.validator_period =
       message.validatorPeriod !== BigInt(0)
-        ? message.validatorPeriod.toString()
+        ? message.validatorPeriod?.toString()
         : undefined;
     obj.fraction = message.fraction === '' ? undefined : message.fraction;
     return obj;
@@ -1854,10 +1854,10 @@ export const DelegatorStartingInfo = {
     const obj: any = {};
     obj.previous_period =
       message.previousPeriod !== BigInt(0)
-        ? message.previousPeriod.toString()
+        ? message.previousPeriod?.toString()
         : undefined;
     obj.stake = message.stake ?? '';
-    obj.height = message.height ? message.height.toString() : '0';
+    obj.height = message.height ? message.height?.toString() : '0';
     return obj;
   },
   fromAminoMsg(object: DelegatorStartingInfoAminoMsg): DelegatorStartingInfo {

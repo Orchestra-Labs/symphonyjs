@@ -134,7 +134,7 @@ export interface PruningState {
   lastKeptTime: Date;
   /** Deprecated: This field is deprecated. */
   /** @deprecated */
-  lastKeySeen: Uint8Array;
+  lastKeySeen?: Uint8Array;
   /**
    * last_seen_pool_id is the pool_id that we will begin pruning in the next
    * block. This value starts at the highest pool_id at time of epoch, and
@@ -187,7 +187,7 @@ export interface PruningStateSDKType {
   is_pruning: boolean;
   last_kept_time: Date;
   /** @deprecated */
-  last_key_seen: Uint8Array;
+  last_key_seen?: Uint8Array;
   last_seen_pool_id: bigint;
 }
 function createBaseTwapRecord(): TwapRecord {
@@ -473,12 +473,12 @@ export const TwapRecord = {
   toAmino(message: TwapRecord): TwapRecordAmino {
     const obj: any = {};
     obj.pool_id =
-      message.poolId !== BigInt(0) ? message.poolId.toString() : undefined;
+      message.poolId !== BigInt(0) ? message.poolId?.toString() : undefined;
     obj.asset0_denom =
       message.asset0Denom === '' ? undefined : message.asset0Denom;
     obj.asset1_denom =
       message.asset1Denom === '' ? undefined : message.asset1Denom;
-    obj.height = message.height ? message.height.toString() : '0';
+    obj.height = message.height ? message.height?.toString() : '0';
     obj.time = message.time
       ? Timestamp.toAmino(toTimestamp(message.time))
       : undefined;
@@ -524,7 +524,7 @@ function createBasePruningState(): PruningState {
   return {
     isPruning: false,
     lastKeptTime: new Date(),
-    lastKeySeen: new Uint8Array(),
+    lastKeySeen: undefined,
     lastSeenPoolId: BigInt(0),
   };
 }
@@ -536,8 +536,6 @@ export const PruningState = {
       (o.$typeUrl === PruningState.typeUrl ||
         (typeof o.isPruning === 'boolean' &&
           Timestamp.is(o.lastKeptTime) &&
-          (o.lastKeySeen instanceof Uint8Array ||
-            typeof o.lastKeySeen === 'string') &&
           typeof o.lastSeenPoolId === 'bigint'))
     );
   },
@@ -547,8 +545,6 @@ export const PruningState = {
       (o.$typeUrl === PruningState.typeUrl ||
         (typeof o.is_pruning === 'boolean' &&
           Timestamp.isSDK(o.last_kept_time) &&
-          (o.last_key_seen instanceof Uint8Array ||
-            typeof o.last_key_seen === 'string') &&
           typeof o.last_seen_pool_id === 'bigint'))
     );
   },
@@ -558,8 +554,6 @@ export const PruningState = {
       (o.$typeUrl === PruningState.typeUrl ||
         (typeof o.is_pruning === 'boolean' &&
           Timestamp.isAmino(o.last_kept_time) &&
-          (o.last_key_seen instanceof Uint8Array ||
-            typeof o.last_key_seen === 'string') &&
           typeof o.last_seen_pool_id === 'bigint'))
     );
   },
@@ -576,7 +570,7 @@ export const PruningState = {
         writer.uint32(18).fork(),
       ).ldelim();
     }
-    if (message.lastKeySeen.length !== 0) {
+    if (message.lastKeySeen !== undefined) {
       writer.uint32(26).bytes(message.lastKeySeen);
     }
     if (message.lastSeenPoolId !== BigInt(0)) {
@@ -617,7 +611,7 @@ export const PruningState = {
     const message = createBasePruningState();
     message.isPruning = object.isPruning ?? false;
     message.lastKeptTime = object.lastKeptTime ?? undefined;
-    message.lastKeySeen = object.lastKeySeen ?? new Uint8Array();
+    message.lastKeySeen = object.lastKeySeen ?? undefined;
     message.lastSeenPoolId =
       object.lastSeenPoolId !== undefined && object.lastSeenPoolId !== null
         ? BigInt(object.lastSeenPoolId.toString())
@@ -657,7 +651,7 @@ export const PruningState = {
       : undefined;
     obj.last_seen_pool_id =
       message.lastSeenPoolId !== BigInt(0)
-        ? message.lastSeenPoolId.toString()
+        ? message.lastSeenPoolId?.toString()
         : undefined;
     return obj;
   },

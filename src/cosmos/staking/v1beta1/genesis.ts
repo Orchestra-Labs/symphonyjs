@@ -17,8 +17,8 @@ import {
   RedelegationSDKType,
 } from './staking';
 import { BinaryReader, BinaryWriter } from '../../../binary';
-import { bytesFromBase64, base64FromBytes } from '../../../helpers';
 import { GlobalDecoderRegistry } from '../../../registry';
+import { bytesFromBase64, base64FromBytes } from '../../../helpers';
 /** GenesisState defines the staking module's genesis state. */
 export interface GenesisState {
   /** params defines all the parameters of related to deposit. */
@@ -486,7 +486,7 @@ export const LastValidatorPower = {
     const obj: any = {};
     obj.address = message.address === '' ? undefined : message.address;
     obj.power =
-      message.power !== BigInt(0) ? message.power.toString() : undefined;
+      message.power !== BigInt(0) ? message.power?.toString() : undefined;
     return obj;
   },
   fromAminoMsg(object: LastValidatorPowerAminoMsg): LastValidatorPower {

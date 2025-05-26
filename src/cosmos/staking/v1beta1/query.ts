@@ -4026,7 +4026,7 @@ export const QueryHistoricalInfoRequest = {
   ): QueryHistoricalInfoRequestAmino {
     const obj: any = {};
     obj.height =
-      message.height !== BigInt(0) ? message.height.toString() : undefined;
+      message.height !== BigInt(0) ? message.height?.toString() : undefined;
     return obj;
   },
   fromAminoMsg(

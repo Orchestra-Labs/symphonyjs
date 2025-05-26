@@ -314,7 +314,7 @@ export const ConfigResponse = {
       message.pruningInterval === '' ? undefined : message.pruningInterval;
     obj.halt_height =
       message.haltHeight !== BigInt(0)
-        ? message.haltHeight.toString()
+        ? message.haltHeight?.toString()
         : undefined;
     return obj;
   },
@@ -565,10 +565,10 @@ export const StatusResponse = {
     const obj: any = {};
     obj.earliest_store_height =
       message.earliestStoreHeight !== BigInt(0)
-        ? message.earliestStoreHeight.toString()
+        ? message.earliestStoreHeight?.toString()
         : undefined;
     obj.height =
-      message.height !== BigInt(0) ? message.height.toString() : undefined;
+      message.height !== BigInt(0) ? message.height?.toString() : undefined;
     obj.timestamp = message.timestamp
       ? Timestamp.toAmino(toTimestamp(message.timestamp))
       : undefined;

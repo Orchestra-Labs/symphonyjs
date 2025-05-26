@@ -503,7 +503,7 @@ export const SignatureDescriptor = {
       ? SignatureDescriptor_Data.toAmino(message.data)
       : undefined;
     obj.sequence =
-      message.sequence !== BigInt(0) ? message.sequence.toString() : undefined;
+      message.sequence !== BigInt(0) ? message.sequence?.toString() : undefined;
     return obj;
   },
   fromAminoMsg(object: SignatureDescriptorAminoMsg): SignatureDescriptor {

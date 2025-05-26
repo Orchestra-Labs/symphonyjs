@@ -7,8 +7,8 @@ import {
 import { Timestamp } from '../../google/protobuf/timestamp';
 import { Coin, CoinAmino, CoinSDKType } from '../../cosmos/base/v1beta1/coin';
 import { BinaryReader, BinaryWriter } from '../../binary';
-import { toTimestamp, fromTimestamp, isSet } from '../../helpers';
 import { GlobalDecoderRegistry } from '../../registry';
+import { toTimestamp, fromTimestamp, isSet } from '../../helpers';
 /**
  * LockQueryType defines the type of the lock query that can
  * either be by duration or start time of the lock.
@@ -453,7 +453,7 @@ export const PeriodLock = {
   },
   toAmino(message: PeriodLock): PeriodLockAmino {
     const obj: any = {};
-    obj.ID = message.iD !== BigInt(0) ? message.iD.toString() : undefined;
+    obj.ID = message.iD !== BigInt(0) ? message.iD?.toString() : undefined;
     obj.owner = message.owner === '' ? undefined : message.owner;
     obj.duration = message.duration
       ? Duration.toAmino(message.duration)
@@ -766,7 +766,7 @@ export const SyntheticLock = {
     const obj: any = {};
     obj.underlying_lock_id =
       message.underlyingLockId !== BigInt(0)
-        ? message.underlyingLockId.toString()
+        ? message.underlyingLockId?.toString()
         : undefined;
     obj.synth_denom =
       message.synthDenom === '' ? undefined : message.synthDenom;

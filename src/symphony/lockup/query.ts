@@ -2976,7 +2976,7 @@ export const LockedRequest = {
   toAmino(message: LockedRequest): LockedRequestAmino {
     const obj: any = {};
     obj.lock_id =
-      message.lockId !== BigInt(0) ? message.lockId.toString() : undefined;
+      message.lockId !== BigInt(0) ? message.lockId?.toString() : undefined;
     return obj;
   },
   fromAminoMsg(object: LockedRequestAminoMsg): LockedRequest {
@@ -3154,7 +3154,7 @@ export const LockRewardReceiverRequest = {
   toAmino(message: LockRewardReceiverRequest): LockRewardReceiverRequestAmino {
     const obj: any = {};
     obj.lock_id =
-      message.lockId !== BigInt(0) ? message.lockId.toString() : undefined;
+      message.lockId !== BigInt(0) ? message.lockId?.toString() : undefined;
     return obj;
   },
   fromAminoMsg(
@@ -3434,7 +3434,7 @@ export const NextLockIDResponse = {
   toAmino(message: NextLockIDResponse): NextLockIDResponseAmino {
     const obj: any = {};
     obj.lock_id =
-      message.lockId !== BigInt(0) ? message.lockId.toString() : undefined;
+      message.lockId !== BigInt(0) ? message.lockId?.toString() : undefined;
     return obj;
   },
   fromAminoMsg(object: NextLockIDResponseAminoMsg): NextLockIDResponse {
@@ -3536,7 +3536,7 @@ export const SyntheticLockupsByLockupIDRequest = {
   ): SyntheticLockupsByLockupIDRequestAmino {
     const obj: any = {};
     obj.lock_id =
-      message.lockId !== BigInt(0) ? message.lockId.toString() : undefined;
+      message.lockId !== BigInt(0) ? message.lockId?.toString() : undefined;
     return obj;
   },
   fromAminoMsg(
@@ -3767,7 +3767,7 @@ export const SyntheticLockupByLockupIDRequest = {
   ): SyntheticLockupByLockupIDRequestAmino {
     const obj: any = {};
     obj.lock_id =
-      message.lockId !== BigInt(0) ? message.lockId.toString() : undefined;
+      message.lockId !== BigInt(0) ? message.lockId?.toString() : undefined;
     return obj;
   },
   fromAminoMsg(

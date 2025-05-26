@@ -7,8 +7,8 @@ import {
 import { Coin, CoinAmino, CoinSDKType } from '../../cosmos/base/v1beta1/coin';
 import { Timestamp } from '../../google/protobuf/timestamp';
 import { BinaryReader, BinaryWriter } from '../../binary';
-import { toTimestamp, fromTimestamp } from '../../helpers';
 import { GlobalDecoderRegistry } from '../../registry';
+import { toTimestamp, fromTimestamp } from '../../helpers';
 /** MsgCreateGauge creates a gauge to distribute rewards to users */
 export interface MsgCreateGauge {
   /**
@@ -409,10 +409,10 @@ export const MsgCreateGauge = {
       : undefined;
     obj.num_epochs_paid_over =
       message.numEpochsPaidOver !== BigInt(0)
-        ? message.numEpochsPaidOver.toString()
+        ? message.numEpochsPaidOver?.toString()
         : undefined;
     obj.pool_id =
-      message.poolId !== BigInt(0) ? message.poolId.toString() : undefined;
+      message.poolId !== BigInt(0) ? message.poolId?.toString() : undefined;
     return obj;
   },
   fromAminoMsg(object: MsgCreateGaugeAminoMsg): MsgCreateGauge {
@@ -618,7 +618,7 @@ export const MsgAddToGauge = {
     const obj: any = {};
     obj.owner = message.owner === '' ? undefined : message.owner;
     obj.gauge_id =
-      message.gaugeId !== BigInt(0) ? message.gaugeId.toString() : undefined;
+      message.gaugeId !== BigInt(0) ? message.gaugeId?.toString() : undefined;
     if (message.rewards) {
       obj.rewards = message.rewards.map(e => (e ? Coin.toAmino(e) : undefined));
     } else {
@@ -860,7 +860,7 @@ export const MsgCreateGroup = {
     }
     obj.num_epochs_paid_over =
       message.numEpochsPaidOver !== BigInt(0)
-        ? message.numEpochsPaidOver.toString()
+        ? message.numEpochsPaidOver?.toString()
         : undefined;
     obj.owner = message.owner === '' ? undefined : message.owner;
     if (message.poolIds) {
@@ -973,7 +973,7 @@ export const MsgCreateGroupResponse = {
   toAmino(message: MsgCreateGroupResponse): MsgCreateGroupResponseAmino {
     const obj: any = {};
     obj.group_id =
-      message.groupId !== BigInt(0) ? message.groupId.toString() : undefined;
+      message.groupId !== BigInt(0) ? message.groupId?.toString() : undefined;
     return obj;
   },
   fromAminoMsg(object: MsgCreateGroupResponseAminoMsg): MsgCreateGroupResponse {

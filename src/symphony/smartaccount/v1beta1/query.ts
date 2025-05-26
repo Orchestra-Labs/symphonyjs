@@ -608,7 +608,7 @@ export const GetAuthenticatorRequest = {
     obj.account = message.account === '' ? undefined : message.account;
     obj.authenticator_id =
       message.authenticatorId !== BigInt(0)
-        ? message.authenticatorId.toString()
+        ? message.authenticatorId?.toString()
         : undefined;
     return obj;
   },

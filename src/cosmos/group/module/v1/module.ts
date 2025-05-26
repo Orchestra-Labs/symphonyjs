@@ -152,7 +152,7 @@ export const Module = {
       : Duration.toAmino(Duration.fromPartial({}));
     obj.max_metadata_len =
       message.maxMetadataLen !== BigInt(0)
-        ? message.maxMetadataLen.toString()
+        ? message.maxMetadataLen?.toString()
         : undefined;
     return obj;
   },

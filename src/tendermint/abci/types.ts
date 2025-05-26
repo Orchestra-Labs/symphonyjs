@@ -2209,11 +2209,11 @@ export const RequestInfo = {
     obj.version = message.version === '' ? undefined : message.version;
     obj.block_version =
       message.blockVersion !== BigInt(0)
-        ? message.blockVersion.toString()
+        ? message.blockVersion?.toString()
         : undefined;
     obj.p2p_version =
       message.p2pVersion !== BigInt(0)
-        ? message.p2pVersion.toString()
+        ? message.p2pVersion?.toString()
         : undefined;
     obj.abci_version =
       message.abciVersion === '' ? undefined : message.abciVersion;
@@ -2424,7 +2424,7 @@ export const RequestInitChain = {
       : undefined;
     obj.initial_height =
       message.initialHeight !== BigInt(0)
-        ? message.initialHeight.toString()
+        ? message.initialHeight?.toString()
         : undefined;
     return obj;
   },
@@ -2562,7 +2562,7 @@ export const RequestQuery = {
     obj.data = message.data ? base64FromBytes(message.data) : undefined;
     obj.path = message.path === '' ? undefined : message.path;
     obj.height =
-      message.height !== BigInt(0) ? message.height.toString() : undefined;
+      message.height !== BigInt(0) ? message.height?.toString() : undefined;
     obj.prove = message.prove === false ? undefined : message.prove;
     return obj;
   },
@@ -3011,7 +3011,7 @@ export const RequestEndBlock = {
   toAmino(message: RequestEndBlock): RequestEndBlockAmino {
     const obj: any = {};
     obj.height =
-      message.height !== BigInt(0) ? message.height.toString() : undefined;
+      message.height !== BigInt(0) ? message.height?.toString() : undefined;
     return obj;
   },
   fromAminoMsg(object: RequestEndBlockAminoMsg): RequestEndBlock {
@@ -3388,7 +3388,7 @@ export const RequestLoadSnapshotChunk = {
   toAmino(message: RequestLoadSnapshotChunk): RequestLoadSnapshotChunkAmino {
     const obj: any = {};
     obj.height =
-      message.height !== BigInt(0) ? message.height.toString() : undefined;
+      message.height !== BigInt(0) ? message.height?.toString() : undefined;
     obj.format = message.format === 0 ? undefined : message.format;
     obj.chunk = message.chunk === 0 ? undefined : message.chunk;
     return obj;
@@ -3771,7 +3771,7 @@ export const RequestPrepareProposal = {
     const obj: any = {};
     obj.max_tx_bytes =
       message.maxTxBytes !== BigInt(0)
-        ? message.maxTxBytes.toString()
+        ? message.maxTxBytes?.toString()
         : undefined;
     if (message.txs) {
       obj.txs = message.txs.map(e => base64FromBytes(e));
@@ -3789,7 +3789,7 @@ export const RequestPrepareProposal = {
       obj.misbehavior = message.misbehavior;
     }
     obj.height =
-      message.height !== BigInt(0) ? message.height.toString() : undefined;
+      message.height !== BigInt(0) ? message.height?.toString() : undefined;
     obj.time = message.time
       ? Timestamp.toAmino(toTimestamp(message.time))
       : undefined;
@@ -4055,7 +4055,7 @@ export const RequestProcessProposal = {
     }
     obj.hash = message.hash ? base64FromBytes(message.hash) : undefined;
     obj.height =
-      message.height !== BigInt(0) ? message.height.toString() : undefined;
+      message.height !== BigInt(0) ? message.height?.toString() : undefined;
     obj.time = message.time
       ? Timestamp.toAmino(toTimestamp(message.time))
       : undefined;
@@ -4902,11 +4902,11 @@ export const ResponseInfo = {
     obj.version = message.version === '' ? undefined : message.version;
     obj.app_version =
       message.appVersion !== BigInt(0)
-        ? message.appVersion.toString()
+        ? message.appVersion?.toString()
         : undefined;
     obj.last_block_height =
       message.lastBlockHeight !== BigInt(0)
-        ? message.lastBlockHeight.toString()
+        ? message.lastBlockHeight?.toString()
         : undefined;
     obj.last_block_app_hash = message.lastBlockAppHash
       ? base64FromBytes(message.lastBlockAppHash)
@@ -5266,14 +5266,14 @@ export const ResponseQuery = {
     obj.log = message.log === '' ? undefined : message.log;
     obj.info = message.info === '' ? undefined : message.info;
     obj.index =
-      message.index !== BigInt(0) ? message.index.toString() : undefined;
+      message.index !== BigInt(0) ? message.index?.toString() : undefined;
     obj.key = message.key ? base64FromBytes(message.key) : undefined;
     obj.value = message.value ? base64FromBytes(message.value) : undefined;
     obj.proof_ops = message.proofOps
       ? ProofOps.toAmino(message.proofOps)
       : undefined;
     obj.height =
-      message.height !== BigInt(0) ? message.height.toString() : undefined;
+      message.height !== BigInt(0) ? message.height?.toString() : undefined;
     obj.codespace = message.codespace === '' ? undefined : message.codespace;
     return obj;
   },
@@ -5616,10 +5616,10 @@ export const ResponseCheckTx = {
     obj.info = message.info === '' ? undefined : message.info;
     obj.gas_wanted =
       message.gasWanted !== BigInt(0)
-        ? message.gasWanted.toString()
+        ? message.gasWanted?.toString()
         : undefined;
     obj.gas_used =
-      message.gasUsed !== BigInt(0) ? message.gasUsed.toString() : undefined;
+      message.gasUsed !== BigInt(0) ? message.gasUsed?.toString() : undefined;
     if (message.events) {
       obj.events = message.events.map(e => (e ? Event.toAmino(e) : undefined));
     } else {
@@ -5628,7 +5628,7 @@ export const ResponseCheckTx = {
     obj.codespace = message.codespace === '' ? undefined : message.codespace;
     obj.sender = message.sender === '' ? undefined : message.sender;
     obj.priority =
-      message.priority !== BigInt(0) ? message.priority.toString() : undefined;
+      message.priority !== BigInt(0) ? message.priority?.toString() : undefined;
     obj.mempool_error =
       message.mempoolError === '' ? undefined : message.mempoolError;
     return obj;
@@ -5830,10 +5830,10 @@ export const ResponseDeliverTx = {
     obj.info = message.info === '' ? undefined : message.info;
     obj.gas_wanted =
       message.gasWanted !== BigInt(0)
-        ? message.gasWanted.toString()
+        ? message.gasWanted?.toString()
         : undefined;
     obj.gas_used =
-      message.gasUsed !== BigInt(0) ? message.gasUsed.toString() : undefined;
+      message.gasUsed !== BigInt(0) ? message.gasUsed?.toString() : undefined;
     if (message.events) {
       obj.events = message.events.map(e => (e ? Event.toAmino(e) : undefined));
     } else {
@@ -6100,7 +6100,7 @@ export const ResponseCommit = {
     obj.data = message.data ? base64FromBytes(message.data) : undefined;
     obj.retain_height =
       message.retainHeight !== BigInt(0)
-        ? message.retainHeight.toString()
+        ? message.retainHeight?.toString()
         : undefined;
     return obj;
   },
@@ -7369,7 +7369,7 @@ export const TxResult = {
   toAmino(message: TxResult): TxResultAmino {
     const obj: any = {};
     obj.height =
-      message.height !== BigInt(0) ? message.height.toString() : undefined;
+      message.height !== BigInt(0) ? message.height?.toString() : undefined;
     obj.index = message.index === 0 ? undefined : message.index;
     obj.tx = message.tx ? base64FromBytes(message.tx) : undefined;
     obj.result = message.result
@@ -7484,7 +7484,7 @@ export const Validator = {
       ? base64FromBytes(message.address)
       : undefined;
     obj.power =
-      message.power !== BigInt(0) ? message.power.toString() : undefined;
+      message.power !== BigInt(0) ? message.power?.toString() : undefined;
     return obj;
   },
   fromAminoMsg(object: ValidatorAminoMsg): Validator {
@@ -7594,7 +7594,7 @@ export const ValidatorUpdate = {
       ? PublicKey.toAmino(message.pubKey)
       : undefined;
     obj.power =
-      message.power !== BigInt(0) ? message.power.toString() : undefined;
+      message.power !== BigInt(0) ? message.power?.toString() : undefined;
     return obj;
   },
   fromAminoMsg(object: ValidatorUpdateAminoMsg): ValidatorUpdate {
@@ -8006,13 +8006,13 @@ export const Misbehavior = {
       ? Validator.toAmino(message.validator)
       : undefined;
     obj.height =
-      message.height !== BigInt(0) ? message.height.toString() : undefined;
+      message.height !== BigInt(0) ? message.height?.toString() : undefined;
     obj.time = message.time
       ? Timestamp.toAmino(toTimestamp(message.time))
       : undefined;
     obj.total_voting_power =
       message.totalVotingPower !== BigInt(0)
-        ? message.totalVotingPower.toString()
+        ? message.totalVotingPower?.toString()
         : undefined;
     return obj;
   },
@@ -8162,7 +8162,7 @@ export const Snapshot = {
   toAmino(message: Snapshot): SnapshotAmino {
     const obj: any = {};
     obj.height =
-      message.height !== BigInt(0) ? message.height.toString() : undefined;
+      message.height !== BigInt(0) ? message.height?.toString() : undefined;
     obj.format = message.format === 0 ? undefined : message.format;
     obj.chunks = message.chunks === 0 ? undefined : message.chunks;
     obj.hash = message.hash ? base64FromBytes(message.hash) : undefined;

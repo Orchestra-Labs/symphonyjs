@@ -445,7 +445,7 @@ export const InternalGaugeRecord = {
   toAmino(message: InternalGaugeRecord): InternalGaugeRecordAmino {
     const obj: any = {};
     obj.gauge_id =
-      message.gaugeId !== BigInt(0) ? message.gaugeId.toString() : undefined;
+      message.gaugeId !== BigInt(0) ? message.gaugeId?.toString() : undefined;
     obj.current_weight =
       message.currentWeight === '' ? undefined : message.currentWeight;
     obj.cumulative_weight =
@@ -592,7 +592,7 @@ export const Group = {
     const obj: any = {};
     obj.group_gauge_id =
       message.groupGaugeId !== BigInt(0)
-        ? message.groupGaugeId.toString()
+        ? message.groupGaugeId?.toString()
         : undefined;
     obj.internal_gauge_info = message.internalGaugeInfo
       ? InternalGaugeInfo.toAmino(message.internalGaugeInfo)
