@@ -256,7 +256,7 @@ export const GenesisState = {
     }
     obj.last_gauge_id =
       message.lastGaugeId !== BigInt(0)
-        ? message.lastGaugeId.toString()
+        ? message.lastGaugeId?.toString()
         : undefined;
     if (message.groupGauges) {
       obj.group_gauges = message.groupGauges.map(e =>

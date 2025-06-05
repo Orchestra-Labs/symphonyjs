@@ -75,11 +75,6 @@ import {
   UpdateUnpoolWhiteListProposalSDKType,
 } from '../../../symphony/superfluid/v1beta1/gov';
 import {
-  UpdateFeeTokenProposal,
-  UpdateFeeTokenProposalProtoMsg,
-  UpdateFeeTokenProposalSDKType,
-} from '../../../symphony/txfees/v1beta1/gov';
-import {
   isSet,
   toTimestamp,
   fromTimestamp,
@@ -247,7 +242,7 @@ export interface WeightedVoteOptionAmino {
   /** option defines the valid vote options, it must not contain duplicate vote options. */
   option?: VoteOption;
   /** weight is the vote weight associated with the vote option. */
-  weight?: string;
+  weight: string;
 }
 export interface WeightedVoteOptionAminoMsg {
   type: 'cosmos-sdk/WeightedVoteOption';
@@ -364,7 +359,6 @@ export interface Proposal {
     | SetSuperfluidAssetsProposal
     | RemoveSuperfluidAssetsProposal
     | UpdateUnpoolWhiteListProposal
-    | UpdateFeeTokenProposal
     | Any
     | undefined;
   /** status defines the proposal status. */
@@ -409,7 +403,6 @@ export type ProposalEncoded = Omit<Proposal, 'content'> & {
     | SetSuperfluidAssetsProposalProtoMsg
     | RemoveSuperfluidAssetsProposalProtoMsg
     | UpdateUnpoolWhiteListProposalProtoMsg
-    | UpdateFeeTokenProposalProtoMsg
     | AnyProtoMsg
     | undefined;
 };
@@ -463,7 +456,6 @@ export interface ProposalSDKType {
     | SetSuperfluidAssetsProposalSDKType
     | RemoveSuperfluidAssetsProposalSDKType
     | UpdateUnpoolWhiteListProposalSDKType
-    | UpdateFeeTokenProposalSDKType
     | AnySDKType
     | undefined;
   status: ProposalStatus;
@@ -762,7 +754,7 @@ export const WeightedVoteOption = {
   toAmino(message: WeightedVoteOption): WeightedVoteOptionAmino {
     const obj: any = {};
     obj.option = message.option === 0 ? undefined : message.option;
-    obj.weight = message.weight === '' ? undefined : message.weight;
+    obj.weight = message.weight ?? '';
     return obj;
   },
   fromAminoMsg(object: WeightedVoteOptionAminoMsg): WeightedVoteOption {
@@ -1010,7 +1002,7 @@ export const Deposit = {
     const obj: any = {};
     obj.proposal_id =
       message.proposalId !== BigInt(0)
-        ? message.proposalId.toString()
+        ? message.proposalId?.toString()
         : undefined;
     obj.depositor = message.depositor === '' ? undefined : message.depositor;
     if (message.amount) {
@@ -1291,7 +1283,7 @@ export const Proposal = {
     const obj: any = {};
     obj.proposal_id =
       message.proposalId !== BigInt(0)
-        ? message.proposalId.toString()
+        ? message.proposalId?.toString()
         : undefined;
     obj.content = message.content
       ? GlobalDecoderRegistry.toAminoMsg(message.content)
@@ -1614,7 +1606,7 @@ export const Vote = {
   },
   toAmino(message: Vote): VoteAmino {
     const obj: any = {};
-    obj.proposal_id = message.proposalId ? message.proposalId.toString() : '0';
+    obj.proposal_id = message.proposalId ? message.proposalId?.toString() : '0';
     obj.voter = message.voter === '' ? undefined : message.voter;
     obj.option = message.option === 0 ? undefined : message.option;
     if (message.options) {

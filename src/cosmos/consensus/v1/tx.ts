@@ -47,7 +47,7 @@ export interface MsgUpdateParamsAmino {
   validator?: ValidatorParamsAmino;
 }
 export interface MsgUpdateParamsAminoMsg {
-  type: 'cosmos-sdk/MsgUpdateParams';
+  type: 'cosmos-sdk/x/consensus/MsgUpdateParams';
   value: MsgUpdateParamsAmino;
 }
 /** MsgUpdateParams is the Msg/UpdateParams request type. */
@@ -90,7 +90,7 @@ function createBaseMsgUpdateParams(): MsgUpdateParams {
 }
 export const MsgUpdateParams = {
   typeUrl: '/cosmos.consensus.v1.MsgUpdateParams',
-  aminoType: 'cosmos-sdk/MsgUpdateParams',
+  aminoType: 'cosmos-sdk/x/consensus/MsgUpdateParams',
   is(o: any): o is MsgUpdateParams {
     return (
       o &&
@@ -213,7 +213,7 @@ export const MsgUpdateParams = {
   },
   toAminoMsg(message: MsgUpdateParams): MsgUpdateParamsAminoMsg {
     return {
-      type: 'cosmos-sdk/MsgUpdateParams',
+      type: 'cosmos-sdk/x/consensus/MsgUpdateParams',
       value: MsgUpdateParams.toAmino(message),
     };
   },

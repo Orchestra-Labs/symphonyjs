@@ -360,7 +360,7 @@ export const EpochInfo = {
       : undefined;
     obj.current_epoch =
       message.currentEpoch !== BigInt(0)
-        ? message.currentEpoch.toString()
+        ? message.currentEpoch?.toString()
         : undefined;
     obj.current_epoch_start_time = message.currentEpochStartTime
       ? Timestamp.toAmino(toTimestamp(message.currentEpochStartTime))
@@ -371,7 +371,7 @@ export const EpochInfo = {
         : message.epochCountingStarted;
     obj.current_epoch_start_height =
       message.currentEpochStartHeight !== BigInt(0)
-        ? message.currentEpochStartHeight.toString()
+        ? message.currentEpochStartHeight?.toString()
         : undefined;
     return obj;
   },

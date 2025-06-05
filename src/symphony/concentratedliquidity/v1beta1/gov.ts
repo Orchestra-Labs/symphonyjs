@@ -119,7 +119,7 @@ export interface PoolRecord {
   tickSpacing: bigint;
   /** DEPRECATED */
   /** @deprecated */
-  exponentAtPriceOne: string;
+  exponentAtPriceOne?: string;
   spreadFactor: string;
 }
 export interface PoolRecordProtoMsg {
@@ -144,7 +144,7 @@ export interface PoolRecordSDKType {
   denom1: string;
   tick_spacing: bigint;
   /** @deprecated */
-  exponent_at_price_one: string;
+  exponent_at_price_one?: string;
   spread_factor: string;
 }
 function createBaseCreateConcentratedLiquidityPoolsProposal(): CreateConcentratedLiquidityPoolsProposal {
@@ -556,10 +556,10 @@ export const PoolIdToTickSpacingRecord = {
   toAmino(message: PoolIdToTickSpacingRecord): PoolIdToTickSpacingRecordAmino {
     const obj: any = {};
     obj.pool_id =
-      message.poolId !== BigInt(0) ? message.poolId.toString() : undefined;
+      message.poolId !== BigInt(0) ? message.poolId?.toString() : undefined;
     obj.new_tick_spacing =
       message.newTickSpacing !== BigInt(0)
-        ? message.newTickSpacing.toString()
+        ? message.newTickSpacing?.toString()
         : undefined;
     return obj;
   },
@@ -595,7 +595,7 @@ function createBasePoolRecord(): PoolRecord {
     denom0: '',
     denom1: '',
     tickSpacing: BigInt(0),
-    exponentAtPriceOne: '',
+    exponentAtPriceOne: undefined,
     spreadFactor: '',
   };
 }
@@ -608,7 +608,6 @@ export const PoolRecord = {
         (typeof o.denom0 === 'string' &&
           typeof o.denom1 === 'string' &&
           typeof o.tickSpacing === 'bigint' &&
-          typeof o.exponentAtPriceOne === 'string' &&
           typeof o.spreadFactor === 'string'))
     );
   },
@@ -619,7 +618,6 @@ export const PoolRecord = {
         (typeof o.denom0 === 'string' &&
           typeof o.denom1 === 'string' &&
           typeof o.tick_spacing === 'bigint' &&
-          typeof o.exponent_at_price_one === 'string' &&
           typeof o.spread_factor === 'string'))
     );
   },
@@ -630,7 +628,6 @@ export const PoolRecord = {
         (typeof o.denom0 === 'string' &&
           typeof o.denom1 === 'string' &&
           typeof o.tick_spacing === 'bigint' &&
-          typeof o.exponent_at_price_one === 'string' &&
           typeof o.spread_factor === 'string'))
     );
   },
@@ -647,7 +644,7 @@ export const PoolRecord = {
     if (message.tickSpacing !== BigInt(0)) {
       writer.uint32(24).uint64(message.tickSpacing);
     }
-    if (message.exponentAtPriceOne !== '') {
+    if (message.exponentAtPriceOne !== undefined) {
       writer.uint32(34).string(message.exponentAtPriceOne);
     }
     if (message.spreadFactor !== '') {
@@ -698,7 +695,7 @@ export const PoolRecord = {
       object.tickSpacing !== undefined && object.tickSpacing !== null
         ? BigInt(object.tickSpacing.toString())
         : BigInt(0);
-    message.exponentAtPriceOne = object.exponentAtPriceOne ?? '';
+    message.exponentAtPriceOne = object.exponentAtPriceOne ?? undefined;
     message.spreadFactor = object.spreadFactor ?? '';
     return message;
   },
@@ -730,10 +727,10 @@ export const PoolRecord = {
     obj.denom1 = message.denom1 === '' ? undefined : message.denom1;
     obj.tick_spacing =
       message.tickSpacing !== BigInt(0)
-        ? message.tickSpacing.toString()
+        ? message.tickSpacing?.toString()
         : undefined;
     obj.exponent_at_price_one =
-      message.exponentAtPriceOne === ''
+      message.exponentAtPriceOne === null
         ? undefined
         : message.exponentAtPriceOne;
     obj.spread_factor =

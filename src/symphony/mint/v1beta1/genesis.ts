@@ -161,7 +161,7 @@ export const GenesisState = {
     obj.params = message.params ? Params.toAmino(message.params) : undefined;
     obj.reduction_started_epoch =
       message.reductionStartedEpoch !== BigInt(0)
-        ? message.reductionStartedEpoch.toString()
+        ? message.reductionStartedEpoch?.toString()
         : undefined;
     return obj;
   },

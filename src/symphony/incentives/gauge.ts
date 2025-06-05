@@ -12,8 +12,8 @@ import {
   DurationSDKType,
 } from '../../google/protobuf/duration';
 import { BinaryReader, BinaryWriter } from '../../binary';
-import { toTimestamp, fromTimestamp } from '../../helpers';
 import { GlobalDecoderRegistry } from '../../registry';
+import { toTimestamp, fromTimestamp } from '../../helpers';
 /**
  * Gauge is an object that stores and distributes yields to recipients who
  * satisfy certain conditions. Currently gauges support conditions around the
@@ -334,7 +334,7 @@ export const Gauge = {
   },
   toAmino(message: Gauge): GaugeAmino {
     const obj: any = {};
-    obj.id = message.id !== BigInt(0) ? message.id.toString() : undefined;
+    obj.id = message.id !== BigInt(0) ? message.id?.toString() : undefined;
     obj.is_perpetual =
       message.isPerpetual === false ? undefined : message.isPerpetual;
     obj.distribute_to = message.distributeTo
@@ -350,11 +350,11 @@ export const Gauge = {
       : undefined;
     obj.num_epochs_paid_over =
       message.numEpochsPaidOver !== BigInt(0)
-        ? message.numEpochsPaidOver.toString()
+        ? message.numEpochsPaidOver?.toString()
         : undefined;
     obj.filled_epochs =
       message.filledEpochs !== BigInt(0)
-        ? message.filledEpochs.toString()
+        ? message.filledEpochs?.toString()
         : undefined;
     if (message.distributedCoins) {
       obj.distributed_coins = message.distributedCoins.map(e =>

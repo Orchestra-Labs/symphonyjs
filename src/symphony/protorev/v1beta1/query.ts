@@ -3109,7 +3109,7 @@ export const QueryGetProtoRevMaxPoolPointsPerBlockResponse = {
     const obj: any = {};
     obj.max_pool_points_per_block =
       message.maxPoolPointsPerBlock !== BigInt(0)
-        ? message.maxPoolPointsPerBlock.toString()
+        ? message.maxPoolPointsPerBlock?.toString()
         : undefined;
     return obj;
   },
@@ -3323,7 +3323,7 @@ export const QueryGetProtoRevMaxPoolPointsPerTxResponse = {
     const obj: any = {};
     obj.max_pool_points_per_tx =
       message.maxPoolPointsPerTx !== BigInt(0)
-        ? message.maxPoolPointsPerTx.toString()
+        ? message.maxPoolPointsPerTx?.toString()
         : undefined;
     return obj;
   },
@@ -3944,7 +3944,7 @@ export const QueryGetProtoRevPoolResponse = {
   ): QueryGetProtoRevPoolResponseAmino {
     const obj: any = {};
     obj.pool_id =
-      message.poolId !== BigInt(0) ? message.poolId.toString() : undefined;
+      message.poolId !== BigInt(0) ? message.poolId?.toString() : undefined;
     return obj;
   },
   fromAminoMsg(

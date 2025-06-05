@@ -151,7 +151,7 @@ export const MsgEmitIBCAck = {
     obj.sender = message.sender === '' ? undefined : message.sender;
     obj.packet_sequence =
       message.packetSequence !== BigInt(0)
-        ? message.packetSequence.toString()
+        ? message.packetSequence?.toString()
         : undefined;
     obj.channel = message.channel === '' ? undefined : message.channel;
     return obj;

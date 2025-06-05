@@ -867,7 +867,7 @@ export const GaugeByIDRequest = {
   },
   toAmino(message: GaugeByIDRequest): GaugeByIDRequestAmino {
     const obj: any = {};
-    obj.id = message.id !== BigInt(0) ? message.id.toString() : undefined;
+    obj.id = message.id !== BigInt(0) ? message.id?.toString() : undefined;
     return obj;
   },
   fromAminoMsg(object: GaugeByIDRequestAminoMsg): GaugeByIDRequest {
@@ -2202,7 +2202,7 @@ export const RewardsEstRequest = {
       obj.lock_ids = message.lockIds;
     }
     obj.end_epoch =
-      message.endEpoch !== BigInt(0) ? message.endEpoch.toString() : undefined;
+      message.endEpoch !== BigInt(0) ? message.endEpoch?.toString() : undefined;
     return obj;
   },
   fromAminoMsg(object: RewardsEstRequestAminoMsg): RewardsEstRequest {
@@ -3165,7 +3165,7 @@ export const QueryGroupByGroupGaugeIDRequest = {
     message: QueryGroupByGroupGaugeIDRequest,
   ): QueryGroupByGroupGaugeIDRequestAmino {
     const obj: any = {};
-    obj.id = message.id !== BigInt(0) ? message.id.toString() : undefined;
+    obj.id = message.id !== BigInt(0) ? message.id?.toString() : undefined;
     return obj;
   },
   fromAminoMsg(
@@ -3387,7 +3387,7 @@ export const QueryCurrentWeightByGroupGaugeIDRequest = {
     const obj: any = {};
     obj.group_gauge_id =
       message.groupGaugeId !== BigInt(0)
-        ? message.groupGaugeId.toString()
+        ? message.groupGaugeId?.toString()
         : undefined;
     return obj;
   },
@@ -3622,7 +3622,7 @@ export const GaugeWeight = {
   toAmino(message: GaugeWeight): GaugeWeightAmino {
     const obj: any = {};
     obj.gauge_id =
-      message.gaugeId !== BigInt(0) ? message.gaugeId.toString() : undefined;
+      message.gaugeId !== BigInt(0) ? message.gaugeId?.toString() : undefined;
     obj.weight_ratio =
       message.weightRatio === '' ? undefined : message.weightRatio;
     return obj;

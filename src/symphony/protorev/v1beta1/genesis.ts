@@ -41,7 +41,7 @@ export interface GenesisState {
    * It is replaced by the `info_by_pool_type` field.
    */
   /** @deprecated */
-  poolWeights: PoolWeights;
+  poolWeights?: PoolWeights;
   /** The number of days since module genesis. */
   daysSinceModuleGenesis: bigint;
   /** The fees the developer account has accumulated over time. */
@@ -132,7 +132,7 @@ export interface GenesisStateSDKType {
   token_pair_arb_routes: TokenPairArbRoutesSDKType[];
   base_denoms: BaseDenomSDKType[];
   /** @deprecated */
-  pool_weights: PoolWeightsSDKType;
+  pool_weights?: PoolWeightsSDKType;
   days_since_module_genesis: bigint;
   developer_fees: CoinSDKType[];
   latest_block_height: bigint;
@@ -149,7 +149,7 @@ function createBaseGenesisState(): GenesisState {
     params: Params.fromPartial({}),
     tokenPairArbRoutes: [],
     baseDenoms: [],
-    poolWeights: PoolWeights.fromPartial({}),
+    poolWeights: undefined,
     daysSinceModuleGenesis: BigInt(0),
     developerFees: [],
     latestBlockHeight: BigInt(0),
@@ -174,7 +174,6 @@ export const GenesisState = {
             TokenPairArbRoutes.is(o.tokenPairArbRoutes[0])) &&
           Array.isArray(o.baseDenoms) &&
           (!o.baseDenoms.length || BaseDenom.is(o.baseDenoms[0])) &&
-          PoolWeights.is(o.poolWeights) &&
           typeof o.daysSinceModuleGenesis === 'bigint' &&
           Array.isArray(o.developerFees) &&
           (!o.developerFees.length || Coin.is(o.developerFees[0])) &&
@@ -198,7 +197,6 @@ export const GenesisState = {
             TokenPairArbRoutes.isSDK(o.token_pair_arb_routes[0])) &&
           Array.isArray(o.base_denoms) &&
           (!o.base_denoms.length || BaseDenom.isSDK(o.base_denoms[0])) &&
-          PoolWeights.isSDK(o.pool_weights) &&
           typeof o.days_since_module_genesis === 'bigint' &&
           Array.isArray(o.developer_fees) &&
           (!o.developer_fees.length || Coin.isSDK(o.developer_fees[0])) &&
@@ -222,7 +220,6 @@ export const GenesisState = {
             TokenPairArbRoutes.isAmino(o.token_pair_arb_routes[0])) &&
           Array.isArray(o.base_denoms) &&
           (!o.base_denoms.length || BaseDenom.isAmino(o.base_denoms[0])) &&
-          PoolWeights.isAmino(o.pool_weights) &&
           typeof o.days_since_module_genesis === 'bigint' &&
           Array.isArray(o.developer_fees) &&
           (!o.developer_fees.length || Coin.isAmino(o.developer_fees[0])) &&
@@ -504,7 +501,7 @@ export const GenesisState = {
       : undefined;
     obj.days_since_module_genesis =
       message.daysSinceModuleGenesis !== BigInt(0)
-        ? message.daysSinceModuleGenesis.toString()
+        ? message.daysSinceModuleGenesis?.toString()
         : undefined;
     if (message.developerFees) {
       obj.developer_fees = message.developerFees.map(e =>
@@ -515,21 +512,21 @@ export const GenesisState = {
     }
     obj.latest_block_height =
       message.latestBlockHeight !== BigInt(0)
-        ? message.latestBlockHeight.toString()
+        ? message.latestBlockHeight?.toString()
         : undefined;
     obj.developer_address =
       message.developerAddress === '' ? undefined : message.developerAddress;
     obj.max_pool_points_per_block =
       message.maxPoolPointsPerBlock !== BigInt(0)
-        ? message.maxPoolPointsPerBlock.toString()
+        ? message.maxPoolPointsPerBlock?.toString()
         : undefined;
     obj.max_pool_points_per_tx =
       message.maxPoolPointsPerTx !== BigInt(0)
-        ? message.maxPoolPointsPerTx.toString()
+        ? message.maxPoolPointsPerTx?.toString()
         : undefined;
     obj.point_count_for_block =
       message.pointCountForBlock !== BigInt(0)
-        ? message.pointCountForBlock.toString()
+        ? message.pointCountForBlock?.toString()
         : undefined;
     if (message.profits) {
       obj.profits = message.profits.map(e => (e ? Coin.toAmino(e) : undefined));

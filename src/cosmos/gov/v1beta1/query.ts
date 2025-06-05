@@ -537,7 +537,7 @@ export const QueryProposalRequest = {
     const obj: any = {};
     obj.proposal_id =
       message.proposalId !== BigInt(0)
-        ? message.proposalId.toString()
+        ? message.proposalId?.toString()
         : undefined;
     return obj;
   },
@@ -1060,7 +1060,7 @@ export const QueryVoteRequest = {
     const obj: any = {};
     obj.proposal_id =
       message.proposalId !== BigInt(0)
-        ? message.proposalId.toString()
+        ? message.proposalId?.toString()
         : undefined;
     obj.voter = message.voter === '' ? undefined : message.voter;
     return obj;
@@ -1278,7 +1278,7 @@ export const QueryVotesRequest = {
     const obj: any = {};
     obj.proposal_id =
       message.proposalId !== BigInt(0)
-        ? message.proposalId.toString()
+        ? message.proposalId?.toString()
         : undefined;
     obj.pagination = message.pagination
       ? PageRequest.toAmino(message.pagination)
@@ -1791,7 +1791,7 @@ export const QueryDepositRequest = {
     const obj: any = {};
     obj.proposal_id =
       message.proposalId !== BigInt(0)
-        ? message.proposalId.toString()
+        ? message.proposalId?.toString()
         : undefined;
     obj.depositor = message.depositor === '' ? undefined : message.depositor;
     return obj;
@@ -2027,7 +2027,7 @@ export const QueryDepositsRequest = {
     const obj: any = {};
     obj.proposal_id =
       message.proposalId !== BigInt(0)
-        ? message.proposalId.toString()
+        ? message.proposalId?.toString()
         : undefined;
     obj.pagination = message.pagination
       ? PageRequest.toAmino(message.pagination)
@@ -2277,7 +2277,7 @@ export const QueryTallyResultRequest = {
     const obj: any = {};
     obj.proposal_id =
       message.proposalId !== BigInt(0)
-        ? message.proposalId.toString()
+        ? message.proposalId?.toString()
         : undefined;
     return obj;
   },

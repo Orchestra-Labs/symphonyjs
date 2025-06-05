@@ -493,7 +493,7 @@ export const MsgLockTokensResponse = {
   },
   toAmino(message: MsgLockTokensResponse): MsgLockTokensResponseAmino {
     const obj: any = {};
-    obj.ID = message.iD !== BigInt(0) ? message.iD.toString() : undefined;
+    obj.ID = message.iD !== BigInt(0) ? message.iD?.toString() : undefined;
     return obj;
   },
   fromAminoMsg(object: MsgLockTokensResponseAminoMsg): MsgLockTokensResponse {
@@ -839,7 +839,7 @@ export const MsgBeginUnlocking = {
   toAmino(message: MsgBeginUnlocking): MsgBeginUnlockingAmino {
     const obj: any = {};
     obj.owner = message.owner === '' ? undefined : message.owner;
-    obj.ID = message.iD !== BigInt(0) ? message.iD.toString() : undefined;
+    obj.ID = message.iD !== BigInt(0) ? message.iD?.toString() : undefined;
     if (message.coins) {
       obj.coins = message.coins.map(e => (e ? Coin.toAmino(e) : undefined));
     } else {
@@ -971,7 +971,7 @@ export const MsgBeginUnlockingResponse = {
     obj.success = message.success === false ? undefined : message.success;
     obj.unlockingLockID =
       message.unlockingLockID !== BigInt(0)
-        ? message.unlockingLockID.toString()
+        ? message.unlockingLockID?.toString()
         : undefined;
     return obj;
   },
@@ -1106,7 +1106,7 @@ export const MsgExtendLockup = {
   toAmino(message: MsgExtendLockup): MsgExtendLockupAmino {
     const obj: any = {};
     obj.owner = message.owner === '' ? undefined : message.owner;
-    obj.ID = message.iD !== BigInt(0) ? message.iD.toString() : undefined;
+    obj.ID = message.iD !== BigInt(0) ? message.iD?.toString() : undefined;
     obj.duration = message.duration
       ? Duration.toAmino(message.duration)
       : undefined;
@@ -1345,7 +1345,7 @@ export const MsgForceUnlock = {
   toAmino(message: MsgForceUnlock): MsgForceUnlockAmino {
     const obj: any = {};
     obj.owner = message.owner === '' ? undefined : message.owner;
-    obj.ID = message.iD !== BigInt(0) ? message.iD.toString() : undefined;
+    obj.ID = message.iD !== BigInt(0) ? message.iD?.toString() : undefined;
     if (message.coins) {
       obj.coins = message.coins.map(e => (e ? Coin.toAmino(e) : undefined));
     } else {
@@ -1592,7 +1592,7 @@ export const MsgSetRewardReceiverAddress = {
     const obj: any = {};
     obj.owner = message.owner === '' ? undefined : message.owner;
     obj.lockID =
-      message.lockID !== BigInt(0) ? message.lockID.toString() : undefined;
+      message.lockID !== BigInt(0) ? message.lockID?.toString() : undefined;
     obj.reward_receiver =
       message.rewardReceiver === '' ? undefined : message.rewardReceiver;
     return obj;

@@ -6189,11 +6189,11 @@ export const UninterpretedOption = {
       message.identifierValue === '' ? undefined : message.identifierValue;
     obj.positive_int_value =
       message.positiveIntValue !== BigInt(0)
-        ? message.positiveIntValue.toString()
+        ? message.positiveIntValue?.toString()
         : undefined;
     obj.negative_int_value =
       message.negativeIntValue !== BigInt(0)
-        ? message.negativeIntValue.toString()
+        ? message.negativeIntValue?.toString()
         : undefined;
     obj.double_value =
       message.doubleValue === 0 ? undefined : message.doubleValue;

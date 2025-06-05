@@ -310,7 +310,7 @@ export const MsgCreateBalancerPoolResponse = {
   ): MsgCreateBalancerPoolResponseAmino {
     const obj: any = {};
     obj.pool_id =
-      message.poolId !== BigInt(0) ? message.poolId.toString() : undefined;
+      message.poolId !== BigInt(0) ? message.poolId?.toString() : undefined;
     return obj;
   },
   fromAminoMsg(

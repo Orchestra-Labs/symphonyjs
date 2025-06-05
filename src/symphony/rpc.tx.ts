@@ -17,6 +17,11 @@ export const createRPCMsgClient = async ({ rpc }: { rpc: Rpc }) => ({
         await import('../cosmos/bank/v1beta1/tx.rpc.msg')
       ).MsgClientImpl(rpc),
     },
+    circuit: {
+      v1: new (await import('../cosmos/circuit/v1/tx.rpc.msg')).MsgClientImpl(
+        rpc,
+      ),
+    },
     consensus: {
       v1: new (await import('../cosmos/consensus/v1/tx.rpc.msg')).MsgClientImpl(
         rpc,
@@ -112,11 +117,6 @@ export const createRPCMsgClient = async ({ rpc }: { rpc: Rpc }) => ({
       v1beta1: new (
         await import('./tokenfactory/v1beta1/tx.rpc.msg')
       ).MsgClientImpl(rpc),
-    },
-    txfees: {
-      v1beta1: new (await import('./txfees/v1beta1/tx.rpc.msg')).MsgClientImpl(
-        rpc,
-      ),
     },
     valsetpref: {
       v1beta1: new (

@@ -477,7 +477,7 @@ export const Asset = {
     obj.denom = message.denom === '' ? undefined : message.denom;
     obj.precision =
       message.precision !== BigInt(0)
-        ? message.precision.toString()
+        ? message.precision?.toString()
         : undefined;
     return obj;
   },

@@ -36,7 +36,7 @@ async function run() {
     [msg], // EncodeObject[]
     {
       amount: [{ denom: 'note', amount: '1000000' }],
-          gas: '110000',
+      gas: '110000',
     },
     'swap send note to uusd',
   );

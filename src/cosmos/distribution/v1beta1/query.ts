@@ -1776,11 +1776,11 @@ export const QueryValidatorSlashesRequest = {
       message.validatorAddress === '' ? undefined : message.validatorAddress;
     obj.starting_height =
       message.startingHeight !== BigInt(0)
-        ? message.startingHeight.toString()
+        ? message.startingHeight?.toString()
         : undefined;
     obj.ending_height =
       message.endingHeight !== BigInt(0)
-        ? message.endingHeight.toString()
+        ? message.endingHeight?.toString()
         : undefined;
     obj.pagination = message.pagination
       ? PageRequest.toAmino(message.pagination)

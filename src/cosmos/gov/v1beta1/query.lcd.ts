@@ -84,7 +84,7 @@ export class LCDQueryClient {
     const endpoint = `cosmos/gov/v1beta1/params/${params.paramsType}`;
     return await this.req.get<QueryParamsResponseSDKType>(endpoint);
   }
-  /* Deposit queries single deposit information based proposalID, depositAddr. */
+  /* Deposit queries single deposit information based on proposalID, depositor address. */
   async deposit(
     params: QueryDepositRequest,
   ): Promise<QueryDepositResponseSDKType> {

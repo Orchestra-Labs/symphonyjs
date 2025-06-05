@@ -47,6 +47,7 @@ message MsgCreateVestingAccount {
   repeated cosmos.base.v1beta1.Coin amount = 3 [
     (gogoproto.nullable)     = false,
     (amino.dont_omitempty)   = true,
+    (amino.encoding)         = "legacy_coins",
     (gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"
   ];
 
@@ -72,6 +73,7 @@ message MsgCreatePermanentLockedAccount {
   repeated cosmos.base.v1beta1.Coin amount = 3 [
     (gogoproto.nullable)     = false,
     (amino.dont_omitempty)   = true,
+    (amino.encoding)         = "legacy_coins",
     (gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"
   ];
 }
@@ -87,7 +89,7 @@ message MsgCreatePermanentLockedAccountResponse {}
 // Since: cosmos-sdk 0.46
 message MsgCreatePeriodicVestingAccount {
   option (cosmos.msg.v1.signer) = "from_address";
-  option (amino.name)           = "cosmos-sdk/MsgCreatePeriodicVestingAccount";
+  option (amino.name)           = "cosmos-sdk/MsgCreatePeriodVestAccount";
 
   option (gogoproto.equal) = false;
 
@@ -105,6 +107,9 @@ message MsgCreatePeriodicVestingAccount {
 message MsgCreatePeriodicVestingAccountResponse {}
 // MsgCreateClawbackVestingAccount defines a message that enables creating a ClawbackVestingAccount.
 message MsgCreateClawbackVestingAccount {
+  option (cosmos.msg.v1.signer) = "from_address";
+  option (amino.name)           = "cosmos-sdk/MsgCreateClawbackVestingAccount";
+
   option (gogoproto.equal) = false;
 
   // from_address specifies the account to provide the funds and sign the
@@ -115,9 +120,9 @@ message MsgCreateClawbackVestingAccount {
   // start_time defines the time at which the vesting period begins
   int64 start_time = 3 [(gogoproto.moretags) = "yaml:\"start_time\""];
   // lockup_periods defines the unlocking schedule relative to the start_time
-  repeated cosmos.vesting.v1beta1.Period lockup_periods = 4 [(gogoproto.nullable) = false];
+  repeated Period lockup_periods = 4 [(gogoproto.nullable) = false];
   // vesting_periods defines the vesting schedule relative to the start_time
-  repeated cosmos.vesting.v1beta1.Period vesting_periods = 5 [(gogoproto.nullable) = false];
+  repeated Period vesting_periods = 5 [(gogoproto.nullable) = false];
   // merge specifies a creation mechanism for existing
   // ClawbackVestingAccounts. If true, merge this new grant into an existing
   // ClawbackVestingAccount, or create it if it does not exist. If false,
@@ -133,6 +138,9 @@ message MsgCreateClawbackVestingAccountResponse {}
 // MsgClawback defines a message that removes unvested tokens from a
 // ClawbackVestingAccount.
 message MsgClawback {
+  option (cosmos.msg.v1.signer) = "funder_address";
+  option (amino.name)           = "cosmos-sdk/MsgClawback";
+
   // funder_address is the address which funded the account
   string funder_address = 1;
   // address is the address of the ClawbackVestingAccount to claw back from.

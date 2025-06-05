@@ -223,15 +223,15 @@ export const Params = {
         : message.updateTreasuryEpochIdentifier;
     obj.window_short =
       message.windowShort !== BigInt(0)
-        ? message.windowShort.toString()
+        ? message.windowShort?.toString()
         : undefined;
     obj.window_long =
       message.windowLong !== BigInt(0)
-        ? message.windowLong.toString()
+        ? message.windowLong?.toString()
         : undefined;
     obj.window_probation =
       message.windowProbation !== BigInt(0)
-        ? message.windowProbation.toString()
+        ? message.windowProbation?.toString()
         : undefined;
     return obj;
   },

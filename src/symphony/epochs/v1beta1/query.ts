@@ -428,7 +428,7 @@ export const QueryCurrentEpochResponse = {
     const obj: any = {};
     obj.current_epoch =
       message.currentEpoch !== BigInt(0)
-        ? message.currentEpoch.toString()
+        ? message.currentEpoch?.toString()
         : undefined;
     return obj;
   },

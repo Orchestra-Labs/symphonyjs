@@ -1,5 +1,4 @@
 //@ts-nocheck
-import { FeeToken, FeeTokenAmino, FeeTokenSDKType } from './feetoken';
 import { Params, ParamsAmino, ParamsSDKType } from './params';
 import {
   Coin,
@@ -10,11 +9,6 @@ import { BinaryReader, BinaryWriter } from '../../../binary';
 import { GlobalDecoderRegistry } from '../../../registry';
 /** GenesisState defines the txfees module's genesis state. */
 export interface GenesisState {
-  basedenom: string;
-  feetokens: FeeToken[];
-  /** DEPRECATED */
-  /** @deprecated */
-  txFeesTracker?: TxFeesTracker;
   /** params is the container of txfees parameters. */
   params: Params;
 }
@@ -24,11 +18,6 @@ export interface GenesisStateProtoMsg {
 }
 /** GenesisState defines the txfees module's genesis state. */
 export interface GenesisStateAmino {
-  basedenom?: string;
-  feetokens?: FeeTokenAmino[];
-  /** DEPRECATED */
-  /** @deprecated */
-  txFeesTracker?: TxFeesTrackerAmino;
   /** params is the container of txfees parameters. */
   params?: ParamsAmino;
 }
@@ -38,10 +27,6 @@ export interface GenesisStateAminoMsg {
 }
 /** GenesisState defines the txfees module's genesis state. */
 export interface GenesisStateSDKType {
-  basedenom: string;
-  feetokens: FeeTokenSDKType[];
-  /** @deprecated */
-  txFeesTracker?: TxFeesTrackerSDKType;
   params: ParamsSDKType;
 }
 export interface TxFeesTracker {
@@ -66,62 +51,28 @@ export interface TxFeesTrackerSDKType {
 }
 function createBaseGenesisState(): GenesisState {
   return {
-    basedenom: '',
-    feetokens: [],
-    txFeesTracker: undefined,
     params: Params.fromPartial({}),
   };
 }
 export const GenesisState = {
   typeUrl: '/symphony.txfees.v1beta1.GenesisState',
   is(o: any): o is GenesisState {
-    return (
-      o &&
-      (o.$typeUrl === GenesisState.typeUrl ||
-        (typeof o.basedenom === 'string' &&
-          Array.isArray(o.feetokens) &&
-          (!o.feetokens.length || FeeToken.is(o.feetokens[0])) &&
-          Params.is(o.params)))
-    );
+    return o && (o.$typeUrl === GenesisState.typeUrl || Params.is(o.params));
   },
   isSDK(o: any): o is GenesisStateSDKType {
-    return (
-      o &&
-      (o.$typeUrl === GenesisState.typeUrl ||
-        (typeof o.basedenom === 'string' &&
-          Array.isArray(o.feetokens) &&
-          (!o.feetokens.length || FeeToken.isSDK(o.feetokens[0])) &&
-          Params.isSDK(o.params)))
-    );
+    return o && (o.$typeUrl === GenesisState.typeUrl || Params.isSDK(o.params));
   },
   isAmino(o: any): o is GenesisStateAmino {
     return (
-      o &&
-      (o.$typeUrl === GenesisState.typeUrl ||
-        (typeof o.basedenom === 'string' &&
-          Array.isArray(o.feetokens) &&
-          (!o.feetokens.length || FeeToken.isAmino(o.feetokens[0])) &&
-          Params.isAmino(o.params)))
+      o && (o.$typeUrl === GenesisState.typeUrl || Params.isAmino(o.params))
     );
   },
   encode(
     message: GenesisState,
     writer: BinaryWriter = BinaryWriter.create(),
   ): BinaryWriter {
-    if (message.basedenom !== '') {
-      writer.uint32(10).string(message.basedenom);
-    }
-    for (const v of message.feetokens) {
-      FeeToken.encode(v!, writer.uint32(18).fork()).ldelim();
-    }
-    if (message.txFeesTracker !== undefined) {
-      TxFeesTracker.encode(
-        message.txFeesTracker,
-        writer.uint32(26).fork(),
-      ).ldelim();
-    }
     if (message.params !== undefined) {
-      Params.encode(message.params, writer.uint32(34).fork()).ldelim();
+      Params.encode(message.params, writer.uint32(10).fork()).ldelim();
     }
     return writer;
   },
@@ -134,15 +85,6 @@ export const GenesisState = {
       const tag = reader.uint32();
       switch (tag >>> 3) {
         case 1:
-          message.basedenom = reader.string();
-          break;
-        case 2:
-          message.feetokens.push(FeeToken.decode(reader, reader.uint32()));
-          break;
-        case 3:
-          message.txFeesTracker = TxFeesTracker.decode(reader, reader.uint32());
-          break;
-        case 4:
           message.params = Params.decode(reader, reader.uint32());
           break;
         default:
@@ -154,13 +96,6 @@ export const GenesisState = {
   },
   fromPartial(object: Partial<GenesisState>): GenesisState {
     const message = createBaseGenesisState();
-    message.basedenom = object.basedenom ?? '';
-    message.feetokens =
-      object.feetokens?.map(e => FeeToken.fromPartial(e)) || [];
-    message.txFeesTracker =
-      object.txFeesTracker !== undefined && object.txFeesTracker !== null
-        ? TxFeesTracker.fromPartial(object.txFeesTracker)
-        : undefined;
     message.params =
       object.params !== undefined && object.params !== null
         ? Params.fromPartial(object.params)
@@ -169,13 +104,6 @@ export const GenesisState = {
   },
   fromAmino(object: GenesisStateAmino): GenesisState {
     const message = createBaseGenesisState();
-    if (object.basedenom !== undefined && object.basedenom !== null) {
-      message.basedenom = object.basedenom;
-    }
-    message.feetokens = object.feetokens?.map(e => FeeToken.fromAmino(e)) || [];
-    if (object.txFeesTracker !== undefined && object.txFeesTracker !== null) {
-      message.txFeesTracker = TxFeesTracker.fromAmino(object.txFeesTracker);
-    }
     if (object.params !== undefined && object.params !== null) {
       message.params = Params.fromAmino(object.params);
     }
@@ -183,17 +111,6 @@ export const GenesisState = {
   },
   toAmino(message: GenesisState): GenesisStateAmino {
     const obj: any = {};
-    obj.basedenom = message.basedenom === '' ? undefined : message.basedenom;
-    if (message.feetokens) {
-      obj.feetokens = message.feetokens.map(e =>
-        e ? FeeToken.toAmino(e) : undefined,
-      );
-    } else {
-      obj.feetokens = message.feetokens;
-    }
-    obj.txFeesTracker = message.txFeesTracker
-      ? TxFeesTracker.toAmino(message.txFeesTracker)
-      : undefined;
     obj.params = message.params ? Params.toAmino(message.params) : undefined;
     return obj;
   },
@@ -314,7 +231,7 @@ export const TxFeesTracker = {
     }
     obj.height_accounting_starts_from =
       message.heightAccountingStartsFrom !== BigInt(0)
-        ? message.heightAccountingStartsFrom.toString()
+        ? message.heightAccountingStartsFrom?.toString()
         : undefined;
     return obj;
   },

@@ -3,7 +3,7 @@ import { BinaryReader, BinaryWriter } from '../../../binary';
 import { GlobalDecoderRegistry } from '../../../registry';
 /** Params holds parameters for the txfees module */
 export interface Params {
-  whitelistedFeeTokenSetters: string[];
+  swapFeesEpochIdentifier: string;
 }
 export interface ParamsProtoMsg {
   typeUrl: '/symphony.txfees.v1beta1.Params';
@@ -11,7 +11,7 @@ export interface ParamsProtoMsg {
 }
 /** Params holds parameters for the txfees module */
 export interface ParamsAmino {
-  whitelisted_fee_token_setters?: string[];
+  swap_fees_epoch_identifier?: string;
 }
 export interface ParamsAminoMsg {
   type: '/symphony.txfees.v1beta1.Params';
@@ -19,11 +19,11 @@ export interface ParamsAminoMsg {
 }
 /** Params holds parameters for the txfees module */
 export interface ParamsSDKType {
-  whitelisted_fee_token_setters: string[];
+  swap_fees_epoch_identifier: string;
 }
 function createBaseParams(): Params {
   return {
-    whitelistedFeeTokenSetters: [],
+    swapFeesEpochIdentifier: '',
   };
 }
 export const Params = {
@@ -32,35 +32,29 @@ export const Params = {
     return (
       o &&
       (o.$typeUrl === Params.typeUrl ||
-        (Array.isArray(o.whitelistedFeeTokenSetters) &&
-          (!o.whitelistedFeeTokenSetters.length ||
-            typeof o.whitelistedFeeTokenSetters[0] === 'string')))
+        typeof o.swapFeesEpochIdentifier === 'string')
     );
   },
   isSDK(o: any): o is ParamsSDKType {
     return (
       o &&
       (o.$typeUrl === Params.typeUrl ||
-        (Array.isArray(o.whitelisted_fee_token_setters) &&
-          (!o.whitelisted_fee_token_setters.length ||
-            typeof o.whitelisted_fee_token_setters[0] === 'string')))
+        typeof o.swap_fees_epoch_identifier === 'string')
     );
   },
   isAmino(o: any): o is ParamsAmino {
     return (
       o &&
       (o.$typeUrl === Params.typeUrl ||
-        (Array.isArray(o.whitelisted_fee_token_setters) &&
-          (!o.whitelisted_fee_token_setters.length ||
-            typeof o.whitelisted_fee_token_setters[0] === 'string')))
+        typeof o.swap_fees_epoch_identifier === 'string')
     );
   },
   encode(
     message: Params,
     writer: BinaryWriter = BinaryWriter.create(),
   ): BinaryWriter {
-    for (const v of message.whitelistedFeeTokenSetters) {
-      writer.uint32(10).string(v!);
+    if (message.swapFeesEpochIdentifier !== '') {
+      writer.uint32(10).string(message.swapFeesEpochIdentifier);
     }
     return writer;
   },
@@ -73,7 +67,7 @@ export const Params = {
       const tag = reader.uint32();
       switch (tag >>> 3) {
         case 1:
-          message.whitelistedFeeTokenSetters.push(reader.string());
+          message.swapFeesEpochIdentifier = reader.string();
           break;
         default:
           reader.skipType(tag & 7);
@@ -84,24 +78,25 @@ export const Params = {
   },
   fromPartial(object: Partial<Params>): Params {
     const message = createBaseParams();
-    message.whitelistedFeeTokenSetters =
-      object.whitelistedFeeTokenSetters?.map(e => e) || [];
+    message.swapFeesEpochIdentifier = object.swapFeesEpochIdentifier ?? '';
     return message;
   },
   fromAmino(object: ParamsAmino): Params {
     const message = createBaseParams();
-    message.whitelistedFeeTokenSetters =
-      object.whitelisted_fee_token_setters?.map(e => e) || [];
+    if (
+      object.swap_fees_epoch_identifier !== undefined &&
+      object.swap_fees_epoch_identifier !== null
+    ) {
+      message.swapFeesEpochIdentifier = object.swap_fees_epoch_identifier;
+    }
     return message;
   },
   toAmino(message: Params): ParamsAmino {
     const obj: any = {};
-    if (message.whitelistedFeeTokenSetters) {
-      obj.whitelisted_fee_token_setters =
-        message.whitelistedFeeTokenSetters.map(e => e);
-    } else {
-      obj.whitelisted_fee_token_setters = message.whitelistedFeeTokenSetters;
-    }
+    obj.swap_fees_epoch_identifier =
+      message.swapFeesEpochIdentifier === ''
+        ? undefined
+        : message.swapFeesEpochIdentifier;
     return obj;
   },
   fromAminoMsg(object: ParamsAminoMsg): Params {

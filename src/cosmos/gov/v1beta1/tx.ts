@@ -77,11 +77,6 @@ import {
   UpdateUnpoolWhiteListProposalProtoMsg,
   UpdateUnpoolWhiteListProposalSDKType,
 } from '../../../symphony/superfluid/v1beta1/gov';
-import {
-  UpdateFeeTokenProposal,
-  UpdateFeeTokenProposalProtoMsg,
-  UpdateFeeTokenProposalSDKType,
-} from '../../../symphony/txfees/v1beta1/gov';
 import { BinaryReader, BinaryWriter } from '../../../binary';
 import { GlobalDecoderRegistry } from '../../../registry';
 import { isSet } from '../../../helpers';
@@ -109,7 +104,6 @@ export interface MsgSubmitProposal {
     | SetSuperfluidAssetsProposal
     | RemoveSuperfluidAssetsProposal
     | UpdateUnpoolWhiteListProposal
-    | UpdateFeeTokenProposal
     | Any
     | undefined;
   /** initial_deposit is the deposit value that must be paid at proposal submission. */
@@ -140,7 +134,6 @@ export type MsgSubmitProposalEncoded = Omit<MsgSubmitProposal, 'content'> & {
     | SetSuperfluidAssetsProposalProtoMsg
     | RemoveSuperfluidAssetsProposalProtoMsg
     | UpdateUnpoolWhiteListProposalProtoMsg
-    | UpdateFeeTokenProposalProtoMsg
     | AnyProtoMsg
     | undefined;
 };
@@ -183,7 +176,6 @@ export interface MsgSubmitProposalSDKType {
     | SetSuperfluidAssetsProposalSDKType
     | RemoveSuperfluidAssetsProposalSDKType
     | UpdateUnpoolWhiteListProposalSDKType
-    | UpdateFeeTokenProposalSDKType
     | AnySDKType
     | undefined;
   initial_deposit: CoinSDKType[];
@@ -595,7 +587,7 @@ export const MsgSubmitProposalResponse = {
   },
   toAmino(message: MsgSubmitProposalResponse): MsgSubmitProposalResponseAmino {
     const obj: any = {};
-    obj.proposal_id = message.proposalId ? message.proposalId.toString() : '0';
+    obj.proposal_id = message.proposalId ? message.proposalId?.toString() : '0';
     return obj;
   },
   fromAminoMsg(
@@ -739,7 +731,7 @@ export const MsgVote = {
     const obj: any = {};
     obj.proposal_id =
       message.proposalId !== BigInt(0)
-        ? message.proposalId.toString()
+        ? message.proposalId?.toString()
         : undefined;
     obj.voter = message.voter === '' ? undefined : message.voter;
     obj.option = message.option === 0 ? undefined : message.option;
@@ -953,7 +945,7 @@ export const MsgVoteWeighted = {
   },
   toAmino(message: MsgVoteWeighted): MsgVoteWeightedAmino {
     const obj: any = {};
-    obj.proposal_id = message.proposalId ? message.proposalId.toString() : '0';
+    obj.proposal_id = message.proposalId ? message.proposalId?.toString() : '0';
     obj.voter = message.voter === '' ? undefined : message.voter;
     if (message.options) {
       obj.options = message.options.map(e =>
@@ -1182,7 +1174,7 @@ export const MsgDeposit = {
   },
   toAmino(message: MsgDeposit): MsgDepositAmino {
     const obj: any = {};
-    obj.proposal_id = message.proposalId ? message.proposalId.toString() : '0';
+    obj.proposal_id = message.proposalId ? message.proposalId?.toString() : '0';
     obj.depositor = message.depositor === '' ? undefined : message.depositor;
     if (message.amount) {
       obj.amount = message.amount.map(e => (e ? Coin.toAmino(e) : undefined));

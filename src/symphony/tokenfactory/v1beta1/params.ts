@@ -154,7 +154,7 @@ export const Params = {
     }
     obj.denom_creation_gas_consume =
       message.denomCreationGasConsume !== BigInt(0)
-        ? message.denomCreationGasConsume.toString()
+        ? message.denomCreationGasConsume?.toString()
         : undefined;
     return obj;
   },

@@ -32,6 +32,11 @@ export const createRPCQueryClient = async ({
           ).createRpcQueryExtension(client),
         },
       },
+      circuit: {
+        v1: (
+          await import('../cosmos/circuit/v1/query.rpc.Query')
+        ).createRpcQueryExtension(client),
+      },
       consensus: {
         v1: (
           await import('../cosmos/consensus/v1/query.rpc.Query')
@@ -146,6 +151,11 @@ export const createRPCQueryClient = async ({
       smartaccount: {
         v1beta1: (
           await import('./smartaccount/v1beta1/query.rpc.Query')
+        ).createRpcQueryExtension(client),
+      },
+      stablestakingincentives: {
+        v1beta1: (
+          await import('./stablestakingincentives/v1beta1/query.rpc.Query')
         ).createRpcQueryExtension(client),
       },
       superfluid: (

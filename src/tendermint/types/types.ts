@@ -1177,7 +1177,7 @@ export const Header = {
       : undefined;
     obj.chain_id = message.chainId === '' ? undefined : message.chainId;
     obj.height =
-      message.height !== BigInt(0) ? message.height.toString() : undefined;
+      message.height !== BigInt(0) ? message.height?.toString() : undefined;
     obj.time = message.time
       ? Timestamp.toAmino(toTimestamp(message.time))
       : undefined;
@@ -1522,7 +1522,7 @@ export const Vote = {
     const obj: any = {};
     obj.type = message.type === 0 ? undefined : message.type;
     obj.height =
-      message.height !== BigInt(0) ? message.height.toString() : undefined;
+      message.height !== BigInt(0) ? message.height?.toString() : undefined;
     obj.round = message.round === 0 ? undefined : message.round;
     obj.block_id = message.blockId
       ? BlockID.toAmino(message.blockId)
@@ -1678,7 +1678,7 @@ export const Commit = {
   toAmino(message: Commit): CommitAmino {
     const obj: any = {};
     obj.height =
-      message.height !== BigInt(0) ? message.height.toString() : undefined;
+      message.height !== BigInt(0) ? message.height?.toString() : undefined;
     obj.round = message.round === 0 ? undefined : message.round;
     obj.block_id = message.blockId
       ? BlockID.toAmino(message.blockId)
@@ -2033,7 +2033,7 @@ export const Proposal = {
     const obj: any = {};
     obj.type = message.type === 0 ? undefined : message.type;
     obj.height =
-      message.height !== BigInt(0) ? message.height.toString() : undefined;
+      message.height !== BigInt(0) ? message.height?.toString() : undefined;
     obj.round = message.round === 0 ? undefined : message.round;
     obj.pol_round = message.polRound === 0 ? undefined : message.polRound;
     obj.block_id = message.blockId
@@ -2392,11 +2392,11 @@ export const BlockMeta = {
       : undefined;
     obj.block_size =
       message.blockSize !== BigInt(0)
-        ? message.blockSize.toString()
+        ? message.blockSize?.toString()
         : undefined;
     obj.header = message.header ? Header.toAmino(message.header) : undefined;
     obj.num_txs =
-      message.numTxs !== BigInt(0) ? message.numTxs.toString() : undefined;
+      message.numTxs !== BigInt(0) ? message.numTxs?.toString() : undefined;
     return obj;
   },
   fromAminoMsg(object: BlockMetaAminoMsg): BlockMeta {

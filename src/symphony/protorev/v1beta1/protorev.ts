@@ -500,7 +500,7 @@ export interface AllProtocolRevenue {
   takerFeesTracker: TakerFeesTracker;
   /** DEPRECATED */
   /** @deprecated */
-  txFeesTracker: TxFeesTracker;
+  txFeesTracker?: TxFeesTracker;
   cyclicArbTracker: CyclicArbTracker;
 }
 export interface AllProtocolRevenueProtoMsg {
@@ -521,7 +521,7 @@ export interface AllProtocolRevenueAminoMsg {
 export interface AllProtocolRevenueSDKType {
   taker_fees_tracker: TakerFeesTrackerSDKType;
   /** @deprecated */
-  tx_fees_tracker: TxFeesTrackerSDKType;
+  tx_fees_tracker?: TxFeesTrackerSDKType;
   cyclic_arb_tracker: CyclicArbTrackerSDKType;
 }
 export interface CyclicArbTracker {
@@ -882,7 +882,8 @@ export const Trade = {
   },
   toAmino(message: Trade): TradeAmino {
     const obj: any = {};
-    obj.pool = message.pool !== BigInt(0) ? message.pool.toString() : undefined;
+    obj.pool =
+      message.pool !== BigInt(0) ? message.pool?.toString() : undefined;
     obj.token_in = message.tokenIn === '' ? undefined : message.tokenIn;
     obj.token_out = message.tokenOut === '' ? undefined : message.tokenOut;
     return obj;
@@ -1181,19 +1182,19 @@ export const PoolWeights = {
     const obj: any = {};
     obj.stable_weight =
       message.stableWeight !== BigInt(0)
-        ? message.stableWeight.toString()
+        ? message.stableWeight?.toString()
         : undefined;
     obj.balancer_weight =
       message.balancerWeight !== BigInt(0)
-        ? message.balancerWeight.toString()
+        ? message.balancerWeight?.toString()
         : undefined;
     obj.concentrated_weight =
       message.concentratedWeight !== BigInt(0)
-        ? message.concentratedWeight.toString()
+        ? message.concentratedWeight?.toString()
         : undefined;
     obj.cosmwasm_weight =
       message.cosmwasmWeight !== BigInt(0)
-        ? message.cosmwasmWeight.toString()
+        ? message.cosmwasmWeight?.toString()
         : undefined;
     return obj;
   },
@@ -1452,7 +1453,7 @@ export const StablePoolInfo = {
   toAmino(message: StablePoolInfo): StablePoolInfoAmino {
     const obj: any = {};
     obj.weight =
-      message.weight !== BigInt(0) ? message.weight.toString() : undefined;
+      message.weight !== BigInt(0) ? message.weight?.toString() : undefined;
     return obj;
   },
   fromAminoMsg(object: StablePoolInfoAminoMsg): StablePoolInfo {
@@ -1542,7 +1543,7 @@ export const BalancerPoolInfo = {
   toAmino(message: BalancerPoolInfo): BalancerPoolInfoAmino {
     const obj: any = {};
     obj.weight =
-      message.weight !== BigInt(0) ? message.weight.toString() : undefined;
+      message.weight !== BigInt(0) ? message.weight?.toString() : undefined;
     return obj;
   },
   fromAminoMsg(object: BalancerPoolInfoAminoMsg): BalancerPoolInfo {
@@ -1657,10 +1658,10 @@ export const ConcentratedPoolInfo = {
   toAmino(message: ConcentratedPoolInfo): ConcentratedPoolInfoAmino {
     const obj: any = {};
     obj.weight =
-      message.weight !== BigInt(0) ? message.weight.toString() : undefined;
+      message.weight !== BigInt(0) ? message.weight?.toString() : undefined;
     obj.max_ticks_crossed =
       message.maxTicksCrossed !== BigInt(0)
-        ? message.maxTicksCrossed.toString()
+        ? message.maxTicksCrossed?.toString()
         : undefined;
     return obj;
   },
@@ -1871,7 +1872,7 @@ export const WeightMap = {
   toAmino(message: WeightMap): WeightMapAmino {
     const obj: any = {};
     obj.weight =
-      message.weight !== BigInt(0) ? message.weight.toString() : undefined;
+      message.weight !== BigInt(0) ? message.weight?.toString() : undefined;
     obj.contract_address =
       message.contractAddress === '' ? undefined : message.contractAddress;
     return obj;
@@ -2095,7 +2096,7 @@ GlobalDecoderRegistry.register(BaseDenoms.typeUrl, BaseDenoms);
 function createBaseAllProtocolRevenue(): AllProtocolRevenue {
   return {
     takerFeesTracker: TakerFeesTracker.fromPartial({}),
-    txFeesTracker: TxFeesTracker.fromPartial({}),
+    txFeesTracker: undefined,
     cyclicArbTracker: CyclicArbTracker.fromPartial({}),
   };
 }
@@ -2106,7 +2107,6 @@ export const AllProtocolRevenue = {
       o &&
       (o.$typeUrl === AllProtocolRevenue.typeUrl ||
         (TakerFeesTracker.is(o.takerFeesTracker) &&
-          TxFeesTracker.is(o.txFeesTracker) &&
           CyclicArbTracker.is(o.cyclicArbTracker)))
     );
   },
@@ -2115,7 +2115,6 @@ export const AllProtocolRevenue = {
       o &&
       (o.$typeUrl === AllProtocolRevenue.typeUrl ||
         (TakerFeesTracker.isSDK(o.taker_fees_tracker) &&
-          TxFeesTracker.isSDK(o.tx_fees_tracker) &&
           CyclicArbTracker.isSDK(o.cyclic_arb_tracker)))
     );
   },
@@ -2124,7 +2123,6 @@ export const AllProtocolRevenue = {
       o &&
       (o.$typeUrl === AllProtocolRevenue.typeUrl ||
         (TakerFeesTracker.isAmino(o.taker_fees_tracker) &&
-          TxFeesTracker.isAmino(o.tx_fees_tracker) &&
           CyclicArbTracker.isAmino(o.cyclic_arb_tracker)))
     );
   },
@@ -2359,7 +2357,7 @@ export const CyclicArbTracker = {
     }
     obj.height_accounting_starts_from =
       message.heightAccountingStartsFrom !== BigInt(0)
-        ? message.heightAccountingStartsFrom.toString()
+        ? message.heightAccountingStartsFrom?.toString()
         : undefined;
     return obj;
   },

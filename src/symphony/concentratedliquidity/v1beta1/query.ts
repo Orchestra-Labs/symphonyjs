@@ -869,7 +869,7 @@ export const UserPositionsRequest = {
     const obj: any = {};
     obj.address = message.address === '' ? undefined : message.address;
     obj.pool_id =
-      message.poolId !== BigInt(0) ? message.poolId.toString() : undefined;
+      message.poolId !== BigInt(0) ? message.poolId?.toString() : undefined;
     obj.pagination = message.pagination
       ? PageRequest.toAmino(message.pagination)
       : undefined;
@@ -1099,7 +1099,7 @@ export const PositionByIdRequest = {
     const obj: any = {};
     obj.position_id =
       message.positionId !== BigInt(0)
-        ? message.positionId.toString()
+        ? message.positionId?.toString()
         : undefined;
     return obj;
   },
@@ -1307,7 +1307,7 @@ export const NumPoolPositionsRequest = {
   toAmino(message: NumPoolPositionsRequest): NumPoolPositionsRequestAmino {
     const obj: any = {};
     obj.pool_id =
-      message.poolId !== BigInt(0) ? message.poolId.toString() : undefined;
+      message.poolId !== BigInt(0) ? message.poolId?.toString() : undefined;
     return obj;
   },
   fromAminoMsg(
@@ -1416,7 +1416,7 @@ export const NumPoolPositionsResponse = {
     const obj: any = {};
     obj.position_count =
       message.positionCount !== BigInt(0)
-        ? message.positionCount.toString()
+        ? message.positionCount?.toString()
         : undefined;
     return obj;
   },
@@ -1907,7 +1907,7 @@ export const TickLiquidityNet = {
       message.liquidityNet === '' ? undefined : message.liquidityNet;
     obj.tick_index =
       message.tickIndex !== BigInt(0)
-        ? message.tickIndex.toString()
+        ? message.tickIndex?.toString()
         : undefined;
     return obj;
   },
@@ -2048,11 +2048,11 @@ export const LiquidityDepthWithRange = {
       message.liquidityAmount === '' ? undefined : message.liquidityAmount;
     obj.lower_tick =
       message.lowerTick !== BigInt(0)
-        ? message.lowerTick.toString()
+        ? message.lowerTick?.toString()
         : undefined;
     obj.upper_tick =
       message.upperTick !== BigInt(0)
-        ? message.upperTick.toString()
+        ? message.upperTick?.toString()
         : undefined;
     return obj;
   },
@@ -2242,17 +2242,17 @@ export const LiquidityNetInDirectionRequest = {
   ): LiquidityNetInDirectionRequestAmino {
     const obj: any = {};
     obj.pool_id =
-      message.poolId !== BigInt(0) ? message.poolId.toString() : undefined;
+      message.poolId !== BigInt(0) ? message.poolId?.toString() : undefined;
     obj.token_in = message.tokenIn === '' ? undefined : message.tokenIn;
     obj.start_tick =
       message.startTick !== BigInt(0)
-        ? message.startTick.toString()
+        ? message.startTick?.toString()
         : undefined;
     obj.use_cur_tick =
       message.useCurTick === false ? undefined : message.useCurTick;
     obj.bound_tick =
       message.boundTick !== BigInt(0)
-        ? message.boundTick.toString()
+        ? message.boundTick?.toString()
         : undefined;
     obj.use_no_bound =
       message.useNoBound === false ? undefined : message.useNoBound;
@@ -2437,7 +2437,7 @@ export const LiquidityNetInDirectionResponse = {
     }
     obj.current_tick =
       message.currentTick !== BigInt(0)
-        ? message.currentTick.toString()
+        ? message.currentTick?.toString()
         : undefined;
     obj.current_liquidity =
       message.currentLiquidity === '' ? undefined : message.currentLiquidity;
@@ -2555,7 +2555,7 @@ export const LiquidityPerTickRangeRequest = {
   ): LiquidityPerTickRangeRequestAmino {
     const obj: any = {};
     obj.pool_id =
-      message.poolId !== BigInt(0) ? message.poolId.toString() : undefined;
+      message.poolId !== BigInt(0) ? message.poolId?.toString() : undefined;
     return obj;
   },
   fromAminoMsg(
@@ -2697,7 +2697,7 @@ export const LiquidityPerTickRangeResponse = {
     }
     obj.bucket_index =
       message.bucketIndex !== BigInt(0)
-        ? message.bucketIndex.toString()
+        ? message.bucketIndex?.toString()
         : undefined;
     return obj;
   },
@@ -2812,7 +2812,7 @@ export const ClaimableSpreadRewardsRequest = {
     const obj: any = {};
     obj.position_id =
       message.positionId !== BigInt(0)
-        ? message.positionId.toString()
+        ? message.positionId?.toString()
         : undefined;
     return obj;
   },
@@ -3049,7 +3049,7 @@ export const ClaimableIncentivesRequest = {
     const obj: any = {};
     obj.position_id =
       message.positionId !== BigInt(0)
-        ? message.positionId.toString()
+        ? message.positionId?.toString()
         : undefined;
     return obj;
   },
@@ -3314,7 +3314,7 @@ export const PoolAccumulatorRewardsRequest = {
   ): PoolAccumulatorRewardsRequestAmino {
     const obj: any = {};
     obj.pool_id =
-      message.poolId !== BigInt(0) ? message.poolId.toString() : undefined;
+      message.poolId !== BigInt(0) ? message.poolId?.toString() : undefined;
     return obj;
   },
   fromAminoMsg(
@@ -3593,10 +3593,10 @@ export const TickAccumulatorTrackersRequest = {
   ): TickAccumulatorTrackersRequestAmino {
     const obj: any = {};
     obj.pool_id =
-      message.poolId !== BigInt(0) ? message.poolId.toString() : undefined;
+      message.poolId !== BigInt(0) ? message.poolId?.toString() : undefined;
     obj.tick_index =
       message.tickIndex !== BigInt(0)
-        ? message.tickIndex.toString()
+        ? message.tickIndex?.toString()
         : undefined;
     return obj;
   },
@@ -3888,7 +3888,7 @@ export const IncentiveRecordsRequest = {
   toAmino(message: IncentiveRecordsRequest): IncentiveRecordsRequestAmino {
     const obj: any = {};
     obj.pool_id =
-      message.poolId !== BigInt(0) ? message.poolId.toString() : undefined;
+      message.poolId !== BigInt(0) ? message.poolId?.toString() : undefined;
     obj.pagination = message.pagination
       ? PageRequest.toAmino(message.pagination)
       : undefined;
@@ -4147,7 +4147,7 @@ export const CFMMPoolIdLinkFromConcentratedPoolIdRequest = {
     const obj: any = {};
     obj.concentrated_pool_id =
       message.concentratedPoolId !== BigInt(0)
-        ? message.concentratedPoolId.toString()
+        ? message.concentratedPoolId?.toString()
         : undefined;
     return obj;
   },
@@ -4263,7 +4263,7 @@ export const CFMMPoolIdLinkFromConcentratedPoolIdResponse = {
     const obj: any = {};
     obj.cfmm_pool_id =
       message.cfmmPoolId !== BigInt(0)
-        ? message.cfmmPoolId.toString()
+        ? message.cfmmPoolId?.toString()
         : undefined;
     return obj;
   },
@@ -4843,12 +4843,12 @@ export const NumNextInitializedTicksRequest = {
   ): NumNextInitializedTicksRequestAmino {
     const obj: any = {};
     obj.pool_id =
-      message.poolId !== BigInt(0) ? message.poolId.toString() : undefined;
+      message.poolId !== BigInt(0) ? message.poolId?.toString() : undefined;
     obj.token_in_denom =
       message.tokenInDenom === '' ? undefined : message.tokenInDenom;
     obj.num_next_initialized_ticks =
       message.numNextInitializedTicks !== BigInt(0)
-        ? message.numNextInitializedTicks.toString()
+        ? message.numNextInitializedTicks?.toString()
         : undefined;
     return obj;
   },
@@ -5014,7 +5014,7 @@ export const NumNextInitializedTicksResponse = {
     }
     obj.current_tick =
       message.currentTick !== BigInt(0)
-        ? message.currentTick.toString()
+        ? message.currentTick?.toString()
         : undefined;
     obj.current_liquidity =
       message.currentLiquidity === '' ? undefined : message.currentLiquidity;

@@ -17,8 +17,8 @@ import {
   RedelegationSDKType,
 } from './staking';
 import { BinaryReader, BinaryWriter } from '../../../binary';
-import { bytesFromBase64, base64FromBytes } from '../../../helpers';
 import { GlobalDecoderRegistry } from '../../../registry';
+import { bytesFromBase64, base64FromBytes } from '../../../helpers';
 /** GenesisState defines the staking module's genesis state. */
 export interface GenesisState {
   /** params defines all the parameters of related to deposit. */
@@ -33,7 +33,7 @@ export interface GenesisState {
    * of the last-block's bonded validators.
    */
   lastValidatorPowers: LastValidatorPower[];
-  /** delegations defines the validator set at genesis. */
+  /** validators defines the validator set at genesis. */
   validators: Validator[];
   /** delegations defines the delegations active at genesis. */
   delegations: Delegation[];
@@ -41,6 +41,7 @@ export interface GenesisState {
   unbondingDelegations: UnbondingDelegation[];
   /** redelegations defines the redelegations active at genesis. */
   redelegations: Redelegation[];
+  /** exported defines a bool to identify whether the chain dealing with exported or initialized genesis. */
   exported: boolean;
 }
 export interface GenesisStateProtoMsg {
@@ -61,7 +62,7 @@ export interface GenesisStateAmino {
    * of the last-block's bonded validators.
    */
   last_validator_powers: LastValidatorPowerAmino[];
-  /** delegations defines the validator set at genesis. */
+  /** validators defines the validator set at genesis. */
   validators: ValidatorAmino[];
   /** delegations defines the delegations active at genesis. */
   delegations: DelegationAmino[];
@@ -69,6 +70,7 @@ export interface GenesisStateAmino {
   unbonding_delegations: UnbondingDelegationAmino[];
   /** redelegations defines the redelegations active at genesis. */
   redelegations: RedelegationAmino[];
+  /** exported defines a bool to identify whether the chain dealing with exported or initialized genesis. */
   exported?: boolean;
 }
 export interface GenesisStateAminoMsg {
@@ -484,7 +486,7 @@ export const LastValidatorPower = {
     const obj: any = {};
     obj.address = message.address === '' ? undefined : message.address;
     obj.power =
-      message.power !== BigInt(0) ? message.power.toString() : undefined;
+      message.power !== BigInt(0) ? message.power?.toString() : undefined;
     return obj;
   },
   fromAminoMsg(object: LastValidatorPowerAminoMsg): LastValidatorPower {

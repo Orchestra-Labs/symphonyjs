@@ -8,8 +8,8 @@ import {
 } from '../../crypto/multisig/v1beta1/multisig';
 import { Coin, CoinAmino, CoinSDKType } from '../../base/v1beta1/coin';
 import { BinaryReader, BinaryWriter } from '../../../binary';
-import { bytesFromBase64, base64FromBytes, isSet } from '../../../helpers';
 import { GlobalDecoderRegistry } from '../../../registry';
+import { bytesFromBase64, base64FromBytes, isSet } from '../../../helpers';
 /** Tx is the standard type used for broadcasting transactions. */
 export interface Tx {
   /** body is the processable content of the transaction */
@@ -207,14 +207,8 @@ export interface SignDocDirectAux {
   accountNumber: bigint;
   /** sequence is the sequence number of the signing account. */
   sequence: bigint;
-  /**
-   * Tip is the optional tip used for transactions fees paid in another denom.
-   * It should be left empty if the signer is not the tipper for this
-   * transaction.
-   *
-   * This field is ignored if the chain didn't enable tips, i.e. didn't add the
-   * `TipDecorator` in its posthandler.
-   */
+  /** tips have been depreacted and should not be used */
+  /** @deprecated */
   tip?: Tip;
 }
 export interface SignDocDirectAuxProtoMsg {
@@ -245,14 +239,8 @@ export interface SignDocDirectAuxAmino {
   account_number?: string;
   /** sequence is the sequence number of the signing account. */
   sequence?: string;
-  /**
-   * Tip is the optional tip used for transactions fees paid in another denom.
-   * It should be left empty if the signer is not the tipper for this
-   * transaction.
-   *
-   * This field is ignored if the chain didn't enable tips, i.e. didn't add the
-   * `TipDecorator` in its posthandler.
-   */
+  /** tips have been depreacted and should not be used */
+  /** @deprecated */
   tip?: TipAmino;
 }
 export interface SignDocDirectAuxAminoMsg {
@@ -271,6 +259,7 @@ export interface SignDocDirectAuxSDKType {
   chain_id: string;
   account_number: bigint;
   sequence: bigint;
+  /** @deprecated */
   tip?: TipSDKType;
 }
 /** TxBody is the body of a transaction that all signers sign over. */
@@ -388,6 +377,7 @@ export interface AuthInfo {
    *
    * Since: cosmos-sdk 0.46
    */
+  /** @deprecated */
   tip?: Tip;
 }
 export interface AuthInfoProtoMsg {
@@ -421,6 +411,7 @@ export interface AuthInfoAmino {
    *
    * Since: cosmos-sdk 0.46
    */
+  /** @deprecated */
   tip?: TipAmino;
 }
 export interface AuthInfoAminoMsg {
@@ -434,6 +425,7 @@ export interface AuthInfoAminoMsg {
 export interface AuthInfoSDKType {
   signer_infos: SignerInfoSDKType[];
   fee?: FeeSDKType;
+  /** @deprecated */
   tip?: TipSDKType;
 }
 /**
@@ -630,7 +622,7 @@ export interface FeeProtoMsg {
  */
 export interface FeeAmino {
   /** amount is the amount of coins to be paid as a fee */
-  amount?: CoinAmino[];
+  amount: CoinAmino[];
   /**
    * gas_limit is the maximum gas that can be used in transaction processing
    * before an out of gas error occurs
@@ -669,6 +661,7 @@ export interface FeeSDKType {
  *
  * Since: cosmos-sdk 0.46
  */
+/** @deprecated */
 export interface Tip {
   /** amount is the amount of the tip */
   amount: Coin[];
@@ -684,9 +677,10 @@ export interface TipProtoMsg {
  *
  * Since: cosmos-sdk 0.46
  */
+/** @deprecated */
 export interface TipAmino {
   /** amount is the amount of the tip */
-  amount?: CoinAmino[];
+  amount: CoinAmino[];
   /** tipper is the address of the account paying for the tip */
   tipper?: string;
 }
@@ -699,6 +693,7 @@ export interface TipAminoMsg {
  *
  * Since: cosmos-sdk 0.46
  */
+/** @deprecated */
 export interface TipSDKType {
   amount: CoinSDKType[];
   tipper: string;
@@ -1201,7 +1196,7 @@ export const SignDoc = {
     obj.chain_id = message.chainId === '' ? undefined : message.chainId;
     obj.account_number =
       message.accountNumber !== BigInt(0)
-        ? message.accountNumber.toString()
+        ? message.accountNumber?.toString()
         : undefined;
     return obj;
   },
@@ -1390,10 +1385,10 @@ export const SignDocDirectAux = {
     obj.chain_id = message.chainId === '' ? undefined : message.chainId;
     obj.account_number =
       message.accountNumber !== BigInt(0)
-        ? message.accountNumber.toString()
+        ? message.accountNumber?.toString()
         : undefined;
     obj.sequence =
-      message.sequence !== BigInt(0) ? message.sequence.toString() : undefined;
+      message.sequence !== BigInt(0) ? message.sequence?.toString() : undefined;
     obj.tip = message.tip ? Tip.toAmino(message.tip) : undefined;
     return obj;
   },
@@ -1576,7 +1571,7 @@ export const TxBody = {
     obj.memo = message.memo === '' ? undefined : message.memo;
     obj.timeout_height =
       message.timeoutHeight !== BigInt(0)
-        ? message.timeoutHeight.toString()
+        ? message.timeoutHeight?.toString()
         : undefined;
     if (message.extensionOptions) {
       obj.extension_options = message.extensionOptions.map(e =>
@@ -1863,7 +1858,7 @@ export const SignerInfo = {
       ? ModeInfo.toAmino(message.modeInfo)
       : undefined;
     obj.sequence =
-      message.sequence !== BigInt(0) ? message.sequence.toString() : undefined;
+      message.sequence !== BigInt(0) ? message.sequence?.toString() : undefined;
     return obj;
   },
   fromAminoMsg(object: SignerInfoAminoMsg): SignerInfo {
@@ -2342,7 +2337,7 @@ export const Fee = {
       obj.amount = message.amount;
     }
     obj.gas_limit =
-      message.gasLimit !== BigInt(0) ? message.gasLimit.toString() : undefined;
+      message.gasLimit !== BigInt(0) ? message.gasLimit?.toString() : undefined;
     obj.payer = message.payer === '' ? undefined : message.payer;
     obj.granter = message.granter === '' ? undefined : message.granter;
     return obj;

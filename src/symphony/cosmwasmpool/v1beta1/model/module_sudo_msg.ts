@@ -5,8 +5,8 @@ import {
   CoinSDKType,
 } from '../../../../cosmos/base/v1beta1/coin';
 import { BinaryReader, BinaryWriter } from '../../../../binary';
-import { Decimal } from '@cosmjs/math';
 import { GlobalDecoderRegistry } from '../../../../registry';
+import { Decimal } from '@cosmjs/math';
 /** ===================== SwapExactAmountIn */
 export interface SwapExactAmountIn {
   sender: string;

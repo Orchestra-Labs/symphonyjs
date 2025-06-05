@@ -4,13 +4,20 @@ import { GlobalDecoderRegistry } from '../../../../registry';
 /** Module is the config object of the bank module. */
 export interface Module {
   /**
-   * blocked_module_accounts configures exceptional module accounts which should be blocked from receiving funds.
-   * If left empty it defaults to the list of account names supplied in the auth module configuration as
+   * blocked_module_accounts_override configures exceptional module accounts which should be blocked from receiving
+   * funds. If left empty it defaults to the list of account names supplied in the auth module configuration as
    * module_account_permissions
    */
   blockedModuleAccountsOverride: string[];
   /** authority defines the custom module authority. If not set, defaults to the governance module. */
   authority: string;
+  /**
+   * restrictions_order specifies the order of send restrictions and should be
+   * a list of module names which provide a send restriction instance. If no
+   * order is provided, then restrictions will be applied in alphabetical order
+   * of module names.
+   */
+  restrictionsOrder: string[];
 }
 export interface ModuleProtoMsg {
   typeUrl: '/cosmos.bank.module.v1.Module';
@@ -19,13 +26,20 @@ export interface ModuleProtoMsg {
 /** Module is the config object of the bank module. */
 export interface ModuleAmino {
   /**
-   * blocked_module_accounts configures exceptional module accounts which should be blocked from receiving funds.
-   * If left empty it defaults to the list of account names supplied in the auth module configuration as
+   * blocked_module_accounts_override configures exceptional module accounts which should be blocked from receiving
+   * funds. If left empty it defaults to the list of account names supplied in the auth module configuration as
    * module_account_permissions
    */
   blocked_module_accounts_override?: string[];
   /** authority defines the custom module authority. If not set, defaults to the governance module. */
   authority?: string;
+  /**
+   * restrictions_order specifies the order of send restrictions and should be
+   * a list of module names which provide a send restriction instance. If no
+   * order is provided, then restrictions will be applied in alphabetical order
+   * of module names.
+   */
+  restrictions_order?: string[];
 }
 export interface ModuleAminoMsg {
   type: 'cosmos-sdk/Module';
@@ -35,11 +49,13 @@ export interface ModuleAminoMsg {
 export interface ModuleSDKType {
   blocked_module_accounts_override: string[];
   authority: string;
+  restrictions_order: string[];
 }
 function createBaseModule(): Module {
   return {
     blockedModuleAccountsOverride: [],
     authority: '',
+    restrictionsOrder: [],
   };
 }
 export const Module = {
@@ -52,7 +68,10 @@ export const Module = {
         (Array.isArray(o.blockedModuleAccountsOverride) &&
           (!o.blockedModuleAccountsOverride.length ||
             typeof o.blockedModuleAccountsOverride[0] === 'string') &&
-          typeof o.authority === 'string'))
+          typeof o.authority === 'string' &&
+          Array.isArray(o.restrictionsOrder) &&
+          (!o.restrictionsOrder.length ||
+            typeof o.restrictionsOrder[0] === 'string')))
     );
   },
   isSDK(o: any): o is ModuleSDKType {
@@ -62,7 +81,10 @@ export const Module = {
         (Array.isArray(o.blocked_module_accounts_override) &&
           (!o.blocked_module_accounts_override.length ||
             typeof o.blocked_module_accounts_override[0] === 'string') &&
-          typeof o.authority === 'string'))
+          typeof o.authority === 'string' &&
+          Array.isArray(o.restrictions_order) &&
+          (!o.restrictions_order.length ||
+            typeof o.restrictions_order[0] === 'string')))
     );
   },
   isAmino(o: any): o is ModuleAmino {
@@ -72,7 +94,10 @@ export const Module = {
         (Array.isArray(o.blocked_module_accounts_override) &&
           (!o.blocked_module_accounts_override.length ||
             typeof o.blocked_module_accounts_override[0] === 'string') &&
-          typeof o.authority === 'string'))
+          typeof o.authority === 'string' &&
+          Array.isArray(o.restrictions_order) &&
+          (!o.restrictions_order.length ||
+            typeof o.restrictions_order[0] === 'string')))
     );
   },
   encode(
@@ -84,6 +109,9 @@ export const Module = {
     }
     if (message.authority !== '') {
       writer.uint32(18).string(message.authority);
+    }
+    for (const v of message.restrictionsOrder) {
+      writer.uint32(26).string(v!);
     }
     return writer;
   },
@@ -101,6 +129,9 @@ export const Module = {
         case 2:
           message.authority = reader.string();
           break;
+        case 3:
+          message.restrictionsOrder.push(reader.string());
+          break;
         default:
           reader.skipType(tag & 7);
           break;
@@ -113,6 +144,7 @@ export const Module = {
     message.blockedModuleAccountsOverride =
       object.blockedModuleAccountsOverride?.map(e => e) || [];
     message.authority = object.authority ?? '';
+    message.restrictionsOrder = object.restrictionsOrder?.map(e => e) || [];
     return message;
   },
   fromAmino(object: ModuleAmino): Module {
@@ -122,6 +154,7 @@ export const Module = {
     if (object.authority !== undefined && object.authority !== null) {
       message.authority = object.authority;
     }
+    message.restrictionsOrder = object.restrictions_order?.map(e => e) || [];
     return message;
   },
   toAmino(message: Module): ModuleAmino {
@@ -134,6 +167,11 @@ export const Module = {
         message.blockedModuleAccountsOverride;
     }
     obj.authority = message.authority === '' ? undefined : message.authority;
+    if (message.restrictionsOrder) {
+      obj.restrictions_order = message.restrictionsOrder.map(e => e);
+    } else {
+      obj.restrictions_order = message.restrictionsOrder;
+    }
     return obj;
   },
   fromAminoMsg(object: ModuleAminoMsg): Module {

@@ -366,9 +366,9 @@ export interface DenomPairTakerFee {
    * prevent confusion.
    */
   /** @deprecated */
-  denom0: string;
+  denom0?: string;
   /** @deprecated */
-  denom1: string;
+  denom1?: string;
   takerFee: string;
   tokenInDenom: string;
   tokenOutDenom: string;
@@ -397,9 +397,9 @@ export interface DenomPairTakerFeeAminoMsg {
 }
 export interface DenomPairTakerFeeSDKType {
   /** @deprecated */
-  denom0: string;
+  denom0?: string;
   /** @deprecated */
-  denom1: string;
+  denom1?: string;
   taker_fee: string;
   tokenInDenom: string;
   tokenOutDenom: string;
@@ -2172,7 +2172,7 @@ export const MsgSetRegisteredAlloyedPool = {
     const obj: any = {};
     obj.sender = message.sender === '' ? undefined : message.sender;
     obj.pool_id =
-      message.poolId !== BigInt(0) ? message.poolId.toString() : undefined;
+      message.poolId !== BigInt(0) ? message.poolId?.toString() : undefined;
     return obj;
   },
   fromAminoMsg(
@@ -2298,8 +2298,8 @@ GlobalDecoderRegistry.register(
 );
 function createBaseDenomPairTakerFee(): DenomPairTakerFee {
   return {
-    denom0: '',
-    denom1: '',
+    denom0: undefined,
+    denom1: undefined,
     takerFee: '',
     tokenInDenom: '',
     tokenOutDenom: '',
@@ -2311,9 +2311,7 @@ export const DenomPairTakerFee = {
     return (
       o &&
       (o.$typeUrl === DenomPairTakerFee.typeUrl ||
-        (typeof o.denom0 === 'string' &&
-          typeof o.denom1 === 'string' &&
-          typeof o.takerFee === 'string' &&
+        (typeof o.takerFee === 'string' &&
           typeof o.tokenInDenom === 'string' &&
           typeof o.tokenOutDenom === 'string'))
     );
@@ -2322,9 +2320,7 @@ export const DenomPairTakerFee = {
     return (
       o &&
       (o.$typeUrl === DenomPairTakerFee.typeUrl ||
-        (typeof o.denom0 === 'string' &&
-          typeof o.denom1 === 'string' &&
-          typeof o.taker_fee === 'string' &&
+        (typeof o.taker_fee === 'string' &&
           typeof o.tokenInDenom === 'string' &&
           typeof o.tokenOutDenom === 'string'))
     );
@@ -2333,9 +2329,7 @@ export const DenomPairTakerFee = {
     return (
       o &&
       (o.$typeUrl === DenomPairTakerFee.typeUrl ||
-        (typeof o.denom0 === 'string' &&
-          typeof o.denom1 === 'string' &&
-          typeof o.taker_fee === 'string' &&
+        (typeof o.taker_fee === 'string' &&
           typeof o.tokenInDenom === 'string' &&
           typeof o.tokenOutDenom === 'string'))
     );
@@ -2344,10 +2338,10 @@ export const DenomPairTakerFee = {
     message: DenomPairTakerFee,
     writer: BinaryWriter = BinaryWriter.create(),
   ): BinaryWriter {
-    if (message.denom0 !== '') {
+    if (message.denom0 !== undefined) {
       writer.uint32(10).string(message.denom0);
     }
-    if (message.denom1 !== '') {
+    if (message.denom1 !== undefined) {
       writer.uint32(18).string(message.denom1);
     }
     if (message.takerFee !== '') {
@@ -2398,8 +2392,8 @@ export const DenomPairTakerFee = {
   },
   fromPartial(object: Partial<DenomPairTakerFee>): DenomPairTakerFee {
     const message = createBaseDenomPairTakerFee();
-    message.denom0 = object.denom0 ?? '';
-    message.denom1 = object.denom1 ?? '';
+    message.denom0 = object.denom0 ?? undefined;
+    message.denom1 = object.denom1 ?? undefined;
     message.takerFee = object.takerFee ?? '';
     message.tokenInDenom = object.tokenInDenom ?? '';
     message.tokenOutDenom = object.tokenOutDenom ?? '';
@@ -2426,8 +2420,8 @@ export const DenomPairTakerFee = {
   },
   toAmino(message: DenomPairTakerFee): DenomPairTakerFeeAmino {
     const obj: any = {};
-    obj.denom0 = message.denom0 === '' ? undefined : message.denom0;
-    obj.denom1 = message.denom1 === '' ? undefined : message.denom1;
+    obj.denom0 = message.denom0 === null ? undefined : message.denom0;
+    obj.denom1 = message.denom1 === null ? undefined : message.denom1;
     obj.taker_fee = message.takerFee === '' ? undefined : message.takerFee;
     obj.tokenInDenom =
       message.tokenInDenom === '' ? undefined : message.tokenInDenom;

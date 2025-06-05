@@ -7,10 +7,6 @@ import {
   QueryFeeTokensResponse,
   QueryDenomSpotPriceRequest,
   QueryDenomSpotPriceResponse,
-  QueryDenomPoolIdRequest,
-  QueryDenomPoolIdResponse,
-  QueryBaseDenomRequest,
-  QueryBaseDenomResponse,
   QueryEipBaseFeeRequest,
   QueryEipBaseFeeResponse,
 } from './query';
@@ -25,13 +21,6 @@ export interface Query {
   denomSpotPrice(
     request: QueryDenomSpotPriceRequest,
   ): Promise<QueryDenomSpotPriceResponse>;
-  /** Returns the poolID for a specified denom input. */
-  denomPoolId(
-    request: QueryDenomPoolIdRequest,
-  ): Promise<QueryDenomPoolIdResponse>;
-  /** Returns a list of all base denom tokens and their corresponding pools. */
-  baseDenom(request?: QueryBaseDenomRequest): Promise<QueryBaseDenomResponse>;
-  /** Returns a list of all base denom tokens and their corresponding pools. */
   getEipBaseFee(
     request?: QueryEipBaseFeeRequest,
   ): Promise<QueryEipBaseFeeResponse>;
@@ -42,8 +31,6 @@ export class QueryClientImpl implements Query {
     this.rpc = rpc;
     this.feeTokens = this.feeTokens.bind(this);
     this.denomSpotPrice = this.denomSpotPrice.bind(this);
-    this.denomPoolId = this.denomPoolId.bind(this);
-    this.baseDenom = this.baseDenom.bind(this);
     this.getEipBaseFee = this.getEipBaseFee.bind(this);
   }
   feeTokens(
@@ -70,32 +57,6 @@ export class QueryClientImpl implements Query {
     );
     return promise.then(data =>
       QueryDenomSpotPriceResponse.decode(new BinaryReader(data)),
-    );
-  }
-  denomPoolId(
-    request: QueryDenomPoolIdRequest,
-  ): Promise<QueryDenomPoolIdResponse> {
-    const data = QueryDenomPoolIdRequest.encode(request).finish();
-    const promise = this.rpc.request(
-      'symphony.txfees.v1beta1.Query',
-      'DenomPoolId',
-      data,
-    );
-    return promise.then(data =>
-      QueryDenomPoolIdResponse.decode(new BinaryReader(data)),
-    );
-  }
-  baseDenom(
-    request: QueryBaseDenomRequest = {},
-  ): Promise<QueryBaseDenomResponse> {
-    const data = QueryBaseDenomRequest.encode(request).finish();
-    const promise = this.rpc.request(
-      'symphony.txfees.v1beta1.Query',
-      'BaseDenom',
-      data,
-    );
-    return promise.then(data =>
-      QueryBaseDenomResponse.decode(new BinaryReader(data)),
     );
   }
   getEipBaseFee(
@@ -125,16 +86,6 @@ export const createRpcQueryExtension = (base: QueryClient) => {
       request: QueryDenomSpotPriceRequest,
     ): Promise<QueryDenomSpotPriceResponse> {
       return queryService.denomSpotPrice(request);
-    },
-    denomPoolId(
-      request: QueryDenomPoolIdRequest,
-    ): Promise<QueryDenomPoolIdResponse> {
-      return queryService.denomPoolId(request);
-    },
-    baseDenom(
-      request?: QueryBaseDenomRequest,
-    ): Promise<QueryBaseDenomResponse> {
-      return queryService.baseDenom(request);
     },
     getEipBaseFee(
       request?: QueryEipBaseFeeRequest,
