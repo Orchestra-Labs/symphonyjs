@@ -76,6 +76,8 @@ export const symphonyProtoRegistry: ReadonlyArray<[string, GeneratedType]> = [
 ];
 export const getSigningSymphonyClientOptions = ({
   defaultTypes = defaultRegistryTypes,
+}: {
+  defaultTypes?: ReadonlyArray<[string, GeneratedType]>;
 } = {}): {
   registry: Registry;
   aminoTypes: AminoTypes;

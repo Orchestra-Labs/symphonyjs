@@ -14,9 +14,9 @@ To set up this project locally, follow these steps:
    ```bash
    cd <project-directory>
    ```
-3. Install dependencies with Yarn:
+3. Install dependencies with pnpm:
    ```bash
-   yarn install
+   pnpm install
    ```
 
 ## Maintenance
@@ -26,7 +26,23 @@ To set up this project locally, follow these steps:
 Regularly update dependencies to keep the application secure and efficient:
 
 ```bash
-yarn upgrade
+pnpm upgrade
+```
+
+### Codegen
+
+Generate or regenerate TypeScript files from Protobuf definitions:
+
+```bash
+pnpm run codegen
+```
+
+### Build
+
+Compile the CommonJS and ESM outputs:
+
+```bash
+pnpm run build
 ```
 
 ## Deployment
@@ -44,20 +60,20 @@ If manual deployment to npm is necessary, make sure your local .npmrc file is co
 Update the npm package with new patches (bug fixes):
 
 ```bash
-npm version patch
+pnpm run patch
 git push
 ```
 
 Update the npm package with new minor versions (backwards compatible changes):
 
 ```bash
-npm version minor
+pnpm run minor
 git push
 ```
 
 Update the npm package with new major versions (breaking changes):
 
 ```bash
-npm version major
+pnpm run major
 git push
 ```
