@@ -1,0 +1,35 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "GetAllVestingContractsResponse",
+  "type": "object",
+  "required": [
+    "contracts"
+  ],
+  "properties": {
+    "contracts": {
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/VestingContractRecord"
+      }
+    }
+  },
+  "additionalProperties": false,
+  "definitions": {
+    "VestingContractRecord": {
+      "type": "object",
+      "required": [
+        "address",
+        "contract_address"
+      ],
+      "properties": {
+        "address": {
+          "type": "string"
+        },
+        "contract_address": {
+          "type": "string"
+        }
+      },
+      "additionalProperties": false
+    }
+  }
+}

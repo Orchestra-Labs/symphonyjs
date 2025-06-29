@@ -1,0 +1,24 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "VestingContractResponse",
+  "type": "object",
+  "required": [
+    "address",
+    "found"
+  ],
+  "properties": {
+    "address": {
+      "type": "string"
+    },
+    "contract_address": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "found": {
+      "type": "boolean"
+    }
+  },
+  "additionalProperties": false
+}
