@@ -4,7 +4,14 @@ import { sync as rimraf } from 'rimraf';
 import codegen from '@cosmwasm/ts-codegen';
 
 const protoDirs = [join(__dirname, '/../proto')];
-const rewardsVestingSchema = join(__dirname, '/../contracts/vesting/schema');
+const rewardsVestingOrchestratorSchema = join(
+  __dirname,
+  '/../contracts/vesting-orchestrator/schema',
+);
+const vestingOrchestratorSchema = join(
+  __dirname,
+  '/../contracts/vesting/schema',
+);
 const outPath = join(__dirname, '/../src');
 rimraf(outPath);
 
@@ -118,8 +125,12 @@ telescope({
 codegen({
   contracts: [
     {
-      name: 'RewardsVesting',
-      dir: rewardsVestingSchema,
+      name: 'RewardsVestingOrchestrator',
+      dir: rewardsVestingOrchestratorSchema,
+    },
+    {
+      name: 'Vesting',
+      dir: vestingOrchestratorSchema,
     },
   ],
   outPath: join(__dirname, '/../src/contracts'),

@@ -76,7 +76,7 @@ export type QueryMsg =
       };
     }
   | {
-      all_vesting_contracts: {
+      get_all_vesting_contracts: {
         limit?: number | null;
         start_after?: string | null;
       };

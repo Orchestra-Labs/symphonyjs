@@ -25,24 +25,24 @@ import {
   InstantiateMsg,
   QueryMsg,
   VestingContractResponse,
-} from './RewardsVesting.types';
-export interface RewardsVestingReadOnlyInterface {
+} from './RewardsVestingOrchestrator.types';
+export interface RewardsVestingOrchestratorReadOnlyInterface {
   contractAddress: string;
   vestingContract: ({
     address,
   }: {
     address: string;
   }) => Promise<VestingContractResponse>;
-  allVestingContracts: ({
+  getAllVestingContracts: ({
     limit,
     startAfter,
   }: {
     limit?: number;
     startAfter?: string;
-  }) => Promise<AllVestingContractsResponse>;
+  }) => Promise<GetAllVestingContractsResponse>;
 }
-export class RewardsVestingQueryClient
-  implements RewardsVestingReadOnlyInterface
+export class RewardsVestingOrchestratorQueryClient
+  implements RewardsVestingOrchestratorReadOnlyInterface
 {
   client: CosmWasmClient;
   contractAddress: string;
@@ -50,7 +50,7 @@ export class RewardsVestingQueryClient
     this.client = client;
     this.contractAddress = contractAddress;
     this.vestingContract = this.vestingContract.bind(this);
-    this.allVestingContracts = this.allVestingContracts.bind(this);
+    this.getAllVestingContracts = this.getAllVestingContracts.bind(this);
   }
   vestingContract = async ({
     address,
@@ -63,23 +63,23 @@ export class RewardsVestingQueryClient
       },
     });
   };
-  allVestingContracts = async ({
+  getAllVestingContracts = async ({
     limit,
     startAfter,
   }: {
     limit?: number;
     startAfter?: string;
-  }): Promise<AllVestingContractsResponse> => {
+  }): Promise<GetAllVestingContractsResponse> => {
     return this.client.queryContractSmart(this.contractAddress, {
-      all_vesting_contracts: {
+      get_all_vesting_contracts: {
         limit,
         start_after: startAfter,
       },
     });
   };
 }
-export interface RewardsVestingInterface
-  extends RewardsVestingReadOnlyInterface {
+export interface RewardsVestingOrchestratorInterface
+  extends RewardsVestingOrchestratorReadOnlyInterface {
   contractAddress: string;
   sender: string;
   batchVesting: (
@@ -111,9 +111,9 @@ export interface RewardsVestingInterface
     funds_?: Coin[],
   ) => Promise<ExecuteResult>;
 }
-export class RewardsVestingClient
-  extends RewardsVestingQueryClient
-  implements RewardsVestingInterface
+export class RewardsVestingOrchestratorClient
+  extends RewardsVestingOrchestratorQueryClient
+  implements RewardsVestingOrchestratorInterface
 {
   declare client: SigningCosmWasmClient;
   sender: string;
