@@ -1,8 +1,10 @@
 import telescope from '@cosmology/telescope';
 import { join } from 'path';
 import { sync as rimraf } from 'rimraf';
+import codegen from '@cosmwasm/ts-codegen';
 
 const protoDirs = [join(__dirname, '/../proto')];
+const rewardsVestingSchema = join(__dirname, '/../contracts/vesting/schema');
 const outPath = join(__dirname, '/../src');
 rimraf(outPath);
 
@@ -107,6 +109,56 @@ telescope({
 })
   .then(() => {
     console.log('✨ all done!');
+  })
+  .catch(e => {
+    console.error(e);
+    process.exit(1);
+  });
+
+codegen({
+  contracts: [
+    {
+      name: 'RewardsVesting',
+      dir: rewardsVestingSchema,
+    },
+  ],
+  outPath: join(__dirname, '/../src/contracts'),
+  options: {
+    bundle: {
+      bundleFile: 'index.ts',
+      scope: 'contracts',
+    },
+    types: {
+      enabled: true,
+    },
+    client: {
+      enabled: true,
+      useDeclareKeyword: true,
+    },
+    recoil: {
+      enabled: false,
+    },
+    useContractsHook: {
+      enabled: false,
+    },
+    messageComposer: {
+      enabled: false,
+    },
+    messageBuilder: {
+      enabled: false,
+    },
+    reactQuery: {
+      enabled: false,
+      optionalClient: true,
+      version: 'v4',
+      mutations: true,
+      queryKeys: true,
+      queryFactory: true,
+    },
+  },
+})
+  .then(() => {
+    console.log('✨ contracts codegen done!');
   })
   .catch(e => {
     console.error(e);
