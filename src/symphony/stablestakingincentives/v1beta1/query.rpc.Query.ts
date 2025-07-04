@@ -1,8 +1,8 @@
 //@ts-nocheck
-import { Rpc } from "../../../helpers";
-import { BinaryReader } from "../../../binary";
-import { QueryClient, createProtobufRpcClient } from "@cosmjs/stargate";
-import { QueryParamsRequest, QueryParamsResponse } from "./query";
+import { Rpc } from '../../../helpers';
+import { BinaryReader } from '../../../binary';
+import { QueryClient, createProtobufRpcClient } from '@cosmjs/stargate';
+import { QueryParamsRequest, QueryParamsResponse } from './query';
 export interface Query {
   /** Params returns pool incentives params. */
   params(request?: QueryParamsRequest): Promise<QueryParamsResponse>;
@@ -15,8 +15,14 @@ export class QueryClientImpl implements Query {
   }
   params(request: QueryParamsRequest = {}): Promise<QueryParamsResponse> {
     const data = QueryParamsRequest.encode(request).finish();
-    const promise = this.rpc.request("symphony.stablestakingincentives.v1beta1.Query", "Params", data);
-    return promise.then(data => QueryParamsResponse.decode(new BinaryReader(data)));
+    const promise = this.rpc.request(
+      'symphony.stablestakingincentives.v1beta1.Query',
+      'Params',
+      data,
+    );
+    return promise.then(data =>
+      QueryParamsResponse.decode(new BinaryReader(data)),
+    );
   }
 }
 export const createRpcQueryExtension = (base: QueryClient) => {
@@ -25,6 +31,6 @@ export const createRpcQueryExtension = (base: QueryClient) => {
   return {
     params(request?: QueryParamsRequest): Promise<QueryParamsResponse> {
       return queryService.params(request);
-    }
+    },
   };
 };

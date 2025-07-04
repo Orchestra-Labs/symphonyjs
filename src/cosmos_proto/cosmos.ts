@@ -1,6 +1,6 @@
 //@ts-nocheck
-import { BinaryReader, BinaryWriter } from "../binary";
-import { GlobalDecoderRegistry } from "../registry";
+import { BinaryReader, BinaryWriter } from '../binary';
+import { GlobalDecoderRegistry } from '../registry';
 export enum ScalarType {
   SCALAR_TYPE_UNSPECIFIED = 0,
   SCALAR_TYPE_STRING = 1,
@@ -12,16 +12,16 @@ export const ScalarTypeAmino = ScalarType;
 export function scalarTypeFromJSON(object: any): ScalarType {
   switch (object) {
     case 0:
-    case "SCALAR_TYPE_UNSPECIFIED":
+    case 'SCALAR_TYPE_UNSPECIFIED':
       return ScalarType.SCALAR_TYPE_UNSPECIFIED;
     case 1:
-    case "SCALAR_TYPE_STRING":
+    case 'SCALAR_TYPE_STRING':
       return ScalarType.SCALAR_TYPE_STRING;
     case 2:
-    case "SCALAR_TYPE_BYTES":
+    case 'SCALAR_TYPE_BYTES':
       return ScalarType.SCALAR_TYPE_BYTES;
     case -1:
-    case "UNRECOGNIZED":
+    case 'UNRECOGNIZED':
     default:
       return ScalarType.UNRECOGNIZED;
   }
@@ -29,19 +29,22 @@ export function scalarTypeFromJSON(object: any): ScalarType {
 export function scalarTypeToJSON(object: ScalarType): string {
   switch (object) {
     case ScalarType.SCALAR_TYPE_UNSPECIFIED:
-      return "SCALAR_TYPE_UNSPECIFIED";
+      return 'SCALAR_TYPE_UNSPECIFIED';
     case ScalarType.SCALAR_TYPE_STRING:
-      return "SCALAR_TYPE_STRING";
+      return 'SCALAR_TYPE_STRING';
     case ScalarType.SCALAR_TYPE_BYTES:
-      return "SCALAR_TYPE_BYTES";
+      return 'SCALAR_TYPE_BYTES';
     case ScalarType.UNRECOGNIZED:
     default:
-      return "UNRECOGNIZED";
+      return 'UNRECOGNIZED';
   }
 }
 /**
  * InterfaceDescriptor describes an interface type to be used with
  * accepts_interface and implements_interface and declared by declare_interface.
+ * @name InterfaceDescriptor
+ * @package cosmos_proto
+ * @see proto type: cosmos_proto.InterfaceDescriptor
  */
 export interface InterfaceDescriptor {
   /**
@@ -58,12 +61,15 @@ export interface InterfaceDescriptor {
   description: string;
 }
 export interface InterfaceDescriptorProtoMsg {
-  typeUrl: "/cosmos_proto.InterfaceDescriptor";
+  typeUrl: '/cosmos_proto.InterfaceDescriptor';
   value: Uint8Array;
 }
 /**
  * InterfaceDescriptor describes an interface type to be used with
  * accepts_interface and implements_interface and declared by declare_interface.
+ * @name InterfaceDescriptorAmino
+ * @package cosmos_proto
+ * @see proto type: cosmos_proto.InterfaceDescriptor
  */
 export interface InterfaceDescriptorAmino {
   /**
@@ -80,12 +86,15 @@ export interface InterfaceDescriptorAmino {
   description?: string;
 }
 export interface InterfaceDescriptorAminoMsg {
-  type: "/cosmos_proto.InterfaceDescriptor";
+  type: '/cosmos_proto.InterfaceDescriptor';
   value: InterfaceDescriptorAmino;
 }
 /**
  * InterfaceDescriptor describes an interface type to be used with
  * accepts_interface and implements_interface and declared by declare_interface.
+ * @name InterfaceDescriptorSDKType
+ * @package cosmos_proto
+ * @see proto type: cosmos_proto.InterfaceDescriptor
  */
 export interface InterfaceDescriptorSDKType {
   name: string;
@@ -99,6 +108,9 @@ export interface InterfaceDescriptorSDKType {
  * Scalars should ideally define an encoding such that there is only one
  * valid syntactical representation for a given semantic meaning,
  * i.e. the encoding should be deterministic.
+ * @name ScalarDescriptor
+ * @package cosmos_proto
+ * @see proto type: cosmos_proto.ScalarDescriptor
  */
 export interface ScalarDescriptor {
   /**
@@ -123,7 +135,7 @@ export interface ScalarDescriptor {
   fieldType: ScalarType[];
 }
 export interface ScalarDescriptorProtoMsg {
-  typeUrl: "/cosmos_proto.ScalarDescriptor";
+  typeUrl: '/cosmos_proto.ScalarDescriptor';
   value: Uint8Array;
 }
 /**
@@ -134,6 +146,9 @@ export interface ScalarDescriptorProtoMsg {
  * Scalars should ideally define an encoding such that there is only one
  * valid syntactical representation for a given semantic meaning,
  * i.e. the encoding should be deterministic.
+ * @name ScalarDescriptorAmino
+ * @package cosmos_proto
+ * @see proto type: cosmos_proto.ScalarDescriptor
  */
 export interface ScalarDescriptorAmino {
   /**
@@ -158,7 +173,7 @@ export interface ScalarDescriptorAmino {
   field_type?: ScalarType[];
 }
 export interface ScalarDescriptorAminoMsg {
-  type: "/cosmos_proto.ScalarDescriptor";
+  type: '/cosmos_proto.ScalarDescriptor';
   value: ScalarDescriptorAmino;
 }
 /**
@@ -169,6 +184,9 @@ export interface ScalarDescriptorAminoMsg {
  * Scalars should ideally define an encoding such that there is only one
  * valid syntactical representation for a given semantic meaning,
  * i.e. the encoding should be deterministic.
+ * @name ScalarDescriptorSDKType
+ * @package cosmos_proto
+ * @see proto type: cosmos_proto.ScalarDescriptor
  */
 export interface ScalarDescriptorSDKType {
   name: string;
@@ -177,32 +195,58 @@ export interface ScalarDescriptorSDKType {
 }
 function createBaseInterfaceDescriptor(): InterfaceDescriptor {
   return {
-    name: "",
-    description: ""
+    name: '',
+    description: '',
   };
 }
+/**
+ * InterfaceDescriptor describes an interface type to be used with
+ * accepts_interface and implements_interface and declared by declare_interface.
+ * @name InterfaceDescriptor
+ * @package cosmos_proto
+ * @see proto type: cosmos_proto.InterfaceDescriptor
+ */
 export const InterfaceDescriptor = {
-  typeUrl: "/cosmos_proto.InterfaceDescriptor",
+  typeUrl: '/cosmos_proto.InterfaceDescriptor',
   is(o: any): o is InterfaceDescriptor {
-    return o && (o.$typeUrl === InterfaceDescriptor.typeUrl || typeof o.name === "string" && typeof o.description === "string");
+    return (
+      o &&
+      (o.$typeUrl === InterfaceDescriptor.typeUrl ||
+        (typeof o.name === 'string' && typeof o.description === 'string'))
+    );
   },
   isSDK(o: any): o is InterfaceDescriptorSDKType {
-    return o && (o.$typeUrl === InterfaceDescriptor.typeUrl || typeof o.name === "string" && typeof o.description === "string");
+    return (
+      o &&
+      (o.$typeUrl === InterfaceDescriptor.typeUrl ||
+        (typeof o.name === 'string' && typeof o.description === 'string'))
+    );
   },
   isAmino(o: any): o is InterfaceDescriptorAmino {
-    return o && (o.$typeUrl === InterfaceDescriptor.typeUrl || typeof o.name === "string" && typeof o.description === "string");
+    return (
+      o &&
+      (o.$typeUrl === InterfaceDescriptor.typeUrl ||
+        (typeof o.name === 'string' && typeof o.description === 'string'))
+    );
   },
-  encode(message: InterfaceDescriptor, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
-    if (message.name !== "") {
+  encode(
+    message: InterfaceDescriptor,
+    writer: BinaryWriter = BinaryWriter.create(),
+  ): BinaryWriter {
+    if (message.name !== '') {
       writer.uint32(10).string(message.name);
     }
-    if (message.description !== "") {
+    if (message.description !== '') {
       writer.uint32(18).string(message.description);
     }
     return writer;
   },
-  decode(input: BinaryReader | Uint8Array, length?: number): InterfaceDescriptor {
-    const reader = input instanceof BinaryReader ? input : new BinaryReader(input);
+  decode(
+    input: BinaryReader | Uint8Array,
+    length?: number,
+  ): InterfaceDescriptor {
+    const reader =
+      input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseInterfaceDescriptor();
     while (reader.pos < end) {
@@ -223,8 +267,8 @@ export const InterfaceDescriptor = {
   },
   fromPartial(object: Partial<InterfaceDescriptor>): InterfaceDescriptor {
     const message = createBaseInterfaceDescriptor();
-    message.name = object.name ?? "";
-    message.description = object.description ?? "";
+    message.name = object.name ?? '';
+    message.description = object.description ?? '';
     return message;
   },
   fromAmino(object: InterfaceDescriptorAmino): InterfaceDescriptor {
@@ -239,8 +283,9 @@ export const InterfaceDescriptor = {
   },
   toAmino(message: InterfaceDescriptor): InterfaceDescriptorAmino {
     const obj: any = {};
-    obj.name = message.name === "" ? undefined : message.name;
-    obj.description = message.description === "" ? undefined : message.description;
+    obj.name = message.name === '' ? undefined : message.name;
+    obj.description =
+      message.description === '' ? undefined : message.description;
     return obj;
   },
   fromAminoMsg(object: InterfaceDescriptorAminoMsg): InterfaceDescriptor {
@@ -254,35 +299,71 @@ export const InterfaceDescriptor = {
   },
   toProtoMsg(message: InterfaceDescriptor): InterfaceDescriptorProtoMsg {
     return {
-      typeUrl: "/cosmos_proto.InterfaceDescriptor",
-      value: InterfaceDescriptor.encode(message).finish()
+      typeUrl: '/cosmos_proto.InterfaceDescriptor',
+      value: InterfaceDescriptor.encode(message).finish(),
     };
-  }
+  },
 };
-GlobalDecoderRegistry.register(InterfaceDescriptor.typeUrl, InterfaceDescriptor);
+GlobalDecoderRegistry.register(
+  InterfaceDescriptor.typeUrl,
+  InterfaceDescriptor,
+);
 function createBaseScalarDescriptor(): ScalarDescriptor {
   return {
-    name: "",
-    description: "",
-    fieldType: []
+    name: '',
+    description: '',
+    fieldType: [],
   };
 }
+/**
+ * ScalarDescriptor describes an scalar type to be used with
+ * the scalar field option and declared by declare_scalar.
+ * Scalars extend simple protobuf built-in types with additional
+ * syntax and semantics, for instance to represent big integers.
+ * Scalars should ideally define an encoding such that there is only one
+ * valid syntactical representation for a given semantic meaning,
+ * i.e. the encoding should be deterministic.
+ * @name ScalarDescriptor
+ * @package cosmos_proto
+ * @see proto type: cosmos_proto.ScalarDescriptor
+ */
 export const ScalarDescriptor = {
-  typeUrl: "/cosmos_proto.ScalarDescriptor",
+  typeUrl: '/cosmos_proto.ScalarDescriptor',
   is(o: any): o is ScalarDescriptor {
-    return o && (o.$typeUrl === ScalarDescriptor.typeUrl || typeof o.name === "string" && typeof o.description === "string" && Array.isArray(o.fieldType));
+    return (
+      o &&
+      (o.$typeUrl === ScalarDescriptor.typeUrl ||
+        (typeof o.name === 'string' &&
+          typeof o.description === 'string' &&
+          Array.isArray(o.fieldType)))
+    );
   },
   isSDK(o: any): o is ScalarDescriptorSDKType {
-    return o && (o.$typeUrl === ScalarDescriptor.typeUrl || typeof o.name === "string" && typeof o.description === "string" && Array.isArray(o.field_type));
+    return (
+      o &&
+      (o.$typeUrl === ScalarDescriptor.typeUrl ||
+        (typeof o.name === 'string' &&
+          typeof o.description === 'string' &&
+          Array.isArray(o.field_type)))
+    );
   },
   isAmino(o: any): o is ScalarDescriptorAmino {
-    return o && (o.$typeUrl === ScalarDescriptor.typeUrl || typeof o.name === "string" && typeof o.description === "string" && Array.isArray(o.field_type));
+    return (
+      o &&
+      (o.$typeUrl === ScalarDescriptor.typeUrl ||
+        (typeof o.name === 'string' &&
+          typeof o.description === 'string' &&
+          Array.isArray(o.field_type)))
+    );
   },
-  encode(message: ScalarDescriptor, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
-    if (message.name !== "") {
+  encode(
+    message: ScalarDescriptor,
+    writer: BinaryWriter = BinaryWriter.create(),
+  ): BinaryWriter {
+    if (message.name !== '') {
       writer.uint32(10).string(message.name);
     }
-    if (message.description !== "") {
+    if (message.description !== '') {
       writer.uint32(18).string(message.description);
     }
     writer.uint32(26).fork();
@@ -293,7 +374,8 @@ export const ScalarDescriptor = {
     return writer;
   },
   decode(input: BinaryReader | Uint8Array, length?: number): ScalarDescriptor {
-    const reader = input instanceof BinaryReader ? input : new BinaryReader(input);
+    const reader =
+      input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseScalarDescriptor();
     while (reader.pos < end) {
@@ -324,8 +406,8 @@ export const ScalarDescriptor = {
   },
   fromPartial(object: Partial<ScalarDescriptor>): ScalarDescriptor {
     const message = createBaseScalarDescriptor();
-    message.name = object.name ?? "";
-    message.description = object.description ?? "";
+    message.name = object.name ?? '';
+    message.description = object.description ?? '';
     message.fieldType = object.fieldType?.map(e => e) || [];
     return message;
   },
@@ -342,8 +424,9 @@ export const ScalarDescriptor = {
   },
   toAmino(message: ScalarDescriptor): ScalarDescriptorAmino {
     const obj: any = {};
-    obj.name = message.name === "" ? undefined : message.name;
-    obj.description = message.description === "" ? undefined : message.description;
+    obj.name = message.name === '' ? undefined : message.name;
+    obj.description =
+      message.description === '' ? undefined : message.description;
     if (message.fieldType) {
       obj.field_type = message.fieldType.map(e => e);
     } else {
@@ -362,9 +445,9 @@ export const ScalarDescriptor = {
   },
   toProtoMsg(message: ScalarDescriptor): ScalarDescriptorProtoMsg {
     return {
-      typeUrl: "/cosmos_proto.ScalarDescriptor",
-      value: ScalarDescriptor.encode(message).finish()
+      typeUrl: '/cosmos_proto.ScalarDescriptor',
+      value: ScalarDescriptor.encode(message).finish(),
     };
-  }
+  },
 };
 GlobalDecoderRegistry.register(ScalarDescriptor.typeUrl, ScalarDescriptor);

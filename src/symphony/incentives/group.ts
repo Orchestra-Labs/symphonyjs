@@ -1,8 +1,8 @@
 //@ts-nocheck
-import { Gauge, GaugeAmino, GaugeSDKType } from "./gauge";
-import { BinaryReader, BinaryWriter } from "../../binary";
-import { GlobalDecoderRegistry } from "../../registry";
-import { isSet } from "../../helpers";
+import { Gauge, GaugeAmino, GaugeSDKType } from './gauge';
+import { BinaryReader, BinaryWriter } from '../../binary';
+import { GlobalDecoderRegistry } from '../../registry';
+import { isSet } from '../../helpers';
 /** SplittingPolicy determines the way we want to split incentives in groupGauges */
 export enum SplittingPolicy {
   ByVolume = 0,
@@ -13,10 +13,10 @@ export const SplittingPolicyAmino = SplittingPolicy;
 export function splittingPolicyFromJSON(object: any): SplittingPolicy {
   switch (object) {
     case 0:
-    case "ByVolume":
+    case 'ByVolume':
       return SplittingPolicy.ByVolume;
     case -1:
-    case "UNRECOGNIZED":
+    case 'UNRECOGNIZED':
     default:
       return SplittingPolicy.UNRECOGNIZED;
   }
@@ -24,10 +24,10 @@ export function splittingPolicyFromJSON(object: any): SplittingPolicy {
 export function splittingPolicyToJSON(object: SplittingPolicy): string {
   switch (object) {
     case SplittingPolicy.ByVolume:
-      return "ByVolume";
+      return 'ByVolume';
     case SplittingPolicy.UNRECOGNIZED:
     default:
-      return "UNRECOGNIZED";
+      return 'UNRECOGNIZED';
   }
 }
 /**
@@ -37,13 +37,16 @@ export function splittingPolicyToJSON(object: SplittingPolicy): string {
  * readable (pool-incentives distribution abstractions are used in a very
  * specific way that does not directly relate to gauge logic). This also helps
  * us sidestep a refactor to avoid an import cycle.
+ * @name InternalGaugeInfo
+ * @package symphony.incentives
+ * @see proto type: symphony.incentives.InternalGaugeInfo
  */
 export interface InternalGaugeInfo {
   totalWeight: string;
   gaugeRecords: InternalGaugeRecord[];
 }
 export interface InternalGaugeInfoProtoMsg {
-  typeUrl: "/symphony.incentives.InternalGaugeInfo";
+  typeUrl: '/symphony.incentives.InternalGaugeInfo';
   value: Uint8Array;
 }
 /**
@@ -53,13 +56,16 @@ export interface InternalGaugeInfoProtoMsg {
  * readable (pool-incentives distribution abstractions are used in a very
  * specific way that does not directly relate to gauge logic). This also helps
  * us sidestep a refactor to avoid an import cycle.
+ * @name InternalGaugeInfoAmino
+ * @package symphony.incentives
+ * @see proto type: symphony.incentives.InternalGaugeInfo
  */
 export interface InternalGaugeInfoAmino {
   total_weight?: string;
   gauge_records?: InternalGaugeRecordAmino[];
 }
 export interface InternalGaugeInfoAminoMsg {
-  type: "/symphony.incentives.InternalGaugeInfo";
+  type: '/symphony.incentives.InternalGaugeInfo';
   value: InternalGaugeInfoAmino;
 }
 /**
@@ -69,11 +75,19 @@ export interface InternalGaugeInfoAminoMsg {
  * readable (pool-incentives distribution abstractions are used in a very
  * specific way that does not directly relate to gauge logic). This also helps
  * us sidestep a refactor to avoid an import cycle.
+ * @name InternalGaugeInfoSDKType
+ * @package symphony.incentives
+ * @see proto type: symphony.incentives.InternalGaugeInfo
  */
 export interface InternalGaugeInfoSDKType {
   total_weight: string;
   gauge_records: InternalGaugeRecordSDKType[];
 }
+/**
+ * @name InternalGaugeRecord
+ * @package symphony.incentives
+ * @see proto type: symphony.incentives.InternalGaugeRecord
+ */
 export interface InternalGaugeRecord {
   gaugeId: bigint;
   /**
@@ -90,9 +104,14 @@ export interface InternalGaugeRecord {
   cumulativeWeight: string;
 }
 export interface InternalGaugeRecordProtoMsg {
-  typeUrl: "/symphony.incentives.InternalGaugeRecord";
+  typeUrl: '/symphony.incentives.InternalGaugeRecord';
   value: Uint8Array;
 }
+/**
+ * @name InternalGaugeRecordAmino
+ * @package symphony.incentives
+ * @see proto type: symphony.incentives.InternalGaugeRecord
+ */
 export interface InternalGaugeRecordAmino {
   gauge_id?: string;
   /**
@@ -109,9 +128,14 @@ export interface InternalGaugeRecordAmino {
   cumulative_weight?: string;
 }
 export interface InternalGaugeRecordAminoMsg {
-  type: "/symphony.incentives.InternalGaugeRecord";
+  type: '/symphony.incentives.InternalGaugeRecord';
   value: InternalGaugeRecordAmino;
 }
+/**
+ * @name InternalGaugeRecordSDKType
+ * @package symphony.incentives
+ * @see proto type: symphony.incentives.InternalGaugeRecord
+ */
 export interface InternalGaugeRecordSDKType {
   gauge_id: bigint;
   current_weight: string;
@@ -122,6 +146,9 @@ export interface InternalGaugeRecordSDKType {
  * info, and a splitting policy. These are grouped into a single abstraction to
  * allow for distribution of group incentives to internal gauges according to
  * the specified splitting policy.
+ * @name Group
+ * @package symphony.incentives
+ * @see proto type: symphony.incentives.Group
  */
 export interface Group {
   groupGaugeId: bigint;
@@ -129,7 +156,7 @@ export interface Group {
   splittingPolicy: SplittingPolicy;
 }
 export interface GroupProtoMsg {
-  typeUrl: "/symphony.incentives.Group";
+  typeUrl: '/symphony.incentives.Group';
   value: Uint8Array;
 }
 /**
@@ -137,6 +164,9 @@ export interface GroupProtoMsg {
  * info, and a splitting policy. These are grouped into a single abstraction to
  * allow for distribution of group incentives to internal gauges according to
  * the specified splitting policy.
+ * @name GroupAmino
+ * @package symphony.incentives
+ * @see proto type: symphony.incentives.Group
  */
 export interface GroupAmino {
   group_gauge_id?: string;
@@ -144,7 +174,7 @@ export interface GroupAmino {
   splitting_policy?: SplittingPolicy;
 }
 export interface GroupAminoMsg {
-  type: "/symphony.incentives.Group";
+  type: '/symphony.incentives.Group';
   value: GroupAmino;
 }
 /**
@@ -152,6 +182,9 @@ export interface GroupAminoMsg {
  * info, and a splitting policy. These are grouped into a single abstraction to
  * allow for distribution of group incentives to internal gauges according to
  * the specified splitting policy.
+ * @name GroupSDKType
+ * @package symphony.incentives
+ * @see proto type: symphony.incentives.Group
  */
 export interface GroupSDKType {
   group_gauge_id: bigint;
@@ -161,28 +194,37 @@ export interface GroupSDKType {
 /**
  * CreateGroup is called via governance to create a new group.
  * It takes an array of pool IDs to split the incentives across.
+ * @name CreateGroup
+ * @package symphony.incentives
+ * @see proto type: symphony.incentives.CreateGroup
  */
 export interface CreateGroup {
   poolIds: bigint[];
 }
 export interface CreateGroupProtoMsg {
-  typeUrl: "/symphony.incentives.CreateGroup";
+  typeUrl: '/symphony.incentives.CreateGroup';
   value: Uint8Array;
 }
 /**
  * CreateGroup is called via governance to create a new group.
  * It takes an array of pool IDs to split the incentives across.
+ * @name CreateGroupAmino
+ * @package symphony.incentives
+ * @see proto type: symphony.incentives.CreateGroup
  */
 export interface CreateGroupAmino {
   pool_ids?: string[];
 }
 export interface CreateGroupAminoMsg {
-  type: "/symphony.incentives.CreateGroup";
+  type: '/symphony.incentives.CreateGroup';
   value: CreateGroupAmino;
 }
 /**
  * CreateGroup is called via governance to create a new group.
  * It takes an array of pool IDs to split the incentives across.
+ * @name CreateGroupSDKType
+ * @package symphony.incentives
+ * @see proto type: symphony.incentives.CreateGroup
  */
 export interface CreateGroupSDKType {
   pool_ids: bigint[];
@@ -190,30 +232,39 @@ export interface CreateGroupSDKType {
 /**
  * GroupsWithGauge is a helper struct that stores a group and its
  * associated gauge.
+ * @name GroupsWithGauge
+ * @package symphony.incentives
+ * @see proto type: symphony.incentives.GroupsWithGauge
  */
 export interface GroupsWithGauge {
   group: Group;
   gauge: Gauge;
 }
 export interface GroupsWithGaugeProtoMsg {
-  typeUrl: "/symphony.incentives.GroupsWithGauge";
+  typeUrl: '/symphony.incentives.GroupsWithGauge';
   value: Uint8Array;
 }
 /**
  * GroupsWithGauge is a helper struct that stores a group and its
  * associated gauge.
+ * @name GroupsWithGaugeAmino
+ * @package symphony.incentives
+ * @see proto type: symphony.incentives.GroupsWithGauge
  */
 export interface GroupsWithGaugeAmino {
   group?: GroupAmino;
   gauge?: GaugeAmino;
 }
 export interface GroupsWithGaugeAminoMsg {
-  type: "/symphony.incentives.GroupsWithGauge";
+  type: '/symphony.incentives.GroupsWithGauge';
   value: GroupsWithGaugeAmino;
 }
 /**
  * GroupsWithGauge is a helper struct that stores a group and its
  * associated gauge.
+ * @name GroupsWithGaugeSDKType
+ * @package symphony.incentives
+ * @see proto type: symphony.incentives.GroupsWithGauge
  */
 export interface GroupsWithGaugeSDKType {
   group: GroupSDKType;
@@ -221,23 +272,58 @@ export interface GroupsWithGaugeSDKType {
 }
 function createBaseInternalGaugeInfo(): InternalGaugeInfo {
   return {
-    totalWeight: "",
-    gaugeRecords: []
+    totalWeight: '',
+    gaugeRecords: [],
   };
 }
+/**
+ * Note that while both InternalGaugeInfo and InternalGaugeRecord could
+ * technically be replaced by DistrInfo and DistrRecord from the pool-incentives
+ * module, we create separate types here to keep our abstractions clean and
+ * readable (pool-incentives distribution abstractions are used in a very
+ * specific way that does not directly relate to gauge logic). This also helps
+ * us sidestep a refactor to avoid an import cycle.
+ * @name InternalGaugeInfo
+ * @package symphony.incentives
+ * @see proto type: symphony.incentives.InternalGaugeInfo
+ */
 export const InternalGaugeInfo = {
-  typeUrl: "/symphony.incentives.InternalGaugeInfo",
+  typeUrl: '/symphony.incentives.InternalGaugeInfo',
   is(o: any): o is InternalGaugeInfo {
-    return o && (o.$typeUrl === InternalGaugeInfo.typeUrl || typeof o.totalWeight === "string" && Array.isArray(o.gaugeRecords) && (!o.gaugeRecords.length || InternalGaugeRecord.is(o.gaugeRecords[0])));
+    return (
+      o &&
+      (o.$typeUrl === InternalGaugeInfo.typeUrl ||
+        (typeof o.totalWeight === 'string' &&
+          Array.isArray(o.gaugeRecords) &&
+          (!o.gaugeRecords.length ||
+            InternalGaugeRecord.is(o.gaugeRecords[0]))))
+    );
   },
   isSDK(o: any): o is InternalGaugeInfoSDKType {
-    return o && (o.$typeUrl === InternalGaugeInfo.typeUrl || typeof o.total_weight === "string" && Array.isArray(o.gauge_records) && (!o.gauge_records.length || InternalGaugeRecord.isSDK(o.gauge_records[0])));
+    return (
+      o &&
+      (o.$typeUrl === InternalGaugeInfo.typeUrl ||
+        (typeof o.total_weight === 'string' &&
+          Array.isArray(o.gauge_records) &&
+          (!o.gauge_records.length ||
+            InternalGaugeRecord.isSDK(o.gauge_records[0]))))
+    );
   },
   isAmino(o: any): o is InternalGaugeInfoAmino {
-    return o && (o.$typeUrl === InternalGaugeInfo.typeUrl || typeof o.total_weight === "string" && Array.isArray(o.gauge_records) && (!o.gauge_records.length || InternalGaugeRecord.isAmino(o.gauge_records[0])));
+    return (
+      o &&
+      (o.$typeUrl === InternalGaugeInfo.typeUrl ||
+        (typeof o.total_weight === 'string' &&
+          Array.isArray(o.gauge_records) &&
+          (!o.gauge_records.length ||
+            InternalGaugeRecord.isAmino(o.gauge_records[0]))))
+    );
   },
-  encode(message: InternalGaugeInfo, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
-    if (message.totalWeight !== "") {
+  encode(
+    message: InternalGaugeInfo,
+    writer: BinaryWriter = BinaryWriter.create(),
+  ): BinaryWriter {
+    if (message.totalWeight !== '') {
       writer.uint32(10).string(message.totalWeight);
     }
     for (const v of message.gaugeRecords) {
@@ -246,7 +332,8 @@ export const InternalGaugeInfo = {
     return writer;
   },
   decode(input: BinaryReader | Uint8Array, length?: number): InternalGaugeInfo {
-    const reader = input instanceof BinaryReader ? input : new BinaryReader(input);
+    const reader =
+      input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseInternalGaugeInfo();
     while (reader.pos < end) {
@@ -256,7 +343,9 @@ export const InternalGaugeInfo = {
           message.totalWeight = reader.string();
           break;
         case 2:
-          message.gaugeRecords.push(InternalGaugeRecord.decode(reader, reader.uint32()));
+          message.gaugeRecords.push(
+            InternalGaugeRecord.decode(reader, reader.uint32()),
+          );
           break;
         default:
           reader.skipType(tag & 7);
@@ -267,8 +356,9 @@ export const InternalGaugeInfo = {
   },
   fromPartial(object: Partial<InternalGaugeInfo>): InternalGaugeInfo {
     const message = createBaseInternalGaugeInfo();
-    message.totalWeight = object.totalWeight ?? "";
-    message.gaugeRecords = object.gaugeRecords?.map(e => InternalGaugeRecord.fromPartial(e)) || [];
+    message.totalWeight = object.totalWeight ?? '';
+    message.gaugeRecords =
+      object.gaugeRecords?.map(e => InternalGaugeRecord.fromPartial(e)) || [];
     return message;
   },
   fromAmino(object: InternalGaugeInfoAmino): InternalGaugeInfo {
@@ -276,14 +366,18 @@ export const InternalGaugeInfo = {
     if (object.total_weight !== undefined && object.total_weight !== null) {
       message.totalWeight = object.total_weight;
     }
-    message.gaugeRecords = object.gauge_records?.map(e => InternalGaugeRecord.fromAmino(e)) || [];
+    message.gaugeRecords =
+      object.gauge_records?.map(e => InternalGaugeRecord.fromAmino(e)) || [];
     return message;
   },
   toAmino(message: InternalGaugeInfo): InternalGaugeInfoAmino {
     const obj: any = {};
-    obj.total_weight = message.totalWeight === "" ? undefined : message.totalWeight;
+    obj.total_weight =
+      message.totalWeight === '' ? undefined : message.totalWeight;
     if (message.gaugeRecords) {
-      obj.gauge_records = message.gaugeRecords.map(e => e ? InternalGaugeRecord.toAmino(e) : undefined);
+      obj.gauge_records = message.gaugeRecords.map(e =>
+        e ? InternalGaugeRecord.toAmino(e) : undefined,
+      );
     } else {
       obj.gauge_records = message.gaugeRecords;
     }
@@ -300,44 +394,74 @@ export const InternalGaugeInfo = {
   },
   toProtoMsg(message: InternalGaugeInfo): InternalGaugeInfoProtoMsg {
     return {
-      typeUrl: "/symphony.incentives.InternalGaugeInfo",
-      value: InternalGaugeInfo.encode(message).finish()
+      typeUrl: '/symphony.incentives.InternalGaugeInfo',
+      value: InternalGaugeInfo.encode(message).finish(),
     };
-  }
+  },
 };
 GlobalDecoderRegistry.register(InternalGaugeInfo.typeUrl, InternalGaugeInfo);
 function createBaseInternalGaugeRecord(): InternalGaugeRecord {
   return {
     gaugeId: BigInt(0),
-    currentWeight: "",
-    cumulativeWeight: ""
+    currentWeight: '',
+    cumulativeWeight: '',
   };
 }
+/**
+ * @name InternalGaugeRecord
+ * @package symphony.incentives
+ * @see proto type: symphony.incentives.InternalGaugeRecord
+ */
 export const InternalGaugeRecord = {
-  typeUrl: "/symphony.incentives.InternalGaugeRecord",
+  typeUrl: '/symphony.incentives.InternalGaugeRecord',
   is(o: any): o is InternalGaugeRecord {
-    return o && (o.$typeUrl === InternalGaugeRecord.typeUrl || typeof o.gaugeId === "bigint" && typeof o.currentWeight === "string" && typeof o.cumulativeWeight === "string");
+    return (
+      o &&
+      (o.$typeUrl === InternalGaugeRecord.typeUrl ||
+        (typeof o.gaugeId === 'bigint' &&
+          typeof o.currentWeight === 'string' &&
+          typeof o.cumulativeWeight === 'string'))
+    );
   },
   isSDK(o: any): o is InternalGaugeRecordSDKType {
-    return o && (o.$typeUrl === InternalGaugeRecord.typeUrl || typeof o.gauge_id === "bigint" && typeof o.current_weight === "string" && typeof o.cumulative_weight === "string");
+    return (
+      o &&
+      (o.$typeUrl === InternalGaugeRecord.typeUrl ||
+        (typeof o.gauge_id === 'bigint' &&
+          typeof o.current_weight === 'string' &&
+          typeof o.cumulative_weight === 'string'))
+    );
   },
   isAmino(o: any): o is InternalGaugeRecordAmino {
-    return o && (o.$typeUrl === InternalGaugeRecord.typeUrl || typeof o.gauge_id === "bigint" && typeof o.current_weight === "string" && typeof o.cumulative_weight === "string");
+    return (
+      o &&
+      (o.$typeUrl === InternalGaugeRecord.typeUrl ||
+        (typeof o.gauge_id === 'bigint' &&
+          typeof o.current_weight === 'string' &&
+          typeof o.cumulative_weight === 'string'))
+    );
   },
-  encode(message: InternalGaugeRecord, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
+  encode(
+    message: InternalGaugeRecord,
+    writer: BinaryWriter = BinaryWriter.create(),
+  ): BinaryWriter {
     if (message.gaugeId !== BigInt(0)) {
       writer.uint32(8).uint64(message.gaugeId);
     }
-    if (message.currentWeight !== "") {
+    if (message.currentWeight !== '') {
       writer.uint32(18).string(message.currentWeight);
     }
-    if (message.cumulativeWeight !== "") {
+    if (message.cumulativeWeight !== '') {
       writer.uint32(26).string(message.cumulativeWeight);
     }
     return writer;
   },
-  decode(input: BinaryReader | Uint8Array, length?: number): InternalGaugeRecord {
-    const reader = input instanceof BinaryReader ? input : new BinaryReader(input);
+  decode(
+    input: BinaryReader | Uint8Array,
+    length?: number,
+  ): InternalGaugeRecord {
+    const reader =
+      input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseInternalGaugeRecord();
     while (reader.pos < end) {
@@ -361,9 +485,12 @@ export const InternalGaugeRecord = {
   },
   fromPartial(object: Partial<InternalGaugeRecord>): InternalGaugeRecord {
     const message = createBaseInternalGaugeRecord();
-    message.gaugeId = object.gaugeId !== undefined && object.gaugeId !== null ? BigInt(object.gaugeId.toString()) : BigInt(0);
-    message.currentWeight = object.currentWeight ?? "";
-    message.cumulativeWeight = object.cumulativeWeight ?? "";
+    message.gaugeId =
+      object.gaugeId !== undefined && object.gaugeId !== null
+        ? BigInt(object.gaugeId.toString())
+        : BigInt(0);
+    message.currentWeight = object.currentWeight ?? '';
+    message.cumulativeWeight = object.cumulativeWeight ?? '';
     return message;
   },
   fromAmino(object: InternalGaugeRecordAmino): InternalGaugeRecord {
@@ -374,16 +501,22 @@ export const InternalGaugeRecord = {
     if (object.current_weight !== undefined && object.current_weight !== null) {
       message.currentWeight = object.current_weight;
     }
-    if (object.cumulative_weight !== undefined && object.cumulative_weight !== null) {
+    if (
+      object.cumulative_weight !== undefined &&
+      object.cumulative_weight !== null
+    ) {
       message.cumulativeWeight = object.cumulative_weight;
     }
     return message;
   },
   toAmino(message: InternalGaugeRecord): InternalGaugeRecordAmino {
     const obj: any = {};
-    obj.gauge_id = message.gaugeId !== BigInt(0) ? message.gaugeId?.toString() : undefined;
-    obj.current_weight = message.currentWeight === "" ? undefined : message.currentWeight;
-    obj.cumulative_weight = message.cumulativeWeight === "" ? undefined : message.cumulativeWeight;
+    obj.gauge_id =
+      message.gaugeId !== BigInt(0) ? message.gaugeId?.toString() : undefined;
+    obj.current_weight =
+      message.currentWeight === '' ? undefined : message.currentWeight;
+    obj.cumulative_weight =
+      message.cumulativeWeight === '' ? undefined : message.cumulativeWeight;
     return obj;
   },
   fromAminoMsg(object: InternalGaugeRecordAminoMsg): InternalGaugeRecord {
@@ -397,36 +530,72 @@ export const InternalGaugeRecord = {
   },
   toProtoMsg(message: InternalGaugeRecord): InternalGaugeRecordProtoMsg {
     return {
-      typeUrl: "/symphony.incentives.InternalGaugeRecord",
-      value: InternalGaugeRecord.encode(message).finish()
+      typeUrl: '/symphony.incentives.InternalGaugeRecord',
+      value: InternalGaugeRecord.encode(message).finish(),
     };
-  }
+  },
 };
-GlobalDecoderRegistry.register(InternalGaugeRecord.typeUrl, InternalGaugeRecord);
+GlobalDecoderRegistry.register(
+  InternalGaugeRecord.typeUrl,
+  InternalGaugeRecord,
+);
 function createBaseGroup(): Group {
   return {
     groupGaugeId: BigInt(0),
     internalGaugeInfo: InternalGaugeInfo.fromPartial({}),
-    splittingPolicy: 0
+    splittingPolicy: 0,
   };
 }
+/**
+ * Group is an object that stores a 1:1 mapped gauge ID, a list of pool gauge
+ * info, and a splitting policy. These are grouped into a single abstraction to
+ * allow for distribution of group incentives to internal gauges according to
+ * the specified splitting policy.
+ * @name Group
+ * @package symphony.incentives
+ * @see proto type: symphony.incentives.Group
+ */
 export const Group = {
-  typeUrl: "/symphony.incentives.Group",
+  typeUrl: '/symphony.incentives.Group',
   is(o: any): o is Group {
-    return o && (o.$typeUrl === Group.typeUrl || typeof o.groupGaugeId === "bigint" && InternalGaugeInfo.is(o.internalGaugeInfo) && isSet(o.splittingPolicy));
+    return (
+      o &&
+      (o.$typeUrl === Group.typeUrl ||
+        (typeof o.groupGaugeId === 'bigint' &&
+          InternalGaugeInfo.is(o.internalGaugeInfo) &&
+          isSet(o.splittingPolicy)))
+    );
   },
   isSDK(o: any): o is GroupSDKType {
-    return o && (o.$typeUrl === Group.typeUrl || typeof o.group_gauge_id === "bigint" && InternalGaugeInfo.isSDK(o.internal_gauge_info) && isSet(o.splitting_policy));
+    return (
+      o &&
+      (o.$typeUrl === Group.typeUrl ||
+        (typeof o.group_gauge_id === 'bigint' &&
+          InternalGaugeInfo.isSDK(o.internal_gauge_info) &&
+          isSet(o.splitting_policy)))
+    );
   },
   isAmino(o: any): o is GroupAmino {
-    return o && (o.$typeUrl === Group.typeUrl || typeof o.group_gauge_id === "bigint" && InternalGaugeInfo.isAmino(o.internal_gauge_info) && isSet(o.splitting_policy));
+    return (
+      o &&
+      (o.$typeUrl === Group.typeUrl ||
+        (typeof o.group_gauge_id === 'bigint' &&
+          InternalGaugeInfo.isAmino(o.internal_gauge_info) &&
+          isSet(o.splitting_policy)))
+    );
   },
-  encode(message: Group, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
+  encode(
+    message: Group,
+    writer: BinaryWriter = BinaryWriter.create(),
+  ): BinaryWriter {
     if (message.groupGaugeId !== BigInt(0)) {
       writer.uint32(8).uint64(message.groupGaugeId);
     }
     if (message.internalGaugeInfo !== undefined) {
-      InternalGaugeInfo.encode(message.internalGaugeInfo, writer.uint32(18).fork()).ldelim();
+      InternalGaugeInfo.encode(
+        message.internalGaugeInfo,
+        writer.uint32(18).fork(),
+      ).ldelim();
     }
     if (message.splittingPolicy !== 0) {
       writer.uint32(24).int32(message.splittingPolicy);
@@ -434,7 +603,8 @@ export const Group = {
     return writer;
   },
   decode(input: BinaryReader | Uint8Array, length?: number): Group {
-    const reader = input instanceof BinaryReader ? input : new BinaryReader(input);
+    const reader =
+      input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseGroup();
     while (reader.pos < end) {
@@ -444,7 +614,10 @@ export const Group = {
           message.groupGaugeId = reader.uint64();
           break;
         case 2:
-          message.internalGaugeInfo = InternalGaugeInfo.decode(reader, reader.uint32());
+          message.internalGaugeInfo = InternalGaugeInfo.decode(
+            reader,
+            reader.uint32(),
+          );
           break;
         case 3:
           message.splittingPolicy = reader.int32() as any;
@@ -458,8 +631,15 @@ export const Group = {
   },
   fromPartial(object: Partial<Group>): Group {
     const message = createBaseGroup();
-    message.groupGaugeId = object.groupGaugeId !== undefined && object.groupGaugeId !== null ? BigInt(object.groupGaugeId.toString()) : BigInt(0);
-    message.internalGaugeInfo = object.internalGaugeInfo !== undefined && object.internalGaugeInfo !== null ? InternalGaugeInfo.fromPartial(object.internalGaugeInfo) : undefined;
+    message.groupGaugeId =
+      object.groupGaugeId !== undefined && object.groupGaugeId !== null
+        ? BigInt(object.groupGaugeId.toString())
+        : BigInt(0);
+    message.internalGaugeInfo =
+      object.internalGaugeInfo !== undefined &&
+      object.internalGaugeInfo !== null
+        ? InternalGaugeInfo.fromPartial(object.internalGaugeInfo)
+        : undefined;
     message.splittingPolicy = object.splittingPolicy ?? 0;
     return message;
   },
@@ -468,19 +648,33 @@ export const Group = {
     if (object.group_gauge_id !== undefined && object.group_gauge_id !== null) {
       message.groupGaugeId = BigInt(object.group_gauge_id);
     }
-    if (object.internal_gauge_info !== undefined && object.internal_gauge_info !== null) {
-      message.internalGaugeInfo = InternalGaugeInfo.fromAmino(object.internal_gauge_info);
+    if (
+      object.internal_gauge_info !== undefined &&
+      object.internal_gauge_info !== null
+    ) {
+      message.internalGaugeInfo = InternalGaugeInfo.fromAmino(
+        object.internal_gauge_info,
+      );
     }
-    if (object.splitting_policy !== undefined && object.splitting_policy !== null) {
+    if (
+      object.splitting_policy !== undefined &&
+      object.splitting_policy !== null
+    ) {
       message.splittingPolicy = object.splitting_policy;
     }
     return message;
   },
   toAmino(message: Group): GroupAmino {
     const obj: any = {};
-    obj.group_gauge_id = message.groupGaugeId !== BigInt(0) ? message.groupGaugeId?.toString() : undefined;
-    obj.internal_gauge_info = message.internalGaugeInfo ? InternalGaugeInfo.toAmino(message.internalGaugeInfo) : undefined;
-    obj.splitting_policy = message.splittingPolicy === 0 ? undefined : message.splittingPolicy;
+    obj.group_gauge_id =
+      message.groupGaugeId !== BigInt(0)
+        ? message.groupGaugeId?.toString()
+        : undefined;
+    obj.internal_gauge_info = message.internalGaugeInfo
+      ? InternalGaugeInfo.toAmino(message.internalGaugeInfo)
+      : undefined;
+    obj.splitting_policy =
+      message.splittingPolicy === 0 ? undefined : message.splittingPolicy;
     return obj;
   },
   fromAminoMsg(object: GroupAminoMsg): Group {
@@ -494,29 +688,54 @@ export const Group = {
   },
   toProtoMsg(message: Group): GroupProtoMsg {
     return {
-      typeUrl: "/symphony.incentives.Group",
-      value: Group.encode(message).finish()
+      typeUrl: '/symphony.incentives.Group',
+      value: Group.encode(message).finish(),
     };
-  }
+  },
 };
 GlobalDecoderRegistry.register(Group.typeUrl, Group);
 function createBaseCreateGroup(): CreateGroup {
   return {
-    poolIds: []
+    poolIds: [],
   };
 }
+/**
+ * CreateGroup is called via governance to create a new group.
+ * It takes an array of pool IDs to split the incentives across.
+ * @name CreateGroup
+ * @package symphony.incentives
+ * @see proto type: symphony.incentives.CreateGroup
+ */
 export const CreateGroup = {
-  typeUrl: "/symphony.incentives.CreateGroup",
+  typeUrl: '/symphony.incentives.CreateGroup',
   is(o: any): o is CreateGroup {
-    return o && (o.$typeUrl === CreateGroup.typeUrl || Array.isArray(o.poolIds) && (!o.poolIds.length || typeof o.poolIds[0] === "bigint"));
+    return (
+      o &&
+      (o.$typeUrl === CreateGroup.typeUrl ||
+        (Array.isArray(o.poolIds) &&
+          (!o.poolIds.length || typeof o.poolIds[0] === 'bigint')))
+    );
   },
   isSDK(o: any): o is CreateGroupSDKType {
-    return o && (o.$typeUrl === CreateGroup.typeUrl || Array.isArray(o.pool_ids) && (!o.pool_ids.length || typeof o.pool_ids[0] === "bigint"));
+    return (
+      o &&
+      (o.$typeUrl === CreateGroup.typeUrl ||
+        (Array.isArray(o.pool_ids) &&
+          (!o.pool_ids.length || typeof o.pool_ids[0] === 'bigint')))
+    );
   },
   isAmino(o: any): o is CreateGroupAmino {
-    return o && (o.$typeUrl === CreateGroup.typeUrl || Array.isArray(o.pool_ids) && (!o.pool_ids.length || typeof o.pool_ids[0] === "bigint"));
+    return (
+      o &&
+      (o.$typeUrl === CreateGroup.typeUrl ||
+        (Array.isArray(o.pool_ids) &&
+          (!o.pool_ids.length || typeof o.pool_ids[0] === 'bigint')))
+    );
   },
-  encode(message: CreateGroup, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
+  encode(
+    message: CreateGroup,
+    writer: BinaryWriter = BinaryWriter.create(),
+  ): BinaryWriter {
     writer.uint32(10).fork();
     for (const v of message.poolIds) {
       writer.uint64(v);
@@ -525,7 +744,8 @@ export const CreateGroup = {
     return writer;
   },
   decode(input: BinaryReader | Uint8Array, length?: number): CreateGroup {
-    const reader = input instanceof BinaryReader ? input : new BinaryReader(input);
+    const reader =
+      input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseCreateGroup();
     while (reader.pos < end) {
@@ -578,30 +798,52 @@ export const CreateGroup = {
   },
   toProtoMsg(message: CreateGroup): CreateGroupProtoMsg {
     return {
-      typeUrl: "/symphony.incentives.CreateGroup",
-      value: CreateGroup.encode(message).finish()
+      typeUrl: '/symphony.incentives.CreateGroup',
+      value: CreateGroup.encode(message).finish(),
     };
-  }
+  },
 };
 GlobalDecoderRegistry.register(CreateGroup.typeUrl, CreateGroup);
 function createBaseGroupsWithGauge(): GroupsWithGauge {
   return {
     group: Group.fromPartial({}),
-    gauge: Gauge.fromPartial({})
+    gauge: Gauge.fromPartial({}),
   };
 }
+/**
+ * GroupsWithGauge is a helper struct that stores a group and its
+ * associated gauge.
+ * @name GroupsWithGauge
+ * @package symphony.incentives
+ * @see proto type: symphony.incentives.GroupsWithGauge
+ */
 export const GroupsWithGauge = {
-  typeUrl: "/symphony.incentives.GroupsWithGauge",
+  typeUrl: '/symphony.incentives.GroupsWithGauge',
   is(o: any): o is GroupsWithGauge {
-    return o && (o.$typeUrl === GroupsWithGauge.typeUrl || Group.is(o.group) && Gauge.is(o.gauge));
+    return (
+      o &&
+      (o.$typeUrl === GroupsWithGauge.typeUrl ||
+        (Group.is(o.group) && Gauge.is(o.gauge)))
+    );
   },
   isSDK(o: any): o is GroupsWithGaugeSDKType {
-    return o && (o.$typeUrl === GroupsWithGauge.typeUrl || Group.isSDK(o.group) && Gauge.isSDK(o.gauge));
+    return (
+      o &&
+      (o.$typeUrl === GroupsWithGauge.typeUrl ||
+        (Group.isSDK(o.group) && Gauge.isSDK(o.gauge)))
+    );
   },
   isAmino(o: any): o is GroupsWithGaugeAmino {
-    return o && (o.$typeUrl === GroupsWithGauge.typeUrl || Group.isAmino(o.group) && Gauge.isAmino(o.gauge));
+    return (
+      o &&
+      (o.$typeUrl === GroupsWithGauge.typeUrl ||
+        (Group.isAmino(o.group) && Gauge.isAmino(o.gauge)))
+    );
   },
-  encode(message: GroupsWithGauge, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
+  encode(
+    message: GroupsWithGauge,
+    writer: BinaryWriter = BinaryWriter.create(),
+  ): BinaryWriter {
     if (message.group !== undefined) {
       Group.encode(message.group, writer.uint32(10).fork()).ldelim();
     }
@@ -611,7 +853,8 @@ export const GroupsWithGauge = {
     return writer;
   },
   decode(input: BinaryReader | Uint8Array, length?: number): GroupsWithGauge {
-    const reader = input instanceof BinaryReader ? input : new BinaryReader(input);
+    const reader =
+      input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseGroupsWithGauge();
     while (reader.pos < end) {
@@ -632,8 +875,14 @@ export const GroupsWithGauge = {
   },
   fromPartial(object: Partial<GroupsWithGauge>): GroupsWithGauge {
     const message = createBaseGroupsWithGauge();
-    message.group = object.group !== undefined && object.group !== null ? Group.fromPartial(object.group) : undefined;
-    message.gauge = object.gauge !== undefined && object.gauge !== null ? Gauge.fromPartial(object.gauge) : undefined;
+    message.group =
+      object.group !== undefined && object.group !== null
+        ? Group.fromPartial(object.group)
+        : undefined;
+    message.gauge =
+      object.gauge !== undefined && object.gauge !== null
+        ? Gauge.fromPartial(object.gauge)
+        : undefined;
     return message;
   },
   fromAmino(object: GroupsWithGaugeAmino): GroupsWithGauge {
@@ -663,9 +912,9 @@ export const GroupsWithGauge = {
   },
   toProtoMsg(message: GroupsWithGauge): GroupsWithGaugeProtoMsg {
     return {
-      typeUrl: "/symphony.incentives.GroupsWithGauge",
-      value: GroupsWithGauge.encode(message).finish()
+      typeUrl: '/symphony.incentives.GroupsWithGauge',
+      value: GroupsWithGauge.encode(message).finish(),
     };
-  }
+  },
 };
 GlobalDecoderRegistry.register(GroupsWithGauge.typeUrl, GroupsWithGauge);

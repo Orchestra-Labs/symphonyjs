@@ -1,94 +1,150 @@
 //@ts-nocheck
-import { Params, ParamsAmino, ParamsSDKType } from "./mint";
-import { BinaryReader, BinaryWriter } from "../../../binary";
-import { GlobalDecoderRegistry } from "../../../registry";
-import { bytesFromBase64, base64FromBytes } from "../../../helpers";
-/** QueryParamsRequest is the request type for the Query/Params RPC method. */
+import { Params, ParamsAmino, ParamsSDKType } from './mint';
+import { BinaryReader, BinaryWriter } from '../../../binary';
+import { GlobalDecoderRegistry } from '../../../registry';
+import { bytesFromBase64, base64FromBytes } from '../../../helpers';
+/**
+ * QueryParamsRequest is the request type for the Query/Params RPC method.
+ * @name QueryParamsRequest
+ * @package symphony.mint.v1beta1
+ * @see proto type: symphony.mint.v1beta1.QueryParamsRequest
+ */
 export interface QueryParamsRequest {}
 export interface QueryParamsRequestProtoMsg {
-  typeUrl: "/symphony.mint.v1beta1.QueryParamsRequest";
+  typeUrl: '/symphony.mint.v1beta1.QueryParamsRequest';
   value: Uint8Array;
 }
-/** QueryParamsRequest is the request type for the Query/Params RPC method. */
+/**
+ * QueryParamsRequest is the request type for the Query/Params RPC method.
+ * @name QueryParamsRequestAmino
+ * @package symphony.mint.v1beta1
+ * @see proto type: symphony.mint.v1beta1.QueryParamsRequest
+ */
 export interface QueryParamsRequestAmino {}
 export interface QueryParamsRequestAminoMsg {
-  type: "/symphony.mint.v1beta1.QueryParamsRequest";
+  type: '/symphony.mint.v1beta1.QueryParamsRequest';
   value: QueryParamsRequestAmino;
 }
-/** QueryParamsRequest is the request type for the Query/Params RPC method. */
+/**
+ * QueryParamsRequest is the request type for the Query/Params RPC method.
+ * @name QueryParamsRequestSDKType
+ * @package symphony.mint.v1beta1
+ * @see proto type: symphony.mint.v1beta1.QueryParamsRequest
+ */
 export interface QueryParamsRequestSDKType {}
-/** QueryParamsResponse is the response type for the Query/Params RPC method. */
+/**
+ * QueryParamsResponse is the response type for the Query/Params RPC method.
+ * @name QueryParamsResponse
+ * @package symphony.mint.v1beta1
+ * @see proto type: symphony.mint.v1beta1.QueryParamsResponse
+ */
 export interface QueryParamsResponse {
-  /** params defines the parameters of the module. */
+  /**
+   * params defines the parameters of the module.
+   */
   params: Params;
 }
 export interface QueryParamsResponseProtoMsg {
-  typeUrl: "/symphony.mint.v1beta1.QueryParamsResponse";
+  typeUrl: '/symphony.mint.v1beta1.QueryParamsResponse';
   value: Uint8Array;
 }
-/** QueryParamsResponse is the response type for the Query/Params RPC method. */
+/**
+ * QueryParamsResponse is the response type for the Query/Params RPC method.
+ * @name QueryParamsResponseAmino
+ * @package symphony.mint.v1beta1
+ * @see proto type: symphony.mint.v1beta1.QueryParamsResponse
+ */
 export interface QueryParamsResponseAmino {
-  /** params defines the parameters of the module. */
+  /**
+   * params defines the parameters of the module.
+   */
   params?: ParamsAmino;
 }
 export interface QueryParamsResponseAminoMsg {
-  type: "/symphony.mint.v1beta1.QueryParamsResponse";
+  type: '/symphony.mint.v1beta1.QueryParamsResponse';
   value: QueryParamsResponseAmino;
 }
-/** QueryParamsResponse is the response type for the Query/Params RPC method. */
+/**
+ * QueryParamsResponse is the response type for the Query/Params RPC method.
+ * @name QueryParamsResponseSDKType
+ * @package symphony.mint.v1beta1
+ * @see proto type: symphony.mint.v1beta1.QueryParamsResponse
+ */
 export interface QueryParamsResponseSDKType {
   params: ParamsSDKType;
 }
 /**
  * QueryEpochProvisionsRequest is the request type for the
  * Query/EpochProvisions RPC method.
+ * @name QueryEpochProvisionsRequest
+ * @package symphony.mint.v1beta1
+ * @see proto type: symphony.mint.v1beta1.QueryEpochProvisionsRequest
  */
 export interface QueryEpochProvisionsRequest {}
 export interface QueryEpochProvisionsRequestProtoMsg {
-  typeUrl: "/symphony.mint.v1beta1.QueryEpochProvisionsRequest";
+  typeUrl: '/symphony.mint.v1beta1.QueryEpochProvisionsRequest';
   value: Uint8Array;
 }
 /**
  * QueryEpochProvisionsRequest is the request type for the
  * Query/EpochProvisions RPC method.
+ * @name QueryEpochProvisionsRequestAmino
+ * @package symphony.mint.v1beta1
+ * @see proto type: symphony.mint.v1beta1.QueryEpochProvisionsRequest
  */
 export interface QueryEpochProvisionsRequestAmino {}
 export interface QueryEpochProvisionsRequestAminoMsg {
-  type: "/symphony.mint.v1beta1.QueryEpochProvisionsRequest";
+  type: '/symphony.mint.v1beta1.QueryEpochProvisionsRequest';
   value: QueryEpochProvisionsRequestAmino;
 }
 /**
  * QueryEpochProvisionsRequest is the request type for the
  * Query/EpochProvisions RPC method.
+ * @name QueryEpochProvisionsRequestSDKType
+ * @package symphony.mint.v1beta1
+ * @see proto type: symphony.mint.v1beta1.QueryEpochProvisionsRequest
  */
 export interface QueryEpochProvisionsRequestSDKType {}
 /**
  * QueryEpochProvisionsResponse is the response type for the
  * Query/EpochProvisions RPC method.
+ * @name QueryEpochProvisionsResponse
+ * @package symphony.mint.v1beta1
+ * @see proto type: symphony.mint.v1beta1.QueryEpochProvisionsResponse
  */
 export interface QueryEpochProvisionsResponse {
-  /** epoch_provisions is the current minting per epoch provisions value. */
+  /**
+   * epoch_provisions is the current minting per epoch provisions value.
+   */
   epochProvisions: Uint8Array;
 }
 export interface QueryEpochProvisionsResponseProtoMsg {
-  typeUrl: "/symphony.mint.v1beta1.QueryEpochProvisionsResponse";
+  typeUrl: '/symphony.mint.v1beta1.QueryEpochProvisionsResponse';
   value: Uint8Array;
 }
 /**
  * QueryEpochProvisionsResponse is the response type for the
  * Query/EpochProvisions RPC method.
+ * @name QueryEpochProvisionsResponseAmino
+ * @package symphony.mint.v1beta1
+ * @see proto type: symphony.mint.v1beta1.QueryEpochProvisionsResponse
  */
 export interface QueryEpochProvisionsResponseAmino {
-  /** epoch_provisions is the current minting per epoch provisions value. */
+  /**
+   * epoch_provisions is the current minting per epoch provisions value.
+   */
   epoch_provisions?: string;
 }
 export interface QueryEpochProvisionsResponseAminoMsg {
-  type: "/symphony.mint.v1beta1.QueryEpochProvisionsResponse";
+  type: '/symphony.mint.v1beta1.QueryEpochProvisionsResponse';
   value: QueryEpochProvisionsResponseAmino;
 }
 /**
  * QueryEpochProvisionsResponse is the response type for the
  * Query/EpochProvisions RPC method.
+ * @name QueryEpochProvisionsResponseSDKType
+ * @package symphony.mint.v1beta1
+ * @see proto type: symphony.mint.v1beta1.QueryEpochProvisionsResponse
  */
 export interface QueryEpochProvisionsResponseSDKType {
   epoch_provisions: Uint8Array;
@@ -96,8 +152,14 @@ export interface QueryEpochProvisionsResponseSDKType {
 function createBaseQueryParamsRequest(): QueryParamsRequest {
   return {};
 }
+/**
+ * QueryParamsRequest is the request type for the Query/Params RPC method.
+ * @name QueryParamsRequest
+ * @package symphony.mint.v1beta1
+ * @see proto type: symphony.mint.v1beta1.QueryParamsRequest
+ */
 export const QueryParamsRequest = {
-  typeUrl: "/symphony.mint.v1beta1.QueryParamsRequest",
+  typeUrl: '/symphony.mint.v1beta1.QueryParamsRequest',
   is(o: any): o is QueryParamsRequest {
     return o && o.$typeUrl === QueryParamsRequest.typeUrl;
   },
@@ -107,11 +169,18 @@ export const QueryParamsRequest = {
   isAmino(o: any): o is QueryParamsRequestAmino {
     return o && o.$typeUrl === QueryParamsRequest.typeUrl;
   },
-  encode(_: QueryParamsRequest, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
+  encode(
+    _: QueryParamsRequest,
+    writer: BinaryWriter = BinaryWriter.create(),
+  ): BinaryWriter {
     return writer;
   },
-  decode(input: BinaryReader | Uint8Array, length?: number): QueryParamsRequest {
-    const reader = input instanceof BinaryReader ? input : new BinaryReader(input);
+  decode(
+    input: BinaryReader | Uint8Array,
+    length?: number,
+  ): QueryParamsRequest {
+    const reader =
+      input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseQueryParamsRequest();
     while (reader.pos < end) {
@@ -147,36 +216,57 @@ export const QueryParamsRequest = {
   },
   toProtoMsg(message: QueryParamsRequest): QueryParamsRequestProtoMsg {
     return {
-      typeUrl: "/symphony.mint.v1beta1.QueryParamsRequest",
-      value: QueryParamsRequest.encode(message).finish()
+      typeUrl: '/symphony.mint.v1beta1.QueryParamsRequest',
+      value: QueryParamsRequest.encode(message).finish(),
     };
-  }
+  },
 };
 GlobalDecoderRegistry.register(QueryParamsRequest.typeUrl, QueryParamsRequest);
 function createBaseQueryParamsResponse(): QueryParamsResponse {
   return {
-    params: Params.fromPartial({})
+    params: Params.fromPartial({}),
   };
 }
+/**
+ * QueryParamsResponse is the response type for the Query/Params RPC method.
+ * @name QueryParamsResponse
+ * @package symphony.mint.v1beta1
+ * @see proto type: symphony.mint.v1beta1.QueryParamsResponse
+ */
 export const QueryParamsResponse = {
-  typeUrl: "/symphony.mint.v1beta1.QueryParamsResponse",
+  typeUrl: '/symphony.mint.v1beta1.QueryParamsResponse',
   is(o: any): o is QueryParamsResponse {
-    return o && (o.$typeUrl === QueryParamsResponse.typeUrl || Params.is(o.params));
+    return (
+      o && (o.$typeUrl === QueryParamsResponse.typeUrl || Params.is(o.params))
+    );
   },
   isSDK(o: any): o is QueryParamsResponseSDKType {
-    return o && (o.$typeUrl === QueryParamsResponse.typeUrl || Params.isSDK(o.params));
+    return (
+      o &&
+      (o.$typeUrl === QueryParamsResponse.typeUrl || Params.isSDK(o.params))
+    );
   },
   isAmino(o: any): o is QueryParamsResponseAmino {
-    return o && (o.$typeUrl === QueryParamsResponse.typeUrl || Params.isAmino(o.params));
+    return (
+      o &&
+      (o.$typeUrl === QueryParamsResponse.typeUrl || Params.isAmino(o.params))
+    );
   },
-  encode(message: QueryParamsResponse, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
+  encode(
+    message: QueryParamsResponse,
+    writer: BinaryWriter = BinaryWriter.create(),
+  ): BinaryWriter {
     if (message.params !== undefined) {
       Params.encode(message.params, writer.uint32(10).fork()).ldelim();
     }
     return writer;
   },
-  decode(input: BinaryReader | Uint8Array, length?: number): QueryParamsResponse {
-    const reader = input instanceof BinaryReader ? input : new BinaryReader(input);
+  decode(
+    input: BinaryReader | Uint8Array,
+    length?: number,
+  ): QueryParamsResponse {
+    const reader =
+      input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseQueryParamsResponse();
     while (reader.pos < end) {
@@ -194,7 +284,10 @@ export const QueryParamsResponse = {
   },
   fromPartial(object: Partial<QueryParamsResponse>): QueryParamsResponse {
     const message = createBaseQueryParamsResponse();
-    message.params = object.params !== undefined && object.params !== null ? Params.fromPartial(object.params) : undefined;
+    message.params =
+      object.params !== undefined && object.params !== null
+        ? Params.fromPartial(object.params)
+        : undefined;
     return message;
   },
   fromAmino(object: QueryParamsResponseAmino): QueryParamsResponse {
@@ -220,17 +313,27 @@ export const QueryParamsResponse = {
   },
   toProtoMsg(message: QueryParamsResponse): QueryParamsResponseProtoMsg {
     return {
-      typeUrl: "/symphony.mint.v1beta1.QueryParamsResponse",
-      value: QueryParamsResponse.encode(message).finish()
+      typeUrl: '/symphony.mint.v1beta1.QueryParamsResponse',
+      value: QueryParamsResponse.encode(message).finish(),
     };
-  }
+  },
 };
-GlobalDecoderRegistry.register(QueryParamsResponse.typeUrl, QueryParamsResponse);
+GlobalDecoderRegistry.register(
+  QueryParamsResponse.typeUrl,
+  QueryParamsResponse,
+);
 function createBaseQueryEpochProvisionsRequest(): QueryEpochProvisionsRequest {
   return {};
 }
+/**
+ * QueryEpochProvisionsRequest is the request type for the
+ * Query/EpochProvisions RPC method.
+ * @name QueryEpochProvisionsRequest
+ * @package symphony.mint.v1beta1
+ * @see proto type: symphony.mint.v1beta1.QueryEpochProvisionsRequest
+ */
 export const QueryEpochProvisionsRequest = {
-  typeUrl: "/symphony.mint.v1beta1.QueryEpochProvisionsRequest",
+  typeUrl: '/symphony.mint.v1beta1.QueryEpochProvisionsRequest',
   is(o: any): o is QueryEpochProvisionsRequest {
     return o && o.$typeUrl === QueryEpochProvisionsRequest.typeUrl;
   },
@@ -240,11 +343,18 @@ export const QueryEpochProvisionsRequest = {
   isAmino(o: any): o is QueryEpochProvisionsRequestAmino {
     return o && o.$typeUrl === QueryEpochProvisionsRequest.typeUrl;
   },
-  encode(_: QueryEpochProvisionsRequest, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
+  encode(
+    _: QueryEpochProvisionsRequest,
+    writer: BinaryWriter = BinaryWriter.create(),
+  ): BinaryWriter {
     return writer;
   },
-  decode(input: BinaryReader | Uint8Array, length?: number): QueryEpochProvisionsRequest {
-    const reader = input instanceof BinaryReader ? input : new BinaryReader(input);
+  decode(
+    input: BinaryReader | Uint8Array,
+    length?: number,
+  ): QueryEpochProvisionsRequest {
+    const reader =
+      input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseQueryEpochProvisionsRequest();
     while (reader.pos < end) {
@@ -257,7 +367,9 @@ export const QueryEpochProvisionsRequest = {
     }
     return message;
   },
-  fromPartial(_: Partial<QueryEpochProvisionsRequest>): QueryEpochProvisionsRequest {
+  fromPartial(
+    _: Partial<QueryEpochProvisionsRequest>,
+  ): QueryEpochProvisionsRequest {
     const message = createBaseQueryEpochProvisionsRequest();
     return message;
   },
@@ -269,47 +381,85 @@ export const QueryEpochProvisionsRequest = {
     const obj: any = {};
     return obj;
   },
-  fromAminoMsg(object: QueryEpochProvisionsRequestAminoMsg): QueryEpochProvisionsRequest {
+  fromAminoMsg(
+    object: QueryEpochProvisionsRequestAminoMsg,
+  ): QueryEpochProvisionsRequest {
     return QueryEpochProvisionsRequest.fromAmino(object.value);
   },
-  fromProtoMsg(message: QueryEpochProvisionsRequestProtoMsg): QueryEpochProvisionsRequest {
+  fromProtoMsg(
+    message: QueryEpochProvisionsRequestProtoMsg,
+  ): QueryEpochProvisionsRequest {
     return QueryEpochProvisionsRequest.decode(message.value);
   },
   toProto(message: QueryEpochProvisionsRequest): Uint8Array {
     return QueryEpochProvisionsRequest.encode(message).finish();
   },
-  toProtoMsg(message: QueryEpochProvisionsRequest): QueryEpochProvisionsRequestProtoMsg {
+  toProtoMsg(
+    message: QueryEpochProvisionsRequest,
+  ): QueryEpochProvisionsRequestProtoMsg {
     return {
-      typeUrl: "/symphony.mint.v1beta1.QueryEpochProvisionsRequest",
-      value: QueryEpochProvisionsRequest.encode(message).finish()
+      typeUrl: '/symphony.mint.v1beta1.QueryEpochProvisionsRequest',
+      value: QueryEpochProvisionsRequest.encode(message).finish(),
     };
-  }
+  },
 };
-GlobalDecoderRegistry.register(QueryEpochProvisionsRequest.typeUrl, QueryEpochProvisionsRequest);
+GlobalDecoderRegistry.register(
+  QueryEpochProvisionsRequest.typeUrl,
+  QueryEpochProvisionsRequest,
+);
 function createBaseQueryEpochProvisionsResponse(): QueryEpochProvisionsResponse {
   return {
-    epochProvisions: new Uint8Array()
+    epochProvisions: new Uint8Array(),
   };
 }
+/**
+ * QueryEpochProvisionsResponse is the response type for the
+ * Query/EpochProvisions RPC method.
+ * @name QueryEpochProvisionsResponse
+ * @package symphony.mint.v1beta1
+ * @see proto type: symphony.mint.v1beta1.QueryEpochProvisionsResponse
+ */
 export const QueryEpochProvisionsResponse = {
-  typeUrl: "/symphony.mint.v1beta1.QueryEpochProvisionsResponse",
+  typeUrl: '/symphony.mint.v1beta1.QueryEpochProvisionsResponse',
   is(o: any): o is QueryEpochProvisionsResponse {
-    return o && (o.$typeUrl === QueryEpochProvisionsResponse.typeUrl || o.epochProvisions instanceof Uint8Array || typeof o.epochProvisions === "string");
+    return (
+      o &&
+      (o.$typeUrl === QueryEpochProvisionsResponse.typeUrl ||
+        o.epochProvisions instanceof Uint8Array ||
+        typeof o.epochProvisions === 'string')
+    );
   },
   isSDK(o: any): o is QueryEpochProvisionsResponseSDKType {
-    return o && (o.$typeUrl === QueryEpochProvisionsResponse.typeUrl || o.epoch_provisions instanceof Uint8Array || typeof o.epoch_provisions === "string");
+    return (
+      o &&
+      (o.$typeUrl === QueryEpochProvisionsResponse.typeUrl ||
+        o.epoch_provisions instanceof Uint8Array ||
+        typeof o.epoch_provisions === 'string')
+    );
   },
   isAmino(o: any): o is QueryEpochProvisionsResponseAmino {
-    return o && (o.$typeUrl === QueryEpochProvisionsResponse.typeUrl || o.epoch_provisions instanceof Uint8Array || typeof o.epoch_provisions === "string");
+    return (
+      o &&
+      (o.$typeUrl === QueryEpochProvisionsResponse.typeUrl ||
+        o.epoch_provisions instanceof Uint8Array ||
+        typeof o.epoch_provisions === 'string')
+    );
   },
-  encode(message: QueryEpochProvisionsResponse, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
+  encode(
+    message: QueryEpochProvisionsResponse,
+    writer: BinaryWriter = BinaryWriter.create(),
+  ): BinaryWriter {
     if (message.epochProvisions.length !== 0) {
       writer.uint32(10).bytes(message.epochProvisions);
     }
     return writer;
   },
-  decode(input: BinaryReader | Uint8Array, length?: number): QueryEpochProvisionsResponse {
-    const reader = input instanceof BinaryReader ? input : new BinaryReader(input);
+  decode(
+    input: BinaryReader | Uint8Array,
+    length?: number,
+  ): QueryEpochProvisionsResponse {
+    const reader =
+      input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseQueryEpochProvisionsResponse();
     while (reader.pos < end) {
@@ -325,37 +475,57 @@ export const QueryEpochProvisionsResponse = {
     }
     return message;
   },
-  fromPartial(object: Partial<QueryEpochProvisionsResponse>): QueryEpochProvisionsResponse {
+  fromPartial(
+    object: Partial<QueryEpochProvisionsResponse>,
+  ): QueryEpochProvisionsResponse {
     const message = createBaseQueryEpochProvisionsResponse();
     message.epochProvisions = object.epochProvisions ?? new Uint8Array();
     return message;
   },
-  fromAmino(object: QueryEpochProvisionsResponseAmino): QueryEpochProvisionsResponse {
+  fromAmino(
+    object: QueryEpochProvisionsResponseAmino,
+  ): QueryEpochProvisionsResponse {
     const message = createBaseQueryEpochProvisionsResponse();
-    if (object.epoch_provisions !== undefined && object.epoch_provisions !== null) {
+    if (
+      object.epoch_provisions !== undefined &&
+      object.epoch_provisions !== null
+    ) {
       message.epochProvisions = bytesFromBase64(object.epoch_provisions);
     }
     return message;
   },
-  toAmino(message: QueryEpochProvisionsResponse): QueryEpochProvisionsResponseAmino {
+  toAmino(
+    message: QueryEpochProvisionsResponse,
+  ): QueryEpochProvisionsResponseAmino {
     const obj: any = {};
-    obj.epoch_provisions = message.epochProvisions ? base64FromBytes(message.epochProvisions) : undefined;
+    obj.epoch_provisions = message.epochProvisions
+      ? base64FromBytes(message.epochProvisions)
+      : undefined;
     return obj;
   },
-  fromAminoMsg(object: QueryEpochProvisionsResponseAminoMsg): QueryEpochProvisionsResponse {
+  fromAminoMsg(
+    object: QueryEpochProvisionsResponseAminoMsg,
+  ): QueryEpochProvisionsResponse {
     return QueryEpochProvisionsResponse.fromAmino(object.value);
   },
-  fromProtoMsg(message: QueryEpochProvisionsResponseProtoMsg): QueryEpochProvisionsResponse {
+  fromProtoMsg(
+    message: QueryEpochProvisionsResponseProtoMsg,
+  ): QueryEpochProvisionsResponse {
     return QueryEpochProvisionsResponse.decode(message.value);
   },
   toProto(message: QueryEpochProvisionsResponse): Uint8Array {
     return QueryEpochProvisionsResponse.encode(message).finish();
   },
-  toProtoMsg(message: QueryEpochProvisionsResponse): QueryEpochProvisionsResponseProtoMsg {
+  toProtoMsg(
+    message: QueryEpochProvisionsResponse,
+  ): QueryEpochProvisionsResponseProtoMsg {
     return {
-      typeUrl: "/symphony.mint.v1beta1.QueryEpochProvisionsResponse",
-      value: QueryEpochProvisionsResponse.encode(message).finish()
+      typeUrl: '/symphony.mint.v1beta1.QueryEpochProvisionsResponse',
+      value: QueryEpochProvisionsResponse.encode(message).finish(),
     };
-  }
+  },
 };
-GlobalDecoderRegistry.register(QueryEpochProvisionsResponse.typeUrl, QueryEpochProvisionsResponse);
+GlobalDecoderRegistry.register(
+  QueryEpochProvisionsResponse.typeUrl,
+  QueryEpochProvisionsResponse,
+);

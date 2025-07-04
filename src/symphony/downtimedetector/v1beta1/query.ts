@@ -1,76 +1,127 @@
 //@ts-nocheck
-import { Downtime } from "./downtime_duration";
-import { Duration, DurationAmino, DurationSDKType } from "../../../google/protobuf/duration";
-import { isSet } from "../../../helpers";
-import { BinaryReader, BinaryWriter } from "../../../binary";
-import { GlobalDecoderRegistry } from "../../../registry";
+import { Downtime } from './downtime_duration';
+import {
+  Duration,
+  DurationAmino,
+  DurationSDKType,
+} from '../../../google/protobuf/duration';
+import { isSet } from '../../../helpers';
+import { BinaryReader, BinaryWriter } from '../../../binary';
+import { GlobalDecoderRegistry } from '../../../registry';
 /**
  * Query for has it been at least $RECOVERY_DURATION units of time,
  * since the chain has been down for $DOWNTIME_DURATION.
+ * @name RecoveredSinceDowntimeOfLengthRequest
+ * @package symphony.downtimedetector.v1beta1
+ * @see proto type: symphony.downtimedetector.v1beta1.RecoveredSinceDowntimeOfLengthRequest
  */
 export interface RecoveredSinceDowntimeOfLengthRequest {
   downtime: Downtime;
   recovery: Duration;
 }
 export interface RecoveredSinceDowntimeOfLengthRequestProtoMsg {
-  typeUrl: "/symphony.downtimedetector.v1beta1.RecoveredSinceDowntimeOfLengthRequest";
+  typeUrl: '/symphony.downtimedetector.v1beta1.RecoveredSinceDowntimeOfLengthRequest';
   value: Uint8Array;
 }
 /**
  * Query for has it been at least $RECOVERY_DURATION units of time,
  * since the chain has been down for $DOWNTIME_DURATION.
+ * @name RecoveredSinceDowntimeOfLengthRequestAmino
+ * @package symphony.downtimedetector.v1beta1
+ * @see proto type: symphony.downtimedetector.v1beta1.RecoveredSinceDowntimeOfLengthRequest
  */
 export interface RecoveredSinceDowntimeOfLengthRequestAmino {
   downtime?: Downtime;
   recovery?: DurationAmino;
 }
 export interface RecoveredSinceDowntimeOfLengthRequestAminoMsg {
-  type: "/symphony.downtimedetector.v1beta1.RecoveredSinceDowntimeOfLengthRequest";
+  type: '/symphony.downtimedetector.v1beta1.RecoveredSinceDowntimeOfLengthRequest';
   value: RecoveredSinceDowntimeOfLengthRequestAmino;
 }
 /**
  * Query for has it been at least $RECOVERY_DURATION units of time,
  * since the chain has been down for $DOWNTIME_DURATION.
+ * @name RecoveredSinceDowntimeOfLengthRequestSDKType
+ * @package symphony.downtimedetector.v1beta1
+ * @see proto type: symphony.downtimedetector.v1beta1.RecoveredSinceDowntimeOfLengthRequest
  */
 export interface RecoveredSinceDowntimeOfLengthRequestSDKType {
   downtime: Downtime;
   recovery: DurationSDKType;
 }
+/**
+ * @name RecoveredSinceDowntimeOfLengthResponse
+ * @package symphony.downtimedetector.v1beta1
+ * @see proto type: symphony.downtimedetector.v1beta1.RecoveredSinceDowntimeOfLengthResponse
+ */
 export interface RecoveredSinceDowntimeOfLengthResponse {
   succesfullyRecovered: boolean;
 }
 export interface RecoveredSinceDowntimeOfLengthResponseProtoMsg {
-  typeUrl: "/symphony.downtimedetector.v1beta1.RecoveredSinceDowntimeOfLengthResponse";
+  typeUrl: '/symphony.downtimedetector.v1beta1.RecoveredSinceDowntimeOfLengthResponse';
   value: Uint8Array;
 }
+/**
+ * @name RecoveredSinceDowntimeOfLengthResponseAmino
+ * @package symphony.downtimedetector.v1beta1
+ * @see proto type: symphony.downtimedetector.v1beta1.RecoveredSinceDowntimeOfLengthResponse
+ */
 export interface RecoveredSinceDowntimeOfLengthResponseAmino {
   succesfully_recovered?: boolean;
 }
 export interface RecoveredSinceDowntimeOfLengthResponseAminoMsg {
-  type: "/symphony.downtimedetector.v1beta1.RecoveredSinceDowntimeOfLengthResponse";
+  type: '/symphony.downtimedetector.v1beta1.RecoveredSinceDowntimeOfLengthResponse';
   value: RecoveredSinceDowntimeOfLengthResponseAmino;
 }
+/**
+ * @name RecoveredSinceDowntimeOfLengthResponseSDKType
+ * @package symphony.downtimedetector.v1beta1
+ * @see proto type: symphony.downtimedetector.v1beta1.RecoveredSinceDowntimeOfLengthResponse
+ */
 export interface RecoveredSinceDowntimeOfLengthResponseSDKType {
   succesfully_recovered: boolean;
 }
 function createBaseRecoveredSinceDowntimeOfLengthRequest(): RecoveredSinceDowntimeOfLengthRequest {
   return {
     downtime: 0,
-    recovery: Duration.fromPartial({})
+    recovery: Duration.fromPartial({}),
   };
 }
+/**
+ * Query for has it been at least $RECOVERY_DURATION units of time,
+ * since the chain has been down for $DOWNTIME_DURATION.
+ * @name RecoveredSinceDowntimeOfLengthRequest
+ * @package symphony.downtimedetector.v1beta1
+ * @see proto type: symphony.downtimedetector.v1beta1.RecoveredSinceDowntimeOfLengthRequest
+ */
 export const RecoveredSinceDowntimeOfLengthRequest = {
-  typeUrl: "/symphony.downtimedetector.v1beta1.RecoveredSinceDowntimeOfLengthRequest",
+  typeUrl:
+    '/symphony.downtimedetector.v1beta1.RecoveredSinceDowntimeOfLengthRequest',
   is(o: any): o is RecoveredSinceDowntimeOfLengthRequest {
-    return o && (o.$typeUrl === RecoveredSinceDowntimeOfLengthRequest.typeUrl || isSet(o.downtime) && Duration.is(o.recovery));
+    return (
+      o &&
+      (o.$typeUrl === RecoveredSinceDowntimeOfLengthRequest.typeUrl ||
+        (isSet(o.downtime) && Duration.is(o.recovery)))
+    );
   },
   isSDK(o: any): o is RecoveredSinceDowntimeOfLengthRequestSDKType {
-    return o && (o.$typeUrl === RecoveredSinceDowntimeOfLengthRequest.typeUrl || isSet(o.downtime) && Duration.isSDK(o.recovery));
+    return (
+      o &&
+      (o.$typeUrl === RecoveredSinceDowntimeOfLengthRequest.typeUrl ||
+        (isSet(o.downtime) && Duration.isSDK(o.recovery)))
+    );
   },
   isAmino(o: any): o is RecoveredSinceDowntimeOfLengthRequestAmino {
-    return o && (o.$typeUrl === RecoveredSinceDowntimeOfLengthRequest.typeUrl || isSet(o.downtime) && Duration.isAmino(o.recovery));
+    return (
+      o &&
+      (o.$typeUrl === RecoveredSinceDowntimeOfLengthRequest.typeUrl ||
+        (isSet(o.downtime) && Duration.isAmino(o.recovery)))
+    );
   },
-  encode(message: RecoveredSinceDowntimeOfLengthRequest, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
+  encode(
+    message: RecoveredSinceDowntimeOfLengthRequest,
+    writer: BinaryWriter = BinaryWriter.create(),
+  ): BinaryWriter {
     if (message.downtime !== 0) {
       writer.uint32(8).int32(message.downtime);
     }
@@ -79,8 +130,12 @@ export const RecoveredSinceDowntimeOfLengthRequest = {
     }
     return writer;
   },
-  decode(input: BinaryReader | Uint8Array, length?: number): RecoveredSinceDowntimeOfLengthRequest {
-    const reader = input instanceof BinaryReader ? input : new BinaryReader(input);
+  decode(
+    input: BinaryReader | Uint8Array,
+    length?: number,
+  ): RecoveredSinceDowntimeOfLengthRequest {
+    const reader =
+      input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseRecoveredSinceDowntimeOfLengthRequest();
     while (reader.pos < end) {
@@ -99,13 +154,20 @@ export const RecoveredSinceDowntimeOfLengthRequest = {
     }
     return message;
   },
-  fromPartial(object: Partial<RecoveredSinceDowntimeOfLengthRequest>): RecoveredSinceDowntimeOfLengthRequest {
+  fromPartial(
+    object: Partial<RecoveredSinceDowntimeOfLengthRequest>,
+  ): RecoveredSinceDowntimeOfLengthRequest {
     const message = createBaseRecoveredSinceDowntimeOfLengthRequest();
     message.downtime = object.downtime ?? 0;
-    message.recovery = object.recovery !== undefined && object.recovery !== null ? Duration.fromPartial(object.recovery) : undefined;
+    message.recovery =
+      object.recovery !== undefined && object.recovery !== null
+        ? Duration.fromPartial(object.recovery)
+        : undefined;
     return message;
   },
-  fromAmino(object: RecoveredSinceDowntimeOfLengthRequestAmino): RecoveredSinceDowntimeOfLengthRequest {
+  fromAmino(
+    object: RecoveredSinceDowntimeOfLengthRequestAmino,
+  ): RecoveredSinceDowntimeOfLengthRequest {
     const message = createBaseRecoveredSinceDowntimeOfLengthRequest();
     if (object.downtime !== undefined && object.downtime !== null) {
       message.downtime = object.downtime;
@@ -115,53 +177,92 @@ export const RecoveredSinceDowntimeOfLengthRequest = {
     }
     return message;
   },
-  toAmino(message: RecoveredSinceDowntimeOfLengthRequest): RecoveredSinceDowntimeOfLengthRequestAmino {
+  toAmino(
+    message: RecoveredSinceDowntimeOfLengthRequest,
+  ): RecoveredSinceDowntimeOfLengthRequestAmino {
     const obj: any = {};
     obj.downtime = message.downtime === 0 ? undefined : message.downtime;
-    obj.recovery = message.recovery ? Duration.toAmino(message.recovery) : undefined;
+    obj.recovery = message.recovery
+      ? Duration.toAmino(message.recovery)
+      : undefined;
     return obj;
   },
-  fromAminoMsg(object: RecoveredSinceDowntimeOfLengthRequestAminoMsg): RecoveredSinceDowntimeOfLengthRequest {
+  fromAminoMsg(
+    object: RecoveredSinceDowntimeOfLengthRequestAminoMsg,
+  ): RecoveredSinceDowntimeOfLengthRequest {
     return RecoveredSinceDowntimeOfLengthRequest.fromAmino(object.value);
   },
-  fromProtoMsg(message: RecoveredSinceDowntimeOfLengthRequestProtoMsg): RecoveredSinceDowntimeOfLengthRequest {
+  fromProtoMsg(
+    message: RecoveredSinceDowntimeOfLengthRequestProtoMsg,
+  ): RecoveredSinceDowntimeOfLengthRequest {
     return RecoveredSinceDowntimeOfLengthRequest.decode(message.value);
   },
   toProto(message: RecoveredSinceDowntimeOfLengthRequest): Uint8Array {
     return RecoveredSinceDowntimeOfLengthRequest.encode(message).finish();
   },
-  toProtoMsg(message: RecoveredSinceDowntimeOfLengthRequest): RecoveredSinceDowntimeOfLengthRequestProtoMsg {
+  toProtoMsg(
+    message: RecoveredSinceDowntimeOfLengthRequest,
+  ): RecoveredSinceDowntimeOfLengthRequestProtoMsg {
     return {
-      typeUrl: "/symphony.downtimedetector.v1beta1.RecoveredSinceDowntimeOfLengthRequest",
-      value: RecoveredSinceDowntimeOfLengthRequest.encode(message).finish()
+      typeUrl:
+        '/symphony.downtimedetector.v1beta1.RecoveredSinceDowntimeOfLengthRequest',
+      value: RecoveredSinceDowntimeOfLengthRequest.encode(message).finish(),
     };
-  }
+  },
 };
-GlobalDecoderRegistry.register(RecoveredSinceDowntimeOfLengthRequest.typeUrl, RecoveredSinceDowntimeOfLengthRequest);
+GlobalDecoderRegistry.register(
+  RecoveredSinceDowntimeOfLengthRequest.typeUrl,
+  RecoveredSinceDowntimeOfLengthRequest,
+);
 function createBaseRecoveredSinceDowntimeOfLengthResponse(): RecoveredSinceDowntimeOfLengthResponse {
   return {
-    succesfullyRecovered: false
+    succesfullyRecovered: false,
   };
 }
+/**
+ * @name RecoveredSinceDowntimeOfLengthResponse
+ * @package symphony.downtimedetector.v1beta1
+ * @see proto type: symphony.downtimedetector.v1beta1.RecoveredSinceDowntimeOfLengthResponse
+ */
 export const RecoveredSinceDowntimeOfLengthResponse = {
-  typeUrl: "/symphony.downtimedetector.v1beta1.RecoveredSinceDowntimeOfLengthResponse",
+  typeUrl:
+    '/symphony.downtimedetector.v1beta1.RecoveredSinceDowntimeOfLengthResponse',
   is(o: any): o is RecoveredSinceDowntimeOfLengthResponse {
-    return o && (o.$typeUrl === RecoveredSinceDowntimeOfLengthResponse.typeUrl || typeof o.succesfullyRecovered === "boolean");
+    return (
+      o &&
+      (o.$typeUrl === RecoveredSinceDowntimeOfLengthResponse.typeUrl ||
+        typeof o.succesfullyRecovered === 'boolean')
+    );
   },
   isSDK(o: any): o is RecoveredSinceDowntimeOfLengthResponseSDKType {
-    return o && (o.$typeUrl === RecoveredSinceDowntimeOfLengthResponse.typeUrl || typeof o.succesfully_recovered === "boolean");
+    return (
+      o &&
+      (o.$typeUrl === RecoveredSinceDowntimeOfLengthResponse.typeUrl ||
+        typeof o.succesfully_recovered === 'boolean')
+    );
   },
   isAmino(o: any): o is RecoveredSinceDowntimeOfLengthResponseAmino {
-    return o && (o.$typeUrl === RecoveredSinceDowntimeOfLengthResponse.typeUrl || typeof o.succesfully_recovered === "boolean");
+    return (
+      o &&
+      (o.$typeUrl === RecoveredSinceDowntimeOfLengthResponse.typeUrl ||
+        typeof o.succesfully_recovered === 'boolean')
+    );
   },
-  encode(message: RecoveredSinceDowntimeOfLengthResponse, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
+  encode(
+    message: RecoveredSinceDowntimeOfLengthResponse,
+    writer: BinaryWriter = BinaryWriter.create(),
+  ): BinaryWriter {
     if (message.succesfullyRecovered === true) {
       writer.uint32(8).bool(message.succesfullyRecovered);
     }
     return writer;
   },
-  decode(input: BinaryReader | Uint8Array, length?: number): RecoveredSinceDowntimeOfLengthResponse {
-    const reader = input instanceof BinaryReader ? input : new BinaryReader(input);
+  decode(
+    input: BinaryReader | Uint8Array,
+    length?: number,
+  ): RecoveredSinceDowntimeOfLengthResponse {
+    const reader =
+      input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseRecoveredSinceDowntimeOfLengthResponse();
     while (reader.pos < end) {
@@ -177,37 +278,59 @@ export const RecoveredSinceDowntimeOfLengthResponse = {
     }
     return message;
   },
-  fromPartial(object: Partial<RecoveredSinceDowntimeOfLengthResponse>): RecoveredSinceDowntimeOfLengthResponse {
+  fromPartial(
+    object: Partial<RecoveredSinceDowntimeOfLengthResponse>,
+  ): RecoveredSinceDowntimeOfLengthResponse {
     const message = createBaseRecoveredSinceDowntimeOfLengthResponse();
     message.succesfullyRecovered = object.succesfullyRecovered ?? false;
     return message;
   },
-  fromAmino(object: RecoveredSinceDowntimeOfLengthResponseAmino): RecoveredSinceDowntimeOfLengthResponse {
+  fromAmino(
+    object: RecoveredSinceDowntimeOfLengthResponseAmino,
+  ): RecoveredSinceDowntimeOfLengthResponse {
     const message = createBaseRecoveredSinceDowntimeOfLengthResponse();
-    if (object.succesfully_recovered !== undefined && object.succesfully_recovered !== null) {
+    if (
+      object.succesfully_recovered !== undefined &&
+      object.succesfully_recovered !== null
+    ) {
       message.succesfullyRecovered = object.succesfully_recovered;
     }
     return message;
   },
-  toAmino(message: RecoveredSinceDowntimeOfLengthResponse): RecoveredSinceDowntimeOfLengthResponseAmino {
+  toAmino(
+    message: RecoveredSinceDowntimeOfLengthResponse,
+  ): RecoveredSinceDowntimeOfLengthResponseAmino {
     const obj: any = {};
-    obj.succesfully_recovered = message.succesfullyRecovered === false ? undefined : message.succesfullyRecovered;
+    obj.succesfully_recovered =
+      message.succesfullyRecovered === false
+        ? undefined
+        : message.succesfullyRecovered;
     return obj;
   },
-  fromAminoMsg(object: RecoveredSinceDowntimeOfLengthResponseAminoMsg): RecoveredSinceDowntimeOfLengthResponse {
+  fromAminoMsg(
+    object: RecoveredSinceDowntimeOfLengthResponseAminoMsg,
+  ): RecoveredSinceDowntimeOfLengthResponse {
     return RecoveredSinceDowntimeOfLengthResponse.fromAmino(object.value);
   },
-  fromProtoMsg(message: RecoveredSinceDowntimeOfLengthResponseProtoMsg): RecoveredSinceDowntimeOfLengthResponse {
+  fromProtoMsg(
+    message: RecoveredSinceDowntimeOfLengthResponseProtoMsg,
+  ): RecoveredSinceDowntimeOfLengthResponse {
     return RecoveredSinceDowntimeOfLengthResponse.decode(message.value);
   },
   toProto(message: RecoveredSinceDowntimeOfLengthResponse): Uint8Array {
     return RecoveredSinceDowntimeOfLengthResponse.encode(message).finish();
   },
-  toProtoMsg(message: RecoveredSinceDowntimeOfLengthResponse): RecoveredSinceDowntimeOfLengthResponseProtoMsg {
+  toProtoMsg(
+    message: RecoveredSinceDowntimeOfLengthResponse,
+  ): RecoveredSinceDowntimeOfLengthResponseProtoMsg {
     return {
-      typeUrl: "/symphony.downtimedetector.v1beta1.RecoveredSinceDowntimeOfLengthResponse",
-      value: RecoveredSinceDowntimeOfLengthResponse.encode(message).finish()
+      typeUrl:
+        '/symphony.downtimedetector.v1beta1.RecoveredSinceDowntimeOfLengthResponse',
+      value: RecoveredSinceDowntimeOfLengthResponse.encode(message).finish(),
     };
-  }
+  },
 };
-GlobalDecoderRegistry.register(RecoveredSinceDowntimeOfLengthResponse.typeUrl, RecoveredSinceDowntimeOfLengthResponse);
+GlobalDecoderRegistry.register(
+  RecoveredSinceDowntimeOfLengthResponse.typeUrl,
+  RecoveredSinceDowntimeOfLengthResponse,
+);

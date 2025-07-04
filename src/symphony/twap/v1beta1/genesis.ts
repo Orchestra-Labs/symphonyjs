@@ -1,86 +1,156 @@
 //@ts-nocheck
-import { Duration, DurationAmino, DurationSDKType } from "../../../google/protobuf/duration";
-import { TwapRecord, TwapRecordAmino, TwapRecordSDKType } from "./twap_record";
-import { BinaryReader, BinaryWriter } from "../../../binary";
-import { GlobalDecoderRegistry } from "../../../registry";
-/** Params holds parameters for the twap module */
+import {
+  Duration,
+  DurationAmino,
+  DurationSDKType,
+} from '../../../google/protobuf/duration';
+import { TwapRecord, TwapRecordAmino, TwapRecordSDKType } from './twap_record';
+import { BinaryReader, BinaryWriter } from '../../../binary';
+import { GlobalDecoderRegistry } from '../../../registry';
+/**
+ * Params holds parameters for the twap module
+ * @name Params
+ * @package symphony.twap.v1beta1
+ * @see proto type: symphony.twap.v1beta1.Params
+ */
 export interface Params {
   pruneEpochIdentifier: string;
   recordHistoryKeepPeriod: Duration;
 }
 export interface ParamsProtoMsg {
-  typeUrl: "/symphony.twap.v1beta1.Params";
+  typeUrl: '/symphony.twap.v1beta1.Params';
   value: Uint8Array;
 }
-/** Params holds parameters for the twap module */
+/**
+ * Params holds parameters for the twap module
+ * @name ParamsAmino
+ * @package symphony.twap.v1beta1
+ * @see proto type: symphony.twap.v1beta1.Params
+ */
 export interface ParamsAmino {
   prune_epoch_identifier?: string;
   record_history_keep_period?: DurationAmino;
 }
 export interface ParamsAminoMsg {
-  type: "/symphony.twap.v1beta1.Params";
+  type: '/symphony.twap.v1beta1.Params';
   value: ParamsAmino;
 }
-/** Params holds parameters for the twap module */
+/**
+ * Params holds parameters for the twap module
+ * @name ParamsSDKType
+ * @package symphony.twap.v1beta1
+ * @see proto type: symphony.twap.v1beta1.Params
+ */
 export interface ParamsSDKType {
   prune_epoch_identifier: string;
   record_history_keep_period: DurationSDKType;
 }
-/** GenesisState defines the twap module's genesis state. */
+/**
+ * GenesisState defines the twap module's genesis state.
+ * @name GenesisState
+ * @package symphony.twap.v1beta1
+ * @see proto type: symphony.twap.v1beta1.GenesisState
+ */
 export interface GenesisState {
-  /** twaps is the collection of all twap records. */
+  /**
+   * twaps is the collection of all twap records.
+   */
   twaps: TwapRecord[];
-  /** params is the container of twap parameters. */
+  /**
+   * params is the container of twap parameters.
+   */
   params: Params;
 }
 export interface GenesisStateProtoMsg {
-  typeUrl: "/symphony.twap.v1beta1.GenesisState";
+  typeUrl: '/symphony.twap.v1beta1.GenesisState';
   value: Uint8Array;
 }
-/** GenesisState defines the twap module's genesis state. */
+/**
+ * GenesisState defines the twap module's genesis state.
+ * @name GenesisStateAmino
+ * @package symphony.twap.v1beta1
+ * @see proto type: symphony.twap.v1beta1.GenesisState
+ */
 export interface GenesisStateAmino {
-  /** twaps is the collection of all twap records. */
+  /**
+   * twaps is the collection of all twap records.
+   */
   twaps?: TwapRecordAmino[];
-  /** params is the container of twap parameters. */
+  /**
+   * params is the container of twap parameters.
+   */
   params?: ParamsAmino;
 }
 export interface GenesisStateAminoMsg {
-  type: "/symphony.twap.v1beta1.GenesisState";
+  type: '/symphony.twap.v1beta1.GenesisState';
   value: GenesisStateAmino;
 }
-/** GenesisState defines the twap module's genesis state. */
+/**
+ * GenesisState defines the twap module's genesis state.
+ * @name GenesisStateSDKType
+ * @package symphony.twap.v1beta1
+ * @see proto type: symphony.twap.v1beta1.GenesisState
+ */
 export interface GenesisStateSDKType {
   twaps: TwapRecordSDKType[];
   params: ParamsSDKType;
 }
 function createBaseParams(): Params {
   return {
-    pruneEpochIdentifier: "",
-    recordHistoryKeepPeriod: Duration.fromPartial({})
+    pruneEpochIdentifier: '',
+    recordHistoryKeepPeriod: Duration.fromPartial({}),
   };
 }
+/**
+ * Params holds parameters for the twap module
+ * @name Params
+ * @package symphony.twap.v1beta1
+ * @see proto type: symphony.twap.v1beta1.Params
+ */
 export const Params = {
-  typeUrl: "/symphony.twap.v1beta1.Params",
+  typeUrl: '/symphony.twap.v1beta1.Params',
   is(o: any): o is Params {
-    return o && (o.$typeUrl === Params.typeUrl || typeof o.pruneEpochIdentifier === "string" && Duration.is(o.recordHistoryKeepPeriod));
+    return (
+      o &&
+      (o.$typeUrl === Params.typeUrl ||
+        (typeof o.pruneEpochIdentifier === 'string' &&
+          Duration.is(o.recordHistoryKeepPeriod)))
+    );
   },
   isSDK(o: any): o is ParamsSDKType {
-    return o && (o.$typeUrl === Params.typeUrl || typeof o.prune_epoch_identifier === "string" && Duration.isSDK(o.record_history_keep_period));
+    return (
+      o &&
+      (o.$typeUrl === Params.typeUrl ||
+        (typeof o.prune_epoch_identifier === 'string' &&
+          Duration.isSDK(o.record_history_keep_period)))
+    );
   },
   isAmino(o: any): o is ParamsAmino {
-    return o && (o.$typeUrl === Params.typeUrl || typeof o.prune_epoch_identifier === "string" && Duration.isAmino(o.record_history_keep_period));
+    return (
+      o &&
+      (o.$typeUrl === Params.typeUrl ||
+        (typeof o.prune_epoch_identifier === 'string' &&
+          Duration.isAmino(o.record_history_keep_period)))
+    );
   },
-  encode(message: Params, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
-    if (message.pruneEpochIdentifier !== "") {
+  encode(
+    message: Params,
+    writer: BinaryWriter = BinaryWriter.create(),
+  ): BinaryWriter {
+    if (message.pruneEpochIdentifier !== '') {
       writer.uint32(10).string(message.pruneEpochIdentifier);
     }
     if (message.recordHistoryKeepPeriod !== undefined) {
-      Duration.encode(message.recordHistoryKeepPeriod, writer.uint32(18).fork()).ldelim();
+      Duration.encode(
+        message.recordHistoryKeepPeriod,
+        writer.uint32(18).fork(),
+      ).ldelim();
     }
     return writer;
   },
   decode(input: BinaryReader | Uint8Array, length?: number): Params {
-    const reader = input instanceof BinaryReader ? input : new BinaryReader(input);
+    const reader =
+      input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseParams();
     while (reader.pos < end) {
@@ -90,7 +160,10 @@ export const Params = {
           message.pruneEpochIdentifier = reader.string();
           break;
         case 2:
-          message.recordHistoryKeepPeriod = Duration.decode(reader, reader.uint32());
+          message.recordHistoryKeepPeriod = Duration.decode(
+            reader,
+            reader.uint32(),
+          );
           break;
         default:
           reader.skipType(tag & 7);
@@ -101,24 +174,41 @@ export const Params = {
   },
   fromPartial(object: Partial<Params>): Params {
     const message = createBaseParams();
-    message.pruneEpochIdentifier = object.pruneEpochIdentifier ?? "";
-    message.recordHistoryKeepPeriod = object.recordHistoryKeepPeriod !== undefined && object.recordHistoryKeepPeriod !== null ? Duration.fromPartial(object.recordHistoryKeepPeriod) : undefined;
+    message.pruneEpochIdentifier = object.pruneEpochIdentifier ?? '';
+    message.recordHistoryKeepPeriod =
+      object.recordHistoryKeepPeriod !== undefined &&
+      object.recordHistoryKeepPeriod !== null
+        ? Duration.fromPartial(object.recordHistoryKeepPeriod)
+        : undefined;
     return message;
   },
   fromAmino(object: ParamsAmino): Params {
     const message = createBaseParams();
-    if (object.prune_epoch_identifier !== undefined && object.prune_epoch_identifier !== null) {
+    if (
+      object.prune_epoch_identifier !== undefined &&
+      object.prune_epoch_identifier !== null
+    ) {
       message.pruneEpochIdentifier = object.prune_epoch_identifier;
     }
-    if (object.record_history_keep_period !== undefined && object.record_history_keep_period !== null) {
-      message.recordHistoryKeepPeriod = Duration.fromAmino(object.record_history_keep_period);
+    if (
+      object.record_history_keep_period !== undefined &&
+      object.record_history_keep_period !== null
+    ) {
+      message.recordHistoryKeepPeriod = Duration.fromAmino(
+        object.record_history_keep_period,
+      );
     }
     return message;
   },
   toAmino(message: Params): ParamsAmino {
     const obj: any = {};
-    obj.prune_epoch_identifier = message.pruneEpochIdentifier === "" ? undefined : message.pruneEpochIdentifier;
-    obj.record_history_keep_period = message.recordHistoryKeepPeriod ? Duration.toAmino(message.recordHistoryKeepPeriod) : undefined;
+    obj.prune_epoch_identifier =
+      message.pruneEpochIdentifier === ''
+        ? undefined
+        : message.pruneEpochIdentifier;
+    obj.record_history_keep_period = message.recordHistoryKeepPeriod
+      ? Duration.toAmino(message.recordHistoryKeepPeriod)
+      : undefined;
     return obj;
   },
   fromAminoMsg(object: ParamsAminoMsg): Params {
@@ -132,30 +222,57 @@ export const Params = {
   },
   toProtoMsg(message: Params): ParamsProtoMsg {
     return {
-      typeUrl: "/symphony.twap.v1beta1.Params",
-      value: Params.encode(message).finish()
+      typeUrl: '/symphony.twap.v1beta1.Params',
+      value: Params.encode(message).finish(),
     };
-  }
+  },
 };
 GlobalDecoderRegistry.register(Params.typeUrl, Params);
 function createBaseGenesisState(): GenesisState {
   return {
     twaps: [],
-    params: Params.fromPartial({})
+    params: Params.fromPartial({}),
   };
 }
+/**
+ * GenesisState defines the twap module's genesis state.
+ * @name GenesisState
+ * @package symphony.twap.v1beta1
+ * @see proto type: symphony.twap.v1beta1.GenesisState
+ */
 export const GenesisState = {
-  typeUrl: "/symphony.twap.v1beta1.GenesisState",
+  typeUrl: '/symphony.twap.v1beta1.GenesisState',
   is(o: any): o is GenesisState {
-    return o && (o.$typeUrl === GenesisState.typeUrl || Array.isArray(o.twaps) && (!o.twaps.length || TwapRecord.is(o.twaps[0])) && Params.is(o.params));
+    return (
+      o &&
+      (o.$typeUrl === GenesisState.typeUrl ||
+        (Array.isArray(o.twaps) &&
+          (!o.twaps.length || TwapRecord.is(o.twaps[0])) &&
+          Params.is(o.params)))
+    );
   },
   isSDK(o: any): o is GenesisStateSDKType {
-    return o && (o.$typeUrl === GenesisState.typeUrl || Array.isArray(o.twaps) && (!o.twaps.length || TwapRecord.isSDK(o.twaps[0])) && Params.isSDK(o.params));
+    return (
+      o &&
+      (o.$typeUrl === GenesisState.typeUrl ||
+        (Array.isArray(o.twaps) &&
+          (!o.twaps.length || TwapRecord.isSDK(o.twaps[0])) &&
+          Params.isSDK(o.params)))
+    );
   },
   isAmino(o: any): o is GenesisStateAmino {
-    return o && (o.$typeUrl === GenesisState.typeUrl || Array.isArray(o.twaps) && (!o.twaps.length || TwapRecord.isAmino(o.twaps[0])) && Params.isAmino(o.params));
+    return (
+      o &&
+      (o.$typeUrl === GenesisState.typeUrl ||
+        (Array.isArray(o.twaps) &&
+          (!o.twaps.length || TwapRecord.isAmino(o.twaps[0])) &&
+          Params.isAmino(o.params)))
+    );
   },
-  encode(message: GenesisState, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
+  encode(
+    message: GenesisState,
+    writer: BinaryWriter = BinaryWriter.create(),
+  ): BinaryWriter {
     for (const v of message.twaps) {
       TwapRecord.encode(v!, writer.uint32(10).fork()).ldelim();
     }
@@ -165,7 +282,8 @@ export const GenesisState = {
     return writer;
   },
   decode(input: BinaryReader | Uint8Array, length?: number): GenesisState {
-    const reader = input instanceof BinaryReader ? input : new BinaryReader(input);
+    const reader =
+      input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseGenesisState();
     while (reader.pos < end) {
@@ -187,7 +305,10 @@ export const GenesisState = {
   fromPartial(object: Partial<GenesisState>): GenesisState {
     const message = createBaseGenesisState();
     message.twaps = object.twaps?.map(e => TwapRecord.fromPartial(e)) || [];
-    message.params = object.params !== undefined && object.params !== null ? Params.fromPartial(object.params) : undefined;
+    message.params =
+      object.params !== undefined && object.params !== null
+        ? Params.fromPartial(object.params)
+        : undefined;
     return message;
   },
   fromAmino(object: GenesisStateAmino): GenesisState {
@@ -201,7 +322,9 @@ export const GenesisState = {
   toAmino(message: GenesisState): GenesisStateAmino {
     const obj: any = {};
     if (message.twaps) {
-      obj.twaps = message.twaps.map(e => e ? TwapRecord.toAmino(e) : undefined);
+      obj.twaps = message.twaps.map(e =>
+        e ? TwapRecord.toAmino(e) : undefined,
+      );
     } else {
       obj.twaps = message.twaps;
     }
@@ -219,9 +342,9 @@ export const GenesisState = {
   },
   toProtoMsg(message: GenesisState): GenesisStateProtoMsg {
     return {
-      typeUrl: "/symphony.twap.v1beta1.GenesisState",
-      value: GenesisState.encode(message).finish()
+      typeUrl: '/symphony.twap.v1beta1.GenesisState',
+      value: GenesisState.encode(message).finish(),
     };
-  }
+  },
 };
 GlobalDecoderRegistry.register(GenesisState.typeUrl, GenesisState);

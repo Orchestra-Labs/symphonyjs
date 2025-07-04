@@ -1,19 +1,22 @@
 //@ts-nocheck
-import { BinaryReader, BinaryWriter } from "../../../binary";
-import { bytesFromBase64, base64FromBytes } from "../../../helpers";
-import { GlobalDecoderRegistry } from "../../../registry";
+import { BinaryReader, BinaryWriter } from '../../../binary';
+import { bytesFromBase64, base64FromBytes } from '../../../helpers';
+import { GlobalDecoderRegistry } from '../../../registry';
 /**
  * PubKey is an ed25519 public key for handling Tendermint keys in SDK.
  * It's needed for Any serialization and SDK compatibility.
  * It must not be used in a non Tendermint key context because it doesn't implement
  * ADR-28. Nevertheless, you will like to use ed25519 in app user level
  * then you must create a new proto message and follow ADR-28 for Address construction.
+ * @name PubKey
+ * @package cosmos.crypto.ed25519
+ * @see proto type: cosmos.crypto.ed25519.PubKey
  */
 export interface PubKey {
   key: Uint8Array;
 }
 export interface PubKeyProtoMsg {
-  typeUrl: "/cosmos.crypto.ed25519.PubKey";
+  typeUrl: '/cosmos.crypto.ed25519.PubKey';
   value: Uint8Array;
 }
 /**
@@ -22,12 +25,15 @@ export interface PubKeyProtoMsg {
  * It must not be used in a non Tendermint key context because it doesn't implement
  * ADR-28. Nevertheless, you will like to use ed25519 in app user level
  * then you must create a new proto message and follow ADR-28 for Address construction.
+ * @name PubKeyAmino
+ * @package cosmos.crypto.ed25519
+ * @see proto type: cosmos.crypto.ed25519.PubKey
  */
 export interface PubKeyAmino {
   key?: string;
 }
 export interface PubKeyAminoMsg {
-  type: "tendermint/PubKeyEd25519";
+  type: 'tendermint/PubKeyEd25519';
   value: PubKeyAmino;
 }
 /**
@@ -36,6 +42,9 @@ export interface PubKeyAminoMsg {
  * It must not be used in a non Tendermint key context because it doesn't implement
  * ADR-28. Nevertheless, you will like to use ed25519 in app user level
  * then you must create a new proto message and follow ADR-28 for Address construction.
+ * @name PubKeySDKType
+ * @package cosmos.crypto.ed25519
+ * @see proto type: cosmos.crypto.ed25519.PubKey
  */
 export interface PubKeySDKType {
   key: Uint8Array;
@@ -43,57 +52,95 @@ export interface PubKeySDKType {
 /**
  * PrivKey defines a ed25519 private key.
  * NOTE: ed25519 keys must not be used in SDK apps except in a tendermint validator context.
+ * @name PrivKey
+ * @package cosmos.crypto.ed25519
+ * @see proto type: cosmos.crypto.ed25519.PrivKey
  */
 export interface PrivKey {
   key: Uint8Array;
 }
 export interface PrivKeyProtoMsg {
-  typeUrl: "/cosmos.crypto.ed25519.PrivKey";
+  typeUrl: '/cosmos.crypto.ed25519.PrivKey';
   value: Uint8Array;
 }
 /**
  * PrivKey defines a ed25519 private key.
  * NOTE: ed25519 keys must not be used in SDK apps except in a tendermint validator context.
+ * @name PrivKeyAmino
+ * @package cosmos.crypto.ed25519
+ * @see proto type: cosmos.crypto.ed25519.PrivKey
  */
 export interface PrivKeyAmino {
   key?: string;
 }
 export interface PrivKeyAminoMsg {
-  type: "tendermint/PrivKeyEd25519";
+  type: 'tendermint/PrivKeyEd25519';
   value: PrivKeyAmino;
 }
 /**
  * PrivKey defines a ed25519 private key.
  * NOTE: ed25519 keys must not be used in SDK apps except in a tendermint validator context.
+ * @name PrivKeySDKType
+ * @package cosmos.crypto.ed25519
+ * @see proto type: cosmos.crypto.ed25519.PrivKey
  */
 export interface PrivKeySDKType {
   key: Uint8Array;
 }
 function createBasePubKey(): PubKey {
   return {
-    key: new Uint8Array()
+    key: new Uint8Array(),
   };
 }
+/**
+ * PubKey is an ed25519 public key for handling Tendermint keys in SDK.
+ * It's needed for Any serialization and SDK compatibility.
+ * It must not be used in a non Tendermint key context because it doesn't implement
+ * ADR-28. Nevertheless, you will like to use ed25519 in app user level
+ * then you must create a new proto message and follow ADR-28 for Address construction.
+ * @name PubKey
+ * @package cosmos.crypto.ed25519
+ * @see proto type: cosmos.crypto.ed25519.PubKey
+ */
 export const PubKey = {
-  typeUrl: "/cosmos.crypto.ed25519.PubKey",
-  aminoType: "tendermint/PubKeyEd25519",
+  typeUrl: '/cosmos.crypto.ed25519.PubKey',
+  aminoType: 'tendermint/PubKeyEd25519',
   is(o: any): o is PubKey {
-    return o && (o.$typeUrl === PubKey.typeUrl || o.key instanceof Uint8Array || typeof o.key === "string");
+    return (
+      o &&
+      (o.$typeUrl === PubKey.typeUrl ||
+        o.key instanceof Uint8Array ||
+        typeof o.key === 'string')
+    );
   },
   isSDK(o: any): o is PubKeySDKType {
-    return o && (o.$typeUrl === PubKey.typeUrl || o.key instanceof Uint8Array || typeof o.key === "string");
+    return (
+      o &&
+      (o.$typeUrl === PubKey.typeUrl ||
+        o.key instanceof Uint8Array ||
+        typeof o.key === 'string')
+    );
   },
   isAmino(o: any): o is PubKeyAmino {
-    return o && (o.$typeUrl === PubKey.typeUrl || o.key instanceof Uint8Array || typeof o.key === "string");
+    return (
+      o &&
+      (o.$typeUrl === PubKey.typeUrl ||
+        o.key instanceof Uint8Array ||
+        typeof o.key === 'string')
+    );
   },
-  encode(message: PubKey, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
+  encode(
+    message: PubKey,
+    writer: BinaryWriter = BinaryWriter.create(),
+  ): BinaryWriter {
     if (message.key.length !== 0) {
       writer.uint32(10).bytes(message.key);
     }
     return writer;
   },
   decode(input: BinaryReader | Uint8Array, length?: number): PubKey {
-    const reader = input instanceof BinaryReader ? input : new BinaryReader(input);
+    const reader =
+      input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBasePubKey();
     while (reader.pos < end) {
@@ -131,8 +178,8 @@ export const PubKey = {
   },
   toAminoMsg(message: PubKey): PubKeyAminoMsg {
     return {
-      type: "tendermint/PubKeyEd25519",
-      value: PubKey.toAmino(message)
+      type: 'tendermint/PubKeyEd25519',
+      value: PubKey.toAmino(message),
     };
   },
   fromProtoMsg(message: PubKeyProtoMsg): PubKey {
@@ -143,38 +190,67 @@ export const PubKey = {
   },
   toProtoMsg(message: PubKey): PubKeyProtoMsg {
     return {
-      typeUrl: "/cosmos.crypto.ed25519.PubKey",
-      value: PubKey.encode(message).finish()
+      typeUrl: '/cosmos.crypto.ed25519.PubKey',
+      value: PubKey.encode(message).finish(),
     };
-  }
+  },
 };
 GlobalDecoderRegistry.register(PubKey.typeUrl, PubKey);
-GlobalDecoderRegistry.registerAminoProtoMapping(PubKey.aminoType, PubKey.typeUrl);
+GlobalDecoderRegistry.registerAminoProtoMapping(
+  PubKey.aminoType,
+  PubKey.typeUrl,
+);
 function createBasePrivKey(): PrivKey {
   return {
-    key: new Uint8Array()
+    key: new Uint8Array(),
   };
 }
+/**
+ * PrivKey defines a ed25519 private key.
+ * NOTE: ed25519 keys must not be used in SDK apps except in a tendermint validator context.
+ * @name PrivKey
+ * @package cosmos.crypto.ed25519
+ * @see proto type: cosmos.crypto.ed25519.PrivKey
+ */
 export const PrivKey = {
-  typeUrl: "/cosmos.crypto.ed25519.PrivKey",
-  aminoType: "tendermint/PrivKeyEd25519",
+  typeUrl: '/cosmos.crypto.ed25519.PrivKey',
+  aminoType: 'tendermint/PrivKeyEd25519',
   is(o: any): o is PrivKey {
-    return o && (o.$typeUrl === PrivKey.typeUrl || o.key instanceof Uint8Array || typeof o.key === "string");
+    return (
+      o &&
+      (o.$typeUrl === PrivKey.typeUrl ||
+        o.key instanceof Uint8Array ||
+        typeof o.key === 'string')
+    );
   },
   isSDK(o: any): o is PrivKeySDKType {
-    return o && (o.$typeUrl === PrivKey.typeUrl || o.key instanceof Uint8Array || typeof o.key === "string");
+    return (
+      o &&
+      (o.$typeUrl === PrivKey.typeUrl ||
+        o.key instanceof Uint8Array ||
+        typeof o.key === 'string')
+    );
   },
   isAmino(o: any): o is PrivKeyAmino {
-    return o && (o.$typeUrl === PrivKey.typeUrl || o.key instanceof Uint8Array || typeof o.key === "string");
+    return (
+      o &&
+      (o.$typeUrl === PrivKey.typeUrl ||
+        o.key instanceof Uint8Array ||
+        typeof o.key === 'string')
+    );
   },
-  encode(message: PrivKey, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
+  encode(
+    message: PrivKey,
+    writer: BinaryWriter = BinaryWriter.create(),
+  ): BinaryWriter {
     if (message.key.length !== 0) {
       writer.uint32(10).bytes(message.key);
     }
     return writer;
   },
   decode(input: BinaryReader | Uint8Array, length?: number): PrivKey {
-    const reader = input instanceof BinaryReader ? input : new BinaryReader(input);
+    const reader =
+      input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBasePrivKey();
     while (reader.pos < end) {
@@ -212,8 +288,8 @@ export const PrivKey = {
   },
   toAminoMsg(message: PrivKey): PrivKeyAminoMsg {
     return {
-      type: "tendermint/PrivKeyEd25519",
-      value: PrivKey.toAmino(message)
+      type: 'tendermint/PrivKeyEd25519',
+      value: PrivKey.toAmino(message),
     };
   },
   fromProtoMsg(message: PrivKeyProtoMsg): PrivKey {
@@ -224,10 +300,13 @@ export const PrivKey = {
   },
   toProtoMsg(message: PrivKey): PrivKeyProtoMsg {
     return {
-      typeUrl: "/cosmos.crypto.ed25519.PrivKey",
-      value: PrivKey.encode(message).finish()
+      typeUrl: '/cosmos.crypto.ed25519.PrivKey',
+      value: PrivKey.encode(message).finish(),
     };
-  }
+  },
 };
 GlobalDecoderRegistry.register(PrivKey.typeUrl, PrivKey);
-GlobalDecoderRegistry.registerAminoProtoMapping(PrivKey.aminoType, PrivKey.typeUrl);
+GlobalDecoderRegistry.registerAminoProtoMapping(
+  PrivKey.aminoType,
+  PrivKey.typeUrl,
+);

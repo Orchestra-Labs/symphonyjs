@@ -1,9 +1,27 @@
 //@ts-nocheck
-import { Params, ParamsAmino, ParamsSDKType, ExchangeRateTuple, ExchangeRateTupleAmino, ExchangeRateTupleSDKType, AggregateExchangeRatePrevote, AggregateExchangeRatePrevoteAmino, AggregateExchangeRatePrevoteSDKType, AggregateExchangeRateVote, AggregateExchangeRateVoteAmino, AggregateExchangeRateVoteSDKType } from "./oracle";
-import { BinaryReader, BinaryWriter } from "../../../binary";
-import { GlobalDecoderRegistry } from "../../../registry";
-import { Decimal } from "@cosmjs/math";
-/** GenesisState defines the oracle module's genesis state. */
+import {
+  Params,
+  ParamsAmino,
+  ParamsSDKType,
+  ExchangeRateTuple,
+  ExchangeRateTupleAmino,
+  ExchangeRateTupleSDKType,
+  AggregateExchangeRatePrevote,
+  AggregateExchangeRatePrevoteAmino,
+  AggregateExchangeRatePrevoteSDKType,
+  AggregateExchangeRateVote,
+  AggregateExchangeRateVoteAmino,
+  AggregateExchangeRateVoteSDKType,
+} from './oracle';
+import { BinaryReader, BinaryWriter } from '../../../binary';
+import { GlobalDecoderRegistry } from '../../../registry';
+import { Decimal } from '@cosmjs/math';
+/**
+ * GenesisState defines the oracle module's genesis state.
+ * @name GenesisState
+ * @package symphony.oracle.v1beta1
+ * @see proto type: symphony.oracle.v1beta1.GenesisState
+ */
 export interface GenesisState {
   params: Params;
   feederDelegations: FeederDelegation[];
@@ -14,10 +32,15 @@ export interface GenesisState {
   tobinTaxes: TobinTax[];
 }
 export interface GenesisStateProtoMsg {
-  typeUrl: "/symphony.oracle.v1beta1.GenesisState";
+  typeUrl: '/symphony.oracle.v1beta1.GenesisState';
   value: Uint8Array;
 }
-/** GenesisState defines the oracle module's genesis state. */
+/**
+ * GenesisState defines the oracle module's genesis state.
+ * @name GenesisStateAmino
+ * @package symphony.oracle.v1beta1
+ * @see proto type: symphony.oracle.v1beta1.GenesisState
+ */
 export interface GenesisStateAmino {
   params?: ParamsAmino;
   feeder_delegations?: FeederDelegationAmino[];
@@ -28,10 +51,15 @@ export interface GenesisStateAmino {
   tobin_taxes?: TobinTaxAmino[];
 }
 export interface GenesisStateAminoMsg {
-  type: "/symphony.oracle.v1beta1.GenesisState";
+  type: '/symphony.oracle.v1beta1.GenesisState';
   value: GenesisStateAmino;
 }
-/** GenesisState defines the oracle module's genesis state. */
+/**
+ * GenesisState defines the oracle module's genesis state.
+ * @name GenesisStateSDKType
+ * @package symphony.oracle.v1beta1
+ * @see proto type: symphony.oracle.v1beta1.GenesisState
+ */
 export interface GenesisStateSDKType {
   params: ParamsSDKType;
   feeder_delegations: FeederDelegationSDKType[];
@@ -45,32 +73,41 @@ export interface GenesisStateSDKType {
  * FeederDelegation is the address for where oracle feeder authority are
  * delegated to. By default this struct is only used at genesis to feed in
  * default feeder addresses.
+ * @name FeederDelegation
+ * @package symphony.oracle.v1beta1
+ * @see proto type: symphony.oracle.v1beta1.FeederDelegation
  */
 export interface FeederDelegation {
   feederAddress: string;
   validatorAddress: string;
 }
 export interface FeederDelegationProtoMsg {
-  typeUrl: "/symphony.oracle.v1beta1.FeederDelegation";
+  typeUrl: '/symphony.oracle.v1beta1.FeederDelegation';
   value: Uint8Array;
 }
 /**
  * FeederDelegation is the address for where oracle feeder authority are
  * delegated to. By default this struct is only used at genesis to feed in
  * default feeder addresses.
+ * @name FeederDelegationAmino
+ * @package symphony.oracle.v1beta1
+ * @see proto type: symphony.oracle.v1beta1.FeederDelegation
  */
 export interface FeederDelegationAmino {
   feeder_address?: string;
   validator_address?: string;
 }
 export interface FeederDelegationAminoMsg {
-  type: "/symphony.oracle.v1beta1.FeederDelegation";
+  type: '/symphony.oracle.v1beta1.FeederDelegation';
   value: FeederDelegationAmino;
 }
 /**
  * FeederDelegation is the address for where oracle feeder authority are
  * delegated to. By default this struct is only used at genesis to feed in
  * default feeder addresses.
+ * @name FeederDelegationSDKType
+ * @package symphony.oracle.v1beta1
+ * @see proto type: symphony.oracle.v1beta1.FeederDelegation
  */
 export interface FeederDelegationSDKType {
   feeder_address: string;
@@ -79,30 +116,39 @@ export interface FeederDelegationSDKType {
 /**
  * MissCounter defines an miss counter and validator address pair used in
  * oracle module's genesis state
+ * @name MissCounter
+ * @package symphony.oracle.v1beta1
+ * @see proto type: symphony.oracle.v1beta1.MissCounter
  */
 export interface MissCounter {
   validatorAddress: string;
   missCounter: bigint;
 }
 export interface MissCounterProtoMsg {
-  typeUrl: "/symphony.oracle.v1beta1.MissCounter";
+  typeUrl: '/symphony.oracle.v1beta1.MissCounter';
   value: Uint8Array;
 }
 /**
  * MissCounter defines an miss counter and validator address pair used in
  * oracle module's genesis state
+ * @name MissCounterAmino
+ * @package symphony.oracle.v1beta1
+ * @see proto type: symphony.oracle.v1beta1.MissCounter
  */
 export interface MissCounterAmino {
   validator_address?: string;
   miss_counter?: string;
 }
 export interface MissCounterAminoMsg {
-  type: "/symphony.oracle.v1beta1.MissCounter";
+  type: '/symphony.oracle.v1beta1.MissCounter';
   value: MissCounterAmino;
 }
 /**
  * MissCounter defines an miss counter and validator address pair used in
  * oracle module's genesis state
+ * @name MissCounterSDKType
+ * @package symphony.oracle.v1beta1
+ * @see proto type: symphony.oracle.v1beta1.MissCounter
  */
 export interface MissCounterSDKType {
   validator_address: string;
@@ -111,30 +157,39 @@ export interface MissCounterSDKType {
 /**
  * TobinTax defines an denom and tobin_tax pair used in
  * oracle module's genesis state
+ * @name TobinTax
+ * @package symphony.oracle.v1beta1
+ * @see proto type: symphony.oracle.v1beta1.TobinTax
  */
 export interface TobinTax {
   denom: string;
   tobinTax: string;
 }
 export interface TobinTaxProtoMsg {
-  typeUrl: "/symphony.oracle.v1beta1.TobinTax";
+  typeUrl: '/symphony.oracle.v1beta1.TobinTax';
   value: Uint8Array;
 }
 /**
  * TobinTax defines an denom and tobin_tax pair used in
  * oracle module's genesis state
+ * @name TobinTaxAmino
+ * @package symphony.oracle.v1beta1
+ * @see proto type: symphony.oracle.v1beta1.TobinTax
  */
 export interface TobinTaxAmino {
   denom?: string;
   tobin_tax?: string;
 }
 export interface TobinTaxAminoMsg {
-  type: "/symphony.oracle.v1beta1.TobinTax";
+  type: '/symphony.oracle.v1beta1.TobinTax';
   value: TobinTaxAmino;
 }
 /**
  * TobinTax defines an denom and tobin_tax pair used in
  * oracle module's genesis state
+ * @name TobinTaxSDKType
+ * @package symphony.oracle.v1beta1
+ * @see proto type: symphony.oracle.v1beta1.TobinTax
  */
 export interface TobinTaxSDKType {
   denom: string;
@@ -148,21 +203,101 @@ function createBaseGenesisState(): GenesisState {
     missCounters: [],
     aggregateExchangeRatePrevotes: [],
     aggregateExchangeRateVotes: [],
-    tobinTaxes: []
+    tobinTaxes: [],
   };
 }
+/**
+ * GenesisState defines the oracle module's genesis state.
+ * @name GenesisState
+ * @package symphony.oracle.v1beta1
+ * @see proto type: symphony.oracle.v1beta1.GenesisState
+ */
 export const GenesisState = {
-  typeUrl: "/symphony.oracle.v1beta1.GenesisState",
+  typeUrl: '/symphony.oracle.v1beta1.GenesisState',
   is(o: any): o is GenesisState {
-    return o && (o.$typeUrl === GenesisState.typeUrl || Params.is(o.params) && Array.isArray(o.feederDelegations) && (!o.feederDelegations.length || FeederDelegation.is(o.feederDelegations[0])) && Array.isArray(o.exchangeRates) && (!o.exchangeRates.length || ExchangeRateTuple.is(o.exchangeRates[0])) && Array.isArray(o.missCounters) && (!o.missCounters.length || MissCounter.is(o.missCounters[0])) && Array.isArray(o.aggregateExchangeRatePrevotes) && (!o.aggregateExchangeRatePrevotes.length || AggregateExchangeRatePrevote.is(o.aggregateExchangeRatePrevotes[0])) && Array.isArray(o.aggregateExchangeRateVotes) && (!o.aggregateExchangeRateVotes.length || AggregateExchangeRateVote.is(o.aggregateExchangeRateVotes[0])) && Array.isArray(o.tobinTaxes) && (!o.tobinTaxes.length || TobinTax.is(o.tobinTaxes[0])));
+    return (
+      o &&
+      (o.$typeUrl === GenesisState.typeUrl ||
+        (Params.is(o.params) &&
+          Array.isArray(o.feederDelegations) &&
+          (!o.feederDelegations.length ||
+            FeederDelegation.is(o.feederDelegations[0])) &&
+          Array.isArray(o.exchangeRates) &&
+          (!o.exchangeRates.length ||
+            ExchangeRateTuple.is(o.exchangeRates[0])) &&
+          Array.isArray(o.missCounters) &&
+          (!o.missCounters.length || MissCounter.is(o.missCounters[0])) &&
+          Array.isArray(o.aggregateExchangeRatePrevotes) &&
+          (!o.aggregateExchangeRatePrevotes.length ||
+            AggregateExchangeRatePrevote.is(
+              o.aggregateExchangeRatePrevotes[0],
+            )) &&
+          Array.isArray(o.aggregateExchangeRateVotes) &&
+          (!o.aggregateExchangeRateVotes.length ||
+            AggregateExchangeRateVote.is(o.aggregateExchangeRateVotes[0])) &&
+          Array.isArray(o.tobinTaxes) &&
+          (!o.tobinTaxes.length || TobinTax.is(o.tobinTaxes[0]))))
+    );
   },
   isSDK(o: any): o is GenesisStateSDKType {
-    return o && (o.$typeUrl === GenesisState.typeUrl || Params.isSDK(o.params) && Array.isArray(o.feeder_delegations) && (!o.feeder_delegations.length || FeederDelegation.isSDK(o.feeder_delegations[0])) && Array.isArray(o.exchange_rates) && (!o.exchange_rates.length || ExchangeRateTuple.isSDK(o.exchange_rates[0])) && Array.isArray(o.miss_counters) && (!o.miss_counters.length || MissCounter.isSDK(o.miss_counters[0])) && Array.isArray(o.aggregate_exchange_rate_prevotes) && (!o.aggregate_exchange_rate_prevotes.length || AggregateExchangeRatePrevote.isSDK(o.aggregate_exchange_rate_prevotes[0])) && Array.isArray(o.aggregate_exchange_rate_votes) && (!o.aggregate_exchange_rate_votes.length || AggregateExchangeRateVote.isSDK(o.aggregate_exchange_rate_votes[0])) && Array.isArray(o.tobin_taxes) && (!o.tobin_taxes.length || TobinTax.isSDK(o.tobin_taxes[0])));
+    return (
+      o &&
+      (o.$typeUrl === GenesisState.typeUrl ||
+        (Params.isSDK(o.params) &&
+          Array.isArray(o.feeder_delegations) &&
+          (!o.feeder_delegations.length ||
+            FeederDelegation.isSDK(o.feeder_delegations[0])) &&
+          Array.isArray(o.exchange_rates) &&
+          (!o.exchange_rates.length ||
+            ExchangeRateTuple.isSDK(o.exchange_rates[0])) &&
+          Array.isArray(o.miss_counters) &&
+          (!o.miss_counters.length || MissCounter.isSDK(o.miss_counters[0])) &&
+          Array.isArray(o.aggregate_exchange_rate_prevotes) &&
+          (!o.aggregate_exchange_rate_prevotes.length ||
+            AggregateExchangeRatePrevote.isSDK(
+              o.aggregate_exchange_rate_prevotes[0],
+            )) &&
+          Array.isArray(o.aggregate_exchange_rate_votes) &&
+          (!o.aggregate_exchange_rate_votes.length ||
+            AggregateExchangeRateVote.isSDK(
+              o.aggregate_exchange_rate_votes[0],
+            )) &&
+          Array.isArray(o.tobin_taxes) &&
+          (!o.tobin_taxes.length || TobinTax.isSDK(o.tobin_taxes[0]))))
+    );
   },
   isAmino(o: any): o is GenesisStateAmino {
-    return o && (o.$typeUrl === GenesisState.typeUrl || Params.isAmino(o.params) && Array.isArray(o.feeder_delegations) && (!o.feeder_delegations.length || FeederDelegation.isAmino(o.feeder_delegations[0])) && Array.isArray(o.exchange_rates) && (!o.exchange_rates.length || ExchangeRateTuple.isAmino(o.exchange_rates[0])) && Array.isArray(o.miss_counters) && (!o.miss_counters.length || MissCounter.isAmino(o.miss_counters[0])) && Array.isArray(o.aggregate_exchange_rate_prevotes) && (!o.aggregate_exchange_rate_prevotes.length || AggregateExchangeRatePrevote.isAmino(o.aggregate_exchange_rate_prevotes[0])) && Array.isArray(o.aggregate_exchange_rate_votes) && (!o.aggregate_exchange_rate_votes.length || AggregateExchangeRateVote.isAmino(o.aggregate_exchange_rate_votes[0])) && Array.isArray(o.tobin_taxes) && (!o.tobin_taxes.length || TobinTax.isAmino(o.tobin_taxes[0])));
+    return (
+      o &&
+      (o.$typeUrl === GenesisState.typeUrl ||
+        (Params.isAmino(o.params) &&
+          Array.isArray(o.feeder_delegations) &&
+          (!o.feeder_delegations.length ||
+            FeederDelegation.isAmino(o.feeder_delegations[0])) &&
+          Array.isArray(o.exchange_rates) &&
+          (!o.exchange_rates.length ||
+            ExchangeRateTuple.isAmino(o.exchange_rates[0])) &&
+          Array.isArray(o.miss_counters) &&
+          (!o.miss_counters.length ||
+            MissCounter.isAmino(o.miss_counters[0])) &&
+          Array.isArray(o.aggregate_exchange_rate_prevotes) &&
+          (!o.aggregate_exchange_rate_prevotes.length ||
+            AggregateExchangeRatePrevote.isAmino(
+              o.aggregate_exchange_rate_prevotes[0],
+            )) &&
+          Array.isArray(o.aggregate_exchange_rate_votes) &&
+          (!o.aggregate_exchange_rate_votes.length ||
+            AggregateExchangeRateVote.isAmino(
+              o.aggregate_exchange_rate_votes[0],
+            )) &&
+          Array.isArray(o.tobin_taxes) &&
+          (!o.tobin_taxes.length || TobinTax.isAmino(o.tobin_taxes[0]))))
+    );
   },
-  encode(message: GenesisState, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
+  encode(
+    message: GenesisState,
+    writer: BinaryWriter = BinaryWriter.create(),
+  ): BinaryWriter {
     if (message.params !== undefined) {
       Params.encode(message.params, writer.uint32(10).fork()).ldelim();
     }
@@ -176,7 +311,10 @@ export const GenesisState = {
       MissCounter.encode(v!, writer.uint32(34).fork()).ldelim();
     }
     for (const v of message.aggregateExchangeRatePrevotes) {
-      AggregateExchangeRatePrevote.encode(v!, writer.uint32(42).fork()).ldelim();
+      AggregateExchangeRatePrevote.encode(
+        v!,
+        writer.uint32(42).fork(),
+      ).ldelim();
     }
     for (const v of message.aggregateExchangeRateVotes) {
       AggregateExchangeRateVote.encode(v!, writer.uint32(50).fork()).ldelim();
@@ -187,7 +325,8 @@ export const GenesisState = {
     return writer;
   },
   decode(input: BinaryReader | Uint8Array, length?: number): GenesisState {
-    const reader = input instanceof BinaryReader ? input : new BinaryReader(input);
+    const reader =
+      input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseGenesisState();
     while (reader.pos < end) {
@@ -197,19 +336,29 @@ export const GenesisState = {
           message.params = Params.decode(reader, reader.uint32());
           break;
         case 2:
-          message.feederDelegations.push(FeederDelegation.decode(reader, reader.uint32()));
+          message.feederDelegations.push(
+            FeederDelegation.decode(reader, reader.uint32()),
+          );
           break;
         case 3:
-          message.exchangeRates.push(ExchangeRateTuple.decode(reader, reader.uint32()));
+          message.exchangeRates.push(
+            ExchangeRateTuple.decode(reader, reader.uint32()),
+          );
           break;
         case 4:
-          message.missCounters.push(MissCounter.decode(reader, reader.uint32()));
+          message.missCounters.push(
+            MissCounter.decode(reader, reader.uint32()),
+          );
           break;
         case 5:
-          message.aggregateExchangeRatePrevotes.push(AggregateExchangeRatePrevote.decode(reader, reader.uint32()));
+          message.aggregateExchangeRatePrevotes.push(
+            AggregateExchangeRatePrevote.decode(reader, reader.uint32()),
+          );
           break;
         case 6:
-          message.aggregateExchangeRateVotes.push(AggregateExchangeRateVote.decode(reader, reader.uint32()));
+          message.aggregateExchangeRateVotes.push(
+            AggregateExchangeRateVote.decode(reader, reader.uint32()),
+          );
           break;
         case 7:
           message.tobinTaxes.push(TobinTax.decode(reader, reader.uint32()));
@@ -223,13 +372,26 @@ export const GenesisState = {
   },
   fromPartial(object: Partial<GenesisState>): GenesisState {
     const message = createBaseGenesisState();
-    message.params = object.params !== undefined && object.params !== null ? Params.fromPartial(object.params) : undefined;
-    message.feederDelegations = object.feederDelegations?.map(e => FeederDelegation.fromPartial(e)) || [];
-    message.exchangeRates = object.exchangeRates?.map(e => ExchangeRateTuple.fromPartial(e)) || [];
-    message.missCounters = object.missCounters?.map(e => MissCounter.fromPartial(e)) || [];
-    message.aggregateExchangeRatePrevotes = object.aggregateExchangeRatePrevotes?.map(e => AggregateExchangeRatePrevote.fromPartial(e)) || [];
-    message.aggregateExchangeRateVotes = object.aggregateExchangeRateVotes?.map(e => AggregateExchangeRateVote.fromPartial(e)) || [];
-    message.tobinTaxes = object.tobinTaxes?.map(e => TobinTax.fromPartial(e)) || [];
+    message.params =
+      object.params !== undefined && object.params !== null
+        ? Params.fromPartial(object.params)
+        : undefined;
+    message.feederDelegations =
+      object.feederDelegations?.map(e => FeederDelegation.fromPartial(e)) || [];
+    message.exchangeRates =
+      object.exchangeRates?.map(e => ExchangeRateTuple.fromPartial(e)) || [];
+    message.missCounters =
+      object.missCounters?.map(e => MissCounter.fromPartial(e)) || [];
+    message.aggregateExchangeRatePrevotes =
+      object.aggregateExchangeRatePrevotes?.map(e =>
+        AggregateExchangeRatePrevote.fromPartial(e),
+      ) || [];
+    message.aggregateExchangeRateVotes =
+      object.aggregateExchangeRateVotes?.map(e =>
+        AggregateExchangeRateVote.fromPartial(e),
+      ) || [];
+    message.tobinTaxes =
+      object.tobinTaxes?.map(e => TobinTax.fromPartial(e)) || [];
     return message;
   },
   fromAmino(object: GenesisStateAmino): GenesisState {
@@ -237,44 +399,69 @@ export const GenesisState = {
     if (object.params !== undefined && object.params !== null) {
       message.params = Params.fromAmino(object.params);
     }
-    message.feederDelegations = object.feeder_delegations?.map(e => FeederDelegation.fromAmino(e)) || [];
-    message.exchangeRates = object.exchange_rates?.map(e => ExchangeRateTuple.fromAmino(e)) || [];
-    message.missCounters = object.miss_counters?.map(e => MissCounter.fromAmino(e)) || [];
-    message.aggregateExchangeRatePrevotes = object.aggregate_exchange_rate_prevotes?.map(e => AggregateExchangeRatePrevote.fromAmino(e)) || [];
-    message.aggregateExchangeRateVotes = object.aggregate_exchange_rate_votes?.map(e => AggregateExchangeRateVote.fromAmino(e)) || [];
-    message.tobinTaxes = object.tobin_taxes?.map(e => TobinTax.fromAmino(e)) || [];
+    message.feederDelegations =
+      object.feeder_delegations?.map(e => FeederDelegation.fromAmino(e)) || [];
+    message.exchangeRates =
+      object.exchange_rates?.map(e => ExchangeRateTuple.fromAmino(e)) || [];
+    message.missCounters =
+      object.miss_counters?.map(e => MissCounter.fromAmino(e)) || [];
+    message.aggregateExchangeRatePrevotes =
+      object.aggregate_exchange_rate_prevotes?.map(e =>
+        AggregateExchangeRatePrevote.fromAmino(e),
+      ) || [];
+    message.aggregateExchangeRateVotes =
+      object.aggregate_exchange_rate_votes?.map(e =>
+        AggregateExchangeRateVote.fromAmino(e),
+      ) || [];
+    message.tobinTaxes =
+      object.tobin_taxes?.map(e => TobinTax.fromAmino(e)) || [];
     return message;
   },
   toAmino(message: GenesisState): GenesisStateAmino {
     const obj: any = {};
     obj.params = message.params ? Params.toAmino(message.params) : undefined;
     if (message.feederDelegations) {
-      obj.feeder_delegations = message.feederDelegations.map(e => e ? FeederDelegation.toAmino(e) : undefined);
+      obj.feeder_delegations = message.feederDelegations.map(e =>
+        e ? FeederDelegation.toAmino(e) : undefined,
+      );
     } else {
       obj.feeder_delegations = message.feederDelegations;
     }
     if (message.exchangeRates) {
-      obj.exchange_rates = message.exchangeRates.map(e => e ? ExchangeRateTuple.toAmino(e) : undefined);
+      obj.exchange_rates = message.exchangeRates.map(e =>
+        e ? ExchangeRateTuple.toAmino(e) : undefined,
+      );
     } else {
       obj.exchange_rates = message.exchangeRates;
     }
     if (message.missCounters) {
-      obj.miss_counters = message.missCounters.map(e => e ? MissCounter.toAmino(e) : undefined);
+      obj.miss_counters = message.missCounters.map(e =>
+        e ? MissCounter.toAmino(e) : undefined,
+      );
     } else {
       obj.miss_counters = message.missCounters;
     }
     if (message.aggregateExchangeRatePrevotes) {
-      obj.aggregate_exchange_rate_prevotes = message.aggregateExchangeRatePrevotes.map(e => e ? AggregateExchangeRatePrevote.toAmino(e) : undefined);
+      obj.aggregate_exchange_rate_prevotes =
+        message.aggregateExchangeRatePrevotes.map(e =>
+          e ? AggregateExchangeRatePrevote.toAmino(e) : undefined,
+        );
     } else {
-      obj.aggregate_exchange_rate_prevotes = message.aggregateExchangeRatePrevotes;
+      obj.aggregate_exchange_rate_prevotes =
+        message.aggregateExchangeRatePrevotes;
     }
     if (message.aggregateExchangeRateVotes) {
-      obj.aggregate_exchange_rate_votes = message.aggregateExchangeRateVotes.map(e => e ? AggregateExchangeRateVote.toAmino(e) : undefined);
+      obj.aggregate_exchange_rate_votes =
+        message.aggregateExchangeRateVotes.map(e =>
+          e ? AggregateExchangeRateVote.toAmino(e) : undefined,
+        );
     } else {
       obj.aggregate_exchange_rate_votes = message.aggregateExchangeRateVotes;
     }
     if (message.tobinTaxes) {
-      obj.tobin_taxes = message.tobinTaxes.map(e => e ? TobinTax.toAmino(e) : undefined);
+      obj.tobin_taxes = message.tobinTaxes.map(e =>
+        e ? TobinTax.toAmino(e) : undefined,
+      );
     } else {
       obj.tobin_taxes = message.tobinTaxes;
     }
@@ -291,40 +478,67 @@ export const GenesisState = {
   },
   toProtoMsg(message: GenesisState): GenesisStateProtoMsg {
     return {
-      typeUrl: "/symphony.oracle.v1beta1.GenesisState",
-      value: GenesisState.encode(message).finish()
+      typeUrl: '/symphony.oracle.v1beta1.GenesisState',
+      value: GenesisState.encode(message).finish(),
     };
-  }
+  },
 };
 GlobalDecoderRegistry.register(GenesisState.typeUrl, GenesisState);
 function createBaseFeederDelegation(): FeederDelegation {
   return {
-    feederAddress: "",
-    validatorAddress: ""
+    feederAddress: '',
+    validatorAddress: '',
   };
 }
+/**
+ * FeederDelegation is the address for where oracle feeder authority are
+ * delegated to. By default this struct is only used at genesis to feed in
+ * default feeder addresses.
+ * @name FeederDelegation
+ * @package symphony.oracle.v1beta1
+ * @see proto type: symphony.oracle.v1beta1.FeederDelegation
+ */
 export const FeederDelegation = {
-  typeUrl: "/symphony.oracle.v1beta1.FeederDelegation",
+  typeUrl: '/symphony.oracle.v1beta1.FeederDelegation',
   is(o: any): o is FeederDelegation {
-    return o && (o.$typeUrl === FeederDelegation.typeUrl || typeof o.feederAddress === "string" && typeof o.validatorAddress === "string");
+    return (
+      o &&
+      (o.$typeUrl === FeederDelegation.typeUrl ||
+        (typeof o.feederAddress === 'string' &&
+          typeof o.validatorAddress === 'string'))
+    );
   },
   isSDK(o: any): o is FeederDelegationSDKType {
-    return o && (o.$typeUrl === FeederDelegation.typeUrl || typeof o.feeder_address === "string" && typeof o.validator_address === "string");
+    return (
+      o &&
+      (o.$typeUrl === FeederDelegation.typeUrl ||
+        (typeof o.feeder_address === 'string' &&
+          typeof o.validator_address === 'string'))
+    );
   },
   isAmino(o: any): o is FeederDelegationAmino {
-    return o && (o.$typeUrl === FeederDelegation.typeUrl || typeof o.feeder_address === "string" && typeof o.validator_address === "string");
+    return (
+      o &&
+      (o.$typeUrl === FeederDelegation.typeUrl ||
+        (typeof o.feeder_address === 'string' &&
+          typeof o.validator_address === 'string'))
+    );
   },
-  encode(message: FeederDelegation, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
-    if (message.feederAddress !== "") {
+  encode(
+    message: FeederDelegation,
+    writer: BinaryWriter = BinaryWriter.create(),
+  ): BinaryWriter {
+    if (message.feederAddress !== '') {
       writer.uint32(10).string(message.feederAddress);
     }
-    if (message.validatorAddress !== "") {
+    if (message.validatorAddress !== '') {
       writer.uint32(18).string(message.validatorAddress);
     }
     return writer;
   },
   decode(input: BinaryReader | Uint8Array, length?: number): FeederDelegation {
-    const reader = input instanceof BinaryReader ? input : new BinaryReader(input);
+    const reader =
+      input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseFeederDelegation();
     while (reader.pos < end) {
@@ -345,8 +559,8 @@ export const FeederDelegation = {
   },
   fromPartial(object: Partial<FeederDelegation>): FeederDelegation {
     const message = createBaseFeederDelegation();
-    message.feederAddress = object.feederAddress ?? "";
-    message.validatorAddress = object.validatorAddress ?? "";
+    message.feederAddress = object.feederAddress ?? '';
+    message.validatorAddress = object.validatorAddress ?? '';
     return message;
   },
   fromAmino(object: FeederDelegationAmino): FeederDelegation {
@@ -354,15 +568,20 @@ export const FeederDelegation = {
     if (object.feeder_address !== undefined && object.feeder_address !== null) {
       message.feederAddress = object.feeder_address;
     }
-    if (object.validator_address !== undefined && object.validator_address !== null) {
+    if (
+      object.validator_address !== undefined &&
+      object.validator_address !== null
+    ) {
       message.validatorAddress = object.validator_address;
     }
     return message;
   },
   toAmino(message: FeederDelegation): FeederDelegationAmino {
     const obj: any = {};
-    obj.feeder_address = message.feederAddress === "" ? undefined : message.feederAddress;
-    obj.validator_address = message.validatorAddress === "" ? undefined : message.validatorAddress;
+    obj.feeder_address =
+      message.feederAddress === '' ? undefined : message.feederAddress;
+    obj.validator_address =
+      message.validatorAddress === '' ? undefined : message.validatorAddress;
     return obj;
   },
   fromAminoMsg(object: FeederDelegationAminoMsg): FeederDelegation {
@@ -376,31 +595,56 @@ export const FeederDelegation = {
   },
   toProtoMsg(message: FeederDelegation): FeederDelegationProtoMsg {
     return {
-      typeUrl: "/symphony.oracle.v1beta1.FeederDelegation",
-      value: FeederDelegation.encode(message).finish()
+      typeUrl: '/symphony.oracle.v1beta1.FeederDelegation',
+      value: FeederDelegation.encode(message).finish(),
     };
-  }
+  },
 };
 GlobalDecoderRegistry.register(FeederDelegation.typeUrl, FeederDelegation);
 function createBaseMissCounter(): MissCounter {
   return {
-    validatorAddress: "",
-    missCounter: BigInt(0)
+    validatorAddress: '',
+    missCounter: BigInt(0),
   };
 }
+/**
+ * MissCounter defines an miss counter and validator address pair used in
+ * oracle module's genesis state
+ * @name MissCounter
+ * @package symphony.oracle.v1beta1
+ * @see proto type: symphony.oracle.v1beta1.MissCounter
+ */
 export const MissCounter = {
-  typeUrl: "/symphony.oracle.v1beta1.MissCounter",
+  typeUrl: '/symphony.oracle.v1beta1.MissCounter',
   is(o: any): o is MissCounter {
-    return o && (o.$typeUrl === MissCounter.typeUrl || typeof o.validatorAddress === "string" && typeof o.missCounter === "bigint");
+    return (
+      o &&
+      (o.$typeUrl === MissCounter.typeUrl ||
+        (typeof o.validatorAddress === 'string' &&
+          typeof o.missCounter === 'bigint'))
+    );
   },
   isSDK(o: any): o is MissCounterSDKType {
-    return o && (o.$typeUrl === MissCounter.typeUrl || typeof o.validator_address === "string" && typeof o.miss_counter === "bigint");
+    return (
+      o &&
+      (o.$typeUrl === MissCounter.typeUrl ||
+        (typeof o.validator_address === 'string' &&
+          typeof o.miss_counter === 'bigint'))
+    );
   },
   isAmino(o: any): o is MissCounterAmino {
-    return o && (o.$typeUrl === MissCounter.typeUrl || typeof o.validator_address === "string" && typeof o.miss_counter === "bigint");
+    return (
+      o &&
+      (o.$typeUrl === MissCounter.typeUrl ||
+        (typeof o.validator_address === 'string' &&
+          typeof o.miss_counter === 'bigint'))
+    );
   },
-  encode(message: MissCounter, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
-    if (message.validatorAddress !== "") {
+  encode(
+    message: MissCounter,
+    writer: BinaryWriter = BinaryWriter.create(),
+  ): BinaryWriter {
+    if (message.validatorAddress !== '') {
       writer.uint32(10).string(message.validatorAddress);
     }
     if (message.missCounter !== BigInt(0)) {
@@ -409,7 +653,8 @@ export const MissCounter = {
     return writer;
   },
   decode(input: BinaryReader | Uint8Array, length?: number): MissCounter {
-    const reader = input instanceof BinaryReader ? input : new BinaryReader(input);
+    const reader =
+      input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseMissCounter();
     while (reader.pos < end) {
@@ -430,13 +675,19 @@ export const MissCounter = {
   },
   fromPartial(object: Partial<MissCounter>): MissCounter {
     const message = createBaseMissCounter();
-    message.validatorAddress = object.validatorAddress ?? "";
-    message.missCounter = object.missCounter !== undefined && object.missCounter !== null ? BigInt(object.missCounter.toString()) : BigInt(0);
+    message.validatorAddress = object.validatorAddress ?? '';
+    message.missCounter =
+      object.missCounter !== undefined && object.missCounter !== null
+        ? BigInt(object.missCounter.toString())
+        : BigInt(0);
     return message;
   },
   fromAmino(object: MissCounterAmino): MissCounter {
     const message = createBaseMissCounter();
-    if (object.validator_address !== undefined && object.validator_address !== null) {
+    if (
+      object.validator_address !== undefined &&
+      object.validator_address !== null
+    ) {
       message.validatorAddress = object.validator_address;
     }
     if (object.miss_counter !== undefined && object.miss_counter !== null) {
@@ -446,8 +697,12 @@ export const MissCounter = {
   },
   toAmino(message: MissCounter): MissCounterAmino {
     const obj: any = {};
-    obj.validator_address = message.validatorAddress === "" ? undefined : message.validatorAddress;
-    obj.miss_counter = message.missCounter !== BigInt(0) ? message.missCounter?.toString() : undefined;
+    obj.validator_address =
+      message.validatorAddress === '' ? undefined : message.validatorAddress;
+    obj.miss_counter =
+      message.missCounter !== BigInt(0)
+        ? message.missCounter?.toString()
+        : undefined;
     return obj;
   },
   fromAminoMsg(object: MissCounterAminoMsg): MissCounter {
@@ -461,40 +716,65 @@ export const MissCounter = {
   },
   toProtoMsg(message: MissCounter): MissCounterProtoMsg {
     return {
-      typeUrl: "/symphony.oracle.v1beta1.MissCounter",
-      value: MissCounter.encode(message).finish()
+      typeUrl: '/symphony.oracle.v1beta1.MissCounter',
+      value: MissCounter.encode(message).finish(),
     };
-  }
+  },
 };
 GlobalDecoderRegistry.register(MissCounter.typeUrl, MissCounter);
 function createBaseTobinTax(): TobinTax {
   return {
-    denom: "",
-    tobinTax: ""
+    denom: '',
+    tobinTax: '',
   };
 }
+/**
+ * TobinTax defines an denom and tobin_tax pair used in
+ * oracle module's genesis state
+ * @name TobinTax
+ * @package symphony.oracle.v1beta1
+ * @see proto type: symphony.oracle.v1beta1.TobinTax
+ */
 export const TobinTax = {
-  typeUrl: "/symphony.oracle.v1beta1.TobinTax",
+  typeUrl: '/symphony.oracle.v1beta1.TobinTax',
   is(o: any): o is TobinTax {
-    return o && (o.$typeUrl === TobinTax.typeUrl || typeof o.denom === "string" && typeof o.tobinTax === "string");
+    return (
+      o &&
+      (o.$typeUrl === TobinTax.typeUrl ||
+        (typeof o.denom === 'string' && typeof o.tobinTax === 'string'))
+    );
   },
   isSDK(o: any): o is TobinTaxSDKType {
-    return o && (o.$typeUrl === TobinTax.typeUrl || typeof o.denom === "string" && typeof o.tobin_tax === "string");
+    return (
+      o &&
+      (o.$typeUrl === TobinTax.typeUrl ||
+        (typeof o.denom === 'string' && typeof o.tobin_tax === 'string'))
+    );
   },
   isAmino(o: any): o is TobinTaxAmino {
-    return o && (o.$typeUrl === TobinTax.typeUrl || typeof o.denom === "string" && typeof o.tobin_tax === "string");
+    return (
+      o &&
+      (o.$typeUrl === TobinTax.typeUrl ||
+        (typeof o.denom === 'string' && typeof o.tobin_tax === 'string'))
+    );
   },
-  encode(message: TobinTax, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
-    if (message.denom !== "") {
+  encode(
+    message: TobinTax,
+    writer: BinaryWriter = BinaryWriter.create(),
+  ): BinaryWriter {
+    if (message.denom !== '') {
       writer.uint32(10).string(message.denom);
     }
-    if (message.tobinTax !== "") {
-      writer.uint32(18).string(Decimal.fromUserInput(message.tobinTax, 18).atomics);
+    if (message.tobinTax !== '') {
+      writer
+        .uint32(18)
+        .string(Decimal.fromUserInput(message.tobinTax, 18).atomics);
     }
     return writer;
   },
   decode(input: BinaryReader | Uint8Array, length?: number): TobinTax {
-    const reader = input instanceof BinaryReader ? input : new BinaryReader(input);
+    const reader =
+      input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseTobinTax();
     while (reader.pos < end) {
@@ -504,7 +784,10 @@ export const TobinTax = {
           message.denom = reader.string();
           break;
         case 2:
-          message.tobinTax = Decimal.fromAtomics(reader.string(), 18).toString();
+          message.tobinTax = Decimal.fromAtomics(
+            reader.string(),
+            18,
+          ).toString();
           break;
         default:
           reader.skipType(tag & 7);
@@ -515,8 +798,8 @@ export const TobinTax = {
   },
   fromPartial(object: Partial<TobinTax>): TobinTax {
     const message = createBaseTobinTax();
-    message.denom = object.denom ?? "";
-    message.tobinTax = object.tobinTax ?? "";
+    message.denom = object.denom ?? '';
+    message.tobinTax = object.tobinTax ?? '';
     return message;
   },
   fromAmino(object: TobinTaxAmino): TobinTax {
@@ -531,8 +814,8 @@ export const TobinTax = {
   },
   toAmino(message: TobinTax): TobinTaxAmino {
     const obj: any = {};
-    obj.denom = message.denom === "" ? undefined : message.denom;
-    obj.tobin_tax = message.tobinTax === "" ? undefined : message.tobinTax;
+    obj.denom = message.denom === '' ? undefined : message.denom;
+    obj.tobin_tax = message.tobinTax === '' ? undefined : message.tobinTax;
     return obj;
   },
   fromAminoMsg(object: TobinTaxAminoMsg): TobinTax {
@@ -546,9 +829,9 @@ export const TobinTax = {
   },
   toProtoMsg(message: TobinTax): TobinTaxProtoMsg {
     return {
-      typeUrl: "/symphony.oracle.v1beta1.TobinTax",
-      value: TobinTax.encode(message).finish()
+      typeUrl: '/symphony.oracle.v1beta1.TobinTax',
+      value: TobinTax.encode(message).finish(),
     };
-  }
+  },
 };
 GlobalDecoderRegistry.register(TobinTax.typeUrl, TobinTax);

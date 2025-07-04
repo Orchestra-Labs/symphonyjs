@@ -1,36 +1,66 @@
 //@ts-nocheck
-import { DecCoin, DecCoinAmino, DecCoinSDKType } from "../../../cosmos/base/v1beta1/coin";
-import { Denom, DenomAmino, DenomSDKType, AggregateExchangeRatePrevote, AggregateExchangeRatePrevoteAmino, AggregateExchangeRatePrevoteSDKType, AggregateExchangeRateVote, AggregateExchangeRateVoteAmino, AggregateExchangeRateVoteSDKType, Params, ParamsAmino, ParamsSDKType } from "./oracle";
-import { BinaryReader, BinaryWriter } from "../../../binary";
-import { GlobalDecoderRegistry } from "../../../registry";
-import { Decimal } from "@cosmjs/math";
+import {
+  DecCoin,
+  DecCoinAmino,
+  DecCoinSDKType,
+} from '../../../cosmos/base/v1beta1/coin';
+import {
+  Denom,
+  DenomAmino,
+  DenomSDKType,
+  AggregateExchangeRatePrevote,
+  AggregateExchangeRatePrevoteAmino,
+  AggregateExchangeRatePrevoteSDKType,
+  AggregateExchangeRateVote,
+  AggregateExchangeRateVoteAmino,
+  AggregateExchangeRateVoteSDKType,
+  Params,
+  ParamsAmino,
+  ParamsSDKType,
+} from './oracle';
+import { BinaryReader, BinaryWriter } from '../../../binary';
+import { GlobalDecoderRegistry } from '../../../registry';
+import { Decimal } from '@cosmjs/math';
 /**
  * QueryExchangeRateRequest is the request type for the Query/ExchangeRate RPC
  * method.
+ * @name QueryExchangeRateRequest
+ * @package symphony.oracle.v1beta1
+ * @see proto type: symphony.oracle.v1beta1.QueryExchangeRateRequest
  */
 export interface QueryExchangeRateRequest {
-  /** denom defines the denomination to query for. */
+  /**
+   * denom defines the denomination to query for.
+   */
   denom: string;
 }
 export interface QueryExchangeRateRequestProtoMsg {
-  typeUrl: "/symphony.oracle.v1beta1.QueryExchangeRateRequest";
+  typeUrl: '/symphony.oracle.v1beta1.QueryExchangeRateRequest';
   value: Uint8Array;
 }
 /**
  * QueryExchangeRateRequest is the request type for the Query/ExchangeRate RPC
  * method.
+ * @name QueryExchangeRateRequestAmino
+ * @package symphony.oracle.v1beta1
+ * @see proto type: symphony.oracle.v1beta1.QueryExchangeRateRequest
  */
 export interface QueryExchangeRateRequestAmino {
-  /** denom defines the denomination to query for. */
+  /**
+   * denom defines the denomination to query for.
+   */
   denom?: string;
 }
 export interface QueryExchangeRateRequestAminoMsg {
-  type: "/symphony.oracle.v1beta1.QueryExchangeRateRequest";
+  type: '/symphony.oracle.v1beta1.QueryExchangeRateRequest';
   value: QueryExchangeRateRequestAmino;
 }
 /**
  * QueryExchangeRateRequest is the request type for the Query/ExchangeRate RPC
  * method.
+ * @name QueryExchangeRateRequestSDKType
+ * @package symphony.oracle.v1beta1
+ * @see proto type: symphony.oracle.v1beta1.QueryExchangeRateRequest
  */
 export interface QueryExchangeRateRequestSDKType {
   denom: string;
@@ -38,6 +68,9 @@ export interface QueryExchangeRateRequestSDKType {
 /**
  * QueryExchangeRateResponse is response type for the
  * Query/ExchangeRate RPC method.
+ * @name QueryExchangeRateResponse
+ * @package symphony.oracle.v1beta1
+ * @see proto type: symphony.oracle.v1beta1.QueryExchangeRateResponse
  */
 export interface QueryExchangeRateResponse {
   /**
@@ -47,12 +80,15 @@ export interface QueryExchangeRateResponse {
   exchangeRate: string;
 }
 export interface QueryExchangeRateResponseProtoMsg {
-  typeUrl: "/symphony.oracle.v1beta1.QueryExchangeRateResponse";
+  typeUrl: '/symphony.oracle.v1beta1.QueryExchangeRateResponse';
   value: Uint8Array;
 }
 /**
  * QueryExchangeRateResponse is response type for the
  * Query/ExchangeRate RPC method.
+ * @name QueryExchangeRateResponseAmino
+ * @package symphony.oracle.v1beta1
+ * @see proto type: symphony.oracle.v1beta1.QueryExchangeRateResponse
  */
 export interface QueryExchangeRateResponseAmino {
   /**
@@ -62,12 +98,15 @@ export interface QueryExchangeRateResponseAmino {
   exchange_rate?: string;
 }
 export interface QueryExchangeRateResponseAminoMsg {
-  type: "/symphony.oracle.v1beta1.QueryExchangeRateResponse";
+  type: '/symphony.oracle.v1beta1.QueryExchangeRateResponse';
   value: QueryExchangeRateResponseAmino;
 }
 /**
  * QueryExchangeRateResponse is response type for the
  * Query/ExchangeRate RPC method.
+ * @name QueryExchangeRateResponseSDKType
+ * @package symphony.oracle.v1beta1
+ * @see proto type: symphony.oracle.v1beta1.QueryExchangeRateResponse
  */
 export interface QueryExchangeRateResponseSDKType {
   exchange_rate: string;
@@ -75,29 +114,41 @@ export interface QueryExchangeRateResponseSDKType {
 /**
  * QueryExchangeRatesRequest is the request type for the Query/ExchangeRates RPC
  * method.
+ * @name QueryExchangeRatesRequest
+ * @package symphony.oracle.v1beta1
+ * @see proto type: symphony.oracle.v1beta1.QueryExchangeRatesRequest
  */
 export interface QueryExchangeRatesRequest {}
 export interface QueryExchangeRatesRequestProtoMsg {
-  typeUrl: "/symphony.oracle.v1beta1.QueryExchangeRatesRequest";
+  typeUrl: '/symphony.oracle.v1beta1.QueryExchangeRatesRequest';
   value: Uint8Array;
 }
 /**
  * QueryExchangeRatesRequest is the request type for the Query/ExchangeRates RPC
  * method.
+ * @name QueryExchangeRatesRequestAmino
+ * @package symphony.oracle.v1beta1
+ * @see proto type: symphony.oracle.v1beta1.QueryExchangeRatesRequest
  */
 export interface QueryExchangeRatesRequestAmino {}
 export interface QueryExchangeRatesRequestAminoMsg {
-  type: "/symphony.oracle.v1beta1.QueryExchangeRatesRequest";
+  type: '/symphony.oracle.v1beta1.QueryExchangeRatesRequest';
   value: QueryExchangeRatesRequestAmino;
 }
 /**
  * QueryExchangeRatesRequest is the request type for the Query/ExchangeRates RPC
  * method.
+ * @name QueryExchangeRatesRequestSDKType
+ * @package symphony.oracle.v1beta1
+ * @see proto type: symphony.oracle.v1beta1.QueryExchangeRatesRequest
  */
 export interface QueryExchangeRatesRequestSDKType {}
 /**
  * QueryExchangeRatesResponse is response type for the
  * Query/ExchangeRates RPC method.
+ * @name QueryExchangeRatesResponse
+ * @package symphony.oracle.v1beta1
+ * @see proto type: symphony.oracle.v1beta1.QueryExchangeRatesResponse
  */
 export interface QueryExchangeRatesResponse {
   /**
@@ -107,12 +158,15 @@ export interface QueryExchangeRatesResponse {
   exchangeRates: DecCoin[];
 }
 export interface QueryExchangeRatesResponseProtoMsg {
-  typeUrl: "/symphony.oracle.v1beta1.QueryExchangeRatesResponse";
+  typeUrl: '/symphony.oracle.v1beta1.QueryExchangeRatesResponse';
   value: Uint8Array;
 }
 /**
  * QueryExchangeRatesResponse is response type for the
  * Query/ExchangeRates RPC method.
+ * @name QueryExchangeRatesResponseAmino
+ * @package symphony.oracle.v1beta1
+ * @see proto type: symphony.oracle.v1beta1.QueryExchangeRatesResponse
  */
 export interface QueryExchangeRatesResponseAmino {
   /**
@@ -122,65 +176,100 @@ export interface QueryExchangeRatesResponseAmino {
   exchange_rates?: DecCoinAmino[];
 }
 export interface QueryExchangeRatesResponseAminoMsg {
-  type: "/symphony.oracle.v1beta1.QueryExchangeRatesResponse";
+  type: '/symphony.oracle.v1beta1.QueryExchangeRatesResponse';
   value: QueryExchangeRatesResponseAmino;
 }
 /**
  * QueryExchangeRatesResponse is response type for the
  * Query/ExchangeRates RPC method.
+ * @name QueryExchangeRatesResponseSDKType
+ * @package symphony.oracle.v1beta1
+ * @see proto type: symphony.oracle.v1beta1.QueryExchangeRatesResponse
  */
 export interface QueryExchangeRatesResponseSDKType {
   exchange_rates: DecCoinSDKType[];
 }
-/** QueryTobinTaxRequest is the request type for the Query/TobinTax RPC method. */
+/**
+ * QueryTobinTaxRequest is the request type for the Query/TobinTax RPC method.
+ * @name QueryTobinTaxRequest
+ * @package symphony.oracle.v1beta1
+ * @see proto type: symphony.oracle.v1beta1.QueryTobinTaxRequest
+ */
 export interface QueryTobinTaxRequest {
-  /** denom defines the denomination to query for. */
+  /**
+   * denom defines the denomination to query for.
+   */
   denom: string;
 }
 export interface QueryTobinTaxRequestProtoMsg {
-  typeUrl: "/symphony.oracle.v1beta1.QueryTobinTaxRequest";
+  typeUrl: '/symphony.oracle.v1beta1.QueryTobinTaxRequest';
   value: Uint8Array;
 }
-/** QueryTobinTaxRequest is the request type for the Query/TobinTax RPC method. */
+/**
+ * QueryTobinTaxRequest is the request type for the Query/TobinTax RPC method.
+ * @name QueryTobinTaxRequestAmino
+ * @package symphony.oracle.v1beta1
+ * @see proto type: symphony.oracle.v1beta1.QueryTobinTaxRequest
+ */
 export interface QueryTobinTaxRequestAmino {
-  /** denom defines the denomination to query for. */
+  /**
+   * denom defines the denomination to query for.
+   */
   denom?: string;
 }
 export interface QueryTobinTaxRequestAminoMsg {
-  type: "/symphony.oracle.v1beta1.QueryTobinTaxRequest";
+  type: '/symphony.oracle.v1beta1.QueryTobinTaxRequest';
   value: QueryTobinTaxRequestAmino;
 }
-/** QueryTobinTaxRequest is the request type for the Query/TobinTax RPC method. */
+/**
+ * QueryTobinTaxRequest is the request type for the Query/TobinTax RPC method.
+ * @name QueryTobinTaxRequestSDKType
+ * @package symphony.oracle.v1beta1
+ * @see proto type: symphony.oracle.v1beta1.QueryTobinTaxRequest
+ */
 export interface QueryTobinTaxRequestSDKType {
   denom: string;
 }
 /**
  * QueryTobinTaxResponse is response type for the
  * Query/TobinTax RPC method.
+ * @name QueryTobinTaxResponse
+ * @package symphony.oracle.v1beta1
+ * @see proto type: symphony.oracle.v1beta1.QueryTobinTaxResponse
  */
 export interface QueryTobinTaxResponse {
-  /** tobin_taxe defines the tobin tax of a denom */
+  /**
+   * tobin_taxe defines the tobin tax of a denom
+   */
   tobinTax: string;
 }
 export interface QueryTobinTaxResponseProtoMsg {
-  typeUrl: "/symphony.oracle.v1beta1.QueryTobinTaxResponse";
+  typeUrl: '/symphony.oracle.v1beta1.QueryTobinTaxResponse';
   value: Uint8Array;
 }
 /**
  * QueryTobinTaxResponse is response type for the
  * Query/TobinTax RPC method.
+ * @name QueryTobinTaxResponseAmino
+ * @package symphony.oracle.v1beta1
+ * @see proto type: symphony.oracle.v1beta1.QueryTobinTaxResponse
  */
 export interface QueryTobinTaxResponseAmino {
-  /** tobin_taxe defines the tobin tax of a denom */
+  /**
+   * tobin_taxe defines the tobin tax of a denom
+   */
   tobin_tax?: string;
 }
 export interface QueryTobinTaxResponseAminoMsg {
-  type: "/symphony.oracle.v1beta1.QueryTobinTaxResponse";
+  type: '/symphony.oracle.v1beta1.QueryTobinTaxResponse';
   value: QueryTobinTaxResponseAmino;
 }
 /**
  * QueryTobinTaxResponse is response type for the
  * Query/TobinTax RPC method.
+ * @name QueryTobinTaxResponseSDKType
+ * @package symphony.oracle.v1beta1
+ * @see proto type: symphony.oracle.v1beta1.QueryTobinTaxResponse
  */
 export interface QueryTobinTaxResponseSDKType {
   tobin_tax: string;
@@ -188,74 +277,114 @@ export interface QueryTobinTaxResponseSDKType {
 /**
  * QueryTobinTaxesRequest is the request type for the Query/TobinTaxes RPC
  * method.
+ * @name QueryTobinTaxesRequest
+ * @package symphony.oracle.v1beta1
+ * @see proto type: symphony.oracle.v1beta1.QueryTobinTaxesRequest
  */
 export interface QueryTobinTaxesRequest {}
 export interface QueryTobinTaxesRequestProtoMsg {
-  typeUrl: "/symphony.oracle.v1beta1.QueryTobinTaxesRequest";
+  typeUrl: '/symphony.oracle.v1beta1.QueryTobinTaxesRequest';
   value: Uint8Array;
 }
 /**
  * QueryTobinTaxesRequest is the request type for the Query/TobinTaxes RPC
  * method.
+ * @name QueryTobinTaxesRequestAmino
+ * @package symphony.oracle.v1beta1
+ * @see proto type: symphony.oracle.v1beta1.QueryTobinTaxesRequest
  */
 export interface QueryTobinTaxesRequestAmino {}
 export interface QueryTobinTaxesRequestAminoMsg {
-  type: "/symphony.oracle.v1beta1.QueryTobinTaxesRequest";
+  type: '/symphony.oracle.v1beta1.QueryTobinTaxesRequest';
   value: QueryTobinTaxesRequestAmino;
 }
 /**
  * QueryTobinTaxesRequest is the request type for the Query/TobinTaxes RPC
  * method.
+ * @name QueryTobinTaxesRequestSDKType
+ * @package symphony.oracle.v1beta1
+ * @see proto type: symphony.oracle.v1beta1.QueryTobinTaxesRequest
  */
 export interface QueryTobinTaxesRequestSDKType {}
 /**
  * QueryTobinTaxesResponse is response type for the
  * Query/TobinTaxes RPC method.
+ * @name QueryTobinTaxesResponse
+ * @package symphony.oracle.v1beta1
+ * @see proto type: symphony.oracle.v1beta1.QueryTobinTaxesResponse
  */
 export interface QueryTobinTaxesResponse {
-  /** tobin_taxes defines a list of the tobin tax of all whitelisted denoms */
+  /**
+   * tobin_taxes defines a list of the tobin tax of all whitelisted denoms
+   */
   tobinTaxes: Denom[];
 }
 export interface QueryTobinTaxesResponseProtoMsg {
-  typeUrl: "/symphony.oracle.v1beta1.QueryTobinTaxesResponse";
+  typeUrl: '/symphony.oracle.v1beta1.QueryTobinTaxesResponse';
   value: Uint8Array;
 }
 /**
  * QueryTobinTaxesResponse is response type for the
  * Query/TobinTaxes RPC method.
+ * @name QueryTobinTaxesResponseAmino
+ * @package symphony.oracle.v1beta1
+ * @see proto type: symphony.oracle.v1beta1.QueryTobinTaxesResponse
  */
 export interface QueryTobinTaxesResponseAmino {
-  /** tobin_taxes defines a list of the tobin tax of all whitelisted denoms */
+  /**
+   * tobin_taxes defines a list of the tobin tax of all whitelisted denoms
+   */
   tobin_taxes?: DenomAmino[];
 }
 export interface QueryTobinTaxesResponseAminoMsg {
-  type: "/symphony.oracle.v1beta1.QueryTobinTaxesResponse";
+  type: '/symphony.oracle.v1beta1.QueryTobinTaxesResponse';
   value: QueryTobinTaxesResponseAmino;
 }
 /**
  * QueryTobinTaxesResponse is response type for the
  * Query/TobinTaxes RPC method.
+ * @name QueryTobinTaxesResponseSDKType
+ * @package symphony.oracle.v1beta1
+ * @see proto type: symphony.oracle.v1beta1.QueryTobinTaxesResponse
  */
 export interface QueryTobinTaxesResponseSDKType {
   tobin_taxes: DenomSDKType[];
 }
-/** QueryActivesRequest is the request type for the Query/Actives RPC method. */
+/**
+ * QueryActivesRequest is the request type for the Query/Actives RPC method.
+ * @name QueryActivesRequest
+ * @package symphony.oracle.v1beta1
+ * @see proto type: symphony.oracle.v1beta1.QueryActivesRequest
+ */
 export interface QueryActivesRequest {}
 export interface QueryActivesRequestProtoMsg {
-  typeUrl: "/symphony.oracle.v1beta1.QueryActivesRequest";
+  typeUrl: '/symphony.oracle.v1beta1.QueryActivesRequest';
   value: Uint8Array;
 }
-/** QueryActivesRequest is the request type for the Query/Actives RPC method. */
+/**
+ * QueryActivesRequest is the request type for the Query/Actives RPC method.
+ * @name QueryActivesRequestAmino
+ * @package symphony.oracle.v1beta1
+ * @see proto type: symphony.oracle.v1beta1.QueryActivesRequest
+ */
 export interface QueryActivesRequestAmino {}
 export interface QueryActivesRequestAminoMsg {
-  type: "/symphony.oracle.v1beta1.QueryActivesRequest";
+  type: '/symphony.oracle.v1beta1.QueryActivesRequest';
   value: QueryActivesRequestAmino;
 }
-/** QueryActivesRequest is the request type for the Query/Actives RPC method. */
+/**
+ * QueryActivesRequest is the request type for the Query/Actives RPC method.
+ * @name QueryActivesRequestSDKType
+ * @package symphony.oracle.v1beta1
+ * @see proto type: symphony.oracle.v1beta1.QueryActivesRequest
+ */
 export interface QueryActivesRequestSDKType {}
 /**
  * QueryActivesResponse is response type for the
  * Query/Actives RPC method.
+ * @name QueryActivesResponse
+ * @package symphony.oracle.v1beta1
+ * @see proto type: symphony.oracle.v1beta1.QueryActivesResponse
  */
 export interface QueryActivesResponse {
   /**
@@ -265,12 +394,15 @@ export interface QueryActivesResponse {
   actives: string[];
 }
 export interface QueryActivesResponseProtoMsg {
-  typeUrl: "/symphony.oracle.v1beta1.QueryActivesResponse";
+  typeUrl: '/symphony.oracle.v1beta1.QueryActivesResponse';
   value: Uint8Array;
 }
 /**
  * QueryActivesResponse is response type for the
  * Query/Actives RPC method.
+ * @name QueryActivesResponseAmino
+ * @package symphony.oracle.v1beta1
+ * @see proto type: symphony.oracle.v1beta1.QueryActivesResponse
  */
 export interface QueryActivesResponseAmino {
   /**
@@ -280,12 +412,15 @@ export interface QueryActivesResponseAmino {
   actives?: string[];
 }
 export interface QueryActivesResponseAminoMsg {
-  type: "/symphony.oracle.v1beta1.QueryActivesResponse";
+  type: '/symphony.oracle.v1beta1.QueryActivesResponse';
   value: QueryActivesResponseAmino;
 }
 /**
  * QueryActivesResponse is response type for the
  * Query/Actives RPC method.
+ * @name QueryActivesResponseSDKType
+ * @package symphony.oracle.v1beta1
+ * @see proto type: symphony.oracle.v1beta1.QueryActivesResponse
  */
 export interface QueryActivesResponseSDKType {
   actives: string[];
@@ -293,29 +428,41 @@ export interface QueryActivesResponseSDKType {
 /**
  * QueryVoteTargetsRequest is the request type for the Query/VoteTargets RPC
  * method.
+ * @name QueryVoteTargetsRequest
+ * @package symphony.oracle.v1beta1
+ * @see proto type: symphony.oracle.v1beta1.QueryVoteTargetsRequest
  */
 export interface QueryVoteTargetsRequest {}
 export interface QueryVoteTargetsRequestProtoMsg {
-  typeUrl: "/symphony.oracle.v1beta1.QueryVoteTargetsRequest";
+  typeUrl: '/symphony.oracle.v1beta1.QueryVoteTargetsRequest';
   value: Uint8Array;
 }
 /**
  * QueryVoteTargetsRequest is the request type for the Query/VoteTargets RPC
  * method.
+ * @name QueryVoteTargetsRequestAmino
+ * @package symphony.oracle.v1beta1
+ * @see proto type: symphony.oracle.v1beta1.QueryVoteTargetsRequest
  */
 export interface QueryVoteTargetsRequestAmino {}
 export interface QueryVoteTargetsRequestAminoMsg {
-  type: "/symphony.oracle.v1beta1.QueryVoteTargetsRequest";
+  type: '/symphony.oracle.v1beta1.QueryVoteTargetsRequest';
   value: QueryVoteTargetsRequestAmino;
 }
 /**
  * QueryVoteTargetsRequest is the request type for the Query/VoteTargets RPC
  * method.
+ * @name QueryVoteTargetsRequestSDKType
+ * @package symphony.oracle.v1beta1
+ * @see proto type: symphony.oracle.v1beta1.QueryVoteTargetsRequest
  */
 export interface QueryVoteTargetsRequestSDKType {}
 /**
  * QueryVoteTargetsResponse is response type for the
  * Query/VoteTargets RPC method.
+ * @name QueryVoteTargetsResponse
+ * @package symphony.oracle.v1beta1
+ * @see proto type: symphony.oracle.v1beta1.QueryVoteTargetsResponse
  */
 export interface QueryVoteTargetsResponse {
   /**
@@ -325,12 +472,15 @@ export interface QueryVoteTargetsResponse {
   voteTargets: string[];
 }
 export interface QueryVoteTargetsResponseProtoMsg {
-  typeUrl: "/symphony.oracle.v1beta1.QueryVoteTargetsResponse";
+  typeUrl: '/symphony.oracle.v1beta1.QueryVoteTargetsResponse';
   value: Uint8Array;
 }
 /**
  * QueryVoteTargetsResponse is response type for the
  * Query/VoteTargets RPC method.
+ * @name QueryVoteTargetsResponseAmino
+ * @package symphony.oracle.v1beta1
+ * @see proto type: symphony.oracle.v1beta1.QueryVoteTargetsResponse
  */
 export interface QueryVoteTargetsResponseAmino {
   /**
@@ -340,12 +490,15 @@ export interface QueryVoteTargetsResponseAmino {
   vote_targets?: string[];
 }
 export interface QueryVoteTargetsResponseAminoMsg {
-  type: "/symphony.oracle.v1beta1.QueryVoteTargetsResponse";
+  type: '/symphony.oracle.v1beta1.QueryVoteTargetsResponse';
   value: QueryVoteTargetsResponseAmino;
 }
 /**
  * QueryVoteTargetsResponse is response type for the
  * Query/VoteTargets RPC method.
+ * @name QueryVoteTargetsResponseSDKType
+ * @package symphony.oracle.v1beta1
+ * @see proto type: symphony.oracle.v1beta1.QueryVoteTargetsResponse
  */
 export interface QueryVoteTargetsResponseSDKType {
   vote_targets: string[];
@@ -353,30 +506,43 @@ export interface QueryVoteTargetsResponseSDKType {
 /**
  * QueryFeederDelegationRequest is the request type for the
  * Query/FeederDelegation RPC method.
+ * @name QueryFeederDelegationRequest
+ * @package symphony.oracle.v1beta1
+ * @see proto type: symphony.oracle.v1beta1.QueryFeederDelegationRequest
  */
 export interface QueryFeederDelegationRequest {
-  /** validator defines the validator address to query for. */
+  /**
+   * validator defines the validator address to query for.
+   */
   validatorAddr: string;
 }
 export interface QueryFeederDelegationRequestProtoMsg {
-  typeUrl: "/symphony.oracle.v1beta1.QueryFeederDelegationRequest";
+  typeUrl: '/symphony.oracle.v1beta1.QueryFeederDelegationRequest';
   value: Uint8Array;
 }
 /**
  * QueryFeederDelegationRequest is the request type for the
  * Query/FeederDelegation RPC method.
+ * @name QueryFeederDelegationRequestAmino
+ * @package symphony.oracle.v1beta1
+ * @see proto type: symphony.oracle.v1beta1.QueryFeederDelegationRequest
  */
 export interface QueryFeederDelegationRequestAmino {
-  /** validator defines the validator address to query for. */
+  /**
+   * validator defines the validator address to query for.
+   */
   validator_addr?: string;
 }
 export interface QueryFeederDelegationRequestAminoMsg {
-  type: "/symphony.oracle.v1beta1.QueryFeederDelegationRequest";
+  type: '/symphony.oracle.v1beta1.QueryFeederDelegationRequest';
   value: QueryFeederDelegationRequestAmino;
 }
 /**
  * QueryFeederDelegationRequest is the request type for the
  * Query/FeederDelegation RPC method.
+ * @name QueryFeederDelegationRequestSDKType
+ * @package symphony.oracle.v1beta1
+ * @see proto type: symphony.oracle.v1beta1.QueryFeederDelegationRequest
  */
 export interface QueryFeederDelegationRequestSDKType {
   validator_addr: string;
@@ -384,30 +550,43 @@ export interface QueryFeederDelegationRequestSDKType {
 /**
  * QueryFeederDelegationResponse is response type for the
  * Query/FeederDelegation RPC method.
+ * @name QueryFeederDelegationResponse
+ * @package symphony.oracle.v1beta1
+ * @see proto type: symphony.oracle.v1beta1.QueryFeederDelegationResponse
  */
 export interface QueryFeederDelegationResponse {
-  /** feeder_addr defines the feeder delegation of a validator */
+  /**
+   * feeder_addr defines the feeder delegation of a validator
+   */
   feederAddr: string;
 }
 export interface QueryFeederDelegationResponseProtoMsg {
-  typeUrl: "/symphony.oracle.v1beta1.QueryFeederDelegationResponse";
+  typeUrl: '/symphony.oracle.v1beta1.QueryFeederDelegationResponse';
   value: Uint8Array;
 }
 /**
  * QueryFeederDelegationResponse is response type for the
  * Query/FeederDelegation RPC method.
+ * @name QueryFeederDelegationResponseAmino
+ * @package symphony.oracle.v1beta1
+ * @see proto type: symphony.oracle.v1beta1.QueryFeederDelegationResponse
  */
 export interface QueryFeederDelegationResponseAmino {
-  /** feeder_addr defines the feeder delegation of a validator */
+  /**
+   * feeder_addr defines the feeder delegation of a validator
+   */
   feeder_addr?: string;
 }
 export interface QueryFeederDelegationResponseAminoMsg {
-  type: "/symphony.oracle.v1beta1.QueryFeederDelegationResponse";
+  type: '/symphony.oracle.v1beta1.QueryFeederDelegationResponse';
   value: QueryFeederDelegationResponseAmino;
 }
 /**
  * QueryFeederDelegationResponse is response type for the
  * Query/FeederDelegation RPC method.
+ * @name QueryFeederDelegationResponseSDKType
+ * @package symphony.oracle.v1beta1
+ * @see proto type: symphony.oracle.v1beta1.QueryFeederDelegationResponse
  */
 export interface QueryFeederDelegationResponseSDKType {
   feeder_addr: string;
@@ -415,30 +594,43 @@ export interface QueryFeederDelegationResponseSDKType {
 /**
  * QueryMissCounterRequest is the request type for the Query/MissCounter RPC
  * method.
+ * @name QueryMissCounterRequest
+ * @package symphony.oracle.v1beta1
+ * @see proto type: symphony.oracle.v1beta1.QueryMissCounterRequest
  */
 export interface QueryMissCounterRequest {
-  /** validator defines the validator address to query for. */
+  /**
+   * validator defines the validator address to query for.
+   */
   validatorAddr: string;
 }
 export interface QueryMissCounterRequestProtoMsg {
-  typeUrl: "/symphony.oracle.v1beta1.QueryMissCounterRequest";
+  typeUrl: '/symphony.oracle.v1beta1.QueryMissCounterRequest';
   value: Uint8Array;
 }
 /**
  * QueryMissCounterRequest is the request type for the Query/MissCounter RPC
  * method.
+ * @name QueryMissCounterRequestAmino
+ * @package symphony.oracle.v1beta1
+ * @see proto type: symphony.oracle.v1beta1.QueryMissCounterRequest
  */
 export interface QueryMissCounterRequestAmino {
-  /** validator defines the validator address to query for. */
+  /**
+   * validator defines the validator address to query for.
+   */
   validator_addr?: string;
 }
 export interface QueryMissCounterRequestAminoMsg {
-  type: "/symphony.oracle.v1beta1.QueryMissCounterRequest";
+  type: '/symphony.oracle.v1beta1.QueryMissCounterRequest';
   value: QueryMissCounterRequestAmino;
 }
 /**
  * QueryMissCounterRequest is the request type for the Query/MissCounter RPC
  * method.
+ * @name QueryMissCounterRequestSDKType
+ * @package symphony.oracle.v1beta1
+ * @see proto type: symphony.oracle.v1beta1.QueryMissCounterRequest
  */
 export interface QueryMissCounterRequestSDKType {
   validator_addr: string;
@@ -446,30 +638,43 @@ export interface QueryMissCounterRequestSDKType {
 /**
  * QueryMissCounterResponse is response type for the
  * Query/MissCounter RPC method.
+ * @name QueryMissCounterResponse
+ * @package symphony.oracle.v1beta1
+ * @see proto type: symphony.oracle.v1beta1.QueryMissCounterResponse
  */
 export interface QueryMissCounterResponse {
-  /** miss_counter defines the oracle miss counter of a validator */
+  /**
+   * miss_counter defines the oracle miss counter of a validator
+   */
   missCounter: bigint;
 }
 export interface QueryMissCounterResponseProtoMsg {
-  typeUrl: "/symphony.oracle.v1beta1.QueryMissCounterResponse";
+  typeUrl: '/symphony.oracle.v1beta1.QueryMissCounterResponse';
   value: Uint8Array;
 }
 /**
  * QueryMissCounterResponse is response type for the
  * Query/MissCounter RPC method.
+ * @name QueryMissCounterResponseAmino
+ * @package symphony.oracle.v1beta1
+ * @see proto type: symphony.oracle.v1beta1.QueryMissCounterResponse
  */
 export interface QueryMissCounterResponseAmino {
-  /** miss_counter defines the oracle miss counter of a validator */
+  /**
+   * miss_counter defines the oracle miss counter of a validator
+   */
   miss_counter?: string;
 }
 export interface QueryMissCounterResponseAminoMsg {
-  type: "/symphony.oracle.v1beta1.QueryMissCounterResponse";
+  type: '/symphony.oracle.v1beta1.QueryMissCounterResponse';
   value: QueryMissCounterResponseAmino;
 }
 /**
  * QueryMissCounterResponse is response type for the
  * Query/MissCounter RPC method.
+ * @name QueryMissCounterResponseSDKType
+ * @package symphony.oracle.v1beta1
+ * @see proto type: symphony.oracle.v1beta1.QueryMissCounterResponse
  */
 export interface QueryMissCounterResponseSDKType {
   miss_counter: bigint;
@@ -477,30 +682,43 @@ export interface QueryMissCounterResponseSDKType {
 /**
  * QueryAggregatePrevoteRequest is the request type for the
  * Query/AggregatePrevote RPC method.
+ * @name QueryAggregatePrevoteRequest
+ * @package symphony.oracle.v1beta1
+ * @see proto type: symphony.oracle.v1beta1.QueryAggregatePrevoteRequest
  */
 export interface QueryAggregatePrevoteRequest {
-  /** validator defines the validator address to query for. */
+  /**
+   * validator defines the validator address to query for.
+   */
   validatorAddr: string;
 }
 export interface QueryAggregatePrevoteRequestProtoMsg {
-  typeUrl: "/symphony.oracle.v1beta1.QueryAggregatePrevoteRequest";
+  typeUrl: '/symphony.oracle.v1beta1.QueryAggregatePrevoteRequest';
   value: Uint8Array;
 }
 /**
  * QueryAggregatePrevoteRequest is the request type for the
  * Query/AggregatePrevote RPC method.
+ * @name QueryAggregatePrevoteRequestAmino
+ * @package symphony.oracle.v1beta1
+ * @see proto type: symphony.oracle.v1beta1.QueryAggregatePrevoteRequest
  */
 export interface QueryAggregatePrevoteRequestAmino {
-  /** validator defines the validator address to query for. */
+  /**
+   * validator defines the validator address to query for.
+   */
   validator_addr?: string;
 }
 export interface QueryAggregatePrevoteRequestAminoMsg {
-  type: "/symphony.oracle.v1beta1.QueryAggregatePrevoteRequest";
+  type: '/symphony.oracle.v1beta1.QueryAggregatePrevoteRequest';
   value: QueryAggregatePrevoteRequestAmino;
 }
 /**
  * QueryAggregatePrevoteRequest is the request type for the
  * Query/AggregatePrevote RPC method.
+ * @name QueryAggregatePrevoteRequestSDKType
+ * @package symphony.oracle.v1beta1
+ * @see proto type: symphony.oracle.v1beta1.QueryAggregatePrevoteRequest
  */
 export interface QueryAggregatePrevoteRequestSDKType {
   validator_addr: string;
@@ -508,6 +726,9 @@ export interface QueryAggregatePrevoteRequestSDKType {
 /**
  * QueryAggregatePrevoteResponse is response type for the
  * Query/AggregatePrevote RPC method.
+ * @name QueryAggregatePrevoteResponse
+ * @package symphony.oracle.v1beta1
+ * @see proto type: symphony.oracle.v1beta1.QueryAggregatePrevoteResponse
  */
 export interface QueryAggregatePrevoteResponse {
   /**
@@ -517,12 +738,15 @@ export interface QueryAggregatePrevoteResponse {
   aggregatePrevote: AggregateExchangeRatePrevote;
 }
 export interface QueryAggregatePrevoteResponseProtoMsg {
-  typeUrl: "/symphony.oracle.v1beta1.QueryAggregatePrevoteResponse";
+  typeUrl: '/symphony.oracle.v1beta1.QueryAggregatePrevoteResponse';
   value: Uint8Array;
 }
 /**
  * QueryAggregatePrevoteResponse is response type for the
  * Query/AggregatePrevote RPC method.
+ * @name QueryAggregatePrevoteResponseAmino
+ * @package symphony.oracle.v1beta1
+ * @see proto type: symphony.oracle.v1beta1.QueryAggregatePrevoteResponse
  */
 export interface QueryAggregatePrevoteResponseAmino {
   /**
@@ -532,12 +756,15 @@ export interface QueryAggregatePrevoteResponseAmino {
   aggregate_prevote?: AggregateExchangeRatePrevoteAmino;
 }
 export interface QueryAggregatePrevoteResponseAminoMsg {
-  type: "/symphony.oracle.v1beta1.QueryAggregatePrevoteResponse";
+  type: '/symphony.oracle.v1beta1.QueryAggregatePrevoteResponse';
   value: QueryAggregatePrevoteResponseAmino;
 }
 /**
  * QueryAggregatePrevoteResponse is response type for the
  * Query/AggregatePrevote RPC method.
+ * @name QueryAggregatePrevoteResponseSDKType
+ * @package symphony.oracle.v1beta1
+ * @see proto type: symphony.oracle.v1beta1.QueryAggregatePrevoteResponse
  */
 export interface QueryAggregatePrevoteResponseSDKType {
   aggregate_prevote: AggregateExchangeRatePrevoteSDKType;
@@ -545,29 +772,41 @@ export interface QueryAggregatePrevoteResponseSDKType {
 /**
  * QueryAggregatePrevotesRequest is the request type for the
  * Query/AggregatePrevotes RPC method.
+ * @name QueryAggregatePrevotesRequest
+ * @package symphony.oracle.v1beta1
+ * @see proto type: symphony.oracle.v1beta1.QueryAggregatePrevotesRequest
  */
 export interface QueryAggregatePrevotesRequest {}
 export interface QueryAggregatePrevotesRequestProtoMsg {
-  typeUrl: "/symphony.oracle.v1beta1.QueryAggregatePrevotesRequest";
+  typeUrl: '/symphony.oracle.v1beta1.QueryAggregatePrevotesRequest';
   value: Uint8Array;
 }
 /**
  * QueryAggregatePrevotesRequest is the request type for the
  * Query/AggregatePrevotes RPC method.
+ * @name QueryAggregatePrevotesRequestAmino
+ * @package symphony.oracle.v1beta1
+ * @see proto type: symphony.oracle.v1beta1.QueryAggregatePrevotesRequest
  */
 export interface QueryAggregatePrevotesRequestAmino {}
 export interface QueryAggregatePrevotesRequestAminoMsg {
-  type: "/symphony.oracle.v1beta1.QueryAggregatePrevotesRequest";
+  type: '/symphony.oracle.v1beta1.QueryAggregatePrevotesRequest';
   value: QueryAggregatePrevotesRequestAmino;
 }
 /**
  * QueryAggregatePrevotesRequest is the request type for the
  * Query/AggregatePrevotes RPC method.
+ * @name QueryAggregatePrevotesRequestSDKType
+ * @package symphony.oracle.v1beta1
+ * @see proto type: symphony.oracle.v1beta1.QueryAggregatePrevotesRequest
  */
 export interface QueryAggregatePrevotesRequestSDKType {}
 /**
  * QueryAggregatePrevotesResponse is response type for the
  * Query/AggregatePrevotes RPC method.
+ * @name QueryAggregatePrevotesResponse
+ * @package symphony.oracle.v1beta1
+ * @see proto type: symphony.oracle.v1beta1.QueryAggregatePrevotesResponse
  */
 export interface QueryAggregatePrevotesResponse {
   /**
@@ -577,12 +816,15 @@ export interface QueryAggregatePrevotesResponse {
   aggregatePrevotes: AggregateExchangeRatePrevote[];
 }
 export interface QueryAggregatePrevotesResponseProtoMsg {
-  typeUrl: "/symphony.oracle.v1beta1.QueryAggregatePrevotesResponse";
+  typeUrl: '/symphony.oracle.v1beta1.QueryAggregatePrevotesResponse';
   value: Uint8Array;
 }
 /**
  * QueryAggregatePrevotesResponse is response type for the
  * Query/AggregatePrevotes RPC method.
+ * @name QueryAggregatePrevotesResponseAmino
+ * @package symphony.oracle.v1beta1
+ * @see proto type: symphony.oracle.v1beta1.QueryAggregatePrevotesResponse
  */
 export interface QueryAggregatePrevotesResponseAmino {
   /**
@@ -592,12 +834,15 @@ export interface QueryAggregatePrevotesResponseAmino {
   aggregate_prevotes?: AggregateExchangeRatePrevoteAmino[];
 }
 export interface QueryAggregatePrevotesResponseAminoMsg {
-  type: "/symphony.oracle.v1beta1.QueryAggregatePrevotesResponse";
+  type: '/symphony.oracle.v1beta1.QueryAggregatePrevotesResponse';
   value: QueryAggregatePrevotesResponseAmino;
 }
 /**
  * QueryAggregatePrevotesResponse is response type for the
  * Query/AggregatePrevotes RPC method.
+ * @name QueryAggregatePrevotesResponseSDKType
+ * @package symphony.oracle.v1beta1
+ * @see proto type: symphony.oracle.v1beta1.QueryAggregatePrevotesResponse
  */
 export interface QueryAggregatePrevotesResponseSDKType {
   aggregate_prevotes: AggregateExchangeRatePrevoteSDKType[];
@@ -605,30 +850,43 @@ export interface QueryAggregatePrevotesResponseSDKType {
 /**
  * QueryAggregateVoteRequest is the request type for the Query/AggregateVote RPC
  * method.
+ * @name QueryAggregateVoteRequest
+ * @package symphony.oracle.v1beta1
+ * @see proto type: symphony.oracle.v1beta1.QueryAggregateVoteRequest
  */
 export interface QueryAggregateVoteRequest {
-  /** validator defines the validator address to query for. */
+  /**
+   * validator defines the validator address to query for.
+   */
   validatorAddr: string;
 }
 export interface QueryAggregateVoteRequestProtoMsg {
-  typeUrl: "/symphony.oracle.v1beta1.QueryAggregateVoteRequest";
+  typeUrl: '/symphony.oracle.v1beta1.QueryAggregateVoteRequest';
   value: Uint8Array;
 }
 /**
  * QueryAggregateVoteRequest is the request type for the Query/AggregateVote RPC
  * method.
+ * @name QueryAggregateVoteRequestAmino
+ * @package symphony.oracle.v1beta1
+ * @see proto type: symphony.oracle.v1beta1.QueryAggregateVoteRequest
  */
 export interface QueryAggregateVoteRequestAmino {
-  /** validator defines the validator address to query for. */
+  /**
+   * validator defines the validator address to query for.
+   */
   validator_addr?: string;
 }
 export interface QueryAggregateVoteRequestAminoMsg {
-  type: "/symphony.oracle.v1beta1.QueryAggregateVoteRequest";
+  type: '/symphony.oracle.v1beta1.QueryAggregateVoteRequest';
   value: QueryAggregateVoteRequestAmino;
 }
 /**
  * QueryAggregateVoteRequest is the request type for the Query/AggregateVote RPC
  * method.
+ * @name QueryAggregateVoteRequestSDKType
+ * @package symphony.oracle.v1beta1
+ * @see proto type: symphony.oracle.v1beta1.QueryAggregateVoteRequest
  */
 export interface QueryAggregateVoteRequestSDKType {
   validator_addr: string;
@@ -636,6 +894,9 @@ export interface QueryAggregateVoteRequestSDKType {
 /**
  * QueryAggregateVoteResponse is response type for the
  * Query/AggregateVote RPC method.
+ * @name QueryAggregateVoteResponse
+ * @package symphony.oracle.v1beta1
+ * @see proto type: symphony.oracle.v1beta1.QueryAggregateVoteResponse
  */
 export interface QueryAggregateVoteResponse {
   /**
@@ -645,12 +906,15 @@ export interface QueryAggregateVoteResponse {
   aggregateVote: AggregateExchangeRateVote;
 }
 export interface QueryAggregateVoteResponseProtoMsg {
-  typeUrl: "/symphony.oracle.v1beta1.QueryAggregateVoteResponse";
+  typeUrl: '/symphony.oracle.v1beta1.QueryAggregateVoteResponse';
   value: Uint8Array;
 }
 /**
  * QueryAggregateVoteResponse is response type for the
  * Query/AggregateVote RPC method.
+ * @name QueryAggregateVoteResponseAmino
+ * @package symphony.oracle.v1beta1
+ * @see proto type: symphony.oracle.v1beta1.QueryAggregateVoteResponse
  */
 export interface QueryAggregateVoteResponseAmino {
   /**
@@ -660,12 +924,15 @@ export interface QueryAggregateVoteResponseAmino {
   aggregate_vote?: AggregateExchangeRateVoteAmino;
 }
 export interface QueryAggregateVoteResponseAminoMsg {
-  type: "/symphony.oracle.v1beta1.QueryAggregateVoteResponse";
+  type: '/symphony.oracle.v1beta1.QueryAggregateVoteResponse';
   value: QueryAggregateVoteResponseAmino;
 }
 /**
  * QueryAggregateVoteResponse is response type for the
  * Query/AggregateVote RPC method.
+ * @name QueryAggregateVoteResponseSDKType
+ * @package symphony.oracle.v1beta1
+ * @see proto type: symphony.oracle.v1beta1.QueryAggregateVoteResponse
  */
 export interface QueryAggregateVoteResponseSDKType {
   aggregate_vote: AggregateExchangeRateVoteSDKType;
@@ -673,29 +940,41 @@ export interface QueryAggregateVoteResponseSDKType {
 /**
  * QueryAggregateVotesRequest is the request type for the Query/AggregateVotes
  * RPC method.
+ * @name QueryAggregateVotesRequest
+ * @package symphony.oracle.v1beta1
+ * @see proto type: symphony.oracle.v1beta1.QueryAggregateVotesRequest
  */
 export interface QueryAggregateVotesRequest {}
 export interface QueryAggregateVotesRequestProtoMsg {
-  typeUrl: "/symphony.oracle.v1beta1.QueryAggregateVotesRequest";
+  typeUrl: '/symphony.oracle.v1beta1.QueryAggregateVotesRequest';
   value: Uint8Array;
 }
 /**
  * QueryAggregateVotesRequest is the request type for the Query/AggregateVotes
  * RPC method.
+ * @name QueryAggregateVotesRequestAmino
+ * @package symphony.oracle.v1beta1
+ * @see proto type: symphony.oracle.v1beta1.QueryAggregateVotesRequest
  */
 export interface QueryAggregateVotesRequestAmino {}
 export interface QueryAggregateVotesRequestAminoMsg {
-  type: "/symphony.oracle.v1beta1.QueryAggregateVotesRequest";
+  type: '/symphony.oracle.v1beta1.QueryAggregateVotesRequest';
   value: QueryAggregateVotesRequestAmino;
 }
 /**
  * QueryAggregateVotesRequest is the request type for the Query/AggregateVotes
  * RPC method.
+ * @name QueryAggregateVotesRequestSDKType
+ * @package symphony.oracle.v1beta1
+ * @see proto type: symphony.oracle.v1beta1.QueryAggregateVotesRequest
  */
 export interface QueryAggregateVotesRequestSDKType {}
 /**
  * QueryAggregateVotesResponse is response type for the
  * Query/AggregateVotes RPC method.
+ * @name QueryAggregateVotesResponse
+ * @package symphony.oracle.v1beta1
+ * @see proto type: symphony.oracle.v1beta1.QueryAggregateVotesResponse
  */
 export interface QueryAggregateVotesResponse {
   /**
@@ -705,12 +984,15 @@ export interface QueryAggregateVotesResponse {
   aggregateVotes: AggregateExchangeRateVote[];
 }
 export interface QueryAggregateVotesResponseProtoMsg {
-  typeUrl: "/symphony.oracle.v1beta1.QueryAggregateVotesResponse";
+  typeUrl: '/symphony.oracle.v1beta1.QueryAggregateVotesResponse';
   value: Uint8Array;
 }
 /**
  * QueryAggregateVotesResponse is response type for the
  * Query/AggregateVotes RPC method.
+ * @name QueryAggregateVotesResponseAmino
+ * @package symphony.oracle.v1beta1
+ * @see proto type: symphony.oracle.v1beta1.QueryAggregateVotesResponse
  */
 export interface QueryAggregateVotesResponseAmino {
   /**
@@ -720,76 +1002,139 @@ export interface QueryAggregateVotesResponseAmino {
   aggregate_votes?: AggregateExchangeRateVoteAmino[];
 }
 export interface QueryAggregateVotesResponseAminoMsg {
-  type: "/symphony.oracle.v1beta1.QueryAggregateVotesResponse";
+  type: '/symphony.oracle.v1beta1.QueryAggregateVotesResponse';
   value: QueryAggregateVotesResponseAmino;
 }
 /**
  * QueryAggregateVotesResponse is response type for the
  * Query/AggregateVotes RPC method.
+ * @name QueryAggregateVotesResponseSDKType
+ * @package symphony.oracle.v1beta1
+ * @see proto type: symphony.oracle.v1beta1.QueryAggregateVotesResponse
  */
 export interface QueryAggregateVotesResponseSDKType {
   aggregate_votes: AggregateExchangeRateVoteSDKType[];
 }
-/** QueryParamsRequest is the request type for the Query/Params RPC method. */
+/**
+ * QueryParamsRequest is the request type for the Query/Params RPC method.
+ * @name QueryParamsRequest
+ * @package symphony.oracle.v1beta1
+ * @see proto type: symphony.oracle.v1beta1.QueryParamsRequest
+ */
 export interface QueryParamsRequest {}
 export interface QueryParamsRequestProtoMsg {
-  typeUrl: "/symphony.oracle.v1beta1.QueryParamsRequest";
+  typeUrl: '/symphony.oracle.v1beta1.QueryParamsRequest';
   value: Uint8Array;
 }
-/** QueryParamsRequest is the request type for the Query/Params RPC method. */
+/**
+ * QueryParamsRequest is the request type for the Query/Params RPC method.
+ * @name QueryParamsRequestAmino
+ * @package symphony.oracle.v1beta1
+ * @see proto type: symphony.oracle.v1beta1.QueryParamsRequest
+ */
 export interface QueryParamsRequestAmino {}
 export interface QueryParamsRequestAminoMsg {
-  type: "/symphony.oracle.v1beta1.QueryParamsRequest";
+  type: '/symphony.oracle.v1beta1.QueryParamsRequest';
   value: QueryParamsRequestAmino;
 }
-/** QueryParamsRequest is the request type for the Query/Params RPC method. */
+/**
+ * QueryParamsRequest is the request type for the Query/Params RPC method.
+ * @name QueryParamsRequestSDKType
+ * @package symphony.oracle.v1beta1
+ * @see proto type: symphony.oracle.v1beta1.QueryParamsRequest
+ */
 export interface QueryParamsRequestSDKType {}
-/** QueryParamsResponse is the response type for the Query/Params RPC method. */
+/**
+ * QueryParamsResponse is the response type for the Query/Params RPC method.
+ * @name QueryParamsResponse
+ * @package symphony.oracle.v1beta1
+ * @see proto type: symphony.oracle.v1beta1.QueryParamsResponse
+ */
 export interface QueryParamsResponse {
-  /** params defines the parameters of the module. */
+  /**
+   * params defines the parameters of the module.
+   */
   params: Params;
 }
 export interface QueryParamsResponseProtoMsg {
-  typeUrl: "/symphony.oracle.v1beta1.QueryParamsResponse";
+  typeUrl: '/symphony.oracle.v1beta1.QueryParamsResponse';
   value: Uint8Array;
 }
-/** QueryParamsResponse is the response type for the Query/Params RPC method. */
+/**
+ * QueryParamsResponse is the response type for the Query/Params RPC method.
+ * @name QueryParamsResponseAmino
+ * @package symphony.oracle.v1beta1
+ * @see proto type: symphony.oracle.v1beta1.QueryParamsResponse
+ */
 export interface QueryParamsResponseAmino {
-  /** params defines the parameters of the module. */
+  /**
+   * params defines the parameters of the module.
+   */
   params?: ParamsAmino;
 }
 export interface QueryParamsResponseAminoMsg {
-  type: "/symphony.oracle.v1beta1.QueryParamsResponse";
+  type: '/symphony.oracle.v1beta1.QueryParamsResponse';
   value: QueryParamsResponseAmino;
 }
-/** QueryParamsResponse is the response type for the Query/Params RPC method. */
+/**
+ * QueryParamsResponse is the response type for the Query/Params RPC method.
+ * @name QueryParamsResponseSDKType
+ * @package symphony.oracle.v1beta1
+ * @see proto type: symphony.oracle.v1beta1.QueryParamsResponse
+ */
 export interface QueryParamsResponseSDKType {
   params: ParamsSDKType;
 }
 function createBaseQueryExchangeRateRequest(): QueryExchangeRateRequest {
   return {
-    denom: ""
+    denom: '',
   };
 }
+/**
+ * QueryExchangeRateRequest is the request type for the Query/ExchangeRate RPC
+ * method.
+ * @name QueryExchangeRateRequest
+ * @package symphony.oracle.v1beta1
+ * @see proto type: symphony.oracle.v1beta1.QueryExchangeRateRequest
+ */
 export const QueryExchangeRateRequest = {
-  typeUrl: "/symphony.oracle.v1beta1.QueryExchangeRateRequest",
+  typeUrl: '/symphony.oracle.v1beta1.QueryExchangeRateRequest',
   is(o: any): o is QueryExchangeRateRequest {
-    return o && (o.$typeUrl === QueryExchangeRateRequest.typeUrl || typeof o.denom === "string");
+    return (
+      o &&
+      (o.$typeUrl === QueryExchangeRateRequest.typeUrl ||
+        typeof o.denom === 'string')
+    );
   },
   isSDK(o: any): o is QueryExchangeRateRequestSDKType {
-    return o && (o.$typeUrl === QueryExchangeRateRequest.typeUrl || typeof o.denom === "string");
+    return (
+      o &&
+      (o.$typeUrl === QueryExchangeRateRequest.typeUrl ||
+        typeof o.denom === 'string')
+    );
   },
   isAmino(o: any): o is QueryExchangeRateRequestAmino {
-    return o && (o.$typeUrl === QueryExchangeRateRequest.typeUrl || typeof o.denom === "string");
+    return (
+      o &&
+      (o.$typeUrl === QueryExchangeRateRequest.typeUrl ||
+        typeof o.denom === 'string')
+    );
   },
-  encode(message: QueryExchangeRateRequest, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
-    if (message.denom !== "") {
+  encode(
+    message: QueryExchangeRateRequest,
+    writer: BinaryWriter = BinaryWriter.create(),
+  ): BinaryWriter {
+    if (message.denom !== '') {
       writer.uint32(10).string(message.denom);
     }
     return writer;
   },
-  decode(input: BinaryReader | Uint8Array, length?: number): QueryExchangeRateRequest {
-    const reader = input instanceof BinaryReader ? input : new BinaryReader(input);
+  decode(
+    input: BinaryReader | Uint8Array,
+    length?: number,
+  ): QueryExchangeRateRequest {
+    const reader =
+      input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseQueryExchangeRateRequest();
     while (reader.pos < end) {
@@ -805,9 +1150,11 @@ export const QueryExchangeRateRequest = {
     }
     return message;
   },
-  fromPartial(object: Partial<QueryExchangeRateRequest>): QueryExchangeRateRequest {
+  fromPartial(
+    object: Partial<QueryExchangeRateRequest>,
+  ): QueryExchangeRateRequest {
     const message = createBaseQueryExchangeRateRequest();
-    message.denom = object.denom ?? "";
+    message.denom = object.denom ?? '';
     return message;
   },
   fromAmino(object: QueryExchangeRateRequestAmino): QueryExchangeRateRequest {
@@ -819,57 +1166,97 @@ export const QueryExchangeRateRequest = {
   },
   toAmino(message: QueryExchangeRateRequest): QueryExchangeRateRequestAmino {
     const obj: any = {};
-    obj.denom = message.denom === "" ? undefined : message.denom;
+    obj.denom = message.denom === '' ? undefined : message.denom;
     return obj;
   },
-  fromAminoMsg(object: QueryExchangeRateRequestAminoMsg): QueryExchangeRateRequest {
+  fromAminoMsg(
+    object: QueryExchangeRateRequestAminoMsg,
+  ): QueryExchangeRateRequest {
     return QueryExchangeRateRequest.fromAmino(object.value);
   },
-  fromProtoMsg(message: QueryExchangeRateRequestProtoMsg): QueryExchangeRateRequest {
+  fromProtoMsg(
+    message: QueryExchangeRateRequestProtoMsg,
+  ): QueryExchangeRateRequest {
     return QueryExchangeRateRequest.decode(message.value);
   },
   toProto(message: QueryExchangeRateRequest): Uint8Array {
     return QueryExchangeRateRequest.encode(message).finish();
   },
-  toProtoMsg(message: QueryExchangeRateRequest): QueryExchangeRateRequestProtoMsg {
+  toProtoMsg(
+    message: QueryExchangeRateRequest,
+  ): QueryExchangeRateRequestProtoMsg {
     return {
-      typeUrl: "/symphony.oracle.v1beta1.QueryExchangeRateRequest",
-      value: QueryExchangeRateRequest.encode(message).finish()
+      typeUrl: '/symphony.oracle.v1beta1.QueryExchangeRateRequest',
+      value: QueryExchangeRateRequest.encode(message).finish(),
     };
-  }
+  },
 };
-GlobalDecoderRegistry.register(QueryExchangeRateRequest.typeUrl, QueryExchangeRateRequest);
+GlobalDecoderRegistry.register(
+  QueryExchangeRateRequest.typeUrl,
+  QueryExchangeRateRequest,
+);
 function createBaseQueryExchangeRateResponse(): QueryExchangeRateResponse {
   return {
-    exchangeRate: ""
+    exchangeRate: '',
   };
 }
+/**
+ * QueryExchangeRateResponse is response type for the
+ * Query/ExchangeRate RPC method.
+ * @name QueryExchangeRateResponse
+ * @package symphony.oracle.v1beta1
+ * @see proto type: symphony.oracle.v1beta1.QueryExchangeRateResponse
+ */
 export const QueryExchangeRateResponse = {
-  typeUrl: "/symphony.oracle.v1beta1.QueryExchangeRateResponse",
+  typeUrl: '/symphony.oracle.v1beta1.QueryExchangeRateResponse',
   is(o: any): o is QueryExchangeRateResponse {
-    return o && (o.$typeUrl === QueryExchangeRateResponse.typeUrl || typeof o.exchangeRate === "string");
+    return (
+      o &&
+      (o.$typeUrl === QueryExchangeRateResponse.typeUrl ||
+        typeof o.exchangeRate === 'string')
+    );
   },
   isSDK(o: any): o is QueryExchangeRateResponseSDKType {
-    return o && (o.$typeUrl === QueryExchangeRateResponse.typeUrl || typeof o.exchange_rate === "string");
+    return (
+      o &&
+      (o.$typeUrl === QueryExchangeRateResponse.typeUrl ||
+        typeof o.exchange_rate === 'string')
+    );
   },
   isAmino(o: any): o is QueryExchangeRateResponseAmino {
-    return o && (o.$typeUrl === QueryExchangeRateResponse.typeUrl || typeof o.exchange_rate === "string");
+    return (
+      o &&
+      (o.$typeUrl === QueryExchangeRateResponse.typeUrl ||
+        typeof o.exchange_rate === 'string')
+    );
   },
-  encode(message: QueryExchangeRateResponse, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
-    if (message.exchangeRate !== "") {
-      writer.uint32(10).string(Decimal.fromUserInput(message.exchangeRate, 18).atomics);
+  encode(
+    message: QueryExchangeRateResponse,
+    writer: BinaryWriter = BinaryWriter.create(),
+  ): BinaryWriter {
+    if (message.exchangeRate !== '') {
+      writer
+        .uint32(10)
+        .string(Decimal.fromUserInput(message.exchangeRate, 18).atomics);
     }
     return writer;
   },
-  decode(input: BinaryReader | Uint8Array, length?: number): QueryExchangeRateResponse {
-    const reader = input instanceof BinaryReader ? input : new BinaryReader(input);
+  decode(
+    input: BinaryReader | Uint8Array,
+    length?: number,
+  ): QueryExchangeRateResponse {
+    const reader =
+      input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseQueryExchangeRateResponse();
     while (reader.pos < end) {
       const tag = reader.uint32();
       switch (tag >>> 3) {
         case 1:
-          message.exchangeRate = Decimal.fromAtomics(reader.string(), 18).toString();
+          message.exchangeRate = Decimal.fromAtomics(
+            reader.string(),
+            18,
+          ).toString();
           break;
         default:
           reader.skipType(tag & 7);
@@ -878,9 +1265,11 @@ export const QueryExchangeRateResponse = {
     }
     return message;
   },
-  fromPartial(object: Partial<QueryExchangeRateResponse>): QueryExchangeRateResponse {
+  fromPartial(
+    object: Partial<QueryExchangeRateResponse>,
+  ): QueryExchangeRateResponse {
     const message = createBaseQueryExchangeRateResponse();
-    message.exchangeRate = object.exchangeRate ?? "";
+    message.exchangeRate = object.exchangeRate ?? '';
     return message;
   },
   fromAmino(object: QueryExchangeRateResponseAmino): QueryExchangeRateResponse {
@@ -892,31 +1281,48 @@ export const QueryExchangeRateResponse = {
   },
   toAmino(message: QueryExchangeRateResponse): QueryExchangeRateResponseAmino {
     const obj: any = {};
-    obj.exchange_rate = message.exchangeRate === "" ? undefined : message.exchangeRate;
+    obj.exchange_rate =
+      message.exchangeRate === '' ? undefined : message.exchangeRate;
     return obj;
   },
-  fromAminoMsg(object: QueryExchangeRateResponseAminoMsg): QueryExchangeRateResponse {
+  fromAminoMsg(
+    object: QueryExchangeRateResponseAminoMsg,
+  ): QueryExchangeRateResponse {
     return QueryExchangeRateResponse.fromAmino(object.value);
   },
-  fromProtoMsg(message: QueryExchangeRateResponseProtoMsg): QueryExchangeRateResponse {
+  fromProtoMsg(
+    message: QueryExchangeRateResponseProtoMsg,
+  ): QueryExchangeRateResponse {
     return QueryExchangeRateResponse.decode(message.value);
   },
   toProto(message: QueryExchangeRateResponse): Uint8Array {
     return QueryExchangeRateResponse.encode(message).finish();
   },
-  toProtoMsg(message: QueryExchangeRateResponse): QueryExchangeRateResponseProtoMsg {
+  toProtoMsg(
+    message: QueryExchangeRateResponse,
+  ): QueryExchangeRateResponseProtoMsg {
     return {
-      typeUrl: "/symphony.oracle.v1beta1.QueryExchangeRateResponse",
-      value: QueryExchangeRateResponse.encode(message).finish()
+      typeUrl: '/symphony.oracle.v1beta1.QueryExchangeRateResponse',
+      value: QueryExchangeRateResponse.encode(message).finish(),
     };
-  }
+  },
 };
-GlobalDecoderRegistry.register(QueryExchangeRateResponse.typeUrl, QueryExchangeRateResponse);
+GlobalDecoderRegistry.register(
+  QueryExchangeRateResponse.typeUrl,
+  QueryExchangeRateResponse,
+);
 function createBaseQueryExchangeRatesRequest(): QueryExchangeRatesRequest {
   return {};
 }
+/**
+ * QueryExchangeRatesRequest is the request type for the Query/ExchangeRates RPC
+ * method.
+ * @name QueryExchangeRatesRequest
+ * @package symphony.oracle.v1beta1
+ * @see proto type: symphony.oracle.v1beta1.QueryExchangeRatesRequest
+ */
 export const QueryExchangeRatesRequest = {
-  typeUrl: "/symphony.oracle.v1beta1.QueryExchangeRatesRequest",
+  typeUrl: '/symphony.oracle.v1beta1.QueryExchangeRatesRequest',
   is(o: any): o is QueryExchangeRatesRequest {
     return o && o.$typeUrl === QueryExchangeRatesRequest.typeUrl;
   },
@@ -926,11 +1332,18 @@ export const QueryExchangeRatesRequest = {
   isAmino(o: any): o is QueryExchangeRatesRequestAmino {
     return o && o.$typeUrl === QueryExchangeRatesRequest.typeUrl;
   },
-  encode(_: QueryExchangeRatesRequest, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
+  encode(
+    _: QueryExchangeRatesRequest,
+    writer: BinaryWriter = BinaryWriter.create(),
+  ): BinaryWriter {
     return writer;
   },
-  decode(input: BinaryReader | Uint8Array, length?: number): QueryExchangeRatesRequest {
-    const reader = input instanceof BinaryReader ? input : new BinaryReader(input);
+  decode(
+    input: BinaryReader | Uint8Array,
+    length?: number,
+  ): QueryExchangeRatesRequest {
+    const reader =
+      input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseQueryExchangeRatesRequest();
     while (reader.pos < end) {
@@ -943,7 +1356,9 @@ export const QueryExchangeRatesRequest = {
     }
     return message;
   },
-  fromPartial(_: Partial<QueryExchangeRatesRequest>): QueryExchangeRatesRequest {
+  fromPartial(
+    _: Partial<QueryExchangeRatesRequest>,
+  ): QueryExchangeRatesRequest {
     const message = createBaseQueryExchangeRatesRequest();
     return message;
   },
@@ -955,47 +1370,85 @@ export const QueryExchangeRatesRequest = {
     const obj: any = {};
     return obj;
   },
-  fromAminoMsg(object: QueryExchangeRatesRequestAminoMsg): QueryExchangeRatesRequest {
+  fromAminoMsg(
+    object: QueryExchangeRatesRequestAminoMsg,
+  ): QueryExchangeRatesRequest {
     return QueryExchangeRatesRequest.fromAmino(object.value);
   },
-  fromProtoMsg(message: QueryExchangeRatesRequestProtoMsg): QueryExchangeRatesRequest {
+  fromProtoMsg(
+    message: QueryExchangeRatesRequestProtoMsg,
+  ): QueryExchangeRatesRequest {
     return QueryExchangeRatesRequest.decode(message.value);
   },
   toProto(message: QueryExchangeRatesRequest): Uint8Array {
     return QueryExchangeRatesRequest.encode(message).finish();
   },
-  toProtoMsg(message: QueryExchangeRatesRequest): QueryExchangeRatesRequestProtoMsg {
+  toProtoMsg(
+    message: QueryExchangeRatesRequest,
+  ): QueryExchangeRatesRequestProtoMsg {
     return {
-      typeUrl: "/symphony.oracle.v1beta1.QueryExchangeRatesRequest",
-      value: QueryExchangeRatesRequest.encode(message).finish()
+      typeUrl: '/symphony.oracle.v1beta1.QueryExchangeRatesRequest',
+      value: QueryExchangeRatesRequest.encode(message).finish(),
     };
-  }
+  },
 };
-GlobalDecoderRegistry.register(QueryExchangeRatesRequest.typeUrl, QueryExchangeRatesRequest);
+GlobalDecoderRegistry.register(
+  QueryExchangeRatesRequest.typeUrl,
+  QueryExchangeRatesRequest,
+);
 function createBaseQueryExchangeRatesResponse(): QueryExchangeRatesResponse {
   return {
-    exchangeRates: []
+    exchangeRates: [],
   };
 }
+/**
+ * QueryExchangeRatesResponse is response type for the
+ * Query/ExchangeRates RPC method.
+ * @name QueryExchangeRatesResponse
+ * @package symphony.oracle.v1beta1
+ * @see proto type: symphony.oracle.v1beta1.QueryExchangeRatesResponse
+ */
 export const QueryExchangeRatesResponse = {
-  typeUrl: "/symphony.oracle.v1beta1.QueryExchangeRatesResponse",
+  typeUrl: '/symphony.oracle.v1beta1.QueryExchangeRatesResponse',
   is(o: any): o is QueryExchangeRatesResponse {
-    return o && (o.$typeUrl === QueryExchangeRatesResponse.typeUrl || Array.isArray(o.exchangeRates) && (!o.exchangeRates.length || DecCoin.is(o.exchangeRates[0])));
+    return (
+      o &&
+      (o.$typeUrl === QueryExchangeRatesResponse.typeUrl ||
+        (Array.isArray(o.exchangeRates) &&
+          (!o.exchangeRates.length || DecCoin.is(o.exchangeRates[0]))))
+    );
   },
   isSDK(o: any): o is QueryExchangeRatesResponseSDKType {
-    return o && (o.$typeUrl === QueryExchangeRatesResponse.typeUrl || Array.isArray(o.exchange_rates) && (!o.exchange_rates.length || DecCoin.isSDK(o.exchange_rates[0])));
+    return (
+      o &&
+      (o.$typeUrl === QueryExchangeRatesResponse.typeUrl ||
+        (Array.isArray(o.exchange_rates) &&
+          (!o.exchange_rates.length || DecCoin.isSDK(o.exchange_rates[0]))))
+    );
   },
   isAmino(o: any): o is QueryExchangeRatesResponseAmino {
-    return o && (o.$typeUrl === QueryExchangeRatesResponse.typeUrl || Array.isArray(o.exchange_rates) && (!o.exchange_rates.length || DecCoin.isAmino(o.exchange_rates[0])));
+    return (
+      o &&
+      (o.$typeUrl === QueryExchangeRatesResponse.typeUrl ||
+        (Array.isArray(o.exchange_rates) &&
+          (!o.exchange_rates.length || DecCoin.isAmino(o.exchange_rates[0]))))
+    );
   },
-  encode(message: QueryExchangeRatesResponse, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
+  encode(
+    message: QueryExchangeRatesResponse,
+    writer: BinaryWriter = BinaryWriter.create(),
+  ): BinaryWriter {
     for (const v of message.exchangeRates) {
       DecCoin.encode(v!, writer.uint32(10).fork()).ldelim();
     }
     return writer;
   },
-  decode(input: BinaryReader | Uint8Array, length?: number): QueryExchangeRatesResponse {
-    const reader = input instanceof BinaryReader ? input : new BinaryReader(input);
+  decode(
+    input: BinaryReader | Uint8Array,
+    length?: number,
+  ): QueryExchangeRatesResponse {
+    const reader =
+      input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseQueryExchangeRatesResponse();
     while (reader.pos < end) {
@@ -1011,66 +1464,110 @@ export const QueryExchangeRatesResponse = {
     }
     return message;
   },
-  fromPartial(object: Partial<QueryExchangeRatesResponse>): QueryExchangeRatesResponse {
+  fromPartial(
+    object: Partial<QueryExchangeRatesResponse>,
+  ): QueryExchangeRatesResponse {
     const message = createBaseQueryExchangeRatesResponse();
-    message.exchangeRates = object.exchangeRates?.map(e => DecCoin.fromPartial(e)) || [];
+    message.exchangeRates =
+      object.exchangeRates?.map(e => DecCoin.fromPartial(e)) || [];
     return message;
   },
-  fromAmino(object: QueryExchangeRatesResponseAmino): QueryExchangeRatesResponse {
+  fromAmino(
+    object: QueryExchangeRatesResponseAmino,
+  ): QueryExchangeRatesResponse {
     const message = createBaseQueryExchangeRatesResponse();
-    message.exchangeRates = object.exchange_rates?.map(e => DecCoin.fromAmino(e)) || [];
+    message.exchangeRates =
+      object.exchange_rates?.map(e => DecCoin.fromAmino(e)) || [];
     return message;
   },
-  toAmino(message: QueryExchangeRatesResponse): QueryExchangeRatesResponseAmino {
+  toAmino(
+    message: QueryExchangeRatesResponse,
+  ): QueryExchangeRatesResponseAmino {
     const obj: any = {};
     if (message.exchangeRates) {
-      obj.exchange_rates = message.exchangeRates.map(e => e ? DecCoin.toAmino(e) : undefined);
+      obj.exchange_rates = message.exchangeRates.map(e =>
+        e ? DecCoin.toAmino(e) : undefined,
+      );
     } else {
       obj.exchange_rates = message.exchangeRates;
     }
     return obj;
   },
-  fromAminoMsg(object: QueryExchangeRatesResponseAminoMsg): QueryExchangeRatesResponse {
+  fromAminoMsg(
+    object: QueryExchangeRatesResponseAminoMsg,
+  ): QueryExchangeRatesResponse {
     return QueryExchangeRatesResponse.fromAmino(object.value);
   },
-  fromProtoMsg(message: QueryExchangeRatesResponseProtoMsg): QueryExchangeRatesResponse {
+  fromProtoMsg(
+    message: QueryExchangeRatesResponseProtoMsg,
+  ): QueryExchangeRatesResponse {
     return QueryExchangeRatesResponse.decode(message.value);
   },
   toProto(message: QueryExchangeRatesResponse): Uint8Array {
     return QueryExchangeRatesResponse.encode(message).finish();
   },
-  toProtoMsg(message: QueryExchangeRatesResponse): QueryExchangeRatesResponseProtoMsg {
+  toProtoMsg(
+    message: QueryExchangeRatesResponse,
+  ): QueryExchangeRatesResponseProtoMsg {
     return {
-      typeUrl: "/symphony.oracle.v1beta1.QueryExchangeRatesResponse",
-      value: QueryExchangeRatesResponse.encode(message).finish()
+      typeUrl: '/symphony.oracle.v1beta1.QueryExchangeRatesResponse',
+      value: QueryExchangeRatesResponse.encode(message).finish(),
     };
-  }
+  },
 };
-GlobalDecoderRegistry.register(QueryExchangeRatesResponse.typeUrl, QueryExchangeRatesResponse);
+GlobalDecoderRegistry.register(
+  QueryExchangeRatesResponse.typeUrl,
+  QueryExchangeRatesResponse,
+);
 function createBaseQueryTobinTaxRequest(): QueryTobinTaxRequest {
   return {
-    denom: ""
+    denom: '',
   };
 }
+/**
+ * QueryTobinTaxRequest is the request type for the Query/TobinTax RPC method.
+ * @name QueryTobinTaxRequest
+ * @package symphony.oracle.v1beta1
+ * @see proto type: symphony.oracle.v1beta1.QueryTobinTaxRequest
+ */
 export const QueryTobinTaxRequest = {
-  typeUrl: "/symphony.oracle.v1beta1.QueryTobinTaxRequest",
+  typeUrl: '/symphony.oracle.v1beta1.QueryTobinTaxRequest',
   is(o: any): o is QueryTobinTaxRequest {
-    return o && (o.$typeUrl === QueryTobinTaxRequest.typeUrl || typeof o.denom === "string");
+    return (
+      o &&
+      (o.$typeUrl === QueryTobinTaxRequest.typeUrl ||
+        typeof o.denom === 'string')
+    );
   },
   isSDK(o: any): o is QueryTobinTaxRequestSDKType {
-    return o && (o.$typeUrl === QueryTobinTaxRequest.typeUrl || typeof o.denom === "string");
+    return (
+      o &&
+      (o.$typeUrl === QueryTobinTaxRequest.typeUrl ||
+        typeof o.denom === 'string')
+    );
   },
   isAmino(o: any): o is QueryTobinTaxRequestAmino {
-    return o && (o.$typeUrl === QueryTobinTaxRequest.typeUrl || typeof o.denom === "string");
+    return (
+      o &&
+      (o.$typeUrl === QueryTobinTaxRequest.typeUrl ||
+        typeof o.denom === 'string')
+    );
   },
-  encode(message: QueryTobinTaxRequest, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
-    if (message.denom !== "") {
+  encode(
+    message: QueryTobinTaxRequest,
+    writer: BinaryWriter = BinaryWriter.create(),
+  ): BinaryWriter {
+    if (message.denom !== '') {
       writer.uint32(10).string(message.denom);
     }
     return writer;
   },
-  decode(input: BinaryReader | Uint8Array, length?: number): QueryTobinTaxRequest {
-    const reader = input instanceof BinaryReader ? input : new BinaryReader(input);
+  decode(
+    input: BinaryReader | Uint8Array,
+    length?: number,
+  ): QueryTobinTaxRequest {
+    const reader =
+      input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseQueryTobinTaxRequest();
     while (reader.pos < end) {
@@ -1088,7 +1585,7 @@ export const QueryTobinTaxRequest = {
   },
   fromPartial(object: Partial<QueryTobinTaxRequest>): QueryTobinTaxRequest {
     const message = createBaseQueryTobinTaxRequest();
-    message.denom = object.denom ?? "";
+    message.denom = object.denom ?? '';
     return message;
   },
   fromAmino(object: QueryTobinTaxRequestAmino): QueryTobinTaxRequest {
@@ -1100,7 +1597,7 @@ export const QueryTobinTaxRequest = {
   },
   toAmino(message: QueryTobinTaxRequest): QueryTobinTaxRequestAmino {
     const obj: any = {};
-    obj.denom = message.denom === "" ? undefined : message.denom;
+    obj.denom = message.denom === '' ? undefined : message.denom;
     return obj;
   },
   fromAminoMsg(object: QueryTobinTaxRequestAminoMsg): QueryTobinTaxRequest {
@@ -1114,43 +1611,77 @@ export const QueryTobinTaxRequest = {
   },
   toProtoMsg(message: QueryTobinTaxRequest): QueryTobinTaxRequestProtoMsg {
     return {
-      typeUrl: "/symphony.oracle.v1beta1.QueryTobinTaxRequest",
-      value: QueryTobinTaxRequest.encode(message).finish()
+      typeUrl: '/symphony.oracle.v1beta1.QueryTobinTaxRequest',
+      value: QueryTobinTaxRequest.encode(message).finish(),
     };
-  }
+  },
 };
-GlobalDecoderRegistry.register(QueryTobinTaxRequest.typeUrl, QueryTobinTaxRequest);
+GlobalDecoderRegistry.register(
+  QueryTobinTaxRequest.typeUrl,
+  QueryTobinTaxRequest,
+);
 function createBaseQueryTobinTaxResponse(): QueryTobinTaxResponse {
   return {
-    tobinTax: ""
+    tobinTax: '',
   };
 }
+/**
+ * QueryTobinTaxResponse is response type for the
+ * Query/TobinTax RPC method.
+ * @name QueryTobinTaxResponse
+ * @package symphony.oracle.v1beta1
+ * @see proto type: symphony.oracle.v1beta1.QueryTobinTaxResponse
+ */
 export const QueryTobinTaxResponse = {
-  typeUrl: "/symphony.oracle.v1beta1.QueryTobinTaxResponse",
+  typeUrl: '/symphony.oracle.v1beta1.QueryTobinTaxResponse',
   is(o: any): o is QueryTobinTaxResponse {
-    return o && (o.$typeUrl === QueryTobinTaxResponse.typeUrl || typeof o.tobinTax === "string");
+    return (
+      o &&
+      (o.$typeUrl === QueryTobinTaxResponse.typeUrl ||
+        typeof o.tobinTax === 'string')
+    );
   },
   isSDK(o: any): o is QueryTobinTaxResponseSDKType {
-    return o && (o.$typeUrl === QueryTobinTaxResponse.typeUrl || typeof o.tobin_tax === "string");
+    return (
+      o &&
+      (o.$typeUrl === QueryTobinTaxResponse.typeUrl ||
+        typeof o.tobin_tax === 'string')
+    );
   },
   isAmino(o: any): o is QueryTobinTaxResponseAmino {
-    return o && (o.$typeUrl === QueryTobinTaxResponse.typeUrl || typeof o.tobin_tax === "string");
+    return (
+      o &&
+      (o.$typeUrl === QueryTobinTaxResponse.typeUrl ||
+        typeof o.tobin_tax === 'string')
+    );
   },
-  encode(message: QueryTobinTaxResponse, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
-    if (message.tobinTax !== "") {
-      writer.uint32(10).string(Decimal.fromUserInput(message.tobinTax, 18).atomics);
+  encode(
+    message: QueryTobinTaxResponse,
+    writer: BinaryWriter = BinaryWriter.create(),
+  ): BinaryWriter {
+    if (message.tobinTax !== '') {
+      writer
+        .uint32(10)
+        .string(Decimal.fromUserInput(message.tobinTax, 18).atomics);
     }
     return writer;
   },
-  decode(input: BinaryReader | Uint8Array, length?: number): QueryTobinTaxResponse {
-    const reader = input instanceof BinaryReader ? input : new BinaryReader(input);
+  decode(
+    input: BinaryReader | Uint8Array,
+    length?: number,
+  ): QueryTobinTaxResponse {
+    const reader =
+      input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseQueryTobinTaxResponse();
     while (reader.pos < end) {
       const tag = reader.uint32();
       switch (tag >>> 3) {
         case 1:
-          message.tobinTax = Decimal.fromAtomics(reader.string(), 18).toString();
+          message.tobinTax = Decimal.fromAtomics(
+            reader.string(),
+            18,
+          ).toString();
           break;
         default:
           reader.skipType(tag & 7);
@@ -1161,7 +1692,7 @@ export const QueryTobinTaxResponse = {
   },
   fromPartial(object: Partial<QueryTobinTaxResponse>): QueryTobinTaxResponse {
     const message = createBaseQueryTobinTaxResponse();
-    message.tobinTax = object.tobinTax ?? "";
+    message.tobinTax = object.tobinTax ?? '';
     return message;
   },
   fromAmino(object: QueryTobinTaxResponseAmino): QueryTobinTaxResponse {
@@ -1173,7 +1704,7 @@ export const QueryTobinTaxResponse = {
   },
   toAmino(message: QueryTobinTaxResponse): QueryTobinTaxResponseAmino {
     const obj: any = {};
-    obj.tobin_tax = message.tobinTax === "" ? undefined : message.tobinTax;
+    obj.tobin_tax = message.tobinTax === '' ? undefined : message.tobinTax;
     return obj;
   },
   fromAminoMsg(object: QueryTobinTaxResponseAminoMsg): QueryTobinTaxResponse {
@@ -1187,17 +1718,27 @@ export const QueryTobinTaxResponse = {
   },
   toProtoMsg(message: QueryTobinTaxResponse): QueryTobinTaxResponseProtoMsg {
     return {
-      typeUrl: "/symphony.oracle.v1beta1.QueryTobinTaxResponse",
-      value: QueryTobinTaxResponse.encode(message).finish()
+      typeUrl: '/symphony.oracle.v1beta1.QueryTobinTaxResponse',
+      value: QueryTobinTaxResponse.encode(message).finish(),
     };
-  }
+  },
 };
-GlobalDecoderRegistry.register(QueryTobinTaxResponse.typeUrl, QueryTobinTaxResponse);
+GlobalDecoderRegistry.register(
+  QueryTobinTaxResponse.typeUrl,
+  QueryTobinTaxResponse,
+);
 function createBaseQueryTobinTaxesRequest(): QueryTobinTaxesRequest {
   return {};
 }
+/**
+ * QueryTobinTaxesRequest is the request type for the Query/TobinTaxes RPC
+ * method.
+ * @name QueryTobinTaxesRequest
+ * @package symphony.oracle.v1beta1
+ * @see proto type: symphony.oracle.v1beta1.QueryTobinTaxesRequest
+ */
 export const QueryTobinTaxesRequest = {
-  typeUrl: "/symphony.oracle.v1beta1.QueryTobinTaxesRequest",
+  typeUrl: '/symphony.oracle.v1beta1.QueryTobinTaxesRequest',
   is(o: any): o is QueryTobinTaxesRequest {
     return o && o.$typeUrl === QueryTobinTaxesRequest.typeUrl;
   },
@@ -1207,11 +1748,18 @@ export const QueryTobinTaxesRequest = {
   isAmino(o: any): o is QueryTobinTaxesRequestAmino {
     return o && o.$typeUrl === QueryTobinTaxesRequest.typeUrl;
   },
-  encode(_: QueryTobinTaxesRequest, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
+  encode(
+    _: QueryTobinTaxesRequest,
+    writer: BinaryWriter = BinaryWriter.create(),
+  ): BinaryWriter {
     return writer;
   },
-  decode(input: BinaryReader | Uint8Array, length?: number): QueryTobinTaxesRequest {
-    const reader = input instanceof BinaryReader ? input : new BinaryReader(input);
+  decode(
+    input: BinaryReader | Uint8Array,
+    length?: number,
+  ): QueryTobinTaxesRequest {
+    const reader =
+      input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseQueryTobinTaxesRequest();
     while (reader.pos < end) {
@@ -1239,7 +1787,9 @@ export const QueryTobinTaxesRequest = {
   fromAminoMsg(object: QueryTobinTaxesRequestAminoMsg): QueryTobinTaxesRequest {
     return QueryTobinTaxesRequest.fromAmino(object.value);
   },
-  fromProtoMsg(message: QueryTobinTaxesRequestProtoMsg): QueryTobinTaxesRequest {
+  fromProtoMsg(
+    message: QueryTobinTaxesRequestProtoMsg,
+  ): QueryTobinTaxesRequest {
     return QueryTobinTaxesRequest.decode(message.value);
   },
   toProto(message: QueryTobinTaxesRequest): Uint8Array {
@@ -1247,36 +1797,68 @@ export const QueryTobinTaxesRequest = {
   },
   toProtoMsg(message: QueryTobinTaxesRequest): QueryTobinTaxesRequestProtoMsg {
     return {
-      typeUrl: "/symphony.oracle.v1beta1.QueryTobinTaxesRequest",
-      value: QueryTobinTaxesRequest.encode(message).finish()
+      typeUrl: '/symphony.oracle.v1beta1.QueryTobinTaxesRequest',
+      value: QueryTobinTaxesRequest.encode(message).finish(),
     };
-  }
+  },
 };
-GlobalDecoderRegistry.register(QueryTobinTaxesRequest.typeUrl, QueryTobinTaxesRequest);
+GlobalDecoderRegistry.register(
+  QueryTobinTaxesRequest.typeUrl,
+  QueryTobinTaxesRequest,
+);
 function createBaseQueryTobinTaxesResponse(): QueryTobinTaxesResponse {
   return {
-    tobinTaxes: []
+    tobinTaxes: [],
   };
 }
+/**
+ * QueryTobinTaxesResponse is response type for the
+ * Query/TobinTaxes RPC method.
+ * @name QueryTobinTaxesResponse
+ * @package symphony.oracle.v1beta1
+ * @see proto type: symphony.oracle.v1beta1.QueryTobinTaxesResponse
+ */
 export const QueryTobinTaxesResponse = {
-  typeUrl: "/symphony.oracle.v1beta1.QueryTobinTaxesResponse",
+  typeUrl: '/symphony.oracle.v1beta1.QueryTobinTaxesResponse',
   is(o: any): o is QueryTobinTaxesResponse {
-    return o && (o.$typeUrl === QueryTobinTaxesResponse.typeUrl || Array.isArray(o.tobinTaxes) && (!o.tobinTaxes.length || Denom.is(o.tobinTaxes[0])));
+    return (
+      o &&
+      (o.$typeUrl === QueryTobinTaxesResponse.typeUrl ||
+        (Array.isArray(o.tobinTaxes) &&
+          (!o.tobinTaxes.length || Denom.is(o.tobinTaxes[0]))))
+    );
   },
   isSDK(o: any): o is QueryTobinTaxesResponseSDKType {
-    return o && (o.$typeUrl === QueryTobinTaxesResponse.typeUrl || Array.isArray(o.tobin_taxes) && (!o.tobin_taxes.length || Denom.isSDK(o.tobin_taxes[0])));
+    return (
+      o &&
+      (o.$typeUrl === QueryTobinTaxesResponse.typeUrl ||
+        (Array.isArray(o.tobin_taxes) &&
+          (!o.tobin_taxes.length || Denom.isSDK(o.tobin_taxes[0]))))
+    );
   },
   isAmino(o: any): o is QueryTobinTaxesResponseAmino {
-    return o && (o.$typeUrl === QueryTobinTaxesResponse.typeUrl || Array.isArray(o.tobin_taxes) && (!o.tobin_taxes.length || Denom.isAmino(o.tobin_taxes[0])));
+    return (
+      o &&
+      (o.$typeUrl === QueryTobinTaxesResponse.typeUrl ||
+        (Array.isArray(o.tobin_taxes) &&
+          (!o.tobin_taxes.length || Denom.isAmino(o.tobin_taxes[0]))))
+    );
   },
-  encode(message: QueryTobinTaxesResponse, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
+  encode(
+    message: QueryTobinTaxesResponse,
+    writer: BinaryWriter = BinaryWriter.create(),
+  ): BinaryWriter {
     for (const v of message.tobinTaxes) {
       Denom.encode(v!, writer.uint32(10).fork()).ldelim();
     }
     return writer;
   },
-  decode(input: BinaryReader | Uint8Array, length?: number): QueryTobinTaxesResponse {
-    const reader = input instanceof BinaryReader ? input : new BinaryReader(input);
+  decode(
+    input: BinaryReader | Uint8Array,
+    length?: number,
+  ): QueryTobinTaxesResponse {
+    const reader =
+      input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseQueryTobinTaxesResponse();
     while (reader.pos < end) {
@@ -1292,9 +1874,12 @@ export const QueryTobinTaxesResponse = {
     }
     return message;
   },
-  fromPartial(object: Partial<QueryTobinTaxesResponse>): QueryTobinTaxesResponse {
+  fromPartial(
+    object: Partial<QueryTobinTaxesResponse>,
+  ): QueryTobinTaxesResponse {
     const message = createBaseQueryTobinTaxesResponse();
-    message.tobinTaxes = object.tobinTaxes?.map(e => Denom.fromPartial(e)) || [];
+    message.tobinTaxes =
+      object.tobinTaxes?.map(e => Denom.fromPartial(e)) || [];
     return message;
   },
   fromAmino(object: QueryTobinTaxesResponseAmino): QueryTobinTaxesResponse {
@@ -1305,34 +1890,51 @@ export const QueryTobinTaxesResponse = {
   toAmino(message: QueryTobinTaxesResponse): QueryTobinTaxesResponseAmino {
     const obj: any = {};
     if (message.tobinTaxes) {
-      obj.tobin_taxes = message.tobinTaxes.map(e => e ? Denom.toAmino(e) : undefined);
+      obj.tobin_taxes = message.tobinTaxes.map(e =>
+        e ? Denom.toAmino(e) : undefined,
+      );
     } else {
       obj.tobin_taxes = message.tobinTaxes;
     }
     return obj;
   },
-  fromAminoMsg(object: QueryTobinTaxesResponseAminoMsg): QueryTobinTaxesResponse {
+  fromAminoMsg(
+    object: QueryTobinTaxesResponseAminoMsg,
+  ): QueryTobinTaxesResponse {
     return QueryTobinTaxesResponse.fromAmino(object.value);
   },
-  fromProtoMsg(message: QueryTobinTaxesResponseProtoMsg): QueryTobinTaxesResponse {
+  fromProtoMsg(
+    message: QueryTobinTaxesResponseProtoMsg,
+  ): QueryTobinTaxesResponse {
     return QueryTobinTaxesResponse.decode(message.value);
   },
   toProto(message: QueryTobinTaxesResponse): Uint8Array {
     return QueryTobinTaxesResponse.encode(message).finish();
   },
-  toProtoMsg(message: QueryTobinTaxesResponse): QueryTobinTaxesResponseProtoMsg {
+  toProtoMsg(
+    message: QueryTobinTaxesResponse,
+  ): QueryTobinTaxesResponseProtoMsg {
     return {
-      typeUrl: "/symphony.oracle.v1beta1.QueryTobinTaxesResponse",
-      value: QueryTobinTaxesResponse.encode(message).finish()
+      typeUrl: '/symphony.oracle.v1beta1.QueryTobinTaxesResponse',
+      value: QueryTobinTaxesResponse.encode(message).finish(),
     };
-  }
+  },
 };
-GlobalDecoderRegistry.register(QueryTobinTaxesResponse.typeUrl, QueryTobinTaxesResponse);
+GlobalDecoderRegistry.register(
+  QueryTobinTaxesResponse.typeUrl,
+  QueryTobinTaxesResponse,
+);
 function createBaseQueryActivesRequest(): QueryActivesRequest {
   return {};
 }
+/**
+ * QueryActivesRequest is the request type for the Query/Actives RPC method.
+ * @name QueryActivesRequest
+ * @package symphony.oracle.v1beta1
+ * @see proto type: symphony.oracle.v1beta1.QueryActivesRequest
+ */
 export const QueryActivesRequest = {
-  typeUrl: "/symphony.oracle.v1beta1.QueryActivesRequest",
+  typeUrl: '/symphony.oracle.v1beta1.QueryActivesRequest',
   is(o: any): o is QueryActivesRequest {
     return o && o.$typeUrl === QueryActivesRequest.typeUrl;
   },
@@ -1342,11 +1944,18 @@ export const QueryActivesRequest = {
   isAmino(o: any): o is QueryActivesRequestAmino {
     return o && o.$typeUrl === QueryActivesRequest.typeUrl;
   },
-  encode(_: QueryActivesRequest, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
+  encode(
+    _: QueryActivesRequest,
+    writer: BinaryWriter = BinaryWriter.create(),
+  ): BinaryWriter {
     return writer;
   },
-  decode(input: BinaryReader | Uint8Array, length?: number): QueryActivesRequest {
-    const reader = input instanceof BinaryReader ? input : new BinaryReader(input);
+  decode(
+    input: BinaryReader | Uint8Array,
+    length?: number,
+  ): QueryActivesRequest {
+    const reader =
+      input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseQueryActivesRequest();
     while (reader.pos < end) {
@@ -1382,36 +1991,68 @@ export const QueryActivesRequest = {
   },
   toProtoMsg(message: QueryActivesRequest): QueryActivesRequestProtoMsg {
     return {
-      typeUrl: "/symphony.oracle.v1beta1.QueryActivesRequest",
-      value: QueryActivesRequest.encode(message).finish()
+      typeUrl: '/symphony.oracle.v1beta1.QueryActivesRequest',
+      value: QueryActivesRequest.encode(message).finish(),
     };
-  }
+  },
 };
-GlobalDecoderRegistry.register(QueryActivesRequest.typeUrl, QueryActivesRequest);
+GlobalDecoderRegistry.register(
+  QueryActivesRequest.typeUrl,
+  QueryActivesRequest,
+);
 function createBaseQueryActivesResponse(): QueryActivesResponse {
   return {
-    actives: []
+    actives: [],
   };
 }
+/**
+ * QueryActivesResponse is response type for the
+ * Query/Actives RPC method.
+ * @name QueryActivesResponse
+ * @package symphony.oracle.v1beta1
+ * @see proto type: symphony.oracle.v1beta1.QueryActivesResponse
+ */
 export const QueryActivesResponse = {
-  typeUrl: "/symphony.oracle.v1beta1.QueryActivesResponse",
+  typeUrl: '/symphony.oracle.v1beta1.QueryActivesResponse',
   is(o: any): o is QueryActivesResponse {
-    return o && (o.$typeUrl === QueryActivesResponse.typeUrl || Array.isArray(o.actives) && (!o.actives.length || typeof o.actives[0] === "string"));
+    return (
+      o &&
+      (o.$typeUrl === QueryActivesResponse.typeUrl ||
+        (Array.isArray(o.actives) &&
+          (!o.actives.length || typeof o.actives[0] === 'string')))
+    );
   },
   isSDK(o: any): o is QueryActivesResponseSDKType {
-    return o && (o.$typeUrl === QueryActivesResponse.typeUrl || Array.isArray(o.actives) && (!o.actives.length || typeof o.actives[0] === "string"));
+    return (
+      o &&
+      (o.$typeUrl === QueryActivesResponse.typeUrl ||
+        (Array.isArray(o.actives) &&
+          (!o.actives.length || typeof o.actives[0] === 'string')))
+    );
   },
   isAmino(o: any): o is QueryActivesResponseAmino {
-    return o && (o.$typeUrl === QueryActivesResponse.typeUrl || Array.isArray(o.actives) && (!o.actives.length || typeof o.actives[0] === "string"));
+    return (
+      o &&
+      (o.$typeUrl === QueryActivesResponse.typeUrl ||
+        (Array.isArray(o.actives) &&
+          (!o.actives.length || typeof o.actives[0] === 'string')))
+    );
   },
-  encode(message: QueryActivesResponse, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
+  encode(
+    message: QueryActivesResponse,
+    writer: BinaryWriter = BinaryWriter.create(),
+  ): BinaryWriter {
     for (const v of message.actives) {
       writer.uint32(10).string(v!);
     }
     return writer;
   },
-  decode(input: BinaryReader | Uint8Array, length?: number): QueryActivesResponse {
-    const reader = input instanceof BinaryReader ? input : new BinaryReader(input);
+  decode(
+    input: BinaryReader | Uint8Array,
+    length?: number,
+  ): QueryActivesResponse {
+    const reader =
+      input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseQueryActivesResponse();
     while (reader.pos < end) {
@@ -1457,17 +2098,27 @@ export const QueryActivesResponse = {
   },
   toProtoMsg(message: QueryActivesResponse): QueryActivesResponseProtoMsg {
     return {
-      typeUrl: "/symphony.oracle.v1beta1.QueryActivesResponse",
-      value: QueryActivesResponse.encode(message).finish()
+      typeUrl: '/symphony.oracle.v1beta1.QueryActivesResponse',
+      value: QueryActivesResponse.encode(message).finish(),
     };
-  }
+  },
 };
-GlobalDecoderRegistry.register(QueryActivesResponse.typeUrl, QueryActivesResponse);
+GlobalDecoderRegistry.register(
+  QueryActivesResponse.typeUrl,
+  QueryActivesResponse,
+);
 function createBaseQueryVoteTargetsRequest(): QueryVoteTargetsRequest {
   return {};
 }
+/**
+ * QueryVoteTargetsRequest is the request type for the Query/VoteTargets RPC
+ * method.
+ * @name QueryVoteTargetsRequest
+ * @package symphony.oracle.v1beta1
+ * @see proto type: symphony.oracle.v1beta1.QueryVoteTargetsRequest
+ */
 export const QueryVoteTargetsRequest = {
-  typeUrl: "/symphony.oracle.v1beta1.QueryVoteTargetsRequest",
+  typeUrl: '/symphony.oracle.v1beta1.QueryVoteTargetsRequest',
   is(o: any): o is QueryVoteTargetsRequest {
     return o && o.$typeUrl === QueryVoteTargetsRequest.typeUrl;
   },
@@ -1477,11 +2128,18 @@ export const QueryVoteTargetsRequest = {
   isAmino(o: any): o is QueryVoteTargetsRequestAmino {
     return o && o.$typeUrl === QueryVoteTargetsRequest.typeUrl;
   },
-  encode(_: QueryVoteTargetsRequest, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
+  encode(
+    _: QueryVoteTargetsRequest,
+    writer: BinaryWriter = BinaryWriter.create(),
+  ): BinaryWriter {
     return writer;
   },
-  decode(input: BinaryReader | Uint8Array, length?: number): QueryVoteTargetsRequest {
-    const reader = input instanceof BinaryReader ? input : new BinaryReader(input);
+  decode(
+    input: BinaryReader | Uint8Array,
+    length?: number,
+  ): QueryVoteTargetsRequest {
+    const reader =
+      input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseQueryVoteTargetsRequest();
     while (reader.pos < end) {
@@ -1506,47 +2164,85 @@ export const QueryVoteTargetsRequest = {
     const obj: any = {};
     return obj;
   },
-  fromAminoMsg(object: QueryVoteTargetsRequestAminoMsg): QueryVoteTargetsRequest {
+  fromAminoMsg(
+    object: QueryVoteTargetsRequestAminoMsg,
+  ): QueryVoteTargetsRequest {
     return QueryVoteTargetsRequest.fromAmino(object.value);
   },
-  fromProtoMsg(message: QueryVoteTargetsRequestProtoMsg): QueryVoteTargetsRequest {
+  fromProtoMsg(
+    message: QueryVoteTargetsRequestProtoMsg,
+  ): QueryVoteTargetsRequest {
     return QueryVoteTargetsRequest.decode(message.value);
   },
   toProto(message: QueryVoteTargetsRequest): Uint8Array {
     return QueryVoteTargetsRequest.encode(message).finish();
   },
-  toProtoMsg(message: QueryVoteTargetsRequest): QueryVoteTargetsRequestProtoMsg {
+  toProtoMsg(
+    message: QueryVoteTargetsRequest,
+  ): QueryVoteTargetsRequestProtoMsg {
     return {
-      typeUrl: "/symphony.oracle.v1beta1.QueryVoteTargetsRequest",
-      value: QueryVoteTargetsRequest.encode(message).finish()
+      typeUrl: '/symphony.oracle.v1beta1.QueryVoteTargetsRequest',
+      value: QueryVoteTargetsRequest.encode(message).finish(),
     };
-  }
+  },
 };
-GlobalDecoderRegistry.register(QueryVoteTargetsRequest.typeUrl, QueryVoteTargetsRequest);
+GlobalDecoderRegistry.register(
+  QueryVoteTargetsRequest.typeUrl,
+  QueryVoteTargetsRequest,
+);
 function createBaseQueryVoteTargetsResponse(): QueryVoteTargetsResponse {
   return {
-    voteTargets: []
+    voteTargets: [],
   };
 }
+/**
+ * QueryVoteTargetsResponse is response type for the
+ * Query/VoteTargets RPC method.
+ * @name QueryVoteTargetsResponse
+ * @package symphony.oracle.v1beta1
+ * @see proto type: symphony.oracle.v1beta1.QueryVoteTargetsResponse
+ */
 export const QueryVoteTargetsResponse = {
-  typeUrl: "/symphony.oracle.v1beta1.QueryVoteTargetsResponse",
+  typeUrl: '/symphony.oracle.v1beta1.QueryVoteTargetsResponse',
   is(o: any): o is QueryVoteTargetsResponse {
-    return o && (o.$typeUrl === QueryVoteTargetsResponse.typeUrl || Array.isArray(o.voteTargets) && (!o.voteTargets.length || typeof o.voteTargets[0] === "string"));
+    return (
+      o &&
+      (o.$typeUrl === QueryVoteTargetsResponse.typeUrl ||
+        (Array.isArray(o.voteTargets) &&
+          (!o.voteTargets.length || typeof o.voteTargets[0] === 'string')))
+    );
   },
   isSDK(o: any): o is QueryVoteTargetsResponseSDKType {
-    return o && (o.$typeUrl === QueryVoteTargetsResponse.typeUrl || Array.isArray(o.vote_targets) && (!o.vote_targets.length || typeof o.vote_targets[0] === "string"));
+    return (
+      o &&
+      (o.$typeUrl === QueryVoteTargetsResponse.typeUrl ||
+        (Array.isArray(o.vote_targets) &&
+          (!o.vote_targets.length || typeof o.vote_targets[0] === 'string')))
+    );
   },
   isAmino(o: any): o is QueryVoteTargetsResponseAmino {
-    return o && (o.$typeUrl === QueryVoteTargetsResponse.typeUrl || Array.isArray(o.vote_targets) && (!o.vote_targets.length || typeof o.vote_targets[0] === "string"));
+    return (
+      o &&
+      (o.$typeUrl === QueryVoteTargetsResponse.typeUrl ||
+        (Array.isArray(o.vote_targets) &&
+          (!o.vote_targets.length || typeof o.vote_targets[0] === 'string')))
+    );
   },
-  encode(message: QueryVoteTargetsResponse, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
+  encode(
+    message: QueryVoteTargetsResponse,
+    writer: BinaryWriter = BinaryWriter.create(),
+  ): BinaryWriter {
     for (const v of message.voteTargets) {
       writer.uint32(10).string(v!);
     }
     return writer;
   },
-  decode(input: BinaryReader | Uint8Array, length?: number): QueryVoteTargetsResponse {
-    const reader = input instanceof BinaryReader ? input : new BinaryReader(input);
+  decode(
+    input: BinaryReader | Uint8Array,
+    length?: number,
+  ): QueryVoteTargetsResponse {
+    const reader =
+      input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseQueryVoteTargetsResponse();
     while (reader.pos < end) {
@@ -1562,7 +2258,9 @@ export const QueryVoteTargetsResponse = {
     }
     return message;
   },
-  fromPartial(object: Partial<QueryVoteTargetsResponse>): QueryVoteTargetsResponse {
+  fromPartial(
+    object: Partial<QueryVoteTargetsResponse>,
+  ): QueryVoteTargetsResponse {
     const message = createBaseQueryVoteTargetsResponse();
     message.voteTargets = object.voteTargets?.map(e => e) || [];
     return message;
@@ -1581,47 +2279,82 @@ export const QueryVoteTargetsResponse = {
     }
     return obj;
   },
-  fromAminoMsg(object: QueryVoteTargetsResponseAminoMsg): QueryVoteTargetsResponse {
+  fromAminoMsg(
+    object: QueryVoteTargetsResponseAminoMsg,
+  ): QueryVoteTargetsResponse {
     return QueryVoteTargetsResponse.fromAmino(object.value);
   },
-  fromProtoMsg(message: QueryVoteTargetsResponseProtoMsg): QueryVoteTargetsResponse {
+  fromProtoMsg(
+    message: QueryVoteTargetsResponseProtoMsg,
+  ): QueryVoteTargetsResponse {
     return QueryVoteTargetsResponse.decode(message.value);
   },
   toProto(message: QueryVoteTargetsResponse): Uint8Array {
     return QueryVoteTargetsResponse.encode(message).finish();
   },
-  toProtoMsg(message: QueryVoteTargetsResponse): QueryVoteTargetsResponseProtoMsg {
+  toProtoMsg(
+    message: QueryVoteTargetsResponse,
+  ): QueryVoteTargetsResponseProtoMsg {
     return {
-      typeUrl: "/symphony.oracle.v1beta1.QueryVoteTargetsResponse",
-      value: QueryVoteTargetsResponse.encode(message).finish()
+      typeUrl: '/symphony.oracle.v1beta1.QueryVoteTargetsResponse',
+      value: QueryVoteTargetsResponse.encode(message).finish(),
     };
-  }
+  },
 };
-GlobalDecoderRegistry.register(QueryVoteTargetsResponse.typeUrl, QueryVoteTargetsResponse);
+GlobalDecoderRegistry.register(
+  QueryVoteTargetsResponse.typeUrl,
+  QueryVoteTargetsResponse,
+);
 function createBaseQueryFeederDelegationRequest(): QueryFeederDelegationRequest {
   return {
-    validatorAddr: ""
+    validatorAddr: '',
   };
 }
+/**
+ * QueryFeederDelegationRequest is the request type for the
+ * Query/FeederDelegation RPC method.
+ * @name QueryFeederDelegationRequest
+ * @package symphony.oracle.v1beta1
+ * @see proto type: symphony.oracle.v1beta1.QueryFeederDelegationRequest
+ */
 export const QueryFeederDelegationRequest = {
-  typeUrl: "/symphony.oracle.v1beta1.QueryFeederDelegationRequest",
+  typeUrl: '/symphony.oracle.v1beta1.QueryFeederDelegationRequest',
   is(o: any): o is QueryFeederDelegationRequest {
-    return o && (o.$typeUrl === QueryFeederDelegationRequest.typeUrl || typeof o.validatorAddr === "string");
+    return (
+      o &&
+      (o.$typeUrl === QueryFeederDelegationRequest.typeUrl ||
+        typeof o.validatorAddr === 'string')
+    );
   },
   isSDK(o: any): o is QueryFeederDelegationRequestSDKType {
-    return o && (o.$typeUrl === QueryFeederDelegationRequest.typeUrl || typeof o.validator_addr === "string");
+    return (
+      o &&
+      (o.$typeUrl === QueryFeederDelegationRequest.typeUrl ||
+        typeof o.validator_addr === 'string')
+    );
   },
   isAmino(o: any): o is QueryFeederDelegationRequestAmino {
-    return o && (o.$typeUrl === QueryFeederDelegationRequest.typeUrl || typeof o.validator_addr === "string");
+    return (
+      o &&
+      (o.$typeUrl === QueryFeederDelegationRequest.typeUrl ||
+        typeof o.validator_addr === 'string')
+    );
   },
-  encode(message: QueryFeederDelegationRequest, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
-    if (message.validatorAddr !== "") {
+  encode(
+    message: QueryFeederDelegationRequest,
+    writer: BinaryWriter = BinaryWriter.create(),
+  ): BinaryWriter {
+    if (message.validatorAddr !== '') {
       writer.uint32(10).string(message.validatorAddr);
     }
     return writer;
   },
-  decode(input: BinaryReader | Uint8Array, length?: number): QueryFeederDelegationRequest {
-    const reader = input instanceof BinaryReader ? input : new BinaryReader(input);
+  decode(
+    input: BinaryReader | Uint8Array,
+    length?: number,
+  ): QueryFeederDelegationRequest {
+    const reader =
+      input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseQueryFeederDelegationRequest();
     while (reader.pos < end) {
@@ -1637,64 +2370,106 @@ export const QueryFeederDelegationRequest = {
     }
     return message;
   },
-  fromPartial(object: Partial<QueryFeederDelegationRequest>): QueryFeederDelegationRequest {
+  fromPartial(
+    object: Partial<QueryFeederDelegationRequest>,
+  ): QueryFeederDelegationRequest {
     const message = createBaseQueryFeederDelegationRequest();
-    message.validatorAddr = object.validatorAddr ?? "";
+    message.validatorAddr = object.validatorAddr ?? '';
     return message;
   },
-  fromAmino(object: QueryFeederDelegationRequestAmino): QueryFeederDelegationRequest {
+  fromAmino(
+    object: QueryFeederDelegationRequestAmino,
+  ): QueryFeederDelegationRequest {
     const message = createBaseQueryFeederDelegationRequest();
     if (object.validator_addr !== undefined && object.validator_addr !== null) {
       message.validatorAddr = object.validator_addr;
     }
     return message;
   },
-  toAmino(message: QueryFeederDelegationRequest): QueryFeederDelegationRequestAmino {
+  toAmino(
+    message: QueryFeederDelegationRequest,
+  ): QueryFeederDelegationRequestAmino {
     const obj: any = {};
-    obj.validator_addr = message.validatorAddr === "" ? undefined : message.validatorAddr;
+    obj.validator_addr =
+      message.validatorAddr === '' ? undefined : message.validatorAddr;
     return obj;
   },
-  fromAminoMsg(object: QueryFeederDelegationRequestAminoMsg): QueryFeederDelegationRequest {
+  fromAminoMsg(
+    object: QueryFeederDelegationRequestAminoMsg,
+  ): QueryFeederDelegationRequest {
     return QueryFeederDelegationRequest.fromAmino(object.value);
   },
-  fromProtoMsg(message: QueryFeederDelegationRequestProtoMsg): QueryFeederDelegationRequest {
+  fromProtoMsg(
+    message: QueryFeederDelegationRequestProtoMsg,
+  ): QueryFeederDelegationRequest {
     return QueryFeederDelegationRequest.decode(message.value);
   },
   toProto(message: QueryFeederDelegationRequest): Uint8Array {
     return QueryFeederDelegationRequest.encode(message).finish();
   },
-  toProtoMsg(message: QueryFeederDelegationRequest): QueryFeederDelegationRequestProtoMsg {
+  toProtoMsg(
+    message: QueryFeederDelegationRequest,
+  ): QueryFeederDelegationRequestProtoMsg {
     return {
-      typeUrl: "/symphony.oracle.v1beta1.QueryFeederDelegationRequest",
-      value: QueryFeederDelegationRequest.encode(message).finish()
+      typeUrl: '/symphony.oracle.v1beta1.QueryFeederDelegationRequest',
+      value: QueryFeederDelegationRequest.encode(message).finish(),
     };
-  }
+  },
 };
-GlobalDecoderRegistry.register(QueryFeederDelegationRequest.typeUrl, QueryFeederDelegationRequest);
+GlobalDecoderRegistry.register(
+  QueryFeederDelegationRequest.typeUrl,
+  QueryFeederDelegationRequest,
+);
 function createBaseQueryFeederDelegationResponse(): QueryFeederDelegationResponse {
   return {
-    feederAddr: ""
+    feederAddr: '',
   };
 }
+/**
+ * QueryFeederDelegationResponse is response type for the
+ * Query/FeederDelegation RPC method.
+ * @name QueryFeederDelegationResponse
+ * @package symphony.oracle.v1beta1
+ * @see proto type: symphony.oracle.v1beta1.QueryFeederDelegationResponse
+ */
 export const QueryFeederDelegationResponse = {
-  typeUrl: "/symphony.oracle.v1beta1.QueryFeederDelegationResponse",
+  typeUrl: '/symphony.oracle.v1beta1.QueryFeederDelegationResponse',
   is(o: any): o is QueryFeederDelegationResponse {
-    return o && (o.$typeUrl === QueryFeederDelegationResponse.typeUrl || typeof o.feederAddr === "string");
+    return (
+      o &&
+      (o.$typeUrl === QueryFeederDelegationResponse.typeUrl ||
+        typeof o.feederAddr === 'string')
+    );
   },
   isSDK(o: any): o is QueryFeederDelegationResponseSDKType {
-    return o && (o.$typeUrl === QueryFeederDelegationResponse.typeUrl || typeof o.feeder_addr === "string");
+    return (
+      o &&
+      (o.$typeUrl === QueryFeederDelegationResponse.typeUrl ||
+        typeof o.feeder_addr === 'string')
+    );
   },
   isAmino(o: any): o is QueryFeederDelegationResponseAmino {
-    return o && (o.$typeUrl === QueryFeederDelegationResponse.typeUrl || typeof o.feeder_addr === "string");
+    return (
+      o &&
+      (o.$typeUrl === QueryFeederDelegationResponse.typeUrl ||
+        typeof o.feeder_addr === 'string')
+    );
   },
-  encode(message: QueryFeederDelegationResponse, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
-    if (message.feederAddr !== "") {
+  encode(
+    message: QueryFeederDelegationResponse,
+    writer: BinaryWriter = BinaryWriter.create(),
+  ): BinaryWriter {
+    if (message.feederAddr !== '') {
       writer.uint32(10).string(message.feederAddr);
     }
     return writer;
   },
-  decode(input: BinaryReader | Uint8Array, length?: number): QueryFeederDelegationResponse {
-    const reader = input instanceof BinaryReader ? input : new BinaryReader(input);
+  decode(
+    input: BinaryReader | Uint8Array,
+    length?: number,
+  ): QueryFeederDelegationResponse {
+    const reader =
+      input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseQueryFeederDelegationResponse();
     while (reader.pos < end) {
@@ -1710,64 +2485,106 @@ export const QueryFeederDelegationResponse = {
     }
     return message;
   },
-  fromPartial(object: Partial<QueryFeederDelegationResponse>): QueryFeederDelegationResponse {
+  fromPartial(
+    object: Partial<QueryFeederDelegationResponse>,
+  ): QueryFeederDelegationResponse {
     const message = createBaseQueryFeederDelegationResponse();
-    message.feederAddr = object.feederAddr ?? "";
+    message.feederAddr = object.feederAddr ?? '';
     return message;
   },
-  fromAmino(object: QueryFeederDelegationResponseAmino): QueryFeederDelegationResponse {
+  fromAmino(
+    object: QueryFeederDelegationResponseAmino,
+  ): QueryFeederDelegationResponse {
     const message = createBaseQueryFeederDelegationResponse();
     if (object.feeder_addr !== undefined && object.feeder_addr !== null) {
       message.feederAddr = object.feeder_addr;
     }
     return message;
   },
-  toAmino(message: QueryFeederDelegationResponse): QueryFeederDelegationResponseAmino {
+  toAmino(
+    message: QueryFeederDelegationResponse,
+  ): QueryFeederDelegationResponseAmino {
     const obj: any = {};
-    obj.feeder_addr = message.feederAddr === "" ? undefined : message.feederAddr;
+    obj.feeder_addr =
+      message.feederAddr === '' ? undefined : message.feederAddr;
     return obj;
   },
-  fromAminoMsg(object: QueryFeederDelegationResponseAminoMsg): QueryFeederDelegationResponse {
+  fromAminoMsg(
+    object: QueryFeederDelegationResponseAminoMsg,
+  ): QueryFeederDelegationResponse {
     return QueryFeederDelegationResponse.fromAmino(object.value);
   },
-  fromProtoMsg(message: QueryFeederDelegationResponseProtoMsg): QueryFeederDelegationResponse {
+  fromProtoMsg(
+    message: QueryFeederDelegationResponseProtoMsg,
+  ): QueryFeederDelegationResponse {
     return QueryFeederDelegationResponse.decode(message.value);
   },
   toProto(message: QueryFeederDelegationResponse): Uint8Array {
     return QueryFeederDelegationResponse.encode(message).finish();
   },
-  toProtoMsg(message: QueryFeederDelegationResponse): QueryFeederDelegationResponseProtoMsg {
+  toProtoMsg(
+    message: QueryFeederDelegationResponse,
+  ): QueryFeederDelegationResponseProtoMsg {
     return {
-      typeUrl: "/symphony.oracle.v1beta1.QueryFeederDelegationResponse",
-      value: QueryFeederDelegationResponse.encode(message).finish()
+      typeUrl: '/symphony.oracle.v1beta1.QueryFeederDelegationResponse',
+      value: QueryFeederDelegationResponse.encode(message).finish(),
     };
-  }
+  },
 };
-GlobalDecoderRegistry.register(QueryFeederDelegationResponse.typeUrl, QueryFeederDelegationResponse);
+GlobalDecoderRegistry.register(
+  QueryFeederDelegationResponse.typeUrl,
+  QueryFeederDelegationResponse,
+);
 function createBaseQueryMissCounterRequest(): QueryMissCounterRequest {
   return {
-    validatorAddr: ""
+    validatorAddr: '',
   };
 }
+/**
+ * QueryMissCounterRequest is the request type for the Query/MissCounter RPC
+ * method.
+ * @name QueryMissCounterRequest
+ * @package symphony.oracle.v1beta1
+ * @see proto type: symphony.oracle.v1beta1.QueryMissCounterRequest
+ */
 export const QueryMissCounterRequest = {
-  typeUrl: "/symphony.oracle.v1beta1.QueryMissCounterRequest",
+  typeUrl: '/symphony.oracle.v1beta1.QueryMissCounterRequest',
   is(o: any): o is QueryMissCounterRequest {
-    return o && (o.$typeUrl === QueryMissCounterRequest.typeUrl || typeof o.validatorAddr === "string");
+    return (
+      o &&
+      (o.$typeUrl === QueryMissCounterRequest.typeUrl ||
+        typeof o.validatorAddr === 'string')
+    );
   },
   isSDK(o: any): o is QueryMissCounterRequestSDKType {
-    return o && (o.$typeUrl === QueryMissCounterRequest.typeUrl || typeof o.validator_addr === "string");
+    return (
+      o &&
+      (o.$typeUrl === QueryMissCounterRequest.typeUrl ||
+        typeof o.validator_addr === 'string')
+    );
   },
   isAmino(o: any): o is QueryMissCounterRequestAmino {
-    return o && (o.$typeUrl === QueryMissCounterRequest.typeUrl || typeof o.validator_addr === "string");
+    return (
+      o &&
+      (o.$typeUrl === QueryMissCounterRequest.typeUrl ||
+        typeof o.validator_addr === 'string')
+    );
   },
-  encode(message: QueryMissCounterRequest, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
-    if (message.validatorAddr !== "") {
+  encode(
+    message: QueryMissCounterRequest,
+    writer: BinaryWriter = BinaryWriter.create(),
+  ): BinaryWriter {
+    if (message.validatorAddr !== '') {
       writer.uint32(10).string(message.validatorAddr);
     }
     return writer;
   },
-  decode(input: BinaryReader | Uint8Array, length?: number): QueryMissCounterRequest {
-    const reader = input instanceof BinaryReader ? input : new BinaryReader(input);
+  decode(
+    input: BinaryReader | Uint8Array,
+    length?: number,
+  ): QueryMissCounterRequest {
+    const reader =
+      input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseQueryMissCounterRequest();
     while (reader.pos < end) {
@@ -1783,9 +2600,11 @@ export const QueryMissCounterRequest = {
     }
     return message;
   },
-  fromPartial(object: Partial<QueryMissCounterRequest>): QueryMissCounterRequest {
+  fromPartial(
+    object: Partial<QueryMissCounterRequest>,
+  ): QueryMissCounterRequest {
     const message = createBaseQueryMissCounterRequest();
-    message.validatorAddr = object.validatorAddr ?? "";
+    message.validatorAddr = object.validatorAddr ?? '';
     return message;
   },
   fromAmino(object: QueryMissCounterRequestAmino): QueryMissCounterRequest {
@@ -1797,50 +2616,86 @@ export const QueryMissCounterRequest = {
   },
   toAmino(message: QueryMissCounterRequest): QueryMissCounterRequestAmino {
     const obj: any = {};
-    obj.validator_addr = message.validatorAddr === "" ? undefined : message.validatorAddr;
+    obj.validator_addr =
+      message.validatorAddr === '' ? undefined : message.validatorAddr;
     return obj;
   },
-  fromAminoMsg(object: QueryMissCounterRequestAminoMsg): QueryMissCounterRequest {
+  fromAminoMsg(
+    object: QueryMissCounterRequestAminoMsg,
+  ): QueryMissCounterRequest {
     return QueryMissCounterRequest.fromAmino(object.value);
   },
-  fromProtoMsg(message: QueryMissCounterRequestProtoMsg): QueryMissCounterRequest {
+  fromProtoMsg(
+    message: QueryMissCounterRequestProtoMsg,
+  ): QueryMissCounterRequest {
     return QueryMissCounterRequest.decode(message.value);
   },
   toProto(message: QueryMissCounterRequest): Uint8Array {
     return QueryMissCounterRequest.encode(message).finish();
   },
-  toProtoMsg(message: QueryMissCounterRequest): QueryMissCounterRequestProtoMsg {
+  toProtoMsg(
+    message: QueryMissCounterRequest,
+  ): QueryMissCounterRequestProtoMsg {
     return {
-      typeUrl: "/symphony.oracle.v1beta1.QueryMissCounterRequest",
-      value: QueryMissCounterRequest.encode(message).finish()
+      typeUrl: '/symphony.oracle.v1beta1.QueryMissCounterRequest',
+      value: QueryMissCounterRequest.encode(message).finish(),
     };
-  }
+  },
 };
-GlobalDecoderRegistry.register(QueryMissCounterRequest.typeUrl, QueryMissCounterRequest);
+GlobalDecoderRegistry.register(
+  QueryMissCounterRequest.typeUrl,
+  QueryMissCounterRequest,
+);
 function createBaseQueryMissCounterResponse(): QueryMissCounterResponse {
   return {
-    missCounter: BigInt(0)
+    missCounter: BigInt(0),
   };
 }
+/**
+ * QueryMissCounterResponse is response type for the
+ * Query/MissCounter RPC method.
+ * @name QueryMissCounterResponse
+ * @package symphony.oracle.v1beta1
+ * @see proto type: symphony.oracle.v1beta1.QueryMissCounterResponse
+ */
 export const QueryMissCounterResponse = {
-  typeUrl: "/symphony.oracle.v1beta1.QueryMissCounterResponse",
+  typeUrl: '/symphony.oracle.v1beta1.QueryMissCounterResponse',
   is(o: any): o is QueryMissCounterResponse {
-    return o && (o.$typeUrl === QueryMissCounterResponse.typeUrl || typeof o.missCounter === "bigint");
+    return (
+      o &&
+      (o.$typeUrl === QueryMissCounterResponse.typeUrl ||
+        typeof o.missCounter === 'bigint')
+    );
   },
   isSDK(o: any): o is QueryMissCounterResponseSDKType {
-    return o && (o.$typeUrl === QueryMissCounterResponse.typeUrl || typeof o.miss_counter === "bigint");
+    return (
+      o &&
+      (o.$typeUrl === QueryMissCounterResponse.typeUrl ||
+        typeof o.miss_counter === 'bigint')
+    );
   },
   isAmino(o: any): o is QueryMissCounterResponseAmino {
-    return o && (o.$typeUrl === QueryMissCounterResponse.typeUrl || typeof o.miss_counter === "bigint");
+    return (
+      o &&
+      (o.$typeUrl === QueryMissCounterResponse.typeUrl ||
+        typeof o.miss_counter === 'bigint')
+    );
   },
-  encode(message: QueryMissCounterResponse, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
+  encode(
+    message: QueryMissCounterResponse,
+    writer: BinaryWriter = BinaryWriter.create(),
+  ): BinaryWriter {
     if (message.missCounter !== BigInt(0)) {
       writer.uint32(8).uint64(message.missCounter);
     }
     return writer;
   },
-  decode(input: BinaryReader | Uint8Array, length?: number): QueryMissCounterResponse {
-    const reader = input instanceof BinaryReader ? input : new BinaryReader(input);
+  decode(
+    input: BinaryReader | Uint8Array,
+    length?: number,
+  ): QueryMissCounterResponse {
+    const reader =
+      input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseQueryMissCounterResponse();
     while (reader.pos < end) {
@@ -1856,9 +2711,14 @@ export const QueryMissCounterResponse = {
     }
     return message;
   },
-  fromPartial(object: Partial<QueryMissCounterResponse>): QueryMissCounterResponse {
+  fromPartial(
+    object: Partial<QueryMissCounterResponse>,
+  ): QueryMissCounterResponse {
     const message = createBaseQueryMissCounterResponse();
-    message.missCounter = object.missCounter !== undefined && object.missCounter !== null ? BigInt(object.missCounter.toString()) : BigInt(0);
+    message.missCounter =
+      object.missCounter !== undefined && object.missCounter !== null
+        ? BigInt(object.missCounter.toString())
+        : BigInt(0);
     return message;
   },
   fromAmino(object: QueryMissCounterResponseAmino): QueryMissCounterResponse {
@@ -1870,50 +2730,88 @@ export const QueryMissCounterResponse = {
   },
   toAmino(message: QueryMissCounterResponse): QueryMissCounterResponseAmino {
     const obj: any = {};
-    obj.miss_counter = message.missCounter !== BigInt(0) ? message.missCounter?.toString() : undefined;
+    obj.miss_counter =
+      message.missCounter !== BigInt(0)
+        ? message.missCounter?.toString()
+        : undefined;
     return obj;
   },
-  fromAminoMsg(object: QueryMissCounterResponseAminoMsg): QueryMissCounterResponse {
+  fromAminoMsg(
+    object: QueryMissCounterResponseAminoMsg,
+  ): QueryMissCounterResponse {
     return QueryMissCounterResponse.fromAmino(object.value);
   },
-  fromProtoMsg(message: QueryMissCounterResponseProtoMsg): QueryMissCounterResponse {
+  fromProtoMsg(
+    message: QueryMissCounterResponseProtoMsg,
+  ): QueryMissCounterResponse {
     return QueryMissCounterResponse.decode(message.value);
   },
   toProto(message: QueryMissCounterResponse): Uint8Array {
     return QueryMissCounterResponse.encode(message).finish();
   },
-  toProtoMsg(message: QueryMissCounterResponse): QueryMissCounterResponseProtoMsg {
+  toProtoMsg(
+    message: QueryMissCounterResponse,
+  ): QueryMissCounterResponseProtoMsg {
     return {
-      typeUrl: "/symphony.oracle.v1beta1.QueryMissCounterResponse",
-      value: QueryMissCounterResponse.encode(message).finish()
+      typeUrl: '/symphony.oracle.v1beta1.QueryMissCounterResponse',
+      value: QueryMissCounterResponse.encode(message).finish(),
     };
-  }
+  },
 };
-GlobalDecoderRegistry.register(QueryMissCounterResponse.typeUrl, QueryMissCounterResponse);
+GlobalDecoderRegistry.register(
+  QueryMissCounterResponse.typeUrl,
+  QueryMissCounterResponse,
+);
 function createBaseQueryAggregatePrevoteRequest(): QueryAggregatePrevoteRequest {
   return {
-    validatorAddr: ""
+    validatorAddr: '',
   };
 }
+/**
+ * QueryAggregatePrevoteRequest is the request type for the
+ * Query/AggregatePrevote RPC method.
+ * @name QueryAggregatePrevoteRequest
+ * @package symphony.oracle.v1beta1
+ * @see proto type: symphony.oracle.v1beta1.QueryAggregatePrevoteRequest
+ */
 export const QueryAggregatePrevoteRequest = {
-  typeUrl: "/symphony.oracle.v1beta1.QueryAggregatePrevoteRequest",
+  typeUrl: '/symphony.oracle.v1beta1.QueryAggregatePrevoteRequest',
   is(o: any): o is QueryAggregatePrevoteRequest {
-    return o && (o.$typeUrl === QueryAggregatePrevoteRequest.typeUrl || typeof o.validatorAddr === "string");
+    return (
+      o &&
+      (o.$typeUrl === QueryAggregatePrevoteRequest.typeUrl ||
+        typeof o.validatorAddr === 'string')
+    );
   },
   isSDK(o: any): o is QueryAggregatePrevoteRequestSDKType {
-    return o && (o.$typeUrl === QueryAggregatePrevoteRequest.typeUrl || typeof o.validator_addr === "string");
+    return (
+      o &&
+      (o.$typeUrl === QueryAggregatePrevoteRequest.typeUrl ||
+        typeof o.validator_addr === 'string')
+    );
   },
   isAmino(o: any): o is QueryAggregatePrevoteRequestAmino {
-    return o && (o.$typeUrl === QueryAggregatePrevoteRequest.typeUrl || typeof o.validator_addr === "string");
+    return (
+      o &&
+      (o.$typeUrl === QueryAggregatePrevoteRequest.typeUrl ||
+        typeof o.validator_addr === 'string')
+    );
   },
-  encode(message: QueryAggregatePrevoteRequest, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
-    if (message.validatorAddr !== "") {
+  encode(
+    message: QueryAggregatePrevoteRequest,
+    writer: BinaryWriter = BinaryWriter.create(),
+  ): BinaryWriter {
+    if (message.validatorAddr !== '') {
       writer.uint32(10).string(message.validatorAddr);
     }
     return writer;
   },
-  decode(input: BinaryReader | Uint8Array, length?: number): QueryAggregatePrevoteRequest {
-    const reader = input instanceof BinaryReader ? input : new BinaryReader(input);
+  decode(
+    input: BinaryReader | Uint8Array,
+    length?: number,
+  ): QueryAggregatePrevoteRequest {
+    const reader =
+      input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseQueryAggregatePrevoteRequest();
     while (reader.pos < end) {
@@ -1929,71 +2827,119 @@ export const QueryAggregatePrevoteRequest = {
     }
     return message;
   },
-  fromPartial(object: Partial<QueryAggregatePrevoteRequest>): QueryAggregatePrevoteRequest {
+  fromPartial(
+    object: Partial<QueryAggregatePrevoteRequest>,
+  ): QueryAggregatePrevoteRequest {
     const message = createBaseQueryAggregatePrevoteRequest();
-    message.validatorAddr = object.validatorAddr ?? "";
+    message.validatorAddr = object.validatorAddr ?? '';
     return message;
   },
-  fromAmino(object: QueryAggregatePrevoteRequestAmino): QueryAggregatePrevoteRequest {
+  fromAmino(
+    object: QueryAggregatePrevoteRequestAmino,
+  ): QueryAggregatePrevoteRequest {
     const message = createBaseQueryAggregatePrevoteRequest();
     if (object.validator_addr !== undefined && object.validator_addr !== null) {
       message.validatorAddr = object.validator_addr;
     }
     return message;
   },
-  toAmino(message: QueryAggregatePrevoteRequest): QueryAggregatePrevoteRequestAmino {
+  toAmino(
+    message: QueryAggregatePrevoteRequest,
+  ): QueryAggregatePrevoteRequestAmino {
     const obj: any = {};
-    obj.validator_addr = message.validatorAddr === "" ? undefined : message.validatorAddr;
+    obj.validator_addr =
+      message.validatorAddr === '' ? undefined : message.validatorAddr;
     return obj;
   },
-  fromAminoMsg(object: QueryAggregatePrevoteRequestAminoMsg): QueryAggregatePrevoteRequest {
+  fromAminoMsg(
+    object: QueryAggregatePrevoteRequestAminoMsg,
+  ): QueryAggregatePrevoteRequest {
     return QueryAggregatePrevoteRequest.fromAmino(object.value);
   },
-  fromProtoMsg(message: QueryAggregatePrevoteRequestProtoMsg): QueryAggregatePrevoteRequest {
+  fromProtoMsg(
+    message: QueryAggregatePrevoteRequestProtoMsg,
+  ): QueryAggregatePrevoteRequest {
     return QueryAggregatePrevoteRequest.decode(message.value);
   },
   toProto(message: QueryAggregatePrevoteRequest): Uint8Array {
     return QueryAggregatePrevoteRequest.encode(message).finish();
   },
-  toProtoMsg(message: QueryAggregatePrevoteRequest): QueryAggregatePrevoteRequestProtoMsg {
+  toProtoMsg(
+    message: QueryAggregatePrevoteRequest,
+  ): QueryAggregatePrevoteRequestProtoMsg {
     return {
-      typeUrl: "/symphony.oracle.v1beta1.QueryAggregatePrevoteRequest",
-      value: QueryAggregatePrevoteRequest.encode(message).finish()
+      typeUrl: '/symphony.oracle.v1beta1.QueryAggregatePrevoteRequest',
+      value: QueryAggregatePrevoteRequest.encode(message).finish(),
     };
-  }
+  },
 };
-GlobalDecoderRegistry.register(QueryAggregatePrevoteRequest.typeUrl, QueryAggregatePrevoteRequest);
+GlobalDecoderRegistry.register(
+  QueryAggregatePrevoteRequest.typeUrl,
+  QueryAggregatePrevoteRequest,
+);
 function createBaseQueryAggregatePrevoteResponse(): QueryAggregatePrevoteResponse {
   return {
-    aggregatePrevote: AggregateExchangeRatePrevote.fromPartial({})
+    aggregatePrevote: AggregateExchangeRatePrevote.fromPartial({}),
   };
 }
+/**
+ * QueryAggregatePrevoteResponse is response type for the
+ * Query/AggregatePrevote RPC method.
+ * @name QueryAggregatePrevoteResponse
+ * @package symphony.oracle.v1beta1
+ * @see proto type: symphony.oracle.v1beta1.QueryAggregatePrevoteResponse
+ */
 export const QueryAggregatePrevoteResponse = {
-  typeUrl: "/symphony.oracle.v1beta1.QueryAggregatePrevoteResponse",
+  typeUrl: '/symphony.oracle.v1beta1.QueryAggregatePrevoteResponse',
   is(o: any): o is QueryAggregatePrevoteResponse {
-    return o && (o.$typeUrl === QueryAggregatePrevoteResponse.typeUrl || AggregateExchangeRatePrevote.is(o.aggregatePrevote));
+    return (
+      o &&
+      (o.$typeUrl === QueryAggregatePrevoteResponse.typeUrl ||
+        AggregateExchangeRatePrevote.is(o.aggregatePrevote))
+    );
   },
   isSDK(o: any): o is QueryAggregatePrevoteResponseSDKType {
-    return o && (o.$typeUrl === QueryAggregatePrevoteResponse.typeUrl || AggregateExchangeRatePrevote.isSDK(o.aggregate_prevote));
+    return (
+      o &&
+      (o.$typeUrl === QueryAggregatePrevoteResponse.typeUrl ||
+        AggregateExchangeRatePrevote.isSDK(o.aggregate_prevote))
+    );
   },
   isAmino(o: any): o is QueryAggregatePrevoteResponseAmino {
-    return o && (o.$typeUrl === QueryAggregatePrevoteResponse.typeUrl || AggregateExchangeRatePrevote.isAmino(o.aggregate_prevote));
+    return (
+      o &&
+      (o.$typeUrl === QueryAggregatePrevoteResponse.typeUrl ||
+        AggregateExchangeRatePrevote.isAmino(o.aggregate_prevote))
+    );
   },
-  encode(message: QueryAggregatePrevoteResponse, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
+  encode(
+    message: QueryAggregatePrevoteResponse,
+    writer: BinaryWriter = BinaryWriter.create(),
+  ): BinaryWriter {
     if (message.aggregatePrevote !== undefined) {
-      AggregateExchangeRatePrevote.encode(message.aggregatePrevote, writer.uint32(10).fork()).ldelim();
+      AggregateExchangeRatePrevote.encode(
+        message.aggregatePrevote,
+        writer.uint32(10).fork(),
+      ).ldelim();
     }
     return writer;
   },
-  decode(input: BinaryReader | Uint8Array, length?: number): QueryAggregatePrevoteResponse {
-    const reader = input instanceof BinaryReader ? input : new BinaryReader(input);
+  decode(
+    input: BinaryReader | Uint8Array,
+    length?: number,
+  ): QueryAggregatePrevoteResponse {
+    const reader =
+      input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseQueryAggregatePrevoteResponse();
     while (reader.pos < end) {
       const tag = reader.uint32();
       switch (tag >>> 3) {
         case 1:
-          message.aggregatePrevote = AggregateExchangeRatePrevote.decode(reader, reader.uint32());
+          message.aggregatePrevote = AggregateExchangeRatePrevote.decode(
+            reader,
+            reader.uint32(),
+          );
           break;
         default:
           reader.skipType(tag & 7);
@@ -2002,45 +2948,77 @@ export const QueryAggregatePrevoteResponse = {
     }
     return message;
   },
-  fromPartial(object: Partial<QueryAggregatePrevoteResponse>): QueryAggregatePrevoteResponse {
+  fromPartial(
+    object: Partial<QueryAggregatePrevoteResponse>,
+  ): QueryAggregatePrevoteResponse {
     const message = createBaseQueryAggregatePrevoteResponse();
-    message.aggregatePrevote = object.aggregatePrevote !== undefined && object.aggregatePrevote !== null ? AggregateExchangeRatePrevote.fromPartial(object.aggregatePrevote) : undefined;
+    message.aggregatePrevote =
+      object.aggregatePrevote !== undefined && object.aggregatePrevote !== null
+        ? AggregateExchangeRatePrevote.fromPartial(object.aggregatePrevote)
+        : undefined;
     return message;
   },
-  fromAmino(object: QueryAggregatePrevoteResponseAmino): QueryAggregatePrevoteResponse {
+  fromAmino(
+    object: QueryAggregatePrevoteResponseAmino,
+  ): QueryAggregatePrevoteResponse {
     const message = createBaseQueryAggregatePrevoteResponse();
-    if (object.aggregate_prevote !== undefined && object.aggregate_prevote !== null) {
-      message.aggregatePrevote = AggregateExchangeRatePrevote.fromAmino(object.aggregate_prevote);
+    if (
+      object.aggregate_prevote !== undefined &&
+      object.aggregate_prevote !== null
+    ) {
+      message.aggregatePrevote = AggregateExchangeRatePrevote.fromAmino(
+        object.aggregate_prevote,
+      );
     }
     return message;
   },
-  toAmino(message: QueryAggregatePrevoteResponse): QueryAggregatePrevoteResponseAmino {
+  toAmino(
+    message: QueryAggregatePrevoteResponse,
+  ): QueryAggregatePrevoteResponseAmino {
     const obj: any = {};
-    obj.aggregate_prevote = message.aggregatePrevote ? AggregateExchangeRatePrevote.toAmino(message.aggregatePrevote) : undefined;
+    obj.aggregate_prevote = message.aggregatePrevote
+      ? AggregateExchangeRatePrevote.toAmino(message.aggregatePrevote)
+      : undefined;
     return obj;
   },
-  fromAminoMsg(object: QueryAggregatePrevoteResponseAminoMsg): QueryAggregatePrevoteResponse {
+  fromAminoMsg(
+    object: QueryAggregatePrevoteResponseAminoMsg,
+  ): QueryAggregatePrevoteResponse {
     return QueryAggregatePrevoteResponse.fromAmino(object.value);
   },
-  fromProtoMsg(message: QueryAggregatePrevoteResponseProtoMsg): QueryAggregatePrevoteResponse {
+  fromProtoMsg(
+    message: QueryAggregatePrevoteResponseProtoMsg,
+  ): QueryAggregatePrevoteResponse {
     return QueryAggregatePrevoteResponse.decode(message.value);
   },
   toProto(message: QueryAggregatePrevoteResponse): Uint8Array {
     return QueryAggregatePrevoteResponse.encode(message).finish();
   },
-  toProtoMsg(message: QueryAggregatePrevoteResponse): QueryAggregatePrevoteResponseProtoMsg {
+  toProtoMsg(
+    message: QueryAggregatePrevoteResponse,
+  ): QueryAggregatePrevoteResponseProtoMsg {
     return {
-      typeUrl: "/symphony.oracle.v1beta1.QueryAggregatePrevoteResponse",
-      value: QueryAggregatePrevoteResponse.encode(message).finish()
+      typeUrl: '/symphony.oracle.v1beta1.QueryAggregatePrevoteResponse',
+      value: QueryAggregatePrevoteResponse.encode(message).finish(),
     };
-  }
+  },
 };
-GlobalDecoderRegistry.register(QueryAggregatePrevoteResponse.typeUrl, QueryAggregatePrevoteResponse);
+GlobalDecoderRegistry.register(
+  QueryAggregatePrevoteResponse.typeUrl,
+  QueryAggregatePrevoteResponse,
+);
 function createBaseQueryAggregatePrevotesRequest(): QueryAggregatePrevotesRequest {
   return {};
 }
+/**
+ * QueryAggregatePrevotesRequest is the request type for the
+ * Query/AggregatePrevotes RPC method.
+ * @name QueryAggregatePrevotesRequest
+ * @package symphony.oracle.v1beta1
+ * @see proto type: symphony.oracle.v1beta1.QueryAggregatePrevotesRequest
+ */
 export const QueryAggregatePrevotesRequest = {
-  typeUrl: "/symphony.oracle.v1beta1.QueryAggregatePrevotesRequest",
+  typeUrl: '/symphony.oracle.v1beta1.QueryAggregatePrevotesRequest',
   is(o: any): o is QueryAggregatePrevotesRequest {
     return o && o.$typeUrl === QueryAggregatePrevotesRequest.typeUrl;
   },
@@ -2050,11 +3028,18 @@ export const QueryAggregatePrevotesRequest = {
   isAmino(o: any): o is QueryAggregatePrevotesRequestAmino {
     return o && o.$typeUrl === QueryAggregatePrevotesRequest.typeUrl;
   },
-  encode(_: QueryAggregatePrevotesRequest, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
+  encode(
+    _: QueryAggregatePrevotesRequest,
+    writer: BinaryWriter = BinaryWriter.create(),
+  ): BinaryWriter {
     return writer;
   },
-  decode(input: BinaryReader | Uint8Array, length?: number): QueryAggregatePrevotesRequest {
-    const reader = input instanceof BinaryReader ? input : new BinaryReader(input);
+  decode(
+    input: BinaryReader | Uint8Array,
+    length?: number,
+  ): QueryAggregatePrevotesRequest {
+    const reader =
+      input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseQueryAggregatePrevotesRequest();
     while (reader.pos < end) {
@@ -2067,66 +3052,118 @@ export const QueryAggregatePrevotesRequest = {
     }
     return message;
   },
-  fromPartial(_: Partial<QueryAggregatePrevotesRequest>): QueryAggregatePrevotesRequest {
+  fromPartial(
+    _: Partial<QueryAggregatePrevotesRequest>,
+  ): QueryAggregatePrevotesRequest {
     const message = createBaseQueryAggregatePrevotesRequest();
     return message;
   },
-  fromAmino(_: QueryAggregatePrevotesRequestAmino): QueryAggregatePrevotesRequest {
+  fromAmino(
+    _: QueryAggregatePrevotesRequestAmino,
+  ): QueryAggregatePrevotesRequest {
     const message = createBaseQueryAggregatePrevotesRequest();
     return message;
   },
-  toAmino(_: QueryAggregatePrevotesRequest): QueryAggregatePrevotesRequestAmino {
+  toAmino(
+    _: QueryAggregatePrevotesRequest,
+  ): QueryAggregatePrevotesRequestAmino {
     const obj: any = {};
     return obj;
   },
-  fromAminoMsg(object: QueryAggregatePrevotesRequestAminoMsg): QueryAggregatePrevotesRequest {
+  fromAminoMsg(
+    object: QueryAggregatePrevotesRequestAminoMsg,
+  ): QueryAggregatePrevotesRequest {
     return QueryAggregatePrevotesRequest.fromAmino(object.value);
   },
-  fromProtoMsg(message: QueryAggregatePrevotesRequestProtoMsg): QueryAggregatePrevotesRequest {
+  fromProtoMsg(
+    message: QueryAggregatePrevotesRequestProtoMsg,
+  ): QueryAggregatePrevotesRequest {
     return QueryAggregatePrevotesRequest.decode(message.value);
   },
   toProto(message: QueryAggregatePrevotesRequest): Uint8Array {
     return QueryAggregatePrevotesRequest.encode(message).finish();
   },
-  toProtoMsg(message: QueryAggregatePrevotesRequest): QueryAggregatePrevotesRequestProtoMsg {
+  toProtoMsg(
+    message: QueryAggregatePrevotesRequest,
+  ): QueryAggregatePrevotesRequestProtoMsg {
     return {
-      typeUrl: "/symphony.oracle.v1beta1.QueryAggregatePrevotesRequest",
-      value: QueryAggregatePrevotesRequest.encode(message).finish()
+      typeUrl: '/symphony.oracle.v1beta1.QueryAggregatePrevotesRequest',
+      value: QueryAggregatePrevotesRequest.encode(message).finish(),
     };
-  }
+  },
 };
-GlobalDecoderRegistry.register(QueryAggregatePrevotesRequest.typeUrl, QueryAggregatePrevotesRequest);
+GlobalDecoderRegistry.register(
+  QueryAggregatePrevotesRequest.typeUrl,
+  QueryAggregatePrevotesRequest,
+);
 function createBaseQueryAggregatePrevotesResponse(): QueryAggregatePrevotesResponse {
   return {
-    aggregatePrevotes: []
+    aggregatePrevotes: [],
   };
 }
+/**
+ * QueryAggregatePrevotesResponse is response type for the
+ * Query/AggregatePrevotes RPC method.
+ * @name QueryAggregatePrevotesResponse
+ * @package symphony.oracle.v1beta1
+ * @see proto type: symphony.oracle.v1beta1.QueryAggregatePrevotesResponse
+ */
 export const QueryAggregatePrevotesResponse = {
-  typeUrl: "/symphony.oracle.v1beta1.QueryAggregatePrevotesResponse",
+  typeUrl: '/symphony.oracle.v1beta1.QueryAggregatePrevotesResponse',
   is(o: any): o is QueryAggregatePrevotesResponse {
-    return o && (o.$typeUrl === QueryAggregatePrevotesResponse.typeUrl || Array.isArray(o.aggregatePrevotes) && (!o.aggregatePrevotes.length || AggregateExchangeRatePrevote.is(o.aggregatePrevotes[0])));
+    return (
+      o &&
+      (o.$typeUrl === QueryAggregatePrevotesResponse.typeUrl ||
+        (Array.isArray(o.aggregatePrevotes) &&
+          (!o.aggregatePrevotes.length ||
+            AggregateExchangeRatePrevote.is(o.aggregatePrevotes[0]))))
+    );
   },
   isSDK(o: any): o is QueryAggregatePrevotesResponseSDKType {
-    return o && (o.$typeUrl === QueryAggregatePrevotesResponse.typeUrl || Array.isArray(o.aggregate_prevotes) && (!o.aggregate_prevotes.length || AggregateExchangeRatePrevote.isSDK(o.aggregate_prevotes[0])));
+    return (
+      o &&
+      (o.$typeUrl === QueryAggregatePrevotesResponse.typeUrl ||
+        (Array.isArray(o.aggregate_prevotes) &&
+          (!o.aggregate_prevotes.length ||
+            AggregateExchangeRatePrevote.isSDK(o.aggregate_prevotes[0]))))
+    );
   },
   isAmino(o: any): o is QueryAggregatePrevotesResponseAmino {
-    return o && (o.$typeUrl === QueryAggregatePrevotesResponse.typeUrl || Array.isArray(o.aggregate_prevotes) && (!o.aggregate_prevotes.length || AggregateExchangeRatePrevote.isAmino(o.aggregate_prevotes[0])));
+    return (
+      o &&
+      (o.$typeUrl === QueryAggregatePrevotesResponse.typeUrl ||
+        (Array.isArray(o.aggregate_prevotes) &&
+          (!o.aggregate_prevotes.length ||
+            AggregateExchangeRatePrevote.isAmino(o.aggregate_prevotes[0]))))
+    );
   },
-  encode(message: QueryAggregatePrevotesResponse, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
+  encode(
+    message: QueryAggregatePrevotesResponse,
+    writer: BinaryWriter = BinaryWriter.create(),
+  ): BinaryWriter {
     for (const v of message.aggregatePrevotes) {
-      AggregateExchangeRatePrevote.encode(v!, writer.uint32(10).fork()).ldelim();
+      AggregateExchangeRatePrevote.encode(
+        v!,
+        writer.uint32(10).fork(),
+      ).ldelim();
     }
     return writer;
   },
-  decode(input: BinaryReader | Uint8Array, length?: number): QueryAggregatePrevotesResponse {
-    const reader = input instanceof BinaryReader ? input : new BinaryReader(input);
+  decode(
+    input: BinaryReader | Uint8Array,
+    length?: number,
+  ): QueryAggregatePrevotesResponse {
+    const reader =
+      input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseQueryAggregatePrevotesResponse();
     while (reader.pos < end) {
       const tag = reader.uint32();
       switch (tag >>> 3) {
         case 1:
-          message.aggregatePrevotes.push(AggregateExchangeRatePrevote.decode(reader, reader.uint32()));
+          message.aggregatePrevotes.push(
+            AggregateExchangeRatePrevote.decode(reader, reader.uint32()),
+          );
           break;
         default:
           reader.skipType(tag & 7);
@@ -2135,66 +3172,115 @@ export const QueryAggregatePrevotesResponse = {
     }
     return message;
   },
-  fromPartial(object: Partial<QueryAggregatePrevotesResponse>): QueryAggregatePrevotesResponse {
+  fromPartial(
+    object: Partial<QueryAggregatePrevotesResponse>,
+  ): QueryAggregatePrevotesResponse {
     const message = createBaseQueryAggregatePrevotesResponse();
-    message.aggregatePrevotes = object.aggregatePrevotes?.map(e => AggregateExchangeRatePrevote.fromPartial(e)) || [];
+    message.aggregatePrevotes =
+      object.aggregatePrevotes?.map(e =>
+        AggregateExchangeRatePrevote.fromPartial(e),
+      ) || [];
     return message;
   },
-  fromAmino(object: QueryAggregatePrevotesResponseAmino): QueryAggregatePrevotesResponse {
+  fromAmino(
+    object: QueryAggregatePrevotesResponseAmino,
+  ): QueryAggregatePrevotesResponse {
     const message = createBaseQueryAggregatePrevotesResponse();
-    message.aggregatePrevotes = object.aggregate_prevotes?.map(e => AggregateExchangeRatePrevote.fromAmino(e)) || [];
+    message.aggregatePrevotes =
+      object.aggregate_prevotes?.map(e =>
+        AggregateExchangeRatePrevote.fromAmino(e),
+      ) || [];
     return message;
   },
-  toAmino(message: QueryAggregatePrevotesResponse): QueryAggregatePrevotesResponseAmino {
+  toAmino(
+    message: QueryAggregatePrevotesResponse,
+  ): QueryAggregatePrevotesResponseAmino {
     const obj: any = {};
     if (message.aggregatePrevotes) {
-      obj.aggregate_prevotes = message.aggregatePrevotes.map(e => e ? AggregateExchangeRatePrevote.toAmino(e) : undefined);
+      obj.aggregate_prevotes = message.aggregatePrevotes.map(e =>
+        e ? AggregateExchangeRatePrevote.toAmino(e) : undefined,
+      );
     } else {
       obj.aggregate_prevotes = message.aggregatePrevotes;
     }
     return obj;
   },
-  fromAminoMsg(object: QueryAggregatePrevotesResponseAminoMsg): QueryAggregatePrevotesResponse {
+  fromAminoMsg(
+    object: QueryAggregatePrevotesResponseAminoMsg,
+  ): QueryAggregatePrevotesResponse {
     return QueryAggregatePrevotesResponse.fromAmino(object.value);
   },
-  fromProtoMsg(message: QueryAggregatePrevotesResponseProtoMsg): QueryAggregatePrevotesResponse {
+  fromProtoMsg(
+    message: QueryAggregatePrevotesResponseProtoMsg,
+  ): QueryAggregatePrevotesResponse {
     return QueryAggregatePrevotesResponse.decode(message.value);
   },
   toProto(message: QueryAggregatePrevotesResponse): Uint8Array {
     return QueryAggregatePrevotesResponse.encode(message).finish();
   },
-  toProtoMsg(message: QueryAggregatePrevotesResponse): QueryAggregatePrevotesResponseProtoMsg {
+  toProtoMsg(
+    message: QueryAggregatePrevotesResponse,
+  ): QueryAggregatePrevotesResponseProtoMsg {
     return {
-      typeUrl: "/symphony.oracle.v1beta1.QueryAggregatePrevotesResponse",
-      value: QueryAggregatePrevotesResponse.encode(message).finish()
+      typeUrl: '/symphony.oracle.v1beta1.QueryAggregatePrevotesResponse',
+      value: QueryAggregatePrevotesResponse.encode(message).finish(),
     };
-  }
+  },
 };
-GlobalDecoderRegistry.register(QueryAggregatePrevotesResponse.typeUrl, QueryAggregatePrevotesResponse);
+GlobalDecoderRegistry.register(
+  QueryAggregatePrevotesResponse.typeUrl,
+  QueryAggregatePrevotesResponse,
+);
 function createBaseQueryAggregateVoteRequest(): QueryAggregateVoteRequest {
   return {
-    validatorAddr: ""
+    validatorAddr: '',
   };
 }
+/**
+ * QueryAggregateVoteRequest is the request type for the Query/AggregateVote RPC
+ * method.
+ * @name QueryAggregateVoteRequest
+ * @package symphony.oracle.v1beta1
+ * @see proto type: symphony.oracle.v1beta1.QueryAggregateVoteRequest
+ */
 export const QueryAggregateVoteRequest = {
-  typeUrl: "/symphony.oracle.v1beta1.QueryAggregateVoteRequest",
+  typeUrl: '/symphony.oracle.v1beta1.QueryAggregateVoteRequest',
   is(o: any): o is QueryAggregateVoteRequest {
-    return o && (o.$typeUrl === QueryAggregateVoteRequest.typeUrl || typeof o.validatorAddr === "string");
+    return (
+      o &&
+      (o.$typeUrl === QueryAggregateVoteRequest.typeUrl ||
+        typeof o.validatorAddr === 'string')
+    );
   },
   isSDK(o: any): o is QueryAggregateVoteRequestSDKType {
-    return o && (o.$typeUrl === QueryAggregateVoteRequest.typeUrl || typeof o.validator_addr === "string");
+    return (
+      o &&
+      (o.$typeUrl === QueryAggregateVoteRequest.typeUrl ||
+        typeof o.validator_addr === 'string')
+    );
   },
   isAmino(o: any): o is QueryAggregateVoteRequestAmino {
-    return o && (o.$typeUrl === QueryAggregateVoteRequest.typeUrl || typeof o.validator_addr === "string");
+    return (
+      o &&
+      (o.$typeUrl === QueryAggregateVoteRequest.typeUrl ||
+        typeof o.validator_addr === 'string')
+    );
   },
-  encode(message: QueryAggregateVoteRequest, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
-    if (message.validatorAddr !== "") {
+  encode(
+    message: QueryAggregateVoteRequest,
+    writer: BinaryWriter = BinaryWriter.create(),
+  ): BinaryWriter {
+    if (message.validatorAddr !== '') {
       writer.uint32(10).string(message.validatorAddr);
     }
     return writer;
   },
-  decode(input: BinaryReader | Uint8Array, length?: number): QueryAggregateVoteRequest {
-    const reader = input instanceof BinaryReader ? input : new BinaryReader(input);
+  decode(
+    input: BinaryReader | Uint8Array,
+    length?: number,
+  ): QueryAggregateVoteRequest {
+    const reader =
+      input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseQueryAggregateVoteRequest();
     while (reader.pos < end) {
@@ -2210,9 +3296,11 @@ export const QueryAggregateVoteRequest = {
     }
     return message;
   },
-  fromPartial(object: Partial<QueryAggregateVoteRequest>): QueryAggregateVoteRequest {
+  fromPartial(
+    object: Partial<QueryAggregateVoteRequest>,
+  ): QueryAggregateVoteRequest {
     const message = createBaseQueryAggregateVoteRequest();
-    message.validatorAddr = object.validatorAddr ?? "";
+    message.validatorAddr = object.validatorAddr ?? '';
     return message;
   },
   fromAmino(object: QueryAggregateVoteRequestAmino): QueryAggregateVoteRequest {
@@ -2224,57 +3312,99 @@ export const QueryAggregateVoteRequest = {
   },
   toAmino(message: QueryAggregateVoteRequest): QueryAggregateVoteRequestAmino {
     const obj: any = {};
-    obj.validator_addr = message.validatorAddr === "" ? undefined : message.validatorAddr;
+    obj.validator_addr =
+      message.validatorAddr === '' ? undefined : message.validatorAddr;
     return obj;
   },
-  fromAminoMsg(object: QueryAggregateVoteRequestAminoMsg): QueryAggregateVoteRequest {
+  fromAminoMsg(
+    object: QueryAggregateVoteRequestAminoMsg,
+  ): QueryAggregateVoteRequest {
     return QueryAggregateVoteRequest.fromAmino(object.value);
   },
-  fromProtoMsg(message: QueryAggregateVoteRequestProtoMsg): QueryAggregateVoteRequest {
+  fromProtoMsg(
+    message: QueryAggregateVoteRequestProtoMsg,
+  ): QueryAggregateVoteRequest {
     return QueryAggregateVoteRequest.decode(message.value);
   },
   toProto(message: QueryAggregateVoteRequest): Uint8Array {
     return QueryAggregateVoteRequest.encode(message).finish();
   },
-  toProtoMsg(message: QueryAggregateVoteRequest): QueryAggregateVoteRequestProtoMsg {
+  toProtoMsg(
+    message: QueryAggregateVoteRequest,
+  ): QueryAggregateVoteRequestProtoMsg {
     return {
-      typeUrl: "/symphony.oracle.v1beta1.QueryAggregateVoteRequest",
-      value: QueryAggregateVoteRequest.encode(message).finish()
+      typeUrl: '/symphony.oracle.v1beta1.QueryAggregateVoteRequest',
+      value: QueryAggregateVoteRequest.encode(message).finish(),
     };
-  }
+  },
 };
-GlobalDecoderRegistry.register(QueryAggregateVoteRequest.typeUrl, QueryAggregateVoteRequest);
+GlobalDecoderRegistry.register(
+  QueryAggregateVoteRequest.typeUrl,
+  QueryAggregateVoteRequest,
+);
 function createBaseQueryAggregateVoteResponse(): QueryAggregateVoteResponse {
   return {
-    aggregateVote: AggregateExchangeRateVote.fromPartial({})
+    aggregateVote: AggregateExchangeRateVote.fromPartial({}),
   };
 }
+/**
+ * QueryAggregateVoteResponse is response type for the
+ * Query/AggregateVote RPC method.
+ * @name QueryAggregateVoteResponse
+ * @package symphony.oracle.v1beta1
+ * @see proto type: symphony.oracle.v1beta1.QueryAggregateVoteResponse
+ */
 export const QueryAggregateVoteResponse = {
-  typeUrl: "/symphony.oracle.v1beta1.QueryAggregateVoteResponse",
+  typeUrl: '/symphony.oracle.v1beta1.QueryAggregateVoteResponse',
   is(o: any): o is QueryAggregateVoteResponse {
-    return o && (o.$typeUrl === QueryAggregateVoteResponse.typeUrl || AggregateExchangeRateVote.is(o.aggregateVote));
+    return (
+      o &&
+      (o.$typeUrl === QueryAggregateVoteResponse.typeUrl ||
+        AggregateExchangeRateVote.is(o.aggregateVote))
+    );
   },
   isSDK(o: any): o is QueryAggregateVoteResponseSDKType {
-    return o && (o.$typeUrl === QueryAggregateVoteResponse.typeUrl || AggregateExchangeRateVote.isSDK(o.aggregate_vote));
+    return (
+      o &&
+      (o.$typeUrl === QueryAggregateVoteResponse.typeUrl ||
+        AggregateExchangeRateVote.isSDK(o.aggregate_vote))
+    );
   },
   isAmino(o: any): o is QueryAggregateVoteResponseAmino {
-    return o && (o.$typeUrl === QueryAggregateVoteResponse.typeUrl || AggregateExchangeRateVote.isAmino(o.aggregate_vote));
+    return (
+      o &&
+      (o.$typeUrl === QueryAggregateVoteResponse.typeUrl ||
+        AggregateExchangeRateVote.isAmino(o.aggregate_vote))
+    );
   },
-  encode(message: QueryAggregateVoteResponse, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
+  encode(
+    message: QueryAggregateVoteResponse,
+    writer: BinaryWriter = BinaryWriter.create(),
+  ): BinaryWriter {
     if (message.aggregateVote !== undefined) {
-      AggregateExchangeRateVote.encode(message.aggregateVote, writer.uint32(10).fork()).ldelim();
+      AggregateExchangeRateVote.encode(
+        message.aggregateVote,
+        writer.uint32(10).fork(),
+      ).ldelim();
     }
     return writer;
   },
-  decode(input: BinaryReader | Uint8Array, length?: number): QueryAggregateVoteResponse {
-    const reader = input instanceof BinaryReader ? input : new BinaryReader(input);
+  decode(
+    input: BinaryReader | Uint8Array,
+    length?: number,
+  ): QueryAggregateVoteResponse {
+    const reader =
+      input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseQueryAggregateVoteResponse();
     while (reader.pos < end) {
       const tag = reader.uint32();
       switch (tag >>> 3) {
         case 1:
-          message.aggregateVote = AggregateExchangeRateVote.decode(reader, reader.uint32());
+          message.aggregateVote = AggregateExchangeRateVote.decode(
+            reader,
+            reader.uint32(),
+          );
           break;
         default:
           reader.skipType(tag & 7);
@@ -2283,45 +3413,74 @@ export const QueryAggregateVoteResponse = {
     }
     return message;
   },
-  fromPartial(object: Partial<QueryAggregateVoteResponse>): QueryAggregateVoteResponse {
+  fromPartial(
+    object: Partial<QueryAggregateVoteResponse>,
+  ): QueryAggregateVoteResponse {
     const message = createBaseQueryAggregateVoteResponse();
-    message.aggregateVote = object.aggregateVote !== undefined && object.aggregateVote !== null ? AggregateExchangeRateVote.fromPartial(object.aggregateVote) : undefined;
+    message.aggregateVote =
+      object.aggregateVote !== undefined && object.aggregateVote !== null
+        ? AggregateExchangeRateVote.fromPartial(object.aggregateVote)
+        : undefined;
     return message;
   },
-  fromAmino(object: QueryAggregateVoteResponseAmino): QueryAggregateVoteResponse {
+  fromAmino(
+    object: QueryAggregateVoteResponseAmino,
+  ): QueryAggregateVoteResponse {
     const message = createBaseQueryAggregateVoteResponse();
     if (object.aggregate_vote !== undefined && object.aggregate_vote !== null) {
-      message.aggregateVote = AggregateExchangeRateVote.fromAmino(object.aggregate_vote);
+      message.aggregateVote = AggregateExchangeRateVote.fromAmino(
+        object.aggregate_vote,
+      );
     }
     return message;
   },
-  toAmino(message: QueryAggregateVoteResponse): QueryAggregateVoteResponseAmino {
+  toAmino(
+    message: QueryAggregateVoteResponse,
+  ): QueryAggregateVoteResponseAmino {
     const obj: any = {};
-    obj.aggregate_vote = message.aggregateVote ? AggregateExchangeRateVote.toAmino(message.aggregateVote) : undefined;
+    obj.aggregate_vote = message.aggregateVote
+      ? AggregateExchangeRateVote.toAmino(message.aggregateVote)
+      : undefined;
     return obj;
   },
-  fromAminoMsg(object: QueryAggregateVoteResponseAminoMsg): QueryAggregateVoteResponse {
+  fromAminoMsg(
+    object: QueryAggregateVoteResponseAminoMsg,
+  ): QueryAggregateVoteResponse {
     return QueryAggregateVoteResponse.fromAmino(object.value);
   },
-  fromProtoMsg(message: QueryAggregateVoteResponseProtoMsg): QueryAggregateVoteResponse {
+  fromProtoMsg(
+    message: QueryAggregateVoteResponseProtoMsg,
+  ): QueryAggregateVoteResponse {
     return QueryAggregateVoteResponse.decode(message.value);
   },
   toProto(message: QueryAggregateVoteResponse): Uint8Array {
     return QueryAggregateVoteResponse.encode(message).finish();
   },
-  toProtoMsg(message: QueryAggregateVoteResponse): QueryAggregateVoteResponseProtoMsg {
+  toProtoMsg(
+    message: QueryAggregateVoteResponse,
+  ): QueryAggregateVoteResponseProtoMsg {
     return {
-      typeUrl: "/symphony.oracle.v1beta1.QueryAggregateVoteResponse",
-      value: QueryAggregateVoteResponse.encode(message).finish()
+      typeUrl: '/symphony.oracle.v1beta1.QueryAggregateVoteResponse',
+      value: QueryAggregateVoteResponse.encode(message).finish(),
     };
-  }
+  },
 };
-GlobalDecoderRegistry.register(QueryAggregateVoteResponse.typeUrl, QueryAggregateVoteResponse);
+GlobalDecoderRegistry.register(
+  QueryAggregateVoteResponse.typeUrl,
+  QueryAggregateVoteResponse,
+);
 function createBaseQueryAggregateVotesRequest(): QueryAggregateVotesRequest {
   return {};
 }
+/**
+ * QueryAggregateVotesRequest is the request type for the Query/AggregateVotes
+ * RPC method.
+ * @name QueryAggregateVotesRequest
+ * @package symphony.oracle.v1beta1
+ * @see proto type: symphony.oracle.v1beta1.QueryAggregateVotesRequest
+ */
 export const QueryAggregateVotesRequest = {
-  typeUrl: "/symphony.oracle.v1beta1.QueryAggregateVotesRequest",
+  typeUrl: '/symphony.oracle.v1beta1.QueryAggregateVotesRequest',
   is(o: any): o is QueryAggregateVotesRequest {
     return o && o.$typeUrl === QueryAggregateVotesRequest.typeUrl;
   },
@@ -2331,11 +3490,18 @@ export const QueryAggregateVotesRequest = {
   isAmino(o: any): o is QueryAggregateVotesRequestAmino {
     return o && o.$typeUrl === QueryAggregateVotesRequest.typeUrl;
   },
-  encode(_: QueryAggregateVotesRequest, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
+  encode(
+    _: QueryAggregateVotesRequest,
+    writer: BinaryWriter = BinaryWriter.create(),
+  ): BinaryWriter {
     return writer;
   },
-  decode(input: BinaryReader | Uint8Array, length?: number): QueryAggregateVotesRequest {
-    const reader = input instanceof BinaryReader ? input : new BinaryReader(input);
+  decode(
+    input: BinaryReader | Uint8Array,
+    length?: number,
+  ): QueryAggregateVotesRequest {
+    const reader =
+      input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseQueryAggregateVotesRequest();
     while (reader.pos < end) {
@@ -2348,7 +3514,9 @@ export const QueryAggregateVotesRequest = {
     }
     return message;
   },
-  fromPartial(_: Partial<QueryAggregateVotesRequest>): QueryAggregateVotesRequest {
+  fromPartial(
+    _: Partial<QueryAggregateVotesRequest>,
+  ): QueryAggregateVotesRequest {
     const message = createBaseQueryAggregateVotesRequest();
     return message;
   },
@@ -2360,54 +3528,97 @@ export const QueryAggregateVotesRequest = {
     const obj: any = {};
     return obj;
   },
-  fromAminoMsg(object: QueryAggregateVotesRequestAminoMsg): QueryAggregateVotesRequest {
+  fromAminoMsg(
+    object: QueryAggregateVotesRequestAminoMsg,
+  ): QueryAggregateVotesRequest {
     return QueryAggregateVotesRequest.fromAmino(object.value);
   },
-  fromProtoMsg(message: QueryAggregateVotesRequestProtoMsg): QueryAggregateVotesRequest {
+  fromProtoMsg(
+    message: QueryAggregateVotesRequestProtoMsg,
+  ): QueryAggregateVotesRequest {
     return QueryAggregateVotesRequest.decode(message.value);
   },
   toProto(message: QueryAggregateVotesRequest): Uint8Array {
     return QueryAggregateVotesRequest.encode(message).finish();
   },
-  toProtoMsg(message: QueryAggregateVotesRequest): QueryAggregateVotesRequestProtoMsg {
+  toProtoMsg(
+    message: QueryAggregateVotesRequest,
+  ): QueryAggregateVotesRequestProtoMsg {
     return {
-      typeUrl: "/symphony.oracle.v1beta1.QueryAggregateVotesRequest",
-      value: QueryAggregateVotesRequest.encode(message).finish()
+      typeUrl: '/symphony.oracle.v1beta1.QueryAggregateVotesRequest',
+      value: QueryAggregateVotesRequest.encode(message).finish(),
     };
-  }
+  },
 };
-GlobalDecoderRegistry.register(QueryAggregateVotesRequest.typeUrl, QueryAggregateVotesRequest);
+GlobalDecoderRegistry.register(
+  QueryAggregateVotesRequest.typeUrl,
+  QueryAggregateVotesRequest,
+);
 function createBaseQueryAggregateVotesResponse(): QueryAggregateVotesResponse {
   return {
-    aggregateVotes: []
+    aggregateVotes: [],
   };
 }
+/**
+ * QueryAggregateVotesResponse is response type for the
+ * Query/AggregateVotes RPC method.
+ * @name QueryAggregateVotesResponse
+ * @package symphony.oracle.v1beta1
+ * @see proto type: symphony.oracle.v1beta1.QueryAggregateVotesResponse
+ */
 export const QueryAggregateVotesResponse = {
-  typeUrl: "/symphony.oracle.v1beta1.QueryAggregateVotesResponse",
+  typeUrl: '/symphony.oracle.v1beta1.QueryAggregateVotesResponse',
   is(o: any): o is QueryAggregateVotesResponse {
-    return o && (o.$typeUrl === QueryAggregateVotesResponse.typeUrl || Array.isArray(o.aggregateVotes) && (!o.aggregateVotes.length || AggregateExchangeRateVote.is(o.aggregateVotes[0])));
+    return (
+      o &&
+      (o.$typeUrl === QueryAggregateVotesResponse.typeUrl ||
+        (Array.isArray(o.aggregateVotes) &&
+          (!o.aggregateVotes.length ||
+            AggregateExchangeRateVote.is(o.aggregateVotes[0]))))
+    );
   },
   isSDK(o: any): o is QueryAggregateVotesResponseSDKType {
-    return o && (o.$typeUrl === QueryAggregateVotesResponse.typeUrl || Array.isArray(o.aggregate_votes) && (!o.aggregate_votes.length || AggregateExchangeRateVote.isSDK(o.aggregate_votes[0])));
+    return (
+      o &&
+      (o.$typeUrl === QueryAggregateVotesResponse.typeUrl ||
+        (Array.isArray(o.aggregate_votes) &&
+          (!o.aggregate_votes.length ||
+            AggregateExchangeRateVote.isSDK(o.aggregate_votes[0]))))
+    );
   },
   isAmino(o: any): o is QueryAggregateVotesResponseAmino {
-    return o && (o.$typeUrl === QueryAggregateVotesResponse.typeUrl || Array.isArray(o.aggregate_votes) && (!o.aggregate_votes.length || AggregateExchangeRateVote.isAmino(o.aggregate_votes[0])));
+    return (
+      o &&
+      (o.$typeUrl === QueryAggregateVotesResponse.typeUrl ||
+        (Array.isArray(o.aggregate_votes) &&
+          (!o.aggregate_votes.length ||
+            AggregateExchangeRateVote.isAmino(o.aggregate_votes[0]))))
+    );
   },
-  encode(message: QueryAggregateVotesResponse, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
+  encode(
+    message: QueryAggregateVotesResponse,
+    writer: BinaryWriter = BinaryWriter.create(),
+  ): BinaryWriter {
     for (const v of message.aggregateVotes) {
       AggregateExchangeRateVote.encode(v!, writer.uint32(10).fork()).ldelim();
     }
     return writer;
   },
-  decode(input: BinaryReader | Uint8Array, length?: number): QueryAggregateVotesResponse {
-    const reader = input instanceof BinaryReader ? input : new BinaryReader(input);
+  decode(
+    input: BinaryReader | Uint8Array,
+    length?: number,
+  ): QueryAggregateVotesResponse {
+    const reader =
+      input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseQueryAggregateVotesResponse();
     while (reader.pos < end) {
       const tag = reader.uint32();
       switch (tag >>> 3) {
         case 1:
-          message.aggregateVotes.push(AggregateExchangeRateVote.decode(reader, reader.uint32()));
+          message.aggregateVotes.push(
+            AggregateExchangeRateVote.decode(reader, reader.uint32()),
+          );
           break;
         default:
           reader.skipType(tag & 7);
@@ -2416,47 +3627,76 @@ export const QueryAggregateVotesResponse = {
     }
     return message;
   },
-  fromPartial(object: Partial<QueryAggregateVotesResponse>): QueryAggregateVotesResponse {
+  fromPartial(
+    object: Partial<QueryAggregateVotesResponse>,
+  ): QueryAggregateVotesResponse {
     const message = createBaseQueryAggregateVotesResponse();
-    message.aggregateVotes = object.aggregateVotes?.map(e => AggregateExchangeRateVote.fromPartial(e)) || [];
+    message.aggregateVotes =
+      object.aggregateVotes?.map(e =>
+        AggregateExchangeRateVote.fromPartial(e),
+      ) || [];
     return message;
   },
-  fromAmino(object: QueryAggregateVotesResponseAmino): QueryAggregateVotesResponse {
+  fromAmino(
+    object: QueryAggregateVotesResponseAmino,
+  ): QueryAggregateVotesResponse {
     const message = createBaseQueryAggregateVotesResponse();
-    message.aggregateVotes = object.aggregate_votes?.map(e => AggregateExchangeRateVote.fromAmino(e)) || [];
+    message.aggregateVotes =
+      object.aggregate_votes?.map(e =>
+        AggregateExchangeRateVote.fromAmino(e),
+      ) || [];
     return message;
   },
-  toAmino(message: QueryAggregateVotesResponse): QueryAggregateVotesResponseAmino {
+  toAmino(
+    message: QueryAggregateVotesResponse,
+  ): QueryAggregateVotesResponseAmino {
     const obj: any = {};
     if (message.aggregateVotes) {
-      obj.aggregate_votes = message.aggregateVotes.map(e => e ? AggregateExchangeRateVote.toAmino(e) : undefined);
+      obj.aggregate_votes = message.aggregateVotes.map(e =>
+        e ? AggregateExchangeRateVote.toAmino(e) : undefined,
+      );
     } else {
       obj.aggregate_votes = message.aggregateVotes;
     }
     return obj;
   },
-  fromAminoMsg(object: QueryAggregateVotesResponseAminoMsg): QueryAggregateVotesResponse {
+  fromAminoMsg(
+    object: QueryAggregateVotesResponseAminoMsg,
+  ): QueryAggregateVotesResponse {
     return QueryAggregateVotesResponse.fromAmino(object.value);
   },
-  fromProtoMsg(message: QueryAggregateVotesResponseProtoMsg): QueryAggregateVotesResponse {
+  fromProtoMsg(
+    message: QueryAggregateVotesResponseProtoMsg,
+  ): QueryAggregateVotesResponse {
     return QueryAggregateVotesResponse.decode(message.value);
   },
   toProto(message: QueryAggregateVotesResponse): Uint8Array {
     return QueryAggregateVotesResponse.encode(message).finish();
   },
-  toProtoMsg(message: QueryAggregateVotesResponse): QueryAggregateVotesResponseProtoMsg {
+  toProtoMsg(
+    message: QueryAggregateVotesResponse,
+  ): QueryAggregateVotesResponseProtoMsg {
     return {
-      typeUrl: "/symphony.oracle.v1beta1.QueryAggregateVotesResponse",
-      value: QueryAggregateVotesResponse.encode(message).finish()
+      typeUrl: '/symphony.oracle.v1beta1.QueryAggregateVotesResponse',
+      value: QueryAggregateVotesResponse.encode(message).finish(),
     };
-  }
+  },
 };
-GlobalDecoderRegistry.register(QueryAggregateVotesResponse.typeUrl, QueryAggregateVotesResponse);
+GlobalDecoderRegistry.register(
+  QueryAggregateVotesResponse.typeUrl,
+  QueryAggregateVotesResponse,
+);
 function createBaseQueryParamsRequest(): QueryParamsRequest {
   return {};
 }
+/**
+ * QueryParamsRequest is the request type for the Query/Params RPC method.
+ * @name QueryParamsRequest
+ * @package symphony.oracle.v1beta1
+ * @see proto type: symphony.oracle.v1beta1.QueryParamsRequest
+ */
 export const QueryParamsRequest = {
-  typeUrl: "/symphony.oracle.v1beta1.QueryParamsRequest",
+  typeUrl: '/symphony.oracle.v1beta1.QueryParamsRequest',
   is(o: any): o is QueryParamsRequest {
     return o && o.$typeUrl === QueryParamsRequest.typeUrl;
   },
@@ -2466,11 +3706,18 @@ export const QueryParamsRequest = {
   isAmino(o: any): o is QueryParamsRequestAmino {
     return o && o.$typeUrl === QueryParamsRequest.typeUrl;
   },
-  encode(_: QueryParamsRequest, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
+  encode(
+    _: QueryParamsRequest,
+    writer: BinaryWriter = BinaryWriter.create(),
+  ): BinaryWriter {
     return writer;
   },
-  decode(input: BinaryReader | Uint8Array, length?: number): QueryParamsRequest {
-    const reader = input instanceof BinaryReader ? input : new BinaryReader(input);
+  decode(
+    input: BinaryReader | Uint8Array,
+    length?: number,
+  ): QueryParamsRequest {
+    const reader =
+      input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseQueryParamsRequest();
     while (reader.pos < end) {
@@ -2506,36 +3753,57 @@ export const QueryParamsRequest = {
   },
   toProtoMsg(message: QueryParamsRequest): QueryParamsRequestProtoMsg {
     return {
-      typeUrl: "/symphony.oracle.v1beta1.QueryParamsRequest",
-      value: QueryParamsRequest.encode(message).finish()
+      typeUrl: '/symphony.oracle.v1beta1.QueryParamsRequest',
+      value: QueryParamsRequest.encode(message).finish(),
     };
-  }
+  },
 };
 GlobalDecoderRegistry.register(QueryParamsRequest.typeUrl, QueryParamsRequest);
 function createBaseQueryParamsResponse(): QueryParamsResponse {
   return {
-    params: Params.fromPartial({})
+    params: Params.fromPartial({}),
   };
 }
+/**
+ * QueryParamsResponse is the response type for the Query/Params RPC method.
+ * @name QueryParamsResponse
+ * @package symphony.oracle.v1beta1
+ * @see proto type: symphony.oracle.v1beta1.QueryParamsResponse
+ */
 export const QueryParamsResponse = {
-  typeUrl: "/symphony.oracle.v1beta1.QueryParamsResponse",
+  typeUrl: '/symphony.oracle.v1beta1.QueryParamsResponse',
   is(o: any): o is QueryParamsResponse {
-    return o && (o.$typeUrl === QueryParamsResponse.typeUrl || Params.is(o.params));
+    return (
+      o && (o.$typeUrl === QueryParamsResponse.typeUrl || Params.is(o.params))
+    );
   },
   isSDK(o: any): o is QueryParamsResponseSDKType {
-    return o && (o.$typeUrl === QueryParamsResponse.typeUrl || Params.isSDK(o.params));
+    return (
+      o &&
+      (o.$typeUrl === QueryParamsResponse.typeUrl || Params.isSDK(o.params))
+    );
   },
   isAmino(o: any): o is QueryParamsResponseAmino {
-    return o && (o.$typeUrl === QueryParamsResponse.typeUrl || Params.isAmino(o.params));
+    return (
+      o &&
+      (o.$typeUrl === QueryParamsResponse.typeUrl || Params.isAmino(o.params))
+    );
   },
-  encode(message: QueryParamsResponse, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
+  encode(
+    message: QueryParamsResponse,
+    writer: BinaryWriter = BinaryWriter.create(),
+  ): BinaryWriter {
     if (message.params !== undefined) {
       Params.encode(message.params, writer.uint32(10).fork()).ldelim();
     }
     return writer;
   },
-  decode(input: BinaryReader | Uint8Array, length?: number): QueryParamsResponse {
-    const reader = input instanceof BinaryReader ? input : new BinaryReader(input);
+  decode(
+    input: BinaryReader | Uint8Array,
+    length?: number,
+  ): QueryParamsResponse {
+    const reader =
+      input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseQueryParamsResponse();
     while (reader.pos < end) {
@@ -2553,7 +3821,10 @@ export const QueryParamsResponse = {
   },
   fromPartial(object: Partial<QueryParamsResponse>): QueryParamsResponse {
     const message = createBaseQueryParamsResponse();
-    message.params = object.params !== undefined && object.params !== null ? Params.fromPartial(object.params) : undefined;
+    message.params =
+      object.params !== undefined && object.params !== null
+        ? Params.fromPartial(object.params)
+        : undefined;
     return message;
   },
   fromAmino(object: QueryParamsResponseAmino): QueryParamsResponse {
@@ -2579,9 +3850,12 @@ export const QueryParamsResponse = {
   },
   toProtoMsg(message: QueryParamsResponse): QueryParamsResponseProtoMsg {
     return {
-      typeUrl: "/symphony.oracle.v1beta1.QueryParamsResponse",
-      value: QueryParamsResponse.encode(message).finish()
+      typeUrl: '/symphony.oracle.v1beta1.QueryParamsResponse',
+      value: QueryParamsResponse.encode(message).finish(),
     };
-  }
+  },
 };
-GlobalDecoderRegistry.register(QueryParamsResponse.typeUrl, QueryParamsResponse);
+GlobalDecoderRegistry.register(
+  QueryParamsResponse.typeUrl,
+  QueryParamsResponse,
+);

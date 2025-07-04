@@ -1,31 +1,51 @@
 //@ts-nocheck
-import { Params, ParamsAmino, ParamsSDKType } from "./params";
-import { BinaryReader, BinaryWriter } from "../../binary";
-import { GlobalDecoderRegistry } from "../../registry";
+import { Params, ParamsAmino, ParamsSDKType } from './params';
+import { BinaryReader, BinaryWriter } from '../../binary';
+import { GlobalDecoderRegistry } from '../../registry';
+/**
+ * @name GenesisState
+ * @package symphony.ibchooks
+ * @see proto type: symphony.ibchooks.GenesisState
+ */
 export interface GenesisState {
   params: Params;
 }
 export interface GenesisStateProtoMsg {
-  typeUrl: "/symphony.ibchooks.GenesisState";
+  typeUrl: '/symphony.ibchooks.GenesisState';
   value: Uint8Array;
 }
+/**
+ * @name GenesisStateAmino
+ * @package symphony.ibchooks
+ * @see proto type: symphony.ibchooks.GenesisState
+ */
 export interface GenesisStateAmino {
   params?: ParamsAmino;
 }
 export interface GenesisStateAminoMsg {
-  type: "/symphony.ibchooks.GenesisState";
+  type: '/symphony.ibchooks.GenesisState';
   value: GenesisStateAmino;
 }
+/**
+ * @name GenesisStateSDKType
+ * @package symphony.ibchooks
+ * @see proto type: symphony.ibchooks.GenesisState
+ */
 export interface GenesisStateSDKType {
   params: ParamsSDKType;
 }
 function createBaseGenesisState(): GenesisState {
   return {
-    params: Params.fromPartial({})
+    params: Params.fromPartial({}),
   };
 }
+/**
+ * @name GenesisState
+ * @package symphony.ibchooks
+ * @see proto type: symphony.ibchooks.GenesisState
+ */
 export const GenesisState = {
-  typeUrl: "/symphony.ibchooks.GenesisState",
+  typeUrl: '/symphony.ibchooks.GenesisState',
   is(o: any): o is GenesisState {
     return o && (o.$typeUrl === GenesisState.typeUrl || Params.is(o.params));
   },
@@ -33,16 +53,22 @@ export const GenesisState = {
     return o && (o.$typeUrl === GenesisState.typeUrl || Params.isSDK(o.params));
   },
   isAmino(o: any): o is GenesisStateAmino {
-    return o && (o.$typeUrl === GenesisState.typeUrl || Params.isAmino(o.params));
+    return (
+      o && (o.$typeUrl === GenesisState.typeUrl || Params.isAmino(o.params))
+    );
   },
-  encode(message: GenesisState, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
+  encode(
+    message: GenesisState,
+    writer: BinaryWriter = BinaryWriter.create(),
+  ): BinaryWriter {
     if (message.params !== undefined) {
       Params.encode(message.params, writer.uint32(10).fork()).ldelim();
     }
     return writer;
   },
   decode(input: BinaryReader | Uint8Array, length?: number): GenesisState {
-    const reader = input instanceof BinaryReader ? input : new BinaryReader(input);
+    const reader =
+      input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseGenesisState();
     while (reader.pos < end) {
@@ -60,7 +86,10 @@ export const GenesisState = {
   },
   fromPartial(object: Partial<GenesisState>): GenesisState {
     const message = createBaseGenesisState();
-    message.params = object.params !== undefined && object.params !== null ? Params.fromPartial(object.params) : undefined;
+    message.params =
+      object.params !== undefined && object.params !== null
+        ? Params.fromPartial(object.params)
+        : undefined;
     return message;
   },
   fromAmino(object: GenesisStateAmino): GenesisState {
@@ -86,9 +115,9 @@ export const GenesisState = {
   },
   toProtoMsg(message: GenesisState): GenesisStateProtoMsg {
     return {
-      typeUrl: "/symphony.ibchooks.GenesisState",
-      value: GenesisState.encode(message).finish()
+      typeUrl: '/symphony.ibchooks.GenesisState',
+      value: GenesisState.encode(message).finish(),
     };
-  }
+  },
 };
 GlobalDecoderRegistry.register(GenesisState.typeUrl, GenesisState);

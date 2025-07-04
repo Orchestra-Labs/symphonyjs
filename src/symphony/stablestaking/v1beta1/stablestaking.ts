@@ -1,8 +1,17 @@
 //@ts-nocheck
-import { Duration, DurationAmino, DurationSDKType } from "../../../google/protobuf/duration";
-import { BinaryReader, BinaryWriter } from "../../../binary";
-import { GlobalDecoderRegistry } from "../../../registry";
-import { bytesFromBase64, base64FromBytes } from "../../../helpers";
+import {
+  Duration,
+  DurationAmino,
+  DurationSDKType,
+} from '../../../google/protobuf/duration';
+import { BinaryReader, BinaryWriter } from '../../../binary';
+import { GlobalDecoderRegistry } from '../../../registry';
+import { bytesFromBase64, base64FromBytes } from '../../../helpers';
+/**
+ * @name Params
+ * @package symphony.stablestaking.v1beta1
+ * @see proto type: symphony.stablestaking.v1beta1.Params
+ */
 export interface Params {
   rewardRate: string;
   unbondingDuration: Duration;
@@ -12,9 +21,14 @@ export interface Params {
   maxStakingAmount: Uint8Array;
 }
 export interface ParamsProtoMsg {
-  typeUrl: "/symphony.stablestaking.v1beta1.Params";
+  typeUrl: '/symphony.stablestaking.v1beta1.Params';
   value: Uint8Array;
 }
+/**
+ * @name ParamsAmino
+ * @package symphony.stablestaking.v1beta1
+ * @see proto type: symphony.stablestaking.v1beta1.Params
+ */
 export interface ParamsAmino {
   reward_rate?: string;
   unbonding_duration?: DurationAmino;
@@ -24,9 +38,14 @@ export interface ParamsAmino {
   max_staking_amount?: string;
 }
 export interface ParamsAminoMsg {
-  type: "/symphony.stablestaking.v1beta1.Params";
+  type: '/symphony.stablestaking.v1beta1.Params';
   value: ParamsAmino;
 }
+/**
+ * @name ParamsSDKType
+ * @package symphony.stablestaking.v1beta1
+ * @see proto type: symphony.stablestaking.v1beta1.Params
+ */
 export interface ParamsSDKType {
   reward_rate: string;
   unbonding_duration: DurationSDKType;
@@ -35,69 +54,119 @@ export interface ParamsSDKType {
   unbonding_epoch_identifier: string;
   max_staking_amount: Uint8Array;
 }
+/**
+ * @name GenesisState
+ * @package symphony.stablestaking.v1beta1
+ * @see proto type: symphony.stablestaking.v1beta1.GenesisState
+ */
 export interface GenesisState {
   params: Params;
 }
 export interface GenesisStateProtoMsg {
-  typeUrl: "/symphony.stablestaking.v1beta1.GenesisState";
+  typeUrl: '/symphony.stablestaking.v1beta1.GenesisState';
   value: Uint8Array;
 }
+/**
+ * @name GenesisStateAmino
+ * @package symphony.stablestaking.v1beta1
+ * @see proto type: symphony.stablestaking.v1beta1.GenesisState
+ */
 export interface GenesisStateAmino {
   params?: ParamsAmino;
 }
 export interface GenesisStateAminoMsg {
-  type: "/symphony.stablestaking.v1beta1.GenesisState";
+  type: '/symphony.stablestaking.v1beta1.GenesisState';
   value: GenesisStateAmino;
 }
+/**
+ * @name GenesisStateSDKType
+ * @package symphony.stablestaking.v1beta1
+ * @see proto type: symphony.stablestaking.v1beta1.GenesisState
+ */
 export interface GenesisStateSDKType {
   params: ParamsSDKType;
 }
+/**
+ * @name StakingPool
+ * @package symphony.stablestaking.v1beta1
+ * @see proto type: symphony.stablestaking.v1beta1.StakingPool
+ */
 export interface StakingPool {
   denom: string;
   totalStaked: Uint8Array;
   totalShares: Uint8Array;
 }
 export interface StakingPoolProtoMsg {
-  typeUrl: "/symphony.stablestaking.v1beta1.StakingPool";
+  typeUrl: '/symphony.stablestaking.v1beta1.StakingPool';
   value: Uint8Array;
 }
+/**
+ * @name StakingPoolAmino
+ * @package symphony.stablestaking.v1beta1
+ * @see proto type: symphony.stablestaking.v1beta1.StakingPool
+ */
 export interface StakingPoolAmino {
   denom?: string;
   total_staked?: string;
   total_shares?: string;
 }
 export interface StakingPoolAminoMsg {
-  type: "/symphony.stablestaking.v1beta1.StakingPool";
+  type: '/symphony.stablestaking.v1beta1.StakingPool';
   value: StakingPoolAmino;
 }
+/**
+ * @name StakingPoolSDKType
+ * @package symphony.stablestaking.v1beta1
+ * @see proto type: symphony.stablestaking.v1beta1.StakingPool
+ */
 export interface StakingPoolSDKType {
   denom: string;
   total_staked: Uint8Array;
   total_shares: Uint8Array;
 }
+/**
+ * @name UserStake
+ * @package symphony.stablestaking.v1beta1
+ * @see proto type: symphony.stablestaking.v1beta1.UserStake
+ */
 export interface UserStake {
   address: string;
   shares: Uint8Array;
   epoch: bigint;
 }
 export interface UserStakeProtoMsg {
-  typeUrl: "/symphony.stablestaking.v1beta1.UserStake";
+  typeUrl: '/symphony.stablestaking.v1beta1.UserStake';
   value: Uint8Array;
 }
+/**
+ * @name UserStakeAmino
+ * @package symphony.stablestaking.v1beta1
+ * @see proto type: symphony.stablestaking.v1beta1.UserStake
+ */
 export interface UserStakeAmino {
   address?: string;
   shares?: string;
   epoch?: string;
 }
 export interface UserStakeAminoMsg {
-  type: "/symphony.stablestaking.v1beta1.UserStake";
+  type: '/symphony.stablestaking.v1beta1.UserStake';
   value: UserStakeAmino;
 }
+/**
+ * @name UserStakeSDKType
+ * @package symphony.stablestaking.v1beta1
+ * @see proto type: symphony.stablestaking.v1beta1.UserStake
+ */
 export interface UserStakeSDKType {
   address: string;
   shares: Uint8Array;
   epoch: bigint;
 }
+/**
+ * @name UnbondingInfo
+ * @package symphony.stablestaking.v1beta1
+ * @see proto type: symphony.stablestaking.v1beta1.UnbondingInfo
+ */
 export interface UnbondingInfo {
   address: string;
   amount: Uint8Array;
@@ -105,9 +174,14 @@ export interface UnbondingInfo {
   unbondEpoch: bigint;
 }
 export interface UnbondingInfoProtoMsg {
-  typeUrl: "/symphony.stablestaking.v1beta1.UnbondingInfo";
+  typeUrl: '/symphony.stablestaking.v1beta1.UnbondingInfo';
   value: Uint8Array;
 }
+/**
+ * @name UnbondingInfoAmino
+ * @package symphony.stablestaking.v1beta1
+ * @see proto type: symphony.stablestaking.v1beta1.UnbondingInfo
+ */
 export interface UnbondingInfoAmino {
   address?: string;
   amount?: string;
@@ -115,33 +189,53 @@ export interface UnbondingInfoAmino {
   unbond_epoch?: string;
 }
 export interface UnbondingInfoAminoMsg {
-  type: "/symphony.stablestaking.v1beta1.UnbondingInfo";
+  type: '/symphony.stablestaking.v1beta1.UnbondingInfo';
   value: UnbondingInfoAmino;
 }
+/**
+ * @name UnbondingInfoSDKType
+ * @package symphony.stablestaking.v1beta1
+ * @see proto type: symphony.stablestaking.v1beta1.UnbondingInfo
+ */
 export interface UnbondingInfoSDKType {
   address: string;
   amount: Uint8Array;
   denom: string;
   unbond_epoch: bigint;
 }
+/**
+ * @name EpochSnapshot
+ * @package symphony.stablestaking.v1beta1
+ * @see proto type: symphony.stablestaking.v1beta1.EpochSnapshot
+ */
 export interface EpochSnapshot {
   totalStaked: Uint8Array;
   totalShares: Uint8Array;
   stakers: UserStake[];
 }
 export interface EpochSnapshotProtoMsg {
-  typeUrl: "/symphony.stablestaking.v1beta1.EpochSnapshot";
+  typeUrl: '/symphony.stablestaking.v1beta1.EpochSnapshot';
   value: Uint8Array;
 }
+/**
+ * @name EpochSnapshotAmino
+ * @package symphony.stablestaking.v1beta1
+ * @see proto type: symphony.stablestaking.v1beta1.EpochSnapshot
+ */
 export interface EpochSnapshotAmino {
   total_staked?: string;
   total_shares?: string;
   stakers?: UserStakeAmino[];
 }
 export interface EpochSnapshotAminoMsg {
-  type: "/symphony.stablestaking.v1beta1.EpochSnapshot";
+  type: '/symphony.stablestaking.v1beta1.EpochSnapshot';
   value: EpochSnapshotAmino;
 }
+/**
+ * @name EpochSnapshotSDKType
+ * @package symphony.stablestaking.v1beta1
+ * @see proto type: symphony.stablestaking.v1beta1.EpochSnapshot
+ */
 export interface EpochSnapshotSDKType {
   total_staked: Uint8Array;
   total_shares: Uint8Array;
@@ -149,39 +243,86 @@ export interface EpochSnapshotSDKType {
 }
 function createBaseParams(): Params {
   return {
-    rewardRate: "",
+    rewardRate: '',
     unbondingDuration: Duration.fromPartial({}),
     supportedTokens: [],
-    rewardEpochIdentifier: "",
-    unbondingEpochIdentifier: "",
-    maxStakingAmount: new Uint8Array()
+    rewardEpochIdentifier: '',
+    unbondingEpochIdentifier: '',
+    maxStakingAmount: new Uint8Array(),
   };
 }
+/**
+ * @name Params
+ * @package symphony.stablestaking.v1beta1
+ * @see proto type: symphony.stablestaking.v1beta1.Params
+ */
 export const Params = {
-  typeUrl: "/symphony.stablestaking.v1beta1.Params",
+  typeUrl: '/symphony.stablestaking.v1beta1.Params',
   is(o: any): o is Params {
-    return o && (o.$typeUrl === Params.typeUrl || typeof o.rewardRate === "string" && Duration.is(o.unbondingDuration) && Array.isArray(o.supportedTokens) && (!o.supportedTokens.length || typeof o.supportedTokens[0] === "string") && typeof o.rewardEpochIdentifier === "string" && typeof o.unbondingEpochIdentifier === "string" && (o.maxStakingAmount instanceof Uint8Array || typeof o.maxStakingAmount === "string"));
+    return (
+      o &&
+      (o.$typeUrl === Params.typeUrl ||
+        (typeof o.rewardRate === 'string' &&
+          Duration.is(o.unbondingDuration) &&
+          Array.isArray(o.supportedTokens) &&
+          (!o.supportedTokens.length ||
+            typeof o.supportedTokens[0] === 'string') &&
+          typeof o.rewardEpochIdentifier === 'string' &&
+          typeof o.unbondingEpochIdentifier === 'string' &&
+          (o.maxStakingAmount instanceof Uint8Array ||
+            typeof o.maxStakingAmount === 'string')))
+    );
   },
   isSDK(o: any): o is ParamsSDKType {
-    return o && (o.$typeUrl === Params.typeUrl || typeof o.reward_rate === "string" && Duration.isSDK(o.unbonding_duration) && Array.isArray(o.supported_tokens) && (!o.supported_tokens.length || typeof o.supported_tokens[0] === "string") && typeof o.reward_epoch_identifier === "string" && typeof o.unbonding_epoch_identifier === "string" && (o.max_staking_amount instanceof Uint8Array || typeof o.max_staking_amount === "string"));
+    return (
+      o &&
+      (o.$typeUrl === Params.typeUrl ||
+        (typeof o.reward_rate === 'string' &&
+          Duration.isSDK(o.unbonding_duration) &&
+          Array.isArray(o.supported_tokens) &&
+          (!o.supported_tokens.length ||
+            typeof o.supported_tokens[0] === 'string') &&
+          typeof o.reward_epoch_identifier === 'string' &&
+          typeof o.unbonding_epoch_identifier === 'string' &&
+          (o.max_staking_amount instanceof Uint8Array ||
+            typeof o.max_staking_amount === 'string')))
+    );
   },
   isAmino(o: any): o is ParamsAmino {
-    return o && (o.$typeUrl === Params.typeUrl || typeof o.reward_rate === "string" && Duration.isAmino(o.unbonding_duration) && Array.isArray(o.supported_tokens) && (!o.supported_tokens.length || typeof o.supported_tokens[0] === "string") && typeof o.reward_epoch_identifier === "string" && typeof o.unbonding_epoch_identifier === "string" && (o.max_staking_amount instanceof Uint8Array || typeof o.max_staking_amount === "string"));
+    return (
+      o &&
+      (o.$typeUrl === Params.typeUrl ||
+        (typeof o.reward_rate === 'string' &&
+          Duration.isAmino(o.unbonding_duration) &&
+          Array.isArray(o.supported_tokens) &&
+          (!o.supported_tokens.length ||
+            typeof o.supported_tokens[0] === 'string') &&
+          typeof o.reward_epoch_identifier === 'string' &&
+          typeof o.unbonding_epoch_identifier === 'string' &&
+          (o.max_staking_amount instanceof Uint8Array ||
+            typeof o.max_staking_amount === 'string')))
+    );
   },
-  encode(message: Params, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
-    if (message.rewardRate !== "") {
+  encode(
+    message: Params,
+    writer: BinaryWriter = BinaryWriter.create(),
+  ): BinaryWriter {
+    if (message.rewardRate !== '') {
       writer.uint32(10).string(message.rewardRate);
     }
     if (message.unbondingDuration !== undefined) {
-      Duration.encode(message.unbondingDuration, writer.uint32(18).fork()).ldelim();
+      Duration.encode(
+        message.unbondingDuration,
+        writer.uint32(18).fork(),
+      ).ldelim();
     }
     for (const v of message.supportedTokens) {
       writer.uint32(26).string(v!);
     }
-    if (message.rewardEpochIdentifier !== "") {
+    if (message.rewardEpochIdentifier !== '') {
       writer.uint32(34).string(message.rewardEpochIdentifier);
     }
-    if (message.unbondingEpochIdentifier !== "") {
+    if (message.unbondingEpochIdentifier !== '') {
       writer.uint32(42).string(message.unbondingEpochIdentifier);
     }
     if (message.maxStakingAmount.length !== 0) {
@@ -190,7 +331,8 @@ export const Params = {
     return writer;
   },
   decode(input: BinaryReader | Uint8Array, length?: number): Params {
-    const reader = input instanceof BinaryReader ? input : new BinaryReader(input);
+    const reader =
+      input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseParams();
     while (reader.pos < end) {
@@ -223,11 +365,15 @@ export const Params = {
   },
   fromPartial(object: Partial<Params>): Params {
     const message = createBaseParams();
-    message.rewardRate = object.rewardRate ?? "";
-    message.unbondingDuration = object.unbondingDuration !== undefined && object.unbondingDuration !== null ? Duration.fromPartial(object.unbondingDuration) : undefined;
+    message.rewardRate = object.rewardRate ?? '';
+    message.unbondingDuration =
+      object.unbondingDuration !== undefined &&
+      object.unbondingDuration !== null
+        ? Duration.fromPartial(object.unbondingDuration)
+        : undefined;
     message.supportedTokens = object.supportedTokens?.map(e => e) || [];
-    message.rewardEpochIdentifier = object.rewardEpochIdentifier ?? "";
-    message.unbondingEpochIdentifier = object.unbondingEpochIdentifier ?? "";
+    message.rewardEpochIdentifier = object.rewardEpochIdentifier ?? '';
+    message.unbondingEpochIdentifier = object.unbondingEpochIdentifier ?? '';
     message.maxStakingAmount = object.maxStakingAmount ?? new Uint8Array();
     return message;
   },
@@ -236,33 +382,56 @@ export const Params = {
     if (object.reward_rate !== undefined && object.reward_rate !== null) {
       message.rewardRate = object.reward_rate;
     }
-    if (object.unbonding_duration !== undefined && object.unbonding_duration !== null) {
+    if (
+      object.unbonding_duration !== undefined &&
+      object.unbonding_duration !== null
+    ) {
       message.unbondingDuration = Duration.fromAmino(object.unbonding_duration);
     }
     message.supportedTokens = object.supported_tokens?.map(e => e) || [];
-    if (object.reward_epoch_identifier !== undefined && object.reward_epoch_identifier !== null) {
+    if (
+      object.reward_epoch_identifier !== undefined &&
+      object.reward_epoch_identifier !== null
+    ) {
       message.rewardEpochIdentifier = object.reward_epoch_identifier;
     }
-    if (object.unbonding_epoch_identifier !== undefined && object.unbonding_epoch_identifier !== null) {
+    if (
+      object.unbonding_epoch_identifier !== undefined &&
+      object.unbonding_epoch_identifier !== null
+    ) {
       message.unbondingEpochIdentifier = object.unbonding_epoch_identifier;
     }
-    if (object.max_staking_amount !== undefined && object.max_staking_amount !== null) {
+    if (
+      object.max_staking_amount !== undefined &&
+      object.max_staking_amount !== null
+    ) {
       message.maxStakingAmount = bytesFromBase64(object.max_staking_amount);
     }
     return message;
   },
   toAmino(message: Params): ParamsAmino {
     const obj: any = {};
-    obj.reward_rate = message.rewardRate === "" ? undefined : message.rewardRate;
-    obj.unbonding_duration = message.unbondingDuration ? Duration.toAmino(message.unbondingDuration) : undefined;
+    obj.reward_rate =
+      message.rewardRate === '' ? undefined : message.rewardRate;
+    obj.unbonding_duration = message.unbondingDuration
+      ? Duration.toAmino(message.unbondingDuration)
+      : undefined;
     if (message.supportedTokens) {
       obj.supported_tokens = message.supportedTokens.map(e => e);
     } else {
       obj.supported_tokens = message.supportedTokens;
     }
-    obj.reward_epoch_identifier = message.rewardEpochIdentifier === "" ? undefined : message.rewardEpochIdentifier;
-    obj.unbonding_epoch_identifier = message.unbondingEpochIdentifier === "" ? undefined : message.unbondingEpochIdentifier;
-    obj.max_staking_amount = message.maxStakingAmount ? base64FromBytes(message.maxStakingAmount) : undefined;
+    obj.reward_epoch_identifier =
+      message.rewardEpochIdentifier === ''
+        ? undefined
+        : message.rewardEpochIdentifier;
+    obj.unbonding_epoch_identifier =
+      message.unbondingEpochIdentifier === ''
+        ? undefined
+        : message.unbondingEpochIdentifier;
+    obj.max_staking_amount = message.maxStakingAmount
+      ? base64FromBytes(message.maxStakingAmount)
+      : undefined;
     return obj;
   },
   fromAminoMsg(object: ParamsAminoMsg): Params {
@@ -276,19 +445,24 @@ export const Params = {
   },
   toProtoMsg(message: Params): ParamsProtoMsg {
     return {
-      typeUrl: "/symphony.stablestaking.v1beta1.Params",
-      value: Params.encode(message).finish()
+      typeUrl: '/symphony.stablestaking.v1beta1.Params',
+      value: Params.encode(message).finish(),
     };
-  }
+  },
 };
 GlobalDecoderRegistry.register(Params.typeUrl, Params);
 function createBaseGenesisState(): GenesisState {
   return {
-    params: Params.fromPartial({})
+    params: Params.fromPartial({}),
   };
 }
+/**
+ * @name GenesisState
+ * @package symphony.stablestaking.v1beta1
+ * @see proto type: symphony.stablestaking.v1beta1.GenesisState
+ */
 export const GenesisState = {
-  typeUrl: "/symphony.stablestaking.v1beta1.GenesisState",
+  typeUrl: '/symphony.stablestaking.v1beta1.GenesisState',
   is(o: any): o is GenesisState {
     return o && (o.$typeUrl === GenesisState.typeUrl || Params.is(o.params));
   },
@@ -296,16 +470,22 @@ export const GenesisState = {
     return o && (o.$typeUrl === GenesisState.typeUrl || Params.isSDK(o.params));
   },
   isAmino(o: any): o is GenesisStateAmino {
-    return o && (o.$typeUrl === GenesisState.typeUrl || Params.isAmino(o.params));
+    return (
+      o && (o.$typeUrl === GenesisState.typeUrl || Params.isAmino(o.params))
+    );
   },
-  encode(message: GenesisState, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
+  encode(
+    message: GenesisState,
+    writer: BinaryWriter = BinaryWriter.create(),
+  ): BinaryWriter {
     if (message.params !== undefined) {
       Params.encode(message.params, writer.uint32(10).fork()).ldelim();
     }
     return writer;
   },
   decode(input: BinaryReader | Uint8Array, length?: number): GenesisState {
-    const reader = input instanceof BinaryReader ? input : new BinaryReader(input);
+    const reader =
+      input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseGenesisState();
     while (reader.pos < end) {
@@ -323,7 +503,10 @@ export const GenesisState = {
   },
   fromPartial(object: Partial<GenesisState>): GenesisState {
     const message = createBaseGenesisState();
-    message.params = object.params !== undefined && object.params !== null ? Params.fromPartial(object.params) : undefined;
+    message.params =
+      object.params !== undefined && object.params !== null
+        ? Params.fromPartial(object.params)
+        : undefined;
     return message;
   },
   fromAmino(object: GenesisStateAmino): GenesisState {
@@ -349,32 +532,64 @@ export const GenesisState = {
   },
   toProtoMsg(message: GenesisState): GenesisStateProtoMsg {
     return {
-      typeUrl: "/symphony.stablestaking.v1beta1.GenesisState",
-      value: GenesisState.encode(message).finish()
+      typeUrl: '/symphony.stablestaking.v1beta1.GenesisState',
+      value: GenesisState.encode(message).finish(),
     };
-  }
+  },
 };
 GlobalDecoderRegistry.register(GenesisState.typeUrl, GenesisState);
 function createBaseStakingPool(): StakingPool {
   return {
-    denom: "",
+    denom: '',
     totalStaked: new Uint8Array(),
-    totalShares: new Uint8Array()
+    totalShares: new Uint8Array(),
   };
 }
+/**
+ * @name StakingPool
+ * @package symphony.stablestaking.v1beta1
+ * @see proto type: symphony.stablestaking.v1beta1.StakingPool
+ */
 export const StakingPool = {
-  typeUrl: "/symphony.stablestaking.v1beta1.StakingPool",
+  typeUrl: '/symphony.stablestaking.v1beta1.StakingPool',
   is(o: any): o is StakingPool {
-    return o && (o.$typeUrl === StakingPool.typeUrl || typeof o.denom === "string" && (o.totalStaked instanceof Uint8Array || typeof o.totalStaked === "string") && (o.totalShares instanceof Uint8Array || typeof o.totalShares === "string"));
+    return (
+      o &&
+      (o.$typeUrl === StakingPool.typeUrl ||
+        (typeof o.denom === 'string' &&
+          (o.totalStaked instanceof Uint8Array ||
+            typeof o.totalStaked === 'string') &&
+          (o.totalShares instanceof Uint8Array ||
+            typeof o.totalShares === 'string')))
+    );
   },
   isSDK(o: any): o is StakingPoolSDKType {
-    return o && (o.$typeUrl === StakingPool.typeUrl || typeof o.denom === "string" && (o.total_staked instanceof Uint8Array || typeof o.total_staked === "string") && (o.total_shares instanceof Uint8Array || typeof o.total_shares === "string"));
+    return (
+      o &&
+      (o.$typeUrl === StakingPool.typeUrl ||
+        (typeof o.denom === 'string' &&
+          (o.total_staked instanceof Uint8Array ||
+            typeof o.total_staked === 'string') &&
+          (o.total_shares instanceof Uint8Array ||
+            typeof o.total_shares === 'string')))
+    );
   },
   isAmino(o: any): o is StakingPoolAmino {
-    return o && (o.$typeUrl === StakingPool.typeUrl || typeof o.denom === "string" && (o.total_staked instanceof Uint8Array || typeof o.total_staked === "string") && (o.total_shares instanceof Uint8Array || typeof o.total_shares === "string"));
+    return (
+      o &&
+      (o.$typeUrl === StakingPool.typeUrl ||
+        (typeof o.denom === 'string' &&
+          (o.total_staked instanceof Uint8Array ||
+            typeof o.total_staked === 'string') &&
+          (o.total_shares instanceof Uint8Array ||
+            typeof o.total_shares === 'string')))
+    );
   },
-  encode(message: StakingPool, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
-    if (message.denom !== "") {
+  encode(
+    message: StakingPool,
+    writer: BinaryWriter = BinaryWriter.create(),
+  ): BinaryWriter {
+    if (message.denom !== '') {
       writer.uint32(10).string(message.denom);
     }
     if (message.totalStaked.length !== 0) {
@@ -386,7 +601,8 @@ export const StakingPool = {
     return writer;
   },
   decode(input: BinaryReader | Uint8Array, length?: number): StakingPool {
-    const reader = input instanceof BinaryReader ? input : new BinaryReader(input);
+    const reader =
+      input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseStakingPool();
     while (reader.pos < end) {
@@ -410,7 +626,7 @@ export const StakingPool = {
   },
   fromPartial(object: Partial<StakingPool>): StakingPool {
     const message = createBaseStakingPool();
-    message.denom = object.denom ?? "";
+    message.denom = object.denom ?? '';
     message.totalStaked = object.totalStaked ?? new Uint8Array();
     message.totalShares = object.totalShares ?? new Uint8Array();
     return message;
@@ -430,9 +646,13 @@ export const StakingPool = {
   },
   toAmino(message: StakingPool): StakingPoolAmino {
     const obj: any = {};
-    obj.denom = message.denom === "" ? undefined : message.denom;
-    obj.total_staked = message.totalStaked ? base64FromBytes(message.totalStaked) : undefined;
-    obj.total_shares = message.totalShares ? base64FromBytes(message.totalShares) : undefined;
+    obj.denom = message.denom === '' ? undefined : message.denom;
+    obj.total_staked = message.totalStaked
+      ? base64FromBytes(message.totalStaked)
+      : undefined;
+    obj.total_shares = message.totalShares
+      ? base64FromBytes(message.totalShares)
+      : undefined;
     return obj;
   },
   fromAminoMsg(object: StakingPoolAminoMsg): StakingPool {
@@ -446,32 +666,58 @@ export const StakingPool = {
   },
   toProtoMsg(message: StakingPool): StakingPoolProtoMsg {
     return {
-      typeUrl: "/symphony.stablestaking.v1beta1.StakingPool",
-      value: StakingPool.encode(message).finish()
+      typeUrl: '/symphony.stablestaking.v1beta1.StakingPool',
+      value: StakingPool.encode(message).finish(),
     };
-  }
+  },
 };
 GlobalDecoderRegistry.register(StakingPool.typeUrl, StakingPool);
 function createBaseUserStake(): UserStake {
   return {
-    address: "",
+    address: '',
     shares: new Uint8Array(),
-    epoch: BigInt(0)
+    epoch: BigInt(0),
   };
 }
+/**
+ * @name UserStake
+ * @package symphony.stablestaking.v1beta1
+ * @see proto type: symphony.stablestaking.v1beta1.UserStake
+ */
 export const UserStake = {
-  typeUrl: "/symphony.stablestaking.v1beta1.UserStake",
+  typeUrl: '/symphony.stablestaking.v1beta1.UserStake',
   is(o: any): o is UserStake {
-    return o && (o.$typeUrl === UserStake.typeUrl || typeof o.address === "string" && (o.shares instanceof Uint8Array || typeof o.shares === "string") && typeof o.epoch === "bigint");
+    return (
+      o &&
+      (o.$typeUrl === UserStake.typeUrl ||
+        (typeof o.address === 'string' &&
+          (o.shares instanceof Uint8Array || typeof o.shares === 'string') &&
+          typeof o.epoch === 'bigint'))
+    );
   },
   isSDK(o: any): o is UserStakeSDKType {
-    return o && (o.$typeUrl === UserStake.typeUrl || typeof o.address === "string" && (o.shares instanceof Uint8Array || typeof o.shares === "string") && typeof o.epoch === "bigint");
+    return (
+      o &&
+      (o.$typeUrl === UserStake.typeUrl ||
+        (typeof o.address === 'string' &&
+          (o.shares instanceof Uint8Array || typeof o.shares === 'string') &&
+          typeof o.epoch === 'bigint'))
+    );
   },
   isAmino(o: any): o is UserStakeAmino {
-    return o && (o.$typeUrl === UserStake.typeUrl || typeof o.address === "string" && (o.shares instanceof Uint8Array || typeof o.shares === "string") && typeof o.epoch === "bigint");
+    return (
+      o &&
+      (o.$typeUrl === UserStake.typeUrl ||
+        (typeof o.address === 'string' &&
+          (o.shares instanceof Uint8Array || typeof o.shares === 'string') &&
+          typeof o.epoch === 'bigint'))
+    );
   },
-  encode(message: UserStake, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
-    if (message.address !== "") {
+  encode(
+    message: UserStake,
+    writer: BinaryWriter = BinaryWriter.create(),
+  ): BinaryWriter {
+    if (message.address !== '') {
       writer.uint32(10).string(message.address);
     }
     if (message.shares.length !== 0) {
@@ -483,7 +729,8 @@ export const UserStake = {
     return writer;
   },
   decode(input: BinaryReader | Uint8Array, length?: number): UserStake {
-    const reader = input instanceof BinaryReader ? input : new BinaryReader(input);
+    const reader =
+      input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseUserStake();
     while (reader.pos < end) {
@@ -507,9 +754,12 @@ export const UserStake = {
   },
   fromPartial(object: Partial<UserStake>): UserStake {
     const message = createBaseUserStake();
-    message.address = object.address ?? "";
+    message.address = object.address ?? '';
     message.shares = object.shares ?? new Uint8Array();
-    message.epoch = object.epoch !== undefined && object.epoch !== null ? BigInt(object.epoch.toString()) : BigInt(0);
+    message.epoch =
+      object.epoch !== undefined && object.epoch !== null
+        ? BigInt(object.epoch.toString())
+        : BigInt(0);
     return message;
   },
   fromAmino(object: UserStakeAmino): UserStake {
@@ -527,9 +777,10 @@ export const UserStake = {
   },
   toAmino(message: UserStake): UserStakeAmino {
     const obj: any = {};
-    obj.address = message.address === "" ? undefined : message.address;
+    obj.address = message.address === '' ? undefined : message.address;
     obj.shares = message.shares ? base64FromBytes(message.shares) : undefined;
-    obj.epoch = message.epoch !== BigInt(0) ? message.epoch?.toString() : undefined;
+    obj.epoch =
+      message.epoch !== BigInt(0) ? message.epoch?.toString() : undefined;
     return obj;
   },
   fromAminoMsg(object: UserStakeAminoMsg): UserStake {
@@ -543,39 +794,68 @@ export const UserStake = {
   },
   toProtoMsg(message: UserStake): UserStakeProtoMsg {
     return {
-      typeUrl: "/symphony.stablestaking.v1beta1.UserStake",
-      value: UserStake.encode(message).finish()
+      typeUrl: '/symphony.stablestaking.v1beta1.UserStake',
+      value: UserStake.encode(message).finish(),
     };
-  }
+  },
 };
 GlobalDecoderRegistry.register(UserStake.typeUrl, UserStake);
 function createBaseUnbondingInfo(): UnbondingInfo {
   return {
-    address: "",
+    address: '',
     amount: new Uint8Array(),
-    denom: "",
-    unbondEpoch: BigInt(0)
+    denom: '',
+    unbondEpoch: BigInt(0),
   };
 }
+/**
+ * @name UnbondingInfo
+ * @package symphony.stablestaking.v1beta1
+ * @see proto type: symphony.stablestaking.v1beta1.UnbondingInfo
+ */
 export const UnbondingInfo = {
-  typeUrl: "/symphony.stablestaking.v1beta1.UnbondingInfo",
+  typeUrl: '/symphony.stablestaking.v1beta1.UnbondingInfo',
   is(o: any): o is UnbondingInfo {
-    return o && (o.$typeUrl === UnbondingInfo.typeUrl || typeof o.address === "string" && (o.amount instanceof Uint8Array || typeof o.amount === "string") && typeof o.denom === "string" && typeof o.unbondEpoch === "bigint");
+    return (
+      o &&
+      (o.$typeUrl === UnbondingInfo.typeUrl ||
+        (typeof o.address === 'string' &&
+          (o.amount instanceof Uint8Array || typeof o.amount === 'string') &&
+          typeof o.denom === 'string' &&
+          typeof o.unbondEpoch === 'bigint'))
+    );
   },
   isSDK(o: any): o is UnbondingInfoSDKType {
-    return o && (o.$typeUrl === UnbondingInfo.typeUrl || typeof o.address === "string" && (o.amount instanceof Uint8Array || typeof o.amount === "string") && typeof o.denom === "string" && typeof o.unbond_epoch === "bigint");
+    return (
+      o &&
+      (o.$typeUrl === UnbondingInfo.typeUrl ||
+        (typeof o.address === 'string' &&
+          (o.amount instanceof Uint8Array || typeof o.amount === 'string') &&
+          typeof o.denom === 'string' &&
+          typeof o.unbond_epoch === 'bigint'))
+    );
   },
   isAmino(o: any): o is UnbondingInfoAmino {
-    return o && (o.$typeUrl === UnbondingInfo.typeUrl || typeof o.address === "string" && (o.amount instanceof Uint8Array || typeof o.amount === "string") && typeof o.denom === "string" && typeof o.unbond_epoch === "bigint");
+    return (
+      o &&
+      (o.$typeUrl === UnbondingInfo.typeUrl ||
+        (typeof o.address === 'string' &&
+          (o.amount instanceof Uint8Array || typeof o.amount === 'string') &&
+          typeof o.denom === 'string' &&
+          typeof o.unbond_epoch === 'bigint'))
+    );
   },
-  encode(message: UnbondingInfo, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
-    if (message.address !== "") {
+  encode(
+    message: UnbondingInfo,
+    writer: BinaryWriter = BinaryWriter.create(),
+  ): BinaryWriter {
+    if (message.address !== '') {
       writer.uint32(10).string(message.address);
     }
     if (message.amount.length !== 0) {
       writer.uint32(18).bytes(message.amount);
     }
-    if (message.denom !== "") {
+    if (message.denom !== '') {
       writer.uint32(26).string(message.denom);
     }
     if (message.unbondEpoch !== BigInt(0)) {
@@ -584,7 +864,8 @@ export const UnbondingInfo = {
     return writer;
   },
   decode(input: BinaryReader | Uint8Array, length?: number): UnbondingInfo {
-    const reader = input instanceof BinaryReader ? input : new BinaryReader(input);
+    const reader =
+      input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseUnbondingInfo();
     while (reader.pos < end) {
@@ -611,10 +892,13 @@ export const UnbondingInfo = {
   },
   fromPartial(object: Partial<UnbondingInfo>): UnbondingInfo {
     const message = createBaseUnbondingInfo();
-    message.address = object.address ?? "";
+    message.address = object.address ?? '';
     message.amount = object.amount ?? new Uint8Array();
-    message.denom = object.denom ?? "";
-    message.unbondEpoch = object.unbondEpoch !== undefined && object.unbondEpoch !== null ? BigInt(object.unbondEpoch.toString()) : BigInt(0);
+    message.denom = object.denom ?? '';
+    message.unbondEpoch =
+      object.unbondEpoch !== undefined && object.unbondEpoch !== null
+        ? BigInt(object.unbondEpoch.toString())
+        : BigInt(0);
     return message;
   },
   fromAmino(object: UnbondingInfoAmino): UnbondingInfo {
@@ -635,10 +919,13 @@ export const UnbondingInfo = {
   },
   toAmino(message: UnbondingInfo): UnbondingInfoAmino {
     const obj: any = {};
-    obj.address = message.address === "" ? undefined : message.address;
+    obj.address = message.address === '' ? undefined : message.address;
     obj.amount = message.amount ? base64FromBytes(message.amount) : undefined;
-    obj.denom = message.denom === "" ? undefined : message.denom;
-    obj.unbond_epoch = message.unbondEpoch !== BigInt(0) ? message.unbondEpoch?.toString() : undefined;
+    obj.denom = message.denom === '' ? undefined : message.denom;
+    obj.unbond_epoch =
+      message.unbondEpoch !== BigInt(0)
+        ? message.unbondEpoch?.toString()
+        : undefined;
     return obj;
   },
   fromAminoMsg(object: UnbondingInfoAminoMsg): UnbondingInfo {
@@ -652,31 +939,66 @@ export const UnbondingInfo = {
   },
   toProtoMsg(message: UnbondingInfo): UnbondingInfoProtoMsg {
     return {
-      typeUrl: "/symphony.stablestaking.v1beta1.UnbondingInfo",
-      value: UnbondingInfo.encode(message).finish()
+      typeUrl: '/symphony.stablestaking.v1beta1.UnbondingInfo',
+      value: UnbondingInfo.encode(message).finish(),
     };
-  }
+  },
 };
 GlobalDecoderRegistry.register(UnbondingInfo.typeUrl, UnbondingInfo);
 function createBaseEpochSnapshot(): EpochSnapshot {
   return {
     totalStaked: new Uint8Array(),
     totalShares: new Uint8Array(),
-    stakers: []
+    stakers: [],
   };
 }
+/**
+ * @name EpochSnapshot
+ * @package symphony.stablestaking.v1beta1
+ * @see proto type: symphony.stablestaking.v1beta1.EpochSnapshot
+ */
 export const EpochSnapshot = {
-  typeUrl: "/symphony.stablestaking.v1beta1.EpochSnapshot",
+  typeUrl: '/symphony.stablestaking.v1beta1.EpochSnapshot',
   is(o: any): o is EpochSnapshot {
-    return o && (o.$typeUrl === EpochSnapshot.typeUrl || (o.totalStaked instanceof Uint8Array || typeof o.totalStaked === "string") && (o.totalShares instanceof Uint8Array || typeof o.totalShares === "string") && Array.isArray(o.stakers) && (!o.stakers.length || UserStake.is(o.stakers[0])));
+    return (
+      o &&
+      (o.$typeUrl === EpochSnapshot.typeUrl ||
+        ((o.totalStaked instanceof Uint8Array ||
+          typeof o.totalStaked === 'string') &&
+          (o.totalShares instanceof Uint8Array ||
+            typeof o.totalShares === 'string') &&
+          Array.isArray(o.stakers) &&
+          (!o.stakers.length || UserStake.is(o.stakers[0]))))
+    );
   },
   isSDK(o: any): o is EpochSnapshotSDKType {
-    return o && (o.$typeUrl === EpochSnapshot.typeUrl || (o.total_staked instanceof Uint8Array || typeof o.total_staked === "string") && (o.total_shares instanceof Uint8Array || typeof o.total_shares === "string") && Array.isArray(o.stakers) && (!o.stakers.length || UserStake.isSDK(o.stakers[0])));
+    return (
+      o &&
+      (o.$typeUrl === EpochSnapshot.typeUrl ||
+        ((o.total_staked instanceof Uint8Array ||
+          typeof o.total_staked === 'string') &&
+          (o.total_shares instanceof Uint8Array ||
+            typeof o.total_shares === 'string') &&
+          Array.isArray(o.stakers) &&
+          (!o.stakers.length || UserStake.isSDK(o.stakers[0]))))
+    );
   },
   isAmino(o: any): o is EpochSnapshotAmino {
-    return o && (o.$typeUrl === EpochSnapshot.typeUrl || (o.total_staked instanceof Uint8Array || typeof o.total_staked === "string") && (o.total_shares instanceof Uint8Array || typeof o.total_shares === "string") && Array.isArray(o.stakers) && (!o.stakers.length || UserStake.isAmino(o.stakers[0])));
+    return (
+      o &&
+      (o.$typeUrl === EpochSnapshot.typeUrl ||
+        ((o.total_staked instanceof Uint8Array ||
+          typeof o.total_staked === 'string') &&
+          (o.total_shares instanceof Uint8Array ||
+            typeof o.total_shares === 'string') &&
+          Array.isArray(o.stakers) &&
+          (!o.stakers.length || UserStake.isAmino(o.stakers[0]))))
+    );
   },
-  encode(message: EpochSnapshot, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
+  encode(
+    message: EpochSnapshot,
+    writer: BinaryWriter = BinaryWriter.create(),
+  ): BinaryWriter {
     if (message.totalStaked.length !== 0) {
       writer.uint32(10).bytes(message.totalStaked);
     }
@@ -689,7 +1011,8 @@ export const EpochSnapshot = {
     return writer;
   },
   decode(input: BinaryReader | Uint8Array, length?: number): EpochSnapshot {
-    const reader = input instanceof BinaryReader ? input : new BinaryReader(input);
+    const reader =
+      input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseEpochSnapshot();
     while (reader.pos < end) {
@@ -731,10 +1054,16 @@ export const EpochSnapshot = {
   },
   toAmino(message: EpochSnapshot): EpochSnapshotAmino {
     const obj: any = {};
-    obj.total_staked = message.totalStaked ? base64FromBytes(message.totalStaked) : undefined;
-    obj.total_shares = message.totalShares ? base64FromBytes(message.totalShares) : undefined;
+    obj.total_staked = message.totalStaked
+      ? base64FromBytes(message.totalStaked)
+      : undefined;
+    obj.total_shares = message.totalShares
+      ? base64FromBytes(message.totalShares)
+      : undefined;
     if (message.stakers) {
-      obj.stakers = message.stakers.map(e => e ? UserStake.toAmino(e) : undefined);
+      obj.stakers = message.stakers.map(e =>
+        e ? UserStake.toAmino(e) : undefined,
+      );
     } else {
       obj.stakers = message.stakers;
     }
@@ -751,9 +1080,9 @@ export const EpochSnapshot = {
   },
   toProtoMsg(message: EpochSnapshot): EpochSnapshotProtoMsg {
     return {
-      typeUrl: "/symphony.stablestaking.v1beta1.EpochSnapshot",
-      value: EpochSnapshot.encode(message).finish()
+      typeUrl: '/symphony.stablestaking.v1beta1.EpochSnapshot',
+      value: EpochSnapshot.encode(message).finish(),
     };
-  }
+  },
 };
 GlobalDecoderRegistry.register(EpochSnapshot.typeUrl, EpochSnapshot);

@@ -1,14 +1,41 @@
 //@ts-nocheck
-import { setPaginationParams } from "../../../helpers";
-import { LCDClient } from "@cosmology/lcd";
-import { QueryBalanceRequest, QueryBalanceResponseSDKType, QueryAllBalancesRequest, QueryAllBalancesResponseSDKType, QuerySpendableBalancesRequest, QuerySpendableBalancesResponseSDKType, QuerySpendableBalanceByDenomRequest, QuerySpendableBalanceByDenomResponseSDKType, QueryTotalSupplyRequest, QueryTotalSupplyResponseSDKType, QuerySupplyOfRequest, QuerySupplyOfResponseSDKType, QueryTotalSupplyWithoutOffsetRequest, QueryTotalSupplyWithoutOffsetResponseSDKType, QuerySupplyOfWithoutOffsetRequest, QuerySupplyOfWithoutOffsetResponseSDKType, QueryParamsRequest, QueryParamsResponseSDKType, QueryDenomMetadataRequest, QueryDenomMetadataResponseSDKType, QueryDenomMetadataByQueryStringRequest, QueryDenomMetadataByQueryStringResponseSDKType, QueryDenomsMetadataRequest, QueryDenomsMetadataResponseSDKType, QueryDenomOwnersRequest, QueryDenomOwnersResponseSDKType, QueryDenomOwnersByQueryRequest, QueryDenomOwnersByQueryResponseSDKType, QuerySendEnabledRequest, QuerySendEnabledResponseSDKType } from "./query";
+import { setPaginationParams } from '../../../helpers';
+import { LCDClient } from '@cosmology/lcd';
+import {
+  QueryBalanceRequest,
+  QueryBalanceResponseSDKType,
+  QueryAllBalancesRequest,
+  QueryAllBalancesResponseSDKType,
+  QuerySpendableBalancesRequest,
+  QuerySpendableBalancesResponseSDKType,
+  QuerySpendableBalanceByDenomRequest,
+  QuerySpendableBalanceByDenomResponseSDKType,
+  QueryTotalSupplyRequest,
+  QueryTotalSupplyResponseSDKType,
+  QuerySupplyOfRequest,
+  QuerySupplyOfResponseSDKType,
+  QueryTotalSupplyWithoutOffsetRequest,
+  QueryTotalSupplyWithoutOffsetResponseSDKType,
+  QuerySupplyOfWithoutOffsetRequest,
+  QuerySupplyOfWithoutOffsetResponseSDKType,
+  QueryParamsRequest,
+  QueryParamsResponseSDKType,
+  QueryDenomMetadataRequest,
+  QueryDenomMetadataResponseSDKType,
+  QueryDenomMetadataByQueryStringRequest,
+  QueryDenomMetadataByQueryStringResponseSDKType,
+  QueryDenomsMetadataRequest,
+  QueryDenomsMetadataResponseSDKType,
+  QueryDenomOwnersRequest,
+  QueryDenomOwnersResponseSDKType,
+  QueryDenomOwnersByQueryRequest,
+  QueryDenomOwnersByQueryResponseSDKType,
+  QuerySendEnabledRequest,
+  QuerySendEnabledResponseSDKType,
+} from './query';
 export class LCDQueryClient {
   req: LCDClient;
-  constructor({
-    requestClient
-  }: {
-    requestClient: LCDClient;
-  }) {
+  constructor({ requestClient }: { requestClient: LCDClient }) {
     this.req = requestClient;
     this.balance = this.balance.bind(this);
     this.allBalances = this.allBalances.bind(this);
@@ -20,18 +47,21 @@ export class LCDQueryClient {
     this.supplyOfWithoutOffset = this.supplyOfWithoutOffset.bind(this);
     this.params = this.params.bind(this);
     this.denomMetadata = this.denomMetadata.bind(this);
-    this.denomMetadataByQueryString = this.denomMetadataByQueryString.bind(this);
+    this.denomMetadataByQueryString =
+      this.denomMetadataByQueryString.bind(this);
     this.denomsMetadata = this.denomsMetadata.bind(this);
     this.denomOwners = this.denomOwners.bind(this);
     this.denomOwnersByQuery = this.denomOwnersByQuery.bind(this);
     this.sendEnabled = this.sendEnabled.bind(this);
   }
   /* Balance queries the balance of a single coin for a single account. */
-  async balance(params: QueryBalanceRequest): Promise<QueryBalanceResponseSDKType> {
+  async balance(
+    params: QueryBalanceRequest,
+  ): Promise<QueryBalanceResponseSDKType> {
     const options: any = {
-      params: {}
+      params: {},
     };
-    if (typeof params?.denom !== "undefined") {
+    if (typeof params?.denom !== 'undefined') {
       options.params.denom = params.denom;
     }
     const endpoint = `cosmos/bank/v1beta1/balances/${params.address}/by_denom`;
@@ -41,18 +71,23 @@ export class LCDQueryClient {
   
    When called from another module, this query might consume a high amount of
    gas if the pagination field is incorrectly set. */
-  async allBalances(params: QueryAllBalancesRequest): Promise<QueryAllBalancesResponseSDKType> {
+  async allBalances(
+    params: QueryAllBalancesRequest,
+  ): Promise<QueryAllBalancesResponseSDKType> {
     const options: any = {
-      params: {}
+      params: {},
     };
-    if (typeof params?.pagination !== "undefined") {
+    if (typeof params?.pagination !== 'undefined') {
       setPaginationParams(options, params.pagination);
     }
-    if (typeof params?.resolveDenom !== "undefined") {
+    if (typeof params?.resolveDenom !== 'undefined') {
       options.params.resolve_denom = params.resolveDenom;
     }
     const endpoint = `cosmos/bank/v1beta1/balances/${params.address}`;
-    return await this.req.get<QueryAllBalancesResponseSDKType>(endpoint, options);
+    return await this.req.get<QueryAllBalancesResponseSDKType>(
+      endpoint,
+      options,
+    );
   }
   /* SpendableBalances queries the spendable balance of all coins for a single
    account.
@@ -61,15 +96,20 @@ export class LCDQueryClient {
    gas if the pagination field is incorrectly set.
   
    Since: cosmos-sdk 0.46 */
-  async spendableBalances(params: QuerySpendableBalancesRequest): Promise<QuerySpendableBalancesResponseSDKType> {
+  async spendableBalances(
+    params: QuerySpendableBalancesRequest,
+  ): Promise<QuerySpendableBalancesResponseSDKType> {
     const options: any = {
-      params: {}
+      params: {},
     };
-    if (typeof params?.pagination !== "undefined") {
+    if (typeof params?.pagination !== 'undefined') {
       setPaginationParams(options, params.pagination);
     }
     const endpoint = `cosmos/bank/v1beta1/spendable_balances/${params.address}`;
-    return await this.req.get<QuerySpendableBalancesResponseSDKType>(endpoint, options);
+    return await this.req.get<QuerySpendableBalancesResponseSDKType>(
+      endpoint,
+      options,
+    );
   }
   /* SpendableBalanceByDenom queries the spendable balance of a single denom for
    a single account.
@@ -78,98 +118,133 @@ export class LCDQueryClient {
    gas if the pagination field is incorrectly set.
   
    Since: cosmos-sdk 0.47 */
-  async spendableBalanceByDenom(params: QuerySpendableBalanceByDenomRequest): Promise<QuerySpendableBalanceByDenomResponseSDKType> {
+  async spendableBalanceByDenom(
+    params: QuerySpendableBalanceByDenomRequest,
+  ): Promise<QuerySpendableBalanceByDenomResponseSDKType> {
     const options: any = {
-      params: {}
+      params: {},
     };
-    if (typeof params?.denom !== "undefined") {
+    if (typeof params?.denom !== 'undefined') {
       options.params.denom = params.denom;
     }
     const endpoint = `cosmos/bank/v1beta1/spendable_balances/${params.address}/by_denom`;
-    return await this.req.get<QuerySpendableBalanceByDenomResponseSDKType>(endpoint, options);
+    return await this.req.get<QuerySpendableBalanceByDenomResponseSDKType>(
+      endpoint,
+      options,
+    );
   }
   /* TotalSupply queries the total supply of all coins.
   
    When called from another module, this query might consume a high amount of
    gas if the pagination field is incorrectly set. */
-  async totalSupply(params: QueryTotalSupplyRequest = {
-    pagination: undefined
-  }): Promise<QueryTotalSupplyResponseSDKType> {
+  async totalSupply(
+    params: QueryTotalSupplyRequest = {
+      pagination: undefined,
+    },
+  ): Promise<QueryTotalSupplyResponseSDKType> {
     const options: any = {
-      params: {}
+      params: {},
     };
-    if (typeof params?.pagination !== "undefined") {
+    if (typeof params?.pagination !== 'undefined') {
       setPaginationParams(options, params.pagination);
     }
     const endpoint = `cosmos/bank/v1beta1/supply`;
-    return await this.req.get<QueryTotalSupplyResponseSDKType>(endpoint, options);
+    return await this.req.get<QueryTotalSupplyResponseSDKType>(
+      endpoint,
+      options,
+    );
   }
   /* SupplyOf queries the supply of a single coin.
   
    When called from another module, this query might consume a high amount of
    gas if the pagination field is incorrectly set. */
-  async supplyOf(params: QuerySupplyOfRequest): Promise<QuerySupplyOfResponseSDKType> {
+  async supplyOf(
+    params: QuerySupplyOfRequest,
+  ): Promise<QuerySupplyOfResponseSDKType> {
     const options: any = {
-      params: {}
+      params: {},
     };
-    if (typeof params?.denom !== "undefined") {
+    if (typeof params?.denom !== 'undefined') {
       options.params.denom = params.denom;
     }
     const endpoint = `cosmos/bank/v1beta1/supply/by_denom`;
     return await this.req.get<QuerySupplyOfResponseSDKType>(endpoint, options);
   }
   /* TotalSupplyWithoutOffset queries the total supply of all coins. */
-  async totalSupplyWithoutOffset(params: QueryTotalSupplyWithoutOffsetRequest = {
-    pagination: undefined
-  }): Promise<QueryTotalSupplyWithoutOffsetResponseSDKType> {
+  async totalSupplyWithoutOffset(
+    params: QueryTotalSupplyWithoutOffsetRequest = {
+      pagination: undefined,
+    },
+  ): Promise<QueryTotalSupplyWithoutOffsetResponseSDKType> {
     const options: any = {
-      params: {}
+      params: {},
     };
-    if (typeof params?.pagination !== "undefined") {
+    if (typeof params?.pagination !== 'undefined') {
       setPaginationParams(options, params.pagination);
     }
     const endpoint = `cosmos/bank/v1beta1/supply_without_offset`;
-    return await this.req.get<QueryTotalSupplyWithoutOffsetResponseSDKType>(endpoint, options);
+    return await this.req.get<QueryTotalSupplyWithoutOffsetResponseSDKType>(
+      endpoint,
+      options,
+    );
   }
   /* SupplyOf queries the supply of a single coin. */
-  async supplyOfWithoutOffset(params: QuerySupplyOfWithoutOffsetRequest): Promise<QuerySupplyOfWithoutOffsetResponseSDKType> {
+  async supplyOfWithoutOffset(
+    params: QuerySupplyOfWithoutOffsetRequest,
+  ): Promise<QuerySupplyOfWithoutOffsetResponseSDKType> {
     const endpoint = `cosmos/bank/v1beta1/supply_without_offset/${params.denom}`;
-    return await this.req.get<QuerySupplyOfWithoutOffsetResponseSDKType>(endpoint);
+    return await this.req.get<QuerySupplyOfWithoutOffsetResponseSDKType>(
+      endpoint,
+    );
   }
   /* Params queries the parameters of x/bank module. */
-  async params(_params: QueryParamsRequest = {}): Promise<QueryParamsResponseSDKType> {
+  async params(
+    _params: QueryParamsRequest = {},
+  ): Promise<QueryParamsResponseSDKType> {
     const endpoint = `cosmos/bank/v1beta1/params`;
     return await this.req.get<QueryParamsResponseSDKType>(endpoint);
   }
   /* DenomMetadata queries the client metadata of a given coin denomination. */
-  async denomMetadata(params: QueryDenomMetadataRequest): Promise<QueryDenomMetadataResponseSDKType> {
+  async denomMetadata(
+    params: QueryDenomMetadataRequest,
+  ): Promise<QueryDenomMetadataResponseSDKType> {
     const endpoint = `cosmos/bank/v1beta1/denoms_metadata/${params.denom}`;
     return await this.req.get<QueryDenomMetadataResponseSDKType>(endpoint);
   }
   /* DenomMetadataByQueryString queries the client metadata of a given coin denomination. */
-  async denomMetadataByQueryString(params: QueryDenomMetadataByQueryStringRequest): Promise<QueryDenomMetadataByQueryStringResponseSDKType> {
+  async denomMetadataByQueryString(
+    params: QueryDenomMetadataByQueryStringRequest,
+  ): Promise<QueryDenomMetadataByQueryStringResponseSDKType> {
     const options: any = {
-      params: {}
+      params: {},
     };
-    if (typeof params?.denom !== "undefined") {
+    if (typeof params?.denom !== 'undefined') {
       options.params.denom = params.denom;
     }
     const endpoint = `cosmos/bank/v1beta1/denoms_metadata_by_query_string`;
-    return await this.req.get<QueryDenomMetadataByQueryStringResponseSDKType>(endpoint, options);
+    return await this.req.get<QueryDenomMetadataByQueryStringResponseSDKType>(
+      endpoint,
+      options,
+    );
   }
   /* DenomsMetadata queries the client metadata for all registered coin
    denominations. */
-  async denomsMetadata(params: QueryDenomsMetadataRequest = {
-    pagination: undefined
-  }): Promise<QueryDenomsMetadataResponseSDKType> {
+  async denomsMetadata(
+    params: QueryDenomsMetadataRequest = {
+      pagination: undefined,
+    },
+  ): Promise<QueryDenomsMetadataResponseSDKType> {
     const options: any = {
-      params: {}
+      params: {},
     };
-    if (typeof params?.pagination !== "undefined") {
+    if (typeof params?.pagination !== 'undefined') {
       setPaginationParams(options, params.pagination);
     }
     const endpoint = `cosmos/bank/v1beta1/denoms_metadata`;
-    return await this.req.get<QueryDenomsMetadataResponseSDKType>(endpoint, options);
+    return await this.req.get<QueryDenomsMetadataResponseSDKType>(
+      endpoint,
+      options,
+    );
   }
   /* DenomOwners queries for all account addresses that own a particular token
    denomination.
@@ -178,32 +253,42 @@ export class LCDQueryClient {
    gas if the pagination field is incorrectly set.
   
    Since: cosmos-sdk 0.46 */
-  async denomOwners(params: QueryDenomOwnersRequest): Promise<QueryDenomOwnersResponseSDKType> {
+  async denomOwners(
+    params: QueryDenomOwnersRequest,
+  ): Promise<QueryDenomOwnersResponseSDKType> {
     const options: any = {
-      params: {}
+      params: {},
     };
-    if (typeof params?.pagination !== "undefined") {
+    if (typeof params?.pagination !== 'undefined') {
       setPaginationParams(options, params.pagination);
     }
     const endpoint = `cosmos/bank/v1beta1/denom_owners/${params.denom}`;
-    return await this.req.get<QueryDenomOwnersResponseSDKType>(endpoint, options);
+    return await this.req.get<QueryDenomOwnersResponseSDKType>(
+      endpoint,
+      options,
+    );
   }
   /* DenomOwnersByQuery queries for all account addresses that own a particular token
    denomination.
   
    Since: cosmos-sdk 0.50.3 */
-  async denomOwnersByQuery(params: QueryDenomOwnersByQueryRequest): Promise<QueryDenomOwnersByQueryResponseSDKType> {
+  async denomOwnersByQuery(
+    params: QueryDenomOwnersByQueryRequest,
+  ): Promise<QueryDenomOwnersByQueryResponseSDKType> {
     const options: any = {
-      params: {}
+      params: {},
     };
-    if (typeof params?.denom !== "undefined") {
+    if (typeof params?.denom !== 'undefined') {
       options.params.denom = params.denom;
     }
-    if (typeof params?.pagination !== "undefined") {
+    if (typeof params?.pagination !== 'undefined') {
       setPaginationParams(options, params.pagination);
     }
     const endpoint = `cosmos/bank/v1beta1/denom_owners_by_query`;
-    return await this.req.get<QueryDenomOwnersByQueryResponseSDKType>(endpoint, options);
+    return await this.req.get<QueryDenomOwnersByQueryResponseSDKType>(
+      endpoint,
+      options,
+    );
   }
   /* SendEnabled queries for SendEnabled entries.
   
@@ -212,17 +297,22 @@ export class LCDQueryClient {
    params.default_send_enabled, and will not be returned by this query.
   
    Since: cosmos-sdk 0.47 */
-  async sendEnabled(params: QuerySendEnabledRequest): Promise<QuerySendEnabledResponseSDKType> {
+  async sendEnabled(
+    params: QuerySendEnabledRequest,
+  ): Promise<QuerySendEnabledResponseSDKType> {
     const options: any = {
-      params: {}
+      params: {},
     };
-    if (typeof params?.denoms !== "undefined") {
+    if (typeof params?.denoms !== 'undefined') {
       options.params.denoms = params.denoms;
     }
-    if (typeof params?.pagination !== "undefined") {
+    if (typeof params?.pagination !== 'undefined') {
       setPaginationParams(options, params.pagination);
     }
     const endpoint = `cosmos/bank/v1beta1/send_enabled`;
-    return await this.req.get<QuerySendEnabledResponseSDKType>(endpoint, options);
+    return await this.req.get<QuerySendEnabledResponseSDKType>(
+      endpoint,
+      options,
+    );
   }
 }

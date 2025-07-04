@@ -1,26 +1,32 @@
 //@ts-nocheck
-import { CreateGroup, CreateGroupAmino, CreateGroupSDKType } from "./group";
-import { BinaryReader, BinaryWriter } from "../../binary";
-import { GlobalDecoderRegistry } from "../../registry";
+import { CreateGroup, CreateGroupAmino, CreateGroupSDKType } from './group';
+import { BinaryReader, BinaryWriter } from '../../binary';
+import { GlobalDecoderRegistry } from '../../registry';
 /**
  * CreateGroupsProposal is a type for creating one or more groups via
  * governance. This is useful for creating groups without having to pay
  * creation fees.
+ * @name CreateGroupsProposal
+ * @package symphony.incentives
+ * @see proto type: symphony.incentives.CreateGroupsProposal
  */
 export interface CreateGroupsProposal {
-  $typeUrl?: "/symphony.incentives.CreateGroupsProposal";
+  $typeUrl?: '/symphony.incentives.CreateGroupsProposal';
   title: string;
   description: string;
   createGroups: CreateGroup[];
 }
 export interface CreateGroupsProposalProtoMsg {
-  typeUrl: "/symphony.incentives.CreateGroupsProposal";
+  typeUrl: '/symphony.incentives.CreateGroupsProposal';
   value: Uint8Array;
 }
 /**
  * CreateGroupsProposal is a type for creating one or more groups via
  * governance. This is useful for creating groups without having to pay
  * creation fees.
+ * @name CreateGroupsProposalAmino
+ * @package symphony.incentives
+ * @see proto type: symphony.incentives.CreateGroupsProposal
  */
 export interface CreateGroupsProposalAmino {
   title?: string;
@@ -28,44 +34,79 @@ export interface CreateGroupsProposalAmino {
   create_groups?: CreateGroupAmino[];
 }
 export interface CreateGroupsProposalAminoMsg {
-  type: "/symphony.incentives.CreateGroupsProposal";
+  type: '/symphony.incentives.CreateGroupsProposal';
   value: CreateGroupsProposalAmino;
 }
 /**
  * CreateGroupsProposal is a type for creating one or more groups via
  * governance. This is useful for creating groups without having to pay
  * creation fees.
+ * @name CreateGroupsProposalSDKType
+ * @package symphony.incentives
+ * @see proto type: symphony.incentives.CreateGroupsProposal
  */
 export interface CreateGroupsProposalSDKType {
-  $typeUrl?: "/symphony.incentives.CreateGroupsProposal";
+  $typeUrl?: '/symphony.incentives.CreateGroupsProposal';
   title: string;
   description: string;
   create_groups: CreateGroupSDKType[];
 }
 function createBaseCreateGroupsProposal(): CreateGroupsProposal {
   return {
-    $typeUrl: "/symphony.incentives.CreateGroupsProposal",
-    title: "",
-    description: "",
-    createGroups: []
+    $typeUrl: '/symphony.incentives.CreateGroupsProposal',
+    title: '',
+    description: '',
+    createGroups: [],
   };
 }
+/**
+ * CreateGroupsProposal is a type for creating one or more groups via
+ * governance. This is useful for creating groups without having to pay
+ * creation fees.
+ * @name CreateGroupsProposal
+ * @package symphony.incentives
+ * @see proto type: symphony.incentives.CreateGroupsProposal
+ */
 export const CreateGroupsProposal = {
-  typeUrl: "/symphony.incentives.CreateGroupsProposal",
+  typeUrl: '/symphony.incentives.CreateGroupsProposal',
   is(o: any): o is CreateGroupsProposal {
-    return o && (o.$typeUrl === CreateGroupsProposal.typeUrl || typeof o.title === "string" && typeof o.description === "string" && Array.isArray(o.createGroups) && (!o.createGroups.length || CreateGroup.is(o.createGroups[0])));
+    return (
+      o &&
+      (o.$typeUrl === CreateGroupsProposal.typeUrl ||
+        (typeof o.title === 'string' &&
+          typeof o.description === 'string' &&
+          Array.isArray(o.createGroups) &&
+          (!o.createGroups.length || CreateGroup.is(o.createGroups[0]))))
+    );
   },
   isSDK(o: any): o is CreateGroupsProposalSDKType {
-    return o && (o.$typeUrl === CreateGroupsProposal.typeUrl || typeof o.title === "string" && typeof o.description === "string" && Array.isArray(o.create_groups) && (!o.create_groups.length || CreateGroup.isSDK(o.create_groups[0])));
+    return (
+      o &&
+      (o.$typeUrl === CreateGroupsProposal.typeUrl ||
+        (typeof o.title === 'string' &&
+          typeof o.description === 'string' &&
+          Array.isArray(o.create_groups) &&
+          (!o.create_groups.length || CreateGroup.isSDK(o.create_groups[0]))))
+    );
   },
   isAmino(o: any): o is CreateGroupsProposalAmino {
-    return o && (o.$typeUrl === CreateGroupsProposal.typeUrl || typeof o.title === "string" && typeof o.description === "string" && Array.isArray(o.create_groups) && (!o.create_groups.length || CreateGroup.isAmino(o.create_groups[0])));
+    return (
+      o &&
+      (o.$typeUrl === CreateGroupsProposal.typeUrl ||
+        (typeof o.title === 'string' &&
+          typeof o.description === 'string' &&
+          Array.isArray(o.create_groups) &&
+          (!o.create_groups.length || CreateGroup.isAmino(o.create_groups[0]))))
+    );
   },
-  encode(message: CreateGroupsProposal, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
-    if (message.title !== "") {
+  encode(
+    message: CreateGroupsProposal,
+    writer: BinaryWriter = BinaryWriter.create(),
+  ): BinaryWriter {
+    if (message.title !== '') {
       writer.uint32(10).string(message.title);
     }
-    if (message.description !== "") {
+    if (message.description !== '') {
       writer.uint32(18).string(message.description);
     }
     for (const v of message.createGroups) {
@@ -73,8 +114,12 @@ export const CreateGroupsProposal = {
     }
     return writer;
   },
-  decode(input: BinaryReader | Uint8Array, length?: number): CreateGroupsProposal {
-    const reader = input instanceof BinaryReader ? input : new BinaryReader(input);
+  decode(
+    input: BinaryReader | Uint8Array,
+    length?: number,
+  ): CreateGroupsProposal {
+    const reader =
+      input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseCreateGroupsProposal();
     while (reader.pos < end) {
@@ -87,7 +132,9 @@ export const CreateGroupsProposal = {
           message.description = reader.string();
           break;
         case 3:
-          message.createGroups.push(CreateGroup.decode(reader, reader.uint32()));
+          message.createGroups.push(
+            CreateGroup.decode(reader, reader.uint32()),
+          );
           break;
         default:
           reader.skipType(tag & 7);
@@ -98,9 +145,10 @@ export const CreateGroupsProposal = {
   },
   fromPartial(object: Partial<CreateGroupsProposal>): CreateGroupsProposal {
     const message = createBaseCreateGroupsProposal();
-    message.title = object.title ?? "";
-    message.description = object.description ?? "";
-    message.createGroups = object.createGroups?.map(e => CreateGroup.fromPartial(e)) || [];
+    message.title = object.title ?? '';
+    message.description = object.description ?? '';
+    message.createGroups =
+      object.createGroups?.map(e => CreateGroup.fromPartial(e)) || [];
     return message;
   },
   fromAmino(object: CreateGroupsProposalAmino): CreateGroupsProposal {
@@ -111,15 +159,19 @@ export const CreateGroupsProposal = {
     if (object.description !== undefined && object.description !== null) {
       message.description = object.description;
     }
-    message.createGroups = object.create_groups?.map(e => CreateGroup.fromAmino(e)) || [];
+    message.createGroups =
+      object.create_groups?.map(e => CreateGroup.fromAmino(e)) || [];
     return message;
   },
   toAmino(message: CreateGroupsProposal): CreateGroupsProposalAmino {
     const obj: any = {};
-    obj.title = message.title === "" ? undefined : message.title;
-    obj.description = message.description === "" ? undefined : message.description;
+    obj.title = message.title === '' ? undefined : message.title;
+    obj.description =
+      message.description === '' ? undefined : message.description;
     if (message.createGroups) {
-      obj.create_groups = message.createGroups.map(e => e ? CreateGroup.toAmino(e) : undefined);
+      obj.create_groups = message.createGroups.map(e =>
+        e ? CreateGroup.toAmino(e) : undefined,
+      );
     } else {
       obj.create_groups = message.createGroups;
     }
@@ -136,9 +188,12 @@ export const CreateGroupsProposal = {
   },
   toProtoMsg(message: CreateGroupsProposal): CreateGroupsProposalProtoMsg {
     return {
-      typeUrl: "/symphony.incentives.CreateGroupsProposal",
-      value: CreateGroupsProposal.encode(message).finish()
+      typeUrl: '/symphony.incentives.CreateGroupsProposal',
+      value: CreateGroupsProposal.encode(message).finish(),
     };
-  }
+  },
 };
-GlobalDecoderRegistry.register(CreateGroupsProposal.typeUrl, CreateGroupsProposal);
+GlobalDecoderRegistry.register(
+  CreateGroupsProposal.typeUrl,
+  CreateGroupsProposal,
+);

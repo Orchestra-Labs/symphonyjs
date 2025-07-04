@@ -1,60 +1,99 @@
 //@ts-nocheck
-import { BinaryReader, BinaryWriter } from "../../../binary";
-import { GlobalDecoderRegistry } from "../../../registry";
-import { Decimal } from "@cosmjs/math";
+import { BinaryReader, BinaryWriter } from '../../../binary';
+import { GlobalDecoderRegistry } from '../../../registry';
+import { Decimal } from '@cosmjs/math';
+/**
+ * @name QueryFeeTokensRequest
+ * @package symphony.txfees.v1beta1
+ * @see proto type: symphony.txfees.v1beta1.QueryFeeTokensRequest
+ */
 export interface QueryFeeTokensRequest {}
 export interface QueryFeeTokensRequestProtoMsg {
-  typeUrl: "/symphony.txfees.v1beta1.QueryFeeTokensRequest";
+  typeUrl: '/symphony.txfees.v1beta1.QueryFeeTokensRequest';
   value: Uint8Array;
 }
+/**
+ * @name QueryFeeTokensRequestAmino
+ * @package symphony.txfees.v1beta1
+ * @see proto type: symphony.txfees.v1beta1.QueryFeeTokensRequest
+ */
 export interface QueryFeeTokensRequestAmino {}
 export interface QueryFeeTokensRequestAminoMsg {
-  type: "/symphony.txfees.v1beta1.QueryFeeTokensRequest";
+  type: '/symphony.txfees.v1beta1.QueryFeeTokensRequest';
   value: QueryFeeTokensRequestAmino;
 }
+/**
+ * @name QueryFeeTokensRequestSDKType
+ * @package symphony.txfees.v1beta1
+ * @see proto type: symphony.txfees.v1beta1.QueryFeeTokensRequest
+ */
 export interface QueryFeeTokensRequestSDKType {}
+/**
+ * @name QueryFeeTokensResponse
+ * @package symphony.txfees.v1beta1
+ * @see proto type: symphony.txfees.v1beta1.QueryFeeTokensResponse
+ */
 export interface QueryFeeTokensResponse {
   feeTokens: string[];
 }
 export interface QueryFeeTokensResponseProtoMsg {
-  typeUrl: "/symphony.txfees.v1beta1.QueryFeeTokensResponse";
+  typeUrl: '/symphony.txfees.v1beta1.QueryFeeTokensResponse';
   value: Uint8Array;
 }
+/**
+ * @name QueryFeeTokensResponseAmino
+ * @package symphony.txfees.v1beta1
+ * @see proto type: symphony.txfees.v1beta1.QueryFeeTokensResponse
+ */
 export interface QueryFeeTokensResponseAmino {
   fee_tokens?: string[];
 }
 export interface QueryFeeTokensResponseAminoMsg {
-  type: "/symphony.txfees.v1beta1.QueryFeeTokensResponse";
+  type: '/symphony.txfees.v1beta1.QueryFeeTokensResponse';
   value: QueryFeeTokensResponseAmino;
 }
+/**
+ * @name QueryFeeTokensResponseSDKType
+ * @package symphony.txfees.v1beta1
+ * @see proto type: symphony.txfees.v1beta1.QueryFeeTokensResponse
+ */
 export interface QueryFeeTokensResponseSDKType {
   fee_tokens: string[];
 }
 /**
  * QueryDenomSpotPriceRequest defines grpc request structure for querying spot
  * price for the specified tx fee denom
+ * @name QueryDenomSpotPriceRequest
+ * @package symphony.txfees.v1beta1
+ * @see proto type: symphony.txfees.v1beta1.QueryDenomSpotPriceRequest
  */
 export interface QueryDenomSpotPriceRequest {
   denom: string;
 }
 export interface QueryDenomSpotPriceRequestProtoMsg {
-  typeUrl: "/symphony.txfees.v1beta1.QueryDenomSpotPriceRequest";
+  typeUrl: '/symphony.txfees.v1beta1.QueryDenomSpotPriceRequest';
   value: Uint8Array;
 }
 /**
  * QueryDenomSpotPriceRequest defines grpc request structure for querying spot
  * price for the specified tx fee denom
+ * @name QueryDenomSpotPriceRequestAmino
+ * @package symphony.txfees.v1beta1
+ * @see proto type: symphony.txfees.v1beta1.QueryDenomSpotPriceRequest
  */
 export interface QueryDenomSpotPriceRequestAmino {
   denom?: string;
 }
 export interface QueryDenomSpotPriceRequestAminoMsg {
-  type: "/symphony.txfees.v1beta1.QueryDenomSpotPriceRequest";
+  type: '/symphony.txfees.v1beta1.QueryDenomSpotPriceRequest';
   value: QueryDenomSpotPriceRequestAmino;
 }
 /**
  * QueryDenomSpotPriceRequest defines grpc request structure for querying spot
  * price for the specified tx fee denom
+ * @name QueryDenomSpotPriceRequestSDKType
+ * @package symphony.txfees.v1beta1
+ * @see proto type: symphony.txfees.v1beta1.QueryDenomSpotPriceRequest
  */
 export interface QueryDenomSpotPriceRequestSDKType {
   denom: string;
@@ -62,65 +101,109 @@ export interface QueryDenomSpotPriceRequestSDKType {
 /**
  * QueryDenomSpotPriceRequest defines grpc response structure for querying spot
  * price for the specified tx fee denom
+ * @name QueryDenomSpotPriceResponse
+ * @package symphony.txfees.v1beta1
+ * @see proto type: symphony.txfees.v1beta1.QueryDenomSpotPriceResponse
  */
 export interface QueryDenomSpotPriceResponse {
   spotPrice: string;
 }
 export interface QueryDenomSpotPriceResponseProtoMsg {
-  typeUrl: "/symphony.txfees.v1beta1.QueryDenomSpotPriceResponse";
+  typeUrl: '/symphony.txfees.v1beta1.QueryDenomSpotPriceResponse';
   value: Uint8Array;
 }
 /**
  * QueryDenomSpotPriceRequest defines grpc response structure for querying spot
  * price for the specified tx fee denom
+ * @name QueryDenomSpotPriceResponseAmino
+ * @package symphony.txfees.v1beta1
+ * @see proto type: symphony.txfees.v1beta1.QueryDenomSpotPriceResponse
  */
 export interface QueryDenomSpotPriceResponseAmino {
   spot_price?: string;
 }
 export interface QueryDenomSpotPriceResponseAminoMsg {
-  type: "/symphony.txfees.v1beta1.QueryDenomSpotPriceResponse";
+  type: '/symphony.txfees.v1beta1.QueryDenomSpotPriceResponse';
   value: QueryDenomSpotPriceResponseAmino;
 }
 /**
  * QueryDenomSpotPriceRequest defines grpc response structure for querying spot
  * price for the specified tx fee denom
+ * @name QueryDenomSpotPriceResponseSDKType
+ * @package symphony.txfees.v1beta1
+ * @see proto type: symphony.txfees.v1beta1.QueryDenomSpotPriceResponse
  */
 export interface QueryDenomSpotPriceResponseSDKType {
   spot_price: string;
 }
+/**
+ * @name QueryEipBaseFeeRequest
+ * @package symphony.txfees.v1beta1
+ * @see proto type: symphony.txfees.v1beta1.QueryEipBaseFeeRequest
+ */
 export interface QueryEipBaseFeeRequest {}
 export interface QueryEipBaseFeeRequestProtoMsg {
-  typeUrl: "/symphony.txfees.v1beta1.QueryEipBaseFeeRequest";
+  typeUrl: '/symphony.txfees.v1beta1.QueryEipBaseFeeRequest';
   value: Uint8Array;
 }
+/**
+ * @name QueryEipBaseFeeRequestAmino
+ * @package symphony.txfees.v1beta1
+ * @see proto type: symphony.txfees.v1beta1.QueryEipBaseFeeRequest
+ */
 export interface QueryEipBaseFeeRequestAmino {}
 export interface QueryEipBaseFeeRequestAminoMsg {
-  type: "/symphony.txfees.v1beta1.QueryEipBaseFeeRequest";
+  type: '/symphony.txfees.v1beta1.QueryEipBaseFeeRequest';
   value: QueryEipBaseFeeRequestAmino;
 }
+/**
+ * @name QueryEipBaseFeeRequestSDKType
+ * @package symphony.txfees.v1beta1
+ * @see proto type: symphony.txfees.v1beta1.QueryEipBaseFeeRequest
+ */
 export interface QueryEipBaseFeeRequestSDKType {}
+/**
+ * @name QueryEipBaseFeeResponse
+ * @package symphony.txfees.v1beta1
+ * @see proto type: symphony.txfees.v1beta1.QueryEipBaseFeeResponse
+ */
 export interface QueryEipBaseFeeResponse {
   baseFee: string;
 }
 export interface QueryEipBaseFeeResponseProtoMsg {
-  typeUrl: "/symphony.txfees.v1beta1.QueryEipBaseFeeResponse";
+  typeUrl: '/symphony.txfees.v1beta1.QueryEipBaseFeeResponse';
   value: Uint8Array;
 }
+/**
+ * @name QueryEipBaseFeeResponseAmino
+ * @package symphony.txfees.v1beta1
+ * @see proto type: symphony.txfees.v1beta1.QueryEipBaseFeeResponse
+ */
 export interface QueryEipBaseFeeResponseAmino {
   base_fee?: string;
 }
 export interface QueryEipBaseFeeResponseAminoMsg {
-  type: "/symphony.txfees.v1beta1.QueryEipBaseFeeResponse";
+  type: '/symphony.txfees.v1beta1.QueryEipBaseFeeResponse';
   value: QueryEipBaseFeeResponseAmino;
 }
+/**
+ * @name QueryEipBaseFeeResponseSDKType
+ * @package symphony.txfees.v1beta1
+ * @see proto type: symphony.txfees.v1beta1.QueryEipBaseFeeResponse
+ */
 export interface QueryEipBaseFeeResponseSDKType {
   base_fee: string;
 }
 function createBaseQueryFeeTokensRequest(): QueryFeeTokensRequest {
   return {};
 }
+/**
+ * @name QueryFeeTokensRequest
+ * @package symphony.txfees.v1beta1
+ * @see proto type: symphony.txfees.v1beta1.QueryFeeTokensRequest
+ */
 export const QueryFeeTokensRequest = {
-  typeUrl: "/symphony.txfees.v1beta1.QueryFeeTokensRequest",
+  typeUrl: '/symphony.txfees.v1beta1.QueryFeeTokensRequest',
   is(o: any): o is QueryFeeTokensRequest {
     return o && o.$typeUrl === QueryFeeTokensRequest.typeUrl;
   },
@@ -130,11 +213,18 @@ export const QueryFeeTokensRequest = {
   isAmino(o: any): o is QueryFeeTokensRequestAmino {
     return o && o.$typeUrl === QueryFeeTokensRequest.typeUrl;
   },
-  encode(_: QueryFeeTokensRequest, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
+  encode(
+    _: QueryFeeTokensRequest,
+    writer: BinaryWriter = BinaryWriter.create(),
+  ): BinaryWriter {
     return writer;
   },
-  decode(input: BinaryReader | Uint8Array, length?: number): QueryFeeTokensRequest {
-    const reader = input instanceof BinaryReader ? input : new BinaryReader(input);
+  decode(
+    input: BinaryReader | Uint8Array,
+    length?: number,
+  ): QueryFeeTokensRequest {
+    const reader =
+      input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseQueryFeeTokensRequest();
     while (reader.pos < end) {
@@ -170,36 +260,66 @@ export const QueryFeeTokensRequest = {
   },
   toProtoMsg(message: QueryFeeTokensRequest): QueryFeeTokensRequestProtoMsg {
     return {
-      typeUrl: "/symphony.txfees.v1beta1.QueryFeeTokensRequest",
-      value: QueryFeeTokensRequest.encode(message).finish()
+      typeUrl: '/symphony.txfees.v1beta1.QueryFeeTokensRequest',
+      value: QueryFeeTokensRequest.encode(message).finish(),
     };
-  }
+  },
 };
-GlobalDecoderRegistry.register(QueryFeeTokensRequest.typeUrl, QueryFeeTokensRequest);
+GlobalDecoderRegistry.register(
+  QueryFeeTokensRequest.typeUrl,
+  QueryFeeTokensRequest,
+);
 function createBaseQueryFeeTokensResponse(): QueryFeeTokensResponse {
   return {
-    feeTokens: []
+    feeTokens: [],
   };
 }
+/**
+ * @name QueryFeeTokensResponse
+ * @package symphony.txfees.v1beta1
+ * @see proto type: symphony.txfees.v1beta1.QueryFeeTokensResponse
+ */
 export const QueryFeeTokensResponse = {
-  typeUrl: "/symphony.txfees.v1beta1.QueryFeeTokensResponse",
+  typeUrl: '/symphony.txfees.v1beta1.QueryFeeTokensResponse',
   is(o: any): o is QueryFeeTokensResponse {
-    return o && (o.$typeUrl === QueryFeeTokensResponse.typeUrl || Array.isArray(o.feeTokens) && (!o.feeTokens.length || typeof o.feeTokens[0] === "string"));
+    return (
+      o &&
+      (o.$typeUrl === QueryFeeTokensResponse.typeUrl ||
+        (Array.isArray(o.feeTokens) &&
+          (!o.feeTokens.length || typeof o.feeTokens[0] === 'string')))
+    );
   },
   isSDK(o: any): o is QueryFeeTokensResponseSDKType {
-    return o && (o.$typeUrl === QueryFeeTokensResponse.typeUrl || Array.isArray(o.fee_tokens) && (!o.fee_tokens.length || typeof o.fee_tokens[0] === "string"));
+    return (
+      o &&
+      (o.$typeUrl === QueryFeeTokensResponse.typeUrl ||
+        (Array.isArray(o.fee_tokens) &&
+          (!o.fee_tokens.length || typeof o.fee_tokens[0] === 'string')))
+    );
   },
   isAmino(o: any): o is QueryFeeTokensResponseAmino {
-    return o && (o.$typeUrl === QueryFeeTokensResponse.typeUrl || Array.isArray(o.fee_tokens) && (!o.fee_tokens.length || typeof o.fee_tokens[0] === "string"));
+    return (
+      o &&
+      (o.$typeUrl === QueryFeeTokensResponse.typeUrl ||
+        (Array.isArray(o.fee_tokens) &&
+          (!o.fee_tokens.length || typeof o.fee_tokens[0] === 'string')))
+    );
   },
-  encode(message: QueryFeeTokensResponse, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
+  encode(
+    message: QueryFeeTokensResponse,
+    writer: BinaryWriter = BinaryWriter.create(),
+  ): BinaryWriter {
     for (const v of message.feeTokens) {
       writer.uint32(10).string(v!);
     }
     return writer;
   },
-  decode(input: BinaryReader | Uint8Array, length?: number): QueryFeeTokensResponse {
-    const reader = input instanceof BinaryReader ? input : new BinaryReader(input);
+  decode(
+    input: BinaryReader | Uint8Array,
+    length?: number,
+  ): QueryFeeTokensResponse {
+    const reader =
+      input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseQueryFeeTokensResponse();
     while (reader.pos < end) {
@@ -237,7 +357,9 @@ export const QueryFeeTokensResponse = {
   fromAminoMsg(object: QueryFeeTokensResponseAminoMsg): QueryFeeTokensResponse {
     return QueryFeeTokensResponse.fromAmino(object.value);
   },
-  fromProtoMsg(message: QueryFeeTokensResponseProtoMsg): QueryFeeTokensResponse {
+  fromProtoMsg(
+    message: QueryFeeTokensResponseProtoMsg,
+  ): QueryFeeTokensResponse {
     return QueryFeeTokensResponse.decode(message.value);
   },
   toProto(message: QueryFeeTokensResponse): Uint8Array {
@@ -245,36 +367,65 @@ export const QueryFeeTokensResponse = {
   },
   toProtoMsg(message: QueryFeeTokensResponse): QueryFeeTokensResponseProtoMsg {
     return {
-      typeUrl: "/symphony.txfees.v1beta1.QueryFeeTokensResponse",
-      value: QueryFeeTokensResponse.encode(message).finish()
+      typeUrl: '/symphony.txfees.v1beta1.QueryFeeTokensResponse',
+      value: QueryFeeTokensResponse.encode(message).finish(),
     };
-  }
+  },
 };
-GlobalDecoderRegistry.register(QueryFeeTokensResponse.typeUrl, QueryFeeTokensResponse);
+GlobalDecoderRegistry.register(
+  QueryFeeTokensResponse.typeUrl,
+  QueryFeeTokensResponse,
+);
 function createBaseQueryDenomSpotPriceRequest(): QueryDenomSpotPriceRequest {
   return {
-    denom: ""
+    denom: '',
   };
 }
+/**
+ * QueryDenomSpotPriceRequest defines grpc request structure for querying spot
+ * price for the specified tx fee denom
+ * @name QueryDenomSpotPriceRequest
+ * @package symphony.txfees.v1beta1
+ * @see proto type: symphony.txfees.v1beta1.QueryDenomSpotPriceRequest
+ */
 export const QueryDenomSpotPriceRequest = {
-  typeUrl: "/symphony.txfees.v1beta1.QueryDenomSpotPriceRequest",
+  typeUrl: '/symphony.txfees.v1beta1.QueryDenomSpotPriceRequest',
   is(o: any): o is QueryDenomSpotPriceRequest {
-    return o && (o.$typeUrl === QueryDenomSpotPriceRequest.typeUrl || typeof o.denom === "string");
+    return (
+      o &&
+      (o.$typeUrl === QueryDenomSpotPriceRequest.typeUrl ||
+        typeof o.denom === 'string')
+    );
   },
   isSDK(o: any): o is QueryDenomSpotPriceRequestSDKType {
-    return o && (o.$typeUrl === QueryDenomSpotPriceRequest.typeUrl || typeof o.denom === "string");
+    return (
+      o &&
+      (o.$typeUrl === QueryDenomSpotPriceRequest.typeUrl ||
+        typeof o.denom === 'string')
+    );
   },
   isAmino(o: any): o is QueryDenomSpotPriceRequestAmino {
-    return o && (o.$typeUrl === QueryDenomSpotPriceRequest.typeUrl || typeof o.denom === "string");
+    return (
+      o &&
+      (o.$typeUrl === QueryDenomSpotPriceRequest.typeUrl ||
+        typeof o.denom === 'string')
+    );
   },
-  encode(message: QueryDenomSpotPriceRequest, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
-    if (message.denom !== "") {
+  encode(
+    message: QueryDenomSpotPriceRequest,
+    writer: BinaryWriter = BinaryWriter.create(),
+  ): BinaryWriter {
+    if (message.denom !== '') {
       writer.uint32(10).string(message.denom);
     }
     return writer;
   },
-  decode(input: BinaryReader | Uint8Array, length?: number): QueryDenomSpotPriceRequest {
-    const reader = input instanceof BinaryReader ? input : new BinaryReader(input);
+  decode(
+    input: BinaryReader | Uint8Array,
+    length?: number,
+  ): QueryDenomSpotPriceRequest {
+    const reader =
+      input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseQueryDenomSpotPriceRequest();
     while (reader.pos < end) {
@@ -290,71 +441,117 @@ export const QueryDenomSpotPriceRequest = {
     }
     return message;
   },
-  fromPartial(object: Partial<QueryDenomSpotPriceRequest>): QueryDenomSpotPriceRequest {
+  fromPartial(
+    object: Partial<QueryDenomSpotPriceRequest>,
+  ): QueryDenomSpotPriceRequest {
     const message = createBaseQueryDenomSpotPriceRequest();
-    message.denom = object.denom ?? "";
+    message.denom = object.denom ?? '';
     return message;
   },
-  fromAmino(object: QueryDenomSpotPriceRequestAmino): QueryDenomSpotPriceRequest {
+  fromAmino(
+    object: QueryDenomSpotPriceRequestAmino,
+  ): QueryDenomSpotPriceRequest {
     const message = createBaseQueryDenomSpotPriceRequest();
     if (object.denom !== undefined && object.denom !== null) {
       message.denom = object.denom;
     }
     return message;
   },
-  toAmino(message: QueryDenomSpotPriceRequest): QueryDenomSpotPriceRequestAmino {
+  toAmino(
+    message: QueryDenomSpotPriceRequest,
+  ): QueryDenomSpotPriceRequestAmino {
     const obj: any = {};
-    obj.denom = message.denom === "" ? undefined : message.denom;
+    obj.denom = message.denom === '' ? undefined : message.denom;
     return obj;
   },
-  fromAminoMsg(object: QueryDenomSpotPriceRequestAminoMsg): QueryDenomSpotPriceRequest {
+  fromAminoMsg(
+    object: QueryDenomSpotPriceRequestAminoMsg,
+  ): QueryDenomSpotPriceRequest {
     return QueryDenomSpotPriceRequest.fromAmino(object.value);
   },
-  fromProtoMsg(message: QueryDenomSpotPriceRequestProtoMsg): QueryDenomSpotPriceRequest {
+  fromProtoMsg(
+    message: QueryDenomSpotPriceRequestProtoMsg,
+  ): QueryDenomSpotPriceRequest {
     return QueryDenomSpotPriceRequest.decode(message.value);
   },
   toProto(message: QueryDenomSpotPriceRequest): Uint8Array {
     return QueryDenomSpotPriceRequest.encode(message).finish();
   },
-  toProtoMsg(message: QueryDenomSpotPriceRequest): QueryDenomSpotPriceRequestProtoMsg {
+  toProtoMsg(
+    message: QueryDenomSpotPriceRequest,
+  ): QueryDenomSpotPriceRequestProtoMsg {
     return {
-      typeUrl: "/symphony.txfees.v1beta1.QueryDenomSpotPriceRequest",
-      value: QueryDenomSpotPriceRequest.encode(message).finish()
+      typeUrl: '/symphony.txfees.v1beta1.QueryDenomSpotPriceRequest',
+      value: QueryDenomSpotPriceRequest.encode(message).finish(),
     };
-  }
+  },
 };
-GlobalDecoderRegistry.register(QueryDenomSpotPriceRequest.typeUrl, QueryDenomSpotPriceRequest);
+GlobalDecoderRegistry.register(
+  QueryDenomSpotPriceRequest.typeUrl,
+  QueryDenomSpotPriceRequest,
+);
 function createBaseQueryDenomSpotPriceResponse(): QueryDenomSpotPriceResponse {
   return {
-    spotPrice: ""
+    spotPrice: '',
   };
 }
+/**
+ * QueryDenomSpotPriceRequest defines grpc response structure for querying spot
+ * price for the specified tx fee denom
+ * @name QueryDenomSpotPriceResponse
+ * @package symphony.txfees.v1beta1
+ * @see proto type: symphony.txfees.v1beta1.QueryDenomSpotPriceResponse
+ */
 export const QueryDenomSpotPriceResponse = {
-  typeUrl: "/symphony.txfees.v1beta1.QueryDenomSpotPriceResponse",
+  typeUrl: '/symphony.txfees.v1beta1.QueryDenomSpotPriceResponse',
   is(o: any): o is QueryDenomSpotPriceResponse {
-    return o && (o.$typeUrl === QueryDenomSpotPriceResponse.typeUrl || typeof o.spotPrice === "string");
+    return (
+      o &&
+      (o.$typeUrl === QueryDenomSpotPriceResponse.typeUrl ||
+        typeof o.spotPrice === 'string')
+    );
   },
   isSDK(o: any): o is QueryDenomSpotPriceResponseSDKType {
-    return o && (o.$typeUrl === QueryDenomSpotPriceResponse.typeUrl || typeof o.spot_price === "string");
+    return (
+      o &&
+      (o.$typeUrl === QueryDenomSpotPriceResponse.typeUrl ||
+        typeof o.spot_price === 'string')
+    );
   },
   isAmino(o: any): o is QueryDenomSpotPriceResponseAmino {
-    return o && (o.$typeUrl === QueryDenomSpotPriceResponse.typeUrl || typeof o.spot_price === "string");
+    return (
+      o &&
+      (o.$typeUrl === QueryDenomSpotPriceResponse.typeUrl ||
+        typeof o.spot_price === 'string')
+    );
   },
-  encode(message: QueryDenomSpotPriceResponse, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
-    if (message.spotPrice !== "") {
-      writer.uint32(10).string(Decimal.fromUserInput(message.spotPrice, 18).atomics);
+  encode(
+    message: QueryDenomSpotPriceResponse,
+    writer: BinaryWriter = BinaryWriter.create(),
+  ): BinaryWriter {
+    if (message.spotPrice !== '') {
+      writer
+        .uint32(10)
+        .string(Decimal.fromUserInput(message.spotPrice, 18).atomics);
     }
     return writer;
   },
-  decode(input: BinaryReader | Uint8Array, length?: number): QueryDenomSpotPriceResponse {
-    const reader = input instanceof BinaryReader ? input : new BinaryReader(input);
+  decode(
+    input: BinaryReader | Uint8Array,
+    length?: number,
+  ): QueryDenomSpotPriceResponse {
+    const reader =
+      input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseQueryDenomSpotPriceResponse();
     while (reader.pos < end) {
       const tag = reader.uint32();
       switch (tag >>> 3) {
         case 1:
-          message.spotPrice = Decimal.fromAtomics(reader.string(), 18).toString();
+          message.spotPrice = Decimal.fromAtomics(
+            reader.string(),
+            18,
+          ).toString();
           break;
         default:
           reader.skipType(tag & 7);
@@ -363,45 +560,65 @@ export const QueryDenomSpotPriceResponse = {
     }
     return message;
   },
-  fromPartial(object: Partial<QueryDenomSpotPriceResponse>): QueryDenomSpotPriceResponse {
+  fromPartial(
+    object: Partial<QueryDenomSpotPriceResponse>,
+  ): QueryDenomSpotPriceResponse {
     const message = createBaseQueryDenomSpotPriceResponse();
-    message.spotPrice = object.spotPrice ?? "";
+    message.spotPrice = object.spotPrice ?? '';
     return message;
   },
-  fromAmino(object: QueryDenomSpotPriceResponseAmino): QueryDenomSpotPriceResponse {
+  fromAmino(
+    object: QueryDenomSpotPriceResponseAmino,
+  ): QueryDenomSpotPriceResponse {
     const message = createBaseQueryDenomSpotPriceResponse();
     if (object.spot_price !== undefined && object.spot_price !== null) {
       message.spotPrice = object.spot_price;
     }
     return message;
   },
-  toAmino(message: QueryDenomSpotPriceResponse): QueryDenomSpotPriceResponseAmino {
+  toAmino(
+    message: QueryDenomSpotPriceResponse,
+  ): QueryDenomSpotPriceResponseAmino {
     const obj: any = {};
-    obj.spot_price = message.spotPrice === "" ? undefined : message.spotPrice;
+    obj.spot_price = message.spotPrice === '' ? undefined : message.spotPrice;
     return obj;
   },
-  fromAminoMsg(object: QueryDenomSpotPriceResponseAminoMsg): QueryDenomSpotPriceResponse {
+  fromAminoMsg(
+    object: QueryDenomSpotPriceResponseAminoMsg,
+  ): QueryDenomSpotPriceResponse {
     return QueryDenomSpotPriceResponse.fromAmino(object.value);
   },
-  fromProtoMsg(message: QueryDenomSpotPriceResponseProtoMsg): QueryDenomSpotPriceResponse {
+  fromProtoMsg(
+    message: QueryDenomSpotPriceResponseProtoMsg,
+  ): QueryDenomSpotPriceResponse {
     return QueryDenomSpotPriceResponse.decode(message.value);
   },
   toProto(message: QueryDenomSpotPriceResponse): Uint8Array {
     return QueryDenomSpotPriceResponse.encode(message).finish();
   },
-  toProtoMsg(message: QueryDenomSpotPriceResponse): QueryDenomSpotPriceResponseProtoMsg {
+  toProtoMsg(
+    message: QueryDenomSpotPriceResponse,
+  ): QueryDenomSpotPriceResponseProtoMsg {
     return {
-      typeUrl: "/symphony.txfees.v1beta1.QueryDenomSpotPriceResponse",
-      value: QueryDenomSpotPriceResponse.encode(message).finish()
+      typeUrl: '/symphony.txfees.v1beta1.QueryDenomSpotPriceResponse',
+      value: QueryDenomSpotPriceResponse.encode(message).finish(),
     };
-  }
+  },
 };
-GlobalDecoderRegistry.register(QueryDenomSpotPriceResponse.typeUrl, QueryDenomSpotPriceResponse);
+GlobalDecoderRegistry.register(
+  QueryDenomSpotPriceResponse.typeUrl,
+  QueryDenomSpotPriceResponse,
+);
 function createBaseQueryEipBaseFeeRequest(): QueryEipBaseFeeRequest {
   return {};
 }
+/**
+ * @name QueryEipBaseFeeRequest
+ * @package symphony.txfees.v1beta1
+ * @see proto type: symphony.txfees.v1beta1.QueryEipBaseFeeRequest
+ */
 export const QueryEipBaseFeeRequest = {
-  typeUrl: "/symphony.txfees.v1beta1.QueryEipBaseFeeRequest",
+  typeUrl: '/symphony.txfees.v1beta1.QueryEipBaseFeeRequest',
   is(o: any): o is QueryEipBaseFeeRequest {
     return o && o.$typeUrl === QueryEipBaseFeeRequest.typeUrl;
   },
@@ -411,11 +628,18 @@ export const QueryEipBaseFeeRequest = {
   isAmino(o: any): o is QueryEipBaseFeeRequestAmino {
     return o && o.$typeUrl === QueryEipBaseFeeRequest.typeUrl;
   },
-  encode(_: QueryEipBaseFeeRequest, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
+  encode(
+    _: QueryEipBaseFeeRequest,
+    writer: BinaryWriter = BinaryWriter.create(),
+  ): BinaryWriter {
     return writer;
   },
-  decode(input: BinaryReader | Uint8Array, length?: number): QueryEipBaseFeeRequest {
-    const reader = input instanceof BinaryReader ? input : new BinaryReader(input);
+  decode(
+    input: BinaryReader | Uint8Array,
+    length?: number,
+  ): QueryEipBaseFeeRequest {
+    const reader =
+      input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseQueryEipBaseFeeRequest();
     while (reader.pos < end) {
@@ -443,7 +667,9 @@ export const QueryEipBaseFeeRequest = {
   fromAminoMsg(object: QueryEipBaseFeeRequestAminoMsg): QueryEipBaseFeeRequest {
     return QueryEipBaseFeeRequest.fromAmino(object.value);
   },
-  fromProtoMsg(message: QueryEipBaseFeeRequestProtoMsg): QueryEipBaseFeeRequest {
+  fromProtoMsg(
+    message: QueryEipBaseFeeRequestProtoMsg,
+  ): QueryEipBaseFeeRequest {
     return QueryEipBaseFeeRequest.decode(message.value);
   },
   toProto(message: QueryEipBaseFeeRequest): Uint8Array {
@@ -451,36 +677,65 @@ export const QueryEipBaseFeeRequest = {
   },
   toProtoMsg(message: QueryEipBaseFeeRequest): QueryEipBaseFeeRequestProtoMsg {
     return {
-      typeUrl: "/symphony.txfees.v1beta1.QueryEipBaseFeeRequest",
-      value: QueryEipBaseFeeRequest.encode(message).finish()
+      typeUrl: '/symphony.txfees.v1beta1.QueryEipBaseFeeRequest',
+      value: QueryEipBaseFeeRequest.encode(message).finish(),
     };
-  }
+  },
 };
-GlobalDecoderRegistry.register(QueryEipBaseFeeRequest.typeUrl, QueryEipBaseFeeRequest);
+GlobalDecoderRegistry.register(
+  QueryEipBaseFeeRequest.typeUrl,
+  QueryEipBaseFeeRequest,
+);
 function createBaseQueryEipBaseFeeResponse(): QueryEipBaseFeeResponse {
   return {
-    baseFee: ""
+    baseFee: '',
   };
 }
+/**
+ * @name QueryEipBaseFeeResponse
+ * @package symphony.txfees.v1beta1
+ * @see proto type: symphony.txfees.v1beta1.QueryEipBaseFeeResponse
+ */
 export const QueryEipBaseFeeResponse = {
-  typeUrl: "/symphony.txfees.v1beta1.QueryEipBaseFeeResponse",
+  typeUrl: '/symphony.txfees.v1beta1.QueryEipBaseFeeResponse',
   is(o: any): o is QueryEipBaseFeeResponse {
-    return o && (o.$typeUrl === QueryEipBaseFeeResponse.typeUrl || typeof o.baseFee === "string");
+    return (
+      o &&
+      (o.$typeUrl === QueryEipBaseFeeResponse.typeUrl ||
+        typeof o.baseFee === 'string')
+    );
   },
   isSDK(o: any): o is QueryEipBaseFeeResponseSDKType {
-    return o && (o.$typeUrl === QueryEipBaseFeeResponse.typeUrl || typeof o.base_fee === "string");
+    return (
+      o &&
+      (o.$typeUrl === QueryEipBaseFeeResponse.typeUrl ||
+        typeof o.base_fee === 'string')
+    );
   },
   isAmino(o: any): o is QueryEipBaseFeeResponseAmino {
-    return o && (o.$typeUrl === QueryEipBaseFeeResponse.typeUrl || typeof o.base_fee === "string");
+    return (
+      o &&
+      (o.$typeUrl === QueryEipBaseFeeResponse.typeUrl ||
+        typeof o.base_fee === 'string')
+    );
   },
-  encode(message: QueryEipBaseFeeResponse, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
-    if (message.baseFee !== "") {
-      writer.uint32(10).string(Decimal.fromUserInput(message.baseFee, 18).atomics);
+  encode(
+    message: QueryEipBaseFeeResponse,
+    writer: BinaryWriter = BinaryWriter.create(),
+  ): BinaryWriter {
+    if (message.baseFee !== '') {
+      writer
+        .uint32(10)
+        .string(Decimal.fromUserInput(message.baseFee, 18).atomics);
     }
     return writer;
   },
-  decode(input: BinaryReader | Uint8Array, length?: number): QueryEipBaseFeeResponse {
-    const reader = input instanceof BinaryReader ? input : new BinaryReader(input);
+  decode(
+    input: BinaryReader | Uint8Array,
+    length?: number,
+  ): QueryEipBaseFeeResponse {
+    const reader =
+      input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseQueryEipBaseFeeResponse();
     while (reader.pos < end) {
@@ -496,9 +751,11 @@ export const QueryEipBaseFeeResponse = {
     }
     return message;
   },
-  fromPartial(object: Partial<QueryEipBaseFeeResponse>): QueryEipBaseFeeResponse {
+  fromPartial(
+    object: Partial<QueryEipBaseFeeResponse>,
+  ): QueryEipBaseFeeResponse {
     const message = createBaseQueryEipBaseFeeResponse();
-    message.baseFee = object.baseFee ?? "";
+    message.baseFee = object.baseFee ?? '';
     return message;
   },
   fromAmino(object: QueryEipBaseFeeResponseAmino): QueryEipBaseFeeResponse {
@@ -510,23 +767,32 @@ export const QueryEipBaseFeeResponse = {
   },
   toAmino(message: QueryEipBaseFeeResponse): QueryEipBaseFeeResponseAmino {
     const obj: any = {};
-    obj.base_fee = message.baseFee === "" ? undefined : message.baseFee;
+    obj.base_fee = message.baseFee === '' ? undefined : message.baseFee;
     return obj;
   },
-  fromAminoMsg(object: QueryEipBaseFeeResponseAminoMsg): QueryEipBaseFeeResponse {
+  fromAminoMsg(
+    object: QueryEipBaseFeeResponseAminoMsg,
+  ): QueryEipBaseFeeResponse {
     return QueryEipBaseFeeResponse.fromAmino(object.value);
   },
-  fromProtoMsg(message: QueryEipBaseFeeResponseProtoMsg): QueryEipBaseFeeResponse {
+  fromProtoMsg(
+    message: QueryEipBaseFeeResponseProtoMsg,
+  ): QueryEipBaseFeeResponse {
     return QueryEipBaseFeeResponse.decode(message.value);
   },
   toProto(message: QueryEipBaseFeeResponse): Uint8Array {
     return QueryEipBaseFeeResponse.encode(message).finish();
   },
-  toProtoMsg(message: QueryEipBaseFeeResponse): QueryEipBaseFeeResponseProtoMsg {
+  toProtoMsg(
+    message: QueryEipBaseFeeResponse,
+  ): QueryEipBaseFeeResponseProtoMsg {
     return {
-      typeUrl: "/symphony.txfees.v1beta1.QueryEipBaseFeeResponse",
-      value: QueryEipBaseFeeResponse.encode(message).finish()
+      typeUrl: '/symphony.txfees.v1beta1.QueryEipBaseFeeResponse',
+      value: QueryEipBaseFeeResponse.encode(message).finish(),
     };
-  }
+  },
 };
-GlobalDecoderRegistry.register(QueryEipBaseFeeResponse.typeUrl, QueryEipBaseFeeResponse);
+GlobalDecoderRegistry.register(
+  QueryEipBaseFeeResponse.typeUrl,
+  QueryEipBaseFeeResponse,
+);

@@ -1,6 +1,11 @@
 //@ts-nocheck
-import { BinaryReader, BinaryWriter } from "../../../binary";
-import { GlobalDecoderRegistry } from "../../../registry";
+import { BinaryReader, BinaryWriter } from '../../../binary';
+import { GlobalDecoderRegistry } from '../../../registry';
+/**
+ * @name Params
+ * @package symphony.stablestakingincentives.v1beta1
+ * @see proto type: symphony.stablestakingincentives.v1beta1.Params
+ */
 export interface Params {
   /**
    * distribution_contract_address is the address of the distribution contract
@@ -10,9 +15,14 @@ export interface Params {
   distributionContractAddress: string;
 }
 export interface ParamsProtoMsg {
-  typeUrl: "/symphony.stablestakingincentives.v1beta1.Params";
+  typeUrl: '/symphony.stablestakingincentives.v1beta1.Params';
   value: Uint8Array;
 }
+/**
+ * @name ParamsAmino
+ * @package symphony.stablestakingincentives.v1beta1
+ * @see proto type: symphony.stablestakingincentives.v1beta1.Params
+ */
 export interface ParamsAmino {
   /**
    * distribution_contract_address is the address of the distribution contract
@@ -22,36 +32,62 @@ export interface ParamsAmino {
   distribution_contract_address?: string;
 }
 export interface ParamsAminoMsg {
-  type: "/symphony.stablestakingincentives.v1beta1.Params";
+  type: '/symphony.stablestakingincentives.v1beta1.Params';
   value: ParamsAmino;
 }
+/**
+ * @name ParamsSDKType
+ * @package symphony.stablestakingincentives.v1beta1
+ * @see proto type: symphony.stablestakingincentives.v1beta1.Params
+ */
 export interface ParamsSDKType {
   distribution_contract_address: string;
 }
 function createBaseParams(): Params {
   return {
-    distributionContractAddress: ""
+    distributionContractAddress: '',
   };
 }
+/**
+ * @name Params
+ * @package symphony.stablestakingincentives.v1beta1
+ * @see proto type: symphony.stablestakingincentives.v1beta1.Params
+ */
 export const Params = {
-  typeUrl: "/symphony.stablestakingincentives.v1beta1.Params",
+  typeUrl: '/symphony.stablestakingincentives.v1beta1.Params',
   is(o: any): o is Params {
-    return o && (o.$typeUrl === Params.typeUrl || typeof o.distributionContractAddress === "string");
+    return (
+      o &&
+      (o.$typeUrl === Params.typeUrl ||
+        typeof o.distributionContractAddress === 'string')
+    );
   },
   isSDK(o: any): o is ParamsSDKType {
-    return o && (o.$typeUrl === Params.typeUrl || typeof o.distribution_contract_address === "string");
+    return (
+      o &&
+      (o.$typeUrl === Params.typeUrl ||
+        typeof o.distribution_contract_address === 'string')
+    );
   },
   isAmino(o: any): o is ParamsAmino {
-    return o && (o.$typeUrl === Params.typeUrl || typeof o.distribution_contract_address === "string");
+    return (
+      o &&
+      (o.$typeUrl === Params.typeUrl ||
+        typeof o.distribution_contract_address === 'string')
+    );
   },
-  encode(message: Params, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
-    if (message.distributionContractAddress !== "") {
+  encode(
+    message: Params,
+    writer: BinaryWriter = BinaryWriter.create(),
+  ): BinaryWriter {
+    if (message.distributionContractAddress !== '') {
       writer.uint32(10).string(message.distributionContractAddress);
     }
     return writer;
   },
   decode(input: BinaryReader | Uint8Array, length?: number): Params {
-    const reader = input instanceof BinaryReader ? input : new BinaryReader(input);
+    const reader =
+      input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseParams();
     while (reader.pos < end) {
@@ -69,19 +105,27 @@ export const Params = {
   },
   fromPartial(object: Partial<Params>): Params {
     const message = createBaseParams();
-    message.distributionContractAddress = object.distributionContractAddress ?? "";
+    message.distributionContractAddress =
+      object.distributionContractAddress ?? '';
     return message;
   },
   fromAmino(object: ParamsAmino): Params {
     const message = createBaseParams();
-    if (object.distribution_contract_address !== undefined && object.distribution_contract_address !== null) {
-      message.distributionContractAddress = object.distribution_contract_address;
+    if (
+      object.distribution_contract_address !== undefined &&
+      object.distribution_contract_address !== null
+    ) {
+      message.distributionContractAddress =
+        object.distribution_contract_address;
     }
     return message;
   },
   toAmino(message: Params): ParamsAmino {
     const obj: any = {};
-    obj.distribution_contract_address = message.distributionContractAddress === "" ? undefined : message.distributionContractAddress;
+    obj.distribution_contract_address =
+      message.distributionContractAddress === ''
+        ? undefined
+        : message.distributionContractAddress;
     return obj;
   },
   fromAminoMsg(object: ParamsAminoMsg): Params {
@@ -95,9 +139,9 @@ export const Params = {
   },
   toProtoMsg(message: Params): ParamsProtoMsg {
     return {
-      typeUrl: "/symphony.stablestakingincentives.v1beta1.Params",
-      value: Params.encode(message).finish()
+      typeUrl: '/symphony.stablestakingincentives.v1beta1.Params',
+      value: Params.encode(message).finish(),
     };
-  }
+  },
 };
 GlobalDecoderRegistry.register(Params.typeUrl, Params);

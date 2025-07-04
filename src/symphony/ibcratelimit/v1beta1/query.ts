@@ -1,48 +1,88 @@
 //@ts-nocheck
-import { Params, ParamsAmino, ParamsSDKType } from "./params";
-import { BinaryReader, BinaryWriter } from "../../../binary";
-import { GlobalDecoderRegistry } from "../../../registry";
-/** ParamsRequest is the request type for the Query/Params RPC method. */
+import { Params, ParamsAmino, ParamsSDKType } from './params';
+import { BinaryReader, BinaryWriter } from '../../../binary';
+import { GlobalDecoderRegistry } from '../../../registry';
+/**
+ * ParamsRequest is the request type for the Query/Params RPC method.
+ * @name ParamsRequest
+ * @package symphony.ibcratelimit.v1beta1
+ * @see proto type: symphony.ibcratelimit.v1beta1.ParamsRequest
+ */
 export interface ParamsRequest {}
 export interface ParamsRequestProtoMsg {
-  typeUrl: "/symphony.ibcratelimit.v1beta1.ParamsRequest";
+  typeUrl: '/symphony.ibcratelimit.v1beta1.ParamsRequest';
   value: Uint8Array;
 }
-/** ParamsRequest is the request type for the Query/Params RPC method. */
+/**
+ * ParamsRequest is the request type for the Query/Params RPC method.
+ * @name ParamsRequestAmino
+ * @package symphony.ibcratelimit.v1beta1
+ * @see proto type: symphony.ibcratelimit.v1beta1.ParamsRequest
+ */
 export interface ParamsRequestAmino {}
 export interface ParamsRequestAminoMsg {
-  type: "/symphony.ibcratelimit.v1beta1.ParamsRequest";
+  type: '/symphony.ibcratelimit.v1beta1.ParamsRequest';
   value: ParamsRequestAmino;
 }
-/** ParamsRequest is the request type for the Query/Params RPC method. */
+/**
+ * ParamsRequest is the request type for the Query/Params RPC method.
+ * @name ParamsRequestSDKType
+ * @package symphony.ibcratelimit.v1beta1
+ * @see proto type: symphony.ibcratelimit.v1beta1.ParamsRequest
+ */
 export interface ParamsRequestSDKType {}
-/** aramsResponse is the response type for the Query/Params RPC method. */
+/**
+ * aramsResponse is the response type for the Query/Params RPC method.
+ * @name ParamsResponse
+ * @package symphony.ibcratelimit.v1beta1
+ * @see proto type: symphony.ibcratelimit.v1beta1.ParamsResponse
+ */
 export interface ParamsResponse {
-  /** params defines the parameters of the module. */
+  /**
+   * params defines the parameters of the module.
+   */
   params: Params;
 }
 export interface ParamsResponseProtoMsg {
-  typeUrl: "/symphony.ibcratelimit.v1beta1.ParamsResponse";
+  typeUrl: '/symphony.ibcratelimit.v1beta1.ParamsResponse';
   value: Uint8Array;
 }
-/** aramsResponse is the response type for the Query/Params RPC method. */
+/**
+ * aramsResponse is the response type for the Query/Params RPC method.
+ * @name ParamsResponseAmino
+ * @package symphony.ibcratelimit.v1beta1
+ * @see proto type: symphony.ibcratelimit.v1beta1.ParamsResponse
+ */
 export interface ParamsResponseAmino {
-  /** params defines the parameters of the module. */
+  /**
+   * params defines the parameters of the module.
+   */
   params?: ParamsAmino;
 }
 export interface ParamsResponseAminoMsg {
-  type: "/symphony.ibcratelimit.v1beta1.ParamsResponse";
+  type: '/symphony.ibcratelimit.v1beta1.ParamsResponse';
   value: ParamsResponseAmino;
 }
-/** aramsResponse is the response type for the Query/Params RPC method. */
+/**
+ * aramsResponse is the response type for the Query/Params RPC method.
+ * @name ParamsResponseSDKType
+ * @package symphony.ibcratelimit.v1beta1
+ * @see proto type: symphony.ibcratelimit.v1beta1.ParamsResponse
+ */
 export interface ParamsResponseSDKType {
   params: ParamsSDKType;
 }
 function createBaseParamsRequest(): ParamsRequest {
   return {};
 }
+/**
+ * ParamsRequest is the request type for the Query/Params RPC method.
+ * @name ParamsRequest
+ * @package symphony.ibcratelimit.v1beta1
+ * @see proto type: symphony.ibcratelimit.v1beta1.ParamsRequest
+ */
 export const ParamsRequest = {
-  typeUrl: "/symphony.ibcratelimit.v1beta1.ParamsRequest",
+  typeUrl: '/symphony.ibcratelimit.v1beta1.ParamsRequest',
   is(o: any): o is ParamsRequest {
     return o && o.$typeUrl === ParamsRequest.typeUrl;
   },
@@ -52,11 +92,15 @@ export const ParamsRequest = {
   isAmino(o: any): o is ParamsRequestAmino {
     return o && o.$typeUrl === ParamsRequest.typeUrl;
   },
-  encode(_: ParamsRequest, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
+  encode(
+    _: ParamsRequest,
+    writer: BinaryWriter = BinaryWriter.create(),
+  ): BinaryWriter {
     return writer;
   },
   decode(input: BinaryReader | Uint8Array, length?: number): ParamsRequest {
-    const reader = input instanceof BinaryReader ? input : new BinaryReader(input);
+    const reader =
+      input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseParamsRequest();
     while (reader.pos < end) {
@@ -92,36 +136,50 @@ export const ParamsRequest = {
   },
   toProtoMsg(message: ParamsRequest): ParamsRequestProtoMsg {
     return {
-      typeUrl: "/symphony.ibcratelimit.v1beta1.ParamsRequest",
-      value: ParamsRequest.encode(message).finish()
+      typeUrl: '/symphony.ibcratelimit.v1beta1.ParamsRequest',
+      value: ParamsRequest.encode(message).finish(),
     };
-  }
+  },
 };
 GlobalDecoderRegistry.register(ParamsRequest.typeUrl, ParamsRequest);
 function createBaseParamsResponse(): ParamsResponse {
   return {
-    params: Params.fromPartial({})
+    params: Params.fromPartial({}),
   };
 }
+/**
+ * aramsResponse is the response type for the Query/Params RPC method.
+ * @name ParamsResponse
+ * @package symphony.ibcratelimit.v1beta1
+ * @see proto type: symphony.ibcratelimit.v1beta1.ParamsResponse
+ */
 export const ParamsResponse = {
-  typeUrl: "/symphony.ibcratelimit.v1beta1.ParamsResponse",
+  typeUrl: '/symphony.ibcratelimit.v1beta1.ParamsResponse',
   is(o: any): o is ParamsResponse {
     return o && (o.$typeUrl === ParamsResponse.typeUrl || Params.is(o.params));
   },
   isSDK(o: any): o is ParamsResponseSDKType {
-    return o && (o.$typeUrl === ParamsResponse.typeUrl || Params.isSDK(o.params));
+    return (
+      o && (o.$typeUrl === ParamsResponse.typeUrl || Params.isSDK(o.params))
+    );
   },
   isAmino(o: any): o is ParamsResponseAmino {
-    return o && (o.$typeUrl === ParamsResponse.typeUrl || Params.isAmino(o.params));
+    return (
+      o && (o.$typeUrl === ParamsResponse.typeUrl || Params.isAmino(o.params))
+    );
   },
-  encode(message: ParamsResponse, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
+  encode(
+    message: ParamsResponse,
+    writer: BinaryWriter = BinaryWriter.create(),
+  ): BinaryWriter {
     if (message.params !== undefined) {
       Params.encode(message.params, writer.uint32(10).fork()).ldelim();
     }
     return writer;
   },
   decode(input: BinaryReader | Uint8Array, length?: number): ParamsResponse {
-    const reader = input instanceof BinaryReader ? input : new BinaryReader(input);
+    const reader =
+      input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseParamsResponse();
     while (reader.pos < end) {
@@ -139,7 +197,10 @@ export const ParamsResponse = {
   },
   fromPartial(object: Partial<ParamsResponse>): ParamsResponse {
     const message = createBaseParamsResponse();
-    message.params = object.params !== undefined && object.params !== null ? Params.fromPartial(object.params) : undefined;
+    message.params =
+      object.params !== undefined && object.params !== null
+        ? Params.fromPartial(object.params)
+        : undefined;
     return message;
   },
   fromAmino(object: ParamsResponseAmino): ParamsResponse {
@@ -165,9 +226,9 @@ export const ParamsResponse = {
   },
   toProtoMsg(message: ParamsResponse): ParamsResponseProtoMsg {
     return {
-      typeUrl: "/symphony.ibcratelimit.v1beta1.ParamsResponse",
-      value: ParamsResponse.encode(message).finish()
+      typeUrl: '/symphony.ibcratelimit.v1beta1.ParamsResponse',
+      value: ParamsResponse.encode(message).finish(),
     };
-  }
+  },
 };
 GlobalDecoderRegistry.register(ParamsResponse.typeUrl, ParamsResponse);

@@ -1,7 +1,7 @@
 //@ts-nocheck
-import { BinaryReader, BinaryWriter } from "../../../binary";
-import { GlobalDecoderRegistry } from "../../../registry";
-import { isSet } from "../../../helpers";
+import { BinaryReader, BinaryWriter } from '../../../binary';
+import { GlobalDecoderRegistry } from '../../../registry';
+import { isSet } from '../../../helpers';
 export enum AssetStatus {
   ASSET_STATUS_UNSPECIFIED = 0,
   ASSET_STATUS_OK = 1,
@@ -15,22 +15,22 @@ export const AssetStatusAmino = AssetStatus;
 export function assetStatusFromJSON(object: any): AssetStatus {
   switch (object) {
     case 0:
-    case "ASSET_STATUS_UNSPECIFIED":
+    case 'ASSET_STATUS_UNSPECIFIED':
       return AssetStatus.ASSET_STATUS_UNSPECIFIED;
     case 1:
-    case "ASSET_STATUS_OK":
+    case 'ASSET_STATUS_OK':
       return AssetStatus.ASSET_STATUS_OK;
     case 2:
-    case "ASSET_STATUS_BLOCKED_INBOUND":
+    case 'ASSET_STATUS_BLOCKED_INBOUND':
       return AssetStatus.ASSET_STATUS_BLOCKED_INBOUND;
     case 3:
-    case "ASSET_STATUS_BLOCKED_OUTBOUND":
+    case 'ASSET_STATUS_BLOCKED_OUTBOUND':
       return AssetStatus.ASSET_STATUS_BLOCKED_OUTBOUND;
     case 4:
-    case "ASSET_STATUS_BLOCKED_BOTH":
+    case 'ASSET_STATUS_BLOCKED_BOTH':
       return AssetStatus.ASSET_STATUS_BLOCKED_BOTH;
     case -1:
-    case "UNRECOGNIZED":
+    case 'UNRECOGNIZED':
     default:
       return AssetStatus.UNRECOGNIZED;
   }
@@ -38,23 +38,30 @@ export function assetStatusFromJSON(object: any): AssetStatus {
 export function assetStatusToJSON(object: AssetStatus): string {
   switch (object) {
     case AssetStatus.ASSET_STATUS_UNSPECIFIED:
-      return "ASSET_STATUS_UNSPECIFIED";
+      return 'ASSET_STATUS_UNSPECIFIED';
     case AssetStatus.ASSET_STATUS_OK:
-      return "ASSET_STATUS_OK";
+      return 'ASSET_STATUS_OK';
     case AssetStatus.ASSET_STATUS_BLOCKED_INBOUND:
-      return "ASSET_STATUS_BLOCKED_INBOUND";
+      return 'ASSET_STATUS_BLOCKED_INBOUND';
     case AssetStatus.ASSET_STATUS_BLOCKED_OUTBOUND:
-      return "ASSET_STATUS_BLOCKED_OUTBOUND";
+      return 'ASSET_STATUS_BLOCKED_OUTBOUND';
     case AssetStatus.ASSET_STATUS_BLOCKED_BOTH:
-      return "ASSET_STATUS_BLOCKED_BOTH";
+      return 'ASSET_STATUS_BLOCKED_BOTH';
     case AssetStatus.UNRECOGNIZED:
     default:
-      return "UNRECOGNIZED";
+      return 'UNRECOGNIZED';
   }
 }
-/** Params defines params for x/bridge module. */
+/**
+ * Params defines params for x/bridge module.
+ * @name Params
+ * @package symphony.bridge.v1beta1
+ * @see proto type: symphony.bridge.v1beta1.Params
+ */
 export interface Params {
-  /** Signers used to sign inbound and release outbound transactions */
+  /**
+   * Signers used to sign inbound and release outbound transactions
+   */
   signers: string[];
   /**
    * Assets is a list used to create tokenfactory denoms
@@ -63,12 +70,19 @@ export interface Params {
   assets: AssetWithStatus[];
 }
 export interface ParamsProtoMsg {
-  typeUrl: "/symphony.bridge.v1beta1.Params";
+  typeUrl: '/symphony.bridge.v1beta1.Params';
   value: Uint8Array;
 }
-/** Params defines params for x/bridge module. */
+/**
+ * Params defines params for x/bridge module.
+ * @name ParamsAmino
+ * @package symphony.bridge.v1beta1
+ * @see proto type: symphony.bridge.v1beta1.Params
+ */
 export interface ParamsAmino {
-  /** Signers used to sign inbound and release outbound transactions */
+  /**
+   * Signers used to sign inbound and release outbound transactions
+   */
   signers?: string[];
   /**
    * Assets is a list used to create tokenfactory denoms
@@ -77,33 +91,53 @@ export interface ParamsAmino {
   assets?: AssetWithStatusAmino[];
 }
 export interface ParamsAminoMsg {
-  type: "/symphony.bridge.v1beta1.Params";
+  type: '/symphony.bridge.v1beta1.Params';
   value: ParamsAmino;
 }
-/** Params defines params for x/bridge module. */
+/**
+ * Params defines params for x/bridge module.
+ * @name ParamsSDKType
+ * @package symphony.bridge.v1beta1
+ * @see proto type: symphony.bridge.v1beta1.Params
+ */
 export interface ParamsSDKType {
   signers: string[];
   assets: AssetWithStatusSDKType[];
 }
-/** AssetWithStatus defines a pair of the asset and its current status. */
+/**
+ * AssetWithStatus defines a pair of the asset and its current status.
+ * @name AssetWithStatus
+ * @package symphony.bridge.v1beta1
+ * @see proto type: symphony.bridge.v1beta1.AssetWithStatus
+ */
 export interface AssetWithStatus {
   asset: Asset;
   assetStatus: AssetStatus;
 }
 export interface AssetWithStatusProtoMsg {
-  typeUrl: "/symphony.bridge.v1beta1.AssetWithStatus";
+  typeUrl: '/symphony.bridge.v1beta1.AssetWithStatus';
   value: Uint8Array;
 }
-/** AssetWithStatus defines a pair of the asset and its current status. */
+/**
+ * AssetWithStatus defines a pair of the asset and its current status.
+ * @name AssetWithStatusAmino
+ * @package symphony.bridge.v1beta1
+ * @see proto type: symphony.bridge.v1beta1.AssetWithStatus
+ */
 export interface AssetWithStatusAmino {
   asset?: AssetAmino;
   asset_status?: AssetStatus;
 }
 export interface AssetWithStatusAminoMsg {
-  type: "/symphony.bridge.v1beta1.AssetWithStatus";
+  type: '/symphony.bridge.v1beta1.AssetWithStatus';
   value: AssetWithStatusAmino;
 }
-/** AssetWithStatus defines a pair of the asset and its current status. */
+/**
+ * AssetWithStatus defines a pair of the asset and its current status.
+ * @name AssetWithStatusSDKType
+ * @package symphony.bridge.v1beta1
+ * @see proto type: symphony.bridge.v1beta1.AssetWithStatus
+ */
 export interface AssetWithStatusSDKType {
   asset: AssetSDKType;
   asset_status: AssetStatus;
@@ -111,38 +145,59 @@ export interface AssetWithStatusSDKType {
 /**
  * Asset defines a pair of the source chain name and its Osmosis representation
  * denoted by denom. It also includes a precision used for coins representation.
+ * @name Asset
+ * @package symphony.bridge.v1beta1
+ * @see proto type: symphony.bridge.v1beta1.Asset
  */
 export interface Asset {
-  /** SourceChain is a source chain name */
+  /**
+   * SourceChain is a source chain name
+   */
   sourceChain: string;
-  /** Denom is the Osmosis representation of the SourceChain */
+  /**
+   * Denom is the Osmosis representation of the SourceChain
+   */
   denom: string;
-  /** Precision used for coins representation */
+  /**
+   * Precision used for coins representation
+   */
   precision: bigint;
 }
 export interface AssetProtoMsg {
-  typeUrl: "/symphony.bridge.v1beta1.Asset";
+  typeUrl: '/symphony.bridge.v1beta1.Asset';
   value: Uint8Array;
 }
 /**
  * Asset defines a pair of the source chain name and its Osmosis representation
  * denoted by denom. It also includes a precision used for coins representation.
+ * @name AssetAmino
+ * @package symphony.bridge.v1beta1
+ * @see proto type: symphony.bridge.v1beta1.Asset
  */
 export interface AssetAmino {
-  /** SourceChain is a source chain name */
+  /**
+   * SourceChain is a source chain name
+   */
   source_chain?: string;
-  /** Denom is the Osmosis representation of the SourceChain */
+  /**
+   * Denom is the Osmosis representation of the SourceChain
+   */
   denom?: string;
-  /** Precision used for coins representation */
+  /**
+   * Precision used for coins representation
+   */
   precision?: string;
 }
 export interface AssetAminoMsg {
-  type: "/symphony.bridge.v1beta1.Asset";
+  type: '/symphony.bridge.v1beta1.Asset';
   value: AssetAmino;
 }
 /**
  * Asset defines a pair of the source chain name and its Osmosis representation
  * denoted by denom. It also includes a precision used for coins representation.
+ * @name AssetSDKType
+ * @package symphony.bridge.v1beta1
+ * @see proto type: symphony.bridge.v1beta1.Asset
  */
 export interface AssetSDKType {
   source_chain: string;
@@ -152,21 +207,51 @@ export interface AssetSDKType {
 function createBaseParams(): Params {
   return {
     signers: [],
-    assets: []
+    assets: [],
   };
 }
+/**
+ * Params defines params for x/bridge module.
+ * @name Params
+ * @package symphony.bridge.v1beta1
+ * @see proto type: symphony.bridge.v1beta1.Params
+ */
 export const Params = {
-  typeUrl: "/symphony.bridge.v1beta1.Params",
+  typeUrl: '/symphony.bridge.v1beta1.Params',
   is(o: any): o is Params {
-    return o && (o.$typeUrl === Params.typeUrl || Array.isArray(o.signers) && (!o.signers.length || typeof o.signers[0] === "string") && Array.isArray(o.assets) && (!o.assets.length || AssetWithStatus.is(o.assets[0])));
+    return (
+      o &&
+      (o.$typeUrl === Params.typeUrl ||
+        (Array.isArray(o.signers) &&
+          (!o.signers.length || typeof o.signers[0] === 'string') &&
+          Array.isArray(o.assets) &&
+          (!o.assets.length || AssetWithStatus.is(o.assets[0]))))
+    );
   },
   isSDK(o: any): o is ParamsSDKType {
-    return o && (o.$typeUrl === Params.typeUrl || Array.isArray(o.signers) && (!o.signers.length || typeof o.signers[0] === "string") && Array.isArray(o.assets) && (!o.assets.length || AssetWithStatus.isSDK(o.assets[0])));
+    return (
+      o &&
+      (o.$typeUrl === Params.typeUrl ||
+        (Array.isArray(o.signers) &&
+          (!o.signers.length || typeof o.signers[0] === 'string') &&
+          Array.isArray(o.assets) &&
+          (!o.assets.length || AssetWithStatus.isSDK(o.assets[0]))))
+    );
   },
   isAmino(o: any): o is ParamsAmino {
-    return o && (o.$typeUrl === Params.typeUrl || Array.isArray(o.signers) && (!o.signers.length || typeof o.signers[0] === "string") && Array.isArray(o.assets) && (!o.assets.length || AssetWithStatus.isAmino(o.assets[0])));
+    return (
+      o &&
+      (o.$typeUrl === Params.typeUrl ||
+        (Array.isArray(o.signers) &&
+          (!o.signers.length || typeof o.signers[0] === 'string') &&
+          Array.isArray(o.assets) &&
+          (!o.assets.length || AssetWithStatus.isAmino(o.assets[0]))))
+    );
   },
-  encode(message: Params, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
+  encode(
+    message: Params,
+    writer: BinaryWriter = BinaryWriter.create(),
+  ): BinaryWriter {
     for (const v of message.signers) {
       writer.uint32(10).string(v!);
     }
@@ -176,7 +261,8 @@ export const Params = {
     return writer;
   },
   decode(input: BinaryReader | Uint8Array, length?: number): Params {
-    const reader = input instanceof BinaryReader ? input : new BinaryReader(input);
+    const reader =
+      input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseParams();
     while (reader.pos < end) {
@@ -198,13 +284,15 @@ export const Params = {
   fromPartial(object: Partial<Params>): Params {
     const message = createBaseParams();
     message.signers = object.signers?.map(e => e) || [];
-    message.assets = object.assets?.map(e => AssetWithStatus.fromPartial(e)) || [];
+    message.assets =
+      object.assets?.map(e => AssetWithStatus.fromPartial(e)) || [];
     return message;
   },
   fromAmino(object: ParamsAmino): Params {
     const message = createBaseParams();
     message.signers = object.signers?.map(e => e) || [];
-    message.assets = object.assets?.map(e => AssetWithStatus.fromAmino(e)) || [];
+    message.assets =
+      object.assets?.map(e => AssetWithStatus.fromAmino(e)) || [];
     return message;
   },
   toAmino(message: Params): ParamsAmino {
@@ -215,7 +303,9 @@ export const Params = {
       obj.signers = message.signers;
     }
     if (message.assets) {
-      obj.assets = message.assets.map(e => e ? AssetWithStatus.toAmino(e) : undefined);
+      obj.assets = message.assets.map(e =>
+        e ? AssetWithStatus.toAmino(e) : undefined,
+      );
     } else {
       obj.assets = message.assets;
     }
@@ -232,30 +322,51 @@ export const Params = {
   },
   toProtoMsg(message: Params): ParamsProtoMsg {
     return {
-      typeUrl: "/symphony.bridge.v1beta1.Params",
-      value: Params.encode(message).finish()
+      typeUrl: '/symphony.bridge.v1beta1.Params',
+      value: Params.encode(message).finish(),
     };
-  }
+  },
 };
 GlobalDecoderRegistry.register(Params.typeUrl, Params);
 function createBaseAssetWithStatus(): AssetWithStatus {
   return {
     asset: Asset.fromPartial({}),
-    assetStatus: 0
+    assetStatus: 0,
   };
 }
+/**
+ * AssetWithStatus defines a pair of the asset and its current status.
+ * @name AssetWithStatus
+ * @package symphony.bridge.v1beta1
+ * @see proto type: symphony.bridge.v1beta1.AssetWithStatus
+ */
 export const AssetWithStatus = {
-  typeUrl: "/symphony.bridge.v1beta1.AssetWithStatus",
+  typeUrl: '/symphony.bridge.v1beta1.AssetWithStatus',
   is(o: any): o is AssetWithStatus {
-    return o && (o.$typeUrl === AssetWithStatus.typeUrl || Asset.is(o.asset) && isSet(o.assetStatus));
+    return (
+      o &&
+      (o.$typeUrl === AssetWithStatus.typeUrl ||
+        (Asset.is(o.asset) && isSet(o.assetStatus)))
+    );
   },
   isSDK(o: any): o is AssetWithStatusSDKType {
-    return o && (o.$typeUrl === AssetWithStatus.typeUrl || Asset.isSDK(o.asset) && isSet(o.asset_status));
+    return (
+      o &&
+      (o.$typeUrl === AssetWithStatus.typeUrl ||
+        (Asset.isSDK(o.asset) && isSet(o.asset_status)))
+    );
   },
   isAmino(o: any): o is AssetWithStatusAmino {
-    return o && (o.$typeUrl === AssetWithStatus.typeUrl || Asset.isAmino(o.asset) && isSet(o.asset_status));
+    return (
+      o &&
+      (o.$typeUrl === AssetWithStatus.typeUrl ||
+        (Asset.isAmino(o.asset) && isSet(o.asset_status)))
+    );
   },
-  encode(message: AssetWithStatus, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
+  encode(
+    message: AssetWithStatus,
+    writer: BinaryWriter = BinaryWriter.create(),
+  ): BinaryWriter {
     if (message.asset !== undefined) {
       Asset.encode(message.asset, writer.uint32(10).fork()).ldelim();
     }
@@ -265,7 +376,8 @@ export const AssetWithStatus = {
     return writer;
   },
   decode(input: BinaryReader | Uint8Array, length?: number): AssetWithStatus {
-    const reader = input instanceof BinaryReader ? input : new BinaryReader(input);
+    const reader =
+      input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseAssetWithStatus();
     while (reader.pos < end) {
@@ -286,7 +398,10 @@ export const AssetWithStatus = {
   },
   fromPartial(object: Partial<AssetWithStatus>): AssetWithStatus {
     const message = createBaseAssetWithStatus();
-    message.asset = object.asset !== undefined && object.asset !== null ? Asset.fromPartial(object.asset) : undefined;
+    message.asset =
+      object.asset !== undefined && object.asset !== null
+        ? Asset.fromPartial(object.asset)
+        : undefined;
     message.assetStatus = object.assetStatus ?? 0;
     return message;
   },
@@ -303,7 +418,8 @@ export const AssetWithStatus = {
   toAmino(message: AssetWithStatus): AssetWithStatusAmino {
     const obj: any = {};
     obj.asset = message.asset ? Asset.toAmino(message.asset) : undefined;
-    obj.asset_status = message.assetStatus === 0 ? undefined : message.assetStatus;
+    obj.asset_status =
+      message.assetStatus === 0 ? undefined : message.assetStatus;
     return obj;
   },
   fromAminoMsg(object: AssetWithStatusAminoMsg): AssetWithStatus {
@@ -317,35 +433,63 @@ export const AssetWithStatus = {
   },
   toProtoMsg(message: AssetWithStatus): AssetWithStatusProtoMsg {
     return {
-      typeUrl: "/symphony.bridge.v1beta1.AssetWithStatus",
-      value: AssetWithStatus.encode(message).finish()
+      typeUrl: '/symphony.bridge.v1beta1.AssetWithStatus',
+      value: AssetWithStatus.encode(message).finish(),
     };
-  }
+  },
 };
 GlobalDecoderRegistry.register(AssetWithStatus.typeUrl, AssetWithStatus);
 function createBaseAsset(): Asset {
   return {
-    sourceChain: "",
-    denom: "",
-    precision: BigInt(0)
+    sourceChain: '',
+    denom: '',
+    precision: BigInt(0),
   };
 }
+/**
+ * Asset defines a pair of the source chain name and its Osmosis representation
+ * denoted by denom. It also includes a precision used for coins representation.
+ * @name Asset
+ * @package symphony.bridge.v1beta1
+ * @see proto type: symphony.bridge.v1beta1.Asset
+ */
 export const Asset = {
-  typeUrl: "/symphony.bridge.v1beta1.Asset",
+  typeUrl: '/symphony.bridge.v1beta1.Asset',
   is(o: any): o is Asset {
-    return o && (o.$typeUrl === Asset.typeUrl || typeof o.sourceChain === "string" && typeof o.denom === "string" && typeof o.precision === "bigint");
+    return (
+      o &&
+      (o.$typeUrl === Asset.typeUrl ||
+        (typeof o.sourceChain === 'string' &&
+          typeof o.denom === 'string' &&
+          typeof o.precision === 'bigint'))
+    );
   },
   isSDK(o: any): o is AssetSDKType {
-    return o && (o.$typeUrl === Asset.typeUrl || typeof o.source_chain === "string" && typeof o.denom === "string" && typeof o.precision === "bigint");
+    return (
+      o &&
+      (o.$typeUrl === Asset.typeUrl ||
+        (typeof o.source_chain === 'string' &&
+          typeof o.denom === 'string' &&
+          typeof o.precision === 'bigint'))
+    );
   },
   isAmino(o: any): o is AssetAmino {
-    return o && (o.$typeUrl === Asset.typeUrl || typeof o.source_chain === "string" && typeof o.denom === "string" && typeof o.precision === "bigint");
+    return (
+      o &&
+      (o.$typeUrl === Asset.typeUrl ||
+        (typeof o.source_chain === 'string' &&
+          typeof o.denom === 'string' &&
+          typeof o.precision === 'bigint'))
+    );
   },
-  encode(message: Asset, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
-    if (message.sourceChain !== "") {
+  encode(
+    message: Asset,
+    writer: BinaryWriter = BinaryWriter.create(),
+  ): BinaryWriter {
+    if (message.sourceChain !== '') {
       writer.uint32(10).string(message.sourceChain);
     }
-    if (message.denom !== "") {
+    if (message.denom !== '') {
       writer.uint32(18).string(message.denom);
     }
     if (message.precision !== BigInt(0)) {
@@ -354,7 +498,8 @@ export const Asset = {
     return writer;
   },
   decode(input: BinaryReader | Uint8Array, length?: number): Asset {
-    const reader = input instanceof BinaryReader ? input : new BinaryReader(input);
+    const reader =
+      input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseAsset();
     while (reader.pos < end) {
@@ -378,9 +523,12 @@ export const Asset = {
   },
   fromPartial(object: Partial<Asset>): Asset {
     const message = createBaseAsset();
-    message.sourceChain = object.sourceChain ?? "";
-    message.denom = object.denom ?? "";
-    message.precision = object.precision !== undefined && object.precision !== null ? BigInt(object.precision.toString()) : BigInt(0);
+    message.sourceChain = object.sourceChain ?? '';
+    message.denom = object.denom ?? '';
+    message.precision =
+      object.precision !== undefined && object.precision !== null
+        ? BigInt(object.precision.toString())
+        : BigInt(0);
     return message;
   },
   fromAmino(object: AssetAmino): Asset {
@@ -398,9 +546,13 @@ export const Asset = {
   },
   toAmino(message: Asset): AssetAmino {
     const obj: any = {};
-    obj.source_chain = message.sourceChain === "" ? undefined : message.sourceChain;
-    obj.denom = message.denom === "" ? undefined : message.denom;
-    obj.precision = message.precision !== BigInt(0) ? message.precision?.toString() : undefined;
+    obj.source_chain =
+      message.sourceChain === '' ? undefined : message.sourceChain;
+    obj.denom = message.denom === '' ? undefined : message.denom;
+    obj.precision =
+      message.precision !== BigInt(0)
+        ? message.precision?.toString()
+        : undefined;
     return obj;
   },
   fromAminoMsg(object: AssetAminoMsg): Asset {
@@ -414,9 +566,9 @@ export const Asset = {
   },
   toProtoMsg(message: Asset): AssetProtoMsg {
     return {
-      typeUrl: "/symphony.bridge.v1beta1.Asset",
-      value: Asset.encode(message).finish()
+      typeUrl: '/symphony.bridge.v1beta1.Asset',
+      value: Asset.encode(message).finish(),
     };
-  }
+  },
 };
 GlobalDecoderRegistry.register(Asset.typeUrl, Asset);

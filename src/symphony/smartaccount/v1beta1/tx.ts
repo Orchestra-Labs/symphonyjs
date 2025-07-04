@@ -1,80 +1,119 @@
 //@ts-nocheck
-import { BinaryReader, BinaryWriter } from "../../../binary";
-import { bytesFromBase64, base64FromBytes } from "../../../helpers";
-import { GlobalDecoderRegistry } from "../../../registry";
-/** MsgAddAuthenticatorRequest defines the Msg/AddAuthenticator request type. */
+import { BinaryReader, BinaryWriter } from '../../../binary';
+import { bytesFromBase64, base64FromBytes } from '../../../helpers';
+import { GlobalDecoderRegistry } from '../../../registry';
+/**
+ * MsgAddAuthenticatorRequest defines the Msg/AddAuthenticator request type.
+ * @name MsgAddAuthenticator
+ * @package symphony.smartaccount.v1beta1
+ * @see proto type: symphony.smartaccount.v1beta1.MsgAddAuthenticator
+ */
 export interface MsgAddAuthenticator {
   sender: string;
   authenticatorType: string;
   data: Uint8Array;
 }
 export interface MsgAddAuthenticatorProtoMsg {
-  typeUrl: "/symphony.smartaccount.v1beta1.MsgAddAuthenticator";
+  typeUrl: '/symphony.smartaccount.v1beta1.MsgAddAuthenticator';
   value: Uint8Array;
 }
-/** MsgAddAuthenticatorRequest defines the Msg/AddAuthenticator request type. */
+/**
+ * MsgAddAuthenticatorRequest defines the Msg/AddAuthenticator request type.
+ * @name MsgAddAuthenticatorAmino
+ * @package symphony.smartaccount.v1beta1
+ * @see proto type: symphony.smartaccount.v1beta1.MsgAddAuthenticator
+ */
 export interface MsgAddAuthenticatorAmino {
   sender?: string;
   authenticator_type?: string;
   data?: string;
 }
 export interface MsgAddAuthenticatorAminoMsg {
-  type: "symphony/smartaccount/add-authenticator";
+  type: 'symphony/smartaccount/add-authenticator';
   value: MsgAddAuthenticatorAmino;
 }
-/** MsgAddAuthenticatorRequest defines the Msg/AddAuthenticator request type. */
+/**
+ * MsgAddAuthenticatorRequest defines the Msg/AddAuthenticator request type.
+ * @name MsgAddAuthenticatorSDKType
+ * @package symphony.smartaccount.v1beta1
+ * @see proto type: symphony.smartaccount.v1beta1.MsgAddAuthenticator
+ */
 export interface MsgAddAuthenticatorSDKType {
   sender: string;
   authenticator_type: string;
   data: Uint8Array;
 }
-/** MsgAddAuthenticatorResponse defines the Msg/AddAuthenticator response type. */
+/**
+ * MsgAddAuthenticatorResponse defines the Msg/AddAuthenticator response type.
+ * @name MsgAddAuthenticatorResponse
+ * @package symphony.smartaccount.v1beta1
+ * @see proto type: symphony.smartaccount.v1beta1.MsgAddAuthenticatorResponse
+ */
 export interface MsgAddAuthenticatorResponse {
   success: boolean;
 }
 export interface MsgAddAuthenticatorResponseProtoMsg {
-  typeUrl: "/symphony.smartaccount.v1beta1.MsgAddAuthenticatorResponse";
+  typeUrl: '/symphony.smartaccount.v1beta1.MsgAddAuthenticatorResponse';
   value: Uint8Array;
 }
-/** MsgAddAuthenticatorResponse defines the Msg/AddAuthenticator response type. */
+/**
+ * MsgAddAuthenticatorResponse defines the Msg/AddAuthenticator response type.
+ * @name MsgAddAuthenticatorResponseAmino
+ * @package symphony.smartaccount.v1beta1
+ * @see proto type: symphony.smartaccount.v1beta1.MsgAddAuthenticatorResponse
+ */
 export interface MsgAddAuthenticatorResponseAmino {
   success?: boolean;
 }
 export interface MsgAddAuthenticatorResponseAminoMsg {
-  type: "/symphony.smartaccount.v1beta1.MsgAddAuthenticatorResponse";
+  type: '/symphony.smartaccount.v1beta1.MsgAddAuthenticatorResponse';
   value: MsgAddAuthenticatorResponseAmino;
 }
-/** MsgAddAuthenticatorResponse defines the Msg/AddAuthenticator response type. */
+/**
+ * MsgAddAuthenticatorResponse defines the Msg/AddAuthenticator response type.
+ * @name MsgAddAuthenticatorResponseSDKType
+ * @package symphony.smartaccount.v1beta1
+ * @see proto type: symphony.smartaccount.v1beta1.MsgAddAuthenticatorResponse
+ */
 export interface MsgAddAuthenticatorResponseSDKType {
   success: boolean;
 }
 /**
  * MsgRemoveAuthenticatorRequest defines the Msg/RemoveAuthenticator request
  * type.
+ * @name MsgRemoveAuthenticator
+ * @package symphony.smartaccount.v1beta1
+ * @see proto type: symphony.smartaccount.v1beta1.MsgRemoveAuthenticator
  */
 export interface MsgRemoveAuthenticator {
   sender: string;
   id: bigint;
 }
 export interface MsgRemoveAuthenticatorProtoMsg {
-  typeUrl: "/symphony.smartaccount.v1beta1.MsgRemoveAuthenticator";
+  typeUrl: '/symphony.smartaccount.v1beta1.MsgRemoveAuthenticator';
   value: Uint8Array;
 }
 /**
  * MsgRemoveAuthenticatorRequest defines the Msg/RemoveAuthenticator request
  * type.
+ * @name MsgRemoveAuthenticatorAmino
+ * @package symphony.smartaccount.v1beta1
+ * @see proto type: symphony.smartaccount.v1beta1.MsgRemoveAuthenticator
  */
 export interface MsgRemoveAuthenticatorAmino {
   sender?: string;
   id?: string;
 }
 export interface MsgRemoveAuthenticatorAminoMsg {
-  type: "symphony/smartaccount/remove-authenticator";
+  type: 'symphony/smartaccount/remove-authenticator';
   value: MsgRemoveAuthenticatorAmino;
 }
 /**
  * MsgRemoveAuthenticatorRequest defines the Msg/RemoveAuthenticator request
  * type.
+ * @name MsgRemoveAuthenticatorSDKType
+ * @package symphony.smartaccount.v1beta1
+ * @see proto type: symphony.smartaccount.v1beta1.MsgRemoveAuthenticator
  */
 export interface MsgRemoveAuthenticatorSDKType {
   sender: string;
@@ -83,66 +122,108 @@ export interface MsgRemoveAuthenticatorSDKType {
 /**
  * MsgRemoveAuthenticatorResponse defines the Msg/RemoveAuthenticator response
  * type.
+ * @name MsgRemoveAuthenticatorResponse
+ * @package symphony.smartaccount.v1beta1
+ * @see proto type: symphony.smartaccount.v1beta1.MsgRemoveAuthenticatorResponse
  */
 export interface MsgRemoveAuthenticatorResponse {
   success: boolean;
 }
 export interface MsgRemoveAuthenticatorResponseProtoMsg {
-  typeUrl: "/symphony.smartaccount.v1beta1.MsgRemoveAuthenticatorResponse";
+  typeUrl: '/symphony.smartaccount.v1beta1.MsgRemoveAuthenticatorResponse';
   value: Uint8Array;
 }
 /**
  * MsgRemoveAuthenticatorResponse defines the Msg/RemoveAuthenticator response
  * type.
+ * @name MsgRemoveAuthenticatorResponseAmino
+ * @package symphony.smartaccount.v1beta1
+ * @see proto type: symphony.smartaccount.v1beta1.MsgRemoveAuthenticatorResponse
  */
 export interface MsgRemoveAuthenticatorResponseAmino {
   success?: boolean;
 }
 export interface MsgRemoveAuthenticatorResponseAminoMsg {
-  type: "/symphony.smartaccount.v1beta1.MsgRemoveAuthenticatorResponse";
+  type: '/symphony.smartaccount.v1beta1.MsgRemoveAuthenticatorResponse';
   value: MsgRemoveAuthenticatorResponseAmino;
 }
 /**
  * MsgRemoveAuthenticatorResponse defines the Msg/RemoveAuthenticator response
  * type.
+ * @name MsgRemoveAuthenticatorResponseSDKType
+ * @package symphony.smartaccount.v1beta1
+ * @see proto type: symphony.smartaccount.v1beta1.MsgRemoveAuthenticatorResponse
  */
 export interface MsgRemoveAuthenticatorResponseSDKType {
   success: boolean;
 }
+/**
+ * @name MsgSetActiveState
+ * @package symphony.smartaccount.v1beta1
+ * @see proto type: symphony.smartaccount.v1beta1.MsgSetActiveState
+ */
 export interface MsgSetActiveState {
   sender: string;
   active: boolean;
 }
 export interface MsgSetActiveStateProtoMsg {
-  typeUrl: "/symphony.smartaccount.v1beta1.MsgSetActiveState";
+  typeUrl: '/symphony.smartaccount.v1beta1.MsgSetActiveState';
   value: Uint8Array;
 }
+/**
+ * @name MsgSetActiveStateAmino
+ * @package symphony.smartaccount.v1beta1
+ * @see proto type: symphony.smartaccount.v1beta1.MsgSetActiveState
+ */
 export interface MsgSetActiveStateAmino {
   sender?: string;
   active?: boolean;
 }
 export interface MsgSetActiveStateAminoMsg {
-  type: "symphony/smartaccount/set-active-state";
+  type: 'symphony/smartaccount/set-active-state';
   value: MsgSetActiveStateAmino;
 }
+/**
+ * @name MsgSetActiveStateSDKType
+ * @package symphony.smartaccount.v1beta1
+ * @see proto type: symphony.smartaccount.v1beta1.MsgSetActiveState
+ */
 export interface MsgSetActiveStateSDKType {
   sender: string;
   active: boolean;
 }
+/**
+ * @name MsgSetActiveStateResponse
+ * @package symphony.smartaccount.v1beta1
+ * @see proto type: symphony.smartaccount.v1beta1.MsgSetActiveStateResponse
+ */
 export interface MsgSetActiveStateResponse {}
 export interface MsgSetActiveStateResponseProtoMsg {
-  typeUrl: "/symphony.smartaccount.v1beta1.MsgSetActiveStateResponse";
+  typeUrl: '/symphony.smartaccount.v1beta1.MsgSetActiveStateResponse';
   value: Uint8Array;
 }
+/**
+ * @name MsgSetActiveStateResponseAmino
+ * @package symphony.smartaccount.v1beta1
+ * @see proto type: symphony.smartaccount.v1beta1.MsgSetActiveStateResponse
+ */
 export interface MsgSetActiveStateResponseAmino {}
 export interface MsgSetActiveStateResponseAminoMsg {
-  type: "/symphony.smartaccount.v1beta1.MsgSetActiveStateResponse";
+  type: '/symphony.smartaccount.v1beta1.MsgSetActiveStateResponse';
   value: MsgSetActiveStateResponseAmino;
 }
+/**
+ * @name MsgSetActiveStateResponseSDKType
+ * @package symphony.smartaccount.v1beta1
+ * @see proto type: symphony.smartaccount.v1beta1.MsgSetActiveStateResponse
+ */
 export interface MsgSetActiveStateResponseSDKType {}
 /**
  * TxExtension allows for additional authenticator-specific data in
  * transactions.
+ * @name TxExtension
+ * @package symphony.smartaccount.v1beta1
+ * @see proto type: symphony.smartaccount.v1beta1.TxExtension
  */
 export interface TxExtension {
   /**
@@ -152,12 +233,15 @@ export interface TxExtension {
   selectedAuthenticators: bigint[];
 }
 export interface TxExtensionProtoMsg {
-  typeUrl: "/symphony.smartaccount.v1beta1.TxExtension";
+  typeUrl: '/symphony.smartaccount.v1beta1.TxExtension';
   value: Uint8Array;
 }
 /**
  * TxExtension allows for additional authenticator-specific data in
  * transactions.
+ * @name TxExtensionAmino
+ * @package symphony.smartaccount.v1beta1
+ * @see proto type: symphony.smartaccount.v1beta1.TxExtension
  */
 export interface TxExtensionAmino {
   /**
@@ -167,40 +251,70 @@ export interface TxExtensionAmino {
   selected_authenticators?: string[];
 }
 export interface TxExtensionAminoMsg {
-  type: "/symphony.smartaccount.v1beta1.TxExtension";
+  type: '/symphony.smartaccount.v1beta1.TxExtension';
   value: TxExtensionAmino;
 }
 /**
  * TxExtension allows for additional authenticator-specific data in
  * transactions.
+ * @name TxExtensionSDKType
+ * @package symphony.smartaccount.v1beta1
+ * @see proto type: symphony.smartaccount.v1beta1.TxExtension
  */
 export interface TxExtensionSDKType {
   selected_authenticators: bigint[];
 }
 function createBaseMsgAddAuthenticator(): MsgAddAuthenticator {
   return {
-    sender: "",
-    authenticatorType: "",
-    data: new Uint8Array()
+    sender: '',
+    authenticatorType: '',
+    data: new Uint8Array(),
   };
 }
+/**
+ * MsgAddAuthenticatorRequest defines the Msg/AddAuthenticator request type.
+ * @name MsgAddAuthenticator
+ * @package symphony.smartaccount.v1beta1
+ * @see proto type: symphony.smartaccount.v1beta1.MsgAddAuthenticator
+ */
 export const MsgAddAuthenticator = {
-  typeUrl: "/symphony.smartaccount.v1beta1.MsgAddAuthenticator",
-  aminoType: "symphony/smartaccount/add-authenticator",
+  typeUrl: '/symphony.smartaccount.v1beta1.MsgAddAuthenticator',
+  aminoType: 'symphony/smartaccount/add-authenticator',
   is(o: any): o is MsgAddAuthenticator {
-    return o && (o.$typeUrl === MsgAddAuthenticator.typeUrl || typeof o.sender === "string" && typeof o.authenticatorType === "string" && (o.data instanceof Uint8Array || typeof o.data === "string"));
+    return (
+      o &&
+      (o.$typeUrl === MsgAddAuthenticator.typeUrl ||
+        (typeof o.sender === 'string' &&
+          typeof o.authenticatorType === 'string' &&
+          (o.data instanceof Uint8Array || typeof o.data === 'string')))
+    );
   },
   isSDK(o: any): o is MsgAddAuthenticatorSDKType {
-    return o && (o.$typeUrl === MsgAddAuthenticator.typeUrl || typeof o.sender === "string" && typeof o.authenticator_type === "string" && (o.data instanceof Uint8Array || typeof o.data === "string"));
+    return (
+      o &&
+      (o.$typeUrl === MsgAddAuthenticator.typeUrl ||
+        (typeof o.sender === 'string' &&
+          typeof o.authenticator_type === 'string' &&
+          (o.data instanceof Uint8Array || typeof o.data === 'string')))
+    );
   },
   isAmino(o: any): o is MsgAddAuthenticatorAmino {
-    return o && (o.$typeUrl === MsgAddAuthenticator.typeUrl || typeof o.sender === "string" && typeof o.authenticator_type === "string" && (o.data instanceof Uint8Array || typeof o.data === "string"));
+    return (
+      o &&
+      (o.$typeUrl === MsgAddAuthenticator.typeUrl ||
+        (typeof o.sender === 'string' &&
+          typeof o.authenticator_type === 'string' &&
+          (o.data instanceof Uint8Array || typeof o.data === 'string')))
+    );
   },
-  encode(message: MsgAddAuthenticator, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
-    if (message.sender !== "") {
+  encode(
+    message: MsgAddAuthenticator,
+    writer: BinaryWriter = BinaryWriter.create(),
+  ): BinaryWriter {
+    if (message.sender !== '') {
       writer.uint32(10).string(message.sender);
     }
-    if (message.authenticatorType !== "") {
+    if (message.authenticatorType !== '') {
       writer.uint32(18).string(message.authenticatorType);
     }
     if (message.data.length !== 0) {
@@ -208,8 +322,12 @@ export const MsgAddAuthenticator = {
     }
     return writer;
   },
-  decode(input: BinaryReader | Uint8Array, length?: number): MsgAddAuthenticator {
-    const reader = input instanceof BinaryReader ? input : new BinaryReader(input);
+  decode(
+    input: BinaryReader | Uint8Array,
+    length?: number,
+  ): MsgAddAuthenticator {
+    const reader =
+      input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseMsgAddAuthenticator();
     while (reader.pos < end) {
@@ -233,8 +351,8 @@ export const MsgAddAuthenticator = {
   },
   fromPartial(object: Partial<MsgAddAuthenticator>): MsgAddAuthenticator {
     const message = createBaseMsgAddAuthenticator();
-    message.sender = object.sender ?? "";
-    message.authenticatorType = object.authenticatorType ?? "";
+    message.sender = object.sender ?? '';
+    message.authenticatorType = object.authenticatorType ?? '';
     message.data = object.data ?? new Uint8Array();
     return message;
   },
@@ -243,7 +361,10 @@ export const MsgAddAuthenticator = {
     if (object.sender !== undefined && object.sender !== null) {
       message.sender = object.sender;
     }
-    if (object.authenticator_type !== undefined && object.authenticator_type !== null) {
+    if (
+      object.authenticator_type !== undefined &&
+      object.authenticator_type !== null
+    ) {
       message.authenticatorType = object.authenticator_type;
     }
     if (object.data !== undefined && object.data !== null) {
@@ -253,8 +374,9 @@ export const MsgAddAuthenticator = {
   },
   toAmino(message: MsgAddAuthenticator): MsgAddAuthenticatorAmino {
     const obj: any = {};
-    obj.sender = message.sender === "" ? undefined : message.sender;
-    obj.authenticator_type = message.authenticatorType === "" ? undefined : message.authenticatorType;
+    obj.sender = message.sender === '' ? undefined : message.sender;
+    obj.authenticator_type =
+      message.authenticatorType === '' ? undefined : message.authenticatorType;
     obj.data = message.data ? base64FromBytes(message.data) : undefined;
     return obj;
   },
@@ -263,8 +385,8 @@ export const MsgAddAuthenticator = {
   },
   toAminoMsg(message: MsgAddAuthenticator): MsgAddAuthenticatorAminoMsg {
     return {
-      type: "symphony/smartaccount/add-authenticator",
-      value: MsgAddAuthenticator.toAmino(message)
+      type: 'symphony/smartaccount/add-authenticator',
+      value: MsgAddAuthenticator.toAmino(message),
     };
   },
   fromProtoMsg(message: MsgAddAuthenticatorProtoMsg): MsgAddAuthenticator {
@@ -275,37 +397,68 @@ export const MsgAddAuthenticator = {
   },
   toProtoMsg(message: MsgAddAuthenticator): MsgAddAuthenticatorProtoMsg {
     return {
-      typeUrl: "/symphony.smartaccount.v1beta1.MsgAddAuthenticator",
-      value: MsgAddAuthenticator.encode(message).finish()
+      typeUrl: '/symphony.smartaccount.v1beta1.MsgAddAuthenticator',
+      value: MsgAddAuthenticator.encode(message).finish(),
     };
-  }
+  },
 };
-GlobalDecoderRegistry.register(MsgAddAuthenticator.typeUrl, MsgAddAuthenticator);
-GlobalDecoderRegistry.registerAminoProtoMapping(MsgAddAuthenticator.aminoType, MsgAddAuthenticator.typeUrl);
+GlobalDecoderRegistry.register(
+  MsgAddAuthenticator.typeUrl,
+  MsgAddAuthenticator,
+);
+GlobalDecoderRegistry.registerAminoProtoMapping(
+  MsgAddAuthenticator.aminoType,
+  MsgAddAuthenticator.typeUrl,
+);
 function createBaseMsgAddAuthenticatorResponse(): MsgAddAuthenticatorResponse {
   return {
-    success: false
+    success: false,
   };
 }
+/**
+ * MsgAddAuthenticatorResponse defines the Msg/AddAuthenticator response type.
+ * @name MsgAddAuthenticatorResponse
+ * @package symphony.smartaccount.v1beta1
+ * @see proto type: symphony.smartaccount.v1beta1.MsgAddAuthenticatorResponse
+ */
 export const MsgAddAuthenticatorResponse = {
-  typeUrl: "/symphony.smartaccount.v1beta1.MsgAddAuthenticatorResponse",
+  typeUrl: '/symphony.smartaccount.v1beta1.MsgAddAuthenticatorResponse',
   is(o: any): o is MsgAddAuthenticatorResponse {
-    return o && (o.$typeUrl === MsgAddAuthenticatorResponse.typeUrl || typeof o.success === "boolean");
+    return (
+      o &&
+      (o.$typeUrl === MsgAddAuthenticatorResponse.typeUrl ||
+        typeof o.success === 'boolean')
+    );
   },
   isSDK(o: any): o is MsgAddAuthenticatorResponseSDKType {
-    return o && (o.$typeUrl === MsgAddAuthenticatorResponse.typeUrl || typeof o.success === "boolean");
+    return (
+      o &&
+      (o.$typeUrl === MsgAddAuthenticatorResponse.typeUrl ||
+        typeof o.success === 'boolean')
+    );
   },
   isAmino(o: any): o is MsgAddAuthenticatorResponseAmino {
-    return o && (o.$typeUrl === MsgAddAuthenticatorResponse.typeUrl || typeof o.success === "boolean");
+    return (
+      o &&
+      (o.$typeUrl === MsgAddAuthenticatorResponse.typeUrl ||
+        typeof o.success === 'boolean')
+    );
   },
-  encode(message: MsgAddAuthenticatorResponse, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
+  encode(
+    message: MsgAddAuthenticatorResponse,
+    writer: BinaryWriter = BinaryWriter.create(),
+  ): BinaryWriter {
     if (message.success === true) {
       writer.uint32(8).bool(message.success);
     }
     return writer;
   },
-  decode(input: BinaryReader | Uint8Array, length?: number): MsgAddAuthenticatorResponse {
-    const reader = input instanceof BinaryReader ? input : new BinaryReader(input);
+  decode(
+    input: BinaryReader | Uint8Array,
+    length?: number,
+  ): MsgAddAuthenticatorResponse {
+    const reader =
+      input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseMsgAddAuthenticatorResponse();
     while (reader.pos < end) {
@@ -321,60 +474,97 @@ export const MsgAddAuthenticatorResponse = {
     }
     return message;
   },
-  fromPartial(object: Partial<MsgAddAuthenticatorResponse>): MsgAddAuthenticatorResponse {
+  fromPartial(
+    object: Partial<MsgAddAuthenticatorResponse>,
+  ): MsgAddAuthenticatorResponse {
     const message = createBaseMsgAddAuthenticatorResponse();
     message.success = object.success ?? false;
     return message;
   },
-  fromAmino(object: MsgAddAuthenticatorResponseAmino): MsgAddAuthenticatorResponse {
+  fromAmino(
+    object: MsgAddAuthenticatorResponseAmino,
+  ): MsgAddAuthenticatorResponse {
     const message = createBaseMsgAddAuthenticatorResponse();
     if (object.success !== undefined && object.success !== null) {
       message.success = object.success;
     }
     return message;
   },
-  toAmino(message: MsgAddAuthenticatorResponse): MsgAddAuthenticatorResponseAmino {
+  toAmino(
+    message: MsgAddAuthenticatorResponse,
+  ): MsgAddAuthenticatorResponseAmino {
     const obj: any = {};
     obj.success = message.success === false ? undefined : message.success;
     return obj;
   },
-  fromAminoMsg(object: MsgAddAuthenticatorResponseAminoMsg): MsgAddAuthenticatorResponse {
+  fromAminoMsg(
+    object: MsgAddAuthenticatorResponseAminoMsg,
+  ): MsgAddAuthenticatorResponse {
     return MsgAddAuthenticatorResponse.fromAmino(object.value);
   },
-  fromProtoMsg(message: MsgAddAuthenticatorResponseProtoMsg): MsgAddAuthenticatorResponse {
+  fromProtoMsg(
+    message: MsgAddAuthenticatorResponseProtoMsg,
+  ): MsgAddAuthenticatorResponse {
     return MsgAddAuthenticatorResponse.decode(message.value);
   },
   toProto(message: MsgAddAuthenticatorResponse): Uint8Array {
     return MsgAddAuthenticatorResponse.encode(message).finish();
   },
-  toProtoMsg(message: MsgAddAuthenticatorResponse): MsgAddAuthenticatorResponseProtoMsg {
+  toProtoMsg(
+    message: MsgAddAuthenticatorResponse,
+  ): MsgAddAuthenticatorResponseProtoMsg {
     return {
-      typeUrl: "/symphony.smartaccount.v1beta1.MsgAddAuthenticatorResponse",
-      value: MsgAddAuthenticatorResponse.encode(message).finish()
+      typeUrl: '/symphony.smartaccount.v1beta1.MsgAddAuthenticatorResponse',
+      value: MsgAddAuthenticatorResponse.encode(message).finish(),
     };
-  }
+  },
 };
-GlobalDecoderRegistry.register(MsgAddAuthenticatorResponse.typeUrl, MsgAddAuthenticatorResponse);
+GlobalDecoderRegistry.register(
+  MsgAddAuthenticatorResponse.typeUrl,
+  MsgAddAuthenticatorResponse,
+);
 function createBaseMsgRemoveAuthenticator(): MsgRemoveAuthenticator {
   return {
-    sender: "",
-    id: BigInt(0)
+    sender: '',
+    id: BigInt(0),
   };
 }
+/**
+ * MsgRemoveAuthenticatorRequest defines the Msg/RemoveAuthenticator request
+ * type.
+ * @name MsgRemoveAuthenticator
+ * @package symphony.smartaccount.v1beta1
+ * @see proto type: symphony.smartaccount.v1beta1.MsgRemoveAuthenticator
+ */
 export const MsgRemoveAuthenticator = {
-  typeUrl: "/symphony.smartaccount.v1beta1.MsgRemoveAuthenticator",
-  aminoType: "symphony/smartaccount/remove-authenticator",
+  typeUrl: '/symphony.smartaccount.v1beta1.MsgRemoveAuthenticator',
+  aminoType: 'symphony/smartaccount/remove-authenticator',
   is(o: any): o is MsgRemoveAuthenticator {
-    return o && (o.$typeUrl === MsgRemoveAuthenticator.typeUrl || typeof o.sender === "string" && typeof o.id === "bigint");
+    return (
+      o &&
+      (o.$typeUrl === MsgRemoveAuthenticator.typeUrl ||
+        (typeof o.sender === 'string' && typeof o.id === 'bigint'))
+    );
   },
   isSDK(o: any): o is MsgRemoveAuthenticatorSDKType {
-    return o && (o.$typeUrl === MsgRemoveAuthenticator.typeUrl || typeof o.sender === "string" && typeof o.id === "bigint");
+    return (
+      o &&
+      (o.$typeUrl === MsgRemoveAuthenticator.typeUrl ||
+        (typeof o.sender === 'string' && typeof o.id === 'bigint'))
+    );
   },
   isAmino(o: any): o is MsgRemoveAuthenticatorAmino {
-    return o && (o.$typeUrl === MsgRemoveAuthenticator.typeUrl || typeof o.sender === "string" && typeof o.id === "bigint");
+    return (
+      o &&
+      (o.$typeUrl === MsgRemoveAuthenticator.typeUrl ||
+        (typeof o.sender === 'string' && typeof o.id === 'bigint'))
+    );
   },
-  encode(message: MsgRemoveAuthenticator, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
-    if (message.sender !== "") {
+  encode(
+    message: MsgRemoveAuthenticator,
+    writer: BinaryWriter = BinaryWriter.create(),
+  ): BinaryWriter {
+    if (message.sender !== '') {
       writer.uint32(10).string(message.sender);
     }
     if (message.id !== BigInt(0)) {
@@ -382,8 +572,12 @@ export const MsgRemoveAuthenticator = {
     }
     return writer;
   },
-  decode(input: BinaryReader | Uint8Array, length?: number): MsgRemoveAuthenticator {
-    const reader = input instanceof BinaryReader ? input : new BinaryReader(input);
+  decode(
+    input: BinaryReader | Uint8Array,
+    length?: number,
+  ): MsgRemoveAuthenticator {
+    const reader =
+      input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseMsgRemoveAuthenticator();
     while (reader.pos < end) {
@@ -404,8 +598,11 @@ export const MsgRemoveAuthenticator = {
   },
   fromPartial(object: Partial<MsgRemoveAuthenticator>): MsgRemoveAuthenticator {
     const message = createBaseMsgRemoveAuthenticator();
-    message.sender = object.sender ?? "";
-    message.id = object.id !== undefined && object.id !== null ? BigInt(object.id.toString()) : BigInt(0);
+    message.sender = object.sender ?? '';
+    message.id =
+      object.id !== undefined && object.id !== null
+        ? BigInt(object.id.toString())
+        : BigInt(0);
     return message;
   },
   fromAmino(object: MsgRemoveAuthenticatorAmino): MsgRemoveAuthenticator {
@@ -420,7 +617,7 @@ export const MsgRemoveAuthenticator = {
   },
   toAmino(message: MsgRemoveAuthenticator): MsgRemoveAuthenticatorAmino {
     const obj: any = {};
-    obj.sender = message.sender === "" ? undefined : message.sender;
+    obj.sender = message.sender === '' ? undefined : message.sender;
     obj.id = message.id !== BigInt(0) ? message.id?.toString() : undefined;
     return obj;
   },
@@ -429,11 +626,13 @@ export const MsgRemoveAuthenticator = {
   },
   toAminoMsg(message: MsgRemoveAuthenticator): MsgRemoveAuthenticatorAminoMsg {
     return {
-      type: "symphony/smartaccount/remove-authenticator",
-      value: MsgRemoveAuthenticator.toAmino(message)
+      type: 'symphony/smartaccount/remove-authenticator',
+      value: MsgRemoveAuthenticator.toAmino(message),
     };
   },
-  fromProtoMsg(message: MsgRemoveAuthenticatorProtoMsg): MsgRemoveAuthenticator {
+  fromProtoMsg(
+    message: MsgRemoveAuthenticatorProtoMsg,
+  ): MsgRemoveAuthenticator {
     return MsgRemoveAuthenticator.decode(message.value);
   },
   toProto(message: MsgRemoveAuthenticator): Uint8Array {
@@ -441,37 +640,69 @@ export const MsgRemoveAuthenticator = {
   },
   toProtoMsg(message: MsgRemoveAuthenticator): MsgRemoveAuthenticatorProtoMsg {
     return {
-      typeUrl: "/symphony.smartaccount.v1beta1.MsgRemoveAuthenticator",
-      value: MsgRemoveAuthenticator.encode(message).finish()
+      typeUrl: '/symphony.smartaccount.v1beta1.MsgRemoveAuthenticator',
+      value: MsgRemoveAuthenticator.encode(message).finish(),
     };
-  }
+  },
 };
-GlobalDecoderRegistry.register(MsgRemoveAuthenticator.typeUrl, MsgRemoveAuthenticator);
-GlobalDecoderRegistry.registerAminoProtoMapping(MsgRemoveAuthenticator.aminoType, MsgRemoveAuthenticator.typeUrl);
+GlobalDecoderRegistry.register(
+  MsgRemoveAuthenticator.typeUrl,
+  MsgRemoveAuthenticator,
+);
+GlobalDecoderRegistry.registerAminoProtoMapping(
+  MsgRemoveAuthenticator.aminoType,
+  MsgRemoveAuthenticator.typeUrl,
+);
 function createBaseMsgRemoveAuthenticatorResponse(): MsgRemoveAuthenticatorResponse {
   return {
-    success: false
+    success: false,
   };
 }
+/**
+ * MsgRemoveAuthenticatorResponse defines the Msg/RemoveAuthenticator response
+ * type.
+ * @name MsgRemoveAuthenticatorResponse
+ * @package symphony.smartaccount.v1beta1
+ * @see proto type: symphony.smartaccount.v1beta1.MsgRemoveAuthenticatorResponse
+ */
 export const MsgRemoveAuthenticatorResponse = {
-  typeUrl: "/symphony.smartaccount.v1beta1.MsgRemoveAuthenticatorResponse",
+  typeUrl: '/symphony.smartaccount.v1beta1.MsgRemoveAuthenticatorResponse',
   is(o: any): o is MsgRemoveAuthenticatorResponse {
-    return o && (o.$typeUrl === MsgRemoveAuthenticatorResponse.typeUrl || typeof o.success === "boolean");
+    return (
+      o &&
+      (o.$typeUrl === MsgRemoveAuthenticatorResponse.typeUrl ||
+        typeof o.success === 'boolean')
+    );
   },
   isSDK(o: any): o is MsgRemoveAuthenticatorResponseSDKType {
-    return o && (o.$typeUrl === MsgRemoveAuthenticatorResponse.typeUrl || typeof o.success === "boolean");
+    return (
+      o &&
+      (o.$typeUrl === MsgRemoveAuthenticatorResponse.typeUrl ||
+        typeof o.success === 'boolean')
+    );
   },
   isAmino(o: any): o is MsgRemoveAuthenticatorResponseAmino {
-    return o && (o.$typeUrl === MsgRemoveAuthenticatorResponse.typeUrl || typeof o.success === "boolean");
+    return (
+      o &&
+      (o.$typeUrl === MsgRemoveAuthenticatorResponse.typeUrl ||
+        typeof o.success === 'boolean')
+    );
   },
-  encode(message: MsgRemoveAuthenticatorResponse, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
+  encode(
+    message: MsgRemoveAuthenticatorResponse,
+    writer: BinaryWriter = BinaryWriter.create(),
+  ): BinaryWriter {
     if (message.success === true) {
       writer.uint32(8).bool(message.success);
     }
     return writer;
   },
-  decode(input: BinaryReader | Uint8Array, length?: number): MsgRemoveAuthenticatorResponse {
-    const reader = input instanceof BinaryReader ? input : new BinaryReader(input);
+  decode(
+    input: BinaryReader | Uint8Array,
+    length?: number,
+  ): MsgRemoveAuthenticatorResponse {
+    const reader =
+      input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseMsgRemoveAuthenticatorResponse();
     while (reader.pos < end) {
@@ -487,60 +718,95 @@ export const MsgRemoveAuthenticatorResponse = {
     }
     return message;
   },
-  fromPartial(object: Partial<MsgRemoveAuthenticatorResponse>): MsgRemoveAuthenticatorResponse {
+  fromPartial(
+    object: Partial<MsgRemoveAuthenticatorResponse>,
+  ): MsgRemoveAuthenticatorResponse {
     const message = createBaseMsgRemoveAuthenticatorResponse();
     message.success = object.success ?? false;
     return message;
   },
-  fromAmino(object: MsgRemoveAuthenticatorResponseAmino): MsgRemoveAuthenticatorResponse {
+  fromAmino(
+    object: MsgRemoveAuthenticatorResponseAmino,
+  ): MsgRemoveAuthenticatorResponse {
     const message = createBaseMsgRemoveAuthenticatorResponse();
     if (object.success !== undefined && object.success !== null) {
       message.success = object.success;
     }
     return message;
   },
-  toAmino(message: MsgRemoveAuthenticatorResponse): MsgRemoveAuthenticatorResponseAmino {
+  toAmino(
+    message: MsgRemoveAuthenticatorResponse,
+  ): MsgRemoveAuthenticatorResponseAmino {
     const obj: any = {};
     obj.success = message.success === false ? undefined : message.success;
     return obj;
   },
-  fromAminoMsg(object: MsgRemoveAuthenticatorResponseAminoMsg): MsgRemoveAuthenticatorResponse {
+  fromAminoMsg(
+    object: MsgRemoveAuthenticatorResponseAminoMsg,
+  ): MsgRemoveAuthenticatorResponse {
     return MsgRemoveAuthenticatorResponse.fromAmino(object.value);
   },
-  fromProtoMsg(message: MsgRemoveAuthenticatorResponseProtoMsg): MsgRemoveAuthenticatorResponse {
+  fromProtoMsg(
+    message: MsgRemoveAuthenticatorResponseProtoMsg,
+  ): MsgRemoveAuthenticatorResponse {
     return MsgRemoveAuthenticatorResponse.decode(message.value);
   },
   toProto(message: MsgRemoveAuthenticatorResponse): Uint8Array {
     return MsgRemoveAuthenticatorResponse.encode(message).finish();
   },
-  toProtoMsg(message: MsgRemoveAuthenticatorResponse): MsgRemoveAuthenticatorResponseProtoMsg {
+  toProtoMsg(
+    message: MsgRemoveAuthenticatorResponse,
+  ): MsgRemoveAuthenticatorResponseProtoMsg {
     return {
-      typeUrl: "/symphony.smartaccount.v1beta1.MsgRemoveAuthenticatorResponse",
-      value: MsgRemoveAuthenticatorResponse.encode(message).finish()
+      typeUrl: '/symphony.smartaccount.v1beta1.MsgRemoveAuthenticatorResponse',
+      value: MsgRemoveAuthenticatorResponse.encode(message).finish(),
     };
-  }
+  },
 };
-GlobalDecoderRegistry.register(MsgRemoveAuthenticatorResponse.typeUrl, MsgRemoveAuthenticatorResponse);
+GlobalDecoderRegistry.register(
+  MsgRemoveAuthenticatorResponse.typeUrl,
+  MsgRemoveAuthenticatorResponse,
+);
 function createBaseMsgSetActiveState(): MsgSetActiveState {
   return {
-    sender: "",
-    active: false
+    sender: '',
+    active: false,
   };
 }
+/**
+ * @name MsgSetActiveState
+ * @package symphony.smartaccount.v1beta1
+ * @see proto type: symphony.smartaccount.v1beta1.MsgSetActiveState
+ */
 export const MsgSetActiveState = {
-  typeUrl: "/symphony.smartaccount.v1beta1.MsgSetActiveState",
-  aminoType: "symphony/smartaccount/set-active-state",
+  typeUrl: '/symphony.smartaccount.v1beta1.MsgSetActiveState',
+  aminoType: 'symphony/smartaccount/set-active-state',
   is(o: any): o is MsgSetActiveState {
-    return o && (o.$typeUrl === MsgSetActiveState.typeUrl || typeof o.sender === "string" && typeof o.active === "boolean");
+    return (
+      o &&
+      (o.$typeUrl === MsgSetActiveState.typeUrl ||
+        (typeof o.sender === 'string' && typeof o.active === 'boolean'))
+    );
   },
   isSDK(o: any): o is MsgSetActiveStateSDKType {
-    return o && (o.$typeUrl === MsgSetActiveState.typeUrl || typeof o.sender === "string" && typeof o.active === "boolean");
+    return (
+      o &&
+      (o.$typeUrl === MsgSetActiveState.typeUrl ||
+        (typeof o.sender === 'string' && typeof o.active === 'boolean'))
+    );
   },
   isAmino(o: any): o is MsgSetActiveStateAmino {
-    return o && (o.$typeUrl === MsgSetActiveState.typeUrl || typeof o.sender === "string" && typeof o.active === "boolean");
+    return (
+      o &&
+      (o.$typeUrl === MsgSetActiveState.typeUrl ||
+        (typeof o.sender === 'string' && typeof o.active === 'boolean'))
+    );
   },
-  encode(message: MsgSetActiveState, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
-    if (message.sender !== "") {
+  encode(
+    message: MsgSetActiveState,
+    writer: BinaryWriter = BinaryWriter.create(),
+  ): BinaryWriter {
+    if (message.sender !== '') {
       writer.uint32(10).string(message.sender);
     }
     if (message.active === true) {
@@ -549,7 +815,8 @@ export const MsgSetActiveState = {
     return writer;
   },
   decode(input: BinaryReader | Uint8Array, length?: number): MsgSetActiveState {
-    const reader = input instanceof BinaryReader ? input : new BinaryReader(input);
+    const reader =
+      input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseMsgSetActiveState();
     while (reader.pos < end) {
@@ -570,7 +837,7 @@ export const MsgSetActiveState = {
   },
   fromPartial(object: Partial<MsgSetActiveState>): MsgSetActiveState {
     const message = createBaseMsgSetActiveState();
-    message.sender = object.sender ?? "";
+    message.sender = object.sender ?? '';
     message.active = object.active ?? false;
     return message;
   },
@@ -586,7 +853,7 @@ export const MsgSetActiveState = {
   },
   toAmino(message: MsgSetActiveState): MsgSetActiveStateAmino {
     const obj: any = {};
-    obj.sender = message.sender === "" ? undefined : message.sender;
+    obj.sender = message.sender === '' ? undefined : message.sender;
     obj.active = message.active === false ? undefined : message.active;
     return obj;
   },
@@ -595,8 +862,8 @@ export const MsgSetActiveState = {
   },
   toAminoMsg(message: MsgSetActiveState): MsgSetActiveStateAminoMsg {
     return {
-      type: "symphony/smartaccount/set-active-state",
-      value: MsgSetActiveState.toAmino(message)
+      type: 'symphony/smartaccount/set-active-state',
+      value: MsgSetActiveState.toAmino(message),
     };
   },
   fromProtoMsg(message: MsgSetActiveStateProtoMsg): MsgSetActiveState {
@@ -607,18 +874,26 @@ export const MsgSetActiveState = {
   },
   toProtoMsg(message: MsgSetActiveState): MsgSetActiveStateProtoMsg {
     return {
-      typeUrl: "/symphony.smartaccount.v1beta1.MsgSetActiveState",
-      value: MsgSetActiveState.encode(message).finish()
+      typeUrl: '/symphony.smartaccount.v1beta1.MsgSetActiveState',
+      value: MsgSetActiveState.encode(message).finish(),
     };
-  }
+  },
 };
 GlobalDecoderRegistry.register(MsgSetActiveState.typeUrl, MsgSetActiveState);
-GlobalDecoderRegistry.registerAminoProtoMapping(MsgSetActiveState.aminoType, MsgSetActiveState.typeUrl);
+GlobalDecoderRegistry.registerAminoProtoMapping(
+  MsgSetActiveState.aminoType,
+  MsgSetActiveState.typeUrl,
+);
 function createBaseMsgSetActiveStateResponse(): MsgSetActiveStateResponse {
   return {};
 }
+/**
+ * @name MsgSetActiveStateResponse
+ * @package symphony.smartaccount.v1beta1
+ * @see proto type: symphony.smartaccount.v1beta1.MsgSetActiveStateResponse
+ */
 export const MsgSetActiveStateResponse = {
-  typeUrl: "/symphony.smartaccount.v1beta1.MsgSetActiveStateResponse",
+  typeUrl: '/symphony.smartaccount.v1beta1.MsgSetActiveStateResponse',
   is(o: any): o is MsgSetActiveStateResponse {
     return o && o.$typeUrl === MsgSetActiveStateResponse.typeUrl;
   },
@@ -628,11 +903,18 @@ export const MsgSetActiveStateResponse = {
   isAmino(o: any): o is MsgSetActiveStateResponseAmino {
     return o && o.$typeUrl === MsgSetActiveStateResponse.typeUrl;
   },
-  encode(_: MsgSetActiveStateResponse, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
+  encode(
+    _: MsgSetActiveStateResponse,
+    writer: BinaryWriter = BinaryWriter.create(),
+  ): BinaryWriter {
     return writer;
   },
-  decode(input: BinaryReader | Uint8Array, length?: number): MsgSetActiveStateResponse {
-    const reader = input instanceof BinaryReader ? input : new BinaryReader(input);
+  decode(
+    input: BinaryReader | Uint8Array,
+    length?: number,
+  ): MsgSetActiveStateResponse {
+    const reader =
+      input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseMsgSetActiveStateResponse();
     while (reader.pos < end) {
@@ -645,7 +927,9 @@ export const MsgSetActiveStateResponse = {
     }
     return message;
   },
-  fromPartial(_: Partial<MsgSetActiveStateResponse>): MsgSetActiveStateResponse {
+  fromPartial(
+    _: Partial<MsgSetActiveStateResponse>,
+  ): MsgSetActiveStateResponse {
     const message = createBaseMsgSetActiveStateResponse();
     return message;
   },
@@ -657,40 +941,77 @@ export const MsgSetActiveStateResponse = {
     const obj: any = {};
     return obj;
   },
-  fromAminoMsg(object: MsgSetActiveStateResponseAminoMsg): MsgSetActiveStateResponse {
+  fromAminoMsg(
+    object: MsgSetActiveStateResponseAminoMsg,
+  ): MsgSetActiveStateResponse {
     return MsgSetActiveStateResponse.fromAmino(object.value);
   },
-  fromProtoMsg(message: MsgSetActiveStateResponseProtoMsg): MsgSetActiveStateResponse {
+  fromProtoMsg(
+    message: MsgSetActiveStateResponseProtoMsg,
+  ): MsgSetActiveStateResponse {
     return MsgSetActiveStateResponse.decode(message.value);
   },
   toProto(message: MsgSetActiveStateResponse): Uint8Array {
     return MsgSetActiveStateResponse.encode(message).finish();
   },
-  toProtoMsg(message: MsgSetActiveStateResponse): MsgSetActiveStateResponseProtoMsg {
+  toProtoMsg(
+    message: MsgSetActiveStateResponse,
+  ): MsgSetActiveStateResponseProtoMsg {
     return {
-      typeUrl: "/symphony.smartaccount.v1beta1.MsgSetActiveStateResponse",
-      value: MsgSetActiveStateResponse.encode(message).finish()
+      typeUrl: '/symphony.smartaccount.v1beta1.MsgSetActiveStateResponse',
+      value: MsgSetActiveStateResponse.encode(message).finish(),
     };
-  }
+  },
 };
-GlobalDecoderRegistry.register(MsgSetActiveStateResponse.typeUrl, MsgSetActiveStateResponse);
+GlobalDecoderRegistry.register(
+  MsgSetActiveStateResponse.typeUrl,
+  MsgSetActiveStateResponse,
+);
 function createBaseTxExtension(): TxExtension {
   return {
-    selectedAuthenticators: []
+    selectedAuthenticators: [],
   };
 }
+/**
+ * TxExtension allows for additional authenticator-specific data in
+ * transactions.
+ * @name TxExtension
+ * @package symphony.smartaccount.v1beta1
+ * @see proto type: symphony.smartaccount.v1beta1.TxExtension
+ */
 export const TxExtension = {
-  typeUrl: "/symphony.smartaccount.v1beta1.TxExtension",
+  typeUrl: '/symphony.smartaccount.v1beta1.TxExtension',
   is(o: any): o is TxExtension {
-    return o && (o.$typeUrl === TxExtension.typeUrl || Array.isArray(o.selectedAuthenticators) && (!o.selectedAuthenticators.length || typeof o.selectedAuthenticators[0] === "bigint"));
+    return (
+      o &&
+      (o.$typeUrl === TxExtension.typeUrl ||
+        (Array.isArray(o.selectedAuthenticators) &&
+          (!o.selectedAuthenticators.length ||
+            typeof o.selectedAuthenticators[0] === 'bigint')))
+    );
   },
   isSDK(o: any): o is TxExtensionSDKType {
-    return o && (o.$typeUrl === TxExtension.typeUrl || Array.isArray(o.selected_authenticators) && (!o.selected_authenticators.length || typeof o.selected_authenticators[0] === "bigint"));
+    return (
+      o &&
+      (o.$typeUrl === TxExtension.typeUrl ||
+        (Array.isArray(o.selected_authenticators) &&
+          (!o.selected_authenticators.length ||
+            typeof o.selected_authenticators[0] === 'bigint')))
+    );
   },
   isAmino(o: any): o is TxExtensionAmino {
-    return o && (o.$typeUrl === TxExtension.typeUrl || Array.isArray(o.selected_authenticators) && (!o.selected_authenticators.length || typeof o.selected_authenticators[0] === "bigint"));
+    return (
+      o &&
+      (o.$typeUrl === TxExtension.typeUrl ||
+        (Array.isArray(o.selected_authenticators) &&
+          (!o.selected_authenticators.length ||
+            typeof o.selected_authenticators[0] === 'bigint')))
+    );
   },
-  encode(message: TxExtension, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
+  encode(
+    message: TxExtension,
+    writer: BinaryWriter = BinaryWriter.create(),
+  ): BinaryWriter {
     writer.uint32(10).fork();
     for (const v of message.selectedAuthenticators) {
       writer.uint64(v);
@@ -699,7 +1020,8 @@ export const TxExtension = {
     return writer;
   },
   decode(input: BinaryReader | Uint8Array, length?: number): TxExtension {
-    const reader = input instanceof BinaryReader ? input : new BinaryReader(input);
+    const reader =
+      input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseTxExtension();
     while (reader.pos < end) {
@@ -724,18 +1046,22 @@ export const TxExtension = {
   },
   fromPartial(object: Partial<TxExtension>): TxExtension {
     const message = createBaseTxExtension();
-    message.selectedAuthenticators = object.selectedAuthenticators?.map(e => BigInt(e.toString())) || [];
+    message.selectedAuthenticators =
+      object.selectedAuthenticators?.map(e => BigInt(e.toString())) || [];
     return message;
   },
   fromAmino(object: TxExtensionAmino): TxExtension {
     const message = createBaseTxExtension();
-    message.selectedAuthenticators = object.selected_authenticators?.map(e => BigInt(e)) || [];
+    message.selectedAuthenticators =
+      object.selected_authenticators?.map(e => BigInt(e)) || [];
     return message;
   },
   toAmino(message: TxExtension): TxExtensionAmino {
     const obj: any = {};
     if (message.selectedAuthenticators) {
-      obj.selected_authenticators = message.selectedAuthenticators.map(e => e.toString());
+      obj.selected_authenticators = message.selectedAuthenticators.map(e =>
+        e.toString(),
+      );
     } else {
       obj.selected_authenticators = message.selectedAuthenticators;
     }
@@ -752,9 +1078,9 @@ export const TxExtension = {
   },
   toProtoMsg(message: TxExtension): TxExtensionProtoMsg {
     return {
-      typeUrl: "/symphony.smartaccount.v1beta1.TxExtension",
-      value: TxExtension.encode(message).finish()
+      typeUrl: '/symphony.smartaccount.v1beta1.TxExtension',
+      value: TxExtension.encode(message).finish(),
     };
-  }
+  },
 };
 GlobalDecoderRegistry.register(TxExtension.typeUrl, TxExtension);

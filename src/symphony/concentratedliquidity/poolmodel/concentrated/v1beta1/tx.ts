@@ -1,8 +1,13 @@
 //@ts-nocheck
-import { BinaryReader, BinaryWriter } from "../../../../../binary";
-import { Decimal } from "@cosmjs/math";
-import { GlobalDecoderRegistry } from "../../../../../registry";
-/** ===================== MsgCreateConcentratedPool */
+import { BinaryReader, BinaryWriter } from '../../../../../binary';
+import { Decimal } from '@cosmjs/math';
+import { GlobalDecoderRegistry } from '../../../../../registry';
+/**
+ * ===================== MsgCreateConcentratedPool
+ * @name MsgCreateConcentratedPool
+ * @package symphony.concentratedliquidity.poolmodel.concentrated.v1beta1
+ * @see proto type: symphony.concentratedliquidity.poolmodel.concentrated.v1beta1.MsgCreateConcentratedPool
+ */
 export interface MsgCreateConcentratedPool {
   sender: string;
   denom0: string;
@@ -11,10 +16,15 @@ export interface MsgCreateConcentratedPool {
   spreadFactor: string;
 }
 export interface MsgCreateConcentratedPoolProtoMsg {
-  typeUrl: "/symphony.concentratedliquidity.poolmodel.concentrated.v1beta1.MsgCreateConcentratedPool";
+  typeUrl: '/symphony.concentratedliquidity.poolmodel.concentrated.v1beta1.MsgCreateConcentratedPool';
   value: Uint8Array;
 }
-/** ===================== MsgCreateConcentratedPool */
+/**
+ * ===================== MsgCreateConcentratedPool
+ * @name MsgCreateConcentratedPoolAmino
+ * @package symphony.concentratedliquidity.poolmodel.concentrated.v1beta1
+ * @see proto type: symphony.concentratedliquidity.poolmodel.concentrated.v1beta1.MsgCreateConcentratedPool
+ */
 export interface MsgCreateConcentratedPoolAmino {
   sender?: string;
   denom0?: string;
@@ -23,10 +33,15 @@ export interface MsgCreateConcentratedPoolAmino {
   spread_factor?: string;
 }
 export interface MsgCreateConcentratedPoolAminoMsg {
-  type: "symphony/create-concentrated-pool";
+  type: 'symphony/create-concentrated-pool';
   value: MsgCreateConcentratedPoolAmino;
 }
-/** ===================== MsgCreateConcentratedPool */
+/**
+ * ===================== MsgCreateConcentratedPool
+ * @name MsgCreateConcentratedPoolSDKType
+ * @package symphony.concentratedliquidity.poolmodel.concentrated.v1beta1
+ * @see proto type: symphony.concentratedliquidity.poolmodel.concentrated.v1beta1.MsgCreateConcentratedPool
+ */
 export interface MsgCreateConcentratedPoolSDKType {
   sender: string;
   denom0: string;
@@ -34,67 +49,122 @@ export interface MsgCreateConcentratedPoolSDKType {
   tick_spacing: bigint;
   spread_factor: string;
 }
-/** Returns a unique poolID to identify the pool with. */
+/**
+ * Returns a unique poolID to identify the pool with.
+ * @name MsgCreateConcentratedPoolResponse
+ * @package symphony.concentratedliquidity.poolmodel.concentrated.v1beta1
+ * @see proto type: symphony.concentratedliquidity.poolmodel.concentrated.v1beta1.MsgCreateConcentratedPoolResponse
+ */
 export interface MsgCreateConcentratedPoolResponse {
   poolId: bigint;
 }
 export interface MsgCreateConcentratedPoolResponseProtoMsg {
-  typeUrl: "/symphony.concentratedliquidity.poolmodel.concentrated.v1beta1.MsgCreateConcentratedPoolResponse";
+  typeUrl: '/symphony.concentratedliquidity.poolmodel.concentrated.v1beta1.MsgCreateConcentratedPoolResponse';
   value: Uint8Array;
 }
-/** Returns a unique poolID to identify the pool with. */
+/**
+ * Returns a unique poolID to identify the pool with.
+ * @name MsgCreateConcentratedPoolResponseAmino
+ * @package symphony.concentratedliquidity.poolmodel.concentrated.v1beta1
+ * @see proto type: symphony.concentratedliquidity.poolmodel.concentrated.v1beta1.MsgCreateConcentratedPoolResponse
+ */
 export interface MsgCreateConcentratedPoolResponseAmino {
   pool_id?: string;
 }
 export interface MsgCreateConcentratedPoolResponseAminoMsg {
-  type: "/symphony.concentratedliquidity.poolmodel.concentrated.v1beta1.MsgCreateConcentratedPoolResponse";
+  type: '/symphony.concentratedliquidity.poolmodel.concentrated.v1beta1.MsgCreateConcentratedPoolResponse';
   value: MsgCreateConcentratedPoolResponseAmino;
 }
-/** Returns a unique poolID to identify the pool with. */
+/**
+ * Returns a unique poolID to identify the pool with.
+ * @name MsgCreateConcentratedPoolResponseSDKType
+ * @package symphony.concentratedliquidity.poolmodel.concentrated.v1beta1
+ * @see proto type: symphony.concentratedliquidity.poolmodel.concentrated.v1beta1.MsgCreateConcentratedPoolResponse
+ */
 export interface MsgCreateConcentratedPoolResponseSDKType {
   pool_id: bigint;
 }
 function createBaseMsgCreateConcentratedPool(): MsgCreateConcentratedPool {
   return {
-    sender: "",
-    denom0: "",
-    denom1: "",
+    sender: '',
+    denom0: '',
+    denom1: '',
     tickSpacing: BigInt(0),
-    spreadFactor: ""
+    spreadFactor: '',
   };
 }
+/**
+ * ===================== MsgCreateConcentratedPool
+ * @name MsgCreateConcentratedPool
+ * @package symphony.concentratedliquidity.poolmodel.concentrated.v1beta1
+ * @see proto type: symphony.concentratedliquidity.poolmodel.concentrated.v1beta1.MsgCreateConcentratedPool
+ */
 export const MsgCreateConcentratedPool = {
-  typeUrl: "/symphony.concentratedliquidity.poolmodel.concentrated.v1beta1.MsgCreateConcentratedPool",
-  aminoType: "symphony/create-concentrated-pool",
+  typeUrl:
+    '/symphony.concentratedliquidity.poolmodel.concentrated.v1beta1.MsgCreateConcentratedPool',
+  aminoType: 'symphony/create-concentrated-pool',
   is(o: any): o is MsgCreateConcentratedPool {
-    return o && (o.$typeUrl === MsgCreateConcentratedPool.typeUrl || typeof o.sender === "string" && typeof o.denom0 === "string" && typeof o.denom1 === "string" && typeof o.tickSpacing === "bigint" && typeof o.spreadFactor === "string");
+    return (
+      o &&
+      (o.$typeUrl === MsgCreateConcentratedPool.typeUrl ||
+        (typeof o.sender === 'string' &&
+          typeof o.denom0 === 'string' &&
+          typeof o.denom1 === 'string' &&
+          typeof o.tickSpacing === 'bigint' &&
+          typeof o.spreadFactor === 'string'))
+    );
   },
   isSDK(o: any): o is MsgCreateConcentratedPoolSDKType {
-    return o && (o.$typeUrl === MsgCreateConcentratedPool.typeUrl || typeof o.sender === "string" && typeof o.denom0 === "string" && typeof o.denom1 === "string" && typeof o.tick_spacing === "bigint" && typeof o.spread_factor === "string");
+    return (
+      o &&
+      (o.$typeUrl === MsgCreateConcentratedPool.typeUrl ||
+        (typeof o.sender === 'string' &&
+          typeof o.denom0 === 'string' &&
+          typeof o.denom1 === 'string' &&
+          typeof o.tick_spacing === 'bigint' &&
+          typeof o.spread_factor === 'string'))
+    );
   },
   isAmino(o: any): o is MsgCreateConcentratedPoolAmino {
-    return o && (o.$typeUrl === MsgCreateConcentratedPool.typeUrl || typeof o.sender === "string" && typeof o.denom0 === "string" && typeof o.denom1 === "string" && typeof o.tick_spacing === "bigint" && typeof o.spread_factor === "string");
+    return (
+      o &&
+      (o.$typeUrl === MsgCreateConcentratedPool.typeUrl ||
+        (typeof o.sender === 'string' &&
+          typeof o.denom0 === 'string' &&
+          typeof o.denom1 === 'string' &&
+          typeof o.tick_spacing === 'bigint' &&
+          typeof o.spread_factor === 'string'))
+    );
   },
-  encode(message: MsgCreateConcentratedPool, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
-    if (message.sender !== "") {
+  encode(
+    message: MsgCreateConcentratedPool,
+    writer: BinaryWriter = BinaryWriter.create(),
+  ): BinaryWriter {
+    if (message.sender !== '') {
       writer.uint32(10).string(message.sender);
     }
-    if (message.denom0 !== "") {
+    if (message.denom0 !== '') {
       writer.uint32(18).string(message.denom0);
     }
-    if (message.denom1 !== "") {
+    if (message.denom1 !== '') {
       writer.uint32(26).string(message.denom1);
     }
     if (message.tickSpacing !== BigInt(0)) {
       writer.uint32(32).uint64(message.tickSpacing);
     }
-    if (message.spreadFactor !== "") {
-      writer.uint32(42).string(Decimal.fromUserInput(message.spreadFactor, 18).atomics);
+    if (message.spreadFactor !== '') {
+      writer
+        .uint32(42)
+        .string(Decimal.fromUserInput(message.spreadFactor, 18).atomics);
     }
     return writer;
   },
-  decode(input: BinaryReader | Uint8Array, length?: number): MsgCreateConcentratedPool {
-    const reader = input instanceof BinaryReader ? input : new BinaryReader(input);
+  decode(
+    input: BinaryReader | Uint8Array,
+    length?: number,
+  ): MsgCreateConcentratedPool {
+    const reader =
+      input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseMsgCreateConcentratedPool();
     while (reader.pos < end) {
@@ -113,7 +183,10 @@ export const MsgCreateConcentratedPool = {
           message.tickSpacing = reader.uint64();
           break;
         case 5:
-          message.spreadFactor = Decimal.fromAtomics(reader.string(), 18).toString();
+          message.spreadFactor = Decimal.fromAtomics(
+            reader.string(),
+            18,
+          ).toString();
           break;
         default:
           reader.skipType(tag & 7);
@@ -122,13 +195,18 @@ export const MsgCreateConcentratedPool = {
     }
     return message;
   },
-  fromPartial(object: Partial<MsgCreateConcentratedPool>): MsgCreateConcentratedPool {
+  fromPartial(
+    object: Partial<MsgCreateConcentratedPool>,
+  ): MsgCreateConcentratedPool {
     const message = createBaseMsgCreateConcentratedPool();
-    message.sender = object.sender ?? "";
-    message.denom0 = object.denom0 ?? "";
-    message.denom1 = object.denom1 ?? "";
-    message.tickSpacing = object.tickSpacing !== undefined && object.tickSpacing !== null ? BigInt(object.tickSpacing.toString()) : BigInt(0);
-    message.spreadFactor = object.spreadFactor ?? "";
+    message.sender = object.sender ?? '';
+    message.denom0 = object.denom0 ?? '';
+    message.denom1 = object.denom1 ?? '';
+    message.tickSpacing =
+      object.tickSpacing !== undefined && object.tickSpacing !== null
+        ? BigInt(object.tickSpacing.toString())
+        : BigInt(0);
+    message.spreadFactor = object.spreadFactor ?? '';
     return message;
   },
   fromAmino(object: MsgCreateConcentratedPoolAmino): MsgCreateConcentratedPool {
@@ -152,61 +230,106 @@ export const MsgCreateConcentratedPool = {
   },
   toAmino(message: MsgCreateConcentratedPool): MsgCreateConcentratedPoolAmino {
     const obj: any = {};
-    obj.sender = message.sender === "" ? undefined : message.sender;
-    obj.denom0 = message.denom0 === "" ? undefined : message.denom0;
-    obj.denom1 = message.denom1 === "" ? undefined : message.denom1;
-    obj.tick_spacing = message.tickSpacing !== BigInt(0) ? message.tickSpacing?.toString() : undefined;
-    obj.spread_factor = message.spreadFactor === "" ? undefined : message.spreadFactor;
+    obj.sender = message.sender === '' ? undefined : message.sender;
+    obj.denom0 = message.denom0 === '' ? undefined : message.denom0;
+    obj.denom1 = message.denom1 === '' ? undefined : message.denom1;
+    obj.tick_spacing =
+      message.tickSpacing !== BigInt(0)
+        ? message.tickSpacing?.toString()
+        : undefined;
+    obj.spread_factor =
+      message.spreadFactor === '' ? undefined : message.spreadFactor;
     return obj;
   },
-  fromAminoMsg(object: MsgCreateConcentratedPoolAminoMsg): MsgCreateConcentratedPool {
+  fromAminoMsg(
+    object: MsgCreateConcentratedPoolAminoMsg,
+  ): MsgCreateConcentratedPool {
     return MsgCreateConcentratedPool.fromAmino(object.value);
   },
-  toAminoMsg(message: MsgCreateConcentratedPool): MsgCreateConcentratedPoolAminoMsg {
+  toAminoMsg(
+    message: MsgCreateConcentratedPool,
+  ): MsgCreateConcentratedPoolAminoMsg {
     return {
-      type: "symphony/create-concentrated-pool",
-      value: MsgCreateConcentratedPool.toAmino(message)
+      type: 'symphony/create-concentrated-pool',
+      value: MsgCreateConcentratedPool.toAmino(message),
     };
   },
-  fromProtoMsg(message: MsgCreateConcentratedPoolProtoMsg): MsgCreateConcentratedPool {
+  fromProtoMsg(
+    message: MsgCreateConcentratedPoolProtoMsg,
+  ): MsgCreateConcentratedPool {
     return MsgCreateConcentratedPool.decode(message.value);
   },
   toProto(message: MsgCreateConcentratedPool): Uint8Array {
     return MsgCreateConcentratedPool.encode(message).finish();
   },
-  toProtoMsg(message: MsgCreateConcentratedPool): MsgCreateConcentratedPoolProtoMsg {
+  toProtoMsg(
+    message: MsgCreateConcentratedPool,
+  ): MsgCreateConcentratedPoolProtoMsg {
     return {
-      typeUrl: "/symphony.concentratedliquidity.poolmodel.concentrated.v1beta1.MsgCreateConcentratedPool",
-      value: MsgCreateConcentratedPool.encode(message).finish()
+      typeUrl:
+        '/symphony.concentratedliquidity.poolmodel.concentrated.v1beta1.MsgCreateConcentratedPool',
+      value: MsgCreateConcentratedPool.encode(message).finish(),
     };
-  }
+  },
 };
-GlobalDecoderRegistry.register(MsgCreateConcentratedPool.typeUrl, MsgCreateConcentratedPool);
-GlobalDecoderRegistry.registerAminoProtoMapping(MsgCreateConcentratedPool.aminoType, MsgCreateConcentratedPool.typeUrl);
+GlobalDecoderRegistry.register(
+  MsgCreateConcentratedPool.typeUrl,
+  MsgCreateConcentratedPool,
+);
+GlobalDecoderRegistry.registerAminoProtoMapping(
+  MsgCreateConcentratedPool.aminoType,
+  MsgCreateConcentratedPool.typeUrl,
+);
 function createBaseMsgCreateConcentratedPoolResponse(): MsgCreateConcentratedPoolResponse {
   return {
-    poolId: BigInt(0)
+    poolId: BigInt(0),
   };
 }
+/**
+ * Returns a unique poolID to identify the pool with.
+ * @name MsgCreateConcentratedPoolResponse
+ * @package symphony.concentratedliquidity.poolmodel.concentrated.v1beta1
+ * @see proto type: symphony.concentratedliquidity.poolmodel.concentrated.v1beta1.MsgCreateConcentratedPoolResponse
+ */
 export const MsgCreateConcentratedPoolResponse = {
-  typeUrl: "/symphony.concentratedliquidity.poolmodel.concentrated.v1beta1.MsgCreateConcentratedPoolResponse",
+  typeUrl:
+    '/symphony.concentratedliquidity.poolmodel.concentrated.v1beta1.MsgCreateConcentratedPoolResponse',
   is(o: any): o is MsgCreateConcentratedPoolResponse {
-    return o && (o.$typeUrl === MsgCreateConcentratedPoolResponse.typeUrl || typeof o.poolId === "bigint");
+    return (
+      o &&
+      (o.$typeUrl === MsgCreateConcentratedPoolResponse.typeUrl ||
+        typeof o.poolId === 'bigint')
+    );
   },
   isSDK(o: any): o is MsgCreateConcentratedPoolResponseSDKType {
-    return o && (o.$typeUrl === MsgCreateConcentratedPoolResponse.typeUrl || typeof o.pool_id === "bigint");
+    return (
+      o &&
+      (o.$typeUrl === MsgCreateConcentratedPoolResponse.typeUrl ||
+        typeof o.pool_id === 'bigint')
+    );
   },
   isAmino(o: any): o is MsgCreateConcentratedPoolResponseAmino {
-    return o && (o.$typeUrl === MsgCreateConcentratedPoolResponse.typeUrl || typeof o.pool_id === "bigint");
+    return (
+      o &&
+      (o.$typeUrl === MsgCreateConcentratedPoolResponse.typeUrl ||
+        typeof o.pool_id === 'bigint')
+    );
   },
-  encode(message: MsgCreateConcentratedPoolResponse, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
+  encode(
+    message: MsgCreateConcentratedPoolResponse,
+    writer: BinaryWriter = BinaryWriter.create(),
+  ): BinaryWriter {
     if (message.poolId !== BigInt(0)) {
       writer.uint32(8).uint64(message.poolId);
     }
     return writer;
   },
-  decode(input: BinaryReader | Uint8Array, length?: number): MsgCreateConcentratedPoolResponse {
-    const reader = input instanceof BinaryReader ? input : new BinaryReader(input);
+  decode(
+    input: BinaryReader | Uint8Array,
+    length?: number,
+  ): MsgCreateConcentratedPoolResponse {
+    const reader =
+      input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseMsgCreateConcentratedPoolResponse();
     while (reader.pos < end) {
@@ -222,37 +345,57 @@ export const MsgCreateConcentratedPoolResponse = {
     }
     return message;
   },
-  fromPartial(object: Partial<MsgCreateConcentratedPoolResponse>): MsgCreateConcentratedPoolResponse {
+  fromPartial(
+    object: Partial<MsgCreateConcentratedPoolResponse>,
+  ): MsgCreateConcentratedPoolResponse {
     const message = createBaseMsgCreateConcentratedPoolResponse();
-    message.poolId = object.poolId !== undefined && object.poolId !== null ? BigInt(object.poolId.toString()) : BigInt(0);
+    message.poolId =
+      object.poolId !== undefined && object.poolId !== null
+        ? BigInt(object.poolId.toString())
+        : BigInt(0);
     return message;
   },
-  fromAmino(object: MsgCreateConcentratedPoolResponseAmino): MsgCreateConcentratedPoolResponse {
+  fromAmino(
+    object: MsgCreateConcentratedPoolResponseAmino,
+  ): MsgCreateConcentratedPoolResponse {
     const message = createBaseMsgCreateConcentratedPoolResponse();
     if (object.pool_id !== undefined && object.pool_id !== null) {
       message.poolId = BigInt(object.pool_id);
     }
     return message;
   },
-  toAmino(message: MsgCreateConcentratedPoolResponse): MsgCreateConcentratedPoolResponseAmino {
+  toAmino(
+    message: MsgCreateConcentratedPoolResponse,
+  ): MsgCreateConcentratedPoolResponseAmino {
     const obj: any = {};
-    obj.pool_id = message.poolId !== BigInt(0) ? message.poolId?.toString() : undefined;
+    obj.pool_id =
+      message.poolId !== BigInt(0) ? message.poolId?.toString() : undefined;
     return obj;
   },
-  fromAminoMsg(object: MsgCreateConcentratedPoolResponseAminoMsg): MsgCreateConcentratedPoolResponse {
+  fromAminoMsg(
+    object: MsgCreateConcentratedPoolResponseAminoMsg,
+  ): MsgCreateConcentratedPoolResponse {
     return MsgCreateConcentratedPoolResponse.fromAmino(object.value);
   },
-  fromProtoMsg(message: MsgCreateConcentratedPoolResponseProtoMsg): MsgCreateConcentratedPoolResponse {
+  fromProtoMsg(
+    message: MsgCreateConcentratedPoolResponseProtoMsg,
+  ): MsgCreateConcentratedPoolResponse {
     return MsgCreateConcentratedPoolResponse.decode(message.value);
   },
   toProto(message: MsgCreateConcentratedPoolResponse): Uint8Array {
     return MsgCreateConcentratedPoolResponse.encode(message).finish();
   },
-  toProtoMsg(message: MsgCreateConcentratedPoolResponse): MsgCreateConcentratedPoolResponseProtoMsg {
+  toProtoMsg(
+    message: MsgCreateConcentratedPoolResponse,
+  ): MsgCreateConcentratedPoolResponseProtoMsg {
     return {
-      typeUrl: "/symphony.concentratedliquidity.poolmodel.concentrated.v1beta1.MsgCreateConcentratedPoolResponse",
-      value: MsgCreateConcentratedPoolResponse.encode(message).finish()
+      typeUrl:
+        '/symphony.concentratedliquidity.poolmodel.concentrated.v1beta1.MsgCreateConcentratedPoolResponse',
+      value: MsgCreateConcentratedPoolResponse.encode(message).finish(),
     };
-  }
+  },
 };
-GlobalDecoderRegistry.register(MsgCreateConcentratedPoolResponse.typeUrl, MsgCreateConcentratedPoolResponse);
+GlobalDecoderRegistry.register(
+  MsgCreateConcentratedPoolResponse.typeUrl,
+  MsgCreateConcentratedPoolResponse,
+);

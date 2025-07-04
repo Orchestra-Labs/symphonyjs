@@ -1,8 +1,17 @@
 //@ts-nocheck
-import { DecCoin, DecCoinAmino, DecCoinSDKType } from "../../../cosmos/base/v1beta1/coin";
-import { BinaryReader, BinaryWriter } from "../../../binary";
-import { Decimal } from "@cosmjs/math";
-import { GlobalDecoderRegistry } from "../../../registry";
+import {
+  DecCoin,
+  DecCoinAmino,
+  DecCoinSDKType,
+} from '../../../cosmos/base/v1beta1/coin';
+import { BinaryReader, BinaryWriter } from '../../../binary';
+import { Decimal } from '@cosmjs/math';
+import { GlobalDecoderRegistry } from '../../../registry';
+/**
+ * @name TickInfo
+ * @package symphony.concentratedliquidity.v1beta1
+ * @see proto type: symphony.concentratedliquidity.v1beta1.TickInfo
+ */
 export interface TickInfo {
   liquidityGross: string;
   liquidityNet: string;
@@ -16,9 +25,14 @@ export interface TickInfo {
   uptimeTrackers: UptimeTrackers;
 }
 export interface TickInfoProtoMsg {
-  typeUrl: "/symphony.concentratedliquidity.v1beta1.TickInfo";
+  typeUrl: '/symphony.concentratedliquidity.v1beta1.TickInfo';
   value: Uint8Array;
 }
+/**
+ * @name TickInfoAmino
+ * @package symphony.concentratedliquidity.v1beta1
+ * @see proto type: symphony.concentratedliquidity.v1beta1.TickInfo
+ */
 export interface TickInfoAmino {
   liquidity_gross?: string;
   liquidity_net?: string;
@@ -32,101 +46,202 @@ export interface TickInfoAmino {
   uptime_trackers?: UptimeTrackersAmino;
 }
 export interface TickInfoAminoMsg {
-  type: "/symphony.concentratedliquidity.v1beta1.TickInfo";
+  type: '/symphony.concentratedliquidity.v1beta1.TickInfo';
   value: TickInfoAmino;
 }
+/**
+ * @name TickInfoSDKType
+ * @package symphony.concentratedliquidity.v1beta1
+ * @see proto type: symphony.concentratedliquidity.v1beta1.TickInfo
+ */
 export interface TickInfoSDKType {
   liquidity_gross: string;
   liquidity_net: string;
   spread_reward_growth_opposite_direction_of_last_traversal: DecCoinSDKType[];
   uptime_trackers: UptimeTrackersSDKType;
 }
+/**
+ * @name UptimeTrackers
+ * @package symphony.concentratedliquidity.v1beta1
+ * @see proto type: symphony.concentratedliquidity.v1beta1.UptimeTrackers
+ */
 export interface UptimeTrackers {
   list: UptimeTracker[];
 }
 export interface UptimeTrackersProtoMsg {
-  typeUrl: "/symphony.concentratedliquidity.v1beta1.UptimeTrackers";
+  typeUrl: '/symphony.concentratedliquidity.v1beta1.UptimeTrackers';
   value: Uint8Array;
 }
+/**
+ * @name UptimeTrackersAmino
+ * @package symphony.concentratedliquidity.v1beta1
+ * @see proto type: symphony.concentratedliquidity.v1beta1.UptimeTrackers
+ */
 export interface UptimeTrackersAmino {
   list?: UptimeTrackerAmino[];
 }
 export interface UptimeTrackersAminoMsg {
-  type: "/symphony.concentratedliquidity.v1beta1.UptimeTrackers";
+  type: '/symphony.concentratedliquidity.v1beta1.UptimeTrackers';
   value: UptimeTrackersAmino;
 }
+/**
+ * @name UptimeTrackersSDKType
+ * @package symphony.concentratedliquidity.v1beta1
+ * @see proto type: symphony.concentratedliquidity.v1beta1.UptimeTrackers
+ */
 export interface UptimeTrackersSDKType {
   list: UptimeTrackerSDKType[];
 }
+/**
+ * @name UptimeTracker
+ * @package symphony.concentratedliquidity.v1beta1
+ * @see proto type: symphony.concentratedliquidity.v1beta1.UptimeTracker
+ */
 export interface UptimeTracker {
   uptimeGrowthOutside: DecCoin[];
 }
 export interface UptimeTrackerProtoMsg {
-  typeUrl: "/symphony.concentratedliquidity.v1beta1.UptimeTracker";
+  typeUrl: '/symphony.concentratedliquidity.v1beta1.UptimeTracker';
   value: Uint8Array;
 }
+/**
+ * @name UptimeTrackerAmino
+ * @package symphony.concentratedliquidity.v1beta1
+ * @see proto type: symphony.concentratedliquidity.v1beta1.UptimeTracker
+ */
 export interface UptimeTrackerAmino {
   uptime_growth_outside?: DecCoinAmino[];
 }
 export interface UptimeTrackerAminoMsg {
-  type: "/symphony.concentratedliquidity.v1beta1.UptimeTracker";
+  type: '/symphony.concentratedliquidity.v1beta1.UptimeTracker';
   value: UptimeTrackerAmino;
 }
+/**
+ * @name UptimeTrackerSDKType
+ * @package symphony.concentratedliquidity.v1beta1
+ * @see proto type: symphony.concentratedliquidity.v1beta1.UptimeTracker
+ */
 export interface UptimeTrackerSDKType {
   uptime_growth_outside: DecCoinSDKType[];
 }
 function createBaseTickInfo(): TickInfo {
   return {
-    liquidityGross: "",
-    liquidityNet: "",
+    liquidityGross: '',
+    liquidityNet: '',
     spreadRewardGrowthOppositeDirectionOfLastTraversal: [],
-    uptimeTrackers: UptimeTrackers.fromPartial({})
+    uptimeTrackers: UptimeTrackers.fromPartial({}),
   };
 }
+/**
+ * @name TickInfo
+ * @package symphony.concentratedliquidity.v1beta1
+ * @see proto type: symphony.concentratedliquidity.v1beta1.TickInfo
+ */
 export const TickInfo = {
-  typeUrl: "/symphony.concentratedliquidity.v1beta1.TickInfo",
+  typeUrl: '/symphony.concentratedliquidity.v1beta1.TickInfo',
   is(o: any): o is TickInfo {
-    return o && (o.$typeUrl === TickInfo.typeUrl || typeof o.liquidityGross === "string" && typeof o.liquidityNet === "string" && Array.isArray(o.spreadRewardGrowthOppositeDirectionOfLastTraversal) && (!o.spreadRewardGrowthOppositeDirectionOfLastTraversal.length || DecCoin.is(o.spreadRewardGrowthOppositeDirectionOfLastTraversal[0])) && UptimeTrackers.is(o.uptimeTrackers));
+    return (
+      o &&
+      (o.$typeUrl === TickInfo.typeUrl ||
+        (typeof o.liquidityGross === 'string' &&
+          typeof o.liquidityNet === 'string' &&
+          Array.isArray(o.spreadRewardGrowthOppositeDirectionOfLastTraversal) &&
+          (!o.spreadRewardGrowthOppositeDirectionOfLastTraversal.length ||
+            DecCoin.is(
+              o.spreadRewardGrowthOppositeDirectionOfLastTraversal[0],
+            )) &&
+          UptimeTrackers.is(o.uptimeTrackers)))
+    );
   },
   isSDK(o: any): o is TickInfoSDKType {
-    return o && (o.$typeUrl === TickInfo.typeUrl || typeof o.liquidity_gross === "string" && typeof o.liquidity_net === "string" && Array.isArray(o.spread_reward_growth_opposite_direction_of_last_traversal) && (!o.spread_reward_growth_opposite_direction_of_last_traversal.length || DecCoin.isSDK(o.spread_reward_growth_opposite_direction_of_last_traversal[0])) && UptimeTrackers.isSDK(o.uptime_trackers));
+    return (
+      o &&
+      (o.$typeUrl === TickInfo.typeUrl ||
+        (typeof o.liquidity_gross === 'string' &&
+          typeof o.liquidity_net === 'string' &&
+          Array.isArray(
+            o.spread_reward_growth_opposite_direction_of_last_traversal,
+          ) &&
+          (!o.spread_reward_growth_opposite_direction_of_last_traversal
+            .length ||
+            DecCoin.isSDK(
+              o.spread_reward_growth_opposite_direction_of_last_traversal[0],
+            )) &&
+          UptimeTrackers.isSDK(o.uptime_trackers)))
+    );
   },
   isAmino(o: any): o is TickInfoAmino {
-    return o && (o.$typeUrl === TickInfo.typeUrl || typeof o.liquidity_gross === "string" && typeof o.liquidity_net === "string" && Array.isArray(o.spread_reward_growth_opposite_direction_of_last_traversal) && (!o.spread_reward_growth_opposite_direction_of_last_traversal.length || DecCoin.isAmino(o.spread_reward_growth_opposite_direction_of_last_traversal[0])) && UptimeTrackers.isAmino(o.uptime_trackers));
+    return (
+      o &&
+      (o.$typeUrl === TickInfo.typeUrl ||
+        (typeof o.liquidity_gross === 'string' &&
+          typeof o.liquidity_net === 'string' &&
+          Array.isArray(
+            o.spread_reward_growth_opposite_direction_of_last_traversal,
+          ) &&
+          (!o.spread_reward_growth_opposite_direction_of_last_traversal
+            .length ||
+            DecCoin.isAmino(
+              o.spread_reward_growth_opposite_direction_of_last_traversal[0],
+            )) &&
+          UptimeTrackers.isAmino(o.uptime_trackers)))
+    );
   },
-  encode(message: TickInfo, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
-    if (message.liquidityGross !== "") {
-      writer.uint32(10).string(Decimal.fromUserInput(message.liquidityGross, 18).atomics);
+  encode(
+    message: TickInfo,
+    writer: BinaryWriter = BinaryWriter.create(),
+  ): BinaryWriter {
+    if (message.liquidityGross !== '') {
+      writer
+        .uint32(10)
+        .string(Decimal.fromUserInput(message.liquidityGross, 18).atomics);
     }
-    if (message.liquidityNet !== "") {
-      writer.uint32(18).string(Decimal.fromUserInput(message.liquidityNet, 18).atomics);
+    if (message.liquidityNet !== '') {
+      writer
+        .uint32(18)
+        .string(Decimal.fromUserInput(message.liquidityNet, 18).atomics);
     }
     for (const v of message.spreadRewardGrowthOppositeDirectionOfLastTraversal) {
       DecCoin.encode(v!, writer.uint32(26).fork()).ldelim();
     }
     if (message.uptimeTrackers !== undefined) {
-      UptimeTrackers.encode(message.uptimeTrackers, writer.uint32(34).fork()).ldelim();
+      UptimeTrackers.encode(
+        message.uptimeTrackers,
+        writer.uint32(34).fork(),
+      ).ldelim();
     }
     return writer;
   },
   decode(input: BinaryReader | Uint8Array, length?: number): TickInfo {
-    const reader = input instanceof BinaryReader ? input : new BinaryReader(input);
+    const reader =
+      input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseTickInfo();
     while (reader.pos < end) {
       const tag = reader.uint32();
       switch (tag >>> 3) {
         case 1:
-          message.liquidityGross = Decimal.fromAtomics(reader.string(), 18).toString();
+          message.liquidityGross = Decimal.fromAtomics(
+            reader.string(),
+            18,
+          ).toString();
           break;
         case 2:
-          message.liquidityNet = Decimal.fromAtomics(reader.string(), 18).toString();
+          message.liquidityNet = Decimal.fromAtomics(
+            reader.string(),
+            18,
+          ).toString();
           break;
         case 3:
-          message.spreadRewardGrowthOppositeDirectionOfLastTraversal.push(DecCoin.decode(reader, reader.uint32()));
+          message.spreadRewardGrowthOppositeDirectionOfLastTraversal.push(
+            DecCoin.decode(reader, reader.uint32()),
+          );
           break;
         case 4:
-          message.uptimeTrackers = UptimeTrackers.decode(reader, reader.uint32());
+          message.uptimeTrackers = UptimeTrackers.decode(
+            reader,
+            reader.uint32(),
+          );
           break;
         default:
           reader.skipType(tag & 7);
@@ -137,36 +252,59 @@ export const TickInfo = {
   },
   fromPartial(object: Partial<TickInfo>): TickInfo {
     const message = createBaseTickInfo();
-    message.liquidityGross = object.liquidityGross ?? "";
-    message.liquidityNet = object.liquidityNet ?? "";
-    message.spreadRewardGrowthOppositeDirectionOfLastTraversal = object.spreadRewardGrowthOppositeDirectionOfLastTraversal?.map(e => DecCoin.fromPartial(e)) || [];
-    message.uptimeTrackers = object.uptimeTrackers !== undefined && object.uptimeTrackers !== null ? UptimeTrackers.fromPartial(object.uptimeTrackers) : undefined;
+    message.liquidityGross = object.liquidityGross ?? '';
+    message.liquidityNet = object.liquidityNet ?? '';
+    message.spreadRewardGrowthOppositeDirectionOfLastTraversal =
+      object.spreadRewardGrowthOppositeDirectionOfLastTraversal?.map(e =>
+        DecCoin.fromPartial(e),
+      ) || [];
+    message.uptimeTrackers =
+      object.uptimeTrackers !== undefined && object.uptimeTrackers !== null
+        ? UptimeTrackers.fromPartial(object.uptimeTrackers)
+        : undefined;
     return message;
   },
   fromAmino(object: TickInfoAmino): TickInfo {
     const message = createBaseTickInfo();
-    if (object.liquidity_gross !== undefined && object.liquidity_gross !== null) {
+    if (
+      object.liquidity_gross !== undefined &&
+      object.liquidity_gross !== null
+    ) {
       message.liquidityGross = object.liquidity_gross;
     }
     if (object.liquidity_net !== undefined && object.liquidity_net !== null) {
       message.liquidityNet = object.liquidity_net;
     }
-    message.spreadRewardGrowthOppositeDirectionOfLastTraversal = object.spread_reward_growth_opposite_direction_of_last_traversal?.map(e => DecCoin.fromAmino(e)) || [];
-    if (object.uptime_trackers !== undefined && object.uptime_trackers !== null) {
+    message.spreadRewardGrowthOppositeDirectionOfLastTraversal =
+      object.spread_reward_growth_opposite_direction_of_last_traversal?.map(e =>
+        DecCoin.fromAmino(e),
+      ) || [];
+    if (
+      object.uptime_trackers !== undefined &&
+      object.uptime_trackers !== null
+    ) {
       message.uptimeTrackers = UptimeTrackers.fromAmino(object.uptime_trackers);
     }
     return message;
   },
   toAmino(message: TickInfo): TickInfoAmino {
     const obj: any = {};
-    obj.liquidity_gross = message.liquidityGross === "" ? undefined : message.liquidityGross;
-    obj.liquidity_net = message.liquidityNet === "" ? undefined : message.liquidityNet;
+    obj.liquidity_gross =
+      message.liquidityGross === '' ? undefined : message.liquidityGross;
+    obj.liquidity_net =
+      message.liquidityNet === '' ? undefined : message.liquidityNet;
     if (message.spreadRewardGrowthOppositeDirectionOfLastTraversal) {
-      obj.spread_reward_growth_opposite_direction_of_last_traversal = message.spreadRewardGrowthOppositeDirectionOfLastTraversal.map(e => e ? DecCoin.toAmino(e) : undefined);
+      obj.spread_reward_growth_opposite_direction_of_last_traversal =
+        message.spreadRewardGrowthOppositeDirectionOfLastTraversal.map(e =>
+          e ? DecCoin.toAmino(e) : undefined,
+        );
     } else {
-      obj.spread_reward_growth_opposite_direction_of_last_traversal = message.spreadRewardGrowthOppositeDirectionOfLastTraversal;
+      obj.spread_reward_growth_opposite_direction_of_last_traversal =
+        message.spreadRewardGrowthOppositeDirectionOfLastTraversal;
     }
-    obj.uptime_trackers = message.uptimeTrackers ? UptimeTrackers.toAmino(message.uptimeTrackers) : undefined;
+    obj.uptime_trackers = message.uptimeTrackers
+      ? UptimeTrackers.toAmino(message.uptimeTrackers)
+      : undefined;
     return obj;
   },
   fromAminoMsg(object: TickInfoAminoMsg): TickInfo {
@@ -180,36 +318,60 @@ export const TickInfo = {
   },
   toProtoMsg(message: TickInfo): TickInfoProtoMsg {
     return {
-      typeUrl: "/symphony.concentratedliquidity.v1beta1.TickInfo",
-      value: TickInfo.encode(message).finish()
+      typeUrl: '/symphony.concentratedliquidity.v1beta1.TickInfo',
+      value: TickInfo.encode(message).finish(),
     };
-  }
+  },
 };
 GlobalDecoderRegistry.register(TickInfo.typeUrl, TickInfo);
 function createBaseUptimeTrackers(): UptimeTrackers {
   return {
-    list: []
+    list: [],
   };
 }
+/**
+ * @name UptimeTrackers
+ * @package symphony.concentratedliquidity.v1beta1
+ * @see proto type: symphony.concentratedliquidity.v1beta1.UptimeTrackers
+ */
 export const UptimeTrackers = {
-  typeUrl: "/symphony.concentratedliquidity.v1beta1.UptimeTrackers",
+  typeUrl: '/symphony.concentratedliquidity.v1beta1.UptimeTrackers',
   is(o: any): o is UptimeTrackers {
-    return o && (o.$typeUrl === UptimeTrackers.typeUrl || Array.isArray(o.list) && (!o.list.length || UptimeTracker.is(o.list[0])));
+    return (
+      o &&
+      (o.$typeUrl === UptimeTrackers.typeUrl ||
+        (Array.isArray(o.list) &&
+          (!o.list.length || UptimeTracker.is(o.list[0]))))
+    );
   },
   isSDK(o: any): o is UptimeTrackersSDKType {
-    return o && (o.$typeUrl === UptimeTrackers.typeUrl || Array.isArray(o.list) && (!o.list.length || UptimeTracker.isSDK(o.list[0])));
+    return (
+      o &&
+      (o.$typeUrl === UptimeTrackers.typeUrl ||
+        (Array.isArray(o.list) &&
+          (!o.list.length || UptimeTracker.isSDK(o.list[0]))))
+    );
   },
   isAmino(o: any): o is UptimeTrackersAmino {
-    return o && (o.$typeUrl === UptimeTrackers.typeUrl || Array.isArray(o.list) && (!o.list.length || UptimeTracker.isAmino(o.list[0])));
+    return (
+      o &&
+      (o.$typeUrl === UptimeTrackers.typeUrl ||
+        (Array.isArray(o.list) &&
+          (!o.list.length || UptimeTracker.isAmino(o.list[0]))))
+    );
   },
-  encode(message: UptimeTrackers, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
+  encode(
+    message: UptimeTrackers,
+    writer: BinaryWriter = BinaryWriter.create(),
+  ): BinaryWriter {
     for (const v of message.list) {
       UptimeTracker.encode(v!, writer.uint32(10).fork()).ldelim();
     }
     return writer;
   },
   decode(input: BinaryReader | Uint8Array, length?: number): UptimeTrackers {
-    const reader = input instanceof BinaryReader ? input : new BinaryReader(input);
+    const reader =
+      input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseUptimeTrackers();
     while (reader.pos < end) {
@@ -238,7 +400,9 @@ export const UptimeTrackers = {
   toAmino(message: UptimeTrackers): UptimeTrackersAmino {
     const obj: any = {};
     if (message.list) {
-      obj.list = message.list.map(e => e ? UptimeTracker.toAmino(e) : undefined);
+      obj.list = message.list.map(e =>
+        e ? UptimeTracker.toAmino(e) : undefined,
+      );
     } else {
       obj.list = message.list;
     }
@@ -255,43 +419,72 @@ export const UptimeTrackers = {
   },
   toProtoMsg(message: UptimeTrackers): UptimeTrackersProtoMsg {
     return {
-      typeUrl: "/symphony.concentratedliquidity.v1beta1.UptimeTrackers",
-      value: UptimeTrackers.encode(message).finish()
+      typeUrl: '/symphony.concentratedliquidity.v1beta1.UptimeTrackers',
+      value: UptimeTrackers.encode(message).finish(),
     };
-  }
+  },
 };
 GlobalDecoderRegistry.register(UptimeTrackers.typeUrl, UptimeTrackers);
 function createBaseUptimeTracker(): UptimeTracker {
   return {
-    uptimeGrowthOutside: []
+    uptimeGrowthOutside: [],
   };
 }
+/**
+ * @name UptimeTracker
+ * @package symphony.concentratedliquidity.v1beta1
+ * @see proto type: symphony.concentratedliquidity.v1beta1.UptimeTracker
+ */
 export const UptimeTracker = {
-  typeUrl: "/symphony.concentratedliquidity.v1beta1.UptimeTracker",
+  typeUrl: '/symphony.concentratedliquidity.v1beta1.UptimeTracker',
   is(o: any): o is UptimeTracker {
-    return o && (o.$typeUrl === UptimeTracker.typeUrl || Array.isArray(o.uptimeGrowthOutside) && (!o.uptimeGrowthOutside.length || DecCoin.is(o.uptimeGrowthOutside[0])));
+    return (
+      o &&
+      (o.$typeUrl === UptimeTracker.typeUrl ||
+        (Array.isArray(o.uptimeGrowthOutside) &&
+          (!o.uptimeGrowthOutside.length ||
+            DecCoin.is(o.uptimeGrowthOutside[0]))))
+    );
   },
   isSDK(o: any): o is UptimeTrackerSDKType {
-    return o && (o.$typeUrl === UptimeTracker.typeUrl || Array.isArray(o.uptime_growth_outside) && (!o.uptime_growth_outside.length || DecCoin.isSDK(o.uptime_growth_outside[0])));
+    return (
+      o &&
+      (o.$typeUrl === UptimeTracker.typeUrl ||
+        (Array.isArray(o.uptime_growth_outside) &&
+          (!o.uptime_growth_outside.length ||
+            DecCoin.isSDK(o.uptime_growth_outside[0]))))
+    );
   },
   isAmino(o: any): o is UptimeTrackerAmino {
-    return o && (o.$typeUrl === UptimeTracker.typeUrl || Array.isArray(o.uptime_growth_outside) && (!o.uptime_growth_outside.length || DecCoin.isAmino(o.uptime_growth_outside[0])));
+    return (
+      o &&
+      (o.$typeUrl === UptimeTracker.typeUrl ||
+        (Array.isArray(o.uptime_growth_outside) &&
+          (!o.uptime_growth_outside.length ||
+            DecCoin.isAmino(o.uptime_growth_outside[0]))))
+    );
   },
-  encode(message: UptimeTracker, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
+  encode(
+    message: UptimeTracker,
+    writer: BinaryWriter = BinaryWriter.create(),
+  ): BinaryWriter {
     for (const v of message.uptimeGrowthOutside) {
       DecCoin.encode(v!, writer.uint32(10).fork()).ldelim();
     }
     return writer;
   },
   decode(input: BinaryReader | Uint8Array, length?: number): UptimeTracker {
-    const reader = input instanceof BinaryReader ? input : new BinaryReader(input);
+    const reader =
+      input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseUptimeTracker();
     while (reader.pos < end) {
       const tag = reader.uint32();
       switch (tag >>> 3) {
         case 1:
-          message.uptimeGrowthOutside.push(DecCoin.decode(reader, reader.uint32()));
+          message.uptimeGrowthOutside.push(
+            DecCoin.decode(reader, reader.uint32()),
+          );
           break;
         default:
           reader.skipType(tag & 7);
@@ -302,18 +495,22 @@ export const UptimeTracker = {
   },
   fromPartial(object: Partial<UptimeTracker>): UptimeTracker {
     const message = createBaseUptimeTracker();
-    message.uptimeGrowthOutside = object.uptimeGrowthOutside?.map(e => DecCoin.fromPartial(e)) || [];
+    message.uptimeGrowthOutside =
+      object.uptimeGrowthOutside?.map(e => DecCoin.fromPartial(e)) || [];
     return message;
   },
   fromAmino(object: UptimeTrackerAmino): UptimeTracker {
     const message = createBaseUptimeTracker();
-    message.uptimeGrowthOutside = object.uptime_growth_outside?.map(e => DecCoin.fromAmino(e)) || [];
+    message.uptimeGrowthOutside =
+      object.uptime_growth_outside?.map(e => DecCoin.fromAmino(e)) || [];
     return message;
   },
   toAmino(message: UptimeTracker): UptimeTrackerAmino {
     const obj: any = {};
     if (message.uptimeGrowthOutside) {
-      obj.uptime_growth_outside = message.uptimeGrowthOutside.map(e => e ? DecCoin.toAmino(e) : undefined);
+      obj.uptime_growth_outside = message.uptimeGrowthOutside.map(e =>
+        e ? DecCoin.toAmino(e) : undefined,
+      );
     } else {
       obj.uptime_growth_outside = message.uptimeGrowthOutside;
     }
@@ -330,9 +527,9 @@ export const UptimeTracker = {
   },
   toProtoMsg(message: UptimeTracker): UptimeTrackerProtoMsg {
     return {
-      typeUrl: "/symphony.concentratedliquidity.v1beta1.UptimeTracker",
-      value: UptimeTracker.encode(message).finish()
+      typeUrl: '/symphony.concentratedliquidity.v1beta1.UptimeTracker',
+      value: UptimeTracker.encode(message).finish(),
     };
-  }
+  },
 };
 GlobalDecoderRegistry.register(UptimeTracker.typeUrl, UptimeTracker);

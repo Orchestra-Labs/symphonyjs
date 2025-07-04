@@ -1,20 +1,40 @@
 //@ts-nocheck
-import { BinaryReader, BinaryWriter } from "../../../../binary";
-import { GlobalDecoderRegistry } from "../../../../registry";
-/** ===================== JoinPoolExecuteMsg */
+import { BinaryReader, BinaryWriter } from '../../../../binary';
+import { GlobalDecoderRegistry } from '../../../../registry';
+/**
+ * ===================== JoinPoolExecuteMsg
+ * @name EmptyRequest
+ * @package symphony.cosmwasmpool.v1beta1
+ * @see proto type: symphony.cosmwasmpool.v1beta1.EmptyRequest
+ */
 export interface EmptyRequest {}
 export interface EmptyRequestProtoMsg {
-  typeUrl: "/symphony.cosmwasmpool.v1beta1.EmptyRequest";
+  typeUrl: '/symphony.cosmwasmpool.v1beta1.EmptyRequest';
   value: Uint8Array;
 }
-/** ===================== JoinPoolExecuteMsg */
+/**
+ * ===================== JoinPoolExecuteMsg
+ * @name EmptyRequestAmino
+ * @package symphony.cosmwasmpool.v1beta1
+ * @see proto type: symphony.cosmwasmpool.v1beta1.EmptyRequest
+ */
 export interface EmptyRequestAmino {}
 export interface EmptyRequestAminoMsg {
-  type: "/symphony.cosmwasmpool.v1beta1.EmptyRequest";
+  type: '/symphony.cosmwasmpool.v1beta1.EmptyRequest';
   value: EmptyRequestAmino;
 }
-/** ===================== JoinPoolExecuteMsg */
+/**
+ * ===================== JoinPoolExecuteMsg
+ * @name EmptyRequestSDKType
+ * @package symphony.cosmwasmpool.v1beta1
+ * @see proto type: symphony.cosmwasmpool.v1beta1.EmptyRequest
+ */
 export interface EmptyRequestSDKType {}
+/**
+ * @name JoinPoolExecuteMsgRequest
+ * @package symphony.cosmwasmpool.v1beta1
+ * @see proto type: symphony.cosmwasmpool.v1beta1.JoinPoolExecuteMsgRequest
+ */
 export interface JoinPoolExecuteMsgRequest {
   /**
    * join_pool is the structure containing all request fields of the join pool
@@ -23,9 +43,14 @@ export interface JoinPoolExecuteMsgRequest {
   joinPool: EmptyRequest;
 }
 export interface JoinPoolExecuteMsgRequestProtoMsg {
-  typeUrl: "/symphony.cosmwasmpool.v1beta1.JoinPoolExecuteMsgRequest";
+  typeUrl: '/symphony.cosmwasmpool.v1beta1.JoinPoolExecuteMsgRequest';
   value: Uint8Array;
 }
+/**
+ * @name JoinPoolExecuteMsgRequestAmino
+ * @package symphony.cosmwasmpool.v1beta1
+ * @see proto type: symphony.cosmwasmpool.v1beta1.JoinPoolExecuteMsgRequest
+ */
 export interface JoinPoolExecuteMsgRequestAmino {
   /**
    * join_pool is the structure containing all request fields of the join pool
@@ -34,24 +59,49 @@ export interface JoinPoolExecuteMsgRequestAmino {
   join_pool?: EmptyRequestAmino;
 }
 export interface JoinPoolExecuteMsgRequestAminoMsg {
-  type: "/symphony.cosmwasmpool.v1beta1.JoinPoolExecuteMsgRequest";
+  type: '/symphony.cosmwasmpool.v1beta1.JoinPoolExecuteMsgRequest';
   value: JoinPoolExecuteMsgRequestAmino;
 }
+/**
+ * @name JoinPoolExecuteMsgRequestSDKType
+ * @package symphony.cosmwasmpool.v1beta1
+ * @see proto type: symphony.cosmwasmpool.v1beta1.JoinPoolExecuteMsgRequest
+ */
 export interface JoinPoolExecuteMsgRequestSDKType {
   join_pool: EmptyRequestSDKType;
 }
+/**
+ * @name JoinPoolExecuteMsgResponse
+ * @package symphony.cosmwasmpool.v1beta1
+ * @see proto type: symphony.cosmwasmpool.v1beta1.JoinPoolExecuteMsgResponse
+ */
 export interface JoinPoolExecuteMsgResponse {}
 export interface JoinPoolExecuteMsgResponseProtoMsg {
-  typeUrl: "/symphony.cosmwasmpool.v1beta1.JoinPoolExecuteMsgResponse";
+  typeUrl: '/symphony.cosmwasmpool.v1beta1.JoinPoolExecuteMsgResponse';
   value: Uint8Array;
 }
+/**
+ * @name JoinPoolExecuteMsgResponseAmino
+ * @package symphony.cosmwasmpool.v1beta1
+ * @see proto type: symphony.cosmwasmpool.v1beta1.JoinPoolExecuteMsgResponse
+ */
 export interface JoinPoolExecuteMsgResponseAmino {}
 export interface JoinPoolExecuteMsgResponseAminoMsg {
-  type: "/symphony.cosmwasmpool.v1beta1.JoinPoolExecuteMsgResponse";
+  type: '/symphony.cosmwasmpool.v1beta1.JoinPoolExecuteMsgResponse';
   value: JoinPoolExecuteMsgResponseAmino;
 }
+/**
+ * @name JoinPoolExecuteMsgResponseSDKType
+ * @package symphony.cosmwasmpool.v1beta1
+ * @see proto type: symphony.cosmwasmpool.v1beta1.JoinPoolExecuteMsgResponse
+ */
 export interface JoinPoolExecuteMsgResponseSDKType {}
-/** ===================== ExitPoolExecuteMsg */
+/**
+ * ===================== ExitPoolExecuteMsg
+ * @name ExitPoolExecuteMsgRequest
+ * @package symphony.cosmwasmpool.v1beta1
+ * @see proto type: symphony.cosmwasmpool.v1beta1.ExitPoolExecuteMsgRequest
+ */
 export interface ExitPoolExecuteMsgRequest {
   /**
    * exit_pool is the structure containing all request fields of the exit pool
@@ -60,10 +110,15 @@ export interface ExitPoolExecuteMsgRequest {
   exitPool: EmptyRequest;
 }
 export interface ExitPoolExecuteMsgRequestProtoMsg {
-  typeUrl: "/symphony.cosmwasmpool.v1beta1.ExitPoolExecuteMsgRequest";
+  typeUrl: '/symphony.cosmwasmpool.v1beta1.ExitPoolExecuteMsgRequest';
   value: Uint8Array;
 }
-/** ===================== ExitPoolExecuteMsg */
+/**
+ * ===================== ExitPoolExecuteMsg
+ * @name ExitPoolExecuteMsgRequestAmino
+ * @package symphony.cosmwasmpool.v1beta1
+ * @see proto type: symphony.cosmwasmpool.v1beta1.ExitPoolExecuteMsgRequest
+ */
 export interface ExitPoolExecuteMsgRequestAmino {
   /**
    * exit_pool is the structure containing all request fields of the exit pool
@@ -72,29 +127,55 @@ export interface ExitPoolExecuteMsgRequestAmino {
   exit_pool?: EmptyRequestAmino;
 }
 export interface ExitPoolExecuteMsgRequestAminoMsg {
-  type: "/symphony.cosmwasmpool.v1beta1.ExitPoolExecuteMsgRequest";
+  type: '/symphony.cosmwasmpool.v1beta1.ExitPoolExecuteMsgRequest';
   value: ExitPoolExecuteMsgRequestAmino;
 }
-/** ===================== ExitPoolExecuteMsg */
+/**
+ * ===================== ExitPoolExecuteMsg
+ * @name ExitPoolExecuteMsgRequestSDKType
+ * @package symphony.cosmwasmpool.v1beta1
+ * @see proto type: symphony.cosmwasmpool.v1beta1.ExitPoolExecuteMsgRequest
+ */
 export interface ExitPoolExecuteMsgRequestSDKType {
   exit_pool: EmptyRequestSDKType;
 }
+/**
+ * @name ExitPoolExecuteMsgResponse
+ * @package symphony.cosmwasmpool.v1beta1
+ * @see proto type: symphony.cosmwasmpool.v1beta1.ExitPoolExecuteMsgResponse
+ */
 export interface ExitPoolExecuteMsgResponse {}
 export interface ExitPoolExecuteMsgResponseProtoMsg {
-  typeUrl: "/symphony.cosmwasmpool.v1beta1.ExitPoolExecuteMsgResponse";
+  typeUrl: '/symphony.cosmwasmpool.v1beta1.ExitPoolExecuteMsgResponse';
   value: Uint8Array;
 }
+/**
+ * @name ExitPoolExecuteMsgResponseAmino
+ * @package symphony.cosmwasmpool.v1beta1
+ * @see proto type: symphony.cosmwasmpool.v1beta1.ExitPoolExecuteMsgResponse
+ */
 export interface ExitPoolExecuteMsgResponseAmino {}
 export interface ExitPoolExecuteMsgResponseAminoMsg {
-  type: "/symphony.cosmwasmpool.v1beta1.ExitPoolExecuteMsgResponse";
+  type: '/symphony.cosmwasmpool.v1beta1.ExitPoolExecuteMsgResponse';
   value: ExitPoolExecuteMsgResponseAmino;
 }
+/**
+ * @name ExitPoolExecuteMsgResponseSDKType
+ * @package symphony.cosmwasmpool.v1beta1
+ * @see proto type: symphony.cosmwasmpool.v1beta1.ExitPoolExecuteMsgResponse
+ */
 export interface ExitPoolExecuteMsgResponseSDKType {}
 function createBaseEmptyRequest(): EmptyRequest {
   return {};
 }
+/**
+ * ===================== JoinPoolExecuteMsg
+ * @name EmptyRequest
+ * @package symphony.cosmwasmpool.v1beta1
+ * @see proto type: symphony.cosmwasmpool.v1beta1.EmptyRequest
+ */
 export const EmptyRequest = {
-  typeUrl: "/symphony.cosmwasmpool.v1beta1.EmptyRequest",
+  typeUrl: '/symphony.cosmwasmpool.v1beta1.EmptyRequest',
   is(o: any): o is EmptyRequest {
     return o && o.$typeUrl === EmptyRequest.typeUrl;
   },
@@ -104,11 +185,15 @@ export const EmptyRequest = {
   isAmino(o: any): o is EmptyRequestAmino {
     return o && o.$typeUrl === EmptyRequest.typeUrl;
   },
-  encode(_: EmptyRequest, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
+  encode(
+    _: EmptyRequest,
+    writer: BinaryWriter = BinaryWriter.create(),
+  ): BinaryWriter {
     return writer;
   },
   decode(input: BinaryReader | Uint8Array, length?: number): EmptyRequest {
-    const reader = input instanceof BinaryReader ? input : new BinaryReader(input);
+    const reader =
+      input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseEmptyRequest();
     while (reader.pos < end) {
@@ -144,36 +229,60 @@ export const EmptyRequest = {
   },
   toProtoMsg(message: EmptyRequest): EmptyRequestProtoMsg {
     return {
-      typeUrl: "/symphony.cosmwasmpool.v1beta1.EmptyRequest",
-      value: EmptyRequest.encode(message).finish()
+      typeUrl: '/symphony.cosmwasmpool.v1beta1.EmptyRequest',
+      value: EmptyRequest.encode(message).finish(),
     };
-  }
+  },
 };
 GlobalDecoderRegistry.register(EmptyRequest.typeUrl, EmptyRequest);
 function createBaseJoinPoolExecuteMsgRequest(): JoinPoolExecuteMsgRequest {
   return {
-    joinPool: EmptyRequest.fromPartial({})
+    joinPool: EmptyRequest.fromPartial({}),
   };
 }
+/**
+ * @name JoinPoolExecuteMsgRequest
+ * @package symphony.cosmwasmpool.v1beta1
+ * @see proto type: symphony.cosmwasmpool.v1beta1.JoinPoolExecuteMsgRequest
+ */
 export const JoinPoolExecuteMsgRequest = {
-  typeUrl: "/symphony.cosmwasmpool.v1beta1.JoinPoolExecuteMsgRequest",
+  typeUrl: '/symphony.cosmwasmpool.v1beta1.JoinPoolExecuteMsgRequest',
   is(o: any): o is JoinPoolExecuteMsgRequest {
-    return o && (o.$typeUrl === JoinPoolExecuteMsgRequest.typeUrl || EmptyRequest.is(o.joinPool));
+    return (
+      o &&
+      (o.$typeUrl === JoinPoolExecuteMsgRequest.typeUrl ||
+        EmptyRequest.is(o.joinPool))
+    );
   },
   isSDK(o: any): o is JoinPoolExecuteMsgRequestSDKType {
-    return o && (o.$typeUrl === JoinPoolExecuteMsgRequest.typeUrl || EmptyRequest.isSDK(o.join_pool));
+    return (
+      o &&
+      (o.$typeUrl === JoinPoolExecuteMsgRequest.typeUrl ||
+        EmptyRequest.isSDK(o.join_pool))
+    );
   },
   isAmino(o: any): o is JoinPoolExecuteMsgRequestAmino {
-    return o && (o.$typeUrl === JoinPoolExecuteMsgRequest.typeUrl || EmptyRequest.isAmino(o.join_pool));
+    return (
+      o &&
+      (o.$typeUrl === JoinPoolExecuteMsgRequest.typeUrl ||
+        EmptyRequest.isAmino(o.join_pool))
+    );
   },
-  encode(message: JoinPoolExecuteMsgRequest, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
+  encode(
+    message: JoinPoolExecuteMsgRequest,
+    writer: BinaryWriter = BinaryWriter.create(),
+  ): BinaryWriter {
     if (message.joinPool !== undefined) {
       EmptyRequest.encode(message.joinPool, writer.uint32(10).fork()).ldelim();
     }
     return writer;
   },
-  decode(input: BinaryReader | Uint8Array, length?: number): JoinPoolExecuteMsgRequest {
-    const reader = input instanceof BinaryReader ? input : new BinaryReader(input);
+  decode(
+    input: BinaryReader | Uint8Array,
+    length?: number,
+  ): JoinPoolExecuteMsgRequest {
+    const reader =
+      input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseJoinPoolExecuteMsgRequest();
     while (reader.pos < end) {
@@ -189,9 +298,14 @@ export const JoinPoolExecuteMsgRequest = {
     }
     return message;
   },
-  fromPartial(object: Partial<JoinPoolExecuteMsgRequest>): JoinPoolExecuteMsgRequest {
+  fromPartial(
+    object: Partial<JoinPoolExecuteMsgRequest>,
+  ): JoinPoolExecuteMsgRequest {
     const message = createBaseJoinPoolExecuteMsgRequest();
-    message.joinPool = object.joinPool !== undefined && object.joinPool !== null ? EmptyRequest.fromPartial(object.joinPool) : undefined;
+    message.joinPool =
+      object.joinPool !== undefined && object.joinPool !== null
+        ? EmptyRequest.fromPartial(object.joinPool)
+        : undefined;
     return message;
   },
   fromAmino(object: JoinPoolExecuteMsgRequestAmino): JoinPoolExecuteMsgRequest {
@@ -203,31 +317,47 @@ export const JoinPoolExecuteMsgRequest = {
   },
   toAmino(message: JoinPoolExecuteMsgRequest): JoinPoolExecuteMsgRequestAmino {
     const obj: any = {};
-    obj.join_pool = message.joinPool ? EmptyRequest.toAmino(message.joinPool) : undefined;
+    obj.join_pool = message.joinPool
+      ? EmptyRequest.toAmino(message.joinPool)
+      : undefined;
     return obj;
   },
-  fromAminoMsg(object: JoinPoolExecuteMsgRequestAminoMsg): JoinPoolExecuteMsgRequest {
+  fromAminoMsg(
+    object: JoinPoolExecuteMsgRequestAminoMsg,
+  ): JoinPoolExecuteMsgRequest {
     return JoinPoolExecuteMsgRequest.fromAmino(object.value);
   },
-  fromProtoMsg(message: JoinPoolExecuteMsgRequestProtoMsg): JoinPoolExecuteMsgRequest {
+  fromProtoMsg(
+    message: JoinPoolExecuteMsgRequestProtoMsg,
+  ): JoinPoolExecuteMsgRequest {
     return JoinPoolExecuteMsgRequest.decode(message.value);
   },
   toProto(message: JoinPoolExecuteMsgRequest): Uint8Array {
     return JoinPoolExecuteMsgRequest.encode(message).finish();
   },
-  toProtoMsg(message: JoinPoolExecuteMsgRequest): JoinPoolExecuteMsgRequestProtoMsg {
+  toProtoMsg(
+    message: JoinPoolExecuteMsgRequest,
+  ): JoinPoolExecuteMsgRequestProtoMsg {
     return {
-      typeUrl: "/symphony.cosmwasmpool.v1beta1.JoinPoolExecuteMsgRequest",
-      value: JoinPoolExecuteMsgRequest.encode(message).finish()
+      typeUrl: '/symphony.cosmwasmpool.v1beta1.JoinPoolExecuteMsgRequest',
+      value: JoinPoolExecuteMsgRequest.encode(message).finish(),
     };
-  }
+  },
 };
-GlobalDecoderRegistry.register(JoinPoolExecuteMsgRequest.typeUrl, JoinPoolExecuteMsgRequest);
+GlobalDecoderRegistry.register(
+  JoinPoolExecuteMsgRequest.typeUrl,
+  JoinPoolExecuteMsgRequest,
+);
 function createBaseJoinPoolExecuteMsgResponse(): JoinPoolExecuteMsgResponse {
   return {};
 }
+/**
+ * @name JoinPoolExecuteMsgResponse
+ * @package symphony.cosmwasmpool.v1beta1
+ * @see proto type: symphony.cosmwasmpool.v1beta1.JoinPoolExecuteMsgResponse
+ */
 export const JoinPoolExecuteMsgResponse = {
-  typeUrl: "/symphony.cosmwasmpool.v1beta1.JoinPoolExecuteMsgResponse",
+  typeUrl: '/symphony.cosmwasmpool.v1beta1.JoinPoolExecuteMsgResponse',
   is(o: any): o is JoinPoolExecuteMsgResponse {
     return o && o.$typeUrl === JoinPoolExecuteMsgResponse.typeUrl;
   },
@@ -237,11 +367,18 @@ export const JoinPoolExecuteMsgResponse = {
   isAmino(o: any): o is JoinPoolExecuteMsgResponseAmino {
     return o && o.$typeUrl === JoinPoolExecuteMsgResponse.typeUrl;
   },
-  encode(_: JoinPoolExecuteMsgResponse, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
+  encode(
+    _: JoinPoolExecuteMsgResponse,
+    writer: BinaryWriter = BinaryWriter.create(),
+  ): BinaryWriter {
     return writer;
   },
-  decode(input: BinaryReader | Uint8Array, length?: number): JoinPoolExecuteMsgResponse {
-    const reader = input instanceof BinaryReader ? input : new BinaryReader(input);
+  decode(
+    input: BinaryReader | Uint8Array,
+    length?: number,
+  ): JoinPoolExecuteMsgResponse {
+    const reader =
+      input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseJoinPoolExecuteMsgResponse();
     while (reader.pos < end) {
@@ -254,7 +391,9 @@ export const JoinPoolExecuteMsgResponse = {
     }
     return message;
   },
-  fromPartial(_: Partial<JoinPoolExecuteMsgResponse>): JoinPoolExecuteMsgResponse {
+  fromPartial(
+    _: Partial<JoinPoolExecuteMsgResponse>,
+  ): JoinPoolExecuteMsgResponse {
     const message = createBaseJoinPoolExecuteMsgResponse();
     return message;
   },
@@ -266,47 +405,81 @@ export const JoinPoolExecuteMsgResponse = {
     const obj: any = {};
     return obj;
   },
-  fromAminoMsg(object: JoinPoolExecuteMsgResponseAminoMsg): JoinPoolExecuteMsgResponse {
+  fromAminoMsg(
+    object: JoinPoolExecuteMsgResponseAminoMsg,
+  ): JoinPoolExecuteMsgResponse {
     return JoinPoolExecuteMsgResponse.fromAmino(object.value);
   },
-  fromProtoMsg(message: JoinPoolExecuteMsgResponseProtoMsg): JoinPoolExecuteMsgResponse {
+  fromProtoMsg(
+    message: JoinPoolExecuteMsgResponseProtoMsg,
+  ): JoinPoolExecuteMsgResponse {
     return JoinPoolExecuteMsgResponse.decode(message.value);
   },
   toProto(message: JoinPoolExecuteMsgResponse): Uint8Array {
     return JoinPoolExecuteMsgResponse.encode(message).finish();
   },
-  toProtoMsg(message: JoinPoolExecuteMsgResponse): JoinPoolExecuteMsgResponseProtoMsg {
+  toProtoMsg(
+    message: JoinPoolExecuteMsgResponse,
+  ): JoinPoolExecuteMsgResponseProtoMsg {
     return {
-      typeUrl: "/symphony.cosmwasmpool.v1beta1.JoinPoolExecuteMsgResponse",
-      value: JoinPoolExecuteMsgResponse.encode(message).finish()
+      typeUrl: '/symphony.cosmwasmpool.v1beta1.JoinPoolExecuteMsgResponse',
+      value: JoinPoolExecuteMsgResponse.encode(message).finish(),
     };
-  }
+  },
 };
-GlobalDecoderRegistry.register(JoinPoolExecuteMsgResponse.typeUrl, JoinPoolExecuteMsgResponse);
+GlobalDecoderRegistry.register(
+  JoinPoolExecuteMsgResponse.typeUrl,
+  JoinPoolExecuteMsgResponse,
+);
 function createBaseExitPoolExecuteMsgRequest(): ExitPoolExecuteMsgRequest {
   return {
-    exitPool: EmptyRequest.fromPartial({})
+    exitPool: EmptyRequest.fromPartial({}),
   };
 }
+/**
+ * ===================== ExitPoolExecuteMsg
+ * @name ExitPoolExecuteMsgRequest
+ * @package symphony.cosmwasmpool.v1beta1
+ * @see proto type: symphony.cosmwasmpool.v1beta1.ExitPoolExecuteMsgRequest
+ */
 export const ExitPoolExecuteMsgRequest = {
-  typeUrl: "/symphony.cosmwasmpool.v1beta1.ExitPoolExecuteMsgRequest",
+  typeUrl: '/symphony.cosmwasmpool.v1beta1.ExitPoolExecuteMsgRequest',
   is(o: any): o is ExitPoolExecuteMsgRequest {
-    return o && (o.$typeUrl === ExitPoolExecuteMsgRequest.typeUrl || EmptyRequest.is(o.exitPool));
+    return (
+      o &&
+      (o.$typeUrl === ExitPoolExecuteMsgRequest.typeUrl ||
+        EmptyRequest.is(o.exitPool))
+    );
   },
   isSDK(o: any): o is ExitPoolExecuteMsgRequestSDKType {
-    return o && (o.$typeUrl === ExitPoolExecuteMsgRequest.typeUrl || EmptyRequest.isSDK(o.exit_pool));
+    return (
+      o &&
+      (o.$typeUrl === ExitPoolExecuteMsgRequest.typeUrl ||
+        EmptyRequest.isSDK(o.exit_pool))
+    );
   },
   isAmino(o: any): o is ExitPoolExecuteMsgRequestAmino {
-    return o && (o.$typeUrl === ExitPoolExecuteMsgRequest.typeUrl || EmptyRequest.isAmino(o.exit_pool));
+    return (
+      o &&
+      (o.$typeUrl === ExitPoolExecuteMsgRequest.typeUrl ||
+        EmptyRequest.isAmino(o.exit_pool))
+    );
   },
-  encode(message: ExitPoolExecuteMsgRequest, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
+  encode(
+    message: ExitPoolExecuteMsgRequest,
+    writer: BinaryWriter = BinaryWriter.create(),
+  ): BinaryWriter {
     if (message.exitPool !== undefined) {
       EmptyRequest.encode(message.exitPool, writer.uint32(10).fork()).ldelim();
     }
     return writer;
   },
-  decode(input: BinaryReader | Uint8Array, length?: number): ExitPoolExecuteMsgRequest {
-    const reader = input instanceof BinaryReader ? input : new BinaryReader(input);
+  decode(
+    input: BinaryReader | Uint8Array,
+    length?: number,
+  ): ExitPoolExecuteMsgRequest {
+    const reader =
+      input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseExitPoolExecuteMsgRequest();
     while (reader.pos < end) {
@@ -322,9 +495,14 @@ export const ExitPoolExecuteMsgRequest = {
     }
     return message;
   },
-  fromPartial(object: Partial<ExitPoolExecuteMsgRequest>): ExitPoolExecuteMsgRequest {
+  fromPartial(
+    object: Partial<ExitPoolExecuteMsgRequest>,
+  ): ExitPoolExecuteMsgRequest {
     const message = createBaseExitPoolExecuteMsgRequest();
-    message.exitPool = object.exitPool !== undefined && object.exitPool !== null ? EmptyRequest.fromPartial(object.exitPool) : undefined;
+    message.exitPool =
+      object.exitPool !== undefined && object.exitPool !== null
+        ? EmptyRequest.fromPartial(object.exitPool)
+        : undefined;
     return message;
   },
   fromAmino(object: ExitPoolExecuteMsgRequestAmino): ExitPoolExecuteMsgRequest {
@@ -336,31 +514,47 @@ export const ExitPoolExecuteMsgRequest = {
   },
   toAmino(message: ExitPoolExecuteMsgRequest): ExitPoolExecuteMsgRequestAmino {
     const obj: any = {};
-    obj.exit_pool = message.exitPool ? EmptyRequest.toAmino(message.exitPool) : undefined;
+    obj.exit_pool = message.exitPool
+      ? EmptyRequest.toAmino(message.exitPool)
+      : undefined;
     return obj;
   },
-  fromAminoMsg(object: ExitPoolExecuteMsgRequestAminoMsg): ExitPoolExecuteMsgRequest {
+  fromAminoMsg(
+    object: ExitPoolExecuteMsgRequestAminoMsg,
+  ): ExitPoolExecuteMsgRequest {
     return ExitPoolExecuteMsgRequest.fromAmino(object.value);
   },
-  fromProtoMsg(message: ExitPoolExecuteMsgRequestProtoMsg): ExitPoolExecuteMsgRequest {
+  fromProtoMsg(
+    message: ExitPoolExecuteMsgRequestProtoMsg,
+  ): ExitPoolExecuteMsgRequest {
     return ExitPoolExecuteMsgRequest.decode(message.value);
   },
   toProto(message: ExitPoolExecuteMsgRequest): Uint8Array {
     return ExitPoolExecuteMsgRequest.encode(message).finish();
   },
-  toProtoMsg(message: ExitPoolExecuteMsgRequest): ExitPoolExecuteMsgRequestProtoMsg {
+  toProtoMsg(
+    message: ExitPoolExecuteMsgRequest,
+  ): ExitPoolExecuteMsgRequestProtoMsg {
     return {
-      typeUrl: "/symphony.cosmwasmpool.v1beta1.ExitPoolExecuteMsgRequest",
-      value: ExitPoolExecuteMsgRequest.encode(message).finish()
+      typeUrl: '/symphony.cosmwasmpool.v1beta1.ExitPoolExecuteMsgRequest',
+      value: ExitPoolExecuteMsgRequest.encode(message).finish(),
     };
-  }
+  },
 };
-GlobalDecoderRegistry.register(ExitPoolExecuteMsgRequest.typeUrl, ExitPoolExecuteMsgRequest);
+GlobalDecoderRegistry.register(
+  ExitPoolExecuteMsgRequest.typeUrl,
+  ExitPoolExecuteMsgRequest,
+);
 function createBaseExitPoolExecuteMsgResponse(): ExitPoolExecuteMsgResponse {
   return {};
 }
+/**
+ * @name ExitPoolExecuteMsgResponse
+ * @package symphony.cosmwasmpool.v1beta1
+ * @see proto type: symphony.cosmwasmpool.v1beta1.ExitPoolExecuteMsgResponse
+ */
 export const ExitPoolExecuteMsgResponse = {
-  typeUrl: "/symphony.cosmwasmpool.v1beta1.ExitPoolExecuteMsgResponse",
+  typeUrl: '/symphony.cosmwasmpool.v1beta1.ExitPoolExecuteMsgResponse',
   is(o: any): o is ExitPoolExecuteMsgResponse {
     return o && o.$typeUrl === ExitPoolExecuteMsgResponse.typeUrl;
   },
@@ -370,11 +564,18 @@ export const ExitPoolExecuteMsgResponse = {
   isAmino(o: any): o is ExitPoolExecuteMsgResponseAmino {
     return o && o.$typeUrl === ExitPoolExecuteMsgResponse.typeUrl;
   },
-  encode(_: ExitPoolExecuteMsgResponse, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
+  encode(
+    _: ExitPoolExecuteMsgResponse,
+    writer: BinaryWriter = BinaryWriter.create(),
+  ): BinaryWriter {
     return writer;
   },
-  decode(input: BinaryReader | Uint8Array, length?: number): ExitPoolExecuteMsgResponse {
-    const reader = input instanceof BinaryReader ? input : new BinaryReader(input);
+  decode(
+    input: BinaryReader | Uint8Array,
+    length?: number,
+  ): ExitPoolExecuteMsgResponse {
+    const reader =
+      input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseExitPoolExecuteMsgResponse();
     while (reader.pos < end) {
@@ -387,7 +588,9 @@ export const ExitPoolExecuteMsgResponse = {
     }
     return message;
   },
-  fromPartial(_: Partial<ExitPoolExecuteMsgResponse>): ExitPoolExecuteMsgResponse {
+  fromPartial(
+    _: Partial<ExitPoolExecuteMsgResponse>,
+  ): ExitPoolExecuteMsgResponse {
     const message = createBaseExitPoolExecuteMsgResponse();
     return message;
   },
@@ -399,20 +602,29 @@ export const ExitPoolExecuteMsgResponse = {
     const obj: any = {};
     return obj;
   },
-  fromAminoMsg(object: ExitPoolExecuteMsgResponseAminoMsg): ExitPoolExecuteMsgResponse {
+  fromAminoMsg(
+    object: ExitPoolExecuteMsgResponseAminoMsg,
+  ): ExitPoolExecuteMsgResponse {
     return ExitPoolExecuteMsgResponse.fromAmino(object.value);
   },
-  fromProtoMsg(message: ExitPoolExecuteMsgResponseProtoMsg): ExitPoolExecuteMsgResponse {
+  fromProtoMsg(
+    message: ExitPoolExecuteMsgResponseProtoMsg,
+  ): ExitPoolExecuteMsgResponse {
     return ExitPoolExecuteMsgResponse.decode(message.value);
   },
   toProto(message: ExitPoolExecuteMsgResponse): Uint8Array {
     return ExitPoolExecuteMsgResponse.encode(message).finish();
   },
-  toProtoMsg(message: ExitPoolExecuteMsgResponse): ExitPoolExecuteMsgResponseProtoMsg {
+  toProtoMsg(
+    message: ExitPoolExecuteMsgResponse,
+  ): ExitPoolExecuteMsgResponseProtoMsg {
     return {
-      typeUrl: "/symphony.cosmwasmpool.v1beta1.ExitPoolExecuteMsgResponse",
-      value: ExitPoolExecuteMsgResponse.encode(message).finish()
+      typeUrl: '/symphony.cosmwasmpool.v1beta1.ExitPoolExecuteMsgResponse',
+      value: ExitPoolExecuteMsgResponse.encode(message).finish(),
     };
-  }
+  },
 };
-GlobalDecoderRegistry.register(ExitPoolExecuteMsgResponse.typeUrl, ExitPoolExecuteMsgResponse);
+GlobalDecoderRegistry.register(
+  ExitPoolExecuteMsgResponse.typeUrl,
+  ExitPoolExecuteMsgResponse,
+);

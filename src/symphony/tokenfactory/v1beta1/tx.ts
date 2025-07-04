@@ -1,26 +1,39 @@
 //@ts-nocheck
-import { Coin, CoinAmino, CoinSDKType } from "../../../cosmos/base/v1beta1/coin";
-import { Metadata, MetadataAmino, MetadataSDKType } from "../../../cosmos/bank/v1beta1/bank";
-import { BinaryReader, BinaryWriter } from "../../../binary";
-import { GlobalDecoderRegistry } from "../../../registry";
+import {
+  Coin,
+  CoinAmino,
+  CoinSDKType,
+} from '../../../cosmos/base/v1beta1/coin';
+import {
+  Metadata,
+  MetadataAmino,
+  MetadataSDKType,
+} from '../../../cosmos/bank/v1beta1/bank';
+import { BinaryReader, BinaryWriter } from '../../../binary';
+import { GlobalDecoderRegistry } from '../../../registry';
 /**
  * MsgCreateDenom defines the message structure for the CreateDenom gRPC service
  * method. It allows an account to create a new denom. It requires a sender
  * address and a sub denomination. The (sender_address, sub_denomination) tuple
  * must be unique and cannot be re-used.
- * 
+ *
  * The resulting denom created is defined as
  * <factory/{creatorAddress}/{subdenom}>. The resulting denom's admin is
  * originally set to be the creator, but this can be changed later. The token
  * denom does not indicate the current admin.
+ * @name MsgCreateDenom
+ * @package symphony.tokenfactory.v1beta1
+ * @see proto type: symphony.tokenfactory.v1beta1.MsgCreateDenom
  */
 export interface MsgCreateDenom {
   sender: string;
-  /** subdenom can be up to 44 "alphanumeric" characters long. */
+  /**
+   * subdenom can be up to 44 "alphanumeric" characters long.
+   */
   subdenom: string;
 }
 export interface MsgCreateDenomProtoMsg {
-  typeUrl: "/symphony.tokenfactory.v1beta1.MsgCreateDenom";
+  typeUrl: '/symphony.tokenfactory.v1beta1.MsgCreateDenom';
   value: Uint8Array;
 }
 /**
@@ -28,19 +41,24 @@ export interface MsgCreateDenomProtoMsg {
  * method. It allows an account to create a new denom. It requires a sender
  * address and a sub denomination. The (sender_address, sub_denomination) tuple
  * must be unique and cannot be re-used.
- * 
+ *
  * The resulting denom created is defined as
  * <factory/{creatorAddress}/{subdenom}>. The resulting denom's admin is
  * originally set to be the creator, but this can be changed later. The token
  * denom does not indicate the current admin.
+ * @name MsgCreateDenomAmino
+ * @package symphony.tokenfactory.v1beta1
+ * @see proto type: symphony.tokenfactory.v1beta1.MsgCreateDenom
  */
 export interface MsgCreateDenomAmino {
   sender?: string;
-  /** subdenom can be up to 44 "alphanumeric" characters long. */
+  /**
+   * subdenom can be up to 44 "alphanumeric" characters long.
+   */
   subdenom?: string;
 }
 export interface MsgCreateDenomAminoMsg {
-  type: "symphony/tokenfactory/create-denom";
+  type: 'symphony/tokenfactory/create-denom';
   value: MsgCreateDenomAmino;
 }
 /**
@@ -48,11 +66,14 @@ export interface MsgCreateDenomAminoMsg {
  * method. It allows an account to create a new denom. It requires a sender
  * address and a sub denomination. The (sender_address, sub_denomination) tuple
  * must be unique and cannot be re-used.
- * 
+ *
  * The resulting denom created is defined as
  * <factory/{creatorAddress}/{subdenom}>. The resulting denom's admin is
  * originally set to be the creator, but this can be changed later. The token
  * denom does not indicate the current admin.
+ * @name MsgCreateDenomSDKType
+ * @package symphony.tokenfactory.v1beta1
+ * @see proto type: symphony.tokenfactory.v1beta1.MsgCreateDenom
  */
 export interface MsgCreateDenomSDKType {
   sender: string;
@@ -61,28 +82,37 @@ export interface MsgCreateDenomSDKType {
 /**
  * MsgCreateDenomResponse is the return value of MsgCreateDenom
  * It returns the full string of the newly created denom
+ * @name MsgCreateDenomResponse
+ * @package symphony.tokenfactory.v1beta1
+ * @see proto type: symphony.tokenfactory.v1beta1.MsgCreateDenomResponse
  */
 export interface MsgCreateDenomResponse {
   newTokenDenom: string;
 }
 export interface MsgCreateDenomResponseProtoMsg {
-  typeUrl: "/symphony.tokenfactory.v1beta1.MsgCreateDenomResponse";
+  typeUrl: '/symphony.tokenfactory.v1beta1.MsgCreateDenomResponse';
   value: Uint8Array;
 }
 /**
  * MsgCreateDenomResponse is the return value of MsgCreateDenom
  * It returns the full string of the newly created denom
+ * @name MsgCreateDenomResponseAmino
+ * @package symphony.tokenfactory.v1beta1
+ * @see proto type: symphony.tokenfactory.v1beta1.MsgCreateDenomResponse
  */
 export interface MsgCreateDenomResponseAmino {
   new_token_denom?: string;
 }
 export interface MsgCreateDenomResponseAminoMsg {
-  type: "/symphony.tokenfactory.v1beta1.MsgCreateDenomResponse";
+  type: '/symphony.tokenfactory.v1beta1.MsgCreateDenomResponse';
   value: MsgCreateDenomResponseAmino;
 }
 /**
  * MsgCreateDenomResponse is the return value of MsgCreateDenom
  * It returns the full string of the newly created denom
+ * @name MsgCreateDenomResponseSDKType
+ * @package symphony.tokenfactory.v1beta1
+ * @see proto type: symphony.tokenfactory.v1beta1.MsgCreateDenomResponse
  */
 export interface MsgCreateDenomResponseSDKType {
   new_token_denom: string;
@@ -92,6 +122,9 @@ export interface MsgCreateDenomResponseSDKType {
  * more of a token.
  * Only the admin of the token factory denom has permission to mint unless
  * the denom does not have any admin.
+ * @name MsgMint
+ * @package symphony.tokenfactory.v1beta1
+ * @see proto type: symphony.tokenfactory.v1beta1.MsgMint
  */
 export interface MsgMint {
   sender: string;
@@ -99,7 +132,7 @@ export interface MsgMint {
   mintToAddress: string;
 }
 export interface MsgMintProtoMsg {
-  typeUrl: "/symphony.tokenfactory.v1beta1.MsgMint";
+  typeUrl: '/symphony.tokenfactory.v1beta1.MsgMint';
   value: Uint8Array;
 }
 /**
@@ -107,6 +140,9 @@ export interface MsgMintProtoMsg {
  * more of a token.
  * Only the admin of the token factory denom has permission to mint unless
  * the denom does not have any admin.
+ * @name MsgMintAmino
+ * @package symphony.tokenfactory.v1beta1
+ * @see proto type: symphony.tokenfactory.v1beta1.MsgMint
  */
 export interface MsgMintAmino {
   sender?: string;
@@ -114,7 +150,7 @@ export interface MsgMintAmino {
   mintToAddress: string;
 }
 export interface MsgMintAminoMsg {
-  type: "symphony/tokenfactory/mint";
+  type: 'symphony/tokenfactory/mint';
   value: MsgMintAmino;
 }
 /**
@@ -122,28 +158,49 @@ export interface MsgMintAminoMsg {
  * more of a token.
  * Only the admin of the token factory denom has permission to mint unless
  * the denom does not have any admin.
+ * @name MsgMintSDKType
+ * @package symphony.tokenfactory.v1beta1
+ * @see proto type: symphony.tokenfactory.v1beta1.MsgMint
  */
 export interface MsgMintSDKType {
   sender: string;
   amount: CoinSDKType;
   mintToAddress: string;
 }
+/**
+ * @name MsgMintResponse
+ * @package symphony.tokenfactory.v1beta1
+ * @see proto type: symphony.tokenfactory.v1beta1.MsgMintResponse
+ */
 export interface MsgMintResponse {}
 export interface MsgMintResponseProtoMsg {
-  typeUrl: "/symphony.tokenfactory.v1beta1.MsgMintResponse";
+  typeUrl: '/symphony.tokenfactory.v1beta1.MsgMintResponse';
   value: Uint8Array;
 }
+/**
+ * @name MsgMintResponseAmino
+ * @package symphony.tokenfactory.v1beta1
+ * @see proto type: symphony.tokenfactory.v1beta1.MsgMintResponse
+ */
 export interface MsgMintResponseAmino {}
 export interface MsgMintResponseAminoMsg {
-  type: "/symphony.tokenfactory.v1beta1.MsgMintResponse";
+  type: '/symphony.tokenfactory.v1beta1.MsgMintResponse';
   value: MsgMintResponseAmino;
 }
+/**
+ * @name MsgMintResponseSDKType
+ * @package symphony.tokenfactory.v1beta1
+ * @see proto type: symphony.tokenfactory.v1beta1.MsgMintResponse
+ */
 export interface MsgMintResponseSDKType {}
 /**
  * MsgBurn is the sdk.Msg type for allowing an admin account to burn
  * a token.
  * Only the admin of the token factory denom has permission to burn unless
  * the denom does not have any admin.
+ * @name MsgBurn
+ * @package symphony.tokenfactory.v1beta1
+ * @see proto type: symphony.tokenfactory.v1beta1.MsgBurn
  */
 export interface MsgBurn {
   sender: string;
@@ -151,7 +208,7 @@ export interface MsgBurn {
   burnFromAddress: string;
 }
 export interface MsgBurnProtoMsg {
-  typeUrl: "/symphony.tokenfactory.v1beta1.MsgBurn";
+  typeUrl: '/symphony.tokenfactory.v1beta1.MsgBurn';
   value: Uint8Array;
 }
 /**
@@ -159,6 +216,9 @@ export interface MsgBurnProtoMsg {
  * a token.
  * Only the admin of the token factory denom has permission to burn unless
  * the denom does not have any admin.
+ * @name MsgBurnAmino
+ * @package symphony.tokenfactory.v1beta1
+ * @see proto type: symphony.tokenfactory.v1beta1.MsgBurn
  */
 export interface MsgBurnAmino {
   sender?: string;
@@ -166,7 +226,7 @@ export interface MsgBurnAmino {
   burnFromAddress: string;
 }
 export interface MsgBurnAminoMsg {
-  type: "symphony/tokenfactory/burn";
+  type: 'symphony/tokenfactory/burn';
   value: MsgBurnAmino;
 }
 /**
@@ -174,26 +234,47 @@ export interface MsgBurnAminoMsg {
  * a token.
  * Only the admin of the token factory denom has permission to burn unless
  * the denom does not have any admin.
+ * @name MsgBurnSDKType
+ * @package symphony.tokenfactory.v1beta1
+ * @see proto type: symphony.tokenfactory.v1beta1.MsgBurn
  */
 export interface MsgBurnSDKType {
   sender: string;
   amount: CoinSDKType;
   burnFromAddress: string;
 }
+/**
+ * @name MsgBurnResponse
+ * @package symphony.tokenfactory.v1beta1
+ * @see proto type: symphony.tokenfactory.v1beta1.MsgBurnResponse
+ */
 export interface MsgBurnResponse {}
 export interface MsgBurnResponseProtoMsg {
-  typeUrl: "/symphony.tokenfactory.v1beta1.MsgBurnResponse";
+  typeUrl: '/symphony.tokenfactory.v1beta1.MsgBurnResponse';
   value: Uint8Array;
 }
+/**
+ * @name MsgBurnResponseAmino
+ * @package symphony.tokenfactory.v1beta1
+ * @see proto type: symphony.tokenfactory.v1beta1.MsgBurnResponse
+ */
 export interface MsgBurnResponseAmino {}
 export interface MsgBurnResponseAminoMsg {
-  type: "/symphony.tokenfactory.v1beta1.MsgBurnResponse";
+  type: '/symphony.tokenfactory.v1beta1.MsgBurnResponse';
   value: MsgBurnResponseAmino;
 }
+/**
+ * @name MsgBurnResponseSDKType
+ * @package symphony.tokenfactory.v1beta1
+ * @see proto type: symphony.tokenfactory.v1beta1.MsgBurnResponse
+ */
 export interface MsgBurnResponseSDKType {}
 /**
  * MsgChangeAdmin is the sdk.Msg type for allowing an admin account to reassign
  * adminship of a denom to a new account
+ * @name MsgChangeAdmin
+ * @package symphony.tokenfactory.v1beta1
+ * @see proto type: symphony.tokenfactory.v1beta1.MsgChangeAdmin
  */
 export interface MsgChangeAdmin {
   sender: string;
@@ -201,12 +282,15 @@ export interface MsgChangeAdmin {
   newAdmin: string;
 }
 export interface MsgChangeAdminProtoMsg {
-  typeUrl: "/symphony.tokenfactory.v1beta1.MsgChangeAdmin";
+  typeUrl: '/symphony.tokenfactory.v1beta1.MsgChangeAdmin';
   value: Uint8Array;
 }
 /**
  * MsgChangeAdmin is the sdk.Msg type for allowing an admin account to reassign
  * adminship of a denom to a new account
+ * @name MsgChangeAdminAmino
+ * @package symphony.tokenfactory.v1beta1
+ * @see proto type: symphony.tokenfactory.v1beta1.MsgChangeAdmin
  */
 export interface MsgChangeAdminAmino {
   sender?: string;
@@ -214,12 +298,15 @@ export interface MsgChangeAdminAmino {
   new_admin?: string;
 }
 export interface MsgChangeAdminAminoMsg {
-  type: "symphony/tokenfactory/change-admin";
+  type: 'symphony/tokenfactory/change-admin';
   value: MsgChangeAdminAmino;
 }
 /**
  * MsgChangeAdmin is the sdk.Msg type for allowing an admin account to reassign
  * adminship of a denom to a new account
+ * @name MsgChangeAdminSDKType
+ * @package symphony.tokenfactory.v1beta1
+ * @see proto type: symphony.tokenfactory.v1beta1.MsgChangeAdmin
  */
 export interface MsgChangeAdminSDKType {
   sender: string;
@@ -229,29 +316,41 @@ export interface MsgChangeAdminSDKType {
 /**
  * MsgChangeAdminResponse defines the response structure for an executed
  * MsgChangeAdmin message.
+ * @name MsgChangeAdminResponse
+ * @package symphony.tokenfactory.v1beta1
+ * @see proto type: symphony.tokenfactory.v1beta1.MsgChangeAdminResponse
  */
 export interface MsgChangeAdminResponse {}
 export interface MsgChangeAdminResponseProtoMsg {
-  typeUrl: "/symphony.tokenfactory.v1beta1.MsgChangeAdminResponse";
+  typeUrl: '/symphony.tokenfactory.v1beta1.MsgChangeAdminResponse';
   value: Uint8Array;
 }
 /**
  * MsgChangeAdminResponse defines the response structure for an executed
  * MsgChangeAdmin message.
+ * @name MsgChangeAdminResponseAmino
+ * @package symphony.tokenfactory.v1beta1
+ * @see proto type: symphony.tokenfactory.v1beta1.MsgChangeAdminResponse
  */
 export interface MsgChangeAdminResponseAmino {}
 export interface MsgChangeAdminResponseAminoMsg {
-  type: "/symphony.tokenfactory.v1beta1.MsgChangeAdminResponse";
+  type: '/symphony.tokenfactory.v1beta1.MsgChangeAdminResponse';
   value: MsgChangeAdminResponseAmino;
 }
 /**
  * MsgChangeAdminResponse defines the response structure for an executed
  * MsgChangeAdmin message.
+ * @name MsgChangeAdminResponseSDKType
+ * @package symphony.tokenfactory.v1beta1
+ * @see proto type: symphony.tokenfactory.v1beta1.MsgChangeAdminResponse
  */
 export interface MsgChangeAdminResponseSDKType {}
 /**
  * MsgSetBeforeSendHook is the sdk.Msg type for allowing an admin account to
  * assign a CosmWasm contract to call with a BeforeSend hook
+ * @name MsgSetBeforeSendHook
+ * @package symphony.tokenfactory.v1beta1
+ * @see proto type: symphony.tokenfactory.v1beta1.MsgSetBeforeSendHook
  */
 export interface MsgSetBeforeSendHook {
   sender: string;
@@ -259,12 +358,15 @@ export interface MsgSetBeforeSendHook {
   cosmwasmAddress: string;
 }
 export interface MsgSetBeforeSendHookProtoMsg {
-  typeUrl: "/symphony.tokenfactory.v1beta1.MsgSetBeforeSendHook";
+  typeUrl: '/symphony.tokenfactory.v1beta1.MsgSetBeforeSendHook';
   value: Uint8Array;
 }
 /**
  * MsgSetBeforeSendHook is the sdk.Msg type for allowing an admin account to
  * assign a CosmWasm contract to call with a BeforeSend hook
+ * @name MsgSetBeforeSendHookAmino
+ * @package symphony.tokenfactory.v1beta1
+ * @see proto type: symphony.tokenfactory.v1beta1.MsgSetBeforeSendHook
  */
 export interface MsgSetBeforeSendHookAmino {
   sender?: string;
@@ -272,12 +374,15 @@ export interface MsgSetBeforeSendHookAmino {
   cosmwasm_address: string;
 }
 export interface MsgSetBeforeSendHookAminoMsg {
-  type: "symphony/tokenfactory/set-bef-send-hook";
+  type: 'symphony/tokenfactory/set-bef-send-hook';
   value: MsgSetBeforeSendHookAmino;
 }
 /**
  * MsgSetBeforeSendHook is the sdk.Msg type for allowing an admin account to
  * assign a CosmWasm contract to call with a BeforeSend hook
+ * @name MsgSetBeforeSendHookSDKType
+ * @package symphony.tokenfactory.v1beta1
+ * @see proto type: symphony.tokenfactory.v1beta1.MsgSetBeforeSendHook
  */
 export interface MsgSetBeforeSendHookSDKType {
   sender: string;
@@ -287,53 +392,71 @@ export interface MsgSetBeforeSendHookSDKType {
 /**
  * MsgSetBeforeSendHookResponse defines the response structure for an executed
  * MsgSetBeforeSendHook message.
+ * @name MsgSetBeforeSendHookResponse
+ * @package symphony.tokenfactory.v1beta1
+ * @see proto type: symphony.tokenfactory.v1beta1.MsgSetBeforeSendHookResponse
  */
 export interface MsgSetBeforeSendHookResponse {}
 export interface MsgSetBeforeSendHookResponseProtoMsg {
-  typeUrl: "/symphony.tokenfactory.v1beta1.MsgSetBeforeSendHookResponse";
+  typeUrl: '/symphony.tokenfactory.v1beta1.MsgSetBeforeSendHookResponse';
   value: Uint8Array;
 }
 /**
  * MsgSetBeforeSendHookResponse defines the response structure for an executed
  * MsgSetBeforeSendHook message.
+ * @name MsgSetBeforeSendHookResponseAmino
+ * @package symphony.tokenfactory.v1beta1
+ * @see proto type: symphony.tokenfactory.v1beta1.MsgSetBeforeSendHookResponse
  */
 export interface MsgSetBeforeSendHookResponseAmino {}
 export interface MsgSetBeforeSendHookResponseAminoMsg {
-  type: "/symphony.tokenfactory.v1beta1.MsgSetBeforeSendHookResponse";
+  type: '/symphony.tokenfactory.v1beta1.MsgSetBeforeSendHookResponse';
   value: MsgSetBeforeSendHookResponseAmino;
 }
 /**
  * MsgSetBeforeSendHookResponse defines the response structure for an executed
  * MsgSetBeforeSendHook message.
+ * @name MsgSetBeforeSendHookResponseSDKType
+ * @package symphony.tokenfactory.v1beta1
+ * @see proto type: symphony.tokenfactory.v1beta1.MsgSetBeforeSendHookResponse
  */
 export interface MsgSetBeforeSendHookResponseSDKType {}
 /**
  * MsgSetDenomMetadata is the sdk.Msg type for allowing an admin account to set
  * the denom's bank metadata
+ * @name MsgSetDenomMetadata
+ * @package symphony.tokenfactory.v1beta1
+ * @see proto type: symphony.tokenfactory.v1beta1.MsgSetDenomMetadata
  */
 export interface MsgSetDenomMetadata {
   sender: string;
   metadata: Metadata;
 }
 export interface MsgSetDenomMetadataProtoMsg {
-  typeUrl: "/symphony.tokenfactory.v1beta1.MsgSetDenomMetadata";
+  typeUrl: '/symphony.tokenfactory.v1beta1.MsgSetDenomMetadata';
   value: Uint8Array;
 }
 /**
  * MsgSetDenomMetadata is the sdk.Msg type for allowing an admin account to set
  * the denom's bank metadata
+ * @name MsgSetDenomMetadataAmino
+ * @package symphony.tokenfactory.v1beta1
+ * @see proto type: symphony.tokenfactory.v1beta1.MsgSetDenomMetadata
  */
 export interface MsgSetDenomMetadataAmino {
   sender?: string;
   metadata?: MetadataAmino;
 }
 export interface MsgSetDenomMetadataAminoMsg {
-  type: "symphony/tokenfactory/set-denom-metadata";
+  type: 'symphony/tokenfactory/set-denom-metadata';
   value: MsgSetDenomMetadataAmino;
 }
 /**
  * MsgSetDenomMetadata is the sdk.Msg type for allowing an admin account to set
  * the denom's bank metadata
+ * @name MsgSetDenomMetadataSDKType
+ * @package symphony.tokenfactory.v1beta1
+ * @see proto type: symphony.tokenfactory.v1beta1.MsgSetDenomMetadata
  */
 export interface MsgSetDenomMetadataSDKType {
   sender: string;
@@ -342,26 +465,40 @@ export interface MsgSetDenomMetadataSDKType {
 /**
  * MsgSetDenomMetadataResponse defines the response structure for an executed
  * MsgSetDenomMetadata message.
+ * @name MsgSetDenomMetadataResponse
+ * @package symphony.tokenfactory.v1beta1
+ * @see proto type: symphony.tokenfactory.v1beta1.MsgSetDenomMetadataResponse
  */
 export interface MsgSetDenomMetadataResponse {}
 export interface MsgSetDenomMetadataResponseProtoMsg {
-  typeUrl: "/symphony.tokenfactory.v1beta1.MsgSetDenomMetadataResponse";
+  typeUrl: '/symphony.tokenfactory.v1beta1.MsgSetDenomMetadataResponse';
   value: Uint8Array;
 }
 /**
  * MsgSetDenomMetadataResponse defines the response structure for an executed
  * MsgSetDenomMetadata message.
+ * @name MsgSetDenomMetadataResponseAmino
+ * @package symphony.tokenfactory.v1beta1
+ * @see proto type: symphony.tokenfactory.v1beta1.MsgSetDenomMetadataResponse
  */
 export interface MsgSetDenomMetadataResponseAmino {}
 export interface MsgSetDenomMetadataResponseAminoMsg {
-  type: "/symphony.tokenfactory.v1beta1.MsgSetDenomMetadataResponse";
+  type: '/symphony.tokenfactory.v1beta1.MsgSetDenomMetadataResponse';
   value: MsgSetDenomMetadataResponseAmino;
 }
 /**
  * MsgSetDenomMetadataResponse defines the response structure for an executed
  * MsgSetDenomMetadata message.
+ * @name MsgSetDenomMetadataResponseSDKType
+ * @package symphony.tokenfactory.v1beta1
+ * @see proto type: symphony.tokenfactory.v1beta1.MsgSetDenomMetadataResponse
  */
 export interface MsgSetDenomMetadataResponseSDKType {}
+/**
+ * @name MsgForceTransfer
+ * @package symphony.tokenfactory.v1beta1
+ * @see proto type: symphony.tokenfactory.v1beta1.MsgForceTransfer
+ */
 export interface MsgForceTransfer {
   sender: string;
   amount: Coin;
@@ -369,9 +506,14 @@ export interface MsgForceTransfer {
   transferToAddress: string;
 }
 export interface MsgForceTransferProtoMsg {
-  typeUrl: "/symphony.tokenfactory.v1beta1.MsgForceTransfer";
+  typeUrl: '/symphony.tokenfactory.v1beta1.MsgForceTransfer';
   value: Uint8Array;
 }
+/**
+ * @name MsgForceTransferAmino
+ * @package symphony.tokenfactory.v1beta1
+ * @see proto type: symphony.tokenfactory.v1beta1.MsgForceTransfer
+ */
 export interface MsgForceTransferAmino {
   sender?: string;
   amount?: CoinAmino;
@@ -379,55 +521,105 @@ export interface MsgForceTransferAmino {
   transferToAddress?: string;
 }
 export interface MsgForceTransferAminoMsg {
-  type: "symphony/tokenfactory/force-transfer";
+  type: 'symphony/tokenfactory/force-transfer';
   value: MsgForceTransferAmino;
 }
+/**
+ * @name MsgForceTransferSDKType
+ * @package symphony.tokenfactory.v1beta1
+ * @see proto type: symphony.tokenfactory.v1beta1.MsgForceTransfer
+ */
 export interface MsgForceTransferSDKType {
   sender: string;
   amount: CoinSDKType;
   transferFromAddress: string;
   transferToAddress: string;
 }
+/**
+ * @name MsgForceTransferResponse
+ * @package symphony.tokenfactory.v1beta1
+ * @see proto type: symphony.tokenfactory.v1beta1.MsgForceTransferResponse
+ */
 export interface MsgForceTransferResponse {}
 export interface MsgForceTransferResponseProtoMsg {
-  typeUrl: "/symphony.tokenfactory.v1beta1.MsgForceTransferResponse";
+  typeUrl: '/symphony.tokenfactory.v1beta1.MsgForceTransferResponse';
   value: Uint8Array;
 }
+/**
+ * @name MsgForceTransferResponseAmino
+ * @package symphony.tokenfactory.v1beta1
+ * @see proto type: symphony.tokenfactory.v1beta1.MsgForceTransferResponse
+ */
 export interface MsgForceTransferResponseAmino {}
 export interface MsgForceTransferResponseAminoMsg {
-  type: "/symphony.tokenfactory.v1beta1.MsgForceTransferResponse";
+  type: '/symphony.tokenfactory.v1beta1.MsgForceTransferResponse';
   value: MsgForceTransferResponseAmino;
 }
+/**
+ * @name MsgForceTransferResponseSDKType
+ * @package symphony.tokenfactory.v1beta1
+ * @see proto type: symphony.tokenfactory.v1beta1.MsgForceTransferResponse
+ */
 export interface MsgForceTransferResponseSDKType {}
 function createBaseMsgCreateDenom(): MsgCreateDenom {
   return {
-    sender: "",
-    subdenom: ""
+    sender: '',
+    subdenom: '',
   };
 }
+/**
+ * MsgCreateDenom defines the message structure for the CreateDenom gRPC service
+ * method. It allows an account to create a new denom. It requires a sender
+ * address and a sub denomination. The (sender_address, sub_denomination) tuple
+ * must be unique and cannot be re-used.
+ *
+ * The resulting denom created is defined as
+ * <factory/{creatorAddress}/{subdenom}>. The resulting denom's admin is
+ * originally set to be the creator, but this can be changed later. The token
+ * denom does not indicate the current admin.
+ * @name MsgCreateDenom
+ * @package symphony.tokenfactory.v1beta1
+ * @see proto type: symphony.tokenfactory.v1beta1.MsgCreateDenom
+ */
 export const MsgCreateDenom = {
-  typeUrl: "/symphony.tokenfactory.v1beta1.MsgCreateDenom",
-  aminoType: "symphony/tokenfactory/create-denom",
+  typeUrl: '/symphony.tokenfactory.v1beta1.MsgCreateDenom',
+  aminoType: 'symphony/tokenfactory/create-denom',
   is(o: any): o is MsgCreateDenom {
-    return o && (o.$typeUrl === MsgCreateDenom.typeUrl || typeof o.sender === "string" && typeof o.subdenom === "string");
+    return (
+      o &&
+      (o.$typeUrl === MsgCreateDenom.typeUrl ||
+        (typeof o.sender === 'string' && typeof o.subdenom === 'string'))
+    );
   },
   isSDK(o: any): o is MsgCreateDenomSDKType {
-    return o && (o.$typeUrl === MsgCreateDenom.typeUrl || typeof o.sender === "string" && typeof o.subdenom === "string");
+    return (
+      o &&
+      (o.$typeUrl === MsgCreateDenom.typeUrl ||
+        (typeof o.sender === 'string' && typeof o.subdenom === 'string'))
+    );
   },
   isAmino(o: any): o is MsgCreateDenomAmino {
-    return o && (o.$typeUrl === MsgCreateDenom.typeUrl || typeof o.sender === "string" && typeof o.subdenom === "string");
+    return (
+      o &&
+      (o.$typeUrl === MsgCreateDenom.typeUrl ||
+        (typeof o.sender === 'string' && typeof o.subdenom === 'string'))
+    );
   },
-  encode(message: MsgCreateDenom, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
-    if (message.sender !== "") {
+  encode(
+    message: MsgCreateDenom,
+    writer: BinaryWriter = BinaryWriter.create(),
+  ): BinaryWriter {
+    if (message.sender !== '') {
       writer.uint32(10).string(message.sender);
     }
-    if (message.subdenom !== "") {
+    if (message.subdenom !== '') {
       writer.uint32(18).string(message.subdenom);
     }
     return writer;
   },
   decode(input: BinaryReader | Uint8Array, length?: number): MsgCreateDenom {
-    const reader = input instanceof BinaryReader ? input : new BinaryReader(input);
+    const reader =
+      input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseMsgCreateDenom();
     while (reader.pos < end) {
@@ -448,8 +640,8 @@ export const MsgCreateDenom = {
   },
   fromPartial(object: Partial<MsgCreateDenom>): MsgCreateDenom {
     const message = createBaseMsgCreateDenom();
-    message.sender = object.sender ?? "";
-    message.subdenom = object.subdenom ?? "";
+    message.sender = object.sender ?? '';
+    message.subdenom = object.subdenom ?? '';
     return message;
   },
   fromAmino(object: MsgCreateDenomAmino): MsgCreateDenom {
@@ -464,8 +656,8 @@ export const MsgCreateDenom = {
   },
   toAmino(message: MsgCreateDenom): MsgCreateDenomAmino {
     const obj: any = {};
-    obj.sender = message.sender === "" ? undefined : message.sender;
-    obj.subdenom = message.subdenom === "" ? undefined : message.subdenom;
+    obj.sender = message.sender === '' ? undefined : message.sender;
+    obj.subdenom = message.subdenom === '' ? undefined : message.subdenom;
     return obj;
   },
   fromAminoMsg(object: MsgCreateDenomAminoMsg): MsgCreateDenom {
@@ -473,8 +665,8 @@ export const MsgCreateDenom = {
   },
   toAminoMsg(message: MsgCreateDenom): MsgCreateDenomAminoMsg {
     return {
-      type: "symphony/tokenfactory/create-denom",
-      value: MsgCreateDenom.toAmino(message)
+      type: 'symphony/tokenfactory/create-denom',
+      value: MsgCreateDenom.toAmino(message),
     };
   },
   fromProtoMsg(message: MsgCreateDenomProtoMsg): MsgCreateDenom {
@@ -485,37 +677,66 @@ export const MsgCreateDenom = {
   },
   toProtoMsg(message: MsgCreateDenom): MsgCreateDenomProtoMsg {
     return {
-      typeUrl: "/symphony.tokenfactory.v1beta1.MsgCreateDenom",
-      value: MsgCreateDenom.encode(message).finish()
+      typeUrl: '/symphony.tokenfactory.v1beta1.MsgCreateDenom',
+      value: MsgCreateDenom.encode(message).finish(),
     };
-  }
+  },
 };
 GlobalDecoderRegistry.register(MsgCreateDenom.typeUrl, MsgCreateDenom);
-GlobalDecoderRegistry.registerAminoProtoMapping(MsgCreateDenom.aminoType, MsgCreateDenom.typeUrl);
+GlobalDecoderRegistry.registerAminoProtoMapping(
+  MsgCreateDenom.aminoType,
+  MsgCreateDenom.typeUrl,
+);
 function createBaseMsgCreateDenomResponse(): MsgCreateDenomResponse {
   return {
-    newTokenDenom: ""
+    newTokenDenom: '',
   };
 }
+/**
+ * MsgCreateDenomResponse is the return value of MsgCreateDenom
+ * It returns the full string of the newly created denom
+ * @name MsgCreateDenomResponse
+ * @package symphony.tokenfactory.v1beta1
+ * @see proto type: symphony.tokenfactory.v1beta1.MsgCreateDenomResponse
+ */
 export const MsgCreateDenomResponse = {
-  typeUrl: "/symphony.tokenfactory.v1beta1.MsgCreateDenomResponse",
+  typeUrl: '/symphony.tokenfactory.v1beta1.MsgCreateDenomResponse',
   is(o: any): o is MsgCreateDenomResponse {
-    return o && (o.$typeUrl === MsgCreateDenomResponse.typeUrl || typeof o.newTokenDenom === "string");
+    return (
+      o &&
+      (o.$typeUrl === MsgCreateDenomResponse.typeUrl ||
+        typeof o.newTokenDenom === 'string')
+    );
   },
   isSDK(o: any): o is MsgCreateDenomResponseSDKType {
-    return o && (o.$typeUrl === MsgCreateDenomResponse.typeUrl || typeof o.new_token_denom === "string");
+    return (
+      o &&
+      (o.$typeUrl === MsgCreateDenomResponse.typeUrl ||
+        typeof o.new_token_denom === 'string')
+    );
   },
   isAmino(o: any): o is MsgCreateDenomResponseAmino {
-    return o && (o.$typeUrl === MsgCreateDenomResponse.typeUrl || typeof o.new_token_denom === "string");
+    return (
+      o &&
+      (o.$typeUrl === MsgCreateDenomResponse.typeUrl ||
+        typeof o.new_token_denom === 'string')
+    );
   },
-  encode(message: MsgCreateDenomResponse, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
-    if (message.newTokenDenom !== "") {
+  encode(
+    message: MsgCreateDenomResponse,
+    writer: BinaryWriter = BinaryWriter.create(),
+  ): BinaryWriter {
+    if (message.newTokenDenom !== '') {
       writer.uint32(10).string(message.newTokenDenom);
     }
     return writer;
   },
-  decode(input: BinaryReader | Uint8Array, length?: number): MsgCreateDenomResponse {
-    const reader = input instanceof BinaryReader ? input : new BinaryReader(input);
+  decode(
+    input: BinaryReader | Uint8Array,
+    length?: number,
+  ): MsgCreateDenomResponse {
+    const reader =
+      input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseMsgCreateDenomResponse();
     while (reader.pos < end) {
@@ -533,25 +754,31 @@ export const MsgCreateDenomResponse = {
   },
   fromPartial(object: Partial<MsgCreateDenomResponse>): MsgCreateDenomResponse {
     const message = createBaseMsgCreateDenomResponse();
-    message.newTokenDenom = object.newTokenDenom ?? "";
+    message.newTokenDenom = object.newTokenDenom ?? '';
     return message;
   },
   fromAmino(object: MsgCreateDenomResponseAmino): MsgCreateDenomResponse {
     const message = createBaseMsgCreateDenomResponse();
-    if (object.new_token_denom !== undefined && object.new_token_denom !== null) {
+    if (
+      object.new_token_denom !== undefined &&
+      object.new_token_denom !== null
+    ) {
       message.newTokenDenom = object.new_token_denom;
     }
     return message;
   },
   toAmino(message: MsgCreateDenomResponse): MsgCreateDenomResponseAmino {
     const obj: any = {};
-    obj.new_token_denom = message.newTokenDenom === "" ? undefined : message.newTokenDenom;
+    obj.new_token_denom =
+      message.newTokenDenom === '' ? undefined : message.newTokenDenom;
     return obj;
   },
   fromAminoMsg(object: MsgCreateDenomResponseAminoMsg): MsgCreateDenomResponse {
     return MsgCreateDenomResponse.fromAmino(object.value);
   },
-  fromProtoMsg(message: MsgCreateDenomResponseProtoMsg): MsgCreateDenomResponse {
+  fromProtoMsg(
+    message: MsgCreateDenomResponseProtoMsg,
+  ): MsgCreateDenomResponse {
     return MsgCreateDenomResponse.decode(message.value);
   },
   toProto(message: MsgCreateDenomResponse): Uint8Array {
@@ -559,45 +786,79 @@ export const MsgCreateDenomResponse = {
   },
   toProtoMsg(message: MsgCreateDenomResponse): MsgCreateDenomResponseProtoMsg {
     return {
-      typeUrl: "/symphony.tokenfactory.v1beta1.MsgCreateDenomResponse",
-      value: MsgCreateDenomResponse.encode(message).finish()
+      typeUrl: '/symphony.tokenfactory.v1beta1.MsgCreateDenomResponse',
+      value: MsgCreateDenomResponse.encode(message).finish(),
     };
-  }
+  },
 };
-GlobalDecoderRegistry.register(MsgCreateDenomResponse.typeUrl, MsgCreateDenomResponse);
+GlobalDecoderRegistry.register(
+  MsgCreateDenomResponse.typeUrl,
+  MsgCreateDenomResponse,
+);
 function createBaseMsgMint(): MsgMint {
   return {
-    sender: "",
+    sender: '',
     amount: Coin.fromPartial({}),
-    mintToAddress: ""
+    mintToAddress: '',
   };
 }
+/**
+ * MsgMint is the sdk.Msg type for allowing an admin account to mint
+ * more of a token.
+ * Only the admin of the token factory denom has permission to mint unless
+ * the denom does not have any admin.
+ * @name MsgMint
+ * @package symphony.tokenfactory.v1beta1
+ * @see proto type: symphony.tokenfactory.v1beta1.MsgMint
+ */
 export const MsgMint = {
-  typeUrl: "/symphony.tokenfactory.v1beta1.MsgMint",
-  aminoType: "symphony/tokenfactory/mint",
+  typeUrl: '/symphony.tokenfactory.v1beta1.MsgMint',
+  aminoType: 'symphony/tokenfactory/mint',
   is(o: any): o is MsgMint {
-    return o && (o.$typeUrl === MsgMint.typeUrl || typeof o.sender === "string" && Coin.is(o.amount) && typeof o.mintToAddress === "string");
+    return (
+      o &&
+      (o.$typeUrl === MsgMint.typeUrl ||
+        (typeof o.sender === 'string' &&
+          Coin.is(o.amount) &&
+          typeof o.mintToAddress === 'string'))
+    );
   },
   isSDK(o: any): o is MsgMintSDKType {
-    return o && (o.$typeUrl === MsgMint.typeUrl || typeof o.sender === "string" && Coin.isSDK(o.amount) && typeof o.mintToAddress === "string");
+    return (
+      o &&
+      (o.$typeUrl === MsgMint.typeUrl ||
+        (typeof o.sender === 'string' &&
+          Coin.isSDK(o.amount) &&
+          typeof o.mintToAddress === 'string'))
+    );
   },
   isAmino(o: any): o is MsgMintAmino {
-    return o && (o.$typeUrl === MsgMint.typeUrl || typeof o.sender === "string" && Coin.isAmino(o.amount) && typeof o.mintToAddress === "string");
+    return (
+      o &&
+      (o.$typeUrl === MsgMint.typeUrl ||
+        (typeof o.sender === 'string' &&
+          Coin.isAmino(o.amount) &&
+          typeof o.mintToAddress === 'string'))
+    );
   },
-  encode(message: MsgMint, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
-    if (message.sender !== "") {
+  encode(
+    message: MsgMint,
+    writer: BinaryWriter = BinaryWriter.create(),
+  ): BinaryWriter {
+    if (message.sender !== '') {
       writer.uint32(10).string(message.sender);
     }
     if (message.amount !== undefined) {
       Coin.encode(message.amount, writer.uint32(18).fork()).ldelim();
     }
-    if (message.mintToAddress !== "") {
+    if (message.mintToAddress !== '') {
       writer.uint32(26).string(message.mintToAddress);
     }
     return writer;
   },
   decode(input: BinaryReader | Uint8Array, length?: number): MsgMint {
-    const reader = input instanceof BinaryReader ? input : new BinaryReader(input);
+    const reader =
+      input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseMsgMint();
     while (reader.pos < end) {
@@ -621,9 +882,12 @@ export const MsgMint = {
   },
   fromPartial(object: Partial<MsgMint>): MsgMint {
     const message = createBaseMsgMint();
-    message.sender = object.sender ?? "";
-    message.amount = object.amount !== undefined && object.amount !== null ? Coin.fromPartial(object.amount) : undefined;
-    message.mintToAddress = object.mintToAddress ?? "";
+    message.sender = object.sender ?? '';
+    message.amount =
+      object.amount !== undefined && object.amount !== null
+        ? Coin.fromPartial(object.amount)
+        : undefined;
+    message.mintToAddress = object.mintToAddress ?? '';
     return message;
   },
   fromAmino(object: MsgMintAmino): MsgMint {
@@ -641,9 +905,9 @@ export const MsgMint = {
   },
   toAmino(message: MsgMint): MsgMintAmino {
     const obj: any = {};
-    obj.sender = message.sender === "" ? undefined : message.sender;
+    obj.sender = message.sender === '' ? undefined : message.sender;
     obj.amount = message.amount ? Coin.toAmino(message.amount) : undefined;
-    obj.mintToAddress = message.mintToAddress ?? "";
+    obj.mintToAddress = message.mintToAddress ?? '';
     return obj;
   },
   fromAminoMsg(object: MsgMintAminoMsg): MsgMint {
@@ -651,8 +915,8 @@ export const MsgMint = {
   },
   toAminoMsg(message: MsgMint): MsgMintAminoMsg {
     return {
-      type: "symphony/tokenfactory/mint",
-      value: MsgMint.toAmino(message)
+      type: 'symphony/tokenfactory/mint',
+      value: MsgMint.toAmino(message),
     };
   },
   fromProtoMsg(message: MsgMintProtoMsg): MsgMint {
@@ -663,18 +927,26 @@ export const MsgMint = {
   },
   toProtoMsg(message: MsgMint): MsgMintProtoMsg {
     return {
-      typeUrl: "/symphony.tokenfactory.v1beta1.MsgMint",
-      value: MsgMint.encode(message).finish()
+      typeUrl: '/symphony.tokenfactory.v1beta1.MsgMint',
+      value: MsgMint.encode(message).finish(),
     };
-  }
+  },
 };
 GlobalDecoderRegistry.register(MsgMint.typeUrl, MsgMint);
-GlobalDecoderRegistry.registerAminoProtoMapping(MsgMint.aminoType, MsgMint.typeUrl);
+GlobalDecoderRegistry.registerAminoProtoMapping(
+  MsgMint.aminoType,
+  MsgMint.typeUrl,
+);
 function createBaseMsgMintResponse(): MsgMintResponse {
   return {};
 }
+/**
+ * @name MsgMintResponse
+ * @package symphony.tokenfactory.v1beta1
+ * @see proto type: symphony.tokenfactory.v1beta1.MsgMintResponse
+ */
 export const MsgMintResponse = {
-  typeUrl: "/symphony.tokenfactory.v1beta1.MsgMintResponse",
+  typeUrl: '/symphony.tokenfactory.v1beta1.MsgMintResponse',
   is(o: any): o is MsgMintResponse {
     return o && o.$typeUrl === MsgMintResponse.typeUrl;
   },
@@ -684,11 +956,15 @@ export const MsgMintResponse = {
   isAmino(o: any): o is MsgMintResponseAmino {
     return o && o.$typeUrl === MsgMintResponse.typeUrl;
   },
-  encode(_: MsgMintResponse, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
+  encode(
+    _: MsgMintResponse,
+    writer: BinaryWriter = BinaryWriter.create(),
+  ): BinaryWriter {
     return writer;
   },
   decode(input: BinaryReader | Uint8Array, length?: number): MsgMintResponse {
-    const reader = input instanceof BinaryReader ? input : new BinaryReader(input);
+    const reader =
+      input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseMsgMintResponse();
     while (reader.pos < end) {
@@ -724,45 +1000,76 @@ export const MsgMintResponse = {
   },
   toProtoMsg(message: MsgMintResponse): MsgMintResponseProtoMsg {
     return {
-      typeUrl: "/symphony.tokenfactory.v1beta1.MsgMintResponse",
-      value: MsgMintResponse.encode(message).finish()
+      typeUrl: '/symphony.tokenfactory.v1beta1.MsgMintResponse',
+      value: MsgMintResponse.encode(message).finish(),
     };
-  }
+  },
 };
 GlobalDecoderRegistry.register(MsgMintResponse.typeUrl, MsgMintResponse);
 function createBaseMsgBurn(): MsgBurn {
   return {
-    sender: "",
+    sender: '',
     amount: Coin.fromPartial({}),
-    burnFromAddress: ""
+    burnFromAddress: '',
   };
 }
+/**
+ * MsgBurn is the sdk.Msg type for allowing an admin account to burn
+ * a token.
+ * Only the admin of the token factory denom has permission to burn unless
+ * the denom does not have any admin.
+ * @name MsgBurn
+ * @package symphony.tokenfactory.v1beta1
+ * @see proto type: symphony.tokenfactory.v1beta1.MsgBurn
+ */
 export const MsgBurn = {
-  typeUrl: "/symphony.tokenfactory.v1beta1.MsgBurn",
-  aminoType: "symphony/tokenfactory/burn",
+  typeUrl: '/symphony.tokenfactory.v1beta1.MsgBurn',
+  aminoType: 'symphony/tokenfactory/burn',
   is(o: any): o is MsgBurn {
-    return o && (o.$typeUrl === MsgBurn.typeUrl || typeof o.sender === "string" && Coin.is(o.amount) && typeof o.burnFromAddress === "string");
+    return (
+      o &&
+      (o.$typeUrl === MsgBurn.typeUrl ||
+        (typeof o.sender === 'string' &&
+          Coin.is(o.amount) &&
+          typeof o.burnFromAddress === 'string'))
+    );
   },
   isSDK(o: any): o is MsgBurnSDKType {
-    return o && (o.$typeUrl === MsgBurn.typeUrl || typeof o.sender === "string" && Coin.isSDK(o.amount) && typeof o.burnFromAddress === "string");
+    return (
+      o &&
+      (o.$typeUrl === MsgBurn.typeUrl ||
+        (typeof o.sender === 'string' &&
+          Coin.isSDK(o.amount) &&
+          typeof o.burnFromAddress === 'string'))
+    );
   },
   isAmino(o: any): o is MsgBurnAmino {
-    return o && (o.$typeUrl === MsgBurn.typeUrl || typeof o.sender === "string" && Coin.isAmino(o.amount) && typeof o.burnFromAddress === "string");
+    return (
+      o &&
+      (o.$typeUrl === MsgBurn.typeUrl ||
+        (typeof o.sender === 'string' &&
+          Coin.isAmino(o.amount) &&
+          typeof o.burnFromAddress === 'string'))
+    );
   },
-  encode(message: MsgBurn, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
-    if (message.sender !== "") {
+  encode(
+    message: MsgBurn,
+    writer: BinaryWriter = BinaryWriter.create(),
+  ): BinaryWriter {
+    if (message.sender !== '') {
       writer.uint32(10).string(message.sender);
     }
     if (message.amount !== undefined) {
       Coin.encode(message.amount, writer.uint32(18).fork()).ldelim();
     }
-    if (message.burnFromAddress !== "") {
+    if (message.burnFromAddress !== '') {
       writer.uint32(26).string(message.burnFromAddress);
     }
     return writer;
   },
   decode(input: BinaryReader | Uint8Array, length?: number): MsgBurn {
-    const reader = input instanceof BinaryReader ? input : new BinaryReader(input);
+    const reader =
+      input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseMsgBurn();
     while (reader.pos < end) {
@@ -786,9 +1093,12 @@ export const MsgBurn = {
   },
   fromPartial(object: Partial<MsgBurn>): MsgBurn {
     const message = createBaseMsgBurn();
-    message.sender = object.sender ?? "";
-    message.amount = object.amount !== undefined && object.amount !== null ? Coin.fromPartial(object.amount) : undefined;
-    message.burnFromAddress = object.burnFromAddress ?? "";
+    message.sender = object.sender ?? '';
+    message.amount =
+      object.amount !== undefined && object.amount !== null
+        ? Coin.fromPartial(object.amount)
+        : undefined;
+    message.burnFromAddress = object.burnFromAddress ?? '';
     return message;
   },
   fromAmino(object: MsgBurnAmino): MsgBurn {
@@ -799,16 +1109,19 @@ export const MsgBurn = {
     if (object.amount !== undefined && object.amount !== null) {
       message.amount = Coin.fromAmino(object.amount);
     }
-    if (object.burnFromAddress !== undefined && object.burnFromAddress !== null) {
+    if (
+      object.burnFromAddress !== undefined &&
+      object.burnFromAddress !== null
+    ) {
       message.burnFromAddress = object.burnFromAddress;
     }
     return message;
   },
   toAmino(message: MsgBurn): MsgBurnAmino {
     const obj: any = {};
-    obj.sender = message.sender === "" ? undefined : message.sender;
+    obj.sender = message.sender === '' ? undefined : message.sender;
     obj.amount = message.amount ? Coin.toAmino(message.amount) : undefined;
-    obj.burnFromAddress = message.burnFromAddress ?? "";
+    obj.burnFromAddress = message.burnFromAddress ?? '';
     return obj;
   },
   fromAminoMsg(object: MsgBurnAminoMsg): MsgBurn {
@@ -816,8 +1129,8 @@ export const MsgBurn = {
   },
   toAminoMsg(message: MsgBurn): MsgBurnAminoMsg {
     return {
-      type: "symphony/tokenfactory/burn",
-      value: MsgBurn.toAmino(message)
+      type: 'symphony/tokenfactory/burn',
+      value: MsgBurn.toAmino(message),
     };
   },
   fromProtoMsg(message: MsgBurnProtoMsg): MsgBurn {
@@ -828,18 +1141,26 @@ export const MsgBurn = {
   },
   toProtoMsg(message: MsgBurn): MsgBurnProtoMsg {
     return {
-      typeUrl: "/symphony.tokenfactory.v1beta1.MsgBurn",
-      value: MsgBurn.encode(message).finish()
+      typeUrl: '/symphony.tokenfactory.v1beta1.MsgBurn',
+      value: MsgBurn.encode(message).finish(),
     };
-  }
+  },
 };
 GlobalDecoderRegistry.register(MsgBurn.typeUrl, MsgBurn);
-GlobalDecoderRegistry.registerAminoProtoMapping(MsgBurn.aminoType, MsgBurn.typeUrl);
+GlobalDecoderRegistry.registerAminoProtoMapping(
+  MsgBurn.aminoType,
+  MsgBurn.typeUrl,
+);
 function createBaseMsgBurnResponse(): MsgBurnResponse {
   return {};
 }
+/**
+ * @name MsgBurnResponse
+ * @package symphony.tokenfactory.v1beta1
+ * @see proto type: symphony.tokenfactory.v1beta1.MsgBurnResponse
+ */
 export const MsgBurnResponse = {
-  typeUrl: "/symphony.tokenfactory.v1beta1.MsgBurnResponse",
+  typeUrl: '/symphony.tokenfactory.v1beta1.MsgBurnResponse',
   is(o: any): o is MsgBurnResponse {
     return o && o.$typeUrl === MsgBurnResponse.typeUrl;
   },
@@ -849,11 +1170,15 @@ export const MsgBurnResponse = {
   isAmino(o: any): o is MsgBurnResponseAmino {
     return o && o.$typeUrl === MsgBurnResponse.typeUrl;
   },
-  encode(_: MsgBurnResponse, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
+  encode(
+    _: MsgBurnResponse,
+    writer: BinaryWriter = BinaryWriter.create(),
+  ): BinaryWriter {
     return writer;
   },
   decode(input: BinaryReader | Uint8Array, length?: number): MsgBurnResponse {
-    const reader = input instanceof BinaryReader ? input : new BinaryReader(input);
+    const reader =
+      input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseMsgBurnResponse();
     while (reader.pos < end) {
@@ -889,45 +1214,74 @@ export const MsgBurnResponse = {
   },
   toProtoMsg(message: MsgBurnResponse): MsgBurnResponseProtoMsg {
     return {
-      typeUrl: "/symphony.tokenfactory.v1beta1.MsgBurnResponse",
-      value: MsgBurnResponse.encode(message).finish()
+      typeUrl: '/symphony.tokenfactory.v1beta1.MsgBurnResponse',
+      value: MsgBurnResponse.encode(message).finish(),
     };
-  }
+  },
 };
 GlobalDecoderRegistry.register(MsgBurnResponse.typeUrl, MsgBurnResponse);
 function createBaseMsgChangeAdmin(): MsgChangeAdmin {
   return {
-    sender: "",
-    denom: "",
-    newAdmin: ""
+    sender: '',
+    denom: '',
+    newAdmin: '',
   };
 }
+/**
+ * MsgChangeAdmin is the sdk.Msg type for allowing an admin account to reassign
+ * adminship of a denom to a new account
+ * @name MsgChangeAdmin
+ * @package symphony.tokenfactory.v1beta1
+ * @see proto type: symphony.tokenfactory.v1beta1.MsgChangeAdmin
+ */
 export const MsgChangeAdmin = {
-  typeUrl: "/symphony.tokenfactory.v1beta1.MsgChangeAdmin",
-  aminoType: "symphony/tokenfactory/change-admin",
+  typeUrl: '/symphony.tokenfactory.v1beta1.MsgChangeAdmin',
+  aminoType: 'symphony/tokenfactory/change-admin',
   is(o: any): o is MsgChangeAdmin {
-    return o && (o.$typeUrl === MsgChangeAdmin.typeUrl || typeof o.sender === "string" && typeof o.denom === "string" && typeof o.newAdmin === "string");
+    return (
+      o &&
+      (o.$typeUrl === MsgChangeAdmin.typeUrl ||
+        (typeof o.sender === 'string' &&
+          typeof o.denom === 'string' &&
+          typeof o.newAdmin === 'string'))
+    );
   },
   isSDK(o: any): o is MsgChangeAdminSDKType {
-    return o && (o.$typeUrl === MsgChangeAdmin.typeUrl || typeof o.sender === "string" && typeof o.denom === "string" && typeof o.new_admin === "string");
+    return (
+      o &&
+      (o.$typeUrl === MsgChangeAdmin.typeUrl ||
+        (typeof o.sender === 'string' &&
+          typeof o.denom === 'string' &&
+          typeof o.new_admin === 'string'))
+    );
   },
   isAmino(o: any): o is MsgChangeAdminAmino {
-    return o && (o.$typeUrl === MsgChangeAdmin.typeUrl || typeof o.sender === "string" && typeof o.denom === "string" && typeof o.new_admin === "string");
+    return (
+      o &&
+      (o.$typeUrl === MsgChangeAdmin.typeUrl ||
+        (typeof o.sender === 'string' &&
+          typeof o.denom === 'string' &&
+          typeof o.new_admin === 'string'))
+    );
   },
-  encode(message: MsgChangeAdmin, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
-    if (message.sender !== "") {
+  encode(
+    message: MsgChangeAdmin,
+    writer: BinaryWriter = BinaryWriter.create(),
+  ): BinaryWriter {
+    if (message.sender !== '') {
       writer.uint32(10).string(message.sender);
     }
-    if (message.denom !== "") {
+    if (message.denom !== '') {
       writer.uint32(18).string(message.denom);
     }
-    if (message.newAdmin !== "") {
+    if (message.newAdmin !== '') {
       writer.uint32(26).string(message.newAdmin);
     }
     return writer;
   },
   decode(input: BinaryReader | Uint8Array, length?: number): MsgChangeAdmin {
-    const reader = input instanceof BinaryReader ? input : new BinaryReader(input);
+    const reader =
+      input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseMsgChangeAdmin();
     while (reader.pos < end) {
@@ -951,9 +1305,9 @@ export const MsgChangeAdmin = {
   },
   fromPartial(object: Partial<MsgChangeAdmin>): MsgChangeAdmin {
     const message = createBaseMsgChangeAdmin();
-    message.sender = object.sender ?? "";
-    message.denom = object.denom ?? "";
-    message.newAdmin = object.newAdmin ?? "";
+    message.sender = object.sender ?? '';
+    message.denom = object.denom ?? '';
+    message.newAdmin = object.newAdmin ?? '';
     return message;
   },
   fromAmino(object: MsgChangeAdminAmino): MsgChangeAdmin {
@@ -971,9 +1325,9 @@ export const MsgChangeAdmin = {
   },
   toAmino(message: MsgChangeAdmin): MsgChangeAdminAmino {
     const obj: any = {};
-    obj.sender = message.sender === "" ? undefined : message.sender;
-    obj.denom = message.denom === "" ? undefined : message.denom;
-    obj.new_admin = message.newAdmin === "" ? undefined : message.newAdmin;
+    obj.sender = message.sender === '' ? undefined : message.sender;
+    obj.denom = message.denom === '' ? undefined : message.denom;
+    obj.new_admin = message.newAdmin === '' ? undefined : message.newAdmin;
     return obj;
   },
   fromAminoMsg(object: MsgChangeAdminAminoMsg): MsgChangeAdmin {
@@ -981,8 +1335,8 @@ export const MsgChangeAdmin = {
   },
   toAminoMsg(message: MsgChangeAdmin): MsgChangeAdminAminoMsg {
     return {
-      type: "symphony/tokenfactory/change-admin",
-      value: MsgChangeAdmin.toAmino(message)
+      type: 'symphony/tokenfactory/change-admin',
+      value: MsgChangeAdmin.toAmino(message),
     };
   },
   fromProtoMsg(message: MsgChangeAdminProtoMsg): MsgChangeAdmin {
@@ -993,18 +1347,28 @@ export const MsgChangeAdmin = {
   },
   toProtoMsg(message: MsgChangeAdmin): MsgChangeAdminProtoMsg {
     return {
-      typeUrl: "/symphony.tokenfactory.v1beta1.MsgChangeAdmin",
-      value: MsgChangeAdmin.encode(message).finish()
+      typeUrl: '/symphony.tokenfactory.v1beta1.MsgChangeAdmin',
+      value: MsgChangeAdmin.encode(message).finish(),
     };
-  }
+  },
 };
 GlobalDecoderRegistry.register(MsgChangeAdmin.typeUrl, MsgChangeAdmin);
-GlobalDecoderRegistry.registerAminoProtoMapping(MsgChangeAdmin.aminoType, MsgChangeAdmin.typeUrl);
+GlobalDecoderRegistry.registerAminoProtoMapping(
+  MsgChangeAdmin.aminoType,
+  MsgChangeAdmin.typeUrl,
+);
 function createBaseMsgChangeAdminResponse(): MsgChangeAdminResponse {
   return {};
 }
+/**
+ * MsgChangeAdminResponse defines the response structure for an executed
+ * MsgChangeAdmin message.
+ * @name MsgChangeAdminResponse
+ * @package symphony.tokenfactory.v1beta1
+ * @see proto type: symphony.tokenfactory.v1beta1.MsgChangeAdminResponse
+ */
 export const MsgChangeAdminResponse = {
-  typeUrl: "/symphony.tokenfactory.v1beta1.MsgChangeAdminResponse",
+  typeUrl: '/symphony.tokenfactory.v1beta1.MsgChangeAdminResponse',
   is(o: any): o is MsgChangeAdminResponse {
     return o && o.$typeUrl === MsgChangeAdminResponse.typeUrl;
   },
@@ -1014,11 +1378,18 @@ export const MsgChangeAdminResponse = {
   isAmino(o: any): o is MsgChangeAdminResponseAmino {
     return o && o.$typeUrl === MsgChangeAdminResponse.typeUrl;
   },
-  encode(_: MsgChangeAdminResponse, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
+  encode(
+    _: MsgChangeAdminResponse,
+    writer: BinaryWriter = BinaryWriter.create(),
+  ): BinaryWriter {
     return writer;
   },
-  decode(input: BinaryReader | Uint8Array, length?: number): MsgChangeAdminResponse {
-    const reader = input instanceof BinaryReader ? input : new BinaryReader(input);
+  decode(
+    input: BinaryReader | Uint8Array,
+    length?: number,
+  ): MsgChangeAdminResponse {
+    const reader =
+      input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseMsgChangeAdminResponse();
     while (reader.pos < end) {
@@ -1046,7 +1417,9 @@ export const MsgChangeAdminResponse = {
   fromAminoMsg(object: MsgChangeAdminResponseAminoMsg): MsgChangeAdminResponse {
     return MsgChangeAdminResponse.fromAmino(object.value);
   },
-  fromProtoMsg(message: MsgChangeAdminResponseProtoMsg): MsgChangeAdminResponse {
+  fromProtoMsg(
+    message: MsgChangeAdminResponseProtoMsg,
+  ): MsgChangeAdminResponse {
     return MsgChangeAdminResponse.decode(message.value);
   },
   toProto(message: MsgChangeAdminResponse): Uint8Array {
@@ -1054,45 +1427,80 @@ export const MsgChangeAdminResponse = {
   },
   toProtoMsg(message: MsgChangeAdminResponse): MsgChangeAdminResponseProtoMsg {
     return {
-      typeUrl: "/symphony.tokenfactory.v1beta1.MsgChangeAdminResponse",
-      value: MsgChangeAdminResponse.encode(message).finish()
+      typeUrl: '/symphony.tokenfactory.v1beta1.MsgChangeAdminResponse',
+      value: MsgChangeAdminResponse.encode(message).finish(),
     };
-  }
+  },
 };
-GlobalDecoderRegistry.register(MsgChangeAdminResponse.typeUrl, MsgChangeAdminResponse);
+GlobalDecoderRegistry.register(
+  MsgChangeAdminResponse.typeUrl,
+  MsgChangeAdminResponse,
+);
 function createBaseMsgSetBeforeSendHook(): MsgSetBeforeSendHook {
   return {
-    sender: "",
-    denom: "",
-    cosmwasmAddress: ""
+    sender: '',
+    denom: '',
+    cosmwasmAddress: '',
   };
 }
+/**
+ * MsgSetBeforeSendHook is the sdk.Msg type for allowing an admin account to
+ * assign a CosmWasm contract to call with a BeforeSend hook
+ * @name MsgSetBeforeSendHook
+ * @package symphony.tokenfactory.v1beta1
+ * @see proto type: symphony.tokenfactory.v1beta1.MsgSetBeforeSendHook
+ */
 export const MsgSetBeforeSendHook = {
-  typeUrl: "/symphony.tokenfactory.v1beta1.MsgSetBeforeSendHook",
-  aminoType: "symphony/tokenfactory/set-bef-send-hook",
+  typeUrl: '/symphony.tokenfactory.v1beta1.MsgSetBeforeSendHook',
+  aminoType: 'symphony/tokenfactory/set-bef-send-hook',
   is(o: any): o is MsgSetBeforeSendHook {
-    return o && (o.$typeUrl === MsgSetBeforeSendHook.typeUrl || typeof o.sender === "string" && typeof o.denom === "string" && typeof o.cosmwasmAddress === "string");
+    return (
+      o &&
+      (o.$typeUrl === MsgSetBeforeSendHook.typeUrl ||
+        (typeof o.sender === 'string' &&
+          typeof o.denom === 'string' &&
+          typeof o.cosmwasmAddress === 'string'))
+    );
   },
   isSDK(o: any): o is MsgSetBeforeSendHookSDKType {
-    return o && (o.$typeUrl === MsgSetBeforeSendHook.typeUrl || typeof o.sender === "string" && typeof o.denom === "string" && typeof o.cosmwasm_address === "string");
+    return (
+      o &&
+      (o.$typeUrl === MsgSetBeforeSendHook.typeUrl ||
+        (typeof o.sender === 'string' &&
+          typeof o.denom === 'string' &&
+          typeof o.cosmwasm_address === 'string'))
+    );
   },
   isAmino(o: any): o is MsgSetBeforeSendHookAmino {
-    return o && (o.$typeUrl === MsgSetBeforeSendHook.typeUrl || typeof o.sender === "string" && typeof o.denom === "string" && typeof o.cosmwasm_address === "string");
+    return (
+      o &&
+      (o.$typeUrl === MsgSetBeforeSendHook.typeUrl ||
+        (typeof o.sender === 'string' &&
+          typeof o.denom === 'string' &&
+          typeof o.cosmwasm_address === 'string'))
+    );
   },
-  encode(message: MsgSetBeforeSendHook, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
-    if (message.sender !== "") {
+  encode(
+    message: MsgSetBeforeSendHook,
+    writer: BinaryWriter = BinaryWriter.create(),
+  ): BinaryWriter {
+    if (message.sender !== '') {
       writer.uint32(10).string(message.sender);
     }
-    if (message.denom !== "") {
+    if (message.denom !== '') {
       writer.uint32(18).string(message.denom);
     }
-    if (message.cosmwasmAddress !== "") {
+    if (message.cosmwasmAddress !== '') {
       writer.uint32(26).string(message.cosmwasmAddress);
     }
     return writer;
   },
-  decode(input: BinaryReader | Uint8Array, length?: number): MsgSetBeforeSendHook {
-    const reader = input instanceof BinaryReader ? input : new BinaryReader(input);
+  decode(
+    input: BinaryReader | Uint8Array,
+    length?: number,
+  ): MsgSetBeforeSendHook {
+    const reader =
+      input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseMsgSetBeforeSendHook();
     while (reader.pos < end) {
@@ -1116,9 +1524,9 @@ export const MsgSetBeforeSendHook = {
   },
   fromPartial(object: Partial<MsgSetBeforeSendHook>): MsgSetBeforeSendHook {
     const message = createBaseMsgSetBeforeSendHook();
-    message.sender = object.sender ?? "";
-    message.denom = object.denom ?? "";
-    message.cosmwasmAddress = object.cosmwasmAddress ?? "";
+    message.sender = object.sender ?? '';
+    message.denom = object.denom ?? '';
+    message.cosmwasmAddress = object.cosmwasmAddress ?? '';
     return message;
   },
   fromAmino(object: MsgSetBeforeSendHookAmino): MsgSetBeforeSendHook {
@@ -1129,16 +1537,19 @@ export const MsgSetBeforeSendHook = {
     if (object.denom !== undefined && object.denom !== null) {
       message.denom = object.denom;
     }
-    if (object.cosmwasm_address !== undefined && object.cosmwasm_address !== null) {
+    if (
+      object.cosmwasm_address !== undefined &&
+      object.cosmwasm_address !== null
+    ) {
       message.cosmwasmAddress = object.cosmwasm_address;
     }
     return message;
   },
   toAmino(message: MsgSetBeforeSendHook): MsgSetBeforeSendHookAmino {
     const obj: any = {};
-    obj.sender = message.sender === "" ? undefined : message.sender;
-    obj.denom = message.denom === "" ? undefined : message.denom;
-    obj.cosmwasm_address = message.cosmwasmAddress ?? "";
+    obj.sender = message.sender === '' ? undefined : message.sender;
+    obj.denom = message.denom === '' ? undefined : message.denom;
+    obj.cosmwasm_address = message.cosmwasmAddress ?? '';
     return obj;
   },
   fromAminoMsg(object: MsgSetBeforeSendHookAminoMsg): MsgSetBeforeSendHook {
@@ -1146,8 +1557,8 @@ export const MsgSetBeforeSendHook = {
   },
   toAminoMsg(message: MsgSetBeforeSendHook): MsgSetBeforeSendHookAminoMsg {
     return {
-      type: "symphony/tokenfactory/set-bef-send-hook",
-      value: MsgSetBeforeSendHook.toAmino(message)
+      type: 'symphony/tokenfactory/set-bef-send-hook',
+      value: MsgSetBeforeSendHook.toAmino(message),
     };
   },
   fromProtoMsg(message: MsgSetBeforeSendHookProtoMsg): MsgSetBeforeSendHook {
@@ -1158,18 +1569,31 @@ export const MsgSetBeforeSendHook = {
   },
   toProtoMsg(message: MsgSetBeforeSendHook): MsgSetBeforeSendHookProtoMsg {
     return {
-      typeUrl: "/symphony.tokenfactory.v1beta1.MsgSetBeforeSendHook",
-      value: MsgSetBeforeSendHook.encode(message).finish()
+      typeUrl: '/symphony.tokenfactory.v1beta1.MsgSetBeforeSendHook',
+      value: MsgSetBeforeSendHook.encode(message).finish(),
     };
-  }
+  },
 };
-GlobalDecoderRegistry.register(MsgSetBeforeSendHook.typeUrl, MsgSetBeforeSendHook);
-GlobalDecoderRegistry.registerAminoProtoMapping(MsgSetBeforeSendHook.aminoType, MsgSetBeforeSendHook.typeUrl);
+GlobalDecoderRegistry.register(
+  MsgSetBeforeSendHook.typeUrl,
+  MsgSetBeforeSendHook,
+);
+GlobalDecoderRegistry.registerAminoProtoMapping(
+  MsgSetBeforeSendHook.aminoType,
+  MsgSetBeforeSendHook.typeUrl,
+);
 function createBaseMsgSetBeforeSendHookResponse(): MsgSetBeforeSendHookResponse {
   return {};
 }
+/**
+ * MsgSetBeforeSendHookResponse defines the response structure for an executed
+ * MsgSetBeforeSendHook message.
+ * @name MsgSetBeforeSendHookResponse
+ * @package symphony.tokenfactory.v1beta1
+ * @see proto type: symphony.tokenfactory.v1beta1.MsgSetBeforeSendHookResponse
+ */
 export const MsgSetBeforeSendHookResponse = {
-  typeUrl: "/symphony.tokenfactory.v1beta1.MsgSetBeforeSendHookResponse",
+  typeUrl: '/symphony.tokenfactory.v1beta1.MsgSetBeforeSendHookResponse',
   is(o: any): o is MsgSetBeforeSendHookResponse {
     return o && o.$typeUrl === MsgSetBeforeSendHookResponse.typeUrl;
   },
@@ -1179,11 +1603,18 @@ export const MsgSetBeforeSendHookResponse = {
   isAmino(o: any): o is MsgSetBeforeSendHookResponseAmino {
     return o && o.$typeUrl === MsgSetBeforeSendHookResponse.typeUrl;
   },
-  encode(_: MsgSetBeforeSendHookResponse, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
+  encode(
+    _: MsgSetBeforeSendHookResponse,
+    writer: BinaryWriter = BinaryWriter.create(),
+  ): BinaryWriter {
     return writer;
   },
-  decode(input: BinaryReader | Uint8Array, length?: number): MsgSetBeforeSendHookResponse {
-    const reader = input instanceof BinaryReader ? input : new BinaryReader(input);
+  decode(
+    input: BinaryReader | Uint8Array,
+    length?: number,
+  ): MsgSetBeforeSendHookResponse {
+    const reader =
+      input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseMsgSetBeforeSendHookResponse();
     while (reader.pos < end) {
@@ -1196,11 +1627,15 @@ export const MsgSetBeforeSendHookResponse = {
     }
     return message;
   },
-  fromPartial(_: Partial<MsgSetBeforeSendHookResponse>): MsgSetBeforeSendHookResponse {
+  fromPartial(
+    _: Partial<MsgSetBeforeSendHookResponse>,
+  ): MsgSetBeforeSendHookResponse {
     const message = createBaseMsgSetBeforeSendHookResponse();
     return message;
   },
-  fromAmino(_: MsgSetBeforeSendHookResponseAmino): MsgSetBeforeSendHookResponse {
+  fromAmino(
+    _: MsgSetBeforeSendHookResponseAmino,
+  ): MsgSetBeforeSendHookResponse {
     const message = createBaseMsgSetBeforeSendHookResponse();
     return message;
   },
@@ -1208,43 +1643,74 @@ export const MsgSetBeforeSendHookResponse = {
     const obj: any = {};
     return obj;
   },
-  fromAminoMsg(object: MsgSetBeforeSendHookResponseAminoMsg): MsgSetBeforeSendHookResponse {
+  fromAminoMsg(
+    object: MsgSetBeforeSendHookResponseAminoMsg,
+  ): MsgSetBeforeSendHookResponse {
     return MsgSetBeforeSendHookResponse.fromAmino(object.value);
   },
-  fromProtoMsg(message: MsgSetBeforeSendHookResponseProtoMsg): MsgSetBeforeSendHookResponse {
+  fromProtoMsg(
+    message: MsgSetBeforeSendHookResponseProtoMsg,
+  ): MsgSetBeforeSendHookResponse {
     return MsgSetBeforeSendHookResponse.decode(message.value);
   },
   toProto(message: MsgSetBeforeSendHookResponse): Uint8Array {
     return MsgSetBeforeSendHookResponse.encode(message).finish();
   },
-  toProtoMsg(message: MsgSetBeforeSendHookResponse): MsgSetBeforeSendHookResponseProtoMsg {
+  toProtoMsg(
+    message: MsgSetBeforeSendHookResponse,
+  ): MsgSetBeforeSendHookResponseProtoMsg {
     return {
-      typeUrl: "/symphony.tokenfactory.v1beta1.MsgSetBeforeSendHookResponse",
-      value: MsgSetBeforeSendHookResponse.encode(message).finish()
+      typeUrl: '/symphony.tokenfactory.v1beta1.MsgSetBeforeSendHookResponse',
+      value: MsgSetBeforeSendHookResponse.encode(message).finish(),
     };
-  }
+  },
 };
-GlobalDecoderRegistry.register(MsgSetBeforeSendHookResponse.typeUrl, MsgSetBeforeSendHookResponse);
+GlobalDecoderRegistry.register(
+  MsgSetBeforeSendHookResponse.typeUrl,
+  MsgSetBeforeSendHookResponse,
+);
 function createBaseMsgSetDenomMetadata(): MsgSetDenomMetadata {
   return {
-    sender: "",
-    metadata: Metadata.fromPartial({})
+    sender: '',
+    metadata: Metadata.fromPartial({}),
   };
 }
+/**
+ * MsgSetDenomMetadata is the sdk.Msg type for allowing an admin account to set
+ * the denom's bank metadata
+ * @name MsgSetDenomMetadata
+ * @package symphony.tokenfactory.v1beta1
+ * @see proto type: symphony.tokenfactory.v1beta1.MsgSetDenomMetadata
+ */
 export const MsgSetDenomMetadata = {
-  typeUrl: "/symphony.tokenfactory.v1beta1.MsgSetDenomMetadata",
-  aminoType: "symphony/tokenfactory/set-denom-metadata",
+  typeUrl: '/symphony.tokenfactory.v1beta1.MsgSetDenomMetadata',
+  aminoType: 'symphony/tokenfactory/set-denom-metadata',
   is(o: any): o is MsgSetDenomMetadata {
-    return o && (o.$typeUrl === MsgSetDenomMetadata.typeUrl || typeof o.sender === "string" && Metadata.is(o.metadata));
+    return (
+      o &&
+      (o.$typeUrl === MsgSetDenomMetadata.typeUrl ||
+        (typeof o.sender === 'string' && Metadata.is(o.metadata)))
+    );
   },
   isSDK(o: any): o is MsgSetDenomMetadataSDKType {
-    return o && (o.$typeUrl === MsgSetDenomMetadata.typeUrl || typeof o.sender === "string" && Metadata.isSDK(o.metadata));
+    return (
+      o &&
+      (o.$typeUrl === MsgSetDenomMetadata.typeUrl ||
+        (typeof o.sender === 'string' && Metadata.isSDK(o.metadata)))
+    );
   },
   isAmino(o: any): o is MsgSetDenomMetadataAmino {
-    return o && (o.$typeUrl === MsgSetDenomMetadata.typeUrl || typeof o.sender === "string" && Metadata.isAmino(o.metadata));
+    return (
+      o &&
+      (o.$typeUrl === MsgSetDenomMetadata.typeUrl ||
+        (typeof o.sender === 'string' && Metadata.isAmino(o.metadata)))
+    );
   },
-  encode(message: MsgSetDenomMetadata, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
-    if (message.sender !== "") {
+  encode(
+    message: MsgSetDenomMetadata,
+    writer: BinaryWriter = BinaryWriter.create(),
+  ): BinaryWriter {
+    if (message.sender !== '') {
       writer.uint32(10).string(message.sender);
     }
     if (message.metadata !== undefined) {
@@ -1252,8 +1718,12 @@ export const MsgSetDenomMetadata = {
     }
     return writer;
   },
-  decode(input: BinaryReader | Uint8Array, length?: number): MsgSetDenomMetadata {
-    const reader = input instanceof BinaryReader ? input : new BinaryReader(input);
+  decode(
+    input: BinaryReader | Uint8Array,
+    length?: number,
+  ): MsgSetDenomMetadata {
+    const reader =
+      input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseMsgSetDenomMetadata();
     while (reader.pos < end) {
@@ -1274,8 +1744,11 @@ export const MsgSetDenomMetadata = {
   },
   fromPartial(object: Partial<MsgSetDenomMetadata>): MsgSetDenomMetadata {
     const message = createBaseMsgSetDenomMetadata();
-    message.sender = object.sender ?? "";
-    message.metadata = object.metadata !== undefined && object.metadata !== null ? Metadata.fromPartial(object.metadata) : undefined;
+    message.sender = object.sender ?? '';
+    message.metadata =
+      object.metadata !== undefined && object.metadata !== null
+        ? Metadata.fromPartial(object.metadata)
+        : undefined;
     return message;
   },
   fromAmino(object: MsgSetDenomMetadataAmino): MsgSetDenomMetadata {
@@ -1290,8 +1763,10 @@ export const MsgSetDenomMetadata = {
   },
   toAmino(message: MsgSetDenomMetadata): MsgSetDenomMetadataAmino {
     const obj: any = {};
-    obj.sender = message.sender === "" ? undefined : message.sender;
-    obj.metadata = message.metadata ? Metadata.toAmino(message.metadata) : undefined;
+    obj.sender = message.sender === '' ? undefined : message.sender;
+    obj.metadata = message.metadata
+      ? Metadata.toAmino(message.metadata)
+      : undefined;
     return obj;
   },
   fromAminoMsg(object: MsgSetDenomMetadataAminoMsg): MsgSetDenomMetadata {
@@ -1299,8 +1774,8 @@ export const MsgSetDenomMetadata = {
   },
   toAminoMsg(message: MsgSetDenomMetadata): MsgSetDenomMetadataAminoMsg {
     return {
-      type: "symphony/tokenfactory/set-denom-metadata",
-      value: MsgSetDenomMetadata.toAmino(message)
+      type: 'symphony/tokenfactory/set-denom-metadata',
+      value: MsgSetDenomMetadata.toAmino(message),
     };
   },
   fromProtoMsg(message: MsgSetDenomMetadataProtoMsg): MsgSetDenomMetadata {
@@ -1311,18 +1786,31 @@ export const MsgSetDenomMetadata = {
   },
   toProtoMsg(message: MsgSetDenomMetadata): MsgSetDenomMetadataProtoMsg {
     return {
-      typeUrl: "/symphony.tokenfactory.v1beta1.MsgSetDenomMetadata",
-      value: MsgSetDenomMetadata.encode(message).finish()
+      typeUrl: '/symphony.tokenfactory.v1beta1.MsgSetDenomMetadata',
+      value: MsgSetDenomMetadata.encode(message).finish(),
     };
-  }
+  },
 };
-GlobalDecoderRegistry.register(MsgSetDenomMetadata.typeUrl, MsgSetDenomMetadata);
-GlobalDecoderRegistry.registerAminoProtoMapping(MsgSetDenomMetadata.aminoType, MsgSetDenomMetadata.typeUrl);
+GlobalDecoderRegistry.register(
+  MsgSetDenomMetadata.typeUrl,
+  MsgSetDenomMetadata,
+);
+GlobalDecoderRegistry.registerAminoProtoMapping(
+  MsgSetDenomMetadata.aminoType,
+  MsgSetDenomMetadata.typeUrl,
+);
 function createBaseMsgSetDenomMetadataResponse(): MsgSetDenomMetadataResponse {
   return {};
 }
+/**
+ * MsgSetDenomMetadataResponse defines the response structure for an executed
+ * MsgSetDenomMetadata message.
+ * @name MsgSetDenomMetadataResponse
+ * @package symphony.tokenfactory.v1beta1
+ * @see proto type: symphony.tokenfactory.v1beta1.MsgSetDenomMetadataResponse
+ */
 export const MsgSetDenomMetadataResponse = {
-  typeUrl: "/symphony.tokenfactory.v1beta1.MsgSetDenomMetadataResponse",
+  typeUrl: '/symphony.tokenfactory.v1beta1.MsgSetDenomMetadataResponse',
   is(o: any): o is MsgSetDenomMetadataResponse {
     return o && o.$typeUrl === MsgSetDenomMetadataResponse.typeUrl;
   },
@@ -1332,11 +1820,18 @@ export const MsgSetDenomMetadataResponse = {
   isAmino(o: any): o is MsgSetDenomMetadataResponseAmino {
     return o && o.$typeUrl === MsgSetDenomMetadataResponse.typeUrl;
   },
-  encode(_: MsgSetDenomMetadataResponse, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
+  encode(
+    _: MsgSetDenomMetadataResponse,
+    writer: BinaryWriter = BinaryWriter.create(),
+  ): BinaryWriter {
     return writer;
   },
-  decode(input: BinaryReader | Uint8Array, length?: number): MsgSetDenomMetadataResponse {
-    const reader = input instanceof BinaryReader ? input : new BinaryReader(input);
+  decode(
+    input: BinaryReader | Uint8Array,
+    length?: number,
+  ): MsgSetDenomMetadataResponse {
+    const reader =
+      input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseMsgSetDenomMetadataResponse();
     while (reader.pos < end) {
@@ -1349,7 +1844,9 @@ export const MsgSetDenomMetadataResponse = {
     }
     return message;
   },
-  fromPartial(_: Partial<MsgSetDenomMetadataResponse>): MsgSetDenomMetadataResponse {
+  fromPartial(
+    _: Partial<MsgSetDenomMetadataResponse>,
+  ): MsgSetDenomMetadataResponse {
     const message = createBaseMsgSetDenomMetadataResponse();
     return message;
   },
@@ -1361,60 +1858,99 @@ export const MsgSetDenomMetadataResponse = {
     const obj: any = {};
     return obj;
   },
-  fromAminoMsg(object: MsgSetDenomMetadataResponseAminoMsg): MsgSetDenomMetadataResponse {
+  fromAminoMsg(
+    object: MsgSetDenomMetadataResponseAminoMsg,
+  ): MsgSetDenomMetadataResponse {
     return MsgSetDenomMetadataResponse.fromAmino(object.value);
   },
-  fromProtoMsg(message: MsgSetDenomMetadataResponseProtoMsg): MsgSetDenomMetadataResponse {
+  fromProtoMsg(
+    message: MsgSetDenomMetadataResponseProtoMsg,
+  ): MsgSetDenomMetadataResponse {
     return MsgSetDenomMetadataResponse.decode(message.value);
   },
   toProto(message: MsgSetDenomMetadataResponse): Uint8Array {
     return MsgSetDenomMetadataResponse.encode(message).finish();
   },
-  toProtoMsg(message: MsgSetDenomMetadataResponse): MsgSetDenomMetadataResponseProtoMsg {
+  toProtoMsg(
+    message: MsgSetDenomMetadataResponse,
+  ): MsgSetDenomMetadataResponseProtoMsg {
     return {
-      typeUrl: "/symphony.tokenfactory.v1beta1.MsgSetDenomMetadataResponse",
-      value: MsgSetDenomMetadataResponse.encode(message).finish()
+      typeUrl: '/symphony.tokenfactory.v1beta1.MsgSetDenomMetadataResponse',
+      value: MsgSetDenomMetadataResponse.encode(message).finish(),
     };
-  }
+  },
 };
-GlobalDecoderRegistry.register(MsgSetDenomMetadataResponse.typeUrl, MsgSetDenomMetadataResponse);
+GlobalDecoderRegistry.register(
+  MsgSetDenomMetadataResponse.typeUrl,
+  MsgSetDenomMetadataResponse,
+);
 function createBaseMsgForceTransfer(): MsgForceTransfer {
   return {
-    sender: "",
+    sender: '',
     amount: Coin.fromPartial({}),
-    transferFromAddress: "",
-    transferToAddress: ""
+    transferFromAddress: '',
+    transferToAddress: '',
   };
 }
+/**
+ * @name MsgForceTransfer
+ * @package symphony.tokenfactory.v1beta1
+ * @see proto type: symphony.tokenfactory.v1beta1.MsgForceTransfer
+ */
 export const MsgForceTransfer = {
-  typeUrl: "/symphony.tokenfactory.v1beta1.MsgForceTransfer",
-  aminoType: "symphony/tokenfactory/force-transfer",
+  typeUrl: '/symphony.tokenfactory.v1beta1.MsgForceTransfer',
+  aminoType: 'symphony/tokenfactory/force-transfer',
   is(o: any): o is MsgForceTransfer {
-    return o && (o.$typeUrl === MsgForceTransfer.typeUrl || typeof o.sender === "string" && Coin.is(o.amount) && typeof o.transferFromAddress === "string" && typeof o.transferToAddress === "string");
+    return (
+      o &&
+      (o.$typeUrl === MsgForceTransfer.typeUrl ||
+        (typeof o.sender === 'string' &&
+          Coin.is(o.amount) &&
+          typeof o.transferFromAddress === 'string' &&
+          typeof o.transferToAddress === 'string'))
+    );
   },
   isSDK(o: any): o is MsgForceTransferSDKType {
-    return o && (o.$typeUrl === MsgForceTransfer.typeUrl || typeof o.sender === "string" && Coin.isSDK(o.amount) && typeof o.transferFromAddress === "string" && typeof o.transferToAddress === "string");
+    return (
+      o &&
+      (o.$typeUrl === MsgForceTransfer.typeUrl ||
+        (typeof o.sender === 'string' &&
+          Coin.isSDK(o.amount) &&
+          typeof o.transferFromAddress === 'string' &&
+          typeof o.transferToAddress === 'string'))
+    );
   },
   isAmino(o: any): o is MsgForceTransferAmino {
-    return o && (o.$typeUrl === MsgForceTransfer.typeUrl || typeof o.sender === "string" && Coin.isAmino(o.amount) && typeof o.transferFromAddress === "string" && typeof o.transferToAddress === "string");
+    return (
+      o &&
+      (o.$typeUrl === MsgForceTransfer.typeUrl ||
+        (typeof o.sender === 'string' &&
+          Coin.isAmino(o.amount) &&
+          typeof o.transferFromAddress === 'string' &&
+          typeof o.transferToAddress === 'string'))
+    );
   },
-  encode(message: MsgForceTransfer, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
-    if (message.sender !== "") {
+  encode(
+    message: MsgForceTransfer,
+    writer: BinaryWriter = BinaryWriter.create(),
+  ): BinaryWriter {
+    if (message.sender !== '') {
       writer.uint32(10).string(message.sender);
     }
     if (message.amount !== undefined) {
       Coin.encode(message.amount, writer.uint32(18).fork()).ldelim();
     }
-    if (message.transferFromAddress !== "") {
+    if (message.transferFromAddress !== '') {
       writer.uint32(26).string(message.transferFromAddress);
     }
-    if (message.transferToAddress !== "") {
+    if (message.transferToAddress !== '') {
       writer.uint32(34).string(message.transferToAddress);
     }
     return writer;
   },
   decode(input: BinaryReader | Uint8Array, length?: number): MsgForceTransfer {
-    const reader = input instanceof BinaryReader ? input : new BinaryReader(input);
+    const reader =
+      input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseMsgForceTransfer();
     while (reader.pos < end) {
@@ -1441,10 +1977,13 @@ export const MsgForceTransfer = {
   },
   fromPartial(object: Partial<MsgForceTransfer>): MsgForceTransfer {
     const message = createBaseMsgForceTransfer();
-    message.sender = object.sender ?? "";
-    message.amount = object.amount !== undefined && object.amount !== null ? Coin.fromPartial(object.amount) : undefined;
-    message.transferFromAddress = object.transferFromAddress ?? "";
-    message.transferToAddress = object.transferToAddress ?? "";
+    message.sender = object.sender ?? '';
+    message.amount =
+      object.amount !== undefined && object.amount !== null
+        ? Coin.fromPartial(object.amount)
+        : undefined;
+    message.transferFromAddress = object.transferFromAddress ?? '';
+    message.transferToAddress = object.transferToAddress ?? '';
     return message;
   },
   fromAmino(object: MsgForceTransferAmino): MsgForceTransfer {
@@ -1455,20 +1994,30 @@ export const MsgForceTransfer = {
     if (object.amount !== undefined && object.amount !== null) {
       message.amount = Coin.fromAmino(object.amount);
     }
-    if (object.transferFromAddress !== undefined && object.transferFromAddress !== null) {
+    if (
+      object.transferFromAddress !== undefined &&
+      object.transferFromAddress !== null
+    ) {
       message.transferFromAddress = object.transferFromAddress;
     }
-    if (object.transferToAddress !== undefined && object.transferToAddress !== null) {
+    if (
+      object.transferToAddress !== undefined &&
+      object.transferToAddress !== null
+    ) {
       message.transferToAddress = object.transferToAddress;
     }
     return message;
   },
   toAmino(message: MsgForceTransfer): MsgForceTransferAmino {
     const obj: any = {};
-    obj.sender = message.sender === "" ? undefined : message.sender;
+    obj.sender = message.sender === '' ? undefined : message.sender;
     obj.amount = message.amount ? Coin.toAmino(message.amount) : undefined;
-    obj.transferFromAddress = message.transferFromAddress === "" ? undefined : message.transferFromAddress;
-    obj.transferToAddress = message.transferToAddress === "" ? undefined : message.transferToAddress;
+    obj.transferFromAddress =
+      message.transferFromAddress === ''
+        ? undefined
+        : message.transferFromAddress;
+    obj.transferToAddress =
+      message.transferToAddress === '' ? undefined : message.transferToAddress;
     return obj;
   },
   fromAminoMsg(object: MsgForceTransferAminoMsg): MsgForceTransfer {
@@ -1476,8 +2025,8 @@ export const MsgForceTransfer = {
   },
   toAminoMsg(message: MsgForceTransfer): MsgForceTransferAminoMsg {
     return {
-      type: "symphony/tokenfactory/force-transfer",
-      value: MsgForceTransfer.toAmino(message)
+      type: 'symphony/tokenfactory/force-transfer',
+      value: MsgForceTransfer.toAmino(message),
     };
   },
   fromProtoMsg(message: MsgForceTransferProtoMsg): MsgForceTransfer {
@@ -1488,18 +2037,26 @@ export const MsgForceTransfer = {
   },
   toProtoMsg(message: MsgForceTransfer): MsgForceTransferProtoMsg {
     return {
-      typeUrl: "/symphony.tokenfactory.v1beta1.MsgForceTransfer",
-      value: MsgForceTransfer.encode(message).finish()
+      typeUrl: '/symphony.tokenfactory.v1beta1.MsgForceTransfer',
+      value: MsgForceTransfer.encode(message).finish(),
     };
-  }
+  },
 };
 GlobalDecoderRegistry.register(MsgForceTransfer.typeUrl, MsgForceTransfer);
-GlobalDecoderRegistry.registerAminoProtoMapping(MsgForceTransfer.aminoType, MsgForceTransfer.typeUrl);
+GlobalDecoderRegistry.registerAminoProtoMapping(
+  MsgForceTransfer.aminoType,
+  MsgForceTransfer.typeUrl,
+);
 function createBaseMsgForceTransferResponse(): MsgForceTransferResponse {
   return {};
 }
+/**
+ * @name MsgForceTransferResponse
+ * @package symphony.tokenfactory.v1beta1
+ * @see proto type: symphony.tokenfactory.v1beta1.MsgForceTransferResponse
+ */
 export const MsgForceTransferResponse = {
-  typeUrl: "/symphony.tokenfactory.v1beta1.MsgForceTransferResponse",
+  typeUrl: '/symphony.tokenfactory.v1beta1.MsgForceTransferResponse',
   is(o: any): o is MsgForceTransferResponse {
     return o && o.$typeUrl === MsgForceTransferResponse.typeUrl;
   },
@@ -1509,11 +2066,18 @@ export const MsgForceTransferResponse = {
   isAmino(o: any): o is MsgForceTransferResponseAmino {
     return o && o.$typeUrl === MsgForceTransferResponse.typeUrl;
   },
-  encode(_: MsgForceTransferResponse, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
+  encode(
+    _: MsgForceTransferResponse,
+    writer: BinaryWriter = BinaryWriter.create(),
+  ): BinaryWriter {
     return writer;
   },
-  decode(input: BinaryReader | Uint8Array, length?: number): MsgForceTransferResponse {
-    const reader = input instanceof BinaryReader ? input : new BinaryReader(input);
+  decode(
+    input: BinaryReader | Uint8Array,
+    length?: number,
+  ): MsgForceTransferResponse {
+    const reader =
+      input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseMsgForceTransferResponse();
     while (reader.pos < end) {
@@ -1538,20 +2102,29 @@ export const MsgForceTransferResponse = {
     const obj: any = {};
     return obj;
   },
-  fromAminoMsg(object: MsgForceTransferResponseAminoMsg): MsgForceTransferResponse {
+  fromAminoMsg(
+    object: MsgForceTransferResponseAminoMsg,
+  ): MsgForceTransferResponse {
     return MsgForceTransferResponse.fromAmino(object.value);
   },
-  fromProtoMsg(message: MsgForceTransferResponseProtoMsg): MsgForceTransferResponse {
+  fromProtoMsg(
+    message: MsgForceTransferResponseProtoMsg,
+  ): MsgForceTransferResponse {
     return MsgForceTransferResponse.decode(message.value);
   },
   toProto(message: MsgForceTransferResponse): Uint8Array {
     return MsgForceTransferResponse.encode(message).finish();
   },
-  toProtoMsg(message: MsgForceTransferResponse): MsgForceTransferResponseProtoMsg {
+  toProtoMsg(
+    message: MsgForceTransferResponse,
+  ): MsgForceTransferResponseProtoMsg {
     return {
-      typeUrl: "/symphony.tokenfactory.v1beta1.MsgForceTransferResponse",
-      value: MsgForceTransferResponse.encode(message).finish()
+      typeUrl: '/symphony.tokenfactory.v1beta1.MsgForceTransferResponse',
+      value: MsgForceTransferResponse.encode(message).finish(),
     };
-  }
+  },
 };
-GlobalDecoderRegistry.register(MsgForceTransferResponse.typeUrl, MsgForceTransferResponse);
+GlobalDecoderRegistry.register(
+  MsgForceTransferResponse.typeUrl,
+  MsgForceTransferResponse,
+);

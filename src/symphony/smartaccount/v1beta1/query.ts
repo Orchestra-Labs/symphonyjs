@@ -1,132 +1,236 @@
 //@ts-nocheck
-import { Params, ParamsAmino, ParamsSDKType } from "./params";
-import { AccountAuthenticator, AccountAuthenticatorAmino, AccountAuthenticatorSDKType } from "./models";
-import { BinaryReader, BinaryWriter } from "../../../binary";
-import { GlobalDecoderRegistry } from "../../../registry";
-/** QueryParamsRequest is request type for the Query/Params RPC method. */
+import { Params, ParamsAmino, ParamsSDKType } from './params';
+import {
+  AccountAuthenticator,
+  AccountAuthenticatorAmino,
+  AccountAuthenticatorSDKType,
+} from './models';
+import { BinaryReader, BinaryWriter } from '../../../binary';
+import { GlobalDecoderRegistry } from '../../../registry';
+/**
+ * QueryParamsRequest is request type for the Query/Params RPC method.
+ * @name QueryParamsRequest
+ * @package symphony.smartaccount.v1beta1
+ * @see proto type: symphony.smartaccount.v1beta1.QueryParamsRequest
+ */
 export interface QueryParamsRequest {}
 export interface QueryParamsRequestProtoMsg {
-  typeUrl: "/symphony.smartaccount.v1beta1.QueryParamsRequest";
+  typeUrl: '/symphony.smartaccount.v1beta1.QueryParamsRequest';
   value: Uint8Array;
 }
-/** QueryParamsRequest is request type for the Query/Params RPC method. */
+/**
+ * QueryParamsRequest is request type for the Query/Params RPC method.
+ * @name QueryParamsRequestAmino
+ * @package symphony.smartaccount.v1beta1
+ * @see proto type: symphony.smartaccount.v1beta1.QueryParamsRequest
+ */
 export interface QueryParamsRequestAmino {}
 export interface QueryParamsRequestAminoMsg {
-  type: "/symphony.smartaccount.v1beta1.QueryParamsRequest";
+  type: '/symphony.smartaccount.v1beta1.QueryParamsRequest';
   value: QueryParamsRequestAmino;
 }
-/** QueryParamsRequest is request type for the Query/Params RPC method. */
+/**
+ * QueryParamsRequest is request type for the Query/Params RPC method.
+ * @name QueryParamsRequestSDKType
+ * @package symphony.smartaccount.v1beta1
+ * @see proto type: symphony.smartaccount.v1beta1.QueryParamsRequest
+ */
 export interface QueryParamsRequestSDKType {}
-/** QueryParamsResponse is response type for the Query/Params RPC method. */
+/**
+ * QueryParamsResponse is response type for the Query/Params RPC method.
+ * @name QueryParamsResponse
+ * @package symphony.smartaccount.v1beta1
+ * @see proto type: symphony.smartaccount.v1beta1.QueryParamsResponse
+ */
 export interface QueryParamsResponse {
-  /** params holds all the parameters of this module. */
+  /**
+   * params holds all the parameters of this module.
+   */
   params: Params;
 }
 export interface QueryParamsResponseProtoMsg {
-  typeUrl: "/symphony.smartaccount.v1beta1.QueryParamsResponse";
+  typeUrl: '/symphony.smartaccount.v1beta1.QueryParamsResponse';
   value: Uint8Array;
 }
-/** QueryParamsResponse is response type for the Query/Params RPC method. */
+/**
+ * QueryParamsResponse is response type for the Query/Params RPC method.
+ * @name QueryParamsResponseAmino
+ * @package symphony.smartaccount.v1beta1
+ * @see proto type: symphony.smartaccount.v1beta1.QueryParamsResponse
+ */
 export interface QueryParamsResponseAmino {
-  /** params holds all the parameters of this module. */
+  /**
+   * params holds all the parameters of this module.
+   */
   params?: ParamsAmino;
 }
 export interface QueryParamsResponseAminoMsg {
-  type: "/symphony.smartaccount.v1beta1.QueryParamsResponse";
+  type: '/symphony.smartaccount.v1beta1.QueryParamsResponse';
   value: QueryParamsResponseAmino;
 }
-/** QueryParamsResponse is response type for the Query/Params RPC method. */
+/**
+ * QueryParamsResponse is response type for the Query/Params RPC method.
+ * @name QueryParamsResponseSDKType
+ * @package symphony.smartaccount.v1beta1
+ * @see proto type: symphony.smartaccount.v1beta1.QueryParamsResponse
+ */
 export interface QueryParamsResponseSDKType {
   params: ParamsSDKType;
 }
-/** MsgGetAuthenticatorsRequest defines the Msg/GetAuthenticators request type. */
+/**
+ * MsgGetAuthenticatorsRequest defines the Msg/GetAuthenticators request type.
+ * @name GetAuthenticatorsRequest
+ * @package symphony.smartaccount.v1beta1
+ * @see proto type: symphony.smartaccount.v1beta1.GetAuthenticatorsRequest
+ */
 export interface GetAuthenticatorsRequest {
   account: string;
 }
 export interface GetAuthenticatorsRequestProtoMsg {
-  typeUrl: "/symphony.smartaccount.v1beta1.GetAuthenticatorsRequest";
+  typeUrl: '/symphony.smartaccount.v1beta1.GetAuthenticatorsRequest';
   value: Uint8Array;
 }
-/** MsgGetAuthenticatorsRequest defines the Msg/GetAuthenticators request type. */
+/**
+ * MsgGetAuthenticatorsRequest defines the Msg/GetAuthenticators request type.
+ * @name GetAuthenticatorsRequestAmino
+ * @package symphony.smartaccount.v1beta1
+ * @see proto type: symphony.smartaccount.v1beta1.GetAuthenticatorsRequest
+ */
 export interface GetAuthenticatorsRequestAmino {
   account?: string;
 }
 export interface GetAuthenticatorsRequestAminoMsg {
-  type: "/symphony.smartaccount.v1beta1.GetAuthenticatorsRequest";
+  type: '/symphony.smartaccount.v1beta1.GetAuthenticatorsRequest';
   value: GetAuthenticatorsRequestAmino;
 }
-/** MsgGetAuthenticatorsRequest defines the Msg/GetAuthenticators request type. */
+/**
+ * MsgGetAuthenticatorsRequest defines the Msg/GetAuthenticators request type.
+ * @name GetAuthenticatorsRequestSDKType
+ * @package symphony.smartaccount.v1beta1
+ * @see proto type: symphony.smartaccount.v1beta1.GetAuthenticatorsRequest
+ */
 export interface GetAuthenticatorsRequestSDKType {
   account: string;
 }
-/** MsgGetAuthenticatorsResponse defines the Msg/GetAuthenticators response type. */
+/**
+ * MsgGetAuthenticatorsResponse defines the Msg/GetAuthenticators response type.
+ * @name GetAuthenticatorsResponse
+ * @package symphony.smartaccount.v1beta1
+ * @see proto type: symphony.smartaccount.v1beta1.GetAuthenticatorsResponse
+ */
 export interface GetAuthenticatorsResponse {
   accountAuthenticators: AccountAuthenticator[];
 }
 export interface GetAuthenticatorsResponseProtoMsg {
-  typeUrl: "/symphony.smartaccount.v1beta1.GetAuthenticatorsResponse";
+  typeUrl: '/symphony.smartaccount.v1beta1.GetAuthenticatorsResponse';
   value: Uint8Array;
 }
-/** MsgGetAuthenticatorsResponse defines the Msg/GetAuthenticators response type. */
+/**
+ * MsgGetAuthenticatorsResponse defines the Msg/GetAuthenticators response type.
+ * @name GetAuthenticatorsResponseAmino
+ * @package symphony.smartaccount.v1beta1
+ * @see proto type: symphony.smartaccount.v1beta1.GetAuthenticatorsResponse
+ */
 export interface GetAuthenticatorsResponseAmino {
   account_authenticators?: AccountAuthenticatorAmino[];
 }
 export interface GetAuthenticatorsResponseAminoMsg {
-  type: "/symphony.smartaccount.v1beta1.GetAuthenticatorsResponse";
+  type: '/symphony.smartaccount.v1beta1.GetAuthenticatorsResponse';
   value: GetAuthenticatorsResponseAmino;
 }
-/** MsgGetAuthenticatorsResponse defines the Msg/GetAuthenticators response type. */
+/**
+ * MsgGetAuthenticatorsResponse defines the Msg/GetAuthenticators response type.
+ * @name GetAuthenticatorsResponseSDKType
+ * @package symphony.smartaccount.v1beta1
+ * @see proto type: symphony.smartaccount.v1beta1.GetAuthenticatorsResponse
+ */
 export interface GetAuthenticatorsResponseSDKType {
   account_authenticators: AccountAuthenticatorSDKType[];
 }
-/** MsgGetAuthenticatorRequest defines the Msg/GetAuthenticator request type. */
+/**
+ * MsgGetAuthenticatorRequest defines the Msg/GetAuthenticator request type.
+ * @name GetAuthenticatorRequest
+ * @package symphony.smartaccount.v1beta1
+ * @see proto type: symphony.smartaccount.v1beta1.GetAuthenticatorRequest
+ */
 export interface GetAuthenticatorRequest {
   account: string;
   authenticatorId: bigint;
 }
 export interface GetAuthenticatorRequestProtoMsg {
-  typeUrl: "/symphony.smartaccount.v1beta1.GetAuthenticatorRequest";
+  typeUrl: '/symphony.smartaccount.v1beta1.GetAuthenticatorRequest';
   value: Uint8Array;
 }
-/** MsgGetAuthenticatorRequest defines the Msg/GetAuthenticator request type. */
+/**
+ * MsgGetAuthenticatorRequest defines the Msg/GetAuthenticator request type.
+ * @name GetAuthenticatorRequestAmino
+ * @package symphony.smartaccount.v1beta1
+ * @see proto type: symphony.smartaccount.v1beta1.GetAuthenticatorRequest
+ */
 export interface GetAuthenticatorRequestAmino {
   account?: string;
   authenticator_id?: string;
 }
 export interface GetAuthenticatorRequestAminoMsg {
-  type: "/symphony.smartaccount.v1beta1.GetAuthenticatorRequest";
+  type: '/symphony.smartaccount.v1beta1.GetAuthenticatorRequest';
   value: GetAuthenticatorRequestAmino;
 }
-/** MsgGetAuthenticatorRequest defines the Msg/GetAuthenticator request type. */
+/**
+ * MsgGetAuthenticatorRequest defines the Msg/GetAuthenticator request type.
+ * @name GetAuthenticatorRequestSDKType
+ * @package symphony.smartaccount.v1beta1
+ * @see proto type: symphony.smartaccount.v1beta1.GetAuthenticatorRequest
+ */
 export interface GetAuthenticatorRequestSDKType {
   account: string;
   authenticator_id: bigint;
 }
-/** MsgGetAuthenticatorResponse defines the Msg/GetAuthenticator response type. */
+/**
+ * MsgGetAuthenticatorResponse defines the Msg/GetAuthenticator response type.
+ * @name GetAuthenticatorResponse
+ * @package symphony.smartaccount.v1beta1
+ * @see proto type: symphony.smartaccount.v1beta1.GetAuthenticatorResponse
+ */
 export interface GetAuthenticatorResponse {
   accountAuthenticator?: AccountAuthenticator;
 }
 export interface GetAuthenticatorResponseProtoMsg {
-  typeUrl: "/symphony.smartaccount.v1beta1.GetAuthenticatorResponse";
+  typeUrl: '/symphony.smartaccount.v1beta1.GetAuthenticatorResponse';
   value: Uint8Array;
 }
-/** MsgGetAuthenticatorResponse defines the Msg/GetAuthenticator response type. */
+/**
+ * MsgGetAuthenticatorResponse defines the Msg/GetAuthenticator response type.
+ * @name GetAuthenticatorResponseAmino
+ * @package symphony.smartaccount.v1beta1
+ * @see proto type: symphony.smartaccount.v1beta1.GetAuthenticatorResponse
+ */
 export interface GetAuthenticatorResponseAmino {
   account_authenticator?: AccountAuthenticatorAmino;
 }
 export interface GetAuthenticatorResponseAminoMsg {
-  type: "/symphony.smartaccount.v1beta1.GetAuthenticatorResponse";
+  type: '/symphony.smartaccount.v1beta1.GetAuthenticatorResponse';
   value: GetAuthenticatorResponseAmino;
 }
-/** MsgGetAuthenticatorResponse defines the Msg/GetAuthenticator response type. */
+/**
+ * MsgGetAuthenticatorResponse defines the Msg/GetAuthenticator response type.
+ * @name GetAuthenticatorResponseSDKType
+ * @package symphony.smartaccount.v1beta1
+ * @see proto type: symphony.smartaccount.v1beta1.GetAuthenticatorResponse
+ */
 export interface GetAuthenticatorResponseSDKType {
   account_authenticator?: AccountAuthenticatorSDKType;
 }
 function createBaseQueryParamsRequest(): QueryParamsRequest {
   return {};
 }
+/**
+ * QueryParamsRequest is request type for the Query/Params RPC method.
+ * @name QueryParamsRequest
+ * @package symphony.smartaccount.v1beta1
+ * @see proto type: symphony.smartaccount.v1beta1.QueryParamsRequest
+ */
 export const QueryParamsRequest = {
-  typeUrl: "/symphony.smartaccount.v1beta1.QueryParamsRequest",
+  typeUrl: '/symphony.smartaccount.v1beta1.QueryParamsRequest',
   is(o: any): o is QueryParamsRequest {
     return o && o.$typeUrl === QueryParamsRequest.typeUrl;
   },
@@ -136,11 +240,18 @@ export const QueryParamsRequest = {
   isAmino(o: any): o is QueryParamsRequestAmino {
     return o && o.$typeUrl === QueryParamsRequest.typeUrl;
   },
-  encode(_: QueryParamsRequest, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
+  encode(
+    _: QueryParamsRequest,
+    writer: BinaryWriter = BinaryWriter.create(),
+  ): BinaryWriter {
     return writer;
   },
-  decode(input: BinaryReader | Uint8Array, length?: number): QueryParamsRequest {
-    const reader = input instanceof BinaryReader ? input : new BinaryReader(input);
+  decode(
+    input: BinaryReader | Uint8Array,
+    length?: number,
+  ): QueryParamsRequest {
+    const reader =
+      input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseQueryParamsRequest();
     while (reader.pos < end) {
@@ -176,36 +287,57 @@ export const QueryParamsRequest = {
   },
   toProtoMsg(message: QueryParamsRequest): QueryParamsRequestProtoMsg {
     return {
-      typeUrl: "/symphony.smartaccount.v1beta1.QueryParamsRequest",
-      value: QueryParamsRequest.encode(message).finish()
+      typeUrl: '/symphony.smartaccount.v1beta1.QueryParamsRequest',
+      value: QueryParamsRequest.encode(message).finish(),
     };
-  }
+  },
 };
 GlobalDecoderRegistry.register(QueryParamsRequest.typeUrl, QueryParamsRequest);
 function createBaseQueryParamsResponse(): QueryParamsResponse {
   return {
-    params: Params.fromPartial({})
+    params: Params.fromPartial({}),
   };
 }
+/**
+ * QueryParamsResponse is response type for the Query/Params RPC method.
+ * @name QueryParamsResponse
+ * @package symphony.smartaccount.v1beta1
+ * @see proto type: symphony.smartaccount.v1beta1.QueryParamsResponse
+ */
 export const QueryParamsResponse = {
-  typeUrl: "/symphony.smartaccount.v1beta1.QueryParamsResponse",
+  typeUrl: '/symphony.smartaccount.v1beta1.QueryParamsResponse',
   is(o: any): o is QueryParamsResponse {
-    return o && (o.$typeUrl === QueryParamsResponse.typeUrl || Params.is(o.params));
+    return (
+      o && (o.$typeUrl === QueryParamsResponse.typeUrl || Params.is(o.params))
+    );
   },
   isSDK(o: any): o is QueryParamsResponseSDKType {
-    return o && (o.$typeUrl === QueryParamsResponse.typeUrl || Params.isSDK(o.params));
+    return (
+      o &&
+      (o.$typeUrl === QueryParamsResponse.typeUrl || Params.isSDK(o.params))
+    );
   },
   isAmino(o: any): o is QueryParamsResponseAmino {
-    return o && (o.$typeUrl === QueryParamsResponse.typeUrl || Params.isAmino(o.params));
+    return (
+      o &&
+      (o.$typeUrl === QueryParamsResponse.typeUrl || Params.isAmino(o.params))
+    );
   },
-  encode(message: QueryParamsResponse, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
+  encode(
+    message: QueryParamsResponse,
+    writer: BinaryWriter = BinaryWriter.create(),
+  ): BinaryWriter {
     if (message.params !== undefined) {
       Params.encode(message.params, writer.uint32(10).fork()).ldelim();
     }
     return writer;
   },
-  decode(input: BinaryReader | Uint8Array, length?: number): QueryParamsResponse {
-    const reader = input instanceof BinaryReader ? input : new BinaryReader(input);
+  decode(
+    input: BinaryReader | Uint8Array,
+    length?: number,
+  ): QueryParamsResponse {
+    const reader =
+      input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseQueryParamsResponse();
     while (reader.pos < end) {
@@ -223,7 +355,10 @@ export const QueryParamsResponse = {
   },
   fromPartial(object: Partial<QueryParamsResponse>): QueryParamsResponse {
     const message = createBaseQueryParamsResponse();
-    message.params = object.params !== undefined && object.params !== null ? Params.fromPartial(object.params) : undefined;
+    message.params =
+      object.params !== undefined && object.params !== null
+        ? Params.fromPartial(object.params)
+        : undefined;
     return message;
   },
   fromAmino(object: QueryParamsResponseAmino): QueryParamsResponse {
@@ -249,36 +384,64 @@ export const QueryParamsResponse = {
   },
   toProtoMsg(message: QueryParamsResponse): QueryParamsResponseProtoMsg {
     return {
-      typeUrl: "/symphony.smartaccount.v1beta1.QueryParamsResponse",
-      value: QueryParamsResponse.encode(message).finish()
+      typeUrl: '/symphony.smartaccount.v1beta1.QueryParamsResponse',
+      value: QueryParamsResponse.encode(message).finish(),
     };
-  }
+  },
 };
-GlobalDecoderRegistry.register(QueryParamsResponse.typeUrl, QueryParamsResponse);
+GlobalDecoderRegistry.register(
+  QueryParamsResponse.typeUrl,
+  QueryParamsResponse,
+);
 function createBaseGetAuthenticatorsRequest(): GetAuthenticatorsRequest {
   return {
-    account: ""
+    account: '',
   };
 }
+/**
+ * MsgGetAuthenticatorsRequest defines the Msg/GetAuthenticators request type.
+ * @name GetAuthenticatorsRequest
+ * @package symphony.smartaccount.v1beta1
+ * @see proto type: symphony.smartaccount.v1beta1.GetAuthenticatorsRequest
+ */
 export const GetAuthenticatorsRequest = {
-  typeUrl: "/symphony.smartaccount.v1beta1.GetAuthenticatorsRequest",
+  typeUrl: '/symphony.smartaccount.v1beta1.GetAuthenticatorsRequest',
   is(o: any): o is GetAuthenticatorsRequest {
-    return o && (o.$typeUrl === GetAuthenticatorsRequest.typeUrl || typeof o.account === "string");
+    return (
+      o &&
+      (o.$typeUrl === GetAuthenticatorsRequest.typeUrl ||
+        typeof o.account === 'string')
+    );
   },
   isSDK(o: any): o is GetAuthenticatorsRequestSDKType {
-    return o && (o.$typeUrl === GetAuthenticatorsRequest.typeUrl || typeof o.account === "string");
+    return (
+      o &&
+      (o.$typeUrl === GetAuthenticatorsRequest.typeUrl ||
+        typeof o.account === 'string')
+    );
   },
   isAmino(o: any): o is GetAuthenticatorsRequestAmino {
-    return o && (o.$typeUrl === GetAuthenticatorsRequest.typeUrl || typeof o.account === "string");
+    return (
+      o &&
+      (o.$typeUrl === GetAuthenticatorsRequest.typeUrl ||
+        typeof o.account === 'string')
+    );
   },
-  encode(message: GetAuthenticatorsRequest, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
-    if (message.account !== "") {
+  encode(
+    message: GetAuthenticatorsRequest,
+    writer: BinaryWriter = BinaryWriter.create(),
+  ): BinaryWriter {
+    if (message.account !== '') {
       writer.uint32(10).string(message.account);
     }
     return writer;
   },
-  decode(input: BinaryReader | Uint8Array, length?: number): GetAuthenticatorsRequest {
-    const reader = input instanceof BinaryReader ? input : new BinaryReader(input);
+  decode(
+    input: BinaryReader | Uint8Array,
+    length?: number,
+  ): GetAuthenticatorsRequest {
+    const reader =
+      input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseGetAuthenticatorsRequest();
     while (reader.pos < end) {
@@ -294,9 +457,11 @@ export const GetAuthenticatorsRequest = {
     }
     return message;
   },
-  fromPartial(object: Partial<GetAuthenticatorsRequest>): GetAuthenticatorsRequest {
+  fromPartial(
+    object: Partial<GetAuthenticatorsRequest>,
+  ): GetAuthenticatorsRequest {
     const message = createBaseGetAuthenticatorsRequest();
-    message.account = object.account ?? "";
+    message.account = object.account ?? '';
     return message;
   },
   fromAmino(object: GetAuthenticatorsRequestAmino): GetAuthenticatorsRequest {
@@ -308,57 +473,99 @@ export const GetAuthenticatorsRequest = {
   },
   toAmino(message: GetAuthenticatorsRequest): GetAuthenticatorsRequestAmino {
     const obj: any = {};
-    obj.account = message.account === "" ? undefined : message.account;
+    obj.account = message.account === '' ? undefined : message.account;
     return obj;
   },
-  fromAminoMsg(object: GetAuthenticatorsRequestAminoMsg): GetAuthenticatorsRequest {
+  fromAminoMsg(
+    object: GetAuthenticatorsRequestAminoMsg,
+  ): GetAuthenticatorsRequest {
     return GetAuthenticatorsRequest.fromAmino(object.value);
   },
-  fromProtoMsg(message: GetAuthenticatorsRequestProtoMsg): GetAuthenticatorsRequest {
+  fromProtoMsg(
+    message: GetAuthenticatorsRequestProtoMsg,
+  ): GetAuthenticatorsRequest {
     return GetAuthenticatorsRequest.decode(message.value);
   },
   toProto(message: GetAuthenticatorsRequest): Uint8Array {
     return GetAuthenticatorsRequest.encode(message).finish();
   },
-  toProtoMsg(message: GetAuthenticatorsRequest): GetAuthenticatorsRequestProtoMsg {
+  toProtoMsg(
+    message: GetAuthenticatorsRequest,
+  ): GetAuthenticatorsRequestProtoMsg {
     return {
-      typeUrl: "/symphony.smartaccount.v1beta1.GetAuthenticatorsRequest",
-      value: GetAuthenticatorsRequest.encode(message).finish()
+      typeUrl: '/symphony.smartaccount.v1beta1.GetAuthenticatorsRequest',
+      value: GetAuthenticatorsRequest.encode(message).finish(),
     };
-  }
+  },
 };
-GlobalDecoderRegistry.register(GetAuthenticatorsRequest.typeUrl, GetAuthenticatorsRequest);
+GlobalDecoderRegistry.register(
+  GetAuthenticatorsRequest.typeUrl,
+  GetAuthenticatorsRequest,
+);
 function createBaseGetAuthenticatorsResponse(): GetAuthenticatorsResponse {
   return {
-    accountAuthenticators: []
+    accountAuthenticators: [],
   };
 }
+/**
+ * MsgGetAuthenticatorsResponse defines the Msg/GetAuthenticators response type.
+ * @name GetAuthenticatorsResponse
+ * @package symphony.smartaccount.v1beta1
+ * @see proto type: symphony.smartaccount.v1beta1.GetAuthenticatorsResponse
+ */
 export const GetAuthenticatorsResponse = {
-  typeUrl: "/symphony.smartaccount.v1beta1.GetAuthenticatorsResponse",
+  typeUrl: '/symphony.smartaccount.v1beta1.GetAuthenticatorsResponse',
   is(o: any): o is GetAuthenticatorsResponse {
-    return o && (o.$typeUrl === GetAuthenticatorsResponse.typeUrl || Array.isArray(o.accountAuthenticators) && (!o.accountAuthenticators.length || AccountAuthenticator.is(o.accountAuthenticators[0])));
+    return (
+      o &&
+      (o.$typeUrl === GetAuthenticatorsResponse.typeUrl ||
+        (Array.isArray(o.accountAuthenticators) &&
+          (!o.accountAuthenticators.length ||
+            AccountAuthenticator.is(o.accountAuthenticators[0]))))
+    );
   },
   isSDK(o: any): o is GetAuthenticatorsResponseSDKType {
-    return o && (o.$typeUrl === GetAuthenticatorsResponse.typeUrl || Array.isArray(o.account_authenticators) && (!o.account_authenticators.length || AccountAuthenticator.isSDK(o.account_authenticators[0])));
+    return (
+      o &&
+      (o.$typeUrl === GetAuthenticatorsResponse.typeUrl ||
+        (Array.isArray(o.account_authenticators) &&
+          (!o.account_authenticators.length ||
+            AccountAuthenticator.isSDK(o.account_authenticators[0]))))
+    );
   },
   isAmino(o: any): o is GetAuthenticatorsResponseAmino {
-    return o && (o.$typeUrl === GetAuthenticatorsResponse.typeUrl || Array.isArray(o.account_authenticators) && (!o.account_authenticators.length || AccountAuthenticator.isAmino(o.account_authenticators[0])));
+    return (
+      o &&
+      (o.$typeUrl === GetAuthenticatorsResponse.typeUrl ||
+        (Array.isArray(o.account_authenticators) &&
+          (!o.account_authenticators.length ||
+            AccountAuthenticator.isAmino(o.account_authenticators[0]))))
+    );
   },
-  encode(message: GetAuthenticatorsResponse, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
+  encode(
+    message: GetAuthenticatorsResponse,
+    writer: BinaryWriter = BinaryWriter.create(),
+  ): BinaryWriter {
     for (const v of message.accountAuthenticators) {
       AccountAuthenticator.encode(v!, writer.uint32(10).fork()).ldelim();
     }
     return writer;
   },
-  decode(input: BinaryReader | Uint8Array, length?: number): GetAuthenticatorsResponse {
-    const reader = input instanceof BinaryReader ? input : new BinaryReader(input);
+  decode(
+    input: BinaryReader | Uint8Array,
+    length?: number,
+  ): GetAuthenticatorsResponse {
+    const reader =
+      input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseGetAuthenticatorsResponse();
     while (reader.pos < end) {
       const tag = reader.uint32();
       switch (tag >>> 3) {
         case 1:
-          message.accountAuthenticators.push(AccountAuthenticator.decode(reader, reader.uint32()));
+          message.accountAuthenticators.push(
+            AccountAuthenticator.decode(reader, reader.uint32()),
+          );
           break;
         default:
           reader.skipType(tag & 7);
@@ -367,61 +574,104 @@ export const GetAuthenticatorsResponse = {
     }
     return message;
   },
-  fromPartial(object: Partial<GetAuthenticatorsResponse>): GetAuthenticatorsResponse {
+  fromPartial(
+    object: Partial<GetAuthenticatorsResponse>,
+  ): GetAuthenticatorsResponse {
     const message = createBaseGetAuthenticatorsResponse();
-    message.accountAuthenticators = object.accountAuthenticators?.map(e => AccountAuthenticator.fromPartial(e)) || [];
+    message.accountAuthenticators =
+      object.accountAuthenticators?.map(e =>
+        AccountAuthenticator.fromPartial(e),
+      ) || [];
     return message;
   },
   fromAmino(object: GetAuthenticatorsResponseAmino): GetAuthenticatorsResponse {
     const message = createBaseGetAuthenticatorsResponse();
-    message.accountAuthenticators = object.account_authenticators?.map(e => AccountAuthenticator.fromAmino(e)) || [];
+    message.accountAuthenticators =
+      object.account_authenticators?.map(e =>
+        AccountAuthenticator.fromAmino(e),
+      ) || [];
     return message;
   },
   toAmino(message: GetAuthenticatorsResponse): GetAuthenticatorsResponseAmino {
     const obj: any = {};
     if (message.accountAuthenticators) {
-      obj.account_authenticators = message.accountAuthenticators.map(e => e ? AccountAuthenticator.toAmino(e) : undefined);
+      obj.account_authenticators = message.accountAuthenticators.map(e =>
+        e ? AccountAuthenticator.toAmino(e) : undefined,
+      );
     } else {
       obj.account_authenticators = message.accountAuthenticators;
     }
     return obj;
   },
-  fromAminoMsg(object: GetAuthenticatorsResponseAminoMsg): GetAuthenticatorsResponse {
+  fromAminoMsg(
+    object: GetAuthenticatorsResponseAminoMsg,
+  ): GetAuthenticatorsResponse {
     return GetAuthenticatorsResponse.fromAmino(object.value);
   },
-  fromProtoMsg(message: GetAuthenticatorsResponseProtoMsg): GetAuthenticatorsResponse {
+  fromProtoMsg(
+    message: GetAuthenticatorsResponseProtoMsg,
+  ): GetAuthenticatorsResponse {
     return GetAuthenticatorsResponse.decode(message.value);
   },
   toProto(message: GetAuthenticatorsResponse): Uint8Array {
     return GetAuthenticatorsResponse.encode(message).finish();
   },
-  toProtoMsg(message: GetAuthenticatorsResponse): GetAuthenticatorsResponseProtoMsg {
+  toProtoMsg(
+    message: GetAuthenticatorsResponse,
+  ): GetAuthenticatorsResponseProtoMsg {
     return {
-      typeUrl: "/symphony.smartaccount.v1beta1.GetAuthenticatorsResponse",
-      value: GetAuthenticatorsResponse.encode(message).finish()
+      typeUrl: '/symphony.smartaccount.v1beta1.GetAuthenticatorsResponse',
+      value: GetAuthenticatorsResponse.encode(message).finish(),
     };
-  }
+  },
 };
-GlobalDecoderRegistry.register(GetAuthenticatorsResponse.typeUrl, GetAuthenticatorsResponse);
+GlobalDecoderRegistry.register(
+  GetAuthenticatorsResponse.typeUrl,
+  GetAuthenticatorsResponse,
+);
 function createBaseGetAuthenticatorRequest(): GetAuthenticatorRequest {
   return {
-    account: "",
-    authenticatorId: BigInt(0)
+    account: '',
+    authenticatorId: BigInt(0),
   };
 }
+/**
+ * MsgGetAuthenticatorRequest defines the Msg/GetAuthenticator request type.
+ * @name GetAuthenticatorRequest
+ * @package symphony.smartaccount.v1beta1
+ * @see proto type: symphony.smartaccount.v1beta1.GetAuthenticatorRequest
+ */
 export const GetAuthenticatorRequest = {
-  typeUrl: "/symphony.smartaccount.v1beta1.GetAuthenticatorRequest",
+  typeUrl: '/symphony.smartaccount.v1beta1.GetAuthenticatorRequest',
   is(o: any): o is GetAuthenticatorRequest {
-    return o && (o.$typeUrl === GetAuthenticatorRequest.typeUrl || typeof o.account === "string" && typeof o.authenticatorId === "bigint");
+    return (
+      o &&
+      (o.$typeUrl === GetAuthenticatorRequest.typeUrl ||
+        (typeof o.account === 'string' &&
+          typeof o.authenticatorId === 'bigint'))
+    );
   },
   isSDK(o: any): o is GetAuthenticatorRequestSDKType {
-    return o && (o.$typeUrl === GetAuthenticatorRequest.typeUrl || typeof o.account === "string" && typeof o.authenticator_id === "bigint");
+    return (
+      o &&
+      (o.$typeUrl === GetAuthenticatorRequest.typeUrl ||
+        (typeof o.account === 'string' &&
+          typeof o.authenticator_id === 'bigint'))
+    );
   },
   isAmino(o: any): o is GetAuthenticatorRequestAmino {
-    return o && (o.$typeUrl === GetAuthenticatorRequest.typeUrl || typeof o.account === "string" && typeof o.authenticator_id === "bigint");
+    return (
+      o &&
+      (o.$typeUrl === GetAuthenticatorRequest.typeUrl ||
+        (typeof o.account === 'string' &&
+          typeof o.authenticator_id === 'bigint'))
+    );
   },
-  encode(message: GetAuthenticatorRequest, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
-    if (message.account !== "") {
+  encode(
+    message: GetAuthenticatorRequest,
+    writer: BinaryWriter = BinaryWriter.create(),
+  ): BinaryWriter {
+    if (message.account !== '') {
       writer.uint32(10).string(message.account);
     }
     if (message.authenticatorId !== BigInt(0)) {
@@ -429,8 +679,12 @@ export const GetAuthenticatorRequest = {
     }
     return writer;
   },
-  decode(input: BinaryReader | Uint8Array, length?: number): GetAuthenticatorRequest {
-    const reader = input instanceof BinaryReader ? input : new BinaryReader(input);
+  decode(
+    input: BinaryReader | Uint8Array,
+    length?: number,
+  ): GetAuthenticatorRequest {
+    const reader =
+      input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseGetAuthenticatorRequest();
     while (reader.pos < end) {
@@ -449,10 +703,15 @@ export const GetAuthenticatorRequest = {
     }
     return message;
   },
-  fromPartial(object: Partial<GetAuthenticatorRequest>): GetAuthenticatorRequest {
+  fromPartial(
+    object: Partial<GetAuthenticatorRequest>,
+  ): GetAuthenticatorRequest {
     const message = createBaseGetAuthenticatorRequest();
-    message.account = object.account ?? "";
-    message.authenticatorId = object.authenticatorId !== undefined && object.authenticatorId !== null ? BigInt(object.authenticatorId.toString()) : BigInt(0);
+    message.account = object.account ?? '';
+    message.authenticatorId =
+      object.authenticatorId !== undefined && object.authenticatorId !== null
+        ? BigInt(object.authenticatorId.toString())
+        : BigInt(0);
     return message;
   },
   fromAmino(object: GetAuthenticatorRequestAmino): GetAuthenticatorRequest {
@@ -460,41 +719,62 @@ export const GetAuthenticatorRequest = {
     if (object.account !== undefined && object.account !== null) {
       message.account = object.account;
     }
-    if (object.authenticator_id !== undefined && object.authenticator_id !== null) {
+    if (
+      object.authenticator_id !== undefined &&
+      object.authenticator_id !== null
+    ) {
       message.authenticatorId = BigInt(object.authenticator_id);
     }
     return message;
   },
   toAmino(message: GetAuthenticatorRequest): GetAuthenticatorRequestAmino {
     const obj: any = {};
-    obj.account = message.account === "" ? undefined : message.account;
-    obj.authenticator_id = message.authenticatorId !== BigInt(0) ? message.authenticatorId?.toString() : undefined;
+    obj.account = message.account === '' ? undefined : message.account;
+    obj.authenticator_id =
+      message.authenticatorId !== BigInt(0)
+        ? message.authenticatorId?.toString()
+        : undefined;
     return obj;
   },
-  fromAminoMsg(object: GetAuthenticatorRequestAminoMsg): GetAuthenticatorRequest {
+  fromAminoMsg(
+    object: GetAuthenticatorRequestAminoMsg,
+  ): GetAuthenticatorRequest {
     return GetAuthenticatorRequest.fromAmino(object.value);
   },
-  fromProtoMsg(message: GetAuthenticatorRequestProtoMsg): GetAuthenticatorRequest {
+  fromProtoMsg(
+    message: GetAuthenticatorRequestProtoMsg,
+  ): GetAuthenticatorRequest {
     return GetAuthenticatorRequest.decode(message.value);
   },
   toProto(message: GetAuthenticatorRequest): Uint8Array {
     return GetAuthenticatorRequest.encode(message).finish();
   },
-  toProtoMsg(message: GetAuthenticatorRequest): GetAuthenticatorRequestProtoMsg {
+  toProtoMsg(
+    message: GetAuthenticatorRequest,
+  ): GetAuthenticatorRequestProtoMsg {
     return {
-      typeUrl: "/symphony.smartaccount.v1beta1.GetAuthenticatorRequest",
-      value: GetAuthenticatorRequest.encode(message).finish()
+      typeUrl: '/symphony.smartaccount.v1beta1.GetAuthenticatorRequest',
+      value: GetAuthenticatorRequest.encode(message).finish(),
     };
-  }
+  },
 };
-GlobalDecoderRegistry.register(GetAuthenticatorRequest.typeUrl, GetAuthenticatorRequest);
+GlobalDecoderRegistry.register(
+  GetAuthenticatorRequest.typeUrl,
+  GetAuthenticatorRequest,
+);
 function createBaseGetAuthenticatorResponse(): GetAuthenticatorResponse {
   return {
-    accountAuthenticator: undefined
+    accountAuthenticator: undefined,
   };
 }
+/**
+ * MsgGetAuthenticatorResponse defines the Msg/GetAuthenticator response type.
+ * @name GetAuthenticatorResponse
+ * @package symphony.smartaccount.v1beta1
+ * @see proto type: symphony.smartaccount.v1beta1.GetAuthenticatorResponse
+ */
 export const GetAuthenticatorResponse = {
-  typeUrl: "/symphony.smartaccount.v1beta1.GetAuthenticatorResponse",
+  typeUrl: '/symphony.smartaccount.v1beta1.GetAuthenticatorResponse',
   is(o: any): o is GetAuthenticatorResponse {
     return o && o.$typeUrl === GetAuthenticatorResponse.typeUrl;
   },
@@ -504,21 +784,34 @@ export const GetAuthenticatorResponse = {
   isAmino(o: any): o is GetAuthenticatorResponseAmino {
     return o && o.$typeUrl === GetAuthenticatorResponse.typeUrl;
   },
-  encode(message: GetAuthenticatorResponse, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
+  encode(
+    message: GetAuthenticatorResponse,
+    writer: BinaryWriter = BinaryWriter.create(),
+  ): BinaryWriter {
     if (message.accountAuthenticator !== undefined) {
-      AccountAuthenticator.encode(message.accountAuthenticator, writer.uint32(10).fork()).ldelim();
+      AccountAuthenticator.encode(
+        message.accountAuthenticator,
+        writer.uint32(10).fork(),
+      ).ldelim();
     }
     return writer;
   },
-  decode(input: BinaryReader | Uint8Array, length?: number): GetAuthenticatorResponse {
-    const reader = input instanceof BinaryReader ? input : new BinaryReader(input);
+  decode(
+    input: BinaryReader | Uint8Array,
+    length?: number,
+  ): GetAuthenticatorResponse {
+    const reader =
+      input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseGetAuthenticatorResponse();
     while (reader.pos < end) {
       const tag = reader.uint32();
       switch (tag >>> 3) {
         case 1:
-          message.accountAuthenticator = AccountAuthenticator.decode(reader, reader.uint32());
+          message.accountAuthenticator = AccountAuthenticator.decode(
+            reader,
+            reader.uint32(),
+          );
           break;
         default:
           reader.skipType(tag & 7);
@@ -527,37 +820,59 @@ export const GetAuthenticatorResponse = {
     }
     return message;
   },
-  fromPartial(object: Partial<GetAuthenticatorResponse>): GetAuthenticatorResponse {
+  fromPartial(
+    object: Partial<GetAuthenticatorResponse>,
+  ): GetAuthenticatorResponse {
     const message = createBaseGetAuthenticatorResponse();
-    message.accountAuthenticator = object.accountAuthenticator !== undefined && object.accountAuthenticator !== null ? AccountAuthenticator.fromPartial(object.accountAuthenticator) : undefined;
+    message.accountAuthenticator =
+      object.accountAuthenticator !== undefined &&
+      object.accountAuthenticator !== null
+        ? AccountAuthenticator.fromPartial(object.accountAuthenticator)
+        : undefined;
     return message;
   },
   fromAmino(object: GetAuthenticatorResponseAmino): GetAuthenticatorResponse {
     const message = createBaseGetAuthenticatorResponse();
-    if (object.account_authenticator !== undefined && object.account_authenticator !== null) {
-      message.accountAuthenticator = AccountAuthenticator.fromAmino(object.account_authenticator);
+    if (
+      object.account_authenticator !== undefined &&
+      object.account_authenticator !== null
+    ) {
+      message.accountAuthenticator = AccountAuthenticator.fromAmino(
+        object.account_authenticator,
+      );
     }
     return message;
   },
   toAmino(message: GetAuthenticatorResponse): GetAuthenticatorResponseAmino {
     const obj: any = {};
-    obj.account_authenticator = message.accountAuthenticator ? AccountAuthenticator.toAmino(message.accountAuthenticator) : undefined;
+    obj.account_authenticator = message.accountAuthenticator
+      ? AccountAuthenticator.toAmino(message.accountAuthenticator)
+      : undefined;
     return obj;
   },
-  fromAminoMsg(object: GetAuthenticatorResponseAminoMsg): GetAuthenticatorResponse {
+  fromAminoMsg(
+    object: GetAuthenticatorResponseAminoMsg,
+  ): GetAuthenticatorResponse {
     return GetAuthenticatorResponse.fromAmino(object.value);
   },
-  fromProtoMsg(message: GetAuthenticatorResponseProtoMsg): GetAuthenticatorResponse {
+  fromProtoMsg(
+    message: GetAuthenticatorResponseProtoMsg,
+  ): GetAuthenticatorResponse {
     return GetAuthenticatorResponse.decode(message.value);
   },
   toProto(message: GetAuthenticatorResponse): Uint8Array {
     return GetAuthenticatorResponse.encode(message).finish();
   },
-  toProtoMsg(message: GetAuthenticatorResponse): GetAuthenticatorResponseProtoMsg {
+  toProtoMsg(
+    message: GetAuthenticatorResponse,
+  ): GetAuthenticatorResponseProtoMsg {
     return {
-      typeUrl: "/symphony.smartaccount.v1beta1.GetAuthenticatorResponse",
-      value: GetAuthenticatorResponse.encode(message).finish()
+      typeUrl: '/symphony.smartaccount.v1beta1.GetAuthenticatorResponse',
+      value: GetAuthenticatorResponse.encode(message).finish(),
     };
-  }
+  },
 };
-GlobalDecoderRegistry.register(GetAuthenticatorResponse.typeUrl, GetAuthenticatorResponse);
+GlobalDecoderRegistry.register(
+  GetAuthenticatorResponse.typeUrl,
+  GetAuthenticatorResponse,
+);

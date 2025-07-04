@@ -1,7 +1,7 @@
 //@ts-nocheck
-import { isSet } from "../../../helpers";
-import { BinaryReader, BinaryWriter } from "../../../binary";
-import { GlobalDecoderRegistry } from "../../../registry";
+import { isSet } from '../../../helpers';
+import { BinaryReader, BinaryWriter } from '../../../binary';
+import { GlobalDecoderRegistry } from '../../../registry';
 /** PoolType is an enumeration of all supported pool types. */
 export enum PoolType {
   /** Balancer - Balancer is the standard xy=k curve. Its pool model is defined in x/gamm. */
@@ -28,19 +28,19 @@ export const PoolTypeAmino = PoolType;
 export function poolTypeFromJSON(object: any): PoolType {
   switch (object) {
     case 0:
-    case "Balancer":
+    case 'Balancer':
       return PoolType.Balancer;
     case 1:
-    case "Stableswap":
+    case 'Stableswap':
       return PoolType.Stableswap;
     case 2:
-    case "Concentrated":
+    case 'Concentrated':
       return PoolType.Concentrated;
     case 3:
-    case "CosmWasm":
+    case 'CosmWasm':
       return PoolType.CosmWasm;
     case -1:
-    case "UNRECOGNIZED":
+    case 'UNRECOGNIZED':
     default:
       return PoolType.UNRECOGNIZED;
   }
@@ -48,16 +48,16 @@ export function poolTypeFromJSON(object: any): PoolType {
 export function poolTypeToJSON(object: PoolType): string {
   switch (object) {
     case PoolType.Balancer:
-      return "Balancer";
+      return 'Balancer';
     case PoolType.Stableswap:
-      return "Stableswap";
+      return 'Stableswap';
     case PoolType.Concentrated:
-      return "Concentrated";
+      return 'Concentrated';
     case PoolType.CosmWasm:
-      return "CosmWasm";
+      return 'CosmWasm';
     case PoolType.UNRECOGNIZED:
     default:
-      return "UNRECOGNIZED";
+      return 'UNRECOGNIZED';
   }
 }
 /**
@@ -65,14 +65,19 @@ export function poolTypeToJSON(object: PoolType): string {
  * It is used as the value of a mapping from pool id to the pool type,
  * allowing the pool manager to know which module to route swaps to given the
  * pool id.
+ * @name ModuleRoute
+ * @package symphony.poolmanager.v1beta1
+ * @see proto type: symphony.poolmanager.v1beta1.ModuleRoute
  */
 export interface ModuleRoute {
-  /** pool_type specifies the type of the pool */
+  /**
+   * pool_type specifies the type of the pool
+   */
   poolType: PoolType;
   poolId?: bigint;
 }
 export interface ModuleRouteProtoMsg {
-  typeUrl: "/symphony.poolmanager.v1beta1.ModuleRoute";
+  typeUrl: '/symphony.poolmanager.v1beta1.ModuleRoute';
   value: Uint8Array;
 }
 /**
@@ -80,14 +85,19 @@ export interface ModuleRouteProtoMsg {
  * It is used as the value of a mapping from pool id to the pool type,
  * allowing the pool manager to know which module to route swaps to given the
  * pool id.
+ * @name ModuleRouteAmino
+ * @package symphony.poolmanager.v1beta1
+ * @see proto type: symphony.poolmanager.v1beta1.ModuleRoute
  */
 export interface ModuleRouteAmino {
-  /** pool_type specifies the type of the pool */
+  /**
+   * pool_type specifies the type of the pool
+   */
   pool_type?: PoolType;
   pool_id?: string;
 }
 export interface ModuleRouteAminoMsg {
-  type: "/symphony.poolmanager.v1beta1.ModuleRoute";
+  type: '/symphony.poolmanager.v1beta1.ModuleRoute';
   value: ModuleRouteAmino;
 }
 /**
@@ -95,6 +105,9 @@ export interface ModuleRouteAminoMsg {
  * It is used as the value of a mapping from pool id to the pool type,
  * allowing the pool manager to know which module to route swaps to given the
  * pool id.
+ * @name ModuleRouteSDKType
+ * @package symphony.poolmanager.v1beta1
+ * @see proto type: symphony.poolmanager.v1beta1.ModuleRoute
  */
 export interface ModuleRouteSDKType {
   pool_type: PoolType;
@@ -103,11 +116,20 @@ export interface ModuleRouteSDKType {
 function createBaseModuleRoute(): ModuleRoute {
   return {
     poolType: 0,
-    poolId: undefined
+    poolId: undefined,
   };
 }
+/**
+ * ModuleRouter defines a route encapsulating pool type.
+ * It is used as the value of a mapping from pool id to the pool type,
+ * allowing the pool manager to know which module to route swaps to given the
+ * pool id.
+ * @name ModuleRoute
+ * @package symphony.poolmanager.v1beta1
+ * @see proto type: symphony.poolmanager.v1beta1.ModuleRoute
+ */
 export const ModuleRoute = {
-  typeUrl: "/symphony.poolmanager.v1beta1.ModuleRoute",
+  typeUrl: '/symphony.poolmanager.v1beta1.ModuleRoute',
   is(o: any): o is ModuleRoute {
     return o && (o.$typeUrl === ModuleRoute.typeUrl || isSet(o.poolType));
   },
@@ -117,7 +139,10 @@ export const ModuleRoute = {
   isAmino(o: any): o is ModuleRouteAmino {
     return o && (o.$typeUrl === ModuleRoute.typeUrl || isSet(o.pool_type));
   },
-  encode(message: ModuleRoute, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
+  encode(
+    message: ModuleRoute,
+    writer: BinaryWriter = BinaryWriter.create(),
+  ): BinaryWriter {
     if (message.poolType !== 0) {
       writer.uint32(8).int32(message.poolType);
     }
@@ -127,7 +152,8 @@ export const ModuleRoute = {
     return writer;
   },
   decode(input: BinaryReader | Uint8Array, length?: number): ModuleRoute {
-    const reader = input instanceof BinaryReader ? input : new BinaryReader(input);
+    const reader =
+      input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseModuleRoute();
     while (reader.pos < end) {
@@ -149,7 +175,10 @@ export const ModuleRoute = {
   fromPartial(object: Partial<ModuleRoute>): ModuleRoute {
     const message = createBaseModuleRoute();
     message.poolType = object.poolType ?? 0;
-    message.poolId = object.poolId !== undefined && object.poolId !== null ? BigInt(object.poolId.toString()) : undefined;
+    message.poolId =
+      object.poolId !== undefined && object.poolId !== null
+        ? BigInt(object.poolId.toString())
+        : undefined;
     return message;
   },
   fromAmino(object: ModuleRouteAmino): ModuleRoute {
@@ -165,7 +194,8 @@ export const ModuleRoute = {
   toAmino(message: ModuleRoute): ModuleRouteAmino {
     const obj: any = {};
     obj.pool_type = message.poolType === 0 ? undefined : message.poolType;
-    obj.pool_id = message.poolId !== BigInt(0) ? message.poolId?.toString() : undefined;
+    obj.pool_id =
+      message.poolId !== BigInt(0) ? message.poolId?.toString() : undefined;
     return obj;
   },
   fromAminoMsg(object: ModuleRouteAminoMsg): ModuleRoute {
@@ -179,9 +209,9 @@ export const ModuleRoute = {
   },
   toProtoMsg(message: ModuleRoute): ModuleRouteProtoMsg {
     return {
-      typeUrl: "/symphony.poolmanager.v1beta1.ModuleRoute",
-      value: ModuleRoute.encode(message).finish()
+      typeUrl: '/symphony.poolmanager.v1beta1.ModuleRoute',
+      value: ModuleRoute.encode(message).finish(),
     };
-  }
+  },
 };
 GlobalDecoderRegistry.register(ModuleRoute.typeUrl, ModuleRoute);
