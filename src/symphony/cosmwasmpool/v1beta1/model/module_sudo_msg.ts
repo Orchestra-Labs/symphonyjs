@@ -1,12 +1,8 @@
 //@ts-nocheck
-import {
-  Coin,
-  CoinAmino,
-  CoinSDKType,
-} from '../../../../cosmos/base/v1beta1/coin';
-import { BinaryReader, BinaryWriter } from '../../../../binary';
-import { GlobalDecoderRegistry } from '../../../../registry';
-import { Decimal } from '@cosmjs/math';
+import { Coin, CoinAmino, CoinSDKType } from "../../../../cosmos/base/v1beta1/coin";
+import { BinaryReader, BinaryWriter } from "../../../../binary";
+import { GlobalDecoderRegistry } from "../../../../registry";
+import { Decimal } from "@cosmjs/math";
 /** ===================== SwapExactAmountIn */
 export interface SwapExactAmountIn {
   sender: string;
@@ -23,7 +19,7 @@ export interface SwapExactAmountIn {
   swapFee: string;
 }
 export interface SwapExactAmountInProtoMsg {
-  typeUrl: '/symphony.cosmwasmpool.v1beta1.SwapExactAmountIn';
+  typeUrl: "/symphony.cosmwasmpool.v1beta1.SwapExactAmountIn";
   value: Uint8Array;
 }
 /** ===================== SwapExactAmountIn */
@@ -42,7 +38,7 @@ export interface SwapExactAmountInAmino {
   swap_fee?: string;
 }
 export interface SwapExactAmountInAminoMsg {
-  type: '/symphony.cosmwasmpool.v1beta1.SwapExactAmountIn';
+  type: "/symphony.cosmwasmpool.v1beta1.SwapExactAmountIn";
   value: SwapExactAmountInAmino;
 }
 /** ===================== SwapExactAmountIn */
@@ -61,7 +57,7 @@ export interface SwapExactAmountInSudoMsg {
   swapExactAmountIn: SwapExactAmountIn;
 }
 export interface SwapExactAmountInSudoMsgProtoMsg {
-  typeUrl: '/symphony.cosmwasmpool.v1beta1.SwapExactAmountInSudoMsg';
+  typeUrl: "/symphony.cosmwasmpool.v1beta1.SwapExactAmountInSudoMsg";
   value: Uint8Array;
 }
 export interface SwapExactAmountInSudoMsgAmino {
@@ -72,7 +68,7 @@ export interface SwapExactAmountInSudoMsgAmino {
   swap_exact_amount_in?: SwapExactAmountInAmino;
 }
 export interface SwapExactAmountInSudoMsgAminoMsg {
-  type: '/symphony.cosmwasmpool.v1beta1.SwapExactAmountInSudoMsg';
+  type: "/symphony.cosmwasmpool.v1beta1.SwapExactAmountInSudoMsg";
   value: SwapExactAmountInSudoMsgAmino;
 }
 export interface SwapExactAmountInSudoMsgSDKType {
@@ -83,7 +79,7 @@ export interface SwapExactAmountInSudoMsgResponse {
   tokenOutAmount: string;
 }
 export interface SwapExactAmountInSudoMsgResponseProtoMsg {
-  typeUrl: '/symphony.cosmwasmpool.v1beta1.SwapExactAmountInSudoMsgResponse';
+  typeUrl: "/symphony.cosmwasmpool.v1beta1.SwapExactAmountInSudoMsgResponse";
   value: Uint8Array;
 }
 export interface SwapExactAmountInSudoMsgResponseAmino {
@@ -91,7 +87,7 @@ export interface SwapExactAmountInSudoMsgResponseAmino {
   token_out_amount?: string;
 }
 export interface SwapExactAmountInSudoMsgResponseAminoMsg {
-  type: '/symphony.cosmwasmpool.v1beta1.SwapExactAmountInSudoMsgResponse';
+  type: "/symphony.cosmwasmpool.v1beta1.SwapExactAmountInSudoMsgResponse";
   value: SwapExactAmountInSudoMsgResponseAmino;
 }
 export interface SwapExactAmountInSudoMsgResponseSDKType {
@@ -113,7 +109,7 @@ export interface SwapExactAmountOut {
   swapFee: string;
 }
 export interface SwapExactAmountOutProtoMsg {
-  typeUrl: '/symphony.cosmwasmpool.v1beta1.SwapExactAmountOut';
+  typeUrl: "/symphony.cosmwasmpool.v1beta1.SwapExactAmountOut";
   value: Uint8Array;
 }
 /** ===================== SwapExactAmountOut */
@@ -132,7 +128,7 @@ export interface SwapExactAmountOutAmino {
   swap_fee?: string;
 }
 export interface SwapExactAmountOutAminoMsg {
-  type: '/symphony.cosmwasmpool.v1beta1.SwapExactAmountOut';
+  type: "/symphony.cosmwasmpool.v1beta1.SwapExactAmountOut";
   value: SwapExactAmountOutAmino;
 }
 /** ===================== SwapExactAmountOut */
@@ -151,7 +147,7 @@ export interface SwapExactAmountOutSudoMsg {
   swapExactAmountOut: SwapExactAmountOut;
 }
 export interface SwapExactAmountOutSudoMsgProtoMsg {
-  typeUrl: '/symphony.cosmwasmpool.v1beta1.SwapExactAmountOutSudoMsg';
+  typeUrl: "/symphony.cosmwasmpool.v1beta1.SwapExactAmountOutSudoMsg";
   value: Uint8Array;
 }
 export interface SwapExactAmountOutSudoMsgAmino {
@@ -162,7 +158,7 @@ export interface SwapExactAmountOutSudoMsgAmino {
   swap_exact_amount_out?: SwapExactAmountOutAmino;
 }
 export interface SwapExactAmountOutSudoMsgAminoMsg {
-  type: '/symphony.cosmwasmpool.v1beta1.SwapExactAmountOutSudoMsg';
+  type: "/symphony.cosmwasmpool.v1beta1.SwapExactAmountOutSudoMsg";
   value: SwapExactAmountOutSudoMsgAmino;
 }
 export interface SwapExactAmountOutSudoMsgSDKType {
@@ -173,7 +169,7 @@ export interface SwapExactAmountOutSudoMsgResponse {
   tokenInAmount: string;
 }
 export interface SwapExactAmountOutSudoMsgResponseProtoMsg {
-  typeUrl: '/symphony.cosmwasmpool.v1beta1.SwapExactAmountOutSudoMsgResponse';
+  typeUrl: "/symphony.cosmwasmpool.v1beta1.SwapExactAmountOutSudoMsgResponse";
   value: Uint8Array;
 }
 export interface SwapExactAmountOutSudoMsgResponseAmino {
@@ -181,7 +177,7 @@ export interface SwapExactAmountOutSudoMsgResponseAmino {
   token_in_amount?: string;
 }
 export interface SwapExactAmountOutSudoMsgResponseAminoMsg {
-  type: '/symphony.cosmwasmpool.v1beta1.SwapExactAmountOutSudoMsgResponse';
+  type: "/symphony.cosmwasmpool.v1beta1.SwapExactAmountOutSudoMsgResponse";
   value: SwapExactAmountOutSudoMsgResponseAmino;
 }
 export interface SwapExactAmountOutSudoMsgResponseSDKType {
@@ -189,74 +185,44 @@ export interface SwapExactAmountOutSudoMsgResponseSDKType {
 }
 function createBaseSwapExactAmountIn(): SwapExactAmountIn {
   return {
-    sender: '',
+    sender: "",
     tokenIn: Coin.fromPartial({}),
-    tokenOutDenom: '',
-    tokenOutMinAmount: '',
-    swapFee: '',
+    tokenOutDenom: "",
+    tokenOutMinAmount: "",
+    swapFee: ""
   };
 }
 export const SwapExactAmountIn = {
-  typeUrl: '/symphony.cosmwasmpool.v1beta1.SwapExactAmountIn',
+  typeUrl: "/symphony.cosmwasmpool.v1beta1.SwapExactAmountIn",
   is(o: any): o is SwapExactAmountIn {
-    return (
-      o &&
-      (o.$typeUrl === SwapExactAmountIn.typeUrl ||
-        (typeof o.sender === 'string' &&
-          Coin.is(o.tokenIn) &&
-          typeof o.tokenOutDenom === 'string' &&
-          typeof o.tokenOutMinAmount === 'string' &&
-          typeof o.swapFee === 'string'))
-    );
+    return o && (o.$typeUrl === SwapExactAmountIn.typeUrl || typeof o.sender === "string" && Coin.is(o.tokenIn) && typeof o.tokenOutDenom === "string" && typeof o.tokenOutMinAmount === "string" && typeof o.swapFee === "string");
   },
   isSDK(o: any): o is SwapExactAmountInSDKType {
-    return (
-      o &&
-      (o.$typeUrl === SwapExactAmountIn.typeUrl ||
-        (typeof o.sender === 'string' &&
-          Coin.isSDK(o.token_in) &&
-          typeof o.token_out_denom === 'string' &&
-          typeof o.token_out_min_amount === 'string' &&
-          typeof o.swap_fee === 'string'))
-    );
+    return o && (o.$typeUrl === SwapExactAmountIn.typeUrl || typeof o.sender === "string" && Coin.isSDK(o.token_in) && typeof o.token_out_denom === "string" && typeof o.token_out_min_amount === "string" && typeof o.swap_fee === "string");
   },
   isAmino(o: any): o is SwapExactAmountInAmino {
-    return (
-      o &&
-      (o.$typeUrl === SwapExactAmountIn.typeUrl ||
-        (typeof o.sender === 'string' &&
-          Coin.isAmino(o.token_in) &&
-          typeof o.token_out_denom === 'string' &&
-          typeof o.token_out_min_amount === 'string' &&
-          typeof o.swap_fee === 'string'))
-    );
+    return o && (o.$typeUrl === SwapExactAmountIn.typeUrl || typeof o.sender === "string" && Coin.isAmino(o.token_in) && typeof o.token_out_denom === "string" && typeof o.token_out_min_amount === "string" && typeof o.swap_fee === "string");
   },
-  encode(
-    message: SwapExactAmountIn,
-    writer: BinaryWriter = BinaryWriter.create(),
-  ): BinaryWriter {
-    if (message.sender !== '') {
+  encode(message: SwapExactAmountIn, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
+    if (message.sender !== "") {
       writer.uint32(10).string(message.sender);
     }
     if (message.tokenIn !== undefined) {
       Coin.encode(message.tokenIn, writer.uint32(18).fork()).ldelim();
     }
-    if (message.tokenOutDenom !== '') {
+    if (message.tokenOutDenom !== "") {
       writer.uint32(26).string(message.tokenOutDenom);
     }
-    if (message.tokenOutMinAmount !== '') {
+    if (message.tokenOutMinAmount !== "") {
       writer.uint32(34).string(message.tokenOutMinAmount);
     }
-    if (message.swapFee !== '') {
-      writer
-        .uint32(42)
-        .string(Decimal.fromUserInput(message.swapFee, 18).atomics);
+    if (message.swapFee !== "") {
+      writer.uint32(42).string(Decimal.fromUserInput(message.swapFee, 18).atomics);
     }
     return writer;
   },
   decode(input: BinaryReader | Uint8Array, length?: number): SwapExactAmountIn {
-    const reader =
-      input instanceof BinaryReader ? input : new BinaryReader(input);
+    const reader = input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseSwapExactAmountIn();
     while (reader.pos < end) {
@@ -286,14 +252,11 @@ export const SwapExactAmountIn = {
   },
   fromPartial(object: Partial<SwapExactAmountIn>): SwapExactAmountIn {
     const message = createBaseSwapExactAmountIn();
-    message.sender = object.sender ?? '';
-    message.tokenIn =
-      object.tokenIn !== undefined && object.tokenIn !== null
-        ? Coin.fromPartial(object.tokenIn)
-        : undefined;
-    message.tokenOutDenom = object.tokenOutDenom ?? '';
-    message.tokenOutMinAmount = object.tokenOutMinAmount ?? '';
-    message.swapFee = object.swapFee ?? '';
+    message.sender = object.sender ?? "";
+    message.tokenIn = object.tokenIn !== undefined && object.tokenIn !== null ? Coin.fromPartial(object.tokenIn) : undefined;
+    message.tokenOutDenom = object.tokenOutDenom ?? "";
+    message.tokenOutMinAmount = object.tokenOutMinAmount ?? "";
+    message.swapFee = object.swapFee ?? "";
     return message;
   },
   fromAmino(object: SwapExactAmountInAmino): SwapExactAmountIn {
@@ -304,16 +267,10 @@ export const SwapExactAmountIn = {
     if (object.token_in !== undefined && object.token_in !== null) {
       message.tokenIn = Coin.fromAmino(object.token_in);
     }
-    if (
-      object.token_out_denom !== undefined &&
-      object.token_out_denom !== null
-    ) {
+    if (object.token_out_denom !== undefined && object.token_out_denom !== null) {
       message.tokenOutDenom = object.token_out_denom;
     }
-    if (
-      object.token_out_min_amount !== undefined &&
-      object.token_out_min_amount !== null
-    ) {
+    if (object.token_out_min_amount !== undefined && object.token_out_min_amount !== null) {
       message.tokenOutMinAmount = object.token_out_min_amount;
     }
     if (object.swap_fee !== undefined && object.swap_fee !== null) {
@@ -323,13 +280,11 @@ export const SwapExactAmountIn = {
   },
   toAmino(message: SwapExactAmountIn): SwapExactAmountInAmino {
     const obj: any = {};
-    obj.sender = message.sender === '' ? undefined : message.sender;
+    obj.sender = message.sender === "" ? undefined : message.sender;
     obj.token_in = message.tokenIn ? Coin.toAmino(message.tokenIn) : undefined;
-    obj.token_out_denom =
-      message.tokenOutDenom === '' ? undefined : message.tokenOutDenom;
-    obj.token_out_min_amount =
-      message.tokenOutMinAmount === '' ? undefined : message.tokenOutMinAmount;
-    obj.swap_fee = message.swapFee === '' ? undefined : message.swapFee;
+    obj.token_out_denom = message.tokenOutDenom === "" ? undefined : message.tokenOutDenom;
+    obj.token_out_min_amount = message.tokenOutMinAmount === "" ? undefined : message.tokenOutMinAmount;
+    obj.swap_fee = message.swapFee === "" ? undefined : message.swapFee;
     return obj;
   },
   fromAminoMsg(object: SwapExactAmountInAminoMsg): SwapExactAmountIn {
@@ -343,68 +298,43 @@ export const SwapExactAmountIn = {
   },
   toProtoMsg(message: SwapExactAmountIn): SwapExactAmountInProtoMsg {
     return {
-      typeUrl: '/symphony.cosmwasmpool.v1beta1.SwapExactAmountIn',
-      value: SwapExactAmountIn.encode(message).finish(),
+      typeUrl: "/symphony.cosmwasmpool.v1beta1.SwapExactAmountIn",
+      value: SwapExactAmountIn.encode(message).finish()
     };
-  },
+  }
 };
 GlobalDecoderRegistry.register(SwapExactAmountIn.typeUrl, SwapExactAmountIn);
 function createBaseSwapExactAmountInSudoMsg(): SwapExactAmountInSudoMsg {
   return {
-    swapExactAmountIn: SwapExactAmountIn.fromPartial({}),
+    swapExactAmountIn: SwapExactAmountIn.fromPartial({})
   };
 }
 export const SwapExactAmountInSudoMsg = {
-  typeUrl: '/symphony.cosmwasmpool.v1beta1.SwapExactAmountInSudoMsg',
+  typeUrl: "/symphony.cosmwasmpool.v1beta1.SwapExactAmountInSudoMsg",
   is(o: any): o is SwapExactAmountInSudoMsg {
-    return (
-      o &&
-      (o.$typeUrl === SwapExactAmountInSudoMsg.typeUrl ||
-        SwapExactAmountIn.is(o.swapExactAmountIn))
-    );
+    return o && (o.$typeUrl === SwapExactAmountInSudoMsg.typeUrl || SwapExactAmountIn.is(o.swapExactAmountIn));
   },
   isSDK(o: any): o is SwapExactAmountInSudoMsgSDKType {
-    return (
-      o &&
-      (o.$typeUrl === SwapExactAmountInSudoMsg.typeUrl ||
-        SwapExactAmountIn.isSDK(o.swap_exact_amount_in))
-    );
+    return o && (o.$typeUrl === SwapExactAmountInSudoMsg.typeUrl || SwapExactAmountIn.isSDK(o.swap_exact_amount_in));
   },
   isAmino(o: any): o is SwapExactAmountInSudoMsgAmino {
-    return (
-      o &&
-      (o.$typeUrl === SwapExactAmountInSudoMsg.typeUrl ||
-        SwapExactAmountIn.isAmino(o.swap_exact_amount_in))
-    );
+    return o && (o.$typeUrl === SwapExactAmountInSudoMsg.typeUrl || SwapExactAmountIn.isAmino(o.swap_exact_amount_in));
   },
-  encode(
-    message: SwapExactAmountInSudoMsg,
-    writer: BinaryWriter = BinaryWriter.create(),
-  ): BinaryWriter {
+  encode(message: SwapExactAmountInSudoMsg, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
     if (message.swapExactAmountIn !== undefined) {
-      SwapExactAmountIn.encode(
-        message.swapExactAmountIn,
-        writer.uint32(10).fork(),
-      ).ldelim();
+      SwapExactAmountIn.encode(message.swapExactAmountIn, writer.uint32(10).fork()).ldelim();
     }
     return writer;
   },
-  decode(
-    input: BinaryReader | Uint8Array,
-    length?: number,
-  ): SwapExactAmountInSudoMsg {
-    const reader =
-      input instanceof BinaryReader ? input : new BinaryReader(input);
+  decode(input: BinaryReader | Uint8Array, length?: number): SwapExactAmountInSudoMsg {
+    const reader = input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseSwapExactAmountInSudoMsg();
     while (reader.pos < end) {
       const tag = reader.uint32();
       switch (tag >>> 3) {
         case 1:
-          message.swapExactAmountIn = SwapExactAmountIn.decode(
-            reader,
-            reader.uint32(),
-          );
+          message.swapExactAmountIn = SwapExactAmountIn.decode(reader, reader.uint32());
           break;
         default:
           reader.skipType(tag & 7);
@@ -413,105 +343,64 @@ export const SwapExactAmountInSudoMsg = {
     }
     return message;
   },
-  fromPartial(
-    object: Partial<SwapExactAmountInSudoMsg>,
-  ): SwapExactAmountInSudoMsg {
+  fromPartial(object: Partial<SwapExactAmountInSudoMsg>): SwapExactAmountInSudoMsg {
     const message = createBaseSwapExactAmountInSudoMsg();
-    message.swapExactAmountIn =
-      object.swapExactAmountIn !== undefined &&
-      object.swapExactAmountIn !== null
-        ? SwapExactAmountIn.fromPartial(object.swapExactAmountIn)
-        : undefined;
+    message.swapExactAmountIn = object.swapExactAmountIn !== undefined && object.swapExactAmountIn !== null ? SwapExactAmountIn.fromPartial(object.swapExactAmountIn) : undefined;
     return message;
   },
   fromAmino(object: SwapExactAmountInSudoMsgAmino): SwapExactAmountInSudoMsg {
     const message = createBaseSwapExactAmountInSudoMsg();
-    if (
-      object.swap_exact_amount_in !== undefined &&
-      object.swap_exact_amount_in !== null
-    ) {
-      message.swapExactAmountIn = SwapExactAmountIn.fromAmino(
-        object.swap_exact_amount_in,
-      );
+    if (object.swap_exact_amount_in !== undefined && object.swap_exact_amount_in !== null) {
+      message.swapExactAmountIn = SwapExactAmountIn.fromAmino(object.swap_exact_amount_in);
     }
     return message;
   },
   toAmino(message: SwapExactAmountInSudoMsg): SwapExactAmountInSudoMsgAmino {
     const obj: any = {};
-    obj.swap_exact_amount_in = message.swapExactAmountIn
-      ? SwapExactAmountIn.toAmino(message.swapExactAmountIn)
-      : undefined;
+    obj.swap_exact_amount_in = message.swapExactAmountIn ? SwapExactAmountIn.toAmino(message.swapExactAmountIn) : undefined;
     return obj;
   },
-  fromAminoMsg(
-    object: SwapExactAmountInSudoMsgAminoMsg,
-  ): SwapExactAmountInSudoMsg {
+  fromAminoMsg(object: SwapExactAmountInSudoMsgAminoMsg): SwapExactAmountInSudoMsg {
     return SwapExactAmountInSudoMsg.fromAmino(object.value);
   },
-  fromProtoMsg(
-    message: SwapExactAmountInSudoMsgProtoMsg,
-  ): SwapExactAmountInSudoMsg {
+  fromProtoMsg(message: SwapExactAmountInSudoMsgProtoMsg): SwapExactAmountInSudoMsg {
     return SwapExactAmountInSudoMsg.decode(message.value);
   },
   toProto(message: SwapExactAmountInSudoMsg): Uint8Array {
     return SwapExactAmountInSudoMsg.encode(message).finish();
   },
-  toProtoMsg(
-    message: SwapExactAmountInSudoMsg,
-  ): SwapExactAmountInSudoMsgProtoMsg {
+  toProtoMsg(message: SwapExactAmountInSudoMsg): SwapExactAmountInSudoMsgProtoMsg {
     return {
-      typeUrl: '/symphony.cosmwasmpool.v1beta1.SwapExactAmountInSudoMsg',
-      value: SwapExactAmountInSudoMsg.encode(message).finish(),
+      typeUrl: "/symphony.cosmwasmpool.v1beta1.SwapExactAmountInSudoMsg",
+      value: SwapExactAmountInSudoMsg.encode(message).finish()
     };
-  },
+  }
 };
-GlobalDecoderRegistry.register(
-  SwapExactAmountInSudoMsg.typeUrl,
-  SwapExactAmountInSudoMsg,
-);
+GlobalDecoderRegistry.register(SwapExactAmountInSudoMsg.typeUrl, SwapExactAmountInSudoMsg);
 function createBaseSwapExactAmountInSudoMsgResponse(): SwapExactAmountInSudoMsgResponse {
   return {
-    tokenOutAmount: '',
+    tokenOutAmount: ""
   };
 }
 export const SwapExactAmountInSudoMsgResponse = {
-  typeUrl: '/symphony.cosmwasmpool.v1beta1.SwapExactAmountInSudoMsgResponse',
+  typeUrl: "/symphony.cosmwasmpool.v1beta1.SwapExactAmountInSudoMsgResponse",
   is(o: any): o is SwapExactAmountInSudoMsgResponse {
-    return (
-      o &&
-      (o.$typeUrl === SwapExactAmountInSudoMsgResponse.typeUrl ||
-        typeof o.tokenOutAmount === 'string')
-    );
+    return o && (o.$typeUrl === SwapExactAmountInSudoMsgResponse.typeUrl || typeof o.tokenOutAmount === "string");
   },
   isSDK(o: any): o is SwapExactAmountInSudoMsgResponseSDKType {
-    return (
-      o &&
-      (o.$typeUrl === SwapExactAmountInSudoMsgResponse.typeUrl ||
-        typeof o.token_out_amount === 'string')
-    );
+    return o && (o.$typeUrl === SwapExactAmountInSudoMsgResponse.typeUrl || typeof o.token_out_amount === "string");
   },
   isAmino(o: any): o is SwapExactAmountInSudoMsgResponseAmino {
-    return (
-      o &&
-      (o.$typeUrl === SwapExactAmountInSudoMsgResponse.typeUrl ||
-        typeof o.token_out_amount === 'string')
-    );
+    return o && (o.$typeUrl === SwapExactAmountInSudoMsgResponse.typeUrl || typeof o.token_out_amount === "string");
   },
-  encode(
-    message: SwapExactAmountInSudoMsgResponse,
-    writer: BinaryWriter = BinaryWriter.create(),
-  ): BinaryWriter {
-    if (message.tokenOutAmount !== '') {
+  encode(message: SwapExactAmountInSudoMsgResponse, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
+    if (message.tokenOutAmount !== "") {
       writer.uint32(10).string(message.tokenOutAmount);
     }
     return writer;
   },
-  decode(
-    input: BinaryReader | Uint8Array,
-    length?: number,
-  ): SwapExactAmountInSudoMsgResponse {
-    const reader =
-      input instanceof BinaryReader ? input : new BinaryReader(input);
+  decode(input: BinaryReader | Uint8Array, length?: number): SwapExactAmountInSudoMsgResponse {
+    const reader = input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseSwapExactAmountInSudoMsgResponse();
     while (reader.pos < end) {
@@ -527,133 +416,80 @@ export const SwapExactAmountInSudoMsgResponse = {
     }
     return message;
   },
-  fromPartial(
-    object: Partial<SwapExactAmountInSudoMsgResponse>,
-  ): SwapExactAmountInSudoMsgResponse {
+  fromPartial(object: Partial<SwapExactAmountInSudoMsgResponse>): SwapExactAmountInSudoMsgResponse {
     const message = createBaseSwapExactAmountInSudoMsgResponse();
-    message.tokenOutAmount = object.tokenOutAmount ?? '';
+    message.tokenOutAmount = object.tokenOutAmount ?? "";
     return message;
   },
-  fromAmino(
-    object: SwapExactAmountInSudoMsgResponseAmino,
-  ): SwapExactAmountInSudoMsgResponse {
+  fromAmino(object: SwapExactAmountInSudoMsgResponseAmino): SwapExactAmountInSudoMsgResponse {
     const message = createBaseSwapExactAmountInSudoMsgResponse();
-    if (
-      object.token_out_amount !== undefined &&
-      object.token_out_amount !== null
-    ) {
+    if (object.token_out_amount !== undefined && object.token_out_amount !== null) {
       message.tokenOutAmount = object.token_out_amount;
     }
     return message;
   },
-  toAmino(
-    message: SwapExactAmountInSudoMsgResponse,
-  ): SwapExactAmountInSudoMsgResponseAmino {
+  toAmino(message: SwapExactAmountInSudoMsgResponse): SwapExactAmountInSudoMsgResponseAmino {
     const obj: any = {};
-    obj.token_out_amount =
-      message.tokenOutAmount === '' ? undefined : message.tokenOutAmount;
+    obj.token_out_amount = message.tokenOutAmount === "" ? undefined : message.tokenOutAmount;
     return obj;
   },
-  fromAminoMsg(
-    object: SwapExactAmountInSudoMsgResponseAminoMsg,
-  ): SwapExactAmountInSudoMsgResponse {
+  fromAminoMsg(object: SwapExactAmountInSudoMsgResponseAminoMsg): SwapExactAmountInSudoMsgResponse {
     return SwapExactAmountInSudoMsgResponse.fromAmino(object.value);
   },
-  fromProtoMsg(
-    message: SwapExactAmountInSudoMsgResponseProtoMsg,
-  ): SwapExactAmountInSudoMsgResponse {
+  fromProtoMsg(message: SwapExactAmountInSudoMsgResponseProtoMsg): SwapExactAmountInSudoMsgResponse {
     return SwapExactAmountInSudoMsgResponse.decode(message.value);
   },
   toProto(message: SwapExactAmountInSudoMsgResponse): Uint8Array {
     return SwapExactAmountInSudoMsgResponse.encode(message).finish();
   },
-  toProtoMsg(
-    message: SwapExactAmountInSudoMsgResponse,
-  ): SwapExactAmountInSudoMsgResponseProtoMsg {
+  toProtoMsg(message: SwapExactAmountInSudoMsgResponse): SwapExactAmountInSudoMsgResponseProtoMsg {
     return {
-      typeUrl:
-        '/symphony.cosmwasmpool.v1beta1.SwapExactAmountInSudoMsgResponse',
-      value: SwapExactAmountInSudoMsgResponse.encode(message).finish(),
+      typeUrl: "/symphony.cosmwasmpool.v1beta1.SwapExactAmountInSudoMsgResponse",
+      value: SwapExactAmountInSudoMsgResponse.encode(message).finish()
     };
-  },
+  }
 };
-GlobalDecoderRegistry.register(
-  SwapExactAmountInSudoMsgResponse.typeUrl,
-  SwapExactAmountInSudoMsgResponse,
-);
+GlobalDecoderRegistry.register(SwapExactAmountInSudoMsgResponse.typeUrl, SwapExactAmountInSudoMsgResponse);
 function createBaseSwapExactAmountOut(): SwapExactAmountOut {
   return {
-    sender: '',
+    sender: "",
     tokenOut: Coin.fromPartial({}),
-    tokenInDenom: '',
-    tokenInMaxAmount: '',
-    swapFee: '',
+    tokenInDenom: "",
+    tokenInMaxAmount: "",
+    swapFee: ""
   };
 }
 export const SwapExactAmountOut = {
-  typeUrl: '/symphony.cosmwasmpool.v1beta1.SwapExactAmountOut',
+  typeUrl: "/symphony.cosmwasmpool.v1beta1.SwapExactAmountOut",
   is(o: any): o is SwapExactAmountOut {
-    return (
-      o &&
-      (o.$typeUrl === SwapExactAmountOut.typeUrl ||
-        (typeof o.sender === 'string' &&
-          Coin.is(o.tokenOut) &&
-          typeof o.tokenInDenom === 'string' &&
-          typeof o.tokenInMaxAmount === 'string' &&
-          typeof o.swapFee === 'string'))
-    );
+    return o && (o.$typeUrl === SwapExactAmountOut.typeUrl || typeof o.sender === "string" && Coin.is(o.tokenOut) && typeof o.tokenInDenom === "string" && typeof o.tokenInMaxAmount === "string" && typeof o.swapFee === "string");
   },
   isSDK(o: any): o is SwapExactAmountOutSDKType {
-    return (
-      o &&
-      (o.$typeUrl === SwapExactAmountOut.typeUrl ||
-        (typeof o.sender === 'string' &&
-          Coin.isSDK(o.token_out) &&
-          typeof o.token_in_denom === 'string' &&
-          typeof o.token_in_max_amount === 'string' &&
-          typeof o.swap_fee === 'string'))
-    );
+    return o && (o.$typeUrl === SwapExactAmountOut.typeUrl || typeof o.sender === "string" && Coin.isSDK(o.token_out) && typeof o.token_in_denom === "string" && typeof o.token_in_max_amount === "string" && typeof o.swap_fee === "string");
   },
   isAmino(o: any): o is SwapExactAmountOutAmino {
-    return (
-      o &&
-      (o.$typeUrl === SwapExactAmountOut.typeUrl ||
-        (typeof o.sender === 'string' &&
-          Coin.isAmino(o.token_out) &&
-          typeof o.token_in_denom === 'string' &&
-          typeof o.token_in_max_amount === 'string' &&
-          typeof o.swap_fee === 'string'))
-    );
+    return o && (o.$typeUrl === SwapExactAmountOut.typeUrl || typeof o.sender === "string" && Coin.isAmino(o.token_out) && typeof o.token_in_denom === "string" && typeof o.token_in_max_amount === "string" && typeof o.swap_fee === "string");
   },
-  encode(
-    message: SwapExactAmountOut,
-    writer: BinaryWriter = BinaryWriter.create(),
-  ): BinaryWriter {
-    if (message.sender !== '') {
+  encode(message: SwapExactAmountOut, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
+    if (message.sender !== "") {
       writer.uint32(10).string(message.sender);
     }
     if (message.tokenOut !== undefined) {
       Coin.encode(message.tokenOut, writer.uint32(18).fork()).ldelim();
     }
-    if (message.tokenInDenom !== '') {
+    if (message.tokenInDenom !== "") {
       writer.uint32(26).string(message.tokenInDenom);
     }
-    if (message.tokenInMaxAmount !== '') {
+    if (message.tokenInMaxAmount !== "") {
       writer.uint32(34).string(message.tokenInMaxAmount);
     }
-    if (message.swapFee !== '') {
-      writer
-        .uint32(42)
-        .string(Decimal.fromUserInput(message.swapFee, 18).atomics);
+    if (message.swapFee !== "") {
+      writer.uint32(42).string(Decimal.fromUserInput(message.swapFee, 18).atomics);
     }
     return writer;
   },
-  decode(
-    input: BinaryReader | Uint8Array,
-    length?: number,
-  ): SwapExactAmountOut {
-    const reader =
-      input instanceof BinaryReader ? input : new BinaryReader(input);
+  decode(input: BinaryReader | Uint8Array, length?: number): SwapExactAmountOut {
+    const reader = input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseSwapExactAmountOut();
     while (reader.pos < end) {
@@ -683,14 +519,11 @@ export const SwapExactAmountOut = {
   },
   fromPartial(object: Partial<SwapExactAmountOut>): SwapExactAmountOut {
     const message = createBaseSwapExactAmountOut();
-    message.sender = object.sender ?? '';
-    message.tokenOut =
-      object.tokenOut !== undefined && object.tokenOut !== null
-        ? Coin.fromPartial(object.tokenOut)
-        : undefined;
-    message.tokenInDenom = object.tokenInDenom ?? '';
-    message.tokenInMaxAmount = object.tokenInMaxAmount ?? '';
-    message.swapFee = object.swapFee ?? '';
+    message.sender = object.sender ?? "";
+    message.tokenOut = object.tokenOut !== undefined && object.tokenOut !== null ? Coin.fromPartial(object.tokenOut) : undefined;
+    message.tokenInDenom = object.tokenInDenom ?? "";
+    message.tokenInMaxAmount = object.tokenInMaxAmount ?? "";
+    message.swapFee = object.swapFee ?? "";
     return message;
   },
   fromAmino(object: SwapExactAmountOutAmino): SwapExactAmountOut {
@@ -704,10 +537,7 @@ export const SwapExactAmountOut = {
     if (object.token_in_denom !== undefined && object.token_in_denom !== null) {
       message.tokenInDenom = object.token_in_denom;
     }
-    if (
-      object.token_in_max_amount !== undefined &&
-      object.token_in_max_amount !== null
-    ) {
+    if (object.token_in_max_amount !== undefined && object.token_in_max_amount !== null) {
       message.tokenInMaxAmount = object.token_in_max_amount;
     }
     if (object.swap_fee !== undefined && object.swap_fee !== null) {
@@ -717,15 +547,11 @@ export const SwapExactAmountOut = {
   },
   toAmino(message: SwapExactAmountOut): SwapExactAmountOutAmino {
     const obj: any = {};
-    obj.sender = message.sender === '' ? undefined : message.sender;
-    obj.token_out = message.tokenOut
-      ? Coin.toAmino(message.tokenOut)
-      : undefined;
-    obj.token_in_denom =
-      message.tokenInDenom === '' ? undefined : message.tokenInDenom;
-    obj.token_in_max_amount =
-      message.tokenInMaxAmount === '' ? undefined : message.tokenInMaxAmount;
-    obj.swap_fee = message.swapFee === '' ? undefined : message.swapFee;
+    obj.sender = message.sender === "" ? undefined : message.sender;
+    obj.token_out = message.tokenOut ? Coin.toAmino(message.tokenOut) : undefined;
+    obj.token_in_denom = message.tokenInDenom === "" ? undefined : message.tokenInDenom;
+    obj.token_in_max_amount = message.tokenInMaxAmount === "" ? undefined : message.tokenInMaxAmount;
+    obj.swap_fee = message.swapFee === "" ? undefined : message.swapFee;
     return obj;
   },
   fromAminoMsg(object: SwapExactAmountOutAminoMsg): SwapExactAmountOut {
@@ -739,68 +565,43 @@ export const SwapExactAmountOut = {
   },
   toProtoMsg(message: SwapExactAmountOut): SwapExactAmountOutProtoMsg {
     return {
-      typeUrl: '/symphony.cosmwasmpool.v1beta1.SwapExactAmountOut',
-      value: SwapExactAmountOut.encode(message).finish(),
+      typeUrl: "/symphony.cosmwasmpool.v1beta1.SwapExactAmountOut",
+      value: SwapExactAmountOut.encode(message).finish()
     };
-  },
+  }
 };
 GlobalDecoderRegistry.register(SwapExactAmountOut.typeUrl, SwapExactAmountOut);
 function createBaseSwapExactAmountOutSudoMsg(): SwapExactAmountOutSudoMsg {
   return {
-    swapExactAmountOut: SwapExactAmountOut.fromPartial({}),
+    swapExactAmountOut: SwapExactAmountOut.fromPartial({})
   };
 }
 export const SwapExactAmountOutSudoMsg = {
-  typeUrl: '/symphony.cosmwasmpool.v1beta1.SwapExactAmountOutSudoMsg',
+  typeUrl: "/symphony.cosmwasmpool.v1beta1.SwapExactAmountOutSudoMsg",
   is(o: any): o is SwapExactAmountOutSudoMsg {
-    return (
-      o &&
-      (o.$typeUrl === SwapExactAmountOutSudoMsg.typeUrl ||
-        SwapExactAmountOut.is(o.swapExactAmountOut))
-    );
+    return o && (o.$typeUrl === SwapExactAmountOutSudoMsg.typeUrl || SwapExactAmountOut.is(o.swapExactAmountOut));
   },
   isSDK(o: any): o is SwapExactAmountOutSudoMsgSDKType {
-    return (
-      o &&
-      (o.$typeUrl === SwapExactAmountOutSudoMsg.typeUrl ||
-        SwapExactAmountOut.isSDK(o.swap_exact_amount_out))
-    );
+    return o && (o.$typeUrl === SwapExactAmountOutSudoMsg.typeUrl || SwapExactAmountOut.isSDK(o.swap_exact_amount_out));
   },
   isAmino(o: any): o is SwapExactAmountOutSudoMsgAmino {
-    return (
-      o &&
-      (o.$typeUrl === SwapExactAmountOutSudoMsg.typeUrl ||
-        SwapExactAmountOut.isAmino(o.swap_exact_amount_out))
-    );
+    return o && (o.$typeUrl === SwapExactAmountOutSudoMsg.typeUrl || SwapExactAmountOut.isAmino(o.swap_exact_amount_out));
   },
-  encode(
-    message: SwapExactAmountOutSudoMsg,
-    writer: BinaryWriter = BinaryWriter.create(),
-  ): BinaryWriter {
+  encode(message: SwapExactAmountOutSudoMsg, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
     if (message.swapExactAmountOut !== undefined) {
-      SwapExactAmountOut.encode(
-        message.swapExactAmountOut,
-        writer.uint32(10).fork(),
-      ).ldelim();
+      SwapExactAmountOut.encode(message.swapExactAmountOut, writer.uint32(10).fork()).ldelim();
     }
     return writer;
   },
-  decode(
-    input: BinaryReader | Uint8Array,
-    length?: number,
-  ): SwapExactAmountOutSudoMsg {
-    const reader =
-      input instanceof BinaryReader ? input : new BinaryReader(input);
+  decode(input: BinaryReader | Uint8Array, length?: number): SwapExactAmountOutSudoMsg {
+    const reader = input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseSwapExactAmountOutSudoMsg();
     while (reader.pos < end) {
       const tag = reader.uint32();
       switch (tag >>> 3) {
         case 1:
-          message.swapExactAmountOut = SwapExactAmountOut.decode(
-            reader,
-            reader.uint32(),
-          );
+          message.swapExactAmountOut = SwapExactAmountOut.decode(reader, reader.uint32());
           break;
         default:
           reader.skipType(tag & 7);
@@ -809,105 +610,64 @@ export const SwapExactAmountOutSudoMsg = {
     }
     return message;
   },
-  fromPartial(
-    object: Partial<SwapExactAmountOutSudoMsg>,
-  ): SwapExactAmountOutSudoMsg {
+  fromPartial(object: Partial<SwapExactAmountOutSudoMsg>): SwapExactAmountOutSudoMsg {
     const message = createBaseSwapExactAmountOutSudoMsg();
-    message.swapExactAmountOut =
-      object.swapExactAmountOut !== undefined &&
-      object.swapExactAmountOut !== null
-        ? SwapExactAmountOut.fromPartial(object.swapExactAmountOut)
-        : undefined;
+    message.swapExactAmountOut = object.swapExactAmountOut !== undefined && object.swapExactAmountOut !== null ? SwapExactAmountOut.fromPartial(object.swapExactAmountOut) : undefined;
     return message;
   },
   fromAmino(object: SwapExactAmountOutSudoMsgAmino): SwapExactAmountOutSudoMsg {
     const message = createBaseSwapExactAmountOutSudoMsg();
-    if (
-      object.swap_exact_amount_out !== undefined &&
-      object.swap_exact_amount_out !== null
-    ) {
-      message.swapExactAmountOut = SwapExactAmountOut.fromAmino(
-        object.swap_exact_amount_out,
-      );
+    if (object.swap_exact_amount_out !== undefined && object.swap_exact_amount_out !== null) {
+      message.swapExactAmountOut = SwapExactAmountOut.fromAmino(object.swap_exact_amount_out);
     }
     return message;
   },
   toAmino(message: SwapExactAmountOutSudoMsg): SwapExactAmountOutSudoMsgAmino {
     const obj: any = {};
-    obj.swap_exact_amount_out = message.swapExactAmountOut
-      ? SwapExactAmountOut.toAmino(message.swapExactAmountOut)
-      : undefined;
+    obj.swap_exact_amount_out = message.swapExactAmountOut ? SwapExactAmountOut.toAmino(message.swapExactAmountOut) : undefined;
     return obj;
   },
-  fromAminoMsg(
-    object: SwapExactAmountOutSudoMsgAminoMsg,
-  ): SwapExactAmountOutSudoMsg {
+  fromAminoMsg(object: SwapExactAmountOutSudoMsgAminoMsg): SwapExactAmountOutSudoMsg {
     return SwapExactAmountOutSudoMsg.fromAmino(object.value);
   },
-  fromProtoMsg(
-    message: SwapExactAmountOutSudoMsgProtoMsg,
-  ): SwapExactAmountOutSudoMsg {
+  fromProtoMsg(message: SwapExactAmountOutSudoMsgProtoMsg): SwapExactAmountOutSudoMsg {
     return SwapExactAmountOutSudoMsg.decode(message.value);
   },
   toProto(message: SwapExactAmountOutSudoMsg): Uint8Array {
     return SwapExactAmountOutSudoMsg.encode(message).finish();
   },
-  toProtoMsg(
-    message: SwapExactAmountOutSudoMsg,
-  ): SwapExactAmountOutSudoMsgProtoMsg {
+  toProtoMsg(message: SwapExactAmountOutSudoMsg): SwapExactAmountOutSudoMsgProtoMsg {
     return {
-      typeUrl: '/symphony.cosmwasmpool.v1beta1.SwapExactAmountOutSudoMsg',
-      value: SwapExactAmountOutSudoMsg.encode(message).finish(),
+      typeUrl: "/symphony.cosmwasmpool.v1beta1.SwapExactAmountOutSudoMsg",
+      value: SwapExactAmountOutSudoMsg.encode(message).finish()
     };
-  },
+  }
 };
-GlobalDecoderRegistry.register(
-  SwapExactAmountOutSudoMsg.typeUrl,
-  SwapExactAmountOutSudoMsg,
-);
+GlobalDecoderRegistry.register(SwapExactAmountOutSudoMsg.typeUrl, SwapExactAmountOutSudoMsg);
 function createBaseSwapExactAmountOutSudoMsgResponse(): SwapExactAmountOutSudoMsgResponse {
   return {
-    tokenInAmount: '',
+    tokenInAmount: ""
   };
 }
 export const SwapExactAmountOutSudoMsgResponse = {
-  typeUrl: '/symphony.cosmwasmpool.v1beta1.SwapExactAmountOutSudoMsgResponse',
+  typeUrl: "/symphony.cosmwasmpool.v1beta1.SwapExactAmountOutSudoMsgResponse",
   is(o: any): o is SwapExactAmountOutSudoMsgResponse {
-    return (
-      o &&
-      (o.$typeUrl === SwapExactAmountOutSudoMsgResponse.typeUrl ||
-        typeof o.tokenInAmount === 'string')
-    );
+    return o && (o.$typeUrl === SwapExactAmountOutSudoMsgResponse.typeUrl || typeof o.tokenInAmount === "string");
   },
   isSDK(o: any): o is SwapExactAmountOutSudoMsgResponseSDKType {
-    return (
-      o &&
-      (o.$typeUrl === SwapExactAmountOutSudoMsgResponse.typeUrl ||
-        typeof o.token_in_amount === 'string')
-    );
+    return o && (o.$typeUrl === SwapExactAmountOutSudoMsgResponse.typeUrl || typeof o.token_in_amount === "string");
   },
   isAmino(o: any): o is SwapExactAmountOutSudoMsgResponseAmino {
-    return (
-      o &&
-      (o.$typeUrl === SwapExactAmountOutSudoMsgResponse.typeUrl ||
-        typeof o.token_in_amount === 'string')
-    );
+    return o && (o.$typeUrl === SwapExactAmountOutSudoMsgResponse.typeUrl || typeof o.token_in_amount === "string");
   },
-  encode(
-    message: SwapExactAmountOutSudoMsgResponse,
-    writer: BinaryWriter = BinaryWriter.create(),
-  ): BinaryWriter {
-    if (message.tokenInAmount !== '') {
+  encode(message: SwapExactAmountOutSudoMsgResponse, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
+    if (message.tokenInAmount !== "") {
       writer.uint32(10).string(message.tokenInAmount);
     }
     return writer;
   },
-  decode(
-    input: BinaryReader | Uint8Array,
-    length?: number,
-  ): SwapExactAmountOutSudoMsgResponse {
-    const reader =
-      input instanceof BinaryReader ? input : new BinaryReader(input);
+  decode(input: BinaryReader | Uint8Array, length?: number): SwapExactAmountOutSudoMsgResponse {
+    const reader = input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseSwapExactAmountOutSudoMsgResponse();
     while (reader.pos < end) {
@@ -923,57 +683,37 @@ export const SwapExactAmountOutSudoMsgResponse = {
     }
     return message;
   },
-  fromPartial(
-    object: Partial<SwapExactAmountOutSudoMsgResponse>,
-  ): SwapExactAmountOutSudoMsgResponse {
+  fromPartial(object: Partial<SwapExactAmountOutSudoMsgResponse>): SwapExactAmountOutSudoMsgResponse {
     const message = createBaseSwapExactAmountOutSudoMsgResponse();
-    message.tokenInAmount = object.tokenInAmount ?? '';
+    message.tokenInAmount = object.tokenInAmount ?? "";
     return message;
   },
-  fromAmino(
-    object: SwapExactAmountOutSudoMsgResponseAmino,
-  ): SwapExactAmountOutSudoMsgResponse {
+  fromAmino(object: SwapExactAmountOutSudoMsgResponseAmino): SwapExactAmountOutSudoMsgResponse {
     const message = createBaseSwapExactAmountOutSudoMsgResponse();
-    if (
-      object.token_in_amount !== undefined &&
-      object.token_in_amount !== null
-    ) {
+    if (object.token_in_amount !== undefined && object.token_in_amount !== null) {
       message.tokenInAmount = object.token_in_amount;
     }
     return message;
   },
-  toAmino(
-    message: SwapExactAmountOutSudoMsgResponse,
-  ): SwapExactAmountOutSudoMsgResponseAmino {
+  toAmino(message: SwapExactAmountOutSudoMsgResponse): SwapExactAmountOutSudoMsgResponseAmino {
     const obj: any = {};
-    obj.token_in_amount =
-      message.tokenInAmount === '' ? undefined : message.tokenInAmount;
+    obj.token_in_amount = message.tokenInAmount === "" ? undefined : message.tokenInAmount;
     return obj;
   },
-  fromAminoMsg(
-    object: SwapExactAmountOutSudoMsgResponseAminoMsg,
-  ): SwapExactAmountOutSudoMsgResponse {
+  fromAminoMsg(object: SwapExactAmountOutSudoMsgResponseAminoMsg): SwapExactAmountOutSudoMsgResponse {
     return SwapExactAmountOutSudoMsgResponse.fromAmino(object.value);
   },
-  fromProtoMsg(
-    message: SwapExactAmountOutSudoMsgResponseProtoMsg,
-  ): SwapExactAmountOutSudoMsgResponse {
+  fromProtoMsg(message: SwapExactAmountOutSudoMsgResponseProtoMsg): SwapExactAmountOutSudoMsgResponse {
     return SwapExactAmountOutSudoMsgResponse.decode(message.value);
   },
   toProto(message: SwapExactAmountOutSudoMsgResponse): Uint8Array {
     return SwapExactAmountOutSudoMsgResponse.encode(message).finish();
   },
-  toProtoMsg(
-    message: SwapExactAmountOutSudoMsgResponse,
-  ): SwapExactAmountOutSudoMsgResponseProtoMsg {
+  toProtoMsg(message: SwapExactAmountOutSudoMsgResponse): SwapExactAmountOutSudoMsgResponseProtoMsg {
     return {
-      typeUrl:
-        '/symphony.cosmwasmpool.v1beta1.SwapExactAmountOutSudoMsgResponse',
-      value: SwapExactAmountOutSudoMsgResponse.encode(message).finish(),
+      typeUrl: "/symphony.cosmwasmpool.v1beta1.SwapExactAmountOutSudoMsgResponse",
+      value: SwapExactAmountOutSudoMsgResponse.encode(message).finish()
     };
-  },
+  }
 };
-GlobalDecoderRegistry.register(
-  SwapExactAmountOutSudoMsgResponse.typeUrl,
-  SwapExactAmountOutSudoMsgResponse,
-);
+GlobalDecoderRegistry.register(SwapExactAmountOutSudoMsgResponse.typeUrl, SwapExactAmountOutSudoMsgResponse);

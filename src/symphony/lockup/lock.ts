@@ -1,14 +1,10 @@
 //@ts-nocheck
-import {
-  Duration,
-  DurationAmino,
-  DurationSDKType,
-} from '../../google/protobuf/duration';
-import { Timestamp } from '../../google/protobuf/timestamp';
-import { Coin, CoinAmino, CoinSDKType } from '../../cosmos/base/v1beta1/coin';
-import { BinaryReader, BinaryWriter } from '../../binary';
-import { GlobalDecoderRegistry } from '../../registry';
-import { toTimestamp, fromTimestamp, isSet } from '../../helpers';
+import { Duration, DurationAmino, DurationSDKType } from "../../google/protobuf/duration";
+import { Timestamp } from "../../google/protobuf/timestamp";
+import { Coin, CoinAmino, CoinSDKType } from "../../cosmos/base/v1beta1/coin";
+import { BinaryReader, BinaryWriter } from "../../binary";
+import { GlobalDecoderRegistry } from "../../registry";
+import { toTimestamp, fromTimestamp, isSet } from "../../helpers";
 /**
  * LockQueryType defines the type of the lock query that can
  * either be by duration or start time of the lock.
@@ -25,19 +21,19 @@ export const LockQueryTypeAmino = LockQueryType;
 export function lockQueryTypeFromJSON(object: any): LockQueryType {
   switch (object) {
     case 0:
-    case 'ByDuration':
+    case "ByDuration":
       return LockQueryType.ByDuration;
     case 1:
-    case 'ByTime':
+    case "ByTime":
       return LockQueryType.ByTime;
     case 2:
-    case 'NoLock':
+    case "NoLock":
       return LockQueryType.NoLock;
     case 3:
-    case 'ByGroup':
+    case "ByGroup":
       return LockQueryType.ByGroup;
     case -1:
-    case 'UNRECOGNIZED':
+    case "UNRECOGNIZED":
     default:
       return LockQueryType.UNRECOGNIZED;
   }
@@ -45,16 +41,16 @@ export function lockQueryTypeFromJSON(object: any): LockQueryType {
 export function lockQueryTypeToJSON(object: LockQueryType): string {
   switch (object) {
     case LockQueryType.ByDuration:
-      return 'ByDuration';
+      return "ByDuration";
     case LockQueryType.ByTime:
-      return 'ByTime';
+      return "ByTime";
     case LockQueryType.NoLock:
-      return 'NoLock';
+      return "NoLock";
     case LockQueryType.ByGroup:
-      return 'ByGroup';
+      return "ByGroup";
     case LockQueryType.UNRECOGNIZED:
     default:
-      return 'UNRECOGNIZED';
+      return "UNRECOGNIZED";
   }
 }
 /**
@@ -97,7 +93,7 @@ export interface PeriodLock {
   rewardReceiverAddress: string;
 }
 export interface PeriodLockProtoMsg {
-  typeUrl: '/symphony.lockup.PeriodLock';
+  typeUrl: "/symphony.lockup.PeriodLock";
   value: Uint8Array;
 }
 /**
@@ -140,7 +136,7 @@ export interface PeriodLockAmino {
   reward_receiver_address?: string;
 }
 export interface PeriodLockAminoMsg {
-  type: '/symphony.lockup.PeriodLock';
+  type: "/symphony.lockup.PeriodLock";
   value: PeriodLockAmino;
 }
 /**
@@ -182,7 +178,7 @@ export interface QueryCondition {
   timestamp: Date;
 }
 export interface QueryConditionProtoMsg {
-  typeUrl: '/symphony.lockup.QueryCondition';
+  typeUrl: "/symphony.lockup.QueryCondition";
   value: Uint8Array;
 }
 /**
@@ -209,7 +205,7 @@ export interface QueryConditionAmino {
   timestamp?: string;
 }
 export interface QueryConditionAminoMsg {
-  type: '/symphony.lockup.QueryCondition';
+  type: "/symphony.lockup.QueryCondition";
   value: QueryConditionAmino;
 }
 /**
@@ -252,7 +248,7 @@ export interface SyntheticLock {
   duration: Duration;
 }
 export interface SyntheticLockProtoMsg {
-  typeUrl: '/symphony.lockup.SyntheticLock';
+  typeUrl: "/symphony.lockup.SyntheticLock";
   value: Uint8Array;
 }
 /**
@@ -284,7 +280,7 @@ export interface SyntheticLockAmino {
   duration?: DurationAmino;
 }
 export interface SyntheticLockAminoMsg {
-  type: '/symphony.lockup.SyntheticLock';
+  type: "/symphony.lockup.SyntheticLock";
   value: SyntheticLockAmino;
 }
 /**
@@ -302,84 +298,47 @@ export interface SyntheticLockSDKType {
 function createBasePeriodLock(): PeriodLock {
   return {
     iD: BigInt(0),
-    owner: '',
+    owner: "",
     duration: Duration.fromPartial({}),
     endTime: new Date(),
     coins: [],
-    rewardReceiverAddress: '',
+    rewardReceiverAddress: ""
   };
 }
 export const PeriodLock = {
-  typeUrl: '/symphony.lockup.PeriodLock',
+  typeUrl: "/symphony.lockup.PeriodLock",
   is(o: any): o is PeriodLock {
-    return (
-      o &&
-      (o.$typeUrl === PeriodLock.typeUrl ||
-        (typeof o.iD === 'bigint' &&
-          typeof o.owner === 'string' &&
-          Duration.is(o.duration) &&
-          Timestamp.is(o.endTime) &&
-          Array.isArray(o.coins) &&
-          (!o.coins.length || Coin.is(o.coins[0])) &&
-          typeof o.rewardReceiverAddress === 'string'))
-    );
+    return o && (o.$typeUrl === PeriodLock.typeUrl || typeof o.iD === "bigint" && typeof o.owner === "string" && Duration.is(o.duration) && Timestamp.is(o.endTime) && Array.isArray(o.coins) && (!o.coins.length || Coin.is(o.coins[0])) && typeof o.rewardReceiverAddress === "string");
   },
   isSDK(o: any): o is PeriodLockSDKType {
-    return (
-      o &&
-      (o.$typeUrl === PeriodLock.typeUrl ||
-        (typeof o.ID === 'bigint' &&
-          typeof o.owner === 'string' &&
-          Duration.isSDK(o.duration) &&
-          Timestamp.isSDK(o.end_time) &&
-          Array.isArray(o.coins) &&
-          (!o.coins.length || Coin.isSDK(o.coins[0])) &&
-          typeof o.reward_receiver_address === 'string'))
-    );
+    return o && (o.$typeUrl === PeriodLock.typeUrl || typeof o.ID === "bigint" && typeof o.owner === "string" && Duration.isSDK(o.duration) && Timestamp.isSDK(o.end_time) && Array.isArray(o.coins) && (!o.coins.length || Coin.isSDK(o.coins[0])) && typeof o.reward_receiver_address === "string");
   },
   isAmino(o: any): o is PeriodLockAmino {
-    return (
-      o &&
-      (o.$typeUrl === PeriodLock.typeUrl ||
-        (typeof o.ID === 'bigint' &&
-          typeof o.owner === 'string' &&
-          Duration.isAmino(o.duration) &&
-          Timestamp.isAmino(o.end_time) &&
-          Array.isArray(o.coins) &&
-          (!o.coins.length || Coin.isAmino(o.coins[0])) &&
-          typeof o.reward_receiver_address === 'string'))
-    );
+    return o && (o.$typeUrl === PeriodLock.typeUrl || typeof o.ID === "bigint" && typeof o.owner === "string" && Duration.isAmino(o.duration) && Timestamp.isAmino(o.end_time) && Array.isArray(o.coins) && (!o.coins.length || Coin.isAmino(o.coins[0])) && typeof o.reward_receiver_address === "string");
   },
-  encode(
-    message: PeriodLock,
-    writer: BinaryWriter = BinaryWriter.create(),
-  ): BinaryWriter {
+  encode(message: PeriodLock, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
     if (message.iD !== BigInt(0)) {
       writer.uint32(8).uint64(message.iD);
     }
-    if (message.owner !== '') {
+    if (message.owner !== "") {
       writer.uint32(18).string(message.owner);
     }
     if (message.duration !== undefined) {
       Duration.encode(message.duration, writer.uint32(26).fork()).ldelim();
     }
     if (message.endTime !== undefined) {
-      Timestamp.encode(
-        toTimestamp(message.endTime),
-        writer.uint32(34).fork(),
-      ).ldelim();
+      Timestamp.encode(toTimestamp(message.endTime), writer.uint32(34).fork()).ldelim();
     }
     for (const v of message.coins) {
       Coin.encode(v!, writer.uint32(42).fork()).ldelim();
     }
-    if (message.rewardReceiverAddress !== '') {
+    if (message.rewardReceiverAddress !== "") {
       writer.uint32(50).string(message.rewardReceiverAddress);
     }
     return writer;
   },
   decode(input: BinaryReader | Uint8Array, length?: number): PeriodLock {
-    const reader =
-      input instanceof BinaryReader ? input : new BinaryReader(input);
+    const reader = input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBasePeriodLock();
     while (reader.pos < end) {
@@ -395,9 +354,7 @@ export const PeriodLock = {
           message.duration = Duration.decode(reader, reader.uint32());
           break;
         case 4:
-          message.endTime = fromTimestamp(
-            Timestamp.decode(reader, reader.uint32()),
-          );
+          message.endTime = fromTimestamp(Timestamp.decode(reader, reader.uint32()));
           break;
         case 5:
           message.coins.push(Coin.decode(reader, reader.uint32()));
@@ -414,18 +371,12 @@ export const PeriodLock = {
   },
   fromPartial(object: Partial<PeriodLock>): PeriodLock {
     const message = createBasePeriodLock();
-    message.iD =
-      object.iD !== undefined && object.iD !== null
-        ? BigInt(object.iD.toString())
-        : BigInt(0);
-    message.owner = object.owner ?? '';
-    message.duration =
-      object.duration !== undefined && object.duration !== null
-        ? Duration.fromPartial(object.duration)
-        : undefined;
+    message.iD = object.iD !== undefined && object.iD !== null ? BigInt(object.iD.toString()) : BigInt(0);
+    message.owner = object.owner ?? "";
+    message.duration = object.duration !== undefined && object.duration !== null ? Duration.fromPartial(object.duration) : undefined;
     message.endTime = object.endTime ?? undefined;
     message.coins = object.coins?.map(e => Coin.fromPartial(e)) || [];
-    message.rewardReceiverAddress = object.rewardReceiverAddress ?? '';
+    message.rewardReceiverAddress = object.rewardReceiverAddress ?? "";
     return message;
   },
   fromAmino(object: PeriodLockAmino): PeriodLock {
@@ -443,10 +394,7 @@ export const PeriodLock = {
       message.endTime = fromTimestamp(Timestamp.fromAmino(object.end_time));
     }
     message.coins = object.coins?.map(e => Coin.fromAmino(e)) || [];
-    if (
-      object.reward_receiver_address !== undefined &&
-      object.reward_receiver_address !== null
-    ) {
+    if (object.reward_receiver_address !== undefined && object.reward_receiver_address !== null) {
       message.rewardReceiverAddress = object.reward_receiver_address;
     }
     return message;
@@ -454,22 +402,15 @@ export const PeriodLock = {
   toAmino(message: PeriodLock): PeriodLockAmino {
     const obj: any = {};
     obj.ID = message.iD !== BigInt(0) ? message.iD?.toString() : undefined;
-    obj.owner = message.owner === '' ? undefined : message.owner;
-    obj.duration = message.duration
-      ? Duration.toAmino(message.duration)
-      : undefined;
-    obj.end_time = message.endTime
-      ? Timestamp.toAmino(toTimestamp(message.endTime))
-      : undefined;
+    obj.owner = message.owner === "" ? undefined : message.owner;
+    obj.duration = message.duration ? Duration.toAmino(message.duration) : undefined;
+    obj.end_time = message.endTime ? Timestamp.toAmino(toTimestamp(message.endTime)) : undefined;
     if (message.coins) {
-      obj.coins = message.coins.map(e => (e ? Coin.toAmino(e) : undefined));
+      obj.coins = message.coins.map(e => e ? Coin.toAmino(e) : undefined);
     } else {
       obj.coins = message.coins;
     }
-    obj.reward_receiver_address =
-      message.rewardReceiverAddress === ''
-        ? undefined
-        : message.rewardReceiverAddress;
+    obj.reward_receiver_address = message.rewardReceiverAddress === "" ? undefined : message.rewardReceiverAddress;
     return obj;
   },
   fromAminoMsg(object: PeriodLockAminoMsg): PeriodLock {
@@ -483,76 +424,48 @@ export const PeriodLock = {
   },
   toProtoMsg(message: PeriodLock): PeriodLockProtoMsg {
     return {
-      typeUrl: '/symphony.lockup.PeriodLock',
-      value: PeriodLock.encode(message).finish(),
+      typeUrl: "/symphony.lockup.PeriodLock",
+      value: PeriodLock.encode(message).finish()
     };
-  },
+  }
 };
 GlobalDecoderRegistry.register(PeriodLock.typeUrl, PeriodLock);
 function createBaseQueryCondition(): QueryCondition {
   return {
     lockQueryType: 0,
-    denom: '',
+    denom: "",
     duration: Duration.fromPartial({}),
-    timestamp: new Date(),
+    timestamp: new Date()
   };
 }
 export const QueryCondition = {
-  typeUrl: '/symphony.lockup.QueryCondition',
+  typeUrl: "/symphony.lockup.QueryCondition",
   is(o: any): o is QueryCondition {
-    return (
-      o &&
-      (o.$typeUrl === QueryCondition.typeUrl ||
-        (isSet(o.lockQueryType) &&
-          typeof o.denom === 'string' &&
-          Duration.is(o.duration) &&
-          Timestamp.is(o.timestamp)))
-    );
+    return o && (o.$typeUrl === QueryCondition.typeUrl || isSet(o.lockQueryType) && typeof o.denom === "string" && Duration.is(o.duration) && Timestamp.is(o.timestamp));
   },
   isSDK(o: any): o is QueryConditionSDKType {
-    return (
-      o &&
-      (o.$typeUrl === QueryCondition.typeUrl ||
-        (isSet(o.lock_query_type) &&
-          typeof o.denom === 'string' &&
-          Duration.isSDK(o.duration) &&
-          Timestamp.isSDK(o.timestamp)))
-    );
+    return o && (o.$typeUrl === QueryCondition.typeUrl || isSet(o.lock_query_type) && typeof o.denom === "string" && Duration.isSDK(o.duration) && Timestamp.isSDK(o.timestamp));
   },
   isAmino(o: any): o is QueryConditionAmino {
-    return (
-      o &&
-      (o.$typeUrl === QueryCondition.typeUrl ||
-        (isSet(o.lock_query_type) &&
-          typeof o.denom === 'string' &&
-          Duration.isAmino(o.duration) &&
-          Timestamp.isAmino(o.timestamp)))
-    );
+    return o && (o.$typeUrl === QueryCondition.typeUrl || isSet(o.lock_query_type) && typeof o.denom === "string" && Duration.isAmino(o.duration) && Timestamp.isAmino(o.timestamp));
   },
-  encode(
-    message: QueryCondition,
-    writer: BinaryWriter = BinaryWriter.create(),
-  ): BinaryWriter {
+  encode(message: QueryCondition, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
     if (message.lockQueryType !== 0) {
       writer.uint32(8).int32(message.lockQueryType);
     }
-    if (message.denom !== '') {
+    if (message.denom !== "") {
       writer.uint32(18).string(message.denom);
     }
     if (message.duration !== undefined) {
       Duration.encode(message.duration, writer.uint32(26).fork()).ldelim();
     }
     if (message.timestamp !== undefined) {
-      Timestamp.encode(
-        toTimestamp(message.timestamp),
-        writer.uint32(34).fork(),
-      ).ldelim();
+      Timestamp.encode(toTimestamp(message.timestamp), writer.uint32(34).fork()).ldelim();
     }
     return writer;
   },
   decode(input: BinaryReader | Uint8Array, length?: number): QueryCondition {
-    const reader =
-      input instanceof BinaryReader ? input : new BinaryReader(input);
+    const reader = input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseQueryCondition();
     while (reader.pos < end) {
@@ -568,9 +481,7 @@ export const QueryCondition = {
           message.duration = Duration.decode(reader, reader.uint32());
           break;
         case 4:
-          message.timestamp = fromTimestamp(
-            Timestamp.decode(reader, reader.uint32()),
-          );
+          message.timestamp = fromTimestamp(Timestamp.decode(reader, reader.uint32()));
           break;
         default:
           reader.skipType(tag & 7);
@@ -582,20 +493,14 @@ export const QueryCondition = {
   fromPartial(object: Partial<QueryCondition>): QueryCondition {
     const message = createBaseQueryCondition();
     message.lockQueryType = object.lockQueryType ?? 0;
-    message.denom = object.denom ?? '';
-    message.duration =
-      object.duration !== undefined && object.duration !== null
-        ? Duration.fromPartial(object.duration)
-        : undefined;
+    message.denom = object.denom ?? "";
+    message.duration = object.duration !== undefined && object.duration !== null ? Duration.fromPartial(object.duration) : undefined;
     message.timestamp = object.timestamp ?? undefined;
     return message;
   },
   fromAmino(object: QueryConditionAmino): QueryCondition {
     const message = createBaseQueryCondition();
-    if (
-      object.lock_query_type !== undefined &&
-      object.lock_query_type !== null
-    ) {
+    if (object.lock_query_type !== undefined && object.lock_query_type !== null) {
       message.lockQueryType = object.lock_query_type;
     }
     if (object.denom !== undefined && object.denom !== null) {
@@ -611,15 +516,10 @@ export const QueryCondition = {
   },
   toAmino(message: QueryCondition): QueryConditionAmino {
     const obj: any = {};
-    obj.lock_query_type =
-      message.lockQueryType === 0 ? undefined : message.lockQueryType;
-    obj.denom = message.denom === '' ? undefined : message.denom;
-    obj.duration = message.duration
-      ? Duration.toAmino(message.duration)
-      : undefined;
-    obj.timestamp = message.timestamp
-      ? Timestamp.toAmino(toTimestamp(message.timestamp))
-      : undefined;
+    obj.lock_query_type = message.lockQueryType === 0 ? undefined : message.lockQueryType;
+    obj.denom = message.denom === "" ? undefined : message.denom;
+    obj.duration = message.duration ? Duration.toAmino(message.duration) : undefined;
+    obj.timestamp = message.timestamp ? Timestamp.toAmino(toTimestamp(message.timestamp)) : undefined;
     return obj;
   },
   fromAminoMsg(object: QueryConditionAminoMsg): QueryCondition {
@@ -633,67 +533,40 @@ export const QueryCondition = {
   },
   toProtoMsg(message: QueryCondition): QueryConditionProtoMsg {
     return {
-      typeUrl: '/symphony.lockup.QueryCondition',
-      value: QueryCondition.encode(message).finish(),
+      typeUrl: "/symphony.lockup.QueryCondition",
+      value: QueryCondition.encode(message).finish()
     };
-  },
+  }
 };
 GlobalDecoderRegistry.register(QueryCondition.typeUrl, QueryCondition);
 function createBaseSyntheticLock(): SyntheticLock {
   return {
     underlyingLockId: BigInt(0),
-    synthDenom: '',
+    synthDenom: "",
     endTime: new Date(),
-    duration: Duration.fromPartial({}),
+    duration: Duration.fromPartial({})
   };
 }
 export const SyntheticLock = {
-  typeUrl: '/symphony.lockup.SyntheticLock',
+  typeUrl: "/symphony.lockup.SyntheticLock",
   is(o: any): o is SyntheticLock {
-    return (
-      o &&
-      (o.$typeUrl === SyntheticLock.typeUrl ||
-        (typeof o.underlyingLockId === 'bigint' &&
-          typeof o.synthDenom === 'string' &&
-          Timestamp.is(o.endTime) &&
-          Duration.is(o.duration)))
-    );
+    return o && (o.$typeUrl === SyntheticLock.typeUrl || typeof o.underlyingLockId === "bigint" && typeof o.synthDenom === "string" && Timestamp.is(o.endTime) && Duration.is(o.duration));
   },
   isSDK(o: any): o is SyntheticLockSDKType {
-    return (
-      o &&
-      (o.$typeUrl === SyntheticLock.typeUrl ||
-        (typeof o.underlying_lock_id === 'bigint' &&
-          typeof o.synth_denom === 'string' &&
-          Timestamp.isSDK(o.end_time) &&
-          Duration.isSDK(o.duration)))
-    );
+    return o && (o.$typeUrl === SyntheticLock.typeUrl || typeof o.underlying_lock_id === "bigint" && typeof o.synth_denom === "string" && Timestamp.isSDK(o.end_time) && Duration.isSDK(o.duration));
   },
   isAmino(o: any): o is SyntheticLockAmino {
-    return (
-      o &&
-      (o.$typeUrl === SyntheticLock.typeUrl ||
-        (typeof o.underlying_lock_id === 'bigint' &&
-          typeof o.synth_denom === 'string' &&
-          Timestamp.isAmino(o.end_time) &&
-          Duration.isAmino(o.duration)))
-    );
+    return o && (o.$typeUrl === SyntheticLock.typeUrl || typeof o.underlying_lock_id === "bigint" && typeof o.synth_denom === "string" && Timestamp.isAmino(o.end_time) && Duration.isAmino(o.duration));
   },
-  encode(
-    message: SyntheticLock,
-    writer: BinaryWriter = BinaryWriter.create(),
-  ): BinaryWriter {
+  encode(message: SyntheticLock, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
     if (message.underlyingLockId !== BigInt(0)) {
       writer.uint32(8).uint64(message.underlyingLockId);
     }
-    if (message.synthDenom !== '') {
+    if (message.synthDenom !== "") {
       writer.uint32(18).string(message.synthDenom);
     }
     if (message.endTime !== undefined) {
-      Timestamp.encode(
-        toTimestamp(message.endTime),
-        writer.uint32(26).fork(),
-      ).ldelim();
+      Timestamp.encode(toTimestamp(message.endTime), writer.uint32(26).fork()).ldelim();
     }
     if (message.duration !== undefined) {
       Duration.encode(message.duration, writer.uint32(34).fork()).ldelim();
@@ -701,8 +574,7 @@ export const SyntheticLock = {
     return writer;
   },
   decode(input: BinaryReader | Uint8Array, length?: number): SyntheticLock {
-    const reader =
-      input instanceof BinaryReader ? input : new BinaryReader(input);
+    const reader = input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseSyntheticLock();
     while (reader.pos < end) {
@@ -715,9 +587,7 @@ export const SyntheticLock = {
           message.synthDenom = reader.string();
           break;
         case 3:
-          message.endTime = fromTimestamp(
-            Timestamp.decode(reader, reader.uint32()),
-          );
+          message.endTime = fromTimestamp(Timestamp.decode(reader, reader.uint32()));
           break;
         case 4:
           message.duration = Duration.decode(reader, reader.uint32());
@@ -731,24 +601,15 @@ export const SyntheticLock = {
   },
   fromPartial(object: Partial<SyntheticLock>): SyntheticLock {
     const message = createBaseSyntheticLock();
-    message.underlyingLockId =
-      object.underlyingLockId !== undefined && object.underlyingLockId !== null
-        ? BigInt(object.underlyingLockId.toString())
-        : BigInt(0);
-    message.synthDenom = object.synthDenom ?? '';
+    message.underlyingLockId = object.underlyingLockId !== undefined && object.underlyingLockId !== null ? BigInt(object.underlyingLockId.toString()) : BigInt(0);
+    message.synthDenom = object.synthDenom ?? "";
     message.endTime = object.endTime ?? undefined;
-    message.duration =
-      object.duration !== undefined && object.duration !== null
-        ? Duration.fromPartial(object.duration)
-        : undefined;
+    message.duration = object.duration !== undefined && object.duration !== null ? Duration.fromPartial(object.duration) : undefined;
     return message;
   },
   fromAmino(object: SyntheticLockAmino): SyntheticLock {
     const message = createBaseSyntheticLock();
-    if (
-      object.underlying_lock_id !== undefined &&
-      object.underlying_lock_id !== null
-    ) {
+    if (object.underlying_lock_id !== undefined && object.underlying_lock_id !== null) {
       message.underlyingLockId = BigInt(object.underlying_lock_id);
     }
     if (object.synth_denom !== undefined && object.synth_denom !== null) {
@@ -764,18 +625,10 @@ export const SyntheticLock = {
   },
   toAmino(message: SyntheticLock): SyntheticLockAmino {
     const obj: any = {};
-    obj.underlying_lock_id =
-      message.underlyingLockId !== BigInt(0)
-        ? message.underlyingLockId?.toString()
-        : undefined;
-    obj.synth_denom =
-      message.synthDenom === '' ? undefined : message.synthDenom;
-    obj.end_time = message.endTime
-      ? Timestamp.toAmino(toTimestamp(message.endTime))
-      : undefined;
-    obj.duration = message.duration
-      ? Duration.toAmino(message.duration)
-      : undefined;
+    obj.underlying_lock_id = message.underlyingLockId !== BigInt(0) ? message.underlyingLockId?.toString() : undefined;
+    obj.synth_denom = message.synthDenom === "" ? undefined : message.synthDenom;
+    obj.end_time = message.endTime ? Timestamp.toAmino(toTimestamp(message.endTime)) : undefined;
+    obj.duration = message.duration ? Duration.toAmino(message.duration) : undefined;
     return obj;
   },
   fromAminoMsg(object: SyntheticLockAminoMsg): SyntheticLock {
@@ -789,9 +642,9 @@ export const SyntheticLock = {
   },
   toProtoMsg(message: SyntheticLock): SyntheticLockProtoMsg {
     return {
-      typeUrl: '/symphony.lockup.SyntheticLock',
-      value: SyntheticLock.encode(message).finish(),
+      typeUrl: "/symphony.lockup.SyntheticLock",
+      value: SyntheticLock.encode(message).finish()
     };
-  },
+  }
 };
 GlobalDecoderRegistry.register(SyntheticLock.typeUrl, SyntheticLock);

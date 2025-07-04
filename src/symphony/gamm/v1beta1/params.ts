@@ -1,17 +1,13 @@
 //@ts-nocheck
-import {
-  Coin,
-  CoinAmino,
-  CoinSDKType,
-} from '../../../cosmos/base/v1beta1/coin';
-import { BinaryReader, BinaryWriter } from '../../../binary';
-import { GlobalDecoderRegistry } from '../../../registry';
+import { Coin, CoinAmino, CoinSDKType } from "../../../cosmos/base/v1beta1/coin";
+import { BinaryReader, BinaryWriter } from "../../../binary";
+import { GlobalDecoderRegistry } from "../../../registry";
 /** Params holds parameters for the incentives module */
 export interface Params {
   poolCreationFee: Coin[];
 }
 export interface ParamsProtoMsg {
-  typeUrl: '/symphony.gamm.v1beta1.Params';
+  typeUrl: "/symphony.gamm.v1beta1.Params";
   value: Uint8Array;
 }
 /** Params holds parameters for the incentives module */
@@ -19,7 +15,7 @@ export interface ParamsAmino {
   pool_creation_fee?: CoinAmino[];
 }
 export interface ParamsAminoMsg {
-  type: '/symphony.gamm.v1beta1.Params';
+  type: "/symphony.gamm.v1beta1.Params";
   value: ParamsAmino;
 }
 /** Params holds parameters for the incentives module */
@@ -28,48 +24,28 @@ export interface ParamsSDKType {
 }
 function createBaseParams(): Params {
   return {
-    poolCreationFee: [],
+    poolCreationFee: []
   };
 }
 export const Params = {
-  typeUrl: '/symphony.gamm.v1beta1.Params',
+  typeUrl: "/symphony.gamm.v1beta1.Params",
   is(o: any): o is Params {
-    return (
-      o &&
-      (o.$typeUrl === Params.typeUrl ||
-        (Array.isArray(o.poolCreationFee) &&
-          (!o.poolCreationFee.length || Coin.is(o.poolCreationFee[0]))))
-    );
+    return o && (o.$typeUrl === Params.typeUrl || Array.isArray(o.poolCreationFee) && (!o.poolCreationFee.length || Coin.is(o.poolCreationFee[0])));
   },
   isSDK(o: any): o is ParamsSDKType {
-    return (
-      o &&
-      (o.$typeUrl === Params.typeUrl ||
-        (Array.isArray(o.pool_creation_fee) &&
-          (!o.pool_creation_fee.length || Coin.isSDK(o.pool_creation_fee[0]))))
-    );
+    return o && (o.$typeUrl === Params.typeUrl || Array.isArray(o.pool_creation_fee) && (!o.pool_creation_fee.length || Coin.isSDK(o.pool_creation_fee[0])));
   },
   isAmino(o: any): o is ParamsAmino {
-    return (
-      o &&
-      (o.$typeUrl === Params.typeUrl ||
-        (Array.isArray(o.pool_creation_fee) &&
-          (!o.pool_creation_fee.length ||
-            Coin.isAmino(o.pool_creation_fee[0]))))
-    );
+    return o && (o.$typeUrl === Params.typeUrl || Array.isArray(o.pool_creation_fee) && (!o.pool_creation_fee.length || Coin.isAmino(o.pool_creation_fee[0])));
   },
-  encode(
-    message: Params,
-    writer: BinaryWriter = BinaryWriter.create(),
-  ): BinaryWriter {
+  encode(message: Params, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
     for (const v of message.poolCreationFee) {
       Coin.encode(v!, writer.uint32(10).fork()).ldelim();
     }
     return writer;
   },
   decode(input: BinaryReader | Uint8Array, length?: number): Params {
-    const reader =
-      input instanceof BinaryReader ? input : new BinaryReader(input);
+    const reader = input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseParams();
     while (reader.pos < end) {
@@ -87,22 +63,18 @@ export const Params = {
   },
   fromPartial(object: Partial<Params>): Params {
     const message = createBaseParams();
-    message.poolCreationFee =
-      object.poolCreationFee?.map(e => Coin.fromPartial(e)) || [];
+    message.poolCreationFee = object.poolCreationFee?.map(e => Coin.fromPartial(e)) || [];
     return message;
   },
   fromAmino(object: ParamsAmino): Params {
     const message = createBaseParams();
-    message.poolCreationFee =
-      object.pool_creation_fee?.map(e => Coin.fromAmino(e)) || [];
+    message.poolCreationFee = object.pool_creation_fee?.map(e => Coin.fromAmino(e)) || [];
     return message;
   },
   toAmino(message: Params): ParamsAmino {
     const obj: any = {};
     if (message.poolCreationFee) {
-      obj.pool_creation_fee = message.poolCreationFee.map(e =>
-        e ? Coin.toAmino(e) : undefined,
-      );
+      obj.pool_creation_fee = message.poolCreationFee.map(e => e ? Coin.toAmino(e) : undefined);
     } else {
       obj.pool_creation_fee = message.poolCreationFee;
     }
@@ -119,9 +91,9 @@ export const Params = {
   },
   toProtoMsg(message: Params): ParamsProtoMsg {
     return {
-      typeUrl: '/symphony.gamm.v1beta1.Params',
-      value: Params.encode(message).finish(),
+      typeUrl: "/symphony.gamm.v1beta1.Params",
+      value: Params.encode(message).finish()
     };
-  },
+  }
 };
 GlobalDecoderRegistry.register(Params.typeUrl, Params);

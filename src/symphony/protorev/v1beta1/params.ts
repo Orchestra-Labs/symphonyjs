@@ -1,6 +1,6 @@
 //@ts-nocheck
-import { BinaryReader, BinaryWriter } from '../../../binary';
-import { GlobalDecoderRegistry } from '../../../registry';
+import { BinaryReader, BinaryWriter } from "../../../binary";
+import { GlobalDecoderRegistry } from "../../../registry";
 /** Params defines the parameters for the module. */
 export interface Params {
   /** Boolean whether the protorev module is enabled. */
@@ -9,7 +9,7 @@ export interface Params {
   admin: string;
 }
 export interface ParamsProtoMsg {
-  typeUrl: '/symphony.protorev.v1beta1.Params';
+  typeUrl: "/symphony.protorev.v1beta1.Params";
   value: Uint8Array;
 }
 /** Params defines the parameters for the module. */
@@ -20,7 +20,7 @@ export interface ParamsAmino {
   admin?: string;
 }
 export interface ParamsAminoMsg {
-  type: '/symphony.protorev.v1beta1.Params';
+  type: "/symphony.protorev.v1beta1.Params";
   value: ParamsAmino;
 }
 /** Params defines the parameters for the module. */
@@ -31,47 +31,31 @@ export interface ParamsSDKType {
 function createBaseParams(): Params {
   return {
     enabled: false,
-    admin: '',
+    admin: ""
   };
 }
 export const Params = {
-  typeUrl: '/symphony.protorev.v1beta1.Params',
+  typeUrl: "/symphony.protorev.v1beta1.Params",
   is(o: any): o is Params {
-    return (
-      o &&
-      (o.$typeUrl === Params.typeUrl ||
-        (typeof o.enabled === 'boolean' && typeof o.admin === 'string'))
-    );
+    return o && (o.$typeUrl === Params.typeUrl || typeof o.enabled === "boolean" && typeof o.admin === "string");
   },
   isSDK(o: any): o is ParamsSDKType {
-    return (
-      o &&
-      (o.$typeUrl === Params.typeUrl ||
-        (typeof o.enabled === 'boolean' && typeof o.admin === 'string'))
-    );
+    return o && (o.$typeUrl === Params.typeUrl || typeof o.enabled === "boolean" && typeof o.admin === "string");
   },
   isAmino(o: any): o is ParamsAmino {
-    return (
-      o &&
-      (o.$typeUrl === Params.typeUrl ||
-        (typeof o.enabled === 'boolean' && typeof o.admin === 'string'))
-    );
+    return o && (o.$typeUrl === Params.typeUrl || typeof o.enabled === "boolean" && typeof o.admin === "string");
   },
-  encode(
-    message: Params,
-    writer: BinaryWriter = BinaryWriter.create(),
-  ): BinaryWriter {
+  encode(message: Params, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
     if (message.enabled === true) {
       writer.uint32(8).bool(message.enabled);
     }
-    if (message.admin !== '') {
+    if (message.admin !== "") {
       writer.uint32(18).string(message.admin);
     }
     return writer;
   },
   decode(input: BinaryReader | Uint8Array, length?: number): Params {
-    const reader =
-      input instanceof BinaryReader ? input : new BinaryReader(input);
+    const reader = input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseParams();
     while (reader.pos < end) {
@@ -93,7 +77,7 @@ export const Params = {
   fromPartial(object: Partial<Params>): Params {
     const message = createBaseParams();
     message.enabled = object.enabled ?? false;
-    message.admin = object.admin ?? '';
+    message.admin = object.admin ?? "";
     return message;
   },
   fromAmino(object: ParamsAmino): Params {
@@ -109,7 +93,7 @@ export const Params = {
   toAmino(message: Params): ParamsAmino {
     const obj: any = {};
     obj.enabled = message.enabled === false ? undefined : message.enabled;
-    obj.admin = message.admin === '' ? undefined : message.admin;
+    obj.admin = message.admin === "" ? undefined : message.admin;
     return obj;
   },
   fromAminoMsg(object: ParamsAminoMsg): Params {
@@ -123,9 +107,9 @@ export const Params = {
   },
   toProtoMsg(message: Params): ParamsProtoMsg {
     return {
-      typeUrl: '/symphony.protorev.v1beta1.Params',
-      value: Params.encode(message).finish(),
+      typeUrl: "/symphony.protorev.v1beta1.Params",
+      value: Params.encode(message).finish()
     };
-  },
+  }
 };
 GlobalDecoderRegistry.register(Params.typeUrl, Params);

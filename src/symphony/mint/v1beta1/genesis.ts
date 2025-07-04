@@ -1,14 +1,7 @@
 //@ts-nocheck
-import {
-  Minter,
-  MinterAmino,
-  MinterSDKType,
-  Params,
-  ParamsAmino,
-  ParamsSDKType,
-} from './mint';
-import { BinaryReader, BinaryWriter } from '../../../binary';
-import { GlobalDecoderRegistry } from '../../../registry';
+import { Minter, MinterAmino, MinterSDKType, Params, ParamsAmino, ParamsSDKType } from "./mint";
+import { BinaryReader, BinaryWriter } from "../../../binary";
+import { GlobalDecoderRegistry } from "../../../registry";
 /** GenesisState defines the mint module's genesis state. */
 export interface GenesisState {
   /** minter is an abstraction for holding current rewards information. */
@@ -22,7 +15,7 @@ export interface GenesisState {
   reductionStartedEpoch: bigint;
 }
 export interface GenesisStateProtoMsg {
-  typeUrl: '/symphony.mint.v1beta1.GenesisState';
+  typeUrl: "/symphony.mint.v1beta1.GenesisState";
   value: Uint8Array;
 }
 /** GenesisState defines the mint module's genesis state. */
@@ -38,7 +31,7 @@ export interface GenesisStateAmino {
   reduction_started_epoch?: string;
 }
 export interface GenesisStateAminoMsg {
-  type: '/symphony.mint.v1beta1.GenesisState';
+  type: "/symphony.mint.v1beta1.GenesisState";
   value: GenesisStateAmino;
 }
 /** GenesisState defines the mint module's genesis state. */
@@ -51,42 +44,21 @@ function createBaseGenesisState(): GenesisState {
   return {
     minter: Minter.fromPartial({}),
     params: Params.fromPartial({}),
-    reductionStartedEpoch: BigInt(0),
+    reductionStartedEpoch: BigInt(0)
   };
 }
 export const GenesisState = {
-  typeUrl: '/symphony.mint.v1beta1.GenesisState',
+  typeUrl: "/symphony.mint.v1beta1.GenesisState",
   is(o: any): o is GenesisState {
-    return (
-      o &&
-      (o.$typeUrl === GenesisState.typeUrl ||
-        (Minter.is(o.minter) &&
-          Params.is(o.params) &&
-          typeof o.reductionStartedEpoch === 'bigint'))
-    );
+    return o && (o.$typeUrl === GenesisState.typeUrl || Minter.is(o.minter) && Params.is(o.params) && typeof o.reductionStartedEpoch === "bigint");
   },
   isSDK(o: any): o is GenesisStateSDKType {
-    return (
-      o &&
-      (o.$typeUrl === GenesisState.typeUrl ||
-        (Minter.isSDK(o.minter) &&
-          Params.isSDK(o.params) &&
-          typeof o.reduction_started_epoch === 'bigint'))
-    );
+    return o && (o.$typeUrl === GenesisState.typeUrl || Minter.isSDK(o.minter) && Params.isSDK(o.params) && typeof o.reduction_started_epoch === "bigint");
   },
   isAmino(o: any): o is GenesisStateAmino {
-    return (
-      o &&
-      (o.$typeUrl === GenesisState.typeUrl ||
-        (Minter.isAmino(o.minter) &&
-          Params.isAmino(o.params) &&
-          typeof o.reduction_started_epoch === 'bigint'))
-    );
+    return o && (o.$typeUrl === GenesisState.typeUrl || Minter.isAmino(o.minter) && Params.isAmino(o.params) && typeof o.reduction_started_epoch === "bigint");
   },
-  encode(
-    message: GenesisState,
-    writer: BinaryWriter = BinaryWriter.create(),
-  ): BinaryWriter {
+  encode(message: GenesisState, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
     if (message.minter !== undefined) {
       Minter.encode(message.minter, writer.uint32(10).fork()).ldelim();
     }
@@ -99,8 +71,7 @@ export const GenesisState = {
     return writer;
   },
   decode(input: BinaryReader | Uint8Array, length?: number): GenesisState {
-    const reader =
-      input instanceof BinaryReader ? input : new BinaryReader(input);
+    const reader = input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseGenesisState();
     while (reader.pos < end) {
@@ -124,19 +95,9 @@ export const GenesisState = {
   },
   fromPartial(object: Partial<GenesisState>): GenesisState {
     const message = createBaseGenesisState();
-    message.minter =
-      object.minter !== undefined && object.minter !== null
-        ? Minter.fromPartial(object.minter)
-        : undefined;
-    message.params =
-      object.params !== undefined && object.params !== null
-        ? Params.fromPartial(object.params)
-        : undefined;
-    message.reductionStartedEpoch =
-      object.reductionStartedEpoch !== undefined &&
-      object.reductionStartedEpoch !== null
-        ? BigInt(object.reductionStartedEpoch.toString())
-        : BigInt(0);
+    message.minter = object.minter !== undefined && object.minter !== null ? Minter.fromPartial(object.minter) : undefined;
+    message.params = object.params !== undefined && object.params !== null ? Params.fromPartial(object.params) : undefined;
+    message.reductionStartedEpoch = object.reductionStartedEpoch !== undefined && object.reductionStartedEpoch !== null ? BigInt(object.reductionStartedEpoch.toString()) : BigInt(0);
     return message;
   },
   fromAmino(object: GenesisStateAmino): GenesisState {
@@ -147,10 +108,7 @@ export const GenesisState = {
     if (object.params !== undefined && object.params !== null) {
       message.params = Params.fromAmino(object.params);
     }
-    if (
-      object.reduction_started_epoch !== undefined &&
-      object.reduction_started_epoch !== null
-    ) {
+    if (object.reduction_started_epoch !== undefined && object.reduction_started_epoch !== null) {
       message.reductionStartedEpoch = BigInt(object.reduction_started_epoch);
     }
     return message;
@@ -159,10 +117,7 @@ export const GenesisState = {
     const obj: any = {};
     obj.minter = message.minter ? Minter.toAmino(message.minter) : undefined;
     obj.params = message.params ? Params.toAmino(message.params) : undefined;
-    obj.reduction_started_epoch =
-      message.reductionStartedEpoch !== BigInt(0)
-        ? message.reductionStartedEpoch?.toString()
-        : undefined;
+    obj.reduction_started_epoch = message.reductionStartedEpoch !== BigInt(0) ? message.reductionStartedEpoch?.toString() : undefined;
     return obj;
   },
   fromAminoMsg(object: GenesisStateAminoMsg): GenesisState {
@@ -176,9 +131,9 @@ export const GenesisState = {
   },
   toProtoMsg(message: GenesisState): GenesisStateProtoMsg {
     return {
-      typeUrl: '/symphony.mint.v1beta1.GenesisState',
-      value: GenesisState.encode(message).finish(),
+      typeUrl: "/symphony.mint.v1beta1.GenesisState",
+      value: GenesisState.encode(message).finish()
     };
-  },
+  }
 };
 GlobalDecoderRegistry.register(GenesisState.typeUrl, GenesisState);

@@ -1,11 +1,7 @@
 //@ts-nocheck
-import {
-  DistrRecord,
-  DistrRecordAmino,
-  DistrRecordSDKType,
-} from './incentives';
-import { BinaryReader, BinaryWriter } from '../../../binary';
-import { GlobalDecoderRegistry } from '../../../registry';
+import { DistrRecord, DistrRecordAmino, DistrRecordSDKType } from "./incentives";
+import { BinaryReader, BinaryWriter } from "../../../binary";
+import { GlobalDecoderRegistry } from "../../../registry";
 /**
  * ReplacePoolIncentivesProposal is a gov Content type for updating the pool
  * incentives. If a ReplacePoolIncentivesProposal passes, the proposal’s records
@@ -16,13 +12,13 @@ import { GlobalDecoderRegistry } from '../../../registry';
  * configuration. Note that gaugeId=0 represents the community pool.
  */
 export interface ReplacePoolIncentivesProposal {
-  $typeUrl?: '/symphony.poolincentives.v1beta1.ReplacePoolIncentivesProposal';
+  $typeUrl?: "/symphony.poolincentives.v1beta1.ReplacePoolIncentivesProposal";
   title: string;
   description: string;
   records: DistrRecord[];
 }
 export interface ReplacePoolIncentivesProposalProtoMsg {
-  typeUrl: '/symphony.poolincentives.v1beta1.ReplacePoolIncentivesProposal';
+  typeUrl: "/symphony.poolincentives.v1beta1.ReplacePoolIncentivesProposal";
   value: Uint8Array;
 }
 /**
@@ -40,7 +36,7 @@ export interface ReplacePoolIncentivesProposalAmino {
   records?: DistrRecordAmino[];
 }
 export interface ReplacePoolIncentivesProposalAminoMsg {
-  type: 'symphony/ReplacePoolIncentivesProposal';
+  type: "symphony/ReplacePoolIncentivesProposal";
   value: ReplacePoolIncentivesProposalAmino;
 }
 /**
@@ -53,7 +49,7 @@ export interface ReplacePoolIncentivesProposalAminoMsg {
  * configuration. Note that gaugeId=0 represents the community pool.
  */
 export interface ReplacePoolIncentivesProposalSDKType {
-  $typeUrl?: '/symphony.poolincentives.v1beta1.ReplacePoolIncentivesProposal';
+  $typeUrl?: "/symphony.poolincentives.v1beta1.ReplacePoolIncentivesProposal";
   title: string;
   description: string;
   records: DistrRecordSDKType[];
@@ -68,13 +64,13 @@ export interface ReplacePoolIncentivesProposalSDKType {
  * [(Gauge 0, 5), (Gauge 2, 4), (Gauge 3, 10)]
  */
 export interface UpdatePoolIncentivesProposal {
-  $typeUrl?: '/symphony.poolincentives.v1beta1.UpdatePoolIncentivesProposal';
+  $typeUrl?: "/symphony.poolincentives.v1beta1.UpdatePoolIncentivesProposal";
   title: string;
   description: string;
   records: DistrRecord[];
 }
 export interface UpdatePoolIncentivesProposalProtoMsg {
-  typeUrl: '/symphony.poolincentives.v1beta1.UpdatePoolIncentivesProposal';
+  typeUrl: "/symphony.poolincentives.v1beta1.UpdatePoolIncentivesProposal";
   value: Uint8Array;
 }
 /**
@@ -92,7 +88,7 @@ export interface UpdatePoolIncentivesProposalAmino {
   records?: DistrRecordAmino[];
 }
 export interface UpdatePoolIncentivesProposalAminoMsg {
-  type: 'symphony/UpdatePoolIncentivesProposal';
+  type: "symphony/UpdatePoolIncentivesProposal";
   value: UpdatePoolIncentivesProposalAmino;
 }
 /**
@@ -105,60 +101,36 @@ export interface UpdatePoolIncentivesProposalAminoMsg {
  * [(Gauge 0, 5), (Gauge 2, 4), (Gauge 3, 10)]
  */
 export interface UpdatePoolIncentivesProposalSDKType {
-  $typeUrl?: '/symphony.poolincentives.v1beta1.UpdatePoolIncentivesProposal';
+  $typeUrl?: "/symphony.poolincentives.v1beta1.UpdatePoolIncentivesProposal";
   title: string;
   description: string;
   records: DistrRecordSDKType[];
 }
 function createBaseReplacePoolIncentivesProposal(): ReplacePoolIncentivesProposal {
   return {
-    $typeUrl: '/symphony.poolincentives.v1beta1.ReplacePoolIncentivesProposal',
-    title: '',
-    description: '',
-    records: [],
+    $typeUrl: "/symphony.poolincentives.v1beta1.ReplacePoolIncentivesProposal",
+    title: "",
+    description: "",
+    records: []
   };
 }
 export const ReplacePoolIncentivesProposal = {
-  typeUrl: '/symphony.poolincentives.v1beta1.ReplacePoolIncentivesProposal',
-  aminoType: 'symphony/ReplacePoolIncentivesProposal',
+  typeUrl: "/symphony.poolincentives.v1beta1.ReplacePoolIncentivesProposal",
+  aminoType: "symphony/ReplacePoolIncentivesProposal",
   is(o: any): o is ReplacePoolIncentivesProposal {
-    return (
-      o &&
-      (o.$typeUrl === ReplacePoolIncentivesProposal.typeUrl ||
-        (typeof o.title === 'string' &&
-          typeof o.description === 'string' &&
-          Array.isArray(o.records) &&
-          (!o.records.length || DistrRecord.is(o.records[0]))))
-    );
+    return o && (o.$typeUrl === ReplacePoolIncentivesProposal.typeUrl || typeof o.title === "string" && typeof o.description === "string" && Array.isArray(o.records) && (!o.records.length || DistrRecord.is(o.records[0])));
   },
   isSDK(o: any): o is ReplacePoolIncentivesProposalSDKType {
-    return (
-      o &&
-      (o.$typeUrl === ReplacePoolIncentivesProposal.typeUrl ||
-        (typeof o.title === 'string' &&
-          typeof o.description === 'string' &&
-          Array.isArray(o.records) &&
-          (!o.records.length || DistrRecord.isSDK(o.records[0]))))
-    );
+    return o && (o.$typeUrl === ReplacePoolIncentivesProposal.typeUrl || typeof o.title === "string" && typeof o.description === "string" && Array.isArray(o.records) && (!o.records.length || DistrRecord.isSDK(o.records[0])));
   },
   isAmino(o: any): o is ReplacePoolIncentivesProposalAmino {
-    return (
-      o &&
-      (o.$typeUrl === ReplacePoolIncentivesProposal.typeUrl ||
-        (typeof o.title === 'string' &&
-          typeof o.description === 'string' &&
-          Array.isArray(o.records) &&
-          (!o.records.length || DistrRecord.isAmino(o.records[0]))))
-    );
+    return o && (o.$typeUrl === ReplacePoolIncentivesProposal.typeUrl || typeof o.title === "string" && typeof o.description === "string" && Array.isArray(o.records) && (!o.records.length || DistrRecord.isAmino(o.records[0])));
   },
-  encode(
-    message: ReplacePoolIncentivesProposal,
-    writer: BinaryWriter = BinaryWriter.create(),
-  ): BinaryWriter {
-    if (message.title !== '') {
+  encode(message: ReplacePoolIncentivesProposal, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
+    if (message.title !== "") {
       writer.uint32(10).string(message.title);
     }
-    if (message.description !== '') {
+    if (message.description !== "") {
       writer.uint32(18).string(message.description);
     }
     for (const v of message.records) {
@@ -166,12 +138,8 @@ export const ReplacePoolIncentivesProposal = {
     }
     return writer;
   },
-  decode(
-    input: BinaryReader | Uint8Array,
-    length?: number,
-  ): ReplacePoolIncentivesProposal {
-    const reader =
-      input instanceof BinaryReader ? input : new BinaryReader(input);
+  decode(input: BinaryReader | Uint8Array, length?: number): ReplacePoolIncentivesProposal {
+    const reader = input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseReplacePoolIncentivesProposal();
     while (reader.pos < end) {
@@ -193,19 +161,14 @@ export const ReplacePoolIncentivesProposal = {
     }
     return message;
   },
-  fromPartial(
-    object: Partial<ReplacePoolIncentivesProposal>,
-  ): ReplacePoolIncentivesProposal {
+  fromPartial(object: Partial<ReplacePoolIncentivesProposal>): ReplacePoolIncentivesProposal {
     const message = createBaseReplacePoolIncentivesProposal();
-    message.title = object.title ?? '';
-    message.description = object.description ?? '';
-    message.records =
-      object.records?.map(e => DistrRecord.fromPartial(e)) || [];
+    message.title = object.title ?? "";
+    message.description = object.description ?? "";
+    message.records = object.records?.map(e => DistrRecord.fromPartial(e)) || [];
     return message;
   },
-  fromAmino(
-    object: ReplacePoolIncentivesProposalAmino,
-  ): ReplacePoolIncentivesProposal {
+  fromAmino(object: ReplacePoolIncentivesProposalAmino): ReplacePoolIncentivesProposal {
     const message = createBaseReplacePoolIncentivesProposal();
     if (object.title !== undefined && object.title !== null) {
       message.title = object.title;
@@ -216,109 +179,66 @@ export const ReplacePoolIncentivesProposal = {
     message.records = object.records?.map(e => DistrRecord.fromAmino(e)) || [];
     return message;
   },
-  toAmino(
-    message: ReplacePoolIncentivesProposal,
-  ): ReplacePoolIncentivesProposalAmino {
+  toAmino(message: ReplacePoolIncentivesProposal): ReplacePoolIncentivesProposalAmino {
     const obj: any = {};
-    obj.title = message.title === '' ? undefined : message.title;
-    obj.description =
-      message.description === '' ? undefined : message.description;
+    obj.title = message.title === "" ? undefined : message.title;
+    obj.description = message.description === "" ? undefined : message.description;
     if (message.records) {
-      obj.records = message.records.map(e =>
-        e ? DistrRecord.toAmino(e) : undefined,
-      );
+      obj.records = message.records.map(e => e ? DistrRecord.toAmino(e) : undefined);
     } else {
       obj.records = message.records;
     }
     return obj;
   },
-  fromAminoMsg(
-    object: ReplacePoolIncentivesProposalAminoMsg,
-  ): ReplacePoolIncentivesProposal {
+  fromAminoMsg(object: ReplacePoolIncentivesProposalAminoMsg): ReplacePoolIncentivesProposal {
     return ReplacePoolIncentivesProposal.fromAmino(object.value);
   },
-  toAminoMsg(
-    message: ReplacePoolIncentivesProposal,
-  ): ReplacePoolIncentivesProposalAminoMsg {
+  toAminoMsg(message: ReplacePoolIncentivesProposal): ReplacePoolIncentivesProposalAminoMsg {
     return {
-      type: 'symphony/ReplacePoolIncentivesProposal',
-      value: ReplacePoolIncentivesProposal.toAmino(message),
+      type: "symphony/ReplacePoolIncentivesProposal",
+      value: ReplacePoolIncentivesProposal.toAmino(message)
     };
   },
-  fromProtoMsg(
-    message: ReplacePoolIncentivesProposalProtoMsg,
-  ): ReplacePoolIncentivesProposal {
+  fromProtoMsg(message: ReplacePoolIncentivesProposalProtoMsg): ReplacePoolIncentivesProposal {
     return ReplacePoolIncentivesProposal.decode(message.value);
   },
   toProto(message: ReplacePoolIncentivesProposal): Uint8Array {
     return ReplacePoolIncentivesProposal.encode(message).finish();
   },
-  toProtoMsg(
-    message: ReplacePoolIncentivesProposal,
-  ): ReplacePoolIncentivesProposalProtoMsg {
+  toProtoMsg(message: ReplacePoolIncentivesProposal): ReplacePoolIncentivesProposalProtoMsg {
     return {
-      typeUrl: '/symphony.poolincentives.v1beta1.ReplacePoolIncentivesProposal',
-      value: ReplacePoolIncentivesProposal.encode(message).finish(),
+      typeUrl: "/symphony.poolincentives.v1beta1.ReplacePoolIncentivesProposal",
+      value: ReplacePoolIncentivesProposal.encode(message).finish()
     };
-  },
+  }
 };
-GlobalDecoderRegistry.register(
-  ReplacePoolIncentivesProposal.typeUrl,
-  ReplacePoolIncentivesProposal,
-);
-GlobalDecoderRegistry.registerAminoProtoMapping(
-  ReplacePoolIncentivesProposal.aminoType,
-  ReplacePoolIncentivesProposal.typeUrl,
-);
+GlobalDecoderRegistry.register(ReplacePoolIncentivesProposal.typeUrl, ReplacePoolIncentivesProposal);
+GlobalDecoderRegistry.registerAminoProtoMapping(ReplacePoolIncentivesProposal.aminoType, ReplacePoolIncentivesProposal.typeUrl);
 function createBaseUpdatePoolIncentivesProposal(): UpdatePoolIncentivesProposal {
   return {
-    $typeUrl: '/symphony.poolincentives.v1beta1.UpdatePoolIncentivesProposal',
-    title: '',
-    description: '',
-    records: [],
+    $typeUrl: "/symphony.poolincentives.v1beta1.UpdatePoolIncentivesProposal",
+    title: "",
+    description: "",
+    records: []
   };
 }
 export const UpdatePoolIncentivesProposal = {
-  typeUrl: '/symphony.poolincentives.v1beta1.UpdatePoolIncentivesProposal',
-  aminoType: 'symphony/UpdatePoolIncentivesProposal',
+  typeUrl: "/symphony.poolincentives.v1beta1.UpdatePoolIncentivesProposal",
+  aminoType: "symphony/UpdatePoolIncentivesProposal",
   is(o: any): o is UpdatePoolIncentivesProposal {
-    return (
-      o &&
-      (o.$typeUrl === UpdatePoolIncentivesProposal.typeUrl ||
-        (typeof o.title === 'string' &&
-          typeof o.description === 'string' &&
-          Array.isArray(o.records) &&
-          (!o.records.length || DistrRecord.is(o.records[0]))))
-    );
+    return o && (o.$typeUrl === UpdatePoolIncentivesProposal.typeUrl || typeof o.title === "string" && typeof o.description === "string" && Array.isArray(o.records) && (!o.records.length || DistrRecord.is(o.records[0])));
   },
   isSDK(o: any): o is UpdatePoolIncentivesProposalSDKType {
-    return (
-      o &&
-      (o.$typeUrl === UpdatePoolIncentivesProposal.typeUrl ||
-        (typeof o.title === 'string' &&
-          typeof o.description === 'string' &&
-          Array.isArray(o.records) &&
-          (!o.records.length || DistrRecord.isSDK(o.records[0]))))
-    );
+    return o && (o.$typeUrl === UpdatePoolIncentivesProposal.typeUrl || typeof o.title === "string" && typeof o.description === "string" && Array.isArray(o.records) && (!o.records.length || DistrRecord.isSDK(o.records[0])));
   },
   isAmino(o: any): o is UpdatePoolIncentivesProposalAmino {
-    return (
-      o &&
-      (o.$typeUrl === UpdatePoolIncentivesProposal.typeUrl ||
-        (typeof o.title === 'string' &&
-          typeof o.description === 'string' &&
-          Array.isArray(o.records) &&
-          (!o.records.length || DistrRecord.isAmino(o.records[0]))))
-    );
+    return o && (o.$typeUrl === UpdatePoolIncentivesProposal.typeUrl || typeof o.title === "string" && typeof o.description === "string" && Array.isArray(o.records) && (!o.records.length || DistrRecord.isAmino(o.records[0])));
   },
-  encode(
-    message: UpdatePoolIncentivesProposal,
-    writer: BinaryWriter = BinaryWriter.create(),
-  ): BinaryWriter {
-    if (message.title !== '') {
+  encode(message: UpdatePoolIncentivesProposal, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
+    if (message.title !== "") {
       writer.uint32(10).string(message.title);
     }
-    if (message.description !== '') {
+    if (message.description !== "") {
       writer.uint32(18).string(message.description);
     }
     for (const v of message.records) {
@@ -326,12 +246,8 @@ export const UpdatePoolIncentivesProposal = {
     }
     return writer;
   },
-  decode(
-    input: BinaryReader | Uint8Array,
-    length?: number,
-  ): UpdatePoolIncentivesProposal {
-    const reader =
-      input instanceof BinaryReader ? input : new BinaryReader(input);
+  decode(input: BinaryReader | Uint8Array, length?: number): UpdatePoolIncentivesProposal {
+    const reader = input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseUpdatePoolIncentivesProposal();
     while (reader.pos < end) {
@@ -353,19 +269,14 @@ export const UpdatePoolIncentivesProposal = {
     }
     return message;
   },
-  fromPartial(
-    object: Partial<UpdatePoolIncentivesProposal>,
-  ): UpdatePoolIncentivesProposal {
+  fromPartial(object: Partial<UpdatePoolIncentivesProposal>): UpdatePoolIncentivesProposal {
     const message = createBaseUpdatePoolIncentivesProposal();
-    message.title = object.title ?? '';
-    message.description = object.description ?? '';
-    message.records =
-      object.records?.map(e => DistrRecord.fromPartial(e)) || [];
+    message.title = object.title ?? "";
+    message.description = object.description ?? "";
+    message.records = object.records?.map(e => DistrRecord.fromPartial(e)) || [];
     return message;
   },
-  fromAmino(
-    object: UpdatePoolIncentivesProposalAmino,
-  ): UpdatePoolIncentivesProposal {
+  fromAmino(object: UpdatePoolIncentivesProposalAmino): UpdatePoolIncentivesProposal {
     const message = createBaseUpdatePoolIncentivesProposal();
     if (object.title !== undefined && object.title !== null) {
       message.title = object.title;
@@ -376,57 +287,38 @@ export const UpdatePoolIncentivesProposal = {
     message.records = object.records?.map(e => DistrRecord.fromAmino(e)) || [];
     return message;
   },
-  toAmino(
-    message: UpdatePoolIncentivesProposal,
-  ): UpdatePoolIncentivesProposalAmino {
+  toAmino(message: UpdatePoolIncentivesProposal): UpdatePoolIncentivesProposalAmino {
     const obj: any = {};
-    obj.title = message.title === '' ? undefined : message.title;
-    obj.description =
-      message.description === '' ? undefined : message.description;
+    obj.title = message.title === "" ? undefined : message.title;
+    obj.description = message.description === "" ? undefined : message.description;
     if (message.records) {
-      obj.records = message.records.map(e =>
-        e ? DistrRecord.toAmino(e) : undefined,
-      );
+      obj.records = message.records.map(e => e ? DistrRecord.toAmino(e) : undefined);
     } else {
       obj.records = message.records;
     }
     return obj;
   },
-  fromAminoMsg(
-    object: UpdatePoolIncentivesProposalAminoMsg,
-  ): UpdatePoolIncentivesProposal {
+  fromAminoMsg(object: UpdatePoolIncentivesProposalAminoMsg): UpdatePoolIncentivesProposal {
     return UpdatePoolIncentivesProposal.fromAmino(object.value);
   },
-  toAminoMsg(
-    message: UpdatePoolIncentivesProposal,
-  ): UpdatePoolIncentivesProposalAminoMsg {
+  toAminoMsg(message: UpdatePoolIncentivesProposal): UpdatePoolIncentivesProposalAminoMsg {
     return {
-      type: 'symphony/UpdatePoolIncentivesProposal',
-      value: UpdatePoolIncentivesProposal.toAmino(message),
+      type: "symphony/UpdatePoolIncentivesProposal",
+      value: UpdatePoolIncentivesProposal.toAmino(message)
     };
   },
-  fromProtoMsg(
-    message: UpdatePoolIncentivesProposalProtoMsg,
-  ): UpdatePoolIncentivesProposal {
+  fromProtoMsg(message: UpdatePoolIncentivesProposalProtoMsg): UpdatePoolIncentivesProposal {
     return UpdatePoolIncentivesProposal.decode(message.value);
   },
   toProto(message: UpdatePoolIncentivesProposal): Uint8Array {
     return UpdatePoolIncentivesProposal.encode(message).finish();
   },
-  toProtoMsg(
-    message: UpdatePoolIncentivesProposal,
-  ): UpdatePoolIncentivesProposalProtoMsg {
+  toProtoMsg(message: UpdatePoolIncentivesProposal): UpdatePoolIncentivesProposalProtoMsg {
     return {
-      typeUrl: '/symphony.poolincentives.v1beta1.UpdatePoolIncentivesProposal',
-      value: UpdatePoolIncentivesProposal.encode(message).finish(),
+      typeUrl: "/symphony.poolincentives.v1beta1.UpdatePoolIncentivesProposal",
+      value: UpdatePoolIncentivesProposal.encode(message).finish()
     };
-  },
+  }
 };
-GlobalDecoderRegistry.register(
-  UpdatePoolIncentivesProposal.typeUrl,
-  UpdatePoolIncentivesProposal,
-);
-GlobalDecoderRegistry.registerAminoProtoMapping(
-  UpdatePoolIncentivesProposal.aminoType,
-  UpdatePoolIncentivesProposal.typeUrl,
-);
+GlobalDecoderRegistry.register(UpdatePoolIncentivesProposal.typeUrl, UpdatePoolIncentivesProposal);
+GlobalDecoderRegistry.registerAminoProtoMapping(UpdatePoolIncentivesProposal.aminoType, UpdatePoolIncentivesProposal.typeUrl);

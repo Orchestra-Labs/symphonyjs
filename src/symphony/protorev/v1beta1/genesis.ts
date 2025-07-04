@@ -1,29 +1,9 @@
 //@ts-nocheck
-import { Params, ParamsAmino, ParamsSDKType } from './params';
-import {
-  TokenPairArbRoutes,
-  TokenPairArbRoutesAmino,
-  TokenPairArbRoutesSDKType,
-  BaseDenom,
-  BaseDenomAmino,
-  BaseDenomSDKType,
-  PoolWeights,
-  PoolWeightsAmino,
-  PoolWeightsSDKType,
-  InfoByPoolType,
-  InfoByPoolTypeAmino,
-  InfoByPoolTypeSDKType,
-  CyclicArbTracker,
-  CyclicArbTrackerAmino,
-  CyclicArbTrackerSDKType,
-} from './protorev';
-import {
-  Coin,
-  CoinAmino,
-  CoinSDKType,
-} from '../../../cosmos/base/v1beta1/coin';
-import { BinaryReader, BinaryWriter } from '../../../binary';
-import { GlobalDecoderRegistry } from '../../../registry';
+import { Params, ParamsAmino, ParamsSDKType } from "./params";
+import { TokenPairArbRoutes, TokenPairArbRoutesAmino, TokenPairArbRoutesSDKType, BaseDenom, BaseDenomAmino, BaseDenomSDKType, PoolWeights, PoolWeightsAmino, PoolWeightsSDKType, InfoByPoolType, InfoByPoolTypeAmino, InfoByPoolTypeSDKType, CyclicArbTracker, CyclicArbTrackerAmino, CyclicArbTrackerSDKType } from "./protorev";
+import { Coin, CoinAmino, CoinSDKType } from "../../../cosmos/base/v1beta1/coin";
+import { BinaryReader, BinaryWriter } from "../../../binary";
+import { GlobalDecoderRegistry } from "../../../registry";
 /** GenesisState defines the protorev module's genesis state. */
 export interface GenesisState {
   /** Parameters for the protorev module. */
@@ -72,7 +52,7 @@ export interface GenesisState {
   cyclicArbTracker?: CyclicArbTracker;
 }
 export interface GenesisStateProtoMsg {
-  typeUrl: '/symphony.protorev.v1beta1.GenesisState';
+  typeUrl: "/symphony.protorev.v1beta1.GenesisState";
   value: Uint8Array;
 }
 /** GenesisState defines the protorev module's genesis state. */
@@ -123,7 +103,7 @@ export interface GenesisStateAmino {
   cyclic_arb_tracker?: CyclicArbTrackerAmino;
 }
 export interface GenesisStateAminoMsg {
-  type: '/symphony.protorev.v1beta1.GenesisState';
+  type: "/symphony.protorev.v1beta1.GenesisState";
   value: GenesisStateAmino;
 }
 /** GenesisState defines the protorev module's genesis state. */
@@ -153,90 +133,27 @@ function createBaseGenesisState(): GenesisState {
     daysSinceModuleGenesis: BigInt(0),
     developerFees: [],
     latestBlockHeight: BigInt(0),
-    developerAddress: '',
+    developerAddress: "",
     maxPoolPointsPerBlock: BigInt(0),
     maxPoolPointsPerTx: BigInt(0),
     pointCountForBlock: BigInt(0),
     profits: [],
     infoByPoolType: InfoByPoolType.fromPartial({}),
-    cyclicArbTracker: undefined,
+    cyclicArbTracker: undefined
   };
 }
 export const GenesisState = {
-  typeUrl: '/symphony.protorev.v1beta1.GenesisState',
+  typeUrl: "/symphony.protorev.v1beta1.GenesisState",
   is(o: any): o is GenesisState {
-    return (
-      o &&
-      (o.$typeUrl === GenesisState.typeUrl ||
-        (Params.is(o.params) &&
-          Array.isArray(o.tokenPairArbRoutes) &&
-          (!o.tokenPairArbRoutes.length ||
-            TokenPairArbRoutes.is(o.tokenPairArbRoutes[0])) &&
-          Array.isArray(o.baseDenoms) &&
-          (!o.baseDenoms.length || BaseDenom.is(o.baseDenoms[0])) &&
-          typeof o.daysSinceModuleGenesis === 'bigint' &&
-          Array.isArray(o.developerFees) &&
-          (!o.developerFees.length || Coin.is(o.developerFees[0])) &&
-          typeof o.latestBlockHeight === 'bigint' &&
-          typeof o.developerAddress === 'string' &&
-          typeof o.maxPoolPointsPerBlock === 'bigint' &&
-          typeof o.maxPoolPointsPerTx === 'bigint' &&
-          typeof o.pointCountForBlock === 'bigint' &&
-          Array.isArray(o.profits) &&
-          (!o.profits.length || Coin.is(o.profits[0])) &&
-          InfoByPoolType.is(o.infoByPoolType)))
-    );
+    return o && (o.$typeUrl === GenesisState.typeUrl || Params.is(o.params) && Array.isArray(o.tokenPairArbRoutes) && (!o.tokenPairArbRoutes.length || TokenPairArbRoutes.is(o.tokenPairArbRoutes[0])) && Array.isArray(o.baseDenoms) && (!o.baseDenoms.length || BaseDenom.is(o.baseDenoms[0])) && typeof o.daysSinceModuleGenesis === "bigint" && Array.isArray(o.developerFees) && (!o.developerFees.length || Coin.is(o.developerFees[0])) && typeof o.latestBlockHeight === "bigint" && typeof o.developerAddress === "string" && typeof o.maxPoolPointsPerBlock === "bigint" && typeof o.maxPoolPointsPerTx === "bigint" && typeof o.pointCountForBlock === "bigint" && Array.isArray(o.profits) && (!o.profits.length || Coin.is(o.profits[0])) && InfoByPoolType.is(o.infoByPoolType));
   },
   isSDK(o: any): o is GenesisStateSDKType {
-    return (
-      o &&
-      (o.$typeUrl === GenesisState.typeUrl ||
-        (Params.isSDK(o.params) &&
-          Array.isArray(o.token_pair_arb_routes) &&
-          (!o.token_pair_arb_routes.length ||
-            TokenPairArbRoutes.isSDK(o.token_pair_arb_routes[0])) &&
-          Array.isArray(o.base_denoms) &&
-          (!o.base_denoms.length || BaseDenom.isSDK(o.base_denoms[0])) &&
-          typeof o.days_since_module_genesis === 'bigint' &&
-          Array.isArray(o.developer_fees) &&
-          (!o.developer_fees.length || Coin.isSDK(o.developer_fees[0])) &&
-          typeof o.latest_block_height === 'bigint' &&
-          typeof o.developer_address === 'string' &&
-          typeof o.max_pool_points_per_block === 'bigint' &&
-          typeof o.max_pool_points_per_tx === 'bigint' &&
-          typeof o.point_count_for_block === 'bigint' &&
-          Array.isArray(o.profits) &&
-          (!o.profits.length || Coin.isSDK(o.profits[0])) &&
-          InfoByPoolType.isSDK(o.info_by_pool_type)))
-    );
+    return o && (o.$typeUrl === GenesisState.typeUrl || Params.isSDK(o.params) && Array.isArray(o.token_pair_arb_routes) && (!o.token_pair_arb_routes.length || TokenPairArbRoutes.isSDK(o.token_pair_arb_routes[0])) && Array.isArray(o.base_denoms) && (!o.base_denoms.length || BaseDenom.isSDK(o.base_denoms[0])) && typeof o.days_since_module_genesis === "bigint" && Array.isArray(o.developer_fees) && (!o.developer_fees.length || Coin.isSDK(o.developer_fees[0])) && typeof o.latest_block_height === "bigint" && typeof o.developer_address === "string" && typeof o.max_pool_points_per_block === "bigint" && typeof o.max_pool_points_per_tx === "bigint" && typeof o.point_count_for_block === "bigint" && Array.isArray(o.profits) && (!o.profits.length || Coin.isSDK(o.profits[0])) && InfoByPoolType.isSDK(o.info_by_pool_type));
   },
   isAmino(o: any): o is GenesisStateAmino {
-    return (
-      o &&
-      (o.$typeUrl === GenesisState.typeUrl ||
-        (Params.isAmino(o.params) &&
-          Array.isArray(o.token_pair_arb_routes) &&
-          (!o.token_pair_arb_routes.length ||
-            TokenPairArbRoutes.isAmino(o.token_pair_arb_routes[0])) &&
-          Array.isArray(o.base_denoms) &&
-          (!o.base_denoms.length || BaseDenom.isAmino(o.base_denoms[0])) &&
-          typeof o.days_since_module_genesis === 'bigint' &&
-          Array.isArray(o.developer_fees) &&
-          (!o.developer_fees.length || Coin.isAmino(o.developer_fees[0])) &&
-          typeof o.latest_block_height === 'bigint' &&
-          typeof o.developer_address === 'string' &&
-          typeof o.max_pool_points_per_block === 'bigint' &&
-          typeof o.max_pool_points_per_tx === 'bigint' &&
-          typeof o.point_count_for_block === 'bigint' &&
-          Array.isArray(o.profits) &&
-          (!o.profits.length || Coin.isAmino(o.profits[0])) &&
-          InfoByPoolType.isAmino(o.info_by_pool_type)))
-    );
+    return o && (o.$typeUrl === GenesisState.typeUrl || Params.isAmino(o.params) && Array.isArray(o.token_pair_arb_routes) && (!o.token_pair_arb_routes.length || TokenPairArbRoutes.isAmino(o.token_pair_arb_routes[0])) && Array.isArray(o.base_denoms) && (!o.base_denoms.length || BaseDenom.isAmino(o.base_denoms[0])) && typeof o.days_since_module_genesis === "bigint" && Array.isArray(o.developer_fees) && (!o.developer_fees.length || Coin.isAmino(o.developer_fees[0])) && typeof o.latest_block_height === "bigint" && typeof o.developer_address === "string" && typeof o.max_pool_points_per_block === "bigint" && typeof o.max_pool_points_per_tx === "bigint" && typeof o.point_count_for_block === "bigint" && Array.isArray(o.profits) && (!o.profits.length || Coin.isAmino(o.profits[0])) && InfoByPoolType.isAmino(o.info_by_pool_type));
   },
-  encode(
-    message: GenesisState,
-    writer: BinaryWriter = BinaryWriter.create(),
-  ): BinaryWriter {
+  encode(message: GenesisState, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
     if (message.params !== undefined) {
       Params.encode(message.params, writer.uint32(10).fork()).ldelim();
     }
@@ -247,10 +164,7 @@ export const GenesisState = {
       BaseDenom.encode(v!, writer.uint32(26).fork()).ldelim();
     }
     if (message.poolWeights !== undefined) {
-      PoolWeights.encode(
-        message.poolWeights,
-        writer.uint32(34).fork(),
-      ).ldelim();
+      PoolWeights.encode(message.poolWeights, writer.uint32(34).fork()).ldelim();
     }
     if (message.daysSinceModuleGenesis !== BigInt(0)) {
       writer.uint32(40).uint64(message.daysSinceModuleGenesis);
@@ -261,7 +175,7 @@ export const GenesisState = {
     if (message.latestBlockHeight !== BigInt(0)) {
       writer.uint32(56).uint64(message.latestBlockHeight);
     }
-    if (message.developerAddress !== '') {
+    if (message.developerAddress !== "") {
       writer.uint32(66).string(message.developerAddress);
     }
     if (message.maxPoolPointsPerBlock !== BigInt(0)) {
@@ -277,22 +191,15 @@ export const GenesisState = {
       Coin.encode(v!, writer.uint32(98).fork()).ldelim();
     }
     if (message.infoByPoolType !== undefined) {
-      InfoByPoolType.encode(
-        message.infoByPoolType,
-        writer.uint32(106).fork(),
-      ).ldelim();
+      InfoByPoolType.encode(message.infoByPoolType, writer.uint32(106).fork()).ldelim();
     }
     if (message.cyclicArbTracker !== undefined) {
-      CyclicArbTracker.encode(
-        message.cyclicArbTracker,
-        writer.uint32(114).fork(),
-      ).ldelim();
+      CyclicArbTracker.encode(message.cyclicArbTracker, writer.uint32(114).fork()).ldelim();
     }
     return writer;
   },
   decode(input: BinaryReader | Uint8Array, length?: number): GenesisState {
-    const reader =
-      input instanceof BinaryReader ? input : new BinaryReader(input);
+    const reader = input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseGenesisState();
     while (reader.pos < end) {
@@ -302,9 +209,7 @@ export const GenesisState = {
           message.params = Params.decode(reader, reader.uint32());
           break;
         case 2:
-          message.tokenPairArbRoutes.push(
-            TokenPairArbRoutes.decode(reader, reader.uint32()),
-          );
+          message.tokenPairArbRoutes.push(TokenPairArbRoutes.decode(reader, reader.uint32()));
           break;
         case 3:
           message.baseDenoms.push(BaseDenom.decode(reader, reader.uint32()));
@@ -337,16 +242,10 @@ export const GenesisState = {
           message.profits.push(Coin.decode(reader, reader.uint32()));
           break;
         case 13:
-          message.infoByPoolType = InfoByPoolType.decode(
-            reader,
-            reader.uint32(),
-          );
+          message.infoByPoolType = InfoByPoolType.decode(reader, reader.uint32());
           break;
         case 14:
-          message.cyclicArbTracker = CyclicArbTracker.decode(
-            reader,
-            reader.uint32(),
-          );
+          message.cyclicArbTracker = CyclicArbTracker.decode(reader, reader.uint32());
           break;
         default:
           reader.skipType(tag & 7);
@@ -357,56 +256,20 @@ export const GenesisState = {
   },
   fromPartial(object: Partial<GenesisState>): GenesisState {
     const message = createBaseGenesisState();
-    message.params =
-      object.params !== undefined && object.params !== null
-        ? Params.fromPartial(object.params)
-        : undefined;
-    message.tokenPairArbRoutes =
-      object.tokenPairArbRoutes?.map(e => TokenPairArbRoutes.fromPartial(e)) ||
-      [];
-    message.baseDenoms =
-      object.baseDenoms?.map(e => BaseDenom.fromPartial(e)) || [];
-    message.poolWeights =
-      object.poolWeights !== undefined && object.poolWeights !== null
-        ? PoolWeights.fromPartial(object.poolWeights)
-        : undefined;
-    message.daysSinceModuleGenesis =
-      object.daysSinceModuleGenesis !== undefined &&
-      object.daysSinceModuleGenesis !== null
-        ? BigInt(object.daysSinceModuleGenesis.toString())
-        : BigInt(0);
-    message.developerFees =
-      object.developerFees?.map(e => Coin.fromPartial(e)) || [];
-    message.latestBlockHeight =
-      object.latestBlockHeight !== undefined &&
-      object.latestBlockHeight !== null
-        ? BigInt(object.latestBlockHeight.toString())
-        : BigInt(0);
-    message.developerAddress = object.developerAddress ?? '';
-    message.maxPoolPointsPerBlock =
-      object.maxPoolPointsPerBlock !== undefined &&
-      object.maxPoolPointsPerBlock !== null
-        ? BigInt(object.maxPoolPointsPerBlock.toString())
-        : BigInt(0);
-    message.maxPoolPointsPerTx =
-      object.maxPoolPointsPerTx !== undefined &&
-      object.maxPoolPointsPerTx !== null
-        ? BigInt(object.maxPoolPointsPerTx.toString())
-        : BigInt(0);
-    message.pointCountForBlock =
-      object.pointCountForBlock !== undefined &&
-      object.pointCountForBlock !== null
-        ? BigInt(object.pointCountForBlock.toString())
-        : BigInt(0);
+    message.params = object.params !== undefined && object.params !== null ? Params.fromPartial(object.params) : undefined;
+    message.tokenPairArbRoutes = object.tokenPairArbRoutes?.map(e => TokenPairArbRoutes.fromPartial(e)) || [];
+    message.baseDenoms = object.baseDenoms?.map(e => BaseDenom.fromPartial(e)) || [];
+    message.poolWeights = object.poolWeights !== undefined && object.poolWeights !== null ? PoolWeights.fromPartial(object.poolWeights) : undefined;
+    message.daysSinceModuleGenesis = object.daysSinceModuleGenesis !== undefined && object.daysSinceModuleGenesis !== null ? BigInt(object.daysSinceModuleGenesis.toString()) : BigInt(0);
+    message.developerFees = object.developerFees?.map(e => Coin.fromPartial(e)) || [];
+    message.latestBlockHeight = object.latestBlockHeight !== undefined && object.latestBlockHeight !== null ? BigInt(object.latestBlockHeight.toString()) : BigInt(0);
+    message.developerAddress = object.developerAddress ?? "";
+    message.maxPoolPointsPerBlock = object.maxPoolPointsPerBlock !== undefined && object.maxPoolPointsPerBlock !== null ? BigInt(object.maxPoolPointsPerBlock.toString()) : BigInt(0);
+    message.maxPoolPointsPerTx = object.maxPoolPointsPerTx !== undefined && object.maxPoolPointsPerTx !== null ? BigInt(object.maxPoolPointsPerTx.toString()) : BigInt(0);
+    message.pointCountForBlock = object.pointCountForBlock !== undefined && object.pointCountForBlock !== null ? BigInt(object.pointCountForBlock.toString()) : BigInt(0);
     message.profits = object.profits?.map(e => Coin.fromPartial(e)) || [];
-    message.infoByPoolType =
-      object.infoByPoolType !== undefined && object.infoByPoolType !== null
-        ? InfoByPoolType.fromPartial(object.infoByPoolType)
-        : undefined;
-    message.cyclicArbTracker =
-      object.cyclicArbTracker !== undefined && object.cyclicArbTracker !== null
-        ? CyclicArbTracker.fromPartial(object.cyclicArbTracker)
-        : undefined;
+    message.infoByPoolType = object.infoByPoolType !== undefined && object.infoByPoolType !== null ? InfoByPoolType.fromPartial(object.infoByPoolType) : undefined;
+    message.cyclicArbTracker = object.cyclicArbTracker !== undefined && object.cyclicArbTracker !== null ? CyclicArbTracker.fromPartial(object.cyclicArbTracker) : undefined;
     return message;
   },
   fromAmino(object: GenesisStateAmino): GenesisState {
@@ -414,68 +277,36 @@ export const GenesisState = {
     if (object.params !== undefined && object.params !== null) {
       message.params = Params.fromAmino(object.params);
     }
-    message.tokenPairArbRoutes =
-      object.token_pair_arb_routes?.map(e => TokenPairArbRoutes.fromAmino(e)) ||
-      [];
-    message.baseDenoms =
-      object.base_denoms?.map(e => BaseDenom.fromAmino(e)) || [];
+    message.tokenPairArbRoutes = object.token_pair_arb_routes?.map(e => TokenPairArbRoutes.fromAmino(e)) || [];
+    message.baseDenoms = object.base_denoms?.map(e => BaseDenom.fromAmino(e)) || [];
     if (object.pool_weights !== undefined && object.pool_weights !== null) {
       message.poolWeights = PoolWeights.fromAmino(object.pool_weights);
     }
-    if (
-      object.days_since_module_genesis !== undefined &&
-      object.days_since_module_genesis !== null
-    ) {
+    if (object.days_since_module_genesis !== undefined && object.days_since_module_genesis !== null) {
       message.daysSinceModuleGenesis = BigInt(object.days_since_module_genesis);
     }
-    message.developerFees =
-      object.developer_fees?.map(e => Coin.fromAmino(e)) || [];
-    if (
-      object.latest_block_height !== undefined &&
-      object.latest_block_height !== null
-    ) {
+    message.developerFees = object.developer_fees?.map(e => Coin.fromAmino(e)) || [];
+    if (object.latest_block_height !== undefined && object.latest_block_height !== null) {
       message.latestBlockHeight = BigInt(object.latest_block_height);
     }
-    if (
-      object.developer_address !== undefined &&
-      object.developer_address !== null
-    ) {
+    if (object.developer_address !== undefined && object.developer_address !== null) {
       message.developerAddress = object.developer_address;
     }
-    if (
-      object.max_pool_points_per_block !== undefined &&
-      object.max_pool_points_per_block !== null
-    ) {
+    if (object.max_pool_points_per_block !== undefined && object.max_pool_points_per_block !== null) {
       message.maxPoolPointsPerBlock = BigInt(object.max_pool_points_per_block);
     }
-    if (
-      object.max_pool_points_per_tx !== undefined &&
-      object.max_pool_points_per_tx !== null
-    ) {
+    if (object.max_pool_points_per_tx !== undefined && object.max_pool_points_per_tx !== null) {
       message.maxPoolPointsPerTx = BigInt(object.max_pool_points_per_tx);
     }
-    if (
-      object.point_count_for_block !== undefined &&
-      object.point_count_for_block !== null
-    ) {
+    if (object.point_count_for_block !== undefined && object.point_count_for_block !== null) {
       message.pointCountForBlock = BigInt(object.point_count_for_block);
     }
     message.profits = object.profits?.map(e => Coin.fromAmino(e)) || [];
-    if (
-      object.info_by_pool_type !== undefined &&
-      object.info_by_pool_type !== null
-    ) {
-      message.infoByPoolType = InfoByPoolType.fromAmino(
-        object.info_by_pool_type,
-      );
+    if (object.info_by_pool_type !== undefined && object.info_by_pool_type !== null) {
+      message.infoByPoolType = InfoByPoolType.fromAmino(object.info_by_pool_type);
     }
-    if (
-      object.cyclic_arb_tracker !== undefined &&
-      object.cyclic_arb_tracker !== null
-    ) {
-      message.cyclicArbTracker = CyclicArbTracker.fromAmino(
-        object.cyclic_arb_tracker,
-      );
+    if (object.cyclic_arb_tracker !== undefined && object.cyclic_arb_tracker !== null) {
+      message.cyclicArbTracker = CyclicArbTracker.fromAmino(object.cyclic_arb_tracker);
     }
     return message;
   },
@@ -483,62 +314,34 @@ export const GenesisState = {
     const obj: any = {};
     obj.params = message.params ? Params.toAmino(message.params) : undefined;
     if (message.tokenPairArbRoutes) {
-      obj.token_pair_arb_routes = message.tokenPairArbRoutes.map(e =>
-        e ? TokenPairArbRoutes.toAmino(e) : undefined,
-      );
+      obj.token_pair_arb_routes = message.tokenPairArbRoutes.map(e => e ? TokenPairArbRoutes.toAmino(e) : undefined);
     } else {
       obj.token_pair_arb_routes = message.tokenPairArbRoutes;
     }
     if (message.baseDenoms) {
-      obj.base_denoms = message.baseDenoms.map(e =>
-        e ? BaseDenom.toAmino(e) : undefined,
-      );
+      obj.base_denoms = message.baseDenoms.map(e => e ? BaseDenom.toAmino(e) : undefined);
     } else {
       obj.base_denoms = message.baseDenoms;
     }
-    obj.pool_weights = message.poolWeights
-      ? PoolWeights.toAmino(message.poolWeights)
-      : undefined;
-    obj.days_since_module_genesis =
-      message.daysSinceModuleGenesis !== BigInt(0)
-        ? message.daysSinceModuleGenesis?.toString()
-        : undefined;
+    obj.pool_weights = message.poolWeights ? PoolWeights.toAmino(message.poolWeights) : undefined;
+    obj.days_since_module_genesis = message.daysSinceModuleGenesis !== BigInt(0) ? message.daysSinceModuleGenesis?.toString() : undefined;
     if (message.developerFees) {
-      obj.developer_fees = message.developerFees.map(e =>
-        e ? Coin.toAmino(e) : undefined,
-      );
+      obj.developer_fees = message.developerFees.map(e => e ? Coin.toAmino(e) : undefined);
     } else {
       obj.developer_fees = message.developerFees;
     }
-    obj.latest_block_height =
-      message.latestBlockHeight !== BigInt(0)
-        ? message.latestBlockHeight?.toString()
-        : undefined;
-    obj.developer_address =
-      message.developerAddress === '' ? undefined : message.developerAddress;
-    obj.max_pool_points_per_block =
-      message.maxPoolPointsPerBlock !== BigInt(0)
-        ? message.maxPoolPointsPerBlock?.toString()
-        : undefined;
-    obj.max_pool_points_per_tx =
-      message.maxPoolPointsPerTx !== BigInt(0)
-        ? message.maxPoolPointsPerTx?.toString()
-        : undefined;
-    obj.point_count_for_block =
-      message.pointCountForBlock !== BigInt(0)
-        ? message.pointCountForBlock?.toString()
-        : undefined;
+    obj.latest_block_height = message.latestBlockHeight !== BigInt(0) ? message.latestBlockHeight?.toString() : undefined;
+    obj.developer_address = message.developerAddress === "" ? undefined : message.developerAddress;
+    obj.max_pool_points_per_block = message.maxPoolPointsPerBlock !== BigInt(0) ? message.maxPoolPointsPerBlock?.toString() : undefined;
+    obj.max_pool_points_per_tx = message.maxPoolPointsPerTx !== BigInt(0) ? message.maxPoolPointsPerTx?.toString() : undefined;
+    obj.point_count_for_block = message.pointCountForBlock !== BigInt(0) ? message.pointCountForBlock?.toString() : undefined;
     if (message.profits) {
-      obj.profits = message.profits.map(e => (e ? Coin.toAmino(e) : undefined));
+      obj.profits = message.profits.map(e => e ? Coin.toAmino(e) : undefined);
     } else {
       obj.profits = message.profits;
     }
-    obj.info_by_pool_type = message.infoByPoolType
-      ? InfoByPoolType.toAmino(message.infoByPoolType)
-      : undefined;
-    obj.cyclic_arb_tracker = message.cyclicArbTracker
-      ? CyclicArbTracker.toAmino(message.cyclicArbTracker)
-      : undefined;
+    obj.info_by_pool_type = message.infoByPoolType ? InfoByPoolType.toAmino(message.infoByPoolType) : undefined;
+    obj.cyclic_arb_tracker = message.cyclicArbTracker ? CyclicArbTracker.toAmino(message.cyclicArbTracker) : undefined;
     return obj;
   },
   fromAminoMsg(object: GenesisStateAminoMsg): GenesisState {
@@ -552,9 +355,9 @@ export const GenesisState = {
   },
   toProtoMsg(message: GenesisState): GenesisStateProtoMsg {
     return {
-      typeUrl: '/symphony.protorev.v1beta1.GenesisState',
-      value: GenesisState.encode(message).finish(),
+      typeUrl: "/symphony.protorev.v1beta1.GenesisState",
+      value: GenesisState.encode(message).finish()
     };
-  },
+  }
 };
 GlobalDecoderRegistry.register(GenesisState.typeUrl, GenesisState);

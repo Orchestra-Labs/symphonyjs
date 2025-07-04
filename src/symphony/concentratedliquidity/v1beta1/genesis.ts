@@ -1,42 +1,22 @@
 //@ts-nocheck
-import { TickInfo, TickInfoAmino, TickInfoSDKType } from './tick_info';
-import {
-  Any,
-  AnyProtoMsg,
-  AnyAmino,
-  AnySDKType,
-} from '../../../google/protobuf/any';
-import {
-  IncentiveRecord,
-  IncentiveRecordAmino,
-  IncentiveRecordSDKType,
-} from './incentive_record';
-import { Position, PositionAmino, PositionSDKType } from './position';
-import {
-  Record,
-  RecordAmino,
-  RecordSDKType,
-  AccumulatorContent,
-  AccumulatorContentAmino,
-  AccumulatorContentSDKType,
-} from '../../accum/v1beta1/accum';
-import { Params, ParamsAmino, ParamsSDKType } from '../params';
-import { Pool as Pool1 } from './pool';
-import { PoolProtoMsg as Pool1ProtoMsg } from './pool';
-import { PoolSDKType as Pool1SDKType } from './pool';
-import {
-  CosmWasmPool,
-  CosmWasmPoolProtoMsg,
-  CosmWasmPoolSDKType,
-} from '../../cosmwasmpool/v1beta1/model/pool';
-import { Pool as Pool2 } from '../../gamm/poolmodels/stableswap/v1beta1/stableswap_pool';
-import { PoolProtoMsg as Pool2ProtoMsg } from '../../gamm/poolmodels/stableswap/v1beta1/stableswap_pool';
-import { PoolSDKType as Pool2SDKType } from '../../gamm/poolmodels/stableswap/v1beta1/stableswap_pool';
-import { Pool as Pool3 } from '../../gamm/v1beta1/balancerPool';
-import { PoolProtoMsg as Pool3ProtoMsg } from '../../gamm/v1beta1/balancerPool';
-import { PoolSDKType as Pool3SDKType } from '../../gamm/v1beta1/balancerPool';
-import { BinaryReader, BinaryWriter } from '../../../binary';
-import { GlobalDecoderRegistry } from '../../../registry';
+import { TickInfo, TickInfoAmino, TickInfoSDKType } from "./tick_info";
+import { Any, AnyProtoMsg, AnyAmino, AnySDKType } from "../../../google/protobuf/any";
+import { IncentiveRecord, IncentiveRecordAmino, IncentiveRecordSDKType } from "./incentive_record";
+import { Position, PositionAmino, PositionSDKType } from "./position";
+import { Record, RecordAmino, RecordSDKType, AccumulatorContent, AccumulatorContentAmino, AccumulatorContentSDKType } from "../../accum/v1beta1/accum";
+import { Params, ParamsAmino, ParamsSDKType } from "../params";
+import { Pool as Pool1 } from "./pool";
+import { PoolProtoMsg as Pool1ProtoMsg } from "./pool";
+import { PoolSDKType as Pool1SDKType } from "./pool";
+import { CosmWasmPool, CosmWasmPoolProtoMsg, CosmWasmPoolSDKType } from "../../cosmwasmpool/v1beta1/model/pool";
+import { Pool as Pool2 } from "../../gamm/poolmodels/stableswap/v1beta1/stableswap_pool";
+import { PoolProtoMsg as Pool2ProtoMsg } from "../../gamm/poolmodels/stableswap/v1beta1/stableswap_pool";
+import { PoolSDKType as Pool2SDKType } from "../../gamm/poolmodels/stableswap/v1beta1/stableswap_pool";
+import { Pool as Pool3 } from "../../gamm/v1beta1/balancerPool";
+import { PoolProtoMsg as Pool3ProtoMsg } from "../../gamm/v1beta1/balancerPool";
+import { PoolSDKType as Pool3SDKType } from "../../gamm/v1beta1/balancerPool";
+import { BinaryReader, BinaryWriter } from "../../../binary";
+import { GlobalDecoderRegistry } from "../../../registry";
 /**
  * FullTick contains tick index and pool id along with other tick model
  * information.
@@ -50,7 +30,7 @@ export interface FullTick {
   info: TickInfo;
 }
 export interface FullTickProtoMsg {
-  typeUrl: '/symphony.concentratedliquidity.v1beta1.FullTick';
+  typeUrl: "/symphony.concentratedliquidity.v1beta1.FullTick";
   value: Uint8Array;
 }
 /**
@@ -66,7 +46,7 @@ export interface FullTickAmino {
   info?: TickInfoAmino;
 }
 export interface FullTickAminoMsg {
-  type: '/symphony.concentratedliquidity.v1beta1.FullTick';
+  type: "/symphony.concentratedliquidity.v1beta1.FullTick";
   value: FullTickAmino;
 }
 /**
@@ -93,17 +73,11 @@ export interface PoolData {
   incentiveRecords: IncentiveRecord[];
 }
 export interface PoolDataProtoMsg {
-  typeUrl: '/symphony.concentratedliquidity.v1beta1.PoolData';
+  typeUrl: "/symphony.concentratedliquidity.v1beta1.PoolData";
   value: Uint8Array;
 }
-export type PoolDataEncoded = Omit<PoolData, 'pool'> & {
-  /** pool struct */ pool?:
-    | Pool1ProtoMsg
-    | CosmWasmPoolProtoMsg
-    | Pool2ProtoMsg
-    | Pool3ProtoMsg
-    | AnyProtoMsg
-    | undefined;
+export type PoolDataEncoded = Omit<PoolData, "pool"> & {
+  /** pool struct */pool?: Pool1ProtoMsg | CosmWasmPoolProtoMsg | Pool2ProtoMsg | Pool3ProtoMsg | AnyProtoMsg | undefined;
 };
 /**
  * PoolData represents a serialized pool along with its ticks
@@ -120,7 +94,7 @@ export interface PoolDataAmino {
   incentive_records?: IncentiveRecordAmino[];
 }
 export interface PoolDataAminoMsg {
-  type: '/symphony.concentratedliquidity.v1beta1.PoolData';
+  type: "/symphony.concentratedliquidity.v1beta1.PoolData";
   value: PoolDataAmino;
 }
 /**
@@ -128,13 +102,7 @@ export interface PoolDataAminoMsg {
  * for genesis state.
  */
 export interface PoolDataSDKType {
-  pool?:
-    | Pool1SDKType
-    | CosmWasmPoolSDKType
-    | Pool2SDKType
-    | Pool3SDKType
-    | AnySDKType
-    | undefined;
+  pool?: Pool1SDKType | CosmWasmPoolSDKType | Pool2SDKType | Pool3SDKType | AnySDKType | undefined;
   ticks: FullTickSDKType[];
   spread_reward_accumulator: AccumObjectSDKType;
   incentives_accumulators: AccumObjectSDKType[];
@@ -147,7 +115,7 @@ export interface PositionData {
   uptimeAccumRecords: Record[];
 }
 export interface PositionDataProtoMsg {
-  typeUrl: '/symphony.concentratedliquidity.v1beta1.PositionData';
+  typeUrl: "/symphony.concentratedliquidity.v1beta1.PositionData";
   value: Uint8Array;
 }
 export interface PositionDataAmino {
@@ -157,7 +125,7 @@ export interface PositionDataAmino {
   uptime_accum_records?: RecordAmino[];
 }
 export interface PositionDataAminoMsg {
-  type: '/symphony.concentratedliquidity.v1beta1.PositionData';
+  type: "/symphony.concentratedliquidity.v1beta1.PositionData";
   value: PositionDataAmino;
 }
 export interface PositionDataSDKType {
@@ -179,7 +147,7 @@ export interface GenesisState {
   spreadFactorPoolIdMigrationThreshold: bigint;
 }
 export interface GenesisStateProtoMsg {
-  typeUrl: '/symphony.concentratedliquidity.v1beta1.GenesisState';
+  typeUrl: "/symphony.concentratedliquidity.v1beta1.GenesisState";
   value: Uint8Array;
 }
 /** GenesisState defines the concentrated liquidity module's genesis state. */
@@ -195,7 +163,7 @@ export interface GenesisStateAmino {
   spread_factor_pool_id_migration_threshold?: string;
 }
 export interface GenesisStateAminoMsg {
-  type: '/symphony.concentratedliquidity.v1beta1.GenesisState';
+  type: "/symphony.concentratedliquidity.v1beta1.GenesisState";
   value: GenesisStateAmino;
 }
 /** GenesisState defines the concentrated liquidity module's genesis state. */
@@ -214,7 +182,7 @@ export interface AccumObject {
   accumContent?: AccumulatorContent;
 }
 export interface AccumObjectProtoMsg {
-  typeUrl: '/symphony.concentratedliquidity.v1beta1.AccumObject';
+  typeUrl: "/symphony.concentratedliquidity.v1beta1.AccumObject";
   value: Uint8Array;
 }
 export interface AccumObjectAmino {
@@ -223,7 +191,7 @@ export interface AccumObjectAmino {
   accum_content?: AccumulatorContentAmino;
 }
 export interface AccumObjectAminoMsg {
-  type: '/symphony.concentratedliquidity.v1beta1.AccumObject';
+  type: "/symphony.concentratedliquidity.v1beta1.AccumObject";
   value: AccumObjectAmino;
 }
 export interface AccumObjectSDKType {
@@ -234,42 +202,21 @@ function createBaseFullTick(): FullTick {
   return {
     poolId: BigInt(0),
     tickIndex: BigInt(0),
-    info: TickInfo.fromPartial({}),
+    info: TickInfo.fromPartial({})
   };
 }
 export const FullTick = {
-  typeUrl: '/symphony.concentratedliquidity.v1beta1.FullTick',
+  typeUrl: "/symphony.concentratedliquidity.v1beta1.FullTick",
   is(o: any): o is FullTick {
-    return (
-      o &&
-      (o.$typeUrl === FullTick.typeUrl ||
-        (typeof o.poolId === 'bigint' &&
-          typeof o.tickIndex === 'bigint' &&
-          TickInfo.is(o.info)))
-    );
+    return o && (o.$typeUrl === FullTick.typeUrl || typeof o.poolId === "bigint" && typeof o.tickIndex === "bigint" && TickInfo.is(o.info));
   },
   isSDK(o: any): o is FullTickSDKType {
-    return (
-      o &&
-      (o.$typeUrl === FullTick.typeUrl ||
-        (typeof o.pool_id === 'bigint' &&
-          typeof o.tick_index === 'bigint' &&
-          TickInfo.isSDK(o.info)))
-    );
+    return o && (o.$typeUrl === FullTick.typeUrl || typeof o.pool_id === "bigint" && typeof o.tick_index === "bigint" && TickInfo.isSDK(o.info));
   },
   isAmino(o: any): o is FullTickAmino {
-    return (
-      o &&
-      (o.$typeUrl === FullTick.typeUrl ||
-        (typeof o.pool_id === 'bigint' &&
-          typeof o.tick_index === 'bigint' &&
-          TickInfo.isAmino(o.info)))
-    );
+    return o && (o.$typeUrl === FullTick.typeUrl || typeof o.pool_id === "bigint" && typeof o.tick_index === "bigint" && TickInfo.isAmino(o.info));
   },
-  encode(
-    message: FullTick,
-    writer: BinaryWriter = BinaryWriter.create(),
-  ): BinaryWriter {
+  encode(message: FullTick, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
     if (message.poolId !== BigInt(0)) {
       writer.uint32(8).uint64(message.poolId);
     }
@@ -282,8 +229,7 @@ export const FullTick = {
     return writer;
   },
   decode(input: BinaryReader | Uint8Array, length?: number): FullTick {
-    const reader =
-      input instanceof BinaryReader ? input : new BinaryReader(input);
+    const reader = input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseFullTick();
     while (reader.pos < end) {
@@ -307,18 +253,9 @@ export const FullTick = {
   },
   fromPartial(object: Partial<FullTick>): FullTick {
     const message = createBaseFullTick();
-    message.poolId =
-      object.poolId !== undefined && object.poolId !== null
-        ? BigInt(object.poolId.toString())
-        : BigInt(0);
-    message.tickIndex =
-      object.tickIndex !== undefined && object.tickIndex !== null
-        ? BigInt(object.tickIndex.toString())
-        : BigInt(0);
-    message.info =
-      object.info !== undefined && object.info !== null
-        ? TickInfo.fromPartial(object.info)
-        : undefined;
+    message.poolId = object.poolId !== undefined && object.poolId !== null ? BigInt(object.poolId.toString()) : BigInt(0);
+    message.tickIndex = object.tickIndex !== undefined && object.tickIndex !== null ? BigInt(object.tickIndex.toString()) : BigInt(0);
+    message.info = object.info !== undefined && object.info !== null ? TickInfo.fromPartial(object.info) : undefined;
     return message;
   },
   fromAmino(object: FullTickAmino): FullTick {
@@ -336,12 +273,8 @@ export const FullTick = {
   },
   toAmino(message: FullTick): FullTickAmino {
     const obj: any = {};
-    obj.pool_id =
-      message.poolId !== BigInt(0) ? message.poolId?.toString() : undefined;
-    obj.tick_index =
-      message.tickIndex !== BigInt(0)
-        ? message.tickIndex?.toString()
-        : undefined;
+    obj.pool_id = message.poolId !== BigInt(0) ? message.poolId?.toString() : undefined;
+    obj.tick_index = message.tickIndex !== BigInt(0) ? message.tickIndex?.toString() : undefined;
     obj.info = message.info ? TickInfo.toAmino(message.info) : undefined;
     return obj;
   },
@@ -356,10 +289,10 @@ export const FullTick = {
   },
   toProtoMsg(message: FullTick): FullTickProtoMsg {
     return {
-      typeUrl: '/symphony.concentratedliquidity.v1beta1.FullTick',
-      value: FullTick.encode(message).finish(),
+      typeUrl: "/symphony.concentratedliquidity.v1beta1.FullTick",
+      value: FullTick.encode(message).finish()
     };
-  },
+  }
 };
 GlobalDecoderRegistry.register(FullTick.typeUrl, FullTick);
 function createBasePoolData(): PoolData {
@@ -368,74 +301,29 @@ function createBasePoolData(): PoolData {
     ticks: [],
     spreadRewardAccumulator: AccumObject.fromPartial({}),
     incentivesAccumulators: [],
-    incentiveRecords: [],
+    incentiveRecords: []
   };
 }
 export const PoolData = {
-  typeUrl: '/symphony.concentratedliquidity.v1beta1.PoolData',
+  typeUrl: "/symphony.concentratedliquidity.v1beta1.PoolData",
   is(o: any): o is PoolData {
-    return (
-      o &&
-      (o.$typeUrl === PoolData.typeUrl ||
-        (Array.isArray(o.ticks) &&
-          (!o.ticks.length || FullTick.is(o.ticks[0])) &&
-          AccumObject.is(o.spreadRewardAccumulator) &&
-          Array.isArray(o.incentivesAccumulators) &&
-          (!o.incentivesAccumulators.length ||
-            AccumObject.is(o.incentivesAccumulators[0])) &&
-          Array.isArray(o.incentiveRecords) &&
-          (!o.incentiveRecords.length ||
-            IncentiveRecord.is(o.incentiveRecords[0]))))
-    );
+    return o && (o.$typeUrl === PoolData.typeUrl || Array.isArray(o.ticks) && (!o.ticks.length || FullTick.is(o.ticks[0])) && AccumObject.is(o.spreadRewardAccumulator) && Array.isArray(o.incentivesAccumulators) && (!o.incentivesAccumulators.length || AccumObject.is(o.incentivesAccumulators[0])) && Array.isArray(o.incentiveRecords) && (!o.incentiveRecords.length || IncentiveRecord.is(o.incentiveRecords[0])));
   },
   isSDK(o: any): o is PoolDataSDKType {
-    return (
-      o &&
-      (o.$typeUrl === PoolData.typeUrl ||
-        (Array.isArray(o.ticks) &&
-          (!o.ticks.length || FullTick.isSDK(o.ticks[0])) &&
-          AccumObject.isSDK(o.spread_reward_accumulator) &&
-          Array.isArray(o.incentives_accumulators) &&
-          (!o.incentives_accumulators.length ||
-            AccumObject.isSDK(o.incentives_accumulators[0])) &&
-          Array.isArray(o.incentive_records) &&
-          (!o.incentive_records.length ||
-            IncentiveRecord.isSDK(o.incentive_records[0]))))
-    );
+    return o && (o.$typeUrl === PoolData.typeUrl || Array.isArray(o.ticks) && (!o.ticks.length || FullTick.isSDK(o.ticks[0])) && AccumObject.isSDK(o.spread_reward_accumulator) && Array.isArray(o.incentives_accumulators) && (!o.incentives_accumulators.length || AccumObject.isSDK(o.incentives_accumulators[0])) && Array.isArray(o.incentive_records) && (!o.incentive_records.length || IncentiveRecord.isSDK(o.incentive_records[0])));
   },
   isAmino(o: any): o is PoolDataAmino {
-    return (
-      o &&
-      (o.$typeUrl === PoolData.typeUrl ||
-        (Array.isArray(o.ticks) &&
-          (!o.ticks.length || FullTick.isAmino(o.ticks[0])) &&
-          AccumObject.isAmino(o.spread_reward_accumulator) &&
-          Array.isArray(o.incentives_accumulators) &&
-          (!o.incentives_accumulators.length ||
-            AccumObject.isAmino(o.incentives_accumulators[0])) &&
-          Array.isArray(o.incentive_records) &&
-          (!o.incentive_records.length ||
-            IncentiveRecord.isAmino(o.incentive_records[0]))))
-    );
+    return o && (o.$typeUrl === PoolData.typeUrl || Array.isArray(o.ticks) && (!o.ticks.length || FullTick.isAmino(o.ticks[0])) && AccumObject.isAmino(o.spread_reward_accumulator) && Array.isArray(o.incentives_accumulators) && (!o.incentives_accumulators.length || AccumObject.isAmino(o.incentives_accumulators[0])) && Array.isArray(o.incentive_records) && (!o.incentive_records.length || IncentiveRecord.isAmino(o.incentive_records[0])));
   },
-  encode(
-    message: PoolData,
-    writer: BinaryWriter = BinaryWriter.create(),
-  ): BinaryWriter {
+  encode(message: PoolData, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
     if (message.pool !== undefined) {
-      Any.encode(
-        GlobalDecoderRegistry.wrapAny(message.pool),
-        writer.uint32(10).fork(),
-      ).ldelim();
+      Any.encode(GlobalDecoderRegistry.wrapAny(message.pool), writer.uint32(10).fork()).ldelim();
     }
     for (const v of message.ticks) {
       FullTick.encode(v!, writer.uint32(18).fork()).ldelim();
     }
     if (message.spreadRewardAccumulator !== undefined) {
-      AccumObject.encode(
-        message.spreadRewardAccumulator,
-        writer.uint32(26).fork(),
-      ).ldelim();
+      AccumObject.encode(message.spreadRewardAccumulator, writer.uint32(26).fork()).ldelim();
     }
     for (const v of message.incentivesAccumulators) {
       AccumObject.encode(v!, writer.uint32(34).fork()).ldelim();
@@ -446,8 +334,7 @@ export const PoolData = {
     return writer;
   },
   decode(input: BinaryReader | Uint8Array, length?: number): PoolData {
-    const reader =
-      input instanceof BinaryReader ? input : new BinaryReader(input);
+    const reader = input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBasePoolData();
     while (reader.pos < end) {
@@ -460,20 +347,13 @@ export const PoolData = {
           message.ticks.push(FullTick.decode(reader, reader.uint32()));
           break;
         case 3:
-          message.spreadRewardAccumulator = AccumObject.decode(
-            reader,
-            reader.uint32(),
-          );
+          message.spreadRewardAccumulator = AccumObject.decode(reader, reader.uint32());
           break;
         case 4:
-          message.incentivesAccumulators.push(
-            AccumObject.decode(reader, reader.uint32()),
-          );
+          message.incentivesAccumulators.push(AccumObject.decode(reader, reader.uint32()));
           break;
         case 5:
-          message.incentiveRecords.push(
-            IncentiveRecord.decode(reader, reader.uint32()),
-          );
+          message.incentiveRecords.push(IncentiveRecord.decode(reader, reader.uint32()));
           break;
         default:
           reader.skipType(tag & 7);
@@ -484,20 +364,11 @@ export const PoolData = {
   },
   fromPartial(object: Partial<PoolData>): PoolData {
     const message = createBasePoolData();
-    message.pool =
-      object.pool !== undefined && object.pool !== null
-        ? GlobalDecoderRegistry.fromPartial(object.pool)
-        : undefined;
+    message.pool = object.pool !== undefined && object.pool !== null ? GlobalDecoderRegistry.fromPartial(object.pool) : undefined;
     message.ticks = object.ticks?.map(e => FullTick.fromPartial(e)) || [];
-    message.spreadRewardAccumulator =
-      object.spreadRewardAccumulator !== undefined &&
-      object.spreadRewardAccumulator !== null
-        ? AccumObject.fromPartial(object.spreadRewardAccumulator)
-        : undefined;
-    message.incentivesAccumulators =
-      object.incentivesAccumulators?.map(e => AccumObject.fromPartial(e)) || [];
-    message.incentiveRecords =
-      object.incentiveRecords?.map(e => IncentiveRecord.fromPartial(e)) || [];
+    message.spreadRewardAccumulator = object.spreadRewardAccumulator !== undefined && object.spreadRewardAccumulator !== null ? AccumObject.fromPartial(object.spreadRewardAccumulator) : undefined;
+    message.incentivesAccumulators = object.incentivesAccumulators?.map(e => AccumObject.fromPartial(e)) || [];
+    message.incentiveRecords = object.incentiveRecords?.map(e => IncentiveRecord.fromPartial(e)) || [];
     return message;
   },
   fromAmino(object: PoolDataAmino): PoolData {
@@ -506,44 +377,29 @@ export const PoolData = {
       message.pool = GlobalDecoderRegistry.fromAminoMsg(object.pool);
     }
     message.ticks = object.ticks?.map(e => FullTick.fromAmino(e)) || [];
-    if (
-      object.spread_reward_accumulator !== undefined &&
-      object.spread_reward_accumulator !== null
-    ) {
-      message.spreadRewardAccumulator = AccumObject.fromAmino(
-        object.spread_reward_accumulator,
-      );
+    if (object.spread_reward_accumulator !== undefined && object.spread_reward_accumulator !== null) {
+      message.spreadRewardAccumulator = AccumObject.fromAmino(object.spread_reward_accumulator);
     }
-    message.incentivesAccumulators =
-      object.incentives_accumulators?.map(e => AccumObject.fromAmino(e)) || [];
-    message.incentiveRecords =
-      object.incentive_records?.map(e => IncentiveRecord.fromAmino(e)) || [];
+    message.incentivesAccumulators = object.incentives_accumulators?.map(e => AccumObject.fromAmino(e)) || [];
+    message.incentiveRecords = object.incentive_records?.map(e => IncentiveRecord.fromAmino(e)) || [];
     return message;
   },
   toAmino(message: PoolData): PoolDataAmino {
     const obj: any = {};
-    obj.pool = message.pool
-      ? GlobalDecoderRegistry.toAminoMsg(message.pool)
-      : undefined;
+    obj.pool = message.pool ? GlobalDecoderRegistry.toAminoMsg(message.pool) : undefined;
     if (message.ticks) {
-      obj.ticks = message.ticks.map(e => (e ? FullTick.toAmino(e) : undefined));
+      obj.ticks = message.ticks.map(e => e ? FullTick.toAmino(e) : undefined);
     } else {
       obj.ticks = message.ticks;
     }
-    obj.spread_reward_accumulator = message.spreadRewardAccumulator
-      ? AccumObject.toAmino(message.spreadRewardAccumulator)
-      : undefined;
+    obj.spread_reward_accumulator = message.spreadRewardAccumulator ? AccumObject.toAmino(message.spreadRewardAccumulator) : undefined;
     if (message.incentivesAccumulators) {
-      obj.incentives_accumulators = message.incentivesAccumulators.map(e =>
-        e ? AccumObject.toAmino(e) : undefined,
-      );
+      obj.incentives_accumulators = message.incentivesAccumulators.map(e => e ? AccumObject.toAmino(e) : undefined);
     } else {
       obj.incentives_accumulators = message.incentivesAccumulators;
     }
     if (message.incentiveRecords) {
-      obj.incentive_records = message.incentiveRecords.map(e =>
-        e ? IncentiveRecord.toAmino(e) : undefined,
-      );
+      obj.incentive_records = message.incentiveRecords.map(e => e ? IncentiveRecord.toAmino(e) : undefined);
     } else {
       obj.incentive_records = message.incentiveRecords;
     }
@@ -560,10 +416,10 @@ export const PoolData = {
   },
   toProtoMsg(message: PoolData): PoolDataProtoMsg {
     return {
-      typeUrl: '/symphony.concentratedliquidity.v1beta1.PoolData',
-      value: PoolData.encode(message).finish(),
+      typeUrl: "/symphony.concentratedliquidity.v1beta1.PoolData",
+      value: PoolData.encode(message).finish()
     };
-  },
+  }
 };
 GlobalDecoderRegistry.register(PoolData.typeUrl, PoolData);
 function createBasePositionData(): PositionData {
@@ -571,47 +427,21 @@ function createBasePositionData(): PositionData {
     position: undefined,
     lockId: BigInt(0),
     spreadRewardAccumRecord: Record.fromPartial({}),
-    uptimeAccumRecords: [],
+    uptimeAccumRecords: []
   };
 }
 export const PositionData = {
-  typeUrl: '/symphony.concentratedliquidity.v1beta1.PositionData',
+  typeUrl: "/symphony.concentratedliquidity.v1beta1.PositionData",
   is(o: any): o is PositionData {
-    return (
-      o &&
-      (o.$typeUrl === PositionData.typeUrl ||
-        (typeof o.lockId === 'bigint' &&
-          Record.is(o.spreadRewardAccumRecord) &&
-          Array.isArray(o.uptimeAccumRecords) &&
-          (!o.uptimeAccumRecords.length || Record.is(o.uptimeAccumRecords[0]))))
-    );
+    return o && (o.$typeUrl === PositionData.typeUrl || typeof o.lockId === "bigint" && Record.is(o.spreadRewardAccumRecord) && Array.isArray(o.uptimeAccumRecords) && (!o.uptimeAccumRecords.length || Record.is(o.uptimeAccumRecords[0])));
   },
   isSDK(o: any): o is PositionDataSDKType {
-    return (
-      o &&
-      (o.$typeUrl === PositionData.typeUrl ||
-        (typeof o.lock_id === 'bigint' &&
-          Record.isSDK(o.spread_reward_accum_record) &&
-          Array.isArray(o.uptime_accum_records) &&
-          (!o.uptime_accum_records.length ||
-            Record.isSDK(o.uptime_accum_records[0]))))
-    );
+    return o && (o.$typeUrl === PositionData.typeUrl || typeof o.lock_id === "bigint" && Record.isSDK(o.spread_reward_accum_record) && Array.isArray(o.uptime_accum_records) && (!o.uptime_accum_records.length || Record.isSDK(o.uptime_accum_records[0])));
   },
   isAmino(o: any): o is PositionDataAmino {
-    return (
-      o &&
-      (o.$typeUrl === PositionData.typeUrl ||
-        (typeof o.lock_id === 'bigint' &&
-          Record.isAmino(o.spread_reward_accum_record) &&
-          Array.isArray(o.uptime_accum_records) &&
-          (!o.uptime_accum_records.length ||
-            Record.isAmino(o.uptime_accum_records[0]))))
-    );
+    return o && (o.$typeUrl === PositionData.typeUrl || typeof o.lock_id === "bigint" && Record.isAmino(o.spread_reward_accum_record) && Array.isArray(o.uptime_accum_records) && (!o.uptime_accum_records.length || Record.isAmino(o.uptime_accum_records[0])));
   },
-  encode(
-    message: PositionData,
-    writer: BinaryWriter = BinaryWriter.create(),
-  ): BinaryWriter {
+  encode(message: PositionData, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
     if (message.position !== undefined) {
       Position.encode(message.position, writer.uint32(10).fork()).ldelim();
     }
@@ -619,10 +449,7 @@ export const PositionData = {
       writer.uint32(16).uint64(message.lockId);
     }
     if (message.spreadRewardAccumRecord !== undefined) {
-      Record.encode(
-        message.spreadRewardAccumRecord,
-        writer.uint32(26).fork(),
-      ).ldelim();
+      Record.encode(message.spreadRewardAccumRecord, writer.uint32(26).fork()).ldelim();
     }
     for (const v of message.uptimeAccumRecords) {
       Record.encode(v!, writer.uint32(34).fork()).ldelim();
@@ -630,8 +457,7 @@ export const PositionData = {
     return writer;
   },
   decode(input: BinaryReader | Uint8Array, length?: number): PositionData {
-    const reader =
-      input instanceof BinaryReader ? input : new BinaryReader(input);
+    const reader = input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBasePositionData();
     while (reader.pos < end) {
@@ -644,15 +470,10 @@ export const PositionData = {
           message.lockId = reader.uint64();
           break;
         case 3:
-          message.spreadRewardAccumRecord = Record.decode(
-            reader,
-            reader.uint32(),
-          );
+          message.spreadRewardAccumRecord = Record.decode(reader, reader.uint32());
           break;
         case 4:
-          message.uptimeAccumRecords.push(
-            Record.decode(reader, reader.uint32()),
-          );
+          message.uptimeAccumRecords.push(Record.decode(reader, reader.uint32()));
           break;
         default:
           reader.skipType(tag & 7);
@@ -663,21 +484,10 @@ export const PositionData = {
   },
   fromPartial(object: Partial<PositionData>): PositionData {
     const message = createBasePositionData();
-    message.position =
-      object.position !== undefined && object.position !== null
-        ? Position.fromPartial(object.position)
-        : undefined;
-    message.lockId =
-      object.lockId !== undefined && object.lockId !== null
-        ? BigInt(object.lockId.toString())
-        : BigInt(0);
-    message.spreadRewardAccumRecord =
-      object.spreadRewardAccumRecord !== undefined &&
-      object.spreadRewardAccumRecord !== null
-        ? Record.fromPartial(object.spreadRewardAccumRecord)
-        : undefined;
-    message.uptimeAccumRecords =
-      object.uptimeAccumRecords?.map(e => Record.fromPartial(e)) || [];
+    message.position = object.position !== undefined && object.position !== null ? Position.fromPartial(object.position) : undefined;
+    message.lockId = object.lockId !== undefined && object.lockId !== null ? BigInt(object.lockId.toString()) : BigInt(0);
+    message.spreadRewardAccumRecord = object.spreadRewardAccumRecord !== undefined && object.spreadRewardAccumRecord !== null ? Record.fromPartial(object.spreadRewardAccumRecord) : undefined;
+    message.uptimeAccumRecords = object.uptimeAccumRecords?.map(e => Record.fromPartial(e)) || [];
     return message;
   },
   fromAmino(object: PositionDataAmino): PositionData {
@@ -688,32 +498,19 @@ export const PositionData = {
     if (object.lock_id !== undefined && object.lock_id !== null) {
       message.lockId = BigInt(object.lock_id);
     }
-    if (
-      object.spread_reward_accum_record !== undefined &&
-      object.spread_reward_accum_record !== null
-    ) {
-      message.spreadRewardAccumRecord = Record.fromAmino(
-        object.spread_reward_accum_record,
-      );
+    if (object.spread_reward_accum_record !== undefined && object.spread_reward_accum_record !== null) {
+      message.spreadRewardAccumRecord = Record.fromAmino(object.spread_reward_accum_record);
     }
-    message.uptimeAccumRecords =
-      object.uptime_accum_records?.map(e => Record.fromAmino(e)) || [];
+    message.uptimeAccumRecords = object.uptime_accum_records?.map(e => Record.fromAmino(e)) || [];
     return message;
   },
   toAmino(message: PositionData): PositionDataAmino {
     const obj: any = {};
-    obj.position = message.position
-      ? Position.toAmino(message.position)
-      : undefined;
-    obj.lock_id =
-      message.lockId !== BigInt(0) ? message.lockId?.toString() : undefined;
-    obj.spread_reward_accum_record = message.spreadRewardAccumRecord
-      ? Record.toAmino(message.spreadRewardAccumRecord)
-      : undefined;
+    obj.position = message.position ? Position.toAmino(message.position) : undefined;
+    obj.lock_id = message.lockId !== BigInt(0) ? message.lockId?.toString() : undefined;
+    obj.spread_reward_accum_record = message.spreadRewardAccumRecord ? Record.toAmino(message.spreadRewardAccumRecord) : undefined;
     if (message.uptimeAccumRecords) {
-      obj.uptime_accum_records = message.uptimeAccumRecords.map(e =>
-        e ? Record.toAmino(e) : undefined,
-      );
+      obj.uptime_accum_records = message.uptimeAccumRecords.map(e => e ? Record.toAmino(e) : undefined);
     } else {
       obj.uptime_accum_records = message.uptimeAccumRecords;
     }
@@ -730,10 +527,10 @@ export const PositionData = {
   },
   toProtoMsg(message: PositionData): PositionDataProtoMsg {
     return {
-      typeUrl: '/symphony.concentratedliquidity.v1beta1.PositionData',
-      value: PositionData.encode(message).finish(),
+      typeUrl: "/symphony.concentratedliquidity.v1beta1.PositionData",
+      value: PositionData.encode(message).finish()
     };
-  },
+  }
 };
 GlobalDecoderRegistry.register(PositionData.typeUrl, PositionData);
 function createBaseGenesisState(): GenesisState {
@@ -744,63 +541,21 @@ function createBaseGenesisState(): GenesisState {
     nextPositionId: BigInt(0),
     nextIncentiveRecordId: BigInt(0),
     incentivesAccumulatorPoolIdMigrationThreshold: BigInt(0),
-    spreadFactorPoolIdMigrationThreshold: BigInt(0),
+    spreadFactorPoolIdMigrationThreshold: BigInt(0)
   };
 }
 export const GenesisState = {
-  typeUrl: '/symphony.concentratedliquidity.v1beta1.GenesisState',
+  typeUrl: "/symphony.concentratedliquidity.v1beta1.GenesisState",
   is(o: any): o is GenesisState {
-    return (
-      o &&
-      (o.$typeUrl === GenesisState.typeUrl ||
-        (Params.is(o.params) &&
-          Array.isArray(o.poolData) &&
-          (!o.poolData.length || PoolData.is(o.poolData[0])) &&
-          Array.isArray(o.positionData) &&
-          (!o.positionData.length || PositionData.is(o.positionData[0])) &&
-          typeof o.nextPositionId === 'bigint' &&
-          typeof o.nextIncentiveRecordId === 'bigint' &&
-          typeof o.incentivesAccumulatorPoolIdMigrationThreshold === 'bigint' &&
-          typeof o.spreadFactorPoolIdMigrationThreshold === 'bigint'))
-    );
+    return o && (o.$typeUrl === GenesisState.typeUrl || Params.is(o.params) && Array.isArray(o.poolData) && (!o.poolData.length || PoolData.is(o.poolData[0])) && Array.isArray(o.positionData) && (!o.positionData.length || PositionData.is(o.positionData[0])) && typeof o.nextPositionId === "bigint" && typeof o.nextIncentiveRecordId === "bigint" && typeof o.incentivesAccumulatorPoolIdMigrationThreshold === "bigint" && typeof o.spreadFactorPoolIdMigrationThreshold === "bigint");
   },
   isSDK(o: any): o is GenesisStateSDKType {
-    return (
-      o &&
-      (o.$typeUrl === GenesisState.typeUrl ||
-        (Params.isSDK(o.params) &&
-          Array.isArray(o.pool_data) &&
-          (!o.pool_data.length || PoolData.isSDK(o.pool_data[0])) &&
-          Array.isArray(o.position_data) &&
-          (!o.position_data.length || PositionData.isSDK(o.position_data[0])) &&
-          typeof o.next_position_id === 'bigint' &&
-          typeof o.next_incentive_record_id === 'bigint' &&
-          typeof o.incentives_accumulator_pool_id_migration_threshold ===
-            'bigint' &&
-          typeof o.spread_factor_pool_id_migration_threshold === 'bigint'))
-    );
+    return o && (o.$typeUrl === GenesisState.typeUrl || Params.isSDK(o.params) && Array.isArray(o.pool_data) && (!o.pool_data.length || PoolData.isSDK(o.pool_data[0])) && Array.isArray(o.position_data) && (!o.position_data.length || PositionData.isSDK(o.position_data[0])) && typeof o.next_position_id === "bigint" && typeof o.next_incentive_record_id === "bigint" && typeof o.incentives_accumulator_pool_id_migration_threshold === "bigint" && typeof o.spread_factor_pool_id_migration_threshold === "bigint");
   },
   isAmino(o: any): o is GenesisStateAmino {
-    return (
-      o &&
-      (o.$typeUrl === GenesisState.typeUrl ||
-        (Params.isAmino(o.params) &&
-          Array.isArray(o.pool_data) &&
-          (!o.pool_data.length || PoolData.isAmino(o.pool_data[0])) &&
-          Array.isArray(o.position_data) &&
-          (!o.position_data.length ||
-            PositionData.isAmino(o.position_data[0])) &&
-          typeof o.next_position_id === 'bigint' &&
-          typeof o.next_incentive_record_id === 'bigint' &&
-          typeof o.incentives_accumulator_pool_id_migration_threshold ===
-            'bigint' &&
-          typeof o.spread_factor_pool_id_migration_threshold === 'bigint'))
-    );
+    return o && (o.$typeUrl === GenesisState.typeUrl || Params.isAmino(o.params) && Array.isArray(o.pool_data) && (!o.pool_data.length || PoolData.isAmino(o.pool_data[0])) && Array.isArray(o.position_data) && (!o.position_data.length || PositionData.isAmino(o.position_data[0])) && typeof o.next_position_id === "bigint" && typeof o.next_incentive_record_id === "bigint" && typeof o.incentives_accumulator_pool_id_migration_threshold === "bigint" && typeof o.spread_factor_pool_id_migration_threshold === "bigint");
   },
-  encode(
-    message: GenesisState,
-    writer: BinaryWriter = BinaryWriter.create(),
-  ): BinaryWriter {
+  encode(message: GenesisState, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
     if (message.params !== undefined) {
       Params.encode(message.params, writer.uint32(10).fork()).ldelim();
     }
@@ -817,9 +572,7 @@ export const GenesisState = {
       writer.uint32(40).uint64(message.nextIncentiveRecordId);
     }
     if (message.incentivesAccumulatorPoolIdMigrationThreshold !== BigInt(0)) {
-      writer
-        .uint32(48)
-        .uint64(message.incentivesAccumulatorPoolIdMigrationThreshold);
+      writer.uint32(48).uint64(message.incentivesAccumulatorPoolIdMigrationThreshold);
     }
     if (message.spreadFactorPoolIdMigrationThreshold !== BigInt(0)) {
       writer.uint32(56).uint64(message.spreadFactorPoolIdMigrationThreshold);
@@ -827,8 +580,7 @@ export const GenesisState = {
     return writer;
   },
   decode(input: BinaryReader | Uint8Array, length?: number): GenesisState {
-    const reader =
-      input instanceof BinaryReader ? input : new BinaryReader(input);
+    const reader = input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseGenesisState();
     while (reader.pos < end) {
@@ -841,9 +593,7 @@ export const GenesisState = {
           message.poolData.push(PoolData.decode(reader, reader.uint32()));
           break;
         case 3:
-          message.positionData.push(
-            PositionData.decode(reader, reader.uint32()),
-          );
+          message.positionData.push(PositionData.decode(reader, reader.uint32()));
           break;
         case 4:
           message.nextPositionId = reader.uint64();
@@ -852,8 +602,7 @@ export const GenesisState = {
           message.nextIncentiveRecordId = reader.uint64();
           break;
         case 6:
-          message.incentivesAccumulatorPoolIdMigrationThreshold =
-            reader.uint64();
+          message.incentivesAccumulatorPoolIdMigrationThreshold = reader.uint64();
           break;
         case 7:
           message.spreadFactorPoolIdMigrationThreshold = reader.uint64();
@@ -867,34 +616,13 @@ export const GenesisState = {
   },
   fromPartial(object: Partial<GenesisState>): GenesisState {
     const message = createBaseGenesisState();
-    message.params =
-      object.params !== undefined && object.params !== null
-        ? Params.fromPartial(object.params)
-        : undefined;
+    message.params = object.params !== undefined && object.params !== null ? Params.fromPartial(object.params) : undefined;
     message.poolData = object.poolData?.map(e => PoolData.fromPartial(e)) || [];
-    message.positionData =
-      object.positionData?.map(e => PositionData.fromPartial(e)) || [];
-    message.nextPositionId =
-      object.nextPositionId !== undefined && object.nextPositionId !== null
-        ? BigInt(object.nextPositionId.toString())
-        : BigInt(0);
-    message.nextIncentiveRecordId =
-      object.nextIncentiveRecordId !== undefined &&
-      object.nextIncentiveRecordId !== null
-        ? BigInt(object.nextIncentiveRecordId.toString())
-        : BigInt(0);
-    message.incentivesAccumulatorPoolIdMigrationThreshold =
-      object.incentivesAccumulatorPoolIdMigrationThreshold !== undefined &&
-      object.incentivesAccumulatorPoolIdMigrationThreshold !== null
-        ? BigInt(
-            object.incentivesAccumulatorPoolIdMigrationThreshold.toString(),
-          )
-        : BigInt(0);
-    message.spreadFactorPoolIdMigrationThreshold =
-      object.spreadFactorPoolIdMigrationThreshold !== undefined &&
-      object.spreadFactorPoolIdMigrationThreshold !== null
-        ? BigInt(object.spreadFactorPoolIdMigrationThreshold.toString())
-        : BigInt(0);
+    message.positionData = object.positionData?.map(e => PositionData.fromPartial(e)) || [];
+    message.nextPositionId = object.nextPositionId !== undefined && object.nextPositionId !== null ? BigInt(object.nextPositionId.toString()) : BigInt(0);
+    message.nextIncentiveRecordId = object.nextIncentiveRecordId !== undefined && object.nextIncentiveRecordId !== null ? BigInt(object.nextIncentiveRecordId.toString()) : BigInt(0);
+    message.incentivesAccumulatorPoolIdMigrationThreshold = object.incentivesAccumulatorPoolIdMigrationThreshold !== undefined && object.incentivesAccumulatorPoolIdMigrationThreshold !== null ? BigInt(object.incentivesAccumulatorPoolIdMigrationThreshold.toString()) : BigInt(0);
+    message.spreadFactorPoolIdMigrationThreshold = object.spreadFactorPoolIdMigrationThreshold !== undefined && object.spreadFactorPoolIdMigrationThreshold !== null ? BigInt(object.spreadFactorPoolIdMigrationThreshold.toString()) : BigInt(0);
     return message;
   },
   fromAmino(object: GenesisStateAmino): GenesisState {
@@ -903,35 +631,18 @@ export const GenesisState = {
       message.params = Params.fromAmino(object.params);
     }
     message.poolData = object.pool_data?.map(e => PoolData.fromAmino(e)) || [];
-    message.positionData =
-      object.position_data?.map(e => PositionData.fromAmino(e)) || [];
-    if (
-      object.next_position_id !== undefined &&
-      object.next_position_id !== null
-    ) {
+    message.positionData = object.position_data?.map(e => PositionData.fromAmino(e)) || [];
+    if (object.next_position_id !== undefined && object.next_position_id !== null) {
       message.nextPositionId = BigInt(object.next_position_id);
     }
-    if (
-      object.next_incentive_record_id !== undefined &&
-      object.next_incentive_record_id !== null
-    ) {
+    if (object.next_incentive_record_id !== undefined && object.next_incentive_record_id !== null) {
       message.nextIncentiveRecordId = BigInt(object.next_incentive_record_id);
     }
-    if (
-      object.incentives_accumulator_pool_id_migration_threshold !== undefined &&
-      object.incentives_accumulator_pool_id_migration_threshold !== null
-    ) {
-      message.incentivesAccumulatorPoolIdMigrationThreshold = BigInt(
-        object.incentives_accumulator_pool_id_migration_threshold,
-      );
+    if (object.incentives_accumulator_pool_id_migration_threshold !== undefined && object.incentives_accumulator_pool_id_migration_threshold !== null) {
+      message.incentivesAccumulatorPoolIdMigrationThreshold = BigInt(object.incentives_accumulator_pool_id_migration_threshold);
     }
-    if (
-      object.spread_factor_pool_id_migration_threshold !== undefined &&
-      object.spread_factor_pool_id_migration_threshold !== null
-    ) {
-      message.spreadFactorPoolIdMigrationThreshold = BigInt(
-        object.spread_factor_pool_id_migration_threshold,
-      );
+    if (object.spread_factor_pool_id_migration_threshold !== undefined && object.spread_factor_pool_id_migration_threshold !== null) {
+      message.spreadFactorPoolIdMigrationThreshold = BigInt(object.spread_factor_pool_id_migration_threshold);
     }
     return message;
   },
@@ -939,35 +650,19 @@ export const GenesisState = {
     const obj: any = {};
     obj.params = message.params ? Params.toAmino(message.params) : undefined;
     if (message.poolData) {
-      obj.pool_data = message.poolData.map(e =>
-        e ? PoolData.toAmino(e) : undefined,
-      );
+      obj.pool_data = message.poolData.map(e => e ? PoolData.toAmino(e) : undefined);
     } else {
       obj.pool_data = message.poolData;
     }
     if (message.positionData) {
-      obj.position_data = message.positionData.map(e =>
-        e ? PositionData.toAmino(e) : undefined,
-      );
+      obj.position_data = message.positionData.map(e => e ? PositionData.toAmino(e) : undefined);
     } else {
       obj.position_data = message.positionData;
     }
-    obj.next_position_id =
-      message.nextPositionId !== BigInt(0)
-        ? message.nextPositionId?.toString()
-        : undefined;
-    obj.next_incentive_record_id =
-      message.nextIncentiveRecordId !== BigInt(0)
-        ? message.nextIncentiveRecordId?.toString()
-        : undefined;
-    obj.incentives_accumulator_pool_id_migration_threshold =
-      message.incentivesAccumulatorPoolIdMigrationThreshold !== BigInt(0)
-        ? message.incentivesAccumulatorPoolIdMigrationThreshold?.toString()
-        : undefined;
-    obj.spread_factor_pool_id_migration_threshold =
-      message.spreadFactorPoolIdMigrationThreshold !== BigInt(0)
-        ? message.spreadFactorPoolIdMigrationThreshold?.toString()
-        : undefined;
+    obj.next_position_id = message.nextPositionId !== BigInt(0) ? message.nextPositionId?.toString() : undefined;
+    obj.next_incentive_record_id = message.nextIncentiveRecordId !== BigInt(0) ? message.nextIncentiveRecordId?.toString() : undefined;
+    obj.incentives_accumulator_pool_id_migration_threshold = message.incentivesAccumulatorPoolIdMigrationThreshold !== BigInt(0) ? message.incentivesAccumulatorPoolIdMigrationThreshold?.toString() : undefined;
+    obj.spread_factor_pool_id_migration_threshold = message.spreadFactorPoolIdMigrationThreshold !== BigInt(0) ? message.spreadFactorPoolIdMigrationThreshold?.toString() : undefined;
     return obj;
   },
   fromAminoMsg(object: GenesisStateAminoMsg): GenesisState {
@@ -981,53 +676,40 @@ export const GenesisState = {
   },
   toProtoMsg(message: GenesisState): GenesisStateProtoMsg {
     return {
-      typeUrl: '/symphony.concentratedliquidity.v1beta1.GenesisState',
-      value: GenesisState.encode(message).finish(),
+      typeUrl: "/symphony.concentratedliquidity.v1beta1.GenesisState",
+      value: GenesisState.encode(message).finish()
     };
-  },
+  }
 };
 GlobalDecoderRegistry.register(GenesisState.typeUrl, GenesisState);
 function createBaseAccumObject(): AccumObject {
   return {
-    name: '',
-    accumContent: undefined,
+    name: "",
+    accumContent: undefined
   };
 }
 export const AccumObject = {
-  typeUrl: '/symphony.concentratedliquidity.v1beta1.AccumObject',
+  typeUrl: "/symphony.concentratedliquidity.v1beta1.AccumObject",
   is(o: any): o is AccumObject {
-    return (
-      o && (o.$typeUrl === AccumObject.typeUrl || typeof o.name === 'string')
-    );
+    return o && (o.$typeUrl === AccumObject.typeUrl || typeof o.name === "string");
   },
   isSDK(o: any): o is AccumObjectSDKType {
-    return (
-      o && (o.$typeUrl === AccumObject.typeUrl || typeof o.name === 'string')
-    );
+    return o && (o.$typeUrl === AccumObject.typeUrl || typeof o.name === "string");
   },
   isAmino(o: any): o is AccumObjectAmino {
-    return (
-      o && (o.$typeUrl === AccumObject.typeUrl || typeof o.name === 'string')
-    );
+    return o && (o.$typeUrl === AccumObject.typeUrl || typeof o.name === "string");
   },
-  encode(
-    message: AccumObject,
-    writer: BinaryWriter = BinaryWriter.create(),
-  ): BinaryWriter {
-    if (message.name !== '') {
+  encode(message: AccumObject, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
+    if (message.name !== "") {
       writer.uint32(10).string(message.name);
     }
     if (message.accumContent !== undefined) {
-      AccumulatorContent.encode(
-        message.accumContent,
-        writer.uint32(18).fork(),
-      ).ldelim();
+      AccumulatorContent.encode(message.accumContent, writer.uint32(18).fork()).ldelim();
     }
     return writer;
   },
   decode(input: BinaryReader | Uint8Array, length?: number): AccumObject {
-    const reader =
-      input instanceof BinaryReader ? input : new BinaryReader(input);
+    const reader = input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseAccumObject();
     while (reader.pos < end) {
@@ -1037,10 +719,7 @@ export const AccumObject = {
           message.name = reader.string();
           break;
         case 2:
-          message.accumContent = AccumulatorContent.decode(
-            reader,
-            reader.uint32(),
-          );
+          message.accumContent = AccumulatorContent.decode(reader, reader.uint32());
           break;
         default:
           reader.skipType(tag & 7);
@@ -1051,11 +730,8 @@ export const AccumObject = {
   },
   fromPartial(object: Partial<AccumObject>): AccumObject {
     const message = createBaseAccumObject();
-    message.name = object.name ?? '';
-    message.accumContent =
-      object.accumContent !== undefined && object.accumContent !== null
-        ? AccumulatorContent.fromPartial(object.accumContent)
-        : undefined;
+    message.name = object.name ?? "";
+    message.accumContent = object.accumContent !== undefined && object.accumContent !== null ? AccumulatorContent.fromPartial(object.accumContent) : undefined;
     return message;
   },
   fromAmino(object: AccumObjectAmino): AccumObject {
@@ -1070,10 +746,8 @@ export const AccumObject = {
   },
   toAmino(message: AccumObject): AccumObjectAmino {
     const obj: any = {};
-    obj.name = message.name === '' ? undefined : message.name;
-    obj.accum_content = message.accumContent
-      ? AccumulatorContent.toAmino(message.accumContent)
-      : undefined;
+    obj.name = message.name === "" ? undefined : message.name;
+    obj.accum_content = message.accumContent ? AccumulatorContent.toAmino(message.accumContent) : undefined;
     return obj;
   },
   fromAminoMsg(object: AccumObjectAminoMsg): AccumObject {
@@ -1087,9 +761,9 @@ export const AccumObject = {
   },
   toProtoMsg(message: AccumObject): AccumObjectProtoMsg {
     return {
-      typeUrl: '/symphony.concentratedliquidity.v1beta1.AccumObject',
-      value: AccumObject.encode(message).finish(),
+      typeUrl: "/symphony.concentratedliquidity.v1beta1.AccumObject",
+      value: AccumObject.encode(message).finish()
     };
-  },
+  }
 };
 GlobalDecoderRegistry.register(AccumObject.typeUrl, AccumObject);

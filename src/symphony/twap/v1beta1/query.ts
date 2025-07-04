@@ -1,10 +1,10 @@
 //@ts-nocheck
-import { Timestamp } from '../../../google/protobuf/timestamp';
-import { Params, ParamsAmino, ParamsSDKType } from './genesis';
-import { BinaryReader, BinaryWriter } from '../../../binary';
-import { toTimestamp, fromTimestamp } from '../../../helpers';
-import { GlobalDecoderRegistry } from '../../../registry';
-import { Decimal } from '@cosmjs/math';
+import { Timestamp } from "../../../google/protobuf/timestamp";
+import { Params, ParamsAmino, ParamsSDKType } from "./genesis";
+import { BinaryReader, BinaryWriter } from "../../../binary";
+import { toTimestamp, fromTimestamp } from "../../../helpers";
+import { GlobalDecoderRegistry } from "../../../registry";
+import { Decimal } from "@cosmjs/math";
 export interface ArithmeticTwapRequest {
   poolId: bigint;
   baseAsset: string;
@@ -13,7 +13,7 @@ export interface ArithmeticTwapRequest {
   endTime?: Date;
 }
 export interface ArithmeticTwapRequestProtoMsg {
-  typeUrl: '/symphony.twap.v1beta1.ArithmeticTwapRequest';
+  typeUrl: "/symphony.twap.v1beta1.ArithmeticTwapRequest";
   value: Uint8Array;
 }
 export interface ArithmeticTwapRequestAmino {
@@ -24,7 +24,7 @@ export interface ArithmeticTwapRequestAmino {
   end_time?: string;
 }
 export interface ArithmeticTwapRequestAminoMsg {
-  type: '/symphony.twap.v1beta1.ArithmeticTwapRequest';
+  type: "/symphony.twap.v1beta1.ArithmeticTwapRequest";
   value: ArithmeticTwapRequestAmino;
 }
 export interface ArithmeticTwapRequestSDKType {
@@ -38,14 +38,14 @@ export interface ArithmeticTwapResponse {
   arithmeticTwap: string;
 }
 export interface ArithmeticTwapResponseProtoMsg {
-  typeUrl: '/symphony.twap.v1beta1.ArithmeticTwapResponse';
+  typeUrl: "/symphony.twap.v1beta1.ArithmeticTwapResponse";
   value: Uint8Array;
 }
 export interface ArithmeticTwapResponseAmino {
   arithmetic_twap?: string;
 }
 export interface ArithmeticTwapResponseAminoMsg {
-  type: '/symphony.twap.v1beta1.ArithmeticTwapResponse';
+  type: "/symphony.twap.v1beta1.ArithmeticTwapResponse";
   value: ArithmeticTwapResponseAmino;
 }
 export interface ArithmeticTwapResponseSDKType {
@@ -58,7 +58,7 @@ export interface ArithmeticTwapToNowRequest {
   startTime: Date;
 }
 export interface ArithmeticTwapToNowRequestProtoMsg {
-  typeUrl: '/symphony.twap.v1beta1.ArithmeticTwapToNowRequest';
+  typeUrl: "/symphony.twap.v1beta1.ArithmeticTwapToNowRequest";
   value: Uint8Array;
 }
 export interface ArithmeticTwapToNowRequestAmino {
@@ -68,7 +68,7 @@ export interface ArithmeticTwapToNowRequestAmino {
   start_time?: string;
 }
 export interface ArithmeticTwapToNowRequestAminoMsg {
-  type: '/symphony.twap.v1beta1.ArithmeticTwapToNowRequest';
+  type: "/symphony.twap.v1beta1.ArithmeticTwapToNowRequest";
   value: ArithmeticTwapToNowRequestAmino;
 }
 export interface ArithmeticTwapToNowRequestSDKType {
@@ -81,14 +81,14 @@ export interface ArithmeticTwapToNowResponse {
   arithmeticTwap: string;
 }
 export interface ArithmeticTwapToNowResponseProtoMsg {
-  typeUrl: '/symphony.twap.v1beta1.ArithmeticTwapToNowResponse';
+  typeUrl: "/symphony.twap.v1beta1.ArithmeticTwapToNowResponse";
   value: Uint8Array;
 }
 export interface ArithmeticTwapToNowResponseAmino {
   arithmetic_twap?: string;
 }
 export interface ArithmeticTwapToNowResponseAminoMsg {
-  type: '/symphony.twap.v1beta1.ArithmeticTwapToNowResponse';
+  type: "/symphony.twap.v1beta1.ArithmeticTwapToNowResponse";
   value: ArithmeticTwapToNowResponseAmino;
 }
 export interface ArithmeticTwapToNowResponseSDKType {
@@ -102,7 +102,7 @@ export interface GeometricTwapRequest {
   endTime?: Date;
 }
 export interface GeometricTwapRequestProtoMsg {
-  typeUrl: '/symphony.twap.v1beta1.GeometricTwapRequest';
+  typeUrl: "/symphony.twap.v1beta1.GeometricTwapRequest";
   value: Uint8Array;
 }
 export interface GeometricTwapRequestAmino {
@@ -113,7 +113,7 @@ export interface GeometricTwapRequestAmino {
   end_time?: string;
 }
 export interface GeometricTwapRequestAminoMsg {
-  type: '/symphony.twap.v1beta1.GeometricTwapRequest';
+  type: "/symphony.twap.v1beta1.GeometricTwapRequest";
   value: GeometricTwapRequestAmino;
 }
 export interface GeometricTwapRequestSDKType {
@@ -127,14 +127,14 @@ export interface GeometricTwapResponse {
   geometricTwap: string;
 }
 export interface GeometricTwapResponseProtoMsg {
-  typeUrl: '/symphony.twap.v1beta1.GeometricTwapResponse';
+  typeUrl: "/symphony.twap.v1beta1.GeometricTwapResponse";
   value: Uint8Array;
 }
 export interface GeometricTwapResponseAmino {
   geometric_twap?: string;
 }
 export interface GeometricTwapResponseAminoMsg {
-  type: '/symphony.twap.v1beta1.GeometricTwapResponse';
+  type: "/symphony.twap.v1beta1.GeometricTwapResponse";
   value: GeometricTwapResponseAmino;
 }
 export interface GeometricTwapResponseSDKType {
@@ -147,7 +147,7 @@ export interface GeometricTwapToNowRequest {
   startTime: Date;
 }
 export interface GeometricTwapToNowRequestProtoMsg {
-  typeUrl: '/symphony.twap.v1beta1.GeometricTwapToNowRequest';
+  typeUrl: "/symphony.twap.v1beta1.GeometricTwapToNowRequest";
   value: Uint8Array;
 }
 export interface GeometricTwapToNowRequestAmino {
@@ -157,7 +157,7 @@ export interface GeometricTwapToNowRequestAmino {
   start_time?: string;
 }
 export interface GeometricTwapToNowRequestAminoMsg {
-  type: '/symphony.twap.v1beta1.GeometricTwapToNowRequest';
+  type: "/symphony.twap.v1beta1.GeometricTwapToNowRequest";
   value: GeometricTwapToNowRequestAmino;
 }
 export interface GeometricTwapToNowRequestSDKType {
@@ -170,14 +170,14 @@ export interface GeometricTwapToNowResponse {
   geometricTwap: string;
 }
 export interface GeometricTwapToNowResponseProtoMsg {
-  typeUrl: '/symphony.twap.v1beta1.GeometricTwapToNowResponse';
+  typeUrl: "/symphony.twap.v1beta1.GeometricTwapToNowResponse";
   value: Uint8Array;
 }
 export interface GeometricTwapToNowResponseAmino {
   geometric_twap?: string;
 }
 export interface GeometricTwapToNowResponseAminoMsg {
-  type: '/symphony.twap.v1beta1.GeometricTwapToNowResponse';
+  type: "/symphony.twap.v1beta1.GeometricTwapToNowResponse";
   value: GeometricTwapToNowResponseAmino;
 }
 export interface GeometricTwapToNowResponseSDKType {
@@ -185,12 +185,12 @@ export interface GeometricTwapToNowResponseSDKType {
 }
 export interface ParamsRequest {}
 export interface ParamsRequestProtoMsg {
-  typeUrl: '/symphony.twap.v1beta1.ParamsRequest';
+  typeUrl: "/symphony.twap.v1beta1.ParamsRequest";
   value: Uint8Array;
 }
 export interface ParamsRequestAmino {}
 export interface ParamsRequestAminoMsg {
-  type: '/symphony.twap.v1beta1.ParamsRequest';
+  type: "/symphony.twap.v1beta1.ParamsRequest";
   value: ParamsRequestAmino;
 }
 export interface ParamsRequestSDKType {}
@@ -198,14 +198,14 @@ export interface ParamsResponse {
   params: Params;
 }
 export interface ParamsResponseProtoMsg {
-  typeUrl: '/symphony.twap.v1beta1.ParamsResponse';
+  typeUrl: "/symphony.twap.v1beta1.ParamsResponse";
   value: Uint8Array;
 }
 export interface ParamsResponseAmino {
   params?: ParamsAmino;
 }
 export interface ParamsResponseAminoMsg {
-  type: '/symphony.twap.v1beta1.ParamsResponse';
+  type: "/symphony.twap.v1beta1.ParamsResponse";
   value: ParamsResponseAmino;
 }
 export interface ParamsResponseSDKType {
@@ -214,77 +214,43 @@ export interface ParamsResponseSDKType {
 function createBaseArithmeticTwapRequest(): ArithmeticTwapRequest {
   return {
     poolId: BigInt(0),
-    baseAsset: '',
-    quoteAsset: '',
+    baseAsset: "",
+    quoteAsset: "",
     startTime: new Date(),
-    endTime: undefined,
+    endTime: undefined
   };
 }
 export const ArithmeticTwapRequest = {
-  typeUrl: '/symphony.twap.v1beta1.ArithmeticTwapRequest',
+  typeUrl: "/symphony.twap.v1beta1.ArithmeticTwapRequest",
   is(o: any): o is ArithmeticTwapRequest {
-    return (
-      o &&
-      (o.$typeUrl === ArithmeticTwapRequest.typeUrl ||
-        (typeof o.poolId === 'bigint' &&
-          typeof o.baseAsset === 'string' &&
-          typeof o.quoteAsset === 'string' &&
-          Timestamp.is(o.startTime)))
-    );
+    return o && (o.$typeUrl === ArithmeticTwapRequest.typeUrl || typeof o.poolId === "bigint" && typeof o.baseAsset === "string" && typeof o.quoteAsset === "string" && Timestamp.is(o.startTime));
   },
   isSDK(o: any): o is ArithmeticTwapRequestSDKType {
-    return (
-      o &&
-      (o.$typeUrl === ArithmeticTwapRequest.typeUrl ||
-        (typeof o.pool_id === 'bigint' &&
-          typeof o.base_asset === 'string' &&
-          typeof o.quote_asset === 'string' &&
-          Timestamp.isSDK(o.start_time)))
-    );
+    return o && (o.$typeUrl === ArithmeticTwapRequest.typeUrl || typeof o.pool_id === "bigint" && typeof o.base_asset === "string" && typeof o.quote_asset === "string" && Timestamp.isSDK(o.start_time));
   },
   isAmino(o: any): o is ArithmeticTwapRequestAmino {
-    return (
-      o &&
-      (o.$typeUrl === ArithmeticTwapRequest.typeUrl ||
-        (typeof o.pool_id === 'bigint' &&
-          typeof o.base_asset === 'string' &&
-          typeof o.quote_asset === 'string' &&
-          Timestamp.isAmino(o.start_time)))
-    );
+    return o && (o.$typeUrl === ArithmeticTwapRequest.typeUrl || typeof o.pool_id === "bigint" && typeof o.base_asset === "string" && typeof o.quote_asset === "string" && Timestamp.isAmino(o.start_time));
   },
-  encode(
-    message: ArithmeticTwapRequest,
-    writer: BinaryWriter = BinaryWriter.create(),
-  ): BinaryWriter {
+  encode(message: ArithmeticTwapRequest, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
     if (message.poolId !== BigInt(0)) {
       writer.uint32(8).uint64(message.poolId);
     }
-    if (message.baseAsset !== '') {
+    if (message.baseAsset !== "") {
       writer.uint32(18).string(message.baseAsset);
     }
-    if (message.quoteAsset !== '') {
+    if (message.quoteAsset !== "") {
       writer.uint32(26).string(message.quoteAsset);
     }
     if (message.startTime !== undefined) {
-      Timestamp.encode(
-        toTimestamp(message.startTime),
-        writer.uint32(34).fork(),
-      ).ldelim();
+      Timestamp.encode(toTimestamp(message.startTime), writer.uint32(34).fork()).ldelim();
     }
     if (message.endTime !== undefined) {
-      Timestamp.encode(
-        toTimestamp(message.endTime),
-        writer.uint32(42).fork(),
-      ).ldelim();
+      Timestamp.encode(toTimestamp(message.endTime), writer.uint32(42).fork()).ldelim();
     }
     return writer;
   },
-  decode(
-    input: BinaryReader | Uint8Array,
-    length?: number,
-  ): ArithmeticTwapRequest {
-    const reader =
-      input instanceof BinaryReader ? input : new BinaryReader(input);
+  decode(input: BinaryReader | Uint8Array, length?: number): ArithmeticTwapRequest {
+    const reader = input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseArithmeticTwapRequest();
     while (reader.pos < end) {
@@ -300,14 +266,10 @@ export const ArithmeticTwapRequest = {
           message.quoteAsset = reader.string();
           break;
         case 4:
-          message.startTime = fromTimestamp(
-            Timestamp.decode(reader, reader.uint32()),
-          );
+          message.startTime = fromTimestamp(Timestamp.decode(reader, reader.uint32()));
           break;
         case 5:
-          message.endTime = fromTimestamp(
-            Timestamp.decode(reader, reader.uint32()),
-          );
+          message.endTime = fromTimestamp(Timestamp.decode(reader, reader.uint32()));
           break;
         default:
           reader.skipType(tag & 7);
@@ -318,12 +280,9 @@ export const ArithmeticTwapRequest = {
   },
   fromPartial(object: Partial<ArithmeticTwapRequest>): ArithmeticTwapRequest {
     const message = createBaseArithmeticTwapRequest();
-    message.poolId =
-      object.poolId !== undefined && object.poolId !== null
-        ? BigInt(object.poolId.toString())
-        : BigInt(0);
-    message.baseAsset = object.baseAsset ?? '';
-    message.quoteAsset = object.quoteAsset ?? '';
+    message.poolId = object.poolId !== undefined && object.poolId !== null ? BigInt(object.poolId.toString()) : BigInt(0);
+    message.baseAsset = object.baseAsset ?? "";
+    message.quoteAsset = object.quoteAsset ?? "";
     message.startTime = object.startTime ?? undefined;
     message.endTime = object.endTime ?? undefined;
     return message;
@@ -349,17 +308,11 @@ export const ArithmeticTwapRequest = {
   },
   toAmino(message: ArithmeticTwapRequest): ArithmeticTwapRequestAmino {
     const obj: any = {};
-    obj.pool_id =
-      message.poolId !== BigInt(0) ? message.poolId?.toString() : undefined;
-    obj.base_asset = message.baseAsset === '' ? undefined : message.baseAsset;
-    obj.quote_asset =
-      message.quoteAsset === '' ? undefined : message.quoteAsset;
-    obj.start_time = message.startTime
-      ? Timestamp.toAmino(toTimestamp(message.startTime))
-      : undefined;
-    obj.end_time = message.endTime
-      ? Timestamp.toAmino(toTimestamp(message.endTime))
-      : undefined;
+    obj.pool_id = message.poolId !== BigInt(0) ? message.poolId?.toString() : undefined;
+    obj.base_asset = message.baseAsset === "" ? undefined : message.baseAsset;
+    obj.quote_asset = message.quoteAsset === "" ? undefined : message.quoteAsset;
+    obj.start_time = message.startTime ? Timestamp.toAmino(toTimestamp(message.startTime)) : undefined;
+    obj.end_time = message.endTime ? Timestamp.toAmino(toTimestamp(message.endTime)) : undefined;
     return obj;
   },
   fromAminoMsg(object: ArithmeticTwapRequestAminoMsg): ArithmeticTwapRequest {
@@ -373,70 +326,43 @@ export const ArithmeticTwapRequest = {
   },
   toProtoMsg(message: ArithmeticTwapRequest): ArithmeticTwapRequestProtoMsg {
     return {
-      typeUrl: '/symphony.twap.v1beta1.ArithmeticTwapRequest',
-      value: ArithmeticTwapRequest.encode(message).finish(),
+      typeUrl: "/symphony.twap.v1beta1.ArithmeticTwapRequest",
+      value: ArithmeticTwapRequest.encode(message).finish()
     };
-  },
+  }
 };
-GlobalDecoderRegistry.register(
-  ArithmeticTwapRequest.typeUrl,
-  ArithmeticTwapRequest,
-);
+GlobalDecoderRegistry.register(ArithmeticTwapRequest.typeUrl, ArithmeticTwapRequest);
 function createBaseArithmeticTwapResponse(): ArithmeticTwapResponse {
   return {
-    arithmeticTwap: '',
+    arithmeticTwap: ""
   };
 }
 export const ArithmeticTwapResponse = {
-  typeUrl: '/symphony.twap.v1beta1.ArithmeticTwapResponse',
+  typeUrl: "/symphony.twap.v1beta1.ArithmeticTwapResponse",
   is(o: any): o is ArithmeticTwapResponse {
-    return (
-      o &&
-      (o.$typeUrl === ArithmeticTwapResponse.typeUrl ||
-        typeof o.arithmeticTwap === 'string')
-    );
+    return o && (o.$typeUrl === ArithmeticTwapResponse.typeUrl || typeof o.arithmeticTwap === "string");
   },
   isSDK(o: any): o is ArithmeticTwapResponseSDKType {
-    return (
-      o &&
-      (o.$typeUrl === ArithmeticTwapResponse.typeUrl ||
-        typeof o.arithmetic_twap === 'string')
-    );
+    return o && (o.$typeUrl === ArithmeticTwapResponse.typeUrl || typeof o.arithmetic_twap === "string");
   },
   isAmino(o: any): o is ArithmeticTwapResponseAmino {
-    return (
-      o &&
-      (o.$typeUrl === ArithmeticTwapResponse.typeUrl ||
-        typeof o.arithmetic_twap === 'string')
-    );
+    return o && (o.$typeUrl === ArithmeticTwapResponse.typeUrl || typeof o.arithmetic_twap === "string");
   },
-  encode(
-    message: ArithmeticTwapResponse,
-    writer: BinaryWriter = BinaryWriter.create(),
-  ): BinaryWriter {
-    if (message.arithmeticTwap !== '') {
-      writer
-        .uint32(10)
-        .string(Decimal.fromUserInput(message.arithmeticTwap, 18).atomics);
+  encode(message: ArithmeticTwapResponse, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
+    if (message.arithmeticTwap !== "") {
+      writer.uint32(10).string(Decimal.fromUserInput(message.arithmeticTwap, 18).atomics);
     }
     return writer;
   },
-  decode(
-    input: BinaryReader | Uint8Array,
-    length?: number,
-  ): ArithmeticTwapResponse {
-    const reader =
-      input instanceof BinaryReader ? input : new BinaryReader(input);
+  decode(input: BinaryReader | Uint8Array, length?: number): ArithmeticTwapResponse {
+    const reader = input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseArithmeticTwapResponse();
     while (reader.pos < end) {
       const tag = reader.uint32();
       switch (tag >>> 3) {
         case 1:
-          message.arithmeticTwap = Decimal.fromAtomics(
-            reader.string(),
-            18,
-          ).toString();
+          message.arithmeticTwap = Decimal.fromAtomics(reader.string(), 18).toString();
           break;
         default:
           reader.skipType(tag & 7);
@@ -447,31 +373,25 @@ export const ArithmeticTwapResponse = {
   },
   fromPartial(object: Partial<ArithmeticTwapResponse>): ArithmeticTwapResponse {
     const message = createBaseArithmeticTwapResponse();
-    message.arithmeticTwap = object.arithmeticTwap ?? '';
+    message.arithmeticTwap = object.arithmeticTwap ?? "";
     return message;
   },
   fromAmino(object: ArithmeticTwapResponseAmino): ArithmeticTwapResponse {
     const message = createBaseArithmeticTwapResponse();
-    if (
-      object.arithmetic_twap !== undefined &&
-      object.arithmetic_twap !== null
-    ) {
+    if (object.arithmetic_twap !== undefined && object.arithmetic_twap !== null) {
       message.arithmeticTwap = object.arithmetic_twap;
     }
     return message;
   },
   toAmino(message: ArithmeticTwapResponse): ArithmeticTwapResponseAmino {
     const obj: any = {};
-    obj.arithmetic_twap =
-      message.arithmeticTwap === '' ? undefined : message.arithmeticTwap;
+    obj.arithmetic_twap = message.arithmeticTwap === "" ? undefined : message.arithmeticTwap;
     return obj;
   },
   fromAminoMsg(object: ArithmeticTwapResponseAminoMsg): ArithmeticTwapResponse {
     return ArithmeticTwapResponse.fromAmino(object.value);
   },
-  fromProtoMsg(
-    message: ArithmeticTwapResponseProtoMsg,
-  ): ArithmeticTwapResponse {
+  fromProtoMsg(message: ArithmeticTwapResponseProtoMsg): ArithmeticTwapResponse {
     return ArithmeticTwapResponse.decode(message.value);
   },
   toProto(message: ArithmeticTwapResponse): Uint8Array {
@@ -479,82 +399,48 @@ export const ArithmeticTwapResponse = {
   },
   toProtoMsg(message: ArithmeticTwapResponse): ArithmeticTwapResponseProtoMsg {
     return {
-      typeUrl: '/symphony.twap.v1beta1.ArithmeticTwapResponse',
-      value: ArithmeticTwapResponse.encode(message).finish(),
+      typeUrl: "/symphony.twap.v1beta1.ArithmeticTwapResponse",
+      value: ArithmeticTwapResponse.encode(message).finish()
     };
-  },
+  }
 };
-GlobalDecoderRegistry.register(
-  ArithmeticTwapResponse.typeUrl,
-  ArithmeticTwapResponse,
-);
+GlobalDecoderRegistry.register(ArithmeticTwapResponse.typeUrl, ArithmeticTwapResponse);
 function createBaseArithmeticTwapToNowRequest(): ArithmeticTwapToNowRequest {
   return {
     poolId: BigInt(0),
-    baseAsset: '',
-    quoteAsset: '',
-    startTime: new Date(),
+    baseAsset: "",
+    quoteAsset: "",
+    startTime: new Date()
   };
 }
 export const ArithmeticTwapToNowRequest = {
-  typeUrl: '/symphony.twap.v1beta1.ArithmeticTwapToNowRequest',
+  typeUrl: "/symphony.twap.v1beta1.ArithmeticTwapToNowRequest",
   is(o: any): o is ArithmeticTwapToNowRequest {
-    return (
-      o &&
-      (o.$typeUrl === ArithmeticTwapToNowRequest.typeUrl ||
-        (typeof o.poolId === 'bigint' &&
-          typeof o.baseAsset === 'string' &&
-          typeof o.quoteAsset === 'string' &&
-          Timestamp.is(o.startTime)))
-    );
+    return o && (o.$typeUrl === ArithmeticTwapToNowRequest.typeUrl || typeof o.poolId === "bigint" && typeof o.baseAsset === "string" && typeof o.quoteAsset === "string" && Timestamp.is(o.startTime));
   },
   isSDK(o: any): o is ArithmeticTwapToNowRequestSDKType {
-    return (
-      o &&
-      (o.$typeUrl === ArithmeticTwapToNowRequest.typeUrl ||
-        (typeof o.pool_id === 'bigint' &&
-          typeof o.base_asset === 'string' &&
-          typeof o.quote_asset === 'string' &&
-          Timestamp.isSDK(o.start_time)))
-    );
+    return o && (o.$typeUrl === ArithmeticTwapToNowRequest.typeUrl || typeof o.pool_id === "bigint" && typeof o.base_asset === "string" && typeof o.quote_asset === "string" && Timestamp.isSDK(o.start_time));
   },
   isAmino(o: any): o is ArithmeticTwapToNowRequestAmino {
-    return (
-      o &&
-      (o.$typeUrl === ArithmeticTwapToNowRequest.typeUrl ||
-        (typeof o.pool_id === 'bigint' &&
-          typeof o.base_asset === 'string' &&
-          typeof o.quote_asset === 'string' &&
-          Timestamp.isAmino(o.start_time)))
-    );
+    return o && (o.$typeUrl === ArithmeticTwapToNowRequest.typeUrl || typeof o.pool_id === "bigint" && typeof o.base_asset === "string" && typeof o.quote_asset === "string" && Timestamp.isAmino(o.start_time));
   },
-  encode(
-    message: ArithmeticTwapToNowRequest,
-    writer: BinaryWriter = BinaryWriter.create(),
-  ): BinaryWriter {
+  encode(message: ArithmeticTwapToNowRequest, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
     if (message.poolId !== BigInt(0)) {
       writer.uint32(8).uint64(message.poolId);
     }
-    if (message.baseAsset !== '') {
+    if (message.baseAsset !== "") {
       writer.uint32(18).string(message.baseAsset);
     }
-    if (message.quoteAsset !== '') {
+    if (message.quoteAsset !== "") {
       writer.uint32(26).string(message.quoteAsset);
     }
     if (message.startTime !== undefined) {
-      Timestamp.encode(
-        toTimestamp(message.startTime),
-        writer.uint32(34).fork(),
-      ).ldelim();
+      Timestamp.encode(toTimestamp(message.startTime), writer.uint32(34).fork()).ldelim();
     }
     return writer;
   },
-  decode(
-    input: BinaryReader | Uint8Array,
-    length?: number,
-  ): ArithmeticTwapToNowRequest {
-    const reader =
-      input instanceof BinaryReader ? input : new BinaryReader(input);
+  decode(input: BinaryReader | Uint8Array, length?: number): ArithmeticTwapToNowRequest {
+    const reader = input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseArithmeticTwapToNowRequest();
     while (reader.pos < end) {
@@ -570,9 +456,7 @@ export const ArithmeticTwapToNowRequest = {
           message.quoteAsset = reader.string();
           break;
         case 4:
-          message.startTime = fromTimestamp(
-            Timestamp.decode(reader, reader.uint32()),
-          );
+          message.startTime = fromTimestamp(Timestamp.decode(reader, reader.uint32()));
           break;
         default:
           reader.skipType(tag & 7);
@@ -581,22 +465,15 @@ export const ArithmeticTwapToNowRequest = {
     }
     return message;
   },
-  fromPartial(
-    object: Partial<ArithmeticTwapToNowRequest>,
-  ): ArithmeticTwapToNowRequest {
+  fromPartial(object: Partial<ArithmeticTwapToNowRequest>): ArithmeticTwapToNowRequest {
     const message = createBaseArithmeticTwapToNowRequest();
-    message.poolId =
-      object.poolId !== undefined && object.poolId !== null
-        ? BigInt(object.poolId.toString())
-        : BigInt(0);
-    message.baseAsset = object.baseAsset ?? '';
-    message.quoteAsset = object.quoteAsset ?? '';
+    message.poolId = object.poolId !== undefined && object.poolId !== null ? BigInt(object.poolId.toString()) : BigInt(0);
+    message.baseAsset = object.baseAsset ?? "";
+    message.quoteAsset = object.quoteAsset ?? "";
     message.startTime = object.startTime ?? undefined;
     return message;
   },
-  fromAmino(
-    object: ArithmeticTwapToNowRequestAmino,
-  ): ArithmeticTwapToNowRequest {
+  fromAmino(object: ArithmeticTwapToNowRequestAmino): ArithmeticTwapToNowRequest {
     const message = createBaseArithmeticTwapToNowRequest();
     if (object.pool_id !== undefined && object.pool_id !== null) {
       message.poolId = BigInt(object.pool_id);
@@ -612,101 +489,62 @@ export const ArithmeticTwapToNowRequest = {
     }
     return message;
   },
-  toAmino(
-    message: ArithmeticTwapToNowRequest,
-  ): ArithmeticTwapToNowRequestAmino {
+  toAmino(message: ArithmeticTwapToNowRequest): ArithmeticTwapToNowRequestAmino {
     const obj: any = {};
-    obj.pool_id =
-      message.poolId !== BigInt(0) ? message.poolId?.toString() : undefined;
-    obj.base_asset = message.baseAsset === '' ? undefined : message.baseAsset;
-    obj.quote_asset =
-      message.quoteAsset === '' ? undefined : message.quoteAsset;
-    obj.start_time = message.startTime
-      ? Timestamp.toAmino(toTimestamp(message.startTime))
-      : undefined;
+    obj.pool_id = message.poolId !== BigInt(0) ? message.poolId?.toString() : undefined;
+    obj.base_asset = message.baseAsset === "" ? undefined : message.baseAsset;
+    obj.quote_asset = message.quoteAsset === "" ? undefined : message.quoteAsset;
+    obj.start_time = message.startTime ? Timestamp.toAmino(toTimestamp(message.startTime)) : undefined;
     return obj;
   },
-  fromAminoMsg(
-    object: ArithmeticTwapToNowRequestAminoMsg,
-  ): ArithmeticTwapToNowRequest {
+  fromAminoMsg(object: ArithmeticTwapToNowRequestAminoMsg): ArithmeticTwapToNowRequest {
     return ArithmeticTwapToNowRequest.fromAmino(object.value);
   },
-  fromProtoMsg(
-    message: ArithmeticTwapToNowRequestProtoMsg,
-  ): ArithmeticTwapToNowRequest {
+  fromProtoMsg(message: ArithmeticTwapToNowRequestProtoMsg): ArithmeticTwapToNowRequest {
     return ArithmeticTwapToNowRequest.decode(message.value);
   },
   toProto(message: ArithmeticTwapToNowRequest): Uint8Array {
     return ArithmeticTwapToNowRequest.encode(message).finish();
   },
-  toProtoMsg(
-    message: ArithmeticTwapToNowRequest,
-  ): ArithmeticTwapToNowRequestProtoMsg {
+  toProtoMsg(message: ArithmeticTwapToNowRequest): ArithmeticTwapToNowRequestProtoMsg {
     return {
-      typeUrl: '/symphony.twap.v1beta1.ArithmeticTwapToNowRequest',
-      value: ArithmeticTwapToNowRequest.encode(message).finish(),
+      typeUrl: "/symphony.twap.v1beta1.ArithmeticTwapToNowRequest",
+      value: ArithmeticTwapToNowRequest.encode(message).finish()
     };
-  },
+  }
 };
-GlobalDecoderRegistry.register(
-  ArithmeticTwapToNowRequest.typeUrl,
-  ArithmeticTwapToNowRequest,
-);
+GlobalDecoderRegistry.register(ArithmeticTwapToNowRequest.typeUrl, ArithmeticTwapToNowRequest);
 function createBaseArithmeticTwapToNowResponse(): ArithmeticTwapToNowResponse {
   return {
-    arithmeticTwap: '',
+    arithmeticTwap: ""
   };
 }
 export const ArithmeticTwapToNowResponse = {
-  typeUrl: '/symphony.twap.v1beta1.ArithmeticTwapToNowResponse',
+  typeUrl: "/symphony.twap.v1beta1.ArithmeticTwapToNowResponse",
   is(o: any): o is ArithmeticTwapToNowResponse {
-    return (
-      o &&
-      (o.$typeUrl === ArithmeticTwapToNowResponse.typeUrl ||
-        typeof o.arithmeticTwap === 'string')
-    );
+    return o && (o.$typeUrl === ArithmeticTwapToNowResponse.typeUrl || typeof o.arithmeticTwap === "string");
   },
   isSDK(o: any): o is ArithmeticTwapToNowResponseSDKType {
-    return (
-      o &&
-      (o.$typeUrl === ArithmeticTwapToNowResponse.typeUrl ||
-        typeof o.arithmetic_twap === 'string')
-    );
+    return o && (o.$typeUrl === ArithmeticTwapToNowResponse.typeUrl || typeof o.arithmetic_twap === "string");
   },
   isAmino(o: any): o is ArithmeticTwapToNowResponseAmino {
-    return (
-      o &&
-      (o.$typeUrl === ArithmeticTwapToNowResponse.typeUrl ||
-        typeof o.arithmetic_twap === 'string')
-    );
+    return o && (o.$typeUrl === ArithmeticTwapToNowResponse.typeUrl || typeof o.arithmetic_twap === "string");
   },
-  encode(
-    message: ArithmeticTwapToNowResponse,
-    writer: BinaryWriter = BinaryWriter.create(),
-  ): BinaryWriter {
-    if (message.arithmeticTwap !== '') {
-      writer
-        .uint32(10)
-        .string(Decimal.fromUserInput(message.arithmeticTwap, 18).atomics);
+  encode(message: ArithmeticTwapToNowResponse, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
+    if (message.arithmeticTwap !== "") {
+      writer.uint32(10).string(Decimal.fromUserInput(message.arithmeticTwap, 18).atomics);
     }
     return writer;
   },
-  decode(
-    input: BinaryReader | Uint8Array,
-    length?: number,
-  ): ArithmeticTwapToNowResponse {
-    const reader =
-      input instanceof BinaryReader ? input : new BinaryReader(input);
+  decode(input: BinaryReader | Uint8Array, length?: number): ArithmeticTwapToNowResponse {
+    const reader = input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseArithmeticTwapToNowResponse();
     while (reader.pos < end) {
       const tag = reader.uint32();
       switch (tag >>> 3) {
         case 1:
-          message.arithmeticTwap = Decimal.fromAtomics(
-            reader.string(),
-            18,
-          ).toString();
+          message.arithmeticTwap = Decimal.fromAtomics(reader.string(), 18).toString();
           break;
         default:
           reader.skipType(tag & 7);
@@ -715,133 +553,80 @@ export const ArithmeticTwapToNowResponse = {
     }
     return message;
   },
-  fromPartial(
-    object: Partial<ArithmeticTwapToNowResponse>,
-  ): ArithmeticTwapToNowResponse {
+  fromPartial(object: Partial<ArithmeticTwapToNowResponse>): ArithmeticTwapToNowResponse {
     const message = createBaseArithmeticTwapToNowResponse();
-    message.arithmeticTwap = object.arithmeticTwap ?? '';
+    message.arithmeticTwap = object.arithmeticTwap ?? "";
     return message;
   },
-  fromAmino(
-    object: ArithmeticTwapToNowResponseAmino,
-  ): ArithmeticTwapToNowResponse {
+  fromAmino(object: ArithmeticTwapToNowResponseAmino): ArithmeticTwapToNowResponse {
     const message = createBaseArithmeticTwapToNowResponse();
-    if (
-      object.arithmetic_twap !== undefined &&
-      object.arithmetic_twap !== null
-    ) {
+    if (object.arithmetic_twap !== undefined && object.arithmetic_twap !== null) {
       message.arithmeticTwap = object.arithmetic_twap;
     }
     return message;
   },
-  toAmino(
-    message: ArithmeticTwapToNowResponse,
-  ): ArithmeticTwapToNowResponseAmino {
+  toAmino(message: ArithmeticTwapToNowResponse): ArithmeticTwapToNowResponseAmino {
     const obj: any = {};
-    obj.arithmetic_twap =
-      message.arithmeticTwap === '' ? undefined : message.arithmeticTwap;
+    obj.arithmetic_twap = message.arithmeticTwap === "" ? undefined : message.arithmeticTwap;
     return obj;
   },
-  fromAminoMsg(
-    object: ArithmeticTwapToNowResponseAminoMsg,
-  ): ArithmeticTwapToNowResponse {
+  fromAminoMsg(object: ArithmeticTwapToNowResponseAminoMsg): ArithmeticTwapToNowResponse {
     return ArithmeticTwapToNowResponse.fromAmino(object.value);
   },
-  fromProtoMsg(
-    message: ArithmeticTwapToNowResponseProtoMsg,
-  ): ArithmeticTwapToNowResponse {
+  fromProtoMsg(message: ArithmeticTwapToNowResponseProtoMsg): ArithmeticTwapToNowResponse {
     return ArithmeticTwapToNowResponse.decode(message.value);
   },
   toProto(message: ArithmeticTwapToNowResponse): Uint8Array {
     return ArithmeticTwapToNowResponse.encode(message).finish();
   },
-  toProtoMsg(
-    message: ArithmeticTwapToNowResponse,
-  ): ArithmeticTwapToNowResponseProtoMsg {
+  toProtoMsg(message: ArithmeticTwapToNowResponse): ArithmeticTwapToNowResponseProtoMsg {
     return {
-      typeUrl: '/symphony.twap.v1beta1.ArithmeticTwapToNowResponse',
-      value: ArithmeticTwapToNowResponse.encode(message).finish(),
+      typeUrl: "/symphony.twap.v1beta1.ArithmeticTwapToNowResponse",
+      value: ArithmeticTwapToNowResponse.encode(message).finish()
     };
-  },
+  }
 };
-GlobalDecoderRegistry.register(
-  ArithmeticTwapToNowResponse.typeUrl,
-  ArithmeticTwapToNowResponse,
-);
+GlobalDecoderRegistry.register(ArithmeticTwapToNowResponse.typeUrl, ArithmeticTwapToNowResponse);
 function createBaseGeometricTwapRequest(): GeometricTwapRequest {
   return {
     poolId: BigInt(0),
-    baseAsset: '',
-    quoteAsset: '',
+    baseAsset: "",
+    quoteAsset: "",
     startTime: new Date(),
-    endTime: undefined,
+    endTime: undefined
   };
 }
 export const GeometricTwapRequest = {
-  typeUrl: '/symphony.twap.v1beta1.GeometricTwapRequest',
+  typeUrl: "/symphony.twap.v1beta1.GeometricTwapRequest",
   is(o: any): o is GeometricTwapRequest {
-    return (
-      o &&
-      (o.$typeUrl === GeometricTwapRequest.typeUrl ||
-        (typeof o.poolId === 'bigint' &&
-          typeof o.baseAsset === 'string' &&
-          typeof o.quoteAsset === 'string' &&
-          Timestamp.is(o.startTime)))
-    );
+    return o && (o.$typeUrl === GeometricTwapRequest.typeUrl || typeof o.poolId === "bigint" && typeof o.baseAsset === "string" && typeof o.quoteAsset === "string" && Timestamp.is(o.startTime));
   },
   isSDK(o: any): o is GeometricTwapRequestSDKType {
-    return (
-      o &&
-      (o.$typeUrl === GeometricTwapRequest.typeUrl ||
-        (typeof o.pool_id === 'bigint' &&
-          typeof o.base_asset === 'string' &&
-          typeof o.quote_asset === 'string' &&
-          Timestamp.isSDK(o.start_time)))
-    );
+    return o && (o.$typeUrl === GeometricTwapRequest.typeUrl || typeof o.pool_id === "bigint" && typeof o.base_asset === "string" && typeof o.quote_asset === "string" && Timestamp.isSDK(o.start_time));
   },
   isAmino(o: any): o is GeometricTwapRequestAmino {
-    return (
-      o &&
-      (o.$typeUrl === GeometricTwapRequest.typeUrl ||
-        (typeof o.pool_id === 'bigint' &&
-          typeof o.base_asset === 'string' &&
-          typeof o.quote_asset === 'string' &&
-          Timestamp.isAmino(o.start_time)))
-    );
+    return o && (o.$typeUrl === GeometricTwapRequest.typeUrl || typeof o.pool_id === "bigint" && typeof o.base_asset === "string" && typeof o.quote_asset === "string" && Timestamp.isAmino(o.start_time));
   },
-  encode(
-    message: GeometricTwapRequest,
-    writer: BinaryWriter = BinaryWriter.create(),
-  ): BinaryWriter {
+  encode(message: GeometricTwapRequest, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
     if (message.poolId !== BigInt(0)) {
       writer.uint32(8).uint64(message.poolId);
     }
-    if (message.baseAsset !== '') {
+    if (message.baseAsset !== "") {
       writer.uint32(18).string(message.baseAsset);
     }
-    if (message.quoteAsset !== '') {
+    if (message.quoteAsset !== "") {
       writer.uint32(26).string(message.quoteAsset);
     }
     if (message.startTime !== undefined) {
-      Timestamp.encode(
-        toTimestamp(message.startTime),
-        writer.uint32(34).fork(),
-      ).ldelim();
+      Timestamp.encode(toTimestamp(message.startTime), writer.uint32(34).fork()).ldelim();
     }
     if (message.endTime !== undefined) {
-      Timestamp.encode(
-        toTimestamp(message.endTime),
-        writer.uint32(42).fork(),
-      ).ldelim();
+      Timestamp.encode(toTimestamp(message.endTime), writer.uint32(42).fork()).ldelim();
     }
     return writer;
   },
-  decode(
-    input: BinaryReader | Uint8Array,
-    length?: number,
-  ): GeometricTwapRequest {
-    const reader =
-      input instanceof BinaryReader ? input : new BinaryReader(input);
+  decode(input: BinaryReader | Uint8Array, length?: number): GeometricTwapRequest {
+    const reader = input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseGeometricTwapRequest();
     while (reader.pos < end) {
@@ -857,14 +642,10 @@ export const GeometricTwapRequest = {
           message.quoteAsset = reader.string();
           break;
         case 4:
-          message.startTime = fromTimestamp(
-            Timestamp.decode(reader, reader.uint32()),
-          );
+          message.startTime = fromTimestamp(Timestamp.decode(reader, reader.uint32()));
           break;
         case 5:
-          message.endTime = fromTimestamp(
-            Timestamp.decode(reader, reader.uint32()),
-          );
+          message.endTime = fromTimestamp(Timestamp.decode(reader, reader.uint32()));
           break;
         default:
           reader.skipType(tag & 7);
@@ -875,12 +656,9 @@ export const GeometricTwapRequest = {
   },
   fromPartial(object: Partial<GeometricTwapRequest>): GeometricTwapRequest {
     const message = createBaseGeometricTwapRequest();
-    message.poolId =
-      object.poolId !== undefined && object.poolId !== null
-        ? BigInt(object.poolId.toString())
-        : BigInt(0);
-    message.baseAsset = object.baseAsset ?? '';
-    message.quoteAsset = object.quoteAsset ?? '';
+    message.poolId = object.poolId !== undefined && object.poolId !== null ? BigInt(object.poolId.toString()) : BigInt(0);
+    message.baseAsset = object.baseAsset ?? "";
+    message.quoteAsset = object.quoteAsset ?? "";
     message.startTime = object.startTime ?? undefined;
     message.endTime = object.endTime ?? undefined;
     return message;
@@ -906,17 +684,11 @@ export const GeometricTwapRequest = {
   },
   toAmino(message: GeometricTwapRequest): GeometricTwapRequestAmino {
     const obj: any = {};
-    obj.pool_id =
-      message.poolId !== BigInt(0) ? message.poolId?.toString() : undefined;
-    obj.base_asset = message.baseAsset === '' ? undefined : message.baseAsset;
-    obj.quote_asset =
-      message.quoteAsset === '' ? undefined : message.quoteAsset;
-    obj.start_time = message.startTime
-      ? Timestamp.toAmino(toTimestamp(message.startTime))
-      : undefined;
-    obj.end_time = message.endTime
-      ? Timestamp.toAmino(toTimestamp(message.endTime))
-      : undefined;
+    obj.pool_id = message.poolId !== BigInt(0) ? message.poolId?.toString() : undefined;
+    obj.base_asset = message.baseAsset === "" ? undefined : message.baseAsset;
+    obj.quote_asset = message.quoteAsset === "" ? undefined : message.quoteAsset;
+    obj.start_time = message.startTime ? Timestamp.toAmino(toTimestamp(message.startTime)) : undefined;
+    obj.end_time = message.endTime ? Timestamp.toAmino(toTimestamp(message.endTime)) : undefined;
     return obj;
   },
   fromAminoMsg(object: GeometricTwapRequestAminoMsg): GeometricTwapRequest {
@@ -930,70 +702,43 @@ export const GeometricTwapRequest = {
   },
   toProtoMsg(message: GeometricTwapRequest): GeometricTwapRequestProtoMsg {
     return {
-      typeUrl: '/symphony.twap.v1beta1.GeometricTwapRequest',
-      value: GeometricTwapRequest.encode(message).finish(),
+      typeUrl: "/symphony.twap.v1beta1.GeometricTwapRequest",
+      value: GeometricTwapRequest.encode(message).finish()
     };
-  },
+  }
 };
-GlobalDecoderRegistry.register(
-  GeometricTwapRequest.typeUrl,
-  GeometricTwapRequest,
-);
+GlobalDecoderRegistry.register(GeometricTwapRequest.typeUrl, GeometricTwapRequest);
 function createBaseGeometricTwapResponse(): GeometricTwapResponse {
   return {
-    geometricTwap: '',
+    geometricTwap: ""
   };
 }
 export const GeometricTwapResponse = {
-  typeUrl: '/symphony.twap.v1beta1.GeometricTwapResponse',
+  typeUrl: "/symphony.twap.v1beta1.GeometricTwapResponse",
   is(o: any): o is GeometricTwapResponse {
-    return (
-      o &&
-      (o.$typeUrl === GeometricTwapResponse.typeUrl ||
-        typeof o.geometricTwap === 'string')
-    );
+    return o && (o.$typeUrl === GeometricTwapResponse.typeUrl || typeof o.geometricTwap === "string");
   },
   isSDK(o: any): o is GeometricTwapResponseSDKType {
-    return (
-      o &&
-      (o.$typeUrl === GeometricTwapResponse.typeUrl ||
-        typeof o.geometric_twap === 'string')
-    );
+    return o && (o.$typeUrl === GeometricTwapResponse.typeUrl || typeof o.geometric_twap === "string");
   },
   isAmino(o: any): o is GeometricTwapResponseAmino {
-    return (
-      o &&
-      (o.$typeUrl === GeometricTwapResponse.typeUrl ||
-        typeof o.geometric_twap === 'string')
-    );
+    return o && (o.$typeUrl === GeometricTwapResponse.typeUrl || typeof o.geometric_twap === "string");
   },
-  encode(
-    message: GeometricTwapResponse,
-    writer: BinaryWriter = BinaryWriter.create(),
-  ): BinaryWriter {
-    if (message.geometricTwap !== '') {
-      writer
-        .uint32(10)
-        .string(Decimal.fromUserInput(message.geometricTwap, 18).atomics);
+  encode(message: GeometricTwapResponse, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
+    if (message.geometricTwap !== "") {
+      writer.uint32(10).string(Decimal.fromUserInput(message.geometricTwap, 18).atomics);
     }
     return writer;
   },
-  decode(
-    input: BinaryReader | Uint8Array,
-    length?: number,
-  ): GeometricTwapResponse {
-    const reader =
-      input instanceof BinaryReader ? input : new BinaryReader(input);
+  decode(input: BinaryReader | Uint8Array, length?: number): GeometricTwapResponse {
+    const reader = input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseGeometricTwapResponse();
     while (reader.pos < end) {
       const tag = reader.uint32();
       switch (tag >>> 3) {
         case 1:
-          message.geometricTwap = Decimal.fromAtomics(
-            reader.string(),
-            18,
-          ).toString();
+          message.geometricTwap = Decimal.fromAtomics(reader.string(), 18).toString();
           break;
         default:
           reader.skipType(tag & 7);
@@ -1004,7 +749,7 @@ export const GeometricTwapResponse = {
   },
   fromPartial(object: Partial<GeometricTwapResponse>): GeometricTwapResponse {
     const message = createBaseGeometricTwapResponse();
-    message.geometricTwap = object.geometricTwap ?? '';
+    message.geometricTwap = object.geometricTwap ?? "";
     return message;
   },
   fromAmino(object: GeometricTwapResponseAmino): GeometricTwapResponse {
@@ -1016,8 +761,7 @@ export const GeometricTwapResponse = {
   },
   toAmino(message: GeometricTwapResponse): GeometricTwapResponseAmino {
     const obj: any = {};
-    obj.geometric_twap =
-      message.geometricTwap === '' ? undefined : message.geometricTwap;
+    obj.geometric_twap = message.geometricTwap === "" ? undefined : message.geometricTwap;
     return obj;
   },
   fromAminoMsg(object: GeometricTwapResponseAminoMsg): GeometricTwapResponse {
@@ -1031,82 +775,48 @@ export const GeometricTwapResponse = {
   },
   toProtoMsg(message: GeometricTwapResponse): GeometricTwapResponseProtoMsg {
     return {
-      typeUrl: '/symphony.twap.v1beta1.GeometricTwapResponse',
-      value: GeometricTwapResponse.encode(message).finish(),
+      typeUrl: "/symphony.twap.v1beta1.GeometricTwapResponse",
+      value: GeometricTwapResponse.encode(message).finish()
     };
-  },
+  }
 };
-GlobalDecoderRegistry.register(
-  GeometricTwapResponse.typeUrl,
-  GeometricTwapResponse,
-);
+GlobalDecoderRegistry.register(GeometricTwapResponse.typeUrl, GeometricTwapResponse);
 function createBaseGeometricTwapToNowRequest(): GeometricTwapToNowRequest {
   return {
     poolId: BigInt(0),
-    baseAsset: '',
-    quoteAsset: '',
-    startTime: new Date(),
+    baseAsset: "",
+    quoteAsset: "",
+    startTime: new Date()
   };
 }
 export const GeometricTwapToNowRequest = {
-  typeUrl: '/symphony.twap.v1beta1.GeometricTwapToNowRequest',
+  typeUrl: "/symphony.twap.v1beta1.GeometricTwapToNowRequest",
   is(o: any): o is GeometricTwapToNowRequest {
-    return (
-      o &&
-      (o.$typeUrl === GeometricTwapToNowRequest.typeUrl ||
-        (typeof o.poolId === 'bigint' &&
-          typeof o.baseAsset === 'string' &&
-          typeof o.quoteAsset === 'string' &&
-          Timestamp.is(o.startTime)))
-    );
+    return o && (o.$typeUrl === GeometricTwapToNowRequest.typeUrl || typeof o.poolId === "bigint" && typeof o.baseAsset === "string" && typeof o.quoteAsset === "string" && Timestamp.is(o.startTime));
   },
   isSDK(o: any): o is GeometricTwapToNowRequestSDKType {
-    return (
-      o &&
-      (o.$typeUrl === GeometricTwapToNowRequest.typeUrl ||
-        (typeof o.pool_id === 'bigint' &&
-          typeof o.base_asset === 'string' &&
-          typeof o.quote_asset === 'string' &&
-          Timestamp.isSDK(o.start_time)))
-    );
+    return o && (o.$typeUrl === GeometricTwapToNowRequest.typeUrl || typeof o.pool_id === "bigint" && typeof o.base_asset === "string" && typeof o.quote_asset === "string" && Timestamp.isSDK(o.start_time));
   },
   isAmino(o: any): o is GeometricTwapToNowRequestAmino {
-    return (
-      o &&
-      (o.$typeUrl === GeometricTwapToNowRequest.typeUrl ||
-        (typeof o.pool_id === 'bigint' &&
-          typeof o.base_asset === 'string' &&
-          typeof o.quote_asset === 'string' &&
-          Timestamp.isAmino(o.start_time)))
-    );
+    return o && (o.$typeUrl === GeometricTwapToNowRequest.typeUrl || typeof o.pool_id === "bigint" && typeof o.base_asset === "string" && typeof o.quote_asset === "string" && Timestamp.isAmino(o.start_time));
   },
-  encode(
-    message: GeometricTwapToNowRequest,
-    writer: BinaryWriter = BinaryWriter.create(),
-  ): BinaryWriter {
+  encode(message: GeometricTwapToNowRequest, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
     if (message.poolId !== BigInt(0)) {
       writer.uint32(8).uint64(message.poolId);
     }
-    if (message.baseAsset !== '') {
+    if (message.baseAsset !== "") {
       writer.uint32(18).string(message.baseAsset);
     }
-    if (message.quoteAsset !== '') {
+    if (message.quoteAsset !== "") {
       writer.uint32(26).string(message.quoteAsset);
     }
     if (message.startTime !== undefined) {
-      Timestamp.encode(
-        toTimestamp(message.startTime),
-        writer.uint32(34).fork(),
-      ).ldelim();
+      Timestamp.encode(toTimestamp(message.startTime), writer.uint32(34).fork()).ldelim();
     }
     return writer;
   },
-  decode(
-    input: BinaryReader | Uint8Array,
-    length?: number,
-  ): GeometricTwapToNowRequest {
-    const reader =
-      input instanceof BinaryReader ? input : new BinaryReader(input);
+  decode(input: BinaryReader | Uint8Array, length?: number): GeometricTwapToNowRequest {
+    const reader = input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseGeometricTwapToNowRequest();
     while (reader.pos < end) {
@@ -1122,9 +832,7 @@ export const GeometricTwapToNowRequest = {
           message.quoteAsset = reader.string();
           break;
         case 4:
-          message.startTime = fromTimestamp(
-            Timestamp.decode(reader, reader.uint32()),
-          );
+          message.startTime = fromTimestamp(Timestamp.decode(reader, reader.uint32()));
           break;
         default:
           reader.skipType(tag & 7);
@@ -1133,16 +841,11 @@ export const GeometricTwapToNowRequest = {
     }
     return message;
   },
-  fromPartial(
-    object: Partial<GeometricTwapToNowRequest>,
-  ): GeometricTwapToNowRequest {
+  fromPartial(object: Partial<GeometricTwapToNowRequest>): GeometricTwapToNowRequest {
     const message = createBaseGeometricTwapToNowRequest();
-    message.poolId =
-      object.poolId !== undefined && object.poolId !== null
-        ? BigInt(object.poolId.toString())
-        : BigInt(0);
-    message.baseAsset = object.baseAsset ?? '';
-    message.quoteAsset = object.quoteAsset ?? '';
+    message.poolId = object.poolId !== undefined && object.poolId !== null ? BigInt(object.poolId.toString()) : BigInt(0);
+    message.baseAsset = object.baseAsset ?? "";
+    message.quoteAsset = object.quoteAsset ?? "";
     message.startTime = object.startTime ?? undefined;
     return message;
   },
@@ -1164,97 +867,60 @@ export const GeometricTwapToNowRequest = {
   },
   toAmino(message: GeometricTwapToNowRequest): GeometricTwapToNowRequestAmino {
     const obj: any = {};
-    obj.pool_id =
-      message.poolId !== BigInt(0) ? message.poolId?.toString() : undefined;
-    obj.base_asset = message.baseAsset === '' ? undefined : message.baseAsset;
-    obj.quote_asset =
-      message.quoteAsset === '' ? undefined : message.quoteAsset;
-    obj.start_time = message.startTime
-      ? Timestamp.toAmino(toTimestamp(message.startTime))
-      : undefined;
+    obj.pool_id = message.poolId !== BigInt(0) ? message.poolId?.toString() : undefined;
+    obj.base_asset = message.baseAsset === "" ? undefined : message.baseAsset;
+    obj.quote_asset = message.quoteAsset === "" ? undefined : message.quoteAsset;
+    obj.start_time = message.startTime ? Timestamp.toAmino(toTimestamp(message.startTime)) : undefined;
     return obj;
   },
-  fromAminoMsg(
-    object: GeometricTwapToNowRequestAminoMsg,
-  ): GeometricTwapToNowRequest {
+  fromAminoMsg(object: GeometricTwapToNowRequestAminoMsg): GeometricTwapToNowRequest {
     return GeometricTwapToNowRequest.fromAmino(object.value);
   },
-  fromProtoMsg(
-    message: GeometricTwapToNowRequestProtoMsg,
-  ): GeometricTwapToNowRequest {
+  fromProtoMsg(message: GeometricTwapToNowRequestProtoMsg): GeometricTwapToNowRequest {
     return GeometricTwapToNowRequest.decode(message.value);
   },
   toProto(message: GeometricTwapToNowRequest): Uint8Array {
     return GeometricTwapToNowRequest.encode(message).finish();
   },
-  toProtoMsg(
-    message: GeometricTwapToNowRequest,
-  ): GeometricTwapToNowRequestProtoMsg {
+  toProtoMsg(message: GeometricTwapToNowRequest): GeometricTwapToNowRequestProtoMsg {
     return {
-      typeUrl: '/symphony.twap.v1beta1.GeometricTwapToNowRequest',
-      value: GeometricTwapToNowRequest.encode(message).finish(),
+      typeUrl: "/symphony.twap.v1beta1.GeometricTwapToNowRequest",
+      value: GeometricTwapToNowRequest.encode(message).finish()
     };
-  },
+  }
 };
-GlobalDecoderRegistry.register(
-  GeometricTwapToNowRequest.typeUrl,
-  GeometricTwapToNowRequest,
-);
+GlobalDecoderRegistry.register(GeometricTwapToNowRequest.typeUrl, GeometricTwapToNowRequest);
 function createBaseGeometricTwapToNowResponse(): GeometricTwapToNowResponse {
   return {
-    geometricTwap: '',
+    geometricTwap: ""
   };
 }
 export const GeometricTwapToNowResponse = {
-  typeUrl: '/symphony.twap.v1beta1.GeometricTwapToNowResponse',
+  typeUrl: "/symphony.twap.v1beta1.GeometricTwapToNowResponse",
   is(o: any): o is GeometricTwapToNowResponse {
-    return (
-      o &&
-      (o.$typeUrl === GeometricTwapToNowResponse.typeUrl ||
-        typeof o.geometricTwap === 'string')
-    );
+    return o && (o.$typeUrl === GeometricTwapToNowResponse.typeUrl || typeof o.geometricTwap === "string");
   },
   isSDK(o: any): o is GeometricTwapToNowResponseSDKType {
-    return (
-      o &&
-      (o.$typeUrl === GeometricTwapToNowResponse.typeUrl ||
-        typeof o.geometric_twap === 'string')
-    );
+    return o && (o.$typeUrl === GeometricTwapToNowResponse.typeUrl || typeof o.geometric_twap === "string");
   },
   isAmino(o: any): o is GeometricTwapToNowResponseAmino {
-    return (
-      o &&
-      (o.$typeUrl === GeometricTwapToNowResponse.typeUrl ||
-        typeof o.geometric_twap === 'string')
-    );
+    return o && (o.$typeUrl === GeometricTwapToNowResponse.typeUrl || typeof o.geometric_twap === "string");
   },
-  encode(
-    message: GeometricTwapToNowResponse,
-    writer: BinaryWriter = BinaryWriter.create(),
-  ): BinaryWriter {
-    if (message.geometricTwap !== '') {
-      writer
-        .uint32(10)
-        .string(Decimal.fromUserInput(message.geometricTwap, 18).atomics);
+  encode(message: GeometricTwapToNowResponse, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
+    if (message.geometricTwap !== "") {
+      writer.uint32(10).string(Decimal.fromUserInput(message.geometricTwap, 18).atomics);
     }
     return writer;
   },
-  decode(
-    input: BinaryReader | Uint8Array,
-    length?: number,
-  ): GeometricTwapToNowResponse {
-    const reader =
-      input instanceof BinaryReader ? input : new BinaryReader(input);
+  decode(input: BinaryReader | Uint8Array, length?: number): GeometricTwapToNowResponse {
+    const reader = input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseGeometricTwapToNowResponse();
     while (reader.pos < end) {
       const tag = reader.uint32();
       switch (tag >>> 3) {
         case 1:
-          message.geometricTwap = Decimal.fromAtomics(
-            reader.string(),
-            18,
-          ).toString();
+          message.geometricTwap = Decimal.fromAtomics(reader.string(), 18).toString();
           break;
         default:
           reader.skipType(tag & 7);
@@ -1263,61 +929,45 @@ export const GeometricTwapToNowResponse = {
     }
     return message;
   },
-  fromPartial(
-    object: Partial<GeometricTwapToNowResponse>,
-  ): GeometricTwapToNowResponse {
+  fromPartial(object: Partial<GeometricTwapToNowResponse>): GeometricTwapToNowResponse {
     const message = createBaseGeometricTwapToNowResponse();
-    message.geometricTwap = object.geometricTwap ?? '';
+    message.geometricTwap = object.geometricTwap ?? "";
     return message;
   },
-  fromAmino(
-    object: GeometricTwapToNowResponseAmino,
-  ): GeometricTwapToNowResponse {
+  fromAmino(object: GeometricTwapToNowResponseAmino): GeometricTwapToNowResponse {
     const message = createBaseGeometricTwapToNowResponse();
     if (object.geometric_twap !== undefined && object.geometric_twap !== null) {
       message.geometricTwap = object.geometric_twap;
     }
     return message;
   },
-  toAmino(
-    message: GeometricTwapToNowResponse,
-  ): GeometricTwapToNowResponseAmino {
+  toAmino(message: GeometricTwapToNowResponse): GeometricTwapToNowResponseAmino {
     const obj: any = {};
-    obj.geometric_twap =
-      message.geometricTwap === '' ? undefined : message.geometricTwap;
+    obj.geometric_twap = message.geometricTwap === "" ? undefined : message.geometricTwap;
     return obj;
   },
-  fromAminoMsg(
-    object: GeometricTwapToNowResponseAminoMsg,
-  ): GeometricTwapToNowResponse {
+  fromAminoMsg(object: GeometricTwapToNowResponseAminoMsg): GeometricTwapToNowResponse {
     return GeometricTwapToNowResponse.fromAmino(object.value);
   },
-  fromProtoMsg(
-    message: GeometricTwapToNowResponseProtoMsg,
-  ): GeometricTwapToNowResponse {
+  fromProtoMsg(message: GeometricTwapToNowResponseProtoMsg): GeometricTwapToNowResponse {
     return GeometricTwapToNowResponse.decode(message.value);
   },
   toProto(message: GeometricTwapToNowResponse): Uint8Array {
     return GeometricTwapToNowResponse.encode(message).finish();
   },
-  toProtoMsg(
-    message: GeometricTwapToNowResponse,
-  ): GeometricTwapToNowResponseProtoMsg {
+  toProtoMsg(message: GeometricTwapToNowResponse): GeometricTwapToNowResponseProtoMsg {
     return {
-      typeUrl: '/symphony.twap.v1beta1.GeometricTwapToNowResponse',
-      value: GeometricTwapToNowResponse.encode(message).finish(),
+      typeUrl: "/symphony.twap.v1beta1.GeometricTwapToNowResponse",
+      value: GeometricTwapToNowResponse.encode(message).finish()
     };
-  },
+  }
 };
-GlobalDecoderRegistry.register(
-  GeometricTwapToNowResponse.typeUrl,
-  GeometricTwapToNowResponse,
-);
+GlobalDecoderRegistry.register(GeometricTwapToNowResponse.typeUrl, GeometricTwapToNowResponse);
 function createBaseParamsRequest(): ParamsRequest {
   return {};
 }
 export const ParamsRequest = {
-  typeUrl: '/symphony.twap.v1beta1.ParamsRequest',
+  typeUrl: "/symphony.twap.v1beta1.ParamsRequest",
   is(o: any): o is ParamsRequest {
     return o && o.$typeUrl === ParamsRequest.typeUrl;
   },
@@ -1327,15 +977,11 @@ export const ParamsRequest = {
   isAmino(o: any): o is ParamsRequestAmino {
     return o && o.$typeUrl === ParamsRequest.typeUrl;
   },
-  encode(
-    _: ParamsRequest,
-    writer: BinaryWriter = BinaryWriter.create(),
-  ): BinaryWriter {
+  encode(_: ParamsRequest, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
     return writer;
   },
   decode(input: BinaryReader | Uint8Array, length?: number): ParamsRequest {
-    const reader =
-      input instanceof BinaryReader ? input : new BinaryReader(input);
+    const reader = input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseParamsRequest();
     while (reader.pos < end) {
@@ -1371,44 +1017,36 @@ export const ParamsRequest = {
   },
   toProtoMsg(message: ParamsRequest): ParamsRequestProtoMsg {
     return {
-      typeUrl: '/symphony.twap.v1beta1.ParamsRequest',
-      value: ParamsRequest.encode(message).finish(),
+      typeUrl: "/symphony.twap.v1beta1.ParamsRequest",
+      value: ParamsRequest.encode(message).finish()
     };
-  },
+  }
 };
 GlobalDecoderRegistry.register(ParamsRequest.typeUrl, ParamsRequest);
 function createBaseParamsResponse(): ParamsResponse {
   return {
-    params: Params.fromPartial({}),
+    params: Params.fromPartial({})
   };
 }
 export const ParamsResponse = {
-  typeUrl: '/symphony.twap.v1beta1.ParamsResponse',
+  typeUrl: "/symphony.twap.v1beta1.ParamsResponse",
   is(o: any): o is ParamsResponse {
     return o && (o.$typeUrl === ParamsResponse.typeUrl || Params.is(o.params));
   },
   isSDK(o: any): o is ParamsResponseSDKType {
-    return (
-      o && (o.$typeUrl === ParamsResponse.typeUrl || Params.isSDK(o.params))
-    );
+    return o && (o.$typeUrl === ParamsResponse.typeUrl || Params.isSDK(o.params));
   },
   isAmino(o: any): o is ParamsResponseAmino {
-    return (
-      o && (o.$typeUrl === ParamsResponse.typeUrl || Params.isAmino(o.params))
-    );
+    return o && (o.$typeUrl === ParamsResponse.typeUrl || Params.isAmino(o.params));
   },
-  encode(
-    message: ParamsResponse,
-    writer: BinaryWriter = BinaryWriter.create(),
-  ): BinaryWriter {
+  encode(message: ParamsResponse, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
     if (message.params !== undefined) {
       Params.encode(message.params, writer.uint32(10).fork()).ldelim();
     }
     return writer;
   },
   decode(input: BinaryReader | Uint8Array, length?: number): ParamsResponse {
-    const reader =
-      input instanceof BinaryReader ? input : new BinaryReader(input);
+    const reader = input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseParamsResponse();
     while (reader.pos < end) {
@@ -1426,10 +1064,7 @@ export const ParamsResponse = {
   },
   fromPartial(object: Partial<ParamsResponse>): ParamsResponse {
     const message = createBaseParamsResponse();
-    message.params =
-      object.params !== undefined && object.params !== null
-        ? Params.fromPartial(object.params)
-        : undefined;
+    message.params = object.params !== undefined && object.params !== null ? Params.fromPartial(object.params) : undefined;
     return message;
   },
   fromAmino(object: ParamsResponseAmino): ParamsResponse {
@@ -1455,9 +1090,9 @@ export const ParamsResponse = {
   },
   toProtoMsg(message: ParamsResponse): ParamsResponseProtoMsg {
     return {
-      typeUrl: '/symphony.twap.v1beta1.ParamsResponse',
-      value: ParamsResponse.encode(message).finish(),
+      typeUrl: "/symphony.twap.v1beta1.ParamsResponse",
+      value: ParamsResponse.encode(message).finish()
     };
-  },
+  }
 };
 GlobalDecoderRegistry.register(ParamsResponse.typeUrl, ParamsResponse);

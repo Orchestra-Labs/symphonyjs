@@ -1,12 +1,7 @@
 //@ts-nocheck
-import { GeneratedType, Registry } from '@cosmjs/proto-signing';
-import { MsgCreateBalancerPool } from './tx';
-export const registry: ReadonlyArray<[string, GeneratedType]> = [
-  [
-    '/symphony.gamm.poolmodels.balancer.v1beta1.MsgCreateBalancerPool',
-    MsgCreateBalancerPool,
-  ],
-];
+import { GeneratedType, Registry } from "@cosmjs/proto-signing";
+import { MsgCreateBalancerPool } from "./tx";
+export const registry: ReadonlyArray<[string, GeneratedType]> = [["/symphony.gamm.poolmodels.balancer.v1beta1.MsgCreateBalancerPool", MsgCreateBalancerPool]];
 export const load = (protoRegistry: Registry) => {
   registry.forEach(([typeUrl, mod]) => {
     protoRegistry.register(typeUrl, mod);
@@ -16,28 +11,25 @@ export const MessageComposer = {
   encoded: {
     createBalancerPool(value: MsgCreateBalancerPool) {
       return {
-        typeUrl:
-          '/symphony.gamm.poolmodels.balancer.v1beta1.MsgCreateBalancerPool',
-        value: MsgCreateBalancerPool.encode(value).finish(),
+        typeUrl: "/symphony.gamm.poolmodels.balancer.v1beta1.MsgCreateBalancerPool",
+        value: MsgCreateBalancerPool.encode(value).finish()
       };
-    },
+    }
   },
   withTypeUrl: {
     createBalancerPool(value: MsgCreateBalancerPool) {
       return {
-        typeUrl:
-          '/symphony.gamm.poolmodels.balancer.v1beta1.MsgCreateBalancerPool',
-        value,
+        typeUrl: "/symphony.gamm.poolmodels.balancer.v1beta1.MsgCreateBalancerPool",
+        value
       };
-    },
+    }
   },
   fromPartial: {
     createBalancerPool(value: MsgCreateBalancerPool) {
       return {
-        typeUrl:
-          '/symphony.gamm.poolmodels.balancer.v1beta1.MsgCreateBalancerPool',
-        value: MsgCreateBalancerPool.fromPartial(value),
+        typeUrl: "/symphony.gamm.poolmodels.balancer.v1beta1.MsgCreateBalancerPool",
+        value: MsgCreateBalancerPool.fromPartial(value)
       };
-    },
-  },
+    }
+  }
 };

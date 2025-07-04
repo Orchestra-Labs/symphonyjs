@@ -1,22 +1,18 @@
 //@ts-nocheck
-import { Params, ParamsAmino, ParamsSDKType } from './params';
-import {
-  DenomAuthorityMetadata,
-  DenomAuthorityMetadataAmino,
-  DenomAuthorityMetadataSDKType,
-} from './authorityMetadata';
-import { BinaryReader, BinaryWriter } from '../../../binary';
-import { GlobalDecoderRegistry } from '../../../registry';
+import { Params, ParamsAmino, ParamsSDKType } from "./params";
+import { DenomAuthorityMetadata, DenomAuthorityMetadataAmino, DenomAuthorityMetadataSDKType } from "./authorityMetadata";
+import { BinaryReader, BinaryWriter } from "../../../binary";
+import { GlobalDecoderRegistry } from "../../../registry";
 /** QueryParamsRequest is the request type for the Query/Params RPC method. */
 export interface QueryParamsRequest {}
 export interface QueryParamsRequestProtoMsg {
-  typeUrl: '/symphony.tokenfactory.v1beta1.QueryParamsRequest';
+  typeUrl: "/symphony.tokenfactory.v1beta1.QueryParamsRequest";
   value: Uint8Array;
 }
 /** QueryParamsRequest is the request type for the Query/Params RPC method. */
 export interface QueryParamsRequestAmino {}
 export interface QueryParamsRequestAminoMsg {
-  type: '/symphony.tokenfactory.v1beta1.QueryParamsRequest';
+  type: "/symphony.tokenfactory.v1beta1.QueryParamsRequest";
   value: QueryParamsRequestAmino;
 }
 /** QueryParamsRequest is the request type for the Query/Params RPC method. */
@@ -27,7 +23,7 @@ export interface QueryParamsResponse {
   params: Params;
 }
 export interface QueryParamsResponseProtoMsg {
-  typeUrl: '/symphony.tokenfactory.v1beta1.QueryParamsResponse';
+  typeUrl: "/symphony.tokenfactory.v1beta1.QueryParamsResponse";
   value: Uint8Array;
 }
 /** QueryParamsResponse is the response type for the Query/Params RPC method. */
@@ -36,7 +32,7 @@ export interface QueryParamsResponseAmino {
   params?: ParamsAmino;
 }
 export interface QueryParamsResponseAminoMsg {
-  type: '/symphony.tokenfactory.v1beta1.QueryParamsResponse';
+  type: "/symphony.tokenfactory.v1beta1.QueryParamsResponse";
   value: QueryParamsResponseAmino;
 }
 /** QueryParamsResponse is the response type for the Query/Params RPC method. */
@@ -51,7 +47,7 @@ export interface QueryDenomAuthorityMetadataRequest {
   denom: string;
 }
 export interface QueryDenomAuthorityMetadataRequestProtoMsg {
-  typeUrl: '/symphony.tokenfactory.v1beta1.QueryDenomAuthorityMetadataRequest';
+  typeUrl: "/symphony.tokenfactory.v1beta1.QueryDenomAuthorityMetadataRequest";
   value: Uint8Array;
 }
 /**
@@ -62,7 +58,7 @@ export interface QueryDenomAuthorityMetadataRequestAmino {
   denom?: string;
 }
 export interface QueryDenomAuthorityMetadataRequestAminoMsg {
-  type: '/symphony.tokenfactory.v1beta1.QueryDenomAuthorityMetadataRequest';
+  type: "/symphony.tokenfactory.v1beta1.QueryDenomAuthorityMetadataRequest";
   value: QueryDenomAuthorityMetadataRequestAmino;
 }
 /**
@@ -80,7 +76,7 @@ export interface QueryDenomAuthorityMetadataResponse {
   authorityMetadata: DenomAuthorityMetadata;
 }
 export interface QueryDenomAuthorityMetadataResponseProtoMsg {
-  typeUrl: '/symphony.tokenfactory.v1beta1.QueryDenomAuthorityMetadataResponse';
+  typeUrl: "/symphony.tokenfactory.v1beta1.QueryDenomAuthorityMetadataResponse";
   value: Uint8Array;
 }
 /**
@@ -91,7 +87,7 @@ export interface QueryDenomAuthorityMetadataResponseAmino {
   authority_metadata?: DenomAuthorityMetadataAmino;
 }
 export interface QueryDenomAuthorityMetadataResponseAminoMsg {
-  type: '/symphony.tokenfactory.v1beta1.QueryDenomAuthorityMetadataResponse';
+  type: "/symphony.tokenfactory.v1beta1.QueryDenomAuthorityMetadataResponse";
   value: QueryDenomAuthorityMetadataResponseAmino;
 }
 /**
@@ -109,7 +105,7 @@ export interface QueryDenomsFromCreatorRequest {
   creator: string;
 }
 export interface QueryDenomsFromCreatorRequestProtoMsg {
-  typeUrl: '/symphony.tokenfactory.v1beta1.QueryDenomsFromCreatorRequest';
+  typeUrl: "/symphony.tokenfactory.v1beta1.QueryDenomsFromCreatorRequest";
   value: Uint8Array;
 }
 /**
@@ -120,7 +116,7 @@ export interface QueryDenomsFromCreatorRequestAmino {
   creator?: string;
 }
 export interface QueryDenomsFromCreatorRequestAminoMsg {
-  type: '/symphony.tokenfactory.v1beta1.QueryDenomsFromCreatorRequest';
+  type: "/symphony.tokenfactory.v1beta1.QueryDenomsFromCreatorRequest";
   value: QueryDenomsFromCreatorRequestAmino;
 }
 /**
@@ -138,7 +134,7 @@ export interface QueryDenomsFromCreatorResponse {
   denoms: string[];
 }
 export interface QueryDenomsFromCreatorResponseProtoMsg {
-  typeUrl: '/symphony.tokenfactory.v1beta1.QueryDenomsFromCreatorResponse';
+  typeUrl: "/symphony.tokenfactory.v1beta1.QueryDenomsFromCreatorResponse";
   value: Uint8Array;
 }
 /**
@@ -149,7 +145,7 @@ export interface QueryDenomsFromCreatorResponseAmino {
   denoms?: string[];
 }
 export interface QueryDenomsFromCreatorResponseAminoMsg {
-  type: '/symphony.tokenfactory.v1beta1.QueryDenomsFromCreatorResponse';
+  type: "/symphony.tokenfactory.v1beta1.QueryDenomsFromCreatorResponse";
   value: QueryDenomsFromCreatorResponseAmino;
 }
 /**
@@ -163,14 +159,14 @@ export interface QueryBeforeSendHookAddressRequest {
   denom: string;
 }
 export interface QueryBeforeSendHookAddressRequestProtoMsg {
-  typeUrl: '/symphony.tokenfactory.v1beta1.QueryBeforeSendHookAddressRequest';
+  typeUrl: "/symphony.tokenfactory.v1beta1.QueryBeforeSendHookAddressRequest";
   value: Uint8Array;
 }
 export interface QueryBeforeSendHookAddressRequestAmino {
   denom?: string;
 }
 export interface QueryBeforeSendHookAddressRequestAminoMsg {
-  type: '/symphony.tokenfactory.v1beta1.QueryBeforeSendHookAddressRequest';
+  type: "/symphony.tokenfactory.v1beta1.QueryBeforeSendHookAddressRequest";
   value: QueryBeforeSendHookAddressRequestAmino;
 }
 export interface QueryBeforeSendHookAddressRequestSDKType {
@@ -184,7 +180,7 @@ export interface QueryBeforeSendHookAddressResponse {
   cosmwasmAddress: string;
 }
 export interface QueryBeforeSendHookAddressResponseProtoMsg {
-  typeUrl: '/symphony.tokenfactory.v1beta1.QueryBeforeSendHookAddressResponse';
+  typeUrl: "/symphony.tokenfactory.v1beta1.QueryBeforeSendHookAddressResponse";
   value: Uint8Array;
 }
 /**
@@ -195,7 +191,7 @@ export interface QueryBeforeSendHookAddressResponseAmino {
   cosmwasm_address?: string;
 }
 export interface QueryBeforeSendHookAddressResponseAminoMsg {
-  type: '/symphony.tokenfactory.v1beta1.QueryBeforeSendHookAddressResponse';
+  type: "/symphony.tokenfactory.v1beta1.QueryBeforeSendHookAddressResponse";
   value: QueryBeforeSendHookAddressResponseAmino;
 }
 /**
@@ -207,12 +203,12 @@ export interface QueryBeforeSendHookAddressResponseSDKType {
 }
 export interface QueryAllBeforeSendHooksAddressesRequest {}
 export interface QueryAllBeforeSendHooksAddressesRequestProtoMsg {
-  typeUrl: '/symphony.tokenfactory.v1beta1.QueryAllBeforeSendHooksAddressesRequest';
+  typeUrl: "/symphony.tokenfactory.v1beta1.QueryAllBeforeSendHooksAddressesRequest";
   value: Uint8Array;
 }
 export interface QueryAllBeforeSendHooksAddressesRequestAmino {}
 export interface QueryAllBeforeSendHooksAddressesRequestAminoMsg {
-  type: '/symphony.tokenfactory.v1beta1.QueryAllBeforeSendHooksAddressesRequest';
+  type: "/symphony.tokenfactory.v1beta1.QueryAllBeforeSendHooksAddressesRequest";
   value: QueryAllBeforeSendHooksAddressesRequestAmino;
 }
 export interface QueryAllBeforeSendHooksAddressesRequestSDKType {}
@@ -225,7 +221,7 @@ export interface QueryAllBeforeSendHooksAddressesResponse {
   beforeSendHookAddresses: string[];
 }
 export interface QueryAllBeforeSendHooksAddressesResponseProtoMsg {
-  typeUrl: '/symphony.tokenfactory.v1beta1.QueryAllBeforeSendHooksAddressesResponse';
+  typeUrl: "/symphony.tokenfactory.v1beta1.QueryAllBeforeSendHooksAddressesResponse";
   value: Uint8Array;
 }
 /**
@@ -237,7 +233,7 @@ export interface QueryAllBeforeSendHooksAddressesResponseAmino {
   before_send_hook_addresses?: string[];
 }
 export interface QueryAllBeforeSendHooksAddressesResponseAminoMsg {
-  type: '/symphony.tokenfactory.v1beta1.QueryAllBeforeSendHooksAddressesResponse';
+  type: "/symphony.tokenfactory.v1beta1.QueryAllBeforeSendHooksAddressesResponse";
   value: QueryAllBeforeSendHooksAddressesResponseAmino;
 }
 /**
@@ -252,7 +248,7 @@ function createBaseQueryParamsRequest(): QueryParamsRequest {
   return {};
 }
 export const QueryParamsRequest = {
-  typeUrl: '/symphony.tokenfactory.v1beta1.QueryParamsRequest',
+  typeUrl: "/symphony.tokenfactory.v1beta1.QueryParamsRequest",
   is(o: any): o is QueryParamsRequest {
     return o && o.$typeUrl === QueryParamsRequest.typeUrl;
   },
@@ -262,18 +258,11 @@ export const QueryParamsRequest = {
   isAmino(o: any): o is QueryParamsRequestAmino {
     return o && o.$typeUrl === QueryParamsRequest.typeUrl;
   },
-  encode(
-    _: QueryParamsRequest,
-    writer: BinaryWriter = BinaryWriter.create(),
-  ): BinaryWriter {
+  encode(_: QueryParamsRequest, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
     return writer;
   },
-  decode(
-    input: BinaryReader | Uint8Array,
-    length?: number,
-  ): QueryParamsRequest {
-    const reader =
-      input instanceof BinaryReader ? input : new BinaryReader(input);
+  decode(input: BinaryReader | Uint8Array, length?: number): QueryParamsRequest {
+    const reader = input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseQueryParamsRequest();
     while (reader.pos < end) {
@@ -309,51 +298,36 @@ export const QueryParamsRequest = {
   },
   toProtoMsg(message: QueryParamsRequest): QueryParamsRequestProtoMsg {
     return {
-      typeUrl: '/symphony.tokenfactory.v1beta1.QueryParamsRequest',
-      value: QueryParamsRequest.encode(message).finish(),
+      typeUrl: "/symphony.tokenfactory.v1beta1.QueryParamsRequest",
+      value: QueryParamsRequest.encode(message).finish()
     };
-  },
+  }
 };
 GlobalDecoderRegistry.register(QueryParamsRequest.typeUrl, QueryParamsRequest);
 function createBaseQueryParamsResponse(): QueryParamsResponse {
   return {
-    params: Params.fromPartial({}),
+    params: Params.fromPartial({})
   };
 }
 export const QueryParamsResponse = {
-  typeUrl: '/symphony.tokenfactory.v1beta1.QueryParamsResponse',
+  typeUrl: "/symphony.tokenfactory.v1beta1.QueryParamsResponse",
   is(o: any): o is QueryParamsResponse {
-    return (
-      o && (o.$typeUrl === QueryParamsResponse.typeUrl || Params.is(o.params))
-    );
+    return o && (o.$typeUrl === QueryParamsResponse.typeUrl || Params.is(o.params));
   },
   isSDK(o: any): o is QueryParamsResponseSDKType {
-    return (
-      o &&
-      (o.$typeUrl === QueryParamsResponse.typeUrl || Params.isSDK(o.params))
-    );
+    return o && (o.$typeUrl === QueryParamsResponse.typeUrl || Params.isSDK(o.params));
   },
   isAmino(o: any): o is QueryParamsResponseAmino {
-    return (
-      o &&
-      (o.$typeUrl === QueryParamsResponse.typeUrl || Params.isAmino(o.params))
-    );
+    return o && (o.$typeUrl === QueryParamsResponse.typeUrl || Params.isAmino(o.params));
   },
-  encode(
-    message: QueryParamsResponse,
-    writer: BinaryWriter = BinaryWriter.create(),
-  ): BinaryWriter {
+  encode(message: QueryParamsResponse, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
     if (message.params !== undefined) {
       Params.encode(message.params, writer.uint32(10).fork()).ldelim();
     }
     return writer;
   },
-  decode(
-    input: BinaryReader | Uint8Array,
-    length?: number,
-  ): QueryParamsResponse {
-    const reader =
-      input instanceof BinaryReader ? input : new BinaryReader(input);
+  decode(input: BinaryReader | Uint8Array, length?: number): QueryParamsResponse {
+    const reader = input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseQueryParamsResponse();
     while (reader.pos < end) {
@@ -371,10 +345,7 @@ export const QueryParamsResponse = {
   },
   fromPartial(object: Partial<QueryParamsResponse>): QueryParamsResponse {
     const message = createBaseQueryParamsResponse();
-    message.params =
-      object.params !== undefined && object.params !== null
-        ? Params.fromPartial(object.params)
-        : undefined;
+    message.params = object.params !== undefined && object.params !== null ? Params.fromPartial(object.params) : undefined;
     return message;
   },
   fromAmino(object: QueryParamsResponseAmino): QueryParamsResponse {
@@ -400,58 +371,36 @@ export const QueryParamsResponse = {
   },
   toProtoMsg(message: QueryParamsResponse): QueryParamsResponseProtoMsg {
     return {
-      typeUrl: '/symphony.tokenfactory.v1beta1.QueryParamsResponse',
-      value: QueryParamsResponse.encode(message).finish(),
+      typeUrl: "/symphony.tokenfactory.v1beta1.QueryParamsResponse",
+      value: QueryParamsResponse.encode(message).finish()
     };
-  },
+  }
 };
-GlobalDecoderRegistry.register(
-  QueryParamsResponse.typeUrl,
-  QueryParamsResponse,
-);
+GlobalDecoderRegistry.register(QueryParamsResponse.typeUrl, QueryParamsResponse);
 function createBaseQueryDenomAuthorityMetadataRequest(): QueryDenomAuthorityMetadataRequest {
   return {
-    denom: '',
+    denom: ""
   };
 }
 export const QueryDenomAuthorityMetadataRequest = {
-  typeUrl: '/symphony.tokenfactory.v1beta1.QueryDenomAuthorityMetadataRequest',
+  typeUrl: "/symphony.tokenfactory.v1beta1.QueryDenomAuthorityMetadataRequest",
   is(o: any): o is QueryDenomAuthorityMetadataRequest {
-    return (
-      o &&
-      (o.$typeUrl === QueryDenomAuthorityMetadataRequest.typeUrl ||
-        typeof o.denom === 'string')
-    );
+    return o && (o.$typeUrl === QueryDenomAuthorityMetadataRequest.typeUrl || typeof o.denom === "string");
   },
   isSDK(o: any): o is QueryDenomAuthorityMetadataRequestSDKType {
-    return (
-      o &&
-      (o.$typeUrl === QueryDenomAuthorityMetadataRequest.typeUrl ||
-        typeof o.denom === 'string')
-    );
+    return o && (o.$typeUrl === QueryDenomAuthorityMetadataRequest.typeUrl || typeof o.denom === "string");
   },
   isAmino(o: any): o is QueryDenomAuthorityMetadataRequestAmino {
-    return (
-      o &&
-      (o.$typeUrl === QueryDenomAuthorityMetadataRequest.typeUrl ||
-        typeof o.denom === 'string')
-    );
+    return o && (o.$typeUrl === QueryDenomAuthorityMetadataRequest.typeUrl || typeof o.denom === "string");
   },
-  encode(
-    message: QueryDenomAuthorityMetadataRequest,
-    writer: BinaryWriter = BinaryWriter.create(),
-  ): BinaryWriter {
-    if (message.denom !== '') {
+  encode(message: QueryDenomAuthorityMetadataRequest, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
+    if (message.denom !== "") {
       writer.uint32(10).string(message.denom);
     }
     return writer;
   },
-  decode(
-    input: BinaryReader | Uint8Array,
-    length?: number,
-  ): QueryDenomAuthorityMetadataRequest {
-    const reader =
-      input instanceof BinaryReader ? input : new BinaryReader(input);
+  decode(input: BinaryReader | Uint8Array, length?: number): QueryDenomAuthorityMetadataRequest {
+    const reader = input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseQueryDenomAuthorityMetadataRequest();
     while (reader.pos < end) {
@@ -467,112 +416,71 @@ export const QueryDenomAuthorityMetadataRequest = {
     }
     return message;
   },
-  fromPartial(
-    object: Partial<QueryDenomAuthorityMetadataRequest>,
-  ): QueryDenomAuthorityMetadataRequest {
+  fromPartial(object: Partial<QueryDenomAuthorityMetadataRequest>): QueryDenomAuthorityMetadataRequest {
     const message = createBaseQueryDenomAuthorityMetadataRequest();
-    message.denom = object.denom ?? '';
+    message.denom = object.denom ?? "";
     return message;
   },
-  fromAmino(
-    object: QueryDenomAuthorityMetadataRequestAmino,
-  ): QueryDenomAuthorityMetadataRequest {
+  fromAmino(object: QueryDenomAuthorityMetadataRequestAmino): QueryDenomAuthorityMetadataRequest {
     const message = createBaseQueryDenomAuthorityMetadataRequest();
     if (object.denom !== undefined && object.denom !== null) {
       message.denom = object.denom;
     }
     return message;
   },
-  toAmino(
-    message: QueryDenomAuthorityMetadataRequest,
-  ): QueryDenomAuthorityMetadataRequestAmino {
+  toAmino(message: QueryDenomAuthorityMetadataRequest): QueryDenomAuthorityMetadataRequestAmino {
     const obj: any = {};
-    obj.denom = message.denom === '' ? undefined : message.denom;
+    obj.denom = message.denom === "" ? undefined : message.denom;
     return obj;
   },
-  fromAminoMsg(
-    object: QueryDenomAuthorityMetadataRequestAminoMsg,
-  ): QueryDenomAuthorityMetadataRequest {
+  fromAminoMsg(object: QueryDenomAuthorityMetadataRequestAminoMsg): QueryDenomAuthorityMetadataRequest {
     return QueryDenomAuthorityMetadataRequest.fromAmino(object.value);
   },
-  fromProtoMsg(
-    message: QueryDenomAuthorityMetadataRequestProtoMsg,
-  ): QueryDenomAuthorityMetadataRequest {
+  fromProtoMsg(message: QueryDenomAuthorityMetadataRequestProtoMsg): QueryDenomAuthorityMetadataRequest {
     return QueryDenomAuthorityMetadataRequest.decode(message.value);
   },
   toProto(message: QueryDenomAuthorityMetadataRequest): Uint8Array {
     return QueryDenomAuthorityMetadataRequest.encode(message).finish();
   },
-  toProtoMsg(
-    message: QueryDenomAuthorityMetadataRequest,
-  ): QueryDenomAuthorityMetadataRequestProtoMsg {
+  toProtoMsg(message: QueryDenomAuthorityMetadataRequest): QueryDenomAuthorityMetadataRequestProtoMsg {
     return {
-      typeUrl:
-        '/symphony.tokenfactory.v1beta1.QueryDenomAuthorityMetadataRequest',
-      value: QueryDenomAuthorityMetadataRequest.encode(message).finish(),
+      typeUrl: "/symphony.tokenfactory.v1beta1.QueryDenomAuthorityMetadataRequest",
+      value: QueryDenomAuthorityMetadataRequest.encode(message).finish()
     };
-  },
+  }
 };
-GlobalDecoderRegistry.register(
-  QueryDenomAuthorityMetadataRequest.typeUrl,
-  QueryDenomAuthorityMetadataRequest,
-);
+GlobalDecoderRegistry.register(QueryDenomAuthorityMetadataRequest.typeUrl, QueryDenomAuthorityMetadataRequest);
 function createBaseQueryDenomAuthorityMetadataResponse(): QueryDenomAuthorityMetadataResponse {
   return {
-    authorityMetadata: DenomAuthorityMetadata.fromPartial({}),
+    authorityMetadata: DenomAuthorityMetadata.fromPartial({})
   };
 }
 export const QueryDenomAuthorityMetadataResponse = {
-  typeUrl: '/symphony.tokenfactory.v1beta1.QueryDenomAuthorityMetadataResponse',
+  typeUrl: "/symphony.tokenfactory.v1beta1.QueryDenomAuthorityMetadataResponse",
   is(o: any): o is QueryDenomAuthorityMetadataResponse {
-    return (
-      o &&
-      (o.$typeUrl === QueryDenomAuthorityMetadataResponse.typeUrl ||
-        DenomAuthorityMetadata.is(o.authorityMetadata))
-    );
+    return o && (o.$typeUrl === QueryDenomAuthorityMetadataResponse.typeUrl || DenomAuthorityMetadata.is(o.authorityMetadata));
   },
   isSDK(o: any): o is QueryDenomAuthorityMetadataResponseSDKType {
-    return (
-      o &&
-      (o.$typeUrl === QueryDenomAuthorityMetadataResponse.typeUrl ||
-        DenomAuthorityMetadata.isSDK(o.authority_metadata))
-    );
+    return o && (o.$typeUrl === QueryDenomAuthorityMetadataResponse.typeUrl || DenomAuthorityMetadata.isSDK(o.authority_metadata));
   },
   isAmino(o: any): o is QueryDenomAuthorityMetadataResponseAmino {
-    return (
-      o &&
-      (o.$typeUrl === QueryDenomAuthorityMetadataResponse.typeUrl ||
-        DenomAuthorityMetadata.isAmino(o.authority_metadata))
-    );
+    return o && (o.$typeUrl === QueryDenomAuthorityMetadataResponse.typeUrl || DenomAuthorityMetadata.isAmino(o.authority_metadata));
   },
-  encode(
-    message: QueryDenomAuthorityMetadataResponse,
-    writer: BinaryWriter = BinaryWriter.create(),
-  ): BinaryWriter {
+  encode(message: QueryDenomAuthorityMetadataResponse, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
     if (message.authorityMetadata !== undefined) {
-      DenomAuthorityMetadata.encode(
-        message.authorityMetadata,
-        writer.uint32(10).fork(),
-      ).ldelim();
+      DenomAuthorityMetadata.encode(message.authorityMetadata, writer.uint32(10).fork()).ldelim();
     }
     return writer;
   },
-  decode(
-    input: BinaryReader | Uint8Array,
-    length?: number,
-  ): QueryDenomAuthorityMetadataResponse {
-    const reader =
-      input instanceof BinaryReader ? input : new BinaryReader(input);
+  decode(input: BinaryReader | Uint8Array, length?: number): QueryDenomAuthorityMetadataResponse {
+    const reader = input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseQueryDenomAuthorityMetadataResponse();
     while (reader.pos < end) {
       const tag = reader.uint32();
       switch (tag >>> 3) {
         case 1:
-          message.authorityMetadata = DenomAuthorityMetadata.decode(
-            reader,
-            reader.uint32(),
-          );
+          message.authorityMetadata = DenomAuthorityMetadata.decode(reader, reader.uint32());
           break;
         default:
           reader.skipType(tag & 7);
@@ -581,110 +489,64 @@ export const QueryDenomAuthorityMetadataResponse = {
     }
     return message;
   },
-  fromPartial(
-    object: Partial<QueryDenomAuthorityMetadataResponse>,
-  ): QueryDenomAuthorityMetadataResponse {
+  fromPartial(object: Partial<QueryDenomAuthorityMetadataResponse>): QueryDenomAuthorityMetadataResponse {
     const message = createBaseQueryDenomAuthorityMetadataResponse();
-    message.authorityMetadata =
-      object.authorityMetadata !== undefined &&
-      object.authorityMetadata !== null
-        ? DenomAuthorityMetadata.fromPartial(object.authorityMetadata)
-        : undefined;
+    message.authorityMetadata = object.authorityMetadata !== undefined && object.authorityMetadata !== null ? DenomAuthorityMetadata.fromPartial(object.authorityMetadata) : undefined;
     return message;
   },
-  fromAmino(
-    object: QueryDenomAuthorityMetadataResponseAmino,
-  ): QueryDenomAuthorityMetadataResponse {
+  fromAmino(object: QueryDenomAuthorityMetadataResponseAmino): QueryDenomAuthorityMetadataResponse {
     const message = createBaseQueryDenomAuthorityMetadataResponse();
-    if (
-      object.authority_metadata !== undefined &&
-      object.authority_metadata !== null
-    ) {
-      message.authorityMetadata = DenomAuthorityMetadata.fromAmino(
-        object.authority_metadata,
-      );
+    if (object.authority_metadata !== undefined && object.authority_metadata !== null) {
+      message.authorityMetadata = DenomAuthorityMetadata.fromAmino(object.authority_metadata);
     }
     return message;
   },
-  toAmino(
-    message: QueryDenomAuthorityMetadataResponse,
-  ): QueryDenomAuthorityMetadataResponseAmino {
+  toAmino(message: QueryDenomAuthorityMetadataResponse): QueryDenomAuthorityMetadataResponseAmino {
     const obj: any = {};
-    obj.authority_metadata = message.authorityMetadata
-      ? DenomAuthorityMetadata.toAmino(message.authorityMetadata)
-      : undefined;
+    obj.authority_metadata = message.authorityMetadata ? DenomAuthorityMetadata.toAmino(message.authorityMetadata) : undefined;
     return obj;
   },
-  fromAminoMsg(
-    object: QueryDenomAuthorityMetadataResponseAminoMsg,
-  ): QueryDenomAuthorityMetadataResponse {
+  fromAminoMsg(object: QueryDenomAuthorityMetadataResponseAminoMsg): QueryDenomAuthorityMetadataResponse {
     return QueryDenomAuthorityMetadataResponse.fromAmino(object.value);
   },
-  fromProtoMsg(
-    message: QueryDenomAuthorityMetadataResponseProtoMsg,
-  ): QueryDenomAuthorityMetadataResponse {
+  fromProtoMsg(message: QueryDenomAuthorityMetadataResponseProtoMsg): QueryDenomAuthorityMetadataResponse {
     return QueryDenomAuthorityMetadataResponse.decode(message.value);
   },
   toProto(message: QueryDenomAuthorityMetadataResponse): Uint8Array {
     return QueryDenomAuthorityMetadataResponse.encode(message).finish();
   },
-  toProtoMsg(
-    message: QueryDenomAuthorityMetadataResponse,
-  ): QueryDenomAuthorityMetadataResponseProtoMsg {
+  toProtoMsg(message: QueryDenomAuthorityMetadataResponse): QueryDenomAuthorityMetadataResponseProtoMsg {
     return {
-      typeUrl:
-        '/symphony.tokenfactory.v1beta1.QueryDenomAuthorityMetadataResponse',
-      value: QueryDenomAuthorityMetadataResponse.encode(message).finish(),
+      typeUrl: "/symphony.tokenfactory.v1beta1.QueryDenomAuthorityMetadataResponse",
+      value: QueryDenomAuthorityMetadataResponse.encode(message).finish()
     };
-  },
+  }
 };
-GlobalDecoderRegistry.register(
-  QueryDenomAuthorityMetadataResponse.typeUrl,
-  QueryDenomAuthorityMetadataResponse,
-);
+GlobalDecoderRegistry.register(QueryDenomAuthorityMetadataResponse.typeUrl, QueryDenomAuthorityMetadataResponse);
 function createBaseQueryDenomsFromCreatorRequest(): QueryDenomsFromCreatorRequest {
   return {
-    creator: '',
+    creator: ""
   };
 }
 export const QueryDenomsFromCreatorRequest = {
-  typeUrl: '/symphony.tokenfactory.v1beta1.QueryDenomsFromCreatorRequest',
+  typeUrl: "/symphony.tokenfactory.v1beta1.QueryDenomsFromCreatorRequest",
   is(o: any): o is QueryDenomsFromCreatorRequest {
-    return (
-      o &&
-      (o.$typeUrl === QueryDenomsFromCreatorRequest.typeUrl ||
-        typeof o.creator === 'string')
-    );
+    return o && (o.$typeUrl === QueryDenomsFromCreatorRequest.typeUrl || typeof o.creator === "string");
   },
   isSDK(o: any): o is QueryDenomsFromCreatorRequestSDKType {
-    return (
-      o &&
-      (o.$typeUrl === QueryDenomsFromCreatorRequest.typeUrl ||
-        typeof o.creator === 'string')
-    );
+    return o && (o.$typeUrl === QueryDenomsFromCreatorRequest.typeUrl || typeof o.creator === "string");
   },
   isAmino(o: any): o is QueryDenomsFromCreatorRequestAmino {
-    return (
-      o &&
-      (o.$typeUrl === QueryDenomsFromCreatorRequest.typeUrl ||
-        typeof o.creator === 'string')
-    );
+    return o && (o.$typeUrl === QueryDenomsFromCreatorRequest.typeUrl || typeof o.creator === "string");
   },
-  encode(
-    message: QueryDenomsFromCreatorRequest,
-    writer: BinaryWriter = BinaryWriter.create(),
-  ): BinaryWriter {
-    if (message.creator !== '') {
+  encode(message: QueryDenomsFromCreatorRequest, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
+    if (message.creator !== "") {
       writer.uint32(10).string(message.creator);
     }
     return writer;
   },
-  decode(
-    input: BinaryReader | Uint8Array,
-    length?: number,
-  ): QueryDenomsFromCreatorRequest {
-    const reader =
-      input instanceof BinaryReader ? input : new BinaryReader(input);
+  decode(input: BinaryReader | Uint8Array, length?: number): QueryDenomsFromCreatorRequest {
+    const reader = input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseQueryDenomsFromCreatorRequest();
     while (reader.pos < end) {
@@ -700,101 +562,64 @@ export const QueryDenomsFromCreatorRequest = {
     }
     return message;
   },
-  fromPartial(
-    object: Partial<QueryDenomsFromCreatorRequest>,
-  ): QueryDenomsFromCreatorRequest {
+  fromPartial(object: Partial<QueryDenomsFromCreatorRequest>): QueryDenomsFromCreatorRequest {
     const message = createBaseQueryDenomsFromCreatorRequest();
-    message.creator = object.creator ?? '';
+    message.creator = object.creator ?? "";
     return message;
   },
-  fromAmino(
-    object: QueryDenomsFromCreatorRequestAmino,
-  ): QueryDenomsFromCreatorRequest {
+  fromAmino(object: QueryDenomsFromCreatorRequestAmino): QueryDenomsFromCreatorRequest {
     const message = createBaseQueryDenomsFromCreatorRequest();
     if (object.creator !== undefined && object.creator !== null) {
       message.creator = object.creator;
     }
     return message;
   },
-  toAmino(
-    message: QueryDenomsFromCreatorRequest,
-  ): QueryDenomsFromCreatorRequestAmino {
+  toAmino(message: QueryDenomsFromCreatorRequest): QueryDenomsFromCreatorRequestAmino {
     const obj: any = {};
-    obj.creator = message.creator === '' ? undefined : message.creator;
+    obj.creator = message.creator === "" ? undefined : message.creator;
     return obj;
   },
-  fromAminoMsg(
-    object: QueryDenomsFromCreatorRequestAminoMsg,
-  ): QueryDenomsFromCreatorRequest {
+  fromAminoMsg(object: QueryDenomsFromCreatorRequestAminoMsg): QueryDenomsFromCreatorRequest {
     return QueryDenomsFromCreatorRequest.fromAmino(object.value);
   },
-  fromProtoMsg(
-    message: QueryDenomsFromCreatorRequestProtoMsg,
-  ): QueryDenomsFromCreatorRequest {
+  fromProtoMsg(message: QueryDenomsFromCreatorRequestProtoMsg): QueryDenomsFromCreatorRequest {
     return QueryDenomsFromCreatorRequest.decode(message.value);
   },
   toProto(message: QueryDenomsFromCreatorRequest): Uint8Array {
     return QueryDenomsFromCreatorRequest.encode(message).finish();
   },
-  toProtoMsg(
-    message: QueryDenomsFromCreatorRequest,
-  ): QueryDenomsFromCreatorRequestProtoMsg {
+  toProtoMsg(message: QueryDenomsFromCreatorRequest): QueryDenomsFromCreatorRequestProtoMsg {
     return {
-      typeUrl: '/symphony.tokenfactory.v1beta1.QueryDenomsFromCreatorRequest',
-      value: QueryDenomsFromCreatorRequest.encode(message).finish(),
+      typeUrl: "/symphony.tokenfactory.v1beta1.QueryDenomsFromCreatorRequest",
+      value: QueryDenomsFromCreatorRequest.encode(message).finish()
     };
-  },
+  }
 };
-GlobalDecoderRegistry.register(
-  QueryDenomsFromCreatorRequest.typeUrl,
-  QueryDenomsFromCreatorRequest,
-);
+GlobalDecoderRegistry.register(QueryDenomsFromCreatorRequest.typeUrl, QueryDenomsFromCreatorRequest);
 function createBaseQueryDenomsFromCreatorResponse(): QueryDenomsFromCreatorResponse {
   return {
-    denoms: [],
+    denoms: []
   };
 }
 export const QueryDenomsFromCreatorResponse = {
-  typeUrl: '/symphony.tokenfactory.v1beta1.QueryDenomsFromCreatorResponse',
+  typeUrl: "/symphony.tokenfactory.v1beta1.QueryDenomsFromCreatorResponse",
   is(o: any): o is QueryDenomsFromCreatorResponse {
-    return (
-      o &&
-      (o.$typeUrl === QueryDenomsFromCreatorResponse.typeUrl ||
-        (Array.isArray(o.denoms) &&
-          (!o.denoms.length || typeof o.denoms[0] === 'string')))
-    );
+    return o && (o.$typeUrl === QueryDenomsFromCreatorResponse.typeUrl || Array.isArray(o.denoms) && (!o.denoms.length || typeof o.denoms[0] === "string"));
   },
   isSDK(o: any): o is QueryDenomsFromCreatorResponseSDKType {
-    return (
-      o &&
-      (o.$typeUrl === QueryDenomsFromCreatorResponse.typeUrl ||
-        (Array.isArray(o.denoms) &&
-          (!o.denoms.length || typeof o.denoms[0] === 'string')))
-    );
+    return o && (o.$typeUrl === QueryDenomsFromCreatorResponse.typeUrl || Array.isArray(o.denoms) && (!o.denoms.length || typeof o.denoms[0] === "string"));
   },
   isAmino(o: any): o is QueryDenomsFromCreatorResponseAmino {
-    return (
-      o &&
-      (o.$typeUrl === QueryDenomsFromCreatorResponse.typeUrl ||
-        (Array.isArray(o.denoms) &&
-          (!o.denoms.length || typeof o.denoms[0] === 'string')))
-    );
+    return o && (o.$typeUrl === QueryDenomsFromCreatorResponse.typeUrl || Array.isArray(o.denoms) && (!o.denoms.length || typeof o.denoms[0] === "string"));
   },
-  encode(
-    message: QueryDenomsFromCreatorResponse,
-    writer: BinaryWriter = BinaryWriter.create(),
-  ): BinaryWriter {
+  encode(message: QueryDenomsFromCreatorResponse, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
     for (const v of message.denoms) {
       writer.uint32(10).string(v!);
     }
     return writer;
   },
-  decode(
-    input: BinaryReader | Uint8Array,
-    length?: number,
-  ): QueryDenomsFromCreatorResponse {
-    const reader =
-      input instanceof BinaryReader ? input : new BinaryReader(input);
+  decode(input: BinaryReader | Uint8Array, length?: number): QueryDenomsFromCreatorResponse {
+    const reader = input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseQueryDenomsFromCreatorResponse();
     while (reader.pos < end) {
@@ -810,23 +635,17 @@ export const QueryDenomsFromCreatorResponse = {
     }
     return message;
   },
-  fromPartial(
-    object: Partial<QueryDenomsFromCreatorResponse>,
-  ): QueryDenomsFromCreatorResponse {
+  fromPartial(object: Partial<QueryDenomsFromCreatorResponse>): QueryDenomsFromCreatorResponse {
     const message = createBaseQueryDenomsFromCreatorResponse();
     message.denoms = object.denoms?.map(e => e) || [];
     return message;
   },
-  fromAmino(
-    object: QueryDenomsFromCreatorResponseAmino,
-  ): QueryDenomsFromCreatorResponse {
+  fromAmino(object: QueryDenomsFromCreatorResponseAmino): QueryDenomsFromCreatorResponse {
     const message = createBaseQueryDenomsFromCreatorResponse();
     message.denoms = object.denoms?.map(e => e) || [];
     return message;
   },
-  toAmino(
-    message: QueryDenomsFromCreatorResponse,
-  ): QueryDenomsFromCreatorResponseAmino {
+  toAmino(message: QueryDenomsFromCreatorResponse): QueryDenomsFromCreatorResponseAmino {
     const obj: any = {};
     if (message.denoms) {
       obj.denoms = message.denoms.map(e => e);
@@ -835,75 +654,47 @@ export const QueryDenomsFromCreatorResponse = {
     }
     return obj;
   },
-  fromAminoMsg(
-    object: QueryDenomsFromCreatorResponseAminoMsg,
-  ): QueryDenomsFromCreatorResponse {
+  fromAminoMsg(object: QueryDenomsFromCreatorResponseAminoMsg): QueryDenomsFromCreatorResponse {
     return QueryDenomsFromCreatorResponse.fromAmino(object.value);
   },
-  fromProtoMsg(
-    message: QueryDenomsFromCreatorResponseProtoMsg,
-  ): QueryDenomsFromCreatorResponse {
+  fromProtoMsg(message: QueryDenomsFromCreatorResponseProtoMsg): QueryDenomsFromCreatorResponse {
     return QueryDenomsFromCreatorResponse.decode(message.value);
   },
   toProto(message: QueryDenomsFromCreatorResponse): Uint8Array {
     return QueryDenomsFromCreatorResponse.encode(message).finish();
   },
-  toProtoMsg(
-    message: QueryDenomsFromCreatorResponse,
-  ): QueryDenomsFromCreatorResponseProtoMsg {
+  toProtoMsg(message: QueryDenomsFromCreatorResponse): QueryDenomsFromCreatorResponseProtoMsg {
     return {
-      typeUrl: '/symphony.tokenfactory.v1beta1.QueryDenomsFromCreatorResponse',
-      value: QueryDenomsFromCreatorResponse.encode(message).finish(),
+      typeUrl: "/symphony.tokenfactory.v1beta1.QueryDenomsFromCreatorResponse",
+      value: QueryDenomsFromCreatorResponse.encode(message).finish()
     };
-  },
+  }
 };
-GlobalDecoderRegistry.register(
-  QueryDenomsFromCreatorResponse.typeUrl,
-  QueryDenomsFromCreatorResponse,
-);
+GlobalDecoderRegistry.register(QueryDenomsFromCreatorResponse.typeUrl, QueryDenomsFromCreatorResponse);
 function createBaseQueryBeforeSendHookAddressRequest(): QueryBeforeSendHookAddressRequest {
   return {
-    denom: '',
+    denom: ""
   };
 }
 export const QueryBeforeSendHookAddressRequest = {
-  typeUrl: '/symphony.tokenfactory.v1beta1.QueryBeforeSendHookAddressRequest',
+  typeUrl: "/symphony.tokenfactory.v1beta1.QueryBeforeSendHookAddressRequest",
   is(o: any): o is QueryBeforeSendHookAddressRequest {
-    return (
-      o &&
-      (o.$typeUrl === QueryBeforeSendHookAddressRequest.typeUrl ||
-        typeof o.denom === 'string')
-    );
+    return o && (o.$typeUrl === QueryBeforeSendHookAddressRequest.typeUrl || typeof o.denom === "string");
   },
   isSDK(o: any): o is QueryBeforeSendHookAddressRequestSDKType {
-    return (
-      o &&
-      (o.$typeUrl === QueryBeforeSendHookAddressRequest.typeUrl ||
-        typeof o.denom === 'string')
-    );
+    return o && (o.$typeUrl === QueryBeforeSendHookAddressRequest.typeUrl || typeof o.denom === "string");
   },
   isAmino(o: any): o is QueryBeforeSendHookAddressRequestAmino {
-    return (
-      o &&
-      (o.$typeUrl === QueryBeforeSendHookAddressRequest.typeUrl ||
-        typeof o.denom === 'string')
-    );
+    return o && (o.$typeUrl === QueryBeforeSendHookAddressRequest.typeUrl || typeof o.denom === "string");
   },
-  encode(
-    message: QueryBeforeSendHookAddressRequest,
-    writer: BinaryWriter = BinaryWriter.create(),
-  ): BinaryWriter {
-    if (message.denom !== '') {
+  encode(message: QueryBeforeSendHookAddressRequest, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
+    if (message.denom !== "") {
       writer.uint32(10).string(message.denom);
     }
     return writer;
   },
-  decode(
-    input: BinaryReader | Uint8Array,
-    length?: number,
-  ): QueryBeforeSendHookAddressRequest {
-    const reader =
-      input instanceof BinaryReader ? input : new BinaryReader(input);
+  decode(input: BinaryReader | Uint8Array, length?: number): QueryBeforeSendHookAddressRequest {
+    const reader = input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseQueryBeforeSendHookAddressRequest();
     while (reader.pos < end) {
@@ -919,99 +710,64 @@ export const QueryBeforeSendHookAddressRequest = {
     }
     return message;
   },
-  fromPartial(
-    object: Partial<QueryBeforeSendHookAddressRequest>,
-  ): QueryBeforeSendHookAddressRequest {
+  fromPartial(object: Partial<QueryBeforeSendHookAddressRequest>): QueryBeforeSendHookAddressRequest {
     const message = createBaseQueryBeforeSendHookAddressRequest();
-    message.denom = object.denom ?? '';
+    message.denom = object.denom ?? "";
     return message;
   },
-  fromAmino(
-    object: QueryBeforeSendHookAddressRequestAmino,
-  ): QueryBeforeSendHookAddressRequest {
+  fromAmino(object: QueryBeforeSendHookAddressRequestAmino): QueryBeforeSendHookAddressRequest {
     const message = createBaseQueryBeforeSendHookAddressRequest();
     if (object.denom !== undefined && object.denom !== null) {
       message.denom = object.denom;
     }
     return message;
   },
-  toAmino(
-    message: QueryBeforeSendHookAddressRequest,
-  ): QueryBeforeSendHookAddressRequestAmino {
+  toAmino(message: QueryBeforeSendHookAddressRequest): QueryBeforeSendHookAddressRequestAmino {
     const obj: any = {};
-    obj.denom = message.denom === '' ? undefined : message.denom;
+    obj.denom = message.denom === "" ? undefined : message.denom;
     return obj;
   },
-  fromAminoMsg(
-    object: QueryBeforeSendHookAddressRequestAminoMsg,
-  ): QueryBeforeSendHookAddressRequest {
+  fromAminoMsg(object: QueryBeforeSendHookAddressRequestAminoMsg): QueryBeforeSendHookAddressRequest {
     return QueryBeforeSendHookAddressRequest.fromAmino(object.value);
   },
-  fromProtoMsg(
-    message: QueryBeforeSendHookAddressRequestProtoMsg,
-  ): QueryBeforeSendHookAddressRequest {
+  fromProtoMsg(message: QueryBeforeSendHookAddressRequestProtoMsg): QueryBeforeSendHookAddressRequest {
     return QueryBeforeSendHookAddressRequest.decode(message.value);
   },
   toProto(message: QueryBeforeSendHookAddressRequest): Uint8Array {
     return QueryBeforeSendHookAddressRequest.encode(message).finish();
   },
-  toProtoMsg(
-    message: QueryBeforeSendHookAddressRequest,
-  ): QueryBeforeSendHookAddressRequestProtoMsg {
+  toProtoMsg(message: QueryBeforeSendHookAddressRequest): QueryBeforeSendHookAddressRequestProtoMsg {
     return {
-      typeUrl:
-        '/symphony.tokenfactory.v1beta1.QueryBeforeSendHookAddressRequest',
-      value: QueryBeforeSendHookAddressRequest.encode(message).finish(),
+      typeUrl: "/symphony.tokenfactory.v1beta1.QueryBeforeSendHookAddressRequest",
+      value: QueryBeforeSendHookAddressRequest.encode(message).finish()
     };
-  },
+  }
 };
-GlobalDecoderRegistry.register(
-  QueryBeforeSendHookAddressRequest.typeUrl,
-  QueryBeforeSendHookAddressRequest,
-);
+GlobalDecoderRegistry.register(QueryBeforeSendHookAddressRequest.typeUrl, QueryBeforeSendHookAddressRequest);
 function createBaseQueryBeforeSendHookAddressResponse(): QueryBeforeSendHookAddressResponse {
   return {
-    cosmwasmAddress: '',
+    cosmwasmAddress: ""
   };
 }
 export const QueryBeforeSendHookAddressResponse = {
-  typeUrl: '/symphony.tokenfactory.v1beta1.QueryBeforeSendHookAddressResponse',
+  typeUrl: "/symphony.tokenfactory.v1beta1.QueryBeforeSendHookAddressResponse",
   is(o: any): o is QueryBeforeSendHookAddressResponse {
-    return (
-      o &&
-      (o.$typeUrl === QueryBeforeSendHookAddressResponse.typeUrl ||
-        typeof o.cosmwasmAddress === 'string')
-    );
+    return o && (o.$typeUrl === QueryBeforeSendHookAddressResponse.typeUrl || typeof o.cosmwasmAddress === "string");
   },
   isSDK(o: any): o is QueryBeforeSendHookAddressResponseSDKType {
-    return (
-      o &&
-      (o.$typeUrl === QueryBeforeSendHookAddressResponse.typeUrl ||
-        typeof o.cosmwasm_address === 'string')
-    );
+    return o && (o.$typeUrl === QueryBeforeSendHookAddressResponse.typeUrl || typeof o.cosmwasm_address === "string");
   },
   isAmino(o: any): o is QueryBeforeSendHookAddressResponseAmino {
-    return (
-      o &&
-      (o.$typeUrl === QueryBeforeSendHookAddressResponse.typeUrl ||
-        typeof o.cosmwasm_address === 'string')
-    );
+    return o && (o.$typeUrl === QueryBeforeSendHookAddressResponse.typeUrl || typeof o.cosmwasm_address === "string");
   },
-  encode(
-    message: QueryBeforeSendHookAddressResponse,
-    writer: BinaryWriter = BinaryWriter.create(),
-  ): BinaryWriter {
-    if (message.cosmwasmAddress !== '') {
+  encode(message: QueryBeforeSendHookAddressResponse, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
+    if (message.cosmwasmAddress !== "") {
       writer.uint32(10).string(message.cosmwasmAddress);
     }
     return writer;
   },
-  decode(
-    input: BinaryReader | Uint8Array,
-    length?: number,
-  ): QueryBeforeSendHookAddressResponse {
-    const reader =
-      input instanceof BinaryReader ? input : new BinaryReader(input);
+  decode(input: BinaryReader | Uint8Array, length?: number): QueryBeforeSendHookAddressResponse {
+    const reader = input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseQueryBeforeSendHookAddressResponse();
     while (reader.pos < end) {
@@ -1027,66 +783,45 @@ export const QueryBeforeSendHookAddressResponse = {
     }
     return message;
   },
-  fromPartial(
-    object: Partial<QueryBeforeSendHookAddressResponse>,
-  ): QueryBeforeSendHookAddressResponse {
+  fromPartial(object: Partial<QueryBeforeSendHookAddressResponse>): QueryBeforeSendHookAddressResponse {
     const message = createBaseQueryBeforeSendHookAddressResponse();
-    message.cosmwasmAddress = object.cosmwasmAddress ?? '';
+    message.cosmwasmAddress = object.cosmwasmAddress ?? "";
     return message;
   },
-  fromAmino(
-    object: QueryBeforeSendHookAddressResponseAmino,
-  ): QueryBeforeSendHookAddressResponse {
+  fromAmino(object: QueryBeforeSendHookAddressResponseAmino): QueryBeforeSendHookAddressResponse {
     const message = createBaseQueryBeforeSendHookAddressResponse();
-    if (
-      object.cosmwasm_address !== undefined &&
-      object.cosmwasm_address !== null
-    ) {
+    if (object.cosmwasm_address !== undefined && object.cosmwasm_address !== null) {
       message.cosmwasmAddress = object.cosmwasm_address;
     }
     return message;
   },
-  toAmino(
-    message: QueryBeforeSendHookAddressResponse,
-  ): QueryBeforeSendHookAddressResponseAmino {
+  toAmino(message: QueryBeforeSendHookAddressResponse): QueryBeforeSendHookAddressResponseAmino {
     const obj: any = {};
-    obj.cosmwasm_address =
-      message.cosmwasmAddress === '' ? undefined : message.cosmwasmAddress;
+    obj.cosmwasm_address = message.cosmwasmAddress === "" ? undefined : message.cosmwasmAddress;
     return obj;
   },
-  fromAminoMsg(
-    object: QueryBeforeSendHookAddressResponseAminoMsg,
-  ): QueryBeforeSendHookAddressResponse {
+  fromAminoMsg(object: QueryBeforeSendHookAddressResponseAminoMsg): QueryBeforeSendHookAddressResponse {
     return QueryBeforeSendHookAddressResponse.fromAmino(object.value);
   },
-  fromProtoMsg(
-    message: QueryBeforeSendHookAddressResponseProtoMsg,
-  ): QueryBeforeSendHookAddressResponse {
+  fromProtoMsg(message: QueryBeforeSendHookAddressResponseProtoMsg): QueryBeforeSendHookAddressResponse {
     return QueryBeforeSendHookAddressResponse.decode(message.value);
   },
   toProto(message: QueryBeforeSendHookAddressResponse): Uint8Array {
     return QueryBeforeSendHookAddressResponse.encode(message).finish();
   },
-  toProtoMsg(
-    message: QueryBeforeSendHookAddressResponse,
-  ): QueryBeforeSendHookAddressResponseProtoMsg {
+  toProtoMsg(message: QueryBeforeSendHookAddressResponse): QueryBeforeSendHookAddressResponseProtoMsg {
     return {
-      typeUrl:
-        '/symphony.tokenfactory.v1beta1.QueryBeforeSendHookAddressResponse',
-      value: QueryBeforeSendHookAddressResponse.encode(message).finish(),
+      typeUrl: "/symphony.tokenfactory.v1beta1.QueryBeforeSendHookAddressResponse",
+      value: QueryBeforeSendHookAddressResponse.encode(message).finish()
     };
-  },
+  }
 };
-GlobalDecoderRegistry.register(
-  QueryBeforeSendHookAddressResponse.typeUrl,
-  QueryBeforeSendHookAddressResponse,
-);
+GlobalDecoderRegistry.register(QueryBeforeSendHookAddressResponse.typeUrl, QueryBeforeSendHookAddressResponse);
 function createBaseQueryAllBeforeSendHooksAddressesRequest(): QueryAllBeforeSendHooksAddressesRequest {
   return {};
 }
 export const QueryAllBeforeSendHooksAddressesRequest = {
-  typeUrl:
-    '/symphony.tokenfactory.v1beta1.QueryAllBeforeSendHooksAddressesRequest',
+  typeUrl: "/symphony.tokenfactory.v1beta1.QueryAllBeforeSendHooksAddressesRequest",
   is(o: any): o is QueryAllBeforeSendHooksAddressesRequest {
     return o && o.$typeUrl === QueryAllBeforeSendHooksAddressesRequest.typeUrl;
   },
@@ -1096,18 +831,11 @@ export const QueryAllBeforeSendHooksAddressesRequest = {
   isAmino(o: any): o is QueryAllBeforeSendHooksAddressesRequestAmino {
     return o && o.$typeUrl === QueryAllBeforeSendHooksAddressesRequest.typeUrl;
   },
-  encode(
-    _: QueryAllBeforeSendHooksAddressesRequest,
-    writer: BinaryWriter = BinaryWriter.create(),
-  ): BinaryWriter {
+  encode(_: QueryAllBeforeSendHooksAddressesRequest, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
     return writer;
   },
-  decode(
-    input: BinaryReader | Uint8Array,
-    length?: number,
-  ): QueryAllBeforeSendHooksAddressesRequest {
-    const reader =
-      input instanceof BinaryReader ? input : new BinaryReader(input);
+  decode(input: BinaryReader | Uint8Array, length?: number): QueryAllBeforeSendHooksAddressesRequest {
+    const reader = input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseQueryAllBeforeSendHooksAddressesRequest();
     while (reader.pos < end) {
@@ -1120,97 +848,53 @@ export const QueryAllBeforeSendHooksAddressesRequest = {
     }
     return message;
   },
-  fromPartial(
-    _: Partial<QueryAllBeforeSendHooksAddressesRequest>,
-  ): QueryAllBeforeSendHooksAddressesRequest {
+  fromPartial(_: Partial<QueryAllBeforeSendHooksAddressesRequest>): QueryAllBeforeSendHooksAddressesRequest {
     const message = createBaseQueryAllBeforeSendHooksAddressesRequest();
     return message;
   },
-  fromAmino(
-    _: QueryAllBeforeSendHooksAddressesRequestAmino,
-  ): QueryAllBeforeSendHooksAddressesRequest {
+  fromAmino(_: QueryAllBeforeSendHooksAddressesRequestAmino): QueryAllBeforeSendHooksAddressesRequest {
     const message = createBaseQueryAllBeforeSendHooksAddressesRequest();
     return message;
   },
-  toAmino(
-    _: QueryAllBeforeSendHooksAddressesRequest,
-  ): QueryAllBeforeSendHooksAddressesRequestAmino {
+  toAmino(_: QueryAllBeforeSendHooksAddressesRequest): QueryAllBeforeSendHooksAddressesRequestAmino {
     const obj: any = {};
     return obj;
   },
-  fromAminoMsg(
-    object: QueryAllBeforeSendHooksAddressesRequestAminoMsg,
-  ): QueryAllBeforeSendHooksAddressesRequest {
+  fromAminoMsg(object: QueryAllBeforeSendHooksAddressesRequestAminoMsg): QueryAllBeforeSendHooksAddressesRequest {
     return QueryAllBeforeSendHooksAddressesRequest.fromAmino(object.value);
   },
-  fromProtoMsg(
-    message: QueryAllBeforeSendHooksAddressesRequestProtoMsg,
-  ): QueryAllBeforeSendHooksAddressesRequest {
+  fromProtoMsg(message: QueryAllBeforeSendHooksAddressesRequestProtoMsg): QueryAllBeforeSendHooksAddressesRequest {
     return QueryAllBeforeSendHooksAddressesRequest.decode(message.value);
   },
   toProto(message: QueryAllBeforeSendHooksAddressesRequest): Uint8Array {
     return QueryAllBeforeSendHooksAddressesRequest.encode(message).finish();
   },
-  toProtoMsg(
-    message: QueryAllBeforeSendHooksAddressesRequest,
-  ): QueryAllBeforeSendHooksAddressesRequestProtoMsg {
+  toProtoMsg(message: QueryAllBeforeSendHooksAddressesRequest): QueryAllBeforeSendHooksAddressesRequestProtoMsg {
     return {
-      typeUrl:
-        '/symphony.tokenfactory.v1beta1.QueryAllBeforeSendHooksAddressesRequest',
-      value: QueryAllBeforeSendHooksAddressesRequest.encode(message).finish(),
+      typeUrl: "/symphony.tokenfactory.v1beta1.QueryAllBeforeSendHooksAddressesRequest",
+      value: QueryAllBeforeSendHooksAddressesRequest.encode(message).finish()
     };
-  },
+  }
 };
-GlobalDecoderRegistry.register(
-  QueryAllBeforeSendHooksAddressesRequest.typeUrl,
-  QueryAllBeforeSendHooksAddressesRequest,
-);
+GlobalDecoderRegistry.register(QueryAllBeforeSendHooksAddressesRequest.typeUrl, QueryAllBeforeSendHooksAddressesRequest);
 function createBaseQueryAllBeforeSendHooksAddressesResponse(): QueryAllBeforeSendHooksAddressesResponse {
   return {
     denoms: [],
-    beforeSendHookAddresses: [],
+    beforeSendHookAddresses: []
   };
 }
 export const QueryAllBeforeSendHooksAddressesResponse = {
-  typeUrl:
-    '/symphony.tokenfactory.v1beta1.QueryAllBeforeSendHooksAddressesResponse',
+  typeUrl: "/symphony.tokenfactory.v1beta1.QueryAllBeforeSendHooksAddressesResponse",
   is(o: any): o is QueryAllBeforeSendHooksAddressesResponse {
-    return (
-      o &&
-      (o.$typeUrl === QueryAllBeforeSendHooksAddressesResponse.typeUrl ||
-        (Array.isArray(o.denoms) &&
-          (!o.denoms.length || typeof o.denoms[0] === 'string') &&
-          Array.isArray(o.beforeSendHookAddresses) &&
-          (!o.beforeSendHookAddresses.length ||
-            typeof o.beforeSendHookAddresses[0] === 'string')))
-    );
+    return o && (o.$typeUrl === QueryAllBeforeSendHooksAddressesResponse.typeUrl || Array.isArray(o.denoms) && (!o.denoms.length || typeof o.denoms[0] === "string") && Array.isArray(o.beforeSendHookAddresses) && (!o.beforeSendHookAddresses.length || typeof o.beforeSendHookAddresses[0] === "string"));
   },
   isSDK(o: any): o is QueryAllBeforeSendHooksAddressesResponseSDKType {
-    return (
-      o &&
-      (o.$typeUrl === QueryAllBeforeSendHooksAddressesResponse.typeUrl ||
-        (Array.isArray(o.denoms) &&
-          (!o.denoms.length || typeof o.denoms[0] === 'string') &&
-          Array.isArray(o.before_send_hook_addresses) &&
-          (!o.before_send_hook_addresses.length ||
-            typeof o.before_send_hook_addresses[0] === 'string')))
-    );
+    return o && (o.$typeUrl === QueryAllBeforeSendHooksAddressesResponse.typeUrl || Array.isArray(o.denoms) && (!o.denoms.length || typeof o.denoms[0] === "string") && Array.isArray(o.before_send_hook_addresses) && (!o.before_send_hook_addresses.length || typeof o.before_send_hook_addresses[0] === "string"));
   },
   isAmino(o: any): o is QueryAllBeforeSendHooksAddressesResponseAmino {
-    return (
-      o &&
-      (o.$typeUrl === QueryAllBeforeSendHooksAddressesResponse.typeUrl ||
-        (Array.isArray(o.denoms) &&
-          (!o.denoms.length || typeof o.denoms[0] === 'string') &&
-          Array.isArray(o.before_send_hook_addresses) &&
-          (!o.before_send_hook_addresses.length ||
-            typeof o.before_send_hook_addresses[0] === 'string')))
-    );
+    return o && (o.$typeUrl === QueryAllBeforeSendHooksAddressesResponse.typeUrl || Array.isArray(o.denoms) && (!o.denoms.length || typeof o.denoms[0] === "string") && Array.isArray(o.before_send_hook_addresses) && (!o.before_send_hook_addresses.length || typeof o.before_send_hook_addresses[0] === "string"));
   },
-  encode(
-    message: QueryAllBeforeSendHooksAddressesResponse,
-    writer: BinaryWriter = BinaryWriter.create(),
-  ): BinaryWriter {
+  encode(message: QueryAllBeforeSendHooksAddressesResponse, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
     for (const v of message.denoms) {
       writer.uint32(10).string(v!);
     }
@@ -1219,12 +903,8 @@ export const QueryAllBeforeSendHooksAddressesResponse = {
     }
     return writer;
   },
-  decode(
-    input: BinaryReader | Uint8Array,
-    length?: number,
-  ): QueryAllBeforeSendHooksAddressesResponse {
-    const reader =
-      input instanceof BinaryReader ? input : new BinaryReader(input);
+  decode(input: BinaryReader | Uint8Array, length?: number): QueryAllBeforeSendHooksAddressesResponse {
+    const reader = input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseQueryAllBeforeSendHooksAddressesResponse();
     while (reader.pos < end) {
@@ -1243,27 +923,19 @@ export const QueryAllBeforeSendHooksAddressesResponse = {
     }
     return message;
   },
-  fromPartial(
-    object: Partial<QueryAllBeforeSendHooksAddressesResponse>,
-  ): QueryAllBeforeSendHooksAddressesResponse {
+  fromPartial(object: Partial<QueryAllBeforeSendHooksAddressesResponse>): QueryAllBeforeSendHooksAddressesResponse {
     const message = createBaseQueryAllBeforeSendHooksAddressesResponse();
     message.denoms = object.denoms?.map(e => e) || [];
-    message.beforeSendHookAddresses =
-      object.beforeSendHookAddresses?.map(e => e) || [];
+    message.beforeSendHookAddresses = object.beforeSendHookAddresses?.map(e => e) || [];
     return message;
   },
-  fromAmino(
-    object: QueryAllBeforeSendHooksAddressesResponseAmino,
-  ): QueryAllBeforeSendHooksAddressesResponse {
+  fromAmino(object: QueryAllBeforeSendHooksAddressesResponseAmino): QueryAllBeforeSendHooksAddressesResponse {
     const message = createBaseQueryAllBeforeSendHooksAddressesResponse();
     message.denoms = object.denoms?.map(e => e) || [];
-    message.beforeSendHookAddresses =
-      object.before_send_hook_addresses?.map(e => e) || [];
+    message.beforeSendHookAddresses = object.before_send_hook_addresses?.map(e => e) || [];
     return message;
   },
-  toAmino(
-    message: QueryAllBeforeSendHooksAddressesResponse,
-  ): QueryAllBeforeSendHooksAddressesResponseAmino {
+  toAmino(message: QueryAllBeforeSendHooksAddressesResponse): QueryAllBeforeSendHooksAddressesResponseAmino {
     const obj: any = {};
     if (message.denoms) {
       obj.denoms = message.denoms.map(e => e);
@@ -1271,38 +943,26 @@ export const QueryAllBeforeSendHooksAddressesResponse = {
       obj.denoms = message.denoms;
     }
     if (message.beforeSendHookAddresses) {
-      obj.before_send_hook_addresses = message.beforeSendHookAddresses.map(
-        e => e,
-      );
+      obj.before_send_hook_addresses = message.beforeSendHookAddresses.map(e => e);
     } else {
       obj.before_send_hook_addresses = message.beforeSendHookAddresses;
     }
     return obj;
   },
-  fromAminoMsg(
-    object: QueryAllBeforeSendHooksAddressesResponseAminoMsg,
-  ): QueryAllBeforeSendHooksAddressesResponse {
+  fromAminoMsg(object: QueryAllBeforeSendHooksAddressesResponseAminoMsg): QueryAllBeforeSendHooksAddressesResponse {
     return QueryAllBeforeSendHooksAddressesResponse.fromAmino(object.value);
   },
-  fromProtoMsg(
-    message: QueryAllBeforeSendHooksAddressesResponseProtoMsg,
-  ): QueryAllBeforeSendHooksAddressesResponse {
+  fromProtoMsg(message: QueryAllBeforeSendHooksAddressesResponseProtoMsg): QueryAllBeforeSendHooksAddressesResponse {
     return QueryAllBeforeSendHooksAddressesResponse.decode(message.value);
   },
   toProto(message: QueryAllBeforeSendHooksAddressesResponse): Uint8Array {
     return QueryAllBeforeSendHooksAddressesResponse.encode(message).finish();
   },
-  toProtoMsg(
-    message: QueryAllBeforeSendHooksAddressesResponse,
-  ): QueryAllBeforeSendHooksAddressesResponseProtoMsg {
+  toProtoMsg(message: QueryAllBeforeSendHooksAddressesResponse): QueryAllBeforeSendHooksAddressesResponseProtoMsg {
     return {
-      typeUrl:
-        '/symphony.tokenfactory.v1beta1.QueryAllBeforeSendHooksAddressesResponse',
-      value: QueryAllBeforeSendHooksAddressesResponse.encode(message).finish(),
+      typeUrl: "/symphony.tokenfactory.v1beta1.QueryAllBeforeSendHooksAddressesResponse",
+      value: QueryAllBeforeSendHooksAddressesResponse.encode(message).finish()
     };
-  },
+  }
 };
-GlobalDecoderRegistry.register(
-  QueryAllBeforeSendHooksAddressesResponse.typeUrl,
-  QueryAllBeforeSendHooksAddressesResponse,
-);
+GlobalDecoderRegistry.register(QueryAllBeforeSendHooksAddressesResponse.typeUrl, QueryAllBeforeSendHooksAddressesResponse);

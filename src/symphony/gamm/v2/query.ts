@@ -1,6 +1,6 @@
 //@ts-nocheck
-import { BinaryReader, BinaryWriter } from '../../../binary';
-import { GlobalDecoderRegistry } from '../../../registry';
+import { BinaryReader, BinaryWriter } from "../../../binary";
+import { GlobalDecoderRegistry } from "../../../registry";
 /** Deprecated: please use alternate in x/poolmanager */
 /** @deprecated */
 export interface QuerySpotPriceRequest {
@@ -12,7 +12,7 @@ export interface QuerySpotPriceRequest {
   withSwapFee?: boolean;
 }
 export interface QuerySpotPriceRequestProtoMsg {
-  typeUrl: '/symphony.gamm.v2.QuerySpotPriceRequest';
+  typeUrl: "/symphony.gamm.v2.QuerySpotPriceRequest";
   value: Uint8Array;
 }
 /** Deprecated: please use alternate in x/poolmanager */
@@ -26,7 +26,7 @@ export interface QuerySpotPriceRequestAmino {
   withSwapFee?: boolean;
 }
 export interface QuerySpotPriceRequestAminoMsg {
-  type: '/symphony.gamm.v2.QuerySpotPriceRequest';
+  type: "/symphony.gamm.v2.QuerySpotPriceRequest";
   value: QuerySpotPriceRequestAmino;
 }
 /** Deprecated: please use alternate in x/poolmanager */
@@ -45,7 +45,7 @@ export interface QuerySpotPriceResponse {
   spotPrice: string;
 }
 export interface QuerySpotPriceResponseProtoMsg {
-  typeUrl: '/symphony.gamm.v2.QuerySpotPriceResponse';
+  typeUrl: "/symphony.gamm.v2.QuerySpotPriceResponse";
   value: Uint8Array;
 }
 /** Deprecated: please use alternate in x/poolmanager */
@@ -55,7 +55,7 @@ export interface QuerySpotPriceResponseAmino {
   spot_price?: string;
 }
 export interface QuerySpotPriceResponseAminoMsg {
-  type: '/symphony.gamm.v2.QuerySpotPriceResponse';
+  type: "/symphony.gamm.v2.QuerySpotPriceResponse";
   value: QuerySpotPriceResponseAmino;
 }
 /** Deprecated: please use alternate in x/poolmanager */
@@ -66,51 +66,30 @@ export interface QuerySpotPriceResponseSDKType {
 function createBaseQuerySpotPriceRequest(): QuerySpotPriceRequest {
   return {
     poolId: BigInt(0),
-    baseAssetDenom: '',
-    quoteAssetDenom: '',
-    withSwapFee: undefined,
+    baseAssetDenom: "",
+    quoteAssetDenom: "",
+    withSwapFee: undefined
   };
 }
 export const QuerySpotPriceRequest = {
-  typeUrl: '/symphony.gamm.v2.QuerySpotPriceRequest',
+  typeUrl: "/symphony.gamm.v2.QuerySpotPriceRequest",
   is(o: any): o is QuerySpotPriceRequest {
-    return (
-      o &&
-      (o.$typeUrl === QuerySpotPriceRequest.typeUrl ||
-        (typeof o.poolId === 'bigint' &&
-          typeof o.baseAssetDenom === 'string' &&
-          typeof o.quoteAssetDenom === 'string'))
-    );
+    return o && (o.$typeUrl === QuerySpotPriceRequest.typeUrl || typeof o.poolId === "bigint" && typeof o.baseAssetDenom === "string" && typeof o.quoteAssetDenom === "string");
   },
   isSDK(o: any): o is QuerySpotPriceRequestSDKType {
-    return (
-      o &&
-      (o.$typeUrl === QuerySpotPriceRequest.typeUrl ||
-        (typeof o.pool_id === 'bigint' &&
-          typeof o.base_asset_denom === 'string' &&
-          typeof o.quote_asset_denom === 'string'))
-    );
+    return o && (o.$typeUrl === QuerySpotPriceRequest.typeUrl || typeof o.pool_id === "bigint" && typeof o.base_asset_denom === "string" && typeof o.quote_asset_denom === "string");
   },
   isAmino(o: any): o is QuerySpotPriceRequestAmino {
-    return (
-      o &&
-      (o.$typeUrl === QuerySpotPriceRequest.typeUrl ||
-        (typeof o.pool_id === 'bigint' &&
-          typeof o.base_asset_denom === 'string' &&
-          typeof o.quote_asset_denom === 'string'))
-    );
+    return o && (o.$typeUrl === QuerySpotPriceRequest.typeUrl || typeof o.pool_id === "bigint" && typeof o.base_asset_denom === "string" && typeof o.quote_asset_denom === "string");
   },
-  encode(
-    message: QuerySpotPriceRequest,
-    writer: BinaryWriter = BinaryWriter.create(),
-  ): BinaryWriter {
+  encode(message: QuerySpotPriceRequest, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
     if (message.poolId !== BigInt(0)) {
       writer.uint32(8).uint64(message.poolId);
     }
-    if (message.baseAssetDenom !== '') {
+    if (message.baseAssetDenom !== "") {
       writer.uint32(18).string(message.baseAssetDenom);
     }
-    if (message.quoteAssetDenom !== '') {
+    if (message.quoteAssetDenom !== "") {
       writer.uint32(26).string(message.quoteAssetDenom);
     }
     if (message.withSwapFee !== undefined) {
@@ -118,12 +97,8 @@ export const QuerySpotPriceRequest = {
     }
     return writer;
   },
-  decode(
-    input: BinaryReader | Uint8Array,
-    length?: number,
-  ): QuerySpotPriceRequest {
-    const reader =
-      input instanceof BinaryReader ? input : new BinaryReader(input);
+  decode(input: BinaryReader | Uint8Array, length?: number): QuerySpotPriceRequest {
+    const reader = input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseQuerySpotPriceRequest();
     while (reader.pos < end) {
@@ -150,12 +125,9 @@ export const QuerySpotPriceRequest = {
   },
   fromPartial(object: Partial<QuerySpotPriceRequest>): QuerySpotPriceRequest {
     const message = createBaseQuerySpotPriceRequest();
-    message.poolId =
-      object.poolId !== undefined && object.poolId !== null
-        ? BigInt(object.poolId.toString())
-        : BigInt(0);
-    message.baseAssetDenom = object.baseAssetDenom ?? '';
-    message.quoteAssetDenom = object.quoteAssetDenom ?? '';
+    message.poolId = object.poolId !== undefined && object.poolId !== null ? BigInt(object.poolId.toString()) : BigInt(0);
+    message.baseAssetDenom = object.baseAssetDenom ?? "";
+    message.quoteAssetDenom = object.quoteAssetDenom ?? "";
     message.withSwapFee = object.withSwapFee ?? undefined;
     return message;
   },
@@ -164,16 +136,10 @@ export const QuerySpotPriceRequest = {
     if (object.pool_id !== undefined && object.pool_id !== null) {
       message.poolId = BigInt(object.pool_id);
     }
-    if (
-      object.base_asset_denom !== undefined &&
-      object.base_asset_denom !== null
-    ) {
+    if (object.base_asset_denom !== undefined && object.base_asset_denom !== null) {
       message.baseAssetDenom = object.base_asset_denom;
     }
-    if (
-      object.quote_asset_denom !== undefined &&
-      object.quote_asset_denom !== null
-    ) {
+    if (object.quote_asset_denom !== undefined && object.quote_asset_denom !== null) {
       message.quoteAssetDenom = object.quote_asset_denom;
     }
     if (object.withSwapFee !== undefined && object.withSwapFee !== null) {
@@ -183,14 +149,10 @@ export const QuerySpotPriceRequest = {
   },
   toAmino(message: QuerySpotPriceRequest): QuerySpotPriceRequestAmino {
     const obj: any = {};
-    obj.pool_id =
-      message.poolId !== BigInt(0) ? message.poolId?.toString() : undefined;
-    obj.base_asset_denom =
-      message.baseAssetDenom === '' ? undefined : message.baseAssetDenom;
-    obj.quote_asset_denom =
-      message.quoteAssetDenom === '' ? undefined : message.quoteAssetDenom;
-    obj.withSwapFee =
-      message.withSwapFee === null ? undefined : message.withSwapFee;
+    obj.pool_id = message.poolId !== BigInt(0) ? message.poolId?.toString() : undefined;
+    obj.base_asset_denom = message.baseAssetDenom === "" ? undefined : message.baseAssetDenom;
+    obj.quote_asset_denom = message.quoteAssetDenom === "" ? undefined : message.quoteAssetDenom;
+    obj.withSwapFee = message.withSwapFee === null ? undefined : message.withSwapFee;
     return obj;
   },
   fromAminoMsg(object: QuerySpotPriceRequestAminoMsg): QuerySpotPriceRequest {
@@ -204,58 +166,36 @@ export const QuerySpotPriceRequest = {
   },
   toProtoMsg(message: QuerySpotPriceRequest): QuerySpotPriceRequestProtoMsg {
     return {
-      typeUrl: '/symphony.gamm.v2.QuerySpotPriceRequest',
-      value: QuerySpotPriceRequest.encode(message).finish(),
+      typeUrl: "/symphony.gamm.v2.QuerySpotPriceRequest",
+      value: QuerySpotPriceRequest.encode(message).finish()
     };
-  },
+  }
 };
-GlobalDecoderRegistry.register(
-  QuerySpotPriceRequest.typeUrl,
-  QuerySpotPriceRequest,
-);
+GlobalDecoderRegistry.register(QuerySpotPriceRequest.typeUrl, QuerySpotPriceRequest);
 function createBaseQuerySpotPriceResponse(): QuerySpotPriceResponse {
   return {
-    spotPrice: '',
+    spotPrice: ""
   };
 }
 export const QuerySpotPriceResponse = {
-  typeUrl: '/symphony.gamm.v2.QuerySpotPriceResponse',
+  typeUrl: "/symphony.gamm.v2.QuerySpotPriceResponse",
   is(o: any): o is QuerySpotPriceResponse {
-    return (
-      o &&
-      (o.$typeUrl === QuerySpotPriceResponse.typeUrl ||
-        typeof o.spotPrice === 'string')
-    );
+    return o && (o.$typeUrl === QuerySpotPriceResponse.typeUrl || typeof o.spotPrice === "string");
   },
   isSDK(o: any): o is QuerySpotPriceResponseSDKType {
-    return (
-      o &&
-      (o.$typeUrl === QuerySpotPriceResponse.typeUrl ||
-        typeof o.spot_price === 'string')
-    );
+    return o && (o.$typeUrl === QuerySpotPriceResponse.typeUrl || typeof o.spot_price === "string");
   },
   isAmino(o: any): o is QuerySpotPriceResponseAmino {
-    return (
-      o &&
-      (o.$typeUrl === QuerySpotPriceResponse.typeUrl ||
-        typeof o.spot_price === 'string')
-    );
+    return o && (o.$typeUrl === QuerySpotPriceResponse.typeUrl || typeof o.spot_price === "string");
   },
-  encode(
-    message: QuerySpotPriceResponse,
-    writer: BinaryWriter = BinaryWriter.create(),
-  ): BinaryWriter {
-    if (message.spotPrice !== '') {
+  encode(message: QuerySpotPriceResponse, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
+    if (message.spotPrice !== "") {
       writer.uint32(10).string(message.spotPrice);
     }
     return writer;
   },
-  decode(
-    input: BinaryReader | Uint8Array,
-    length?: number,
-  ): QuerySpotPriceResponse {
-    const reader =
-      input instanceof BinaryReader ? input : new BinaryReader(input);
+  decode(input: BinaryReader | Uint8Array, length?: number): QuerySpotPriceResponse {
+    const reader = input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseQuerySpotPriceResponse();
     while (reader.pos < end) {
@@ -273,7 +213,7 @@ export const QuerySpotPriceResponse = {
   },
   fromPartial(object: Partial<QuerySpotPriceResponse>): QuerySpotPriceResponse {
     const message = createBaseQuerySpotPriceResponse();
-    message.spotPrice = object.spotPrice ?? '';
+    message.spotPrice = object.spotPrice ?? "";
     return message;
   },
   fromAmino(object: QuerySpotPriceResponseAmino): QuerySpotPriceResponse {
@@ -285,15 +225,13 @@ export const QuerySpotPriceResponse = {
   },
   toAmino(message: QuerySpotPriceResponse): QuerySpotPriceResponseAmino {
     const obj: any = {};
-    obj.spot_price = message.spotPrice === '' ? undefined : message.spotPrice;
+    obj.spot_price = message.spotPrice === "" ? undefined : message.spotPrice;
     return obj;
   },
   fromAminoMsg(object: QuerySpotPriceResponseAminoMsg): QuerySpotPriceResponse {
     return QuerySpotPriceResponse.fromAmino(object.value);
   },
-  fromProtoMsg(
-    message: QuerySpotPriceResponseProtoMsg,
-  ): QuerySpotPriceResponse {
+  fromProtoMsg(message: QuerySpotPriceResponseProtoMsg): QuerySpotPriceResponse {
     return QuerySpotPriceResponse.decode(message.value);
   },
   toProto(message: QuerySpotPriceResponse): Uint8Array {
@@ -301,12 +239,9 @@ export const QuerySpotPriceResponse = {
   },
   toProtoMsg(message: QuerySpotPriceResponse): QuerySpotPriceResponseProtoMsg {
     return {
-      typeUrl: '/symphony.gamm.v2.QuerySpotPriceResponse',
-      value: QuerySpotPriceResponse.encode(message).finish(),
+      typeUrl: "/symphony.gamm.v2.QuerySpotPriceResponse",
+      value: QuerySpotPriceResponse.encode(message).finish()
     };
-  },
+  }
 };
-GlobalDecoderRegistry.register(
-  QuerySpotPriceResponse.typeUrl,
-  QuerySpotPriceResponse,
-);
+GlobalDecoderRegistry.register(QuerySpotPriceResponse.typeUrl, QuerySpotPriceResponse);

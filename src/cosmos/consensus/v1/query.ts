@@ -1,21 +1,17 @@
 //@ts-nocheck
-import {
-  ConsensusParams,
-  ConsensusParamsAmino,
-  ConsensusParamsSDKType,
-} from '../../../tendermint/types/params';
-import { BinaryReader, BinaryWriter } from '../../../binary';
-import { GlobalDecoderRegistry } from '../../../registry';
+import { ConsensusParams, ConsensusParamsAmino, ConsensusParamsSDKType } from "../../../tendermint/types/params";
+import { BinaryReader, BinaryWriter } from "../../../binary";
+import { GlobalDecoderRegistry } from "../../../registry";
 /** QueryParamsRequest defines the request type for querying x/consensus parameters. */
 export interface QueryParamsRequest {}
 export interface QueryParamsRequestProtoMsg {
-  typeUrl: '/cosmos.consensus.v1.QueryParamsRequest';
+  typeUrl: "/cosmos.consensus.v1.QueryParamsRequest";
   value: Uint8Array;
 }
 /** QueryParamsRequest defines the request type for querying x/consensus parameters. */
 export interface QueryParamsRequestAmino {}
 export interface QueryParamsRequestAminoMsg {
-  type: 'cosmos-sdk/QueryParamsRequest';
+  type: "cosmos-sdk/QueryParamsRequest";
   value: QueryParamsRequestAmino;
 }
 /** QueryParamsRequest defines the request type for querying x/consensus parameters. */
@@ -30,7 +26,7 @@ export interface QueryParamsResponse {
   params?: ConsensusParams;
 }
 export interface QueryParamsResponseProtoMsg {
-  typeUrl: '/cosmos.consensus.v1.QueryParamsResponse';
+  typeUrl: "/cosmos.consensus.v1.QueryParamsResponse";
   value: Uint8Array;
 }
 /** QueryParamsResponse defines the response type for querying x/consensus parameters. */
@@ -43,7 +39,7 @@ export interface QueryParamsResponseAmino {
   params?: ConsensusParamsAmino;
 }
 export interface QueryParamsResponseAminoMsg {
-  type: 'cosmos-sdk/QueryParamsResponse';
+  type: "cosmos-sdk/QueryParamsResponse";
   value: QueryParamsResponseAmino;
 }
 /** QueryParamsResponse defines the response type for querying x/consensus parameters. */
@@ -54,8 +50,8 @@ function createBaseQueryParamsRequest(): QueryParamsRequest {
   return {};
 }
 export const QueryParamsRequest = {
-  typeUrl: '/cosmos.consensus.v1.QueryParamsRequest',
-  aminoType: 'cosmos-sdk/QueryParamsRequest',
+  typeUrl: "/cosmos.consensus.v1.QueryParamsRequest",
+  aminoType: "cosmos-sdk/QueryParamsRequest",
   is(o: any): o is QueryParamsRequest {
     return o && o.$typeUrl === QueryParamsRequest.typeUrl;
   },
@@ -65,18 +61,11 @@ export const QueryParamsRequest = {
   isAmino(o: any): o is QueryParamsRequestAmino {
     return o && o.$typeUrl === QueryParamsRequest.typeUrl;
   },
-  encode(
-    _: QueryParamsRequest,
-    writer: BinaryWriter = BinaryWriter.create(),
-  ): BinaryWriter {
+  encode(_: QueryParamsRequest, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
     return writer;
   },
-  decode(
-    input: BinaryReader | Uint8Array,
-    length?: number,
-  ): QueryParamsRequest {
-    const reader =
-      input instanceof BinaryReader ? input : new BinaryReader(input);
+  decode(input: BinaryReader | Uint8Array, length?: number): QueryParamsRequest {
+    const reader = input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseQueryParamsRequest();
     while (reader.pos < end) {
@@ -106,8 +95,8 @@ export const QueryParamsRequest = {
   },
   toAminoMsg(message: QueryParamsRequest): QueryParamsRequestAminoMsg {
     return {
-      type: 'cosmos-sdk/QueryParamsRequest',
-      value: QueryParamsRequest.toAmino(message),
+      type: "cosmos-sdk/QueryParamsRequest",
+      value: QueryParamsRequest.toAmino(message)
     };
   },
   fromProtoMsg(message: QueryParamsRequestProtoMsg): QueryParamsRequest {
@@ -118,24 +107,21 @@ export const QueryParamsRequest = {
   },
   toProtoMsg(message: QueryParamsRequest): QueryParamsRequestProtoMsg {
     return {
-      typeUrl: '/cosmos.consensus.v1.QueryParamsRequest',
-      value: QueryParamsRequest.encode(message).finish(),
+      typeUrl: "/cosmos.consensus.v1.QueryParamsRequest",
+      value: QueryParamsRequest.encode(message).finish()
     };
-  },
+  }
 };
 GlobalDecoderRegistry.register(QueryParamsRequest.typeUrl, QueryParamsRequest);
-GlobalDecoderRegistry.registerAminoProtoMapping(
-  QueryParamsRequest.aminoType,
-  QueryParamsRequest.typeUrl,
-);
+GlobalDecoderRegistry.registerAminoProtoMapping(QueryParamsRequest.aminoType, QueryParamsRequest.typeUrl);
 function createBaseQueryParamsResponse(): QueryParamsResponse {
   return {
-    params: undefined,
+    params: undefined
   };
 }
 export const QueryParamsResponse = {
-  typeUrl: '/cosmos.consensus.v1.QueryParamsResponse',
-  aminoType: 'cosmos-sdk/QueryParamsResponse',
+  typeUrl: "/cosmos.consensus.v1.QueryParamsResponse",
+  aminoType: "cosmos-sdk/QueryParamsResponse",
   is(o: any): o is QueryParamsResponse {
     return o && o.$typeUrl === QueryParamsResponse.typeUrl;
   },
@@ -145,21 +131,14 @@ export const QueryParamsResponse = {
   isAmino(o: any): o is QueryParamsResponseAmino {
     return o && o.$typeUrl === QueryParamsResponse.typeUrl;
   },
-  encode(
-    message: QueryParamsResponse,
-    writer: BinaryWriter = BinaryWriter.create(),
-  ): BinaryWriter {
+  encode(message: QueryParamsResponse, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
     if (message.params !== undefined) {
       ConsensusParams.encode(message.params, writer.uint32(10).fork()).ldelim();
     }
     return writer;
   },
-  decode(
-    input: BinaryReader | Uint8Array,
-    length?: number,
-  ): QueryParamsResponse {
-    const reader =
-      input instanceof BinaryReader ? input : new BinaryReader(input);
+  decode(input: BinaryReader | Uint8Array, length?: number): QueryParamsResponse {
+    const reader = input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseQueryParamsResponse();
     while (reader.pos < end) {
@@ -177,10 +156,7 @@ export const QueryParamsResponse = {
   },
   fromPartial(object: Partial<QueryParamsResponse>): QueryParamsResponse {
     const message = createBaseQueryParamsResponse();
-    message.params =
-      object.params !== undefined && object.params !== null
-        ? ConsensusParams.fromPartial(object.params)
-        : undefined;
+    message.params = object.params !== undefined && object.params !== null ? ConsensusParams.fromPartial(object.params) : undefined;
     return message;
   },
   fromAmino(object: QueryParamsResponseAmino): QueryParamsResponse {
@@ -192,9 +168,7 @@ export const QueryParamsResponse = {
   },
   toAmino(message: QueryParamsResponse): QueryParamsResponseAmino {
     const obj: any = {};
-    obj.params = message.params
-      ? ConsensusParams.toAmino(message.params)
-      : undefined;
+    obj.params = message.params ? ConsensusParams.toAmino(message.params) : undefined;
     return obj;
   },
   fromAminoMsg(object: QueryParamsResponseAminoMsg): QueryParamsResponse {
@@ -202,8 +176,8 @@ export const QueryParamsResponse = {
   },
   toAminoMsg(message: QueryParamsResponse): QueryParamsResponseAminoMsg {
     return {
-      type: 'cosmos-sdk/QueryParamsResponse',
-      value: QueryParamsResponse.toAmino(message),
+      type: "cosmos-sdk/QueryParamsResponse",
+      value: QueryParamsResponse.toAmino(message)
     };
   },
   fromProtoMsg(message: QueryParamsResponseProtoMsg): QueryParamsResponse {
@@ -214,16 +188,10 @@ export const QueryParamsResponse = {
   },
   toProtoMsg(message: QueryParamsResponse): QueryParamsResponseProtoMsg {
     return {
-      typeUrl: '/cosmos.consensus.v1.QueryParamsResponse',
-      value: QueryParamsResponse.encode(message).finish(),
+      typeUrl: "/cosmos.consensus.v1.QueryParamsResponse",
+      value: QueryParamsResponse.encode(message).finish()
     };
-  },
+  }
 };
-GlobalDecoderRegistry.register(
-  QueryParamsResponse.typeUrl,
-  QueryParamsResponse,
-);
-GlobalDecoderRegistry.registerAminoProtoMapping(
-  QueryParamsResponse.aminoType,
-  QueryParamsResponse.typeUrl,
-);
+GlobalDecoderRegistry.register(QueryParamsResponse.typeUrl, QueryParamsResponse);
+GlobalDecoderRegistry.registerAminoProtoMapping(QueryParamsResponse.aminoType, QueryParamsResponse.typeUrl);

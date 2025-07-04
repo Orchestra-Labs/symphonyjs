@@ -1,12 +1,8 @@
 //@ts-nocheck
-import { Coin, CoinAmino, CoinSDKType } from '../../cosmos/base/v1beta1/coin';
-import {
-  Duration,
-  DurationAmino,
-  DurationSDKType,
-} from '../../google/protobuf/duration';
-import { BinaryReader, BinaryWriter } from '../../binary';
-import { GlobalDecoderRegistry } from '../../registry';
+import { Coin, CoinAmino, CoinSDKType } from "../../cosmos/base/v1beta1/coin";
+import { Duration, DurationAmino, DurationSDKType } from "../../google/protobuf/duration";
+import { BinaryReader, BinaryWriter } from "../../binary";
+import { GlobalDecoderRegistry } from "../../registry";
 /** Params holds parameters for the incentives module */
 export interface Params {
   /**
@@ -34,7 +30,7 @@ export interface Params {
   /**
    * internal_uptime is the uptime used for internal incentives on pools that
    * use NoLock gauges (currently only Concentrated Liquidity pools).
-   *
+   * 
    * Since Group gauges route through internal gauges, this parameter affects
    * the uptime of those incentives as well (i.e. distributions through volume
    * splitting incentives will use this uptime).
@@ -50,7 +46,7 @@ export interface Params {
   minValueForDistribution: Coin;
 }
 export interface ParamsProtoMsg {
-  typeUrl: '/symphony.incentives.Params';
+  typeUrl: "/symphony.incentives.Params";
   value: Uint8Array;
 }
 /** Params holds parameters for the incentives module */
@@ -80,7 +76,7 @@ export interface ParamsAmino {
   /**
    * internal_uptime is the uptime used for internal incentives on pools that
    * use NoLock gauges (currently only Concentrated Liquidity pools).
-   *
+   * 
    * Since Group gauges route through internal gauges, this parameter affects
    * the uptime of those incentives as well (i.e. distributions through volume
    * splitting incentives will use this uptime).
@@ -96,7 +92,7 @@ export interface ParamsAmino {
   min_value_for_distribution?: CoinAmino;
 }
 export interface ParamsAminoMsg {
-  type: '/symphony.incentives.Params';
+  type: "/symphony.incentives.Params";
   value: ParamsAmino;
 }
 /** Params holds parameters for the incentives module */
@@ -109,64 +105,26 @@ export interface ParamsSDKType {
 }
 function createBaseParams(): Params {
   return {
-    distrEpochIdentifier: '',
+    distrEpochIdentifier: "",
     groupCreationFee: [],
     unrestrictedCreatorWhitelist: [],
     internalUptime: Duration.fromPartial({}),
-    minValueForDistribution: Coin.fromPartial({}),
+    minValueForDistribution: Coin.fromPartial({})
   };
 }
 export const Params = {
-  typeUrl: '/symphony.incentives.Params',
+  typeUrl: "/symphony.incentives.Params",
   is(o: any): o is Params {
-    return (
-      o &&
-      (o.$typeUrl === Params.typeUrl ||
-        (typeof o.distrEpochIdentifier === 'string' &&
-          Array.isArray(o.groupCreationFee) &&
-          (!o.groupCreationFee.length || Coin.is(o.groupCreationFee[0])) &&
-          Array.isArray(o.unrestrictedCreatorWhitelist) &&
-          (!o.unrestrictedCreatorWhitelist.length ||
-            typeof o.unrestrictedCreatorWhitelist[0] === 'string') &&
-          Duration.is(o.internalUptime) &&
-          Coin.is(o.minValueForDistribution)))
-    );
+    return o && (o.$typeUrl === Params.typeUrl || typeof o.distrEpochIdentifier === "string" && Array.isArray(o.groupCreationFee) && (!o.groupCreationFee.length || Coin.is(o.groupCreationFee[0])) && Array.isArray(o.unrestrictedCreatorWhitelist) && (!o.unrestrictedCreatorWhitelist.length || typeof o.unrestrictedCreatorWhitelist[0] === "string") && Duration.is(o.internalUptime) && Coin.is(o.minValueForDistribution));
   },
   isSDK(o: any): o is ParamsSDKType {
-    return (
-      o &&
-      (o.$typeUrl === Params.typeUrl ||
-        (typeof o.distr_epoch_identifier === 'string' &&
-          Array.isArray(o.group_creation_fee) &&
-          (!o.group_creation_fee.length ||
-            Coin.isSDK(o.group_creation_fee[0])) &&
-          Array.isArray(o.unrestricted_creator_whitelist) &&
-          (!o.unrestricted_creator_whitelist.length ||
-            typeof o.unrestricted_creator_whitelist[0] === 'string') &&
-          Duration.isSDK(o.internal_uptime) &&
-          Coin.isSDK(o.min_value_for_distribution)))
-    );
+    return o && (o.$typeUrl === Params.typeUrl || typeof o.distr_epoch_identifier === "string" && Array.isArray(o.group_creation_fee) && (!o.group_creation_fee.length || Coin.isSDK(o.group_creation_fee[0])) && Array.isArray(o.unrestricted_creator_whitelist) && (!o.unrestricted_creator_whitelist.length || typeof o.unrestricted_creator_whitelist[0] === "string") && Duration.isSDK(o.internal_uptime) && Coin.isSDK(o.min_value_for_distribution));
   },
   isAmino(o: any): o is ParamsAmino {
-    return (
-      o &&
-      (o.$typeUrl === Params.typeUrl ||
-        (typeof o.distr_epoch_identifier === 'string' &&
-          Array.isArray(o.group_creation_fee) &&
-          (!o.group_creation_fee.length ||
-            Coin.isAmino(o.group_creation_fee[0])) &&
-          Array.isArray(o.unrestricted_creator_whitelist) &&
-          (!o.unrestricted_creator_whitelist.length ||
-            typeof o.unrestricted_creator_whitelist[0] === 'string') &&
-          Duration.isAmino(o.internal_uptime) &&
-          Coin.isAmino(o.min_value_for_distribution)))
-    );
+    return o && (o.$typeUrl === Params.typeUrl || typeof o.distr_epoch_identifier === "string" && Array.isArray(o.group_creation_fee) && (!o.group_creation_fee.length || Coin.isAmino(o.group_creation_fee[0])) && Array.isArray(o.unrestricted_creator_whitelist) && (!o.unrestricted_creator_whitelist.length || typeof o.unrestricted_creator_whitelist[0] === "string") && Duration.isAmino(o.internal_uptime) && Coin.isAmino(o.min_value_for_distribution));
   },
-  encode(
-    message: Params,
-    writer: BinaryWriter = BinaryWriter.create(),
-  ): BinaryWriter {
-    if (message.distrEpochIdentifier !== '') {
+  encode(message: Params, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
+    if (message.distrEpochIdentifier !== "") {
       writer.uint32(10).string(message.distrEpochIdentifier);
     }
     for (const v of message.groupCreationFee) {
@@ -176,22 +134,15 @@ export const Params = {
       writer.uint32(26).string(v!);
     }
     if (message.internalUptime !== undefined) {
-      Duration.encode(
-        message.internalUptime,
-        writer.uint32(34).fork(),
-      ).ldelim();
+      Duration.encode(message.internalUptime, writer.uint32(34).fork()).ldelim();
     }
     if (message.minValueForDistribution !== undefined) {
-      Coin.encode(
-        message.minValueForDistribution,
-        writer.uint32(42).fork(),
-      ).ldelim();
+      Coin.encode(message.minValueForDistribution, writer.uint32(42).fork()).ldelim();
     }
     return writer;
   },
   decode(input: BinaryReader | Uint8Array, length?: number): Params {
-    const reader =
-      input instanceof BinaryReader ? input : new BinaryReader(input);
+    const reader = input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseParams();
     while (reader.pos < end) {
@@ -210,10 +161,7 @@ export const Params = {
           message.internalUptime = Duration.decode(reader, reader.uint32());
           break;
         case 5:
-          message.minValueForDistribution = Coin.decode(
-            reader,
-            reader.uint32(),
-          );
+          message.minValueForDistribution = Coin.decode(reader, reader.uint32());
           break;
         default:
           reader.skipType(tag & 7);
@@ -224,75 +172,43 @@ export const Params = {
   },
   fromPartial(object: Partial<Params>): Params {
     const message = createBaseParams();
-    message.distrEpochIdentifier = object.distrEpochIdentifier ?? '';
-    message.groupCreationFee =
-      object.groupCreationFee?.map(e => Coin.fromPartial(e)) || [];
-    message.unrestrictedCreatorWhitelist =
-      object.unrestrictedCreatorWhitelist?.map(e => e) || [];
-    message.internalUptime =
-      object.internalUptime !== undefined && object.internalUptime !== null
-        ? Duration.fromPartial(object.internalUptime)
-        : undefined;
-    message.minValueForDistribution =
-      object.minValueForDistribution !== undefined &&
-      object.minValueForDistribution !== null
-        ? Coin.fromPartial(object.minValueForDistribution)
-        : undefined;
+    message.distrEpochIdentifier = object.distrEpochIdentifier ?? "";
+    message.groupCreationFee = object.groupCreationFee?.map(e => Coin.fromPartial(e)) || [];
+    message.unrestrictedCreatorWhitelist = object.unrestrictedCreatorWhitelist?.map(e => e) || [];
+    message.internalUptime = object.internalUptime !== undefined && object.internalUptime !== null ? Duration.fromPartial(object.internalUptime) : undefined;
+    message.minValueForDistribution = object.minValueForDistribution !== undefined && object.minValueForDistribution !== null ? Coin.fromPartial(object.minValueForDistribution) : undefined;
     return message;
   },
   fromAmino(object: ParamsAmino): Params {
     const message = createBaseParams();
-    if (
-      object.distr_epoch_identifier !== undefined &&
-      object.distr_epoch_identifier !== null
-    ) {
+    if (object.distr_epoch_identifier !== undefined && object.distr_epoch_identifier !== null) {
       message.distrEpochIdentifier = object.distr_epoch_identifier;
     }
-    message.groupCreationFee =
-      object.group_creation_fee?.map(e => Coin.fromAmino(e)) || [];
-    message.unrestrictedCreatorWhitelist =
-      object.unrestricted_creator_whitelist?.map(e => e) || [];
-    if (
-      object.internal_uptime !== undefined &&
-      object.internal_uptime !== null
-    ) {
+    message.groupCreationFee = object.group_creation_fee?.map(e => Coin.fromAmino(e)) || [];
+    message.unrestrictedCreatorWhitelist = object.unrestricted_creator_whitelist?.map(e => e) || [];
+    if (object.internal_uptime !== undefined && object.internal_uptime !== null) {
       message.internalUptime = Duration.fromAmino(object.internal_uptime);
     }
-    if (
-      object.min_value_for_distribution !== undefined &&
-      object.min_value_for_distribution !== null
-    ) {
-      message.minValueForDistribution = Coin.fromAmino(
-        object.min_value_for_distribution,
-      );
+    if (object.min_value_for_distribution !== undefined && object.min_value_for_distribution !== null) {
+      message.minValueForDistribution = Coin.fromAmino(object.min_value_for_distribution);
     }
     return message;
   },
   toAmino(message: Params): ParamsAmino {
     const obj: any = {};
-    obj.distr_epoch_identifier =
-      message.distrEpochIdentifier === ''
-        ? undefined
-        : message.distrEpochIdentifier;
+    obj.distr_epoch_identifier = message.distrEpochIdentifier === "" ? undefined : message.distrEpochIdentifier;
     if (message.groupCreationFee) {
-      obj.group_creation_fee = message.groupCreationFee.map(e =>
-        e ? Coin.toAmino(e) : undefined,
-      );
+      obj.group_creation_fee = message.groupCreationFee.map(e => e ? Coin.toAmino(e) : undefined);
     } else {
       obj.group_creation_fee = message.groupCreationFee;
     }
     if (message.unrestrictedCreatorWhitelist) {
-      obj.unrestricted_creator_whitelist =
-        message.unrestrictedCreatorWhitelist.map(e => e);
+      obj.unrestricted_creator_whitelist = message.unrestrictedCreatorWhitelist.map(e => e);
     } else {
       obj.unrestricted_creator_whitelist = message.unrestrictedCreatorWhitelist;
     }
-    obj.internal_uptime = message.internalUptime
-      ? Duration.toAmino(message.internalUptime)
-      : undefined;
-    obj.min_value_for_distribution = message.minValueForDistribution
-      ? Coin.toAmino(message.minValueForDistribution)
-      : undefined;
+    obj.internal_uptime = message.internalUptime ? Duration.toAmino(message.internalUptime) : undefined;
+    obj.min_value_for_distribution = message.minValueForDistribution ? Coin.toAmino(message.minValueForDistribution) : undefined;
     return obj;
   },
   fromAminoMsg(object: ParamsAminoMsg): Params {
@@ -306,9 +222,9 @@ export const Params = {
   },
   toProtoMsg(message: Params): ParamsProtoMsg {
     return {
-      typeUrl: '/symphony.incentives.Params',
-      value: Params.encode(message).finish(),
+      typeUrl: "/symphony.incentives.Params",
+      value: Params.encode(message).finish()
     };
-  },
+  }
 };
 GlobalDecoderRegistry.register(Params.typeUrl, Params);

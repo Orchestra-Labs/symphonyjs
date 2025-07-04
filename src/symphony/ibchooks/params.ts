@@ -1,18 +1,18 @@
 //@ts-nocheck
-import { BinaryReader, BinaryWriter } from '../../binary';
-import { GlobalDecoderRegistry } from '../../registry';
+import { BinaryReader, BinaryWriter } from "../../binary";
+import { GlobalDecoderRegistry } from "../../registry";
 export interface Params {
   allowedAsyncAckContracts: string[];
 }
 export interface ParamsProtoMsg {
-  typeUrl: '/symphony.ibchooks.Params';
+  typeUrl: "/symphony.ibchooks.Params";
   value: Uint8Array;
 }
 export interface ParamsAmino {
   allowed_async_ack_contracts?: string[];
 }
 export interface ParamsAminoMsg {
-  type: '/symphony.ibchooks.Params';
+  type: "/symphony.ibchooks.Params";
   value: ParamsAmino;
 }
 export interface ParamsSDKType {
@@ -20,50 +20,28 @@ export interface ParamsSDKType {
 }
 function createBaseParams(): Params {
   return {
-    allowedAsyncAckContracts: [],
+    allowedAsyncAckContracts: []
   };
 }
 export const Params = {
-  typeUrl: '/symphony.ibchooks.Params',
+  typeUrl: "/symphony.ibchooks.Params",
   is(o: any): o is Params {
-    return (
-      o &&
-      (o.$typeUrl === Params.typeUrl ||
-        (Array.isArray(o.allowedAsyncAckContracts) &&
-          (!o.allowedAsyncAckContracts.length ||
-            typeof o.allowedAsyncAckContracts[0] === 'string')))
-    );
+    return o && (o.$typeUrl === Params.typeUrl || Array.isArray(o.allowedAsyncAckContracts) && (!o.allowedAsyncAckContracts.length || typeof o.allowedAsyncAckContracts[0] === "string"));
   },
   isSDK(o: any): o is ParamsSDKType {
-    return (
-      o &&
-      (o.$typeUrl === Params.typeUrl ||
-        (Array.isArray(o.allowed_async_ack_contracts) &&
-          (!o.allowed_async_ack_contracts.length ||
-            typeof o.allowed_async_ack_contracts[0] === 'string')))
-    );
+    return o && (o.$typeUrl === Params.typeUrl || Array.isArray(o.allowed_async_ack_contracts) && (!o.allowed_async_ack_contracts.length || typeof o.allowed_async_ack_contracts[0] === "string"));
   },
   isAmino(o: any): o is ParamsAmino {
-    return (
-      o &&
-      (o.$typeUrl === Params.typeUrl ||
-        (Array.isArray(o.allowed_async_ack_contracts) &&
-          (!o.allowed_async_ack_contracts.length ||
-            typeof o.allowed_async_ack_contracts[0] === 'string')))
-    );
+    return o && (o.$typeUrl === Params.typeUrl || Array.isArray(o.allowed_async_ack_contracts) && (!o.allowed_async_ack_contracts.length || typeof o.allowed_async_ack_contracts[0] === "string"));
   },
-  encode(
-    message: Params,
-    writer: BinaryWriter = BinaryWriter.create(),
-  ): BinaryWriter {
+  encode(message: Params, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
     for (const v of message.allowedAsyncAckContracts) {
       writer.uint32(10).string(v!);
     }
     return writer;
   },
   decode(input: BinaryReader | Uint8Array, length?: number): Params {
-    const reader =
-      input instanceof BinaryReader ? input : new BinaryReader(input);
+    const reader = input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseParams();
     while (reader.pos < end) {
@@ -81,22 +59,18 @@ export const Params = {
   },
   fromPartial(object: Partial<Params>): Params {
     const message = createBaseParams();
-    message.allowedAsyncAckContracts =
-      object.allowedAsyncAckContracts?.map(e => e) || [];
+    message.allowedAsyncAckContracts = object.allowedAsyncAckContracts?.map(e => e) || [];
     return message;
   },
   fromAmino(object: ParamsAmino): Params {
     const message = createBaseParams();
-    message.allowedAsyncAckContracts =
-      object.allowed_async_ack_contracts?.map(e => e) || [];
+    message.allowedAsyncAckContracts = object.allowed_async_ack_contracts?.map(e => e) || [];
     return message;
   },
   toAmino(message: Params): ParamsAmino {
     const obj: any = {};
     if (message.allowedAsyncAckContracts) {
-      obj.allowed_async_ack_contracts = message.allowedAsyncAckContracts.map(
-        e => e,
-      );
+      obj.allowed_async_ack_contracts = message.allowedAsyncAckContracts.map(e => e);
     } else {
       obj.allowed_async_ack_contracts = message.allowedAsyncAckContracts;
     }
@@ -113,9 +87,9 @@ export const Params = {
   },
   toProtoMsg(message: Params): ParamsProtoMsg {
     return {
-      typeUrl: '/symphony.ibchooks.Params',
-      value: Params.encode(message).finish(),
+      typeUrl: "/symphony.ibchooks.Params",
+      value: Params.encode(message).finish()
     };
-  },
+  }
 };
 GlobalDecoderRegistry.register(Params.typeUrl, Params);

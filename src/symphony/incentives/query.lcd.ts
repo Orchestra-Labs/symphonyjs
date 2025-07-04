@@ -1,41 +1,14 @@
 //@ts-nocheck
-import { setPaginationParams } from '../../helpers';
-import { LCDClient } from '@cosmology/lcd';
-import {
-  ModuleToDistributeCoinsRequest,
-  ModuleToDistributeCoinsResponseSDKType,
-  GaugeByIDRequest,
-  GaugeByIDResponseSDKType,
-  GaugesRequest,
-  GaugesResponseSDKType,
-  ActiveGaugesRequest,
-  ActiveGaugesResponseSDKType,
-  ActiveGaugesPerDenomRequest,
-  ActiveGaugesPerDenomResponseSDKType,
-  UpcomingGaugesRequest,
-  UpcomingGaugesResponseSDKType,
-  UpcomingGaugesPerDenomRequest,
-  UpcomingGaugesPerDenomResponseSDKType,
-  RewardsEstRequest,
-  RewardsEstResponseSDKType,
-  QueryLockableDurationsRequest,
-  QueryLockableDurationsResponseSDKType,
-  QueryAllGroupsRequest,
-  QueryAllGroupsResponseSDKType,
-  QueryAllGroupsGaugesRequest,
-  QueryAllGroupsGaugesResponseSDKType,
-  QueryAllGroupsWithGaugeRequest,
-  QueryAllGroupsWithGaugeResponseSDKType,
-  QueryGroupByGroupGaugeIDRequest,
-  QueryGroupByGroupGaugeIDResponseSDKType,
-  QueryCurrentWeightByGroupGaugeIDRequest,
-  QueryCurrentWeightByGroupGaugeIDResponseSDKType,
-  ParamsRequest,
-  ParamsResponseSDKType,
-} from './query';
+import { setPaginationParams } from "../../helpers";
+import { LCDClient } from "@cosmology/lcd";
+import { ModuleToDistributeCoinsRequest, ModuleToDistributeCoinsResponseSDKType, GaugeByIDRequest, GaugeByIDResponseSDKType, GaugesRequest, GaugesResponseSDKType, ActiveGaugesRequest, ActiveGaugesResponseSDKType, ActiveGaugesPerDenomRequest, ActiveGaugesPerDenomResponseSDKType, UpcomingGaugesRequest, UpcomingGaugesResponseSDKType, UpcomingGaugesPerDenomRequest, UpcomingGaugesPerDenomResponseSDKType, RewardsEstRequest, RewardsEstResponseSDKType, QueryLockableDurationsRequest, QueryLockableDurationsResponseSDKType, QueryAllGroupsRequest, QueryAllGroupsResponseSDKType, QueryAllGroupsGaugesRequest, QueryAllGroupsGaugesResponseSDKType, QueryAllGroupsWithGaugeRequest, QueryAllGroupsWithGaugeResponseSDKType, QueryGroupByGroupGaugeIDRequest, QueryGroupByGroupGaugeIDResponseSDKType, QueryCurrentWeightByGroupGaugeIDRequest, QueryCurrentWeightByGroupGaugeIDResponseSDKType, ParamsRequest, ParamsResponseSDKType } from "./query";
 export class LCDQueryClient {
   req: LCDClient;
-  constructor({ requestClient }: { requestClient: LCDClient }) {
+  constructor({
+    requestClient
+  }: {
+    requestClient: LCDClient;
+  }) {
     this.req = requestClient;
     this.moduleToDistributeCoins = this.moduleToDistributeCoins.bind(this);
     this.gaugeByID = this.gaugeByID.bind(this);
@@ -50,14 +23,11 @@ export class LCDQueryClient {
     this.allGroupsGauges = this.allGroupsGauges.bind(this);
     this.allGroupsWithGauge = this.allGroupsWithGauge.bind(this);
     this.groupByGroupGaugeID = this.groupByGroupGaugeID.bind(this);
-    this.currentWeightByGroupGaugeID =
-      this.currentWeightByGroupGaugeID.bind(this);
+    this.currentWeightByGroupGaugeID = this.currentWeightByGroupGaugeID.bind(this);
     this.params = this.params.bind(this);
   }
   /* ModuleToDistributeCoins returns coins that are going to be distributed */
-  async moduleToDistributeCoins(
-    _params: ModuleToDistributeCoinsRequest = {},
-  ): Promise<ModuleToDistributeCoinsResponseSDKType> {
+  async moduleToDistributeCoins(_params: ModuleToDistributeCoinsRequest = {}): Promise<ModuleToDistributeCoinsResponseSDKType> {
     const endpoint = `symphony/incentives/v1beta1/module_to_distribute_coins`;
     return await this.req.get<ModuleToDistributeCoinsResponseSDKType>(endpoint);
   }
@@ -67,64 +37,53 @@ export class LCDQueryClient {
     return await this.req.get<GaugeByIDResponseSDKType>(endpoint);
   }
   /* Gauges returns both upcoming and active gauges */
-  async gauges(
-    params: GaugesRequest = {
-      pagination: undefined,
-    },
-  ): Promise<GaugesResponseSDKType> {
+  async gauges(params: GaugesRequest = {
+    pagination: undefined
+  }): Promise<GaugesResponseSDKType> {
     const options: any = {
-      params: {},
+      params: {}
     };
-    if (typeof params?.pagination !== 'undefined') {
+    if (typeof params?.pagination !== "undefined") {
       setPaginationParams(options, params.pagination);
     }
     const endpoint = `symphony/incentives/v1beta1/gauges`;
     return await this.req.get<GaugesResponseSDKType>(endpoint, options);
   }
   /* ActiveGauges returns active gauges */
-  async activeGauges(
-    params: ActiveGaugesRequest = {
-      pagination: undefined,
-    },
-  ): Promise<ActiveGaugesResponseSDKType> {
+  async activeGauges(params: ActiveGaugesRequest = {
+    pagination: undefined
+  }): Promise<ActiveGaugesResponseSDKType> {
     const options: any = {
-      params: {},
+      params: {}
     };
-    if (typeof params?.pagination !== 'undefined') {
+    if (typeof params?.pagination !== "undefined") {
       setPaginationParams(options, params.pagination);
     }
     const endpoint = `symphony/incentives/v1beta1/active_gauges`;
     return await this.req.get<ActiveGaugesResponseSDKType>(endpoint, options);
   }
   /* ActiveGaugesPerDenom returns active gauges by denom */
-  async activeGaugesPerDenom(
-    params: ActiveGaugesPerDenomRequest,
-  ): Promise<ActiveGaugesPerDenomResponseSDKType> {
+  async activeGaugesPerDenom(params: ActiveGaugesPerDenomRequest): Promise<ActiveGaugesPerDenomResponseSDKType> {
     const options: any = {
-      params: {},
+      params: {}
     };
-    if (typeof params?.denom !== 'undefined') {
+    if (typeof params?.denom !== "undefined") {
       options.params.denom = params.denom;
     }
-    if (typeof params?.pagination !== 'undefined') {
+    if (typeof params?.pagination !== "undefined") {
       setPaginationParams(options, params.pagination);
     }
     const endpoint = `symphony/incentives/v1beta1/active_gauges_per_denom`;
-    return await this.req.get<ActiveGaugesPerDenomResponseSDKType>(
-      endpoint,
-      options,
-    );
+    return await this.req.get<ActiveGaugesPerDenomResponseSDKType>(endpoint, options);
   }
   /* Returns scheduled gauges that have not yet occurred */
-  async upcomingGauges(
-    params: UpcomingGaugesRequest = {
-      pagination: undefined,
-    },
-  ): Promise<UpcomingGaugesResponseSDKType> {
+  async upcomingGauges(params: UpcomingGaugesRequest = {
+    pagination: undefined
+  }): Promise<UpcomingGaugesResponseSDKType> {
     const options: any = {
-      params: {},
+      params: {}
     };
-    if (typeof params?.pagination !== 'undefined') {
+    if (typeof params?.pagination !== "undefined") {
       setPaginationParams(options, params.pagination);
     }
     const endpoint = `symphony/incentives/v1beta1/upcoming_gauges`;
@@ -132,37 +91,30 @@ export class LCDQueryClient {
   }
   /* UpcomingGaugesPerDenom returns scheduled gauges that have not yet occurred
    by denom */
-  async upcomingGaugesPerDenom(
-    params: UpcomingGaugesPerDenomRequest,
-  ): Promise<UpcomingGaugesPerDenomResponseSDKType> {
+  async upcomingGaugesPerDenom(params: UpcomingGaugesPerDenomRequest): Promise<UpcomingGaugesPerDenomResponseSDKType> {
     const options: any = {
-      params: {},
+      params: {}
     };
-    if (typeof params?.denom !== 'undefined') {
+    if (typeof params?.denom !== "undefined") {
       options.params.denom = params.denom;
     }
-    if (typeof params?.pagination !== 'undefined') {
+    if (typeof params?.pagination !== "undefined") {
       setPaginationParams(options, params.pagination);
     }
     const endpoint = `symphony/incentives/v1beta1/upcoming_gauges_per_denom`;
-    return await this.req.get<UpcomingGaugesPerDenomResponseSDKType>(
-      endpoint,
-      options,
-    );
+    return await this.req.get<UpcomingGaugesPerDenomResponseSDKType>(endpoint, options);
   }
   /* RewardsEst returns an estimate of the rewards from now until a specified
    time in the future The querier either provides an address or a set of locks
    for which they want to find the associated rewards */
-  async rewardsEst(
-    params: RewardsEstRequest,
-  ): Promise<RewardsEstResponseSDKType> {
+  async rewardsEst(params: RewardsEstRequest): Promise<RewardsEstResponseSDKType> {
     const options: any = {
-      params: {},
+      params: {}
     };
-    if (typeof params?.lockIds !== 'undefined') {
+    if (typeof params?.lockIds !== "undefined") {
       options.params.lock_ids = params.lockIds;
     }
-    if (typeof params?.endEpoch !== 'undefined') {
+    if (typeof params?.endEpoch !== "undefined") {
       options.params.end_epoch = params.endEpoch;
     }
     const endpoint = `symphony/incentives/v1beta1/rewards_est/${params.owner}`;
@@ -170,51 +122,35 @@ export class LCDQueryClient {
   }
   /* LockableDurations returns lockable durations that are valid to distribute
    incentives for */
-  async lockableDurations(
-    _params: QueryLockableDurationsRequest = {},
-  ): Promise<QueryLockableDurationsResponseSDKType> {
+  async lockableDurations(_params: QueryLockableDurationsRequest = {}): Promise<QueryLockableDurationsResponseSDKType> {
     const endpoint = `symphony/incentives/v1beta1/lockable_durations`;
     return await this.req.get<QueryLockableDurationsResponseSDKType>(endpoint);
   }
   /* AllGroups returns all groups */
-  async allGroups(
-    _params: QueryAllGroupsRequest = {},
-  ): Promise<QueryAllGroupsResponseSDKType> {
+  async allGroups(_params: QueryAllGroupsRequest = {}): Promise<QueryAllGroupsResponseSDKType> {
     const endpoint = `symphony/incentives/v1beta1/all_groups`;
     return await this.req.get<QueryAllGroupsResponseSDKType>(endpoint);
   }
   /* AllGroupsGauges returns all group gauges */
-  async allGroupsGauges(
-    _params: QueryAllGroupsGaugesRequest = {},
-  ): Promise<QueryAllGroupsGaugesResponseSDKType> {
+  async allGroupsGauges(_params: QueryAllGroupsGaugesRequest = {}): Promise<QueryAllGroupsGaugesResponseSDKType> {
     const endpoint = `symphony/incentives/v1beta1/all_groups_gauges`;
     return await this.req.get<QueryAllGroupsGaugesResponseSDKType>(endpoint);
   }
   /* AllGroupsWithGauge returns all groups with their group gauge */
-  async allGroupsWithGauge(
-    _params: QueryAllGroupsWithGaugeRequest = {},
-  ): Promise<QueryAllGroupsWithGaugeResponseSDKType> {
+  async allGroupsWithGauge(_params: QueryAllGroupsWithGaugeRequest = {}): Promise<QueryAllGroupsWithGaugeResponseSDKType> {
     const endpoint = `symphony/incentives/v1beta1/all_groups_with_gauge`;
     return await this.req.get<QueryAllGroupsWithGaugeResponseSDKType>(endpoint);
   }
   /* GroupByGroupGaugeID returns a group given its group gauge ID */
-  async groupByGroupGaugeID(
-    params: QueryGroupByGroupGaugeIDRequest,
-  ): Promise<QueryGroupByGroupGaugeIDResponseSDKType> {
+  async groupByGroupGaugeID(params: QueryGroupByGroupGaugeIDRequest): Promise<QueryGroupByGroupGaugeIDResponseSDKType> {
     const endpoint = `symphony/incentives/v1beta1/group_by_group_gauge_id/${params.id}`;
-    return await this.req.get<QueryGroupByGroupGaugeIDResponseSDKType>(
-      endpoint,
-    );
+    return await this.req.get<QueryGroupByGroupGaugeIDResponseSDKType>(endpoint);
   }
   /* CurrentWeightByGroupGaugeID returns the current weight since the
    the last epoch given a group gauge ID */
-  async currentWeightByGroupGaugeID(
-    params: QueryCurrentWeightByGroupGaugeIDRequest,
-  ): Promise<QueryCurrentWeightByGroupGaugeIDResponseSDKType> {
+  async currentWeightByGroupGaugeID(params: QueryCurrentWeightByGroupGaugeIDRequest): Promise<QueryCurrentWeightByGroupGaugeIDResponseSDKType> {
     const endpoint = `symphony/incentives/v1beta1/current_weight_by_group_gauge_id/${params.groupGaugeId}`;
-    return await this.req.get<QueryCurrentWeightByGroupGaugeIDResponseSDKType>(
-      endpoint,
-    );
+    return await this.req.get<QueryCurrentWeightByGroupGaugeIDResponseSDKType>(endpoint);
   }
   /* Params returns incentives module params. */
   async params(_params: ParamsRequest = {}): Promise<ParamsResponseSDKType> {

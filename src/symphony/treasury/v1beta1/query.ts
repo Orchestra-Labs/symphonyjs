@@ -1,18 +1,18 @@
 //@ts-nocheck
-import { Params, ParamsAmino, ParamsSDKType } from './treasury';
-import { BinaryReader, BinaryWriter } from '../../../binary';
-import { GlobalDecoderRegistry } from '../../../registry';
-import { Decimal } from '@cosmjs/math';
+import { Params, ParamsAmino, ParamsSDKType } from "./treasury";
+import { BinaryReader, BinaryWriter } from "../../../binary";
+import { GlobalDecoderRegistry } from "../../../registry";
+import { Decimal } from "@cosmjs/math";
 /** QueryTaxRateRequest is the request type for the Query/TaxRate RPC method. */
 export interface QueryTaxRateRequest {}
 export interface QueryTaxRateRequestProtoMsg {
-  typeUrl: '/symphony.treasury.v1beta1.QueryTaxRateRequest';
+  typeUrl: "/symphony.treasury.v1beta1.QueryTaxRateRequest";
   value: Uint8Array;
 }
 /** QueryTaxRateRequest is the request type for the Query/TaxRate RPC method. */
 export interface QueryTaxRateRequestAmino {}
 export interface QueryTaxRateRequestAminoMsg {
-  type: '/symphony.treasury.v1beta1.QueryTaxRateRequest';
+  type: "/symphony.treasury.v1beta1.QueryTaxRateRequest";
   value: QueryTaxRateRequestAmino;
 }
 /** QueryTaxRateRequest is the request type for the Query/TaxRate RPC method. */
@@ -25,7 +25,7 @@ export interface QueryTaxRateResponse {
   taxRate: string;
 }
 export interface QueryTaxRateResponseProtoMsg {
-  typeUrl: '/symphony.treasury.v1beta1.QueryTaxRateResponse';
+  typeUrl: "/symphony.treasury.v1beta1.QueryTaxRateResponse";
   value: Uint8Array;
 }
 /**
@@ -36,7 +36,7 @@ export interface QueryTaxRateResponseAmino {
   tax_rate?: string;
 }
 export interface QueryTaxRateResponseAminoMsg {
-  type: '/symphony.treasury.v1beta1.QueryTaxRateResponse';
+  type: "/symphony.treasury.v1beta1.QueryTaxRateResponse";
   value: QueryTaxRateResponseAmino;
 }
 /**
@@ -49,13 +49,13 @@ export interface QueryTaxRateResponseSDKType {
 /** QueryParamsRequest is the request type for the Query/Params RPC method. */
 export interface QueryParamsRequest {}
 export interface QueryParamsRequestProtoMsg {
-  typeUrl: '/symphony.treasury.v1beta1.QueryParamsRequest';
+  typeUrl: "/symphony.treasury.v1beta1.QueryParamsRequest";
   value: Uint8Array;
 }
 /** QueryParamsRequest is the request type for the Query/Params RPC method. */
 export interface QueryParamsRequestAmino {}
 export interface QueryParamsRequestAminoMsg {
-  type: '/symphony.treasury.v1beta1.QueryParamsRequest';
+  type: "/symphony.treasury.v1beta1.QueryParamsRequest";
   value: QueryParamsRequestAmino;
 }
 /** QueryParamsRequest is the request type for the Query/Params RPC method. */
@@ -66,7 +66,7 @@ export interface QueryParamsResponse {
   params: Params;
 }
 export interface QueryParamsResponseProtoMsg {
-  typeUrl: '/symphony.treasury.v1beta1.QueryParamsResponse';
+  typeUrl: "/symphony.treasury.v1beta1.QueryParamsResponse";
   value: Uint8Array;
 }
 /** QueryParamsResponse is the response type for the Query/Params RPC method. */
@@ -75,7 +75,7 @@ export interface QueryParamsResponseAmino {
   params?: ParamsAmino;
 }
 export interface QueryParamsResponseAminoMsg {
-  type: '/symphony.treasury.v1beta1.QueryParamsResponse';
+  type: "/symphony.treasury.v1beta1.QueryParamsResponse";
   value: QueryParamsResponseAmino;
 }
 /** QueryParamsResponse is the response type for the Query/Params RPC method. */
@@ -86,7 +86,7 @@ function createBaseQueryTaxRateRequest(): QueryTaxRateRequest {
   return {};
 }
 export const QueryTaxRateRequest = {
-  typeUrl: '/symphony.treasury.v1beta1.QueryTaxRateRequest',
+  typeUrl: "/symphony.treasury.v1beta1.QueryTaxRateRequest",
   is(o: any): o is QueryTaxRateRequest {
     return o && o.$typeUrl === QueryTaxRateRequest.typeUrl;
   },
@@ -96,18 +96,11 @@ export const QueryTaxRateRequest = {
   isAmino(o: any): o is QueryTaxRateRequestAmino {
     return o && o.$typeUrl === QueryTaxRateRequest.typeUrl;
   },
-  encode(
-    _: QueryTaxRateRequest,
-    writer: BinaryWriter = BinaryWriter.create(),
-  ): BinaryWriter {
+  encode(_: QueryTaxRateRequest, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
     return writer;
   },
-  decode(
-    input: BinaryReader | Uint8Array,
-    length?: number,
-  ): QueryTaxRateRequest {
-    const reader =
-      input instanceof BinaryReader ? input : new BinaryReader(input);
+  decode(input: BinaryReader | Uint8Array, length?: number): QueryTaxRateRequest {
+    const reader = input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseQueryTaxRateRequest();
     while (reader.pos < end) {
@@ -143,60 +136,36 @@ export const QueryTaxRateRequest = {
   },
   toProtoMsg(message: QueryTaxRateRequest): QueryTaxRateRequestProtoMsg {
     return {
-      typeUrl: '/symphony.treasury.v1beta1.QueryTaxRateRequest',
-      value: QueryTaxRateRequest.encode(message).finish(),
+      typeUrl: "/symphony.treasury.v1beta1.QueryTaxRateRequest",
+      value: QueryTaxRateRequest.encode(message).finish()
     };
-  },
+  }
 };
-GlobalDecoderRegistry.register(
-  QueryTaxRateRequest.typeUrl,
-  QueryTaxRateRequest,
-);
+GlobalDecoderRegistry.register(QueryTaxRateRequest.typeUrl, QueryTaxRateRequest);
 function createBaseQueryTaxRateResponse(): QueryTaxRateResponse {
   return {
-    taxRate: '',
+    taxRate: ""
   };
 }
 export const QueryTaxRateResponse = {
-  typeUrl: '/symphony.treasury.v1beta1.QueryTaxRateResponse',
+  typeUrl: "/symphony.treasury.v1beta1.QueryTaxRateResponse",
   is(o: any): o is QueryTaxRateResponse {
-    return (
-      o &&
-      (o.$typeUrl === QueryTaxRateResponse.typeUrl ||
-        typeof o.taxRate === 'string')
-    );
+    return o && (o.$typeUrl === QueryTaxRateResponse.typeUrl || typeof o.taxRate === "string");
   },
   isSDK(o: any): o is QueryTaxRateResponseSDKType {
-    return (
-      o &&
-      (o.$typeUrl === QueryTaxRateResponse.typeUrl ||
-        typeof o.tax_rate === 'string')
-    );
+    return o && (o.$typeUrl === QueryTaxRateResponse.typeUrl || typeof o.tax_rate === "string");
   },
   isAmino(o: any): o is QueryTaxRateResponseAmino {
-    return (
-      o &&
-      (o.$typeUrl === QueryTaxRateResponse.typeUrl ||
-        typeof o.tax_rate === 'string')
-    );
+    return o && (o.$typeUrl === QueryTaxRateResponse.typeUrl || typeof o.tax_rate === "string");
   },
-  encode(
-    message: QueryTaxRateResponse,
-    writer: BinaryWriter = BinaryWriter.create(),
-  ): BinaryWriter {
-    if (message.taxRate !== '') {
-      writer
-        .uint32(10)
-        .string(Decimal.fromUserInput(message.taxRate, 18).atomics);
+  encode(message: QueryTaxRateResponse, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
+    if (message.taxRate !== "") {
+      writer.uint32(10).string(Decimal.fromUserInput(message.taxRate, 18).atomics);
     }
     return writer;
   },
-  decode(
-    input: BinaryReader | Uint8Array,
-    length?: number,
-  ): QueryTaxRateResponse {
-    const reader =
-      input instanceof BinaryReader ? input : new BinaryReader(input);
+  decode(input: BinaryReader | Uint8Array, length?: number): QueryTaxRateResponse {
+    const reader = input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseQueryTaxRateResponse();
     while (reader.pos < end) {
@@ -214,7 +183,7 @@ export const QueryTaxRateResponse = {
   },
   fromPartial(object: Partial<QueryTaxRateResponse>): QueryTaxRateResponse {
     const message = createBaseQueryTaxRateResponse();
-    message.taxRate = object.taxRate ?? '';
+    message.taxRate = object.taxRate ?? "";
     return message;
   },
   fromAmino(object: QueryTaxRateResponseAmino): QueryTaxRateResponse {
@@ -226,7 +195,7 @@ export const QueryTaxRateResponse = {
   },
   toAmino(message: QueryTaxRateResponse): QueryTaxRateResponseAmino {
     const obj: any = {};
-    obj.tax_rate = message.taxRate === '' ? undefined : message.taxRate;
+    obj.tax_rate = message.taxRate === "" ? undefined : message.taxRate;
     return obj;
   },
   fromAminoMsg(object: QueryTaxRateResponseAminoMsg): QueryTaxRateResponse {
@@ -240,20 +209,17 @@ export const QueryTaxRateResponse = {
   },
   toProtoMsg(message: QueryTaxRateResponse): QueryTaxRateResponseProtoMsg {
     return {
-      typeUrl: '/symphony.treasury.v1beta1.QueryTaxRateResponse',
-      value: QueryTaxRateResponse.encode(message).finish(),
+      typeUrl: "/symphony.treasury.v1beta1.QueryTaxRateResponse",
+      value: QueryTaxRateResponse.encode(message).finish()
     };
-  },
+  }
 };
-GlobalDecoderRegistry.register(
-  QueryTaxRateResponse.typeUrl,
-  QueryTaxRateResponse,
-);
+GlobalDecoderRegistry.register(QueryTaxRateResponse.typeUrl, QueryTaxRateResponse);
 function createBaseQueryParamsRequest(): QueryParamsRequest {
   return {};
 }
 export const QueryParamsRequest = {
-  typeUrl: '/symphony.treasury.v1beta1.QueryParamsRequest',
+  typeUrl: "/symphony.treasury.v1beta1.QueryParamsRequest",
   is(o: any): o is QueryParamsRequest {
     return o && o.$typeUrl === QueryParamsRequest.typeUrl;
   },
@@ -263,18 +229,11 @@ export const QueryParamsRequest = {
   isAmino(o: any): o is QueryParamsRequestAmino {
     return o && o.$typeUrl === QueryParamsRequest.typeUrl;
   },
-  encode(
-    _: QueryParamsRequest,
-    writer: BinaryWriter = BinaryWriter.create(),
-  ): BinaryWriter {
+  encode(_: QueryParamsRequest, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
     return writer;
   },
-  decode(
-    input: BinaryReader | Uint8Array,
-    length?: number,
-  ): QueryParamsRequest {
-    const reader =
-      input instanceof BinaryReader ? input : new BinaryReader(input);
+  decode(input: BinaryReader | Uint8Array, length?: number): QueryParamsRequest {
+    const reader = input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseQueryParamsRequest();
     while (reader.pos < end) {
@@ -310,51 +269,36 @@ export const QueryParamsRequest = {
   },
   toProtoMsg(message: QueryParamsRequest): QueryParamsRequestProtoMsg {
     return {
-      typeUrl: '/symphony.treasury.v1beta1.QueryParamsRequest',
-      value: QueryParamsRequest.encode(message).finish(),
+      typeUrl: "/symphony.treasury.v1beta1.QueryParamsRequest",
+      value: QueryParamsRequest.encode(message).finish()
     };
-  },
+  }
 };
 GlobalDecoderRegistry.register(QueryParamsRequest.typeUrl, QueryParamsRequest);
 function createBaseQueryParamsResponse(): QueryParamsResponse {
   return {
-    params: Params.fromPartial({}),
+    params: Params.fromPartial({})
   };
 }
 export const QueryParamsResponse = {
-  typeUrl: '/symphony.treasury.v1beta1.QueryParamsResponse',
+  typeUrl: "/symphony.treasury.v1beta1.QueryParamsResponse",
   is(o: any): o is QueryParamsResponse {
-    return (
-      o && (o.$typeUrl === QueryParamsResponse.typeUrl || Params.is(o.params))
-    );
+    return o && (o.$typeUrl === QueryParamsResponse.typeUrl || Params.is(o.params));
   },
   isSDK(o: any): o is QueryParamsResponseSDKType {
-    return (
-      o &&
-      (o.$typeUrl === QueryParamsResponse.typeUrl || Params.isSDK(o.params))
-    );
+    return o && (o.$typeUrl === QueryParamsResponse.typeUrl || Params.isSDK(o.params));
   },
   isAmino(o: any): o is QueryParamsResponseAmino {
-    return (
-      o &&
-      (o.$typeUrl === QueryParamsResponse.typeUrl || Params.isAmino(o.params))
-    );
+    return o && (o.$typeUrl === QueryParamsResponse.typeUrl || Params.isAmino(o.params));
   },
-  encode(
-    message: QueryParamsResponse,
-    writer: BinaryWriter = BinaryWriter.create(),
-  ): BinaryWriter {
+  encode(message: QueryParamsResponse, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
     if (message.params !== undefined) {
       Params.encode(message.params, writer.uint32(10).fork()).ldelim();
     }
     return writer;
   },
-  decode(
-    input: BinaryReader | Uint8Array,
-    length?: number,
-  ): QueryParamsResponse {
-    const reader =
-      input instanceof BinaryReader ? input : new BinaryReader(input);
+  decode(input: BinaryReader | Uint8Array, length?: number): QueryParamsResponse {
+    const reader = input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseQueryParamsResponse();
     while (reader.pos < end) {
@@ -372,10 +316,7 @@ export const QueryParamsResponse = {
   },
   fromPartial(object: Partial<QueryParamsResponse>): QueryParamsResponse {
     const message = createBaseQueryParamsResponse();
-    message.params =
-      object.params !== undefined && object.params !== null
-        ? Params.fromPartial(object.params)
-        : undefined;
+    message.params = object.params !== undefined && object.params !== null ? Params.fromPartial(object.params) : undefined;
     return message;
   },
   fromAmino(object: QueryParamsResponseAmino): QueryParamsResponse {
@@ -401,12 +342,9 @@ export const QueryParamsResponse = {
   },
   toProtoMsg(message: QueryParamsResponse): QueryParamsResponseProtoMsg {
     return {
-      typeUrl: '/symphony.treasury.v1beta1.QueryParamsResponse',
-      value: QueryParamsResponse.encode(message).finish(),
+      typeUrl: "/symphony.treasury.v1beta1.QueryParamsResponse",
+      value: QueryParamsResponse.encode(message).finish()
     };
-  },
+  }
 };
-GlobalDecoderRegistry.register(
-  QueryParamsResponse.typeUrl,
-  QueryParamsResponse,
-);
+GlobalDecoderRegistry.register(QueryParamsResponse.typeUrl, QueryParamsResponse);

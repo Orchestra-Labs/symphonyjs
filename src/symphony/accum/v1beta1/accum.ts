@@ -1,12 +1,8 @@
 //@ts-nocheck
-import {
-  DecCoin,
-  DecCoinAmino,
-  DecCoinSDKType,
-} from '../../../cosmos/base/v1beta1/coin';
-import { BinaryReader, BinaryWriter } from '../../../binary';
-import { Decimal } from '@cosmjs/math';
-import { GlobalDecoderRegistry } from '../../../registry';
+import { DecCoin, DecCoinAmino, DecCoinSDKType } from "../../../cosmos/base/v1beta1/coin";
+import { BinaryReader, BinaryWriter } from "../../../binary";
+import { Decimal } from "@cosmjs/math";
+import { GlobalDecoderRegistry } from "../../../registry";
 /**
  * AccumulatorContent is the state-entry for the global accumulator.
  * It contains the name of the global accumulator and the total value of
@@ -17,7 +13,7 @@ export interface AccumulatorContent {
   totalShares: string;
 }
 export interface AccumulatorContentProtoMsg {
-  typeUrl: '/symphony.accum.v1beta1.AccumulatorContent';
+  typeUrl: "/symphony.accum.v1beta1.AccumulatorContent";
   value: Uint8Array;
 }
 /**
@@ -30,7 +26,7 @@ export interface AccumulatorContentAmino {
   total_shares?: string;
 }
 export interface AccumulatorContentAminoMsg {
-  type: '/symphony.accum.v1beta1.AccumulatorContent';
+  type: "/symphony.accum.v1beta1.AccumulatorContent";
   value: AccumulatorContentAmino;
 }
 /**
@@ -44,12 +40,12 @@ export interface AccumulatorContentSDKType {
 }
 export interface Options {}
 export interface OptionsProtoMsg {
-  typeUrl: '/symphony.accum.v1beta1.Options';
+  typeUrl: "/symphony.accum.v1beta1.Options";
   value: Uint8Array;
 }
 export interface OptionsAmino {}
 export interface OptionsAminoMsg {
-  type: '/symphony.accum.v1beta1.Options';
+  type: "/symphony.accum.v1beta1.Options";
   value: OptionsAmino;
 }
 export interface OptionsSDKType {}
@@ -67,11 +63,11 @@ export interface Record {
    * accum_value_per_share is the subset of coins per shar of the global
    * accumulator value that allows to infer how much a position is entitled to
    * per share that it owns.
-   *
+   * 
    * In the default case with no intervals, this value equals to the global
    * accumulator value at the time of the position creation, the last update or
    * reward claim.
-   *
+   * 
    * In the interval case such as concentrated liquidity, this value equals to
    * the global growth of rewards inside the interval during one of: the time of
    * the position creation, the last update or reward claim. Note, that
@@ -94,7 +90,7 @@ export interface Record {
   options?: Options;
 }
 export interface RecordProtoMsg {
-  typeUrl: '/symphony.accum.v1beta1.Record';
+  typeUrl: "/symphony.accum.v1beta1.Record";
   value: Uint8Array;
 }
 /**
@@ -111,11 +107,11 @@ export interface RecordAmino {
    * accum_value_per_share is the subset of coins per shar of the global
    * accumulator value that allows to infer how much a position is entitled to
    * per share that it owns.
-   *
+   * 
    * In the default case with no intervals, this value equals to the global
    * accumulator value at the time of the position creation, the last update or
    * reward claim.
-   *
+   * 
    * In the interval case such as concentrated liquidity, this value equals to
    * the global growth of rewards inside the interval during one of: the time of
    * the position creation, the last update or reward claim. Note, that
@@ -138,7 +134,7 @@ export interface RecordAmino {
   options?: OptionsAmino;
 }
 export interface RecordAminoMsg {
-  type: '/symphony.accum.v1beta1.Record';
+  type: "/symphony.accum.v1beta1.Record";
   value: RecordAmino;
 }
 /**
@@ -154,58 +150,31 @@ export interface RecordSDKType {
 function createBaseAccumulatorContent(): AccumulatorContent {
   return {
     accumValue: [],
-    totalShares: '',
+    totalShares: ""
   };
 }
 export const AccumulatorContent = {
-  typeUrl: '/symphony.accum.v1beta1.AccumulatorContent',
+  typeUrl: "/symphony.accum.v1beta1.AccumulatorContent",
   is(o: any): o is AccumulatorContent {
-    return (
-      o &&
-      (o.$typeUrl === AccumulatorContent.typeUrl ||
-        (Array.isArray(o.accumValue) &&
-          (!o.accumValue.length || DecCoin.is(o.accumValue[0])) &&
-          typeof o.totalShares === 'string'))
-    );
+    return o && (o.$typeUrl === AccumulatorContent.typeUrl || Array.isArray(o.accumValue) && (!o.accumValue.length || DecCoin.is(o.accumValue[0])) && typeof o.totalShares === "string");
   },
   isSDK(o: any): o is AccumulatorContentSDKType {
-    return (
-      o &&
-      (o.$typeUrl === AccumulatorContent.typeUrl ||
-        (Array.isArray(o.accum_value) &&
-          (!o.accum_value.length || DecCoin.isSDK(o.accum_value[0])) &&
-          typeof o.total_shares === 'string'))
-    );
+    return o && (o.$typeUrl === AccumulatorContent.typeUrl || Array.isArray(o.accum_value) && (!o.accum_value.length || DecCoin.isSDK(o.accum_value[0])) && typeof o.total_shares === "string");
   },
   isAmino(o: any): o is AccumulatorContentAmino {
-    return (
-      o &&
-      (o.$typeUrl === AccumulatorContent.typeUrl ||
-        (Array.isArray(o.accum_value) &&
-          (!o.accum_value.length || DecCoin.isAmino(o.accum_value[0])) &&
-          typeof o.total_shares === 'string'))
-    );
+    return o && (o.$typeUrl === AccumulatorContent.typeUrl || Array.isArray(o.accum_value) && (!o.accum_value.length || DecCoin.isAmino(o.accum_value[0])) && typeof o.total_shares === "string");
   },
-  encode(
-    message: AccumulatorContent,
-    writer: BinaryWriter = BinaryWriter.create(),
-  ): BinaryWriter {
+  encode(message: AccumulatorContent, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
     for (const v of message.accumValue) {
       DecCoin.encode(v!, writer.uint32(10).fork()).ldelim();
     }
-    if (message.totalShares !== '') {
-      writer
-        .uint32(18)
-        .string(Decimal.fromUserInput(message.totalShares, 18).atomics);
+    if (message.totalShares !== "") {
+      writer.uint32(18).string(Decimal.fromUserInput(message.totalShares, 18).atomics);
     }
     return writer;
   },
-  decode(
-    input: BinaryReader | Uint8Array,
-    length?: number,
-  ): AccumulatorContent {
-    const reader =
-      input instanceof BinaryReader ? input : new BinaryReader(input);
+  decode(input: BinaryReader | Uint8Array, length?: number): AccumulatorContent {
+    const reader = input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseAccumulatorContent();
     while (reader.pos < end) {
@@ -215,10 +184,7 @@ export const AccumulatorContent = {
           message.accumValue.push(DecCoin.decode(reader, reader.uint32()));
           break;
         case 2:
-          message.totalShares = Decimal.fromAtomics(
-            reader.string(),
-            18,
-          ).toString();
+          message.totalShares = Decimal.fromAtomics(reader.string(), 18).toString();
           break;
         default:
           reader.skipType(tag & 7);
@@ -229,15 +195,13 @@ export const AccumulatorContent = {
   },
   fromPartial(object: Partial<AccumulatorContent>): AccumulatorContent {
     const message = createBaseAccumulatorContent();
-    message.accumValue =
-      object.accumValue?.map(e => DecCoin.fromPartial(e)) || [];
-    message.totalShares = object.totalShares ?? '';
+    message.accumValue = object.accumValue?.map(e => DecCoin.fromPartial(e)) || [];
+    message.totalShares = object.totalShares ?? "";
     return message;
   },
   fromAmino(object: AccumulatorContentAmino): AccumulatorContent {
     const message = createBaseAccumulatorContent();
-    message.accumValue =
-      object.accum_value?.map(e => DecCoin.fromAmino(e)) || [];
+    message.accumValue = object.accum_value?.map(e => DecCoin.fromAmino(e)) || [];
     if (object.total_shares !== undefined && object.total_shares !== null) {
       message.totalShares = object.total_shares;
     }
@@ -246,14 +210,11 @@ export const AccumulatorContent = {
   toAmino(message: AccumulatorContent): AccumulatorContentAmino {
     const obj: any = {};
     if (message.accumValue) {
-      obj.accum_value = message.accumValue.map(e =>
-        e ? DecCoin.toAmino(e) : undefined,
-      );
+      obj.accum_value = message.accumValue.map(e => e ? DecCoin.toAmino(e) : undefined);
     } else {
       obj.accum_value = message.accumValue;
     }
-    obj.total_shares =
-      message.totalShares === '' ? undefined : message.totalShares;
+    obj.total_shares = message.totalShares === "" ? undefined : message.totalShares;
     return obj;
   },
   fromAminoMsg(object: AccumulatorContentAminoMsg): AccumulatorContent {
@@ -267,17 +228,17 @@ export const AccumulatorContent = {
   },
   toProtoMsg(message: AccumulatorContent): AccumulatorContentProtoMsg {
     return {
-      typeUrl: '/symphony.accum.v1beta1.AccumulatorContent',
-      value: AccumulatorContent.encode(message).finish(),
+      typeUrl: "/symphony.accum.v1beta1.AccumulatorContent",
+      value: AccumulatorContent.encode(message).finish()
     };
-  },
+  }
 };
 GlobalDecoderRegistry.register(AccumulatorContent.typeUrl, AccumulatorContent);
 function createBaseOptions(): Options {
   return {};
 }
 export const Options = {
-  typeUrl: '/symphony.accum.v1beta1.Options',
+  typeUrl: "/symphony.accum.v1beta1.Options",
   is(o: any): o is Options {
     return o && o.$typeUrl === Options.typeUrl;
   },
@@ -287,15 +248,11 @@ export const Options = {
   isAmino(o: any): o is OptionsAmino {
     return o && o.$typeUrl === Options.typeUrl;
   },
-  encode(
-    _: Options,
-    writer: BinaryWriter = BinaryWriter.create(),
-  ): BinaryWriter {
+  encode(_: Options, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
     return writer;
   },
   decode(input: BinaryReader | Uint8Array, length?: number): Options {
-    const reader =
-      input instanceof BinaryReader ? input : new BinaryReader(input);
+    const reader = input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseOptions();
     while (reader.pos < end) {
@@ -331,69 +288,34 @@ export const Options = {
   },
   toProtoMsg(message: Options): OptionsProtoMsg {
     return {
-      typeUrl: '/symphony.accum.v1beta1.Options',
-      value: Options.encode(message).finish(),
+      typeUrl: "/symphony.accum.v1beta1.Options",
+      value: Options.encode(message).finish()
     };
-  },
+  }
 };
 GlobalDecoderRegistry.register(Options.typeUrl, Options);
 function createBaseRecord(): Record {
   return {
-    numShares: '',
+    numShares: "",
     accumValuePerShare: [],
     unclaimedRewardsTotal: [],
-    options: undefined,
+    options: undefined
   };
 }
 export const Record = {
-  typeUrl: '/symphony.accum.v1beta1.Record',
+  typeUrl: "/symphony.accum.v1beta1.Record",
   is(o: any): o is Record {
-    return (
-      o &&
-      (o.$typeUrl === Record.typeUrl ||
-        (typeof o.numShares === 'string' &&
-          Array.isArray(o.accumValuePerShare) &&
-          (!o.accumValuePerShare.length ||
-            DecCoin.is(o.accumValuePerShare[0])) &&
-          Array.isArray(o.unclaimedRewardsTotal) &&
-          (!o.unclaimedRewardsTotal.length ||
-            DecCoin.is(o.unclaimedRewardsTotal[0]))))
-    );
+    return o && (o.$typeUrl === Record.typeUrl || typeof o.numShares === "string" && Array.isArray(o.accumValuePerShare) && (!o.accumValuePerShare.length || DecCoin.is(o.accumValuePerShare[0])) && Array.isArray(o.unclaimedRewardsTotal) && (!o.unclaimedRewardsTotal.length || DecCoin.is(o.unclaimedRewardsTotal[0])));
   },
   isSDK(o: any): o is RecordSDKType {
-    return (
-      o &&
-      (o.$typeUrl === Record.typeUrl ||
-        (typeof o.num_shares === 'string' &&
-          Array.isArray(o.accum_value_per_share) &&
-          (!o.accum_value_per_share.length ||
-            DecCoin.isSDK(o.accum_value_per_share[0])) &&
-          Array.isArray(o.unclaimed_rewards_total) &&
-          (!o.unclaimed_rewards_total.length ||
-            DecCoin.isSDK(o.unclaimed_rewards_total[0]))))
-    );
+    return o && (o.$typeUrl === Record.typeUrl || typeof o.num_shares === "string" && Array.isArray(o.accum_value_per_share) && (!o.accum_value_per_share.length || DecCoin.isSDK(o.accum_value_per_share[0])) && Array.isArray(o.unclaimed_rewards_total) && (!o.unclaimed_rewards_total.length || DecCoin.isSDK(o.unclaimed_rewards_total[0])));
   },
   isAmino(o: any): o is RecordAmino {
-    return (
-      o &&
-      (o.$typeUrl === Record.typeUrl ||
-        (typeof o.num_shares === 'string' &&
-          Array.isArray(o.accum_value_per_share) &&
-          (!o.accum_value_per_share.length ||
-            DecCoin.isAmino(o.accum_value_per_share[0])) &&
-          Array.isArray(o.unclaimed_rewards_total) &&
-          (!o.unclaimed_rewards_total.length ||
-            DecCoin.isAmino(o.unclaimed_rewards_total[0]))))
-    );
+    return o && (o.$typeUrl === Record.typeUrl || typeof o.num_shares === "string" && Array.isArray(o.accum_value_per_share) && (!o.accum_value_per_share.length || DecCoin.isAmino(o.accum_value_per_share[0])) && Array.isArray(o.unclaimed_rewards_total) && (!o.unclaimed_rewards_total.length || DecCoin.isAmino(o.unclaimed_rewards_total[0])));
   },
-  encode(
-    message: Record,
-    writer: BinaryWriter = BinaryWriter.create(),
-  ): BinaryWriter {
-    if (message.numShares !== '') {
-      writer
-        .uint32(10)
-        .string(Decimal.fromUserInput(message.numShares, 18).atomics);
+  encode(message: Record, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
+    if (message.numShares !== "") {
+      writer.uint32(10).string(Decimal.fromUserInput(message.numShares, 18).atomics);
     }
     for (const v of message.accumValuePerShare) {
       DecCoin.encode(v!, writer.uint32(18).fork()).ldelim();
@@ -407,28 +329,20 @@ export const Record = {
     return writer;
   },
   decode(input: BinaryReader | Uint8Array, length?: number): Record {
-    const reader =
-      input instanceof BinaryReader ? input : new BinaryReader(input);
+    const reader = input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseRecord();
     while (reader.pos < end) {
       const tag = reader.uint32();
       switch (tag >>> 3) {
         case 1:
-          message.numShares = Decimal.fromAtomics(
-            reader.string(),
-            18,
-          ).toString();
+          message.numShares = Decimal.fromAtomics(reader.string(), 18).toString();
           break;
         case 2:
-          message.accumValuePerShare.push(
-            DecCoin.decode(reader, reader.uint32()),
-          );
+          message.accumValuePerShare.push(DecCoin.decode(reader, reader.uint32()));
           break;
         case 3:
-          message.unclaimedRewardsTotal.push(
-            DecCoin.decode(reader, reader.uint32()),
-          );
+          message.unclaimedRewardsTotal.push(DecCoin.decode(reader, reader.uint32()));
           break;
         case 4:
           message.options = Options.decode(reader, reader.uint32());
@@ -442,15 +356,10 @@ export const Record = {
   },
   fromPartial(object: Partial<Record>): Record {
     const message = createBaseRecord();
-    message.numShares = object.numShares ?? '';
-    message.accumValuePerShare =
-      object.accumValuePerShare?.map(e => DecCoin.fromPartial(e)) || [];
-    message.unclaimedRewardsTotal =
-      object.unclaimedRewardsTotal?.map(e => DecCoin.fromPartial(e)) || [];
-    message.options =
-      object.options !== undefined && object.options !== null
-        ? Options.fromPartial(object.options)
-        : undefined;
+    message.numShares = object.numShares ?? "";
+    message.accumValuePerShare = object.accumValuePerShare?.map(e => DecCoin.fromPartial(e)) || [];
+    message.unclaimedRewardsTotal = object.unclaimedRewardsTotal?.map(e => DecCoin.fromPartial(e)) || [];
+    message.options = object.options !== undefined && object.options !== null ? Options.fromPartial(object.options) : undefined;
     return message;
   },
   fromAmino(object: RecordAmino): Record {
@@ -458,10 +367,8 @@ export const Record = {
     if (object.num_shares !== undefined && object.num_shares !== null) {
       message.numShares = object.num_shares;
     }
-    message.accumValuePerShare =
-      object.accum_value_per_share?.map(e => DecCoin.fromAmino(e)) || [];
-    message.unclaimedRewardsTotal =
-      object.unclaimed_rewards_total?.map(e => DecCoin.fromAmino(e)) || [];
+    message.accumValuePerShare = object.accum_value_per_share?.map(e => DecCoin.fromAmino(e)) || [];
+    message.unclaimedRewardsTotal = object.unclaimed_rewards_total?.map(e => DecCoin.fromAmino(e)) || [];
     if (object.options !== undefined && object.options !== null) {
       message.options = Options.fromAmino(object.options);
     }
@@ -469,24 +376,18 @@ export const Record = {
   },
   toAmino(message: Record): RecordAmino {
     const obj: any = {};
-    obj.num_shares = message.numShares === '' ? undefined : message.numShares;
+    obj.num_shares = message.numShares === "" ? undefined : message.numShares;
     if (message.accumValuePerShare) {
-      obj.accum_value_per_share = message.accumValuePerShare.map(e =>
-        e ? DecCoin.toAmino(e) : undefined,
-      );
+      obj.accum_value_per_share = message.accumValuePerShare.map(e => e ? DecCoin.toAmino(e) : undefined);
     } else {
       obj.accum_value_per_share = message.accumValuePerShare;
     }
     if (message.unclaimedRewardsTotal) {
-      obj.unclaimed_rewards_total = message.unclaimedRewardsTotal.map(e =>
-        e ? DecCoin.toAmino(e) : undefined,
-      );
+      obj.unclaimed_rewards_total = message.unclaimedRewardsTotal.map(e => e ? DecCoin.toAmino(e) : undefined);
     } else {
       obj.unclaimed_rewards_total = message.unclaimedRewardsTotal;
     }
-    obj.options = message.options
-      ? Options.toAmino(message.options)
-      : undefined;
+    obj.options = message.options ? Options.toAmino(message.options) : undefined;
     return obj;
   },
   fromAminoMsg(object: RecordAminoMsg): Record {
@@ -500,9 +401,9 @@ export const Record = {
   },
   toProtoMsg(message: Record): RecordProtoMsg {
     return {
-      typeUrl: '/symphony.accum.v1beta1.Record',
-      value: Record.encode(message).finish(),
+      typeUrl: "/symphony.accum.v1beta1.Record",
+      value: Record.encode(message).finish()
     };
-  },
+  }
 };
 GlobalDecoderRegistry.register(Record.typeUrl, Record);
