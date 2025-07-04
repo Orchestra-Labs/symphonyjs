@@ -2,17 +2,37 @@
 import { EpochInfo, EpochInfoAmino, EpochInfoSDKType } from './genesis';
 import { BinaryReader, BinaryWriter } from '../../../binary';
 import { GlobalDecoderRegistry } from '../../../registry';
+/**
+ * @name QueryEpochsInfoRequest
+ * @package symphony.epochs.v1beta1
+ * @see proto type: symphony.epochs.v1beta1.QueryEpochsInfoRequest
+ */
 export interface QueryEpochsInfoRequest {}
 export interface QueryEpochsInfoRequestProtoMsg {
   typeUrl: '/symphony.epochs.v1beta1.QueryEpochsInfoRequest';
   value: Uint8Array;
 }
+/**
+ * @name QueryEpochsInfoRequestAmino
+ * @package symphony.epochs.v1beta1
+ * @see proto type: symphony.epochs.v1beta1.QueryEpochsInfoRequest
+ */
 export interface QueryEpochsInfoRequestAmino {}
 export interface QueryEpochsInfoRequestAminoMsg {
   type: '/symphony.epochs.v1beta1.QueryEpochsInfoRequest';
   value: QueryEpochsInfoRequestAmino;
 }
+/**
+ * @name QueryEpochsInfoRequestSDKType
+ * @package symphony.epochs.v1beta1
+ * @see proto type: symphony.epochs.v1beta1.QueryEpochsInfoRequest
+ */
 export interface QueryEpochsInfoRequestSDKType {}
+/**
+ * @name QueryEpochsInfoResponse
+ * @package symphony.epochs.v1beta1
+ * @see proto type: symphony.epochs.v1beta1.QueryEpochsInfoResponse
+ */
 export interface QueryEpochsInfoResponse {
   epochs: EpochInfo[];
 }
@@ -20,6 +40,11 @@ export interface QueryEpochsInfoResponseProtoMsg {
   typeUrl: '/symphony.epochs.v1beta1.QueryEpochsInfoResponse';
   value: Uint8Array;
 }
+/**
+ * @name QueryEpochsInfoResponseAmino
+ * @package symphony.epochs.v1beta1
+ * @see proto type: symphony.epochs.v1beta1.QueryEpochsInfoResponse
+ */
 export interface QueryEpochsInfoResponseAmino {
   epochs?: EpochInfoAmino[];
 }
@@ -27,9 +52,19 @@ export interface QueryEpochsInfoResponseAminoMsg {
   type: '/symphony.epochs.v1beta1.QueryEpochsInfoResponse';
   value: QueryEpochsInfoResponseAmino;
 }
+/**
+ * @name QueryEpochsInfoResponseSDKType
+ * @package symphony.epochs.v1beta1
+ * @see proto type: symphony.epochs.v1beta1.QueryEpochsInfoResponse
+ */
 export interface QueryEpochsInfoResponseSDKType {
   epochs: EpochInfoSDKType[];
 }
+/**
+ * @name QueryCurrentEpochRequest
+ * @package symphony.epochs.v1beta1
+ * @see proto type: symphony.epochs.v1beta1.QueryCurrentEpochRequest
+ */
 export interface QueryCurrentEpochRequest {
   identifier: string;
 }
@@ -37,6 +72,11 @@ export interface QueryCurrentEpochRequestProtoMsg {
   typeUrl: '/symphony.epochs.v1beta1.QueryCurrentEpochRequest';
   value: Uint8Array;
 }
+/**
+ * @name QueryCurrentEpochRequestAmino
+ * @package symphony.epochs.v1beta1
+ * @see proto type: symphony.epochs.v1beta1.QueryCurrentEpochRequest
+ */
 export interface QueryCurrentEpochRequestAmino {
   identifier?: string;
 }
@@ -44,9 +84,19 @@ export interface QueryCurrentEpochRequestAminoMsg {
   type: '/symphony.epochs.v1beta1.QueryCurrentEpochRequest';
   value: QueryCurrentEpochRequestAmino;
 }
+/**
+ * @name QueryCurrentEpochRequestSDKType
+ * @package symphony.epochs.v1beta1
+ * @see proto type: symphony.epochs.v1beta1.QueryCurrentEpochRequest
+ */
 export interface QueryCurrentEpochRequestSDKType {
   identifier: string;
 }
+/**
+ * @name QueryCurrentEpochResponse
+ * @package symphony.epochs.v1beta1
+ * @see proto type: symphony.epochs.v1beta1.QueryCurrentEpochResponse
+ */
 export interface QueryCurrentEpochResponse {
   currentEpoch: bigint;
 }
@@ -54,6 +104,11 @@ export interface QueryCurrentEpochResponseProtoMsg {
   typeUrl: '/symphony.epochs.v1beta1.QueryCurrentEpochResponse';
   value: Uint8Array;
 }
+/**
+ * @name QueryCurrentEpochResponseAmino
+ * @package symphony.epochs.v1beta1
+ * @see proto type: symphony.epochs.v1beta1.QueryCurrentEpochResponse
+ */
 export interface QueryCurrentEpochResponseAmino {
   current_epoch?: string;
 }
@@ -61,12 +116,22 @@ export interface QueryCurrentEpochResponseAminoMsg {
   type: '/symphony.epochs.v1beta1.QueryCurrentEpochResponse';
   value: QueryCurrentEpochResponseAmino;
 }
+/**
+ * @name QueryCurrentEpochResponseSDKType
+ * @package symphony.epochs.v1beta1
+ * @see proto type: symphony.epochs.v1beta1.QueryCurrentEpochResponse
+ */
 export interface QueryCurrentEpochResponseSDKType {
   current_epoch: bigint;
 }
 function createBaseQueryEpochsInfoRequest(): QueryEpochsInfoRequest {
   return {};
 }
+/**
+ * @name QueryEpochsInfoRequest
+ * @package symphony.epochs.v1beta1
+ * @see proto type: symphony.epochs.v1beta1.QueryEpochsInfoRequest
+ */
 export const QueryEpochsInfoRequest = {
   typeUrl: '/symphony.epochs.v1beta1.QueryEpochsInfoRequest',
   is(o: any): o is QueryEpochsInfoRequest {
@@ -141,6 +206,11 @@ function createBaseQueryEpochsInfoResponse(): QueryEpochsInfoResponse {
     epochs: [],
   };
 }
+/**
+ * @name QueryEpochsInfoResponse
+ * @package symphony.epochs.v1beta1
+ * @see proto type: symphony.epochs.v1beta1.QueryEpochsInfoResponse
+ */
 export const QueryEpochsInfoResponse = {
   typeUrl: '/symphony.epochs.v1beta1.QueryEpochsInfoResponse',
   is(o: any): o is QueryEpochsInfoResponse {
@@ -251,6 +321,11 @@ function createBaseQueryCurrentEpochRequest(): QueryCurrentEpochRequest {
     identifier: '',
   };
 }
+/**
+ * @name QueryCurrentEpochRequest
+ * @package symphony.epochs.v1beta1
+ * @see proto type: symphony.epochs.v1beta1.QueryCurrentEpochRequest
+ */
 export const QueryCurrentEpochRequest = {
   typeUrl: '/symphony.epochs.v1beta1.QueryCurrentEpochRequest',
   is(o: any): o is QueryCurrentEpochRequest {
@@ -354,6 +429,11 @@ function createBaseQueryCurrentEpochResponse(): QueryCurrentEpochResponse {
     currentEpoch: BigInt(0),
   };
 }
+/**
+ * @name QueryCurrentEpochResponse
+ * @package symphony.epochs.v1beta1
+ * @see proto type: symphony.epochs.v1beta1.QueryCurrentEpochResponse
+ */
 export const QueryCurrentEpochResponse = {
   typeUrl: '/symphony.epochs.v1beta1.QueryCurrentEpochResponse',
   is(o: any): o is QueryCurrentEpochResponse {

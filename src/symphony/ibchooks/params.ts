@@ -1,6 +1,11 @@
 //@ts-nocheck
 import { BinaryReader, BinaryWriter } from '../../binary';
 import { GlobalDecoderRegistry } from '../../registry';
+/**
+ * @name Params
+ * @package symphony.ibchooks
+ * @see proto type: symphony.ibchooks.Params
+ */
 export interface Params {
   allowedAsyncAckContracts: string[];
 }
@@ -8,6 +13,11 @@ export interface ParamsProtoMsg {
   typeUrl: '/symphony.ibchooks.Params';
   value: Uint8Array;
 }
+/**
+ * @name ParamsAmino
+ * @package symphony.ibchooks
+ * @see proto type: symphony.ibchooks.Params
+ */
 export interface ParamsAmino {
   allowed_async_ack_contracts?: string[];
 }
@@ -15,6 +25,11 @@ export interface ParamsAminoMsg {
   type: '/symphony.ibchooks.Params';
   value: ParamsAmino;
 }
+/**
+ * @name ParamsSDKType
+ * @package symphony.ibchooks
+ * @see proto type: symphony.ibchooks.Params
+ */
 export interface ParamsSDKType {
   allowed_async_ack_contracts: string[];
 }
@@ -23,6 +38,11 @@ function createBaseParams(): Params {
     allowedAsyncAckContracts: [],
   };
 }
+/**
+ * @name Params
+ * @package symphony.ibchooks
+ * @see proto type: symphony.ibchooks.Params
+ */
 export const Params = {
   typeUrl: '/symphony.ibchooks.Params',
   is(o: any): o is Params {

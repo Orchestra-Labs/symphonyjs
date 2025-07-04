@@ -7,38 +7,70 @@ import {
 import { BinaryReader, BinaryWriter } from '../../../../binary';
 import { GlobalDecoderRegistry } from '../../../../registry';
 import { Decimal } from '@cosmjs/math';
-/** ===================== CalcOutAmtGivenIn */
+/**
+ * ===================== CalcOutAmtGivenIn
+ * @name CalcOutAmtGivenIn
+ * @package symphony.cosmwasmpool.v1beta1
+ * @see proto type: symphony.cosmwasmpool.v1beta1.CalcOutAmtGivenIn
+ */
 export interface CalcOutAmtGivenIn {
-  /** token_in is the token to be sent to the pool. */
+  /**
+   * token_in is the token to be sent to the pool.
+   */
   tokenIn: Coin;
-  /** token_out_denom is the token denom to be received from the pool. */
+  /**
+   * token_out_denom is the token denom to be received from the pool.
+   */
   tokenOutDenom: string;
-  /** swap_fee is the swap fee for this swap estimate. */
+  /**
+   * swap_fee is the swap fee for this swap estimate.
+   */
   swapFee: string;
 }
 export interface CalcOutAmtGivenInProtoMsg {
   typeUrl: '/symphony.cosmwasmpool.v1beta1.CalcOutAmtGivenIn';
   value: Uint8Array;
 }
-/** ===================== CalcOutAmtGivenIn */
+/**
+ * ===================== CalcOutAmtGivenIn
+ * @name CalcOutAmtGivenInAmino
+ * @package symphony.cosmwasmpool.v1beta1
+ * @see proto type: symphony.cosmwasmpool.v1beta1.CalcOutAmtGivenIn
+ */
 export interface CalcOutAmtGivenInAmino {
-  /** token_in is the token to be sent to the pool. */
+  /**
+   * token_in is the token to be sent to the pool.
+   */
   token_in?: CoinAmino;
-  /** token_out_denom is the token denom to be received from the pool. */
+  /**
+   * token_out_denom is the token denom to be received from the pool.
+   */
   token_out_denom?: string;
-  /** swap_fee is the swap fee for this swap estimate. */
+  /**
+   * swap_fee is the swap fee for this swap estimate.
+   */
   swap_fee?: string;
 }
 export interface CalcOutAmtGivenInAminoMsg {
   type: '/symphony.cosmwasmpool.v1beta1.CalcOutAmtGivenIn';
   value: CalcOutAmtGivenInAmino;
 }
-/** ===================== CalcOutAmtGivenIn */
+/**
+ * ===================== CalcOutAmtGivenIn
+ * @name CalcOutAmtGivenInSDKType
+ * @package symphony.cosmwasmpool.v1beta1
+ * @see proto type: symphony.cosmwasmpool.v1beta1.CalcOutAmtGivenIn
+ */
 export interface CalcOutAmtGivenInSDKType {
   token_in: CoinSDKType;
   token_out_denom: string;
   swap_fee: string;
 }
+/**
+ * @name CalcOutAmtGivenInRequest
+ * @package symphony.cosmwasmpool.v1beta1
+ * @see proto type: symphony.cosmwasmpool.v1beta1.CalcOutAmtGivenInRequest
+ */
 export interface CalcOutAmtGivenInRequest {
   /**
    * calc_out_amt_given_in is the structure containing all the request
@@ -50,6 +82,11 @@ export interface CalcOutAmtGivenInRequestProtoMsg {
   typeUrl: '/symphony.cosmwasmpool.v1beta1.CalcOutAmtGivenInRequest';
   value: Uint8Array;
 }
+/**
+ * @name CalcOutAmtGivenInRequestAmino
+ * @package symphony.cosmwasmpool.v1beta1
+ * @see proto type: symphony.cosmwasmpool.v1beta1.CalcOutAmtGivenInRequest
+ */
 export interface CalcOutAmtGivenInRequestAmino {
   /**
    * calc_out_amt_given_in is the structure containing all the request
@@ -61,60 +98,116 @@ export interface CalcOutAmtGivenInRequestAminoMsg {
   type: '/symphony.cosmwasmpool.v1beta1.CalcOutAmtGivenInRequest';
   value: CalcOutAmtGivenInRequestAmino;
 }
+/**
+ * @name CalcOutAmtGivenInRequestSDKType
+ * @package symphony.cosmwasmpool.v1beta1
+ * @see proto type: symphony.cosmwasmpool.v1beta1.CalcOutAmtGivenInRequest
+ */
 export interface CalcOutAmtGivenInRequestSDKType {
   calc_out_amt_given_in: CalcOutAmtGivenInSDKType;
 }
+/**
+ * @name CalcOutAmtGivenInResponse
+ * @package symphony.cosmwasmpool.v1beta1
+ * @see proto type: symphony.cosmwasmpool.v1beta1.CalcOutAmtGivenInResponse
+ */
 export interface CalcOutAmtGivenInResponse {
-  /** token_out is the token out computed from this swap estimate call. */
+  /**
+   * token_out is the token out computed from this swap estimate call.
+   */
   tokenOut: Coin;
 }
 export interface CalcOutAmtGivenInResponseProtoMsg {
   typeUrl: '/symphony.cosmwasmpool.v1beta1.CalcOutAmtGivenInResponse';
   value: Uint8Array;
 }
+/**
+ * @name CalcOutAmtGivenInResponseAmino
+ * @package symphony.cosmwasmpool.v1beta1
+ * @see proto type: symphony.cosmwasmpool.v1beta1.CalcOutAmtGivenInResponse
+ */
 export interface CalcOutAmtGivenInResponseAmino {
-  /** token_out is the token out computed from this swap estimate call. */
+  /**
+   * token_out is the token out computed from this swap estimate call.
+   */
   token_out?: CoinAmino;
 }
 export interface CalcOutAmtGivenInResponseAminoMsg {
   type: '/symphony.cosmwasmpool.v1beta1.CalcOutAmtGivenInResponse';
   value: CalcOutAmtGivenInResponseAmino;
 }
+/**
+ * @name CalcOutAmtGivenInResponseSDKType
+ * @package symphony.cosmwasmpool.v1beta1
+ * @see proto type: symphony.cosmwasmpool.v1beta1.CalcOutAmtGivenInResponse
+ */
 export interface CalcOutAmtGivenInResponseSDKType {
   token_out: CoinSDKType;
 }
-/** ===================== CalcInAmtGivenOut */
+/**
+ * ===================== CalcInAmtGivenOut
+ * @name CalcInAmtGivenOut
+ * @package symphony.cosmwasmpool.v1beta1
+ * @see proto type: symphony.cosmwasmpool.v1beta1.CalcInAmtGivenOut
+ */
 export interface CalcInAmtGivenOut {
-  /** token_out is the token out to be receoved from the pool. */
+  /**
+   * token_out is the token out to be receoved from the pool.
+   */
   tokenOut: Coin;
-  /** token_in_denom is the token denom to be sentt to the pool. */
+  /**
+   * token_in_denom is the token denom to be sentt to the pool.
+   */
   tokenInDenom: string;
-  /** swap_fee is the swap fee for this swap estimate. */
+  /**
+   * swap_fee is the swap fee for this swap estimate.
+   */
   swapFee: string;
 }
 export interface CalcInAmtGivenOutProtoMsg {
   typeUrl: '/symphony.cosmwasmpool.v1beta1.CalcInAmtGivenOut';
   value: Uint8Array;
 }
-/** ===================== CalcInAmtGivenOut */
+/**
+ * ===================== CalcInAmtGivenOut
+ * @name CalcInAmtGivenOutAmino
+ * @package symphony.cosmwasmpool.v1beta1
+ * @see proto type: symphony.cosmwasmpool.v1beta1.CalcInAmtGivenOut
+ */
 export interface CalcInAmtGivenOutAmino {
-  /** token_out is the token out to be receoved from the pool. */
+  /**
+   * token_out is the token out to be receoved from the pool.
+   */
   token_out?: CoinAmino;
-  /** token_in_denom is the token denom to be sentt to the pool. */
+  /**
+   * token_in_denom is the token denom to be sentt to the pool.
+   */
   token_in_denom?: string;
-  /** swap_fee is the swap fee for this swap estimate. */
+  /**
+   * swap_fee is the swap fee for this swap estimate.
+   */
   swap_fee?: string;
 }
 export interface CalcInAmtGivenOutAminoMsg {
   type: '/symphony.cosmwasmpool.v1beta1.CalcInAmtGivenOut';
   value: CalcInAmtGivenOutAmino;
 }
-/** ===================== CalcInAmtGivenOut */
+/**
+ * ===================== CalcInAmtGivenOut
+ * @name CalcInAmtGivenOutSDKType
+ * @package symphony.cosmwasmpool.v1beta1
+ * @see proto type: symphony.cosmwasmpool.v1beta1.CalcInAmtGivenOut
+ */
 export interface CalcInAmtGivenOutSDKType {
   token_out: CoinSDKType;
   token_in_denom: string;
   swap_fee: string;
 }
+/**
+ * @name CalcInAmtGivenOutRequest
+ * @package symphony.cosmwasmpool.v1beta1
+ * @see proto type: symphony.cosmwasmpool.v1beta1.CalcInAmtGivenOutRequest
+ */
 export interface CalcInAmtGivenOutRequest {
   /**
    * calc_in_amt_given_out is the structure containing all the request
@@ -126,6 +219,11 @@ export interface CalcInAmtGivenOutRequestProtoMsg {
   typeUrl: '/symphony.cosmwasmpool.v1beta1.CalcInAmtGivenOutRequest';
   value: Uint8Array;
 }
+/**
+ * @name CalcInAmtGivenOutRequestAmino
+ * @package symphony.cosmwasmpool.v1beta1
+ * @see proto type: symphony.cosmwasmpool.v1beta1.CalcInAmtGivenOutRequest
+ */
 export interface CalcInAmtGivenOutRequestAmino {
   /**
    * calc_in_amt_given_out is the structure containing all the request
@@ -137,25 +235,49 @@ export interface CalcInAmtGivenOutRequestAminoMsg {
   type: '/symphony.cosmwasmpool.v1beta1.CalcInAmtGivenOutRequest';
   value: CalcInAmtGivenOutRequestAmino;
 }
+/**
+ * @name CalcInAmtGivenOutRequestSDKType
+ * @package symphony.cosmwasmpool.v1beta1
+ * @see proto type: symphony.cosmwasmpool.v1beta1.CalcInAmtGivenOutRequest
+ */
 export interface CalcInAmtGivenOutRequestSDKType {
   calc_in_amt_given_out: CalcInAmtGivenOutSDKType;
 }
+/**
+ * @name CalcInAmtGivenOutResponse
+ * @package symphony.cosmwasmpool.v1beta1
+ * @see proto type: symphony.cosmwasmpool.v1beta1.CalcInAmtGivenOutResponse
+ */
 export interface CalcInAmtGivenOutResponse {
-  /** token_in is the token in computed from this swap estimate call. */
+  /**
+   * token_in is the token in computed from this swap estimate call.
+   */
   tokenIn: Coin;
 }
 export interface CalcInAmtGivenOutResponseProtoMsg {
   typeUrl: '/symphony.cosmwasmpool.v1beta1.CalcInAmtGivenOutResponse';
   value: Uint8Array;
 }
+/**
+ * @name CalcInAmtGivenOutResponseAmino
+ * @package symphony.cosmwasmpool.v1beta1
+ * @see proto type: symphony.cosmwasmpool.v1beta1.CalcInAmtGivenOutResponse
+ */
 export interface CalcInAmtGivenOutResponseAmino {
-  /** token_in is the token in computed from this swap estimate call. */
+  /**
+   * token_in is the token in computed from this swap estimate call.
+   */
   token_in?: CoinAmino;
 }
 export interface CalcInAmtGivenOutResponseAminoMsg {
   type: '/symphony.cosmwasmpool.v1beta1.CalcInAmtGivenOutResponse';
   value: CalcInAmtGivenOutResponseAmino;
 }
+/**
+ * @name CalcInAmtGivenOutResponseSDKType
+ * @package symphony.cosmwasmpool.v1beta1
+ * @see proto type: symphony.cosmwasmpool.v1beta1.CalcInAmtGivenOutResponse
+ */
 export interface CalcInAmtGivenOutResponseSDKType {
   token_in: CoinSDKType;
 }
@@ -166,6 +288,12 @@ function createBaseCalcOutAmtGivenIn(): CalcOutAmtGivenIn {
     swapFee: '',
   };
 }
+/**
+ * ===================== CalcOutAmtGivenIn
+ * @name CalcOutAmtGivenIn
+ * @package symphony.cosmwasmpool.v1beta1
+ * @see proto type: symphony.cosmwasmpool.v1beta1.CalcOutAmtGivenIn
+ */
 export const CalcOutAmtGivenIn = {
   typeUrl: '/symphony.cosmwasmpool.v1beta1.CalcOutAmtGivenIn',
   is(o: any): o is CalcOutAmtGivenIn {
@@ -292,6 +420,11 @@ function createBaseCalcOutAmtGivenInRequest(): CalcOutAmtGivenInRequest {
     calcOutAmtGivenIn: CalcOutAmtGivenIn.fromPartial({}),
   };
 }
+/**
+ * @name CalcOutAmtGivenInRequest
+ * @package symphony.cosmwasmpool.v1beta1
+ * @see proto type: symphony.cosmwasmpool.v1beta1.CalcOutAmtGivenInRequest
+ */
 export const CalcOutAmtGivenInRequest = {
   typeUrl: '/symphony.cosmwasmpool.v1beta1.CalcOutAmtGivenInRequest',
   is(o: any): o is CalcOutAmtGivenInRequest {
@@ -412,6 +545,11 @@ function createBaseCalcOutAmtGivenInResponse(): CalcOutAmtGivenInResponse {
     tokenOut: Coin.fromPartial({}),
   };
 }
+/**
+ * @name CalcOutAmtGivenInResponse
+ * @package symphony.cosmwasmpool.v1beta1
+ * @see proto type: symphony.cosmwasmpool.v1beta1.CalcOutAmtGivenInResponse
+ */
 export const CalcOutAmtGivenInResponse = {
   typeUrl: '/symphony.cosmwasmpool.v1beta1.CalcOutAmtGivenInResponse',
   is(o: any): o is CalcOutAmtGivenInResponse {
@@ -521,6 +659,12 @@ function createBaseCalcInAmtGivenOut(): CalcInAmtGivenOut {
     swapFee: '',
   };
 }
+/**
+ * ===================== CalcInAmtGivenOut
+ * @name CalcInAmtGivenOut
+ * @package symphony.cosmwasmpool.v1beta1
+ * @see proto type: symphony.cosmwasmpool.v1beta1.CalcInAmtGivenOut
+ */
 export const CalcInAmtGivenOut = {
   typeUrl: '/symphony.cosmwasmpool.v1beta1.CalcInAmtGivenOut',
   is(o: any): o is CalcInAmtGivenOut {
@@ -646,6 +790,11 @@ function createBaseCalcInAmtGivenOutRequest(): CalcInAmtGivenOutRequest {
     calcInAmtGivenOut: CalcInAmtGivenOut.fromPartial({}),
   };
 }
+/**
+ * @name CalcInAmtGivenOutRequest
+ * @package symphony.cosmwasmpool.v1beta1
+ * @see proto type: symphony.cosmwasmpool.v1beta1.CalcInAmtGivenOutRequest
+ */
 export const CalcInAmtGivenOutRequest = {
   typeUrl: '/symphony.cosmwasmpool.v1beta1.CalcInAmtGivenOutRequest',
   is(o: any): o is CalcInAmtGivenOutRequest {
@@ -766,6 +915,11 @@ function createBaseCalcInAmtGivenOutResponse(): CalcInAmtGivenOutResponse {
     tokenIn: Coin.fromPartial({}),
   };
 }
+/**
+ * @name CalcInAmtGivenOutResponse
+ * @package symphony.cosmwasmpool.v1beta1
+ * @see proto type: symphony.cosmwasmpool.v1beta1.CalcInAmtGivenOutResponse
+ */
 export const CalcInAmtGivenOutResponse = {
   typeUrl: '/symphony.cosmwasmpool.v1beta1.CalcInAmtGivenOutResponse',
   is(o: any): o is CalcInAmtGivenOutResponse {

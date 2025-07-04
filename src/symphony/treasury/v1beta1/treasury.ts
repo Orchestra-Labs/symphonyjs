@@ -2,7 +2,12 @@
 import { BinaryReader, BinaryWriter } from '../../../binary';
 import { Decimal } from '@cosmjs/math';
 import { GlobalDecoderRegistry } from '../../../registry';
-/** Params defines the parameters for the oracle module. */
+/**
+ * Params defines the parameters for the oracle module.
+ * @name Params
+ * @package symphony.treasury.v1beta1
+ * @see proto type: symphony.treasury.v1beta1.Params
+ */
 export interface Params {
   reserveAllowableOffset: string;
   maxFeeMultiplier: string;
@@ -15,7 +20,12 @@ export interface ParamsProtoMsg {
   typeUrl: '/symphony.treasury.v1beta1.Params';
   value: Uint8Array;
 }
-/** Params defines the parameters for the oracle module. */
+/**
+ * Params defines the parameters for the oracle module.
+ * @name ParamsAmino
+ * @package symphony.treasury.v1beta1
+ * @see proto type: symphony.treasury.v1beta1.Params
+ */
 export interface ParamsAmino {
   reserve_allowable_offset?: string;
   max_fee_multiplier?: string;
@@ -28,7 +38,12 @@ export interface ParamsAminoMsg {
   type: '/symphony.treasury.v1beta1.Params';
   value: ParamsAmino;
 }
-/** Params defines the parameters for the oracle module. */
+/**
+ * Params defines the parameters for the oracle module.
+ * @name ParamsSDKType
+ * @package symphony.treasury.v1beta1
+ * @see proto type: symphony.treasury.v1beta1.Params
+ */
 export interface ParamsSDKType {
   reserve_allowable_offset: string;
   max_fee_multiplier: string;
@@ -47,6 +62,12 @@ function createBaseParams(): Params {
     windowProbation: BigInt(0),
   };
 }
+/**
+ * Params defines the parameters for the oracle module.
+ * @name Params
+ * @package symphony.treasury.v1beta1
+ * @see proto type: symphony.treasury.v1beta1.Params
+ */
 export const Params = {
   typeUrl: '/symphony.treasury.v1beta1.Params',
   is(o: any): o is Params {

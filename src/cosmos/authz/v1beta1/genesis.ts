@@ -6,7 +6,12 @@ import {
 } from './authz';
 import { BinaryReader, BinaryWriter } from '../../../binary';
 import { GlobalDecoderRegistry } from '../../../registry';
-/** GenesisState defines the authz module's genesis state. */
+/**
+ * GenesisState defines the authz module's genesis state.
+ * @name GenesisState
+ * @package cosmos.authz.v1beta1
+ * @see proto type: cosmos.authz.v1beta1.GenesisState
+ */
 export interface GenesisState {
   authorization: GrantAuthorization[];
 }
@@ -14,7 +19,12 @@ export interface GenesisStateProtoMsg {
   typeUrl: '/cosmos.authz.v1beta1.GenesisState';
   value: Uint8Array;
 }
-/** GenesisState defines the authz module's genesis state. */
+/**
+ * GenesisState defines the authz module's genesis state.
+ * @name GenesisStateAmino
+ * @package cosmos.authz.v1beta1
+ * @see proto type: cosmos.authz.v1beta1.GenesisState
+ */
 export interface GenesisStateAmino {
   authorization: GrantAuthorizationAmino[];
 }
@@ -22,7 +32,12 @@ export interface GenesisStateAminoMsg {
   type: 'cosmos-sdk/GenesisState';
   value: GenesisStateAmino;
 }
-/** GenesisState defines the authz module's genesis state. */
+/**
+ * GenesisState defines the authz module's genesis state.
+ * @name GenesisStateSDKType
+ * @package cosmos.authz.v1beta1
+ * @see proto type: cosmos.authz.v1beta1.GenesisState
+ */
 export interface GenesisStateSDKType {
   authorization: GrantAuthorizationSDKType[];
 }
@@ -31,6 +46,12 @@ function createBaseGenesisState(): GenesisState {
     authorization: [],
   };
 }
+/**
+ * GenesisState defines the authz module's genesis state.
+ * @name GenesisState
+ * @package cosmos.authz.v1beta1
+ * @see proto type: cosmos.authz.v1beta1.GenesisState
+ */
 export const GenesisState = {
   typeUrl: '/cosmos.authz.v1beta1.GenesisState',
   aminoType: 'cosmos-sdk/GenesisState',

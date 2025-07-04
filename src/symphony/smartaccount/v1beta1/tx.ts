@@ -2,7 +2,12 @@
 import { BinaryReader, BinaryWriter } from '../../../binary';
 import { bytesFromBase64, base64FromBytes } from '../../../helpers';
 import { GlobalDecoderRegistry } from '../../../registry';
-/** MsgAddAuthenticatorRequest defines the Msg/AddAuthenticator request type. */
+/**
+ * MsgAddAuthenticatorRequest defines the Msg/AddAuthenticator request type.
+ * @name MsgAddAuthenticator
+ * @package symphony.smartaccount.v1beta1
+ * @see proto type: symphony.smartaccount.v1beta1.MsgAddAuthenticator
+ */
 export interface MsgAddAuthenticator {
   sender: string;
   authenticatorType: string;
@@ -12,7 +17,12 @@ export interface MsgAddAuthenticatorProtoMsg {
   typeUrl: '/symphony.smartaccount.v1beta1.MsgAddAuthenticator';
   value: Uint8Array;
 }
-/** MsgAddAuthenticatorRequest defines the Msg/AddAuthenticator request type. */
+/**
+ * MsgAddAuthenticatorRequest defines the Msg/AddAuthenticator request type.
+ * @name MsgAddAuthenticatorAmino
+ * @package symphony.smartaccount.v1beta1
+ * @see proto type: symphony.smartaccount.v1beta1.MsgAddAuthenticator
+ */
 export interface MsgAddAuthenticatorAmino {
   sender?: string;
   authenticator_type?: string;
@@ -22,13 +32,23 @@ export interface MsgAddAuthenticatorAminoMsg {
   type: 'symphony/smartaccount/add-authenticator';
   value: MsgAddAuthenticatorAmino;
 }
-/** MsgAddAuthenticatorRequest defines the Msg/AddAuthenticator request type. */
+/**
+ * MsgAddAuthenticatorRequest defines the Msg/AddAuthenticator request type.
+ * @name MsgAddAuthenticatorSDKType
+ * @package symphony.smartaccount.v1beta1
+ * @see proto type: symphony.smartaccount.v1beta1.MsgAddAuthenticator
+ */
 export interface MsgAddAuthenticatorSDKType {
   sender: string;
   authenticator_type: string;
   data: Uint8Array;
 }
-/** MsgAddAuthenticatorResponse defines the Msg/AddAuthenticator response type. */
+/**
+ * MsgAddAuthenticatorResponse defines the Msg/AddAuthenticator response type.
+ * @name MsgAddAuthenticatorResponse
+ * @package symphony.smartaccount.v1beta1
+ * @see proto type: symphony.smartaccount.v1beta1.MsgAddAuthenticatorResponse
+ */
 export interface MsgAddAuthenticatorResponse {
   success: boolean;
 }
@@ -36,7 +56,12 @@ export interface MsgAddAuthenticatorResponseProtoMsg {
   typeUrl: '/symphony.smartaccount.v1beta1.MsgAddAuthenticatorResponse';
   value: Uint8Array;
 }
-/** MsgAddAuthenticatorResponse defines the Msg/AddAuthenticator response type. */
+/**
+ * MsgAddAuthenticatorResponse defines the Msg/AddAuthenticator response type.
+ * @name MsgAddAuthenticatorResponseAmino
+ * @package symphony.smartaccount.v1beta1
+ * @see proto type: symphony.smartaccount.v1beta1.MsgAddAuthenticatorResponse
+ */
 export interface MsgAddAuthenticatorResponseAmino {
   success?: boolean;
 }
@@ -44,13 +69,21 @@ export interface MsgAddAuthenticatorResponseAminoMsg {
   type: '/symphony.smartaccount.v1beta1.MsgAddAuthenticatorResponse';
   value: MsgAddAuthenticatorResponseAmino;
 }
-/** MsgAddAuthenticatorResponse defines the Msg/AddAuthenticator response type. */
+/**
+ * MsgAddAuthenticatorResponse defines the Msg/AddAuthenticator response type.
+ * @name MsgAddAuthenticatorResponseSDKType
+ * @package symphony.smartaccount.v1beta1
+ * @see proto type: symphony.smartaccount.v1beta1.MsgAddAuthenticatorResponse
+ */
 export interface MsgAddAuthenticatorResponseSDKType {
   success: boolean;
 }
 /**
  * MsgRemoveAuthenticatorRequest defines the Msg/RemoveAuthenticator request
  * type.
+ * @name MsgRemoveAuthenticator
+ * @package symphony.smartaccount.v1beta1
+ * @see proto type: symphony.smartaccount.v1beta1.MsgRemoveAuthenticator
  */
 export interface MsgRemoveAuthenticator {
   sender: string;
@@ -63,6 +96,9 @@ export interface MsgRemoveAuthenticatorProtoMsg {
 /**
  * MsgRemoveAuthenticatorRequest defines the Msg/RemoveAuthenticator request
  * type.
+ * @name MsgRemoveAuthenticatorAmino
+ * @package symphony.smartaccount.v1beta1
+ * @see proto type: symphony.smartaccount.v1beta1.MsgRemoveAuthenticator
  */
 export interface MsgRemoveAuthenticatorAmino {
   sender?: string;
@@ -75,6 +111,9 @@ export interface MsgRemoveAuthenticatorAminoMsg {
 /**
  * MsgRemoveAuthenticatorRequest defines the Msg/RemoveAuthenticator request
  * type.
+ * @name MsgRemoveAuthenticatorSDKType
+ * @package symphony.smartaccount.v1beta1
+ * @see proto type: symphony.smartaccount.v1beta1.MsgRemoveAuthenticator
  */
 export interface MsgRemoveAuthenticatorSDKType {
   sender: string;
@@ -83,6 +122,9 @@ export interface MsgRemoveAuthenticatorSDKType {
 /**
  * MsgRemoveAuthenticatorResponse defines the Msg/RemoveAuthenticator response
  * type.
+ * @name MsgRemoveAuthenticatorResponse
+ * @package symphony.smartaccount.v1beta1
+ * @see proto type: symphony.smartaccount.v1beta1.MsgRemoveAuthenticatorResponse
  */
 export interface MsgRemoveAuthenticatorResponse {
   success: boolean;
@@ -94,6 +136,9 @@ export interface MsgRemoveAuthenticatorResponseProtoMsg {
 /**
  * MsgRemoveAuthenticatorResponse defines the Msg/RemoveAuthenticator response
  * type.
+ * @name MsgRemoveAuthenticatorResponseAmino
+ * @package symphony.smartaccount.v1beta1
+ * @see proto type: symphony.smartaccount.v1beta1.MsgRemoveAuthenticatorResponse
  */
 export interface MsgRemoveAuthenticatorResponseAmino {
   success?: boolean;
@@ -105,10 +150,18 @@ export interface MsgRemoveAuthenticatorResponseAminoMsg {
 /**
  * MsgRemoveAuthenticatorResponse defines the Msg/RemoveAuthenticator response
  * type.
+ * @name MsgRemoveAuthenticatorResponseSDKType
+ * @package symphony.smartaccount.v1beta1
+ * @see proto type: symphony.smartaccount.v1beta1.MsgRemoveAuthenticatorResponse
  */
 export interface MsgRemoveAuthenticatorResponseSDKType {
   success: boolean;
 }
+/**
+ * @name MsgSetActiveState
+ * @package symphony.smartaccount.v1beta1
+ * @see proto type: symphony.smartaccount.v1beta1.MsgSetActiveState
+ */
 export interface MsgSetActiveState {
   sender: string;
   active: boolean;
@@ -117,6 +170,11 @@ export interface MsgSetActiveStateProtoMsg {
   typeUrl: '/symphony.smartaccount.v1beta1.MsgSetActiveState';
   value: Uint8Array;
 }
+/**
+ * @name MsgSetActiveStateAmino
+ * @package symphony.smartaccount.v1beta1
+ * @see proto type: symphony.smartaccount.v1beta1.MsgSetActiveState
+ */
 export interface MsgSetActiveStateAmino {
   sender?: string;
   active?: boolean;
@@ -125,24 +183,47 @@ export interface MsgSetActiveStateAminoMsg {
   type: 'symphony/smartaccount/set-active-state';
   value: MsgSetActiveStateAmino;
 }
+/**
+ * @name MsgSetActiveStateSDKType
+ * @package symphony.smartaccount.v1beta1
+ * @see proto type: symphony.smartaccount.v1beta1.MsgSetActiveState
+ */
 export interface MsgSetActiveStateSDKType {
   sender: string;
   active: boolean;
 }
+/**
+ * @name MsgSetActiveStateResponse
+ * @package symphony.smartaccount.v1beta1
+ * @see proto type: symphony.smartaccount.v1beta1.MsgSetActiveStateResponse
+ */
 export interface MsgSetActiveStateResponse {}
 export interface MsgSetActiveStateResponseProtoMsg {
   typeUrl: '/symphony.smartaccount.v1beta1.MsgSetActiveStateResponse';
   value: Uint8Array;
 }
+/**
+ * @name MsgSetActiveStateResponseAmino
+ * @package symphony.smartaccount.v1beta1
+ * @see proto type: symphony.smartaccount.v1beta1.MsgSetActiveStateResponse
+ */
 export interface MsgSetActiveStateResponseAmino {}
 export interface MsgSetActiveStateResponseAminoMsg {
   type: '/symphony.smartaccount.v1beta1.MsgSetActiveStateResponse';
   value: MsgSetActiveStateResponseAmino;
 }
+/**
+ * @name MsgSetActiveStateResponseSDKType
+ * @package symphony.smartaccount.v1beta1
+ * @see proto type: symphony.smartaccount.v1beta1.MsgSetActiveStateResponse
+ */
 export interface MsgSetActiveStateResponseSDKType {}
 /**
  * TxExtension allows for additional authenticator-specific data in
  * transactions.
+ * @name TxExtension
+ * @package symphony.smartaccount.v1beta1
+ * @see proto type: symphony.smartaccount.v1beta1.TxExtension
  */
 export interface TxExtension {
   /**
@@ -158,6 +239,9 @@ export interface TxExtensionProtoMsg {
 /**
  * TxExtension allows for additional authenticator-specific data in
  * transactions.
+ * @name TxExtensionAmino
+ * @package symphony.smartaccount.v1beta1
+ * @see proto type: symphony.smartaccount.v1beta1.TxExtension
  */
 export interface TxExtensionAmino {
   /**
@@ -173,6 +257,9 @@ export interface TxExtensionAminoMsg {
 /**
  * TxExtension allows for additional authenticator-specific data in
  * transactions.
+ * @name TxExtensionSDKType
+ * @package symphony.smartaccount.v1beta1
+ * @see proto type: symphony.smartaccount.v1beta1.TxExtension
  */
 export interface TxExtensionSDKType {
   selected_authenticators: bigint[];
@@ -184,6 +271,12 @@ function createBaseMsgAddAuthenticator(): MsgAddAuthenticator {
     data: new Uint8Array(),
   };
 }
+/**
+ * MsgAddAuthenticatorRequest defines the Msg/AddAuthenticator request type.
+ * @name MsgAddAuthenticator
+ * @package symphony.smartaccount.v1beta1
+ * @see proto type: symphony.smartaccount.v1beta1.MsgAddAuthenticator
+ */
 export const MsgAddAuthenticator = {
   typeUrl: '/symphony.smartaccount.v1beta1.MsgAddAuthenticator',
   aminoType: 'symphony/smartaccount/add-authenticator',
@@ -322,6 +415,12 @@ function createBaseMsgAddAuthenticatorResponse(): MsgAddAuthenticatorResponse {
     success: false,
   };
 }
+/**
+ * MsgAddAuthenticatorResponse defines the Msg/AddAuthenticator response type.
+ * @name MsgAddAuthenticatorResponse
+ * @package symphony.smartaccount.v1beta1
+ * @see proto type: symphony.smartaccount.v1beta1.MsgAddAuthenticatorResponse
+ */
 export const MsgAddAuthenticatorResponse = {
   typeUrl: '/symphony.smartaccount.v1beta1.MsgAddAuthenticatorResponse',
   is(o: any): o is MsgAddAuthenticatorResponse {
@@ -430,6 +529,13 @@ function createBaseMsgRemoveAuthenticator(): MsgRemoveAuthenticator {
     id: BigInt(0),
   };
 }
+/**
+ * MsgRemoveAuthenticatorRequest defines the Msg/RemoveAuthenticator request
+ * type.
+ * @name MsgRemoveAuthenticator
+ * @package symphony.smartaccount.v1beta1
+ * @see proto type: symphony.smartaccount.v1beta1.MsgRemoveAuthenticator
+ */
 export const MsgRemoveAuthenticator = {
   typeUrl: '/symphony.smartaccount.v1beta1.MsgRemoveAuthenticator',
   aminoType: 'symphony/smartaccount/remove-authenticator',
@@ -552,6 +658,13 @@ function createBaseMsgRemoveAuthenticatorResponse(): MsgRemoveAuthenticatorRespo
     success: false,
   };
 }
+/**
+ * MsgRemoveAuthenticatorResponse defines the Msg/RemoveAuthenticator response
+ * type.
+ * @name MsgRemoveAuthenticatorResponse
+ * @package symphony.smartaccount.v1beta1
+ * @see proto type: symphony.smartaccount.v1beta1.MsgRemoveAuthenticatorResponse
+ */
 export const MsgRemoveAuthenticatorResponse = {
   typeUrl: '/symphony.smartaccount.v1beta1.MsgRemoveAuthenticatorResponse',
   is(o: any): o is MsgRemoveAuthenticatorResponse {
@@ -660,6 +773,11 @@ function createBaseMsgSetActiveState(): MsgSetActiveState {
     active: false,
   };
 }
+/**
+ * @name MsgSetActiveState
+ * @package symphony.smartaccount.v1beta1
+ * @see proto type: symphony.smartaccount.v1beta1.MsgSetActiveState
+ */
 export const MsgSetActiveState = {
   typeUrl: '/symphony.smartaccount.v1beta1.MsgSetActiveState',
   aminoType: 'symphony/smartaccount/set-active-state',
@@ -769,6 +887,11 @@ GlobalDecoderRegistry.registerAminoProtoMapping(
 function createBaseMsgSetActiveStateResponse(): MsgSetActiveStateResponse {
   return {};
 }
+/**
+ * @name MsgSetActiveStateResponse
+ * @package symphony.smartaccount.v1beta1
+ * @see proto type: symphony.smartaccount.v1beta1.MsgSetActiveStateResponse
+ */
 export const MsgSetActiveStateResponse = {
   typeUrl: '/symphony.smartaccount.v1beta1.MsgSetActiveStateResponse',
   is(o: any): o is MsgSetActiveStateResponse {
@@ -849,6 +972,13 @@ function createBaseTxExtension(): TxExtension {
     selectedAuthenticators: [],
   };
 }
+/**
+ * TxExtension allows for additional authenticator-specific data in
+ * transactions.
+ * @name TxExtension
+ * @package symphony.smartaccount.v1beta1
+ * @see proto type: symphony.smartaccount.v1beta1.TxExtension
+ */
 export const TxExtension = {
   typeUrl: '/symphony.smartaccount.v1beta1.TxExtension',
   is(o: any): o is TxExtension {

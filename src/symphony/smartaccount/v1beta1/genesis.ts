@@ -11,9 +11,14 @@ import { GlobalDecoderRegistry } from '../../../registry';
  * AuthenticatorData represents a genesis exported account with Authenticators.
  * The address is used as the key, and the account authenticators are stored in
  * the authenticators field.
+ * @name AuthenticatorData
+ * @package symphony.smartaccount.v1beta1
+ * @see proto type: symphony.smartaccount.v1beta1.AuthenticatorData
  */
 export interface AuthenticatorData {
-  /** address is an account address, one address can have many authenticators */
+  /**
+   * address is an account address, one address can have many authenticators
+   */
   address: string;
   /**
    * authenticators are the account's authenticators, these can be multiple
@@ -29,9 +34,14 @@ export interface AuthenticatorDataProtoMsg {
  * AuthenticatorData represents a genesis exported account with Authenticators.
  * The address is used as the key, and the account authenticators are stored in
  * the authenticators field.
+ * @name AuthenticatorDataAmino
+ * @package symphony.smartaccount.v1beta1
+ * @see proto type: symphony.smartaccount.v1beta1.AuthenticatorData
  */
 export interface AuthenticatorDataAmino {
-  /** address is an account address, one address can have many authenticators */
+  /**
+   * address is an account address, one address can have many authenticators
+   */
   address?: string;
   /**
    * authenticators are the account's authenticators, these can be multiple
@@ -47,16 +57,28 @@ export interface AuthenticatorDataAminoMsg {
  * AuthenticatorData represents a genesis exported account with Authenticators.
  * The address is used as the key, and the account authenticators are stored in
  * the authenticators field.
+ * @name AuthenticatorDataSDKType
+ * @package symphony.smartaccount.v1beta1
+ * @see proto type: symphony.smartaccount.v1beta1.AuthenticatorData
  */
 export interface AuthenticatorDataSDKType {
   address: string;
   authenticators: AccountAuthenticatorSDKType[];
 }
-/** GenesisState defines the authenticator module's genesis state. */
+/**
+ * GenesisState defines the authenticator module's genesis state.
+ * @name GenesisState
+ * @package symphony.smartaccount.v1beta1
+ * @see proto type: symphony.smartaccount.v1beta1.GenesisState
+ */
 export interface GenesisState {
-  /** params define the parameters for the authenticator module. */
+  /**
+   * params define the parameters for the authenticator module.
+   */
   params: Params;
-  /** next_authenticator_id is the next available authenticator ID. */
+  /**
+   * next_authenticator_id is the next available authenticator ID.
+   */
   nextAuthenticatorId: bigint;
   /**
    * authenticator_data contains the data for multiple accounts, each with their
@@ -68,11 +90,20 @@ export interface GenesisStateProtoMsg {
   typeUrl: '/symphony.smartaccount.v1beta1.GenesisState';
   value: Uint8Array;
 }
-/** GenesisState defines the authenticator module's genesis state. */
+/**
+ * GenesisState defines the authenticator module's genesis state.
+ * @name GenesisStateAmino
+ * @package symphony.smartaccount.v1beta1
+ * @see proto type: symphony.smartaccount.v1beta1.GenesisState
+ */
 export interface GenesisStateAmino {
-  /** params define the parameters for the authenticator module. */
+  /**
+   * params define the parameters for the authenticator module.
+   */
   params?: ParamsAmino;
-  /** next_authenticator_id is the next available authenticator ID. */
+  /**
+   * next_authenticator_id is the next available authenticator ID.
+   */
   next_authenticator_id?: string;
   /**
    * authenticator_data contains the data for multiple accounts, each with their
@@ -84,7 +115,12 @@ export interface GenesisStateAminoMsg {
   type: '/symphony.smartaccount.v1beta1.GenesisState';
   value: GenesisStateAmino;
 }
-/** GenesisState defines the authenticator module's genesis state. */
+/**
+ * GenesisState defines the authenticator module's genesis state.
+ * @name GenesisStateSDKType
+ * @package symphony.smartaccount.v1beta1
+ * @see proto type: symphony.smartaccount.v1beta1.GenesisState
+ */
 export interface GenesisStateSDKType {
   params: ParamsSDKType;
   next_authenticator_id: bigint;
@@ -96,6 +132,14 @@ function createBaseAuthenticatorData(): AuthenticatorData {
     authenticators: [],
   };
 }
+/**
+ * AuthenticatorData represents a genesis exported account with Authenticators.
+ * The address is used as the key, and the account authenticators are stored in
+ * the authenticators field.
+ * @name AuthenticatorData
+ * @package symphony.smartaccount.v1beta1
+ * @see proto type: symphony.smartaccount.v1beta1.AuthenticatorData
+ */
 export const AuthenticatorData = {
   typeUrl: '/symphony.smartaccount.v1beta1.AuthenticatorData',
   is(o: any): o is AuthenticatorData {
@@ -216,6 +260,12 @@ function createBaseGenesisState(): GenesisState {
     authenticatorData: [],
   };
 }
+/**
+ * GenesisState defines the authenticator module's genesis state.
+ * @name GenesisState
+ * @package symphony.smartaccount.v1beta1
+ * @see proto type: symphony.smartaccount.v1beta1.GenesisState
+ */
 export const GenesisState = {
   typeUrl: '/symphony.smartaccount.v1beta1.GenesisState',
   is(o: any): o is GenesisState {

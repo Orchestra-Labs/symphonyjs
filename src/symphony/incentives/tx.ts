@@ -9,7 +9,12 @@ import { Timestamp } from '../../google/protobuf/timestamp';
 import { BinaryReader, BinaryWriter } from '../../binary';
 import { GlobalDecoderRegistry } from '../../registry';
 import { toTimestamp, fromTimestamp } from '../../helpers';
-/** MsgCreateGauge creates a gauge to distribute rewards to users */
+/**
+ * MsgCreateGauge creates a gauge to distribute rewards to users
+ * @name MsgCreateGauge
+ * @package symphony.incentives
+ * @see proto type: symphony.incentives.MsgCreateGauge
+ */
 export interface MsgCreateGauge {
   /**
    * is_perpetual shows if it's a perpetual or non-perpetual gauge
@@ -19,16 +24,22 @@ export interface MsgCreateGauge {
    * refilled
    */
   isPerpetual: boolean;
-  /** owner is the address of gauge creator */
+  /**
+   * owner is the address of gauge creator
+   */
   owner: string;
   /**
    * distribute_to show which lock the gauge should distribute to by time
    * duration or by timestamp
    */
   distributeTo: QueryCondition;
-  /** coins are coin(s) to be distributed by the gauge */
+  /**
+   * coins are coin(s) to be distributed by the gauge
+   */
   coins: Coin[];
-  /** start_time is the distribution start time */
+  /**
+   * start_time is the distribution start time
+   */
   startTime: Date;
   /**
    * num_epochs_paid_over is the number of epochs distribution will be completed
@@ -50,7 +61,12 @@ export interface MsgCreateGaugeProtoMsg {
   typeUrl: '/symphony.incentives.MsgCreateGauge';
   value: Uint8Array;
 }
-/** MsgCreateGauge creates a gauge to distribute rewards to users */
+/**
+ * MsgCreateGauge creates a gauge to distribute rewards to users
+ * @name MsgCreateGaugeAmino
+ * @package symphony.incentives
+ * @see proto type: symphony.incentives.MsgCreateGauge
+ */
 export interface MsgCreateGaugeAmino {
   /**
    * is_perpetual shows if it's a perpetual or non-perpetual gauge
@@ -60,16 +76,22 @@ export interface MsgCreateGaugeAmino {
    * refilled
    */
   is_perpetual?: boolean;
-  /** owner is the address of gauge creator */
+  /**
+   * owner is the address of gauge creator
+   */
   owner?: string;
   /**
    * distribute_to show which lock the gauge should distribute to by time
    * duration or by timestamp
    */
   distribute_to?: QueryConditionAmino;
-  /** coins are coin(s) to be distributed by the gauge */
+  /**
+   * coins are coin(s) to be distributed by the gauge
+   */
   coins?: CoinAmino[];
-  /** start_time is the distribution start time */
+  /**
+   * start_time is the distribution start time
+   */
   start_time?: string;
   /**
    * num_epochs_paid_over is the number of epochs distribution will be completed
@@ -91,7 +113,12 @@ export interface MsgCreateGaugeAminoMsg {
   type: 'symphony/incentives/create-gauge';
   value: MsgCreateGaugeAmino;
 }
-/** MsgCreateGauge creates a gauge to distribute rewards to users */
+/**
+ * MsgCreateGauge creates a gauge to distribute rewards to users
+ * @name MsgCreateGaugeSDKType
+ * @package symphony.incentives
+ * @see proto type: symphony.incentives.MsgCreateGauge
+ */
 export interface MsgCreateGaugeSDKType {
   is_perpetual: boolean;
   owner: string;
@@ -101,119 +128,222 @@ export interface MsgCreateGaugeSDKType {
   num_epochs_paid_over: bigint;
   pool_id: bigint;
 }
+/**
+ * @name MsgCreateGaugeResponse
+ * @package symphony.incentives
+ * @see proto type: symphony.incentives.MsgCreateGaugeResponse
+ */
 export interface MsgCreateGaugeResponse {}
 export interface MsgCreateGaugeResponseProtoMsg {
   typeUrl: '/symphony.incentives.MsgCreateGaugeResponse';
   value: Uint8Array;
 }
+/**
+ * @name MsgCreateGaugeResponseAmino
+ * @package symphony.incentives
+ * @see proto type: symphony.incentives.MsgCreateGaugeResponse
+ */
 export interface MsgCreateGaugeResponseAmino {}
 export interface MsgCreateGaugeResponseAminoMsg {
   type: '/symphony.incentives.MsgCreateGaugeResponse';
   value: MsgCreateGaugeResponseAmino;
 }
+/**
+ * @name MsgCreateGaugeResponseSDKType
+ * @package symphony.incentives
+ * @see proto type: symphony.incentives.MsgCreateGaugeResponse
+ */
 export interface MsgCreateGaugeResponseSDKType {}
-/** MsgAddToGauge adds coins to a previously created gauge */
+/**
+ * MsgAddToGauge adds coins to a previously created gauge
+ * @name MsgAddToGauge
+ * @package symphony.incentives
+ * @see proto type: symphony.incentives.MsgAddToGauge
+ */
 export interface MsgAddToGauge {
-  /** owner is the gauge owner's address */
+  /**
+   * owner is the gauge owner's address
+   */
   owner: string;
-  /** gauge_id is the ID of gauge that rewards are getting added to */
+  /**
+   * gauge_id is the ID of gauge that rewards are getting added to
+   */
   gaugeId: bigint;
-  /** rewards are the coin(s) to add to gauge */
+  /**
+   * rewards are the coin(s) to add to gauge
+   */
   rewards: Coin[];
 }
 export interface MsgAddToGaugeProtoMsg {
   typeUrl: '/symphony.incentives.MsgAddToGauge';
   value: Uint8Array;
 }
-/** MsgAddToGauge adds coins to a previously created gauge */
+/**
+ * MsgAddToGauge adds coins to a previously created gauge
+ * @name MsgAddToGaugeAmino
+ * @package symphony.incentives
+ * @see proto type: symphony.incentives.MsgAddToGauge
+ */
 export interface MsgAddToGaugeAmino {
-  /** owner is the gauge owner's address */
+  /**
+   * owner is the gauge owner's address
+   */
   owner?: string;
-  /** gauge_id is the ID of gauge that rewards are getting added to */
+  /**
+   * gauge_id is the ID of gauge that rewards are getting added to
+   */
   gauge_id?: string;
-  /** rewards are the coin(s) to add to gauge */
+  /**
+   * rewards are the coin(s) to add to gauge
+   */
   rewards?: CoinAmino[];
 }
 export interface MsgAddToGaugeAminoMsg {
   type: 'symphony/incentives/add-to-gauge';
   value: MsgAddToGaugeAmino;
 }
-/** MsgAddToGauge adds coins to a previously created gauge */
+/**
+ * MsgAddToGauge adds coins to a previously created gauge
+ * @name MsgAddToGaugeSDKType
+ * @package symphony.incentives
+ * @see proto type: symphony.incentives.MsgAddToGauge
+ */
 export interface MsgAddToGaugeSDKType {
   owner: string;
   gauge_id: bigint;
   rewards: CoinSDKType[];
 }
+/**
+ * @name MsgAddToGaugeResponse
+ * @package symphony.incentives
+ * @see proto type: symphony.incentives.MsgAddToGaugeResponse
+ */
 export interface MsgAddToGaugeResponse {}
 export interface MsgAddToGaugeResponseProtoMsg {
   typeUrl: '/symphony.incentives.MsgAddToGaugeResponse';
   value: Uint8Array;
 }
+/**
+ * @name MsgAddToGaugeResponseAmino
+ * @package symphony.incentives
+ * @see proto type: symphony.incentives.MsgAddToGaugeResponse
+ */
 export interface MsgAddToGaugeResponseAmino {}
 export interface MsgAddToGaugeResponseAminoMsg {
   type: '/symphony.incentives.MsgAddToGaugeResponse';
   value: MsgAddToGaugeResponseAmino;
 }
+/**
+ * @name MsgAddToGaugeResponseSDKType
+ * @package symphony.incentives
+ * @see proto type: symphony.incentives.MsgAddToGaugeResponse
+ */
 export interface MsgAddToGaugeResponseSDKType {}
-/** MsgCreateGroup creates a group to distribute rewards to a group of pools */
+/**
+ * MsgCreateGroup creates a group to distribute rewards to a group of pools
+ * @name MsgCreateGroup
+ * @package symphony.incentives
+ * @see proto type: symphony.incentives.MsgCreateGroup
+ */
 export interface MsgCreateGroup {
-  /** coins are the provided coins that the group will distribute */
+  /**
+   * coins are the provided coins that the group will distribute
+   */
   coins: Coin[];
   /**
    * num_epochs_paid_over is the number of epochs distribution will be completed
    * in. 0 means it's perpetual
    */
   numEpochsPaidOver: bigint;
-  /** owner is the group owner's address */
+  /**
+   * owner is the group owner's address
+   */
   owner: string;
-  /** pool_ids are the IDs of pools that the group is comprised of */
+  /**
+   * pool_ids are the IDs of pools that the group is comprised of
+   */
   poolIds: bigint[];
 }
 export interface MsgCreateGroupProtoMsg {
   typeUrl: '/symphony.incentives.MsgCreateGroup';
   value: Uint8Array;
 }
-/** MsgCreateGroup creates a group to distribute rewards to a group of pools */
+/**
+ * MsgCreateGroup creates a group to distribute rewards to a group of pools
+ * @name MsgCreateGroupAmino
+ * @package symphony.incentives
+ * @see proto type: symphony.incentives.MsgCreateGroup
+ */
 export interface MsgCreateGroupAmino {
-  /** coins are the provided coins that the group will distribute */
+  /**
+   * coins are the provided coins that the group will distribute
+   */
   coins?: CoinAmino[];
   /**
    * num_epochs_paid_over is the number of epochs distribution will be completed
    * in. 0 means it's perpetual
    */
   num_epochs_paid_over?: string;
-  /** owner is the group owner's address */
+  /**
+   * owner is the group owner's address
+   */
   owner?: string;
-  /** pool_ids are the IDs of pools that the group is comprised of */
+  /**
+   * pool_ids are the IDs of pools that the group is comprised of
+   */
   pool_ids?: string[];
 }
 export interface MsgCreateGroupAminoMsg {
   type: 'symphony/incentives/create-group';
   value: MsgCreateGroupAmino;
 }
-/** MsgCreateGroup creates a group to distribute rewards to a group of pools */
+/**
+ * MsgCreateGroup creates a group to distribute rewards to a group of pools
+ * @name MsgCreateGroupSDKType
+ * @package symphony.incentives
+ * @see proto type: symphony.incentives.MsgCreateGroup
+ */
 export interface MsgCreateGroupSDKType {
   coins: CoinSDKType[];
   num_epochs_paid_over: bigint;
   owner: string;
   pool_ids: bigint[];
 }
+/**
+ * @name MsgCreateGroupResponse
+ * @package symphony.incentives
+ * @see proto type: symphony.incentives.MsgCreateGroupResponse
+ */
 export interface MsgCreateGroupResponse {
-  /** group_id is the ID of the group that is created from this msg */
+  /**
+   * group_id is the ID of the group that is created from this msg
+   */
   groupId: bigint;
 }
 export interface MsgCreateGroupResponseProtoMsg {
   typeUrl: '/symphony.incentives.MsgCreateGroupResponse';
   value: Uint8Array;
 }
+/**
+ * @name MsgCreateGroupResponseAmino
+ * @package symphony.incentives
+ * @see proto type: symphony.incentives.MsgCreateGroupResponse
+ */
 export interface MsgCreateGroupResponseAmino {
-  /** group_id is the ID of the group that is created from this msg */
+  /**
+   * group_id is the ID of the group that is created from this msg
+   */
   group_id?: string;
 }
 export interface MsgCreateGroupResponseAminoMsg {
   type: '/symphony.incentives.MsgCreateGroupResponse';
   value: MsgCreateGroupResponseAmino;
 }
+/**
+ * @name MsgCreateGroupResponseSDKType
+ * @package symphony.incentives
+ * @see proto type: symphony.incentives.MsgCreateGroupResponse
+ */
 export interface MsgCreateGroupResponseSDKType {
   group_id: bigint;
 }
@@ -228,6 +358,12 @@ function createBaseMsgCreateGauge(): MsgCreateGauge {
     poolId: BigInt(0),
   };
 }
+/**
+ * MsgCreateGauge creates a gauge to distribute rewards to users
+ * @name MsgCreateGauge
+ * @package symphony.incentives
+ * @see proto type: symphony.incentives.MsgCreateGauge
+ */
 export const MsgCreateGauge = {
   typeUrl: '/symphony.incentives.MsgCreateGauge',
   aminoType: 'symphony/incentives/create-gauge',
@@ -445,6 +581,11 @@ GlobalDecoderRegistry.registerAminoProtoMapping(
 function createBaseMsgCreateGaugeResponse(): MsgCreateGaugeResponse {
   return {};
 }
+/**
+ * @name MsgCreateGaugeResponse
+ * @package symphony.incentives
+ * @see proto type: symphony.incentives.MsgCreateGaugeResponse
+ */
 export const MsgCreateGaugeResponse = {
   typeUrl: '/symphony.incentives.MsgCreateGaugeResponse',
   is(o: any): o is MsgCreateGaugeResponse {
@@ -521,6 +662,12 @@ function createBaseMsgAddToGauge(): MsgAddToGauge {
     rewards: [],
   };
 }
+/**
+ * MsgAddToGauge adds coins to a previously created gauge
+ * @name MsgAddToGauge
+ * @package symphony.incentives
+ * @see proto type: symphony.incentives.MsgAddToGauge
+ */
 export const MsgAddToGauge = {
   typeUrl: '/symphony.incentives.MsgAddToGauge',
   aminoType: 'symphony/incentives/add-to-gauge',
@@ -656,6 +803,11 @@ GlobalDecoderRegistry.registerAminoProtoMapping(
 function createBaseMsgAddToGaugeResponse(): MsgAddToGaugeResponse {
   return {};
 }
+/**
+ * @name MsgAddToGaugeResponse
+ * @package symphony.incentives
+ * @see proto type: symphony.incentives.MsgAddToGaugeResponse
+ */
 export const MsgAddToGaugeResponse = {
   typeUrl: '/symphony.incentives.MsgAddToGaugeResponse',
   is(o: any): o is MsgAddToGaugeResponse {
@@ -731,6 +883,12 @@ function createBaseMsgCreateGroup(): MsgCreateGroup {
     poolIds: [],
   };
 }
+/**
+ * MsgCreateGroup creates a group to distribute rewards to a group of pools
+ * @name MsgCreateGroup
+ * @package symphony.incentives
+ * @see proto type: symphony.incentives.MsgCreateGroup
+ */
 export const MsgCreateGroup = {
   typeUrl: '/symphony.incentives.MsgCreateGroup',
   aminoType: 'symphony/incentives/create-group',
@@ -902,6 +1060,11 @@ function createBaseMsgCreateGroupResponse(): MsgCreateGroupResponse {
     groupId: BigInt(0),
   };
 }
+/**
+ * @name MsgCreateGroupResponse
+ * @package symphony.incentives
+ * @see proto type: symphony.incentives.MsgCreateGroupResponse
+ */
 export const MsgCreateGroupResponse = {
   typeUrl: '/symphony.incentives.MsgCreateGroupResponse',
   is(o: any): o is MsgCreateGroupResponse {

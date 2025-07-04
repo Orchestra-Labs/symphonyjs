@@ -4,6 +4,11 @@ import { Timestamp } from '../../../google/protobuf/timestamp';
 import { isSet, toTimestamp, fromTimestamp } from '../../../helpers';
 import { BinaryReader, BinaryWriter } from '../../../binary';
 import { GlobalDecoderRegistry } from '../../../registry';
+/**
+ * @name GenesisDowntimeEntry
+ * @package symphony.downtimedetector.v1beta1
+ * @see proto type: symphony.downtimedetector.v1beta1.GenesisDowntimeEntry
+ */
 export interface GenesisDowntimeEntry {
   duration: Downtime;
   lastDowntime: Date;
@@ -12,6 +17,11 @@ export interface GenesisDowntimeEntryProtoMsg {
   typeUrl: '/symphony.downtimedetector.v1beta1.GenesisDowntimeEntry';
   value: Uint8Array;
 }
+/**
+ * @name GenesisDowntimeEntryAmino
+ * @package symphony.downtimedetector.v1beta1
+ * @see proto type: symphony.downtimedetector.v1beta1.GenesisDowntimeEntry
+ */
 export interface GenesisDowntimeEntryAmino {
   duration?: Downtime;
   last_downtime?: string;
@@ -20,11 +30,21 @@ export interface GenesisDowntimeEntryAminoMsg {
   type: '/symphony.downtimedetector.v1beta1.GenesisDowntimeEntry';
   value: GenesisDowntimeEntryAmino;
 }
+/**
+ * @name GenesisDowntimeEntrySDKType
+ * @package symphony.downtimedetector.v1beta1
+ * @see proto type: symphony.downtimedetector.v1beta1.GenesisDowntimeEntry
+ */
 export interface GenesisDowntimeEntrySDKType {
   duration: Downtime;
   last_downtime: Date;
 }
-/** GenesisState defines the twap module's genesis state. */
+/**
+ * GenesisState defines the twap module's genesis state.
+ * @name GenesisState
+ * @package symphony.downtimedetector.v1beta1
+ * @see proto type: symphony.downtimedetector.v1beta1.GenesisState
+ */
 export interface GenesisState {
   downtimes: GenesisDowntimeEntry[];
   lastBlockTime: Date;
@@ -33,7 +53,12 @@ export interface GenesisStateProtoMsg {
   typeUrl: '/symphony.downtimedetector.v1beta1.GenesisState';
   value: Uint8Array;
 }
-/** GenesisState defines the twap module's genesis state. */
+/**
+ * GenesisState defines the twap module's genesis state.
+ * @name GenesisStateAmino
+ * @package symphony.downtimedetector.v1beta1
+ * @see proto type: symphony.downtimedetector.v1beta1.GenesisState
+ */
 export interface GenesisStateAmino {
   downtimes?: GenesisDowntimeEntryAmino[];
   last_block_time?: string;
@@ -42,7 +67,12 @@ export interface GenesisStateAminoMsg {
   type: '/symphony.downtimedetector.v1beta1.GenesisState';
   value: GenesisStateAmino;
 }
-/** GenesisState defines the twap module's genesis state. */
+/**
+ * GenesisState defines the twap module's genesis state.
+ * @name GenesisStateSDKType
+ * @package symphony.downtimedetector.v1beta1
+ * @see proto type: symphony.downtimedetector.v1beta1.GenesisState
+ */
 export interface GenesisStateSDKType {
   downtimes: GenesisDowntimeEntrySDKType[];
   last_block_time: Date;
@@ -53,6 +83,11 @@ function createBaseGenesisDowntimeEntry(): GenesisDowntimeEntry {
     lastDowntime: new Date(),
   };
 }
+/**
+ * @name GenesisDowntimeEntry
+ * @package symphony.downtimedetector.v1beta1
+ * @see proto type: symphony.downtimedetector.v1beta1.GenesisDowntimeEntry
+ */
 export const GenesisDowntimeEntry = {
   typeUrl: '/symphony.downtimedetector.v1beta1.GenesisDowntimeEntry',
   is(o: any): o is GenesisDowntimeEntry {
@@ -169,6 +204,12 @@ function createBaseGenesisState(): GenesisState {
     lastBlockTime: new Date(),
   };
 }
+/**
+ * GenesisState defines the twap module's genesis state.
+ * @name GenesisState
+ * @package symphony.downtimedetector.v1beta1
+ * @see proto type: symphony.downtimedetector.v1beta1.GenesisState
+ */
 export const GenesisState = {
   typeUrl: '/symphony.downtimedetector.v1beta1.GenesisState',
   is(o: any): o is GenesisState {

@@ -13,6 +13,9 @@ import { Decimal } from '@cosmjs/math';
  * proposal’s records override the existing MigrationRecords set in the module.
  * Each record specifies a single connection between a single balancer pool and
  * a single concentrated pool.
+ * @name ReplaceMigrationRecordsProposal
+ * @package symphony.gamm.v1beta1
+ * @see proto type: symphony.gamm.v1beta1.ReplaceMigrationRecordsProposal
  */
 export interface ReplaceMigrationRecordsProposal {
   $typeUrl?: '/symphony.gamm.v1beta1.ReplaceMigrationRecordsProposal';
@@ -30,6 +33,9 @@ export interface ReplaceMigrationRecordsProposalProtoMsg {
  * proposal’s records override the existing MigrationRecords set in the module.
  * Each record specifies a single connection between a single balancer pool and
  * a single concentrated pool.
+ * @name ReplaceMigrationRecordsProposalAmino
+ * @package symphony.gamm.v1beta1
+ * @see proto type: symphony.gamm.v1beta1.ReplaceMigrationRecordsProposal
  */
 export interface ReplaceMigrationRecordsProposalAmino {
   title?: string;
@@ -46,6 +52,9 @@ export interface ReplaceMigrationRecordsProposalAminoMsg {
  * proposal’s records override the existing MigrationRecords set in the module.
  * Each record specifies a single connection between a single balancer pool and
  * a single concentrated pool.
+ * @name ReplaceMigrationRecordsProposalSDKType
+ * @package symphony.gamm.v1beta1
+ * @see proto type: symphony.gamm.v1beta1.ReplaceMigrationRecordsProposal
  */
 export interface ReplaceMigrationRecordsProposalSDKType {
   $typeUrl?: '/symphony.gamm.v1beta1.ReplaceMigrationRecordsProposal';
@@ -62,6 +71,9 @@ export interface ReplaceMigrationRecordsProposalSDKType {
  * Edit Balancer 3 record, and Add Balancer 4 record
  * The result MigrationRecords in state would be:
  * [(Balancer 1, CL 5), (Balancer 3, CL 4), (Balancer 4, CL 10)]
+ * @name UpdateMigrationRecordsProposal
+ * @package symphony.gamm.v1beta1
+ * @see proto type: symphony.gamm.v1beta1.UpdateMigrationRecordsProposal
  */
 export interface UpdateMigrationRecordsProposal {
   $typeUrl?: '/symphony.gamm.v1beta1.UpdateMigrationRecordsProposal';
@@ -82,6 +94,9 @@ export interface UpdateMigrationRecordsProposalProtoMsg {
  * Edit Balancer 3 record, and Add Balancer 4 record
  * The result MigrationRecords in state would be:
  * [(Balancer 1, CL 5), (Balancer 3, CL 4), (Balancer 4, CL 10)]
+ * @name UpdateMigrationRecordsProposalAmino
+ * @package symphony.gamm.v1beta1
+ * @see proto type: symphony.gamm.v1beta1.UpdateMigrationRecordsProposal
  */
 export interface UpdateMigrationRecordsProposalAmino {
   title?: string;
@@ -101,6 +116,9 @@ export interface UpdateMigrationRecordsProposalAminoMsg {
  * Edit Balancer 3 record, and Add Balancer 4 record
  * The result MigrationRecords in state would be:
  * [(Balancer 1, CL 5), (Balancer 3, CL 4), (Balancer 4, CL 10)]
+ * @name UpdateMigrationRecordsProposalSDKType
+ * @package symphony.gamm.v1beta1
+ * @see proto type: symphony.gamm.v1beta1.UpdateMigrationRecordsProposal
  */
 export interface UpdateMigrationRecordsProposalSDKType {
   $typeUrl?: '/symphony.gamm.v1beta1.UpdateMigrationRecordsProposal';
@@ -108,6 +126,11 @@ export interface UpdateMigrationRecordsProposalSDKType {
   description: string;
   records: BalancerToConcentratedPoolLinkSDKType[];
 }
+/**
+ * @name PoolRecordWithCFMMLink
+ * @package symphony.gamm.v1beta1
+ * @see proto type: symphony.gamm.v1beta1.PoolRecordWithCFMMLink
+ */
 export interface PoolRecordWithCFMMLink {
   denom0: string;
   denom1: string;
@@ -120,6 +143,11 @@ export interface PoolRecordWithCFMMLinkProtoMsg {
   typeUrl: '/symphony.gamm.v1beta1.PoolRecordWithCFMMLink';
   value: Uint8Array;
 }
+/**
+ * @name PoolRecordWithCFMMLinkAmino
+ * @package symphony.gamm.v1beta1
+ * @see proto type: symphony.gamm.v1beta1.PoolRecordWithCFMMLink
+ */
 export interface PoolRecordWithCFMMLinkAmino {
   denom0?: string;
   denom1?: string;
@@ -132,6 +160,11 @@ export interface PoolRecordWithCFMMLinkAminoMsg {
   type: '/symphony.gamm.v1beta1.PoolRecordWithCFMMLink';
   value: PoolRecordWithCFMMLinkAmino;
 }
+/**
+ * @name PoolRecordWithCFMMLinkSDKType
+ * @package symphony.gamm.v1beta1
+ * @see proto type: symphony.gamm.v1beta1.PoolRecordWithCFMMLink
+ */
 export interface PoolRecordWithCFMMLinkSDKType {
   denom0: string;
   denom1: string;
@@ -143,6 +176,9 @@ export interface PoolRecordWithCFMMLinkSDKType {
 /**
  * CreateConcentratedLiquidityPoolsAndLinktoCFMMProposal is a gov Content type
  * for creating concentrated liquidity pools and linking it to a CFMM pool.
+ * @name CreateConcentratedLiquidityPoolsAndLinktoCFMMProposal
+ * @package symphony.gamm.v1beta1
+ * @see proto type: symphony.gamm.v1beta1.CreateConcentratedLiquidityPoolsAndLinktoCFMMProposal
  */
 export interface CreateConcentratedLiquidityPoolsAndLinktoCFMMProposal {
   $typeUrl?: '/symphony.gamm.v1beta1.CreateConcentratedLiquidityPoolsAndLinktoCFMMProposal';
@@ -157,6 +193,9 @@ export interface CreateConcentratedLiquidityPoolsAndLinktoCFMMProposalProtoMsg {
 /**
  * CreateConcentratedLiquidityPoolsAndLinktoCFMMProposal is a gov Content type
  * for creating concentrated liquidity pools and linking it to a CFMM pool.
+ * @name CreateConcentratedLiquidityPoolsAndLinktoCFMMProposalAmino
+ * @package symphony.gamm.v1beta1
+ * @see proto type: symphony.gamm.v1beta1.CreateConcentratedLiquidityPoolsAndLinktoCFMMProposal
  */
 export interface CreateConcentratedLiquidityPoolsAndLinktoCFMMProposalAmino {
   title?: string;
@@ -170,6 +209,9 @@ export interface CreateConcentratedLiquidityPoolsAndLinktoCFMMProposalAminoMsg {
 /**
  * CreateConcentratedLiquidityPoolsAndLinktoCFMMProposal is a gov Content type
  * for creating concentrated liquidity pools and linking it to a CFMM pool.
+ * @name CreateConcentratedLiquidityPoolsAndLinktoCFMMProposalSDKType
+ * @package symphony.gamm.v1beta1
+ * @see proto type: symphony.gamm.v1beta1.CreateConcentratedLiquidityPoolsAndLinktoCFMMProposal
  */
 export interface CreateConcentratedLiquidityPoolsAndLinktoCFMMProposalSDKType {
   $typeUrl?: '/symphony.gamm.v1beta1.CreateConcentratedLiquidityPoolsAndLinktoCFMMProposal';
@@ -180,6 +222,9 @@ export interface CreateConcentratedLiquidityPoolsAndLinktoCFMMProposalSDKType {
 /**
  * SetScalingFactorControllerProposal is a gov Content type for updating the
  * scaling factor controller address of a stableswap pool
+ * @name SetScalingFactorControllerProposal
+ * @package symphony.gamm.v1beta1
+ * @see proto type: symphony.gamm.v1beta1.SetScalingFactorControllerProposal
  */
 export interface SetScalingFactorControllerProposal {
   $typeUrl?: '/symphony.gamm.v1beta1.SetScalingFactorControllerProposal';
@@ -195,6 +240,9 @@ export interface SetScalingFactorControllerProposalProtoMsg {
 /**
  * SetScalingFactorControllerProposal is a gov Content type for updating the
  * scaling factor controller address of a stableswap pool
+ * @name SetScalingFactorControllerProposalAmino
+ * @package symphony.gamm.v1beta1
+ * @see proto type: symphony.gamm.v1beta1.SetScalingFactorControllerProposal
  */
 export interface SetScalingFactorControllerProposalAmino {
   title?: string;
@@ -209,6 +257,9 @@ export interface SetScalingFactorControllerProposalAminoMsg {
 /**
  * SetScalingFactorControllerProposal is a gov Content type for updating the
  * scaling factor controller address of a stableswap pool
+ * @name SetScalingFactorControllerProposalSDKType
+ * @package symphony.gamm.v1beta1
+ * @see proto type: symphony.gamm.v1beta1.SetScalingFactorControllerProposal
  */
 export interface SetScalingFactorControllerProposalSDKType {
   $typeUrl?: '/symphony.gamm.v1beta1.SetScalingFactorControllerProposal';
@@ -225,6 +276,16 @@ function createBaseReplaceMigrationRecordsProposal(): ReplaceMigrationRecordsPro
     records: [],
   };
 }
+/**
+ * ReplaceMigrationRecordsProposal is a gov Content type for updating the
+ * migration records. If a ReplaceMigrationRecordsProposal passes, the
+ * proposal’s records override the existing MigrationRecords set in the module.
+ * Each record specifies a single connection between a single balancer pool and
+ * a single concentrated pool.
+ * @name ReplaceMigrationRecordsProposal
+ * @package symphony.gamm.v1beta1
+ * @see proto type: symphony.gamm.v1beta1.ReplaceMigrationRecordsProposal
+ */
 export const ReplaceMigrationRecordsProposal = {
   typeUrl: '/symphony.gamm.v1beta1.ReplaceMigrationRecordsProposal',
   aminoType: 'symphony/ReplaceMigrationRecordsProposal',
@@ -396,6 +457,19 @@ function createBaseUpdateMigrationRecordsProposal(): UpdateMigrationRecordsPropo
     records: [],
   };
 }
+/**
+ * For example: if the existing DistrRecords were:
+ * [(Balancer 1, CL 5), (Balancer 2, CL 6), (Balancer 3, CL 7)]
+ * And an UpdateMigrationRecordsProposal includes
+ * [(Balancer 2, CL 0), (Balancer 3, CL 4), (Balancer 4, CL 10)]
+ * This would leave Balancer 1 record, delete Balancer 2 record,
+ * Edit Balancer 3 record, and Add Balancer 4 record
+ * The result MigrationRecords in state would be:
+ * [(Balancer 1, CL 5), (Balancer 3, CL 4), (Balancer 4, CL 10)]
+ * @name UpdateMigrationRecordsProposal
+ * @package symphony.gamm.v1beta1
+ * @see proto type: symphony.gamm.v1beta1.UpdateMigrationRecordsProposal
+ */
 export const UpdateMigrationRecordsProposal = {
   typeUrl: '/symphony.gamm.v1beta1.UpdateMigrationRecordsProposal',
   aminoType: 'symphony/UpdateMigrationRecordsProposal',
@@ -569,6 +643,11 @@ function createBasePoolRecordWithCFMMLink(): PoolRecordWithCFMMLink {
     balancerPoolId: BigInt(0),
   };
 }
+/**
+ * @name PoolRecordWithCFMMLink
+ * @package symphony.gamm.v1beta1
+ * @see proto type: symphony.gamm.v1beta1.PoolRecordWithCFMMLink
+ */
 export const PoolRecordWithCFMMLink = {
   typeUrl: '/symphony.gamm.v1beta1.PoolRecordWithCFMMLink',
   is(o: any): o is PoolRecordWithCFMMLink {
@@ -767,6 +846,13 @@ function createBaseCreateConcentratedLiquidityPoolsAndLinktoCFMMProposal(): Crea
     poolRecordsWithCfmmLink: [],
   };
 }
+/**
+ * CreateConcentratedLiquidityPoolsAndLinktoCFMMProposal is a gov Content type
+ * for creating concentrated liquidity pools and linking it to a CFMM pool.
+ * @name CreateConcentratedLiquidityPoolsAndLinktoCFMMProposal
+ * @package symphony.gamm.v1beta1
+ * @see proto type: symphony.gamm.v1beta1.CreateConcentratedLiquidityPoolsAndLinktoCFMMProposal
+ */
 export const CreateConcentratedLiquidityPoolsAndLinktoCFMMProposal = {
   typeUrl:
     '/symphony.gamm.v1beta1.CreateConcentratedLiquidityPoolsAndLinktoCFMMProposal',
@@ -962,6 +1048,13 @@ function createBaseSetScalingFactorControllerProposal(): SetScalingFactorControl
     controllerAddress: '',
   };
 }
+/**
+ * SetScalingFactorControllerProposal is a gov Content type for updating the
+ * scaling factor controller address of a stableswap pool
+ * @name SetScalingFactorControllerProposal
+ * @package symphony.gamm.v1beta1
+ * @see proto type: symphony.gamm.v1beta1.SetScalingFactorControllerProposal
+ */
 export const SetScalingFactorControllerProposal = {
   typeUrl: '/symphony.gamm.v1beta1.SetScalingFactorControllerProposal',
   aminoType: 'symphony/SetScalingFactorControllerProposal',

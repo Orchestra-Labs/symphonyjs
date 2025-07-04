@@ -1,20 +1,40 @@
 //@ts-nocheck
 import { BinaryReader, BinaryWriter } from '../../../../binary';
 import { GlobalDecoderRegistry } from '../../../../registry';
-/** ===================== JoinPoolExecuteMsg */
+/**
+ * ===================== JoinPoolExecuteMsg
+ * @name EmptyRequest
+ * @package symphony.cosmwasmpool.v1beta1
+ * @see proto type: symphony.cosmwasmpool.v1beta1.EmptyRequest
+ */
 export interface EmptyRequest {}
 export interface EmptyRequestProtoMsg {
   typeUrl: '/symphony.cosmwasmpool.v1beta1.EmptyRequest';
   value: Uint8Array;
 }
-/** ===================== JoinPoolExecuteMsg */
+/**
+ * ===================== JoinPoolExecuteMsg
+ * @name EmptyRequestAmino
+ * @package symphony.cosmwasmpool.v1beta1
+ * @see proto type: symphony.cosmwasmpool.v1beta1.EmptyRequest
+ */
 export interface EmptyRequestAmino {}
 export interface EmptyRequestAminoMsg {
   type: '/symphony.cosmwasmpool.v1beta1.EmptyRequest';
   value: EmptyRequestAmino;
 }
-/** ===================== JoinPoolExecuteMsg */
+/**
+ * ===================== JoinPoolExecuteMsg
+ * @name EmptyRequestSDKType
+ * @package symphony.cosmwasmpool.v1beta1
+ * @see proto type: symphony.cosmwasmpool.v1beta1.EmptyRequest
+ */
 export interface EmptyRequestSDKType {}
+/**
+ * @name JoinPoolExecuteMsgRequest
+ * @package symphony.cosmwasmpool.v1beta1
+ * @see proto type: symphony.cosmwasmpool.v1beta1.JoinPoolExecuteMsgRequest
+ */
 export interface JoinPoolExecuteMsgRequest {
   /**
    * join_pool is the structure containing all request fields of the join pool
@@ -26,6 +46,11 @@ export interface JoinPoolExecuteMsgRequestProtoMsg {
   typeUrl: '/symphony.cosmwasmpool.v1beta1.JoinPoolExecuteMsgRequest';
   value: Uint8Array;
 }
+/**
+ * @name JoinPoolExecuteMsgRequestAmino
+ * @package symphony.cosmwasmpool.v1beta1
+ * @see proto type: symphony.cosmwasmpool.v1beta1.JoinPoolExecuteMsgRequest
+ */
 export interface JoinPoolExecuteMsgRequestAmino {
   /**
    * join_pool is the structure containing all request fields of the join pool
@@ -37,21 +62,46 @@ export interface JoinPoolExecuteMsgRequestAminoMsg {
   type: '/symphony.cosmwasmpool.v1beta1.JoinPoolExecuteMsgRequest';
   value: JoinPoolExecuteMsgRequestAmino;
 }
+/**
+ * @name JoinPoolExecuteMsgRequestSDKType
+ * @package symphony.cosmwasmpool.v1beta1
+ * @see proto type: symphony.cosmwasmpool.v1beta1.JoinPoolExecuteMsgRequest
+ */
 export interface JoinPoolExecuteMsgRequestSDKType {
   join_pool: EmptyRequestSDKType;
 }
+/**
+ * @name JoinPoolExecuteMsgResponse
+ * @package symphony.cosmwasmpool.v1beta1
+ * @see proto type: symphony.cosmwasmpool.v1beta1.JoinPoolExecuteMsgResponse
+ */
 export interface JoinPoolExecuteMsgResponse {}
 export interface JoinPoolExecuteMsgResponseProtoMsg {
   typeUrl: '/symphony.cosmwasmpool.v1beta1.JoinPoolExecuteMsgResponse';
   value: Uint8Array;
 }
+/**
+ * @name JoinPoolExecuteMsgResponseAmino
+ * @package symphony.cosmwasmpool.v1beta1
+ * @see proto type: symphony.cosmwasmpool.v1beta1.JoinPoolExecuteMsgResponse
+ */
 export interface JoinPoolExecuteMsgResponseAmino {}
 export interface JoinPoolExecuteMsgResponseAminoMsg {
   type: '/symphony.cosmwasmpool.v1beta1.JoinPoolExecuteMsgResponse';
   value: JoinPoolExecuteMsgResponseAmino;
 }
+/**
+ * @name JoinPoolExecuteMsgResponseSDKType
+ * @package symphony.cosmwasmpool.v1beta1
+ * @see proto type: symphony.cosmwasmpool.v1beta1.JoinPoolExecuteMsgResponse
+ */
 export interface JoinPoolExecuteMsgResponseSDKType {}
-/** ===================== ExitPoolExecuteMsg */
+/**
+ * ===================== ExitPoolExecuteMsg
+ * @name ExitPoolExecuteMsgRequest
+ * @package symphony.cosmwasmpool.v1beta1
+ * @see proto type: symphony.cosmwasmpool.v1beta1.ExitPoolExecuteMsgRequest
+ */
 export interface ExitPoolExecuteMsgRequest {
   /**
    * exit_pool is the structure containing all request fields of the exit pool
@@ -63,7 +113,12 @@ export interface ExitPoolExecuteMsgRequestProtoMsg {
   typeUrl: '/symphony.cosmwasmpool.v1beta1.ExitPoolExecuteMsgRequest';
   value: Uint8Array;
 }
-/** ===================== ExitPoolExecuteMsg */
+/**
+ * ===================== ExitPoolExecuteMsg
+ * @name ExitPoolExecuteMsgRequestAmino
+ * @package symphony.cosmwasmpool.v1beta1
+ * @see proto type: symphony.cosmwasmpool.v1beta1.ExitPoolExecuteMsgRequest
+ */
 export interface ExitPoolExecuteMsgRequestAmino {
   /**
    * exit_pool is the structure containing all request fields of the exit pool
@@ -75,24 +130,50 @@ export interface ExitPoolExecuteMsgRequestAminoMsg {
   type: '/symphony.cosmwasmpool.v1beta1.ExitPoolExecuteMsgRequest';
   value: ExitPoolExecuteMsgRequestAmino;
 }
-/** ===================== ExitPoolExecuteMsg */
+/**
+ * ===================== ExitPoolExecuteMsg
+ * @name ExitPoolExecuteMsgRequestSDKType
+ * @package symphony.cosmwasmpool.v1beta1
+ * @see proto type: symphony.cosmwasmpool.v1beta1.ExitPoolExecuteMsgRequest
+ */
 export interface ExitPoolExecuteMsgRequestSDKType {
   exit_pool: EmptyRequestSDKType;
 }
+/**
+ * @name ExitPoolExecuteMsgResponse
+ * @package symphony.cosmwasmpool.v1beta1
+ * @see proto type: symphony.cosmwasmpool.v1beta1.ExitPoolExecuteMsgResponse
+ */
 export interface ExitPoolExecuteMsgResponse {}
 export interface ExitPoolExecuteMsgResponseProtoMsg {
   typeUrl: '/symphony.cosmwasmpool.v1beta1.ExitPoolExecuteMsgResponse';
   value: Uint8Array;
 }
+/**
+ * @name ExitPoolExecuteMsgResponseAmino
+ * @package symphony.cosmwasmpool.v1beta1
+ * @see proto type: symphony.cosmwasmpool.v1beta1.ExitPoolExecuteMsgResponse
+ */
 export interface ExitPoolExecuteMsgResponseAmino {}
 export interface ExitPoolExecuteMsgResponseAminoMsg {
   type: '/symphony.cosmwasmpool.v1beta1.ExitPoolExecuteMsgResponse';
   value: ExitPoolExecuteMsgResponseAmino;
 }
+/**
+ * @name ExitPoolExecuteMsgResponseSDKType
+ * @package symphony.cosmwasmpool.v1beta1
+ * @see proto type: symphony.cosmwasmpool.v1beta1.ExitPoolExecuteMsgResponse
+ */
 export interface ExitPoolExecuteMsgResponseSDKType {}
 function createBaseEmptyRequest(): EmptyRequest {
   return {};
 }
+/**
+ * ===================== JoinPoolExecuteMsg
+ * @name EmptyRequest
+ * @package symphony.cosmwasmpool.v1beta1
+ * @see proto type: symphony.cosmwasmpool.v1beta1.EmptyRequest
+ */
 export const EmptyRequest = {
   typeUrl: '/symphony.cosmwasmpool.v1beta1.EmptyRequest',
   is(o: any): o is EmptyRequest {
@@ -159,6 +240,11 @@ function createBaseJoinPoolExecuteMsgRequest(): JoinPoolExecuteMsgRequest {
     joinPool: EmptyRequest.fromPartial({}),
   };
 }
+/**
+ * @name JoinPoolExecuteMsgRequest
+ * @package symphony.cosmwasmpool.v1beta1
+ * @see proto type: symphony.cosmwasmpool.v1beta1.JoinPoolExecuteMsgRequest
+ */
 export const JoinPoolExecuteMsgRequest = {
   typeUrl: '/symphony.cosmwasmpool.v1beta1.JoinPoolExecuteMsgRequest',
   is(o: any): o is JoinPoolExecuteMsgRequest {
@@ -265,6 +351,11 @@ GlobalDecoderRegistry.register(
 function createBaseJoinPoolExecuteMsgResponse(): JoinPoolExecuteMsgResponse {
   return {};
 }
+/**
+ * @name JoinPoolExecuteMsgResponse
+ * @package symphony.cosmwasmpool.v1beta1
+ * @see proto type: symphony.cosmwasmpool.v1beta1.JoinPoolExecuteMsgResponse
+ */
 export const JoinPoolExecuteMsgResponse = {
   typeUrl: '/symphony.cosmwasmpool.v1beta1.JoinPoolExecuteMsgResponse',
   is(o: any): o is JoinPoolExecuteMsgResponse {
@@ -345,6 +436,12 @@ function createBaseExitPoolExecuteMsgRequest(): ExitPoolExecuteMsgRequest {
     exitPool: EmptyRequest.fromPartial({}),
   };
 }
+/**
+ * ===================== ExitPoolExecuteMsg
+ * @name ExitPoolExecuteMsgRequest
+ * @package symphony.cosmwasmpool.v1beta1
+ * @see proto type: symphony.cosmwasmpool.v1beta1.ExitPoolExecuteMsgRequest
+ */
 export const ExitPoolExecuteMsgRequest = {
   typeUrl: '/symphony.cosmwasmpool.v1beta1.ExitPoolExecuteMsgRequest',
   is(o: any): o is ExitPoolExecuteMsgRequest {
@@ -451,6 +548,11 @@ GlobalDecoderRegistry.register(
 function createBaseExitPoolExecuteMsgResponse(): ExitPoolExecuteMsgResponse {
   return {};
 }
+/**
+ * @name ExitPoolExecuteMsgResponse
+ * @package symphony.cosmwasmpool.v1beta1
+ * @see proto type: symphony.cosmwasmpool.v1beta1.ExitPoolExecuteMsgResponse
+ */
 export const ExitPoolExecuteMsgResponse = {
   typeUrl: '/symphony.cosmwasmpool.v1beta1.ExitPoolExecuteMsgResponse',
   is(o: any): o is ExitPoolExecuteMsgResponse {

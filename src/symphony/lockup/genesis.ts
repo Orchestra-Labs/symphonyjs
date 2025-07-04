@@ -10,7 +10,12 @@ import {
 import { Params, ParamsAmino, ParamsSDKType } from './params';
 import { BinaryReader, BinaryWriter } from '../../binary';
 import { GlobalDecoderRegistry } from '../../registry';
-/** GenesisState defines the lockup module's genesis state. */
+/**
+ * GenesisState defines the lockup module's genesis state.
+ * @name GenesisState
+ * @package symphony.lockup
+ * @see proto type: symphony.lockup.GenesisState
+ */
 export interface GenesisState {
   lastLockId: bigint;
   locks: PeriodLock[];
@@ -21,7 +26,12 @@ export interface GenesisStateProtoMsg {
   typeUrl: '/symphony.lockup.GenesisState';
   value: Uint8Array;
 }
-/** GenesisState defines the lockup module's genesis state. */
+/**
+ * GenesisState defines the lockup module's genesis state.
+ * @name GenesisStateAmino
+ * @package symphony.lockup
+ * @see proto type: symphony.lockup.GenesisState
+ */
 export interface GenesisStateAmino {
   last_lock_id?: string;
   locks?: PeriodLockAmino[];
@@ -32,7 +42,12 @@ export interface GenesisStateAminoMsg {
   type: '/symphony.lockup.GenesisState';
   value: GenesisStateAmino;
 }
-/** GenesisState defines the lockup module's genesis state. */
+/**
+ * GenesisState defines the lockup module's genesis state.
+ * @name GenesisStateSDKType
+ * @package symphony.lockup
+ * @see proto type: symphony.lockup.GenesisState
+ */
 export interface GenesisStateSDKType {
   last_lock_id: bigint;
   locks: PeriodLockSDKType[];
@@ -47,6 +62,12 @@ function createBaseGenesisState(): GenesisState {
     params: undefined,
   };
 }
+/**
+ * GenesisState defines the lockup module's genesis state.
+ * @name GenesisState
+ * @package symphony.lockup
+ * @see proto type: symphony.lockup.GenesisState
+ */
 export const GenesisState = {
   typeUrl: '/symphony.lockup.GenesisState',
   is(o: any): o is GenesisState {

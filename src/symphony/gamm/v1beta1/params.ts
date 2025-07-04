@@ -6,7 +6,12 @@ import {
 } from '../../../cosmos/base/v1beta1/coin';
 import { BinaryReader, BinaryWriter } from '../../../binary';
 import { GlobalDecoderRegistry } from '../../../registry';
-/** Params holds parameters for the incentives module */
+/**
+ * Params holds parameters for the incentives module
+ * @name Params
+ * @package symphony.gamm.v1beta1
+ * @see proto type: symphony.gamm.v1beta1.Params
+ */
 export interface Params {
   poolCreationFee: Coin[];
 }
@@ -14,7 +19,12 @@ export interface ParamsProtoMsg {
   typeUrl: '/symphony.gamm.v1beta1.Params';
   value: Uint8Array;
 }
-/** Params holds parameters for the incentives module */
+/**
+ * Params holds parameters for the incentives module
+ * @name ParamsAmino
+ * @package symphony.gamm.v1beta1
+ * @see proto type: symphony.gamm.v1beta1.Params
+ */
 export interface ParamsAmino {
   pool_creation_fee?: CoinAmino[];
 }
@@ -22,7 +32,12 @@ export interface ParamsAminoMsg {
   type: '/symphony.gamm.v1beta1.Params';
   value: ParamsAmino;
 }
-/** Params holds parameters for the incentives module */
+/**
+ * Params holds parameters for the incentives module
+ * @name ParamsSDKType
+ * @package symphony.gamm.v1beta1
+ * @see proto type: symphony.gamm.v1beta1.Params
+ */
 export interface ParamsSDKType {
   pool_creation_fee: CoinSDKType[];
 }
@@ -31,6 +46,12 @@ function createBaseParams(): Params {
     poolCreationFee: [],
   };
 }
+/**
+ * Params holds parameters for the incentives module
+ * @name Params
+ * @package symphony.gamm.v1beta1
+ * @see proto type: symphony.gamm.v1beta1.Params
+ */
 export const Params = {
   typeUrl: '/symphony.gamm.v1beta1.Params',
   is(o: any): o is Params {

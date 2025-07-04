@@ -24,45 +24,82 @@ import {
 } from './protorev';
 import { BinaryReader, BinaryWriter } from '../../../binary';
 import { GlobalDecoderRegistry } from '../../../registry';
-/** QueryParamsRequest is request type for the Query/Params RPC method. */
+/**
+ * QueryParamsRequest is request type for the Query/Params RPC method.
+ * @name QueryParamsRequest
+ * @package symphony.protorev.v1beta1
+ * @see proto type: symphony.protorev.v1beta1.QueryParamsRequest
+ */
 export interface QueryParamsRequest {}
 export interface QueryParamsRequestProtoMsg {
   typeUrl: '/symphony.protorev.v1beta1.QueryParamsRequest';
   value: Uint8Array;
 }
-/** QueryParamsRequest is request type for the Query/Params RPC method. */
+/**
+ * QueryParamsRequest is request type for the Query/Params RPC method.
+ * @name QueryParamsRequestAmino
+ * @package symphony.protorev.v1beta1
+ * @see proto type: symphony.protorev.v1beta1.QueryParamsRequest
+ */
 export interface QueryParamsRequestAmino {}
 export interface QueryParamsRequestAminoMsg {
   type: '/symphony.protorev.v1beta1.QueryParamsRequest';
   value: QueryParamsRequestAmino;
 }
-/** QueryParamsRequest is request type for the Query/Params RPC method. */
+/**
+ * QueryParamsRequest is request type for the Query/Params RPC method.
+ * @name QueryParamsRequestSDKType
+ * @package symphony.protorev.v1beta1
+ * @see proto type: symphony.protorev.v1beta1.QueryParamsRequest
+ */
 export interface QueryParamsRequestSDKType {}
-/** QueryParamsResponse is response type for the Query/Params RPC method. */
+/**
+ * QueryParamsResponse is response type for the Query/Params RPC method.
+ * @name QueryParamsResponse
+ * @package symphony.protorev.v1beta1
+ * @see proto type: symphony.protorev.v1beta1.QueryParamsResponse
+ */
 export interface QueryParamsResponse {
-  /** params holds all the parameters of this module. */
+  /**
+   * params holds all the parameters of this module.
+   */
   params: Params;
 }
 export interface QueryParamsResponseProtoMsg {
   typeUrl: '/symphony.protorev.v1beta1.QueryParamsResponse';
   value: Uint8Array;
 }
-/** QueryParamsResponse is response type for the Query/Params RPC method. */
+/**
+ * QueryParamsResponse is response type for the Query/Params RPC method.
+ * @name QueryParamsResponseAmino
+ * @package symphony.protorev.v1beta1
+ * @see proto type: symphony.protorev.v1beta1.QueryParamsResponse
+ */
 export interface QueryParamsResponseAmino {
-  /** params holds all the parameters of this module. */
+  /**
+   * params holds all the parameters of this module.
+   */
   params?: ParamsAmino;
 }
 export interface QueryParamsResponseAminoMsg {
   type: '/symphony.protorev.v1beta1.QueryParamsResponse';
   value: QueryParamsResponseAmino;
 }
-/** QueryParamsResponse is response type for the Query/Params RPC method. */
+/**
+ * QueryParamsResponse is response type for the Query/Params RPC method.
+ * @name QueryParamsResponseSDKType
+ * @package symphony.protorev.v1beta1
+ * @see proto type: symphony.protorev.v1beta1.QueryParamsResponse
+ */
 export interface QueryParamsResponseSDKType {
   params: ParamsSDKType;
 }
 /**
  * QueryGetProtoRevNumberOfTradesRequest is request type for the
  * Query/GetProtoRevNumberOfTrades RPC method.
+ * @name QueryGetProtoRevNumberOfTradesRequest
+ * @package symphony.protorev.v1beta1
+ * @see proto type: symphony.protorev.v1beta1.QueryGetProtoRevNumberOfTradesRequest
  */
 export interface QueryGetProtoRevNumberOfTradesRequest {}
 export interface QueryGetProtoRevNumberOfTradesRequestProtoMsg {
@@ -72,6 +109,9 @@ export interface QueryGetProtoRevNumberOfTradesRequestProtoMsg {
 /**
  * QueryGetProtoRevNumberOfTradesRequest is request type for the
  * Query/GetProtoRevNumberOfTrades RPC method.
+ * @name QueryGetProtoRevNumberOfTradesRequestAmino
+ * @package symphony.protorev.v1beta1
+ * @see proto type: symphony.protorev.v1beta1.QueryGetProtoRevNumberOfTradesRequest
  */
 export interface QueryGetProtoRevNumberOfTradesRequestAmino {}
 export interface QueryGetProtoRevNumberOfTradesRequestAminoMsg {
@@ -81,14 +121,22 @@ export interface QueryGetProtoRevNumberOfTradesRequestAminoMsg {
 /**
  * QueryGetProtoRevNumberOfTradesRequest is request type for the
  * Query/GetProtoRevNumberOfTrades RPC method.
+ * @name QueryGetProtoRevNumberOfTradesRequestSDKType
+ * @package symphony.protorev.v1beta1
+ * @see proto type: symphony.protorev.v1beta1.QueryGetProtoRevNumberOfTradesRequest
  */
 export interface QueryGetProtoRevNumberOfTradesRequestSDKType {}
 /**
  * QueryGetProtoRevNumberOfTradesResponse is response type for the
  * Query/GetProtoRevNumberOfTrades RPC method.
+ * @name QueryGetProtoRevNumberOfTradesResponse
+ * @package symphony.protorev.v1beta1
+ * @see proto type: symphony.protorev.v1beta1.QueryGetProtoRevNumberOfTradesResponse
  */
 export interface QueryGetProtoRevNumberOfTradesResponse {
-  /** number_of_trades is the number of trades the module has executed */
+  /**
+   * number_of_trades is the number of trades the module has executed
+   */
   numberOfTrades: string;
 }
 export interface QueryGetProtoRevNumberOfTradesResponseProtoMsg {
@@ -98,9 +146,14 @@ export interface QueryGetProtoRevNumberOfTradesResponseProtoMsg {
 /**
  * QueryGetProtoRevNumberOfTradesResponse is response type for the
  * Query/GetProtoRevNumberOfTrades RPC method.
+ * @name QueryGetProtoRevNumberOfTradesResponseAmino
+ * @package symphony.protorev.v1beta1
+ * @see proto type: symphony.protorev.v1beta1.QueryGetProtoRevNumberOfTradesResponse
  */
 export interface QueryGetProtoRevNumberOfTradesResponseAmino {
-  /** number_of_trades is the number of trades the module has executed */
+  /**
+   * number_of_trades is the number of trades the module has executed
+   */
   number_of_trades?: string;
 }
 export interface QueryGetProtoRevNumberOfTradesResponseAminoMsg {
@@ -110,6 +163,9 @@ export interface QueryGetProtoRevNumberOfTradesResponseAminoMsg {
 /**
  * QueryGetProtoRevNumberOfTradesResponse is response type for the
  * Query/GetProtoRevNumberOfTrades RPC method.
+ * @name QueryGetProtoRevNumberOfTradesResponseSDKType
+ * @package symphony.protorev.v1beta1
+ * @see proto type: symphony.protorev.v1beta1.QueryGetProtoRevNumberOfTradesResponse
  */
 export interface QueryGetProtoRevNumberOfTradesResponseSDKType {
   number_of_trades: string;
@@ -117,9 +173,14 @@ export interface QueryGetProtoRevNumberOfTradesResponseSDKType {
 /**
  * QueryGetProtoRevProfitsByDenomRequest is request type for the
  * Query/GetProtoRevProfitsByDenom RPC method.
+ * @name QueryGetProtoRevProfitsByDenomRequest
+ * @package symphony.protorev.v1beta1
+ * @see proto type: symphony.protorev.v1beta1.QueryGetProtoRevProfitsByDenomRequest
  */
 export interface QueryGetProtoRevProfitsByDenomRequest {
-  /** denom is the denom to query profits by */
+  /**
+   * denom is the denom to query profits by
+   */
   denom: string;
 }
 export interface QueryGetProtoRevProfitsByDenomRequestProtoMsg {
@@ -129,9 +190,14 @@ export interface QueryGetProtoRevProfitsByDenomRequestProtoMsg {
 /**
  * QueryGetProtoRevProfitsByDenomRequest is request type for the
  * Query/GetProtoRevProfitsByDenom RPC method.
+ * @name QueryGetProtoRevProfitsByDenomRequestAmino
+ * @package symphony.protorev.v1beta1
+ * @see proto type: symphony.protorev.v1beta1.QueryGetProtoRevProfitsByDenomRequest
  */
 export interface QueryGetProtoRevProfitsByDenomRequestAmino {
-  /** denom is the denom to query profits by */
+  /**
+   * denom is the denom to query profits by
+   */
   denom?: string;
 }
 export interface QueryGetProtoRevProfitsByDenomRequestAminoMsg {
@@ -141,6 +207,9 @@ export interface QueryGetProtoRevProfitsByDenomRequestAminoMsg {
 /**
  * QueryGetProtoRevProfitsByDenomRequest is request type for the
  * Query/GetProtoRevProfitsByDenom RPC method.
+ * @name QueryGetProtoRevProfitsByDenomRequestSDKType
+ * @package symphony.protorev.v1beta1
+ * @see proto type: symphony.protorev.v1beta1.QueryGetProtoRevProfitsByDenomRequest
  */
 export interface QueryGetProtoRevProfitsByDenomRequestSDKType {
   denom: string;
@@ -148,9 +217,14 @@ export interface QueryGetProtoRevProfitsByDenomRequestSDKType {
 /**
  * QueryGetProtoRevProfitsByDenomResponse is response type for the
  * Query/GetProtoRevProfitsByDenom RPC method.
+ * @name QueryGetProtoRevProfitsByDenomResponse
+ * @package symphony.protorev.v1beta1
+ * @see proto type: symphony.protorev.v1beta1.QueryGetProtoRevProfitsByDenomResponse
  */
 export interface QueryGetProtoRevProfitsByDenomResponse {
-  /** profit is the profits of the module by the selected denom */
+  /**
+   * profit is the profits of the module by the selected denom
+   */
   profit?: Coin;
 }
 export interface QueryGetProtoRevProfitsByDenomResponseProtoMsg {
@@ -160,9 +234,14 @@ export interface QueryGetProtoRevProfitsByDenomResponseProtoMsg {
 /**
  * QueryGetProtoRevProfitsByDenomResponse is response type for the
  * Query/GetProtoRevProfitsByDenom RPC method.
+ * @name QueryGetProtoRevProfitsByDenomResponseAmino
+ * @package symphony.protorev.v1beta1
+ * @see proto type: symphony.protorev.v1beta1.QueryGetProtoRevProfitsByDenomResponse
  */
 export interface QueryGetProtoRevProfitsByDenomResponseAmino {
-  /** profit is the profits of the module by the selected denom */
+  /**
+   * profit is the profits of the module by the selected denom
+   */
   profit?: CoinAmino;
 }
 export interface QueryGetProtoRevProfitsByDenomResponseAminoMsg {
@@ -172,6 +251,9 @@ export interface QueryGetProtoRevProfitsByDenomResponseAminoMsg {
 /**
  * QueryGetProtoRevProfitsByDenomResponse is response type for the
  * Query/GetProtoRevProfitsByDenom RPC method.
+ * @name QueryGetProtoRevProfitsByDenomResponseSDKType
+ * @package symphony.protorev.v1beta1
+ * @see proto type: symphony.protorev.v1beta1.QueryGetProtoRevProfitsByDenomResponse
  */
 export interface QueryGetProtoRevProfitsByDenomResponseSDKType {
   profit?: CoinSDKType;
@@ -179,6 +261,9 @@ export interface QueryGetProtoRevProfitsByDenomResponseSDKType {
 /**
  * QueryGetProtoRevAllProfitsRequest is request type for the
  * Query/GetProtoRevAllProfits RPC method.
+ * @name QueryGetProtoRevAllProfitsRequest
+ * @package symphony.protorev.v1beta1
+ * @see proto type: symphony.protorev.v1beta1.QueryGetProtoRevAllProfitsRequest
  */
 export interface QueryGetProtoRevAllProfitsRequest {}
 export interface QueryGetProtoRevAllProfitsRequestProtoMsg {
@@ -188,6 +273,9 @@ export interface QueryGetProtoRevAllProfitsRequestProtoMsg {
 /**
  * QueryGetProtoRevAllProfitsRequest is request type for the
  * Query/GetProtoRevAllProfits RPC method.
+ * @name QueryGetProtoRevAllProfitsRequestAmino
+ * @package symphony.protorev.v1beta1
+ * @see proto type: symphony.protorev.v1beta1.QueryGetProtoRevAllProfitsRequest
  */
 export interface QueryGetProtoRevAllProfitsRequestAmino {}
 export interface QueryGetProtoRevAllProfitsRequestAminoMsg {
@@ -197,14 +285,22 @@ export interface QueryGetProtoRevAllProfitsRequestAminoMsg {
 /**
  * QueryGetProtoRevAllProfitsRequest is request type for the
  * Query/GetProtoRevAllProfits RPC method.
+ * @name QueryGetProtoRevAllProfitsRequestSDKType
+ * @package symphony.protorev.v1beta1
+ * @see proto type: symphony.protorev.v1beta1.QueryGetProtoRevAllProfitsRequest
  */
 export interface QueryGetProtoRevAllProfitsRequestSDKType {}
 /**
  * QueryGetProtoRevAllProfitsResponse is response type for the
  * Query/GetProtoRevAllProfits RPC method.
+ * @name QueryGetProtoRevAllProfitsResponse
+ * @package symphony.protorev.v1beta1
+ * @see proto type: symphony.protorev.v1beta1.QueryGetProtoRevAllProfitsResponse
  */
 export interface QueryGetProtoRevAllProfitsResponse {
-  /** profits is a list of all of the profits from the module */
+  /**
+   * profits is a list of all of the profits from the module
+   */
   profits: Coin[];
 }
 export interface QueryGetProtoRevAllProfitsResponseProtoMsg {
@@ -214,9 +310,14 @@ export interface QueryGetProtoRevAllProfitsResponseProtoMsg {
 /**
  * QueryGetProtoRevAllProfitsResponse is response type for the
  * Query/GetProtoRevAllProfits RPC method.
+ * @name QueryGetProtoRevAllProfitsResponseAmino
+ * @package symphony.protorev.v1beta1
+ * @see proto type: symphony.protorev.v1beta1.QueryGetProtoRevAllProfitsResponse
  */
 export interface QueryGetProtoRevAllProfitsResponseAmino {
-  /** profits is a list of all of the profits from the module */
+  /**
+   * profits is a list of all of the profits from the module
+   */
   profits?: CoinAmino[];
 }
 export interface QueryGetProtoRevAllProfitsResponseAminoMsg {
@@ -226,6 +327,9 @@ export interface QueryGetProtoRevAllProfitsResponseAminoMsg {
 /**
  * QueryGetProtoRevAllProfitsResponse is response type for the
  * Query/GetProtoRevAllProfits RPC method.
+ * @name QueryGetProtoRevAllProfitsResponseSDKType
+ * @package symphony.protorev.v1beta1
+ * @see proto type: symphony.protorev.v1beta1.QueryGetProtoRevAllProfitsResponse
  */
 export interface QueryGetProtoRevAllProfitsResponseSDKType {
   profits: CoinSDKType[];
@@ -233,9 +337,14 @@ export interface QueryGetProtoRevAllProfitsResponseSDKType {
 /**
  * QueryGetProtoRevStatisticsByPoolRequest is request type for the
  * Query/GetProtoRevStatisticsByRoute RPC method.
+ * @name QueryGetProtoRevStatisticsByRouteRequest
+ * @package symphony.protorev.v1beta1
+ * @see proto type: symphony.protorev.v1beta1.QueryGetProtoRevStatisticsByRouteRequest
  */
 export interface QueryGetProtoRevStatisticsByRouteRequest {
-  /** route is the set of pool ids to query statistics by i.e. 1,2,3 */
+  /**
+   * route is the set of pool ids to query statistics by i.e. 1,2,3
+   */
   route: bigint[];
 }
 export interface QueryGetProtoRevStatisticsByRouteRequestProtoMsg {
@@ -245,9 +354,14 @@ export interface QueryGetProtoRevStatisticsByRouteRequestProtoMsg {
 /**
  * QueryGetProtoRevStatisticsByPoolRequest is request type for the
  * Query/GetProtoRevStatisticsByRoute RPC method.
+ * @name QueryGetProtoRevStatisticsByRouteRequestAmino
+ * @package symphony.protorev.v1beta1
+ * @see proto type: symphony.protorev.v1beta1.QueryGetProtoRevStatisticsByRouteRequest
  */
 export interface QueryGetProtoRevStatisticsByRouteRequestAmino {
-  /** route is the set of pool ids to query statistics by i.e. 1,2,3 */
+  /**
+   * route is the set of pool ids to query statistics by i.e. 1,2,3
+   */
   route?: string[];
 }
 export interface QueryGetProtoRevStatisticsByRouteRequestAminoMsg {
@@ -257,6 +371,9 @@ export interface QueryGetProtoRevStatisticsByRouteRequestAminoMsg {
 /**
  * QueryGetProtoRevStatisticsByPoolRequest is request type for the
  * Query/GetProtoRevStatisticsByRoute RPC method.
+ * @name QueryGetProtoRevStatisticsByRouteRequestSDKType
+ * @package symphony.protorev.v1beta1
+ * @see proto type: symphony.protorev.v1beta1.QueryGetProtoRevStatisticsByRouteRequest
  */
 export interface QueryGetProtoRevStatisticsByRouteRequestSDKType {
   route: bigint[];
@@ -264,6 +381,9 @@ export interface QueryGetProtoRevStatisticsByRouteRequestSDKType {
 /**
  * QueryGetProtoRevStatisticsByRouteResponse is response type for the
  * Query/GetProtoRevStatisticsByRoute RPC method.
+ * @name QueryGetProtoRevStatisticsByRouteResponse
+ * @package symphony.protorev.v1beta1
+ * @see proto type: symphony.protorev.v1beta1.QueryGetProtoRevStatisticsByRouteResponse
  */
 export interface QueryGetProtoRevStatisticsByRouteResponse {
   /**
@@ -279,6 +399,9 @@ export interface QueryGetProtoRevStatisticsByRouteResponseProtoMsg {
 /**
  * QueryGetProtoRevStatisticsByRouteResponse is response type for the
  * Query/GetProtoRevStatisticsByRoute RPC method.
+ * @name QueryGetProtoRevStatisticsByRouteResponseAmino
+ * @package symphony.protorev.v1beta1
+ * @see proto type: symphony.protorev.v1beta1.QueryGetProtoRevStatisticsByRouteResponse
  */
 export interface QueryGetProtoRevStatisticsByRouteResponseAmino {
   /**
@@ -294,6 +417,9 @@ export interface QueryGetProtoRevStatisticsByRouteResponseAminoMsg {
 /**
  * QueryGetProtoRevStatisticsByRouteResponse is response type for the
  * Query/GetProtoRevStatisticsByRoute RPC method.
+ * @name QueryGetProtoRevStatisticsByRouteResponseSDKType
+ * @package symphony.protorev.v1beta1
+ * @see proto type: symphony.protorev.v1beta1.QueryGetProtoRevStatisticsByRouteResponse
  */
 export interface QueryGetProtoRevStatisticsByRouteResponseSDKType {
   statistics: RouteStatisticsSDKType;
@@ -301,6 +427,9 @@ export interface QueryGetProtoRevStatisticsByRouteResponseSDKType {
 /**
  * QueryGetProtoRevAllRouteStatisticsRequest is request type for the
  * Query/GetProtoRevAllRouteStatistics RPC method.
+ * @name QueryGetProtoRevAllRouteStatisticsRequest
+ * @package symphony.protorev.v1beta1
+ * @see proto type: symphony.protorev.v1beta1.QueryGetProtoRevAllRouteStatisticsRequest
  */
 export interface QueryGetProtoRevAllRouteStatisticsRequest {}
 export interface QueryGetProtoRevAllRouteStatisticsRequestProtoMsg {
@@ -310,6 +439,9 @@ export interface QueryGetProtoRevAllRouteStatisticsRequestProtoMsg {
 /**
  * QueryGetProtoRevAllRouteStatisticsRequest is request type for the
  * Query/GetProtoRevAllRouteStatistics RPC method.
+ * @name QueryGetProtoRevAllRouteStatisticsRequestAmino
+ * @package symphony.protorev.v1beta1
+ * @see proto type: symphony.protorev.v1beta1.QueryGetProtoRevAllRouteStatisticsRequest
  */
 export interface QueryGetProtoRevAllRouteStatisticsRequestAmino {}
 export interface QueryGetProtoRevAllRouteStatisticsRequestAminoMsg {
@@ -319,11 +451,17 @@ export interface QueryGetProtoRevAllRouteStatisticsRequestAminoMsg {
 /**
  * QueryGetProtoRevAllRouteStatisticsRequest is request type for the
  * Query/GetProtoRevAllRouteStatistics RPC method.
+ * @name QueryGetProtoRevAllRouteStatisticsRequestSDKType
+ * @package symphony.protorev.v1beta1
+ * @see proto type: symphony.protorev.v1beta1.QueryGetProtoRevAllRouteStatisticsRequest
  */
 export interface QueryGetProtoRevAllRouteStatisticsRequestSDKType {}
 /**
  * QueryGetProtoRevAllRouteStatisticsResponse is response type for the
  * Query/GetProtoRevAllRouteStatistics RPC method.
+ * @name QueryGetProtoRevAllRouteStatisticsResponse
+ * @package symphony.protorev.v1beta1
+ * @see proto type: symphony.protorev.v1beta1.QueryGetProtoRevAllRouteStatisticsResponse
  */
 export interface QueryGetProtoRevAllRouteStatisticsResponse {
   /**
@@ -339,6 +477,9 @@ export interface QueryGetProtoRevAllRouteStatisticsResponseProtoMsg {
 /**
  * QueryGetProtoRevAllRouteStatisticsResponse is response type for the
  * Query/GetProtoRevAllRouteStatistics RPC method.
+ * @name QueryGetProtoRevAllRouteStatisticsResponseAmino
+ * @package symphony.protorev.v1beta1
+ * @see proto type: symphony.protorev.v1beta1.QueryGetProtoRevAllRouteStatisticsResponse
  */
 export interface QueryGetProtoRevAllRouteStatisticsResponseAmino {
   /**
@@ -354,6 +495,9 @@ export interface QueryGetProtoRevAllRouteStatisticsResponseAminoMsg {
 /**
  * QueryGetProtoRevAllRouteStatisticsResponse is response type for the
  * Query/GetProtoRevAllRouteStatistics RPC method.
+ * @name QueryGetProtoRevAllRouteStatisticsResponseSDKType
+ * @package symphony.protorev.v1beta1
+ * @see proto type: symphony.protorev.v1beta1.QueryGetProtoRevAllRouteStatisticsResponse
  */
 export interface QueryGetProtoRevAllRouteStatisticsResponseSDKType {
   statistics: RouteStatisticsSDKType[];
@@ -361,6 +505,9 @@ export interface QueryGetProtoRevAllRouteStatisticsResponseSDKType {
 /**
  * QueryGetProtoRevTokenPairArbRoutesRequest is request type for the
  * Query/GetProtoRevTokenPairArbRoutes RPC method.
+ * @name QueryGetProtoRevTokenPairArbRoutesRequest
+ * @package symphony.protorev.v1beta1
+ * @see proto type: symphony.protorev.v1beta1.QueryGetProtoRevTokenPairArbRoutesRequest
  */
 export interface QueryGetProtoRevTokenPairArbRoutesRequest {}
 export interface QueryGetProtoRevTokenPairArbRoutesRequestProtoMsg {
@@ -370,6 +517,9 @@ export interface QueryGetProtoRevTokenPairArbRoutesRequestProtoMsg {
 /**
  * QueryGetProtoRevTokenPairArbRoutesRequest is request type for the
  * Query/GetProtoRevTokenPairArbRoutes RPC method.
+ * @name QueryGetProtoRevTokenPairArbRoutesRequestAmino
+ * @package symphony.protorev.v1beta1
+ * @see proto type: symphony.protorev.v1beta1.QueryGetProtoRevTokenPairArbRoutesRequest
  */
 export interface QueryGetProtoRevTokenPairArbRoutesRequestAmino {}
 export interface QueryGetProtoRevTokenPairArbRoutesRequestAminoMsg {
@@ -379,11 +529,17 @@ export interface QueryGetProtoRevTokenPairArbRoutesRequestAminoMsg {
 /**
  * QueryGetProtoRevTokenPairArbRoutesRequest is request type for the
  * Query/GetProtoRevTokenPairArbRoutes RPC method.
+ * @name QueryGetProtoRevTokenPairArbRoutesRequestSDKType
+ * @package symphony.protorev.v1beta1
+ * @see proto type: symphony.protorev.v1beta1.QueryGetProtoRevTokenPairArbRoutesRequest
  */
 export interface QueryGetProtoRevTokenPairArbRoutesRequestSDKType {}
 /**
  * QueryGetProtoRevTokenPairArbRoutesResponse is response type for the
  * Query/GetProtoRevTokenPairArbRoutes RPC method.
+ * @name QueryGetProtoRevTokenPairArbRoutesResponse
+ * @package symphony.protorev.v1beta1
+ * @see proto type: symphony.protorev.v1beta1.QueryGetProtoRevTokenPairArbRoutesResponse
  */
 export interface QueryGetProtoRevTokenPairArbRoutesResponse {
   /**
@@ -399,6 +555,9 @@ export interface QueryGetProtoRevTokenPairArbRoutesResponseProtoMsg {
 /**
  * QueryGetProtoRevTokenPairArbRoutesResponse is response type for the
  * Query/GetProtoRevTokenPairArbRoutes RPC method.
+ * @name QueryGetProtoRevTokenPairArbRoutesResponseAmino
+ * @package symphony.protorev.v1beta1
+ * @see proto type: symphony.protorev.v1beta1.QueryGetProtoRevTokenPairArbRoutesResponse
  */
 export interface QueryGetProtoRevTokenPairArbRoutesResponseAmino {
   /**
@@ -414,6 +573,9 @@ export interface QueryGetProtoRevTokenPairArbRoutesResponseAminoMsg {
 /**
  * QueryGetProtoRevTokenPairArbRoutesResponse is response type for the
  * Query/GetProtoRevTokenPairArbRoutes RPC method.
+ * @name QueryGetProtoRevTokenPairArbRoutesResponseSDKType
+ * @package symphony.protorev.v1beta1
+ * @see proto type: symphony.protorev.v1beta1.QueryGetProtoRevTokenPairArbRoutesResponse
  */
 export interface QueryGetProtoRevTokenPairArbRoutesResponseSDKType {
   routes: TokenPairArbRoutesSDKType[];
@@ -421,6 +583,9 @@ export interface QueryGetProtoRevTokenPairArbRoutesResponseSDKType {
 /**
  * QueryGetProtoRevAdminAccountRequest is request type for the
  * Query/GetProtoRevAdminAccount RPC method.
+ * @name QueryGetProtoRevAdminAccountRequest
+ * @package symphony.protorev.v1beta1
+ * @see proto type: symphony.protorev.v1beta1.QueryGetProtoRevAdminAccountRequest
  */
 export interface QueryGetProtoRevAdminAccountRequest {}
 export interface QueryGetProtoRevAdminAccountRequestProtoMsg {
@@ -430,6 +595,9 @@ export interface QueryGetProtoRevAdminAccountRequestProtoMsg {
 /**
  * QueryGetProtoRevAdminAccountRequest is request type for the
  * Query/GetProtoRevAdminAccount RPC method.
+ * @name QueryGetProtoRevAdminAccountRequestAmino
+ * @package symphony.protorev.v1beta1
+ * @see proto type: symphony.protorev.v1beta1.QueryGetProtoRevAdminAccountRequest
  */
 export interface QueryGetProtoRevAdminAccountRequestAmino {}
 export interface QueryGetProtoRevAdminAccountRequestAminoMsg {
@@ -439,14 +607,22 @@ export interface QueryGetProtoRevAdminAccountRequestAminoMsg {
 /**
  * QueryGetProtoRevAdminAccountRequest is request type for the
  * Query/GetProtoRevAdminAccount RPC method.
+ * @name QueryGetProtoRevAdminAccountRequestSDKType
+ * @package symphony.protorev.v1beta1
+ * @see proto type: symphony.protorev.v1beta1.QueryGetProtoRevAdminAccountRequest
  */
 export interface QueryGetProtoRevAdminAccountRequestSDKType {}
 /**
  * QueryGetProtoRevAdminAccountResponse is response type for the
  * Query/GetProtoRevAdminAccount RPC method.
+ * @name QueryGetProtoRevAdminAccountResponse
+ * @package symphony.protorev.v1beta1
+ * @see proto type: symphony.protorev.v1beta1.QueryGetProtoRevAdminAccountResponse
  */
 export interface QueryGetProtoRevAdminAccountResponse {
-  /** admin_account is the admin account of the module */
+  /**
+   * admin_account is the admin account of the module
+   */
   adminAccount: string;
 }
 export interface QueryGetProtoRevAdminAccountResponseProtoMsg {
@@ -456,9 +632,14 @@ export interface QueryGetProtoRevAdminAccountResponseProtoMsg {
 /**
  * QueryGetProtoRevAdminAccountResponse is response type for the
  * Query/GetProtoRevAdminAccount RPC method.
+ * @name QueryGetProtoRevAdminAccountResponseAmino
+ * @package symphony.protorev.v1beta1
+ * @see proto type: symphony.protorev.v1beta1.QueryGetProtoRevAdminAccountResponse
  */
 export interface QueryGetProtoRevAdminAccountResponseAmino {
-  /** admin_account is the admin account of the module */
+  /**
+   * admin_account is the admin account of the module
+   */
   admin_account?: string;
 }
 export interface QueryGetProtoRevAdminAccountResponseAminoMsg {
@@ -468,6 +649,9 @@ export interface QueryGetProtoRevAdminAccountResponseAminoMsg {
 /**
  * QueryGetProtoRevAdminAccountResponse is response type for the
  * Query/GetProtoRevAdminAccount RPC method.
+ * @name QueryGetProtoRevAdminAccountResponseSDKType
+ * @package symphony.protorev.v1beta1
+ * @see proto type: symphony.protorev.v1beta1.QueryGetProtoRevAdminAccountResponse
  */
 export interface QueryGetProtoRevAdminAccountResponseSDKType {
   admin_account: string;
@@ -475,6 +659,9 @@ export interface QueryGetProtoRevAdminAccountResponseSDKType {
 /**
  * QueryGetProtoRevDeveloperAccountRequest is request type for the
  * Query/GetProtoRevDeveloperAccount RPC method.
+ * @name QueryGetProtoRevDeveloperAccountRequest
+ * @package symphony.protorev.v1beta1
+ * @see proto type: symphony.protorev.v1beta1.QueryGetProtoRevDeveloperAccountRequest
  */
 export interface QueryGetProtoRevDeveloperAccountRequest {}
 export interface QueryGetProtoRevDeveloperAccountRequestProtoMsg {
@@ -484,6 +671,9 @@ export interface QueryGetProtoRevDeveloperAccountRequestProtoMsg {
 /**
  * QueryGetProtoRevDeveloperAccountRequest is request type for the
  * Query/GetProtoRevDeveloperAccount RPC method.
+ * @name QueryGetProtoRevDeveloperAccountRequestAmino
+ * @package symphony.protorev.v1beta1
+ * @see proto type: symphony.protorev.v1beta1.QueryGetProtoRevDeveloperAccountRequest
  */
 export interface QueryGetProtoRevDeveloperAccountRequestAmino {}
 export interface QueryGetProtoRevDeveloperAccountRequestAminoMsg {
@@ -493,14 +683,22 @@ export interface QueryGetProtoRevDeveloperAccountRequestAminoMsg {
 /**
  * QueryGetProtoRevDeveloperAccountRequest is request type for the
  * Query/GetProtoRevDeveloperAccount RPC method.
+ * @name QueryGetProtoRevDeveloperAccountRequestSDKType
+ * @package symphony.protorev.v1beta1
+ * @see proto type: symphony.protorev.v1beta1.QueryGetProtoRevDeveloperAccountRequest
  */
 export interface QueryGetProtoRevDeveloperAccountRequestSDKType {}
 /**
  * QueryGetProtoRevDeveloperAccountResponse is response type for the
  * Query/GetProtoRevDeveloperAccount RPC method.
+ * @name QueryGetProtoRevDeveloperAccountResponse
+ * @package symphony.protorev.v1beta1
+ * @see proto type: symphony.protorev.v1beta1.QueryGetProtoRevDeveloperAccountResponse
  */
 export interface QueryGetProtoRevDeveloperAccountResponse {
-  /** developer_account is the developer account of the module */
+  /**
+   * developer_account is the developer account of the module
+   */
   developerAccount: string;
 }
 export interface QueryGetProtoRevDeveloperAccountResponseProtoMsg {
@@ -510,9 +708,14 @@ export interface QueryGetProtoRevDeveloperAccountResponseProtoMsg {
 /**
  * QueryGetProtoRevDeveloperAccountResponse is response type for the
  * Query/GetProtoRevDeveloperAccount RPC method.
+ * @name QueryGetProtoRevDeveloperAccountResponseAmino
+ * @package symphony.protorev.v1beta1
+ * @see proto type: symphony.protorev.v1beta1.QueryGetProtoRevDeveloperAccountResponse
  */
 export interface QueryGetProtoRevDeveloperAccountResponseAmino {
-  /** developer_account is the developer account of the module */
+  /**
+   * developer_account is the developer account of the module
+   */
   developer_account?: string;
 }
 export interface QueryGetProtoRevDeveloperAccountResponseAminoMsg {
@@ -522,6 +725,9 @@ export interface QueryGetProtoRevDeveloperAccountResponseAminoMsg {
 /**
  * QueryGetProtoRevDeveloperAccountResponse is response type for the
  * Query/GetProtoRevDeveloperAccount RPC method.
+ * @name QueryGetProtoRevDeveloperAccountResponseSDKType
+ * @package symphony.protorev.v1beta1
+ * @see proto type: symphony.protorev.v1beta1.QueryGetProtoRevDeveloperAccountResponse
  */
 export interface QueryGetProtoRevDeveloperAccountResponseSDKType {
   developer_account: string;
@@ -529,6 +735,9 @@ export interface QueryGetProtoRevDeveloperAccountResponseSDKType {
 /**
  * QueryGetProtoRevInfoByPoolTypeRequest is request type for the
  * Query/GetProtoRevInfoByPoolType RPC method.
+ * @name QueryGetProtoRevInfoByPoolTypeRequest
+ * @package symphony.protorev.v1beta1
+ * @see proto type: symphony.protorev.v1beta1.QueryGetProtoRevInfoByPoolTypeRequest
  */
 export interface QueryGetProtoRevInfoByPoolTypeRequest {}
 export interface QueryGetProtoRevInfoByPoolTypeRequestProtoMsg {
@@ -538,6 +747,9 @@ export interface QueryGetProtoRevInfoByPoolTypeRequestProtoMsg {
 /**
  * QueryGetProtoRevInfoByPoolTypeRequest is request type for the
  * Query/GetProtoRevInfoByPoolType RPC method.
+ * @name QueryGetProtoRevInfoByPoolTypeRequestAmino
+ * @package symphony.protorev.v1beta1
+ * @see proto type: symphony.protorev.v1beta1.QueryGetProtoRevInfoByPoolTypeRequest
  */
 export interface QueryGetProtoRevInfoByPoolTypeRequestAmino {}
 export interface QueryGetProtoRevInfoByPoolTypeRequestAminoMsg {
@@ -547,11 +759,17 @@ export interface QueryGetProtoRevInfoByPoolTypeRequestAminoMsg {
 /**
  * QueryGetProtoRevInfoByPoolTypeRequest is request type for the
  * Query/GetProtoRevInfoByPoolType RPC method.
+ * @name QueryGetProtoRevInfoByPoolTypeRequestSDKType
+ * @package symphony.protorev.v1beta1
+ * @see proto type: symphony.protorev.v1beta1.QueryGetProtoRevInfoByPoolTypeRequest
  */
 export interface QueryGetProtoRevInfoByPoolTypeRequestSDKType {}
 /**
  * QueryGetProtoRevInfoByPoolTypeResponse is response type for the
  * Query/GetProtoRevInfoByPoolType RPC method.
+ * @name QueryGetProtoRevInfoByPoolTypeResponse
+ * @package symphony.protorev.v1beta1
+ * @see proto type: symphony.protorev.v1beta1.QueryGetProtoRevInfoByPoolTypeResponse
  */
 export interface QueryGetProtoRevInfoByPoolTypeResponse {
   /**
@@ -567,6 +785,9 @@ export interface QueryGetProtoRevInfoByPoolTypeResponseProtoMsg {
 /**
  * QueryGetProtoRevInfoByPoolTypeResponse is response type for the
  * Query/GetProtoRevInfoByPoolType RPC method.
+ * @name QueryGetProtoRevInfoByPoolTypeResponseAmino
+ * @package symphony.protorev.v1beta1
+ * @see proto type: symphony.protorev.v1beta1.QueryGetProtoRevInfoByPoolTypeResponse
  */
 export interface QueryGetProtoRevInfoByPoolTypeResponseAmino {
   /**
@@ -582,6 +803,9 @@ export interface QueryGetProtoRevInfoByPoolTypeResponseAminoMsg {
 /**
  * QueryGetProtoRevInfoByPoolTypeResponse is response type for the
  * Query/GetProtoRevInfoByPoolType RPC method.
+ * @name QueryGetProtoRevInfoByPoolTypeResponseSDKType
+ * @package symphony.protorev.v1beta1
+ * @see proto type: symphony.protorev.v1beta1.QueryGetProtoRevInfoByPoolTypeResponse
  */
 export interface QueryGetProtoRevInfoByPoolTypeResponseSDKType {
   info_by_pool_type: InfoByPoolTypeSDKType;
@@ -589,6 +813,9 @@ export interface QueryGetProtoRevInfoByPoolTypeResponseSDKType {
 /**
  * QueryGetProtoRevMaxPoolPointsPerBlockRequest is request type for the
  * Query/GetProtoRevMaxPoolPointsPerBlock RPC method.
+ * @name QueryGetProtoRevMaxPoolPointsPerBlockRequest
+ * @package symphony.protorev.v1beta1
+ * @see proto type: symphony.protorev.v1beta1.QueryGetProtoRevMaxPoolPointsPerBlockRequest
  */
 export interface QueryGetProtoRevMaxPoolPointsPerBlockRequest {}
 export interface QueryGetProtoRevMaxPoolPointsPerBlockRequestProtoMsg {
@@ -598,6 +825,9 @@ export interface QueryGetProtoRevMaxPoolPointsPerBlockRequestProtoMsg {
 /**
  * QueryGetProtoRevMaxPoolPointsPerBlockRequest is request type for the
  * Query/GetProtoRevMaxPoolPointsPerBlock RPC method.
+ * @name QueryGetProtoRevMaxPoolPointsPerBlockRequestAmino
+ * @package symphony.protorev.v1beta1
+ * @see proto type: symphony.protorev.v1beta1.QueryGetProtoRevMaxPoolPointsPerBlockRequest
  */
 export interface QueryGetProtoRevMaxPoolPointsPerBlockRequestAmino {}
 export interface QueryGetProtoRevMaxPoolPointsPerBlockRequestAminoMsg {
@@ -607,11 +837,17 @@ export interface QueryGetProtoRevMaxPoolPointsPerBlockRequestAminoMsg {
 /**
  * QueryGetProtoRevMaxPoolPointsPerBlockRequest is request type for the
  * Query/GetProtoRevMaxPoolPointsPerBlock RPC method.
+ * @name QueryGetProtoRevMaxPoolPointsPerBlockRequestSDKType
+ * @package symphony.protorev.v1beta1
+ * @see proto type: symphony.protorev.v1beta1.QueryGetProtoRevMaxPoolPointsPerBlockRequest
  */
 export interface QueryGetProtoRevMaxPoolPointsPerBlockRequestSDKType {}
 /**
  * QueryGetProtoRevMaxPoolPointsPerBlockResponse is response type for the
  * Query/GetProtoRevMaxPoolPointsPerBlock RPC method.
+ * @name QueryGetProtoRevMaxPoolPointsPerBlockResponse
+ * @package symphony.protorev.v1beta1
+ * @see proto type: symphony.protorev.v1beta1.QueryGetProtoRevMaxPoolPointsPerBlockResponse
  */
 export interface QueryGetProtoRevMaxPoolPointsPerBlockResponse {
   /**
@@ -627,6 +863,9 @@ export interface QueryGetProtoRevMaxPoolPointsPerBlockResponseProtoMsg {
 /**
  * QueryGetProtoRevMaxPoolPointsPerBlockResponse is response type for the
  * Query/GetProtoRevMaxPoolPointsPerBlock RPC method.
+ * @name QueryGetProtoRevMaxPoolPointsPerBlockResponseAmino
+ * @package symphony.protorev.v1beta1
+ * @see proto type: symphony.protorev.v1beta1.QueryGetProtoRevMaxPoolPointsPerBlockResponse
  */
 export interface QueryGetProtoRevMaxPoolPointsPerBlockResponseAmino {
   /**
@@ -642,6 +881,9 @@ export interface QueryGetProtoRevMaxPoolPointsPerBlockResponseAminoMsg {
 /**
  * QueryGetProtoRevMaxPoolPointsPerBlockResponse is response type for the
  * Query/GetProtoRevMaxPoolPointsPerBlock RPC method.
+ * @name QueryGetProtoRevMaxPoolPointsPerBlockResponseSDKType
+ * @package symphony.protorev.v1beta1
+ * @see proto type: symphony.protorev.v1beta1.QueryGetProtoRevMaxPoolPointsPerBlockResponse
  */
 export interface QueryGetProtoRevMaxPoolPointsPerBlockResponseSDKType {
   max_pool_points_per_block: bigint;
@@ -649,6 +891,9 @@ export interface QueryGetProtoRevMaxPoolPointsPerBlockResponseSDKType {
 /**
  * QueryGetProtoRevMaxPoolPointsPerTxRequest is request type for the
  * Query/GetProtoRevMaxPoolPointsPerTx RPC method.
+ * @name QueryGetProtoRevMaxPoolPointsPerTxRequest
+ * @package symphony.protorev.v1beta1
+ * @see proto type: symphony.protorev.v1beta1.QueryGetProtoRevMaxPoolPointsPerTxRequest
  */
 export interface QueryGetProtoRevMaxPoolPointsPerTxRequest {}
 export interface QueryGetProtoRevMaxPoolPointsPerTxRequestProtoMsg {
@@ -658,6 +903,9 @@ export interface QueryGetProtoRevMaxPoolPointsPerTxRequestProtoMsg {
 /**
  * QueryGetProtoRevMaxPoolPointsPerTxRequest is request type for the
  * Query/GetProtoRevMaxPoolPointsPerTx RPC method.
+ * @name QueryGetProtoRevMaxPoolPointsPerTxRequestAmino
+ * @package symphony.protorev.v1beta1
+ * @see proto type: symphony.protorev.v1beta1.QueryGetProtoRevMaxPoolPointsPerTxRequest
  */
 export interface QueryGetProtoRevMaxPoolPointsPerTxRequestAmino {}
 export interface QueryGetProtoRevMaxPoolPointsPerTxRequestAminoMsg {
@@ -667,11 +915,17 @@ export interface QueryGetProtoRevMaxPoolPointsPerTxRequestAminoMsg {
 /**
  * QueryGetProtoRevMaxPoolPointsPerTxRequest is request type for the
  * Query/GetProtoRevMaxPoolPointsPerTx RPC method.
+ * @name QueryGetProtoRevMaxPoolPointsPerTxRequestSDKType
+ * @package symphony.protorev.v1beta1
+ * @see proto type: symphony.protorev.v1beta1.QueryGetProtoRevMaxPoolPointsPerTxRequest
  */
 export interface QueryGetProtoRevMaxPoolPointsPerTxRequestSDKType {}
 /**
  * QueryGetProtoRevMaxPoolPointsPerTxResponse is response type for the
  * Query/GetProtoRevMaxPoolPointsPerTx RPC method.
+ * @name QueryGetProtoRevMaxPoolPointsPerTxResponse
+ * @package symphony.protorev.v1beta1
+ * @see proto type: symphony.protorev.v1beta1.QueryGetProtoRevMaxPoolPointsPerTxResponse
  */
 export interface QueryGetProtoRevMaxPoolPointsPerTxResponse {
   /**
@@ -687,6 +941,9 @@ export interface QueryGetProtoRevMaxPoolPointsPerTxResponseProtoMsg {
 /**
  * QueryGetProtoRevMaxPoolPointsPerTxResponse is response type for the
  * Query/GetProtoRevMaxPoolPointsPerTx RPC method.
+ * @name QueryGetProtoRevMaxPoolPointsPerTxResponseAmino
+ * @package symphony.protorev.v1beta1
+ * @see proto type: symphony.protorev.v1beta1.QueryGetProtoRevMaxPoolPointsPerTxResponse
  */
 export interface QueryGetProtoRevMaxPoolPointsPerTxResponseAmino {
   /**
@@ -702,6 +959,9 @@ export interface QueryGetProtoRevMaxPoolPointsPerTxResponseAminoMsg {
 /**
  * QueryGetProtoRevMaxPoolPointsPerTxResponse is response type for the
  * Query/GetProtoRevMaxPoolPointsPerTx RPC method.
+ * @name QueryGetProtoRevMaxPoolPointsPerTxResponseSDKType
+ * @package symphony.protorev.v1beta1
+ * @see proto type: symphony.protorev.v1beta1.QueryGetProtoRevMaxPoolPointsPerTxResponse
  */
 export interface QueryGetProtoRevMaxPoolPointsPerTxResponseSDKType {
   max_pool_points_per_tx: bigint;
@@ -709,6 +969,9 @@ export interface QueryGetProtoRevMaxPoolPointsPerTxResponseSDKType {
 /**
  * QueryGetProtoRevBaseDenomsRequest is request type for the
  * Query/GetProtoRevBaseDenoms RPC method.
+ * @name QueryGetProtoRevBaseDenomsRequest
+ * @package symphony.protorev.v1beta1
+ * @see proto type: symphony.protorev.v1beta1.QueryGetProtoRevBaseDenomsRequest
  */
 export interface QueryGetProtoRevBaseDenomsRequest {}
 export interface QueryGetProtoRevBaseDenomsRequestProtoMsg {
@@ -718,6 +981,9 @@ export interface QueryGetProtoRevBaseDenomsRequestProtoMsg {
 /**
  * QueryGetProtoRevBaseDenomsRequest is request type for the
  * Query/GetProtoRevBaseDenoms RPC method.
+ * @name QueryGetProtoRevBaseDenomsRequestAmino
+ * @package symphony.protorev.v1beta1
+ * @see proto type: symphony.protorev.v1beta1.QueryGetProtoRevBaseDenomsRequest
  */
 export interface QueryGetProtoRevBaseDenomsRequestAmino {}
 export interface QueryGetProtoRevBaseDenomsRequestAminoMsg {
@@ -727,14 +993,22 @@ export interface QueryGetProtoRevBaseDenomsRequestAminoMsg {
 /**
  * QueryGetProtoRevBaseDenomsRequest is request type for the
  * Query/GetProtoRevBaseDenoms RPC method.
+ * @name QueryGetProtoRevBaseDenomsRequestSDKType
+ * @package symphony.protorev.v1beta1
+ * @see proto type: symphony.protorev.v1beta1.QueryGetProtoRevBaseDenomsRequest
  */
 export interface QueryGetProtoRevBaseDenomsRequestSDKType {}
 /**
  * QueryGetProtoRevBaseDenomsResponse is response type for the
  * Query/GetProtoRevBaseDenoms RPC method.
+ * @name QueryGetProtoRevBaseDenomsResponse
+ * @package symphony.protorev.v1beta1
+ * @see proto type: symphony.protorev.v1beta1.QueryGetProtoRevBaseDenomsResponse
  */
 export interface QueryGetProtoRevBaseDenomsResponse {
-  /** base_denoms is a list of all of the base denoms and step sizes */
+  /**
+   * base_denoms is a list of all of the base denoms and step sizes
+   */
   baseDenoms: BaseDenom[];
 }
 export interface QueryGetProtoRevBaseDenomsResponseProtoMsg {
@@ -744,9 +1018,14 @@ export interface QueryGetProtoRevBaseDenomsResponseProtoMsg {
 /**
  * QueryGetProtoRevBaseDenomsResponse is response type for the
  * Query/GetProtoRevBaseDenoms RPC method.
+ * @name QueryGetProtoRevBaseDenomsResponseAmino
+ * @package symphony.protorev.v1beta1
+ * @see proto type: symphony.protorev.v1beta1.QueryGetProtoRevBaseDenomsResponse
  */
 export interface QueryGetProtoRevBaseDenomsResponseAmino {
-  /** base_denoms is a list of all of the base denoms and step sizes */
+  /**
+   * base_denoms is a list of all of the base denoms and step sizes
+   */
   base_denoms?: BaseDenomAmino[];
 }
 export interface QueryGetProtoRevBaseDenomsResponseAminoMsg {
@@ -756,6 +1035,9 @@ export interface QueryGetProtoRevBaseDenomsResponseAminoMsg {
 /**
  * QueryGetProtoRevBaseDenomsResponse is response type for the
  * Query/GetProtoRevBaseDenoms RPC method.
+ * @name QueryGetProtoRevBaseDenomsResponseSDKType
+ * @package symphony.protorev.v1beta1
+ * @see proto type: symphony.protorev.v1beta1.QueryGetProtoRevBaseDenomsResponse
  */
 export interface QueryGetProtoRevBaseDenomsResponseSDKType {
   base_denoms: BaseDenomSDKType[];
@@ -763,6 +1045,9 @@ export interface QueryGetProtoRevBaseDenomsResponseSDKType {
 /**
  * QueryGetProtoRevEnabledRequest is request type for the
  * Query/GetProtoRevEnabled RPC method.
+ * @name QueryGetProtoRevEnabledRequest
+ * @package symphony.protorev.v1beta1
+ * @see proto type: symphony.protorev.v1beta1.QueryGetProtoRevEnabledRequest
  */
 export interface QueryGetProtoRevEnabledRequest {}
 export interface QueryGetProtoRevEnabledRequestProtoMsg {
@@ -772,6 +1057,9 @@ export interface QueryGetProtoRevEnabledRequestProtoMsg {
 /**
  * QueryGetProtoRevEnabledRequest is request type for the
  * Query/GetProtoRevEnabled RPC method.
+ * @name QueryGetProtoRevEnabledRequestAmino
+ * @package symphony.protorev.v1beta1
+ * @see proto type: symphony.protorev.v1beta1.QueryGetProtoRevEnabledRequest
  */
 export interface QueryGetProtoRevEnabledRequestAmino {}
 export interface QueryGetProtoRevEnabledRequestAminoMsg {
@@ -781,14 +1069,22 @@ export interface QueryGetProtoRevEnabledRequestAminoMsg {
 /**
  * QueryGetProtoRevEnabledRequest is request type for the
  * Query/GetProtoRevEnabled RPC method.
+ * @name QueryGetProtoRevEnabledRequestSDKType
+ * @package symphony.protorev.v1beta1
+ * @see proto type: symphony.protorev.v1beta1.QueryGetProtoRevEnabledRequest
  */
 export interface QueryGetProtoRevEnabledRequestSDKType {}
 /**
  * QueryGetProtoRevEnabledResponse is response type for the
  * Query/GetProtoRevEnabled RPC method.
+ * @name QueryGetProtoRevEnabledResponse
+ * @package symphony.protorev.v1beta1
+ * @see proto type: symphony.protorev.v1beta1.QueryGetProtoRevEnabledResponse
  */
 export interface QueryGetProtoRevEnabledResponse {
-  /** enabled is whether the module is enabled */
+  /**
+   * enabled is whether the module is enabled
+   */
   enabled: boolean;
 }
 export interface QueryGetProtoRevEnabledResponseProtoMsg {
@@ -798,9 +1094,14 @@ export interface QueryGetProtoRevEnabledResponseProtoMsg {
 /**
  * QueryGetProtoRevEnabledResponse is response type for the
  * Query/GetProtoRevEnabled RPC method.
+ * @name QueryGetProtoRevEnabledResponseAmino
+ * @package symphony.protorev.v1beta1
+ * @see proto type: symphony.protorev.v1beta1.QueryGetProtoRevEnabledResponse
  */
 export interface QueryGetProtoRevEnabledResponseAmino {
-  /** enabled is whether the module is enabled */
+  /**
+   * enabled is whether the module is enabled
+   */
   enabled?: boolean;
 }
 export interface QueryGetProtoRevEnabledResponseAminoMsg {
@@ -810,6 +1111,9 @@ export interface QueryGetProtoRevEnabledResponseAminoMsg {
 /**
  * QueryGetProtoRevEnabledResponse is response type for the
  * Query/GetProtoRevEnabled RPC method.
+ * @name QueryGetProtoRevEnabledResponseSDKType
+ * @package symphony.protorev.v1beta1
+ * @see proto type: symphony.protorev.v1beta1.QueryGetProtoRevEnabledResponse
  */
 export interface QueryGetProtoRevEnabledResponseSDKType {
   enabled: boolean;
@@ -817,6 +1121,9 @@ export interface QueryGetProtoRevEnabledResponseSDKType {
 /**
  * QueryGetProtoRevPoolRequest is request type for the
  * Query/GetProtoRevPool RPC method.
+ * @name QueryGetProtoRevPoolRequest
+ * @package symphony.protorev.v1beta1
+ * @see proto type: symphony.protorev.v1beta1.QueryGetProtoRevPoolRequest
  */
 export interface QueryGetProtoRevPoolRequest {
   /**
@@ -824,7 +1131,9 @@ export interface QueryGetProtoRevPoolRequest {
    * mapping
    */
   baseDenom: string;
-  /** other_denom is the other denom for the denom pair to pool mapping */
+  /**
+   * other_denom is the other denom for the denom pair to pool mapping
+   */
   otherDenom: string;
 }
 export interface QueryGetProtoRevPoolRequestProtoMsg {
@@ -834,6 +1143,9 @@ export interface QueryGetProtoRevPoolRequestProtoMsg {
 /**
  * QueryGetProtoRevPoolRequest is request type for the
  * Query/GetProtoRevPool RPC method.
+ * @name QueryGetProtoRevPoolRequestAmino
+ * @package symphony.protorev.v1beta1
+ * @see proto type: symphony.protorev.v1beta1.QueryGetProtoRevPoolRequest
  */
 export interface QueryGetProtoRevPoolRequestAmino {
   /**
@@ -841,7 +1153,9 @@ export interface QueryGetProtoRevPoolRequestAmino {
    * mapping
    */
   base_denom?: string;
-  /** other_denom is the other denom for the denom pair to pool mapping */
+  /**
+   * other_denom is the other denom for the denom pair to pool mapping
+   */
   other_denom?: string;
 }
 export interface QueryGetProtoRevPoolRequestAminoMsg {
@@ -851,6 +1165,9 @@ export interface QueryGetProtoRevPoolRequestAminoMsg {
 /**
  * QueryGetProtoRevPoolRequest is request type for the
  * Query/GetProtoRevPool RPC method.
+ * @name QueryGetProtoRevPoolRequestSDKType
+ * @package symphony.protorev.v1beta1
+ * @see proto type: symphony.protorev.v1beta1.QueryGetProtoRevPoolRequest
  */
 export interface QueryGetProtoRevPoolRequestSDKType {
   base_denom: string;
@@ -859,9 +1176,14 @@ export interface QueryGetProtoRevPoolRequestSDKType {
 /**
  * QueryGetProtoRevPoolResponse is response type for the
  * Query/GetProtoRevPool RPC method.
+ * @name QueryGetProtoRevPoolResponse
+ * @package symphony.protorev.v1beta1
+ * @see proto type: symphony.protorev.v1beta1.QueryGetProtoRevPoolResponse
  */
 export interface QueryGetProtoRevPoolResponse {
-  /** pool_id is the pool_id stored for the denom pair */
+  /**
+   * pool_id is the pool_id stored for the denom pair
+   */
   poolId: bigint;
 }
 export interface QueryGetProtoRevPoolResponseProtoMsg {
@@ -871,9 +1193,14 @@ export interface QueryGetProtoRevPoolResponseProtoMsg {
 /**
  * QueryGetProtoRevPoolResponse is response type for the
  * Query/GetProtoRevPool RPC method.
+ * @name QueryGetProtoRevPoolResponseAmino
+ * @package symphony.protorev.v1beta1
+ * @see proto type: symphony.protorev.v1beta1.QueryGetProtoRevPoolResponse
  */
 export interface QueryGetProtoRevPoolResponseAmino {
-  /** pool_id is the pool_id stored for the denom pair */
+  /**
+   * pool_id is the pool_id stored for the denom pair
+   */
   pool_id?: string;
 }
 export interface QueryGetProtoRevPoolResponseAminoMsg {
@@ -883,21 +1210,44 @@ export interface QueryGetProtoRevPoolResponseAminoMsg {
 /**
  * QueryGetProtoRevPoolResponse is response type for the
  * Query/GetProtoRevPool RPC method.
+ * @name QueryGetProtoRevPoolResponseSDKType
+ * @package symphony.protorev.v1beta1
+ * @see proto type: symphony.protorev.v1beta1.QueryGetProtoRevPoolResponse
  */
 export interface QueryGetProtoRevPoolResponseSDKType {
   pool_id: bigint;
 }
+/**
+ * @name QueryGetAllProtocolRevenueRequest
+ * @package symphony.protorev.v1beta1
+ * @see proto type: symphony.protorev.v1beta1.QueryGetAllProtocolRevenueRequest
+ */
 export interface QueryGetAllProtocolRevenueRequest {}
 export interface QueryGetAllProtocolRevenueRequestProtoMsg {
   typeUrl: '/symphony.protorev.v1beta1.QueryGetAllProtocolRevenueRequest';
   value: Uint8Array;
 }
+/**
+ * @name QueryGetAllProtocolRevenueRequestAmino
+ * @package symphony.protorev.v1beta1
+ * @see proto type: symphony.protorev.v1beta1.QueryGetAllProtocolRevenueRequest
+ */
 export interface QueryGetAllProtocolRevenueRequestAmino {}
 export interface QueryGetAllProtocolRevenueRequestAminoMsg {
   type: '/symphony.protorev.v1beta1.QueryGetAllProtocolRevenueRequest';
   value: QueryGetAllProtocolRevenueRequestAmino;
 }
+/**
+ * @name QueryGetAllProtocolRevenueRequestSDKType
+ * @package symphony.protorev.v1beta1
+ * @see proto type: symphony.protorev.v1beta1.QueryGetAllProtocolRevenueRequest
+ */
 export interface QueryGetAllProtocolRevenueRequestSDKType {}
+/**
+ * @name QueryGetAllProtocolRevenueResponse
+ * @package symphony.protorev.v1beta1
+ * @see proto type: symphony.protorev.v1beta1.QueryGetAllProtocolRevenueResponse
+ */
 export interface QueryGetAllProtocolRevenueResponse {
   allProtocolRevenue: AllProtocolRevenue;
 }
@@ -905,6 +1255,11 @@ export interface QueryGetAllProtocolRevenueResponseProtoMsg {
   typeUrl: '/symphony.protorev.v1beta1.QueryGetAllProtocolRevenueResponse';
   value: Uint8Array;
 }
+/**
+ * @name QueryGetAllProtocolRevenueResponseAmino
+ * @package symphony.protorev.v1beta1
+ * @see proto type: symphony.protorev.v1beta1.QueryGetAllProtocolRevenueResponse
+ */
 export interface QueryGetAllProtocolRevenueResponseAmino {
   all_protocol_revenue?: AllProtocolRevenueAmino;
 }
@@ -912,12 +1267,23 @@ export interface QueryGetAllProtocolRevenueResponseAminoMsg {
   type: '/symphony.protorev.v1beta1.QueryGetAllProtocolRevenueResponse';
   value: QueryGetAllProtocolRevenueResponseAmino;
 }
+/**
+ * @name QueryGetAllProtocolRevenueResponseSDKType
+ * @package symphony.protorev.v1beta1
+ * @see proto type: symphony.protorev.v1beta1.QueryGetAllProtocolRevenueResponse
+ */
 export interface QueryGetAllProtocolRevenueResponseSDKType {
   all_protocol_revenue: AllProtocolRevenueSDKType;
 }
 function createBaseQueryParamsRequest(): QueryParamsRequest {
   return {};
 }
+/**
+ * QueryParamsRequest is request type for the Query/Params RPC method.
+ * @name QueryParamsRequest
+ * @package symphony.protorev.v1beta1
+ * @see proto type: symphony.protorev.v1beta1.QueryParamsRequest
+ */
 export const QueryParamsRequest = {
   typeUrl: '/symphony.protorev.v1beta1.QueryParamsRequest',
   is(o: any): o is QueryParamsRequest {
@@ -987,6 +1353,12 @@ function createBaseQueryParamsResponse(): QueryParamsResponse {
     params: Params.fromPartial({}),
   };
 }
+/**
+ * QueryParamsResponse is response type for the Query/Params RPC method.
+ * @name QueryParamsResponse
+ * @package symphony.protorev.v1beta1
+ * @see proto type: symphony.protorev.v1beta1.QueryParamsResponse
+ */
 export const QueryParamsResponse = {
   typeUrl: '/symphony.protorev.v1beta1.QueryParamsResponse',
   is(o: any): o is QueryParamsResponse {
@@ -1079,6 +1451,13 @@ GlobalDecoderRegistry.register(
 function createBaseQueryGetProtoRevNumberOfTradesRequest(): QueryGetProtoRevNumberOfTradesRequest {
   return {};
 }
+/**
+ * QueryGetProtoRevNumberOfTradesRequest is request type for the
+ * Query/GetProtoRevNumberOfTrades RPC method.
+ * @name QueryGetProtoRevNumberOfTradesRequest
+ * @package symphony.protorev.v1beta1
+ * @see proto type: symphony.protorev.v1beta1.QueryGetProtoRevNumberOfTradesRequest
+ */
 export const QueryGetProtoRevNumberOfTradesRequest = {
   typeUrl: '/symphony.protorev.v1beta1.QueryGetProtoRevNumberOfTradesRequest',
   is(o: any): o is QueryGetProtoRevNumberOfTradesRequest {
@@ -1164,6 +1543,13 @@ function createBaseQueryGetProtoRevNumberOfTradesResponse(): QueryGetProtoRevNum
     numberOfTrades: '',
   };
 }
+/**
+ * QueryGetProtoRevNumberOfTradesResponse is response type for the
+ * Query/GetProtoRevNumberOfTrades RPC method.
+ * @name QueryGetProtoRevNumberOfTradesResponse
+ * @package symphony.protorev.v1beta1
+ * @see proto type: symphony.protorev.v1beta1.QueryGetProtoRevNumberOfTradesResponse
+ */
 export const QueryGetProtoRevNumberOfTradesResponse = {
   typeUrl: '/symphony.protorev.v1beta1.QueryGetProtoRevNumberOfTradesResponse',
   is(o: any): o is QueryGetProtoRevNumberOfTradesResponse {
@@ -1276,6 +1662,13 @@ function createBaseQueryGetProtoRevProfitsByDenomRequest(): QueryGetProtoRevProf
     denom: '',
   };
 }
+/**
+ * QueryGetProtoRevProfitsByDenomRequest is request type for the
+ * Query/GetProtoRevProfitsByDenom RPC method.
+ * @name QueryGetProtoRevProfitsByDenomRequest
+ * @package symphony.protorev.v1beta1
+ * @see proto type: symphony.protorev.v1beta1.QueryGetProtoRevProfitsByDenomRequest
+ */
 export const QueryGetProtoRevProfitsByDenomRequest = {
   typeUrl: '/symphony.protorev.v1beta1.QueryGetProtoRevProfitsByDenomRequest',
   is(o: any): o is QueryGetProtoRevProfitsByDenomRequest {
@@ -1384,6 +1777,13 @@ function createBaseQueryGetProtoRevProfitsByDenomResponse(): QueryGetProtoRevPro
     profit: undefined,
   };
 }
+/**
+ * QueryGetProtoRevProfitsByDenomResponse is response type for the
+ * Query/GetProtoRevProfitsByDenom RPC method.
+ * @name QueryGetProtoRevProfitsByDenomResponse
+ * @package symphony.protorev.v1beta1
+ * @see proto type: symphony.protorev.v1beta1.QueryGetProtoRevProfitsByDenomResponse
+ */
 export const QueryGetProtoRevProfitsByDenomResponse = {
   typeUrl: '/symphony.protorev.v1beta1.QueryGetProtoRevProfitsByDenomResponse',
   is(o: any): o is QueryGetProtoRevProfitsByDenomResponse {
@@ -1481,6 +1881,13 @@ GlobalDecoderRegistry.register(
 function createBaseQueryGetProtoRevAllProfitsRequest(): QueryGetProtoRevAllProfitsRequest {
   return {};
 }
+/**
+ * QueryGetProtoRevAllProfitsRequest is request type for the
+ * Query/GetProtoRevAllProfits RPC method.
+ * @name QueryGetProtoRevAllProfitsRequest
+ * @package symphony.protorev.v1beta1
+ * @see proto type: symphony.protorev.v1beta1.QueryGetProtoRevAllProfitsRequest
+ */
 export const QueryGetProtoRevAllProfitsRequest = {
   typeUrl: '/symphony.protorev.v1beta1.QueryGetProtoRevAllProfitsRequest',
   is(o: any): o is QueryGetProtoRevAllProfitsRequest {
@@ -1565,6 +1972,13 @@ function createBaseQueryGetProtoRevAllProfitsResponse(): QueryGetProtoRevAllProf
     profits: [],
   };
 }
+/**
+ * QueryGetProtoRevAllProfitsResponse is response type for the
+ * Query/GetProtoRevAllProfits RPC method.
+ * @name QueryGetProtoRevAllProfitsResponse
+ * @package symphony.protorev.v1beta1
+ * @see proto type: symphony.protorev.v1beta1.QueryGetProtoRevAllProfitsResponse
+ */
 export const QueryGetProtoRevAllProfitsResponse = {
   typeUrl: '/symphony.protorev.v1beta1.QueryGetProtoRevAllProfitsResponse',
   is(o: any): o is QueryGetProtoRevAllProfitsResponse {
@@ -1677,6 +2091,13 @@ function createBaseQueryGetProtoRevStatisticsByRouteRequest(): QueryGetProtoRevS
     route: [],
   };
 }
+/**
+ * QueryGetProtoRevStatisticsByPoolRequest is request type for the
+ * Query/GetProtoRevStatisticsByRoute RPC method.
+ * @name QueryGetProtoRevStatisticsByRouteRequest
+ * @package symphony.protorev.v1beta1
+ * @see proto type: symphony.protorev.v1beta1.QueryGetProtoRevStatisticsByRouteRequest
+ */
 export const QueryGetProtoRevStatisticsByRouteRequest = {
   typeUrl:
     '/symphony.protorev.v1beta1.QueryGetProtoRevStatisticsByRouteRequest',
@@ -1800,6 +2221,13 @@ function createBaseQueryGetProtoRevStatisticsByRouteResponse(): QueryGetProtoRev
     statistics: RouteStatistics.fromPartial({}),
   };
 }
+/**
+ * QueryGetProtoRevStatisticsByRouteResponse is response type for the
+ * Query/GetProtoRevStatisticsByRoute RPC method.
+ * @name QueryGetProtoRevStatisticsByRouteResponse
+ * @package symphony.protorev.v1beta1
+ * @see proto type: symphony.protorev.v1beta1.QueryGetProtoRevStatisticsByRouteResponse
+ */
 export const QueryGetProtoRevStatisticsByRouteResponse = {
   typeUrl:
     '/symphony.protorev.v1beta1.QueryGetProtoRevStatisticsByRouteResponse',
@@ -1915,6 +2343,13 @@ GlobalDecoderRegistry.register(
 function createBaseQueryGetProtoRevAllRouteStatisticsRequest(): QueryGetProtoRevAllRouteStatisticsRequest {
   return {};
 }
+/**
+ * QueryGetProtoRevAllRouteStatisticsRequest is request type for the
+ * Query/GetProtoRevAllRouteStatistics RPC method.
+ * @name QueryGetProtoRevAllRouteStatisticsRequest
+ * @package symphony.protorev.v1beta1
+ * @see proto type: symphony.protorev.v1beta1.QueryGetProtoRevAllRouteStatisticsRequest
+ */
 export const QueryGetProtoRevAllRouteStatisticsRequest = {
   typeUrl:
     '/symphony.protorev.v1beta1.QueryGetProtoRevAllRouteStatisticsRequest',
@@ -2007,6 +2442,13 @@ function createBaseQueryGetProtoRevAllRouteStatisticsResponse(): QueryGetProtoRe
     statistics: [],
   };
 }
+/**
+ * QueryGetProtoRevAllRouteStatisticsResponse is response type for the
+ * Query/GetProtoRevAllRouteStatistics RPC method.
+ * @name QueryGetProtoRevAllRouteStatisticsResponse
+ * @package symphony.protorev.v1beta1
+ * @see proto type: symphony.protorev.v1beta1.QueryGetProtoRevAllRouteStatisticsResponse
+ */
 export const QueryGetProtoRevAllRouteStatisticsResponse = {
   typeUrl:
     '/symphony.protorev.v1beta1.QueryGetProtoRevAllRouteStatisticsResponse',
@@ -2126,6 +2568,13 @@ GlobalDecoderRegistry.register(
 function createBaseQueryGetProtoRevTokenPairArbRoutesRequest(): QueryGetProtoRevTokenPairArbRoutesRequest {
   return {};
 }
+/**
+ * QueryGetProtoRevTokenPairArbRoutesRequest is request type for the
+ * Query/GetProtoRevTokenPairArbRoutes RPC method.
+ * @name QueryGetProtoRevTokenPairArbRoutesRequest
+ * @package symphony.protorev.v1beta1
+ * @see proto type: symphony.protorev.v1beta1.QueryGetProtoRevTokenPairArbRoutesRequest
+ */
 export const QueryGetProtoRevTokenPairArbRoutesRequest = {
   typeUrl:
     '/symphony.protorev.v1beta1.QueryGetProtoRevTokenPairArbRoutesRequest',
@@ -2218,6 +2667,13 @@ function createBaseQueryGetProtoRevTokenPairArbRoutesResponse(): QueryGetProtoRe
     routes: [],
   };
 }
+/**
+ * QueryGetProtoRevTokenPairArbRoutesResponse is response type for the
+ * Query/GetProtoRevTokenPairArbRoutes RPC method.
+ * @name QueryGetProtoRevTokenPairArbRoutesResponse
+ * @package symphony.protorev.v1beta1
+ * @see proto type: symphony.protorev.v1beta1.QueryGetProtoRevTokenPairArbRoutesResponse
+ */
 export const QueryGetProtoRevTokenPairArbRoutesResponse = {
   typeUrl:
     '/symphony.protorev.v1beta1.QueryGetProtoRevTokenPairArbRoutesResponse',
@@ -2337,6 +2793,13 @@ GlobalDecoderRegistry.register(
 function createBaseQueryGetProtoRevAdminAccountRequest(): QueryGetProtoRevAdminAccountRequest {
   return {};
 }
+/**
+ * QueryGetProtoRevAdminAccountRequest is request type for the
+ * Query/GetProtoRevAdminAccount RPC method.
+ * @name QueryGetProtoRevAdminAccountRequest
+ * @package symphony.protorev.v1beta1
+ * @see proto type: symphony.protorev.v1beta1.QueryGetProtoRevAdminAccountRequest
+ */
 export const QueryGetProtoRevAdminAccountRequest = {
   typeUrl: '/symphony.protorev.v1beta1.QueryGetProtoRevAdminAccountRequest',
   is(o: any): o is QueryGetProtoRevAdminAccountRequest {
@@ -2421,6 +2884,13 @@ function createBaseQueryGetProtoRevAdminAccountResponse(): QueryGetProtoRevAdmin
     adminAccount: '',
   };
 }
+/**
+ * QueryGetProtoRevAdminAccountResponse is response type for the
+ * Query/GetProtoRevAdminAccount RPC method.
+ * @name QueryGetProtoRevAdminAccountResponse
+ * @package symphony.protorev.v1beta1
+ * @see proto type: symphony.protorev.v1beta1.QueryGetProtoRevAdminAccountResponse
+ */
 export const QueryGetProtoRevAdminAccountResponse = {
   typeUrl: '/symphony.protorev.v1beta1.QueryGetProtoRevAdminAccountResponse',
   is(o: any): o is QueryGetProtoRevAdminAccountResponse {
@@ -2528,6 +2998,13 @@ GlobalDecoderRegistry.register(
 function createBaseQueryGetProtoRevDeveloperAccountRequest(): QueryGetProtoRevDeveloperAccountRequest {
   return {};
 }
+/**
+ * QueryGetProtoRevDeveloperAccountRequest is request type for the
+ * Query/GetProtoRevDeveloperAccount RPC method.
+ * @name QueryGetProtoRevDeveloperAccountRequest
+ * @package symphony.protorev.v1beta1
+ * @see proto type: symphony.protorev.v1beta1.QueryGetProtoRevDeveloperAccountRequest
+ */
 export const QueryGetProtoRevDeveloperAccountRequest = {
   typeUrl: '/symphony.protorev.v1beta1.QueryGetProtoRevDeveloperAccountRequest',
   is(o: any): o is QueryGetProtoRevDeveloperAccountRequest {
@@ -2613,6 +3090,13 @@ function createBaseQueryGetProtoRevDeveloperAccountResponse(): QueryGetProtoRevD
     developerAccount: '',
   };
 }
+/**
+ * QueryGetProtoRevDeveloperAccountResponse is response type for the
+ * Query/GetProtoRevDeveloperAccount RPC method.
+ * @name QueryGetProtoRevDeveloperAccountResponse
+ * @package symphony.protorev.v1beta1
+ * @see proto type: symphony.protorev.v1beta1.QueryGetProtoRevDeveloperAccountResponse
+ */
 export const QueryGetProtoRevDeveloperAccountResponse = {
   typeUrl:
     '/symphony.protorev.v1beta1.QueryGetProtoRevDeveloperAccountResponse',
@@ -2724,6 +3208,13 @@ GlobalDecoderRegistry.register(
 function createBaseQueryGetProtoRevInfoByPoolTypeRequest(): QueryGetProtoRevInfoByPoolTypeRequest {
   return {};
 }
+/**
+ * QueryGetProtoRevInfoByPoolTypeRequest is request type for the
+ * Query/GetProtoRevInfoByPoolType RPC method.
+ * @name QueryGetProtoRevInfoByPoolTypeRequest
+ * @package symphony.protorev.v1beta1
+ * @see proto type: symphony.protorev.v1beta1.QueryGetProtoRevInfoByPoolTypeRequest
+ */
 export const QueryGetProtoRevInfoByPoolTypeRequest = {
   typeUrl: '/symphony.protorev.v1beta1.QueryGetProtoRevInfoByPoolTypeRequest',
   is(o: any): o is QueryGetProtoRevInfoByPoolTypeRequest {
@@ -2809,6 +3300,13 @@ function createBaseQueryGetProtoRevInfoByPoolTypeResponse(): QueryGetProtoRevInf
     infoByPoolType: InfoByPoolType.fromPartial({}),
   };
 }
+/**
+ * QueryGetProtoRevInfoByPoolTypeResponse is response type for the
+ * Query/GetProtoRevInfoByPoolType RPC method.
+ * @name QueryGetProtoRevInfoByPoolTypeResponse
+ * @package symphony.protorev.v1beta1
+ * @see proto type: symphony.protorev.v1beta1.QueryGetProtoRevInfoByPoolTypeResponse
+ */
 export const QueryGetProtoRevInfoByPoolTypeResponse = {
   typeUrl: '/symphony.protorev.v1beta1.QueryGetProtoRevInfoByPoolTypeResponse',
   is(o: any): o is QueryGetProtoRevInfoByPoolTypeResponse {
@@ -2931,6 +3429,13 @@ GlobalDecoderRegistry.register(
 function createBaseQueryGetProtoRevMaxPoolPointsPerBlockRequest(): QueryGetProtoRevMaxPoolPointsPerBlockRequest {
   return {};
 }
+/**
+ * QueryGetProtoRevMaxPoolPointsPerBlockRequest is request type for the
+ * Query/GetProtoRevMaxPoolPointsPerBlock RPC method.
+ * @name QueryGetProtoRevMaxPoolPointsPerBlockRequest
+ * @package symphony.protorev.v1beta1
+ * @see proto type: symphony.protorev.v1beta1.QueryGetProtoRevMaxPoolPointsPerBlockRequest
+ */
 export const QueryGetProtoRevMaxPoolPointsPerBlockRequest = {
   typeUrl:
     '/symphony.protorev.v1beta1.QueryGetProtoRevMaxPoolPointsPerBlockRequest',
@@ -3026,6 +3531,13 @@ function createBaseQueryGetProtoRevMaxPoolPointsPerBlockResponse(): QueryGetProt
     maxPoolPointsPerBlock: BigInt(0),
   };
 }
+/**
+ * QueryGetProtoRevMaxPoolPointsPerBlockResponse is response type for the
+ * Query/GetProtoRevMaxPoolPointsPerBlock RPC method.
+ * @name QueryGetProtoRevMaxPoolPointsPerBlockResponse
+ * @package symphony.protorev.v1beta1
+ * @see proto type: symphony.protorev.v1beta1.QueryGetProtoRevMaxPoolPointsPerBlockResponse
+ */
 export const QueryGetProtoRevMaxPoolPointsPerBlockResponse = {
   typeUrl:
     '/symphony.protorev.v1beta1.QueryGetProtoRevMaxPoolPointsPerBlockResponse',
@@ -3148,6 +3660,13 @@ GlobalDecoderRegistry.register(
 function createBaseQueryGetProtoRevMaxPoolPointsPerTxRequest(): QueryGetProtoRevMaxPoolPointsPerTxRequest {
   return {};
 }
+/**
+ * QueryGetProtoRevMaxPoolPointsPerTxRequest is request type for the
+ * Query/GetProtoRevMaxPoolPointsPerTx RPC method.
+ * @name QueryGetProtoRevMaxPoolPointsPerTxRequest
+ * @package symphony.protorev.v1beta1
+ * @see proto type: symphony.protorev.v1beta1.QueryGetProtoRevMaxPoolPointsPerTxRequest
+ */
 export const QueryGetProtoRevMaxPoolPointsPerTxRequest = {
   typeUrl:
     '/symphony.protorev.v1beta1.QueryGetProtoRevMaxPoolPointsPerTxRequest',
@@ -3240,6 +3759,13 @@ function createBaseQueryGetProtoRevMaxPoolPointsPerTxResponse(): QueryGetProtoRe
     maxPoolPointsPerTx: BigInt(0),
   };
 }
+/**
+ * QueryGetProtoRevMaxPoolPointsPerTxResponse is response type for the
+ * Query/GetProtoRevMaxPoolPointsPerTx RPC method.
+ * @name QueryGetProtoRevMaxPoolPointsPerTxResponse
+ * @package symphony.protorev.v1beta1
+ * @see proto type: symphony.protorev.v1beta1.QueryGetProtoRevMaxPoolPointsPerTxResponse
+ */
 export const QueryGetProtoRevMaxPoolPointsPerTxResponse = {
   typeUrl:
     '/symphony.protorev.v1beta1.QueryGetProtoRevMaxPoolPointsPerTxResponse',
@@ -3358,6 +3884,13 @@ GlobalDecoderRegistry.register(
 function createBaseQueryGetProtoRevBaseDenomsRequest(): QueryGetProtoRevBaseDenomsRequest {
   return {};
 }
+/**
+ * QueryGetProtoRevBaseDenomsRequest is request type for the
+ * Query/GetProtoRevBaseDenoms RPC method.
+ * @name QueryGetProtoRevBaseDenomsRequest
+ * @package symphony.protorev.v1beta1
+ * @see proto type: symphony.protorev.v1beta1.QueryGetProtoRevBaseDenomsRequest
+ */
 export const QueryGetProtoRevBaseDenomsRequest = {
   typeUrl: '/symphony.protorev.v1beta1.QueryGetProtoRevBaseDenomsRequest',
   is(o: any): o is QueryGetProtoRevBaseDenomsRequest {
@@ -3442,6 +3975,13 @@ function createBaseQueryGetProtoRevBaseDenomsResponse(): QueryGetProtoRevBaseDen
     baseDenoms: [],
   };
 }
+/**
+ * QueryGetProtoRevBaseDenomsResponse is response type for the
+ * Query/GetProtoRevBaseDenoms RPC method.
+ * @name QueryGetProtoRevBaseDenomsResponse
+ * @package symphony.protorev.v1beta1
+ * @see proto type: symphony.protorev.v1beta1.QueryGetProtoRevBaseDenomsResponse
+ */
 export const QueryGetProtoRevBaseDenomsResponse = {
   typeUrl: '/symphony.protorev.v1beta1.QueryGetProtoRevBaseDenomsResponse',
   is(o: any): o is QueryGetProtoRevBaseDenomsResponse {
@@ -3556,6 +4096,13 @@ GlobalDecoderRegistry.register(
 function createBaseQueryGetProtoRevEnabledRequest(): QueryGetProtoRevEnabledRequest {
   return {};
 }
+/**
+ * QueryGetProtoRevEnabledRequest is request type for the
+ * Query/GetProtoRevEnabled RPC method.
+ * @name QueryGetProtoRevEnabledRequest
+ * @package symphony.protorev.v1beta1
+ * @see proto type: symphony.protorev.v1beta1.QueryGetProtoRevEnabledRequest
+ */
 export const QueryGetProtoRevEnabledRequest = {
   typeUrl: '/symphony.protorev.v1beta1.QueryGetProtoRevEnabledRequest',
   is(o: any): o is QueryGetProtoRevEnabledRequest {
@@ -3640,6 +4187,13 @@ function createBaseQueryGetProtoRevEnabledResponse(): QueryGetProtoRevEnabledRes
     enabled: false,
   };
 }
+/**
+ * QueryGetProtoRevEnabledResponse is response type for the
+ * Query/GetProtoRevEnabled RPC method.
+ * @name QueryGetProtoRevEnabledResponse
+ * @package symphony.protorev.v1beta1
+ * @see proto type: symphony.protorev.v1beta1.QueryGetProtoRevEnabledResponse
+ */
 export const QueryGetProtoRevEnabledResponse = {
   typeUrl: '/symphony.protorev.v1beta1.QueryGetProtoRevEnabledResponse',
   is(o: any): o is QueryGetProtoRevEnabledResponse {
@@ -3748,6 +4302,13 @@ function createBaseQueryGetProtoRevPoolRequest(): QueryGetProtoRevPoolRequest {
     otherDenom: '',
   };
 }
+/**
+ * QueryGetProtoRevPoolRequest is request type for the
+ * Query/GetProtoRevPool RPC method.
+ * @name QueryGetProtoRevPoolRequest
+ * @package symphony.protorev.v1beta1
+ * @see proto type: symphony.protorev.v1beta1.QueryGetProtoRevPoolRequest
+ */
 export const QueryGetProtoRevPoolRequest = {
   typeUrl: '/symphony.protorev.v1beta1.QueryGetProtoRevPoolRequest',
   is(o: any): o is QueryGetProtoRevPoolRequest {
@@ -3867,6 +4428,13 @@ function createBaseQueryGetProtoRevPoolResponse(): QueryGetProtoRevPoolResponse 
     poolId: BigInt(0),
   };
 }
+/**
+ * QueryGetProtoRevPoolResponse is response type for the
+ * Query/GetProtoRevPool RPC method.
+ * @name QueryGetProtoRevPoolResponse
+ * @package symphony.protorev.v1beta1
+ * @see proto type: symphony.protorev.v1beta1.QueryGetProtoRevPoolResponse
+ */
 export const QueryGetProtoRevPoolResponse = {
   typeUrl: '/symphony.protorev.v1beta1.QueryGetProtoRevPoolResponse',
   is(o: any): o is QueryGetProtoRevPoolResponse {
@@ -3976,6 +4544,11 @@ GlobalDecoderRegistry.register(
 function createBaseQueryGetAllProtocolRevenueRequest(): QueryGetAllProtocolRevenueRequest {
   return {};
 }
+/**
+ * @name QueryGetAllProtocolRevenueRequest
+ * @package symphony.protorev.v1beta1
+ * @see proto type: symphony.protorev.v1beta1.QueryGetAllProtocolRevenueRequest
+ */
 export const QueryGetAllProtocolRevenueRequest = {
   typeUrl: '/symphony.protorev.v1beta1.QueryGetAllProtocolRevenueRequest',
   is(o: any): o is QueryGetAllProtocolRevenueRequest {
@@ -4060,6 +4633,11 @@ function createBaseQueryGetAllProtocolRevenueResponse(): QueryGetAllProtocolReve
     allProtocolRevenue: AllProtocolRevenue.fromPartial({}),
   };
 }
+/**
+ * @name QueryGetAllProtocolRevenueResponse
+ * @package symphony.protorev.v1beta1
+ * @see proto type: symphony.protorev.v1beta1.QueryGetAllProtocolRevenueResponse
+ */
 export const QueryGetAllProtocolRevenueResponse = {
   typeUrl: '/symphony.protorev.v1beta1.QueryGetAllProtocolRevenueResponse',
   is(o: any): o is QueryGetAllProtocolRevenueResponse {

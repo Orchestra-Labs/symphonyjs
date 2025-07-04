@@ -6,7 +6,12 @@ import {
 } from '../../../cosmos/base/v1beta1/coin';
 import { BinaryReader, BinaryWriter } from '../../../binary';
 import { GlobalDecoderRegistry } from '../../../registry';
-/** Params defines the parameters for the tokenfactory module. */
+/**
+ * Params defines the parameters for the tokenfactory module.
+ * @name Params
+ * @package symphony.tokenfactory.v1beta1
+ * @see proto type: symphony.tokenfactory.v1beta1.Params
+ */
 export interface Params {
   /**
    * DenomCreationFee defines the fee to be charged on the creation of a new
@@ -26,7 +31,12 @@ export interface ParamsProtoMsg {
   typeUrl: '/symphony.tokenfactory.v1beta1.Params';
   value: Uint8Array;
 }
-/** Params defines the parameters for the tokenfactory module. */
+/**
+ * Params defines the parameters for the tokenfactory module.
+ * @name ParamsAmino
+ * @package symphony.tokenfactory.v1beta1
+ * @see proto type: symphony.tokenfactory.v1beta1.Params
+ */
 export interface ParamsAmino {
   /**
    * DenomCreationFee defines the fee to be charged on the creation of a new
@@ -46,7 +56,12 @@ export interface ParamsAminoMsg {
   type: '/symphony.tokenfactory.v1beta1.Params';
   value: ParamsAmino;
 }
-/** Params defines the parameters for the tokenfactory module. */
+/**
+ * Params defines the parameters for the tokenfactory module.
+ * @name ParamsSDKType
+ * @package symphony.tokenfactory.v1beta1
+ * @see proto type: symphony.tokenfactory.v1beta1.Params
+ */
 export interface ParamsSDKType {
   denom_creation_fee: CoinSDKType[];
   denom_creation_gas_consume?: bigint;
@@ -57,6 +72,12 @@ function createBaseParams(): Params {
     denomCreationGasConsume: undefined,
   };
 }
+/**
+ * Params defines the parameters for the tokenfactory module.
+ * @name Params
+ * @package symphony.tokenfactory.v1beta1
+ * @see proto type: symphony.tokenfactory.v1beta1.Params
+ */
 export const Params = {
   typeUrl: '/symphony.tokenfactory.v1beta1.Params',
   is(o: any): o is Params {

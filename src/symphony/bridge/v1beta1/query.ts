@@ -2,21 +2,41 @@
 import { Params, ParamsAmino, ParamsSDKType } from './bridge';
 import { BinaryReader, BinaryWriter } from '../../../binary';
 import { GlobalDecoderRegistry } from '../../../registry';
-/** QueryParamsRequest is the request type for the Query/Params RPC method. */
+/**
+ * QueryParamsRequest is the request type for the Query/Params RPC method.
+ * @name QueryParamsRequest
+ * @package symphony.bridge.v1beta1
+ * @see proto type: symphony.bridge.v1beta1.QueryParamsRequest
+ */
 export interface QueryParamsRequest {}
 export interface QueryParamsRequestProtoMsg {
   typeUrl: '/symphony.bridge.v1beta1.QueryParamsRequest';
   value: Uint8Array;
 }
-/** QueryParamsRequest is the request type for the Query/Params RPC method. */
+/**
+ * QueryParamsRequest is the request type for the Query/Params RPC method.
+ * @name QueryParamsRequestAmino
+ * @package symphony.bridge.v1beta1
+ * @see proto type: symphony.bridge.v1beta1.QueryParamsRequest
+ */
 export interface QueryParamsRequestAmino {}
 export interface QueryParamsRequestAminoMsg {
   type: '/symphony.bridge.v1beta1.QueryParamsRequest';
   value: QueryParamsRequestAmino;
 }
-/** QueryParamsRequest is the request type for the Query/Params RPC method. */
+/**
+ * QueryParamsRequest is the request type for the Query/Params RPC method.
+ * @name QueryParamsRequestSDKType
+ * @package symphony.bridge.v1beta1
+ * @see proto type: symphony.bridge.v1beta1.QueryParamsRequest
+ */
 export interface QueryParamsRequestSDKType {}
-/** QueryParamsResponse is the response type for the Query/Params RPC method. */
+/**
+ * QueryParamsResponse is the response type for the Query/Params RPC method.
+ * @name QueryParamsResponse
+ * @package symphony.bridge.v1beta1
+ * @see proto type: symphony.bridge.v1beta1.QueryParamsResponse
+ */
 export interface QueryParamsResponse {
   params: Params;
 }
@@ -24,7 +44,12 @@ export interface QueryParamsResponseProtoMsg {
   typeUrl: '/symphony.bridge.v1beta1.QueryParamsResponse';
   value: Uint8Array;
 }
-/** QueryParamsResponse is the response type for the Query/Params RPC method. */
+/**
+ * QueryParamsResponse is the response type for the Query/Params RPC method.
+ * @name QueryParamsResponseAmino
+ * @package symphony.bridge.v1beta1
+ * @see proto type: symphony.bridge.v1beta1.QueryParamsResponse
+ */
 export interface QueryParamsResponseAmino {
   params?: ParamsAmino;
 }
@@ -32,13 +57,24 @@ export interface QueryParamsResponseAminoMsg {
   type: '/symphony.bridge.v1beta1.QueryParamsResponse';
   value: QueryParamsResponseAmino;
 }
-/** QueryParamsResponse is the response type for the Query/Params RPC method. */
+/**
+ * QueryParamsResponse is the response type for the Query/Params RPC method.
+ * @name QueryParamsResponseSDKType
+ * @package symphony.bridge.v1beta1
+ * @see proto type: symphony.bridge.v1beta1.QueryParamsResponse
+ */
 export interface QueryParamsResponseSDKType {
   params: ParamsSDKType;
 }
 function createBaseQueryParamsRequest(): QueryParamsRequest {
   return {};
 }
+/**
+ * QueryParamsRequest is the request type for the Query/Params RPC method.
+ * @name QueryParamsRequest
+ * @package symphony.bridge.v1beta1
+ * @see proto type: symphony.bridge.v1beta1.QueryParamsRequest
+ */
 export const QueryParamsRequest = {
   typeUrl: '/symphony.bridge.v1beta1.QueryParamsRequest',
   is(o: any): o is QueryParamsRequest {
@@ -108,6 +144,12 @@ function createBaseQueryParamsResponse(): QueryParamsResponse {
     params: Params.fromPartial({}),
   };
 }
+/**
+ * QueryParamsResponse is the response type for the Query/Params RPC method.
+ * @name QueryParamsResponse
+ * @package symphony.bridge.v1beta1
+ * @see proto type: symphony.bridge.v1beta1.QueryParamsResponse
+ */
 export const QueryParamsResponse = {
   typeUrl: '/symphony.bridge.v1beta1.QueryParamsResponse',
   is(o: any): o is QueryParamsResponse {

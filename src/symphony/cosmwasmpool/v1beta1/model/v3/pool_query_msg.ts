@@ -6,29 +6,53 @@ import {
 } from '../../../../../cosmos/base/v1beta1/coin';
 import { BinaryReader, BinaryWriter } from '../../../../../binary';
 import { GlobalDecoderRegistry } from '../../../../../registry';
-/** ===================== ShareDenomResponse */
+/**
+ * ===================== ShareDenomResponse
+ * @name ShareDenomResponse
+ * @package symphony.cosmwasmpool.v1beta1.model.v3
+ * @see proto type: symphony.cosmwasmpool.v1beta1.model.v3.ShareDenomResponse
+ */
 export interface ShareDenomResponse {
-  /** share_denom is the share denomination. */
+  /**
+   * share_denom is the share denomination.
+   */
   shareDenom: string;
 }
 export interface ShareDenomResponseProtoMsg {
   typeUrl: '/symphony.cosmwasmpool.v1beta1.model.v3.ShareDenomResponse';
   value: Uint8Array;
 }
-/** ===================== ShareDenomResponse */
+/**
+ * ===================== ShareDenomResponse
+ * @name ShareDenomResponseAmino
+ * @package symphony.cosmwasmpool.v1beta1.model.v3
+ * @see proto type: symphony.cosmwasmpool.v1beta1.model.v3.ShareDenomResponse
+ */
 export interface ShareDenomResponseAmino {
-  /** share_denom is the share denomination. */
+  /**
+   * share_denom is the share denomination.
+   */
   share_denom?: string;
 }
 export interface ShareDenomResponseAminoMsg {
   type: '/symphony.cosmwasmpool.v1beta1.model.v3.ShareDenomResponse';
   value: ShareDenomResponseAmino;
 }
-/** ===================== ShareDenomResponse */
+/**
+ * ===================== ShareDenomResponse
+ * @name ShareDenomResponseSDKType
+ * @package symphony.cosmwasmpool.v1beta1.model.v3
+ * @see proto type: symphony.cosmwasmpool.v1beta1.model.v3.ShareDenomResponse
+ */
 export interface ShareDenomResponseSDKType {
   share_denom: string;
 }
-/** ===================== TotalPoolLiquidityResponse */
+/**
+ * ===================== TotalPoolLiquidityResponse
+ * @name TotalPoolLiquidityResponse
+ * @package symphony.cosmwasmpool.v1beta1.model.v3
+ * @see proto type: symphony.cosmwasmpool.v1beta1.model.v3.TotalPoolLiquidityResponse
+ */
 export interface TotalPoolLiquidityResponse {
   /**
    * total_pool_liquidity is the total liquidity in the pool denominated in
@@ -40,7 +64,12 @@ export interface TotalPoolLiquidityResponseProtoMsg {
   typeUrl: '/symphony.cosmwasmpool.v1beta1.model.v3.TotalPoolLiquidityResponse';
   value: Uint8Array;
 }
-/** ===================== TotalPoolLiquidityResponse */
+/**
+ * ===================== TotalPoolLiquidityResponse
+ * @name TotalPoolLiquidityResponseAmino
+ * @package symphony.cosmwasmpool.v1beta1.model.v3
+ * @see proto type: symphony.cosmwasmpool.v1beta1.model.v3.TotalPoolLiquidityResponse
+ */
 export interface TotalPoolLiquidityResponseAmino {
   /**
    * total_pool_liquidity is the total liquidity in the pool denominated in
@@ -52,56 +81,103 @@ export interface TotalPoolLiquidityResponseAminoMsg {
   type: '/symphony.cosmwasmpool.v1beta1.model.v3.TotalPoolLiquidityResponse';
   value: TotalPoolLiquidityResponseAmino;
 }
-/** ===================== TotalPoolLiquidityResponse */
+/**
+ * ===================== TotalPoolLiquidityResponse
+ * @name TotalPoolLiquidityResponseSDKType
+ * @package symphony.cosmwasmpool.v1beta1.model.v3
+ * @see proto type: symphony.cosmwasmpool.v1beta1.model.v3.TotalPoolLiquidityResponse
+ */
 export interface TotalPoolLiquidityResponseSDKType {
   total_pool_liquidity: CoinSDKType[];
 }
-/** ===================== AssetConfig */
+/**
+ * ===================== AssetConfig
+ * @name AssetConfig
+ * @package symphony.cosmwasmpool.v1beta1.model.v3
+ * @see proto type: symphony.cosmwasmpool.v1beta1.model.v3.AssetConfig
+ */
 export interface AssetConfig {
-  /** denom is the asset denomination. */
+  /**
+   * denom is the asset denomination.
+   */
   denom: string;
-  /** normalization_factor is the normalization factor for the asset. */
+  /**
+   * normalization_factor is the normalization factor for the asset.
+   */
   normalizationFactor: string;
 }
 export interface AssetConfigProtoMsg {
   typeUrl: '/symphony.cosmwasmpool.v1beta1.model.v3.AssetConfig';
   value: Uint8Array;
 }
-/** ===================== AssetConfig */
+/**
+ * ===================== AssetConfig
+ * @name AssetConfigAmino
+ * @package symphony.cosmwasmpool.v1beta1.model.v3
+ * @see proto type: symphony.cosmwasmpool.v1beta1.model.v3.AssetConfig
+ */
 export interface AssetConfigAmino {
-  /** denom is the asset denomination. */
+  /**
+   * denom is the asset denomination.
+   */
   denom?: string;
-  /** normalization_factor is the normalization factor for the asset. */
+  /**
+   * normalization_factor is the normalization factor for the asset.
+   */
   normalization_factor?: string;
 }
 export interface AssetConfigAminoMsg {
   type: '/symphony.cosmwasmpool.v1beta1.model.v3.AssetConfig';
   value: AssetConfigAmino;
 }
-/** ===================== AssetConfig */
+/**
+ * ===================== AssetConfig
+ * @name AssetConfigSDKType
+ * @package symphony.cosmwasmpool.v1beta1.model.v3
+ * @see proto type: symphony.cosmwasmpool.v1beta1.model.v3.AssetConfig
+ */
 export interface AssetConfigSDKType {
   denom: string;
   normalization_factor: string;
 }
-/** ===================== ListAssetConfigsResponse */
+/**
+ * ===================== ListAssetConfigsResponse
+ * @name ListAssetConfigsResponse
+ * @package symphony.cosmwasmpool.v1beta1.model.v3
+ * @see proto type: symphony.cosmwasmpool.v1beta1.model.v3.ListAssetConfigsResponse
+ */
 export interface ListAssetConfigsResponse {
-  /** asset_configs is the list of asset configurations. */
+  /**
+   * asset_configs is the list of asset configurations.
+   */
   assetConfigs: AssetConfig[];
 }
 export interface ListAssetConfigsResponseProtoMsg {
   typeUrl: '/symphony.cosmwasmpool.v1beta1.model.v3.ListAssetConfigsResponse';
   value: Uint8Array;
 }
-/** ===================== ListAssetConfigsResponse */
+/**
+ * ===================== ListAssetConfigsResponse
+ * @name ListAssetConfigsResponseAmino
+ * @package symphony.cosmwasmpool.v1beta1.model.v3
+ * @see proto type: symphony.cosmwasmpool.v1beta1.model.v3.ListAssetConfigsResponse
+ */
 export interface ListAssetConfigsResponseAmino {
-  /** asset_configs is the list of asset configurations. */
+  /**
+   * asset_configs is the list of asset configurations.
+   */
   asset_configs?: AssetConfigAmino[];
 }
 export interface ListAssetConfigsResponseAminoMsg {
   type: '/symphony.cosmwasmpool.v1beta1.model.v3.ListAssetConfigsResponse';
   value: ListAssetConfigsResponseAmino;
 }
-/** ===================== ListAssetConfigsResponse */
+/**
+ * ===================== ListAssetConfigsResponse
+ * @name ListAssetConfigsResponseSDKType
+ * @package symphony.cosmwasmpool.v1beta1.model.v3
+ * @see proto type: symphony.cosmwasmpool.v1beta1.model.v3.ListAssetConfigsResponse
+ */
 export interface ListAssetConfigsResponseSDKType {
   asset_configs: AssetConfigSDKType[];
 }
@@ -110,6 +186,12 @@ function createBaseShareDenomResponse(): ShareDenomResponse {
     shareDenom: '',
   };
 }
+/**
+ * ===================== ShareDenomResponse
+ * @name ShareDenomResponse
+ * @package symphony.cosmwasmpool.v1beta1.model.v3
+ * @see proto type: symphony.cosmwasmpool.v1beta1.model.v3.ShareDenomResponse
+ */
 export const ShareDenomResponse = {
   typeUrl: '/symphony.cosmwasmpool.v1beta1.model.v3.ShareDenomResponse',
   is(o: any): o is ShareDenomResponse {
@@ -203,6 +285,12 @@ function createBaseTotalPoolLiquidityResponse(): TotalPoolLiquidityResponse {
     totalPoolLiquidity: [],
   };
 }
+/**
+ * ===================== TotalPoolLiquidityResponse
+ * @name TotalPoolLiquidityResponse
+ * @package symphony.cosmwasmpool.v1beta1.model.v3
+ * @see proto type: symphony.cosmwasmpool.v1beta1.model.v3.TotalPoolLiquidityResponse
+ */
 export const TotalPoolLiquidityResponse = {
   typeUrl: '/symphony.cosmwasmpool.v1beta1.model.v3.TotalPoolLiquidityResponse',
   is(o: any): o is TotalPoolLiquidityResponse {
@@ -323,6 +411,12 @@ function createBaseAssetConfig(): AssetConfig {
     normalizationFactor: '',
   };
 }
+/**
+ * ===================== AssetConfig
+ * @name AssetConfig
+ * @package symphony.cosmwasmpool.v1beta1.model.v3
+ * @see proto type: symphony.cosmwasmpool.v1beta1.model.v3.AssetConfig
+ */
 export const AssetConfig = {
   typeUrl: '/symphony.cosmwasmpool.v1beta1.model.v3.AssetConfig',
   is(o: any): o is AssetConfig {
@@ -432,6 +526,12 @@ function createBaseListAssetConfigsResponse(): ListAssetConfigsResponse {
     assetConfigs: [],
   };
 }
+/**
+ * ===================== ListAssetConfigsResponse
+ * @name ListAssetConfigsResponse
+ * @package symphony.cosmwasmpool.v1beta1.model.v3
+ * @see proto type: symphony.cosmwasmpool.v1beta1.model.v3.ListAssetConfigsResponse
+ */
 export const ListAssetConfigsResponse = {
   typeUrl: '/symphony.cosmwasmpool.v1beta1.model.v3.ListAssetConfigsResponse',
   is(o: any): o is ListAssetConfigsResponse {

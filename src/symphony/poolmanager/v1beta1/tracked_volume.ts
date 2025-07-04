@@ -6,6 +6,11 @@ import {
 } from '../../../cosmos/base/v1beta1/coin';
 import { BinaryReader, BinaryWriter } from '../../../binary';
 import { GlobalDecoderRegistry } from '../../../registry';
+/**
+ * @name TrackedVolume
+ * @package symphony.poolmanager.v1beta1
+ * @see proto type: symphony.poolmanager.v1beta1.TrackedVolume
+ */
 export interface TrackedVolume {
   amount: Coin[];
 }
@@ -13,6 +18,11 @@ export interface TrackedVolumeProtoMsg {
   typeUrl: '/symphony.poolmanager.v1beta1.TrackedVolume';
   value: Uint8Array;
 }
+/**
+ * @name TrackedVolumeAmino
+ * @package symphony.poolmanager.v1beta1
+ * @see proto type: symphony.poolmanager.v1beta1.TrackedVolume
+ */
 export interface TrackedVolumeAmino {
   amount?: CoinAmino[];
 }
@@ -20,6 +30,11 @@ export interface TrackedVolumeAminoMsg {
   type: '/symphony.poolmanager.v1beta1.TrackedVolume';
   value: TrackedVolumeAmino;
 }
+/**
+ * @name TrackedVolumeSDKType
+ * @package symphony.poolmanager.v1beta1
+ * @see proto type: symphony.poolmanager.v1beta1.TrackedVolume
+ */
 export interface TrackedVolumeSDKType {
   amount: CoinSDKType[];
 }
@@ -28,6 +43,11 @@ function createBaseTrackedVolume(): TrackedVolume {
     amount: [],
   };
 }
+/**
+ * @name TrackedVolume
+ * @package symphony.poolmanager.v1beta1
+ * @see proto type: symphony.poolmanager.v1beta1.TrackedVolume
+ */
 export const TrackedVolume = {
   typeUrl: '/symphony.poolmanager.v1beta1.TrackedVolume',
   is(o: any): o is TrackedVolume {

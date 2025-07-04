@@ -8,6 +8,9 @@ import { GlobalDecoderRegistry } from '../../../registry';
  * state. If a user does not have a validator set preference list set, and has
  * staked, make their preference list default to their current staking
  * distribution.
+ * @name ValidatorPreference
+ * @package symphony.valsetpref.v1beta1
+ * @see proto type: symphony.valsetpref.v1beta1.ValidatorPreference
  */
 export interface ValidatorPreference {
   /**
@@ -15,7 +18,9 @@ export interface ValidatorPreference {
    * funds to.
    */
   valOperAddress: string;
-  /** weight is decimal between 0 and 1, and they all sum to 1. */
+  /**
+   * weight is decimal between 0 and 1, and they all sum to 1.
+   */
   weight: string;
 }
 export interface ValidatorPreferenceProtoMsg {
@@ -28,6 +33,9 @@ export interface ValidatorPreferenceProtoMsg {
  * state. If a user does not have a validator set preference list set, and has
  * staked, make their preference list default to their current staking
  * distribution.
+ * @name ValidatorPreferenceAmino
+ * @package symphony.valsetpref.v1beta1
+ * @see proto type: symphony.valsetpref.v1beta1.ValidatorPreference
  */
 export interface ValidatorPreferenceAmino {
   /**
@@ -35,7 +43,9 @@ export interface ValidatorPreferenceAmino {
    * funds to.
    */
   val_oper_address?: string;
-  /** weight is decimal between 0 and 1, and they all sum to 1. */
+  /**
+   * weight is decimal between 0 and 1, and they all sum to 1.
+   */
   weight?: string;
 }
 export interface ValidatorPreferenceAminoMsg {
@@ -48,6 +58,9 @@ export interface ValidatorPreferenceAminoMsg {
  * state. If a user does not have a validator set preference list set, and has
  * staked, make their preference list default to their current staking
  * distribution.
+ * @name ValidatorPreferenceSDKType
+ * @package symphony.valsetpref.v1beta1
+ * @see proto type: symphony.valsetpref.v1beta1.ValidatorPreference
  */
 export interface ValidatorPreferenceSDKType {
   val_oper_address: string;
@@ -58,9 +71,14 @@ export interface ValidatorPreferenceSDKType {
  * It contains a list of (validator, percent_allocation) pairs.
  * The percent allocation are arranged in decimal notation from 0 to 1 and must
  * add up to 1.
+ * @name ValidatorSetPreferences
+ * @package symphony.valsetpref.v1beta1
+ * @see proto type: symphony.valsetpref.v1beta1.ValidatorSetPreferences
  */
 export interface ValidatorSetPreferences {
-  /** preference holds {valAddr, weight} for the user who created it. */
+  /**
+   * preference holds {valAddr, weight} for the user who created it.
+   */
   preferences: ValidatorPreference[];
 }
 export interface ValidatorSetPreferencesProtoMsg {
@@ -72,9 +90,14 @@ export interface ValidatorSetPreferencesProtoMsg {
  * It contains a list of (validator, percent_allocation) pairs.
  * The percent allocation are arranged in decimal notation from 0 to 1 and must
  * add up to 1.
+ * @name ValidatorSetPreferencesAmino
+ * @package symphony.valsetpref.v1beta1
+ * @see proto type: symphony.valsetpref.v1beta1.ValidatorSetPreferences
  */
 export interface ValidatorSetPreferencesAmino {
-  /** preference holds {valAddr, weight} for the user who created it. */
+  /**
+   * preference holds {valAddr, weight} for the user who created it.
+   */
   preferences?: ValidatorPreferenceAmino[];
 }
 export interface ValidatorSetPreferencesAminoMsg {
@@ -86,6 +109,9 @@ export interface ValidatorSetPreferencesAminoMsg {
  * It contains a list of (validator, percent_allocation) pairs.
  * The percent allocation are arranged in decimal notation from 0 to 1 and must
  * add up to 1.
+ * @name ValidatorSetPreferencesSDKType
+ * @package symphony.valsetpref.v1beta1
+ * @see proto type: symphony.valsetpref.v1beta1.ValidatorSetPreferences
  */
 export interface ValidatorSetPreferencesSDKType {
   preferences: ValidatorPreferenceSDKType[];
@@ -96,6 +122,16 @@ function createBaseValidatorPreference(): ValidatorPreference {
     weight: '',
   };
 }
+/**
+ * ValidatorPreference defines the message structure for
+ * CreateValidatorSetPreference. It allows a user to set {val_addr, weight} in
+ * state. If a user does not have a validator set preference list set, and has
+ * staked, make their preference list default to their current staking
+ * distribution.
+ * @name ValidatorPreference
+ * @package symphony.valsetpref.v1beta1
+ * @see proto type: symphony.valsetpref.v1beta1.ValidatorPreference
+ */
 export const ValidatorPreference = {
   typeUrl: '/symphony.valsetpref.v1beta1.ValidatorPreference',
   is(o: any): o is ValidatorPreference {
@@ -210,6 +246,15 @@ function createBaseValidatorSetPreferences(): ValidatorSetPreferences {
     preferences: [],
   };
 }
+/**
+ * ValidatorSetPreferences defines a delegator's validator set preference.
+ * It contains a list of (validator, percent_allocation) pairs.
+ * The percent allocation are arranged in decimal notation from 0 to 1 and must
+ * add up to 1.
+ * @name ValidatorSetPreferences
+ * @package symphony.valsetpref.v1beta1
+ * @see proto type: symphony.valsetpref.v1beta1.ValidatorSetPreferences
+ */
 export const ValidatorSetPreferences = {
   typeUrl: '/symphony.valsetpref.v1beta1.ValidatorSetPreferences',
   is(o: any): o is ValidatorSetPreferences {

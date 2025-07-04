@@ -11,6 +11,9 @@ import { GlobalDecoderRegistry } from '../../../registry';
 /**
  * Query for has it been at least $RECOVERY_DURATION units of time,
  * since the chain has been down for $DOWNTIME_DURATION.
+ * @name RecoveredSinceDowntimeOfLengthRequest
+ * @package symphony.downtimedetector.v1beta1
+ * @see proto type: symphony.downtimedetector.v1beta1.RecoveredSinceDowntimeOfLengthRequest
  */
 export interface RecoveredSinceDowntimeOfLengthRequest {
   downtime: Downtime;
@@ -23,6 +26,9 @@ export interface RecoveredSinceDowntimeOfLengthRequestProtoMsg {
 /**
  * Query for has it been at least $RECOVERY_DURATION units of time,
  * since the chain has been down for $DOWNTIME_DURATION.
+ * @name RecoveredSinceDowntimeOfLengthRequestAmino
+ * @package symphony.downtimedetector.v1beta1
+ * @see proto type: symphony.downtimedetector.v1beta1.RecoveredSinceDowntimeOfLengthRequest
  */
 export interface RecoveredSinceDowntimeOfLengthRequestAmino {
   downtime?: Downtime;
@@ -35,11 +41,19 @@ export interface RecoveredSinceDowntimeOfLengthRequestAminoMsg {
 /**
  * Query for has it been at least $RECOVERY_DURATION units of time,
  * since the chain has been down for $DOWNTIME_DURATION.
+ * @name RecoveredSinceDowntimeOfLengthRequestSDKType
+ * @package symphony.downtimedetector.v1beta1
+ * @see proto type: symphony.downtimedetector.v1beta1.RecoveredSinceDowntimeOfLengthRequest
  */
 export interface RecoveredSinceDowntimeOfLengthRequestSDKType {
   downtime: Downtime;
   recovery: DurationSDKType;
 }
+/**
+ * @name RecoveredSinceDowntimeOfLengthResponse
+ * @package symphony.downtimedetector.v1beta1
+ * @see proto type: symphony.downtimedetector.v1beta1.RecoveredSinceDowntimeOfLengthResponse
+ */
 export interface RecoveredSinceDowntimeOfLengthResponse {
   succesfullyRecovered: boolean;
 }
@@ -47,6 +61,11 @@ export interface RecoveredSinceDowntimeOfLengthResponseProtoMsg {
   typeUrl: '/symphony.downtimedetector.v1beta1.RecoveredSinceDowntimeOfLengthResponse';
   value: Uint8Array;
 }
+/**
+ * @name RecoveredSinceDowntimeOfLengthResponseAmino
+ * @package symphony.downtimedetector.v1beta1
+ * @see proto type: symphony.downtimedetector.v1beta1.RecoveredSinceDowntimeOfLengthResponse
+ */
 export interface RecoveredSinceDowntimeOfLengthResponseAmino {
   succesfully_recovered?: boolean;
 }
@@ -54,6 +73,11 @@ export interface RecoveredSinceDowntimeOfLengthResponseAminoMsg {
   type: '/symphony.downtimedetector.v1beta1.RecoveredSinceDowntimeOfLengthResponse';
   value: RecoveredSinceDowntimeOfLengthResponseAmino;
 }
+/**
+ * @name RecoveredSinceDowntimeOfLengthResponseSDKType
+ * @package symphony.downtimedetector.v1beta1
+ * @see proto type: symphony.downtimedetector.v1beta1.RecoveredSinceDowntimeOfLengthResponse
+ */
 export interface RecoveredSinceDowntimeOfLengthResponseSDKType {
   succesfully_recovered: boolean;
 }
@@ -63,6 +87,13 @@ function createBaseRecoveredSinceDowntimeOfLengthRequest(): RecoveredSinceDownti
     recovery: Duration.fromPartial({}),
   };
 }
+/**
+ * Query for has it been at least $RECOVERY_DURATION units of time,
+ * since the chain has been down for $DOWNTIME_DURATION.
+ * @name RecoveredSinceDowntimeOfLengthRequest
+ * @package symphony.downtimedetector.v1beta1
+ * @see proto type: symphony.downtimedetector.v1beta1.RecoveredSinceDowntimeOfLengthRequest
+ */
 export const RecoveredSinceDowntimeOfLengthRequest = {
   typeUrl:
     '/symphony.downtimedetector.v1beta1.RecoveredSinceDowntimeOfLengthRequest',
@@ -188,6 +219,11 @@ function createBaseRecoveredSinceDowntimeOfLengthResponse(): RecoveredSinceDownt
     succesfullyRecovered: false,
   };
 }
+/**
+ * @name RecoveredSinceDowntimeOfLengthResponse
+ * @package symphony.downtimedetector.v1beta1
+ * @see proto type: symphony.downtimedetector.v1beta1.RecoveredSinceDowntimeOfLengthResponse
+ */
 export const RecoveredSinceDowntimeOfLengthResponse = {
   typeUrl:
     '/symphony.downtimedetector.v1beta1.RecoveredSinceDowntimeOfLengthResponse',

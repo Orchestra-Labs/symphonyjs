@@ -18,17 +18,37 @@ import { Params, ParamsAmino, ParamsSDKType } from './params';
 import { BinaryReader, BinaryWriter } from '../../binary';
 import { GlobalDecoderRegistry } from '../../registry';
 import { toTimestamp, fromTimestamp } from '../../helpers';
+/**
+ * @name ModuleBalanceRequest
+ * @package symphony.lockup
+ * @see proto type: symphony.lockup.ModuleBalanceRequest
+ */
 export interface ModuleBalanceRequest {}
 export interface ModuleBalanceRequestProtoMsg {
   typeUrl: '/symphony.lockup.ModuleBalanceRequest';
   value: Uint8Array;
 }
+/**
+ * @name ModuleBalanceRequestAmino
+ * @package symphony.lockup
+ * @see proto type: symphony.lockup.ModuleBalanceRequest
+ */
 export interface ModuleBalanceRequestAmino {}
 export interface ModuleBalanceRequestAminoMsg {
   type: '/symphony.lockup.ModuleBalanceRequest';
   value: ModuleBalanceRequestAmino;
 }
+/**
+ * @name ModuleBalanceRequestSDKType
+ * @package symphony.lockup
+ * @see proto type: symphony.lockup.ModuleBalanceRequest
+ */
 export interface ModuleBalanceRequestSDKType {}
+/**
+ * @name ModuleBalanceResponse
+ * @package symphony.lockup
+ * @see proto type: symphony.lockup.ModuleBalanceResponse
+ */
 export interface ModuleBalanceResponse {
   coins: Coin[];
 }
@@ -36,6 +56,11 @@ export interface ModuleBalanceResponseProtoMsg {
   typeUrl: '/symphony.lockup.ModuleBalanceResponse';
   value: Uint8Array;
 }
+/**
+ * @name ModuleBalanceResponseAmino
+ * @package symphony.lockup
+ * @see proto type: symphony.lockup.ModuleBalanceResponse
+ */
 export interface ModuleBalanceResponseAmino {
   coins?: CoinAmino[];
 }
@@ -43,20 +68,45 @@ export interface ModuleBalanceResponseAminoMsg {
   type: '/symphony.lockup.ModuleBalanceResponse';
   value: ModuleBalanceResponseAmino;
 }
+/**
+ * @name ModuleBalanceResponseSDKType
+ * @package symphony.lockup
+ * @see proto type: symphony.lockup.ModuleBalanceResponse
+ */
 export interface ModuleBalanceResponseSDKType {
   coins: CoinSDKType[];
 }
+/**
+ * @name ModuleLockedAmountRequest
+ * @package symphony.lockup
+ * @see proto type: symphony.lockup.ModuleLockedAmountRequest
+ */
 export interface ModuleLockedAmountRequest {}
 export interface ModuleLockedAmountRequestProtoMsg {
   typeUrl: '/symphony.lockup.ModuleLockedAmountRequest';
   value: Uint8Array;
 }
+/**
+ * @name ModuleLockedAmountRequestAmino
+ * @package symphony.lockup
+ * @see proto type: symphony.lockup.ModuleLockedAmountRequest
+ */
 export interface ModuleLockedAmountRequestAmino {}
 export interface ModuleLockedAmountRequestAminoMsg {
   type: '/symphony.lockup.ModuleLockedAmountRequest';
   value: ModuleLockedAmountRequestAmino;
 }
+/**
+ * @name ModuleLockedAmountRequestSDKType
+ * @package symphony.lockup
+ * @see proto type: symphony.lockup.ModuleLockedAmountRequest
+ */
 export interface ModuleLockedAmountRequestSDKType {}
+/**
+ * @name ModuleLockedAmountResponse
+ * @package symphony.lockup
+ * @see proto type: symphony.lockup.ModuleLockedAmountResponse
+ */
 export interface ModuleLockedAmountResponse {
   coins: Coin[];
 }
@@ -64,6 +114,11 @@ export interface ModuleLockedAmountResponseProtoMsg {
   typeUrl: '/symphony.lockup.ModuleLockedAmountResponse';
   value: Uint8Array;
 }
+/**
+ * @name ModuleLockedAmountResponseAmino
+ * @package symphony.lockup
+ * @see proto type: symphony.lockup.ModuleLockedAmountResponse
+ */
 export interface ModuleLockedAmountResponseAmino {
   coins?: CoinAmino[];
 }
@@ -71,9 +126,19 @@ export interface ModuleLockedAmountResponseAminoMsg {
   type: '/symphony.lockup.ModuleLockedAmountResponse';
   value: ModuleLockedAmountResponseAmino;
 }
+/**
+ * @name ModuleLockedAmountResponseSDKType
+ * @package symphony.lockup
+ * @see proto type: symphony.lockup.ModuleLockedAmountResponse
+ */
 export interface ModuleLockedAmountResponseSDKType {
   coins: CoinSDKType[];
 }
+/**
+ * @name AccountUnlockableCoinsRequest
+ * @package symphony.lockup
+ * @see proto type: symphony.lockup.AccountUnlockableCoinsRequest
+ */
 export interface AccountUnlockableCoinsRequest {
   owner: string;
 }
@@ -81,6 +146,11 @@ export interface AccountUnlockableCoinsRequestProtoMsg {
   typeUrl: '/symphony.lockup.AccountUnlockableCoinsRequest';
   value: Uint8Array;
 }
+/**
+ * @name AccountUnlockableCoinsRequestAmino
+ * @package symphony.lockup
+ * @see proto type: symphony.lockup.AccountUnlockableCoinsRequest
+ */
 export interface AccountUnlockableCoinsRequestAmino {
   owner?: string;
 }
@@ -88,9 +158,19 @@ export interface AccountUnlockableCoinsRequestAminoMsg {
   type: '/symphony.lockup.AccountUnlockableCoinsRequest';
   value: AccountUnlockableCoinsRequestAmino;
 }
+/**
+ * @name AccountUnlockableCoinsRequestSDKType
+ * @package symphony.lockup
+ * @see proto type: symphony.lockup.AccountUnlockableCoinsRequest
+ */
 export interface AccountUnlockableCoinsRequestSDKType {
   owner: string;
 }
+/**
+ * @name AccountUnlockableCoinsResponse
+ * @package symphony.lockup
+ * @see proto type: symphony.lockup.AccountUnlockableCoinsResponse
+ */
 export interface AccountUnlockableCoinsResponse {
   coins: Coin[];
 }
@@ -98,6 +178,11 @@ export interface AccountUnlockableCoinsResponseProtoMsg {
   typeUrl: '/symphony.lockup.AccountUnlockableCoinsResponse';
   value: Uint8Array;
 }
+/**
+ * @name AccountUnlockableCoinsResponseAmino
+ * @package symphony.lockup
+ * @see proto type: symphony.lockup.AccountUnlockableCoinsResponse
+ */
 export interface AccountUnlockableCoinsResponseAmino {
   coins?: CoinAmino[];
 }
@@ -105,9 +190,19 @@ export interface AccountUnlockableCoinsResponseAminoMsg {
   type: '/symphony.lockup.AccountUnlockableCoinsResponse';
   value: AccountUnlockableCoinsResponseAmino;
 }
+/**
+ * @name AccountUnlockableCoinsResponseSDKType
+ * @package symphony.lockup
+ * @see proto type: symphony.lockup.AccountUnlockableCoinsResponse
+ */
 export interface AccountUnlockableCoinsResponseSDKType {
   coins: CoinSDKType[];
 }
+/**
+ * @name AccountUnlockingCoinsRequest
+ * @package symphony.lockup
+ * @see proto type: symphony.lockup.AccountUnlockingCoinsRequest
+ */
 export interface AccountUnlockingCoinsRequest {
   owner: string;
 }
@@ -115,6 +210,11 @@ export interface AccountUnlockingCoinsRequestProtoMsg {
   typeUrl: '/symphony.lockup.AccountUnlockingCoinsRequest';
   value: Uint8Array;
 }
+/**
+ * @name AccountUnlockingCoinsRequestAmino
+ * @package symphony.lockup
+ * @see proto type: symphony.lockup.AccountUnlockingCoinsRequest
+ */
 export interface AccountUnlockingCoinsRequestAmino {
   owner?: string;
 }
@@ -122,9 +222,19 @@ export interface AccountUnlockingCoinsRequestAminoMsg {
   type: '/symphony.lockup.AccountUnlockingCoinsRequest';
   value: AccountUnlockingCoinsRequestAmino;
 }
+/**
+ * @name AccountUnlockingCoinsRequestSDKType
+ * @package symphony.lockup
+ * @see proto type: symphony.lockup.AccountUnlockingCoinsRequest
+ */
 export interface AccountUnlockingCoinsRequestSDKType {
   owner: string;
 }
+/**
+ * @name AccountUnlockingCoinsResponse
+ * @package symphony.lockup
+ * @see proto type: symphony.lockup.AccountUnlockingCoinsResponse
+ */
 export interface AccountUnlockingCoinsResponse {
   coins: Coin[];
 }
@@ -132,6 +242,11 @@ export interface AccountUnlockingCoinsResponseProtoMsg {
   typeUrl: '/symphony.lockup.AccountUnlockingCoinsResponse';
   value: Uint8Array;
 }
+/**
+ * @name AccountUnlockingCoinsResponseAmino
+ * @package symphony.lockup
+ * @see proto type: symphony.lockup.AccountUnlockingCoinsResponse
+ */
 export interface AccountUnlockingCoinsResponseAmino {
   coins?: CoinAmino[];
 }
@@ -139,9 +254,19 @@ export interface AccountUnlockingCoinsResponseAminoMsg {
   type: '/symphony.lockup.AccountUnlockingCoinsResponse';
   value: AccountUnlockingCoinsResponseAmino;
 }
+/**
+ * @name AccountUnlockingCoinsResponseSDKType
+ * @package symphony.lockup
+ * @see proto type: symphony.lockup.AccountUnlockingCoinsResponse
+ */
 export interface AccountUnlockingCoinsResponseSDKType {
   coins: CoinSDKType[];
 }
+/**
+ * @name AccountLockedCoinsRequest
+ * @package symphony.lockup
+ * @see proto type: symphony.lockup.AccountLockedCoinsRequest
+ */
 export interface AccountLockedCoinsRequest {
   owner: string;
 }
@@ -149,6 +274,11 @@ export interface AccountLockedCoinsRequestProtoMsg {
   typeUrl: '/symphony.lockup.AccountLockedCoinsRequest';
   value: Uint8Array;
 }
+/**
+ * @name AccountLockedCoinsRequestAmino
+ * @package symphony.lockup
+ * @see proto type: symphony.lockup.AccountLockedCoinsRequest
+ */
 export interface AccountLockedCoinsRequestAmino {
   owner?: string;
 }
@@ -156,9 +286,19 @@ export interface AccountLockedCoinsRequestAminoMsg {
   type: '/symphony.lockup.AccountLockedCoinsRequest';
   value: AccountLockedCoinsRequestAmino;
 }
+/**
+ * @name AccountLockedCoinsRequestSDKType
+ * @package symphony.lockup
+ * @see proto type: symphony.lockup.AccountLockedCoinsRequest
+ */
 export interface AccountLockedCoinsRequestSDKType {
   owner: string;
 }
+/**
+ * @name AccountLockedCoinsResponse
+ * @package symphony.lockup
+ * @see proto type: symphony.lockup.AccountLockedCoinsResponse
+ */
 export interface AccountLockedCoinsResponse {
   coins: Coin[];
 }
@@ -166,6 +306,11 @@ export interface AccountLockedCoinsResponseProtoMsg {
   typeUrl: '/symphony.lockup.AccountLockedCoinsResponse';
   value: Uint8Array;
 }
+/**
+ * @name AccountLockedCoinsResponseAmino
+ * @package symphony.lockup
+ * @see proto type: symphony.lockup.AccountLockedCoinsResponse
+ */
 export interface AccountLockedCoinsResponseAmino {
   coins?: CoinAmino[];
 }
@@ -173,9 +318,19 @@ export interface AccountLockedCoinsResponseAminoMsg {
   type: '/symphony.lockup.AccountLockedCoinsResponse';
   value: AccountLockedCoinsResponseAmino;
 }
+/**
+ * @name AccountLockedCoinsResponseSDKType
+ * @package symphony.lockup
+ * @see proto type: symphony.lockup.AccountLockedCoinsResponse
+ */
 export interface AccountLockedCoinsResponseSDKType {
   coins: CoinSDKType[];
 }
+/**
+ * @name AccountLockedPastTimeRequest
+ * @package symphony.lockup
+ * @see proto type: symphony.lockup.AccountLockedPastTimeRequest
+ */
 export interface AccountLockedPastTimeRequest {
   owner: string;
   timestamp: Date;
@@ -184,6 +339,11 @@ export interface AccountLockedPastTimeRequestProtoMsg {
   typeUrl: '/symphony.lockup.AccountLockedPastTimeRequest';
   value: Uint8Array;
 }
+/**
+ * @name AccountLockedPastTimeRequestAmino
+ * @package symphony.lockup
+ * @see proto type: symphony.lockup.AccountLockedPastTimeRequest
+ */
 export interface AccountLockedPastTimeRequestAmino {
   owner?: string;
   timestamp?: string;
@@ -192,10 +352,20 @@ export interface AccountLockedPastTimeRequestAminoMsg {
   type: '/symphony.lockup.AccountLockedPastTimeRequest';
   value: AccountLockedPastTimeRequestAmino;
 }
+/**
+ * @name AccountLockedPastTimeRequestSDKType
+ * @package symphony.lockup
+ * @see proto type: symphony.lockup.AccountLockedPastTimeRequest
+ */
 export interface AccountLockedPastTimeRequestSDKType {
   owner: string;
   timestamp: Date;
 }
+/**
+ * @name AccountLockedPastTimeResponse
+ * @package symphony.lockup
+ * @see proto type: symphony.lockup.AccountLockedPastTimeResponse
+ */
 export interface AccountLockedPastTimeResponse {
   locks: PeriodLock[];
 }
@@ -203,6 +373,11 @@ export interface AccountLockedPastTimeResponseProtoMsg {
   typeUrl: '/symphony.lockup.AccountLockedPastTimeResponse';
   value: Uint8Array;
 }
+/**
+ * @name AccountLockedPastTimeResponseAmino
+ * @package symphony.lockup
+ * @see proto type: symphony.lockup.AccountLockedPastTimeResponse
+ */
 export interface AccountLockedPastTimeResponseAmino {
   locks?: PeriodLockAmino[];
 }
@@ -210,9 +385,19 @@ export interface AccountLockedPastTimeResponseAminoMsg {
   type: '/symphony.lockup.AccountLockedPastTimeResponse';
   value: AccountLockedPastTimeResponseAmino;
 }
+/**
+ * @name AccountLockedPastTimeResponseSDKType
+ * @package symphony.lockup
+ * @see proto type: symphony.lockup.AccountLockedPastTimeResponse
+ */
 export interface AccountLockedPastTimeResponseSDKType {
   locks: PeriodLockSDKType[];
 }
+/**
+ * @name AccountLockedPastTimeNotUnlockingOnlyRequest
+ * @package symphony.lockup
+ * @see proto type: symphony.lockup.AccountLockedPastTimeNotUnlockingOnlyRequest
+ */
 export interface AccountLockedPastTimeNotUnlockingOnlyRequest {
   owner: string;
   timestamp: Date;
@@ -221,6 +406,11 @@ export interface AccountLockedPastTimeNotUnlockingOnlyRequestProtoMsg {
   typeUrl: '/symphony.lockup.AccountLockedPastTimeNotUnlockingOnlyRequest';
   value: Uint8Array;
 }
+/**
+ * @name AccountLockedPastTimeNotUnlockingOnlyRequestAmino
+ * @package symphony.lockup
+ * @see proto type: symphony.lockup.AccountLockedPastTimeNotUnlockingOnlyRequest
+ */
 export interface AccountLockedPastTimeNotUnlockingOnlyRequestAmino {
   owner?: string;
   timestamp?: string;
@@ -229,10 +419,20 @@ export interface AccountLockedPastTimeNotUnlockingOnlyRequestAminoMsg {
   type: '/symphony.lockup.AccountLockedPastTimeNotUnlockingOnlyRequest';
   value: AccountLockedPastTimeNotUnlockingOnlyRequestAmino;
 }
+/**
+ * @name AccountLockedPastTimeNotUnlockingOnlyRequestSDKType
+ * @package symphony.lockup
+ * @see proto type: symphony.lockup.AccountLockedPastTimeNotUnlockingOnlyRequest
+ */
 export interface AccountLockedPastTimeNotUnlockingOnlyRequestSDKType {
   owner: string;
   timestamp: Date;
 }
+/**
+ * @name AccountLockedPastTimeNotUnlockingOnlyResponse
+ * @package symphony.lockup
+ * @see proto type: symphony.lockup.AccountLockedPastTimeNotUnlockingOnlyResponse
+ */
 export interface AccountLockedPastTimeNotUnlockingOnlyResponse {
   locks: PeriodLock[];
 }
@@ -240,6 +440,11 @@ export interface AccountLockedPastTimeNotUnlockingOnlyResponseProtoMsg {
   typeUrl: '/symphony.lockup.AccountLockedPastTimeNotUnlockingOnlyResponse';
   value: Uint8Array;
 }
+/**
+ * @name AccountLockedPastTimeNotUnlockingOnlyResponseAmino
+ * @package symphony.lockup
+ * @see proto type: symphony.lockup.AccountLockedPastTimeNotUnlockingOnlyResponse
+ */
 export interface AccountLockedPastTimeNotUnlockingOnlyResponseAmino {
   locks?: PeriodLockAmino[];
 }
@@ -247,9 +452,19 @@ export interface AccountLockedPastTimeNotUnlockingOnlyResponseAminoMsg {
   type: '/symphony.lockup.AccountLockedPastTimeNotUnlockingOnlyResponse';
   value: AccountLockedPastTimeNotUnlockingOnlyResponseAmino;
 }
+/**
+ * @name AccountLockedPastTimeNotUnlockingOnlyResponseSDKType
+ * @package symphony.lockup
+ * @see proto type: symphony.lockup.AccountLockedPastTimeNotUnlockingOnlyResponse
+ */
 export interface AccountLockedPastTimeNotUnlockingOnlyResponseSDKType {
   locks: PeriodLockSDKType[];
 }
+/**
+ * @name AccountUnlockedBeforeTimeRequest
+ * @package symphony.lockup
+ * @see proto type: symphony.lockup.AccountUnlockedBeforeTimeRequest
+ */
 export interface AccountUnlockedBeforeTimeRequest {
   owner: string;
   timestamp: Date;
@@ -258,6 +473,11 @@ export interface AccountUnlockedBeforeTimeRequestProtoMsg {
   typeUrl: '/symphony.lockup.AccountUnlockedBeforeTimeRequest';
   value: Uint8Array;
 }
+/**
+ * @name AccountUnlockedBeforeTimeRequestAmino
+ * @package symphony.lockup
+ * @see proto type: symphony.lockup.AccountUnlockedBeforeTimeRequest
+ */
 export interface AccountUnlockedBeforeTimeRequestAmino {
   owner?: string;
   timestamp?: string;
@@ -266,10 +486,20 @@ export interface AccountUnlockedBeforeTimeRequestAminoMsg {
   type: '/symphony.lockup.AccountUnlockedBeforeTimeRequest';
   value: AccountUnlockedBeforeTimeRequestAmino;
 }
+/**
+ * @name AccountUnlockedBeforeTimeRequestSDKType
+ * @package symphony.lockup
+ * @see proto type: symphony.lockup.AccountUnlockedBeforeTimeRequest
+ */
 export interface AccountUnlockedBeforeTimeRequestSDKType {
   owner: string;
   timestamp: Date;
 }
+/**
+ * @name AccountUnlockedBeforeTimeResponse
+ * @package symphony.lockup
+ * @see proto type: symphony.lockup.AccountUnlockedBeforeTimeResponse
+ */
 export interface AccountUnlockedBeforeTimeResponse {
   locks: PeriodLock[];
 }
@@ -277,6 +507,11 @@ export interface AccountUnlockedBeforeTimeResponseProtoMsg {
   typeUrl: '/symphony.lockup.AccountUnlockedBeforeTimeResponse';
   value: Uint8Array;
 }
+/**
+ * @name AccountUnlockedBeforeTimeResponseAmino
+ * @package symphony.lockup
+ * @see proto type: symphony.lockup.AccountUnlockedBeforeTimeResponse
+ */
 export interface AccountUnlockedBeforeTimeResponseAmino {
   locks?: PeriodLockAmino[];
 }
@@ -284,9 +519,19 @@ export interface AccountUnlockedBeforeTimeResponseAminoMsg {
   type: '/symphony.lockup.AccountUnlockedBeforeTimeResponse';
   value: AccountUnlockedBeforeTimeResponseAmino;
 }
+/**
+ * @name AccountUnlockedBeforeTimeResponseSDKType
+ * @package symphony.lockup
+ * @see proto type: symphony.lockup.AccountUnlockedBeforeTimeResponse
+ */
 export interface AccountUnlockedBeforeTimeResponseSDKType {
   locks: PeriodLockSDKType[];
 }
+/**
+ * @name AccountLockedPastTimeDenomRequest
+ * @package symphony.lockup
+ * @see proto type: symphony.lockup.AccountLockedPastTimeDenomRequest
+ */
 export interface AccountLockedPastTimeDenomRequest {
   owner: string;
   timestamp: Date;
@@ -296,6 +541,11 @@ export interface AccountLockedPastTimeDenomRequestProtoMsg {
   typeUrl: '/symphony.lockup.AccountLockedPastTimeDenomRequest';
   value: Uint8Array;
 }
+/**
+ * @name AccountLockedPastTimeDenomRequestAmino
+ * @package symphony.lockup
+ * @see proto type: symphony.lockup.AccountLockedPastTimeDenomRequest
+ */
 export interface AccountLockedPastTimeDenomRequestAmino {
   owner?: string;
   timestamp?: string;
@@ -305,11 +555,21 @@ export interface AccountLockedPastTimeDenomRequestAminoMsg {
   type: '/symphony.lockup.AccountLockedPastTimeDenomRequest';
   value: AccountLockedPastTimeDenomRequestAmino;
 }
+/**
+ * @name AccountLockedPastTimeDenomRequestSDKType
+ * @package symphony.lockup
+ * @see proto type: symphony.lockup.AccountLockedPastTimeDenomRequest
+ */
 export interface AccountLockedPastTimeDenomRequestSDKType {
   owner: string;
   timestamp: Date;
   denom: string;
 }
+/**
+ * @name AccountLockedPastTimeDenomResponse
+ * @package symphony.lockup
+ * @see proto type: symphony.lockup.AccountLockedPastTimeDenomResponse
+ */
 export interface AccountLockedPastTimeDenomResponse {
   locks: PeriodLock[];
 }
@@ -317,6 +577,11 @@ export interface AccountLockedPastTimeDenomResponseProtoMsg {
   typeUrl: '/symphony.lockup.AccountLockedPastTimeDenomResponse';
   value: Uint8Array;
 }
+/**
+ * @name AccountLockedPastTimeDenomResponseAmino
+ * @package symphony.lockup
+ * @see proto type: symphony.lockup.AccountLockedPastTimeDenomResponse
+ */
 export interface AccountLockedPastTimeDenomResponseAmino {
   locks?: PeriodLockAmino[];
 }
@@ -324,9 +589,19 @@ export interface AccountLockedPastTimeDenomResponseAminoMsg {
   type: '/symphony.lockup.AccountLockedPastTimeDenomResponse';
   value: AccountLockedPastTimeDenomResponseAmino;
 }
+/**
+ * @name AccountLockedPastTimeDenomResponseSDKType
+ * @package symphony.lockup
+ * @see proto type: symphony.lockup.AccountLockedPastTimeDenomResponse
+ */
 export interface AccountLockedPastTimeDenomResponseSDKType {
   locks: PeriodLockSDKType[];
 }
+/**
+ * @name LockedDenomRequest
+ * @package symphony.lockup
+ * @see proto type: symphony.lockup.LockedDenomRequest
+ */
 export interface LockedDenomRequest {
   denom: string;
   duration: Duration;
@@ -335,6 +610,11 @@ export interface LockedDenomRequestProtoMsg {
   typeUrl: '/symphony.lockup.LockedDenomRequest';
   value: Uint8Array;
 }
+/**
+ * @name LockedDenomRequestAmino
+ * @package symphony.lockup
+ * @see proto type: symphony.lockup.LockedDenomRequest
+ */
 export interface LockedDenomRequestAmino {
   denom?: string;
   duration?: DurationAmino;
@@ -343,10 +623,20 @@ export interface LockedDenomRequestAminoMsg {
   type: '/symphony.lockup.LockedDenomRequest';
   value: LockedDenomRequestAmino;
 }
+/**
+ * @name LockedDenomRequestSDKType
+ * @package symphony.lockup
+ * @see proto type: symphony.lockup.LockedDenomRequest
+ */
 export interface LockedDenomRequestSDKType {
   denom: string;
   duration: DurationSDKType;
 }
+/**
+ * @name LockedDenomResponse
+ * @package symphony.lockup
+ * @see proto type: symphony.lockup.LockedDenomResponse
+ */
 export interface LockedDenomResponse {
   amount: string;
 }
@@ -354,6 +644,11 @@ export interface LockedDenomResponseProtoMsg {
   typeUrl: '/symphony.lockup.LockedDenomResponse';
   value: Uint8Array;
 }
+/**
+ * @name LockedDenomResponseAmino
+ * @package symphony.lockup
+ * @see proto type: symphony.lockup.LockedDenomResponse
+ */
 export interface LockedDenomResponseAmino {
   amount?: string;
 }
@@ -361,9 +656,19 @@ export interface LockedDenomResponseAminoMsg {
   type: '/symphony.lockup.LockedDenomResponse';
   value: LockedDenomResponseAmino;
 }
+/**
+ * @name LockedDenomResponseSDKType
+ * @package symphony.lockup
+ * @see proto type: symphony.lockup.LockedDenomResponse
+ */
 export interface LockedDenomResponseSDKType {
   amount: string;
 }
+/**
+ * @name LockedRequest
+ * @package symphony.lockup
+ * @see proto type: symphony.lockup.LockedRequest
+ */
 export interface LockedRequest {
   lockId: bigint;
 }
@@ -371,6 +676,11 @@ export interface LockedRequestProtoMsg {
   typeUrl: '/symphony.lockup.LockedRequest';
   value: Uint8Array;
 }
+/**
+ * @name LockedRequestAmino
+ * @package symphony.lockup
+ * @see proto type: symphony.lockup.LockedRequest
+ */
 export interface LockedRequestAmino {
   lock_id?: string;
 }
@@ -378,9 +688,19 @@ export interface LockedRequestAminoMsg {
   type: '/symphony.lockup.LockedRequest';
   value: LockedRequestAmino;
 }
+/**
+ * @name LockedRequestSDKType
+ * @package symphony.lockup
+ * @see proto type: symphony.lockup.LockedRequest
+ */
 export interface LockedRequestSDKType {
   lock_id: bigint;
 }
+/**
+ * @name LockedResponse
+ * @package symphony.lockup
+ * @see proto type: symphony.lockup.LockedResponse
+ */
 export interface LockedResponse {
   lock?: PeriodLock;
 }
@@ -388,6 +708,11 @@ export interface LockedResponseProtoMsg {
   typeUrl: '/symphony.lockup.LockedResponse';
   value: Uint8Array;
 }
+/**
+ * @name LockedResponseAmino
+ * @package symphony.lockup
+ * @see proto type: symphony.lockup.LockedResponse
+ */
 export interface LockedResponseAmino {
   lock?: PeriodLockAmino;
 }
@@ -395,9 +720,19 @@ export interface LockedResponseAminoMsg {
   type: '/symphony.lockup.LockedResponse';
   value: LockedResponseAmino;
 }
+/**
+ * @name LockedResponseSDKType
+ * @package symphony.lockup
+ * @see proto type: symphony.lockup.LockedResponse
+ */
 export interface LockedResponseSDKType {
   lock?: PeriodLockSDKType;
 }
+/**
+ * @name LockRewardReceiverRequest
+ * @package symphony.lockup
+ * @see proto type: symphony.lockup.LockRewardReceiverRequest
+ */
 export interface LockRewardReceiverRequest {
   lockId: bigint;
 }
@@ -405,6 +740,11 @@ export interface LockRewardReceiverRequestProtoMsg {
   typeUrl: '/symphony.lockup.LockRewardReceiverRequest';
   value: Uint8Array;
 }
+/**
+ * @name LockRewardReceiverRequestAmino
+ * @package symphony.lockup
+ * @see proto type: symphony.lockup.LockRewardReceiverRequest
+ */
 export interface LockRewardReceiverRequestAmino {
   lock_id?: string;
 }
@@ -412,9 +752,19 @@ export interface LockRewardReceiverRequestAminoMsg {
   type: '/symphony.lockup.LockRewardReceiverRequest';
   value: LockRewardReceiverRequestAmino;
 }
+/**
+ * @name LockRewardReceiverRequestSDKType
+ * @package symphony.lockup
+ * @see proto type: symphony.lockup.LockRewardReceiverRequest
+ */
 export interface LockRewardReceiverRequestSDKType {
   lock_id: bigint;
 }
+/**
+ * @name LockRewardReceiverResponse
+ * @package symphony.lockup
+ * @see proto type: symphony.lockup.LockRewardReceiverResponse
+ */
 export interface LockRewardReceiverResponse {
   rewardReceiver: string;
 }
@@ -422,6 +772,11 @@ export interface LockRewardReceiverResponseProtoMsg {
   typeUrl: '/symphony.lockup.LockRewardReceiverResponse';
   value: Uint8Array;
 }
+/**
+ * @name LockRewardReceiverResponseAmino
+ * @package symphony.lockup
+ * @see proto type: symphony.lockup.LockRewardReceiverResponse
+ */
 export interface LockRewardReceiverResponseAmino {
   reward_receiver?: string;
 }
@@ -429,20 +784,45 @@ export interface LockRewardReceiverResponseAminoMsg {
   type: '/symphony.lockup.LockRewardReceiverResponse';
   value: LockRewardReceiverResponseAmino;
 }
+/**
+ * @name LockRewardReceiverResponseSDKType
+ * @package symphony.lockup
+ * @see proto type: symphony.lockup.LockRewardReceiverResponse
+ */
 export interface LockRewardReceiverResponseSDKType {
   reward_receiver: string;
 }
+/**
+ * @name NextLockIDRequest
+ * @package symphony.lockup
+ * @see proto type: symphony.lockup.NextLockIDRequest
+ */
 export interface NextLockIDRequest {}
 export interface NextLockIDRequestProtoMsg {
   typeUrl: '/symphony.lockup.NextLockIDRequest';
   value: Uint8Array;
 }
+/**
+ * @name NextLockIDRequestAmino
+ * @package symphony.lockup
+ * @see proto type: symphony.lockup.NextLockIDRequest
+ */
 export interface NextLockIDRequestAmino {}
 export interface NextLockIDRequestAminoMsg {
   type: '/symphony.lockup.NextLockIDRequest';
   value: NextLockIDRequestAmino;
 }
+/**
+ * @name NextLockIDRequestSDKType
+ * @package symphony.lockup
+ * @see proto type: symphony.lockup.NextLockIDRequest
+ */
 export interface NextLockIDRequestSDKType {}
+/**
+ * @name NextLockIDResponse
+ * @package symphony.lockup
+ * @see proto type: symphony.lockup.NextLockIDResponse
+ */
 export interface NextLockIDResponse {
   lockId: bigint;
 }
@@ -450,6 +830,11 @@ export interface NextLockIDResponseProtoMsg {
   typeUrl: '/symphony.lockup.NextLockIDResponse';
   value: Uint8Array;
 }
+/**
+ * @name NextLockIDResponseAmino
+ * @package symphony.lockup
+ * @see proto type: symphony.lockup.NextLockIDResponse
+ */
 export interface NextLockIDResponseAmino {
   lock_id?: string;
 }
@@ -457,10 +842,20 @@ export interface NextLockIDResponseAminoMsg {
   type: '/symphony.lockup.NextLockIDResponse';
   value: NextLockIDResponseAmino;
 }
+/**
+ * @name NextLockIDResponseSDKType
+ * @package symphony.lockup
+ * @see proto type: symphony.lockup.NextLockIDResponse
+ */
 export interface NextLockIDResponseSDKType {
   lock_id: bigint;
 }
-/** @deprecated */
+/**
+ * @name SyntheticLockupsByLockupIDRequest
+ * @package symphony.lockup
+ * @see proto type: symphony.lockup.SyntheticLockupsByLockupIDRequest
+ * @deprecated
+ */
 export interface SyntheticLockupsByLockupIDRequest {
   lockId: bigint;
 }
@@ -468,7 +863,12 @@ export interface SyntheticLockupsByLockupIDRequestProtoMsg {
   typeUrl: '/symphony.lockup.SyntheticLockupsByLockupIDRequest';
   value: Uint8Array;
 }
-/** @deprecated */
+/**
+ * @name SyntheticLockupsByLockupIDRequestAmino
+ * @package symphony.lockup
+ * @see proto type: symphony.lockup.SyntheticLockupsByLockupIDRequest
+ * @deprecated
+ */
 export interface SyntheticLockupsByLockupIDRequestAmino {
   lock_id?: string;
 }
@@ -476,11 +876,21 @@ export interface SyntheticLockupsByLockupIDRequestAminoMsg {
   type: '/symphony.lockup.SyntheticLockupsByLockupIDRequest';
   value: SyntheticLockupsByLockupIDRequestAmino;
 }
-/** @deprecated */
+/**
+ * @name SyntheticLockupsByLockupIDRequestSDKType
+ * @package symphony.lockup
+ * @see proto type: symphony.lockup.SyntheticLockupsByLockupIDRequest
+ * @deprecated
+ */
 export interface SyntheticLockupsByLockupIDRequestSDKType {
   lock_id: bigint;
 }
-/** @deprecated */
+/**
+ * @name SyntheticLockupsByLockupIDResponse
+ * @package symphony.lockup
+ * @see proto type: symphony.lockup.SyntheticLockupsByLockupIDResponse
+ * @deprecated
+ */
 export interface SyntheticLockupsByLockupIDResponse {
   syntheticLocks: SyntheticLock[];
 }
@@ -488,7 +898,12 @@ export interface SyntheticLockupsByLockupIDResponseProtoMsg {
   typeUrl: '/symphony.lockup.SyntheticLockupsByLockupIDResponse';
   value: Uint8Array;
 }
-/** @deprecated */
+/**
+ * @name SyntheticLockupsByLockupIDResponseAmino
+ * @package symphony.lockup
+ * @see proto type: symphony.lockup.SyntheticLockupsByLockupIDResponse
+ * @deprecated
+ */
 export interface SyntheticLockupsByLockupIDResponseAmino {
   synthetic_locks?: SyntheticLockAmino[];
 }
@@ -496,10 +911,20 @@ export interface SyntheticLockupsByLockupIDResponseAminoMsg {
   type: '/symphony.lockup.SyntheticLockupsByLockupIDResponse';
   value: SyntheticLockupsByLockupIDResponseAmino;
 }
-/** @deprecated */
+/**
+ * @name SyntheticLockupsByLockupIDResponseSDKType
+ * @package symphony.lockup
+ * @see proto type: symphony.lockup.SyntheticLockupsByLockupIDResponse
+ * @deprecated
+ */
 export interface SyntheticLockupsByLockupIDResponseSDKType {
   synthetic_locks: SyntheticLockSDKType[];
 }
+/**
+ * @name SyntheticLockupByLockupIDRequest
+ * @package symphony.lockup
+ * @see proto type: symphony.lockup.SyntheticLockupByLockupIDRequest
+ */
 export interface SyntheticLockupByLockupIDRequest {
   lockId: bigint;
 }
@@ -507,6 +932,11 @@ export interface SyntheticLockupByLockupIDRequestProtoMsg {
   typeUrl: '/symphony.lockup.SyntheticLockupByLockupIDRequest';
   value: Uint8Array;
 }
+/**
+ * @name SyntheticLockupByLockupIDRequestAmino
+ * @package symphony.lockup
+ * @see proto type: symphony.lockup.SyntheticLockupByLockupIDRequest
+ */
 export interface SyntheticLockupByLockupIDRequestAmino {
   lock_id?: string;
 }
@@ -514,9 +944,19 @@ export interface SyntheticLockupByLockupIDRequestAminoMsg {
   type: '/symphony.lockup.SyntheticLockupByLockupIDRequest';
   value: SyntheticLockupByLockupIDRequestAmino;
 }
+/**
+ * @name SyntheticLockupByLockupIDRequestSDKType
+ * @package symphony.lockup
+ * @see proto type: symphony.lockup.SyntheticLockupByLockupIDRequest
+ */
 export interface SyntheticLockupByLockupIDRequestSDKType {
   lock_id: bigint;
 }
+/**
+ * @name SyntheticLockupByLockupIDResponse
+ * @package symphony.lockup
+ * @see proto type: symphony.lockup.SyntheticLockupByLockupIDResponse
+ */
 export interface SyntheticLockupByLockupIDResponse {
   syntheticLock: SyntheticLock;
 }
@@ -524,6 +964,11 @@ export interface SyntheticLockupByLockupIDResponseProtoMsg {
   typeUrl: '/symphony.lockup.SyntheticLockupByLockupIDResponse';
   value: Uint8Array;
 }
+/**
+ * @name SyntheticLockupByLockupIDResponseAmino
+ * @package symphony.lockup
+ * @see proto type: symphony.lockup.SyntheticLockupByLockupIDResponse
+ */
 export interface SyntheticLockupByLockupIDResponseAmino {
   synthetic_lock?: SyntheticLockAmino;
 }
@@ -531,9 +976,19 @@ export interface SyntheticLockupByLockupIDResponseAminoMsg {
   type: '/symphony.lockup.SyntheticLockupByLockupIDResponse';
   value: SyntheticLockupByLockupIDResponseAmino;
 }
+/**
+ * @name SyntheticLockupByLockupIDResponseSDKType
+ * @package symphony.lockup
+ * @see proto type: symphony.lockup.SyntheticLockupByLockupIDResponse
+ */
 export interface SyntheticLockupByLockupIDResponseSDKType {
   synthetic_lock: SyntheticLockSDKType;
 }
+/**
+ * @name AccountLockedLongerDurationRequest
+ * @package symphony.lockup
+ * @see proto type: symphony.lockup.AccountLockedLongerDurationRequest
+ */
 export interface AccountLockedLongerDurationRequest {
   owner: string;
   duration: Duration;
@@ -542,6 +997,11 @@ export interface AccountLockedLongerDurationRequestProtoMsg {
   typeUrl: '/symphony.lockup.AccountLockedLongerDurationRequest';
   value: Uint8Array;
 }
+/**
+ * @name AccountLockedLongerDurationRequestAmino
+ * @package symphony.lockup
+ * @see proto type: symphony.lockup.AccountLockedLongerDurationRequest
+ */
 export interface AccountLockedLongerDurationRequestAmino {
   owner?: string;
   duration?: DurationAmino;
@@ -550,10 +1010,20 @@ export interface AccountLockedLongerDurationRequestAminoMsg {
   type: '/symphony.lockup.AccountLockedLongerDurationRequest';
   value: AccountLockedLongerDurationRequestAmino;
 }
+/**
+ * @name AccountLockedLongerDurationRequestSDKType
+ * @package symphony.lockup
+ * @see proto type: symphony.lockup.AccountLockedLongerDurationRequest
+ */
 export interface AccountLockedLongerDurationRequestSDKType {
   owner: string;
   duration: DurationSDKType;
 }
+/**
+ * @name AccountLockedLongerDurationResponse
+ * @package symphony.lockup
+ * @see proto type: symphony.lockup.AccountLockedLongerDurationResponse
+ */
 export interface AccountLockedLongerDurationResponse {
   locks: PeriodLock[];
 }
@@ -561,6 +1031,11 @@ export interface AccountLockedLongerDurationResponseProtoMsg {
   typeUrl: '/symphony.lockup.AccountLockedLongerDurationResponse';
   value: Uint8Array;
 }
+/**
+ * @name AccountLockedLongerDurationResponseAmino
+ * @package symphony.lockup
+ * @see proto type: symphony.lockup.AccountLockedLongerDurationResponse
+ */
 export interface AccountLockedLongerDurationResponseAmino {
   locks?: PeriodLockAmino[];
 }
@@ -568,9 +1043,19 @@ export interface AccountLockedLongerDurationResponseAminoMsg {
   type: '/symphony.lockup.AccountLockedLongerDurationResponse';
   value: AccountLockedLongerDurationResponseAmino;
 }
+/**
+ * @name AccountLockedLongerDurationResponseSDKType
+ * @package symphony.lockup
+ * @see proto type: symphony.lockup.AccountLockedLongerDurationResponse
+ */
 export interface AccountLockedLongerDurationResponseSDKType {
   locks: PeriodLockSDKType[];
 }
+/**
+ * @name AccountLockedDurationRequest
+ * @package symphony.lockup
+ * @see proto type: symphony.lockup.AccountLockedDurationRequest
+ */
 export interface AccountLockedDurationRequest {
   owner: string;
   duration: Duration;
@@ -579,6 +1064,11 @@ export interface AccountLockedDurationRequestProtoMsg {
   typeUrl: '/symphony.lockup.AccountLockedDurationRequest';
   value: Uint8Array;
 }
+/**
+ * @name AccountLockedDurationRequestAmino
+ * @package symphony.lockup
+ * @see proto type: symphony.lockup.AccountLockedDurationRequest
+ */
 export interface AccountLockedDurationRequestAmino {
   owner?: string;
   duration?: DurationAmino;
@@ -587,10 +1077,20 @@ export interface AccountLockedDurationRequestAminoMsg {
   type: '/symphony.lockup.AccountLockedDurationRequest';
   value: AccountLockedDurationRequestAmino;
 }
+/**
+ * @name AccountLockedDurationRequestSDKType
+ * @package symphony.lockup
+ * @see proto type: symphony.lockup.AccountLockedDurationRequest
+ */
 export interface AccountLockedDurationRequestSDKType {
   owner: string;
   duration: DurationSDKType;
 }
+/**
+ * @name AccountLockedDurationResponse
+ * @package symphony.lockup
+ * @see proto type: symphony.lockup.AccountLockedDurationResponse
+ */
 export interface AccountLockedDurationResponse {
   locks: PeriodLock[];
 }
@@ -598,6 +1098,11 @@ export interface AccountLockedDurationResponseProtoMsg {
   typeUrl: '/symphony.lockup.AccountLockedDurationResponse';
   value: Uint8Array;
 }
+/**
+ * @name AccountLockedDurationResponseAmino
+ * @package symphony.lockup
+ * @see proto type: symphony.lockup.AccountLockedDurationResponse
+ */
 export interface AccountLockedDurationResponseAmino {
   locks?: PeriodLockAmino[];
 }
@@ -605,9 +1110,19 @@ export interface AccountLockedDurationResponseAminoMsg {
   type: '/symphony.lockup.AccountLockedDurationResponse';
   value: AccountLockedDurationResponseAmino;
 }
+/**
+ * @name AccountLockedDurationResponseSDKType
+ * @package symphony.lockup
+ * @see proto type: symphony.lockup.AccountLockedDurationResponse
+ */
 export interface AccountLockedDurationResponseSDKType {
   locks: PeriodLockSDKType[];
 }
+/**
+ * @name AccountLockedLongerDurationNotUnlockingOnlyRequest
+ * @package symphony.lockup
+ * @see proto type: symphony.lockup.AccountLockedLongerDurationNotUnlockingOnlyRequest
+ */
 export interface AccountLockedLongerDurationNotUnlockingOnlyRequest {
   owner: string;
   duration: Duration;
@@ -616,6 +1131,11 @@ export interface AccountLockedLongerDurationNotUnlockingOnlyRequestProtoMsg {
   typeUrl: '/symphony.lockup.AccountLockedLongerDurationNotUnlockingOnlyRequest';
   value: Uint8Array;
 }
+/**
+ * @name AccountLockedLongerDurationNotUnlockingOnlyRequestAmino
+ * @package symphony.lockup
+ * @see proto type: symphony.lockup.AccountLockedLongerDurationNotUnlockingOnlyRequest
+ */
 export interface AccountLockedLongerDurationNotUnlockingOnlyRequestAmino {
   owner?: string;
   duration?: DurationAmino;
@@ -624,10 +1144,20 @@ export interface AccountLockedLongerDurationNotUnlockingOnlyRequestAminoMsg {
   type: '/symphony.lockup.AccountLockedLongerDurationNotUnlockingOnlyRequest';
   value: AccountLockedLongerDurationNotUnlockingOnlyRequestAmino;
 }
+/**
+ * @name AccountLockedLongerDurationNotUnlockingOnlyRequestSDKType
+ * @package symphony.lockup
+ * @see proto type: symphony.lockup.AccountLockedLongerDurationNotUnlockingOnlyRequest
+ */
 export interface AccountLockedLongerDurationNotUnlockingOnlyRequestSDKType {
   owner: string;
   duration: DurationSDKType;
 }
+/**
+ * @name AccountLockedLongerDurationNotUnlockingOnlyResponse
+ * @package symphony.lockup
+ * @see proto type: symphony.lockup.AccountLockedLongerDurationNotUnlockingOnlyResponse
+ */
 export interface AccountLockedLongerDurationNotUnlockingOnlyResponse {
   locks: PeriodLock[];
 }
@@ -635,6 +1165,11 @@ export interface AccountLockedLongerDurationNotUnlockingOnlyResponseProtoMsg {
   typeUrl: '/symphony.lockup.AccountLockedLongerDurationNotUnlockingOnlyResponse';
   value: Uint8Array;
 }
+/**
+ * @name AccountLockedLongerDurationNotUnlockingOnlyResponseAmino
+ * @package symphony.lockup
+ * @see proto type: symphony.lockup.AccountLockedLongerDurationNotUnlockingOnlyResponse
+ */
 export interface AccountLockedLongerDurationNotUnlockingOnlyResponseAmino {
   locks?: PeriodLockAmino[];
 }
@@ -642,9 +1177,19 @@ export interface AccountLockedLongerDurationNotUnlockingOnlyResponseAminoMsg {
   type: '/symphony.lockup.AccountLockedLongerDurationNotUnlockingOnlyResponse';
   value: AccountLockedLongerDurationNotUnlockingOnlyResponseAmino;
 }
+/**
+ * @name AccountLockedLongerDurationNotUnlockingOnlyResponseSDKType
+ * @package symphony.lockup
+ * @see proto type: symphony.lockup.AccountLockedLongerDurationNotUnlockingOnlyResponse
+ */
 export interface AccountLockedLongerDurationNotUnlockingOnlyResponseSDKType {
   locks: PeriodLockSDKType[];
 }
+/**
+ * @name AccountLockedLongerDurationDenomRequest
+ * @package symphony.lockup
+ * @see proto type: symphony.lockup.AccountLockedLongerDurationDenomRequest
+ */
 export interface AccountLockedLongerDurationDenomRequest {
   owner: string;
   duration: Duration;
@@ -654,6 +1199,11 @@ export interface AccountLockedLongerDurationDenomRequestProtoMsg {
   typeUrl: '/symphony.lockup.AccountLockedLongerDurationDenomRequest';
   value: Uint8Array;
 }
+/**
+ * @name AccountLockedLongerDurationDenomRequestAmino
+ * @package symphony.lockup
+ * @see proto type: symphony.lockup.AccountLockedLongerDurationDenomRequest
+ */
 export interface AccountLockedLongerDurationDenomRequestAmino {
   owner?: string;
   duration?: DurationAmino;
@@ -663,11 +1213,21 @@ export interface AccountLockedLongerDurationDenomRequestAminoMsg {
   type: '/symphony.lockup.AccountLockedLongerDurationDenomRequest';
   value: AccountLockedLongerDurationDenomRequestAmino;
 }
+/**
+ * @name AccountLockedLongerDurationDenomRequestSDKType
+ * @package symphony.lockup
+ * @see proto type: symphony.lockup.AccountLockedLongerDurationDenomRequest
+ */
 export interface AccountLockedLongerDurationDenomRequestSDKType {
   owner: string;
   duration: DurationSDKType;
   denom: string;
 }
+/**
+ * @name AccountLockedLongerDurationDenomResponse
+ * @package symphony.lockup
+ * @see proto type: symphony.lockup.AccountLockedLongerDurationDenomResponse
+ */
 export interface AccountLockedLongerDurationDenomResponse {
   locks: PeriodLock[];
 }
@@ -675,6 +1235,11 @@ export interface AccountLockedLongerDurationDenomResponseProtoMsg {
   typeUrl: '/symphony.lockup.AccountLockedLongerDurationDenomResponse';
   value: Uint8Array;
 }
+/**
+ * @name AccountLockedLongerDurationDenomResponseAmino
+ * @package symphony.lockup
+ * @see proto type: symphony.lockup.AccountLockedLongerDurationDenomResponse
+ */
 export interface AccountLockedLongerDurationDenomResponseAmino {
   locks?: PeriodLockAmino[];
 }
@@ -682,20 +1247,45 @@ export interface AccountLockedLongerDurationDenomResponseAminoMsg {
   type: '/symphony.lockup.AccountLockedLongerDurationDenomResponse';
   value: AccountLockedLongerDurationDenomResponseAmino;
 }
+/**
+ * @name AccountLockedLongerDurationDenomResponseSDKType
+ * @package symphony.lockup
+ * @see proto type: symphony.lockup.AccountLockedLongerDurationDenomResponse
+ */
 export interface AccountLockedLongerDurationDenomResponseSDKType {
   locks: PeriodLockSDKType[];
 }
+/**
+ * @name QueryParamsRequest
+ * @package symphony.lockup
+ * @see proto type: symphony.lockup.QueryParamsRequest
+ */
 export interface QueryParamsRequest {}
 export interface QueryParamsRequestProtoMsg {
   typeUrl: '/symphony.lockup.QueryParamsRequest';
   value: Uint8Array;
 }
+/**
+ * @name QueryParamsRequestAmino
+ * @package symphony.lockup
+ * @see proto type: symphony.lockup.QueryParamsRequest
+ */
 export interface QueryParamsRequestAmino {}
 export interface QueryParamsRequestAminoMsg {
   type: '/symphony.lockup.QueryParamsRequest';
   value: QueryParamsRequestAmino;
 }
+/**
+ * @name QueryParamsRequestSDKType
+ * @package symphony.lockup
+ * @see proto type: symphony.lockup.QueryParamsRequest
+ */
 export interface QueryParamsRequestSDKType {}
+/**
+ * @name QueryParamsResponse
+ * @package symphony.lockup
+ * @see proto type: symphony.lockup.QueryParamsResponse
+ */
 export interface QueryParamsResponse {
   params: Params;
 }
@@ -703,6 +1293,11 @@ export interface QueryParamsResponseProtoMsg {
   typeUrl: '/symphony.lockup.QueryParamsResponse';
   value: Uint8Array;
 }
+/**
+ * @name QueryParamsResponseAmino
+ * @package symphony.lockup
+ * @see proto type: symphony.lockup.QueryParamsResponse
+ */
 export interface QueryParamsResponseAmino {
   params?: ParamsAmino;
 }
@@ -710,12 +1305,22 @@ export interface QueryParamsResponseAminoMsg {
   type: '/symphony.lockup.QueryParamsResponse';
   value: QueryParamsResponseAmino;
 }
+/**
+ * @name QueryParamsResponseSDKType
+ * @package symphony.lockup
+ * @see proto type: symphony.lockup.QueryParamsResponse
+ */
 export interface QueryParamsResponseSDKType {
   params: ParamsSDKType;
 }
 function createBaseModuleBalanceRequest(): ModuleBalanceRequest {
   return {};
 }
+/**
+ * @name ModuleBalanceRequest
+ * @package symphony.lockup
+ * @see proto type: symphony.lockup.ModuleBalanceRequest
+ */
 export const ModuleBalanceRequest = {
   typeUrl: '/symphony.lockup.ModuleBalanceRequest',
   is(o: any): o is ModuleBalanceRequest {
@@ -788,6 +1393,11 @@ function createBaseModuleBalanceResponse(): ModuleBalanceResponse {
     coins: [],
   };
 }
+/**
+ * @name ModuleBalanceResponse
+ * @package symphony.lockup
+ * @see proto type: symphony.lockup.ModuleBalanceResponse
+ */
 export const ModuleBalanceResponse = {
   typeUrl: '/symphony.lockup.ModuleBalanceResponse',
   is(o: any): o is ModuleBalanceResponse {
@@ -884,6 +1494,11 @@ GlobalDecoderRegistry.register(
 function createBaseModuleLockedAmountRequest(): ModuleLockedAmountRequest {
   return {};
 }
+/**
+ * @name ModuleLockedAmountRequest
+ * @package symphony.lockup
+ * @see proto type: symphony.lockup.ModuleLockedAmountRequest
+ */
 export const ModuleLockedAmountRequest = {
   typeUrl: '/symphony.lockup.ModuleLockedAmountRequest',
   is(o: any): o is ModuleLockedAmountRequest {
@@ -964,6 +1579,11 @@ function createBaseModuleLockedAmountResponse(): ModuleLockedAmountResponse {
     coins: [],
   };
 }
+/**
+ * @name ModuleLockedAmountResponse
+ * @package symphony.lockup
+ * @see proto type: symphony.lockup.ModuleLockedAmountResponse
+ */
 export const ModuleLockedAmountResponse = {
   typeUrl: '/symphony.lockup.ModuleLockedAmountResponse',
   is(o: any): o is ModuleLockedAmountResponse {
@@ -1074,6 +1694,11 @@ function createBaseAccountUnlockableCoinsRequest(): AccountUnlockableCoinsReques
     owner: '',
   };
 }
+/**
+ * @name AccountUnlockableCoinsRequest
+ * @package symphony.lockup
+ * @see proto type: symphony.lockup.AccountUnlockableCoinsRequest
+ */
 export const AccountUnlockableCoinsRequest = {
   typeUrl: '/symphony.lockup.AccountUnlockableCoinsRequest',
   is(o: any): o is AccountUnlockableCoinsRequest {
@@ -1181,6 +1806,11 @@ function createBaseAccountUnlockableCoinsResponse(): AccountUnlockableCoinsRespo
     coins: [],
   };
 }
+/**
+ * @name AccountUnlockableCoinsResponse
+ * @package symphony.lockup
+ * @see proto type: symphony.lockup.AccountUnlockableCoinsResponse
+ */
 export const AccountUnlockableCoinsResponse = {
   typeUrl: '/symphony.lockup.AccountUnlockableCoinsResponse',
   is(o: any): o is AccountUnlockableCoinsResponse {
@@ -1291,6 +1921,11 @@ function createBaseAccountUnlockingCoinsRequest(): AccountUnlockingCoinsRequest 
     owner: '',
   };
 }
+/**
+ * @name AccountUnlockingCoinsRequest
+ * @package symphony.lockup
+ * @see proto type: symphony.lockup.AccountUnlockingCoinsRequest
+ */
 export const AccountUnlockingCoinsRequest = {
   typeUrl: '/symphony.lockup.AccountUnlockingCoinsRequest',
   is(o: any): o is AccountUnlockingCoinsRequest {
@@ -1398,6 +2033,11 @@ function createBaseAccountUnlockingCoinsResponse(): AccountUnlockingCoinsRespons
     coins: [],
   };
 }
+/**
+ * @name AccountUnlockingCoinsResponse
+ * @package symphony.lockup
+ * @see proto type: symphony.lockup.AccountUnlockingCoinsResponse
+ */
 export const AccountUnlockingCoinsResponse = {
   typeUrl: '/symphony.lockup.AccountUnlockingCoinsResponse',
   is(o: any): o is AccountUnlockingCoinsResponse {
@@ -1508,6 +2148,11 @@ function createBaseAccountLockedCoinsRequest(): AccountLockedCoinsRequest {
     owner: '',
   };
 }
+/**
+ * @name AccountLockedCoinsRequest
+ * @package symphony.lockup
+ * @see proto type: symphony.lockup.AccountLockedCoinsRequest
+ */
 export const AccountLockedCoinsRequest = {
   typeUrl: '/symphony.lockup.AccountLockedCoinsRequest',
   is(o: any): o is AccountLockedCoinsRequest {
@@ -1611,6 +2256,11 @@ function createBaseAccountLockedCoinsResponse(): AccountLockedCoinsResponse {
     coins: [],
   };
 }
+/**
+ * @name AccountLockedCoinsResponse
+ * @package symphony.lockup
+ * @see proto type: symphony.lockup.AccountLockedCoinsResponse
+ */
 export const AccountLockedCoinsResponse = {
   typeUrl: '/symphony.lockup.AccountLockedCoinsResponse',
   is(o: any): o is AccountLockedCoinsResponse {
@@ -1722,6 +2372,11 @@ function createBaseAccountLockedPastTimeRequest(): AccountLockedPastTimeRequest 
     timestamp: new Date(),
   };
 }
+/**
+ * @name AccountLockedPastTimeRequest
+ * @package symphony.lockup
+ * @see proto type: symphony.lockup.AccountLockedPastTimeRequest
+ */
 export const AccountLockedPastTimeRequest = {
   typeUrl: '/symphony.lockup.AccountLockedPastTimeRequest',
   is(o: any): o is AccountLockedPastTimeRequest {
@@ -1847,6 +2502,11 @@ function createBaseAccountLockedPastTimeResponse(): AccountLockedPastTimeRespons
     locks: [],
   };
 }
+/**
+ * @name AccountLockedPastTimeResponse
+ * @package symphony.lockup
+ * @see proto type: symphony.lockup.AccountLockedPastTimeResponse
+ */
 export const AccountLockedPastTimeResponse = {
   typeUrl: '/symphony.lockup.AccountLockedPastTimeResponse',
   is(o: any): o is AccountLockedPastTimeResponse {
@@ -1962,6 +2622,11 @@ function createBaseAccountLockedPastTimeNotUnlockingOnlyRequest(): AccountLocked
     timestamp: new Date(),
   };
 }
+/**
+ * @name AccountLockedPastTimeNotUnlockingOnlyRequest
+ * @package symphony.lockup
+ * @see proto type: symphony.lockup.AccountLockedPastTimeNotUnlockingOnlyRequest
+ */
 export const AccountLockedPastTimeNotUnlockingOnlyRequest = {
   typeUrl: '/symphony.lockup.AccountLockedPastTimeNotUnlockingOnlyRequest',
   is(o: any): o is AccountLockedPastTimeNotUnlockingOnlyRequest {
@@ -2090,6 +2755,11 @@ function createBaseAccountLockedPastTimeNotUnlockingOnlyResponse(): AccountLocke
     locks: [],
   };
 }
+/**
+ * @name AccountLockedPastTimeNotUnlockingOnlyResponse
+ * @package symphony.lockup
+ * @see proto type: symphony.lockup.AccountLockedPastTimeNotUnlockingOnlyResponse
+ */
 export const AccountLockedPastTimeNotUnlockingOnlyResponse = {
   typeUrl: '/symphony.lockup.AccountLockedPastTimeNotUnlockingOnlyResponse',
   is(o: any): o is AccountLockedPastTimeNotUnlockingOnlyResponse {
@@ -2210,6 +2880,11 @@ function createBaseAccountUnlockedBeforeTimeRequest(): AccountUnlockedBeforeTime
     timestamp: new Date(),
   };
 }
+/**
+ * @name AccountUnlockedBeforeTimeRequest
+ * @package symphony.lockup
+ * @see proto type: symphony.lockup.AccountUnlockedBeforeTimeRequest
+ */
 export const AccountUnlockedBeforeTimeRequest = {
   typeUrl: '/symphony.lockup.AccountUnlockedBeforeTimeRequest',
   is(o: any): o is AccountUnlockedBeforeTimeRequest {
@@ -2335,6 +3010,11 @@ function createBaseAccountUnlockedBeforeTimeResponse(): AccountUnlockedBeforeTim
     locks: [],
   };
 }
+/**
+ * @name AccountUnlockedBeforeTimeResponse
+ * @package symphony.lockup
+ * @see proto type: symphony.lockup.AccountUnlockedBeforeTimeResponse
+ */
 export const AccountUnlockedBeforeTimeResponse = {
   typeUrl: '/symphony.lockup.AccountUnlockedBeforeTimeResponse',
   is(o: any): o is AccountUnlockedBeforeTimeResponse {
@@ -2451,6 +3131,11 @@ function createBaseAccountLockedPastTimeDenomRequest(): AccountLockedPastTimeDen
     denom: '',
   };
 }
+/**
+ * @name AccountLockedPastTimeDenomRequest
+ * @package symphony.lockup
+ * @see proto type: symphony.lockup.AccountLockedPastTimeDenomRequest
+ */
 export const AccountLockedPastTimeDenomRequest = {
   typeUrl: '/symphony.lockup.AccountLockedPastTimeDenomRequest',
   is(o: any): o is AccountLockedPastTimeDenomRequest {
@@ -2593,6 +3278,11 @@ function createBaseAccountLockedPastTimeDenomResponse(): AccountLockedPastTimeDe
     locks: [],
   };
 }
+/**
+ * @name AccountLockedPastTimeDenomResponse
+ * @package symphony.lockup
+ * @see proto type: symphony.lockup.AccountLockedPastTimeDenomResponse
+ */
 export const AccountLockedPastTimeDenomResponse = {
   typeUrl: '/symphony.lockup.AccountLockedPastTimeDenomResponse',
   is(o: any): o is AccountLockedPastTimeDenomResponse {
@@ -2708,6 +3398,11 @@ function createBaseLockedDenomRequest(): LockedDenomRequest {
     duration: Duration.fromPartial({}),
   };
 }
+/**
+ * @name LockedDenomRequest
+ * @package symphony.lockup
+ * @see proto type: symphony.lockup.LockedDenomRequest
+ */
 export const LockedDenomRequest = {
   typeUrl: '/symphony.lockup.LockedDenomRequest',
   is(o: any): o is LockedDenomRequest {
@@ -2816,6 +3511,11 @@ function createBaseLockedDenomResponse(): LockedDenomResponse {
     amount: '',
   };
 }
+/**
+ * @name LockedDenomResponse
+ * @package symphony.lockup
+ * @see proto type: symphony.lockup.LockedDenomResponse
+ */
 export const LockedDenomResponse = {
   typeUrl: '/symphony.lockup.LockedDenomResponse',
   is(o: any): o is LockedDenomResponse {
@@ -2911,6 +3611,11 @@ function createBaseLockedRequest(): LockedRequest {
     lockId: BigInt(0),
   };
 }
+/**
+ * @name LockedRequest
+ * @package symphony.lockup
+ * @see proto type: symphony.lockup.LockedRequest
+ */
 export const LockedRequest = {
   typeUrl: '/symphony.lockup.LockedRequest',
   is(o: any): o is LockedRequest {
@@ -3001,6 +3706,11 @@ function createBaseLockedResponse(): LockedResponse {
     lock: undefined,
   };
 }
+/**
+ * @name LockedResponse
+ * @package symphony.lockup
+ * @see proto type: symphony.lockup.LockedResponse
+ */
 export const LockedResponse = {
   typeUrl: '/symphony.lockup.LockedResponse',
   is(o: any): o is LockedResponse {
@@ -3081,6 +3791,11 @@ function createBaseLockRewardReceiverRequest(): LockRewardReceiverRequest {
     lockId: BigInt(0),
   };
 }
+/**
+ * @name LockRewardReceiverRequest
+ * @package symphony.lockup
+ * @see proto type: symphony.lockup.LockRewardReceiverRequest
+ */
 export const LockRewardReceiverRequest = {
   typeUrl: '/symphony.lockup.LockRewardReceiverRequest',
   is(o: any): o is LockRewardReceiverRequest {
@@ -3188,6 +3903,11 @@ function createBaseLockRewardReceiverResponse(): LockRewardReceiverResponse {
     rewardReceiver: '',
   };
 }
+/**
+ * @name LockRewardReceiverResponse
+ * @package symphony.lockup
+ * @see proto type: symphony.lockup.LockRewardReceiverResponse
+ */
 export const LockRewardReceiverResponse = {
   typeUrl: '/symphony.lockup.LockRewardReceiverResponse',
   is(o: any): o is LockRewardReceiverResponse {
@@ -3297,6 +4017,11 @@ GlobalDecoderRegistry.register(
 function createBaseNextLockIDRequest(): NextLockIDRequest {
   return {};
 }
+/**
+ * @name NextLockIDRequest
+ * @package symphony.lockup
+ * @see proto type: symphony.lockup.NextLockIDRequest
+ */
 export const NextLockIDRequest = {
   typeUrl: '/symphony.lockup.NextLockIDRequest',
   is(o: any): o is NextLockIDRequest {
@@ -3363,6 +4088,11 @@ function createBaseNextLockIDResponse(): NextLockIDResponse {
     lockId: BigInt(0),
   };
 }
+/**
+ * @name NextLockIDResponse
+ * @package symphony.lockup
+ * @see proto type: symphony.lockup.NextLockIDResponse
+ */
 export const NextLockIDResponse = {
   typeUrl: '/symphony.lockup.NextLockIDResponse',
   is(o: any): o is NextLockIDResponse {
@@ -3459,6 +4189,12 @@ function createBaseSyntheticLockupsByLockupIDRequest(): SyntheticLockupsByLockup
     lockId: BigInt(0),
   };
 }
+/**
+ * @name SyntheticLockupsByLockupIDRequest
+ * @package symphony.lockup
+ * @see proto type: symphony.lockup.SyntheticLockupsByLockupIDRequest
+ * @deprecated
+ */
 export const SyntheticLockupsByLockupIDRequest = {
   typeUrl: '/symphony.lockup.SyntheticLockupsByLockupIDRequest',
   is(o: any): o is SyntheticLockupsByLockupIDRequest {
@@ -3570,6 +4306,12 @@ function createBaseSyntheticLockupsByLockupIDResponse(): SyntheticLockupsByLocku
     syntheticLocks: [],
   };
 }
+/**
+ * @name SyntheticLockupsByLockupIDResponse
+ * @package symphony.lockup
+ * @see proto type: symphony.lockup.SyntheticLockupsByLockupIDResponse
+ * @deprecated
+ */
 export const SyntheticLockupsByLockupIDResponse = {
   typeUrl: '/symphony.lockup.SyntheticLockupsByLockupIDResponse',
   is(o: any): o is SyntheticLockupsByLockupIDResponse {
@@ -3690,6 +4432,11 @@ function createBaseSyntheticLockupByLockupIDRequest(): SyntheticLockupByLockupID
     lockId: BigInt(0),
   };
 }
+/**
+ * @name SyntheticLockupByLockupIDRequest
+ * @package symphony.lockup
+ * @see proto type: symphony.lockup.SyntheticLockupByLockupIDRequest
+ */
 export const SyntheticLockupByLockupIDRequest = {
   typeUrl: '/symphony.lockup.SyntheticLockupByLockupIDRequest',
   is(o: any): o is SyntheticLockupByLockupIDRequest {
@@ -3801,6 +4548,11 @@ function createBaseSyntheticLockupByLockupIDResponse(): SyntheticLockupByLockupI
     syntheticLock: SyntheticLock.fromPartial({}),
   };
 }
+/**
+ * @name SyntheticLockupByLockupIDResponse
+ * @package symphony.lockup
+ * @see proto type: symphony.lockup.SyntheticLockupByLockupIDResponse
+ */
 export const SyntheticLockupByLockupIDResponse = {
   typeUrl: '/symphony.lockup.SyntheticLockupByLockupIDResponse',
   is(o: any): o is SyntheticLockupByLockupIDResponse {
@@ -3917,6 +4669,11 @@ function createBaseAccountLockedLongerDurationRequest(): AccountLockedLongerDura
     duration: Duration.fromPartial({}),
   };
 }
+/**
+ * @name AccountLockedLongerDurationRequest
+ * @package symphony.lockup
+ * @see proto type: symphony.lockup.AccountLockedLongerDurationRequest
+ */
 export const AccountLockedLongerDurationRequest = {
   typeUrl: '/symphony.lockup.AccountLockedLongerDurationRequest',
   is(o: any): o is AccountLockedLongerDurationRequest {
@@ -4040,6 +4797,11 @@ function createBaseAccountLockedLongerDurationResponse(): AccountLockedLongerDur
     locks: [],
   };
 }
+/**
+ * @name AccountLockedLongerDurationResponse
+ * @package symphony.lockup
+ * @see proto type: symphony.lockup.AccountLockedLongerDurationResponse
+ */
 export const AccountLockedLongerDurationResponse = {
   typeUrl: '/symphony.lockup.AccountLockedLongerDurationResponse',
   is(o: any): o is AccountLockedLongerDurationResponse {
@@ -4155,6 +4917,11 @@ function createBaseAccountLockedDurationRequest(): AccountLockedDurationRequest 
     duration: Duration.fromPartial({}),
   };
 }
+/**
+ * @name AccountLockedDurationRequest
+ * @package symphony.lockup
+ * @see proto type: symphony.lockup.AccountLockedDurationRequest
+ */
 export const AccountLockedDurationRequest = {
   typeUrl: '/symphony.lockup.AccountLockedDurationRequest',
   is(o: any): o is AccountLockedDurationRequest {
@@ -4278,6 +5045,11 @@ function createBaseAccountLockedDurationResponse(): AccountLockedDurationRespons
     locks: [],
   };
 }
+/**
+ * @name AccountLockedDurationResponse
+ * @package symphony.lockup
+ * @see proto type: symphony.lockup.AccountLockedDurationResponse
+ */
 export const AccountLockedDurationResponse = {
   typeUrl: '/symphony.lockup.AccountLockedDurationResponse',
   is(o: any): o is AccountLockedDurationResponse {
@@ -4393,6 +5165,11 @@ function createBaseAccountLockedLongerDurationNotUnlockingOnlyRequest(): Account
     duration: Duration.fromPartial({}),
   };
 }
+/**
+ * @name AccountLockedLongerDurationNotUnlockingOnlyRequest
+ * @package symphony.lockup
+ * @see proto type: symphony.lockup.AccountLockedLongerDurationNotUnlockingOnlyRequest
+ */
 export const AccountLockedLongerDurationNotUnlockingOnlyRequest = {
   typeUrl:
     '/symphony.lockup.AccountLockedLongerDurationNotUnlockingOnlyRequest',
@@ -4539,6 +5316,11 @@ function createBaseAccountLockedLongerDurationNotUnlockingOnlyResponse(): Accoun
     locks: [],
   };
 }
+/**
+ * @name AccountLockedLongerDurationNotUnlockingOnlyResponse
+ * @package symphony.lockup
+ * @see proto type: symphony.lockup.AccountLockedLongerDurationNotUnlockingOnlyResponse
+ */
 export const AccountLockedLongerDurationNotUnlockingOnlyResponse = {
   typeUrl:
     '/symphony.lockup.AccountLockedLongerDurationNotUnlockingOnlyResponse',
@@ -4678,6 +5460,11 @@ function createBaseAccountLockedLongerDurationDenomRequest(): AccountLockedLonge
     denom: '',
   };
 }
+/**
+ * @name AccountLockedLongerDurationDenomRequest
+ * @package symphony.lockup
+ * @see proto type: symphony.lockup.AccountLockedLongerDurationDenomRequest
+ */
 export const AccountLockedLongerDurationDenomRequest = {
   typeUrl: '/symphony.lockup.AccountLockedLongerDurationDenomRequest',
   is(o: any): o is AccountLockedLongerDurationDenomRequest {
@@ -4818,6 +5605,11 @@ function createBaseAccountLockedLongerDurationDenomResponse(): AccountLockedLong
     locks: [],
   };
 }
+/**
+ * @name AccountLockedLongerDurationDenomResponse
+ * @package symphony.lockup
+ * @see proto type: symphony.lockup.AccountLockedLongerDurationDenomResponse
+ */
 export const AccountLockedLongerDurationDenomResponse = {
   typeUrl: '/symphony.lockup.AccountLockedLongerDurationDenomResponse',
   is(o: any): o is AccountLockedLongerDurationDenomResponse {
@@ -4930,6 +5722,11 @@ GlobalDecoderRegistry.register(
 function createBaseQueryParamsRequest(): QueryParamsRequest {
   return {};
 }
+/**
+ * @name QueryParamsRequest
+ * @package symphony.lockup
+ * @see proto type: symphony.lockup.QueryParamsRequest
+ */
 export const QueryParamsRequest = {
   typeUrl: '/symphony.lockup.QueryParamsRequest',
   is(o: any): o is QueryParamsRequest {
@@ -4999,6 +5796,11 @@ function createBaseQueryParamsResponse(): QueryParamsResponse {
     params: Params.fromPartial({}),
   };
 }
+/**
+ * @name QueryParamsResponse
+ * @package symphony.lockup
+ * @see proto type: symphony.lockup.QueryParamsResponse
+ */
 export const QueryParamsResponse = {
   typeUrl: '/symphony.lockup.QueryParamsResponse',
   is(o: any): o is QueryParamsResponse {

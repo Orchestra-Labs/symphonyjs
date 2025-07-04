@@ -16,39 +16,71 @@ import {
 } from '../../txfees/v1beta1/genesis';
 import { BinaryReader, BinaryWriter } from '../../../binary';
 import { GlobalDecoderRegistry } from '../../../registry';
-/** TokenPairArbRoutes tracks all of the hot routes for a given pair of tokens */
+/**
+ * TokenPairArbRoutes tracks all of the hot routes for a given pair of tokens
+ * @name TokenPairArbRoutes
+ * @package symphony.protorev.v1beta1
+ * @see proto type: symphony.protorev.v1beta1.TokenPairArbRoutes
+ */
 export interface TokenPairArbRoutes {
-  /** Stores all of the possible hot paths for a given pair of tokens */
+  /**
+   * Stores all of the possible hot paths for a given pair of tokens
+   */
   arbRoutes: Route[];
-  /** Token denomination of the first asset */
+  /**
+   * Token denomination of the first asset
+   */
   tokenIn: string;
-  /** Token denomination of the second asset */
+  /**
+   * Token denomination of the second asset
+   */
   tokenOut: string;
 }
 export interface TokenPairArbRoutesProtoMsg {
   typeUrl: '/symphony.protorev.v1beta1.TokenPairArbRoutes';
   value: Uint8Array;
 }
-/** TokenPairArbRoutes tracks all of the hot routes for a given pair of tokens */
+/**
+ * TokenPairArbRoutes tracks all of the hot routes for a given pair of tokens
+ * @name TokenPairArbRoutesAmino
+ * @package symphony.protorev.v1beta1
+ * @see proto type: symphony.protorev.v1beta1.TokenPairArbRoutes
+ */
 export interface TokenPairArbRoutesAmino {
-  /** Stores all of the possible hot paths for a given pair of tokens */
+  /**
+   * Stores all of the possible hot paths for a given pair of tokens
+   */
   arb_routes?: RouteAmino[];
-  /** Token denomination of the first asset */
+  /**
+   * Token denomination of the first asset
+   */
   token_in?: string;
-  /** Token denomination of the second asset */
+  /**
+   * Token denomination of the second asset
+   */
   token_out?: string;
 }
 export interface TokenPairArbRoutesAminoMsg {
   type: '/symphony.protorev.v1beta1.TokenPairArbRoutes';
   value: TokenPairArbRoutesAmino;
 }
-/** TokenPairArbRoutes tracks all of the hot routes for a given pair of tokens */
+/**
+ * TokenPairArbRoutes tracks all of the hot routes for a given pair of tokens
+ * @name TokenPairArbRoutesSDKType
+ * @package symphony.protorev.v1beta1
+ * @see proto type: symphony.protorev.v1beta1.TokenPairArbRoutes
+ */
 export interface TokenPairArbRoutesSDKType {
   arb_routes: RouteSDKType[];
   token_in: string;
   token_out: string;
 }
-/** Route is a hot route for a given pair of tokens */
+/**
+ * Route is a hot route for a given pair of tokens
+ * @name Route
+ * @package symphony.protorev.v1beta1
+ * @see proto type: symphony.protorev.v1beta1.Route
+ */
 export interface Route {
   /**
    * The pool IDs that are traversed in the directed cyclic graph (traversed
@@ -66,7 +98,12 @@ export interface RouteProtoMsg {
   typeUrl: '/symphony.protorev.v1beta1.Route';
   value: Uint8Array;
 }
-/** Route is a hot route for a given pair of tokens */
+/**
+ * Route is a hot route for a given pair of tokens
+ * @name RouteAmino
+ * @package symphony.protorev.v1beta1
+ * @see proto type: symphony.protorev.v1beta1.Route
+ */
 export interface RouteAmino {
   /**
    * The pool IDs that are traversed in the directed cyclic graph (traversed
@@ -84,38 +121,70 @@ export interface RouteAminoMsg {
   type: '/symphony.protorev.v1beta1.Route';
   value: RouteAmino;
 }
-/** Route is a hot route for a given pair of tokens */
+/**
+ * Route is a hot route for a given pair of tokens
+ * @name RouteSDKType
+ * @package symphony.protorev.v1beta1
+ * @see proto type: symphony.protorev.v1beta1.Route
+ */
 export interface RouteSDKType {
   trades: TradeSDKType[];
   step_size: string;
 }
-/** Trade is a single trade in a route */
+/**
+ * Trade is a single trade in a route
+ * @name Trade
+ * @package symphony.protorev.v1beta1
+ * @see proto type: symphony.protorev.v1beta1.Trade
+ */
 export interface Trade {
-  /** The pool id of the pool that is traded on */
+  /**
+   * The pool id of the pool that is traded on
+   */
   pool: bigint;
-  /** The denom of the token that is traded */
+  /**
+   * The denom of the token that is traded
+   */
   tokenIn: string;
-  /** The denom of the token that is received */
+  /**
+   * The denom of the token that is received
+   */
   tokenOut: string;
 }
 export interface TradeProtoMsg {
   typeUrl: '/symphony.protorev.v1beta1.Trade';
   value: Uint8Array;
 }
-/** Trade is a single trade in a route */
+/**
+ * Trade is a single trade in a route
+ * @name TradeAmino
+ * @package symphony.protorev.v1beta1
+ * @see proto type: symphony.protorev.v1beta1.Trade
+ */
 export interface TradeAmino {
-  /** The pool id of the pool that is traded on */
+  /**
+   * The pool id of the pool that is traded on
+   */
   pool?: string;
-  /** The denom of the token that is traded */
+  /**
+   * The denom of the token that is traded
+   */
   token_in?: string;
-  /** The denom of the token that is received */
+  /**
+   * The denom of the token that is received
+   */
   token_out?: string;
 }
 export interface TradeAminoMsg {
   type: '/symphony.protorev.v1beta1.Trade';
   value: TradeAmino;
 }
-/** Trade is a single trade in a route */
+/**
+ * Trade is a single trade in a route
+ * @name TradeSDKType
+ * @package symphony.protorev.v1beta1
+ * @see proto type: symphony.protorev.v1beta1.Trade
+ */
 export interface TradeSDKType {
   pool: bigint;
   token_in: string;
@@ -124,16 +193,23 @@ export interface TradeSDKType {
 /**
  * RouteStatistics contains the number of trades the module has executed after a
  * swap on a given route and the profits from the trades
+ * @name RouteStatistics
+ * @package symphony.protorev.v1beta1
+ * @see proto type: symphony.protorev.v1beta1.RouteStatistics
  */
 export interface RouteStatistics {
-  /** profits is the total profit from all trades on this route */
+  /**
+   * profits is the total profit from all trades on this route
+   */
   profits: Coin[];
   /**
    * number_of_trades is the number of trades the module has executed using this
    * route
    */
   numberOfTrades: string;
-  /** route is the route that was used (pool ids along the arbitrage route) */
+  /**
+   * route is the route that was used (pool ids along the arbitrage route)
+   */
   route: bigint[];
 }
 export interface RouteStatisticsProtoMsg {
@@ -143,16 +219,23 @@ export interface RouteStatisticsProtoMsg {
 /**
  * RouteStatistics contains the number of trades the module has executed after a
  * swap on a given route and the profits from the trades
+ * @name RouteStatisticsAmino
+ * @package symphony.protorev.v1beta1
+ * @see proto type: symphony.protorev.v1beta1.RouteStatistics
  */
 export interface RouteStatisticsAmino {
-  /** profits is the total profit from all trades on this route */
+  /**
+   * profits is the total profit from all trades on this route
+   */
   profits?: CoinAmino[];
   /**
    * number_of_trades is the number of trades the module has executed using this
    * route
    */
   number_of_trades?: string;
-  /** route is the route that was used (pool ids along the arbitrage route) */
+  /**
+   * route is the route that was used (pool ids along the arbitrage route)
+   */
   route?: string[];
 }
 export interface RouteStatisticsAminoMsg {
@@ -162,6 +245,9 @@ export interface RouteStatisticsAminoMsg {
 /**
  * RouteStatistics contains the number of trades the module has executed after a
  * swap on a given route and the profits from the trades
+ * @name RouteStatisticsSDKType
+ * @package symphony.protorev.v1beta1
+ * @see proto type: symphony.protorev.v1beta1.RouteStatistics
  */
 export interface RouteStatisticsSDKType {
   profits: CoinSDKType[];
@@ -177,15 +263,26 @@ export interface RouteStatisticsSDKType {
  *
  * DEPRECATED: This field is deprecated and will be removed in the next
  * release. It is replaced by the `info_by_pool_type` field.
+ * @name PoolWeights
+ * @package symphony.protorev.v1beta1
+ * @see proto type: symphony.protorev.v1beta1.PoolWeights
  */
 export interface PoolWeights {
-  /** The weight of a stableswap pool */
+  /**
+   * The weight of a stableswap pool
+   */
   stableWeight: bigint;
-  /** The weight of a balancer pool */
+  /**
+   * The weight of a balancer pool
+   */
   balancerWeight: bigint;
-  /** The weight of a concentrated pool */
+  /**
+   * The weight of a concentrated pool
+   */
   concentratedWeight: bigint;
-  /** The weight of a cosmwasm pool */
+  /**
+   * The weight of a cosmwasm pool
+   */
   cosmwasmWeight: bigint;
 }
 export interface PoolWeightsProtoMsg {
@@ -201,15 +298,26 @@ export interface PoolWeightsProtoMsg {
  *
  * DEPRECATED: This field is deprecated and will be removed in the next
  * release. It is replaced by the `info_by_pool_type` field.
+ * @name PoolWeightsAmino
+ * @package symphony.protorev.v1beta1
+ * @see proto type: symphony.protorev.v1beta1.PoolWeights
  */
 export interface PoolWeightsAmino {
-  /** The weight of a stableswap pool */
+  /**
+   * The weight of a stableswap pool
+   */
   stable_weight?: string;
-  /** The weight of a balancer pool */
+  /**
+   * The weight of a balancer pool
+   */
   balancer_weight?: string;
-  /** The weight of a concentrated pool */
+  /**
+   * The weight of a concentrated pool
+   */
   concentrated_weight?: string;
-  /** The weight of a cosmwasm pool */
+  /**
+   * The weight of a cosmwasm pool
+   */
   cosmwasm_weight?: string;
 }
 export interface PoolWeightsAminoMsg {
@@ -225,6 +333,9 @@ export interface PoolWeightsAminoMsg {
  *
  * DEPRECATED: This field is deprecated and will be removed in the next
  * release. It is replaced by the `info_by_pool_type` field.
+ * @name PoolWeightsSDKType
+ * @package symphony.protorev.v1beta1
+ * @see proto type: symphony.protorev.v1beta1.PoolWeights
  */
 export interface PoolWeightsSDKType {
   stable_weight: bigint;
@@ -237,15 +348,26 @@ export interface PoolWeightsSDKType {
  * gas and time) it is to execute a swap on a given pool type. This distinction
  * is made and necessary because the execution time ranges significantly between
  * the different pool types.
+ * @name InfoByPoolType
+ * @package symphony.protorev.v1beta1
+ * @see proto type: symphony.protorev.v1beta1.InfoByPoolType
  */
 export interface InfoByPoolType {
-  /** The stable pool info */
+  /**
+   * The stable pool info
+   */
   stable: StablePoolInfo;
-  /** The balancer pool info */
+  /**
+   * The balancer pool info
+   */
   balancer: BalancerPoolInfo;
-  /** The concentrated pool info */
+  /**
+   * The concentrated pool info
+   */
   concentrated: ConcentratedPoolInfo;
-  /** The cosmwasm pool info */
+  /**
+   * The cosmwasm pool info
+   */
   cosmwasm: CosmwasmPoolInfo;
 }
 export interface InfoByPoolTypeProtoMsg {
@@ -257,15 +379,26 @@ export interface InfoByPoolTypeProtoMsg {
  * gas and time) it is to execute a swap on a given pool type. This distinction
  * is made and necessary because the execution time ranges significantly between
  * the different pool types.
+ * @name InfoByPoolTypeAmino
+ * @package symphony.protorev.v1beta1
+ * @see proto type: symphony.protorev.v1beta1.InfoByPoolType
  */
 export interface InfoByPoolTypeAmino {
-  /** The stable pool info */
+  /**
+   * The stable pool info
+   */
   stable?: StablePoolInfoAmino;
-  /** The balancer pool info */
+  /**
+   * The balancer pool info
+   */
   balancer?: BalancerPoolInfoAmino;
-  /** The concentrated pool info */
+  /**
+   * The concentrated pool info
+   */
   concentrated?: ConcentratedPoolInfoAmino;
-  /** The cosmwasm pool info */
+  /**
+   * The cosmwasm pool info
+   */
   cosmwasm?: CosmwasmPoolInfoAmino;
 }
 export interface InfoByPoolTypeAminoMsg {
@@ -277,6 +410,9 @@ export interface InfoByPoolTypeAminoMsg {
  * gas and time) it is to execute a swap on a given pool type. This distinction
  * is made and necessary because the execution time ranges significantly between
  * the different pool types.
+ * @name InfoByPoolTypeSDKType
+ * @package symphony.protorev.v1beta1
+ * @see proto type: symphony.protorev.v1beta1.InfoByPoolType
  */
 export interface InfoByPoolTypeSDKType {
   stable: StablePoolInfoSDKType;
@@ -284,58 +420,103 @@ export interface InfoByPoolTypeSDKType {
   concentrated: ConcentratedPoolInfoSDKType;
   cosmwasm: CosmwasmPoolInfoSDKType;
 }
-/** StablePoolInfo contains meta data pertaining to a stableswap pool type. */
+/**
+ * StablePoolInfo contains meta data pertaining to a stableswap pool type.
+ * @name StablePoolInfo
+ * @package symphony.protorev.v1beta1
+ * @see proto type: symphony.protorev.v1beta1.StablePoolInfo
+ */
 export interface StablePoolInfo {
-  /** The weight of a stableswap pool */
+  /**
+   * The weight of a stableswap pool
+   */
   weight: bigint;
 }
 export interface StablePoolInfoProtoMsg {
   typeUrl: '/symphony.protorev.v1beta1.StablePoolInfo';
   value: Uint8Array;
 }
-/** StablePoolInfo contains meta data pertaining to a stableswap pool type. */
+/**
+ * StablePoolInfo contains meta data pertaining to a stableswap pool type.
+ * @name StablePoolInfoAmino
+ * @package symphony.protorev.v1beta1
+ * @see proto type: symphony.protorev.v1beta1.StablePoolInfo
+ */
 export interface StablePoolInfoAmino {
-  /** The weight of a stableswap pool */
+  /**
+   * The weight of a stableswap pool
+   */
   weight?: string;
 }
 export interface StablePoolInfoAminoMsg {
   type: '/symphony.protorev.v1beta1.StablePoolInfo';
   value: StablePoolInfoAmino;
 }
-/** StablePoolInfo contains meta data pertaining to a stableswap pool type. */
+/**
+ * StablePoolInfo contains meta data pertaining to a stableswap pool type.
+ * @name StablePoolInfoSDKType
+ * @package symphony.protorev.v1beta1
+ * @see proto type: symphony.protorev.v1beta1.StablePoolInfo
+ */
 export interface StablePoolInfoSDKType {
   weight: bigint;
 }
-/** BalancerPoolInfo contains meta data pertaining to a balancer pool type. */
+/**
+ * BalancerPoolInfo contains meta data pertaining to a balancer pool type.
+ * @name BalancerPoolInfo
+ * @package symphony.protorev.v1beta1
+ * @see proto type: symphony.protorev.v1beta1.BalancerPoolInfo
+ */
 export interface BalancerPoolInfo {
-  /** The weight of a balancer pool */
+  /**
+   * The weight of a balancer pool
+   */
   weight: bigint;
 }
 export interface BalancerPoolInfoProtoMsg {
   typeUrl: '/symphony.protorev.v1beta1.BalancerPoolInfo';
   value: Uint8Array;
 }
-/** BalancerPoolInfo contains meta data pertaining to a balancer pool type. */
+/**
+ * BalancerPoolInfo contains meta data pertaining to a balancer pool type.
+ * @name BalancerPoolInfoAmino
+ * @package symphony.protorev.v1beta1
+ * @see proto type: symphony.protorev.v1beta1.BalancerPoolInfo
+ */
 export interface BalancerPoolInfoAmino {
-  /** The weight of a balancer pool */
+  /**
+   * The weight of a balancer pool
+   */
   weight?: string;
 }
 export interface BalancerPoolInfoAminoMsg {
   type: '/symphony.protorev.v1beta1.BalancerPoolInfo';
   value: BalancerPoolInfoAmino;
 }
-/** BalancerPoolInfo contains meta data pertaining to a balancer pool type. */
+/**
+ * BalancerPoolInfo contains meta data pertaining to a balancer pool type.
+ * @name BalancerPoolInfoSDKType
+ * @package symphony.protorev.v1beta1
+ * @see proto type: symphony.protorev.v1beta1.BalancerPoolInfo
+ */
 export interface BalancerPoolInfoSDKType {
   weight: bigint;
 }
 /**
  * ConcentratedPoolInfo contains meta data pertaining to a concentrated pool
  * type.
+ * @name ConcentratedPoolInfo
+ * @package symphony.protorev.v1beta1
+ * @see proto type: symphony.protorev.v1beta1.ConcentratedPoolInfo
  */
 export interface ConcentratedPoolInfo {
-  /** The weight of a concentrated pool */
+  /**
+   * The weight of a concentrated pool
+   */
   weight: bigint;
-  /** The maximum number of ticks we can move when rebalancing */
+  /**
+   * The maximum number of ticks we can move when rebalancing
+   */
   maxTicksCrossed: bigint;
 }
 export interface ConcentratedPoolInfoProtoMsg {
@@ -345,11 +526,18 @@ export interface ConcentratedPoolInfoProtoMsg {
 /**
  * ConcentratedPoolInfo contains meta data pertaining to a concentrated pool
  * type.
+ * @name ConcentratedPoolInfoAmino
+ * @package symphony.protorev.v1beta1
+ * @see proto type: symphony.protorev.v1beta1.ConcentratedPoolInfo
  */
 export interface ConcentratedPoolInfoAmino {
-  /** The weight of a concentrated pool */
+  /**
+   * The weight of a concentrated pool
+   */
   weight?: string;
-  /** The maximum number of ticks we can move when rebalancing */
+  /**
+   * The maximum number of ticks we can move when rebalancing
+   */
   max_ticks_crossed?: string;
 }
 export interface ConcentratedPoolInfoAminoMsg {
@@ -359,41 +547,70 @@ export interface ConcentratedPoolInfoAminoMsg {
 /**
  * ConcentratedPoolInfo contains meta data pertaining to a concentrated pool
  * type.
+ * @name ConcentratedPoolInfoSDKType
+ * @package symphony.protorev.v1beta1
+ * @see proto type: symphony.protorev.v1beta1.ConcentratedPoolInfo
  */
 export interface ConcentratedPoolInfoSDKType {
   weight: bigint;
   max_ticks_crossed: bigint;
 }
-/** CosmwasmPoolInfo contains meta data pertaining to a cosmwasm pool type. */
+/**
+ * CosmwasmPoolInfo contains meta data pertaining to a cosmwasm pool type.
+ * @name CosmwasmPoolInfo
+ * @package symphony.protorev.v1beta1
+ * @see proto type: symphony.protorev.v1beta1.CosmwasmPoolInfo
+ */
 export interface CosmwasmPoolInfo {
-  /** The weight of a cosmwasm pool (by contract address) */
+  /**
+   * The weight of a cosmwasm pool (by contract address)
+   */
   weightMaps: WeightMap[];
 }
 export interface CosmwasmPoolInfoProtoMsg {
   typeUrl: '/symphony.protorev.v1beta1.CosmwasmPoolInfo';
   value: Uint8Array;
 }
-/** CosmwasmPoolInfo contains meta data pertaining to a cosmwasm pool type. */
+/**
+ * CosmwasmPoolInfo contains meta data pertaining to a cosmwasm pool type.
+ * @name CosmwasmPoolInfoAmino
+ * @package symphony.protorev.v1beta1
+ * @see proto type: symphony.protorev.v1beta1.CosmwasmPoolInfo
+ */
 export interface CosmwasmPoolInfoAmino {
-  /** The weight of a cosmwasm pool (by contract address) */
+  /**
+   * The weight of a cosmwasm pool (by contract address)
+   */
   weight_maps?: WeightMapAmino[];
 }
 export interface CosmwasmPoolInfoAminoMsg {
   type: '/symphony.protorev.v1beta1.CosmwasmPoolInfo';
   value: CosmwasmPoolInfoAmino;
 }
-/** CosmwasmPoolInfo contains meta data pertaining to a cosmwasm pool type. */
+/**
+ * CosmwasmPoolInfo contains meta data pertaining to a cosmwasm pool type.
+ * @name CosmwasmPoolInfoSDKType
+ * @package symphony.protorev.v1beta1
+ * @see proto type: symphony.protorev.v1beta1.CosmwasmPoolInfo
+ */
 export interface CosmwasmPoolInfoSDKType {
   weight_maps: WeightMapSDKType[];
 }
 /**
  * WeightMap maps a contract address to a weight. The weight of an address
  * corresponds to the amount of ms required to execute a swap on that contract.
+ * @name WeightMap
+ * @package symphony.protorev.v1beta1
+ * @see proto type: symphony.protorev.v1beta1.WeightMap
  */
 export interface WeightMap {
-  /** The weight of a cosmwasm pool (by contract address) */
+  /**
+   * The weight of a cosmwasm pool (by contract address)
+   */
   weight: bigint;
-  /** The contract address */
+  /**
+   * The contract address
+   */
   contractAddress: string;
 }
 export interface WeightMapProtoMsg {
@@ -403,11 +620,18 @@ export interface WeightMapProtoMsg {
 /**
  * WeightMap maps a contract address to a weight. The weight of an address
  * corresponds to the amount of ms required to execute a swap on that contract.
+ * @name WeightMapAmino
+ * @package symphony.protorev.v1beta1
+ * @see proto type: symphony.protorev.v1beta1.WeightMap
  */
 export interface WeightMapAmino {
-  /** The weight of a cosmwasm pool (by contract address) */
+  /**
+   * The weight of a cosmwasm pool (by contract address)
+   */
   weight?: string;
-  /** The contract address */
+  /**
+   * The contract address
+   */
   contract_address?: string;
 }
 export interface WeightMapAminoMsg {
@@ -417,6 +641,9 @@ export interface WeightMapAminoMsg {
 /**
  * WeightMap maps a contract address to a weight. The weight of an address
  * corresponds to the amount of ms required to execute a swap on that contract.
+ * @name WeightMapSDKType
+ * @package symphony.protorev.v1beta1
+ * @see proto type: symphony.protorev.v1beta1.WeightMap
  */
 export interface WeightMapSDKType {
   weight: bigint;
@@ -426,9 +653,14 @@ export interface WeightMapSDKType {
  * BaseDenom represents a single base denom that the module uses for its
  * arbitrage trades. It contains the denom name alongside the step size of the
  * binary search that is used to find the optimal swap amount
+ * @name BaseDenom
+ * @package symphony.protorev.v1beta1
+ * @see proto type: symphony.protorev.v1beta1.BaseDenom
  */
 export interface BaseDenom {
-  /** The denom i.e. name of the base denom (ex. uosmo) */
+  /**
+   * The denom i.e. name of the base denom (ex. uosmo)
+   */
   denom: string;
   /**
    * The step size of the binary search that is used to find the optimal swap
@@ -444,9 +676,14 @@ export interface BaseDenomProtoMsg {
  * BaseDenom represents a single base denom that the module uses for its
  * arbitrage trades. It contains the denom name alongside the step size of the
  * binary search that is used to find the optimal swap amount
+ * @name BaseDenomAmino
+ * @package symphony.protorev.v1beta1
+ * @see proto type: symphony.protorev.v1beta1.BaseDenom
  */
 export interface BaseDenomAmino {
-  /** The denom i.e. name of the base denom (ex. uosmo) */
+  /**
+   * The denom i.e. name of the base denom (ex. uosmo)
+   */
   denom?: string;
   /**
    * The step size of the binary search that is used to find the optimal swap
@@ -462,6 +699,9 @@ export interface BaseDenomAminoMsg {
  * BaseDenom represents a single base denom that the module uses for its
  * arbitrage trades. It contains the denom name alongside the step size of the
  * binary search that is used to find the optimal swap amount
+ * @name BaseDenomSDKType
+ * @package symphony.protorev.v1beta1
+ * @see proto type: symphony.protorev.v1beta1.BaseDenom
  */
 export interface BaseDenomSDKType {
   denom: string;
@@ -470,6 +710,9 @@ export interface BaseDenomSDKType {
 /**
  * BaseDenoms represents all of the base denoms that the module uses for its
  * arbitrage trades.
+ * @name BaseDenoms
+ * @package symphony.protorev.v1beta1
+ * @see proto type: symphony.protorev.v1beta1.BaseDenoms
  */
 export interface BaseDenoms {
   baseDenoms: BaseDenom[];
@@ -481,6 +724,9 @@ export interface BaseDenomsProtoMsg {
 /**
  * BaseDenoms represents all of the base denoms that the module uses for its
  * arbitrage trades.
+ * @name BaseDenomsAmino
+ * @package symphony.protorev.v1beta1
+ * @see proto type: symphony.protorev.v1beta1.BaseDenoms
  */
 export interface BaseDenomsAmino {
   base_denoms?: BaseDenomAmino[];
@@ -492,14 +738,24 @@ export interface BaseDenomsAminoMsg {
 /**
  * BaseDenoms represents all of the base denoms that the module uses for its
  * arbitrage trades.
+ * @name BaseDenomsSDKType
+ * @package symphony.protorev.v1beta1
+ * @see proto type: symphony.protorev.v1beta1.BaseDenoms
  */
 export interface BaseDenomsSDKType {
   base_denoms: BaseDenomSDKType[];
 }
+/**
+ * @name AllProtocolRevenue
+ * @package symphony.protorev.v1beta1
+ * @see proto type: symphony.protorev.v1beta1.AllProtocolRevenue
+ */
 export interface AllProtocolRevenue {
   takerFeesTracker: TakerFeesTracker;
-  /** DEPRECATED */
-  /** @deprecated */
+  /**
+   * DEPRECATED
+   * @deprecated
+   */
   txFeesTracker?: TxFeesTracker;
   cyclicArbTracker: CyclicArbTracker;
 }
@@ -507,10 +763,17 @@ export interface AllProtocolRevenueProtoMsg {
   typeUrl: '/symphony.protorev.v1beta1.AllProtocolRevenue';
   value: Uint8Array;
 }
+/**
+ * @name AllProtocolRevenueAmino
+ * @package symphony.protorev.v1beta1
+ * @see proto type: symphony.protorev.v1beta1.AllProtocolRevenue
+ */
 export interface AllProtocolRevenueAmino {
   taker_fees_tracker?: TakerFeesTrackerAmino;
-  /** DEPRECATED */
-  /** @deprecated */
+  /**
+   * DEPRECATED
+   * @deprecated
+   */
   tx_fees_tracker?: TxFeesTrackerAmino;
   cyclic_arb_tracker?: CyclicArbTrackerAmino;
 }
@@ -518,12 +781,24 @@ export interface AllProtocolRevenueAminoMsg {
   type: '/symphony.protorev.v1beta1.AllProtocolRevenue';
   value: AllProtocolRevenueAmino;
 }
+/**
+ * @name AllProtocolRevenueSDKType
+ * @package symphony.protorev.v1beta1
+ * @see proto type: symphony.protorev.v1beta1.AllProtocolRevenue
+ */
 export interface AllProtocolRevenueSDKType {
   taker_fees_tracker: TakerFeesTrackerSDKType;
-  /** @deprecated */
+  /**
+   * @deprecated
+   */
   tx_fees_tracker?: TxFeesTrackerSDKType;
   cyclic_arb_tracker: CyclicArbTrackerSDKType;
 }
+/**
+ * @name CyclicArbTracker
+ * @package symphony.protorev.v1beta1
+ * @see proto type: symphony.protorev.v1beta1.CyclicArbTracker
+ */
 export interface CyclicArbTracker {
   cyclicArb: Coin[];
   heightAccountingStartsFrom: bigint;
@@ -532,6 +807,11 @@ export interface CyclicArbTrackerProtoMsg {
   typeUrl: '/symphony.protorev.v1beta1.CyclicArbTracker';
   value: Uint8Array;
 }
+/**
+ * @name CyclicArbTrackerAmino
+ * @package symphony.protorev.v1beta1
+ * @see proto type: symphony.protorev.v1beta1.CyclicArbTracker
+ */
 export interface CyclicArbTrackerAmino {
   cyclic_arb?: CoinAmino[];
   height_accounting_starts_from?: string;
@@ -540,6 +820,11 @@ export interface CyclicArbTrackerAminoMsg {
   type: '/symphony.protorev.v1beta1.CyclicArbTracker';
   value: CyclicArbTrackerAmino;
 }
+/**
+ * @name CyclicArbTrackerSDKType
+ * @package symphony.protorev.v1beta1
+ * @see proto type: symphony.protorev.v1beta1.CyclicArbTracker
+ */
 export interface CyclicArbTrackerSDKType {
   cyclic_arb: CoinSDKType[];
   height_accounting_starts_from: bigint;
@@ -551,6 +836,12 @@ function createBaseTokenPairArbRoutes(): TokenPairArbRoutes {
     tokenOut: '',
   };
 }
+/**
+ * TokenPairArbRoutes tracks all of the hot routes for a given pair of tokens
+ * @name TokenPairArbRoutes
+ * @package symphony.protorev.v1beta1
+ * @see proto type: symphony.protorev.v1beta1.TokenPairArbRoutes
+ */
 export const TokenPairArbRoutes = {
   typeUrl: '/symphony.protorev.v1beta1.TokenPairArbRoutes',
   is(o: any): o is TokenPairArbRoutes {
@@ -679,6 +970,12 @@ function createBaseRoute(): Route {
     stepSize: '',
   };
 }
+/**
+ * Route is a hot route for a given pair of tokens
+ * @name Route
+ * @package symphony.protorev.v1beta1
+ * @see proto type: symphony.protorev.v1beta1.Route
+ */
 export const Route = {
   typeUrl: '/symphony.protorev.v1beta1.Route',
   is(o: any): o is Route {
@@ -789,6 +1086,12 @@ function createBaseTrade(): Trade {
     tokenOut: '',
   };
 }
+/**
+ * Trade is a single trade in a route
+ * @name Trade
+ * @package symphony.protorev.v1beta1
+ * @see proto type: symphony.protorev.v1beta1.Trade
+ */
 export const Trade = {
   typeUrl: '/symphony.protorev.v1beta1.Trade',
   is(o: any): o is Trade {
@@ -912,6 +1215,13 @@ function createBaseRouteStatistics(): RouteStatistics {
     route: [],
   };
 }
+/**
+ * RouteStatistics contains the number of trades the module has executed after a
+ * swap on a given route and the profits from the trades
+ * @name RouteStatistics
+ * @package symphony.protorev.v1beta1
+ * @see proto type: symphony.protorev.v1beta1.RouteStatistics
+ */
 export const RouteStatistics = {
   typeUrl: '/symphony.protorev.v1beta1.RouteStatistics',
   is(o: any): o is RouteStatistics {
@@ -1055,6 +1365,19 @@ function createBasePoolWeights(): PoolWeights {
     cosmwasmWeight: BigInt(0),
   };
 }
+/**
+ * PoolWeights contains the weights of all of the different pool types. This
+ * distinction is made and necessary because the execution time ranges
+ * significantly between the different pool types. Each weight roughly
+ * corresponds to the amount of time (in ms) it takes to execute a swap on that
+ * pool type.
+ *
+ * DEPRECATED: This field is deprecated and will be removed in the next
+ * release. It is replaced by the `info_by_pool_type` field.
+ * @name PoolWeights
+ * @package symphony.protorev.v1beta1
+ * @see proto type: symphony.protorev.v1beta1.PoolWeights
+ */
 export const PoolWeights = {
   typeUrl: '/symphony.protorev.v1beta1.PoolWeights',
   is(o: any): o is PoolWeights {
@@ -1223,6 +1546,15 @@ function createBaseInfoByPoolType(): InfoByPoolType {
     cosmwasm: CosmwasmPoolInfo.fromPartial({}),
   };
 }
+/**
+ * InfoByPoolType contains information pertaining to how expensive (in terms of
+ * gas and time) it is to execute a swap on a given pool type. This distinction
+ * is made and necessary because the execution time ranges significantly between
+ * the different pool types.
+ * @name InfoByPoolType
+ * @package symphony.protorev.v1beta1
+ * @see proto type: symphony.protorev.v1beta1.InfoByPoolType
+ */
 export const InfoByPoolType = {
   typeUrl: '/symphony.protorev.v1beta1.InfoByPoolType',
   is(o: any): o is InfoByPoolType {
@@ -1388,6 +1720,12 @@ function createBaseStablePoolInfo(): StablePoolInfo {
     weight: BigInt(0),
   };
 }
+/**
+ * StablePoolInfo contains meta data pertaining to a stableswap pool type.
+ * @name StablePoolInfo
+ * @package symphony.protorev.v1beta1
+ * @see proto type: symphony.protorev.v1beta1.StablePoolInfo
+ */
 export const StablePoolInfo = {
   typeUrl: '/symphony.protorev.v1beta1.StablePoolInfo',
   is(o: any): o is StablePoolInfo {
@@ -1478,6 +1816,12 @@ function createBaseBalancerPoolInfo(): BalancerPoolInfo {
     weight: BigInt(0),
   };
 }
+/**
+ * BalancerPoolInfo contains meta data pertaining to a balancer pool type.
+ * @name BalancerPoolInfo
+ * @package symphony.protorev.v1beta1
+ * @see proto type: symphony.protorev.v1beta1.BalancerPoolInfo
+ */
 export const BalancerPoolInfo = {
   typeUrl: '/symphony.protorev.v1beta1.BalancerPoolInfo',
   is(o: any): o is BalancerPoolInfo {
@@ -1569,6 +1913,13 @@ function createBaseConcentratedPoolInfo(): ConcentratedPoolInfo {
     maxTicksCrossed: BigInt(0),
   };
 }
+/**
+ * ConcentratedPoolInfo contains meta data pertaining to a concentrated pool
+ * type.
+ * @name ConcentratedPoolInfo
+ * @package symphony.protorev.v1beta1
+ * @see proto type: symphony.protorev.v1beta1.ConcentratedPoolInfo
+ */
 export const ConcentratedPoolInfo = {
   typeUrl: '/symphony.protorev.v1beta1.ConcentratedPoolInfo',
   is(o: any): o is ConcentratedPoolInfo {
@@ -1690,6 +2041,12 @@ function createBaseCosmwasmPoolInfo(): CosmwasmPoolInfo {
     weightMaps: [],
   };
 }
+/**
+ * CosmwasmPoolInfo contains meta data pertaining to a cosmwasm pool type.
+ * @name CosmwasmPoolInfo
+ * @package symphony.protorev.v1beta1
+ * @see proto type: symphony.protorev.v1beta1.CosmwasmPoolInfo
+ */
 export const CosmwasmPoolInfo = {
   typeUrl: '/symphony.protorev.v1beta1.CosmwasmPoolInfo',
   is(o: any): o is CosmwasmPoolInfo {
@@ -1789,6 +2146,13 @@ function createBaseWeightMap(): WeightMap {
     contractAddress: '',
   };
 }
+/**
+ * WeightMap maps a contract address to a weight. The weight of an address
+ * corresponds to the amount of ms required to execute a swap on that contract.
+ * @name WeightMap
+ * @package symphony.protorev.v1beta1
+ * @see proto type: symphony.protorev.v1beta1.WeightMap
+ */
 export const WeightMap = {
   typeUrl: '/symphony.protorev.v1beta1.WeightMap',
   is(o: any): o is WeightMap {
@@ -1900,6 +2264,14 @@ function createBaseBaseDenom(): BaseDenom {
     stepSize: '',
   };
 }
+/**
+ * BaseDenom represents a single base denom that the module uses for its
+ * arbitrage trades. It contains the denom name alongside the step size of the
+ * binary search that is used to find the optimal swap amount
+ * @name BaseDenom
+ * @package symphony.protorev.v1beta1
+ * @see proto type: symphony.protorev.v1beta1.BaseDenom
+ */
 export const BaseDenom = {
   typeUrl: '/symphony.protorev.v1beta1.BaseDenom',
   is(o: any): o is BaseDenom {
@@ -2000,6 +2372,13 @@ function createBaseBaseDenoms(): BaseDenoms {
     baseDenoms: [],
   };
 }
+/**
+ * BaseDenoms represents all of the base denoms that the module uses for its
+ * arbitrage trades.
+ * @name BaseDenoms
+ * @package symphony.protorev.v1beta1
+ * @see proto type: symphony.protorev.v1beta1.BaseDenoms
+ */
 export const BaseDenoms = {
   typeUrl: '/symphony.protorev.v1beta1.BaseDenoms',
   is(o: any): o is BaseDenoms {
@@ -2100,6 +2479,11 @@ function createBaseAllProtocolRevenue(): AllProtocolRevenue {
     cyclicArbTracker: CyclicArbTracker.fromPartial({}),
   };
 }
+/**
+ * @name AllProtocolRevenue
+ * @package symphony.protorev.v1beta1
+ * @see proto type: symphony.protorev.v1beta1.AllProtocolRevenue
+ */
 export const AllProtocolRevenue = {
   typeUrl: '/symphony.protorev.v1beta1.AllProtocolRevenue',
   is(o: any): o is AllProtocolRevenue {
@@ -2261,6 +2645,11 @@ function createBaseCyclicArbTracker(): CyclicArbTracker {
     heightAccountingStartsFrom: BigInt(0),
   };
 }
+/**
+ * @name CyclicArbTracker
+ * @package symphony.protorev.v1beta1
+ * @see proto type: symphony.protorev.v1beta1.CyclicArbTracker
+ */
 export const CyclicArbTracker = {
   typeUrl: '/symphony.protorev.v1beta1.CyclicArbTracker',
   is(o: any): o is CyclicArbTracker {

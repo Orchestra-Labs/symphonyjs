@@ -1,29 +1,52 @@
 //@ts-nocheck
 import { BinaryReader, BinaryWriter } from '../../../binary';
 import { GlobalDecoderRegistry } from '../../../registry';
-/** Params defines the parameters for the module. */
+/**
+ * Params defines the parameters for the module.
+ * @name Params
+ * @package symphony.protorev.v1beta1
+ * @see proto type: symphony.protorev.v1beta1.Params
+ */
 export interface Params {
-  /** Boolean whether the protorev module is enabled. */
+  /**
+   * Boolean whether the protorev module is enabled.
+   */
   enabled: boolean;
-  /** The admin account (settings manager) of the protorev module. */
+  /**
+   * The admin account (settings manager) of the protorev module.
+   */
   admin: string;
 }
 export interface ParamsProtoMsg {
   typeUrl: '/symphony.protorev.v1beta1.Params';
   value: Uint8Array;
 }
-/** Params defines the parameters for the module. */
+/**
+ * Params defines the parameters for the module.
+ * @name ParamsAmino
+ * @package symphony.protorev.v1beta1
+ * @see proto type: symphony.protorev.v1beta1.Params
+ */
 export interface ParamsAmino {
-  /** Boolean whether the protorev module is enabled. */
+  /**
+   * Boolean whether the protorev module is enabled.
+   */
   enabled?: boolean;
-  /** The admin account (settings manager) of the protorev module. */
+  /**
+   * The admin account (settings manager) of the protorev module.
+   */
   admin?: string;
 }
 export interface ParamsAminoMsg {
   type: '/symphony.protorev.v1beta1.Params';
   value: ParamsAmino;
 }
-/** Params defines the parameters for the module. */
+/**
+ * Params defines the parameters for the module.
+ * @name ParamsSDKType
+ * @package symphony.protorev.v1beta1
+ * @see proto type: symphony.protorev.v1beta1.Params
+ */
 export interface ParamsSDKType {
   enabled: boolean;
   admin: string;
@@ -34,6 +57,12 @@ function createBaseParams(): Params {
     admin: '',
   };
 }
+/**
+ * Params defines the parameters for the module.
+ * @name Params
+ * @package symphony.protorev.v1beta1
+ * @see proto type: symphony.protorev.v1beta1.Params
+ */
 export const Params = {
   typeUrl: '/symphony.protorev.v1beta1.Params',
   is(o: any): o is Params {

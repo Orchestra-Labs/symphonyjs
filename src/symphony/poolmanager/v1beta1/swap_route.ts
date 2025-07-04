@@ -1,6 +1,11 @@
 //@ts-nocheck
 import { BinaryReader, BinaryWriter } from '../../../binary';
 import { GlobalDecoderRegistry } from '../../../registry';
+/**
+ * @name SwapAmountInRoute
+ * @package symphony.poolmanager.v1beta1
+ * @see proto type: symphony.poolmanager.v1beta1.SwapAmountInRoute
+ */
 export interface SwapAmountInRoute {
   poolId: bigint;
   tokenOutDenom: string;
@@ -9,6 +14,11 @@ export interface SwapAmountInRouteProtoMsg {
   typeUrl: '/symphony.poolmanager.v1beta1.SwapAmountInRoute';
   value: Uint8Array;
 }
+/**
+ * @name SwapAmountInRouteAmino
+ * @package symphony.poolmanager.v1beta1
+ * @see proto type: symphony.poolmanager.v1beta1.SwapAmountInRoute
+ */
 export interface SwapAmountInRouteAmino {
   pool_id?: string;
   token_out_denom?: string;
@@ -17,10 +27,20 @@ export interface SwapAmountInRouteAminoMsg {
   type: '/symphony.poolmanager.v1beta1.SwapAmountInRoute';
   value: SwapAmountInRouteAmino;
 }
+/**
+ * @name SwapAmountInRouteSDKType
+ * @package symphony.poolmanager.v1beta1
+ * @see proto type: symphony.poolmanager.v1beta1.SwapAmountInRoute
+ */
 export interface SwapAmountInRouteSDKType {
   pool_id: bigint;
   token_out_denom: string;
 }
+/**
+ * @name SwapAmountOutRoute
+ * @package symphony.poolmanager.v1beta1
+ * @see proto type: symphony.poolmanager.v1beta1.SwapAmountOutRoute
+ */
 export interface SwapAmountOutRoute {
   poolId: bigint;
   tokenInDenom: string;
@@ -29,6 +49,11 @@ export interface SwapAmountOutRouteProtoMsg {
   typeUrl: '/symphony.poolmanager.v1beta1.SwapAmountOutRoute';
   value: Uint8Array;
 }
+/**
+ * @name SwapAmountOutRouteAmino
+ * @package symphony.poolmanager.v1beta1
+ * @see proto type: symphony.poolmanager.v1beta1.SwapAmountOutRoute
+ */
 export interface SwapAmountOutRouteAmino {
   pool_id?: string;
   token_in_denom?: string;
@@ -37,10 +62,20 @@ export interface SwapAmountOutRouteAminoMsg {
   type: '/symphony.poolmanager.v1beta1.SwapAmountOutRoute';
   value: SwapAmountOutRouteAmino;
 }
+/**
+ * @name SwapAmountOutRouteSDKType
+ * @package symphony.poolmanager.v1beta1
+ * @see proto type: symphony.poolmanager.v1beta1.SwapAmountOutRoute
+ */
 export interface SwapAmountOutRouteSDKType {
   pool_id: bigint;
   token_in_denom: string;
 }
+/**
+ * @name SwapAmountInSplitRoute
+ * @package symphony.poolmanager.v1beta1
+ * @see proto type: symphony.poolmanager.v1beta1.SwapAmountInSplitRoute
+ */
 export interface SwapAmountInSplitRoute {
   pools: SwapAmountInRoute[];
   tokenInAmount: string;
@@ -49,6 +84,11 @@ export interface SwapAmountInSplitRouteProtoMsg {
   typeUrl: '/symphony.poolmanager.v1beta1.SwapAmountInSplitRoute';
   value: Uint8Array;
 }
+/**
+ * @name SwapAmountInSplitRouteAmino
+ * @package symphony.poolmanager.v1beta1
+ * @see proto type: symphony.poolmanager.v1beta1.SwapAmountInSplitRoute
+ */
 export interface SwapAmountInSplitRouteAmino {
   pools?: SwapAmountInRouteAmino[];
   token_in_amount?: string;
@@ -57,10 +97,20 @@ export interface SwapAmountInSplitRouteAminoMsg {
   type: '/symphony.poolmanager.v1beta1.SwapAmountInSplitRoute';
   value: SwapAmountInSplitRouteAmino;
 }
+/**
+ * @name SwapAmountInSplitRouteSDKType
+ * @package symphony.poolmanager.v1beta1
+ * @see proto type: symphony.poolmanager.v1beta1.SwapAmountInSplitRoute
+ */
 export interface SwapAmountInSplitRouteSDKType {
   pools: SwapAmountInRouteSDKType[];
   token_in_amount: string;
 }
+/**
+ * @name SwapAmountOutSplitRoute
+ * @package symphony.poolmanager.v1beta1
+ * @see proto type: symphony.poolmanager.v1beta1.SwapAmountOutSplitRoute
+ */
 export interface SwapAmountOutSplitRoute {
   pools: SwapAmountOutRoute[];
   tokenOutAmount: string;
@@ -69,6 +119,11 @@ export interface SwapAmountOutSplitRouteProtoMsg {
   typeUrl: '/symphony.poolmanager.v1beta1.SwapAmountOutSplitRoute';
   value: Uint8Array;
 }
+/**
+ * @name SwapAmountOutSplitRouteAmino
+ * @package symphony.poolmanager.v1beta1
+ * @see proto type: symphony.poolmanager.v1beta1.SwapAmountOutSplitRoute
+ */
 export interface SwapAmountOutSplitRouteAmino {
   pools?: SwapAmountOutRouteAmino[];
   token_out_amount?: string;
@@ -77,6 +132,11 @@ export interface SwapAmountOutSplitRouteAminoMsg {
   type: '/symphony.poolmanager.v1beta1.SwapAmountOutSplitRoute';
   value: SwapAmountOutSplitRouteAmino;
 }
+/**
+ * @name SwapAmountOutSplitRouteSDKType
+ * @package symphony.poolmanager.v1beta1
+ * @see proto type: symphony.poolmanager.v1beta1.SwapAmountOutSplitRoute
+ */
 export interface SwapAmountOutSplitRouteSDKType {
   pools: SwapAmountOutRouteSDKType[];
   token_out_amount: string;
@@ -87,6 +147,11 @@ function createBaseSwapAmountInRoute(): SwapAmountInRoute {
     tokenOutDenom: '',
   };
 }
+/**
+ * @name SwapAmountInRoute
+ * @package symphony.poolmanager.v1beta1
+ * @see proto type: symphony.poolmanager.v1beta1.SwapAmountInRoute
+ */
 export const SwapAmountInRoute = {
   typeUrl: '/symphony.poolmanager.v1beta1.SwapAmountInRoute',
   is(o: any): o is SwapAmountInRoute {
@@ -198,6 +263,11 @@ function createBaseSwapAmountOutRoute(): SwapAmountOutRoute {
     tokenInDenom: '',
   };
 }
+/**
+ * @name SwapAmountOutRoute
+ * @package symphony.poolmanager.v1beta1
+ * @see proto type: symphony.poolmanager.v1beta1.SwapAmountOutRoute
+ */
 export const SwapAmountOutRoute = {
   typeUrl: '/symphony.poolmanager.v1beta1.SwapAmountOutRoute',
   is(o: any): o is SwapAmountOutRoute {
@@ -307,6 +377,11 @@ function createBaseSwapAmountInSplitRoute(): SwapAmountInSplitRoute {
     tokenInAmount: '',
   };
 }
+/**
+ * @name SwapAmountInSplitRoute
+ * @package symphony.poolmanager.v1beta1
+ * @see proto type: symphony.poolmanager.v1beta1.SwapAmountInSplitRoute
+ */
 export const SwapAmountInSplitRoute = {
   typeUrl: '/symphony.poolmanager.v1beta1.SwapAmountInSplitRoute',
   is(o: any): o is SwapAmountInSplitRoute {
@@ -432,6 +507,11 @@ function createBaseSwapAmountOutSplitRoute(): SwapAmountOutSplitRoute {
     tokenOutAmount: '',
   };
 }
+/**
+ * @name SwapAmountOutSplitRoute
+ * @package symphony.poolmanager.v1beta1
+ * @see proto type: symphony.poolmanager.v1beta1.SwapAmountOutSplitRoute
+ */
 export const SwapAmountOutSplitRoute = {
   typeUrl: '/symphony.poolmanager.v1beta1.SwapAmountOutSplitRoute',
   is(o: any): o is SwapAmountOutSplitRoute {

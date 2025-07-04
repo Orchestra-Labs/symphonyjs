@@ -7,7 +7,12 @@ import {
 } from '../../google/protobuf/duration';
 import { BinaryReader, BinaryWriter } from '../../binary';
 import { GlobalDecoderRegistry } from '../../registry';
-/** Params holds parameters for the incentives module */
+/**
+ * Params holds parameters for the incentives module
+ * @name Params
+ * @package symphony.incentives
+ * @see proto type: symphony.incentives.Params
+ */
 export interface Params {
   /**
    * distr_epoch_identifier is what epoch type distribution will be triggered by
@@ -53,7 +58,12 @@ export interface ParamsProtoMsg {
   typeUrl: '/symphony.incentives.Params';
   value: Uint8Array;
 }
-/** Params holds parameters for the incentives module */
+/**
+ * Params holds parameters for the incentives module
+ * @name ParamsAmino
+ * @package symphony.incentives
+ * @see proto type: symphony.incentives.Params
+ */
 export interface ParamsAmino {
   /**
    * distr_epoch_identifier is what epoch type distribution will be triggered by
@@ -99,7 +109,12 @@ export interface ParamsAminoMsg {
   type: '/symphony.incentives.Params';
   value: ParamsAmino;
 }
-/** Params holds parameters for the incentives module */
+/**
+ * Params holds parameters for the incentives module
+ * @name ParamsSDKType
+ * @package symphony.incentives
+ * @see proto type: symphony.incentives.Params
+ */
 export interface ParamsSDKType {
   distr_epoch_identifier: string;
   group_creation_fee: CoinSDKType[];
@@ -116,6 +131,12 @@ function createBaseParams(): Params {
     minValueForDistribution: Coin.fromPartial({}),
   };
 }
+/**
+ * Params holds parameters for the incentives module
+ * @name Params
+ * @package symphony.incentives
+ * @see proto type: symphony.incentives.Params
+ */
 export const Params = {
   typeUrl: '/symphony.incentives.Params',
   is(o: any): o is Params {

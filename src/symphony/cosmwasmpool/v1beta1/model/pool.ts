@@ -19,6 +19,9 @@ import { GlobalDecoderRegistry } from '../../../../registry';
  * on the Pool struct. The reason why we cannot have a Pool struct only is
  * because it cannot be serialized into state due to having a non-serializable
  * wasmKeeper field.
+ * @name CosmWasmPool
+ * @package symphony.cosmwasmpool.v1beta1
+ * @see proto type: symphony.cosmwasmpool.v1beta1.CosmWasmPool
  */
 export interface CosmWasmPool {
   $typeUrl?: '/symphony.cosmwasmpool.v1beta1.CosmWasmPool';
@@ -48,6 +51,9 @@ export interface CosmWasmPoolProtoMsg {
  * on the Pool struct. The reason why we cannot have a Pool struct only is
  * because it cannot be serialized into state due to having a non-serializable
  * wasmKeeper field.
+ * @name CosmWasmPoolAmino
+ * @package symphony.cosmwasmpool.v1beta1
+ * @see proto type: symphony.cosmwasmpool.v1beta1.CosmWasmPool
  */
 export interface CosmWasmPoolAmino {
   contract_address?: string;
@@ -76,6 +82,9 @@ export interface CosmWasmPoolAminoMsg {
  * on the Pool struct. The reason why we cannot have a Pool struct only is
  * because it cannot be serialized into state due to having a non-serializable
  * wasmKeeper field.
+ * @name CosmWasmPoolSDKType
+ * @package symphony.cosmwasmpool.v1beta1
+ * @see proto type: symphony.cosmwasmpool.v1beta1.CosmWasmPool
  */
 export interface CosmWasmPoolSDKType {
   $typeUrl?: '/symphony.cosmwasmpool.v1beta1.CosmWasmPool';
@@ -93,6 +102,27 @@ function createBaseCosmWasmPool(): CosmWasmPool {
     instantiateMsg: new Uint8Array(),
   };
 }
+/**
+ * CosmWasmPool represents the data serialized into state for each CW pool.
+ *
+ * Note: CW Pool has 2 pool models:
+ * - CosmWasmPool which is a proto-generated store model used for serialization
+ * into state.
+ * - Pool struct that encapsulates the CosmWasmPool and wasmKeeper for calling
+ * the contract.
+ *
+ * CosmWasmPool implements the poolmanager.PoolI interface but it panics on all
+ * methods. The reason is that access to wasmKeeper is required to call the
+ * contract.
+ *
+ * Instead, all interactions and poolmanager.PoolI methods are to be performed
+ * on the Pool struct. The reason why we cannot have a Pool struct only is
+ * because it cannot be serialized into state due to having a non-serializable
+ * wasmKeeper field.
+ * @name CosmWasmPool
+ * @package symphony.cosmwasmpool.v1beta1
+ * @see proto type: symphony.cosmwasmpool.v1beta1.CosmWasmPool
+ */
 export const CosmWasmPool = {
   typeUrl: '/symphony.cosmwasmpool.v1beta1.CosmWasmPool',
   is(o: any): o is CosmWasmPool {

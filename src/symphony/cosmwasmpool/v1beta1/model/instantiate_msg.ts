@@ -1,7 +1,12 @@
 //@ts-nocheck
 import { BinaryReader, BinaryWriter } from '../../../../binary';
 import { GlobalDecoderRegistry } from '../../../../registry';
-/** ===================== InstantiateMsg */
+/**
+ * ===================== InstantiateMsg
+ * @name InstantiateMsg
+ * @package symphony.cosmwasmpool.v1beta1
+ * @see proto type: symphony.cosmwasmpool.v1beta1.InstantiateMsg
+ */
 export interface InstantiateMsg {
   /**
    * pool_asset_denoms is the list of asset denoms that are initialized
@@ -13,7 +18,12 @@ export interface InstantiateMsgProtoMsg {
   typeUrl: '/symphony.cosmwasmpool.v1beta1.InstantiateMsg';
   value: Uint8Array;
 }
-/** ===================== InstantiateMsg */
+/**
+ * ===================== InstantiateMsg
+ * @name InstantiateMsgAmino
+ * @package symphony.cosmwasmpool.v1beta1
+ * @see proto type: symphony.cosmwasmpool.v1beta1.InstantiateMsg
+ */
 export interface InstantiateMsgAmino {
   /**
    * pool_asset_denoms is the list of asset denoms that are initialized
@@ -25,7 +35,12 @@ export interface InstantiateMsgAminoMsg {
   type: '/symphony.cosmwasmpool.v1beta1.InstantiateMsg';
   value: InstantiateMsgAmino;
 }
-/** ===================== InstantiateMsg */
+/**
+ * ===================== InstantiateMsg
+ * @name InstantiateMsgSDKType
+ * @package symphony.cosmwasmpool.v1beta1
+ * @see proto type: symphony.cosmwasmpool.v1beta1.InstantiateMsg
+ */
 export interface InstantiateMsgSDKType {
   pool_asset_denoms: string[];
 }
@@ -34,6 +49,12 @@ function createBaseInstantiateMsg(): InstantiateMsg {
     poolAssetDenoms: [],
   };
 }
+/**
+ * ===================== InstantiateMsg
+ * @name InstantiateMsg
+ * @package symphony.cosmwasmpool.v1beta1
+ * @see proto type: symphony.cosmwasmpool.v1beta1.InstantiateMsg
+ */
 export const InstantiateMsg = {
   typeUrl: '/symphony.cosmwasmpool.v1beta1.InstantiateMsg',
   is(o: any): o is InstantiateMsg {

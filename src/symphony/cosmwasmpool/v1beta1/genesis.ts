@@ -22,9 +22,16 @@ import { PoolProtoMsg as Pool3ProtoMsg } from '../../gamm/v1beta1/balancerPool';
 import { PoolSDKType as Pool3SDKType } from '../../gamm/v1beta1/balancerPool';
 import { BinaryReader, BinaryWriter } from '../../../binary';
 import { GlobalDecoderRegistry } from '../../../registry';
-/** GenesisState defines the cosmwasmpool module's genesis state. */
+/**
+ * GenesisState defines the cosmwasmpool module's genesis state.
+ * @name GenesisState
+ * @package symphony.cosmwasmpool.v1beta1
+ * @see proto type: symphony.cosmwasmpool.v1beta1.GenesisState
+ */
 export interface GenesisState {
-  /** params is the container of cosmwasmpool parameters. */
+  /**
+   * params is the container of cosmwasmpool parameters.
+   */
   params: Params;
   pools: (Pool1 | CosmWasmPool | Pool2 | Pool3 | Any)[] | Any[];
 }
@@ -41,9 +48,16 @@ export type GenesisStateEncoded = Omit<GenesisState, 'pools'> & {
     | AnyProtoMsg
   )[];
 };
-/** GenesisState defines the cosmwasmpool module's genesis state. */
+/**
+ * GenesisState defines the cosmwasmpool module's genesis state.
+ * @name GenesisStateAmino
+ * @package symphony.cosmwasmpool.v1beta1
+ * @see proto type: symphony.cosmwasmpool.v1beta1.GenesisState
+ */
 export interface GenesisStateAmino {
-  /** params is the container of cosmwasmpool parameters. */
+  /**
+   * params is the container of cosmwasmpool parameters.
+   */
   params?: ParamsAmino;
   pools?: AnyAmino[];
 }
@@ -51,7 +65,12 @@ export interface GenesisStateAminoMsg {
   type: '/symphony.cosmwasmpool.v1beta1.GenesisState';
   value: GenesisStateAmino;
 }
-/** GenesisState defines the cosmwasmpool module's genesis state. */
+/**
+ * GenesisState defines the cosmwasmpool module's genesis state.
+ * @name GenesisStateSDKType
+ * @package symphony.cosmwasmpool.v1beta1
+ * @see proto type: symphony.cosmwasmpool.v1beta1.GenesisState
+ */
 export interface GenesisStateSDKType {
   params: ParamsSDKType;
   pools: (
@@ -68,6 +87,12 @@ function createBaseGenesisState(): GenesisState {
     pools: [],
   };
 }
+/**
+ * GenesisState defines the cosmwasmpool module's genesis state.
+ * @name GenesisState
+ * @package symphony.cosmwasmpool.v1beta1
+ * @see proto type: symphony.cosmwasmpool.v1beta1.GenesisState
+ */
 export const GenesisState = {
   typeUrl: '/symphony.cosmwasmpool.v1beta1.GenesisState',
   is(o: any): o is GenesisState {

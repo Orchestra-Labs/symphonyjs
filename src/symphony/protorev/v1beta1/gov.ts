@@ -4,6 +4,9 @@ import { GlobalDecoderRegistry } from '../../../registry';
 /**
  * SetProtoRevEnabledProposal is a gov Content type to update whether the
  * protorev module is enabled
+ * @name SetProtoRevEnabledProposal
+ * @package symphony.protorev.v1beta1
+ * @see proto type: symphony.protorev.v1beta1.SetProtoRevEnabledProposal
  */
 export interface SetProtoRevEnabledProposal {
   $typeUrl?: '/symphony.protorev.v1beta1.SetProtoRevEnabledProposal';
@@ -18,6 +21,9 @@ export interface SetProtoRevEnabledProposalProtoMsg {
 /**
  * SetProtoRevEnabledProposal is a gov Content type to update whether the
  * protorev module is enabled
+ * @name SetProtoRevEnabledProposalAmino
+ * @package symphony.protorev.v1beta1
+ * @see proto type: symphony.protorev.v1beta1.SetProtoRevEnabledProposal
  */
 export interface SetProtoRevEnabledProposalAmino {
   title?: string;
@@ -31,6 +37,9 @@ export interface SetProtoRevEnabledProposalAminoMsg {
 /**
  * SetProtoRevEnabledProposal is a gov Content type to update whether the
  * protorev module is enabled
+ * @name SetProtoRevEnabledProposalSDKType
+ * @package symphony.protorev.v1beta1
+ * @see proto type: symphony.protorev.v1beta1.SetProtoRevEnabledProposal
  */
 export interface SetProtoRevEnabledProposalSDKType {
   $typeUrl?: '/symphony.protorev.v1beta1.SetProtoRevEnabledProposal';
@@ -42,6 +51,9 @@ export interface SetProtoRevEnabledProposalSDKType {
  * SetProtoRevAdminAccountProposal is a gov Content type to set the admin
  * account that will receive permissions to alter hot routes and set the
  * developer address that will be receiving a share of profits from the module
+ * @name SetProtoRevAdminAccountProposal
+ * @package symphony.protorev.v1beta1
+ * @see proto type: symphony.protorev.v1beta1.SetProtoRevAdminAccountProposal
  */
 export interface SetProtoRevAdminAccountProposal {
   $typeUrl?: '/symphony.protorev.v1beta1.SetProtoRevAdminAccountProposal';
@@ -57,6 +69,9 @@ export interface SetProtoRevAdminAccountProposalProtoMsg {
  * SetProtoRevAdminAccountProposal is a gov Content type to set the admin
  * account that will receive permissions to alter hot routes and set the
  * developer address that will be receiving a share of profits from the module
+ * @name SetProtoRevAdminAccountProposalAmino
+ * @package symphony.protorev.v1beta1
+ * @see proto type: symphony.protorev.v1beta1.SetProtoRevAdminAccountProposal
  */
 export interface SetProtoRevAdminAccountProposalAmino {
   title?: string;
@@ -71,6 +86,9 @@ export interface SetProtoRevAdminAccountProposalAminoMsg {
  * SetProtoRevAdminAccountProposal is a gov Content type to set the admin
  * account that will receive permissions to alter hot routes and set the
  * developer address that will be receiving a share of profits from the module
+ * @name SetProtoRevAdminAccountProposalSDKType
+ * @package symphony.protorev.v1beta1
+ * @see proto type: symphony.protorev.v1beta1.SetProtoRevAdminAccountProposal
  */
 export interface SetProtoRevAdminAccountProposalSDKType {
   $typeUrl?: '/symphony.protorev.v1beta1.SetProtoRevAdminAccountProposal';
@@ -86,6 +104,13 @@ function createBaseSetProtoRevEnabledProposal(): SetProtoRevEnabledProposal {
     enabled: false,
   };
 }
+/**
+ * SetProtoRevEnabledProposal is a gov Content type to update whether the
+ * protorev module is enabled
+ * @name SetProtoRevEnabledProposal
+ * @package symphony.protorev.v1beta1
+ * @see proto type: symphony.protorev.v1beta1.SetProtoRevEnabledProposal
+ */
 export const SetProtoRevEnabledProposal = {
   typeUrl: '/symphony.protorev.v1beta1.SetProtoRevEnabledProposal',
   aminoType: 'symphony/SetProtoRevEnabledProposal',
@@ -238,6 +263,14 @@ function createBaseSetProtoRevAdminAccountProposal(): SetProtoRevAdminAccountPro
     account: '',
   };
 }
+/**
+ * SetProtoRevAdminAccountProposal is a gov Content type to set the admin
+ * account that will receive permissions to alter hot routes and set the
+ * developer address that will be receiving a share of profits from the module
+ * @name SetProtoRevAdminAccountProposal
+ * @package symphony.protorev.v1beta1
+ * @see proto type: symphony.protorev.v1beta1.SetProtoRevAdminAccountProposal
+ */
 export const SetProtoRevAdminAccountProposal = {
   typeUrl: '/symphony.protorev.v1beta1.SetProtoRevAdminAccountProposal',
   aminoType: 'symphony/SetProtoRevAdminAccountProposal',

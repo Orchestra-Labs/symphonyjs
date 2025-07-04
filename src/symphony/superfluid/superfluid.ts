@@ -51,7 +51,12 @@ export function superfluidAssetTypeToJSON(object: SuperfluidAssetType): string {
       return 'UNRECOGNIZED';
   }
 }
-/** SuperfluidAsset stores the pair of superfluid asset type and denom pair */
+/**
+ * SuperfluidAsset stores the pair of superfluid asset type and denom pair
+ * @name SuperfluidAsset
+ * @package symphony.superfluid
+ * @see proto type: symphony.superfluid.SuperfluidAsset
+ */
 export interface SuperfluidAsset {
   denom: string;
   /**
@@ -64,7 +69,12 @@ export interface SuperfluidAssetProtoMsg {
   typeUrl: '/symphony.superfluid.SuperfluidAsset';
   value: Uint8Array;
 }
-/** SuperfluidAsset stores the pair of superfluid asset type and denom pair */
+/**
+ * SuperfluidAsset stores the pair of superfluid asset type and denom pair
+ * @name SuperfluidAssetAmino
+ * @package symphony.superfluid
+ * @see proto type: symphony.superfluid.SuperfluidAsset
+ */
 export interface SuperfluidAssetAmino {
   denom?: string;
   /**
@@ -77,7 +87,12 @@ export interface SuperfluidAssetAminoMsg {
   type: '/symphony.superfluid.SuperfluidAsset';
   value: SuperfluidAssetAmino;
 }
-/** SuperfluidAsset stores the pair of superfluid asset type and denom pair */
+/**
+ * SuperfluidAsset stores the pair of superfluid asset type and denom pair
+ * @name SuperfluidAssetSDKType
+ * @package symphony.superfluid
+ * @see proto type: symphony.superfluid.SuperfluidAsset
+ */
 export interface SuperfluidAssetSDKType {
   denom: string;
   asset_type: SuperfluidAssetType;
@@ -86,12 +101,19 @@ export interface SuperfluidAssetSDKType {
  * SuperfluidIntermediaryAccount takes the role of intermediary between LP token
  * and OSMO tokens for superfluid staking. The intermediary account is the
  * actual account responsible for delegation, not the validator account itself.
+ * @name SuperfluidIntermediaryAccount
+ * @package symphony.superfluid
+ * @see proto type: symphony.superfluid.SuperfluidIntermediaryAccount
  */
 export interface SuperfluidIntermediaryAccount {
-  /** Denom indicates the denom of the superfluid asset. */
+  /**
+   * Denom indicates the denom of the superfluid asset.
+   */
   denom: string;
   valAddr: string;
-  /** perpetual gauge for rewards distribution */
+  /**
+   * perpetual gauge for rewards distribution
+   */
   gaugeId: bigint;
 }
 export interface SuperfluidIntermediaryAccountProtoMsg {
@@ -102,12 +124,19 @@ export interface SuperfluidIntermediaryAccountProtoMsg {
  * SuperfluidIntermediaryAccount takes the role of intermediary between LP token
  * and OSMO tokens for superfluid staking. The intermediary account is the
  * actual account responsible for delegation, not the validator account itself.
+ * @name SuperfluidIntermediaryAccountAmino
+ * @package symphony.superfluid
+ * @see proto type: symphony.superfluid.SuperfluidIntermediaryAccount
  */
 export interface SuperfluidIntermediaryAccountAmino {
-  /** Denom indicates the denom of the superfluid asset. */
+  /**
+   * Denom indicates the denom of the superfluid asset.
+   */
   denom?: string;
   val_addr?: string;
-  /** perpetual gauge for rewards distribution */
+  /**
+   * perpetual gauge for rewards distribution
+   */
   gauge_id?: string;
 }
 export interface SuperfluidIntermediaryAccountAminoMsg {
@@ -118,6 +147,9 @@ export interface SuperfluidIntermediaryAccountAminoMsg {
  * SuperfluidIntermediaryAccount takes the role of intermediary between LP token
  * and OSMO tokens for superfluid staking. The intermediary account is the
  * actual account responsible for delegation, not the validator account itself.
+ * @name SuperfluidIntermediaryAccountSDKType
+ * @package symphony.superfluid
+ * @see proto type: symphony.superfluid.SuperfluidIntermediaryAccount
  */
 export interface SuperfluidIntermediaryAccountSDKType {
   denom: string;
@@ -132,10 +164,15 @@ export interface SuperfluidIntermediaryAccountSDKType {
  * prior epochs rewards) However for now, this is not the TWAP but instead the
  * spot price at the boundary. For different types of assets in the future, it
  * could change.
+ * @name OsmoEquivalentMultiplierRecord
+ * @package symphony.superfluid
+ * @see proto type: symphony.superfluid.OsmoEquivalentMultiplierRecord
  */
 export interface OsmoEquivalentMultiplierRecord {
   epochNumber: bigint;
-  /** superfluid asset denom, can be LP token or native token */
+  /**
+   * superfluid asset denom, can be LP token or native token
+   */
   denom: string;
   multiplier: string;
 }
@@ -151,10 +188,15 @@ export interface OsmoEquivalentMultiplierRecordProtoMsg {
  * prior epochs rewards) However for now, this is not the TWAP but instead the
  * spot price at the boundary. For different types of assets in the future, it
  * could change.
+ * @name OsmoEquivalentMultiplierRecordAmino
+ * @package symphony.superfluid
+ * @see proto type: symphony.superfluid.OsmoEquivalentMultiplierRecord
  */
 export interface OsmoEquivalentMultiplierRecordAmino {
   epoch_number?: string;
-  /** superfluid asset denom, can be LP token or native token */
+  /**
+   * superfluid asset denom, can be LP token or native token
+   */
   denom?: string;
   multiplier?: string;
 }
@@ -170,6 +212,9 @@ export interface OsmoEquivalentMultiplierRecordAminoMsg {
  * prior epochs rewards) However for now, this is not the TWAP but instead the
  * spot price at the boundary. For different types of assets in the future, it
  * could change.
+ * @name OsmoEquivalentMultiplierRecordSDKType
+ * @package symphony.superfluid
+ * @see proto type: symphony.superfluid.OsmoEquivalentMultiplierRecord
  */
 export interface OsmoEquivalentMultiplierRecordSDKType {
   epoch_number: bigint;
@@ -179,6 +224,9 @@ export interface OsmoEquivalentMultiplierRecordSDKType {
 /**
  * SuperfluidDelegationRecord is a struct used to indicate superfluid
  * delegations of an account in the state machine in a user friendly form.
+ * @name SuperfluidDelegationRecord
+ * @package symphony.superfluid
+ * @see proto type: symphony.superfluid.SuperfluidDelegationRecord
  */
 export interface SuperfluidDelegationRecord {
   delegatorAddress: string;
@@ -193,6 +241,9 @@ export interface SuperfluidDelegationRecordProtoMsg {
 /**
  * SuperfluidDelegationRecord is a struct used to indicate superfluid
  * delegations of an account in the state machine in a user friendly form.
+ * @name SuperfluidDelegationRecordAmino
+ * @package symphony.superfluid
+ * @see proto type: symphony.superfluid.SuperfluidDelegationRecord
  */
 export interface SuperfluidDelegationRecordAmino {
   delegator_address?: string;
@@ -207,6 +258,9 @@ export interface SuperfluidDelegationRecordAminoMsg {
 /**
  * SuperfluidDelegationRecord is a struct used to indicate superfluid
  * delegations of an account in the state machine in a user friendly form.
+ * @name SuperfluidDelegationRecordSDKType
+ * @package symphony.superfluid
+ * @see proto type: symphony.superfluid.SuperfluidDelegationRecord
  */
 export interface SuperfluidDelegationRecordSDKType {
   delegator_address: string;
@@ -218,6 +272,9 @@ export interface SuperfluidDelegationRecordSDKType {
  * LockIdIntermediaryAccountConnection is a struct used to indicate the
  * relationship between the underlying lock id and superfluid delegation done
  * via lp shares.
+ * @name LockIdIntermediaryAccountConnection
+ * @package symphony.superfluid
+ * @see proto type: symphony.superfluid.LockIdIntermediaryAccountConnection
  */
 export interface LockIdIntermediaryAccountConnection {
   lockId: bigint;
@@ -231,6 +288,9 @@ export interface LockIdIntermediaryAccountConnectionProtoMsg {
  * LockIdIntermediaryAccountConnection is a struct used to indicate the
  * relationship between the underlying lock id and superfluid delegation done
  * via lp shares.
+ * @name LockIdIntermediaryAccountConnectionAmino
+ * @package symphony.superfluid
+ * @see proto type: symphony.superfluid.LockIdIntermediaryAccountConnection
  */
 export interface LockIdIntermediaryAccountConnectionAmino {
   lock_id?: string;
@@ -244,11 +304,19 @@ export interface LockIdIntermediaryAccountConnectionAminoMsg {
  * LockIdIntermediaryAccountConnection is a struct used to indicate the
  * relationship between the underlying lock id and superfluid delegation done
  * via lp shares.
+ * @name LockIdIntermediaryAccountConnectionSDKType
+ * @package symphony.superfluid
+ * @see proto type: symphony.superfluid.LockIdIntermediaryAccountConnection
  */
 export interface LockIdIntermediaryAccountConnectionSDKType {
   lock_id: bigint;
   intermediary_account: string;
 }
+/**
+ * @name UnpoolWhitelistedPools
+ * @package symphony.superfluid
+ * @see proto type: symphony.superfluid.UnpoolWhitelistedPools
+ */
 export interface UnpoolWhitelistedPools {
   ids: bigint[];
 }
@@ -256,6 +324,11 @@ export interface UnpoolWhitelistedPoolsProtoMsg {
   typeUrl: '/symphony.superfluid.UnpoolWhitelistedPools';
   value: Uint8Array;
 }
+/**
+ * @name UnpoolWhitelistedPoolsAmino
+ * @package symphony.superfluid
+ * @see proto type: symphony.superfluid.UnpoolWhitelistedPools
+ */
 export interface UnpoolWhitelistedPoolsAmino {
   ids?: string[];
 }
@@ -263,9 +336,19 @@ export interface UnpoolWhitelistedPoolsAminoMsg {
   type: '/symphony.superfluid.UnpoolWhitelistedPools';
   value: UnpoolWhitelistedPoolsAmino;
 }
+/**
+ * @name UnpoolWhitelistedPoolsSDKType
+ * @package symphony.superfluid
+ * @see proto type: symphony.superfluid.UnpoolWhitelistedPools
+ */
 export interface UnpoolWhitelistedPoolsSDKType {
   ids: bigint[];
 }
+/**
+ * @name ConcentratedPoolUserPositionRecord
+ * @package symphony.superfluid
+ * @see proto type: symphony.superfluid.ConcentratedPoolUserPositionRecord
+ */
 export interface ConcentratedPoolUserPositionRecord {
   validatorAddress: string;
   positionId: bigint;
@@ -278,6 +361,11 @@ export interface ConcentratedPoolUserPositionRecordProtoMsg {
   typeUrl: '/symphony.superfluid.ConcentratedPoolUserPositionRecord';
   value: Uint8Array;
 }
+/**
+ * @name ConcentratedPoolUserPositionRecordAmino
+ * @package symphony.superfluid
+ * @see proto type: symphony.superfluid.ConcentratedPoolUserPositionRecord
+ */
 export interface ConcentratedPoolUserPositionRecordAmino {
   validator_address?: string;
   position_id?: string;
@@ -290,6 +378,11 @@ export interface ConcentratedPoolUserPositionRecordAminoMsg {
   type: '/symphony.superfluid.ConcentratedPoolUserPositionRecord';
   value: ConcentratedPoolUserPositionRecordAmino;
 }
+/**
+ * @name ConcentratedPoolUserPositionRecordSDKType
+ * @package symphony.superfluid
+ * @see proto type: symphony.superfluid.ConcentratedPoolUserPositionRecord
+ */
 export interface ConcentratedPoolUserPositionRecordSDKType {
   validator_address: string;
   position_id: bigint;
@@ -304,6 +397,12 @@ function createBaseSuperfluidAsset(): SuperfluidAsset {
     assetType: 0,
   };
 }
+/**
+ * SuperfluidAsset stores the pair of superfluid asset type and denom pair
+ * @name SuperfluidAsset
+ * @package symphony.superfluid
+ * @see proto type: symphony.superfluid.SuperfluidAsset
+ */
 export const SuperfluidAsset = {
   typeUrl: '/symphony.superfluid.SuperfluidAsset',
   is(o: any): o is SuperfluidAsset {
@@ -406,6 +505,14 @@ function createBaseSuperfluidIntermediaryAccount(): SuperfluidIntermediaryAccoun
     gaugeId: BigInt(0),
   };
 }
+/**
+ * SuperfluidIntermediaryAccount takes the role of intermediary between LP token
+ * and OSMO tokens for superfluid staking. The intermediary account is the
+ * actual account responsible for delegation, not the validator account itself.
+ * @name SuperfluidIntermediaryAccount
+ * @package symphony.superfluid
+ * @see proto type: symphony.superfluid.SuperfluidIntermediaryAccount
+ */
 export const SuperfluidIntermediaryAccount = {
   typeUrl: '/symphony.superfluid.SuperfluidIntermediaryAccount',
   is(o: any): o is SuperfluidIntermediaryAccount {
@@ -547,6 +654,18 @@ function createBaseOsmoEquivalentMultiplierRecord(): OsmoEquivalentMultiplierRec
     multiplier: '',
   };
 }
+/**
+ * The Osmo-Equivalent-Multiplier Record for epoch N refers to the osmo worth we
+ * treat an LP share as having, for all of epoch N. Eventually this is intended
+ * to be set as the Time-weighted-average-osmo-backing for the entire duration
+ * of epoch N-1. (Thereby locking what's in use for epoch N as based on the
+ * prior epochs rewards) However for now, this is not the TWAP but instead the
+ * spot price at the boundary. For different types of assets in the future, it
+ * could change.
+ * @name OsmoEquivalentMultiplierRecord
+ * @package symphony.superfluid
+ * @see proto type: symphony.superfluid.OsmoEquivalentMultiplierRecord
+ */
 export const OsmoEquivalentMultiplierRecord = {
   typeUrl: '/symphony.superfluid.OsmoEquivalentMultiplierRecord',
   is(o: any): o is OsmoEquivalentMultiplierRecord {
@@ -696,6 +815,13 @@ function createBaseSuperfluidDelegationRecord(): SuperfluidDelegationRecord {
     equivalentStakedAmount: undefined,
   };
 }
+/**
+ * SuperfluidDelegationRecord is a struct used to indicate superfluid
+ * delegations of an account in the state machine in a user friendly form.
+ * @name SuperfluidDelegationRecord
+ * @package symphony.superfluid
+ * @see proto type: symphony.superfluid.SuperfluidDelegationRecord
+ */
 export const SuperfluidDelegationRecord = {
   typeUrl: '/symphony.superfluid.SuperfluidDelegationRecord',
   is(o: any): o is SuperfluidDelegationRecord {
@@ -873,6 +999,14 @@ function createBaseLockIdIntermediaryAccountConnection(): LockIdIntermediaryAcco
     intermediaryAccount: '',
   };
 }
+/**
+ * LockIdIntermediaryAccountConnection is a struct used to indicate the
+ * relationship between the underlying lock id and superfluid delegation done
+ * via lp shares.
+ * @name LockIdIntermediaryAccountConnection
+ * @package symphony.superfluid
+ * @see proto type: symphony.superfluid.LockIdIntermediaryAccountConnection
+ */
 export const LockIdIntermediaryAccountConnection = {
   typeUrl: '/symphony.superfluid.LockIdIntermediaryAccountConnection',
   is(o: any): o is LockIdIntermediaryAccountConnection {
@@ -1004,6 +1138,11 @@ function createBaseUnpoolWhitelistedPools(): UnpoolWhitelistedPools {
     ids: [],
   };
 }
+/**
+ * @name UnpoolWhitelistedPools
+ * @package symphony.superfluid
+ * @see proto type: symphony.superfluid.UnpoolWhitelistedPools
+ */
 export const UnpoolWhitelistedPools = {
   typeUrl: '/symphony.superfluid.UnpoolWhitelistedPools',
   is(o: any): o is UnpoolWhitelistedPools {
@@ -1120,6 +1259,11 @@ function createBaseConcentratedPoolUserPositionRecord(): ConcentratedPoolUserPos
     equivalentStakedAmount: undefined,
   };
 }
+/**
+ * @name ConcentratedPoolUserPositionRecord
+ * @package symphony.superfluid
+ * @see proto type: symphony.superfluid.ConcentratedPoolUserPositionRecord
+ */
 export const ConcentratedPoolUserPositionRecord = {
   typeUrl: '/symphony.superfluid.ConcentratedPoolUserPositionRecord',
   is(o: any): o is ConcentratedPoolUserPositionRecord {

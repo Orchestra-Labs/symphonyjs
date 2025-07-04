@@ -9,6 +9,9 @@ import { GlobalDecoderRegistry } from '../../../registry';
 /**
  * SetSuperfluidAssetsProposal is a gov Content type to update the superfluid
  * assets
+ * @name SetSuperfluidAssetsProposal
+ * @package symphony.superfluid.v1beta1
+ * @see proto type: symphony.superfluid.v1beta1.SetSuperfluidAssetsProposal
  */
 export interface SetSuperfluidAssetsProposal {
   $typeUrl?: '/symphony.superfluid.v1beta1.SetSuperfluidAssetsProposal';
@@ -23,6 +26,9 @@ export interface SetSuperfluidAssetsProposalProtoMsg {
 /**
  * SetSuperfluidAssetsProposal is a gov Content type to update the superfluid
  * assets
+ * @name SetSuperfluidAssetsProposalAmino
+ * @package symphony.superfluid.v1beta1
+ * @see proto type: symphony.superfluid.v1beta1.SetSuperfluidAssetsProposal
  */
 export interface SetSuperfluidAssetsProposalAmino {
   title?: string;
@@ -36,6 +42,9 @@ export interface SetSuperfluidAssetsProposalAminoMsg {
 /**
  * SetSuperfluidAssetsProposal is a gov Content type to update the superfluid
  * assets
+ * @name SetSuperfluidAssetsProposalSDKType
+ * @package symphony.superfluid.v1beta1
+ * @see proto type: symphony.superfluid.v1beta1.SetSuperfluidAssetsProposal
  */
 export interface SetSuperfluidAssetsProposalSDKType {
   $typeUrl?: '/symphony.superfluid.v1beta1.SetSuperfluidAssetsProposal';
@@ -46,6 +55,9 @@ export interface SetSuperfluidAssetsProposalSDKType {
 /**
  * RemoveSuperfluidAssetsProposal is a gov Content type to remove the superfluid
  * assets by denom
+ * @name RemoveSuperfluidAssetsProposal
+ * @package symphony.superfluid.v1beta1
+ * @see proto type: symphony.superfluid.v1beta1.RemoveSuperfluidAssetsProposal
  */
 export interface RemoveSuperfluidAssetsProposal {
   $typeUrl?: '/symphony.superfluid.v1beta1.RemoveSuperfluidAssetsProposal';
@@ -60,6 +72,9 @@ export interface RemoveSuperfluidAssetsProposalProtoMsg {
 /**
  * RemoveSuperfluidAssetsProposal is a gov Content type to remove the superfluid
  * assets by denom
+ * @name RemoveSuperfluidAssetsProposalAmino
+ * @package symphony.superfluid.v1beta1
+ * @see proto type: symphony.superfluid.v1beta1.RemoveSuperfluidAssetsProposal
  */
 export interface RemoveSuperfluidAssetsProposalAmino {
   title?: string;
@@ -73,6 +88,9 @@ export interface RemoveSuperfluidAssetsProposalAminoMsg {
 /**
  * RemoveSuperfluidAssetsProposal is a gov Content type to remove the superfluid
  * assets by denom
+ * @name RemoveSuperfluidAssetsProposalSDKType
+ * @package symphony.superfluid.v1beta1
+ * @see proto type: symphony.superfluid.v1beta1.RemoveSuperfluidAssetsProposal
  */
 export interface RemoveSuperfluidAssetsProposalSDKType {
   $typeUrl?: '/symphony.superfluid.v1beta1.RemoveSuperfluidAssetsProposal';
@@ -83,6 +101,9 @@ export interface RemoveSuperfluidAssetsProposalSDKType {
 /**
  * UpdateUnpoolWhiteListProposal is a gov Content type to update the
  * allowed list of pool ids.
+ * @name UpdateUnpoolWhiteListProposal
+ * @package symphony.superfluid.v1beta1
+ * @see proto type: symphony.superfluid.v1beta1.UpdateUnpoolWhiteListProposal
  */
 export interface UpdateUnpoolWhiteListProposal {
   $typeUrl?: '/symphony.superfluid.v1beta1.UpdateUnpoolWhiteListProposal';
@@ -98,6 +119,9 @@ export interface UpdateUnpoolWhiteListProposalProtoMsg {
 /**
  * UpdateUnpoolWhiteListProposal is a gov Content type to update the
  * allowed list of pool ids.
+ * @name UpdateUnpoolWhiteListProposalAmino
+ * @package symphony.superfluid.v1beta1
+ * @see proto type: symphony.superfluid.v1beta1.UpdateUnpoolWhiteListProposal
  */
 export interface UpdateUnpoolWhiteListProposalAmino {
   title?: string;
@@ -112,6 +136,9 @@ export interface UpdateUnpoolWhiteListProposalAminoMsg {
 /**
  * UpdateUnpoolWhiteListProposal is a gov Content type to update the
  * allowed list of pool ids.
+ * @name UpdateUnpoolWhiteListProposalSDKType
+ * @package symphony.superfluid.v1beta1
+ * @see proto type: symphony.superfluid.v1beta1.UpdateUnpoolWhiteListProposal
  */
 export interface UpdateUnpoolWhiteListProposalSDKType {
   $typeUrl?: '/symphony.superfluid.v1beta1.UpdateUnpoolWhiteListProposal';
@@ -128,6 +155,13 @@ function createBaseSetSuperfluidAssetsProposal(): SetSuperfluidAssetsProposal {
     assets: [],
   };
 }
+/**
+ * SetSuperfluidAssetsProposal is a gov Content type to update the superfluid
+ * assets
+ * @name SetSuperfluidAssetsProposal
+ * @package symphony.superfluid.v1beta1
+ * @see proto type: symphony.superfluid.v1beta1.SetSuperfluidAssetsProposal
+ */
 export const SetSuperfluidAssetsProposal = {
   typeUrl: '/symphony.superfluid.v1beta1.SetSuperfluidAssetsProposal',
   aminoType: 'symphony/set-superfluid-assets-proposal',
@@ -289,6 +323,13 @@ function createBaseRemoveSuperfluidAssetsProposal(): RemoveSuperfluidAssetsPropo
     superfluidAssetDenoms: [],
   };
 }
+/**
+ * RemoveSuperfluidAssetsProposal is a gov Content type to remove the superfluid
+ * assets by denom
+ * @name RemoveSuperfluidAssetsProposal
+ * @package symphony.superfluid.v1beta1
+ * @see proto type: symphony.superfluid.v1beta1.RemoveSuperfluidAssetsProposal
+ */
 export const RemoveSuperfluidAssetsProposal = {
   typeUrl: '/symphony.superfluid.v1beta1.RemoveSuperfluidAssetsProposal',
   aminoType: 'symphony/del-superfluid-assets-proposal',
@@ -452,6 +493,13 @@ function createBaseUpdateUnpoolWhiteListProposal(): UpdateUnpoolWhiteListProposa
     isOverwrite: false,
   };
 }
+/**
+ * UpdateUnpoolWhiteListProposal is a gov Content type to update the
+ * allowed list of pool ids.
+ * @name UpdateUnpoolWhiteListProposal
+ * @package symphony.superfluid.v1beta1
+ * @see proto type: symphony.superfluid.v1beta1.UpdateUnpoolWhiteListProposal
+ */
 export const UpdateUnpoolWhiteListProposal = {
   typeUrl: '/symphony.superfluid.v1beta1.UpdateUnpoolWhiteListProposal',
   aminoType: 'symphony/update-unpool-whitelist',

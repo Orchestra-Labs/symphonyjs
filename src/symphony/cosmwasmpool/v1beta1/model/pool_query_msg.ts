@@ -7,74 +7,140 @@ import {
 import { BinaryReader, BinaryWriter } from '../../../../binary';
 import { GlobalDecoderRegistry } from '../../../../registry';
 import { Decimal } from '@cosmjs/math';
-/** ===================== GetSwapFeeQueryMsg */
+/**
+ * ===================== GetSwapFeeQueryMsg
+ * @name GetSwapFeeQueryMsg
+ * @package symphony.cosmwasmpool.v1beta1
+ * @see proto type: symphony.cosmwasmpool.v1beta1.GetSwapFeeQueryMsg
+ */
 export interface GetSwapFeeQueryMsg {
-  /** get_swap_fee is the query structure to get swap fee. */
+  /**
+   * get_swap_fee is the query structure to get swap fee.
+   */
   getSwapFee: EmptyStruct;
 }
 export interface GetSwapFeeQueryMsgProtoMsg {
   typeUrl: '/symphony.cosmwasmpool.v1beta1.GetSwapFeeQueryMsg';
   value: Uint8Array;
 }
-/** ===================== GetSwapFeeQueryMsg */
+/**
+ * ===================== GetSwapFeeQueryMsg
+ * @name GetSwapFeeQueryMsgAmino
+ * @package symphony.cosmwasmpool.v1beta1
+ * @see proto type: symphony.cosmwasmpool.v1beta1.GetSwapFeeQueryMsg
+ */
 export interface GetSwapFeeQueryMsgAmino {
-  /** get_swap_fee is the query structure to get swap fee. */
+  /**
+   * get_swap_fee is the query structure to get swap fee.
+   */
   get_swap_fee?: EmptyStructAmino;
 }
 export interface GetSwapFeeQueryMsgAminoMsg {
   type: '/symphony.cosmwasmpool.v1beta1.GetSwapFeeQueryMsg';
   value: GetSwapFeeQueryMsgAmino;
 }
-/** ===================== GetSwapFeeQueryMsg */
+/**
+ * ===================== GetSwapFeeQueryMsg
+ * @name GetSwapFeeQueryMsgSDKType
+ * @package symphony.cosmwasmpool.v1beta1
+ * @see proto type: symphony.cosmwasmpool.v1beta1.GetSwapFeeQueryMsg
+ */
 export interface GetSwapFeeQueryMsgSDKType {
   get_swap_fee: EmptyStructSDKType;
 }
+/**
+ * @name GetSwapFeeQueryMsgResponse
+ * @package symphony.cosmwasmpool.v1beta1
+ * @see proto type: symphony.cosmwasmpool.v1beta1.GetSwapFeeQueryMsgResponse
+ */
 export interface GetSwapFeeQueryMsgResponse {
-  /** swap_fee is the swap fee for this swap estimate. */
+  /**
+   * swap_fee is the swap fee for this swap estimate.
+   */
   swapFee: string;
 }
 export interface GetSwapFeeQueryMsgResponseProtoMsg {
   typeUrl: '/symphony.cosmwasmpool.v1beta1.GetSwapFeeQueryMsgResponse';
   value: Uint8Array;
 }
+/**
+ * @name GetSwapFeeQueryMsgResponseAmino
+ * @package symphony.cosmwasmpool.v1beta1
+ * @see proto type: symphony.cosmwasmpool.v1beta1.GetSwapFeeQueryMsgResponse
+ */
 export interface GetSwapFeeQueryMsgResponseAmino {
-  /** swap_fee is the swap fee for this swap estimate. */
+  /**
+   * swap_fee is the swap fee for this swap estimate.
+   */
   swap_fee?: string;
 }
 export interface GetSwapFeeQueryMsgResponseAminoMsg {
   type: '/symphony.cosmwasmpool.v1beta1.GetSwapFeeQueryMsgResponse';
   value: GetSwapFeeQueryMsgResponseAmino;
 }
+/**
+ * @name GetSwapFeeQueryMsgResponseSDKType
+ * @package symphony.cosmwasmpool.v1beta1
+ * @see proto type: symphony.cosmwasmpool.v1beta1.GetSwapFeeQueryMsgResponse
+ */
 export interface GetSwapFeeQueryMsgResponseSDKType {
   swap_fee: string;
 }
-/** ===================== SpotPriceQueryMsg */
+/**
+ * ===================== SpotPriceQueryMsg
+ * @name SpotPrice
+ * @package symphony.cosmwasmpool.v1beta1
+ * @see proto type: symphony.cosmwasmpool.v1beta1.SpotPrice
+ */
 export interface SpotPrice {
-  /** quote_asset_denom is the quote asset of the spot query. */
+  /**
+   * quote_asset_denom is the quote asset of the spot query.
+   */
   quoteAssetDenom: string;
-  /** base_asset_denom is the base asset of the spot query. */
+  /**
+   * base_asset_denom is the base asset of the spot query.
+   */
   baseAssetDenom: string;
 }
 export interface SpotPriceProtoMsg {
   typeUrl: '/symphony.cosmwasmpool.v1beta1.SpotPrice';
   value: Uint8Array;
 }
-/** ===================== SpotPriceQueryMsg */
+/**
+ * ===================== SpotPriceQueryMsg
+ * @name SpotPriceAmino
+ * @package symphony.cosmwasmpool.v1beta1
+ * @see proto type: symphony.cosmwasmpool.v1beta1.SpotPrice
+ */
 export interface SpotPriceAmino {
-  /** quote_asset_denom is the quote asset of the spot query. */
+  /**
+   * quote_asset_denom is the quote asset of the spot query.
+   */
   quote_asset_denom?: string;
-  /** base_asset_denom is the base asset of the spot query. */
+  /**
+   * base_asset_denom is the base asset of the spot query.
+   */
   base_asset_denom?: string;
 }
 export interface SpotPriceAminoMsg {
   type: '/symphony.cosmwasmpool.v1beta1.SpotPrice';
   value: SpotPriceAmino;
 }
-/** ===================== SpotPriceQueryMsg */
+/**
+ * ===================== SpotPriceQueryMsg
+ * @name SpotPriceSDKType
+ * @package symphony.cosmwasmpool.v1beta1
+ * @see proto type: symphony.cosmwasmpool.v1beta1.SpotPrice
+ */
 export interface SpotPriceSDKType {
   quote_asset_denom: string;
   base_asset_denom: string;
 }
+/**
+ * @name SpotPriceQueryMsg
+ * @package symphony.cosmwasmpool.v1beta1
+ * @see proto type: symphony.cosmwasmpool.v1beta1.SpotPriceQueryMsg
+ */
 export interface SpotPriceQueryMsg {
   /**
    * spot_price is the structure containing request field of the spot price
@@ -86,6 +152,11 @@ export interface SpotPriceQueryMsgProtoMsg {
   typeUrl: '/symphony.cosmwasmpool.v1beta1.SpotPriceQueryMsg';
   value: Uint8Array;
 }
+/**
+ * @name SpotPriceQueryMsgAmino
+ * @package symphony.cosmwasmpool.v1beta1
+ * @see proto type: symphony.cosmwasmpool.v1beta1.SpotPriceQueryMsg
+ */
 export interface SpotPriceQueryMsgAmino {
   /**
    * spot_price is the structure containing request field of the spot price
@@ -97,42 +168,86 @@ export interface SpotPriceQueryMsgAminoMsg {
   type: '/symphony.cosmwasmpool.v1beta1.SpotPriceQueryMsg';
   value: SpotPriceQueryMsgAmino;
 }
+/**
+ * @name SpotPriceQueryMsgSDKType
+ * @package symphony.cosmwasmpool.v1beta1
+ * @see proto type: symphony.cosmwasmpool.v1beta1.SpotPriceQueryMsg
+ */
 export interface SpotPriceQueryMsgSDKType {
   spot_price: SpotPriceSDKType;
 }
+/**
+ * @name SpotPriceQueryMsgResponse
+ * @package symphony.cosmwasmpool.v1beta1
+ * @see proto type: symphony.cosmwasmpool.v1beta1.SpotPriceQueryMsgResponse
+ */
 export interface SpotPriceQueryMsgResponse {
-  /** spot_price is the spot price returned. */
+  /**
+   * spot_price is the spot price returned.
+   */
   spotPrice: string;
 }
 export interface SpotPriceQueryMsgResponseProtoMsg {
   typeUrl: '/symphony.cosmwasmpool.v1beta1.SpotPriceQueryMsgResponse';
   value: Uint8Array;
 }
+/**
+ * @name SpotPriceQueryMsgResponseAmino
+ * @package symphony.cosmwasmpool.v1beta1
+ * @see proto type: symphony.cosmwasmpool.v1beta1.SpotPriceQueryMsgResponse
+ */
 export interface SpotPriceQueryMsgResponseAmino {
-  /** spot_price is the spot price returned. */
+  /**
+   * spot_price is the spot price returned.
+   */
   spot_price?: string;
 }
 export interface SpotPriceQueryMsgResponseAminoMsg {
   type: '/symphony.cosmwasmpool.v1beta1.SpotPriceQueryMsgResponse';
   value: SpotPriceQueryMsgResponseAmino;
 }
+/**
+ * @name SpotPriceQueryMsgResponseSDKType
+ * @package symphony.cosmwasmpool.v1beta1
+ * @see proto type: symphony.cosmwasmpool.v1beta1.SpotPriceQueryMsgResponse
+ */
 export interface SpotPriceQueryMsgResponseSDKType {
   spot_price: string;
 }
-/** ===================== GetTotalPoolLiquidityQueryMsg */
+/**
+ * ===================== GetTotalPoolLiquidityQueryMsg
+ * @name EmptyStruct
+ * @package symphony.cosmwasmpool.v1beta1
+ * @see proto type: symphony.cosmwasmpool.v1beta1.EmptyStruct
+ */
 export interface EmptyStruct {}
 export interface EmptyStructProtoMsg {
   typeUrl: '/symphony.cosmwasmpool.v1beta1.EmptyStruct';
   value: Uint8Array;
 }
-/** ===================== GetTotalPoolLiquidityQueryMsg */
+/**
+ * ===================== GetTotalPoolLiquidityQueryMsg
+ * @name EmptyStructAmino
+ * @package symphony.cosmwasmpool.v1beta1
+ * @see proto type: symphony.cosmwasmpool.v1beta1.EmptyStruct
+ */
 export interface EmptyStructAmino {}
 export interface EmptyStructAminoMsg {
   type: '/symphony.cosmwasmpool.v1beta1.EmptyStruct';
   value: EmptyStructAmino;
 }
-/** ===================== GetTotalPoolLiquidityQueryMsg */
+/**
+ * ===================== GetTotalPoolLiquidityQueryMsg
+ * @name EmptyStructSDKType
+ * @package symphony.cosmwasmpool.v1beta1
+ * @see proto type: symphony.cosmwasmpool.v1beta1.EmptyStruct
+ */
 export interface EmptyStructSDKType {}
+/**
+ * @name GetTotalPoolLiquidityQueryMsg
+ * @package symphony.cosmwasmpool.v1beta1
+ * @see proto type: symphony.cosmwasmpool.v1beta1.GetTotalPoolLiquidityQueryMsg
+ */
 export interface GetTotalPoolLiquidityQueryMsg {
   /**
    * get_total_pool_liquidity is the structure containing request field of the
@@ -144,6 +259,11 @@ export interface GetTotalPoolLiquidityQueryMsgProtoMsg {
   typeUrl: '/symphony.cosmwasmpool.v1beta1.GetTotalPoolLiquidityQueryMsg';
   value: Uint8Array;
 }
+/**
+ * @name GetTotalPoolLiquidityQueryMsgAmino
+ * @package symphony.cosmwasmpool.v1beta1
+ * @see proto type: symphony.cosmwasmpool.v1beta1.GetTotalPoolLiquidityQueryMsg
+ */
 export interface GetTotalPoolLiquidityQueryMsgAmino {
   /**
    * get_total_pool_liquidity is the structure containing request field of the
@@ -155,9 +275,19 @@ export interface GetTotalPoolLiquidityQueryMsgAminoMsg {
   type: '/symphony.cosmwasmpool.v1beta1.GetTotalPoolLiquidityQueryMsg';
   value: GetTotalPoolLiquidityQueryMsgAmino;
 }
+/**
+ * @name GetTotalPoolLiquidityQueryMsgSDKType
+ * @package symphony.cosmwasmpool.v1beta1
+ * @see proto type: symphony.cosmwasmpool.v1beta1.GetTotalPoolLiquidityQueryMsg
+ */
 export interface GetTotalPoolLiquidityQueryMsgSDKType {
   get_total_pool_liquidity: EmptyStructSDKType;
 }
+/**
+ * @name GetTotalPoolLiquidityQueryMsgResponse
+ * @package symphony.cosmwasmpool.v1beta1
+ * @see proto type: symphony.cosmwasmpool.v1beta1.GetTotalPoolLiquidityQueryMsgResponse
+ */
 export interface GetTotalPoolLiquidityQueryMsgResponse {
   /**
    * total_pool_liquidity is the total liquidity in the pool denominated in
@@ -169,6 +299,11 @@ export interface GetTotalPoolLiquidityQueryMsgResponseProtoMsg {
   typeUrl: '/symphony.cosmwasmpool.v1beta1.GetTotalPoolLiquidityQueryMsgResponse';
   value: Uint8Array;
 }
+/**
+ * @name GetTotalPoolLiquidityQueryMsgResponseAmino
+ * @package symphony.cosmwasmpool.v1beta1
+ * @see proto type: symphony.cosmwasmpool.v1beta1.GetTotalPoolLiquidityQueryMsgResponse
+ */
 export interface GetTotalPoolLiquidityQueryMsgResponseAmino {
   /**
    * total_pool_liquidity is the total liquidity in the pool denominated in
@@ -180,10 +315,20 @@ export interface GetTotalPoolLiquidityQueryMsgResponseAminoMsg {
   type: '/symphony.cosmwasmpool.v1beta1.GetTotalPoolLiquidityQueryMsgResponse';
   value: GetTotalPoolLiquidityQueryMsgResponseAmino;
 }
+/**
+ * @name GetTotalPoolLiquidityQueryMsgResponseSDKType
+ * @package symphony.cosmwasmpool.v1beta1
+ * @see proto type: symphony.cosmwasmpool.v1beta1.GetTotalPoolLiquidityQueryMsgResponse
+ */
 export interface GetTotalPoolLiquidityQueryMsgResponseSDKType {
   total_pool_liquidity: CoinSDKType[];
 }
-/** ===================== GetTotalSharesQueryMsg */
+/**
+ * ===================== GetTotalSharesQueryMsg
+ * @name GetTotalSharesQueryMsg
+ * @package symphony.cosmwasmpool.v1beta1
+ * @see proto type: symphony.cosmwasmpool.v1beta1.GetTotalSharesQueryMsg
+ */
 export interface GetTotalSharesQueryMsg {
   /**
    * get_total_shares is the structure containing request field of the
@@ -195,7 +340,12 @@ export interface GetTotalSharesQueryMsgProtoMsg {
   typeUrl: '/symphony.cosmwasmpool.v1beta1.GetTotalSharesQueryMsg';
   value: Uint8Array;
 }
-/** ===================== GetTotalSharesQueryMsg */
+/**
+ * ===================== GetTotalSharesQueryMsg
+ * @name GetTotalSharesQueryMsgAmino
+ * @package symphony.cosmwasmpool.v1beta1
+ * @see proto type: symphony.cosmwasmpool.v1beta1.GetTotalSharesQueryMsg
+ */
 export interface GetTotalSharesQueryMsgAmino {
   /**
    * get_total_shares is the structure containing request field of the
@@ -207,26 +357,50 @@ export interface GetTotalSharesQueryMsgAminoMsg {
   type: '/symphony.cosmwasmpool.v1beta1.GetTotalSharesQueryMsg';
   value: GetTotalSharesQueryMsgAmino;
 }
-/** ===================== GetTotalSharesQueryMsg */
+/**
+ * ===================== GetTotalSharesQueryMsg
+ * @name GetTotalSharesQueryMsgSDKType
+ * @package symphony.cosmwasmpool.v1beta1
+ * @see proto type: symphony.cosmwasmpool.v1beta1.GetTotalSharesQueryMsg
+ */
 export interface GetTotalSharesQueryMsgSDKType {
   get_total_shares: EmptyStructSDKType;
 }
+/**
+ * @name GetTotalSharesQueryMsgResponse
+ * @package symphony.cosmwasmpool.v1beta1
+ * @see proto type: symphony.cosmwasmpool.v1beta1.GetTotalSharesQueryMsgResponse
+ */
 export interface GetTotalSharesQueryMsgResponse {
-  /** total_shares is the amount of shares returned. */
+  /**
+   * total_shares is the amount of shares returned.
+   */
   totalShares: string;
 }
 export interface GetTotalSharesQueryMsgResponseProtoMsg {
   typeUrl: '/symphony.cosmwasmpool.v1beta1.GetTotalSharesQueryMsgResponse';
   value: Uint8Array;
 }
+/**
+ * @name GetTotalSharesQueryMsgResponseAmino
+ * @package symphony.cosmwasmpool.v1beta1
+ * @see proto type: symphony.cosmwasmpool.v1beta1.GetTotalSharesQueryMsgResponse
+ */
 export interface GetTotalSharesQueryMsgResponseAmino {
-  /** total_shares is the amount of shares returned. */
+  /**
+   * total_shares is the amount of shares returned.
+   */
   total_shares?: string;
 }
 export interface GetTotalSharesQueryMsgResponseAminoMsg {
   type: '/symphony.cosmwasmpool.v1beta1.GetTotalSharesQueryMsgResponse';
   value: GetTotalSharesQueryMsgResponseAmino;
 }
+/**
+ * @name GetTotalSharesQueryMsgResponseSDKType
+ * @package symphony.cosmwasmpool.v1beta1
+ * @see proto type: symphony.cosmwasmpool.v1beta1.GetTotalSharesQueryMsgResponse
+ */
 export interface GetTotalSharesQueryMsgResponseSDKType {
   total_shares: string;
 }
@@ -235,6 +409,12 @@ function createBaseGetSwapFeeQueryMsg(): GetSwapFeeQueryMsg {
     getSwapFee: EmptyStruct.fromPartial({}),
   };
 }
+/**
+ * ===================== GetSwapFeeQueryMsg
+ * @name GetSwapFeeQueryMsg
+ * @package symphony.cosmwasmpool.v1beta1
+ * @see proto type: symphony.cosmwasmpool.v1beta1.GetSwapFeeQueryMsg
+ */
 export const GetSwapFeeQueryMsg = {
   typeUrl: '/symphony.cosmwasmpool.v1beta1.GetSwapFeeQueryMsg',
   is(o: any): o is GetSwapFeeQueryMsg {
@@ -332,6 +512,11 @@ function createBaseGetSwapFeeQueryMsgResponse(): GetSwapFeeQueryMsgResponse {
     swapFee: '',
   };
 }
+/**
+ * @name GetSwapFeeQueryMsgResponse
+ * @package symphony.cosmwasmpool.v1beta1
+ * @see proto type: symphony.cosmwasmpool.v1beta1.GetSwapFeeQueryMsgResponse
+ */
 export const GetSwapFeeQueryMsgResponse = {
   typeUrl: '/symphony.cosmwasmpool.v1beta1.GetSwapFeeQueryMsgResponse',
   is(o: any): o is GetSwapFeeQueryMsgResponse {
@@ -442,6 +627,12 @@ function createBaseSpotPrice(): SpotPrice {
     baseAssetDenom: '',
   };
 }
+/**
+ * ===================== SpotPriceQueryMsg
+ * @name SpotPrice
+ * @package symphony.cosmwasmpool.v1beta1
+ * @see proto type: symphony.cosmwasmpool.v1beta1.SpotPrice
+ */
 export const SpotPrice = {
   typeUrl: '/symphony.cosmwasmpool.v1beta1.SpotPrice',
   is(o: any): o is SpotPrice {
@@ -553,6 +744,11 @@ function createBaseSpotPriceQueryMsg(): SpotPriceQueryMsg {
     spotPrice: SpotPrice.fromPartial({}),
   };
 }
+/**
+ * @name SpotPriceQueryMsg
+ * @package symphony.cosmwasmpool.v1beta1
+ * @see proto type: symphony.cosmwasmpool.v1beta1.SpotPriceQueryMsg
+ */
 export const SpotPriceQueryMsg = {
   typeUrl: '/symphony.cosmwasmpool.v1beta1.SpotPriceQueryMsg',
   is(o: any): o is SpotPriceQueryMsg {
@@ -646,6 +842,11 @@ function createBaseSpotPriceQueryMsgResponse(): SpotPriceQueryMsgResponse {
     spotPrice: '',
   };
 }
+/**
+ * @name SpotPriceQueryMsgResponse
+ * @package symphony.cosmwasmpool.v1beta1
+ * @see proto type: symphony.cosmwasmpool.v1beta1.SpotPriceQueryMsgResponse
+ */
 export const SpotPriceQueryMsgResponse = {
   typeUrl: '/symphony.cosmwasmpool.v1beta1.SpotPriceQueryMsgResponse',
   is(o: any): o is SpotPriceQueryMsgResponse {
@@ -747,6 +948,12 @@ GlobalDecoderRegistry.register(
 function createBaseEmptyStruct(): EmptyStruct {
   return {};
 }
+/**
+ * ===================== GetTotalPoolLiquidityQueryMsg
+ * @name EmptyStruct
+ * @package symphony.cosmwasmpool.v1beta1
+ * @see proto type: symphony.cosmwasmpool.v1beta1.EmptyStruct
+ */
 export const EmptyStruct = {
   typeUrl: '/symphony.cosmwasmpool.v1beta1.EmptyStruct',
   is(o: any): o is EmptyStruct {
@@ -813,6 +1020,11 @@ function createBaseGetTotalPoolLiquidityQueryMsg(): GetTotalPoolLiquidityQueryMs
     getTotalPoolLiquidity: EmptyStruct.fromPartial({}),
   };
 }
+/**
+ * @name GetTotalPoolLiquidityQueryMsg
+ * @package symphony.cosmwasmpool.v1beta1
+ * @see proto type: symphony.cosmwasmpool.v1beta1.GetTotalPoolLiquidityQueryMsg
+ */
 export const GetTotalPoolLiquidityQueryMsg = {
   typeUrl: '/symphony.cosmwasmpool.v1beta1.GetTotalPoolLiquidityQueryMsg',
   is(o: any): o is GetTotalPoolLiquidityQueryMsg {
@@ -937,6 +1149,11 @@ function createBaseGetTotalPoolLiquidityQueryMsgResponse(): GetTotalPoolLiquidit
     totalPoolLiquidity: [],
   };
 }
+/**
+ * @name GetTotalPoolLiquidityQueryMsgResponse
+ * @package symphony.cosmwasmpool.v1beta1
+ * @see proto type: symphony.cosmwasmpool.v1beta1.GetTotalPoolLiquidityQueryMsgResponse
+ */
 export const GetTotalPoolLiquidityQueryMsgResponse = {
   typeUrl:
     '/symphony.cosmwasmpool.v1beta1.GetTotalPoolLiquidityQueryMsgResponse',
@@ -1057,6 +1274,12 @@ function createBaseGetTotalSharesQueryMsg(): GetTotalSharesQueryMsg {
     getTotalShares: EmptyStruct.fromPartial({}),
   };
 }
+/**
+ * ===================== GetTotalSharesQueryMsg
+ * @name GetTotalSharesQueryMsg
+ * @package symphony.cosmwasmpool.v1beta1
+ * @see proto type: symphony.cosmwasmpool.v1beta1.GetTotalSharesQueryMsg
+ */
 export const GetTotalSharesQueryMsg = {
   typeUrl: '/symphony.cosmwasmpool.v1beta1.GetTotalSharesQueryMsg',
   is(o: any): o is GetTotalSharesQueryMsg {
@@ -1165,6 +1388,11 @@ function createBaseGetTotalSharesQueryMsgResponse(): GetTotalSharesQueryMsgRespo
     totalShares: '',
   };
 }
+/**
+ * @name GetTotalSharesQueryMsgResponse
+ * @package symphony.cosmwasmpool.v1beta1
+ * @see proto type: symphony.cosmwasmpool.v1beta1.GetTotalSharesQueryMsgResponse
+ */
 export const GetTotalSharesQueryMsgResponse = {
   typeUrl: '/symphony.cosmwasmpool.v1beta1.GetTotalSharesQueryMsgResponse',
   is(o: any): o is GetTotalSharesQueryMsgResponse {

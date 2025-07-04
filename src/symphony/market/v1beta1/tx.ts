@@ -6,7 +6,12 @@ import {
 } from '../../../cosmos/base/v1beta1/coin';
 import { BinaryReader, BinaryWriter } from '../../../binary';
 import { GlobalDecoderRegistry } from '../../../registry';
-/** MsgSwap represents a message to swap coin to another denom. */
+/**
+ * MsgSwap represents a message to swap coin to another denom.
+ * @name MsgSwap
+ * @package symphony.market.v1beta1
+ * @see proto type: symphony.market.v1beta1.MsgSwap
+ */
 export interface MsgSwap {
   trader: string;
   offerCoin: Coin;
@@ -16,7 +21,12 @@ export interface MsgSwapProtoMsg {
   typeUrl: '/symphony.market.v1beta1.MsgSwap';
   value: Uint8Array;
 }
-/** MsgSwap represents a message to swap coin to another denom. */
+/**
+ * MsgSwap represents a message to swap coin to another denom.
+ * @name MsgSwapAmino
+ * @package symphony.market.v1beta1
+ * @see proto type: symphony.market.v1beta1.MsgSwap
+ */
 export interface MsgSwapAmino {
   trader?: string;
   offer_coin?: CoinAmino;
@@ -26,13 +36,23 @@ export interface MsgSwapAminoMsg {
   type: '/symphony.market.v1beta1.MsgSwap';
   value: MsgSwapAmino;
 }
-/** MsgSwap represents a message to swap coin to another denom. */
+/**
+ * MsgSwap represents a message to swap coin to another denom.
+ * @name MsgSwapSDKType
+ * @package symphony.market.v1beta1
+ * @see proto type: symphony.market.v1beta1.MsgSwap
+ */
 export interface MsgSwapSDKType {
   trader: string;
   offer_coin: CoinSDKType;
   ask_denom: string;
 }
-/** MsgSwapResponse defines the Msg/Swap response type. */
+/**
+ * MsgSwapResponse defines the Msg/Swap response type.
+ * @name MsgSwapResponse
+ * @package symphony.market.v1beta1
+ * @see proto type: symphony.market.v1beta1.MsgSwapResponse
+ */
 export interface MsgSwapResponse {
   swapCoin: Coin;
   swapFee: Coin;
@@ -41,7 +61,12 @@ export interface MsgSwapResponseProtoMsg {
   typeUrl: '/symphony.market.v1beta1.MsgSwapResponse';
   value: Uint8Array;
 }
-/** MsgSwapResponse defines the Msg/Swap response type. */
+/**
+ * MsgSwapResponse defines the Msg/Swap response type.
+ * @name MsgSwapResponseAmino
+ * @package symphony.market.v1beta1
+ * @see proto type: symphony.market.v1beta1.MsgSwapResponse
+ */
 export interface MsgSwapResponseAmino {
   swap_coin?: CoinAmino;
   swap_fee?: CoinAmino;
@@ -50,7 +75,12 @@ export interface MsgSwapResponseAminoMsg {
   type: '/symphony.market.v1beta1.MsgSwapResponse';
   value: MsgSwapResponseAmino;
 }
-/** MsgSwapResponse defines the Msg/Swap response type. */
+/**
+ * MsgSwapResponse defines the Msg/Swap response type.
+ * @name MsgSwapResponseSDKType
+ * @package symphony.market.v1beta1
+ * @see proto type: symphony.market.v1beta1.MsgSwapResponse
+ */
 export interface MsgSwapResponseSDKType {
   swap_coin: CoinSDKType;
   swap_fee: CoinSDKType;
@@ -58,6 +88,9 @@ export interface MsgSwapResponseSDKType {
 /**
  * MsgSwapSend represents a message to swap coin and send all result coin to
  * recipient
+ * @name MsgSwapSend
+ * @package symphony.market.v1beta1
+ * @see proto type: symphony.market.v1beta1.MsgSwapSend
  */
 export interface MsgSwapSend {
   fromAddress: string;
@@ -72,6 +105,9 @@ export interface MsgSwapSendProtoMsg {
 /**
  * MsgSwapSend represents a message to swap coin and send all result coin to
  * recipient
+ * @name MsgSwapSendAmino
+ * @package symphony.market.v1beta1
+ * @see proto type: symphony.market.v1beta1.MsgSwapSend
  */
 export interface MsgSwapSendAmino {
   from_address?: string;
@@ -86,6 +122,9 @@ export interface MsgSwapSendAminoMsg {
 /**
  * MsgSwapSend represents a message to swap coin and send all result coin to
  * recipient
+ * @name MsgSwapSendSDKType
+ * @package symphony.market.v1beta1
+ * @see proto type: symphony.market.v1beta1.MsgSwapSend
  */
 export interface MsgSwapSendSDKType {
   from_address: string;
@@ -93,7 +132,12 @@ export interface MsgSwapSendSDKType {
   offer_coin: CoinSDKType;
   ask_denom: string;
 }
-/** MsgSwapSendResponse defines the Msg/SwapSend response type. */
+/**
+ * MsgSwapSendResponse defines the Msg/SwapSend response type.
+ * @name MsgSwapSendResponse
+ * @package symphony.market.v1beta1
+ * @see proto type: symphony.market.v1beta1.MsgSwapSendResponse
+ */
 export interface MsgSwapSendResponse {
   swapCoin: Coin;
   swapFee: Coin;
@@ -102,7 +146,12 @@ export interface MsgSwapSendResponseProtoMsg {
   typeUrl: '/symphony.market.v1beta1.MsgSwapSendResponse';
   value: Uint8Array;
 }
-/** MsgSwapSendResponse defines the Msg/SwapSend response type. */
+/**
+ * MsgSwapSendResponse defines the Msg/SwapSend response type.
+ * @name MsgSwapSendResponseAmino
+ * @package symphony.market.v1beta1
+ * @see proto type: symphony.market.v1beta1.MsgSwapSendResponse
+ */
 export interface MsgSwapSendResponseAmino {
   swap_coin?: CoinAmino;
   swap_fee?: CoinAmino;
@@ -111,7 +160,12 @@ export interface MsgSwapSendResponseAminoMsg {
   type: '/symphony.market.v1beta1.MsgSwapSendResponse';
   value: MsgSwapSendResponseAmino;
 }
-/** MsgSwapSendResponse defines the Msg/SwapSend response type. */
+/**
+ * MsgSwapSendResponse defines the Msg/SwapSend response type.
+ * @name MsgSwapSendResponseSDKType
+ * @package symphony.market.v1beta1
+ * @see proto type: symphony.market.v1beta1.MsgSwapSendResponse
+ */
 export interface MsgSwapSendResponseSDKType {
   swap_coin: CoinSDKType;
   swap_fee: CoinSDKType;
@@ -123,6 +177,12 @@ function createBaseMsgSwap(): MsgSwap {
     askDenom: '',
   };
 }
+/**
+ * MsgSwap represents a message to swap coin to another denom.
+ * @name MsgSwap
+ * @package symphony.market.v1beta1
+ * @see proto type: symphony.market.v1beta1.MsgSwap
+ */
 export const MsgSwap = {
   typeUrl: '/symphony.market.v1beta1.MsgSwap',
   is(o: any): o is MsgSwap {
@@ -246,6 +306,12 @@ function createBaseMsgSwapResponse(): MsgSwapResponse {
     swapFee: Coin.fromPartial({}),
   };
 }
+/**
+ * MsgSwapResponse defines the Msg/Swap response type.
+ * @name MsgSwapResponse
+ * @package symphony.market.v1beta1
+ * @see proto type: symphony.market.v1beta1.MsgSwapResponse
+ */
 export const MsgSwapResponse = {
   typeUrl: '/symphony.market.v1beta1.MsgSwapResponse',
   is(o: any): o is MsgSwapResponse {
@@ -357,6 +423,13 @@ function createBaseMsgSwapSend(): MsgSwapSend {
     askDenom: '',
   };
 }
+/**
+ * MsgSwapSend represents a message to swap coin and send all result coin to
+ * recipient
+ * @name MsgSwapSend
+ * @package symphony.market.v1beta1
+ * @see proto type: symphony.market.v1beta1.MsgSwapSend
+ */
 export const MsgSwapSend = {
   typeUrl: '/symphony.market.v1beta1.MsgSwapSend',
   is(o: any): o is MsgSwapSend {
@@ -495,6 +568,12 @@ function createBaseMsgSwapSendResponse(): MsgSwapSendResponse {
     swapFee: Coin.fromPartial({}),
   };
 }
+/**
+ * MsgSwapSendResponse defines the Msg/SwapSend response type.
+ * @name MsgSwapSendResponse
+ * @package symphony.market.v1beta1
+ * @see proto type: symphony.market.v1beta1.MsgSwapSendResponse
+ */
 export const MsgSwapSendResponse = {
   typeUrl: '/symphony.market.v1beta1.MsgSwapSendResponse',
   is(o: any): o is MsgSwapSendResponse {

@@ -7,45 +7,82 @@ import {
 } from './authorityMetadata';
 import { BinaryReader, BinaryWriter } from '../../../binary';
 import { GlobalDecoderRegistry } from '../../../registry';
-/** QueryParamsRequest is the request type for the Query/Params RPC method. */
+/**
+ * QueryParamsRequest is the request type for the Query/Params RPC method.
+ * @name QueryParamsRequest
+ * @package symphony.tokenfactory.v1beta1
+ * @see proto type: symphony.tokenfactory.v1beta1.QueryParamsRequest
+ */
 export interface QueryParamsRequest {}
 export interface QueryParamsRequestProtoMsg {
   typeUrl: '/symphony.tokenfactory.v1beta1.QueryParamsRequest';
   value: Uint8Array;
 }
-/** QueryParamsRequest is the request type for the Query/Params RPC method. */
+/**
+ * QueryParamsRequest is the request type for the Query/Params RPC method.
+ * @name QueryParamsRequestAmino
+ * @package symphony.tokenfactory.v1beta1
+ * @see proto type: symphony.tokenfactory.v1beta1.QueryParamsRequest
+ */
 export interface QueryParamsRequestAmino {}
 export interface QueryParamsRequestAminoMsg {
   type: '/symphony.tokenfactory.v1beta1.QueryParamsRequest';
   value: QueryParamsRequestAmino;
 }
-/** QueryParamsRequest is the request type for the Query/Params RPC method. */
+/**
+ * QueryParamsRequest is the request type for the Query/Params RPC method.
+ * @name QueryParamsRequestSDKType
+ * @package symphony.tokenfactory.v1beta1
+ * @see proto type: symphony.tokenfactory.v1beta1.QueryParamsRequest
+ */
 export interface QueryParamsRequestSDKType {}
-/** QueryParamsResponse is the response type for the Query/Params RPC method. */
+/**
+ * QueryParamsResponse is the response type for the Query/Params RPC method.
+ * @name QueryParamsResponse
+ * @package symphony.tokenfactory.v1beta1
+ * @see proto type: symphony.tokenfactory.v1beta1.QueryParamsResponse
+ */
 export interface QueryParamsResponse {
-  /** params defines the parameters of the module. */
+  /**
+   * params defines the parameters of the module.
+   */
   params: Params;
 }
 export interface QueryParamsResponseProtoMsg {
   typeUrl: '/symphony.tokenfactory.v1beta1.QueryParamsResponse';
   value: Uint8Array;
 }
-/** QueryParamsResponse is the response type for the Query/Params RPC method. */
+/**
+ * QueryParamsResponse is the response type for the Query/Params RPC method.
+ * @name QueryParamsResponseAmino
+ * @package symphony.tokenfactory.v1beta1
+ * @see proto type: symphony.tokenfactory.v1beta1.QueryParamsResponse
+ */
 export interface QueryParamsResponseAmino {
-  /** params defines the parameters of the module. */
+  /**
+   * params defines the parameters of the module.
+   */
   params?: ParamsAmino;
 }
 export interface QueryParamsResponseAminoMsg {
   type: '/symphony.tokenfactory.v1beta1.QueryParamsResponse';
   value: QueryParamsResponseAmino;
 }
-/** QueryParamsResponse is the response type for the Query/Params RPC method. */
+/**
+ * QueryParamsResponse is the response type for the Query/Params RPC method.
+ * @name QueryParamsResponseSDKType
+ * @package symphony.tokenfactory.v1beta1
+ * @see proto type: symphony.tokenfactory.v1beta1.QueryParamsResponse
+ */
 export interface QueryParamsResponseSDKType {
   params: ParamsSDKType;
 }
 /**
  * QueryDenomAuthorityMetadataRequest defines the request structure for the
  * DenomAuthorityMetadata gRPC query.
+ * @name QueryDenomAuthorityMetadataRequest
+ * @package symphony.tokenfactory.v1beta1
+ * @see proto type: symphony.tokenfactory.v1beta1.QueryDenomAuthorityMetadataRequest
  */
 export interface QueryDenomAuthorityMetadataRequest {
   denom: string;
@@ -57,6 +94,9 @@ export interface QueryDenomAuthorityMetadataRequestProtoMsg {
 /**
  * QueryDenomAuthorityMetadataRequest defines the request structure for the
  * DenomAuthorityMetadata gRPC query.
+ * @name QueryDenomAuthorityMetadataRequestAmino
+ * @package symphony.tokenfactory.v1beta1
+ * @see proto type: symphony.tokenfactory.v1beta1.QueryDenomAuthorityMetadataRequest
  */
 export interface QueryDenomAuthorityMetadataRequestAmino {
   denom?: string;
@@ -68,6 +108,9 @@ export interface QueryDenomAuthorityMetadataRequestAminoMsg {
 /**
  * QueryDenomAuthorityMetadataRequest defines the request structure for the
  * DenomAuthorityMetadata gRPC query.
+ * @name QueryDenomAuthorityMetadataRequestSDKType
+ * @package symphony.tokenfactory.v1beta1
+ * @see proto type: symphony.tokenfactory.v1beta1.QueryDenomAuthorityMetadataRequest
  */
 export interface QueryDenomAuthorityMetadataRequestSDKType {
   denom: string;
@@ -75,6 +118,9 @@ export interface QueryDenomAuthorityMetadataRequestSDKType {
 /**
  * QueryDenomAuthorityMetadataResponse defines the response structure for the
  * DenomAuthorityMetadata gRPC query.
+ * @name QueryDenomAuthorityMetadataResponse
+ * @package symphony.tokenfactory.v1beta1
+ * @see proto type: symphony.tokenfactory.v1beta1.QueryDenomAuthorityMetadataResponse
  */
 export interface QueryDenomAuthorityMetadataResponse {
   authorityMetadata: DenomAuthorityMetadata;
@@ -86,6 +132,9 @@ export interface QueryDenomAuthorityMetadataResponseProtoMsg {
 /**
  * QueryDenomAuthorityMetadataResponse defines the response structure for the
  * DenomAuthorityMetadata gRPC query.
+ * @name QueryDenomAuthorityMetadataResponseAmino
+ * @package symphony.tokenfactory.v1beta1
+ * @see proto type: symphony.tokenfactory.v1beta1.QueryDenomAuthorityMetadataResponse
  */
 export interface QueryDenomAuthorityMetadataResponseAmino {
   authority_metadata?: DenomAuthorityMetadataAmino;
@@ -97,6 +146,9 @@ export interface QueryDenomAuthorityMetadataResponseAminoMsg {
 /**
  * QueryDenomAuthorityMetadataResponse defines the response structure for the
  * DenomAuthorityMetadata gRPC query.
+ * @name QueryDenomAuthorityMetadataResponseSDKType
+ * @package symphony.tokenfactory.v1beta1
+ * @see proto type: symphony.tokenfactory.v1beta1.QueryDenomAuthorityMetadataResponse
  */
 export interface QueryDenomAuthorityMetadataResponseSDKType {
   authority_metadata: DenomAuthorityMetadataSDKType;
@@ -104,6 +156,9 @@ export interface QueryDenomAuthorityMetadataResponseSDKType {
 /**
  * QueryDenomsFromCreatorRequest defines the request structure for the
  * DenomsFromCreator gRPC query.
+ * @name QueryDenomsFromCreatorRequest
+ * @package symphony.tokenfactory.v1beta1
+ * @see proto type: symphony.tokenfactory.v1beta1.QueryDenomsFromCreatorRequest
  */
 export interface QueryDenomsFromCreatorRequest {
   creator: string;
@@ -115,6 +170,9 @@ export interface QueryDenomsFromCreatorRequestProtoMsg {
 /**
  * QueryDenomsFromCreatorRequest defines the request structure for the
  * DenomsFromCreator gRPC query.
+ * @name QueryDenomsFromCreatorRequestAmino
+ * @package symphony.tokenfactory.v1beta1
+ * @see proto type: symphony.tokenfactory.v1beta1.QueryDenomsFromCreatorRequest
  */
 export interface QueryDenomsFromCreatorRequestAmino {
   creator?: string;
@@ -126,6 +184,9 @@ export interface QueryDenomsFromCreatorRequestAminoMsg {
 /**
  * QueryDenomsFromCreatorRequest defines the request structure for the
  * DenomsFromCreator gRPC query.
+ * @name QueryDenomsFromCreatorRequestSDKType
+ * @package symphony.tokenfactory.v1beta1
+ * @see proto type: symphony.tokenfactory.v1beta1.QueryDenomsFromCreatorRequest
  */
 export interface QueryDenomsFromCreatorRequestSDKType {
   creator: string;
@@ -133,6 +194,9 @@ export interface QueryDenomsFromCreatorRequestSDKType {
 /**
  * QueryDenomsFromCreatorRequest defines the response structure for the
  * DenomsFromCreator gRPC query.
+ * @name QueryDenomsFromCreatorResponse
+ * @package symphony.tokenfactory.v1beta1
+ * @see proto type: symphony.tokenfactory.v1beta1.QueryDenomsFromCreatorResponse
  */
 export interface QueryDenomsFromCreatorResponse {
   denoms: string[];
@@ -144,6 +208,9 @@ export interface QueryDenomsFromCreatorResponseProtoMsg {
 /**
  * QueryDenomsFromCreatorRequest defines the response structure for the
  * DenomsFromCreator gRPC query.
+ * @name QueryDenomsFromCreatorResponseAmino
+ * @package symphony.tokenfactory.v1beta1
+ * @see proto type: symphony.tokenfactory.v1beta1.QueryDenomsFromCreatorResponse
  */
 export interface QueryDenomsFromCreatorResponseAmino {
   denoms?: string[];
@@ -155,10 +222,18 @@ export interface QueryDenomsFromCreatorResponseAminoMsg {
 /**
  * QueryDenomsFromCreatorRequest defines the response structure for the
  * DenomsFromCreator gRPC query.
+ * @name QueryDenomsFromCreatorResponseSDKType
+ * @package symphony.tokenfactory.v1beta1
+ * @see proto type: symphony.tokenfactory.v1beta1.QueryDenomsFromCreatorResponse
  */
 export interface QueryDenomsFromCreatorResponseSDKType {
   denoms: string[];
 }
+/**
+ * @name QueryBeforeSendHookAddressRequest
+ * @package symphony.tokenfactory.v1beta1
+ * @see proto type: symphony.tokenfactory.v1beta1.QueryBeforeSendHookAddressRequest
+ */
 export interface QueryBeforeSendHookAddressRequest {
   denom: string;
 }
@@ -166,6 +241,11 @@ export interface QueryBeforeSendHookAddressRequestProtoMsg {
   typeUrl: '/symphony.tokenfactory.v1beta1.QueryBeforeSendHookAddressRequest';
   value: Uint8Array;
 }
+/**
+ * @name QueryBeforeSendHookAddressRequestAmino
+ * @package symphony.tokenfactory.v1beta1
+ * @see proto type: symphony.tokenfactory.v1beta1.QueryBeforeSendHookAddressRequest
+ */
 export interface QueryBeforeSendHookAddressRequestAmino {
   denom?: string;
 }
@@ -173,12 +253,20 @@ export interface QueryBeforeSendHookAddressRequestAminoMsg {
   type: '/symphony.tokenfactory.v1beta1.QueryBeforeSendHookAddressRequest';
   value: QueryBeforeSendHookAddressRequestAmino;
 }
+/**
+ * @name QueryBeforeSendHookAddressRequestSDKType
+ * @package symphony.tokenfactory.v1beta1
+ * @see proto type: symphony.tokenfactory.v1beta1.QueryBeforeSendHookAddressRequest
+ */
 export interface QueryBeforeSendHookAddressRequestSDKType {
   denom: string;
 }
 /**
  * QueryBeforeSendHookAddressResponse defines the response structure for the
  * DenomBeforeSendHook gRPC query.
+ * @name QueryBeforeSendHookAddressResponse
+ * @package symphony.tokenfactory.v1beta1
+ * @see proto type: symphony.tokenfactory.v1beta1.QueryBeforeSendHookAddressResponse
  */
 export interface QueryBeforeSendHookAddressResponse {
   cosmwasmAddress: string;
@@ -190,6 +278,9 @@ export interface QueryBeforeSendHookAddressResponseProtoMsg {
 /**
  * QueryBeforeSendHookAddressResponse defines the response structure for the
  * DenomBeforeSendHook gRPC query.
+ * @name QueryBeforeSendHookAddressResponseAmino
+ * @package symphony.tokenfactory.v1beta1
+ * @see proto type: symphony.tokenfactory.v1beta1.QueryBeforeSendHookAddressResponse
  */
 export interface QueryBeforeSendHookAddressResponseAmino {
   cosmwasm_address?: string;
@@ -201,24 +292,45 @@ export interface QueryBeforeSendHookAddressResponseAminoMsg {
 /**
  * QueryBeforeSendHookAddressResponse defines the response structure for the
  * DenomBeforeSendHook gRPC query.
+ * @name QueryBeforeSendHookAddressResponseSDKType
+ * @package symphony.tokenfactory.v1beta1
+ * @see proto type: symphony.tokenfactory.v1beta1.QueryBeforeSendHookAddressResponse
  */
 export interface QueryBeforeSendHookAddressResponseSDKType {
   cosmwasm_address: string;
 }
+/**
+ * @name QueryAllBeforeSendHooksAddressesRequest
+ * @package symphony.tokenfactory.v1beta1
+ * @see proto type: symphony.tokenfactory.v1beta1.QueryAllBeforeSendHooksAddressesRequest
+ */
 export interface QueryAllBeforeSendHooksAddressesRequest {}
 export interface QueryAllBeforeSendHooksAddressesRequestProtoMsg {
   typeUrl: '/symphony.tokenfactory.v1beta1.QueryAllBeforeSendHooksAddressesRequest';
   value: Uint8Array;
 }
+/**
+ * @name QueryAllBeforeSendHooksAddressesRequestAmino
+ * @package symphony.tokenfactory.v1beta1
+ * @see proto type: symphony.tokenfactory.v1beta1.QueryAllBeforeSendHooksAddressesRequest
+ */
 export interface QueryAllBeforeSendHooksAddressesRequestAmino {}
 export interface QueryAllBeforeSendHooksAddressesRequestAminoMsg {
   type: '/symphony.tokenfactory.v1beta1.QueryAllBeforeSendHooksAddressesRequest';
   value: QueryAllBeforeSendHooksAddressesRequestAmino;
 }
+/**
+ * @name QueryAllBeforeSendHooksAddressesRequestSDKType
+ * @package symphony.tokenfactory.v1beta1
+ * @see proto type: symphony.tokenfactory.v1beta1.QueryAllBeforeSendHooksAddressesRequest
+ */
 export interface QueryAllBeforeSendHooksAddressesRequestSDKType {}
 /**
  * QueryAllBeforeSendHooksAddressesResponse defines the response structure for
  * the AllBeforeSendHooksAddresses gRPC query.
+ * @name QueryAllBeforeSendHooksAddressesResponse
+ * @package symphony.tokenfactory.v1beta1
+ * @see proto type: symphony.tokenfactory.v1beta1.QueryAllBeforeSendHooksAddressesResponse
  */
 export interface QueryAllBeforeSendHooksAddressesResponse {
   denoms: string[];
@@ -231,6 +343,9 @@ export interface QueryAllBeforeSendHooksAddressesResponseProtoMsg {
 /**
  * QueryAllBeforeSendHooksAddressesResponse defines the response structure for
  * the AllBeforeSendHooksAddresses gRPC query.
+ * @name QueryAllBeforeSendHooksAddressesResponseAmino
+ * @package symphony.tokenfactory.v1beta1
+ * @see proto type: symphony.tokenfactory.v1beta1.QueryAllBeforeSendHooksAddressesResponse
  */
 export interface QueryAllBeforeSendHooksAddressesResponseAmino {
   denoms?: string[];
@@ -243,6 +358,9 @@ export interface QueryAllBeforeSendHooksAddressesResponseAminoMsg {
 /**
  * QueryAllBeforeSendHooksAddressesResponse defines the response structure for
  * the AllBeforeSendHooksAddresses gRPC query.
+ * @name QueryAllBeforeSendHooksAddressesResponseSDKType
+ * @package symphony.tokenfactory.v1beta1
+ * @see proto type: symphony.tokenfactory.v1beta1.QueryAllBeforeSendHooksAddressesResponse
  */
 export interface QueryAllBeforeSendHooksAddressesResponseSDKType {
   denoms: string[];
@@ -251,6 +369,12 @@ export interface QueryAllBeforeSendHooksAddressesResponseSDKType {
 function createBaseQueryParamsRequest(): QueryParamsRequest {
   return {};
 }
+/**
+ * QueryParamsRequest is the request type for the Query/Params RPC method.
+ * @name QueryParamsRequest
+ * @package symphony.tokenfactory.v1beta1
+ * @see proto type: symphony.tokenfactory.v1beta1.QueryParamsRequest
+ */
 export const QueryParamsRequest = {
   typeUrl: '/symphony.tokenfactory.v1beta1.QueryParamsRequest',
   is(o: any): o is QueryParamsRequest {
@@ -320,6 +444,12 @@ function createBaseQueryParamsResponse(): QueryParamsResponse {
     params: Params.fromPartial({}),
   };
 }
+/**
+ * QueryParamsResponse is the response type for the Query/Params RPC method.
+ * @name QueryParamsResponse
+ * @package symphony.tokenfactory.v1beta1
+ * @see proto type: symphony.tokenfactory.v1beta1.QueryParamsResponse
+ */
 export const QueryParamsResponse = {
   typeUrl: '/symphony.tokenfactory.v1beta1.QueryParamsResponse',
   is(o: any): o is QueryParamsResponse {
@@ -414,6 +544,13 @@ function createBaseQueryDenomAuthorityMetadataRequest(): QueryDenomAuthorityMeta
     denom: '',
   };
 }
+/**
+ * QueryDenomAuthorityMetadataRequest defines the request structure for the
+ * DenomAuthorityMetadata gRPC query.
+ * @name QueryDenomAuthorityMetadataRequest
+ * @package symphony.tokenfactory.v1beta1
+ * @see proto type: symphony.tokenfactory.v1beta1.QueryDenomAuthorityMetadataRequest
+ */
 export const QueryDenomAuthorityMetadataRequest = {
   typeUrl: '/symphony.tokenfactory.v1beta1.QueryDenomAuthorityMetadataRequest',
   is(o: any): o is QueryDenomAuthorityMetadataRequest {
@@ -522,6 +659,13 @@ function createBaseQueryDenomAuthorityMetadataResponse(): QueryDenomAuthorityMet
     authorityMetadata: DenomAuthorityMetadata.fromPartial({}),
   };
 }
+/**
+ * QueryDenomAuthorityMetadataResponse defines the response structure for the
+ * DenomAuthorityMetadata gRPC query.
+ * @name QueryDenomAuthorityMetadataResponse
+ * @package symphony.tokenfactory.v1beta1
+ * @see proto type: symphony.tokenfactory.v1beta1.QueryDenomAuthorityMetadataResponse
+ */
 export const QueryDenomAuthorityMetadataResponse = {
   typeUrl: '/symphony.tokenfactory.v1beta1.QueryDenomAuthorityMetadataResponse',
   is(o: any): o is QueryDenomAuthorityMetadataResponse {
@@ -647,6 +791,13 @@ function createBaseQueryDenomsFromCreatorRequest(): QueryDenomsFromCreatorReques
     creator: '',
   };
 }
+/**
+ * QueryDenomsFromCreatorRequest defines the request structure for the
+ * DenomsFromCreator gRPC query.
+ * @name QueryDenomsFromCreatorRequest
+ * @package symphony.tokenfactory.v1beta1
+ * @see proto type: symphony.tokenfactory.v1beta1.QueryDenomsFromCreatorRequest
+ */
 export const QueryDenomsFromCreatorRequest = {
   typeUrl: '/symphony.tokenfactory.v1beta1.QueryDenomsFromCreatorRequest',
   is(o: any): o is QueryDenomsFromCreatorRequest {
@@ -754,6 +905,13 @@ function createBaseQueryDenomsFromCreatorResponse(): QueryDenomsFromCreatorRespo
     denoms: [],
   };
 }
+/**
+ * QueryDenomsFromCreatorRequest defines the response structure for the
+ * DenomsFromCreator gRPC query.
+ * @name QueryDenomsFromCreatorResponse
+ * @package symphony.tokenfactory.v1beta1
+ * @see proto type: symphony.tokenfactory.v1beta1.QueryDenomsFromCreatorResponse
+ */
 export const QueryDenomsFromCreatorResponse = {
   typeUrl: '/symphony.tokenfactory.v1beta1.QueryDenomsFromCreatorResponse',
   is(o: any): o is QueryDenomsFromCreatorResponse {
@@ -866,6 +1024,11 @@ function createBaseQueryBeforeSendHookAddressRequest(): QueryBeforeSendHookAddre
     denom: '',
   };
 }
+/**
+ * @name QueryBeforeSendHookAddressRequest
+ * @package symphony.tokenfactory.v1beta1
+ * @see proto type: symphony.tokenfactory.v1beta1.QueryBeforeSendHookAddressRequest
+ */
 export const QueryBeforeSendHookAddressRequest = {
   typeUrl: '/symphony.tokenfactory.v1beta1.QueryBeforeSendHookAddressRequest',
   is(o: any): o is QueryBeforeSendHookAddressRequest {
@@ -974,6 +1137,13 @@ function createBaseQueryBeforeSendHookAddressResponse(): QueryBeforeSendHookAddr
     cosmwasmAddress: '',
   };
 }
+/**
+ * QueryBeforeSendHookAddressResponse defines the response structure for the
+ * DenomBeforeSendHook gRPC query.
+ * @name QueryBeforeSendHookAddressResponse
+ * @package symphony.tokenfactory.v1beta1
+ * @see proto type: symphony.tokenfactory.v1beta1.QueryBeforeSendHookAddressResponse
+ */
 export const QueryBeforeSendHookAddressResponse = {
   typeUrl: '/symphony.tokenfactory.v1beta1.QueryBeforeSendHookAddressResponse',
   is(o: any): o is QueryBeforeSendHookAddressResponse {
@@ -1084,6 +1254,11 @@ GlobalDecoderRegistry.register(
 function createBaseQueryAllBeforeSendHooksAddressesRequest(): QueryAllBeforeSendHooksAddressesRequest {
   return {};
 }
+/**
+ * @name QueryAllBeforeSendHooksAddressesRequest
+ * @package symphony.tokenfactory.v1beta1
+ * @see proto type: symphony.tokenfactory.v1beta1.QueryAllBeforeSendHooksAddressesRequest
+ */
 export const QueryAllBeforeSendHooksAddressesRequest = {
   typeUrl:
     '/symphony.tokenfactory.v1beta1.QueryAllBeforeSendHooksAddressesRequest',
@@ -1171,6 +1346,13 @@ function createBaseQueryAllBeforeSendHooksAddressesResponse(): QueryAllBeforeSen
     beforeSendHookAddresses: [],
   };
 }
+/**
+ * QueryAllBeforeSendHooksAddressesResponse defines the response structure for
+ * the AllBeforeSendHooksAddresses gRPC query.
+ * @name QueryAllBeforeSendHooksAddressesResponse
+ * @package symphony.tokenfactory.v1beta1
+ * @see proto type: symphony.tokenfactory.v1beta1.QueryAllBeforeSendHooksAddressesResponse
+ */
 export const QueryAllBeforeSendHooksAddressesResponse = {
   typeUrl:
     '/symphony.tokenfactory.v1beta1.QueryAllBeforeSendHooksAddressesResponse',

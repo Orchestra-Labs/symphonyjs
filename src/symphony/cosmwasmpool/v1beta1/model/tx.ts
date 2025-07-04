@@ -2,7 +2,12 @@
 import { BinaryReader, BinaryWriter } from '../../../../binary';
 import { bytesFromBase64, base64FromBytes } from '../../../../helpers';
 import { GlobalDecoderRegistry } from '../../../../registry';
-/** ===================== MsgCreateCosmwasmPool */
+/**
+ * ===================== MsgCreateCosmwasmPool
+ * @name MsgCreateCosmWasmPool
+ * @package symphony.cosmwasmpool.v1beta1
+ * @see proto type: symphony.cosmwasmpool.v1beta1.MsgCreateCosmWasmPool
+ */
 export interface MsgCreateCosmWasmPool {
   codeId: bigint;
   instantiateMsg: Uint8Array;
@@ -12,7 +17,12 @@ export interface MsgCreateCosmWasmPoolProtoMsg {
   typeUrl: '/symphony.cosmwasmpool.v1beta1.MsgCreateCosmWasmPool';
   value: Uint8Array;
 }
-/** ===================== MsgCreateCosmwasmPool */
+/**
+ * ===================== MsgCreateCosmwasmPool
+ * @name MsgCreateCosmWasmPoolAmino
+ * @package symphony.cosmwasmpool.v1beta1
+ * @see proto type: symphony.cosmwasmpool.v1beta1.MsgCreateCosmWasmPool
+ */
 export interface MsgCreateCosmWasmPoolAmino {
   code_id?: string;
   instantiate_msg?: string;
@@ -22,13 +32,23 @@ export interface MsgCreateCosmWasmPoolAminoMsg {
   type: 'symphony/MsgCreateCosmWasmPool';
   value: MsgCreateCosmWasmPoolAmino;
 }
-/** ===================== MsgCreateCosmwasmPool */
+/**
+ * ===================== MsgCreateCosmwasmPool
+ * @name MsgCreateCosmWasmPoolSDKType
+ * @package symphony.cosmwasmpool.v1beta1
+ * @see proto type: symphony.cosmwasmpool.v1beta1.MsgCreateCosmWasmPool
+ */
 export interface MsgCreateCosmWasmPoolSDKType {
   code_id: bigint;
   instantiate_msg: Uint8Array;
   sender: string;
 }
-/** Returns a unique poolID to identify the pool with. */
+/**
+ * Returns a unique poolID to identify the pool with.
+ * @name MsgCreateCosmWasmPoolResponse
+ * @package symphony.cosmwasmpool.v1beta1
+ * @see proto type: symphony.cosmwasmpool.v1beta1.MsgCreateCosmWasmPoolResponse
+ */
 export interface MsgCreateCosmWasmPoolResponse {
   poolId: bigint;
 }
@@ -36,7 +56,12 @@ export interface MsgCreateCosmWasmPoolResponseProtoMsg {
   typeUrl: '/symphony.cosmwasmpool.v1beta1.MsgCreateCosmWasmPoolResponse';
   value: Uint8Array;
 }
-/** Returns a unique poolID to identify the pool with. */
+/**
+ * Returns a unique poolID to identify the pool with.
+ * @name MsgCreateCosmWasmPoolResponseAmino
+ * @package symphony.cosmwasmpool.v1beta1
+ * @see proto type: symphony.cosmwasmpool.v1beta1.MsgCreateCosmWasmPoolResponse
+ */
 export interface MsgCreateCosmWasmPoolResponseAmino {
   pool_id?: string;
 }
@@ -44,7 +69,12 @@ export interface MsgCreateCosmWasmPoolResponseAminoMsg {
   type: '/symphony.cosmwasmpool.v1beta1.MsgCreateCosmWasmPoolResponse';
   value: MsgCreateCosmWasmPoolResponseAmino;
 }
-/** Returns a unique poolID to identify the pool with. */
+/**
+ * Returns a unique poolID to identify the pool with.
+ * @name MsgCreateCosmWasmPoolResponseSDKType
+ * @package symphony.cosmwasmpool.v1beta1
+ * @see proto type: symphony.cosmwasmpool.v1beta1.MsgCreateCosmWasmPoolResponse
+ */
 export interface MsgCreateCosmWasmPoolResponseSDKType {
   pool_id: bigint;
 }
@@ -55,6 +85,12 @@ function createBaseMsgCreateCosmWasmPool(): MsgCreateCosmWasmPool {
     sender: '',
   };
 }
+/**
+ * ===================== MsgCreateCosmwasmPool
+ * @name MsgCreateCosmWasmPool
+ * @package symphony.cosmwasmpool.v1beta1
+ * @see proto type: symphony.cosmwasmpool.v1beta1.MsgCreateCosmWasmPool
+ */
 export const MsgCreateCosmWasmPool = {
   typeUrl: '/symphony.cosmwasmpool.v1beta1.MsgCreateCosmWasmPool',
   aminoType: 'symphony/MsgCreateCosmWasmPool',
@@ -201,6 +237,12 @@ function createBaseMsgCreateCosmWasmPoolResponse(): MsgCreateCosmWasmPoolRespons
     poolId: BigInt(0),
   };
 }
+/**
+ * Returns a unique poolID to identify the pool with.
+ * @name MsgCreateCosmWasmPoolResponse
+ * @package symphony.cosmwasmpool.v1beta1
+ * @see proto type: symphony.cosmwasmpool.v1beta1.MsgCreateCosmWasmPoolResponse
+ */
 export const MsgCreateCosmWasmPoolResponse = {
   typeUrl: '/symphony.cosmwasmpool.v1beta1.MsgCreateCosmWasmPoolResponse',
   is(o: any): o is MsgCreateCosmWasmPoolResponse {

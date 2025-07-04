@@ -2,7 +2,12 @@
 import { BinaryReader, BinaryWriter } from '../../../binary';
 import { bytesFromBase64, base64FromBytes } from '../../../helpers';
 import { GlobalDecoderRegistry } from '../../../registry';
-/** Params defines the parameters for the market module. */
+/**
+ * Params defines the parameters for the market module.
+ * @name Params
+ * @package symphony.market.v1beta1
+ * @see proto type: symphony.market.v1beta1.Params
+ */
 export interface Params {
   exchangePool: Uint8Array;
   minStabilitySpread: Uint8Array;
@@ -11,7 +16,12 @@ export interface ParamsProtoMsg {
   typeUrl: '/symphony.market.v1beta1.Params';
   value: Uint8Array;
 }
-/** Params defines the parameters for the market module. */
+/**
+ * Params defines the parameters for the market module.
+ * @name ParamsAmino
+ * @package symphony.market.v1beta1
+ * @see proto type: symphony.market.v1beta1.Params
+ */
 export interface ParamsAmino {
   exchange_pool?: string;
   min_stability_spread?: string;
@@ -20,7 +30,12 @@ export interface ParamsAminoMsg {
   type: '/symphony.market.v1beta1.Params';
   value: ParamsAmino;
 }
-/** Params defines the parameters for the market module. */
+/**
+ * Params defines the parameters for the market module.
+ * @name ParamsSDKType
+ * @package symphony.market.v1beta1
+ * @see proto type: symphony.market.v1beta1.Params
+ */
 export interface ParamsSDKType {
   exchange_pool: Uint8Array;
   min_stability_spread: Uint8Array;
@@ -31,6 +46,12 @@ function createBaseParams(): Params {
     minStabilitySpread: new Uint8Array(),
   };
 }
+/**
+ * Params defines the parameters for the market module.
+ * @name Params
+ * @package symphony.market.v1beta1
+ * @see proto type: symphony.market.v1beta1.Params
+ */
 export const Params = {
   typeUrl: '/symphony.market.v1beta1.Params',
   is(o: any): o is Params {

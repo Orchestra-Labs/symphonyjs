@@ -4,6 +4,9 @@ import { GlobalDecoderRegistry } from '../../../registry';
 /**
  * MigrationRecords contains all the links between balancer and concentrated
  * pools
+ * @name MigrationRecords
+ * @package symphony.gamm.v1beta1
+ * @see proto type: symphony.gamm.v1beta1.MigrationRecords
  */
 export interface MigrationRecords {
   balancerToConcentratedPoolLinks: BalancerToConcentratedPoolLink[];
@@ -15,6 +18,9 @@ export interface MigrationRecordsProtoMsg {
 /**
  * MigrationRecords contains all the links between balancer and concentrated
  * pools
+ * @name MigrationRecordsAmino
+ * @package symphony.gamm.v1beta1
+ * @see proto type: symphony.gamm.v1beta1.MigrationRecords
  */
 export interface MigrationRecordsAmino {
   balancer_to_concentrated_pool_links?: BalancerToConcentratedPoolLinkAmino[];
@@ -26,6 +32,9 @@ export interface MigrationRecordsAminoMsg {
 /**
  * MigrationRecords contains all the links between balancer and concentrated
  * pools
+ * @name MigrationRecordsSDKType
+ * @package symphony.gamm.v1beta1
+ * @see proto type: symphony.gamm.v1beta1.MigrationRecords
  */
 export interface MigrationRecordsSDKType {
   balancer_to_concentrated_pool_links: BalancerToConcentratedPoolLinkSDKType[];
@@ -37,6 +46,9 @@ export interface MigrationRecordsSDKType {
  * concentrated liquidity pool position
  * A balancer pool can be linked to a maximum of one cl pool, and a cl pool can
  * be linked to a maximum of one balancer pool.
+ * @name BalancerToConcentratedPoolLink
+ * @package symphony.gamm.v1beta1
+ * @see proto type: symphony.gamm.v1beta1.BalancerToConcentratedPoolLink
  */
 export interface BalancerToConcentratedPoolLink {
   balancerPoolId: bigint;
@@ -53,6 +65,9 @@ export interface BalancerToConcentratedPoolLinkProtoMsg {
  * concentrated liquidity pool position
  * A balancer pool can be linked to a maximum of one cl pool, and a cl pool can
  * be linked to a maximum of one balancer pool.
+ * @name BalancerToConcentratedPoolLinkAmino
+ * @package symphony.gamm.v1beta1
+ * @see proto type: symphony.gamm.v1beta1.BalancerToConcentratedPoolLink
  */
 export interface BalancerToConcentratedPoolLinkAmino {
   balancer_pool_id?: string;
@@ -69,6 +84,9 @@ export interface BalancerToConcentratedPoolLinkAminoMsg {
  * concentrated liquidity pool position
  * A balancer pool can be linked to a maximum of one cl pool, and a cl pool can
  * be linked to a maximum of one balancer pool.
+ * @name BalancerToConcentratedPoolLinkSDKType
+ * @package symphony.gamm.v1beta1
+ * @see proto type: symphony.gamm.v1beta1.BalancerToConcentratedPoolLink
  */
 export interface BalancerToConcentratedPoolLinkSDKType {
   balancer_pool_id: bigint;
@@ -79,6 +97,13 @@ function createBaseMigrationRecords(): MigrationRecords {
     balancerToConcentratedPoolLinks: [],
   };
 }
+/**
+ * MigrationRecords contains all the links between balancer and concentrated
+ * pools
+ * @name MigrationRecords
+ * @package symphony.gamm.v1beta1
+ * @see proto type: symphony.gamm.v1beta1.MigrationRecords
+ */
 export const MigrationRecords = {
   typeUrl: '/symphony.gamm.v1beta1.MigrationRecords',
   is(o: any): o is MigrationRecords {
@@ -198,6 +223,17 @@ function createBaseBalancerToConcentratedPoolLink(): BalancerToConcentratedPoolL
     clPoolId: BigInt(0),
   };
 }
+/**
+ * BalancerToConcentratedPoolLink defines a single link between a single
+ * balancer pool and a single concentrated liquidity pool. This link is used to
+ * allow a balancer pool to migrate to a single canonical full range
+ * concentrated liquidity pool position
+ * A balancer pool can be linked to a maximum of one cl pool, and a cl pool can
+ * be linked to a maximum of one balancer pool.
+ * @name BalancerToConcentratedPoolLink
+ * @package symphony.gamm.v1beta1
+ * @see proto type: symphony.gamm.v1beta1.BalancerToConcentratedPoolLink
+ */
 export const BalancerToConcentratedPoolLink = {
   typeUrl: '/symphony.gamm.v1beta1.BalancerToConcentratedPoolLink',
   is(o: any): o is BalancerToConcentratedPoolLink {

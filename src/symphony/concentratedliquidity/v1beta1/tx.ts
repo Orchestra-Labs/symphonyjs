@@ -7,7 +7,12 @@ import {
 import { BinaryReader, BinaryWriter } from '../../../binary';
 import { GlobalDecoderRegistry } from '../../../registry';
 import { Decimal } from '@cosmjs/math';
-/** ===================== MsgCreatePosition */
+/**
+ * ===================== MsgCreatePosition
+ * @name MsgCreatePosition
+ * @package symphony.concentratedliquidity.v1beta1
+ * @see proto type: symphony.concentratedliquidity.v1beta1.MsgCreatePosition
+ */
 export interface MsgCreatePosition {
   poolId: bigint;
   sender: string;
@@ -27,7 +32,12 @@ export interface MsgCreatePositionProtoMsg {
   typeUrl: '/symphony.concentratedliquidity.v1beta1.MsgCreatePosition';
   value: Uint8Array;
 }
-/** ===================== MsgCreatePosition */
+/**
+ * ===================== MsgCreatePosition
+ * @name MsgCreatePositionAmino
+ * @package symphony.concentratedliquidity.v1beta1
+ * @see proto type: symphony.concentratedliquidity.v1beta1.MsgCreatePosition
+ */
 export interface MsgCreatePositionAmino {
   pool_id?: string;
   sender?: string;
@@ -47,7 +57,12 @@ export interface MsgCreatePositionAminoMsg {
   type: 'symphony/cl-create-position';
   value: MsgCreatePositionAmino;
 }
-/** ===================== MsgCreatePosition */
+/**
+ * ===================== MsgCreatePosition
+ * @name MsgCreatePositionSDKType
+ * @package symphony.concentratedliquidity.v1beta1
+ * @see proto type: symphony.concentratedliquidity.v1beta1.MsgCreatePosition
+ */
 export interface MsgCreatePositionSDKType {
   pool_id: bigint;
   sender: string;
@@ -57,6 +72,11 @@ export interface MsgCreatePositionSDKType {
   token_min_amount0: string;
   token_min_amount1: string;
 }
+/**
+ * @name MsgCreatePositionResponse
+ * @package symphony.concentratedliquidity.v1beta1
+ * @see proto type: symphony.concentratedliquidity.v1beta1.MsgCreatePositionResponse
+ */
 export interface MsgCreatePositionResponse {
   positionId: bigint;
   amount0: string;
@@ -75,6 +95,11 @@ export interface MsgCreatePositionResponseProtoMsg {
   typeUrl: '/symphony.concentratedliquidity.v1beta1.MsgCreatePositionResponse';
   value: Uint8Array;
 }
+/**
+ * @name MsgCreatePositionResponseAmino
+ * @package symphony.concentratedliquidity.v1beta1
+ * @see proto type: symphony.concentratedliquidity.v1beta1.MsgCreatePositionResponse
+ */
 export interface MsgCreatePositionResponseAmino {
   position_id?: string;
   amount0?: string;
@@ -93,6 +118,11 @@ export interface MsgCreatePositionResponseAminoMsg {
   type: '/symphony.concentratedliquidity.v1beta1.MsgCreatePositionResponse';
   value: MsgCreatePositionResponseAmino;
 }
+/**
+ * @name MsgCreatePositionResponseSDKType
+ * @package symphony.concentratedliquidity.v1beta1
+ * @see proto type: symphony.concentratedliquidity.v1beta1.MsgCreatePositionResponse
+ */
 export interface MsgCreatePositionResponseSDKType {
   position_id: bigint;
   amount0: string;
@@ -101,13 +131,22 @@ export interface MsgCreatePositionResponseSDKType {
   lower_tick: bigint;
   upper_tick: bigint;
 }
-/** ===================== MsgAddToPosition */
+/**
+ * ===================== MsgAddToPosition
+ * @name MsgAddToPosition
+ * @package symphony.concentratedliquidity.v1beta1
+ * @see proto type: symphony.concentratedliquidity.v1beta1.MsgAddToPosition
+ */
 export interface MsgAddToPosition {
   positionId: bigint;
   sender: string;
-  /** amount0 represents the amount of token0 willing to put in. */
+  /**
+   * amount0 represents the amount of token0 willing to put in.
+   */
   amount0: string;
-  /** amount1 represents the amount of token1 willing to put in. */
+  /**
+   * amount1 represents the amount of token1 willing to put in.
+   */
   amount1: string;
   /**
    * token_min_amount0 represents the minimum amount of token0 desired from the
@@ -128,13 +167,22 @@ export interface MsgAddToPositionProtoMsg {
   typeUrl: '/symphony.concentratedliquidity.v1beta1.MsgAddToPosition';
   value: Uint8Array;
 }
-/** ===================== MsgAddToPosition */
+/**
+ * ===================== MsgAddToPosition
+ * @name MsgAddToPositionAmino
+ * @package symphony.concentratedliquidity.v1beta1
+ * @see proto type: symphony.concentratedliquidity.v1beta1.MsgAddToPosition
+ */
 export interface MsgAddToPositionAmino {
   position_id?: string;
   sender?: string;
-  /** amount0 represents the amount of token0 willing to put in. */
+  /**
+   * amount0 represents the amount of token0 willing to put in.
+   */
   amount0?: string;
-  /** amount1 represents the amount of token1 willing to put in. */
+  /**
+   * amount1 represents the amount of token1 willing to put in.
+   */
   amount1?: string;
   /**
    * token_min_amount0 represents the minimum amount of token0 desired from the
@@ -155,7 +203,12 @@ export interface MsgAddToPositionAminoMsg {
   type: 'symphony/cl-add-to-position';
   value: MsgAddToPositionAmino;
 }
-/** ===================== MsgAddToPosition */
+/**
+ * ===================== MsgAddToPosition
+ * @name MsgAddToPositionSDKType
+ * @package symphony.concentratedliquidity.v1beta1
+ * @see proto type: symphony.concentratedliquidity.v1beta1.MsgAddToPosition
+ */
 export interface MsgAddToPositionSDKType {
   position_id: bigint;
   sender: string;
@@ -164,6 +217,11 @@ export interface MsgAddToPositionSDKType {
   token_min_amount0: string;
   token_min_amount1: string;
 }
+/**
+ * @name MsgAddToPositionResponse
+ * @package symphony.concentratedliquidity.v1beta1
+ * @see proto type: symphony.concentratedliquidity.v1beta1.MsgAddToPositionResponse
+ */
 export interface MsgAddToPositionResponse {
   positionId: bigint;
   amount0: string;
@@ -173,6 +231,11 @@ export interface MsgAddToPositionResponseProtoMsg {
   typeUrl: '/symphony.concentratedliquidity.v1beta1.MsgAddToPositionResponse';
   value: Uint8Array;
 }
+/**
+ * @name MsgAddToPositionResponseAmino
+ * @package symphony.concentratedliquidity.v1beta1
+ * @see proto type: symphony.concentratedliquidity.v1beta1.MsgAddToPositionResponse
+ */
 export interface MsgAddToPositionResponseAmino {
   position_id?: string;
   amount0?: string;
@@ -182,12 +245,22 @@ export interface MsgAddToPositionResponseAminoMsg {
   type: '/symphony.concentratedliquidity.v1beta1.MsgAddToPositionResponse';
   value: MsgAddToPositionResponseAmino;
 }
+/**
+ * @name MsgAddToPositionResponseSDKType
+ * @package symphony.concentratedliquidity.v1beta1
+ * @see proto type: symphony.concentratedliquidity.v1beta1.MsgAddToPositionResponse
+ */
 export interface MsgAddToPositionResponseSDKType {
   position_id: bigint;
   amount0: string;
   amount1: string;
 }
-/** ===================== MsgWithdrawPosition */
+/**
+ * ===================== MsgWithdrawPosition
+ * @name MsgWithdrawPosition
+ * @package symphony.concentratedliquidity.v1beta1
+ * @see proto type: symphony.concentratedliquidity.v1beta1.MsgWithdrawPosition
+ */
 export interface MsgWithdrawPosition {
   positionId: bigint;
   sender: string;
@@ -197,7 +270,12 @@ export interface MsgWithdrawPositionProtoMsg {
   typeUrl: '/symphony.concentratedliquidity.v1beta1.MsgWithdrawPosition';
   value: Uint8Array;
 }
-/** ===================== MsgWithdrawPosition */
+/**
+ * ===================== MsgWithdrawPosition
+ * @name MsgWithdrawPositionAmino
+ * @package symphony.concentratedliquidity.v1beta1
+ * @see proto type: symphony.concentratedliquidity.v1beta1.MsgWithdrawPosition
+ */
 export interface MsgWithdrawPositionAmino {
   position_id?: string;
   sender?: string;
@@ -207,12 +285,22 @@ export interface MsgWithdrawPositionAminoMsg {
   type: 'symphony/cl-withdraw-position';
   value: MsgWithdrawPositionAmino;
 }
-/** ===================== MsgWithdrawPosition */
+/**
+ * ===================== MsgWithdrawPosition
+ * @name MsgWithdrawPositionSDKType
+ * @package symphony.concentratedliquidity.v1beta1
+ * @see proto type: symphony.concentratedliquidity.v1beta1.MsgWithdrawPosition
+ */
 export interface MsgWithdrawPositionSDKType {
   position_id: bigint;
   sender: string;
   liquidity_amount: string;
 }
+/**
+ * @name MsgWithdrawPositionResponse
+ * @package symphony.concentratedliquidity.v1beta1
+ * @see proto type: symphony.concentratedliquidity.v1beta1.MsgWithdrawPositionResponse
+ */
 export interface MsgWithdrawPositionResponse {
   amount0: string;
   amount1: string;
@@ -221,6 +309,11 @@ export interface MsgWithdrawPositionResponseProtoMsg {
   typeUrl: '/symphony.concentratedliquidity.v1beta1.MsgWithdrawPositionResponse';
   value: Uint8Array;
 }
+/**
+ * @name MsgWithdrawPositionResponseAmino
+ * @package symphony.concentratedliquidity.v1beta1
+ * @see proto type: symphony.concentratedliquidity.v1beta1.MsgWithdrawPositionResponse
+ */
 export interface MsgWithdrawPositionResponseAmino {
   amount0?: string;
   amount1?: string;
@@ -229,11 +322,21 @@ export interface MsgWithdrawPositionResponseAminoMsg {
   type: '/symphony.concentratedliquidity.v1beta1.MsgWithdrawPositionResponse';
   value: MsgWithdrawPositionResponseAmino;
 }
+/**
+ * @name MsgWithdrawPositionResponseSDKType
+ * @package symphony.concentratedliquidity.v1beta1
+ * @see proto type: symphony.concentratedliquidity.v1beta1.MsgWithdrawPositionResponse
+ */
 export interface MsgWithdrawPositionResponseSDKType {
   amount0: string;
   amount1: string;
 }
-/** ===================== MsgCollectSpreadRewards */
+/**
+ * ===================== MsgCollectSpreadRewards
+ * @name MsgCollectSpreadRewards
+ * @package symphony.concentratedliquidity.v1beta1
+ * @see proto type: symphony.concentratedliquidity.v1beta1.MsgCollectSpreadRewards
+ */
 export interface MsgCollectSpreadRewards {
   positionIds: bigint[];
   sender: string;
@@ -242,7 +345,12 @@ export interface MsgCollectSpreadRewardsProtoMsg {
   typeUrl: '/symphony.concentratedliquidity.v1beta1.MsgCollectSpreadRewards';
   value: Uint8Array;
 }
-/** ===================== MsgCollectSpreadRewards */
+/**
+ * ===================== MsgCollectSpreadRewards
+ * @name MsgCollectSpreadRewardsAmino
+ * @package symphony.concentratedliquidity.v1beta1
+ * @see proto type: symphony.concentratedliquidity.v1beta1.MsgCollectSpreadRewards
+ */
 export interface MsgCollectSpreadRewardsAmino {
   position_ids?: string[];
   sender?: string;
@@ -251,11 +359,21 @@ export interface MsgCollectSpreadRewardsAminoMsg {
   type: 'symphony/cl-col-sp-rewards';
   value: MsgCollectSpreadRewardsAmino;
 }
-/** ===================== MsgCollectSpreadRewards */
+/**
+ * ===================== MsgCollectSpreadRewards
+ * @name MsgCollectSpreadRewardsSDKType
+ * @package symphony.concentratedliquidity.v1beta1
+ * @see proto type: symphony.concentratedliquidity.v1beta1.MsgCollectSpreadRewards
+ */
 export interface MsgCollectSpreadRewardsSDKType {
   position_ids: bigint[];
   sender: string;
 }
+/**
+ * @name MsgCollectSpreadRewardsResponse
+ * @package symphony.concentratedliquidity.v1beta1
+ * @see proto type: symphony.concentratedliquidity.v1beta1.MsgCollectSpreadRewardsResponse
+ */
 export interface MsgCollectSpreadRewardsResponse {
   collectedSpreadRewards: Coin[];
 }
@@ -263,6 +381,11 @@ export interface MsgCollectSpreadRewardsResponseProtoMsg {
   typeUrl: '/symphony.concentratedliquidity.v1beta1.MsgCollectSpreadRewardsResponse';
   value: Uint8Array;
 }
+/**
+ * @name MsgCollectSpreadRewardsResponseAmino
+ * @package symphony.concentratedliquidity.v1beta1
+ * @see proto type: symphony.concentratedliquidity.v1beta1.MsgCollectSpreadRewardsResponse
+ */
 export interface MsgCollectSpreadRewardsResponseAmino {
   collected_spread_rewards?: CoinAmino[];
 }
@@ -270,10 +393,20 @@ export interface MsgCollectSpreadRewardsResponseAminoMsg {
   type: '/symphony.concentratedliquidity.v1beta1.MsgCollectSpreadRewardsResponse';
   value: MsgCollectSpreadRewardsResponseAmino;
 }
+/**
+ * @name MsgCollectSpreadRewardsResponseSDKType
+ * @package symphony.concentratedliquidity.v1beta1
+ * @see proto type: symphony.concentratedliquidity.v1beta1.MsgCollectSpreadRewardsResponse
+ */
 export interface MsgCollectSpreadRewardsResponseSDKType {
   collected_spread_rewards: CoinSDKType[];
 }
-/** ===================== MsgCollectIncentives */
+/**
+ * ===================== MsgCollectIncentives
+ * @name MsgCollectIncentives
+ * @package symphony.concentratedliquidity.v1beta1
+ * @see proto type: symphony.concentratedliquidity.v1beta1.MsgCollectIncentives
+ */
 export interface MsgCollectIncentives {
   positionIds: bigint[];
   sender: string;
@@ -282,7 +415,12 @@ export interface MsgCollectIncentivesProtoMsg {
   typeUrl: '/symphony.concentratedliquidity.v1beta1.MsgCollectIncentives';
   value: Uint8Array;
 }
-/** ===================== MsgCollectIncentives */
+/**
+ * ===================== MsgCollectIncentives
+ * @name MsgCollectIncentivesAmino
+ * @package symphony.concentratedliquidity.v1beta1
+ * @see proto type: symphony.concentratedliquidity.v1beta1.MsgCollectIncentives
+ */
 export interface MsgCollectIncentivesAmino {
   position_ids?: string[];
   sender?: string;
@@ -291,11 +429,21 @@ export interface MsgCollectIncentivesAminoMsg {
   type: 'symphony/cl-collect-incentives';
   value: MsgCollectIncentivesAmino;
 }
-/** ===================== MsgCollectIncentives */
+/**
+ * ===================== MsgCollectIncentives
+ * @name MsgCollectIncentivesSDKType
+ * @package symphony.concentratedliquidity.v1beta1
+ * @see proto type: symphony.concentratedliquidity.v1beta1.MsgCollectIncentives
+ */
 export interface MsgCollectIncentivesSDKType {
   position_ids: bigint[];
   sender: string;
 }
+/**
+ * @name MsgCollectIncentivesResponse
+ * @package symphony.concentratedliquidity.v1beta1
+ * @see proto type: symphony.concentratedliquidity.v1beta1.MsgCollectIncentivesResponse
+ */
 export interface MsgCollectIncentivesResponse {
   collectedIncentives: Coin[];
   forfeitedIncentives: Coin[];
@@ -304,6 +452,11 @@ export interface MsgCollectIncentivesResponseProtoMsg {
   typeUrl: '/symphony.concentratedliquidity.v1beta1.MsgCollectIncentivesResponse';
   value: Uint8Array;
 }
+/**
+ * @name MsgCollectIncentivesResponseAmino
+ * @package symphony.concentratedliquidity.v1beta1
+ * @see proto type: symphony.concentratedliquidity.v1beta1.MsgCollectIncentivesResponse
+ */
 export interface MsgCollectIncentivesResponseAmino {
   collected_incentives?: CoinAmino[];
   forfeited_incentives?: CoinAmino[];
@@ -312,11 +465,21 @@ export interface MsgCollectIncentivesResponseAminoMsg {
   type: '/symphony.concentratedliquidity.v1beta1.MsgCollectIncentivesResponse';
   value: MsgCollectIncentivesResponseAmino;
 }
+/**
+ * @name MsgCollectIncentivesResponseSDKType
+ * @package symphony.concentratedliquidity.v1beta1
+ * @see proto type: symphony.concentratedliquidity.v1beta1.MsgCollectIncentivesResponse
+ */
 export interface MsgCollectIncentivesResponseSDKType {
   collected_incentives: CoinSDKType[];
   forfeited_incentives: CoinSDKType[];
 }
-/** ===================== MsgFungifyChargedPositions */
+/**
+ * ===================== MsgFungifyChargedPositions
+ * @name MsgFungifyChargedPositions
+ * @package symphony.concentratedliquidity.v1beta1
+ * @see proto type: symphony.concentratedliquidity.v1beta1.MsgFungifyChargedPositions
+ */
 export interface MsgFungifyChargedPositions {
   positionIds: bigint[];
   sender: string;
@@ -325,7 +488,12 @@ export interface MsgFungifyChargedPositionsProtoMsg {
   typeUrl: '/symphony.concentratedliquidity.v1beta1.MsgFungifyChargedPositions';
   value: Uint8Array;
 }
-/** ===================== MsgFungifyChargedPositions */
+/**
+ * ===================== MsgFungifyChargedPositions
+ * @name MsgFungifyChargedPositionsAmino
+ * @package symphony.concentratedliquidity.v1beta1
+ * @see proto type: symphony.concentratedliquidity.v1beta1.MsgFungifyChargedPositions
+ */
 export interface MsgFungifyChargedPositionsAmino {
   position_ids?: string[];
   sender?: string;
@@ -334,11 +502,21 @@ export interface MsgFungifyChargedPositionsAminoMsg {
   type: 'symphony/cl-fungify-charged-positions';
   value: MsgFungifyChargedPositionsAmino;
 }
-/** ===================== MsgFungifyChargedPositions */
+/**
+ * ===================== MsgFungifyChargedPositions
+ * @name MsgFungifyChargedPositionsSDKType
+ * @package symphony.concentratedliquidity.v1beta1
+ * @see proto type: symphony.concentratedliquidity.v1beta1.MsgFungifyChargedPositions
+ */
 export interface MsgFungifyChargedPositionsSDKType {
   position_ids: bigint[];
   sender: string;
 }
+/**
+ * @name MsgFungifyChargedPositionsResponse
+ * @package symphony.concentratedliquidity.v1beta1
+ * @see proto type: symphony.concentratedliquidity.v1beta1.MsgFungifyChargedPositionsResponse
+ */
 export interface MsgFungifyChargedPositionsResponse {
   newPositionId: bigint;
 }
@@ -346,6 +524,11 @@ export interface MsgFungifyChargedPositionsResponseProtoMsg {
   typeUrl: '/symphony.concentratedliquidity.v1beta1.MsgFungifyChargedPositionsResponse';
   value: Uint8Array;
 }
+/**
+ * @name MsgFungifyChargedPositionsResponseAmino
+ * @package symphony.concentratedliquidity.v1beta1
+ * @see proto type: symphony.concentratedliquidity.v1beta1.MsgFungifyChargedPositionsResponse
+ */
 export interface MsgFungifyChargedPositionsResponseAmino {
   new_position_id?: string;
 }
@@ -353,10 +536,20 @@ export interface MsgFungifyChargedPositionsResponseAminoMsg {
   type: '/symphony.concentratedliquidity.v1beta1.MsgFungifyChargedPositionsResponse';
   value: MsgFungifyChargedPositionsResponseAmino;
 }
+/**
+ * @name MsgFungifyChargedPositionsResponseSDKType
+ * @package symphony.concentratedliquidity.v1beta1
+ * @see proto type: symphony.concentratedliquidity.v1beta1.MsgFungifyChargedPositionsResponse
+ */
 export interface MsgFungifyChargedPositionsResponseSDKType {
   new_position_id: bigint;
 }
-/** ===================== MsgTransferPositions */
+/**
+ * ===================== MsgTransferPositions
+ * @name MsgTransferPositions
+ * @package symphony.concentratedliquidity.v1beta1
+ * @see proto type: symphony.concentratedliquidity.v1beta1.MsgTransferPositions
+ */
 export interface MsgTransferPositions {
   positionIds: bigint[];
   sender: string;
@@ -366,7 +559,12 @@ export interface MsgTransferPositionsProtoMsg {
   typeUrl: '/symphony.concentratedliquidity.v1beta1.MsgTransferPositions';
   value: Uint8Array;
 }
-/** ===================== MsgTransferPositions */
+/**
+ * ===================== MsgTransferPositions
+ * @name MsgTransferPositionsAmino
+ * @package symphony.concentratedliquidity.v1beta1
+ * @see proto type: symphony.concentratedliquidity.v1beta1.MsgTransferPositions
+ */
 export interface MsgTransferPositionsAmino {
   position_ids?: string[];
   sender?: string;
@@ -376,22 +574,42 @@ export interface MsgTransferPositionsAminoMsg {
   type: 'symphony/cl-transfer-positions';
   value: MsgTransferPositionsAmino;
 }
-/** ===================== MsgTransferPositions */
+/**
+ * ===================== MsgTransferPositions
+ * @name MsgTransferPositionsSDKType
+ * @package symphony.concentratedliquidity.v1beta1
+ * @see proto type: symphony.concentratedliquidity.v1beta1.MsgTransferPositions
+ */
 export interface MsgTransferPositionsSDKType {
   position_ids: bigint[];
   sender: string;
   new_owner: string;
 }
+/**
+ * @name MsgTransferPositionsResponse
+ * @package symphony.concentratedliquidity.v1beta1
+ * @see proto type: symphony.concentratedliquidity.v1beta1.MsgTransferPositionsResponse
+ */
 export interface MsgTransferPositionsResponse {}
 export interface MsgTransferPositionsResponseProtoMsg {
   typeUrl: '/symphony.concentratedliquidity.v1beta1.MsgTransferPositionsResponse';
   value: Uint8Array;
 }
+/**
+ * @name MsgTransferPositionsResponseAmino
+ * @package symphony.concentratedliquidity.v1beta1
+ * @see proto type: symphony.concentratedliquidity.v1beta1.MsgTransferPositionsResponse
+ */
 export interface MsgTransferPositionsResponseAmino {}
 export interface MsgTransferPositionsResponseAminoMsg {
   type: '/symphony.concentratedliquidity.v1beta1.MsgTransferPositionsResponse';
   value: MsgTransferPositionsResponseAmino;
 }
+/**
+ * @name MsgTransferPositionsResponseSDKType
+ * @package symphony.concentratedliquidity.v1beta1
+ * @see proto type: symphony.concentratedliquidity.v1beta1.MsgTransferPositionsResponse
+ */
 export interface MsgTransferPositionsResponseSDKType {}
 function createBaseMsgCreatePosition(): MsgCreatePosition {
   return {
@@ -404,6 +622,12 @@ function createBaseMsgCreatePosition(): MsgCreatePosition {
     tokenMinAmount1: '',
   };
 }
+/**
+ * ===================== MsgCreatePosition
+ * @name MsgCreatePosition
+ * @package symphony.concentratedliquidity.v1beta1
+ * @see proto type: symphony.concentratedliquidity.v1beta1.MsgCreatePosition
+ */
 export const MsgCreatePosition = {
   typeUrl: '/symphony.concentratedliquidity.v1beta1.MsgCreatePosition',
   aminoType: 'symphony/cl-create-position',
@@ -626,6 +850,11 @@ function createBaseMsgCreatePositionResponse(): MsgCreatePositionResponse {
     upperTick: BigInt(0),
   };
 }
+/**
+ * @name MsgCreatePositionResponse
+ * @package symphony.concentratedliquidity.v1beta1
+ * @see proto type: symphony.concentratedliquidity.v1beta1.MsgCreatePositionResponse
+ */
 export const MsgCreatePositionResponse = {
   typeUrl: '/symphony.concentratedliquidity.v1beta1.MsgCreatePositionResponse',
   is(o: any): o is MsgCreatePositionResponse {
@@ -832,6 +1061,12 @@ function createBaseMsgAddToPosition(): MsgAddToPosition {
     tokenMinAmount1: '',
   };
 }
+/**
+ * ===================== MsgAddToPosition
+ * @name MsgAddToPosition
+ * @package symphony.concentratedliquidity.v1beta1
+ * @see proto type: symphony.concentratedliquidity.v1beta1.MsgAddToPosition
+ */
 export const MsgAddToPosition = {
   typeUrl: '/symphony.concentratedliquidity.v1beta1.MsgAddToPosition',
   aminoType: 'symphony/cl-add-to-position',
@@ -1018,6 +1253,11 @@ function createBaseMsgAddToPositionResponse(): MsgAddToPositionResponse {
     amount1: '',
   };
 }
+/**
+ * @name MsgAddToPositionResponse
+ * @package symphony.concentratedliquidity.v1beta1
+ * @see proto type: symphony.concentratedliquidity.v1beta1.MsgAddToPositionResponse
+ */
 export const MsgAddToPositionResponse = {
   typeUrl: '/symphony.concentratedliquidity.v1beta1.MsgAddToPositionResponse',
   is(o: any): o is MsgAddToPositionResponse {
@@ -1158,6 +1398,12 @@ function createBaseMsgWithdrawPosition(): MsgWithdrawPosition {
     liquidityAmount: '',
   };
 }
+/**
+ * ===================== MsgWithdrawPosition
+ * @name MsgWithdrawPosition
+ * @package symphony.concentratedliquidity.v1beta1
+ * @see proto type: symphony.concentratedliquidity.v1beta1.MsgWithdrawPosition
+ */
 export const MsgWithdrawPosition = {
   typeUrl: '/symphony.concentratedliquidity.v1beta1.MsgWithdrawPosition',
   aminoType: 'symphony/cl-withdraw-position',
@@ -1308,6 +1554,11 @@ function createBaseMsgWithdrawPositionResponse(): MsgWithdrawPositionResponse {
     amount1: '',
   };
 }
+/**
+ * @name MsgWithdrawPositionResponse
+ * @package symphony.concentratedliquidity.v1beta1
+ * @see proto type: symphony.concentratedliquidity.v1beta1.MsgWithdrawPositionResponse
+ */
 export const MsgWithdrawPositionResponse = {
   typeUrl:
     '/symphony.concentratedliquidity.v1beta1.MsgWithdrawPositionResponse',
@@ -1429,6 +1680,12 @@ function createBaseMsgCollectSpreadRewards(): MsgCollectSpreadRewards {
     sender: '',
   };
 }
+/**
+ * ===================== MsgCollectSpreadRewards
+ * @name MsgCollectSpreadRewards
+ * @package symphony.concentratedliquidity.v1beta1
+ * @see proto type: symphony.concentratedliquidity.v1beta1.MsgCollectSpreadRewards
+ */
 export const MsgCollectSpreadRewards = {
   typeUrl: '/symphony.concentratedliquidity.v1beta1.MsgCollectSpreadRewards',
   aminoType: 'symphony/cl-col-sp-rewards',
@@ -1575,6 +1832,11 @@ function createBaseMsgCollectSpreadRewardsResponse(): MsgCollectSpreadRewardsRes
     collectedSpreadRewards: [],
   };
 }
+/**
+ * @name MsgCollectSpreadRewardsResponse
+ * @package symphony.concentratedliquidity.v1beta1
+ * @see proto type: symphony.concentratedliquidity.v1beta1.MsgCollectSpreadRewardsResponse
+ */
 export const MsgCollectSpreadRewardsResponse = {
   typeUrl:
     '/symphony.concentratedliquidity.v1beta1.MsgCollectSpreadRewardsResponse',
@@ -1699,6 +1961,12 @@ function createBaseMsgCollectIncentives(): MsgCollectIncentives {
     sender: '',
   };
 }
+/**
+ * ===================== MsgCollectIncentives
+ * @name MsgCollectIncentives
+ * @package symphony.concentratedliquidity.v1beta1
+ * @see proto type: symphony.concentratedliquidity.v1beta1.MsgCollectIncentives
+ */
 export const MsgCollectIncentives = {
   typeUrl: '/symphony.concentratedliquidity.v1beta1.MsgCollectIncentives',
   aminoType: 'symphony/cl-collect-incentives',
@@ -1835,6 +2103,11 @@ function createBaseMsgCollectIncentivesResponse(): MsgCollectIncentivesResponse 
     forfeitedIncentives: [],
   };
 }
+/**
+ * @name MsgCollectIncentivesResponse
+ * @package symphony.concentratedliquidity.v1beta1
+ * @see proto type: symphony.concentratedliquidity.v1beta1.MsgCollectIncentivesResponse
+ */
 export const MsgCollectIncentivesResponse = {
   typeUrl:
     '/symphony.concentratedliquidity.v1beta1.MsgCollectIncentivesResponse',
@@ -1986,6 +2259,12 @@ function createBaseMsgFungifyChargedPositions(): MsgFungifyChargedPositions {
     sender: '',
   };
 }
+/**
+ * ===================== MsgFungifyChargedPositions
+ * @name MsgFungifyChargedPositions
+ * @package symphony.concentratedliquidity.v1beta1
+ * @see proto type: symphony.concentratedliquidity.v1beta1.MsgFungifyChargedPositions
+ */
 export const MsgFungifyChargedPositions = {
   typeUrl: '/symphony.concentratedliquidity.v1beta1.MsgFungifyChargedPositions',
   aminoType: 'symphony/cl-fungify-charged-positions',
@@ -2136,6 +2415,11 @@ function createBaseMsgFungifyChargedPositionsResponse(): MsgFungifyChargedPositi
     newPositionId: BigInt(0),
   };
 }
+/**
+ * @name MsgFungifyChargedPositionsResponse
+ * @package symphony.concentratedliquidity.v1beta1
+ * @see proto type: symphony.concentratedliquidity.v1beta1.MsgFungifyChargedPositionsResponse
+ */
 export const MsgFungifyChargedPositionsResponse = {
   typeUrl:
     '/symphony.concentratedliquidity.v1beta1.MsgFungifyChargedPositionsResponse',
@@ -2256,6 +2540,12 @@ function createBaseMsgTransferPositions(): MsgTransferPositions {
     newOwner: '',
   };
 }
+/**
+ * ===================== MsgTransferPositions
+ * @name MsgTransferPositions
+ * @package symphony.concentratedliquidity.v1beta1
+ * @see proto type: symphony.concentratedliquidity.v1beta1.MsgTransferPositions
+ */
 export const MsgTransferPositions = {
   typeUrl: '/symphony.concentratedliquidity.v1beta1.MsgTransferPositions',
   aminoType: 'symphony/cl-transfer-positions',
@@ -2403,6 +2693,11 @@ GlobalDecoderRegistry.registerAminoProtoMapping(
 function createBaseMsgTransferPositionsResponse(): MsgTransferPositionsResponse {
   return {};
 }
+/**
+ * @name MsgTransferPositionsResponse
+ * @package symphony.concentratedliquidity.v1beta1
+ * @see proto type: symphony.concentratedliquidity.v1beta1.MsgTransferPositionsResponse
+ */
 export const MsgTransferPositionsResponse = {
   typeUrl:
     '/symphony.concentratedliquidity.v1beta1.MsgTransferPositionsResponse',

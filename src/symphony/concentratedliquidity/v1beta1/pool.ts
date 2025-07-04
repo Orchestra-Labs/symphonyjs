@@ -4,16 +4,29 @@ import { BinaryReader, BinaryWriter } from '../../../binary';
 import { Decimal } from '@cosmjs/math';
 import { toTimestamp, fromTimestamp } from '../../../helpers';
 import { GlobalDecoderRegistry } from '../../../registry';
+/**
+ * @name Pool
+ * @package symphony.concentratedliquidity.v1beta1
+ * @see proto type: symphony.concentratedliquidity.v1beta1.Pool
+ */
 export interface Pool {
   $typeUrl?: '/symphony.concentratedliquidity.v1beta1.Pool';
-  /** pool's address holding all liquidity tokens. */
+  /**
+   * pool's address holding all liquidity tokens.
+   */
   address: string;
-  /** address holding the incentives liquidity. */
+  /**
+   * address holding the incentives liquidity.
+   */
   incentivesAddress: string;
-  /** address holding spread rewards from swaps. */
+  /**
+   * address holding spread rewards from swaps.
+   */
   spreadRewardsAddress: string;
   id: bigint;
-  /** Amount of total liquidity */
+  /**
+   * Amount of total liquidity
+   */
   currentTickLiquidity: string;
   token0: string;
   token1: string;
@@ -25,7 +38,9 @@ export interface Pool {
    */
   tickSpacing: bigint;
   exponentAtPriceOne: bigint;
-  /** spread_factor is the ratio that is charged on the amount of token in. */
+  /**
+   * spread_factor is the ratio that is charged on the amount of token in.
+   */
   spreadFactor: string;
   /**
    * last_liquidity_update is the last time either the pool liquidity or the
@@ -37,15 +52,28 @@ export interface PoolProtoMsg {
   typeUrl: '/symphony.concentratedliquidity.v1beta1.Pool';
   value: Uint8Array;
 }
+/**
+ * @name PoolAmino
+ * @package symphony.concentratedliquidity.v1beta1
+ * @see proto type: symphony.concentratedliquidity.v1beta1.Pool
+ */
 export interface PoolAmino {
-  /** pool's address holding all liquidity tokens. */
+  /**
+   * pool's address holding all liquidity tokens.
+   */
   address?: string;
-  /** address holding the incentives liquidity. */
+  /**
+   * address holding the incentives liquidity.
+   */
   incentives_address?: string;
-  /** address holding spread rewards from swaps. */
+  /**
+   * address holding spread rewards from swaps.
+   */
   spread_rewards_address?: string;
   id?: string;
-  /** Amount of total liquidity */
+  /**
+   * Amount of total liquidity
+   */
   current_tick_liquidity?: string;
   token0?: string;
   token1?: string;
@@ -57,7 +85,9 @@ export interface PoolAmino {
    */
   tick_spacing?: string;
   exponent_at_price_one?: string;
-  /** spread_factor is the ratio that is charged on the amount of token in. */
+  /**
+   * spread_factor is the ratio that is charged on the amount of token in.
+   */
   spread_factor?: string;
   /**
    * last_liquidity_update is the last time either the pool liquidity or the
@@ -69,6 +99,11 @@ export interface PoolAminoMsg {
   type: '/symphony.concentratedliquidity.v1beta1.Pool';
   value: PoolAmino;
 }
+/**
+ * @name PoolSDKType
+ * @package symphony.concentratedliquidity.v1beta1
+ * @see proto type: symphony.concentratedliquidity.v1beta1.Pool
+ */
 export interface PoolSDKType {
   $typeUrl?: '/symphony.concentratedliquidity.v1beta1.Pool';
   address: string;
@@ -103,6 +138,11 @@ function createBasePool(): Pool {
     lastLiquidityUpdate: new Date(),
   };
 }
+/**
+ * @name Pool
+ * @package symphony.concentratedliquidity.v1beta1
+ * @see proto type: symphony.concentratedliquidity.v1beta1.Pool
+ */
 export const Pool = {
   typeUrl: '/symphony.concentratedliquidity.v1beta1.Pool',
   is(o: any): o is Pool {

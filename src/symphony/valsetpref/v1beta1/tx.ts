@@ -11,50 +11,93 @@ import {
 } from '../../../cosmos/base/v1beta1/coin';
 import { BinaryReader, BinaryWriter } from '../../../binary';
 import { GlobalDecoderRegistry } from '../../../registry';
-/** MsgCreateValidatorSetPreference is a list that holds validator-set. */
+/**
+ * MsgCreateValidatorSetPreference is a list that holds validator-set.
+ * @name MsgSetValidatorSetPreference
+ * @package symphony.valsetpref.v1beta1
+ * @see proto type: symphony.valsetpref.v1beta1.MsgSetValidatorSetPreference
+ */
 export interface MsgSetValidatorSetPreference {
-  /** delegator is the user who is trying to create a validator-set. */
+  /**
+   * delegator is the user who is trying to create a validator-set.
+   */
   delegator: string;
-  /** list of {valAddr, weight} to delegate to */
+  /**
+   * list of {valAddr, weight} to delegate to
+   */
   preferences: ValidatorPreference[];
 }
 export interface MsgSetValidatorSetPreferenceProtoMsg {
   typeUrl: '/symphony.valsetpref.v1beta1.MsgSetValidatorSetPreference';
   value: Uint8Array;
 }
-/** MsgCreateValidatorSetPreference is a list that holds validator-set. */
+/**
+ * MsgCreateValidatorSetPreference is a list that holds validator-set.
+ * @name MsgSetValidatorSetPreferenceAmino
+ * @package symphony.valsetpref.v1beta1
+ * @see proto type: symphony.valsetpref.v1beta1.MsgSetValidatorSetPreference
+ */
 export interface MsgSetValidatorSetPreferenceAmino {
-  /** delegator is the user who is trying to create a validator-set. */
+  /**
+   * delegator is the user who is trying to create a validator-set.
+   */
   delegator?: string;
-  /** list of {valAddr, weight} to delegate to */
+  /**
+   * list of {valAddr, weight} to delegate to
+   */
   preferences?: ValidatorPreferenceAmino[];
 }
 export interface MsgSetValidatorSetPreferenceAminoMsg {
   type: 'symphony/MsgSetValidatorSetPreference';
   value: MsgSetValidatorSetPreferenceAmino;
 }
-/** MsgCreateValidatorSetPreference is a list that holds validator-set. */
+/**
+ * MsgCreateValidatorSetPreference is a list that holds validator-set.
+ * @name MsgSetValidatorSetPreferenceSDKType
+ * @package symphony.valsetpref.v1beta1
+ * @see proto type: symphony.valsetpref.v1beta1.MsgSetValidatorSetPreference
+ */
 export interface MsgSetValidatorSetPreferenceSDKType {
   delegator: string;
   preferences: ValidatorPreferenceSDKType[];
 }
+/**
+ * @name MsgSetValidatorSetPreferenceResponse
+ * @package symphony.valsetpref.v1beta1
+ * @see proto type: symphony.valsetpref.v1beta1.MsgSetValidatorSetPreferenceResponse
+ */
 export interface MsgSetValidatorSetPreferenceResponse {}
 export interface MsgSetValidatorSetPreferenceResponseProtoMsg {
   typeUrl: '/symphony.valsetpref.v1beta1.MsgSetValidatorSetPreferenceResponse';
   value: Uint8Array;
 }
+/**
+ * @name MsgSetValidatorSetPreferenceResponseAmino
+ * @package symphony.valsetpref.v1beta1
+ * @see proto type: symphony.valsetpref.v1beta1.MsgSetValidatorSetPreferenceResponse
+ */
 export interface MsgSetValidatorSetPreferenceResponseAmino {}
 export interface MsgSetValidatorSetPreferenceResponseAminoMsg {
   type: '/symphony.valsetpref.v1beta1.MsgSetValidatorSetPreferenceResponse';
   value: MsgSetValidatorSetPreferenceResponseAmino;
 }
+/**
+ * @name MsgSetValidatorSetPreferenceResponseSDKType
+ * @package symphony.valsetpref.v1beta1
+ * @see proto type: symphony.valsetpref.v1beta1.MsgSetValidatorSetPreferenceResponse
+ */
 export interface MsgSetValidatorSetPreferenceResponseSDKType {}
 /**
  * MsgDelegateToValidatorSet allows users to delegate to an existing
  * validator-set
+ * @name MsgDelegateToValidatorSet
+ * @package symphony.valsetpref.v1beta1
+ * @see proto type: symphony.valsetpref.v1beta1.MsgDelegateToValidatorSet
  */
 export interface MsgDelegateToValidatorSet {
-  /** delegator is the user who is trying to delegate. */
+  /**
+   * delegator is the user who is trying to delegate.
+   */
   delegator: string;
   /**
    * the amount of tokens the user is trying to delegate.
@@ -71,9 +114,14 @@ export interface MsgDelegateToValidatorSetProtoMsg {
 /**
  * MsgDelegateToValidatorSet allows users to delegate to an existing
  * validator-set
+ * @name MsgDelegateToValidatorSetAmino
+ * @package symphony.valsetpref.v1beta1
+ * @see proto type: symphony.valsetpref.v1beta1.MsgDelegateToValidatorSet
  */
 export interface MsgDelegateToValidatorSetAmino {
-  /** delegator is the user who is trying to delegate. */
+  /**
+   * delegator is the user who is trying to delegate.
+   */
   delegator?: string;
   /**
    * the amount of tokens the user is trying to delegate.
@@ -90,24 +138,49 @@ export interface MsgDelegateToValidatorSetAminoMsg {
 /**
  * MsgDelegateToValidatorSet allows users to delegate to an existing
  * validator-set
+ * @name MsgDelegateToValidatorSetSDKType
+ * @package symphony.valsetpref.v1beta1
+ * @see proto type: symphony.valsetpref.v1beta1.MsgDelegateToValidatorSet
  */
 export interface MsgDelegateToValidatorSetSDKType {
   delegator: string;
   coin: CoinSDKType;
 }
+/**
+ * @name MsgDelegateToValidatorSetResponse
+ * @package symphony.valsetpref.v1beta1
+ * @see proto type: symphony.valsetpref.v1beta1.MsgDelegateToValidatorSetResponse
+ */
 export interface MsgDelegateToValidatorSetResponse {}
 export interface MsgDelegateToValidatorSetResponseProtoMsg {
   typeUrl: '/symphony.valsetpref.v1beta1.MsgDelegateToValidatorSetResponse';
   value: Uint8Array;
 }
+/**
+ * @name MsgDelegateToValidatorSetResponseAmino
+ * @package symphony.valsetpref.v1beta1
+ * @see proto type: symphony.valsetpref.v1beta1.MsgDelegateToValidatorSetResponse
+ */
 export interface MsgDelegateToValidatorSetResponseAmino {}
 export interface MsgDelegateToValidatorSetResponseAminoMsg {
   type: '/symphony.valsetpref.v1beta1.MsgDelegateToValidatorSetResponse';
   value: MsgDelegateToValidatorSetResponseAmino;
 }
+/**
+ * @name MsgDelegateToValidatorSetResponseSDKType
+ * @package symphony.valsetpref.v1beta1
+ * @see proto type: symphony.valsetpref.v1beta1.MsgDelegateToValidatorSetResponse
+ */
 export interface MsgDelegateToValidatorSetResponseSDKType {}
+/**
+ * @name MsgUndelegateFromValidatorSet
+ * @package symphony.valsetpref.v1beta1
+ * @see proto type: symphony.valsetpref.v1beta1.MsgUndelegateFromValidatorSet
+ */
 export interface MsgUndelegateFromValidatorSet {
-  /** delegator is the user who is trying to undelegate. */
+  /**
+   * delegator is the user who is trying to undelegate.
+   */
   delegator: string;
   /**
    * the amount the user wants to undelegate
@@ -122,8 +195,15 @@ export interface MsgUndelegateFromValidatorSetProtoMsg {
   typeUrl: '/symphony.valsetpref.v1beta1.MsgUndelegateFromValidatorSet';
   value: Uint8Array;
 }
+/**
+ * @name MsgUndelegateFromValidatorSetAmino
+ * @package symphony.valsetpref.v1beta1
+ * @see proto type: symphony.valsetpref.v1beta1.MsgUndelegateFromValidatorSet
+ */
 export interface MsgUndelegateFromValidatorSetAmino {
-  /** delegator is the user who is trying to undelegate. */
+  /**
+   * delegator is the user who is trying to undelegate.
+   */
   delegator?: string;
   /**
    * the amount the user wants to undelegate
@@ -138,23 +218,50 @@ export interface MsgUndelegateFromValidatorSetAminoMsg {
   type: 'symphony/MsgUndelegateFromValidatorSet';
   value: MsgUndelegateFromValidatorSetAmino;
 }
+/**
+ * @name MsgUndelegateFromValidatorSetSDKType
+ * @package symphony.valsetpref.v1beta1
+ * @see proto type: symphony.valsetpref.v1beta1.MsgUndelegateFromValidatorSet
+ */
 export interface MsgUndelegateFromValidatorSetSDKType {
   delegator: string;
   coin: CoinSDKType;
 }
+/**
+ * @name MsgUndelegateFromValidatorSetResponse
+ * @package symphony.valsetpref.v1beta1
+ * @see proto type: symphony.valsetpref.v1beta1.MsgUndelegateFromValidatorSetResponse
+ */
 export interface MsgUndelegateFromValidatorSetResponse {}
 export interface MsgUndelegateFromValidatorSetResponseProtoMsg {
   typeUrl: '/symphony.valsetpref.v1beta1.MsgUndelegateFromValidatorSetResponse';
   value: Uint8Array;
 }
+/**
+ * @name MsgUndelegateFromValidatorSetResponseAmino
+ * @package symphony.valsetpref.v1beta1
+ * @see proto type: symphony.valsetpref.v1beta1.MsgUndelegateFromValidatorSetResponse
+ */
 export interface MsgUndelegateFromValidatorSetResponseAmino {}
 export interface MsgUndelegateFromValidatorSetResponseAminoMsg {
   type: '/symphony.valsetpref.v1beta1.MsgUndelegateFromValidatorSetResponse';
   value: MsgUndelegateFromValidatorSetResponseAmino;
 }
+/**
+ * @name MsgUndelegateFromValidatorSetResponseSDKType
+ * @package symphony.valsetpref.v1beta1
+ * @see proto type: symphony.valsetpref.v1beta1.MsgUndelegateFromValidatorSetResponse
+ */
 export interface MsgUndelegateFromValidatorSetResponseSDKType {}
+/**
+ * @name MsgUndelegateFromRebalancedValidatorSet
+ * @package symphony.valsetpref.v1beta1
+ * @see proto type: symphony.valsetpref.v1beta1.MsgUndelegateFromRebalancedValidatorSet
+ */
 export interface MsgUndelegateFromRebalancedValidatorSet {
-  /** delegator is the user who is trying to undelegate. */
+  /**
+   * delegator is the user who is trying to undelegate.
+   */
   delegator: string;
   /**
    * the amount the user wants to undelegate
@@ -171,8 +278,15 @@ export interface MsgUndelegateFromRebalancedValidatorSetProtoMsg {
   typeUrl: '/symphony.valsetpref.v1beta1.MsgUndelegateFromRebalancedValidatorSet';
   value: Uint8Array;
 }
+/**
+ * @name MsgUndelegateFromRebalancedValidatorSetAmino
+ * @package symphony.valsetpref.v1beta1
+ * @see proto type: symphony.valsetpref.v1beta1.MsgUndelegateFromRebalancedValidatorSet
+ */
 export interface MsgUndelegateFromRebalancedValidatorSetAmino {
-  /** delegator is the user who is trying to undelegate. */
+  /**
+   * delegator is the user who is trying to undelegate.
+   */
   delegator?: string;
   /**
    * the amount the user wants to undelegate
@@ -189,62 +303,125 @@ export interface MsgUndelegateFromRebalancedValidatorSetAminoMsg {
   type: 'symphony/MsgUndelegateFromRebalValset';
   value: MsgUndelegateFromRebalancedValidatorSetAmino;
 }
+/**
+ * @name MsgUndelegateFromRebalancedValidatorSetSDKType
+ * @package symphony.valsetpref.v1beta1
+ * @see proto type: symphony.valsetpref.v1beta1.MsgUndelegateFromRebalancedValidatorSet
+ */
 export interface MsgUndelegateFromRebalancedValidatorSetSDKType {
   delegator: string;
   coin: CoinSDKType;
 }
+/**
+ * @name MsgUndelegateFromRebalancedValidatorSetResponse
+ * @package symphony.valsetpref.v1beta1
+ * @see proto type: symphony.valsetpref.v1beta1.MsgUndelegateFromRebalancedValidatorSetResponse
+ */
 export interface MsgUndelegateFromRebalancedValidatorSetResponse {}
 export interface MsgUndelegateFromRebalancedValidatorSetResponseProtoMsg {
   typeUrl: '/symphony.valsetpref.v1beta1.MsgUndelegateFromRebalancedValidatorSetResponse';
   value: Uint8Array;
 }
+/**
+ * @name MsgUndelegateFromRebalancedValidatorSetResponseAmino
+ * @package symphony.valsetpref.v1beta1
+ * @see proto type: symphony.valsetpref.v1beta1.MsgUndelegateFromRebalancedValidatorSetResponse
+ */
 export interface MsgUndelegateFromRebalancedValidatorSetResponseAmino {}
 export interface MsgUndelegateFromRebalancedValidatorSetResponseAminoMsg {
   type: '/symphony.valsetpref.v1beta1.MsgUndelegateFromRebalancedValidatorSetResponse';
   value: MsgUndelegateFromRebalancedValidatorSetResponseAmino;
 }
+/**
+ * @name MsgUndelegateFromRebalancedValidatorSetResponseSDKType
+ * @package symphony.valsetpref.v1beta1
+ * @see proto type: symphony.valsetpref.v1beta1.MsgUndelegateFromRebalancedValidatorSetResponse
+ */
 export interface MsgUndelegateFromRebalancedValidatorSetResponseSDKType {}
+/**
+ * @name MsgRedelegateValidatorSet
+ * @package symphony.valsetpref.v1beta1
+ * @see proto type: symphony.valsetpref.v1beta1.MsgRedelegateValidatorSet
+ */
 export interface MsgRedelegateValidatorSet {
-  /** delegator is the user who is trying to create a validator-set. */
+  /**
+   * delegator is the user who is trying to create a validator-set.
+   */
   delegator: string;
-  /** list of {valAddr, weight} to delegate to */
+  /**
+   * list of {valAddr, weight} to delegate to
+   */
   preferences: ValidatorPreference[];
 }
 export interface MsgRedelegateValidatorSetProtoMsg {
   typeUrl: '/symphony.valsetpref.v1beta1.MsgRedelegateValidatorSet';
   value: Uint8Array;
 }
+/**
+ * @name MsgRedelegateValidatorSetAmino
+ * @package symphony.valsetpref.v1beta1
+ * @see proto type: symphony.valsetpref.v1beta1.MsgRedelegateValidatorSet
+ */
 export interface MsgRedelegateValidatorSetAmino {
-  /** delegator is the user who is trying to create a validator-set. */
+  /**
+   * delegator is the user who is trying to create a validator-set.
+   */
   delegator?: string;
-  /** list of {valAddr, weight} to delegate to */
+  /**
+   * list of {valAddr, weight} to delegate to
+   */
   preferences?: ValidatorPreferenceAmino[];
 }
 export interface MsgRedelegateValidatorSetAminoMsg {
   type: 'symphony/MsgRedelegateValidatorSet';
   value: MsgRedelegateValidatorSetAmino;
 }
+/**
+ * @name MsgRedelegateValidatorSetSDKType
+ * @package symphony.valsetpref.v1beta1
+ * @see proto type: symphony.valsetpref.v1beta1.MsgRedelegateValidatorSet
+ */
 export interface MsgRedelegateValidatorSetSDKType {
   delegator: string;
   preferences: ValidatorPreferenceSDKType[];
 }
+/**
+ * @name MsgRedelegateValidatorSetResponse
+ * @package symphony.valsetpref.v1beta1
+ * @see proto type: symphony.valsetpref.v1beta1.MsgRedelegateValidatorSetResponse
+ */
 export interface MsgRedelegateValidatorSetResponse {}
 export interface MsgRedelegateValidatorSetResponseProtoMsg {
   typeUrl: '/symphony.valsetpref.v1beta1.MsgRedelegateValidatorSetResponse';
   value: Uint8Array;
 }
+/**
+ * @name MsgRedelegateValidatorSetResponseAmino
+ * @package symphony.valsetpref.v1beta1
+ * @see proto type: symphony.valsetpref.v1beta1.MsgRedelegateValidatorSetResponse
+ */
 export interface MsgRedelegateValidatorSetResponseAmino {}
 export interface MsgRedelegateValidatorSetResponseAminoMsg {
   type: '/symphony.valsetpref.v1beta1.MsgRedelegateValidatorSetResponse';
   value: MsgRedelegateValidatorSetResponseAmino;
 }
+/**
+ * @name MsgRedelegateValidatorSetResponseSDKType
+ * @package symphony.valsetpref.v1beta1
+ * @see proto type: symphony.valsetpref.v1beta1.MsgRedelegateValidatorSetResponse
+ */
 export interface MsgRedelegateValidatorSetResponseSDKType {}
 /**
  * MsgWithdrawDelegationRewards allows user to claim staking rewards from the
  * validator set.
+ * @name MsgWithdrawDelegationRewards
+ * @package symphony.valsetpref.v1beta1
+ * @see proto type: symphony.valsetpref.v1beta1.MsgWithdrawDelegationRewards
  */
 export interface MsgWithdrawDelegationRewards {
-  /** delegator is the user who is trying to claim staking rewards. */
+  /**
+   * delegator is the user who is trying to claim staking rewards.
+   */
   delegator: string;
 }
 export interface MsgWithdrawDelegationRewardsProtoMsg {
@@ -254,9 +431,14 @@ export interface MsgWithdrawDelegationRewardsProtoMsg {
 /**
  * MsgWithdrawDelegationRewards allows user to claim staking rewards from the
  * validator set.
+ * @name MsgWithdrawDelegationRewardsAmino
+ * @package symphony.valsetpref.v1beta1
+ * @see proto type: symphony.valsetpref.v1beta1.MsgWithdrawDelegationRewards
  */
 export interface MsgWithdrawDelegationRewardsAmino {
-  /** delegator is the user who is trying to claim staking rewards. */
+  /**
+   * delegator is the user who is trying to claim staking rewards.
+   */
   delegator?: string;
 }
 export interface MsgWithdrawDelegationRewardsAminoMsg {
@@ -266,30 +448,55 @@ export interface MsgWithdrawDelegationRewardsAminoMsg {
 /**
  * MsgWithdrawDelegationRewards allows user to claim staking rewards from the
  * validator set.
+ * @name MsgWithdrawDelegationRewardsSDKType
+ * @package symphony.valsetpref.v1beta1
+ * @see proto type: symphony.valsetpref.v1beta1.MsgWithdrawDelegationRewards
  */
 export interface MsgWithdrawDelegationRewardsSDKType {
   delegator: string;
 }
+/**
+ * @name MsgWithdrawDelegationRewardsResponse
+ * @package symphony.valsetpref.v1beta1
+ * @see proto type: symphony.valsetpref.v1beta1.MsgWithdrawDelegationRewardsResponse
+ */
 export interface MsgWithdrawDelegationRewardsResponse {}
 export interface MsgWithdrawDelegationRewardsResponseProtoMsg {
   typeUrl: '/symphony.valsetpref.v1beta1.MsgWithdrawDelegationRewardsResponse';
   value: Uint8Array;
 }
+/**
+ * @name MsgWithdrawDelegationRewardsResponseAmino
+ * @package symphony.valsetpref.v1beta1
+ * @see proto type: symphony.valsetpref.v1beta1.MsgWithdrawDelegationRewardsResponse
+ */
 export interface MsgWithdrawDelegationRewardsResponseAmino {}
 export interface MsgWithdrawDelegationRewardsResponseAminoMsg {
   type: '/symphony.valsetpref.v1beta1.MsgWithdrawDelegationRewardsResponse';
   value: MsgWithdrawDelegationRewardsResponseAmino;
 }
+/**
+ * @name MsgWithdrawDelegationRewardsResponseSDKType
+ * @package symphony.valsetpref.v1beta1
+ * @see proto type: symphony.valsetpref.v1beta1.MsgWithdrawDelegationRewardsResponse
+ */
 export interface MsgWithdrawDelegationRewardsResponseSDKType {}
 /**
  * MsgDelegateBondedTokens breaks bonded lockup (by ID) of osmo, of
  * length <= 2 weeks and takes all that osmo and delegates according to
  * delegator's current validator set preference.
+ * @name MsgDelegateBondedTokens
+ * @package symphony.valsetpref.v1beta1
+ * @see proto type: symphony.valsetpref.v1beta1.MsgDelegateBondedTokens
  */
 export interface MsgDelegateBondedTokens {
-  /** delegator is the user who is trying to force unbond osmo and delegate. */
+  /**
+   * delegator is the user who is trying to force unbond osmo and delegate.
+   */
   delegator: string;
-  /** lockup id of osmo in the pool */
+  /**
+   * lockup id of osmo in the pool
+   */
   lockID: bigint;
 }
 export interface MsgDelegateBondedTokensProtoMsg {
@@ -300,11 +507,18 @@ export interface MsgDelegateBondedTokensProtoMsg {
  * MsgDelegateBondedTokens breaks bonded lockup (by ID) of osmo, of
  * length <= 2 weeks and takes all that osmo and delegates according to
  * delegator's current validator set preference.
+ * @name MsgDelegateBondedTokensAmino
+ * @package symphony.valsetpref.v1beta1
+ * @see proto type: symphony.valsetpref.v1beta1.MsgDelegateBondedTokens
  */
 export interface MsgDelegateBondedTokensAmino {
-  /** delegator is the user who is trying to force unbond osmo and delegate. */
+  /**
+   * delegator is the user who is trying to force unbond osmo and delegate.
+   */
   delegator?: string;
-  /** lockup id of osmo in the pool */
+  /**
+   * lockup id of osmo in the pool
+   */
   lockID?: string;
 }
 export interface MsgDelegateBondedTokensAminoMsg {
@@ -315,21 +529,39 @@ export interface MsgDelegateBondedTokensAminoMsg {
  * MsgDelegateBondedTokens breaks bonded lockup (by ID) of osmo, of
  * length <= 2 weeks and takes all that osmo and delegates according to
  * delegator's current validator set preference.
+ * @name MsgDelegateBondedTokensSDKType
+ * @package symphony.valsetpref.v1beta1
+ * @see proto type: symphony.valsetpref.v1beta1.MsgDelegateBondedTokens
  */
 export interface MsgDelegateBondedTokensSDKType {
   delegator: string;
   lockID: bigint;
 }
+/**
+ * @name MsgDelegateBondedTokensResponse
+ * @package symphony.valsetpref.v1beta1
+ * @see proto type: symphony.valsetpref.v1beta1.MsgDelegateBondedTokensResponse
+ */
 export interface MsgDelegateBondedTokensResponse {}
 export interface MsgDelegateBondedTokensResponseProtoMsg {
   typeUrl: '/symphony.valsetpref.v1beta1.MsgDelegateBondedTokensResponse';
   value: Uint8Array;
 }
+/**
+ * @name MsgDelegateBondedTokensResponseAmino
+ * @package symphony.valsetpref.v1beta1
+ * @see proto type: symphony.valsetpref.v1beta1.MsgDelegateBondedTokensResponse
+ */
 export interface MsgDelegateBondedTokensResponseAmino {}
 export interface MsgDelegateBondedTokensResponseAminoMsg {
   type: '/symphony.valsetpref.v1beta1.MsgDelegateBondedTokensResponse';
   value: MsgDelegateBondedTokensResponseAmino;
 }
+/**
+ * @name MsgDelegateBondedTokensResponseSDKType
+ * @package symphony.valsetpref.v1beta1
+ * @see proto type: symphony.valsetpref.v1beta1.MsgDelegateBondedTokensResponse
+ */
 export interface MsgDelegateBondedTokensResponseSDKType {}
 function createBaseMsgSetValidatorSetPreference(): MsgSetValidatorSetPreference {
   return {
@@ -337,6 +569,12 @@ function createBaseMsgSetValidatorSetPreference(): MsgSetValidatorSetPreference 
     preferences: [],
   };
 }
+/**
+ * MsgCreateValidatorSetPreference is a list that holds validator-set.
+ * @name MsgSetValidatorSetPreference
+ * @package symphony.valsetpref.v1beta1
+ * @see proto type: symphony.valsetpref.v1beta1.MsgSetValidatorSetPreference
+ */
 export const MsgSetValidatorSetPreference = {
   typeUrl: '/symphony.valsetpref.v1beta1.MsgSetValidatorSetPreference',
   aminoType: 'symphony/MsgSetValidatorSetPreference',
@@ -482,6 +720,11 @@ GlobalDecoderRegistry.registerAminoProtoMapping(
 function createBaseMsgSetValidatorSetPreferenceResponse(): MsgSetValidatorSetPreferenceResponse {
   return {};
 }
+/**
+ * @name MsgSetValidatorSetPreferenceResponse
+ * @package symphony.valsetpref.v1beta1
+ * @see proto type: symphony.valsetpref.v1beta1.MsgSetValidatorSetPreferenceResponse
+ */
 export const MsgSetValidatorSetPreferenceResponse = {
   typeUrl: '/symphony.valsetpref.v1beta1.MsgSetValidatorSetPreferenceResponse',
   is(o: any): o is MsgSetValidatorSetPreferenceResponse {
@@ -568,6 +811,13 @@ function createBaseMsgDelegateToValidatorSet(): MsgDelegateToValidatorSet {
     coin: Coin.fromPartial({}),
   };
 }
+/**
+ * MsgDelegateToValidatorSet allows users to delegate to an existing
+ * validator-set
+ * @name MsgDelegateToValidatorSet
+ * @package symphony.valsetpref.v1beta1
+ * @see proto type: symphony.valsetpref.v1beta1.MsgDelegateToValidatorSet
+ */
 export const MsgDelegateToValidatorSet = {
   typeUrl: '/symphony.valsetpref.v1beta1.MsgDelegateToValidatorSet',
   aminoType: 'symphony/MsgDelegateToValidatorSet',
@@ -696,6 +946,11 @@ GlobalDecoderRegistry.registerAminoProtoMapping(
 function createBaseMsgDelegateToValidatorSetResponse(): MsgDelegateToValidatorSetResponse {
   return {};
 }
+/**
+ * @name MsgDelegateToValidatorSetResponse
+ * @package symphony.valsetpref.v1beta1
+ * @see proto type: symphony.valsetpref.v1beta1.MsgDelegateToValidatorSetResponse
+ */
 export const MsgDelegateToValidatorSetResponse = {
   typeUrl: '/symphony.valsetpref.v1beta1.MsgDelegateToValidatorSetResponse',
   is(o: any): o is MsgDelegateToValidatorSetResponse {
@@ -781,6 +1036,11 @@ function createBaseMsgUndelegateFromValidatorSet(): MsgUndelegateFromValidatorSe
     coin: Coin.fromPartial({}),
   };
 }
+/**
+ * @name MsgUndelegateFromValidatorSet
+ * @package symphony.valsetpref.v1beta1
+ * @see proto type: symphony.valsetpref.v1beta1.MsgUndelegateFromValidatorSet
+ */
 export const MsgUndelegateFromValidatorSet = {
   typeUrl: '/symphony.valsetpref.v1beta1.MsgUndelegateFromValidatorSet',
   aminoType: 'symphony/MsgUndelegateFromValidatorSet',
@@ -913,6 +1173,11 @@ GlobalDecoderRegistry.registerAminoProtoMapping(
 function createBaseMsgUndelegateFromValidatorSetResponse(): MsgUndelegateFromValidatorSetResponse {
   return {};
 }
+/**
+ * @name MsgUndelegateFromValidatorSetResponse
+ * @package symphony.valsetpref.v1beta1
+ * @see proto type: symphony.valsetpref.v1beta1.MsgUndelegateFromValidatorSetResponse
+ */
 export const MsgUndelegateFromValidatorSetResponse = {
   typeUrl: '/symphony.valsetpref.v1beta1.MsgUndelegateFromValidatorSetResponse',
   is(o: any): o is MsgUndelegateFromValidatorSetResponse {
@@ -999,6 +1264,11 @@ function createBaseMsgUndelegateFromRebalancedValidatorSet(): MsgUndelegateFromR
     coin: Coin.fromPartial({}),
   };
 }
+/**
+ * @name MsgUndelegateFromRebalancedValidatorSet
+ * @package symphony.valsetpref.v1beta1
+ * @see proto type: symphony.valsetpref.v1beta1.MsgUndelegateFromRebalancedValidatorSet
+ */
 export const MsgUndelegateFromRebalancedValidatorSet = {
   typeUrl:
     '/symphony.valsetpref.v1beta1.MsgUndelegateFromRebalancedValidatorSet',
@@ -1133,6 +1403,11 @@ GlobalDecoderRegistry.registerAminoProtoMapping(
 function createBaseMsgUndelegateFromRebalancedValidatorSetResponse(): MsgUndelegateFromRebalancedValidatorSetResponse {
   return {};
 }
+/**
+ * @name MsgUndelegateFromRebalancedValidatorSetResponse
+ * @package symphony.valsetpref.v1beta1
+ * @see proto type: symphony.valsetpref.v1beta1.MsgUndelegateFromRebalancedValidatorSetResponse
+ */
 export const MsgUndelegateFromRebalancedValidatorSetResponse = {
   typeUrl:
     '/symphony.valsetpref.v1beta1.MsgUndelegateFromRebalancedValidatorSetResponse',
@@ -1240,6 +1515,11 @@ function createBaseMsgRedelegateValidatorSet(): MsgRedelegateValidatorSet {
     preferences: [],
   };
 }
+/**
+ * @name MsgRedelegateValidatorSet
+ * @package symphony.valsetpref.v1beta1
+ * @see proto type: symphony.valsetpref.v1beta1.MsgRedelegateValidatorSet
+ */
 export const MsgRedelegateValidatorSet = {
   typeUrl: '/symphony.valsetpref.v1beta1.MsgRedelegateValidatorSet',
   aminoType: 'symphony/MsgRedelegateValidatorSet',
@@ -1381,6 +1661,11 @@ GlobalDecoderRegistry.registerAminoProtoMapping(
 function createBaseMsgRedelegateValidatorSetResponse(): MsgRedelegateValidatorSetResponse {
   return {};
 }
+/**
+ * @name MsgRedelegateValidatorSetResponse
+ * @package symphony.valsetpref.v1beta1
+ * @see proto type: symphony.valsetpref.v1beta1.MsgRedelegateValidatorSetResponse
+ */
 export const MsgRedelegateValidatorSetResponse = {
   typeUrl: '/symphony.valsetpref.v1beta1.MsgRedelegateValidatorSetResponse',
   is(o: any): o is MsgRedelegateValidatorSetResponse {
@@ -1465,6 +1750,13 @@ function createBaseMsgWithdrawDelegationRewards(): MsgWithdrawDelegationRewards 
     delegator: '',
   };
 }
+/**
+ * MsgWithdrawDelegationRewards allows user to claim staking rewards from the
+ * validator set.
+ * @name MsgWithdrawDelegationRewards
+ * @package symphony.valsetpref.v1beta1
+ * @see proto type: symphony.valsetpref.v1beta1.MsgWithdrawDelegationRewards
+ */
 export const MsgWithdrawDelegationRewards = {
   typeUrl: '/symphony.valsetpref.v1beta1.MsgWithdrawDelegationRewards',
   aminoType: 'symphony/MsgWithdrawDelegationRewards',
@@ -1583,6 +1875,11 @@ GlobalDecoderRegistry.registerAminoProtoMapping(
 function createBaseMsgWithdrawDelegationRewardsResponse(): MsgWithdrawDelegationRewardsResponse {
   return {};
 }
+/**
+ * @name MsgWithdrawDelegationRewardsResponse
+ * @package symphony.valsetpref.v1beta1
+ * @see proto type: symphony.valsetpref.v1beta1.MsgWithdrawDelegationRewardsResponse
+ */
 export const MsgWithdrawDelegationRewardsResponse = {
   typeUrl: '/symphony.valsetpref.v1beta1.MsgWithdrawDelegationRewardsResponse',
   is(o: any): o is MsgWithdrawDelegationRewardsResponse {
@@ -1669,6 +1966,14 @@ function createBaseMsgDelegateBondedTokens(): MsgDelegateBondedTokens {
     lockID: BigInt(0),
   };
 }
+/**
+ * MsgDelegateBondedTokens breaks bonded lockup (by ID) of osmo, of
+ * length <= 2 weeks and takes all that osmo and delegates according to
+ * delegator's current validator set preference.
+ * @name MsgDelegateBondedTokens
+ * @package symphony.valsetpref.v1beta1
+ * @see proto type: symphony.valsetpref.v1beta1.MsgDelegateBondedTokens
+ */
 export const MsgDelegateBondedTokens = {
   typeUrl: '/symphony.valsetpref.v1beta1.MsgDelegateBondedTokens',
   aminoType: 'symphony/MsgDelegateBondedTokens',
@@ -1798,6 +2103,11 @@ GlobalDecoderRegistry.registerAminoProtoMapping(
 function createBaseMsgDelegateBondedTokensResponse(): MsgDelegateBondedTokensResponse {
   return {};
 }
+/**
+ * @name MsgDelegateBondedTokensResponse
+ * @package symphony.valsetpref.v1beta1
+ * @see proto type: symphony.valsetpref.v1beta1.MsgDelegateBondedTokensResponse
+ */
 export const MsgDelegateBondedTokensResponse = {
   typeUrl: '/symphony.valsetpref.v1beta1.MsgDelegateBondedTokensResponse',
   is(o: any): o is MsgDelegateBondedTokensResponse {

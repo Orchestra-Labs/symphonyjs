@@ -7,43 +7,82 @@ import {
 } from './models';
 import { BinaryReader, BinaryWriter } from '../../../binary';
 import { GlobalDecoderRegistry } from '../../../registry';
-/** QueryParamsRequest is request type for the Query/Params RPC method. */
+/**
+ * QueryParamsRequest is request type for the Query/Params RPC method.
+ * @name QueryParamsRequest
+ * @package symphony.smartaccount.v1beta1
+ * @see proto type: symphony.smartaccount.v1beta1.QueryParamsRequest
+ */
 export interface QueryParamsRequest {}
 export interface QueryParamsRequestProtoMsg {
   typeUrl: '/symphony.smartaccount.v1beta1.QueryParamsRequest';
   value: Uint8Array;
 }
-/** QueryParamsRequest is request type for the Query/Params RPC method. */
+/**
+ * QueryParamsRequest is request type for the Query/Params RPC method.
+ * @name QueryParamsRequestAmino
+ * @package symphony.smartaccount.v1beta1
+ * @see proto type: symphony.smartaccount.v1beta1.QueryParamsRequest
+ */
 export interface QueryParamsRequestAmino {}
 export interface QueryParamsRequestAminoMsg {
   type: '/symphony.smartaccount.v1beta1.QueryParamsRequest';
   value: QueryParamsRequestAmino;
 }
-/** QueryParamsRequest is request type for the Query/Params RPC method. */
+/**
+ * QueryParamsRequest is request type for the Query/Params RPC method.
+ * @name QueryParamsRequestSDKType
+ * @package symphony.smartaccount.v1beta1
+ * @see proto type: symphony.smartaccount.v1beta1.QueryParamsRequest
+ */
 export interface QueryParamsRequestSDKType {}
-/** QueryParamsResponse is response type for the Query/Params RPC method. */
+/**
+ * QueryParamsResponse is response type for the Query/Params RPC method.
+ * @name QueryParamsResponse
+ * @package symphony.smartaccount.v1beta1
+ * @see proto type: symphony.smartaccount.v1beta1.QueryParamsResponse
+ */
 export interface QueryParamsResponse {
-  /** params holds all the parameters of this module. */
+  /**
+   * params holds all the parameters of this module.
+   */
   params: Params;
 }
 export interface QueryParamsResponseProtoMsg {
   typeUrl: '/symphony.smartaccount.v1beta1.QueryParamsResponse';
   value: Uint8Array;
 }
-/** QueryParamsResponse is response type for the Query/Params RPC method. */
+/**
+ * QueryParamsResponse is response type for the Query/Params RPC method.
+ * @name QueryParamsResponseAmino
+ * @package symphony.smartaccount.v1beta1
+ * @see proto type: symphony.smartaccount.v1beta1.QueryParamsResponse
+ */
 export interface QueryParamsResponseAmino {
-  /** params holds all the parameters of this module. */
+  /**
+   * params holds all the parameters of this module.
+   */
   params?: ParamsAmino;
 }
 export interface QueryParamsResponseAminoMsg {
   type: '/symphony.smartaccount.v1beta1.QueryParamsResponse';
   value: QueryParamsResponseAmino;
 }
-/** QueryParamsResponse is response type for the Query/Params RPC method. */
+/**
+ * QueryParamsResponse is response type for the Query/Params RPC method.
+ * @name QueryParamsResponseSDKType
+ * @package symphony.smartaccount.v1beta1
+ * @see proto type: symphony.smartaccount.v1beta1.QueryParamsResponse
+ */
 export interface QueryParamsResponseSDKType {
   params: ParamsSDKType;
 }
-/** MsgGetAuthenticatorsRequest defines the Msg/GetAuthenticators request type. */
+/**
+ * MsgGetAuthenticatorsRequest defines the Msg/GetAuthenticators request type.
+ * @name GetAuthenticatorsRequest
+ * @package symphony.smartaccount.v1beta1
+ * @see proto type: symphony.smartaccount.v1beta1.GetAuthenticatorsRequest
+ */
 export interface GetAuthenticatorsRequest {
   account: string;
 }
@@ -51,7 +90,12 @@ export interface GetAuthenticatorsRequestProtoMsg {
   typeUrl: '/symphony.smartaccount.v1beta1.GetAuthenticatorsRequest';
   value: Uint8Array;
 }
-/** MsgGetAuthenticatorsRequest defines the Msg/GetAuthenticators request type. */
+/**
+ * MsgGetAuthenticatorsRequest defines the Msg/GetAuthenticators request type.
+ * @name GetAuthenticatorsRequestAmino
+ * @package symphony.smartaccount.v1beta1
+ * @see proto type: symphony.smartaccount.v1beta1.GetAuthenticatorsRequest
+ */
 export interface GetAuthenticatorsRequestAmino {
   account?: string;
 }
@@ -59,11 +103,21 @@ export interface GetAuthenticatorsRequestAminoMsg {
   type: '/symphony.smartaccount.v1beta1.GetAuthenticatorsRequest';
   value: GetAuthenticatorsRequestAmino;
 }
-/** MsgGetAuthenticatorsRequest defines the Msg/GetAuthenticators request type. */
+/**
+ * MsgGetAuthenticatorsRequest defines the Msg/GetAuthenticators request type.
+ * @name GetAuthenticatorsRequestSDKType
+ * @package symphony.smartaccount.v1beta1
+ * @see proto type: symphony.smartaccount.v1beta1.GetAuthenticatorsRequest
+ */
 export interface GetAuthenticatorsRequestSDKType {
   account: string;
 }
-/** MsgGetAuthenticatorsResponse defines the Msg/GetAuthenticators response type. */
+/**
+ * MsgGetAuthenticatorsResponse defines the Msg/GetAuthenticators response type.
+ * @name GetAuthenticatorsResponse
+ * @package symphony.smartaccount.v1beta1
+ * @see proto type: symphony.smartaccount.v1beta1.GetAuthenticatorsResponse
+ */
 export interface GetAuthenticatorsResponse {
   accountAuthenticators: AccountAuthenticator[];
 }
@@ -71,7 +125,12 @@ export interface GetAuthenticatorsResponseProtoMsg {
   typeUrl: '/symphony.smartaccount.v1beta1.GetAuthenticatorsResponse';
   value: Uint8Array;
 }
-/** MsgGetAuthenticatorsResponse defines the Msg/GetAuthenticators response type. */
+/**
+ * MsgGetAuthenticatorsResponse defines the Msg/GetAuthenticators response type.
+ * @name GetAuthenticatorsResponseAmino
+ * @package symphony.smartaccount.v1beta1
+ * @see proto type: symphony.smartaccount.v1beta1.GetAuthenticatorsResponse
+ */
 export interface GetAuthenticatorsResponseAmino {
   account_authenticators?: AccountAuthenticatorAmino[];
 }
@@ -79,11 +138,21 @@ export interface GetAuthenticatorsResponseAminoMsg {
   type: '/symphony.smartaccount.v1beta1.GetAuthenticatorsResponse';
   value: GetAuthenticatorsResponseAmino;
 }
-/** MsgGetAuthenticatorsResponse defines the Msg/GetAuthenticators response type. */
+/**
+ * MsgGetAuthenticatorsResponse defines the Msg/GetAuthenticators response type.
+ * @name GetAuthenticatorsResponseSDKType
+ * @package symphony.smartaccount.v1beta1
+ * @see proto type: symphony.smartaccount.v1beta1.GetAuthenticatorsResponse
+ */
 export interface GetAuthenticatorsResponseSDKType {
   account_authenticators: AccountAuthenticatorSDKType[];
 }
-/** MsgGetAuthenticatorRequest defines the Msg/GetAuthenticator request type. */
+/**
+ * MsgGetAuthenticatorRequest defines the Msg/GetAuthenticator request type.
+ * @name GetAuthenticatorRequest
+ * @package symphony.smartaccount.v1beta1
+ * @see proto type: symphony.smartaccount.v1beta1.GetAuthenticatorRequest
+ */
 export interface GetAuthenticatorRequest {
   account: string;
   authenticatorId: bigint;
@@ -92,7 +161,12 @@ export interface GetAuthenticatorRequestProtoMsg {
   typeUrl: '/symphony.smartaccount.v1beta1.GetAuthenticatorRequest';
   value: Uint8Array;
 }
-/** MsgGetAuthenticatorRequest defines the Msg/GetAuthenticator request type. */
+/**
+ * MsgGetAuthenticatorRequest defines the Msg/GetAuthenticator request type.
+ * @name GetAuthenticatorRequestAmino
+ * @package symphony.smartaccount.v1beta1
+ * @see proto type: symphony.smartaccount.v1beta1.GetAuthenticatorRequest
+ */
 export interface GetAuthenticatorRequestAmino {
   account?: string;
   authenticator_id?: string;
@@ -101,12 +175,22 @@ export interface GetAuthenticatorRequestAminoMsg {
   type: '/symphony.smartaccount.v1beta1.GetAuthenticatorRequest';
   value: GetAuthenticatorRequestAmino;
 }
-/** MsgGetAuthenticatorRequest defines the Msg/GetAuthenticator request type. */
+/**
+ * MsgGetAuthenticatorRequest defines the Msg/GetAuthenticator request type.
+ * @name GetAuthenticatorRequestSDKType
+ * @package symphony.smartaccount.v1beta1
+ * @see proto type: symphony.smartaccount.v1beta1.GetAuthenticatorRequest
+ */
 export interface GetAuthenticatorRequestSDKType {
   account: string;
   authenticator_id: bigint;
 }
-/** MsgGetAuthenticatorResponse defines the Msg/GetAuthenticator response type. */
+/**
+ * MsgGetAuthenticatorResponse defines the Msg/GetAuthenticator response type.
+ * @name GetAuthenticatorResponse
+ * @package symphony.smartaccount.v1beta1
+ * @see proto type: symphony.smartaccount.v1beta1.GetAuthenticatorResponse
+ */
 export interface GetAuthenticatorResponse {
   accountAuthenticator?: AccountAuthenticator;
 }
@@ -114,7 +198,12 @@ export interface GetAuthenticatorResponseProtoMsg {
   typeUrl: '/symphony.smartaccount.v1beta1.GetAuthenticatorResponse';
   value: Uint8Array;
 }
-/** MsgGetAuthenticatorResponse defines the Msg/GetAuthenticator response type. */
+/**
+ * MsgGetAuthenticatorResponse defines the Msg/GetAuthenticator response type.
+ * @name GetAuthenticatorResponseAmino
+ * @package symphony.smartaccount.v1beta1
+ * @see proto type: symphony.smartaccount.v1beta1.GetAuthenticatorResponse
+ */
 export interface GetAuthenticatorResponseAmino {
   account_authenticator?: AccountAuthenticatorAmino;
 }
@@ -122,13 +211,24 @@ export interface GetAuthenticatorResponseAminoMsg {
   type: '/symphony.smartaccount.v1beta1.GetAuthenticatorResponse';
   value: GetAuthenticatorResponseAmino;
 }
-/** MsgGetAuthenticatorResponse defines the Msg/GetAuthenticator response type. */
+/**
+ * MsgGetAuthenticatorResponse defines the Msg/GetAuthenticator response type.
+ * @name GetAuthenticatorResponseSDKType
+ * @package symphony.smartaccount.v1beta1
+ * @see proto type: symphony.smartaccount.v1beta1.GetAuthenticatorResponse
+ */
 export interface GetAuthenticatorResponseSDKType {
   account_authenticator?: AccountAuthenticatorSDKType;
 }
 function createBaseQueryParamsRequest(): QueryParamsRequest {
   return {};
 }
+/**
+ * QueryParamsRequest is request type for the Query/Params RPC method.
+ * @name QueryParamsRequest
+ * @package symphony.smartaccount.v1beta1
+ * @see proto type: symphony.smartaccount.v1beta1.QueryParamsRequest
+ */
 export const QueryParamsRequest = {
   typeUrl: '/symphony.smartaccount.v1beta1.QueryParamsRequest',
   is(o: any): o is QueryParamsRequest {
@@ -198,6 +298,12 @@ function createBaseQueryParamsResponse(): QueryParamsResponse {
     params: Params.fromPartial({}),
   };
 }
+/**
+ * QueryParamsResponse is response type for the Query/Params RPC method.
+ * @name QueryParamsResponse
+ * @package symphony.smartaccount.v1beta1
+ * @see proto type: symphony.smartaccount.v1beta1.QueryParamsResponse
+ */
 export const QueryParamsResponse = {
   typeUrl: '/symphony.smartaccount.v1beta1.QueryParamsResponse',
   is(o: any): o is QueryParamsResponse {
@@ -292,6 +398,12 @@ function createBaseGetAuthenticatorsRequest(): GetAuthenticatorsRequest {
     account: '',
   };
 }
+/**
+ * MsgGetAuthenticatorsRequest defines the Msg/GetAuthenticators request type.
+ * @name GetAuthenticatorsRequest
+ * @package symphony.smartaccount.v1beta1
+ * @see proto type: symphony.smartaccount.v1beta1.GetAuthenticatorsRequest
+ */
 export const GetAuthenticatorsRequest = {
   typeUrl: '/symphony.smartaccount.v1beta1.GetAuthenticatorsRequest',
   is(o: any): o is GetAuthenticatorsRequest {
@@ -395,6 +507,12 @@ function createBaseGetAuthenticatorsResponse(): GetAuthenticatorsResponse {
     accountAuthenticators: [],
   };
 }
+/**
+ * MsgGetAuthenticatorsResponse defines the Msg/GetAuthenticators response type.
+ * @name GetAuthenticatorsResponse
+ * @package symphony.smartaccount.v1beta1
+ * @see proto type: symphony.smartaccount.v1beta1.GetAuthenticatorsResponse
+ */
 export const GetAuthenticatorsResponse = {
   typeUrl: '/symphony.smartaccount.v1beta1.GetAuthenticatorsResponse',
   is(o: any): o is GetAuthenticatorsResponse {
@@ -517,6 +635,12 @@ function createBaseGetAuthenticatorRequest(): GetAuthenticatorRequest {
     authenticatorId: BigInt(0),
   };
 }
+/**
+ * MsgGetAuthenticatorRequest defines the Msg/GetAuthenticator request type.
+ * @name GetAuthenticatorRequest
+ * @package symphony.smartaccount.v1beta1
+ * @see proto type: symphony.smartaccount.v1beta1.GetAuthenticatorRequest
+ */
 export const GetAuthenticatorRequest = {
   typeUrl: '/symphony.smartaccount.v1beta1.GetAuthenticatorRequest',
   is(o: any): o is GetAuthenticatorRequest {
@@ -643,6 +767,12 @@ function createBaseGetAuthenticatorResponse(): GetAuthenticatorResponse {
     accountAuthenticator: undefined,
   };
 }
+/**
+ * MsgGetAuthenticatorResponse defines the Msg/GetAuthenticator response type.
+ * @name GetAuthenticatorResponse
+ * @package symphony.smartaccount.v1beta1
+ * @see proto type: symphony.smartaccount.v1beta1.GetAuthenticatorResponse
+ */
 export const GetAuthenticatorResponse = {
   typeUrl: '/symphony.smartaccount.v1beta1.GetAuthenticatorResponse',
   is(o: any): o is GetAuthenticatorResponse {

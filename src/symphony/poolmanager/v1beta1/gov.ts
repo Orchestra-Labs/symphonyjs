@@ -9,6 +9,9 @@ import { GlobalDecoderRegistry } from '../../../registry';
 /**
  * DenomPairTakerFeeProposal is a type for adding/removing a custom taker fee(s)
  * for one or more denom pairs.
+ * @name DenomPairTakerFeeProposal
+ * @package symphony.poolmanager.v1beta1
+ * @see proto type: symphony.poolmanager.v1beta1.DenomPairTakerFeeProposal
  */
 export interface DenomPairTakerFeeProposal {
   title: string;
@@ -22,6 +25,9 @@ export interface DenomPairTakerFeeProposalProtoMsg {
 /**
  * DenomPairTakerFeeProposal is a type for adding/removing a custom taker fee(s)
  * for one or more denom pairs.
+ * @name DenomPairTakerFeeProposalAmino
+ * @package symphony.poolmanager.v1beta1
+ * @see proto type: symphony.poolmanager.v1beta1.DenomPairTakerFeeProposal
  */
 export interface DenomPairTakerFeeProposalAmino {
   title?: string;
@@ -35,6 +41,9 @@ export interface DenomPairTakerFeeProposalAminoMsg {
 /**
  * DenomPairTakerFeeProposal is a type for adding/removing a custom taker fee(s)
  * for one or more denom pairs.
+ * @name DenomPairTakerFeeProposalSDKType
+ * @package symphony.poolmanager.v1beta1
+ * @see proto type: symphony.poolmanager.v1beta1.DenomPairTakerFeeProposal
  */
 export interface DenomPairTakerFeeProposalSDKType {
   title: string;
@@ -48,6 +57,13 @@ function createBaseDenomPairTakerFeeProposal(): DenomPairTakerFeeProposal {
     denomPairTakerFee: [],
   };
 }
+/**
+ * DenomPairTakerFeeProposal is a type for adding/removing a custom taker fee(s)
+ * for one or more denom pairs.
+ * @name DenomPairTakerFeeProposal
+ * @package symphony.poolmanager.v1beta1
+ * @see proto type: symphony.poolmanager.v1beta1.DenomPairTakerFeeProposal
+ */
 export const DenomPairTakerFeeProposal = {
   typeUrl: '/symphony.poolmanager.v1beta1.DenomPairTakerFeeProposal',
   is(o: any): o is DenomPairTakerFeeProposal {

@@ -7,28 +7,52 @@ import {
 } from '../../../cosmos/base/v1beta1/coin';
 import { BinaryReader, BinaryWriter } from '../../../binary';
 import { GlobalDecoderRegistry } from '../../../registry';
-/** GenesisState defines the txfees module's genesis state. */
+/**
+ * GenesisState defines the txfees module's genesis state.
+ * @name GenesisState
+ * @package symphony.txfees.v1beta1
+ * @see proto type: symphony.txfees.v1beta1.GenesisState
+ */
 export interface GenesisState {
-  /** params is the container of txfees parameters. */
+  /**
+   * params is the container of txfees parameters.
+   */
   params: Params;
 }
 export interface GenesisStateProtoMsg {
   typeUrl: '/symphony.txfees.v1beta1.GenesisState';
   value: Uint8Array;
 }
-/** GenesisState defines the txfees module's genesis state. */
+/**
+ * GenesisState defines the txfees module's genesis state.
+ * @name GenesisStateAmino
+ * @package symphony.txfees.v1beta1
+ * @see proto type: symphony.txfees.v1beta1.GenesisState
+ */
 export interface GenesisStateAmino {
-  /** params is the container of txfees parameters. */
+  /**
+   * params is the container of txfees parameters.
+   */
   params?: ParamsAmino;
 }
 export interface GenesisStateAminoMsg {
   type: '/symphony.txfees.v1beta1.GenesisState';
   value: GenesisStateAmino;
 }
-/** GenesisState defines the txfees module's genesis state. */
+/**
+ * GenesisState defines the txfees module's genesis state.
+ * @name GenesisStateSDKType
+ * @package symphony.txfees.v1beta1
+ * @see proto type: symphony.txfees.v1beta1.GenesisState
+ */
 export interface GenesisStateSDKType {
   params: ParamsSDKType;
 }
+/**
+ * @name TxFeesTracker
+ * @package symphony.txfees.v1beta1
+ * @see proto type: symphony.txfees.v1beta1.TxFeesTracker
+ */
 export interface TxFeesTracker {
   txFees: Coin[];
   heightAccountingStartsFrom: bigint;
@@ -37,6 +61,11 @@ export interface TxFeesTrackerProtoMsg {
   typeUrl: '/symphony.txfees.v1beta1.TxFeesTracker';
   value: Uint8Array;
 }
+/**
+ * @name TxFeesTrackerAmino
+ * @package symphony.txfees.v1beta1
+ * @see proto type: symphony.txfees.v1beta1.TxFeesTracker
+ */
 export interface TxFeesTrackerAmino {
   tx_fees?: CoinAmino[];
   height_accounting_starts_from?: string;
@@ -45,6 +74,11 @@ export interface TxFeesTrackerAminoMsg {
   type: '/symphony.txfees.v1beta1.TxFeesTracker';
   value: TxFeesTrackerAmino;
 }
+/**
+ * @name TxFeesTrackerSDKType
+ * @package symphony.txfees.v1beta1
+ * @see proto type: symphony.txfees.v1beta1.TxFeesTracker
+ */
 export interface TxFeesTrackerSDKType {
   tx_fees: CoinSDKType[];
   height_accounting_starts_from: bigint;
@@ -54,6 +88,12 @@ function createBaseGenesisState(): GenesisState {
     params: Params.fromPartial({}),
   };
 }
+/**
+ * GenesisState defines the txfees module's genesis state.
+ * @name GenesisState
+ * @package symphony.txfees.v1beta1
+ * @see proto type: symphony.txfees.v1beta1.GenesisState
+ */
 export const GenesisState = {
   typeUrl: '/symphony.txfees.v1beta1.GenesisState',
   is(o: any): o is GenesisState {
@@ -137,6 +177,11 @@ function createBaseTxFeesTracker(): TxFeesTracker {
     heightAccountingStartsFrom: BigInt(0),
   };
 }
+/**
+ * @name TxFeesTracker
+ * @package symphony.txfees.v1beta1
+ * @see proto type: symphony.txfees.v1beta1.TxFeesTracker
+ */
 export const TxFeesTracker = {
   typeUrl: '/symphony.txfees.v1beta1.TxFeesTracker',
   is(o: any): o is TxFeesTracker {

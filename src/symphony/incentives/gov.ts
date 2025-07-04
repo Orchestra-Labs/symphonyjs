@@ -6,6 +6,9 @@ import { GlobalDecoderRegistry } from '../../registry';
  * CreateGroupsProposal is a type for creating one or more groups via
  * governance. This is useful for creating groups without having to pay
  * creation fees.
+ * @name CreateGroupsProposal
+ * @package symphony.incentives
+ * @see proto type: symphony.incentives.CreateGroupsProposal
  */
 export interface CreateGroupsProposal {
   $typeUrl?: '/symphony.incentives.CreateGroupsProposal';
@@ -21,6 +24,9 @@ export interface CreateGroupsProposalProtoMsg {
  * CreateGroupsProposal is a type for creating one or more groups via
  * governance. This is useful for creating groups without having to pay
  * creation fees.
+ * @name CreateGroupsProposalAmino
+ * @package symphony.incentives
+ * @see proto type: symphony.incentives.CreateGroupsProposal
  */
 export interface CreateGroupsProposalAmino {
   title?: string;
@@ -35,6 +41,9 @@ export interface CreateGroupsProposalAminoMsg {
  * CreateGroupsProposal is a type for creating one or more groups via
  * governance. This is useful for creating groups without having to pay
  * creation fees.
+ * @name CreateGroupsProposalSDKType
+ * @package symphony.incentives
+ * @see proto type: symphony.incentives.CreateGroupsProposal
  */
 export interface CreateGroupsProposalSDKType {
   $typeUrl?: '/symphony.incentives.CreateGroupsProposal';
@@ -50,6 +59,14 @@ function createBaseCreateGroupsProposal(): CreateGroupsProposal {
     createGroups: [],
   };
 }
+/**
+ * CreateGroupsProposal is a type for creating one or more groups via
+ * governance. This is useful for creating groups without having to pay
+ * creation fees.
+ * @name CreateGroupsProposal
+ * @package symphony.incentives
+ * @see proto type: symphony.incentives.CreateGroupsProposal
+ */
 export const CreateGroupsProposal = {
   typeUrl: '/symphony.incentives.CreateGroupsProposal',
   is(o: any): o is CreateGroupsProposal {

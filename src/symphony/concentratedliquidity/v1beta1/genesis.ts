@@ -40,13 +40,22 @@ import { GlobalDecoderRegistry } from '../../../registry';
 /**
  * FullTick contains tick index and pool id along with other tick model
  * information.
+ * @name FullTick
+ * @package symphony.concentratedliquidity.v1beta1
+ * @see proto type: symphony.concentratedliquidity.v1beta1.FullTick
  */
 export interface FullTick {
-  /** pool id associated with the tick. */
+  /**
+   * pool id associated with the tick.
+   */
   poolId: bigint;
-  /** tick's index. */
+  /**
+   * tick's index.
+   */
   tickIndex: bigint;
-  /** tick's info. */
+  /**
+   * tick's info.
+   */
   info: TickInfo;
 }
 export interface FullTickProtoMsg {
@@ -56,13 +65,22 @@ export interface FullTickProtoMsg {
 /**
  * FullTick contains tick index and pool id along with other tick model
  * information.
+ * @name FullTickAmino
+ * @package symphony.concentratedliquidity.v1beta1
+ * @see proto type: symphony.concentratedliquidity.v1beta1.FullTick
  */
 export interface FullTickAmino {
-  /** pool id associated with the tick. */
+  /**
+   * pool id associated with the tick.
+   */
   pool_id?: string;
-  /** tick's index. */
+  /**
+   * tick's index.
+   */
   tick_index?: string;
-  /** tick's info. */
+  /**
+   * tick's info.
+   */
   info?: TickInfoAmino;
 }
 export interface FullTickAminoMsg {
@@ -72,6 +90,9 @@ export interface FullTickAminoMsg {
 /**
  * FullTick contains tick index and pool id along with other tick model
  * information.
+ * @name FullTickSDKType
+ * @package symphony.concentratedliquidity.v1beta1
+ * @see proto type: symphony.concentratedliquidity.v1beta1.FullTick
  */
 export interface FullTickSDKType {
   pool_id: bigint;
@@ -81,15 +102,24 @@ export interface FullTickSDKType {
 /**
  * PoolData represents a serialized pool along with its ticks
  * for genesis state.
+ * @name PoolData
+ * @package symphony.concentratedliquidity.v1beta1
+ * @see proto type: symphony.concentratedliquidity.v1beta1.PoolData
  */
 export interface PoolData {
-  /** pool struct */
+  /**
+   * pool struct
+   */
   pool?: Pool1 | CosmWasmPool | Pool2 | Pool3 | Any | undefined;
-  /** pool's ticks */
+  /**
+   * pool's ticks
+   */
   ticks: FullTick[];
   spreadRewardAccumulator: AccumObject;
   incentivesAccumulators: AccumObject[];
-  /** incentive records to be set */
+  /**
+   * incentive records to be set
+   */
   incentiveRecords: IncentiveRecord[];
 }
 export interface PoolDataProtoMsg {
@@ -97,7 +127,10 @@ export interface PoolDataProtoMsg {
   value: Uint8Array;
 }
 export type PoolDataEncoded = Omit<PoolData, 'pool'> & {
-  /** pool struct */ pool?:
+  /**
+   * pool struct
+   */
+  pool?:
     | Pool1ProtoMsg
     | CosmWasmPoolProtoMsg
     | Pool2ProtoMsg
@@ -108,15 +141,24 @@ export type PoolDataEncoded = Omit<PoolData, 'pool'> & {
 /**
  * PoolData represents a serialized pool along with its ticks
  * for genesis state.
+ * @name PoolDataAmino
+ * @package symphony.concentratedliquidity.v1beta1
+ * @see proto type: symphony.concentratedliquidity.v1beta1.PoolData
  */
 export interface PoolDataAmino {
-  /** pool struct */
+  /**
+   * pool struct
+   */
   pool?: AnyAmino;
-  /** pool's ticks */
+  /**
+   * pool's ticks
+   */
   ticks?: FullTickAmino[];
   spread_reward_accumulator?: AccumObjectAmino;
   incentives_accumulators?: AccumObjectAmino[];
-  /** incentive records to be set */
+  /**
+   * incentive records to be set
+   */
   incentive_records?: IncentiveRecordAmino[];
 }
 export interface PoolDataAminoMsg {
@@ -126,6 +168,9 @@ export interface PoolDataAminoMsg {
 /**
  * PoolData represents a serialized pool along with its ticks
  * for genesis state.
+ * @name PoolDataSDKType
+ * @package symphony.concentratedliquidity.v1beta1
+ * @see proto type: symphony.concentratedliquidity.v1beta1.PoolData
  */
 export interface PoolDataSDKType {
   pool?:
@@ -140,6 +185,11 @@ export interface PoolDataSDKType {
   incentives_accumulators: AccumObjectSDKType[];
   incentive_records: IncentiveRecordSDKType[];
 }
+/**
+ * @name PositionData
+ * @package symphony.concentratedliquidity.v1beta1
+ * @see proto type: symphony.concentratedliquidity.v1beta1.PositionData
+ */
 export interface PositionData {
   position?: Position;
   lockId: bigint;
@@ -150,6 +200,11 @@ export interface PositionDataProtoMsg {
   typeUrl: '/symphony.concentratedliquidity.v1beta1.PositionData';
   value: Uint8Array;
 }
+/**
+ * @name PositionDataAmino
+ * @package symphony.concentratedliquidity.v1beta1
+ * @see proto type: symphony.concentratedliquidity.v1beta1.PositionData
+ */
 export interface PositionDataAmino {
   position?: PositionAmino;
   lock_id?: string;
@@ -160,17 +215,31 @@ export interface PositionDataAminoMsg {
   type: '/symphony.concentratedliquidity.v1beta1.PositionData';
   value: PositionDataAmino;
 }
+/**
+ * @name PositionDataSDKType
+ * @package symphony.concentratedliquidity.v1beta1
+ * @see proto type: symphony.concentratedliquidity.v1beta1.PositionData
+ */
 export interface PositionDataSDKType {
   position?: PositionSDKType;
   lock_id: bigint;
   spread_reward_accum_record: RecordSDKType;
   uptime_accum_records: RecordSDKType[];
 }
-/** GenesisState defines the concentrated liquidity module's genesis state. */
+/**
+ * GenesisState defines the concentrated liquidity module's genesis state.
+ * @name GenesisState
+ * @package symphony.concentratedliquidity.v1beta1
+ * @see proto type: symphony.concentratedliquidity.v1beta1.GenesisState
+ */
 export interface GenesisState {
-  /** params are all the parameters of the module */
+  /**
+   * params are all the parameters of the module
+   */
   params: Params;
-  /** pool data containing serialized pool struct and ticks. */
+  /**
+   * pool data containing serialized pool struct and ticks.
+   */
   poolData: PoolData[];
   positionData: PositionData[];
   nextPositionId: bigint;
@@ -182,11 +251,20 @@ export interface GenesisStateProtoMsg {
   typeUrl: '/symphony.concentratedliquidity.v1beta1.GenesisState';
   value: Uint8Array;
 }
-/** GenesisState defines the concentrated liquidity module's genesis state. */
+/**
+ * GenesisState defines the concentrated liquidity module's genesis state.
+ * @name GenesisStateAmino
+ * @package symphony.concentratedliquidity.v1beta1
+ * @see proto type: symphony.concentratedliquidity.v1beta1.GenesisState
+ */
 export interface GenesisStateAmino {
-  /** params are all the parameters of the module */
+  /**
+   * params are all the parameters of the module
+   */
   params?: ParamsAmino;
-  /** pool data containing serialized pool struct and ticks. */
+  /**
+   * pool data containing serialized pool struct and ticks.
+   */
   pool_data?: PoolDataAmino[];
   position_data?: PositionDataAmino[];
   next_position_id?: string;
@@ -198,7 +276,12 @@ export interface GenesisStateAminoMsg {
   type: '/symphony.concentratedliquidity.v1beta1.GenesisState';
   value: GenesisStateAmino;
 }
-/** GenesisState defines the concentrated liquidity module's genesis state. */
+/**
+ * GenesisState defines the concentrated liquidity module's genesis state.
+ * @name GenesisStateSDKType
+ * @package symphony.concentratedliquidity.v1beta1
+ * @see proto type: symphony.concentratedliquidity.v1beta1.GenesisState
+ */
 export interface GenesisStateSDKType {
   params: ParamsSDKType;
   pool_data: PoolDataSDKType[];
@@ -208,8 +291,15 @@ export interface GenesisStateSDKType {
   incentives_accumulator_pool_id_migration_threshold: bigint;
   spread_factor_pool_id_migration_threshold: bigint;
 }
+/**
+ * @name AccumObject
+ * @package symphony.concentratedliquidity.v1beta1
+ * @see proto type: symphony.concentratedliquidity.v1beta1.AccumObject
+ */
 export interface AccumObject {
-  /** Accumulator's name (pulled from AccumulatorContent) */
+  /**
+   * Accumulator's name (pulled from AccumulatorContent)
+   */
   name: string;
   accumContent?: AccumulatorContent;
 }
@@ -217,8 +307,15 @@ export interface AccumObjectProtoMsg {
   typeUrl: '/symphony.concentratedliquidity.v1beta1.AccumObject';
   value: Uint8Array;
 }
+/**
+ * @name AccumObjectAmino
+ * @package symphony.concentratedliquidity.v1beta1
+ * @see proto type: symphony.concentratedliquidity.v1beta1.AccumObject
+ */
 export interface AccumObjectAmino {
-  /** Accumulator's name (pulled from AccumulatorContent) */
+  /**
+   * Accumulator's name (pulled from AccumulatorContent)
+   */
   name?: string;
   accum_content?: AccumulatorContentAmino;
 }
@@ -226,6 +323,11 @@ export interface AccumObjectAminoMsg {
   type: '/symphony.concentratedliquidity.v1beta1.AccumObject';
   value: AccumObjectAmino;
 }
+/**
+ * @name AccumObjectSDKType
+ * @package symphony.concentratedliquidity.v1beta1
+ * @see proto type: symphony.concentratedliquidity.v1beta1.AccumObject
+ */
 export interface AccumObjectSDKType {
   name: string;
   accum_content?: AccumulatorContentSDKType;
@@ -237,6 +339,13 @@ function createBaseFullTick(): FullTick {
     info: TickInfo.fromPartial({}),
   };
 }
+/**
+ * FullTick contains tick index and pool id along with other tick model
+ * information.
+ * @name FullTick
+ * @package symphony.concentratedliquidity.v1beta1
+ * @see proto type: symphony.concentratedliquidity.v1beta1.FullTick
+ */
 export const FullTick = {
   typeUrl: '/symphony.concentratedliquidity.v1beta1.FullTick',
   is(o: any): o is FullTick {
@@ -371,6 +480,13 @@ function createBasePoolData(): PoolData {
     incentiveRecords: [],
   };
 }
+/**
+ * PoolData represents a serialized pool along with its ticks
+ * for genesis state.
+ * @name PoolData
+ * @package symphony.concentratedliquidity.v1beta1
+ * @see proto type: symphony.concentratedliquidity.v1beta1.PoolData
+ */
 export const PoolData = {
   typeUrl: '/symphony.concentratedliquidity.v1beta1.PoolData',
   is(o: any): o is PoolData {
@@ -574,6 +690,11 @@ function createBasePositionData(): PositionData {
     uptimeAccumRecords: [],
   };
 }
+/**
+ * @name PositionData
+ * @package symphony.concentratedliquidity.v1beta1
+ * @see proto type: symphony.concentratedliquidity.v1beta1.PositionData
+ */
 export const PositionData = {
   typeUrl: '/symphony.concentratedliquidity.v1beta1.PositionData',
   is(o: any): o is PositionData {
@@ -747,6 +868,12 @@ function createBaseGenesisState(): GenesisState {
     spreadFactorPoolIdMigrationThreshold: BigInt(0),
   };
 }
+/**
+ * GenesisState defines the concentrated liquidity module's genesis state.
+ * @name GenesisState
+ * @package symphony.concentratedliquidity.v1beta1
+ * @see proto type: symphony.concentratedliquidity.v1beta1.GenesisState
+ */
 export const GenesisState = {
   typeUrl: '/symphony.concentratedliquidity.v1beta1.GenesisState',
   is(o: any): o is GenesisState {
@@ -993,6 +1120,11 @@ function createBaseAccumObject(): AccumObject {
     accumContent: undefined,
   };
 }
+/**
+ * @name AccumObject
+ * @package symphony.concentratedliquidity.v1beta1
+ * @see proto type: symphony.concentratedliquidity.v1beta1.AccumObject
+ */
 export const AccumObject = {
   typeUrl: '/symphony.concentratedliquidity.v1beta1.AccumObject',
   is(o: any): o is AccumObject {

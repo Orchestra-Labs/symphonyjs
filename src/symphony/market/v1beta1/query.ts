@@ -8,94 +8,173 @@ import { Params, ParamsAmino, ParamsSDKType } from './market';
 import { BinaryReader, BinaryWriter } from '../../../binary';
 import { GlobalDecoderRegistry } from '../../../registry';
 import { Decimal } from '@cosmjs/math';
-/** QuerySwapRequest is the request type for the Query/Swap RPC method. */
+/**
+ * QuerySwapRequest is the request type for the Query/Swap RPC method.
+ * @name QuerySwapRequest
+ * @package symphony.market.v1beta1
+ * @see proto type: symphony.market.v1beta1.QuerySwapRequest
+ */
 export interface QuerySwapRequest {
-  /** offer_coin defines the coin being offered (i.e. 1000000uluna) */
+  /**
+   * offer_coin defines the coin being offered (i.e. 1000000uluna)
+   */
   offerCoin: string;
-  /** ask_denom defines the denom of the coin to swap to */
+  /**
+   * ask_denom defines the denom of the coin to swap to
+   */
   askDenom: string;
 }
 export interface QuerySwapRequestProtoMsg {
   typeUrl: '/symphony.market.v1beta1.QuerySwapRequest';
   value: Uint8Array;
 }
-/** QuerySwapRequest is the request type for the Query/Swap RPC method. */
+/**
+ * QuerySwapRequest is the request type for the Query/Swap RPC method.
+ * @name QuerySwapRequestAmino
+ * @package symphony.market.v1beta1
+ * @see proto type: symphony.market.v1beta1.QuerySwapRequest
+ */
 export interface QuerySwapRequestAmino {
-  /** offer_coin defines the coin being offered (i.e. 1000000uluna) */
+  /**
+   * offer_coin defines the coin being offered (i.e. 1000000uluna)
+   */
   offer_coin?: string;
-  /** ask_denom defines the denom of the coin to swap to */
+  /**
+   * ask_denom defines the denom of the coin to swap to
+   */
   ask_denom?: string;
 }
 export interface QuerySwapRequestAminoMsg {
   type: '/symphony.market.v1beta1.QuerySwapRequest';
   value: QuerySwapRequestAmino;
 }
-/** QuerySwapRequest is the request type for the Query/Swap RPC method. */
+/**
+ * QuerySwapRequest is the request type for the Query/Swap RPC method.
+ * @name QuerySwapRequestSDKType
+ * @package symphony.market.v1beta1
+ * @see proto type: symphony.market.v1beta1.QuerySwapRequest
+ */
 export interface QuerySwapRequestSDKType {
   offer_coin: string;
   ask_denom: string;
 }
-/** QuerySwapResponse is the response type for the Query/Swap RPC method. */
+/**
+ * QuerySwapResponse is the response type for the Query/Swap RPC method.
+ * @name QuerySwapResponse
+ * @package symphony.market.v1beta1
+ * @see proto type: symphony.market.v1beta1.QuerySwapResponse
+ */
 export interface QuerySwapResponse {
-  /** return_coin defines the coin returned as a result of the swap simulation. */
+  /**
+   * return_coin defines the coin returned as a result of the swap simulation.
+   */
   returnCoin: Coin;
 }
 export interface QuerySwapResponseProtoMsg {
   typeUrl: '/symphony.market.v1beta1.QuerySwapResponse';
   value: Uint8Array;
 }
-/** QuerySwapResponse is the response type for the Query/Swap RPC method. */
+/**
+ * QuerySwapResponse is the response type for the Query/Swap RPC method.
+ * @name QuerySwapResponseAmino
+ * @package symphony.market.v1beta1
+ * @see proto type: symphony.market.v1beta1.QuerySwapResponse
+ */
 export interface QuerySwapResponseAmino {
-  /** return_coin defines the coin returned as a result of the swap simulation. */
+  /**
+   * return_coin defines the coin returned as a result of the swap simulation.
+   */
   return_coin?: CoinAmino;
 }
 export interface QuerySwapResponseAminoMsg {
   type: '/symphony.market.v1beta1.QuerySwapResponse';
   value: QuerySwapResponseAmino;
 }
-/** QuerySwapResponse is the response type for the Query/Swap RPC method. */
+/**
+ * QuerySwapResponse is the response type for the Query/Swap RPC method.
+ * @name QuerySwapResponseSDKType
+ * @package symphony.market.v1beta1
+ * @see proto type: symphony.market.v1beta1.QuerySwapResponse
+ */
 export interface QuerySwapResponseSDKType {
   return_coin: CoinSDKType;
 }
-/** QueryParamsRequest is the request type for the Query/Params RPC method. */
+/**
+ * QueryParamsRequest is the request type for the Query/Params RPC method.
+ * @name QueryParamsRequest
+ * @package symphony.market.v1beta1
+ * @see proto type: symphony.market.v1beta1.QueryParamsRequest
+ */
 export interface QueryParamsRequest {}
 export interface QueryParamsRequestProtoMsg {
   typeUrl: '/symphony.market.v1beta1.QueryParamsRequest';
   value: Uint8Array;
 }
-/** QueryParamsRequest is the request type for the Query/Params RPC method. */
+/**
+ * QueryParamsRequest is the request type for the Query/Params RPC method.
+ * @name QueryParamsRequestAmino
+ * @package symphony.market.v1beta1
+ * @see proto type: symphony.market.v1beta1.QueryParamsRequest
+ */
 export interface QueryParamsRequestAmino {}
 export interface QueryParamsRequestAminoMsg {
   type: '/symphony.market.v1beta1.QueryParamsRequest';
   value: QueryParamsRequestAmino;
 }
-/** QueryParamsRequest is the request type for the Query/Params RPC method. */
+/**
+ * QueryParamsRequest is the request type for the Query/Params RPC method.
+ * @name QueryParamsRequestSDKType
+ * @package symphony.market.v1beta1
+ * @see proto type: symphony.market.v1beta1.QueryParamsRequest
+ */
 export interface QueryParamsRequestSDKType {}
-/** QueryParamsResponse is the response type for the Query/Params RPC method. */
+/**
+ * QueryParamsResponse is the response type for the Query/Params RPC method.
+ * @name QueryParamsResponse
+ * @package symphony.market.v1beta1
+ * @see proto type: symphony.market.v1beta1.QueryParamsResponse
+ */
 export interface QueryParamsResponse {
-  /** params defines the parameters of the module. */
+  /**
+   * params defines the parameters of the module.
+   */
   params: Params;
 }
 export interface QueryParamsResponseProtoMsg {
   typeUrl: '/symphony.market.v1beta1.QueryParamsResponse';
   value: Uint8Array;
 }
-/** QueryParamsResponse is the response type for the Query/Params RPC method. */
+/**
+ * QueryParamsResponse is the response type for the Query/Params RPC method.
+ * @name QueryParamsResponseAmino
+ * @package symphony.market.v1beta1
+ * @see proto type: symphony.market.v1beta1.QueryParamsResponse
+ */
 export interface QueryParamsResponseAmino {
-  /** params defines the parameters of the module. */
+  /**
+   * params defines the parameters of the module.
+   */
   params?: ParamsAmino;
 }
 export interface QueryParamsResponseAminoMsg {
   type: '/symphony.market.v1beta1.QueryParamsResponse';
   value: QueryParamsResponseAmino;
 }
-/** QueryParamsResponse is the response type for the Query/Params RPC method. */
+/**
+ * QueryParamsResponse is the response type for the Query/Params RPC method.
+ * @name QueryParamsResponseSDKType
+ * @package symphony.market.v1beta1
+ * @see proto type: symphony.market.v1beta1.QueryParamsResponse
+ */
 export interface QueryParamsResponseSDKType {
   params: ParamsSDKType;
 }
 /**
  * QueryExchangeRequirementsRequest is the request type for the
  * Query/ExchangeRequirements RPC method.
+ * @name QueryExchangeRequirementsRequest
+ * @package symphony.market.v1beta1
+ * @see proto type: symphony.market.v1beta1.QueryExchangeRequirementsRequest
  */
 export interface QueryExchangeRequirementsRequest {}
 export interface QueryExchangeRequirementsRequestProtoMsg {
@@ -105,6 +184,9 @@ export interface QueryExchangeRequirementsRequestProtoMsg {
 /**
  * QueryExchangeRequirementsRequest is the request type for the
  * Query/ExchangeRequirements RPC method.
+ * @name QueryExchangeRequirementsRequestAmino
+ * @package symphony.market.v1beta1
+ * @see proto type: symphony.market.v1beta1.QueryExchangeRequirementsRequest
  */
 export interface QueryExchangeRequirementsRequestAmino {}
 export interface QueryExchangeRequirementsRequestAminoMsg {
@@ -114,11 +196,17 @@ export interface QueryExchangeRequirementsRequestAminoMsg {
 /**
  * QueryExchangeRequirementsRequest is the request type for the
  * Query/ExchangeRequirements RPC method.
+ * @name QueryExchangeRequirementsRequestSDKType
+ * @package symphony.market.v1beta1
+ * @see proto type: symphony.market.v1beta1.QueryExchangeRequirementsRequest
  */
 export interface QueryExchangeRequirementsRequestSDKType {}
 /**
  * QueryExchangeRequirementsResponse is the response type for the
  * Query/ExchangeRequirements RPC method.
+ * @name QueryExchangeRequirementsResponse
+ * @package symphony.market.v1beta1
+ * @see proto type: symphony.market.v1beta1.QueryExchangeRequirementsResponse
  */
 export interface QueryExchangeRequirementsResponse {
   exchangeRequirements: ExchangeRequirement[];
@@ -131,6 +219,9 @@ export interface QueryExchangeRequirementsResponseProtoMsg {
 /**
  * QueryExchangeRequirementsResponse is the response type for the
  * Query/ExchangeRequirements RPC method.
+ * @name QueryExchangeRequirementsResponseAmino
+ * @package symphony.market.v1beta1
+ * @see proto type: symphony.market.v1beta1.QueryExchangeRequirementsResponse
  */
 export interface QueryExchangeRequirementsResponseAmino {
   exchange_requirements?: ExchangeRequirementAmino[];
@@ -143,11 +234,19 @@ export interface QueryExchangeRequirementsResponseAminoMsg {
 /**
  * QueryExchangeRequirementsResponse is the response type for the
  * Query/ExchangeRequirements RPC method.
+ * @name QueryExchangeRequirementsResponseSDKType
+ * @package symphony.market.v1beta1
+ * @see proto type: symphony.market.v1beta1.QueryExchangeRequirementsResponse
  */
 export interface QueryExchangeRequirementsResponseSDKType {
   exchange_requirements: ExchangeRequirementSDKType[];
   total: CoinSDKType;
 }
+/**
+ * @name ExchangeRequirement
+ * @package symphony.market.v1beta1
+ * @see proto type: symphony.market.v1beta1.ExchangeRequirement
+ */
 export interface ExchangeRequirement {
   baseCurrency: Coin;
   exchangeRate: string;
@@ -156,6 +255,11 @@ export interface ExchangeRequirementProtoMsg {
   typeUrl: '/symphony.market.v1beta1.ExchangeRequirement';
   value: Uint8Array;
 }
+/**
+ * @name ExchangeRequirementAmino
+ * @package symphony.market.v1beta1
+ * @see proto type: symphony.market.v1beta1.ExchangeRequirement
+ */
 export interface ExchangeRequirementAmino {
   base_currency?: CoinAmino;
   exchange_rate?: string;
@@ -164,6 +268,11 @@ export interface ExchangeRequirementAminoMsg {
   type: '/symphony.market.v1beta1.ExchangeRequirement';
   value: ExchangeRequirementAmino;
 }
+/**
+ * @name ExchangeRequirementSDKType
+ * @package symphony.market.v1beta1
+ * @see proto type: symphony.market.v1beta1.ExchangeRequirement
+ */
 export interface ExchangeRequirementSDKType {
   base_currency: CoinSDKType;
   exchange_rate: string;
@@ -174,6 +283,12 @@ function createBaseQuerySwapRequest(): QuerySwapRequest {
     askDenom: '',
   };
 }
+/**
+ * QuerySwapRequest is the request type for the Query/Swap RPC method.
+ * @name QuerySwapRequest
+ * @package symphony.market.v1beta1
+ * @see proto type: symphony.market.v1beta1.QuerySwapRequest
+ */
 export const QuerySwapRequest = {
   typeUrl: '/symphony.market.v1beta1.QuerySwapRequest',
   is(o: any): o is QuerySwapRequest {
@@ -274,6 +389,12 @@ function createBaseQuerySwapResponse(): QuerySwapResponse {
     returnCoin: Coin.fromPartial({}),
   };
 }
+/**
+ * QuerySwapResponse is the response type for the Query/Swap RPC method.
+ * @name QuerySwapResponse
+ * @package symphony.market.v1beta1
+ * @see proto type: symphony.market.v1beta1.QuerySwapResponse
+ */
 export const QuerySwapResponse = {
   typeUrl: '/symphony.market.v1beta1.QuerySwapResponse',
   is(o: any): o is QuerySwapResponse {
@@ -362,6 +483,12 @@ GlobalDecoderRegistry.register(QuerySwapResponse.typeUrl, QuerySwapResponse);
 function createBaseQueryParamsRequest(): QueryParamsRequest {
   return {};
 }
+/**
+ * QueryParamsRequest is the request type for the Query/Params RPC method.
+ * @name QueryParamsRequest
+ * @package symphony.market.v1beta1
+ * @see proto type: symphony.market.v1beta1.QueryParamsRequest
+ */
 export const QueryParamsRequest = {
   typeUrl: '/symphony.market.v1beta1.QueryParamsRequest',
   is(o: any): o is QueryParamsRequest {
@@ -431,6 +558,12 @@ function createBaseQueryParamsResponse(): QueryParamsResponse {
     params: Params.fromPartial({}),
   };
 }
+/**
+ * QueryParamsResponse is the response type for the Query/Params RPC method.
+ * @name QueryParamsResponse
+ * @package symphony.market.v1beta1
+ * @see proto type: symphony.market.v1beta1.QueryParamsResponse
+ */
 export const QueryParamsResponse = {
   typeUrl: '/symphony.market.v1beta1.QueryParamsResponse',
   is(o: any): o is QueryParamsResponse {
@@ -523,6 +656,13 @@ GlobalDecoderRegistry.register(
 function createBaseQueryExchangeRequirementsRequest(): QueryExchangeRequirementsRequest {
   return {};
 }
+/**
+ * QueryExchangeRequirementsRequest is the request type for the
+ * Query/ExchangeRequirements RPC method.
+ * @name QueryExchangeRequirementsRequest
+ * @package symphony.market.v1beta1
+ * @see proto type: symphony.market.v1beta1.QueryExchangeRequirementsRequest
+ */
 export const QueryExchangeRequirementsRequest = {
   typeUrl: '/symphony.market.v1beta1.QueryExchangeRequirementsRequest',
   is(o: any): o is QueryExchangeRequirementsRequest {
@@ -608,6 +748,13 @@ function createBaseQueryExchangeRequirementsResponse(): QueryExchangeRequirement
     total: Coin.fromPartial({}),
   };
 }
+/**
+ * QueryExchangeRequirementsResponse is the response type for the
+ * Query/ExchangeRequirements RPC method.
+ * @name QueryExchangeRequirementsResponse
+ * @package symphony.market.v1beta1
+ * @see proto type: symphony.market.v1beta1.QueryExchangeRequirementsResponse
+ */
 export const QueryExchangeRequirementsResponse = {
   typeUrl: '/symphony.market.v1beta1.QueryExchangeRequirementsResponse',
   is(o: any): o is QueryExchangeRequirementsResponse {
@@ -751,6 +898,11 @@ function createBaseExchangeRequirement(): ExchangeRequirement {
     exchangeRate: '',
   };
 }
+/**
+ * @name ExchangeRequirement
+ * @package symphony.market.v1beta1
+ * @see proto type: symphony.market.v1beta1.ExchangeRequirement
+ */
 export const ExchangeRequirement = {
   typeUrl: '/symphony.market.v1beta1.ExchangeRequirement',
   is(o: any): o is ExchangeRequirement {

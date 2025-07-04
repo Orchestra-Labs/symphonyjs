@@ -52,9 +52,16 @@ export function assetStatusToJSON(object: AssetStatus): string {
       return 'UNRECOGNIZED';
   }
 }
-/** Params defines params for x/bridge module. */
+/**
+ * Params defines params for x/bridge module.
+ * @name Params
+ * @package symphony.bridge.v1beta1
+ * @see proto type: symphony.bridge.v1beta1.Params
+ */
 export interface Params {
-  /** Signers used to sign inbound and release outbound transactions */
+  /**
+   * Signers used to sign inbound and release outbound transactions
+   */
   signers: string[];
   /**
    * Assets is a list used to create tokenfactory denoms
@@ -66,9 +73,16 @@ export interface ParamsProtoMsg {
   typeUrl: '/symphony.bridge.v1beta1.Params';
   value: Uint8Array;
 }
-/** Params defines params for x/bridge module. */
+/**
+ * Params defines params for x/bridge module.
+ * @name ParamsAmino
+ * @package symphony.bridge.v1beta1
+ * @see proto type: symphony.bridge.v1beta1.Params
+ */
 export interface ParamsAmino {
-  /** Signers used to sign inbound and release outbound transactions */
+  /**
+   * Signers used to sign inbound and release outbound transactions
+   */
   signers?: string[];
   /**
    * Assets is a list used to create tokenfactory denoms
@@ -80,12 +94,22 @@ export interface ParamsAminoMsg {
   type: '/symphony.bridge.v1beta1.Params';
   value: ParamsAmino;
 }
-/** Params defines params for x/bridge module. */
+/**
+ * Params defines params for x/bridge module.
+ * @name ParamsSDKType
+ * @package symphony.bridge.v1beta1
+ * @see proto type: symphony.bridge.v1beta1.Params
+ */
 export interface ParamsSDKType {
   signers: string[];
   assets: AssetWithStatusSDKType[];
 }
-/** AssetWithStatus defines a pair of the asset and its current status. */
+/**
+ * AssetWithStatus defines a pair of the asset and its current status.
+ * @name AssetWithStatus
+ * @package symphony.bridge.v1beta1
+ * @see proto type: symphony.bridge.v1beta1.AssetWithStatus
+ */
 export interface AssetWithStatus {
   asset: Asset;
   assetStatus: AssetStatus;
@@ -94,7 +118,12 @@ export interface AssetWithStatusProtoMsg {
   typeUrl: '/symphony.bridge.v1beta1.AssetWithStatus';
   value: Uint8Array;
 }
-/** AssetWithStatus defines a pair of the asset and its current status. */
+/**
+ * AssetWithStatus defines a pair of the asset and its current status.
+ * @name AssetWithStatusAmino
+ * @package symphony.bridge.v1beta1
+ * @see proto type: symphony.bridge.v1beta1.AssetWithStatus
+ */
 export interface AssetWithStatusAmino {
   asset?: AssetAmino;
   asset_status?: AssetStatus;
@@ -103,7 +132,12 @@ export interface AssetWithStatusAminoMsg {
   type: '/symphony.bridge.v1beta1.AssetWithStatus';
   value: AssetWithStatusAmino;
 }
-/** AssetWithStatus defines a pair of the asset and its current status. */
+/**
+ * AssetWithStatus defines a pair of the asset and its current status.
+ * @name AssetWithStatusSDKType
+ * @package symphony.bridge.v1beta1
+ * @see proto type: symphony.bridge.v1beta1.AssetWithStatus
+ */
 export interface AssetWithStatusSDKType {
   asset: AssetSDKType;
   asset_status: AssetStatus;
@@ -111,13 +145,22 @@ export interface AssetWithStatusSDKType {
 /**
  * Asset defines a pair of the source chain name and its Osmosis representation
  * denoted by denom. It also includes a precision used for coins representation.
+ * @name Asset
+ * @package symphony.bridge.v1beta1
+ * @see proto type: symphony.bridge.v1beta1.Asset
  */
 export interface Asset {
-  /** SourceChain is a source chain name */
+  /**
+   * SourceChain is a source chain name
+   */
   sourceChain: string;
-  /** Denom is the Osmosis representation of the SourceChain */
+  /**
+   * Denom is the Osmosis representation of the SourceChain
+   */
   denom: string;
-  /** Precision used for coins representation */
+  /**
+   * Precision used for coins representation
+   */
   precision: bigint;
 }
 export interface AssetProtoMsg {
@@ -127,13 +170,22 @@ export interface AssetProtoMsg {
 /**
  * Asset defines a pair of the source chain name and its Osmosis representation
  * denoted by denom. It also includes a precision used for coins representation.
+ * @name AssetAmino
+ * @package symphony.bridge.v1beta1
+ * @see proto type: symphony.bridge.v1beta1.Asset
  */
 export interface AssetAmino {
-  /** SourceChain is a source chain name */
+  /**
+   * SourceChain is a source chain name
+   */
   source_chain?: string;
-  /** Denom is the Osmosis representation of the SourceChain */
+  /**
+   * Denom is the Osmosis representation of the SourceChain
+   */
   denom?: string;
-  /** Precision used for coins representation */
+  /**
+   * Precision used for coins representation
+   */
   precision?: string;
 }
 export interface AssetAminoMsg {
@@ -143,6 +195,9 @@ export interface AssetAminoMsg {
 /**
  * Asset defines a pair of the source chain name and its Osmosis representation
  * denoted by denom. It also includes a precision used for coins representation.
+ * @name AssetSDKType
+ * @package symphony.bridge.v1beta1
+ * @see proto type: symphony.bridge.v1beta1.Asset
  */
 export interface AssetSDKType {
   source_chain: string;
@@ -155,6 +210,12 @@ function createBaseParams(): Params {
     assets: [],
   };
 }
+/**
+ * Params defines params for x/bridge module.
+ * @name Params
+ * @package symphony.bridge.v1beta1
+ * @see proto type: symphony.bridge.v1beta1.Params
+ */
 export const Params = {
   typeUrl: '/symphony.bridge.v1beta1.Params',
   is(o: any): o is Params {
@@ -273,6 +334,12 @@ function createBaseAssetWithStatus(): AssetWithStatus {
     assetStatus: 0,
   };
 }
+/**
+ * AssetWithStatus defines a pair of the asset and its current status.
+ * @name AssetWithStatus
+ * @package symphony.bridge.v1beta1
+ * @see proto type: symphony.bridge.v1beta1.AssetWithStatus
+ */
 export const AssetWithStatus = {
   typeUrl: '/symphony.bridge.v1beta1.AssetWithStatus',
   is(o: any): o is AssetWithStatus {
@@ -379,6 +446,13 @@ function createBaseAsset(): Asset {
     precision: BigInt(0),
   };
 }
+/**
+ * Asset defines a pair of the source chain name and its Osmosis representation
+ * denoted by denom. It also includes a precision used for coins representation.
+ * @name Asset
+ * @package symphony.bridge.v1beta1
+ * @see proto type: symphony.bridge.v1beta1.Asset
+ */
 export const Asset = {
   typeUrl: '/symphony.bridge.v1beta1.Asset',
   is(o: any): o is Asset {

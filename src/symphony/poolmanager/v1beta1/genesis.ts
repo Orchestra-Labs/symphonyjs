@@ -17,10 +17,17 @@ import {
 import { BinaryReader, BinaryWriter } from '../../../binary';
 import { GlobalDecoderRegistry } from '../../../registry';
 import { Decimal } from '@cosmjs/math';
-/** Params holds parameters for the poolmanager module */
+/**
+ * Params holds parameters for the poolmanager module
+ * @name Params
+ * @package symphony.poolmanager.v1beta1
+ * @see proto type: symphony.poolmanager.v1beta1.Params
+ */
 export interface Params {
   poolCreationFee: Coin[];
-  /** taker_fee_params is the container of taker fee parameters. */
+  /**
+   * taker_fee_params is the container of taker fee parameters.
+   */
   takerFeeParams: TakerFeeParams;
   /**
    * authorized_quote_denoms is a list of quote denoms that can be used as
@@ -38,10 +45,17 @@ export interface ParamsProtoMsg {
   typeUrl: '/symphony.poolmanager.v1beta1.Params';
   value: Uint8Array;
 }
-/** Params holds parameters for the poolmanager module */
+/**
+ * Params holds parameters for the poolmanager module
+ * @name ParamsAmino
+ * @package symphony.poolmanager.v1beta1
+ * @see proto type: symphony.poolmanager.v1beta1.Params
+ */
 export interface ParamsAmino {
   pool_creation_fee?: CoinAmino[];
-  /** taker_fee_params is the container of taker fee parameters. */
+  /**
+   * taker_fee_params is the container of taker fee parameters.
+   */
   taker_fee_params?: TakerFeeParamsAmino;
   /**
    * authorized_quote_denoms is a list of quote denoms that can be used as
@@ -59,21 +73,39 @@ export interface ParamsAminoMsg {
   type: '/symphony.poolmanager.v1beta1.Params';
   value: ParamsAmino;
 }
-/** Params holds parameters for the poolmanager module */
+/**
+ * Params holds parameters for the poolmanager module
+ * @name ParamsSDKType
+ * @package symphony.poolmanager.v1beta1
+ * @see proto type: symphony.poolmanager.v1beta1.Params
+ */
 export interface ParamsSDKType {
   pool_creation_fee: CoinSDKType[];
   taker_fee_params: TakerFeeParamsSDKType;
   authorized_quote_denoms: string[];
 }
-/** GenesisState defines the poolmanager module's genesis state. */
+/**
+ * GenesisState defines the poolmanager module's genesis state.
+ * @name GenesisState
+ * @package symphony.poolmanager.v1beta1
+ * @see proto type: symphony.poolmanager.v1beta1.GenesisState
+ */
 export interface GenesisState {
-  /** the next_pool_id */
+  /**
+   * the next_pool_id
+   */
   nextPoolId: bigint;
-  /** params is the container of poolmanager parameters. */
+  /**
+   * params is the container of poolmanager parameters.
+   */
   params: Params;
-  /** pool_routes is the container of the mappings from pool id to pool type. */
+  /**
+   * pool_routes is the container of the mappings from pool id to pool type.
+   */
   poolRoutes: ModuleRoute[];
-  /** KVStore state */
+  /**
+   * KVStore state
+   */
   takerFeesTracker?: TakerFeesTracker;
   poolVolumes: PoolVolume[];
   denomPairTakerFeeStore: DenomPairTakerFee[];
@@ -82,15 +114,28 @@ export interface GenesisStateProtoMsg {
   typeUrl: '/symphony.poolmanager.v1beta1.GenesisState';
   value: Uint8Array;
 }
-/** GenesisState defines the poolmanager module's genesis state. */
+/**
+ * GenesisState defines the poolmanager module's genesis state.
+ * @name GenesisStateAmino
+ * @package symphony.poolmanager.v1beta1
+ * @see proto type: symphony.poolmanager.v1beta1.GenesisState
+ */
 export interface GenesisStateAmino {
-  /** the next_pool_id */
+  /**
+   * the next_pool_id
+   */
   next_pool_id?: string;
-  /** params is the container of poolmanager parameters. */
+  /**
+   * params is the container of poolmanager parameters.
+   */
   params?: ParamsAmino;
-  /** pool_routes is the container of the mappings from pool id to pool type. */
+  /**
+   * pool_routes is the container of the mappings from pool id to pool type.
+   */
   pool_routes?: ModuleRouteAmino[];
-  /** KVStore state */
+  /**
+   * KVStore state
+   */
   taker_fees_tracker?: TakerFeesTrackerAmino;
   pool_volumes?: PoolVolumeAmino[];
   denom_pair_taker_fee_store?: DenomPairTakerFeeAmino[];
@@ -99,7 +144,12 @@ export interface GenesisStateAminoMsg {
   type: '/symphony.poolmanager.v1beta1.GenesisState';
   value: GenesisStateAmino;
 }
-/** GenesisState defines the poolmanager module's genesis state. */
+/**
+ * GenesisState defines the poolmanager module's genesis state.
+ * @name GenesisStateSDKType
+ * @package symphony.poolmanager.v1beta1
+ * @see proto type: symphony.poolmanager.v1beta1.GenesisState
+ */
 export interface GenesisStateSDKType {
   next_pool_id: bigint;
   params: ParamsSDKType;
@@ -108,7 +158,12 @@ export interface GenesisStateSDKType {
   pool_volumes: PoolVolumeSDKType[];
   denom_pair_taker_fee_store: DenomPairTakerFeeSDKType[];
 }
-/** TakerFeeParams consolidates the taker fee parameters for the poolmanager. */
+/**
+ * TakerFeeParams consolidates the taker fee parameters for the poolmanager.
+ * @name TakerFeeParams
+ * @package symphony.poolmanager.v1beta1
+ * @see proto type: symphony.poolmanager.v1beta1.TakerFeeParams
+ */
 export interface TakerFeeParams {
   /**
    * default_taker_fee is the fee used when creating a new pool that doesn't
@@ -164,7 +219,12 @@ export interface TakerFeeParamsProtoMsg {
   typeUrl: '/symphony.poolmanager.v1beta1.TakerFeeParams';
   value: Uint8Array;
 }
-/** TakerFeeParams consolidates the taker fee parameters for the poolmanager. */
+/**
+ * TakerFeeParams consolidates the taker fee parameters for the poolmanager.
+ * @name TakerFeeParamsAmino
+ * @package symphony.poolmanager.v1beta1
+ * @see proto type: symphony.poolmanager.v1beta1.TakerFeeParams
+ */
 export interface TakerFeeParamsAmino {
   /**
    * default_taker_fee is the fee used when creating a new pool that doesn't
@@ -220,7 +280,12 @@ export interface TakerFeeParamsAminoMsg {
   type: '/symphony.poolmanager.v1beta1.TakerFeeParams';
   value: TakerFeeParamsAmino;
 }
-/** TakerFeeParams consolidates the taker fee parameters for the poolmanager. */
+/**
+ * TakerFeeParams consolidates the taker fee parameters for the poolmanager.
+ * @name TakerFeeParamsSDKType
+ * @package symphony.poolmanager.v1beta1
+ * @see proto type: symphony.poolmanager.v1beta1.TakerFeeParams
+ */
 export interface TakerFeeParamsSDKType {
   default_taker_fee: string;
   osmo_taker_fee_distribution: TakerFeeDistributionPercentageSDKType;
@@ -232,6 +297,9 @@ export interface TakerFeeParamsSDKType {
 /**
  * TakerFeeDistributionPercentage defines what percent of the taker fee category
  * gets distributed to the available categories.
+ * @name TakerFeeDistributionPercentage
+ * @package symphony.poolmanager.v1beta1
+ * @see proto type: symphony.poolmanager.v1beta1.TakerFeeDistributionPercentage
  */
 export interface TakerFeeDistributionPercentage {
   stakingRewards: string;
@@ -244,6 +312,9 @@ export interface TakerFeeDistributionPercentageProtoMsg {
 /**
  * TakerFeeDistributionPercentage defines what percent of the taker fee category
  * gets distributed to the available categories.
+ * @name TakerFeeDistributionPercentageAmino
+ * @package symphony.poolmanager.v1beta1
+ * @see proto type: symphony.poolmanager.v1beta1.TakerFeeDistributionPercentage
  */
 export interface TakerFeeDistributionPercentageAmino {
   staking_rewards?: string;
@@ -256,11 +327,19 @@ export interface TakerFeeDistributionPercentageAminoMsg {
 /**
  * TakerFeeDistributionPercentage defines what percent of the taker fee category
  * gets distributed to the available categories.
+ * @name TakerFeeDistributionPercentageSDKType
+ * @package symphony.poolmanager.v1beta1
+ * @see proto type: symphony.poolmanager.v1beta1.TakerFeeDistributionPercentage
  */
 export interface TakerFeeDistributionPercentageSDKType {
   staking_rewards: string;
   community_pool: string;
 }
+/**
+ * @name TakerFeesTracker
+ * @package symphony.poolmanager.v1beta1
+ * @see proto type: symphony.poolmanager.v1beta1.TakerFeesTracker
+ */
 export interface TakerFeesTracker {
   takerFeesToStakers: Coin[];
   takerFeesToCommunityPool: Coin[];
@@ -270,6 +349,11 @@ export interface TakerFeesTrackerProtoMsg {
   typeUrl: '/symphony.poolmanager.v1beta1.TakerFeesTracker';
   value: Uint8Array;
 }
+/**
+ * @name TakerFeesTrackerAmino
+ * @package symphony.poolmanager.v1beta1
+ * @see proto type: symphony.poolmanager.v1beta1.TakerFeesTracker
+ */
 export interface TakerFeesTrackerAmino {
   taker_fees_to_stakers?: CoinAmino[];
   taker_fees_to_community_pool?: CoinAmino[];
@@ -279,6 +363,11 @@ export interface TakerFeesTrackerAminoMsg {
   type: '/symphony.poolmanager.v1beta1.TakerFeesTracker';
   value: TakerFeesTrackerAmino;
 }
+/**
+ * @name TakerFeesTrackerSDKType
+ * @package symphony.poolmanager.v1beta1
+ * @see proto type: symphony.poolmanager.v1beta1.TakerFeesTracker
+ */
 export interface TakerFeesTrackerSDKType {
   taker_fees_to_stakers: CoinSDKType[];
   taker_fees_to_community_pool: CoinSDKType[];
@@ -287,11 +376,18 @@ export interface TakerFeesTrackerSDKType {
 /**
  * PoolVolume stores the KVStore entries for each pool's volume, which
  * is used in export/import genesis.
+ * @name PoolVolume
+ * @package symphony.poolmanager.v1beta1
+ * @see proto type: symphony.poolmanager.v1beta1.PoolVolume
  */
 export interface PoolVolume {
-  /** pool_id is the id of the pool. */
+  /**
+   * pool_id is the id of the pool.
+   */
   poolId: bigint;
-  /** pool_volume is the cumulative volume of the pool. */
+  /**
+   * pool_volume is the cumulative volume of the pool.
+   */
   poolVolume: Coin[];
 }
 export interface PoolVolumeProtoMsg {
@@ -301,11 +397,18 @@ export interface PoolVolumeProtoMsg {
 /**
  * PoolVolume stores the KVStore entries for each pool's volume, which
  * is used in export/import genesis.
+ * @name PoolVolumeAmino
+ * @package symphony.poolmanager.v1beta1
+ * @see proto type: symphony.poolmanager.v1beta1.PoolVolume
  */
 export interface PoolVolumeAmino {
-  /** pool_id is the id of the pool. */
+  /**
+   * pool_id is the id of the pool.
+   */
   pool_id?: string;
-  /** pool_volume is the cumulative volume of the pool. */
+  /**
+   * pool_volume is the cumulative volume of the pool.
+   */
   pool_volume?: CoinAmino[];
 }
 export interface PoolVolumeAminoMsg {
@@ -315,6 +418,9 @@ export interface PoolVolumeAminoMsg {
 /**
  * PoolVolume stores the KVStore entries for each pool's volume, which
  * is used in export/import genesis.
+ * @name PoolVolumeSDKType
+ * @package symphony.poolmanager.v1beta1
+ * @see proto type: symphony.poolmanager.v1beta1.PoolVolume
  */
 export interface PoolVolumeSDKType {
   pool_id: bigint;
@@ -327,6 +433,12 @@ function createBaseParams(): Params {
     authorizedQuoteDenoms: [],
   };
 }
+/**
+ * Params holds parameters for the poolmanager module
+ * @name Params
+ * @package symphony.poolmanager.v1beta1
+ * @see proto type: symphony.poolmanager.v1beta1.Params
+ */
 export const Params = {
   typeUrl: '/symphony.poolmanager.v1beta1.Params',
   is(o: any): o is Params {
@@ -485,6 +597,12 @@ function createBaseGenesisState(): GenesisState {
     denomPairTakerFeeStore: [],
   };
 }
+/**
+ * GenesisState defines the poolmanager module's genesis state.
+ * @name GenesisState
+ * @package symphony.poolmanager.v1beta1
+ * @see proto type: symphony.poolmanager.v1beta1.GenesisState
+ */
 export const GenesisState = {
   typeUrl: '/symphony.poolmanager.v1beta1.GenesisState',
   is(o: any): o is GenesisState {
@@ -707,6 +825,12 @@ function createBaseTakerFeeParams(): TakerFeeParams {
     reducedFeeWhitelist: [],
   };
 }
+/**
+ * TakerFeeParams consolidates the taker fee parameters for the poolmanager.
+ * @name TakerFeeParams
+ * @package symphony.poolmanager.v1beta1
+ * @see proto type: symphony.poolmanager.v1beta1.TakerFeeParams
+ */
 export const TakerFeeParams = {
   typeUrl: '/symphony.poolmanager.v1beta1.TakerFeeParams',
   is(o: any): o is TakerFeeParams {
@@ -952,6 +1076,13 @@ function createBaseTakerFeeDistributionPercentage(): TakerFeeDistributionPercent
     communityPool: '',
   };
 }
+/**
+ * TakerFeeDistributionPercentage defines what percent of the taker fee category
+ * gets distributed to the available categories.
+ * @name TakerFeeDistributionPercentage
+ * @package symphony.poolmanager.v1beta1
+ * @see proto type: symphony.poolmanager.v1beta1.TakerFeeDistributionPercentage
+ */
 export const TakerFeeDistributionPercentage = {
   typeUrl: '/symphony.poolmanager.v1beta1.TakerFeeDistributionPercentage',
   is(o: any): o is TakerFeeDistributionPercentage {
@@ -1090,6 +1221,11 @@ function createBaseTakerFeesTracker(): TakerFeesTracker {
     heightAccountingStartsFrom: BigInt(0),
   };
 }
+/**
+ * @name TakerFeesTracker
+ * @package symphony.poolmanager.v1beta1
+ * @see proto type: symphony.poolmanager.v1beta1.TakerFeesTracker
+ */
 export const TakerFeesTracker = {
   typeUrl: '/symphony.poolmanager.v1beta1.TakerFeesTracker',
   is(o: any): o is TakerFeesTracker {
@@ -1245,6 +1381,13 @@ function createBasePoolVolume(): PoolVolume {
     poolVolume: [],
   };
 }
+/**
+ * PoolVolume stores the KVStore entries for each pool's volume, which
+ * is used in export/import genesis.
+ * @name PoolVolume
+ * @package symphony.poolmanager.v1beta1
+ * @see proto type: symphony.poolmanager.v1beta1.PoolVolume
+ */
 export const PoolVolume = {
   typeUrl: '/symphony.poolmanager.v1beta1.PoolVolume',
   is(o: any): o is PoolVolume {

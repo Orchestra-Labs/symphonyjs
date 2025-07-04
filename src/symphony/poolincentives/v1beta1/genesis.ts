@@ -20,9 +20,16 @@ import {
 } from '../../../google/protobuf/duration';
 import { BinaryReader, BinaryWriter } from '../../../binary';
 import { GlobalDecoderRegistry } from '../../../registry';
-/** GenesisState defines the pool incentives module's genesis state. */
+/**
+ * GenesisState defines the pool incentives module's genesis state.
+ * @name GenesisState
+ * @package symphony.poolincentives.v1beta1
+ * @see proto type: symphony.poolincentives.v1beta1.GenesisState
+ */
 export interface GenesisState {
-  /** params defines all the parameters of the module. */
+  /**
+   * params defines all the parameters of the module.
+   */
   params: Params;
   lockableDurations: Duration[];
   distrInfo?: DistrInfo;
@@ -43,9 +50,16 @@ export interface GenesisStateProtoMsg {
   typeUrl: '/symphony.poolincentives.v1beta1.GenesisState';
   value: Uint8Array;
 }
-/** GenesisState defines the pool incentives module's genesis state. */
+/**
+ * GenesisState defines the pool incentives module's genesis state.
+ * @name GenesisStateAmino
+ * @package symphony.poolincentives.v1beta1
+ * @see proto type: symphony.poolincentives.v1beta1.GenesisState
+ */
 export interface GenesisStateAmino {
-  /** params defines all the parameters of the module. */
+  /**
+   * params defines all the parameters of the module.
+   */
   params?: ParamsAmino;
   lockable_durations?: DurationAmino[];
   distr_info?: DistrInfoAmino;
@@ -66,7 +80,12 @@ export interface GenesisStateAminoMsg {
   type: '/symphony.poolincentives.v1beta1.GenesisState';
   value: GenesisStateAmino;
 }
-/** GenesisState defines the pool incentives module's genesis state. */
+/**
+ * GenesisState defines the pool incentives module's genesis state.
+ * @name GenesisStateSDKType
+ * @package symphony.poolincentives.v1beta1
+ * @see proto type: symphony.poolincentives.v1beta1.GenesisState
+ */
 export interface GenesisStateSDKType {
   params: ParamsSDKType;
   lockable_durations: DurationSDKType[];
@@ -83,6 +102,12 @@ function createBaseGenesisState(): GenesisState {
     concentratedPoolToNoLockGauges: undefined,
   };
 }
+/**
+ * GenesisState defines the pool incentives module's genesis state.
+ * @name GenesisState
+ * @package symphony.poolincentives.v1beta1
+ * @see proto type: symphony.poolincentives.v1beta1.GenesisState
+ */
 export const GenesisState = {
   typeUrl: '/symphony.poolincentives.v1beta1.GenesisState',
   is(o: any): o is GenesisState {

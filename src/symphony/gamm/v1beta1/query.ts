@@ -48,20 +48,40 @@ import { PoolProtoMsg as Pool3ProtoMsg } from './balancerPool';
 import { PoolSDKType as Pool3SDKType } from './balancerPool';
 import { BinaryReader, BinaryWriter } from '../../../binary';
 import { GlobalDecoderRegistry } from '../../../registry';
-/** =============================== Params */
+/**
+ * =============================== Params
+ * @name ParamsRequest
+ * @package symphony.gamm.v1beta1
+ * @see proto type: symphony.gamm.v1beta1.ParamsRequest
+ */
 export interface ParamsRequest {}
 export interface ParamsRequestProtoMsg {
   typeUrl: '/symphony.gamm.v1beta1.ParamsRequest';
   value: Uint8Array;
 }
-/** =============================== Params */
+/**
+ * =============================== Params
+ * @name ParamsRequestAmino
+ * @package symphony.gamm.v1beta1
+ * @see proto type: symphony.gamm.v1beta1.ParamsRequest
+ */
 export interface ParamsRequestAmino {}
 export interface ParamsRequestAminoMsg {
   type: '/symphony.gamm.v1beta1.ParamsRequest';
   value: ParamsRequestAmino;
 }
-/** =============================== Params */
+/**
+ * =============================== Params
+ * @name ParamsRequestSDKType
+ * @package symphony.gamm.v1beta1
+ * @see proto type: symphony.gamm.v1beta1.ParamsRequest
+ */
 export interface ParamsRequestSDKType {}
+/**
+ * @name ParamsResponse
+ * @package symphony.gamm.v1beta1
+ * @see proto type: symphony.gamm.v1beta1.ParamsResponse
+ */
 export interface ParamsResponse {
   params: Params;
 }
@@ -69,6 +89,11 @@ export interface ParamsResponseProtoMsg {
   typeUrl: '/symphony.gamm.v1beta1.ParamsResponse';
   value: Uint8Array;
 }
+/**
+ * @name ParamsResponseAmino
+ * @package symphony.gamm.v1beta1
+ * @see proto type: symphony.gamm.v1beta1.ParamsResponse
+ */
 export interface ParamsResponseAmino {
   params?: ParamsAmino;
 }
@@ -76,14 +101,22 @@ export interface ParamsResponseAminoMsg {
   type: '/symphony.gamm.v1beta1.ParamsResponse';
   value: ParamsResponseAmino;
 }
+/**
+ * @name ParamsResponseSDKType
+ * @package symphony.gamm.v1beta1
+ * @see proto type: symphony.gamm.v1beta1.ParamsResponse
+ */
 export interface ParamsResponseSDKType {
   params: ParamsSDKType;
 }
 /**
  * =============================== Pool
  * Deprecated: please use the alternative in x/poolmanager
+ * @name QueryPoolRequest
+ * @package symphony.gamm.v1beta1
+ * @see proto type: symphony.gamm.v1beta1.QueryPoolRequest
+ * @deprecated
  */
-/** @deprecated */
 export interface QueryPoolRequest {
   poolId: bigint;
 }
@@ -94,8 +127,11 @@ export interface QueryPoolRequestProtoMsg {
 /**
  * =============================== Pool
  * Deprecated: please use the alternative in x/poolmanager
+ * @name QueryPoolRequestAmino
+ * @package symphony.gamm.v1beta1
+ * @see proto type: symphony.gamm.v1beta1.QueryPoolRequest
+ * @deprecated
  */
-/** @deprecated */
 export interface QueryPoolRequestAmino {
   pool_id?: string;
 }
@@ -106,13 +142,21 @@ export interface QueryPoolRequestAminoMsg {
 /**
  * =============================== Pool
  * Deprecated: please use the alternative in x/poolmanager
+ * @name QueryPoolRequestSDKType
+ * @package symphony.gamm.v1beta1
+ * @see proto type: symphony.gamm.v1beta1.QueryPoolRequest
+ * @deprecated
  */
-/** @deprecated */
 export interface QueryPoolRequestSDKType {
   pool_id: bigint;
 }
-/** Deprecated: please use the alternative in x/poolmanager */
-/** @deprecated */
+/**
+ * Deprecated: please use the alternative in x/poolmanager
+ * @name QueryPoolResponse
+ * @package symphony.gamm.v1beta1
+ * @see proto type: symphony.gamm.v1beta1.QueryPoolResponse
+ * @deprecated
+ */
 export interface QueryPoolResponse {
   pool?: Pool1 | CosmWasmPool | Pool2 | Pool3 | Any | undefined;
 }
@@ -129,8 +173,13 @@ export type QueryPoolResponseEncoded = Omit<QueryPoolResponse, 'pool'> & {
     | AnyProtoMsg
     | undefined;
 };
-/** Deprecated: please use the alternative in x/poolmanager */
-/** @deprecated */
+/**
+ * Deprecated: please use the alternative in x/poolmanager
+ * @name QueryPoolResponseAmino
+ * @package symphony.gamm.v1beta1
+ * @see proto type: symphony.gamm.v1beta1.QueryPoolResponse
+ * @deprecated
+ */
 export interface QueryPoolResponseAmino {
   pool?: AnyAmino;
 }
@@ -138,8 +187,13 @@ export interface QueryPoolResponseAminoMsg {
   type: '/symphony.gamm.v1beta1.QueryPoolResponse';
   value: QueryPoolResponseAmino;
 }
-/** Deprecated: please use the alternative in x/poolmanager */
-/** @deprecated */
+/**
+ * Deprecated: please use the alternative in x/poolmanager
+ * @name QueryPoolResponseSDKType
+ * @package symphony.gamm.v1beta1
+ * @see proto type: symphony.gamm.v1beta1.QueryPoolResponse
+ * @deprecated
+ */
 export interface QueryPoolResponseSDKType {
   pool?:
     | Pool1SDKType
@@ -149,31 +203,57 @@ export interface QueryPoolResponseSDKType {
     | AnySDKType
     | undefined;
 }
-/** =============================== Pools */
+/**
+ * =============================== Pools
+ * @name QueryPoolsRequest
+ * @package symphony.gamm.v1beta1
+ * @see proto type: symphony.gamm.v1beta1.QueryPoolsRequest
+ */
 export interface QueryPoolsRequest {
-  /** pagination defines an optional pagination for the request. */
+  /**
+   * pagination defines an optional pagination for the request.
+   */
   pagination?: PageRequest;
 }
 export interface QueryPoolsRequestProtoMsg {
   typeUrl: '/symphony.gamm.v1beta1.QueryPoolsRequest';
   value: Uint8Array;
 }
-/** =============================== Pools */
+/**
+ * =============================== Pools
+ * @name QueryPoolsRequestAmino
+ * @package symphony.gamm.v1beta1
+ * @see proto type: symphony.gamm.v1beta1.QueryPoolsRequest
+ */
 export interface QueryPoolsRequestAmino {
-  /** pagination defines an optional pagination for the request. */
+  /**
+   * pagination defines an optional pagination for the request.
+   */
   pagination?: PageRequestAmino;
 }
 export interface QueryPoolsRequestAminoMsg {
   type: '/symphony.gamm.v1beta1.QueryPoolsRequest';
   value: QueryPoolsRequestAmino;
 }
-/** =============================== Pools */
+/**
+ * =============================== Pools
+ * @name QueryPoolsRequestSDKType
+ * @package symphony.gamm.v1beta1
+ * @see proto type: symphony.gamm.v1beta1.QueryPoolsRequest
+ */
 export interface QueryPoolsRequestSDKType {
   pagination?: PageRequestSDKType;
 }
+/**
+ * @name QueryPoolsResponse
+ * @package symphony.gamm.v1beta1
+ * @see proto type: symphony.gamm.v1beta1.QueryPoolsResponse
+ */
 export interface QueryPoolsResponse {
   pools: (Pool1 | CosmWasmPool | Pool2 | Pool3 | Any)[] | Any[];
-  /** pagination defines the pagination in the response. */
+  /**
+   * pagination defines the pagination in the response.
+   */
   pagination?: PageResponse;
 }
 export interface QueryPoolsResponseProtoMsg {
@@ -189,15 +269,27 @@ export type QueryPoolsResponseEncoded = Omit<QueryPoolsResponse, 'pools'> & {
     | AnyProtoMsg
   )[];
 };
+/**
+ * @name QueryPoolsResponseAmino
+ * @package symphony.gamm.v1beta1
+ * @see proto type: symphony.gamm.v1beta1.QueryPoolsResponse
+ */
 export interface QueryPoolsResponseAmino {
   pools?: AnyAmino[];
-  /** pagination defines the pagination in the response. */
+  /**
+   * pagination defines the pagination in the response.
+   */
   pagination?: PageResponseAmino;
 }
 export interface QueryPoolsResponseAminoMsg {
   type: '/symphony.gamm.v1beta1.QueryPoolsResponse';
   value: QueryPoolsResponseAmino;
 }
+/**
+ * @name QueryPoolsResponseSDKType
+ * @package symphony.gamm.v1beta1
+ * @see proto type: symphony.gamm.v1beta1.QueryPoolsResponse
+ */
 export interface QueryPoolsResponseSDKType {
   pools: (
     | Pool1SDKType
@@ -208,24 +300,44 @@ export interface QueryPoolsResponseSDKType {
   )[];
   pagination?: PageResponseSDKType;
 }
-/** =============================== NumPools */
-/** @deprecated */
+/**
+ * =============================== NumPools
+ * @name QueryNumPoolsRequest
+ * @package symphony.gamm.v1beta1
+ * @see proto type: symphony.gamm.v1beta1.QueryNumPoolsRequest
+ * @deprecated
+ */
 export interface QueryNumPoolsRequest {}
 export interface QueryNumPoolsRequestProtoMsg {
   typeUrl: '/symphony.gamm.v1beta1.QueryNumPoolsRequest';
   value: Uint8Array;
 }
-/** =============================== NumPools */
-/** @deprecated */
+/**
+ * =============================== NumPools
+ * @name QueryNumPoolsRequestAmino
+ * @package symphony.gamm.v1beta1
+ * @see proto type: symphony.gamm.v1beta1.QueryNumPoolsRequest
+ * @deprecated
+ */
 export interface QueryNumPoolsRequestAmino {}
 export interface QueryNumPoolsRequestAminoMsg {
   type: '/symphony.gamm.v1beta1.QueryNumPoolsRequest';
   value: QueryNumPoolsRequestAmino;
 }
-/** =============================== NumPools */
-/** @deprecated */
+/**
+ * =============================== NumPools
+ * @name QueryNumPoolsRequestSDKType
+ * @package symphony.gamm.v1beta1
+ * @see proto type: symphony.gamm.v1beta1.QueryNumPoolsRequest
+ * @deprecated
+ */
 export interface QueryNumPoolsRequestSDKType {}
-/** @deprecated */
+/**
+ * @name QueryNumPoolsResponse
+ * @package symphony.gamm.v1beta1
+ * @see proto type: symphony.gamm.v1beta1.QueryNumPoolsResponse
+ * @deprecated
+ */
 export interface QueryNumPoolsResponse {
   numPools: bigint;
 }
@@ -233,7 +345,12 @@ export interface QueryNumPoolsResponseProtoMsg {
   typeUrl: '/symphony.gamm.v1beta1.QueryNumPoolsResponse';
   value: Uint8Array;
 }
-/** @deprecated */
+/**
+ * @name QueryNumPoolsResponseAmino
+ * @package symphony.gamm.v1beta1
+ * @see proto type: symphony.gamm.v1beta1.QueryNumPoolsResponse
+ * @deprecated
+ */
 export interface QueryNumPoolsResponseAmino {
   num_pools?: string;
 }
@@ -241,11 +358,21 @@ export interface QueryNumPoolsResponseAminoMsg {
   type: '/symphony.gamm.v1beta1.QueryNumPoolsResponse';
   value: QueryNumPoolsResponseAmino;
 }
-/** @deprecated */
+/**
+ * @name QueryNumPoolsResponseSDKType
+ * @package symphony.gamm.v1beta1
+ * @see proto type: symphony.gamm.v1beta1.QueryNumPoolsResponse
+ * @deprecated
+ */
 export interface QueryNumPoolsResponseSDKType {
   num_pools: bigint;
 }
-/** =============================== PoolType */
+/**
+ * =============================== PoolType
+ * @name QueryPoolTypeRequest
+ * @package symphony.gamm.v1beta1
+ * @see proto type: symphony.gamm.v1beta1.QueryPoolTypeRequest
+ */
 export interface QueryPoolTypeRequest {
   poolId: bigint;
 }
@@ -253,7 +380,12 @@ export interface QueryPoolTypeRequestProtoMsg {
   typeUrl: '/symphony.gamm.v1beta1.QueryPoolTypeRequest';
   value: Uint8Array;
 }
-/** =============================== PoolType */
+/**
+ * =============================== PoolType
+ * @name QueryPoolTypeRequestAmino
+ * @package symphony.gamm.v1beta1
+ * @see proto type: symphony.gamm.v1beta1.QueryPoolTypeRequest
+ */
 export interface QueryPoolTypeRequestAmino {
   pool_id?: string;
 }
@@ -261,10 +393,20 @@ export interface QueryPoolTypeRequestAminoMsg {
   type: '/symphony.gamm.v1beta1.QueryPoolTypeRequest';
   value: QueryPoolTypeRequestAmino;
 }
-/** =============================== PoolType */
+/**
+ * =============================== PoolType
+ * @name QueryPoolTypeRequestSDKType
+ * @package symphony.gamm.v1beta1
+ * @see proto type: symphony.gamm.v1beta1.QueryPoolTypeRequest
+ */
 export interface QueryPoolTypeRequestSDKType {
   pool_id: bigint;
 }
+/**
+ * @name QueryPoolTypeResponse
+ * @package symphony.gamm.v1beta1
+ * @see proto type: symphony.gamm.v1beta1.QueryPoolTypeResponse
+ */
 export interface QueryPoolTypeResponse {
   poolType: string;
 }
@@ -272,6 +414,11 @@ export interface QueryPoolTypeResponseProtoMsg {
   typeUrl: '/symphony.gamm.v1beta1.QueryPoolTypeResponse';
   value: Uint8Array;
 }
+/**
+ * @name QueryPoolTypeResponseAmino
+ * @package symphony.gamm.v1beta1
+ * @see proto type: symphony.gamm.v1beta1.QueryPoolTypeResponse
+ */
 export interface QueryPoolTypeResponseAmino {
   pool_type?: string;
 }
@@ -279,10 +426,20 @@ export interface QueryPoolTypeResponseAminoMsg {
   type: '/symphony.gamm.v1beta1.QueryPoolTypeResponse';
   value: QueryPoolTypeResponseAmino;
 }
+/**
+ * @name QueryPoolTypeResponseSDKType
+ * @package symphony.gamm.v1beta1
+ * @see proto type: symphony.gamm.v1beta1.QueryPoolTypeResponse
+ */
 export interface QueryPoolTypeResponseSDKType {
   pool_type: string;
 }
-/** =============================== CalcJoinPoolShares */
+/**
+ * =============================== CalcJoinPoolShares
+ * @name QueryCalcJoinPoolSharesRequest
+ * @package symphony.gamm.v1beta1
+ * @see proto type: symphony.gamm.v1beta1.QueryCalcJoinPoolSharesRequest
+ */
 export interface QueryCalcJoinPoolSharesRequest {
   poolId: bigint;
   tokensIn: Coin[];
@@ -291,7 +448,12 @@ export interface QueryCalcJoinPoolSharesRequestProtoMsg {
   typeUrl: '/symphony.gamm.v1beta1.QueryCalcJoinPoolSharesRequest';
   value: Uint8Array;
 }
-/** =============================== CalcJoinPoolShares */
+/**
+ * =============================== CalcJoinPoolShares
+ * @name QueryCalcJoinPoolSharesRequestAmino
+ * @package symphony.gamm.v1beta1
+ * @see proto type: symphony.gamm.v1beta1.QueryCalcJoinPoolSharesRequest
+ */
 export interface QueryCalcJoinPoolSharesRequestAmino {
   pool_id?: string;
   tokens_in?: CoinAmino[];
@@ -300,11 +462,21 @@ export interface QueryCalcJoinPoolSharesRequestAminoMsg {
   type: '/symphony.gamm.v1beta1.QueryCalcJoinPoolSharesRequest';
   value: QueryCalcJoinPoolSharesRequestAmino;
 }
-/** =============================== CalcJoinPoolShares */
+/**
+ * =============================== CalcJoinPoolShares
+ * @name QueryCalcJoinPoolSharesRequestSDKType
+ * @package symphony.gamm.v1beta1
+ * @see proto type: symphony.gamm.v1beta1.QueryCalcJoinPoolSharesRequest
+ */
 export interface QueryCalcJoinPoolSharesRequestSDKType {
   pool_id: bigint;
   tokens_in: CoinSDKType[];
 }
+/**
+ * @name QueryCalcJoinPoolSharesResponse
+ * @package symphony.gamm.v1beta1
+ * @see proto type: symphony.gamm.v1beta1.QueryCalcJoinPoolSharesResponse
+ */
 export interface QueryCalcJoinPoolSharesResponse {
   shareOutAmount: string;
   tokensOut: Coin[];
@@ -313,6 +485,11 @@ export interface QueryCalcJoinPoolSharesResponseProtoMsg {
   typeUrl: '/symphony.gamm.v1beta1.QueryCalcJoinPoolSharesResponse';
   value: Uint8Array;
 }
+/**
+ * @name QueryCalcJoinPoolSharesResponseAmino
+ * @package symphony.gamm.v1beta1
+ * @see proto type: symphony.gamm.v1beta1.QueryCalcJoinPoolSharesResponse
+ */
 export interface QueryCalcJoinPoolSharesResponseAmino {
   share_out_amount?: string;
   tokens_out?: CoinAmino[];
@@ -321,11 +498,21 @@ export interface QueryCalcJoinPoolSharesResponseAminoMsg {
   type: '/symphony.gamm.v1beta1.QueryCalcJoinPoolSharesResponse';
   value: QueryCalcJoinPoolSharesResponseAmino;
 }
+/**
+ * @name QueryCalcJoinPoolSharesResponseSDKType
+ * @package symphony.gamm.v1beta1
+ * @see proto type: symphony.gamm.v1beta1.QueryCalcJoinPoolSharesResponse
+ */
 export interface QueryCalcJoinPoolSharesResponseSDKType {
   share_out_amount: string;
   tokens_out: CoinSDKType[];
 }
-/** =============================== CalcExitPoolCoinsFromShares */
+/**
+ * =============================== CalcExitPoolCoinsFromShares
+ * @name QueryCalcExitPoolCoinsFromSharesRequest
+ * @package symphony.gamm.v1beta1
+ * @see proto type: symphony.gamm.v1beta1.QueryCalcExitPoolCoinsFromSharesRequest
+ */
 export interface QueryCalcExitPoolCoinsFromSharesRequest {
   poolId: bigint;
   shareInAmount: string;
@@ -334,7 +521,12 @@ export interface QueryCalcExitPoolCoinsFromSharesRequestProtoMsg {
   typeUrl: '/symphony.gamm.v1beta1.QueryCalcExitPoolCoinsFromSharesRequest';
   value: Uint8Array;
 }
-/** =============================== CalcExitPoolCoinsFromShares */
+/**
+ * =============================== CalcExitPoolCoinsFromShares
+ * @name QueryCalcExitPoolCoinsFromSharesRequestAmino
+ * @package symphony.gamm.v1beta1
+ * @see proto type: symphony.gamm.v1beta1.QueryCalcExitPoolCoinsFromSharesRequest
+ */
 export interface QueryCalcExitPoolCoinsFromSharesRequestAmino {
   pool_id?: string;
   share_in_amount?: string;
@@ -343,11 +535,21 @@ export interface QueryCalcExitPoolCoinsFromSharesRequestAminoMsg {
   type: '/symphony.gamm.v1beta1.QueryCalcExitPoolCoinsFromSharesRequest';
   value: QueryCalcExitPoolCoinsFromSharesRequestAmino;
 }
-/** =============================== CalcExitPoolCoinsFromShares */
+/**
+ * =============================== CalcExitPoolCoinsFromShares
+ * @name QueryCalcExitPoolCoinsFromSharesRequestSDKType
+ * @package symphony.gamm.v1beta1
+ * @see proto type: symphony.gamm.v1beta1.QueryCalcExitPoolCoinsFromSharesRequest
+ */
 export interface QueryCalcExitPoolCoinsFromSharesRequestSDKType {
   pool_id: bigint;
   share_in_amount: string;
 }
+/**
+ * @name QueryCalcExitPoolCoinsFromSharesResponse
+ * @package symphony.gamm.v1beta1
+ * @see proto type: symphony.gamm.v1beta1.QueryCalcExitPoolCoinsFromSharesResponse
+ */
 export interface QueryCalcExitPoolCoinsFromSharesResponse {
   tokensOut: Coin[];
 }
@@ -355,6 +557,11 @@ export interface QueryCalcExitPoolCoinsFromSharesResponseProtoMsg {
   typeUrl: '/symphony.gamm.v1beta1.QueryCalcExitPoolCoinsFromSharesResponse';
   value: Uint8Array;
 }
+/**
+ * @name QueryCalcExitPoolCoinsFromSharesResponseAmino
+ * @package symphony.gamm.v1beta1
+ * @see proto type: symphony.gamm.v1beta1.QueryCalcExitPoolCoinsFromSharesResponse
+ */
 export interface QueryCalcExitPoolCoinsFromSharesResponseAmino {
   tokens_out?: CoinAmino[];
 }
@@ -362,10 +569,20 @@ export interface QueryCalcExitPoolCoinsFromSharesResponseAminoMsg {
   type: '/symphony.gamm.v1beta1.QueryCalcExitPoolCoinsFromSharesResponse';
   value: QueryCalcExitPoolCoinsFromSharesResponseAmino;
 }
+/**
+ * @name QueryCalcExitPoolCoinsFromSharesResponseSDKType
+ * @package symphony.gamm.v1beta1
+ * @see proto type: symphony.gamm.v1beta1.QueryCalcExitPoolCoinsFromSharesResponse
+ */
 export interface QueryCalcExitPoolCoinsFromSharesResponseSDKType {
   tokens_out: CoinSDKType[];
 }
-/** =============================== PoolParams */
+/**
+ * =============================== PoolParams
+ * @name QueryPoolParamsRequest
+ * @package symphony.gamm.v1beta1
+ * @see proto type: symphony.gamm.v1beta1.QueryPoolParamsRequest
+ */
 export interface QueryPoolParamsRequest {
   poolId: bigint;
 }
@@ -373,7 +590,12 @@ export interface QueryPoolParamsRequestProtoMsg {
   typeUrl: '/symphony.gamm.v1beta1.QueryPoolParamsRequest';
   value: Uint8Array;
 }
-/** =============================== PoolParams */
+/**
+ * =============================== PoolParams
+ * @name QueryPoolParamsRequestAmino
+ * @package symphony.gamm.v1beta1
+ * @see proto type: symphony.gamm.v1beta1.QueryPoolParamsRequest
+ */
 export interface QueryPoolParamsRequestAmino {
   pool_id?: string;
 }
@@ -381,10 +603,20 @@ export interface QueryPoolParamsRequestAminoMsg {
   type: '/symphony.gamm.v1beta1.QueryPoolParamsRequest';
   value: QueryPoolParamsRequestAmino;
 }
-/** =============================== PoolParams */
+/**
+ * =============================== PoolParams
+ * @name QueryPoolParamsRequestSDKType
+ * @package symphony.gamm.v1beta1
+ * @see proto type: symphony.gamm.v1beta1.QueryPoolParamsRequest
+ */
 export interface QueryPoolParamsRequestSDKType {
   pool_id: bigint;
 }
+/**
+ * @name QueryPoolParamsResponse
+ * @package symphony.gamm.v1beta1
+ * @see proto type: symphony.gamm.v1beta1.QueryPoolParamsResponse
+ */
 export interface QueryPoolParamsResponse {
   params?: Any;
 }
@@ -392,6 +624,11 @@ export interface QueryPoolParamsResponseProtoMsg {
   typeUrl: '/symphony.gamm.v1beta1.QueryPoolParamsResponse';
   value: Uint8Array;
 }
+/**
+ * @name QueryPoolParamsResponseAmino
+ * @package symphony.gamm.v1beta1
+ * @see proto type: symphony.gamm.v1beta1.QueryPoolParamsResponse
+ */
 export interface QueryPoolParamsResponseAmino {
   params?: AnyAmino;
 }
@@ -399,14 +636,22 @@ export interface QueryPoolParamsResponseAminoMsg {
   type: '/symphony.gamm.v1beta1.QueryPoolParamsResponse';
   value: QueryPoolParamsResponseAmino;
 }
+/**
+ * @name QueryPoolParamsResponseSDKType
+ * @package symphony.gamm.v1beta1
+ * @see proto type: symphony.gamm.v1beta1.QueryPoolParamsResponse
+ */
 export interface QueryPoolParamsResponseSDKType {
   params?: AnySDKType;
 }
 /**
  * =============================== PoolLiquidity
  * Deprecated: please use the alternative in x/poolmanager
+ * @name QueryTotalPoolLiquidityRequest
+ * @package symphony.gamm.v1beta1
+ * @see proto type: symphony.gamm.v1beta1.QueryTotalPoolLiquidityRequest
+ * @deprecated
  */
-/** @deprecated */
 export interface QueryTotalPoolLiquidityRequest {
   poolId: bigint;
 }
@@ -417,8 +662,11 @@ export interface QueryTotalPoolLiquidityRequestProtoMsg {
 /**
  * =============================== PoolLiquidity
  * Deprecated: please use the alternative in x/poolmanager
+ * @name QueryTotalPoolLiquidityRequestAmino
+ * @package symphony.gamm.v1beta1
+ * @see proto type: symphony.gamm.v1beta1.QueryTotalPoolLiquidityRequest
+ * @deprecated
  */
-/** @deprecated */
 export interface QueryTotalPoolLiquidityRequestAmino {
   pool_id?: string;
 }
@@ -429,13 +677,21 @@ export interface QueryTotalPoolLiquidityRequestAminoMsg {
 /**
  * =============================== PoolLiquidity
  * Deprecated: please use the alternative in x/poolmanager
+ * @name QueryTotalPoolLiquidityRequestSDKType
+ * @package symphony.gamm.v1beta1
+ * @see proto type: symphony.gamm.v1beta1.QueryTotalPoolLiquidityRequest
+ * @deprecated
  */
-/** @deprecated */
 export interface QueryTotalPoolLiquidityRequestSDKType {
   pool_id: bigint;
 }
-/** Deprecated: please use the alternative in x/poolmanager */
-/** @deprecated */
+/**
+ * Deprecated: please use the alternative in x/poolmanager
+ * @name QueryTotalPoolLiquidityResponse
+ * @package symphony.gamm.v1beta1
+ * @see proto type: symphony.gamm.v1beta1.QueryTotalPoolLiquidityResponse
+ * @deprecated
+ */
 export interface QueryTotalPoolLiquidityResponse {
   liquidity: Coin[];
 }
@@ -443,8 +699,13 @@ export interface QueryTotalPoolLiquidityResponseProtoMsg {
   typeUrl: '/symphony.gamm.v1beta1.QueryTotalPoolLiquidityResponse';
   value: Uint8Array;
 }
-/** Deprecated: please use the alternative in x/poolmanager */
-/** @deprecated */
+/**
+ * Deprecated: please use the alternative in x/poolmanager
+ * @name QueryTotalPoolLiquidityResponseAmino
+ * @package symphony.gamm.v1beta1
+ * @see proto type: symphony.gamm.v1beta1.QueryTotalPoolLiquidityResponse
+ * @deprecated
+ */
 export interface QueryTotalPoolLiquidityResponseAmino {
   liquidity?: CoinAmino[];
 }
@@ -452,12 +713,22 @@ export interface QueryTotalPoolLiquidityResponseAminoMsg {
   type: '/symphony.gamm.v1beta1.QueryTotalPoolLiquidityResponse';
   value: QueryTotalPoolLiquidityResponseAmino;
 }
-/** Deprecated: please use the alternative in x/poolmanager */
-/** @deprecated */
+/**
+ * Deprecated: please use the alternative in x/poolmanager
+ * @name QueryTotalPoolLiquidityResponseSDKType
+ * @package symphony.gamm.v1beta1
+ * @see proto type: symphony.gamm.v1beta1.QueryTotalPoolLiquidityResponse
+ * @deprecated
+ */
 export interface QueryTotalPoolLiquidityResponseSDKType {
   liquidity: CoinSDKType[];
 }
-/** =============================== TotalShares */
+/**
+ * =============================== TotalShares
+ * @name QueryTotalSharesRequest
+ * @package symphony.gamm.v1beta1
+ * @see proto type: symphony.gamm.v1beta1.QueryTotalSharesRequest
+ */
 export interface QueryTotalSharesRequest {
   poolId: bigint;
 }
@@ -465,7 +736,12 @@ export interface QueryTotalSharesRequestProtoMsg {
   typeUrl: '/symphony.gamm.v1beta1.QueryTotalSharesRequest';
   value: Uint8Array;
 }
-/** =============================== TotalShares */
+/**
+ * =============================== TotalShares
+ * @name QueryTotalSharesRequestAmino
+ * @package symphony.gamm.v1beta1
+ * @see proto type: symphony.gamm.v1beta1.QueryTotalSharesRequest
+ */
 export interface QueryTotalSharesRequestAmino {
   pool_id?: string;
 }
@@ -473,10 +749,20 @@ export interface QueryTotalSharesRequestAminoMsg {
   type: '/symphony.gamm.v1beta1.QueryTotalSharesRequest';
   value: QueryTotalSharesRequestAmino;
 }
-/** =============================== TotalShares */
+/**
+ * =============================== TotalShares
+ * @name QueryTotalSharesRequestSDKType
+ * @package symphony.gamm.v1beta1
+ * @see proto type: symphony.gamm.v1beta1.QueryTotalSharesRequest
+ */
 export interface QueryTotalSharesRequestSDKType {
   pool_id: bigint;
 }
+/**
+ * @name QueryTotalSharesResponse
+ * @package symphony.gamm.v1beta1
+ * @see proto type: symphony.gamm.v1beta1.QueryTotalSharesResponse
+ */
 export interface QueryTotalSharesResponse {
   totalShares: Coin;
 }
@@ -484,6 +770,11 @@ export interface QueryTotalSharesResponseProtoMsg {
   typeUrl: '/symphony.gamm.v1beta1.QueryTotalSharesResponse';
   value: Uint8Array;
 }
+/**
+ * @name QueryTotalSharesResponseAmino
+ * @package symphony.gamm.v1beta1
+ * @see proto type: symphony.gamm.v1beta1.QueryTotalSharesResponse
+ */
 export interface QueryTotalSharesResponseAmino {
   total_shares?: CoinAmino;
 }
@@ -491,10 +782,20 @@ export interface QueryTotalSharesResponseAminoMsg {
   type: '/symphony.gamm.v1beta1.QueryTotalSharesResponse';
   value: QueryTotalSharesResponseAmino;
 }
+/**
+ * @name QueryTotalSharesResponseSDKType
+ * @package symphony.gamm.v1beta1
+ * @see proto type: symphony.gamm.v1beta1.QueryTotalSharesResponse
+ */
 export interface QueryTotalSharesResponseSDKType {
   total_shares: CoinSDKType;
 }
-/** =============================== CalcJoinPoolNoSwapShares */
+/**
+ * =============================== CalcJoinPoolNoSwapShares
+ * @name QueryCalcJoinPoolNoSwapSharesRequest
+ * @package symphony.gamm.v1beta1
+ * @see proto type: symphony.gamm.v1beta1.QueryCalcJoinPoolNoSwapSharesRequest
+ */
 export interface QueryCalcJoinPoolNoSwapSharesRequest {
   poolId: bigint;
   tokensIn: Coin[];
@@ -503,7 +804,12 @@ export interface QueryCalcJoinPoolNoSwapSharesRequestProtoMsg {
   typeUrl: '/symphony.gamm.v1beta1.QueryCalcJoinPoolNoSwapSharesRequest';
   value: Uint8Array;
 }
-/** =============================== CalcJoinPoolNoSwapShares */
+/**
+ * =============================== CalcJoinPoolNoSwapShares
+ * @name QueryCalcJoinPoolNoSwapSharesRequestAmino
+ * @package symphony.gamm.v1beta1
+ * @see proto type: symphony.gamm.v1beta1.QueryCalcJoinPoolNoSwapSharesRequest
+ */
 export interface QueryCalcJoinPoolNoSwapSharesRequestAmino {
   pool_id?: string;
   tokens_in?: CoinAmino[];
@@ -512,11 +818,21 @@ export interface QueryCalcJoinPoolNoSwapSharesRequestAminoMsg {
   type: '/symphony.gamm.v1beta1.QueryCalcJoinPoolNoSwapSharesRequest';
   value: QueryCalcJoinPoolNoSwapSharesRequestAmino;
 }
-/** =============================== CalcJoinPoolNoSwapShares */
+/**
+ * =============================== CalcJoinPoolNoSwapShares
+ * @name QueryCalcJoinPoolNoSwapSharesRequestSDKType
+ * @package symphony.gamm.v1beta1
+ * @see proto type: symphony.gamm.v1beta1.QueryCalcJoinPoolNoSwapSharesRequest
+ */
 export interface QueryCalcJoinPoolNoSwapSharesRequestSDKType {
   pool_id: bigint;
   tokens_in: CoinSDKType[];
 }
+/**
+ * @name QueryCalcJoinPoolNoSwapSharesResponse
+ * @package symphony.gamm.v1beta1
+ * @see proto type: symphony.gamm.v1beta1.QueryCalcJoinPoolNoSwapSharesResponse
+ */
 export interface QueryCalcJoinPoolNoSwapSharesResponse {
   tokensOut: Coin[];
   sharesOut: string;
@@ -525,6 +841,11 @@ export interface QueryCalcJoinPoolNoSwapSharesResponseProtoMsg {
   typeUrl: '/symphony.gamm.v1beta1.QueryCalcJoinPoolNoSwapSharesResponse';
   value: Uint8Array;
 }
+/**
+ * @name QueryCalcJoinPoolNoSwapSharesResponseAmino
+ * @package symphony.gamm.v1beta1
+ * @see proto type: symphony.gamm.v1beta1.QueryCalcJoinPoolNoSwapSharesResponse
+ */
 export interface QueryCalcJoinPoolNoSwapSharesResponseAmino {
   tokens_out?: CoinAmino[];
   shares_out?: string;
@@ -533,6 +854,11 @@ export interface QueryCalcJoinPoolNoSwapSharesResponseAminoMsg {
   type: '/symphony.gamm.v1beta1.QueryCalcJoinPoolNoSwapSharesResponse';
   value: QueryCalcJoinPoolNoSwapSharesResponseAmino;
 }
+/**
+ * @name QueryCalcJoinPoolNoSwapSharesResponseSDKType
+ * @package symphony.gamm.v1beta1
+ * @see proto type: symphony.gamm.v1beta1.QueryCalcJoinPoolNoSwapSharesResponse
+ */
 export interface QueryCalcJoinPoolNoSwapSharesResponseSDKType {
   tokens_out: CoinSDKType[];
   shares_out: string;
@@ -540,14 +866,19 @@ export interface QueryCalcJoinPoolNoSwapSharesResponseSDKType {
 /**
  * QuerySpotPriceRequest defines the gRPC request structure for a SpotPrice
  * query.
+ * @name QuerySpotPriceRequest
+ * @package symphony.gamm.v1beta1
+ * @see proto type: symphony.gamm.v1beta1.QuerySpotPriceRequest
+ * @deprecated
  */
-/** @deprecated */
 export interface QuerySpotPriceRequest {
   poolId: bigint;
   baseAssetDenom: string;
   quoteAssetDenom: string;
-  /** DEPRECATED */
-  /** @deprecated */
+  /**
+   * DEPRECATED
+   * @deprecated
+   */
   withSwapFee?: boolean;
 }
 export interface QuerySpotPriceRequestProtoMsg {
@@ -557,14 +888,19 @@ export interface QuerySpotPriceRequestProtoMsg {
 /**
  * QuerySpotPriceRequest defines the gRPC request structure for a SpotPrice
  * query.
+ * @name QuerySpotPriceRequestAmino
+ * @package symphony.gamm.v1beta1
+ * @see proto type: symphony.gamm.v1beta1.QuerySpotPriceRequest
+ * @deprecated
  */
-/** @deprecated */
 export interface QuerySpotPriceRequestAmino {
   pool_id?: string;
   base_asset_denom?: string;
   quote_asset_denom?: string;
-  /** DEPRECATED */
-  /** @deprecated */
+  /**
+   * DEPRECATED
+   * @deprecated
+   */
   withSwapFee?: boolean;
 }
 export interface QuerySpotPriceRequestAminoMsg {
@@ -574,15 +910,25 @@ export interface QuerySpotPriceRequestAminoMsg {
 /**
  * QuerySpotPriceRequest defines the gRPC request structure for a SpotPrice
  * query.
+ * @name QuerySpotPriceRequestSDKType
+ * @package symphony.gamm.v1beta1
+ * @see proto type: symphony.gamm.v1beta1.QuerySpotPriceRequest
+ * @deprecated
  */
-/** @deprecated */
 export interface QuerySpotPriceRequestSDKType {
   pool_id: bigint;
   base_asset_denom: string;
   quote_asset_denom: string;
-  /** @deprecated */
+  /**
+   * @deprecated
+   */
   withSwapFee?: boolean;
 }
+/**
+ * @name QueryPoolsWithFilterRequest
+ * @package symphony.gamm.v1beta1
+ * @see proto type: symphony.gamm.v1beta1.QueryPoolsWithFilterRequest
+ */
 export interface QueryPoolsWithFilterRequest {
   /**
    * String of the coins in single string separated by comma. Ex)
@@ -596,6 +942,11 @@ export interface QueryPoolsWithFilterRequestProtoMsg {
   typeUrl: '/symphony.gamm.v1beta1.QueryPoolsWithFilterRequest';
   value: Uint8Array;
 }
+/**
+ * @name QueryPoolsWithFilterRequestAmino
+ * @package symphony.gamm.v1beta1
+ * @see proto type: symphony.gamm.v1beta1.QueryPoolsWithFilterRequest
+ */
 export interface QueryPoolsWithFilterRequestAmino {
   /**
    * String of the coins in single string separated by comma. Ex)
@@ -609,14 +960,26 @@ export interface QueryPoolsWithFilterRequestAminoMsg {
   type: '/symphony.gamm.v1beta1.QueryPoolsWithFilterRequest';
   value: QueryPoolsWithFilterRequestAmino;
 }
+/**
+ * @name QueryPoolsWithFilterRequestSDKType
+ * @package symphony.gamm.v1beta1
+ * @see proto type: symphony.gamm.v1beta1.QueryPoolsWithFilterRequest
+ */
 export interface QueryPoolsWithFilterRequestSDKType {
   min_liquidity: string;
   pool_type: string;
   pagination?: PageRequestSDKType;
 }
+/**
+ * @name QueryPoolsWithFilterResponse
+ * @package symphony.gamm.v1beta1
+ * @see proto type: symphony.gamm.v1beta1.QueryPoolsWithFilterResponse
+ */
 export interface QueryPoolsWithFilterResponse {
   pools: (Pool1 | CosmWasmPool | Pool2 | Pool3 | Any)[] | Any[];
-  /** pagination defines the pagination in the response. */
+  /**
+   * pagination defines the pagination in the response.
+   */
   pagination?: PageResponse;
 }
 export interface QueryPoolsWithFilterResponseProtoMsg {
@@ -635,15 +998,27 @@ export type QueryPoolsWithFilterResponseEncoded = Omit<
     | AnyProtoMsg
   )[];
 };
+/**
+ * @name QueryPoolsWithFilterResponseAmino
+ * @package symphony.gamm.v1beta1
+ * @see proto type: symphony.gamm.v1beta1.QueryPoolsWithFilterResponse
+ */
 export interface QueryPoolsWithFilterResponseAmino {
   pools?: AnyAmino[];
-  /** pagination defines the pagination in the response. */
+  /**
+   * pagination defines the pagination in the response.
+   */
   pagination?: PageResponseAmino;
 }
 export interface QueryPoolsWithFilterResponseAminoMsg {
   type: '/symphony.gamm.v1beta1.QueryPoolsWithFilterResponse';
   value: QueryPoolsWithFilterResponseAmino;
 }
+/**
+ * @name QueryPoolsWithFilterResponseSDKType
+ * @package symphony.gamm.v1beta1
+ * @see proto type: symphony.gamm.v1beta1.QueryPoolsWithFilterResponse
+ */
 export interface QueryPoolsWithFilterResponseSDKType {
   pools: (
     | Pool1SDKType
@@ -657,10 +1032,15 @@ export interface QueryPoolsWithFilterResponseSDKType {
 /**
  * QuerySpotPriceResponse defines the gRPC response structure for a SpotPrice
  * query.
+ * @name QuerySpotPriceResponse
+ * @package symphony.gamm.v1beta1
+ * @see proto type: symphony.gamm.v1beta1.QuerySpotPriceResponse
+ * @deprecated
  */
-/** @deprecated */
 export interface QuerySpotPriceResponse {
-  /** String of the Dec. Ex) 10.203uatom */
+  /**
+   * String of the Dec. Ex) 10.203uatom
+   */
   spotPrice: string;
 }
 export interface QuerySpotPriceResponseProtoMsg {
@@ -670,10 +1050,15 @@ export interface QuerySpotPriceResponseProtoMsg {
 /**
  * QuerySpotPriceResponse defines the gRPC response structure for a SpotPrice
  * query.
+ * @name QuerySpotPriceResponseAmino
+ * @package symphony.gamm.v1beta1
+ * @see proto type: symphony.gamm.v1beta1.QuerySpotPriceResponse
+ * @deprecated
  */
-/** @deprecated */
 export interface QuerySpotPriceResponseAmino {
-  /** String of the Dec. Ex) 10.203uatom */
+  /**
+   * String of the Dec. Ex) 10.203uatom
+   */
   spot_price?: string;
 }
 export interface QuerySpotPriceResponseAminoMsg {
@@ -683,13 +1068,21 @@ export interface QuerySpotPriceResponseAminoMsg {
 /**
  * QuerySpotPriceResponse defines the gRPC response structure for a SpotPrice
  * query.
+ * @name QuerySpotPriceResponseSDKType
+ * @package symphony.gamm.v1beta1
+ * @see proto type: symphony.gamm.v1beta1.QuerySpotPriceResponse
+ * @deprecated
  */
-/** @deprecated */
 export interface QuerySpotPriceResponseSDKType {
   spot_price: string;
 }
-/** =============================== EstimateSwapExactAmountIn */
-/** @deprecated */
+/**
+ * =============================== EstimateSwapExactAmountIn
+ * @name QuerySwapExactAmountInRequest
+ * @package symphony.gamm.v1beta1
+ * @see proto type: symphony.gamm.v1beta1.QuerySwapExactAmountInRequest
+ * @deprecated
+ */
 export interface QuerySwapExactAmountInRequest {
   sender: string;
   poolId: bigint;
@@ -700,8 +1093,13 @@ export interface QuerySwapExactAmountInRequestProtoMsg {
   typeUrl: '/symphony.gamm.v1beta1.QuerySwapExactAmountInRequest';
   value: Uint8Array;
 }
-/** =============================== EstimateSwapExactAmountIn */
-/** @deprecated */
+/**
+ * =============================== EstimateSwapExactAmountIn
+ * @name QuerySwapExactAmountInRequestAmino
+ * @package symphony.gamm.v1beta1
+ * @see proto type: symphony.gamm.v1beta1.QuerySwapExactAmountInRequest
+ * @deprecated
+ */
 export interface QuerySwapExactAmountInRequestAmino {
   sender?: string;
   pool_id?: string;
@@ -712,15 +1110,25 @@ export interface QuerySwapExactAmountInRequestAminoMsg {
   type: '/symphony.gamm.v1beta1.QuerySwapExactAmountInRequest';
   value: QuerySwapExactAmountInRequestAmino;
 }
-/** =============================== EstimateSwapExactAmountIn */
-/** @deprecated */
+/**
+ * =============================== EstimateSwapExactAmountIn
+ * @name QuerySwapExactAmountInRequestSDKType
+ * @package symphony.gamm.v1beta1
+ * @see proto type: symphony.gamm.v1beta1.QuerySwapExactAmountInRequest
+ * @deprecated
+ */
 export interface QuerySwapExactAmountInRequestSDKType {
   sender: string;
   pool_id: bigint;
   token_in: string;
   routes: SwapAmountInRouteSDKType[];
 }
-/** @deprecated */
+/**
+ * @name QuerySwapExactAmountInResponse
+ * @package symphony.gamm.v1beta1
+ * @see proto type: symphony.gamm.v1beta1.QuerySwapExactAmountInResponse
+ * @deprecated
+ */
 export interface QuerySwapExactAmountInResponse {
   tokenOutAmount: string;
 }
@@ -728,7 +1136,12 @@ export interface QuerySwapExactAmountInResponseProtoMsg {
   typeUrl: '/symphony.gamm.v1beta1.QuerySwapExactAmountInResponse';
   value: Uint8Array;
 }
-/** @deprecated */
+/**
+ * @name QuerySwapExactAmountInResponseAmino
+ * @package symphony.gamm.v1beta1
+ * @see proto type: symphony.gamm.v1beta1.QuerySwapExactAmountInResponse
+ * @deprecated
+ */
 export interface QuerySwapExactAmountInResponseAmino {
   token_out_amount?: string;
 }
@@ -736,12 +1149,22 @@ export interface QuerySwapExactAmountInResponseAminoMsg {
   type: '/symphony.gamm.v1beta1.QuerySwapExactAmountInResponse';
   value: QuerySwapExactAmountInResponseAmino;
 }
-/** @deprecated */
+/**
+ * @name QuerySwapExactAmountInResponseSDKType
+ * @package symphony.gamm.v1beta1
+ * @see proto type: symphony.gamm.v1beta1.QuerySwapExactAmountInResponse
+ * @deprecated
+ */
 export interface QuerySwapExactAmountInResponseSDKType {
   token_out_amount: string;
 }
-/** =============================== EstimateSwapExactAmountOut */
-/** @deprecated */
+/**
+ * =============================== EstimateSwapExactAmountOut
+ * @name QuerySwapExactAmountOutRequest
+ * @package symphony.gamm.v1beta1
+ * @see proto type: symphony.gamm.v1beta1.QuerySwapExactAmountOutRequest
+ * @deprecated
+ */
 export interface QuerySwapExactAmountOutRequest {
   sender: string;
   poolId: bigint;
@@ -752,8 +1175,13 @@ export interface QuerySwapExactAmountOutRequestProtoMsg {
   typeUrl: '/symphony.gamm.v1beta1.QuerySwapExactAmountOutRequest';
   value: Uint8Array;
 }
-/** =============================== EstimateSwapExactAmountOut */
-/** @deprecated */
+/**
+ * =============================== EstimateSwapExactAmountOut
+ * @name QuerySwapExactAmountOutRequestAmino
+ * @package symphony.gamm.v1beta1
+ * @see proto type: symphony.gamm.v1beta1.QuerySwapExactAmountOutRequest
+ * @deprecated
+ */
 export interface QuerySwapExactAmountOutRequestAmino {
   sender?: string;
   pool_id?: string;
@@ -764,15 +1192,25 @@ export interface QuerySwapExactAmountOutRequestAminoMsg {
   type: '/symphony.gamm.v1beta1.QuerySwapExactAmountOutRequest';
   value: QuerySwapExactAmountOutRequestAmino;
 }
-/** =============================== EstimateSwapExactAmountOut */
-/** @deprecated */
+/**
+ * =============================== EstimateSwapExactAmountOut
+ * @name QuerySwapExactAmountOutRequestSDKType
+ * @package symphony.gamm.v1beta1
+ * @see proto type: symphony.gamm.v1beta1.QuerySwapExactAmountOutRequest
+ * @deprecated
+ */
 export interface QuerySwapExactAmountOutRequestSDKType {
   sender: string;
   pool_id: bigint;
   routes: SwapAmountOutRouteSDKType[];
   token_out: string;
 }
-/** @deprecated */
+/**
+ * @name QuerySwapExactAmountOutResponse
+ * @package symphony.gamm.v1beta1
+ * @see proto type: symphony.gamm.v1beta1.QuerySwapExactAmountOutResponse
+ * @deprecated
+ */
 export interface QuerySwapExactAmountOutResponse {
   tokenInAmount: string;
 }
@@ -780,7 +1218,12 @@ export interface QuerySwapExactAmountOutResponseProtoMsg {
   typeUrl: '/symphony.gamm.v1beta1.QuerySwapExactAmountOutResponse';
   value: Uint8Array;
 }
-/** @deprecated */
+/**
+ * @name QuerySwapExactAmountOutResponseAmino
+ * @package symphony.gamm.v1beta1
+ * @see proto type: symphony.gamm.v1beta1.QuerySwapExactAmountOutResponse
+ * @deprecated
+ */
 export interface QuerySwapExactAmountOutResponseAmino {
   token_in_amount?: string;
 }
@@ -788,21 +1231,46 @@ export interface QuerySwapExactAmountOutResponseAminoMsg {
   type: '/symphony.gamm.v1beta1.QuerySwapExactAmountOutResponse';
   value: QuerySwapExactAmountOutResponseAmino;
 }
-/** @deprecated */
+/**
+ * @name QuerySwapExactAmountOutResponseSDKType
+ * @package symphony.gamm.v1beta1
+ * @see proto type: symphony.gamm.v1beta1.QuerySwapExactAmountOutResponse
+ * @deprecated
+ */
 export interface QuerySwapExactAmountOutResponseSDKType {
   token_in_amount: string;
 }
+/**
+ * @name QueryTotalLiquidityRequest
+ * @package symphony.gamm.v1beta1
+ * @see proto type: symphony.gamm.v1beta1.QueryTotalLiquidityRequest
+ */
 export interface QueryTotalLiquidityRequest {}
 export interface QueryTotalLiquidityRequestProtoMsg {
   typeUrl: '/symphony.gamm.v1beta1.QueryTotalLiquidityRequest';
   value: Uint8Array;
 }
+/**
+ * @name QueryTotalLiquidityRequestAmino
+ * @package symphony.gamm.v1beta1
+ * @see proto type: symphony.gamm.v1beta1.QueryTotalLiquidityRequest
+ */
 export interface QueryTotalLiquidityRequestAmino {}
 export interface QueryTotalLiquidityRequestAminoMsg {
   type: '/symphony.gamm.v1beta1.QueryTotalLiquidityRequest';
   value: QueryTotalLiquidityRequestAmino;
 }
+/**
+ * @name QueryTotalLiquidityRequestSDKType
+ * @package symphony.gamm.v1beta1
+ * @see proto type: symphony.gamm.v1beta1.QueryTotalLiquidityRequest
+ */
 export interface QueryTotalLiquidityRequestSDKType {}
+/**
+ * @name QueryTotalLiquidityResponse
+ * @package symphony.gamm.v1beta1
+ * @see proto type: symphony.gamm.v1beta1.QueryTotalLiquidityResponse
+ */
 export interface QueryTotalLiquidityResponse {
   liquidity: Coin[];
 }
@@ -810,6 +1278,11 @@ export interface QueryTotalLiquidityResponseProtoMsg {
   typeUrl: '/symphony.gamm.v1beta1.QueryTotalLiquidityResponse';
   value: Uint8Array;
 }
+/**
+ * @name QueryTotalLiquidityResponseAmino
+ * @package symphony.gamm.v1beta1
+ * @see proto type: symphony.gamm.v1beta1.QueryTotalLiquidityResponse
+ */
 export interface QueryTotalLiquidityResponseAmino {
   liquidity?: CoinAmino[];
 }
@@ -817,10 +1290,20 @@ export interface QueryTotalLiquidityResponseAminoMsg {
   type: '/symphony.gamm.v1beta1.QueryTotalLiquidityResponse';
   value: QueryTotalLiquidityResponseAmino;
 }
+/**
+ * @name QueryTotalLiquidityResponseSDKType
+ * @package symphony.gamm.v1beta1
+ * @see proto type: symphony.gamm.v1beta1.QueryTotalLiquidityResponse
+ */
 export interface QueryTotalLiquidityResponseSDKType {
   liquidity: CoinSDKType[];
 }
-/** =============================== QueryConcentratedPoolIdLinkFromCFMM */
+/**
+ * =============================== QueryConcentratedPoolIdLinkFromCFMM
+ * @name QueryConcentratedPoolIdLinkFromCFMMRequest
+ * @package symphony.gamm.v1beta1
+ * @see proto type: symphony.gamm.v1beta1.QueryConcentratedPoolIdLinkFromCFMMRequest
+ */
 export interface QueryConcentratedPoolIdLinkFromCFMMRequest {
   cfmmPoolId: bigint;
 }
@@ -828,7 +1311,12 @@ export interface QueryConcentratedPoolIdLinkFromCFMMRequestProtoMsg {
   typeUrl: '/symphony.gamm.v1beta1.QueryConcentratedPoolIdLinkFromCFMMRequest';
   value: Uint8Array;
 }
-/** =============================== QueryConcentratedPoolIdLinkFromCFMM */
+/**
+ * =============================== QueryConcentratedPoolIdLinkFromCFMM
+ * @name QueryConcentratedPoolIdLinkFromCFMMRequestAmino
+ * @package symphony.gamm.v1beta1
+ * @see proto type: symphony.gamm.v1beta1.QueryConcentratedPoolIdLinkFromCFMMRequest
+ */
 export interface QueryConcentratedPoolIdLinkFromCFMMRequestAmino {
   cfmm_pool_id?: string;
 }
@@ -836,10 +1324,20 @@ export interface QueryConcentratedPoolIdLinkFromCFMMRequestAminoMsg {
   type: '/symphony.gamm.v1beta1.QueryConcentratedPoolIdLinkFromCFMMRequest';
   value: QueryConcentratedPoolIdLinkFromCFMMRequestAmino;
 }
-/** =============================== QueryConcentratedPoolIdLinkFromCFMM */
+/**
+ * =============================== QueryConcentratedPoolIdLinkFromCFMM
+ * @name QueryConcentratedPoolIdLinkFromCFMMRequestSDKType
+ * @package symphony.gamm.v1beta1
+ * @see proto type: symphony.gamm.v1beta1.QueryConcentratedPoolIdLinkFromCFMMRequest
+ */
 export interface QueryConcentratedPoolIdLinkFromCFMMRequestSDKType {
   cfmm_pool_id: bigint;
 }
+/**
+ * @name QueryConcentratedPoolIdLinkFromCFMMResponse
+ * @package symphony.gamm.v1beta1
+ * @see proto type: symphony.gamm.v1beta1.QueryConcentratedPoolIdLinkFromCFMMResponse
+ */
 export interface QueryConcentratedPoolIdLinkFromCFMMResponse {
   concentratedPoolId: bigint;
 }
@@ -847,6 +1345,11 @@ export interface QueryConcentratedPoolIdLinkFromCFMMResponseProtoMsg {
   typeUrl: '/symphony.gamm.v1beta1.QueryConcentratedPoolIdLinkFromCFMMResponse';
   value: Uint8Array;
 }
+/**
+ * @name QueryConcentratedPoolIdLinkFromCFMMResponseAmino
+ * @package symphony.gamm.v1beta1
+ * @see proto type: symphony.gamm.v1beta1.QueryConcentratedPoolIdLinkFromCFMMResponse
+ */
 export interface QueryConcentratedPoolIdLinkFromCFMMResponseAmino {
   concentrated_pool_id?: string;
 }
@@ -854,23 +1357,48 @@ export interface QueryConcentratedPoolIdLinkFromCFMMResponseAminoMsg {
   type: '/symphony.gamm.v1beta1.QueryConcentratedPoolIdLinkFromCFMMResponse';
   value: QueryConcentratedPoolIdLinkFromCFMMResponseAmino;
 }
+/**
+ * @name QueryConcentratedPoolIdLinkFromCFMMResponseSDKType
+ * @package symphony.gamm.v1beta1
+ * @see proto type: symphony.gamm.v1beta1.QueryConcentratedPoolIdLinkFromCFMMResponse
+ */
 export interface QueryConcentratedPoolIdLinkFromCFMMResponseSDKType {
   concentrated_pool_id: bigint;
 }
-/** =============================== QueryCFMMConcentratedPoolLinks */
+/**
+ * =============================== QueryCFMMConcentratedPoolLinks
+ * @name QueryCFMMConcentratedPoolLinksRequest
+ * @package symphony.gamm.v1beta1
+ * @see proto type: symphony.gamm.v1beta1.QueryCFMMConcentratedPoolLinksRequest
+ */
 export interface QueryCFMMConcentratedPoolLinksRequest {}
 export interface QueryCFMMConcentratedPoolLinksRequestProtoMsg {
   typeUrl: '/symphony.gamm.v1beta1.QueryCFMMConcentratedPoolLinksRequest';
   value: Uint8Array;
 }
-/** =============================== QueryCFMMConcentratedPoolLinks */
+/**
+ * =============================== QueryCFMMConcentratedPoolLinks
+ * @name QueryCFMMConcentratedPoolLinksRequestAmino
+ * @package symphony.gamm.v1beta1
+ * @see proto type: symphony.gamm.v1beta1.QueryCFMMConcentratedPoolLinksRequest
+ */
 export interface QueryCFMMConcentratedPoolLinksRequestAmino {}
 export interface QueryCFMMConcentratedPoolLinksRequestAminoMsg {
   type: '/symphony.gamm.v1beta1.QueryCFMMConcentratedPoolLinksRequest';
   value: QueryCFMMConcentratedPoolLinksRequestAmino;
 }
-/** =============================== QueryCFMMConcentratedPoolLinks */
+/**
+ * =============================== QueryCFMMConcentratedPoolLinks
+ * @name QueryCFMMConcentratedPoolLinksRequestSDKType
+ * @package symphony.gamm.v1beta1
+ * @see proto type: symphony.gamm.v1beta1.QueryCFMMConcentratedPoolLinksRequest
+ */
 export interface QueryCFMMConcentratedPoolLinksRequestSDKType {}
+/**
+ * @name QueryCFMMConcentratedPoolLinksResponse
+ * @package symphony.gamm.v1beta1
+ * @see proto type: symphony.gamm.v1beta1.QueryCFMMConcentratedPoolLinksResponse
+ */
 export interface QueryCFMMConcentratedPoolLinksResponse {
   migrationRecords?: MigrationRecords;
 }
@@ -878,6 +1406,11 @@ export interface QueryCFMMConcentratedPoolLinksResponseProtoMsg {
   typeUrl: '/symphony.gamm.v1beta1.QueryCFMMConcentratedPoolLinksResponse';
   value: Uint8Array;
 }
+/**
+ * @name QueryCFMMConcentratedPoolLinksResponseAmino
+ * @package symphony.gamm.v1beta1
+ * @see proto type: symphony.gamm.v1beta1.QueryCFMMConcentratedPoolLinksResponse
+ */
 export interface QueryCFMMConcentratedPoolLinksResponseAmino {
   migration_records?: MigrationRecordsAmino;
 }
@@ -885,12 +1418,23 @@ export interface QueryCFMMConcentratedPoolLinksResponseAminoMsg {
   type: '/symphony.gamm.v1beta1.QueryCFMMConcentratedPoolLinksResponse';
   value: QueryCFMMConcentratedPoolLinksResponseAmino;
 }
+/**
+ * @name QueryCFMMConcentratedPoolLinksResponseSDKType
+ * @package symphony.gamm.v1beta1
+ * @see proto type: symphony.gamm.v1beta1.QueryCFMMConcentratedPoolLinksResponse
+ */
 export interface QueryCFMMConcentratedPoolLinksResponseSDKType {
   migration_records?: MigrationRecordsSDKType;
 }
 function createBaseParamsRequest(): ParamsRequest {
   return {};
 }
+/**
+ * =============================== Params
+ * @name ParamsRequest
+ * @package symphony.gamm.v1beta1
+ * @see proto type: symphony.gamm.v1beta1.ParamsRequest
+ */
 export const ParamsRequest = {
   typeUrl: '/symphony.gamm.v1beta1.ParamsRequest',
   is(o: any): o is ParamsRequest {
@@ -957,6 +1501,11 @@ function createBaseParamsResponse(): ParamsResponse {
     params: Params.fromPartial({}),
   };
 }
+/**
+ * @name ParamsResponse
+ * @package symphony.gamm.v1beta1
+ * @see proto type: symphony.gamm.v1beta1.ParamsResponse
+ */
 export const ParamsResponse = {
   typeUrl: '/symphony.gamm.v1beta1.ParamsResponse',
   is(o: any): o is ParamsResponse {
@@ -1041,6 +1590,14 @@ function createBaseQueryPoolRequest(): QueryPoolRequest {
     poolId: BigInt(0),
   };
 }
+/**
+ * =============================== Pool
+ * Deprecated: please use the alternative in x/poolmanager
+ * @name QueryPoolRequest
+ * @package symphony.gamm.v1beta1
+ * @see proto type: symphony.gamm.v1beta1.QueryPoolRequest
+ * @deprecated
+ */
 export const QueryPoolRequest = {
   typeUrl: '/symphony.gamm.v1beta1.QueryPoolRequest',
   is(o: any): o is QueryPoolRequest {
@@ -1131,6 +1688,13 @@ function createBaseQueryPoolResponse(): QueryPoolResponse {
     pool: undefined,
   };
 }
+/**
+ * Deprecated: please use the alternative in x/poolmanager
+ * @name QueryPoolResponse
+ * @package symphony.gamm.v1beta1
+ * @see proto type: symphony.gamm.v1beta1.QueryPoolResponse
+ * @deprecated
+ */
 export const QueryPoolResponse = {
   typeUrl: '/symphony.gamm.v1beta1.QueryPoolResponse',
   is(o: any): o is QueryPoolResponse {
@@ -1216,6 +1780,12 @@ function createBaseQueryPoolsRequest(): QueryPoolsRequest {
     pagination: undefined,
   };
 }
+/**
+ * =============================== Pools
+ * @name QueryPoolsRequest
+ * @package symphony.gamm.v1beta1
+ * @see proto type: symphony.gamm.v1beta1.QueryPoolsRequest
+ */
 export const QueryPoolsRequest = {
   typeUrl: '/symphony.gamm.v1beta1.QueryPoolsRequest',
   is(o: any): o is QueryPoolsRequest {
@@ -1299,6 +1869,11 @@ function createBaseQueryPoolsResponse(): QueryPoolsResponse {
     pagination: undefined,
   };
 }
+/**
+ * @name QueryPoolsResponse
+ * @package symphony.gamm.v1beta1
+ * @see proto type: symphony.gamm.v1beta1.QueryPoolsResponse
+ */
 export const QueryPoolsResponse = {
   typeUrl: '/symphony.gamm.v1beta1.QueryPoolsResponse',
   is(o: any): o is QueryPoolsResponse {
@@ -1435,6 +2010,13 @@ GlobalDecoderRegistry.register(QueryPoolsResponse.typeUrl, QueryPoolsResponse);
 function createBaseQueryNumPoolsRequest(): QueryNumPoolsRequest {
   return {};
 }
+/**
+ * =============================== NumPools
+ * @name QueryNumPoolsRequest
+ * @package symphony.gamm.v1beta1
+ * @see proto type: symphony.gamm.v1beta1.QueryNumPoolsRequest
+ * @deprecated
+ */
 export const QueryNumPoolsRequest = {
   typeUrl: '/symphony.gamm.v1beta1.QueryNumPoolsRequest',
   is(o: any): o is QueryNumPoolsRequest {
@@ -1507,6 +2089,12 @@ function createBaseQueryNumPoolsResponse(): QueryNumPoolsResponse {
     numPools: BigInt(0),
   };
 }
+/**
+ * @name QueryNumPoolsResponse
+ * @package symphony.gamm.v1beta1
+ * @see proto type: symphony.gamm.v1beta1.QueryNumPoolsResponse
+ * @deprecated
+ */
 export const QueryNumPoolsResponse = {
   typeUrl: '/symphony.gamm.v1beta1.QueryNumPoolsResponse',
   is(o: any): o is QueryNumPoolsResponse {
@@ -1606,6 +2194,12 @@ function createBaseQueryPoolTypeRequest(): QueryPoolTypeRequest {
     poolId: BigInt(0),
   };
 }
+/**
+ * =============================== PoolType
+ * @name QueryPoolTypeRequest
+ * @package symphony.gamm.v1beta1
+ * @see proto type: symphony.gamm.v1beta1.QueryPoolTypeRequest
+ */
 export const QueryPoolTypeRequest = {
   typeUrl: '/symphony.gamm.v1beta1.QueryPoolTypeRequest',
   is(o: any): o is QueryPoolTypeRequest {
@@ -1705,6 +2299,11 @@ function createBaseQueryPoolTypeResponse(): QueryPoolTypeResponse {
     poolType: '',
   };
 }
+/**
+ * @name QueryPoolTypeResponse
+ * @package symphony.gamm.v1beta1
+ * @see proto type: symphony.gamm.v1beta1.QueryPoolTypeResponse
+ */
 export const QueryPoolTypeResponse = {
   typeUrl: '/symphony.gamm.v1beta1.QueryPoolTypeResponse',
   is(o: any): o is QueryPoolTypeResponse {
@@ -1801,6 +2400,12 @@ function createBaseQueryCalcJoinPoolSharesRequest(): QueryCalcJoinPoolSharesRequ
     tokensIn: [],
   };
 }
+/**
+ * =============================== CalcJoinPoolShares
+ * @name QueryCalcJoinPoolSharesRequest
+ * @package symphony.gamm.v1beta1
+ * @see proto type: symphony.gamm.v1beta1.QueryCalcJoinPoolSharesRequest
+ */
 export const QueryCalcJoinPoolSharesRequest = {
   typeUrl: '/symphony.gamm.v1beta1.QueryCalcJoinPoolSharesRequest',
   is(o: any): o is QueryCalcJoinPoolSharesRequest {
@@ -1934,6 +2539,11 @@ function createBaseQueryCalcJoinPoolSharesResponse(): QueryCalcJoinPoolSharesRes
     tokensOut: [],
   };
 }
+/**
+ * @name QueryCalcJoinPoolSharesResponse
+ * @package symphony.gamm.v1beta1
+ * @see proto type: symphony.gamm.v1beta1.QueryCalcJoinPoolSharesResponse
+ */
 export const QueryCalcJoinPoolSharesResponse = {
   typeUrl: '/symphony.gamm.v1beta1.QueryCalcJoinPoolSharesResponse',
   is(o: any): o is QueryCalcJoinPoolSharesResponse {
@@ -2067,6 +2677,12 @@ function createBaseQueryCalcExitPoolCoinsFromSharesRequest(): QueryCalcExitPoolC
     shareInAmount: '',
   };
 }
+/**
+ * =============================== CalcExitPoolCoinsFromShares
+ * @name QueryCalcExitPoolCoinsFromSharesRequest
+ * @package symphony.gamm.v1beta1
+ * @see proto type: symphony.gamm.v1beta1.QueryCalcExitPoolCoinsFromSharesRequest
+ */
 export const QueryCalcExitPoolCoinsFromSharesRequest = {
   typeUrl: '/symphony.gamm.v1beta1.QueryCalcExitPoolCoinsFromSharesRequest',
   is(o: any): o is QueryCalcExitPoolCoinsFromSharesRequest {
@@ -2195,6 +2811,11 @@ function createBaseQueryCalcExitPoolCoinsFromSharesResponse(): QueryCalcExitPool
     tokensOut: [],
   };
 }
+/**
+ * @name QueryCalcExitPoolCoinsFromSharesResponse
+ * @package symphony.gamm.v1beta1
+ * @see proto type: symphony.gamm.v1beta1.QueryCalcExitPoolCoinsFromSharesResponse
+ */
 export const QueryCalcExitPoolCoinsFromSharesResponse = {
   typeUrl: '/symphony.gamm.v1beta1.QueryCalcExitPoolCoinsFromSharesResponse',
   is(o: any): o is QueryCalcExitPoolCoinsFromSharesResponse {
@@ -2310,6 +2931,12 @@ function createBaseQueryPoolParamsRequest(): QueryPoolParamsRequest {
     poolId: BigInt(0),
   };
 }
+/**
+ * =============================== PoolParams
+ * @name QueryPoolParamsRequest
+ * @package symphony.gamm.v1beta1
+ * @see proto type: symphony.gamm.v1beta1.QueryPoolParamsRequest
+ */
 export const QueryPoolParamsRequest = {
   typeUrl: '/symphony.gamm.v1beta1.QueryPoolParamsRequest',
   is(o: any): o is QueryPoolParamsRequest {
@@ -2411,6 +3038,11 @@ function createBaseQueryPoolParamsResponse(): QueryPoolParamsResponse {
     params: undefined,
   };
 }
+/**
+ * @name QueryPoolParamsResponse
+ * @package symphony.gamm.v1beta1
+ * @see proto type: symphony.gamm.v1beta1.QueryPoolParamsResponse
+ */
 export const QueryPoolParamsResponse = {
   typeUrl: '/symphony.gamm.v1beta1.QueryPoolParamsResponse',
   is(o: any): o is QueryPoolParamsResponse {
@@ -2505,6 +3137,14 @@ function createBaseQueryTotalPoolLiquidityRequest(): QueryTotalPoolLiquidityRequ
     poolId: BigInt(0),
   };
 }
+/**
+ * =============================== PoolLiquidity
+ * Deprecated: please use the alternative in x/poolmanager
+ * @name QueryTotalPoolLiquidityRequest
+ * @package symphony.gamm.v1beta1
+ * @see proto type: symphony.gamm.v1beta1.QueryTotalPoolLiquidityRequest
+ * @deprecated
+ */
 export const QueryTotalPoolLiquidityRequest = {
   typeUrl: '/symphony.gamm.v1beta1.QueryTotalPoolLiquidityRequest',
   is(o: any): o is QueryTotalPoolLiquidityRequest {
@@ -2616,6 +3256,13 @@ function createBaseQueryTotalPoolLiquidityResponse(): QueryTotalPoolLiquidityRes
     liquidity: [],
   };
 }
+/**
+ * Deprecated: please use the alternative in x/poolmanager
+ * @name QueryTotalPoolLiquidityResponse
+ * @package symphony.gamm.v1beta1
+ * @see proto type: symphony.gamm.v1beta1.QueryTotalPoolLiquidityResponse
+ * @deprecated
+ */
 export const QueryTotalPoolLiquidityResponse = {
   typeUrl: '/symphony.gamm.v1beta1.QueryTotalPoolLiquidityResponse',
   is(o: any): o is QueryTotalPoolLiquidityResponse {
@@ -2730,6 +3377,12 @@ function createBaseQueryTotalSharesRequest(): QueryTotalSharesRequest {
     poolId: BigInt(0),
   };
 }
+/**
+ * =============================== TotalShares
+ * @name QueryTotalSharesRequest
+ * @package symphony.gamm.v1beta1
+ * @see proto type: symphony.gamm.v1beta1.QueryTotalSharesRequest
+ */
 export const QueryTotalSharesRequest = {
   typeUrl: '/symphony.gamm.v1beta1.QueryTotalSharesRequest',
   is(o: any): o is QueryTotalSharesRequest {
@@ -2837,6 +3490,11 @@ function createBaseQueryTotalSharesResponse(): QueryTotalSharesResponse {
     totalShares: Coin.fromPartial({}),
   };
 }
+/**
+ * @name QueryTotalSharesResponse
+ * @package symphony.gamm.v1beta1
+ * @see proto type: symphony.gamm.v1beta1.QueryTotalSharesResponse
+ */
 export const QueryTotalSharesResponse = {
   typeUrl: '/symphony.gamm.v1beta1.QueryTotalSharesResponse',
   is(o: any): o is QueryTotalSharesResponse {
@@ -2946,6 +3604,12 @@ function createBaseQueryCalcJoinPoolNoSwapSharesRequest(): QueryCalcJoinPoolNoSw
     tokensIn: [],
   };
 }
+/**
+ * =============================== CalcJoinPoolNoSwapShares
+ * @name QueryCalcJoinPoolNoSwapSharesRequest
+ * @package symphony.gamm.v1beta1
+ * @see proto type: symphony.gamm.v1beta1.QueryCalcJoinPoolNoSwapSharesRequest
+ */
 export const QueryCalcJoinPoolNoSwapSharesRequest = {
   typeUrl: '/symphony.gamm.v1beta1.QueryCalcJoinPoolNoSwapSharesRequest',
   is(o: any): o is QueryCalcJoinPoolNoSwapSharesRequest {
@@ -3079,6 +3743,11 @@ function createBaseQueryCalcJoinPoolNoSwapSharesResponse(): QueryCalcJoinPoolNoS
     sharesOut: '',
   };
 }
+/**
+ * @name QueryCalcJoinPoolNoSwapSharesResponse
+ * @package symphony.gamm.v1beta1
+ * @see proto type: symphony.gamm.v1beta1.QueryCalcJoinPoolNoSwapSharesResponse
+ */
 export const QueryCalcJoinPoolNoSwapSharesResponse = {
   typeUrl: '/symphony.gamm.v1beta1.QueryCalcJoinPoolNoSwapSharesResponse',
   is(o: any): o is QueryCalcJoinPoolNoSwapSharesResponse {
@@ -3210,6 +3879,14 @@ function createBaseQuerySpotPriceRequest(): QuerySpotPriceRequest {
     withSwapFee: undefined,
   };
 }
+/**
+ * QuerySpotPriceRequest defines the gRPC request structure for a SpotPrice
+ * query.
+ * @name QuerySpotPriceRequest
+ * @package symphony.gamm.v1beta1
+ * @see proto type: symphony.gamm.v1beta1.QuerySpotPriceRequest
+ * @deprecated
+ */
 export const QuerySpotPriceRequest = {
   typeUrl: '/symphony.gamm.v1beta1.QuerySpotPriceRequest',
   is(o: any): o is QuerySpotPriceRequest {
@@ -3359,6 +4036,11 @@ function createBaseQueryPoolsWithFilterRequest(): QueryPoolsWithFilterRequest {
     pagination: undefined,
   };
 }
+/**
+ * @name QueryPoolsWithFilterRequest
+ * @package symphony.gamm.v1beta1
+ * @see proto type: symphony.gamm.v1beta1.QueryPoolsWithFilterRequest
+ */
 export const QueryPoolsWithFilterRequest = {
   typeUrl: '/symphony.gamm.v1beta1.QueryPoolsWithFilterRequest',
   is(o: any): o is QueryPoolsWithFilterRequest {
@@ -3497,6 +4179,11 @@ function createBaseQueryPoolsWithFilterResponse(): QueryPoolsWithFilterResponse 
     pagination: undefined,
   };
 }
+/**
+ * @name QueryPoolsWithFilterResponse
+ * @package symphony.gamm.v1beta1
+ * @see proto type: symphony.gamm.v1beta1.QueryPoolsWithFilterResponse
+ */
 export const QueryPoolsWithFilterResponse = {
   typeUrl: '/symphony.gamm.v1beta1.QueryPoolsWithFilterResponse',
   is(o: any): o is QueryPoolsWithFilterResponse {
@@ -3650,6 +4337,14 @@ function createBaseQuerySpotPriceResponse(): QuerySpotPriceResponse {
     spotPrice: '',
   };
 }
+/**
+ * QuerySpotPriceResponse defines the gRPC response structure for a SpotPrice
+ * query.
+ * @name QuerySpotPriceResponse
+ * @package symphony.gamm.v1beta1
+ * @see proto type: symphony.gamm.v1beta1.QuerySpotPriceResponse
+ * @deprecated
+ */
 export const QuerySpotPriceResponse = {
   typeUrl: '/symphony.gamm.v1beta1.QuerySpotPriceResponse',
   is(o: any): o is QuerySpotPriceResponse {
@@ -3750,6 +4445,13 @@ function createBaseQuerySwapExactAmountInRequest(): QuerySwapExactAmountInReques
     routes: [],
   };
 }
+/**
+ * =============================== EstimateSwapExactAmountIn
+ * @name QuerySwapExactAmountInRequest
+ * @package symphony.gamm.v1beta1
+ * @see proto type: symphony.gamm.v1beta1.QuerySwapExactAmountInRequest
+ * @deprecated
+ */
 export const QuerySwapExactAmountInRequest = {
   typeUrl: '/symphony.gamm.v1beta1.QuerySwapExactAmountInRequest',
   is(o: any): o is QuerySwapExactAmountInRequest {
@@ -3914,6 +4616,12 @@ function createBaseQuerySwapExactAmountInResponse(): QuerySwapExactAmountInRespo
     tokenOutAmount: '',
   };
 }
+/**
+ * @name QuerySwapExactAmountInResponse
+ * @package symphony.gamm.v1beta1
+ * @see proto type: symphony.gamm.v1beta1.QuerySwapExactAmountInResponse
+ * @deprecated
+ */
 export const QuerySwapExactAmountInResponse = {
   typeUrl: '/symphony.gamm.v1beta1.QuerySwapExactAmountInResponse',
   is(o: any): o is QuerySwapExactAmountInResponse {
@@ -4028,6 +4736,13 @@ function createBaseQuerySwapExactAmountOutRequest(): QuerySwapExactAmountOutRequ
     tokenOut: '',
   };
 }
+/**
+ * =============================== EstimateSwapExactAmountOut
+ * @name QuerySwapExactAmountOutRequest
+ * @package symphony.gamm.v1beta1
+ * @see proto type: symphony.gamm.v1beta1.QuerySwapExactAmountOutRequest
+ * @deprecated
+ */
 export const QuerySwapExactAmountOutRequest = {
   typeUrl: '/symphony.gamm.v1beta1.QuerySwapExactAmountOutRequest',
   is(o: any): o is QuerySwapExactAmountOutRequest {
@@ -4192,6 +4907,12 @@ function createBaseQuerySwapExactAmountOutResponse(): QuerySwapExactAmountOutRes
     tokenInAmount: '',
   };
 }
+/**
+ * @name QuerySwapExactAmountOutResponse
+ * @package symphony.gamm.v1beta1
+ * @see proto type: symphony.gamm.v1beta1.QuerySwapExactAmountOutResponse
+ * @deprecated
+ */
 export const QuerySwapExactAmountOutResponse = {
   typeUrl: '/symphony.gamm.v1beta1.QuerySwapExactAmountOutResponse',
   is(o: any): o is QuerySwapExactAmountOutResponse {
@@ -4301,6 +5022,11 @@ GlobalDecoderRegistry.register(
 function createBaseQueryTotalLiquidityRequest(): QueryTotalLiquidityRequest {
   return {};
 }
+/**
+ * @name QueryTotalLiquidityRequest
+ * @package symphony.gamm.v1beta1
+ * @see proto type: symphony.gamm.v1beta1.QueryTotalLiquidityRequest
+ */
 export const QueryTotalLiquidityRequest = {
   typeUrl: '/symphony.gamm.v1beta1.QueryTotalLiquidityRequest',
   is(o: any): o is QueryTotalLiquidityRequest {
@@ -4381,6 +5107,11 @@ function createBaseQueryTotalLiquidityResponse(): QueryTotalLiquidityResponse {
     liquidity: [],
   };
 }
+/**
+ * @name QueryTotalLiquidityResponse
+ * @package symphony.gamm.v1beta1
+ * @see proto type: symphony.gamm.v1beta1.QueryTotalLiquidityResponse
+ */
 export const QueryTotalLiquidityResponse = {
   typeUrl: '/symphony.gamm.v1beta1.QueryTotalLiquidityResponse',
   is(o: any): o is QueryTotalLiquidityResponse {
@@ -4495,6 +5226,12 @@ function createBaseQueryConcentratedPoolIdLinkFromCFMMRequest(): QueryConcentrat
     cfmmPoolId: BigInt(0),
   };
 }
+/**
+ * =============================== QueryConcentratedPoolIdLinkFromCFMM
+ * @name QueryConcentratedPoolIdLinkFromCFMMRequest
+ * @package symphony.gamm.v1beta1
+ * @see proto type: symphony.gamm.v1beta1.QueryConcentratedPoolIdLinkFromCFMMRequest
+ */
 export const QueryConcentratedPoolIdLinkFromCFMMRequest = {
   typeUrl: '/symphony.gamm.v1beta1.QueryConcentratedPoolIdLinkFromCFMMRequest',
   is(o: any): o is QueryConcentratedPoolIdLinkFromCFMMRequest {
@@ -4610,6 +5347,11 @@ function createBaseQueryConcentratedPoolIdLinkFromCFMMResponse(): QueryConcentra
     concentratedPoolId: BigInt(0),
   };
 }
+/**
+ * @name QueryConcentratedPoolIdLinkFromCFMMResponse
+ * @package symphony.gamm.v1beta1
+ * @see proto type: symphony.gamm.v1beta1.QueryConcentratedPoolIdLinkFromCFMMResponse
+ */
 export const QueryConcentratedPoolIdLinkFromCFMMResponse = {
   typeUrl: '/symphony.gamm.v1beta1.QueryConcentratedPoolIdLinkFromCFMMResponse',
   is(o: any): o is QueryConcentratedPoolIdLinkFromCFMMResponse {
@@ -4727,6 +5469,12 @@ GlobalDecoderRegistry.register(
 function createBaseQueryCFMMConcentratedPoolLinksRequest(): QueryCFMMConcentratedPoolLinksRequest {
   return {};
 }
+/**
+ * =============================== QueryCFMMConcentratedPoolLinks
+ * @name QueryCFMMConcentratedPoolLinksRequest
+ * @package symphony.gamm.v1beta1
+ * @see proto type: symphony.gamm.v1beta1.QueryCFMMConcentratedPoolLinksRequest
+ */
 export const QueryCFMMConcentratedPoolLinksRequest = {
   typeUrl: '/symphony.gamm.v1beta1.QueryCFMMConcentratedPoolLinksRequest',
   is(o: any): o is QueryCFMMConcentratedPoolLinksRequest {
@@ -4811,6 +5559,11 @@ function createBaseQueryCFMMConcentratedPoolLinksResponse(): QueryCFMMConcentrat
     migrationRecords: undefined,
   };
 }
+/**
+ * @name QueryCFMMConcentratedPoolLinksResponse
+ * @package symphony.gamm.v1beta1
+ * @see proto type: symphony.gamm.v1beta1.QueryCFMMConcentratedPoolLinksResponse
+ */
 export const QueryCFMMConcentratedPoolLinksResponse = {
   typeUrl: '/symphony.gamm.v1beta1.QueryCFMMConcentratedPoolLinksResponse',
   is(o: any): o is QueryCFMMConcentratedPoolLinksResponse {

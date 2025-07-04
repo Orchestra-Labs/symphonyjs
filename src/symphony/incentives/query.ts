@@ -26,303 +26,602 @@ import { Params, ParamsAmino, ParamsSDKType } from './params';
 import { BinaryReader, BinaryWriter } from '../../binary';
 import { GlobalDecoderRegistry } from '../../registry';
 import { Decimal } from '@cosmjs/math';
+/**
+ * @name ModuleToDistributeCoinsRequest
+ * @package symphony.incentives
+ * @see proto type: symphony.incentives.ModuleToDistributeCoinsRequest
+ */
 export interface ModuleToDistributeCoinsRequest {}
 export interface ModuleToDistributeCoinsRequestProtoMsg {
   typeUrl: '/symphony.incentives.ModuleToDistributeCoinsRequest';
   value: Uint8Array;
 }
+/**
+ * @name ModuleToDistributeCoinsRequestAmino
+ * @package symphony.incentives
+ * @see proto type: symphony.incentives.ModuleToDistributeCoinsRequest
+ */
 export interface ModuleToDistributeCoinsRequestAmino {}
 export interface ModuleToDistributeCoinsRequestAminoMsg {
   type: '/symphony.incentives.ModuleToDistributeCoinsRequest';
   value: ModuleToDistributeCoinsRequestAmino;
 }
+/**
+ * @name ModuleToDistributeCoinsRequestSDKType
+ * @package symphony.incentives
+ * @see proto type: symphony.incentives.ModuleToDistributeCoinsRequest
+ */
 export interface ModuleToDistributeCoinsRequestSDKType {}
+/**
+ * @name ModuleToDistributeCoinsResponse
+ * @package symphony.incentives
+ * @see proto type: symphony.incentives.ModuleToDistributeCoinsResponse
+ */
 export interface ModuleToDistributeCoinsResponse {
-  /** Coins that have yet to be distributed */
+  /**
+   * Coins that have yet to be distributed
+   */
   coins: Coin[];
 }
 export interface ModuleToDistributeCoinsResponseProtoMsg {
   typeUrl: '/symphony.incentives.ModuleToDistributeCoinsResponse';
   value: Uint8Array;
 }
+/**
+ * @name ModuleToDistributeCoinsResponseAmino
+ * @package symphony.incentives
+ * @see proto type: symphony.incentives.ModuleToDistributeCoinsResponse
+ */
 export interface ModuleToDistributeCoinsResponseAmino {
-  /** Coins that have yet to be distributed */
+  /**
+   * Coins that have yet to be distributed
+   */
   coins?: CoinAmino[];
 }
 export interface ModuleToDistributeCoinsResponseAminoMsg {
   type: '/symphony.incentives.ModuleToDistributeCoinsResponse';
   value: ModuleToDistributeCoinsResponseAmino;
 }
+/**
+ * @name ModuleToDistributeCoinsResponseSDKType
+ * @package symphony.incentives
+ * @see proto type: symphony.incentives.ModuleToDistributeCoinsResponse
+ */
 export interface ModuleToDistributeCoinsResponseSDKType {
   coins: CoinSDKType[];
 }
+/**
+ * @name GaugeByIDRequest
+ * @package symphony.incentives
+ * @see proto type: symphony.incentives.GaugeByIDRequest
+ */
 export interface GaugeByIDRequest {
-  /** Gauge ID being queried */
+  /**
+   * Gauge ID being queried
+   */
   id: bigint;
 }
 export interface GaugeByIDRequestProtoMsg {
   typeUrl: '/symphony.incentives.GaugeByIDRequest';
   value: Uint8Array;
 }
+/**
+ * @name GaugeByIDRequestAmino
+ * @package symphony.incentives
+ * @see proto type: symphony.incentives.GaugeByIDRequest
+ */
 export interface GaugeByIDRequestAmino {
-  /** Gauge ID being queried */
+  /**
+   * Gauge ID being queried
+   */
   id?: string;
 }
 export interface GaugeByIDRequestAminoMsg {
   type: '/symphony.incentives.GaugeByIDRequest';
   value: GaugeByIDRequestAmino;
 }
+/**
+ * @name GaugeByIDRequestSDKType
+ * @package symphony.incentives
+ * @see proto type: symphony.incentives.GaugeByIDRequest
+ */
 export interface GaugeByIDRequestSDKType {
   id: bigint;
 }
+/**
+ * @name GaugeByIDResponse
+ * @package symphony.incentives
+ * @see proto type: symphony.incentives.GaugeByIDResponse
+ */
 export interface GaugeByIDResponse {
-  /** Gauge that corresponds to provided gauge ID */
+  /**
+   * Gauge that corresponds to provided gauge ID
+   */
   gauge?: Gauge;
 }
 export interface GaugeByIDResponseProtoMsg {
   typeUrl: '/symphony.incentives.GaugeByIDResponse';
   value: Uint8Array;
 }
+/**
+ * @name GaugeByIDResponseAmino
+ * @package symphony.incentives
+ * @see proto type: symphony.incentives.GaugeByIDResponse
+ */
 export interface GaugeByIDResponseAmino {
-  /** Gauge that corresponds to provided gauge ID */
+  /**
+   * Gauge that corresponds to provided gauge ID
+   */
   gauge?: GaugeAmino;
 }
 export interface GaugeByIDResponseAminoMsg {
   type: '/symphony.incentives.GaugeByIDResponse';
   value: GaugeByIDResponseAmino;
 }
+/**
+ * @name GaugeByIDResponseSDKType
+ * @package symphony.incentives
+ * @see proto type: symphony.incentives.GaugeByIDResponse
+ */
 export interface GaugeByIDResponseSDKType {
   gauge?: GaugeSDKType;
 }
+/**
+ * @name GaugesRequest
+ * @package symphony.incentives
+ * @see proto type: symphony.incentives.GaugesRequest
+ */
 export interface GaugesRequest {
-  /** Pagination defines pagination for the request */
+  /**
+   * Pagination defines pagination for the request
+   */
   pagination?: PageRequest;
 }
 export interface GaugesRequestProtoMsg {
   typeUrl: '/symphony.incentives.GaugesRequest';
   value: Uint8Array;
 }
+/**
+ * @name GaugesRequestAmino
+ * @package symphony.incentives
+ * @see proto type: symphony.incentives.GaugesRequest
+ */
 export interface GaugesRequestAmino {
-  /** Pagination defines pagination for the request */
+  /**
+   * Pagination defines pagination for the request
+   */
   pagination?: PageRequestAmino;
 }
 export interface GaugesRequestAminoMsg {
   type: '/symphony.incentives.GaugesRequest';
   value: GaugesRequestAmino;
 }
+/**
+ * @name GaugesRequestSDKType
+ * @package symphony.incentives
+ * @see proto type: symphony.incentives.GaugesRequest
+ */
 export interface GaugesRequestSDKType {
   pagination?: PageRequestSDKType;
 }
+/**
+ * @name GaugesResponse
+ * @package symphony.incentives
+ * @see proto type: symphony.incentives.GaugesResponse
+ */
 export interface GaugesResponse {
-  /** Upcoming and active gauges */
+  /**
+   * Upcoming and active gauges
+   */
   data: Gauge[];
-  /** Pagination defines pagination for the response */
+  /**
+   * Pagination defines pagination for the response
+   */
   pagination?: PageResponse;
 }
 export interface GaugesResponseProtoMsg {
   typeUrl: '/symphony.incentives.GaugesResponse';
   value: Uint8Array;
 }
+/**
+ * @name GaugesResponseAmino
+ * @package symphony.incentives
+ * @see proto type: symphony.incentives.GaugesResponse
+ */
 export interface GaugesResponseAmino {
-  /** Upcoming and active gauges */
+  /**
+   * Upcoming and active gauges
+   */
   data?: GaugeAmino[];
-  /** Pagination defines pagination for the response */
+  /**
+   * Pagination defines pagination for the response
+   */
   pagination?: PageResponseAmino;
 }
 export interface GaugesResponseAminoMsg {
   type: '/symphony.incentives.GaugesResponse';
   value: GaugesResponseAmino;
 }
+/**
+ * @name GaugesResponseSDKType
+ * @package symphony.incentives
+ * @see proto type: symphony.incentives.GaugesResponse
+ */
 export interface GaugesResponseSDKType {
   data: GaugeSDKType[];
   pagination?: PageResponseSDKType;
 }
+/**
+ * @name ActiveGaugesRequest
+ * @package symphony.incentives
+ * @see proto type: symphony.incentives.ActiveGaugesRequest
+ */
 export interface ActiveGaugesRequest {
-  /** Pagination defines pagination for the request */
+  /**
+   * Pagination defines pagination for the request
+   */
   pagination?: PageRequest;
 }
 export interface ActiveGaugesRequestProtoMsg {
   typeUrl: '/symphony.incentives.ActiveGaugesRequest';
   value: Uint8Array;
 }
+/**
+ * @name ActiveGaugesRequestAmino
+ * @package symphony.incentives
+ * @see proto type: symphony.incentives.ActiveGaugesRequest
+ */
 export interface ActiveGaugesRequestAmino {
-  /** Pagination defines pagination for the request */
+  /**
+   * Pagination defines pagination for the request
+   */
   pagination?: PageRequestAmino;
 }
 export interface ActiveGaugesRequestAminoMsg {
   type: '/symphony.incentives.ActiveGaugesRequest';
   value: ActiveGaugesRequestAmino;
 }
+/**
+ * @name ActiveGaugesRequestSDKType
+ * @package symphony.incentives
+ * @see proto type: symphony.incentives.ActiveGaugesRequest
+ */
 export interface ActiveGaugesRequestSDKType {
   pagination?: PageRequestSDKType;
 }
+/**
+ * @name ActiveGaugesResponse
+ * @package symphony.incentives
+ * @see proto type: symphony.incentives.ActiveGaugesResponse
+ */
 export interface ActiveGaugesResponse {
-  /** Active gauges only */
+  /**
+   * Active gauges only
+   */
   data: Gauge[];
-  /** Pagination defines pagination for the response */
+  /**
+   * Pagination defines pagination for the response
+   */
   pagination?: PageResponse;
 }
 export interface ActiveGaugesResponseProtoMsg {
   typeUrl: '/symphony.incentives.ActiveGaugesResponse';
   value: Uint8Array;
 }
+/**
+ * @name ActiveGaugesResponseAmino
+ * @package symphony.incentives
+ * @see proto type: symphony.incentives.ActiveGaugesResponse
+ */
 export interface ActiveGaugesResponseAmino {
-  /** Active gauges only */
+  /**
+   * Active gauges only
+   */
   data?: GaugeAmino[];
-  /** Pagination defines pagination for the response */
+  /**
+   * Pagination defines pagination for the response
+   */
   pagination?: PageResponseAmino;
 }
 export interface ActiveGaugesResponseAminoMsg {
   type: '/symphony.incentives.ActiveGaugesResponse';
   value: ActiveGaugesResponseAmino;
 }
+/**
+ * @name ActiveGaugesResponseSDKType
+ * @package symphony.incentives
+ * @see proto type: symphony.incentives.ActiveGaugesResponse
+ */
 export interface ActiveGaugesResponseSDKType {
   data: GaugeSDKType[];
   pagination?: PageResponseSDKType;
 }
+/**
+ * @name ActiveGaugesPerDenomRequest
+ * @package symphony.incentives
+ * @see proto type: symphony.incentives.ActiveGaugesPerDenomRequest
+ */
 export interface ActiveGaugesPerDenomRequest {
-  /** Desired denom when querying active gauges */
+  /**
+   * Desired denom when querying active gauges
+   */
   denom: string;
-  /** Pagination defines pagination for the request */
+  /**
+   * Pagination defines pagination for the request
+   */
   pagination?: PageRequest;
 }
 export interface ActiveGaugesPerDenomRequestProtoMsg {
   typeUrl: '/symphony.incentives.ActiveGaugesPerDenomRequest';
   value: Uint8Array;
 }
+/**
+ * @name ActiveGaugesPerDenomRequestAmino
+ * @package symphony.incentives
+ * @see proto type: symphony.incentives.ActiveGaugesPerDenomRequest
+ */
 export interface ActiveGaugesPerDenomRequestAmino {
-  /** Desired denom when querying active gauges */
+  /**
+   * Desired denom when querying active gauges
+   */
   denom?: string;
-  /** Pagination defines pagination for the request */
+  /**
+   * Pagination defines pagination for the request
+   */
   pagination?: PageRequestAmino;
 }
 export interface ActiveGaugesPerDenomRequestAminoMsg {
   type: '/symphony.incentives.ActiveGaugesPerDenomRequest';
   value: ActiveGaugesPerDenomRequestAmino;
 }
+/**
+ * @name ActiveGaugesPerDenomRequestSDKType
+ * @package symphony.incentives
+ * @see proto type: symphony.incentives.ActiveGaugesPerDenomRequest
+ */
 export interface ActiveGaugesPerDenomRequestSDKType {
   denom: string;
   pagination?: PageRequestSDKType;
 }
+/**
+ * @name ActiveGaugesPerDenomResponse
+ * @package symphony.incentives
+ * @see proto type: symphony.incentives.ActiveGaugesPerDenomResponse
+ */
 export interface ActiveGaugesPerDenomResponse {
-  /** Active gauges that match denom in query */
+  /**
+   * Active gauges that match denom in query
+   */
   data: Gauge[];
-  /** Pagination defines pagination for the response */
+  /**
+   * Pagination defines pagination for the response
+   */
   pagination?: PageResponse;
 }
 export interface ActiveGaugesPerDenomResponseProtoMsg {
   typeUrl: '/symphony.incentives.ActiveGaugesPerDenomResponse';
   value: Uint8Array;
 }
+/**
+ * @name ActiveGaugesPerDenomResponseAmino
+ * @package symphony.incentives
+ * @see proto type: symphony.incentives.ActiveGaugesPerDenomResponse
+ */
 export interface ActiveGaugesPerDenomResponseAmino {
-  /** Active gauges that match denom in query */
+  /**
+   * Active gauges that match denom in query
+   */
   data?: GaugeAmino[];
-  /** Pagination defines pagination for the response */
+  /**
+   * Pagination defines pagination for the response
+   */
   pagination?: PageResponseAmino;
 }
 export interface ActiveGaugesPerDenomResponseAminoMsg {
   type: '/symphony.incentives.ActiveGaugesPerDenomResponse';
   value: ActiveGaugesPerDenomResponseAmino;
 }
+/**
+ * @name ActiveGaugesPerDenomResponseSDKType
+ * @package symphony.incentives
+ * @see proto type: symphony.incentives.ActiveGaugesPerDenomResponse
+ */
 export interface ActiveGaugesPerDenomResponseSDKType {
   data: GaugeSDKType[];
   pagination?: PageResponseSDKType;
 }
+/**
+ * @name UpcomingGaugesRequest
+ * @package symphony.incentives
+ * @see proto type: symphony.incentives.UpcomingGaugesRequest
+ */
 export interface UpcomingGaugesRequest {
-  /** Pagination defines pagination for the request */
+  /**
+   * Pagination defines pagination for the request
+   */
   pagination?: PageRequest;
 }
 export interface UpcomingGaugesRequestProtoMsg {
   typeUrl: '/symphony.incentives.UpcomingGaugesRequest';
   value: Uint8Array;
 }
+/**
+ * @name UpcomingGaugesRequestAmino
+ * @package symphony.incentives
+ * @see proto type: symphony.incentives.UpcomingGaugesRequest
+ */
 export interface UpcomingGaugesRequestAmino {
-  /** Pagination defines pagination for the request */
+  /**
+   * Pagination defines pagination for the request
+   */
   pagination?: PageRequestAmino;
 }
 export interface UpcomingGaugesRequestAminoMsg {
   type: '/symphony.incentives.UpcomingGaugesRequest';
   value: UpcomingGaugesRequestAmino;
 }
+/**
+ * @name UpcomingGaugesRequestSDKType
+ * @package symphony.incentives
+ * @see proto type: symphony.incentives.UpcomingGaugesRequest
+ */
 export interface UpcomingGaugesRequestSDKType {
   pagination?: PageRequestSDKType;
 }
+/**
+ * @name UpcomingGaugesResponse
+ * @package symphony.incentives
+ * @see proto type: symphony.incentives.UpcomingGaugesResponse
+ */
 export interface UpcomingGaugesResponse {
-  /** Gauges whose distribution is upcoming */
+  /**
+   * Gauges whose distribution is upcoming
+   */
   data: Gauge[];
-  /** Pagination defines pagination for the response */
+  /**
+   * Pagination defines pagination for the response
+   */
   pagination?: PageResponse;
 }
 export interface UpcomingGaugesResponseProtoMsg {
   typeUrl: '/symphony.incentives.UpcomingGaugesResponse';
   value: Uint8Array;
 }
+/**
+ * @name UpcomingGaugesResponseAmino
+ * @package symphony.incentives
+ * @see proto type: symphony.incentives.UpcomingGaugesResponse
+ */
 export interface UpcomingGaugesResponseAmino {
-  /** Gauges whose distribution is upcoming */
+  /**
+   * Gauges whose distribution is upcoming
+   */
   data?: GaugeAmino[];
-  /** Pagination defines pagination for the response */
+  /**
+   * Pagination defines pagination for the response
+   */
   pagination?: PageResponseAmino;
 }
 export interface UpcomingGaugesResponseAminoMsg {
   type: '/symphony.incentives.UpcomingGaugesResponse';
   value: UpcomingGaugesResponseAmino;
 }
+/**
+ * @name UpcomingGaugesResponseSDKType
+ * @package symphony.incentives
+ * @see proto type: symphony.incentives.UpcomingGaugesResponse
+ */
 export interface UpcomingGaugesResponseSDKType {
   data: GaugeSDKType[];
   pagination?: PageResponseSDKType;
 }
+/**
+ * @name UpcomingGaugesPerDenomRequest
+ * @package symphony.incentives
+ * @see proto type: symphony.incentives.UpcomingGaugesPerDenomRequest
+ */
 export interface UpcomingGaugesPerDenomRequest {
-  /** Filter for upcoming gauges that match specific denom */
+  /**
+   * Filter for upcoming gauges that match specific denom
+   */
   denom: string;
-  /** Pagination defines pagination for the request */
+  /**
+   * Pagination defines pagination for the request
+   */
   pagination?: PageRequest;
 }
 export interface UpcomingGaugesPerDenomRequestProtoMsg {
   typeUrl: '/symphony.incentives.UpcomingGaugesPerDenomRequest';
   value: Uint8Array;
 }
+/**
+ * @name UpcomingGaugesPerDenomRequestAmino
+ * @package symphony.incentives
+ * @see proto type: symphony.incentives.UpcomingGaugesPerDenomRequest
+ */
 export interface UpcomingGaugesPerDenomRequestAmino {
-  /** Filter for upcoming gauges that match specific denom */
+  /**
+   * Filter for upcoming gauges that match specific denom
+   */
   denom?: string;
-  /** Pagination defines pagination for the request */
+  /**
+   * Pagination defines pagination for the request
+   */
   pagination?: PageRequestAmino;
 }
 export interface UpcomingGaugesPerDenomRequestAminoMsg {
   type: '/symphony.incentives.UpcomingGaugesPerDenomRequest';
   value: UpcomingGaugesPerDenomRequestAmino;
 }
+/**
+ * @name UpcomingGaugesPerDenomRequestSDKType
+ * @package symphony.incentives
+ * @see proto type: symphony.incentives.UpcomingGaugesPerDenomRequest
+ */
 export interface UpcomingGaugesPerDenomRequestSDKType {
   denom: string;
   pagination?: PageRequestSDKType;
 }
+/**
+ * @name UpcomingGaugesPerDenomResponse
+ * @package symphony.incentives
+ * @see proto type: symphony.incentives.UpcomingGaugesPerDenomResponse
+ */
 export interface UpcomingGaugesPerDenomResponse {
-  /** Upcoming gauges that match denom in query */
+  /**
+   * Upcoming gauges that match denom in query
+   */
   upcomingGauges: Gauge[];
-  /** Pagination defines pagination for the response */
+  /**
+   * Pagination defines pagination for the response
+   */
   pagination?: PageResponse;
 }
 export interface UpcomingGaugesPerDenomResponseProtoMsg {
   typeUrl: '/symphony.incentives.UpcomingGaugesPerDenomResponse';
   value: Uint8Array;
 }
+/**
+ * @name UpcomingGaugesPerDenomResponseAmino
+ * @package symphony.incentives
+ * @see proto type: symphony.incentives.UpcomingGaugesPerDenomResponse
+ */
 export interface UpcomingGaugesPerDenomResponseAmino {
-  /** Upcoming gauges that match denom in query */
+  /**
+   * Upcoming gauges that match denom in query
+   */
   upcoming_gauges?: GaugeAmino[];
-  /** Pagination defines pagination for the response */
+  /**
+   * Pagination defines pagination for the response
+   */
   pagination?: PageResponseAmino;
 }
 export interface UpcomingGaugesPerDenomResponseAminoMsg {
   type: '/symphony.incentives.UpcomingGaugesPerDenomResponse';
   value: UpcomingGaugesPerDenomResponseAmino;
 }
+/**
+ * @name UpcomingGaugesPerDenomResponseSDKType
+ * @package symphony.incentives
+ * @see proto type: symphony.incentives.UpcomingGaugesPerDenomResponse
+ */
 export interface UpcomingGaugesPerDenomResponseSDKType {
   upcoming_gauges: GaugeSDKType[];
   pagination?: PageResponseSDKType;
 }
+/**
+ * @name RewardsEstRequest
+ * @package symphony.incentives
+ * @see proto type: symphony.incentives.RewardsEstRequest
+ */
 export interface RewardsEstRequest {
-  /** Address that is being queried for future estimated rewards */
+  /**
+   * Address that is being queried for future estimated rewards
+   */
   owner: string;
-  /** Lock IDs included in future reward estimation */
+  /**
+   * Lock IDs included in future reward estimation
+   */
   lockIds: bigint[];
   /**
    * Upper time limit of reward estimation
@@ -334,10 +633,19 @@ export interface RewardsEstRequestProtoMsg {
   typeUrl: '/symphony.incentives.RewardsEstRequest';
   value: Uint8Array;
 }
+/**
+ * @name RewardsEstRequestAmino
+ * @package symphony.incentives
+ * @see proto type: symphony.incentives.RewardsEstRequest
+ */
 export interface RewardsEstRequestAmino {
-  /** Address that is being queried for future estimated rewards */
+  /**
+   * Address that is being queried for future estimated rewards
+   */
   owner?: string;
-  /** Lock IDs included in future reward estimation */
+  /**
+   * Lock IDs included in future reward estimation
+   */
   lock_ids?: string[];
   /**
    * Upper time limit of reward estimation
@@ -349,11 +657,21 @@ export interface RewardsEstRequestAminoMsg {
   type: '/symphony.incentives.RewardsEstRequest';
   value: RewardsEstRequestAmino;
 }
+/**
+ * @name RewardsEstRequestSDKType
+ * @package symphony.incentives
+ * @see proto type: symphony.incentives.RewardsEstRequest
+ */
 export interface RewardsEstRequestSDKType {
   owner: string;
   lock_ids: bigint[];
   end_epoch: bigint;
 }
+/**
+ * @name RewardsEstResponse
+ * @package symphony.incentives
+ * @see proto type: symphony.incentives.RewardsEstResponse
+ */
 export interface RewardsEstResponse {
   /**
    * Estimated coin rewards that will be received at provided address
@@ -365,6 +683,11 @@ export interface RewardsEstResponseProtoMsg {
   typeUrl: '/symphony.incentives.RewardsEstResponse';
   value: Uint8Array;
 }
+/**
+ * @name RewardsEstResponseAmino
+ * @package symphony.incentives
+ * @see proto type: symphony.incentives.RewardsEstResponse
+ */
 export interface RewardsEstResponseAmino {
   /**
    * Estimated coin rewards that will be received at provided address
@@ -376,50 +699,109 @@ export interface RewardsEstResponseAminoMsg {
   type: '/symphony.incentives.RewardsEstResponse';
   value: RewardsEstResponseAmino;
 }
+/**
+ * @name RewardsEstResponseSDKType
+ * @package symphony.incentives
+ * @see proto type: symphony.incentives.RewardsEstResponse
+ */
 export interface RewardsEstResponseSDKType {
   coins: CoinSDKType[];
 }
+/**
+ * @name QueryLockableDurationsRequest
+ * @package symphony.incentives
+ * @see proto type: symphony.incentives.QueryLockableDurationsRequest
+ */
 export interface QueryLockableDurationsRequest {}
 export interface QueryLockableDurationsRequestProtoMsg {
   typeUrl: '/symphony.incentives.QueryLockableDurationsRequest';
   value: Uint8Array;
 }
+/**
+ * @name QueryLockableDurationsRequestAmino
+ * @package symphony.incentives
+ * @see proto type: symphony.incentives.QueryLockableDurationsRequest
+ */
 export interface QueryLockableDurationsRequestAmino {}
 export interface QueryLockableDurationsRequestAminoMsg {
   type: '/symphony.incentives.QueryLockableDurationsRequest';
   value: QueryLockableDurationsRequestAmino;
 }
+/**
+ * @name QueryLockableDurationsRequestSDKType
+ * @package symphony.incentives
+ * @see proto type: symphony.incentives.QueryLockableDurationsRequest
+ */
 export interface QueryLockableDurationsRequestSDKType {}
+/**
+ * @name QueryLockableDurationsResponse
+ * @package symphony.incentives
+ * @see proto type: symphony.incentives.QueryLockableDurationsResponse
+ */
 export interface QueryLockableDurationsResponse {
-  /** Time durations that users can lock coins for in order to receive rewards */
+  /**
+   * Time durations that users can lock coins for in order to receive rewards
+   */
   lockableDurations: Duration[];
 }
 export interface QueryLockableDurationsResponseProtoMsg {
   typeUrl: '/symphony.incentives.QueryLockableDurationsResponse';
   value: Uint8Array;
 }
+/**
+ * @name QueryLockableDurationsResponseAmino
+ * @package symphony.incentives
+ * @see proto type: symphony.incentives.QueryLockableDurationsResponse
+ */
 export interface QueryLockableDurationsResponseAmino {
-  /** Time durations that users can lock coins for in order to receive rewards */
+  /**
+   * Time durations that users can lock coins for in order to receive rewards
+   */
   lockable_durations?: DurationAmino[];
 }
 export interface QueryLockableDurationsResponseAminoMsg {
   type: '/symphony.incentives.QueryLockableDurationsResponse';
   value: QueryLockableDurationsResponseAmino;
 }
+/**
+ * @name QueryLockableDurationsResponseSDKType
+ * @package symphony.incentives
+ * @see proto type: symphony.incentives.QueryLockableDurationsResponse
+ */
 export interface QueryLockableDurationsResponseSDKType {
   lockable_durations: DurationSDKType[];
 }
+/**
+ * @name QueryAllGroupsRequest
+ * @package symphony.incentives
+ * @see proto type: symphony.incentives.QueryAllGroupsRequest
+ */
 export interface QueryAllGroupsRequest {}
 export interface QueryAllGroupsRequestProtoMsg {
   typeUrl: '/symphony.incentives.QueryAllGroupsRequest';
   value: Uint8Array;
 }
+/**
+ * @name QueryAllGroupsRequestAmino
+ * @package symphony.incentives
+ * @see proto type: symphony.incentives.QueryAllGroupsRequest
+ */
 export interface QueryAllGroupsRequestAmino {}
 export interface QueryAllGroupsRequestAminoMsg {
   type: '/symphony.incentives.QueryAllGroupsRequest';
   value: QueryAllGroupsRequestAmino;
 }
+/**
+ * @name QueryAllGroupsRequestSDKType
+ * @package symphony.incentives
+ * @see proto type: symphony.incentives.QueryAllGroupsRequest
+ */
 export interface QueryAllGroupsRequestSDKType {}
+/**
+ * @name QueryAllGroupsResponse
+ * @package symphony.incentives
+ * @see proto type: symphony.incentives.QueryAllGroupsResponse
+ */
 export interface QueryAllGroupsResponse {
   groups: Group[];
 }
@@ -427,6 +809,11 @@ export interface QueryAllGroupsResponseProtoMsg {
   typeUrl: '/symphony.incentives.QueryAllGroupsResponse';
   value: Uint8Array;
 }
+/**
+ * @name QueryAllGroupsResponseAmino
+ * @package symphony.incentives
+ * @see proto type: symphony.incentives.QueryAllGroupsResponse
+ */
 export interface QueryAllGroupsResponseAmino {
   groups?: GroupAmino[];
 }
@@ -434,20 +821,45 @@ export interface QueryAllGroupsResponseAminoMsg {
   type: '/symphony.incentives.QueryAllGroupsResponse';
   value: QueryAllGroupsResponseAmino;
 }
+/**
+ * @name QueryAllGroupsResponseSDKType
+ * @package symphony.incentives
+ * @see proto type: symphony.incentives.QueryAllGroupsResponse
+ */
 export interface QueryAllGroupsResponseSDKType {
   groups: GroupSDKType[];
 }
+/**
+ * @name QueryAllGroupsGaugesRequest
+ * @package symphony.incentives
+ * @see proto type: symphony.incentives.QueryAllGroupsGaugesRequest
+ */
 export interface QueryAllGroupsGaugesRequest {}
 export interface QueryAllGroupsGaugesRequestProtoMsg {
   typeUrl: '/symphony.incentives.QueryAllGroupsGaugesRequest';
   value: Uint8Array;
 }
+/**
+ * @name QueryAllGroupsGaugesRequestAmino
+ * @package symphony.incentives
+ * @see proto type: symphony.incentives.QueryAllGroupsGaugesRequest
+ */
 export interface QueryAllGroupsGaugesRequestAmino {}
 export interface QueryAllGroupsGaugesRequestAminoMsg {
   type: '/symphony.incentives.QueryAllGroupsGaugesRequest';
   value: QueryAllGroupsGaugesRequestAmino;
 }
+/**
+ * @name QueryAllGroupsGaugesRequestSDKType
+ * @package symphony.incentives
+ * @see proto type: symphony.incentives.QueryAllGroupsGaugesRequest
+ */
 export interface QueryAllGroupsGaugesRequestSDKType {}
+/**
+ * @name QueryAllGroupsGaugesResponse
+ * @package symphony.incentives
+ * @see proto type: symphony.incentives.QueryAllGroupsGaugesResponse
+ */
 export interface QueryAllGroupsGaugesResponse {
   gauges: Gauge[];
 }
@@ -455,6 +867,11 @@ export interface QueryAllGroupsGaugesResponseProtoMsg {
   typeUrl: '/symphony.incentives.QueryAllGroupsGaugesResponse';
   value: Uint8Array;
 }
+/**
+ * @name QueryAllGroupsGaugesResponseAmino
+ * @package symphony.incentives
+ * @see proto type: symphony.incentives.QueryAllGroupsGaugesResponse
+ */
 export interface QueryAllGroupsGaugesResponseAmino {
   gauges?: GaugeAmino[];
 }
@@ -462,20 +879,45 @@ export interface QueryAllGroupsGaugesResponseAminoMsg {
   type: '/symphony.incentives.QueryAllGroupsGaugesResponse';
   value: QueryAllGroupsGaugesResponseAmino;
 }
+/**
+ * @name QueryAllGroupsGaugesResponseSDKType
+ * @package symphony.incentives
+ * @see proto type: symphony.incentives.QueryAllGroupsGaugesResponse
+ */
 export interface QueryAllGroupsGaugesResponseSDKType {
   gauges: GaugeSDKType[];
 }
+/**
+ * @name QueryAllGroupsWithGaugeRequest
+ * @package symphony.incentives
+ * @see proto type: symphony.incentives.QueryAllGroupsWithGaugeRequest
+ */
 export interface QueryAllGroupsWithGaugeRequest {}
 export interface QueryAllGroupsWithGaugeRequestProtoMsg {
   typeUrl: '/symphony.incentives.QueryAllGroupsWithGaugeRequest';
   value: Uint8Array;
 }
+/**
+ * @name QueryAllGroupsWithGaugeRequestAmino
+ * @package symphony.incentives
+ * @see proto type: symphony.incentives.QueryAllGroupsWithGaugeRequest
+ */
 export interface QueryAllGroupsWithGaugeRequestAmino {}
 export interface QueryAllGroupsWithGaugeRequestAminoMsg {
   type: '/symphony.incentives.QueryAllGroupsWithGaugeRequest';
   value: QueryAllGroupsWithGaugeRequestAmino;
 }
+/**
+ * @name QueryAllGroupsWithGaugeRequestSDKType
+ * @package symphony.incentives
+ * @see proto type: symphony.incentives.QueryAllGroupsWithGaugeRequest
+ */
 export interface QueryAllGroupsWithGaugeRequestSDKType {}
+/**
+ * @name QueryAllGroupsWithGaugeResponse
+ * @package symphony.incentives
+ * @see proto type: symphony.incentives.QueryAllGroupsWithGaugeResponse
+ */
 export interface QueryAllGroupsWithGaugeResponse {
   groupsWithGauge: GroupsWithGauge[];
 }
@@ -483,6 +925,11 @@ export interface QueryAllGroupsWithGaugeResponseProtoMsg {
   typeUrl: '/symphony.incentives.QueryAllGroupsWithGaugeResponse';
   value: Uint8Array;
 }
+/**
+ * @name QueryAllGroupsWithGaugeResponseAmino
+ * @package symphony.incentives
+ * @see proto type: symphony.incentives.QueryAllGroupsWithGaugeResponse
+ */
 export interface QueryAllGroupsWithGaugeResponseAmino {
   groups_with_gauge?: GroupsWithGaugeAmino[];
 }
@@ -490,9 +937,19 @@ export interface QueryAllGroupsWithGaugeResponseAminoMsg {
   type: '/symphony.incentives.QueryAllGroupsWithGaugeResponse';
   value: QueryAllGroupsWithGaugeResponseAmino;
 }
+/**
+ * @name QueryAllGroupsWithGaugeResponseSDKType
+ * @package symphony.incentives
+ * @see proto type: symphony.incentives.QueryAllGroupsWithGaugeResponse
+ */
 export interface QueryAllGroupsWithGaugeResponseSDKType {
   groups_with_gauge: GroupsWithGaugeSDKType[];
 }
+/**
+ * @name QueryGroupByGroupGaugeIDRequest
+ * @package symphony.incentives
+ * @see proto type: symphony.incentives.QueryGroupByGroupGaugeIDRequest
+ */
 export interface QueryGroupByGroupGaugeIDRequest {
   id: bigint;
 }
@@ -500,6 +957,11 @@ export interface QueryGroupByGroupGaugeIDRequestProtoMsg {
   typeUrl: '/symphony.incentives.QueryGroupByGroupGaugeIDRequest';
   value: Uint8Array;
 }
+/**
+ * @name QueryGroupByGroupGaugeIDRequestAmino
+ * @package symphony.incentives
+ * @see proto type: symphony.incentives.QueryGroupByGroupGaugeIDRequest
+ */
 export interface QueryGroupByGroupGaugeIDRequestAmino {
   id?: string;
 }
@@ -507,9 +969,19 @@ export interface QueryGroupByGroupGaugeIDRequestAminoMsg {
   type: '/symphony.incentives.QueryGroupByGroupGaugeIDRequest';
   value: QueryGroupByGroupGaugeIDRequestAmino;
 }
+/**
+ * @name QueryGroupByGroupGaugeIDRequestSDKType
+ * @package symphony.incentives
+ * @see proto type: symphony.incentives.QueryGroupByGroupGaugeIDRequest
+ */
 export interface QueryGroupByGroupGaugeIDRequestSDKType {
   id: bigint;
 }
+/**
+ * @name QueryGroupByGroupGaugeIDResponse
+ * @package symphony.incentives
+ * @see proto type: symphony.incentives.QueryGroupByGroupGaugeIDResponse
+ */
 export interface QueryGroupByGroupGaugeIDResponse {
   group: Group;
 }
@@ -517,6 +989,11 @@ export interface QueryGroupByGroupGaugeIDResponseProtoMsg {
   typeUrl: '/symphony.incentives.QueryGroupByGroupGaugeIDResponse';
   value: Uint8Array;
 }
+/**
+ * @name QueryGroupByGroupGaugeIDResponseAmino
+ * @package symphony.incentives
+ * @see proto type: symphony.incentives.QueryGroupByGroupGaugeIDResponse
+ */
 export interface QueryGroupByGroupGaugeIDResponseAmino {
   group?: GroupAmino;
 }
@@ -524,9 +1001,19 @@ export interface QueryGroupByGroupGaugeIDResponseAminoMsg {
   type: '/symphony.incentives.QueryGroupByGroupGaugeIDResponse';
   value: QueryGroupByGroupGaugeIDResponseAmino;
 }
+/**
+ * @name QueryGroupByGroupGaugeIDResponseSDKType
+ * @package symphony.incentives
+ * @see proto type: symphony.incentives.QueryGroupByGroupGaugeIDResponse
+ */
 export interface QueryGroupByGroupGaugeIDResponseSDKType {
   group: GroupSDKType;
 }
+/**
+ * @name QueryCurrentWeightByGroupGaugeIDRequest
+ * @package symphony.incentives
+ * @see proto type: symphony.incentives.QueryCurrentWeightByGroupGaugeIDRequest
+ */
 export interface QueryCurrentWeightByGroupGaugeIDRequest {
   groupGaugeId: bigint;
 }
@@ -534,6 +1021,11 @@ export interface QueryCurrentWeightByGroupGaugeIDRequestProtoMsg {
   typeUrl: '/symphony.incentives.QueryCurrentWeightByGroupGaugeIDRequest';
   value: Uint8Array;
 }
+/**
+ * @name QueryCurrentWeightByGroupGaugeIDRequestAmino
+ * @package symphony.incentives
+ * @see proto type: symphony.incentives.QueryCurrentWeightByGroupGaugeIDRequest
+ */
 export interface QueryCurrentWeightByGroupGaugeIDRequestAmino {
   group_gauge_id?: string;
 }
@@ -541,9 +1033,19 @@ export interface QueryCurrentWeightByGroupGaugeIDRequestAminoMsg {
   type: '/symphony.incentives.QueryCurrentWeightByGroupGaugeIDRequest';
   value: QueryCurrentWeightByGroupGaugeIDRequestAmino;
 }
+/**
+ * @name QueryCurrentWeightByGroupGaugeIDRequestSDKType
+ * @package symphony.incentives
+ * @see proto type: symphony.incentives.QueryCurrentWeightByGroupGaugeIDRequest
+ */
 export interface QueryCurrentWeightByGroupGaugeIDRequestSDKType {
   group_gauge_id: bigint;
 }
+/**
+ * @name QueryCurrentWeightByGroupGaugeIDResponse
+ * @package symphony.incentives
+ * @see proto type: symphony.incentives.QueryCurrentWeightByGroupGaugeIDResponse
+ */
 export interface QueryCurrentWeightByGroupGaugeIDResponse {
   gaugeWeight: GaugeWeight[];
 }
@@ -551,6 +1053,11 @@ export interface QueryCurrentWeightByGroupGaugeIDResponseProtoMsg {
   typeUrl: '/symphony.incentives.QueryCurrentWeightByGroupGaugeIDResponse';
   value: Uint8Array;
 }
+/**
+ * @name QueryCurrentWeightByGroupGaugeIDResponseAmino
+ * @package symphony.incentives
+ * @see proto type: symphony.incentives.QueryCurrentWeightByGroupGaugeIDResponse
+ */
 export interface QueryCurrentWeightByGroupGaugeIDResponseAmino {
   gauge_weight?: GaugeWeightAmino[];
 }
@@ -558,9 +1065,19 @@ export interface QueryCurrentWeightByGroupGaugeIDResponseAminoMsg {
   type: '/symphony.incentives.QueryCurrentWeightByGroupGaugeIDResponse';
   value: QueryCurrentWeightByGroupGaugeIDResponseAmino;
 }
+/**
+ * @name QueryCurrentWeightByGroupGaugeIDResponseSDKType
+ * @package symphony.incentives
+ * @see proto type: symphony.incentives.QueryCurrentWeightByGroupGaugeIDResponse
+ */
 export interface QueryCurrentWeightByGroupGaugeIDResponseSDKType {
   gauge_weight: GaugeWeightSDKType[];
 }
+/**
+ * @name GaugeWeight
+ * @package symphony.incentives
+ * @see proto type: symphony.incentives.GaugeWeight
+ */
 export interface GaugeWeight {
   gaugeId: bigint;
   weightRatio: string;
@@ -569,6 +1086,11 @@ export interface GaugeWeightProtoMsg {
   typeUrl: '/symphony.incentives.GaugeWeight';
   value: Uint8Array;
 }
+/**
+ * @name GaugeWeightAmino
+ * @package symphony.incentives
+ * @see proto type: symphony.incentives.GaugeWeight
+ */
 export interface GaugeWeightAmino {
   gauge_id?: string;
   weight_ratio?: string;
@@ -577,21 +1099,46 @@ export interface GaugeWeightAminoMsg {
   type: '/symphony.incentives.GaugeWeight';
   value: GaugeWeightAmino;
 }
+/**
+ * @name GaugeWeightSDKType
+ * @package symphony.incentives
+ * @see proto type: symphony.incentives.GaugeWeight
+ */
 export interface GaugeWeightSDKType {
   gauge_id: bigint;
   weight_ratio: string;
 }
+/**
+ * @name ParamsRequest
+ * @package symphony.incentives
+ * @see proto type: symphony.incentives.ParamsRequest
+ */
 export interface ParamsRequest {}
 export interface ParamsRequestProtoMsg {
   typeUrl: '/symphony.incentives.ParamsRequest';
   value: Uint8Array;
 }
+/**
+ * @name ParamsRequestAmino
+ * @package symphony.incentives
+ * @see proto type: symphony.incentives.ParamsRequest
+ */
 export interface ParamsRequestAmino {}
 export interface ParamsRequestAminoMsg {
   type: '/symphony.incentives.ParamsRequest';
   value: ParamsRequestAmino;
 }
+/**
+ * @name ParamsRequestSDKType
+ * @package symphony.incentives
+ * @see proto type: symphony.incentives.ParamsRequest
+ */
 export interface ParamsRequestSDKType {}
+/**
+ * @name ParamsResponse
+ * @package symphony.incentives
+ * @see proto type: symphony.incentives.ParamsResponse
+ */
 export interface ParamsResponse {
   params: Params;
 }
@@ -599,6 +1146,11 @@ export interface ParamsResponseProtoMsg {
   typeUrl: '/symphony.incentives.ParamsResponse';
   value: Uint8Array;
 }
+/**
+ * @name ParamsResponseAmino
+ * @package symphony.incentives
+ * @see proto type: symphony.incentives.ParamsResponse
+ */
 export interface ParamsResponseAmino {
   params?: ParamsAmino;
 }
@@ -606,12 +1158,22 @@ export interface ParamsResponseAminoMsg {
   type: '/symphony.incentives.ParamsResponse';
   value: ParamsResponseAmino;
 }
+/**
+ * @name ParamsResponseSDKType
+ * @package symphony.incentives
+ * @see proto type: symphony.incentives.ParamsResponse
+ */
 export interface ParamsResponseSDKType {
   params: ParamsSDKType;
 }
 function createBaseModuleToDistributeCoinsRequest(): ModuleToDistributeCoinsRequest {
   return {};
 }
+/**
+ * @name ModuleToDistributeCoinsRequest
+ * @package symphony.incentives
+ * @see proto type: symphony.incentives.ModuleToDistributeCoinsRequest
+ */
 export const ModuleToDistributeCoinsRequest = {
   typeUrl: '/symphony.incentives.ModuleToDistributeCoinsRequest',
   is(o: any): o is ModuleToDistributeCoinsRequest {
@@ -696,6 +1258,11 @@ function createBaseModuleToDistributeCoinsResponse(): ModuleToDistributeCoinsRes
     coins: [],
   };
 }
+/**
+ * @name ModuleToDistributeCoinsResponse
+ * @package symphony.incentives
+ * @see proto type: symphony.incentives.ModuleToDistributeCoinsResponse
+ */
 export const ModuleToDistributeCoinsResponse = {
   typeUrl: '/symphony.incentives.ModuleToDistributeCoinsResponse',
   is(o: any): o is ModuleToDistributeCoinsResponse {
@@ -806,6 +1373,11 @@ function createBaseGaugeByIDRequest(): GaugeByIDRequest {
     id: BigInt(0),
   };
 }
+/**
+ * @name GaugeByIDRequest
+ * @package symphony.incentives
+ * @see proto type: symphony.incentives.GaugeByIDRequest
+ */
 export const GaugeByIDRequest = {
   typeUrl: '/symphony.incentives.GaugeByIDRequest',
   is(o: any): o is GaugeByIDRequest {
@@ -892,6 +1464,11 @@ function createBaseGaugeByIDResponse(): GaugeByIDResponse {
     gauge: undefined,
   };
 }
+/**
+ * @name GaugeByIDResponse
+ * @package symphony.incentives
+ * @see proto type: symphony.incentives.GaugeByIDResponse
+ */
 export const GaugeByIDResponse = {
   typeUrl: '/symphony.incentives.GaugeByIDResponse',
   is(o: any): o is GaugeByIDResponse {
@@ -972,6 +1549,11 @@ function createBaseGaugesRequest(): GaugesRequest {
     pagination: undefined,
   };
 }
+/**
+ * @name GaugesRequest
+ * @package symphony.incentives
+ * @see proto type: symphony.incentives.GaugesRequest
+ */
 export const GaugesRequest = {
   typeUrl: '/symphony.incentives.GaugesRequest',
   is(o: any): o is GaugesRequest {
@@ -1055,6 +1637,11 @@ function createBaseGaugesResponse(): GaugesResponse {
     pagination: undefined,
   };
 }
+/**
+ * @name GaugesResponse
+ * @package symphony.incentives
+ * @see proto type: symphony.incentives.GaugesResponse
+ */
 export const GaugesResponse = {
   typeUrl: '/symphony.incentives.GaugesResponse',
   is(o: any): o is GaugesResponse {
@@ -1165,6 +1752,11 @@ function createBaseActiveGaugesRequest(): ActiveGaugesRequest {
     pagination: undefined,
   };
 }
+/**
+ * @name ActiveGaugesRequest
+ * @package symphony.incentives
+ * @see proto type: symphony.incentives.ActiveGaugesRequest
+ */
 export const ActiveGaugesRequest = {
   typeUrl: '/symphony.incentives.ActiveGaugesRequest',
   is(o: any): o is ActiveGaugesRequest {
@@ -1254,6 +1846,11 @@ function createBaseActiveGaugesResponse(): ActiveGaugesResponse {
     pagination: undefined,
   };
 }
+/**
+ * @name ActiveGaugesResponse
+ * @package symphony.incentives
+ * @see proto type: symphony.incentives.ActiveGaugesResponse
+ */
 export const ActiveGaugesResponse = {
   typeUrl: '/symphony.incentives.ActiveGaugesResponse',
   is(o: any): o is ActiveGaugesResponse {
@@ -1371,6 +1968,11 @@ function createBaseActiveGaugesPerDenomRequest(): ActiveGaugesPerDenomRequest {
     pagination: undefined,
   };
 }
+/**
+ * @name ActiveGaugesPerDenomRequest
+ * @package symphony.incentives
+ * @see proto type: symphony.incentives.ActiveGaugesPerDenomRequest
+ */
 export const ActiveGaugesPerDenomRequest = {
   typeUrl: '/symphony.incentives.ActiveGaugesPerDenomRequest',
   is(o: any): o is ActiveGaugesPerDenomRequest {
@@ -1495,6 +2097,11 @@ function createBaseActiveGaugesPerDenomResponse(): ActiveGaugesPerDenomResponse 
     pagination: undefined,
   };
 }
+/**
+ * @name ActiveGaugesPerDenomResponse
+ * @package symphony.incentives
+ * @see proto type: symphony.incentives.ActiveGaugesPerDenomResponse
+ */
 export const ActiveGaugesPerDenomResponse = {
   typeUrl: '/symphony.incentives.ActiveGaugesPerDenomResponse',
   is(o: any): o is ActiveGaugesPerDenomResponse {
@@ -1623,6 +2230,11 @@ function createBaseUpcomingGaugesRequest(): UpcomingGaugesRequest {
     pagination: undefined,
   };
 }
+/**
+ * @name UpcomingGaugesRequest
+ * @package symphony.incentives
+ * @see proto type: symphony.incentives.UpcomingGaugesRequest
+ */
 export const UpcomingGaugesRequest = {
   typeUrl: '/symphony.incentives.UpcomingGaugesRequest',
   is(o: any): o is UpcomingGaugesRequest {
@@ -1712,6 +2324,11 @@ function createBaseUpcomingGaugesResponse(): UpcomingGaugesResponse {
     pagination: undefined,
   };
 }
+/**
+ * @name UpcomingGaugesResponse
+ * @package symphony.incentives
+ * @see proto type: symphony.incentives.UpcomingGaugesResponse
+ */
 export const UpcomingGaugesResponse = {
   typeUrl: '/symphony.incentives.UpcomingGaugesResponse',
   is(o: any): o is UpcomingGaugesResponse {
@@ -1831,6 +2448,11 @@ function createBaseUpcomingGaugesPerDenomRequest(): UpcomingGaugesPerDenomReques
     pagination: undefined,
   };
 }
+/**
+ * @name UpcomingGaugesPerDenomRequest
+ * @package symphony.incentives
+ * @see proto type: symphony.incentives.UpcomingGaugesPerDenomRequest
+ */
 export const UpcomingGaugesPerDenomRequest = {
   typeUrl: '/symphony.incentives.UpcomingGaugesPerDenomRequest',
   is(o: any): o is UpcomingGaugesPerDenomRequest {
@@ -1955,6 +2577,11 @@ function createBaseUpcomingGaugesPerDenomResponse(): UpcomingGaugesPerDenomRespo
     pagination: undefined,
   };
 }
+/**
+ * @name UpcomingGaugesPerDenomResponse
+ * @package symphony.incentives
+ * @see proto type: symphony.incentives.UpcomingGaugesPerDenomResponse
+ */
 export const UpcomingGaugesPerDenomResponse = {
   typeUrl: '/symphony.incentives.UpcomingGaugesPerDenomResponse',
   is(o: any): o is UpcomingGaugesPerDenomResponse {
@@ -2092,6 +2719,11 @@ function createBaseRewardsEstRequest(): RewardsEstRequest {
     endEpoch: BigInt(0),
   };
 }
+/**
+ * @name RewardsEstRequest
+ * @package symphony.incentives
+ * @see proto type: symphony.incentives.RewardsEstRequest
+ */
 export const RewardsEstRequest = {
   typeUrl: '/symphony.incentives.RewardsEstRequest',
   is(o: any): o is RewardsEstRequest {
@@ -2227,6 +2859,11 @@ function createBaseRewardsEstResponse(): RewardsEstResponse {
     coins: [],
   };
 }
+/**
+ * @name RewardsEstResponse
+ * @package symphony.incentives
+ * @see proto type: symphony.incentives.RewardsEstResponse
+ */
 export const RewardsEstResponse = {
   typeUrl: '/symphony.incentives.RewardsEstResponse',
   is(o: any): o is RewardsEstResponse {
@@ -2320,6 +2957,11 @@ GlobalDecoderRegistry.register(RewardsEstResponse.typeUrl, RewardsEstResponse);
 function createBaseQueryLockableDurationsRequest(): QueryLockableDurationsRequest {
   return {};
 }
+/**
+ * @name QueryLockableDurationsRequest
+ * @package symphony.incentives
+ * @see proto type: symphony.incentives.QueryLockableDurationsRequest
+ */
 export const QueryLockableDurationsRequest = {
   typeUrl: '/symphony.incentives.QueryLockableDurationsRequest',
   is(o: any): o is QueryLockableDurationsRequest {
@@ -2404,6 +3046,11 @@ function createBaseQueryLockableDurationsResponse(): QueryLockableDurationsRespo
     lockableDurations: [],
   };
 }
+/**
+ * @name QueryLockableDurationsResponse
+ * @package symphony.incentives
+ * @see proto type: symphony.incentives.QueryLockableDurationsResponse
+ */
 export const QueryLockableDurationsResponse = {
   typeUrl: '/symphony.incentives.QueryLockableDurationsResponse',
   is(o: any): o is QueryLockableDurationsResponse {
@@ -2522,6 +3169,11 @@ GlobalDecoderRegistry.register(
 function createBaseQueryAllGroupsRequest(): QueryAllGroupsRequest {
   return {};
 }
+/**
+ * @name QueryAllGroupsRequest
+ * @package symphony.incentives
+ * @see proto type: symphony.incentives.QueryAllGroupsRequest
+ */
 export const QueryAllGroupsRequest = {
   typeUrl: '/symphony.incentives.QueryAllGroupsRequest',
   is(o: any): o is QueryAllGroupsRequest {
@@ -2594,6 +3246,11 @@ function createBaseQueryAllGroupsResponse(): QueryAllGroupsResponse {
     groups: [],
   };
 }
+/**
+ * @name QueryAllGroupsResponse
+ * @package symphony.incentives
+ * @see proto type: symphony.incentives.QueryAllGroupsResponse
+ */
 export const QueryAllGroupsResponse = {
   typeUrl: '/symphony.incentives.QueryAllGroupsResponse',
   is(o: any): o is QueryAllGroupsResponse {
@@ -2694,6 +3351,11 @@ GlobalDecoderRegistry.register(
 function createBaseQueryAllGroupsGaugesRequest(): QueryAllGroupsGaugesRequest {
   return {};
 }
+/**
+ * @name QueryAllGroupsGaugesRequest
+ * @package symphony.incentives
+ * @see proto type: symphony.incentives.QueryAllGroupsGaugesRequest
+ */
 export const QueryAllGroupsGaugesRequest = {
   typeUrl: '/symphony.incentives.QueryAllGroupsGaugesRequest',
   is(o: any): o is QueryAllGroupsGaugesRequest {
@@ -2774,6 +3436,11 @@ function createBaseQueryAllGroupsGaugesResponse(): QueryAllGroupsGaugesResponse 
     gauges: [],
   };
 }
+/**
+ * @name QueryAllGroupsGaugesResponse
+ * @package symphony.incentives
+ * @see proto type: symphony.incentives.QueryAllGroupsGaugesResponse
+ */
 export const QueryAllGroupsGaugesResponse = {
   typeUrl: '/symphony.incentives.QueryAllGroupsGaugesResponse',
   is(o: any): o is QueryAllGroupsGaugesResponse {
@@ -2884,6 +3551,11 @@ GlobalDecoderRegistry.register(
 function createBaseQueryAllGroupsWithGaugeRequest(): QueryAllGroupsWithGaugeRequest {
   return {};
 }
+/**
+ * @name QueryAllGroupsWithGaugeRequest
+ * @package symphony.incentives
+ * @see proto type: symphony.incentives.QueryAllGroupsWithGaugeRequest
+ */
 export const QueryAllGroupsWithGaugeRequest = {
   typeUrl: '/symphony.incentives.QueryAllGroupsWithGaugeRequest',
   is(o: any): o is QueryAllGroupsWithGaugeRequest {
@@ -2968,6 +3640,11 @@ function createBaseQueryAllGroupsWithGaugeResponse(): QueryAllGroupsWithGaugeRes
     groupsWithGauge: [],
   };
 }
+/**
+ * @name QueryAllGroupsWithGaugeResponse
+ * @package symphony.incentives
+ * @see proto type: symphony.incentives.QueryAllGroupsWithGaugeResponse
+ */
 export const QueryAllGroupsWithGaugeResponse = {
   typeUrl: '/symphony.incentives.QueryAllGroupsWithGaugeResponse',
   is(o: any): o is QueryAllGroupsWithGaugeResponse {
@@ -3089,6 +3766,11 @@ function createBaseQueryGroupByGroupGaugeIDRequest(): QueryGroupByGroupGaugeIDRe
     id: BigInt(0),
   };
 }
+/**
+ * @name QueryGroupByGroupGaugeIDRequest
+ * @package symphony.incentives
+ * @see proto type: symphony.incentives.QueryGroupByGroupGaugeIDRequest
+ */
 export const QueryGroupByGroupGaugeIDRequest = {
   typeUrl: '/symphony.incentives.QueryGroupByGroupGaugeIDRequest',
   is(o: any): o is QueryGroupByGroupGaugeIDRequest {
@@ -3199,6 +3881,11 @@ function createBaseQueryGroupByGroupGaugeIDResponse(): QueryGroupByGroupGaugeIDR
     group: Group.fromPartial({}),
   };
 }
+/**
+ * @name QueryGroupByGroupGaugeIDResponse
+ * @package symphony.incentives
+ * @see proto type: symphony.incentives.QueryGroupByGroupGaugeIDResponse
+ */
 export const QueryGroupByGroupGaugeIDResponse = {
   typeUrl: '/symphony.incentives.QueryGroupByGroupGaugeIDResponse',
   is(o: any): o is QueryGroupByGroupGaugeIDResponse {
@@ -3309,6 +3996,11 @@ function createBaseQueryCurrentWeightByGroupGaugeIDRequest(): QueryCurrentWeight
     groupGaugeId: BigInt(0),
   };
 }
+/**
+ * @name QueryCurrentWeightByGroupGaugeIDRequest
+ * @package symphony.incentives
+ * @see proto type: symphony.incentives.QueryCurrentWeightByGroupGaugeIDRequest
+ */
 export const QueryCurrentWeightByGroupGaugeIDRequest = {
   typeUrl: '/symphony.incentives.QueryCurrentWeightByGroupGaugeIDRequest',
   is(o: any): o is QueryCurrentWeightByGroupGaugeIDRequest {
@@ -3422,6 +4114,11 @@ function createBaseQueryCurrentWeightByGroupGaugeIDResponse(): QueryCurrentWeigh
     gaugeWeight: [],
   };
 }
+/**
+ * @name QueryCurrentWeightByGroupGaugeIDResponse
+ * @package symphony.incentives
+ * @see proto type: symphony.incentives.QueryCurrentWeightByGroupGaugeIDResponse
+ */
 export const QueryCurrentWeightByGroupGaugeIDResponse = {
   typeUrl: '/symphony.incentives.QueryCurrentWeightByGroupGaugeIDResponse',
   is(o: any): o is QueryCurrentWeightByGroupGaugeIDResponse {
@@ -3539,6 +4236,11 @@ function createBaseGaugeWeight(): GaugeWeight {
     weightRatio: '',
   };
 }
+/**
+ * @name GaugeWeight
+ * @package symphony.incentives
+ * @see proto type: symphony.incentives.GaugeWeight
+ */
 export const GaugeWeight = {
   typeUrl: '/symphony.incentives.GaugeWeight',
   is(o: any): o is GaugeWeight {
@@ -3647,6 +4349,11 @@ GlobalDecoderRegistry.register(GaugeWeight.typeUrl, GaugeWeight);
 function createBaseParamsRequest(): ParamsRequest {
   return {};
 }
+/**
+ * @name ParamsRequest
+ * @package symphony.incentives
+ * @see proto type: symphony.incentives.ParamsRequest
+ */
 export const ParamsRequest = {
   typeUrl: '/symphony.incentives.ParamsRequest',
   is(o: any): o is ParamsRequest {
@@ -3713,6 +4420,11 @@ function createBaseParamsResponse(): ParamsResponse {
     params: Params.fromPartial({}),
   };
 }
+/**
+ * @name ParamsResponse
+ * @package symphony.incentives
+ * @see proto type: symphony.incentives.ParamsResponse
+ */
 export const ParamsResponse = {
   typeUrl: '/symphony.incentives.ParamsResponse',
   is(o: any): o is ParamsResponse {

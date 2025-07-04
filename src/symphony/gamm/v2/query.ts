@@ -1,65 +1,105 @@
 //@ts-nocheck
 import { BinaryReader, BinaryWriter } from '../../../binary';
 import { GlobalDecoderRegistry } from '../../../registry';
-/** Deprecated: please use alternate in x/poolmanager */
-/** @deprecated */
+/**
+ * Deprecated: please use alternate in x/poolmanager
+ * @name QuerySpotPriceRequest
+ * @package symphony.gamm.v2
+ * @see proto type: symphony.gamm.v2.QuerySpotPriceRequest
+ * @deprecated
+ */
 export interface QuerySpotPriceRequest {
   poolId: bigint;
   baseAssetDenom: string;
   quoteAssetDenom: string;
-  /** DEPRECATED */
-  /** @deprecated */
+  /**
+   * DEPRECATED
+   * @deprecated
+   */
   withSwapFee?: boolean;
 }
 export interface QuerySpotPriceRequestProtoMsg {
   typeUrl: '/symphony.gamm.v2.QuerySpotPriceRequest';
   value: Uint8Array;
 }
-/** Deprecated: please use alternate in x/poolmanager */
-/** @deprecated */
+/**
+ * Deprecated: please use alternate in x/poolmanager
+ * @name QuerySpotPriceRequestAmino
+ * @package symphony.gamm.v2
+ * @see proto type: symphony.gamm.v2.QuerySpotPriceRequest
+ * @deprecated
+ */
 export interface QuerySpotPriceRequestAmino {
   pool_id?: string;
   base_asset_denom?: string;
   quote_asset_denom?: string;
-  /** DEPRECATED */
-  /** @deprecated */
+  /**
+   * DEPRECATED
+   * @deprecated
+   */
   withSwapFee?: boolean;
 }
 export interface QuerySpotPriceRequestAminoMsg {
   type: '/symphony.gamm.v2.QuerySpotPriceRequest';
   value: QuerySpotPriceRequestAmino;
 }
-/** Deprecated: please use alternate in x/poolmanager */
-/** @deprecated */
+/**
+ * Deprecated: please use alternate in x/poolmanager
+ * @name QuerySpotPriceRequestSDKType
+ * @package symphony.gamm.v2
+ * @see proto type: symphony.gamm.v2.QuerySpotPriceRequest
+ * @deprecated
+ */
 export interface QuerySpotPriceRequestSDKType {
   pool_id: bigint;
   base_asset_denom: string;
   quote_asset_denom: string;
-  /** @deprecated */
+  /**
+   * @deprecated
+   */
   withSwapFee?: boolean;
 }
-/** Deprecated: please use alternate in x/poolmanager */
-/** @deprecated */
+/**
+ * Deprecated: please use alternate in x/poolmanager
+ * @name QuerySpotPriceResponse
+ * @package symphony.gamm.v2
+ * @see proto type: symphony.gamm.v2.QuerySpotPriceResponse
+ * @deprecated
+ */
 export interface QuerySpotPriceResponse {
-  /** String of the Dec. Ex) 10.203uatom */
+  /**
+   * String of the Dec. Ex) 10.203uatom
+   */
   spotPrice: string;
 }
 export interface QuerySpotPriceResponseProtoMsg {
   typeUrl: '/symphony.gamm.v2.QuerySpotPriceResponse';
   value: Uint8Array;
 }
-/** Deprecated: please use alternate in x/poolmanager */
-/** @deprecated */
+/**
+ * Deprecated: please use alternate in x/poolmanager
+ * @name QuerySpotPriceResponseAmino
+ * @package symphony.gamm.v2
+ * @see proto type: symphony.gamm.v2.QuerySpotPriceResponse
+ * @deprecated
+ */
 export interface QuerySpotPriceResponseAmino {
-  /** String of the Dec. Ex) 10.203uatom */
+  /**
+   * String of the Dec. Ex) 10.203uatom
+   */
   spot_price?: string;
 }
 export interface QuerySpotPriceResponseAminoMsg {
   type: '/symphony.gamm.v2.QuerySpotPriceResponse';
   value: QuerySpotPriceResponseAmino;
 }
-/** Deprecated: please use alternate in x/poolmanager */
-/** @deprecated */
+/**
+ * Deprecated: please use alternate in x/poolmanager
+ * @name QuerySpotPriceResponseSDKType
+ * @package symphony.gamm.v2
+ * @see proto type: symphony.gamm.v2.QuerySpotPriceResponse
+ * @deprecated
+ */
 export interface QuerySpotPriceResponseSDKType {
   spot_price: string;
 }
@@ -71,6 +111,13 @@ function createBaseQuerySpotPriceRequest(): QuerySpotPriceRequest {
     withSwapFee: undefined,
   };
 }
+/**
+ * Deprecated: please use alternate in x/poolmanager
+ * @name QuerySpotPriceRequest
+ * @package symphony.gamm.v2
+ * @see proto type: symphony.gamm.v2.QuerySpotPriceRequest
+ * @deprecated
+ */
 export const QuerySpotPriceRequest = {
   typeUrl: '/symphony.gamm.v2.QuerySpotPriceRequest',
   is(o: any): o is QuerySpotPriceRequest {
@@ -218,6 +265,13 @@ function createBaseQuerySpotPriceResponse(): QuerySpotPriceResponse {
     spotPrice: '',
   };
 }
+/**
+ * Deprecated: please use alternate in x/poolmanager
+ * @name QuerySpotPriceResponse
+ * @package symphony.gamm.v2
+ * @see proto type: symphony.gamm.v2.QuerySpotPriceResponse
+ * @deprecated
+ */
 export const QuerySpotPriceResponse = {
   typeUrl: '/symphony.gamm.v2.QuerySpotPriceResponse',
   is(o: any): o is QuerySpotPriceResponse {

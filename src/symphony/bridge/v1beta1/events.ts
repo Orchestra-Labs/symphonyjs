@@ -9,74 +9,141 @@ import {
 } from './bridge';
 import { BinaryReader, BinaryWriter } from '../../../binary';
 import { GlobalDecoderRegistry } from '../../../registry';
+/**
+ * @name EventInboundTransfer
+ * @package symphony.bridge.v1beta1
+ * @see proto type: symphony.bridge.v1beta1.EventInboundTransfer
+ */
 export interface EventInboundTransfer {
-  /** Sender is a sender's address */
+  /**
+   * Sender is a sender's address
+   */
   sender: string;
-  /** DestAddr is a destination Osmosis address */
+  /**
+   * DestAddr is a destination Osmosis address
+   */
   destAddr: string;
-  /** Asset contains a source chain and a target denom */
+  /**
+   * Asset contains a source chain and a target denom
+   */
   asset: Asset;
-  /** Amount of coins to transfer */
+  /**
+   * Amount of coins to transfer
+   */
   amount: string;
 }
 export interface EventInboundTransferProtoMsg {
   typeUrl: '/symphony.bridge.v1beta1.EventInboundTransfer';
   value: Uint8Array;
 }
+/**
+ * @name EventInboundTransferAmino
+ * @package symphony.bridge.v1beta1
+ * @see proto type: symphony.bridge.v1beta1.EventInboundTransfer
+ */
 export interface EventInboundTransferAmino {
-  /** Sender is a sender's address */
+  /**
+   * Sender is a sender's address
+   */
   sender?: string;
-  /** DestAddr is a destination Osmosis address */
+  /**
+   * DestAddr is a destination Osmosis address
+   */
   dest_addr?: string;
-  /** Asset contains a source chain and a target denom */
+  /**
+   * Asset contains a source chain and a target denom
+   */
   asset?: AssetAmino;
-  /** Amount of coins to transfer */
+  /**
+   * Amount of coins to transfer
+   */
   amount?: string;
 }
 export interface EventInboundTransferAminoMsg {
   type: '/symphony.bridge.v1beta1.EventInboundTransfer';
   value: EventInboundTransferAmino;
 }
+/**
+ * @name EventInboundTransferSDKType
+ * @package symphony.bridge.v1beta1
+ * @see proto type: symphony.bridge.v1beta1.EventInboundTransfer
+ */
 export interface EventInboundTransferSDKType {
   sender: string;
   dest_addr: string;
   asset: AssetSDKType;
   amount: string;
 }
+/**
+ * @name EventOutboundTransfer
+ * @package symphony.bridge.v1beta1
+ * @see proto type: symphony.bridge.v1beta1.EventOutboundTransfer
+ */
 export interface EventOutboundTransfer {
-  /** Sender is a sender's address */
+  /**
+   * Sender is a sender's address
+   */
   sender: string;
-  /** DestAddr is a destination Osmosis address */
+  /**
+   * DestAddr is a destination Osmosis address
+   */
   destAddr: string;
-  /** Asset contains a source chain and a target denom */
+  /**
+   * Asset contains a source chain and a target denom
+   */
   asset: Asset;
-  /** Amount of coins to transfer */
+  /**
+   * Amount of coins to transfer
+   */
   amount: string;
 }
 export interface EventOutboundTransferProtoMsg {
   typeUrl: '/symphony.bridge.v1beta1.EventOutboundTransfer';
   value: Uint8Array;
 }
+/**
+ * @name EventOutboundTransferAmino
+ * @package symphony.bridge.v1beta1
+ * @see proto type: symphony.bridge.v1beta1.EventOutboundTransfer
+ */
 export interface EventOutboundTransferAmino {
-  /** Sender is a sender's address */
+  /**
+   * Sender is a sender's address
+   */
   sender?: string;
-  /** DestAddr is a destination Osmosis address */
+  /**
+   * DestAddr is a destination Osmosis address
+   */
   dest_addr?: string;
-  /** Asset contains a source chain and a target denom */
+  /**
+   * Asset contains a source chain and a target denom
+   */
   asset?: AssetAmino;
-  /** Amount of coins to transfer */
+  /**
+   * Amount of coins to transfer
+   */
   amount?: string;
 }
 export interface EventOutboundTransferAminoMsg {
   type: '/symphony.bridge.v1beta1.EventOutboundTransfer';
   value: EventOutboundTransferAmino;
 }
+/**
+ * @name EventOutboundTransferSDKType
+ * @package symphony.bridge.v1beta1
+ * @see proto type: symphony.bridge.v1beta1.EventOutboundTransfer
+ */
 export interface EventOutboundTransferSDKType {
   sender: string;
   dest_addr: string;
   asset: AssetSDKType;
   amount: string;
 }
+/**
+ * @name EventUpdateParams
+ * @package symphony.bridge.v1beta1
+ * @see proto type: symphony.bridge.v1beta1.EventUpdateParams
+ */
 export interface EventUpdateParams {
   newSigners: string[];
   createdSigners: string[];
@@ -89,6 +156,11 @@ export interface EventUpdateParamsProtoMsg {
   typeUrl: '/symphony.bridge.v1beta1.EventUpdateParams';
   value: Uint8Array;
 }
+/**
+ * @name EventUpdateParamsAmino
+ * @package symphony.bridge.v1beta1
+ * @see proto type: symphony.bridge.v1beta1.EventUpdateParams
+ */
 export interface EventUpdateParamsAmino {
   new_signers?: string[];
   created_signers?: string[];
@@ -101,6 +173,11 @@ export interface EventUpdateParamsAminoMsg {
   type: '/symphony.bridge.v1beta1.EventUpdateParams';
   value: EventUpdateParamsAmino;
 }
+/**
+ * @name EventUpdateParamsSDKType
+ * @package symphony.bridge.v1beta1
+ * @see proto type: symphony.bridge.v1beta1.EventUpdateParams
+ */
 export interface EventUpdateParamsSDKType {
   new_signers: string[];
   created_signers: string[];
@@ -109,10 +186,19 @@ export interface EventUpdateParamsSDKType {
   created_assets: AssetWithStatusSDKType[];
   deleted_assets: AssetWithStatusSDKType[];
 }
+/**
+ * @name EventChangeAssetStatus
+ * @package symphony.bridge.v1beta1
+ * @see proto type: symphony.bridge.v1beta1.EventChangeAssetStatus
+ */
 export interface EventChangeAssetStatus {
-  /** Sender is a sender's address */
+  /**
+   * Sender is a sender's address
+   */
   sender: string;
-  /** NewAssetStatus is a pair of the asset and its new status */
+  /**
+   * NewAssetStatus is a pair of the asset and its new status
+   */
   oldAssetStatus: AssetWithStatus;
   newAssetStatus: AssetWithStatus;
 }
@@ -120,10 +206,19 @@ export interface EventChangeAssetStatusProtoMsg {
   typeUrl: '/symphony.bridge.v1beta1.EventChangeAssetStatus';
   value: Uint8Array;
 }
+/**
+ * @name EventChangeAssetStatusAmino
+ * @package symphony.bridge.v1beta1
+ * @see proto type: symphony.bridge.v1beta1.EventChangeAssetStatus
+ */
 export interface EventChangeAssetStatusAmino {
-  /** Sender is a sender's address */
+  /**
+   * Sender is a sender's address
+   */
   sender?: string;
-  /** NewAssetStatus is a pair of the asset and its new status */
+  /**
+   * NewAssetStatus is a pair of the asset and its new status
+   */
   old_asset_status?: AssetWithStatusAmino;
   new_asset_status?: AssetWithStatusAmino;
 }
@@ -131,6 +226,11 @@ export interface EventChangeAssetStatusAminoMsg {
   type: '/symphony.bridge.v1beta1.EventChangeAssetStatus';
   value: EventChangeAssetStatusAmino;
 }
+/**
+ * @name EventChangeAssetStatusSDKType
+ * @package symphony.bridge.v1beta1
+ * @see proto type: symphony.bridge.v1beta1.EventChangeAssetStatus
+ */
 export interface EventChangeAssetStatusSDKType {
   sender: string;
   old_asset_status: AssetWithStatusSDKType;
@@ -144,6 +244,11 @@ function createBaseEventInboundTransfer(): EventInboundTransfer {
     amount: '',
   };
 }
+/**
+ * @name EventInboundTransfer
+ * @package symphony.bridge.v1beta1
+ * @see proto type: symphony.bridge.v1beta1.EventInboundTransfer
+ */
 export const EventInboundTransfer = {
   typeUrl: '/symphony.bridge.v1beta1.EventInboundTransfer',
   is(o: any): o is EventInboundTransfer {
@@ -287,6 +392,11 @@ function createBaseEventOutboundTransfer(): EventOutboundTransfer {
     amount: '',
   };
 }
+/**
+ * @name EventOutboundTransfer
+ * @package symphony.bridge.v1beta1
+ * @see proto type: symphony.bridge.v1beta1.EventOutboundTransfer
+ */
 export const EventOutboundTransfer = {
   typeUrl: '/symphony.bridge.v1beta1.EventOutboundTransfer',
   is(o: any): o is EventOutboundTransfer {
@@ -432,6 +542,11 @@ function createBaseEventUpdateParams(): EventUpdateParams {
     deletedAssets: [],
   };
 }
+/**
+ * @name EventUpdateParams
+ * @package symphony.bridge.v1beta1
+ * @see proto type: symphony.bridge.v1beta1.EventUpdateParams
+ */
 export const EventUpdateParams = {
   typeUrl: '/symphony.bridge.v1beta1.EventUpdateParams',
   is(o: any): o is EventUpdateParams {
@@ -651,6 +766,11 @@ function createBaseEventChangeAssetStatus(): EventChangeAssetStatus {
     newAssetStatus: AssetWithStatus.fromPartial({}),
   };
 }
+/**
+ * @name EventChangeAssetStatus
+ * @package symphony.bridge.v1beta1
+ * @see proto type: symphony.bridge.v1beta1.EventChangeAssetStatus
+ */
 export const EventChangeAssetStatus = {
   typeUrl: '/symphony.bridge.v1beta1.EventChangeAssetStatus',
   is(o: any): o is EventChangeAssetStatus {

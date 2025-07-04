@@ -7,6 +7,11 @@ import {
 import { BinaryReader, BinaryWriter } from '../../binary';
 import { Decimal } from '@cosmjs/math';
 import { GlobalDecoderRegistry } from '../../registry';
+/**
+ * @name Params
+ * @package symphony.concentratedliquidity
+ * @see proto type: symphony.concentratedliquidity.Params
+ */
 export interface Params {
   /**
    * authorized_tick_spacing is an array of uint64s that represents the tick
@@ -34,8 +39,8 @@ export interface Params {
    * will be a desirable property in terms of UX as to allow users to set limit
    * orders at prices in terms of token1 (quote asset) that are easy to reason
    * about.
+   * @deprecated
    */
-  /** @deprecated */
   authorizedQuoteDenoms?: string[];
   authorizedUptimes: Duration[];
   /**
@@ -59,6 +64,11 @@ export interface ParamsProtoMsg {
   typeUrl: '/symphony.concentratedliquidity.Params';
   value: Uint8Array;
 }
+/**
+ * @name ParamsAmino
+ * @package symphony.concentratedliquidity
+ * @see proto type: symphony.concentratedliquidity.Params
+ */
 export interface ParamsAmino {
   /**
    * authorized_tick_spacing is an array of uint64s that represents the tick
@@ -86,8 +96,8 @@ export interface ParamsAmino {
    * will be a desirable property in terms of UX as to allow users to set limit
    * orders at prices in terms of token1 (quote asset) that are easy to reason
    * about.
+   * @deprecated
    */
-  /** @deprecated */
   authorized_quote_denoms?: string[];
   authorized_uptimes?: DurationAmino[];
   /**
@@ -111,11 +121,18 @@ export interface ParamsAminoMsg {
   type: '/symphony.concentratedliquidity.Params';
   value: ParamsAmino;
 }
+/**
+ * @name ParamsSDKType
+ * @package symphony.concentratedliquidity
+ * @see proto type: symphony.concentratedliquidity.Params
+ */
 export interface ParamsSDKType {
   authorized_tick_spacing: bigint[];
   authorized_spread_factors: string[];
   balancer_shares_reward_discount: string;
-  /** @deprecated */
+  /**
+   * @deprecated
+   */
   authorized_quote_denoms?: string[];
   authorized_uptimes: DurationSDKType[];
   is_permissionless_pool_creation_enabled: boolean;
@@ -134,6 +151,11 @@ function createBaseParams(): Params {
     hookGasLimit: BigInt(0),
   };
 }
+/**
+ * @name Params
+ * @package symphony.concentratedliquidity
+ * @see proto type: symphony.concentratedliquidity.Params
+ */
 export const Params = {
   typeUrl: '/symphony.concentratedliquidity.Params',
   is(o: any): o is Params {

@@ -7,6 +7,9 @@ import { GlobalDecoderRegistry } from '../../../registry';
  *
  * This is copied over from the gamm proto file in order to circumnavigate
  * the circular dependency between the two modules.
+ * @name MigrationRecords
+ * @package symphony.poolincentives.v1beta1
+ * @see proto type: symphony.poolincentives.v1beta1.MigrationRecords
  */
 export interface MigrationRecords {
   balancerToConcentratedPoolLinks: BalancerToConcentratedPoolLink[];
@@ -21,6 +24,9 @@ export interface MigrationRecordsProtoMsg {
  *
  * This is copied over from the gamm proto file in order to circumnavigate
  * the circular dependency between the two modules.
+ * @name MigrationRecordsAmino
+ * @package symphony.poolincentives.v1beta1
+ * @see proto type: symphony.poolincentives.v1beta1.MigrationRecords
  */
 export interface MigrationRecordsAmino {
   balancer_to_concentrated_pool_links?: BalancerToConcentratedPoolLinkAmino[];
@@ -35,6 +41,9 @@ export interface MigrationRecordsAminoMsg {
  *
  * This is copied over from the gamm proto file in order to circumnavigate
  * the circular dependency between the two modules.
+ * @name MigrationRecordsSDKType
+ * @package symphony.poolincentives.v1beta1
+ * @see proto type: symphony.poolincentives.v1beta1.MigrationRecords
  */
 export interface MigrationRecordsSDKType {
   balancer_to_concentrated_pool_links: BalancerToConcentratedPoolLinkSDKType[];
@@ -49,6 +58,9 @@ export interface MigrationRecordsSDKType {
  *
  * This is copied over from the gamm proto file in order to circumnavigate
  * the circular dependency between the two modules.
+ * @name BalancerToConcentratedPoolLink
+ * @package symphony.poolincentives.v1beta1
+ * @see proto type: symphony.poolincentives.v1beta1.BalancerToConcentratedPoolLink
  */
 export interface BalancerToConcentratedPoolLink {
   balancerPoolId: bigint;
@@ -68,6 +80,9 @@ export interface BalancerToConcentratedPoolLinkProtoMsg {
  *
  * This is copied over from the gamm proto file in order to circumnavigate
  * the circular dependency between the two modules.
+ * @name BalancerToConcentratedPoolLinkAmino
+ * @package symphony.poolincentives.v1beta1
+ * @see proto type: symphony.poolincentives.v1beta1.BalancerToConcentratedPoolLink
  */
 export interface BalancerToConcentratedPoolLinkAmino {
   balancer_pool_id?: string;
@@ -87,6 +102,9 @@ export interface BalancerToConcentratedPoolLinkAminoMsg {
  *
  * This is copied over from the gamm proto file in order to circumnavigate
  * the circular dependency between the two modules.
+ * @name BalancerToConcentratedPoolLinkSDKType
+ * @package symphony.poolincentives.v1beta1
+ * @see proto type: symphony.poolincentives.v1beta1.BalancerToConcentratedPoolLink
  */
 export interface BalancerToConcentratedPoolLinkSDKType {
   balancer_pool_id: bigint;
@@ -97,6 +115,16 @@ function createBaseMigrationRecords(): MigrationRecords {
     balancerToConcentratedPoolLinks: [],
   };
 }
+/**
+ * MigrationRecords contains all the links between balancer and concentrated
+ * pools.
+ *
+ * This is copied over from the gamm proto file in order to circumnavigate
+ * the circular dependency between the two modules.
+ * @name MigrationRecords
+ * @package symphony.poolincentives.v1beta1
+ * @see proto type: symphony.poolincentives.v1beta1.MigrationRecords
+ */
 export const MigrationRecords = {
   typeUrl: '/symphony.poolincentives.v1beta1.MigrationRecords',
   is(o: any): o is MigrationRecords {
@@ -216,6 +244,20 @@ function createBaseBalancerToConcentratedPoolLink(): BalancerToConcentratedPoolL
     clPoolId: BigInt(0),
   };
 }
+/**
+ * BalancerToConcentratedPoolLink defines a single link between a single
+ * balancer pool and a single concentrated liquidity pool. This link is used to
+ * allow a balancer pool to migrate to a single canonical full range
+ * concentrated liquidity pool position
+ * A balancer pool can be linked to a maximum of one cl pool, and a cl pool can
+ * be linked to a maximum of one balancer pool.
+ *
+ * This is copied over from the gamm proto file in order to circumnavigate
+ * the circular dependency between the two modules.
+ * @name BalancerToConcentratedPoolLink
+ * @package symphony.poolincentives.v1beta1
+ * @see proto type: symphony.poolincentives.v1beta1.BalancerToConcentratedPoolLink
+ */
 export const BalancerToConcentratedPoolLink = {
   typeUrl: '/symphony.poolincentives.v1beta1.BalancerToConcentratedPoolLink',
   is(o: any): o is BalancerToConcentratedPoolLink {

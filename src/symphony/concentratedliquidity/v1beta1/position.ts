@@ -17,6 +17,9 @@ import { GlobalDecoderRegistry } from '../../../registry';
 /**
  * Position contains position's id, address, pool id, lower tick, upper tick
  * join time, and liquidity.
+ * @name Position
+ * @package symphony.concentratedliquidity.v1beta1
+ * @see proto type: symphony.concentratedliquidity.v1beta1.Position
  */
 export interface Position {
   positionId: bigint;
@@ -34,6 +37,9 @@ export interface PositionProtoMsg {
 /**
  * Position contains position's id, address, pool id, lower tick, upper tick
  * join time, and liquidity.
+ * @name PositionAmino
+ * @package symphony.concentratedliquidity.v1beta1
+ * @see proto type: symphony.concentratedliquidity.v1beta1.Position
  */
 export interface PositionAmino {
   position_id?: string;
@@ -51,6 +57,9 @@ export interface PositionAminoMsg {
 /**
  * Position contains position's id, address, pool id, lower tick, upper tick
  * join time, and liquidity.
+ * @name PositionSDKType
+ * @package symphony.concentratedliquidity.v1beta1
+ * @see proto type: symphony.concentratedliquidity.v1beta1.Position
  */
 export interface PositionSDKType {
   position_id: bigint;
@@ -69,6 +78,9 @@ export interface PositionSDKType {
  * - the amount of claimable incentives
  * - the amount of incentives that would be forfeited if the position was closed
  * now
+ * @name FullPositionBreakdown
+ * @package symphony.concentratedliquidity.v1beta1
+ * @see proto type: symphony.concentratedliquidity.v1beta1.FullPositionBreakdown
  */
 export interface FullPositionBreakdown {
   position: Position;
@@ -90,6 +102,9 @@ export interface FullPositionBreakdownProtoMsg {
  * - the amount of claimable incentives
  * - the amount of incentives that would be forfeited if the position was closed
  * now
+ * @name FullPositionBreakdownAmino
+ * @package symphony.concentratedliquidity.v1beta1
+ * @see proto type: symphony.concentratedliquidity.v1beta1.FullPositionBreakdown
  */
 export interface FullPositionBreakdownAmino {
   position?: PositionAmino;
@@ -111,6 +126,9 @@ export interface FullPositionBreakdownAminoMsg {
  * - the amount of claimable incentives
  * - the amount of incentives that would be forfeited if the position was closed
  * now
+ * @name FullPositionBreakdownSDKType
+ * @package symphony.concentratedliquidity.v1beta1
+ * @see proto type: symphony.concentratedliquidity.v1beta1.FullPositionBreakdown
  */
 export interface FullPositionBreakdownSDKType {
   position: PositionSDKType;
@@ -120,6 +138,11 @@ export interface FullPositionBreakdownSDKType {
   claimable_incentives: CoinSDKType[];
   forfeited_incentives: CoinSDKType[];
 }
+/**
+ * @name PositionWithPeriodLock
+ * @package symphony.concentratedliquidity.v1beta1
+ * @see proto type: symphony.concentratedliquidity.v1beta1.PositionWithPeriodLock
+ */
 export interface PositionWithPeriodLock {
   position: Position;
   locks: PeriodLock;
@@ -128,6 +151,11 @@ export interface PositionWithPeriodLockProtoMsg {
   typeUrl: '/symphony.concentratedliquidity.v1beta1.PositionWithPeriodLock';
   value: Uint8Array;
 }
+/**
+ * @name PositionWithPeriodLockAmino
+ * @package symphony.concentratedliquidity.v1beta1
+ * @see proto type: symphony.concentratedliquidity.v1beta1.PositionWithPeriodLock
+ */
 export interface PositionWithPeriodLockAmino {
   position?: PositionAmino;
   locks?: PeriodLockAmino;
@@ -136,6 +164,11 @@ export interface PositionWithPeriodLockAminoMsg {
   type: '/symphony.concentratedliquidity.v1beta1.PositionWithPeriodLock';
   value: PositionWithPeriodLockAmino;
 }
+/**
+ * @name PositionWithPeriodLockSDKType
+ * @package symphony.concentratedliquidity.v1beta1
+ * @see proto type: symphony.concentratedliquidity.v1beta1.PositionWithPeriodLock
+ */
 export interface PositionWithPeriodLockSDKType {
   position: PositionSDKType;
   locks: PeriodLockSDKType;
@@ -151,6 +184,13 @@ function createBasePosition(): Position {
     liquidity: '',
   };
 }
+/**
+ * Position contains position's id, address, pool id, lower tick, upper tick
+ * join time, and liquidity.
+ * @name Position
+ * @package symphony.concentratedliquidity.v1beta1
+ * @see proto type: symphony.concentratedliquidity.v1beta1.Position
+ */
 export const Position = {
   typeUrl: '/symphony.concentratedliquidity.v1beta1.Position',
   is(o: any): o is Position {
@@ -363,6 +403,18 @@ function createBaseFullPositionBreakdown(): FullPositionBreakdown {
     forfeitedIncentives: [],
   };
 }
+/**
+ * FullPositionBreakdown returns:
+ * - the position itself
+ * - the amount the position translates in terms of asset0 and asset1
+ * - the amount of claimable fees
+ * - the amount of claimable incentives
+ * - the amount of incentives that would be forfeited if the position was closed
+ * now
+ * @name FullPositionBreakdown
+ * @package symphony.concentratedliquidity.v1beta1
+ * @see proto type: symphony.concentratedliquidity.v1beta1.FullPositionBreakdown
+ */
 export const FullPositionBreakdown = {
   typeUrl: '/symphony.concentratedliquidity.v1beta1.FullPositionBreakdown',
   is(o: any): o is FullPositionBreakdown {
@@ -581,6 +633,11 @@ function createBasePositionWithPeriodLock(): PositionWithPeriodLock {
     locks: PeriodLock.fromPartial({}),
   };
 }
+/**
+ * @name PositionWithPeriodLock
+ * @package symphony.concentratedliquidity.v1beta1
+ * @see proto type: symphony.concentratedliquidity.v1beta1.PositionWithPeriodLock
+ */
 export const PositionWithPeriodLock = {
   typeUrl: '/symphony.concentratedliquidity.v1beta1.PositionWithPeriodLock',
   is(o: any): o is PositionWithPeriodLock {

@@ -6,9 +6,14 @@ import { GlobalDecoderRegistry } from '../../../registry';
  * AccountAuthenticator represents a foundational model for all authenticators.
  * It provides extensibility by allowing concrete types to interpret and
  * validate transactions based on the encapsulated data.
+ * @name AccountAuthenticator
+ * @package symphony.smartaccount.v1beta1
+ * @see proto type: symphony.smartaccount.v1beta1.AccountAuthenticator
  */
 export interface AccountAuthenticator {
-  /** ID uniquely identifies the authenticator instance. */
+  /**
+   * ID uniquely identifies the authenticator instance.
+   */
   id: bigint;
   /**
    * Type specifies the category of the AccountAuthenticator.
@@ -32,9 +37,14 @@ export interface AccountAuthenticatorProtoMsg {
  * AccountAuthenticator represents a foundational model for all authenticators.
  * It provides extensibility by allowing concrete types to interpret and
  * validate transactions based on the encapsulated data.
+ * @name AccountAuthenticatorAmino
+ * @package symphony.smartaccount.v1beta1
+ * @see proto type: symphony.smartaccount.v1beta1.AccountAuthenticator
  */
 export interface AccountAuthenticatorAmino {
-  /** ID uniquely identifies the authenticator instance. */
+  /**
+   * ID uniquely identifies the authenticator instance.
+   */
   id?: string;
   /**
    * Type specifies the category of the AccountAuthenticator.
@@ -58,6 +68,9 @@ export interface AccountAuthenticatorAminoMsg {
  * AccountAuthenticator represents a foundational model for all authenticators.
  * It provides extensibility by allowing concrete types to interpret and
  * validate transactions based on the encapsulated data.
+ * @name AccountAuthenticatorSDKType
+ * @package symphony.smartaccount.v1beta1
+ * @see proto type: symphony.smartaccount.v1beta1.AccountAuthenticator
  */
 export interface AccountAuthenticatorSDKType {
   id: bigint;
@@ -71,6 +84,14 @@ function createBaseAccountAuthenticator(): AccountAuthenticator {
     config: new Uint8Array(),
   };
 }
+/**
+ * AccountAuthenticator represents a foundational model for all authenticators.
+ * It provides extensibility by allowing concrete types to interpret and
+ * validate transactions based on the encapsulated data.
+ * @name AccountAuthenticator
+ * @package symphony.smartaccount.v1beta1
+ * @see proto type: symphony.smartaccount.v1beta1.AccountAuthenticator
+ */
 export const AccountAuthenticator = {
   typeUrl: '/symphony.smartaccount.v1beta1.AccountAuthenticator',
   is(o: any): o is AccountAuthenticator {

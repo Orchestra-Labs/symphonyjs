@@ -6,6 +6,9 @@ import { Decimal } from '@cosmjs/math';
  * CreateConcentratedLiquidityPoolsProposal is a gov Content type for creating
  * concentrated liquidity pools. If a CreateConcentratedLiquidityPoolsProposal
  * passes, the pools are created via pool manager module account.
+ * @name CreateConcentratedLiquidityPoolsProposal
+ * @package symphony.concentratedliquidity.v1beta1
+ * @see proto type: symphony.concentratedliquidity.v1beta1.CreateConcentratedLiquidityPoolsProposal
  */
 export interface CreateConcentratedLiquidityPoolsProposal {
   title: string;
@@ -20,6 +23,9 @@ export interface CreateConcentratedLiquidityPoolsProposalProtoMsg {
  * CreateConcentratedLiquidityPoolsProposal is a gov Content type for creating
  * concentrated liquidity pools. If a CreateConcentratedLiquidityPoolsProposal
  * passes, the pools are created via pool manager module account.
+ * @name CreateConcentratedLiquidityPoolsProposalAmino
+ * @package symphony.concentratedliquidity.v1beta1
+ * @see proto type: symphony.concentratedliquidity.v1beta1.CreateConcentratedLiquidityPoolsProposal
  */
 export interface CreateConcentratedLiquidityPoolsProposalAmino {
   title?: string;
@@ -34,6 +40,9 @@ export interface CreateConcentratedLiquidityPoolsProposalAminoMsg {
  * CreateConcentratedLiquidityPoolsProposal is a gov Content type for creating
  * concentrated liquidity pools. If a CreateConcentratedLiquidityPoolsProposal
  * passes, the pools are created via pool manager module account.
+ * @name CreateConcentratedLiquidityPoolsProposalSDKType
+ * @package symphony.concentratedliquidity.v1beta1
+ * @see proto type: symphony.concentratedliquidity.v1beta1.CreateConcentratedLiquidityPoolsProposal
  */
 export interface CreateConcentratedLiquidityPoolsProposalSDKType {
   title: string;
@@ -45,6 +54,9 @@ export interface CreateConcentratedLiquidityPoolsProposalSDKType {
  * spacing decrease for a pool. The proposal will fail if one of the pools do
  * not exist, or if the new tick spacing is not less than the current tick
  * spacing.
+ * @name TickSpacingDecreaseProposal
+ * @package symphony.concentratedliquidity.v1beta1
+ * @see proto type: symphony.concentratedliquidity.v1beta1.TickSpacingDecreaseProposal
  */
 export interface TickSpacingDecreaseProposal {
   title: string;
@@ -60,6 +72,9 @@ export interface TickSpacingDecreaseProposalProtoMsg {
  * spacing decrease for a pool. The proposal will fail if one of the pools do
  * not exist, or if the new tick spacing is not less than the current tick
  * spacing.
+ * @name TickSpacingDecreaseProposalAmino
+ * @package symphony.concentratedliquidity.v1beta1
+ * @see proto type: symphony.concentratedliquidity.v1beta1.TickSpacingDecreaseProposal
  */
 export interface TickSpacingDecreaseProposalAmino {
   title?: string;
@@ -75,6 +90,9 @@ export interface TickSpacingDecreaseProposalAminoMsg {
  * spacing decrease for a pool. The proposal will fail if one of the pools do
  * not exist, or if the new tick spacing is not less than the current tick
  * spacing.
+ * @name TickSpacingDecreaseProposalSDKType
+ * @package symphony.concentratedliquidity.v1beta1
+ * @see proto type: symphony.concentratedliquidity.v1beta1.TickSpacingDecreaseProposal
  */
 export interface TickSpacingDecreaseProposalSDKType {
   title: string;
@@ -84,6 +102,9 @@ export interface TickSpacingDecreaseProposalSDKType {
 /**
  * PoolIdToTickSpacingRecord is a struct that contains a pool id to new tick
  * spacing pair.
+ * @name PoolIdToTickSpacingRecord
+ * @package symphony.concentratedliquidity.v1beta1
+ * @see proto type: symphony.concentratedliquidity.v1beta1.PoolIdToTickSpacingRecord
  */
 export interface PoolIdToTickSpacingRecord {
   poolId: bigint;
@@ -96,6 +117,9 @@ export interface PoolIdToTickSpacingRecordProtoMsg {
 /**
  * PoolIdToTickSpacingRecord is a struct that contains a pool id to new tick
  * spacing pair.
+ * @name PoolIdToTickSpacingRecordAmino
+ * @package symphony.concentratedliquidity.v1beta1
+ * @see proto type: symphony.concentratedliquidity.v1beta1.PoolIdToTickSpacingRecord
  */
 export interface PoolIdToTickSpacingRecordAmino {
   pool_id?: string;
@@ -108,17 +132,27 @@ export interface PoolIdToTickSpacingRecordAminoMsg {
 /**
  * PoolIdToTickSpacingRecord is a struct that contains a pool id to new tick
  * spacing pair.
+ * @name PoolIdToTickSpacingRecordSDKType
+ * @package symphony.concentratedliquidity.v1beta1
+ * @see proto type: symphony.concentratedliquidity.v1beta1.PoolIdToTickSpacingRecord
  */
 export interface PoolIdToTickSpacingRecordSDKType {
   pool_id: bigint;
   new_tick_spacing: bigint;
 }
+/**
+ * @name PoolRecord
+ * @package symphony.concentratedliquidity.v1beta1
+ * @see proto type: symphony.concentratedliquidity.v1beta1.PoolRecord
+ */
 export interface PoolRecord {
   denom0: string;
   denom1: string;
   tickSpacing: bigint;
-  /** DEPRECATED */
-  /** @deprecated */
+  /**
+   * DEPRECATED
+   * @deprecated
+   */
   exponentAtPriceOne?: string;
   spreadFactor: string;
 }
@@ -126,12 +160,19 @@ export interface PoolRecordProtoMsg {
   typeUrl: '/symphony.concentratedliquidity.v1beta1.PoolRecord';
   value: Uint8Array;
 }
+/**
+ * @name PoolRecordAmino
+ * @package symphony.concentratedliquidity.v1beta1
+ * @see proto type: symphony.concentratedliquidity.v1beta1.PoolRecord
+ */
 export interface PoolRecordAmino {
   denom0?: string;
   denom1?: string;
   tick_spacing?: string;
-  /** DEPRECATED */
-  /** @deprecated */
+  /**
+   * DEPRECATED
+   * @deprecated
+   */
   exponent_at_price_one?: string;
   spread_factor?: string;
 }
@@ -139,11 +180,18 @@ export interface PoolRecordAminoMsg {
   type: '/symphony.concentratedliquidity.v1beta1.PoolRecord';
   value: PoolRecordAmino;
 }
+/**
+ * @name PoolRecordSDKType
+ * @package symphony.concentratedliquidity.v1beta1
+ * @see proto type: symphony.concentratedliquidity.v1beta1.PoolRecord
+ */
 export interface PoolRecordSDKType {
   denom0: string;
   denom1: string;
   tick_spacing: bigint;
-  /** @deprecated */
+  /**
+   * @deprecated
+   */
   exponent_at_price_one?: string;
   spread_factor: string;
 }
@@ -154,6 +202,14 @@ function createBaseCreateConcentratedLiquidityPoolsProposal(): CreateConcentrate
     poolRecords: [],
   };
 }
+/**
+ * CreateConcentratedLiquidityPoolsProposal is a gov Content type for creating
+ * concentrated liquidity pools. If a CreateConcentratedLiquidityPoolsProposal
+ * passes, the pools are created via pool manager module account.
+ * @name CreateConcentratedLiquidityPoolsProposal
+ * @package symphony.concentratedliquidity.v1beta1
+ * @see proto type: symphony.concentratedliquidity.v1beta1.CreateConcentratedLiquidityPoolsProposal
+ */
 export const CreateConcentratedLiquidityPoolsProposal = {
   typeUrl:
     '/symphony.concentratedliquidity.v1beta1.CreateConcentratedLiquidityPoolsProposal',
@@ -303,6 +359,15 @@ function createBaseTickSpacingDecreaseProposal(): TickSpacingDecreaseProposal {
     poolIdToTickSpacingRecords: [],
   };
 }
+/**
+ * TickSpacingDecreaseProposal is a gov Content type for proposing a tick
+ * spacing decrease for a pool. The proposal will fail if one of the pools do
+ * not exist, or if the new tick spacing is not less than the current tick
+ * spacing.
+ * @name TickSpacingDecreaseProposal
+ * @package symphony.concentratedliquidity.v1beta1
+ * @see proto type: symphony.concentratedliquidity.v1beta1.TickSpacingDecreaseProposal
+ */
 export const TickSpacingDecreaseProposal = {
   typeUrl:
     '/symphony.concentratedliquidity.v1beta1.TickSpacingDecreaseProposal',
@@ -465,6 +530,13 @@ function createBasePoolIdToTickSpacingRecord(): PoolIdToTickSpacingRecord {
     newTickSpacing: BigInt(0),
   };
 }
+/**
+ * PoolIdToTickSpacingRecord is a struct that contains a pool id to new tick
+ * spacing pair.
+ * @name PoolIdToTickSpacingRecord
+ * @package symphony.concentratedliquidity.v1beta1
+ * @see proto type: symphony.concentratedliquidity.v1beta1.PoolIdToTickSpacingRecord
+ */
 export const PoolIdToTickSpacingRecord = {
   typeUrl: '/symphony.concentratedliquidity.v1beta1.PoolIdToTickSpacingRecord',
   is(o: any): o is PoolIdToTickSpacingRecord {
@@ -599,6 +671,11 @@ function createBasePoolRecord(): PoolRecord {
     spreadFactor: '',
   };
 }
+/**
+ * @name PoolRecord
+ * @package symphony.concentratedliquidity.v1beta1
+ * @see proto type: symphony.concentratedliquidity.v1beta1.PoolRecord
+ */
 export const PoolRecord = {
   typeUrl: '/symphony.concentratedliquidity.v1beta1.PoolRecord',
   is(o: any): o is PoolRecord {

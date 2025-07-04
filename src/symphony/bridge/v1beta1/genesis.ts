@@ -2,25 +2,44 @@
 import { Params, ParamsAmino, ParamsSDKType } from './bridge';
 import { BinaryReader, BinaryWriter } from '../../../binary';
 import { GlobalDecoderRegistry } from '../../../registry';
-/** GenesisState defines the mint module's genesis state. */
+/**
+ * GenesisState defines the mint module's genesis state.
+ * @name GenesisState
+ * @package symphony.bridge.v1beta1
+ * @see proto type: symphony.bridge.v1beta1.GenesisState
+ */
 export interface GenesisState {
-  /** Params defines params for x/bridge module. */
+  /**
+   * Params defines params for x/bridge module.
+   */
   params: Params;
 }
 export interface GenesisStateProtoMsg {
   typeUrl: '/symphony.bridge.v1beta1.GenesisState';
   value: Uint8Array;
 }
-/** GenesisState defines the mint module's genesis state. */
+/**
+ * GenesisState defines the mint module's genesis state.
+ * @name GenesisStateAmino
+ * @package symphony.bridge.v1beta1
+ * @see proto type: symphony.bridge.v1beta1.GenesisState
+ */
 export interface GenesisStateAmino {
-  /** Params defines params for x/bridge module. */
+  /**
+   * Params defines params for x/bridge module.
+   */
   params?: ParamsAmino;
 }
 export interface GenesisStateAminoMsg {
   type: '/symphony.bridge.v1beta1.GenesisState';
   value: GenesisStateAmino;
 }
-/** GenesisState defines the mint module's genesis state. */
+/**
+ * GenesisState defines the mint module's genesis state.
+ * @name GenesisStateSDKType
+ * @package symphony.bridge.v1beta1
+ * @see proto type: symphony.bridge.v1beta1.GenesisState
+ */
 export interface GenesisStateSDKType {
   params: ParamsSDKType;
 }
@@ -29,6 +48,12 @@ function createBaseGenesisState(): GenesisState {
     params: Params.fromPartial({}),
   };
 }
+/**
+ * GenesisState defines the mint module's genesis state.
+ * @name GenesisState
+ * @package symphony.bridge.v1beta1
+ * @see proto type: symphony.bridge.v1beta1.GenesisState
+ */
 export const GenesisState = {
   typeUrl: '/symphony.bridge.v1beta1.GenesisState',
   is(o: any): o is GenesisState {

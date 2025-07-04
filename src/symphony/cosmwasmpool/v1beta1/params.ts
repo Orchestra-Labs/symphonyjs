@@ -1,6 +1,11 @@
 //@ts-nocheck
 import { BinaryReader, BinaryWriter } from '../../../binary';
 import { GlobalDecoderRegistry } from '../../../registry';
+/**
+ * @name Params
+ * @package symphony.cosmwasmpool.v1beta1
+ * @see proto type: symphony.cosmwasmpool.v1beta1.Params
+ */
 export interface Params {
   /**
    * code_ide_whitelist contains the list of code ids that are allowed to be
@@ -19,6 +24,11 @@ export interface ParamsProtoMsg {
   typeUrl: '/symphony.cosmwasmpool.v1beta1.Params';
   value: Uint8Array;
 }
+/**
+ * @name ParamsAmino
+ * @package symphony.cosmwasmpool.v1beta1
+ * @see proto type: symphony.cosmwasmpool.v1beta1.Params
+ */
 export interface ParamsAmino {
   /**
    * code_ide_whitelist contains the list of code ids that are allowed to be
@@ -37,6 +47,11 @@ export interface ParamsAminoMsg {
   type: '/symphony.cosmwasmpool.v1beta1.Params';
   value: ParamsAmino;
 }
+/**
+ * @name ParamsSDKType
+ * @package symphony.cosmwasmpool.v1beta1
+ * @see proto type: symphony.cosmwasmpool.v1beta1.Params
+ */
 export interface ParamsSDKType {
   code_id_whitelist: bigint[];
   pool_migration_limit: bigint;
@@ -47,6 +62,11 @@ function createBaseParams(): Params {
     poolMigrationLimit: BigInt(0),
   };
 }
+/**
+ * @name Params
+ * @package symphony.cosmwasmpool.v1beta1
+ * @see proto type: symphony.cosmwasmpool.v1beta1.Params
+ */
 export const Params = {
   typeUrl: '/symphony.cosmwasmpool.v1beta1.Params',
   is(o: any): o is Params {

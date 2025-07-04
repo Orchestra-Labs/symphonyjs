@@ -12,9 +12,14 @@ import { GlobalDecoderRegistry } from '../../registry';
 /**
  * GenesisState defines the incentives module's various parameters when first
  * initialized
+ * @name GenesisState
+ * @package symphony.incentives
+ * @see proto type: symphony.incentives.GenesisState
  */
 export interface GenesisState {
-  /** params are all the parameters of the module */
+  /**
+   * params are all the parameters of the module
+   */
   params: Params;
   /**
    * gauges are all gauges (not including group gauges) that should exist at
@@ -31,9 +36,13 @@ export interface GenesisState {
    * the next gauge after genesis
    */
   lastGaugeId: bigint;
-  /** gauges are all group gauges that should exist at genesis */
+  /**
+   * gauges are all group gauges that should exist at genesis
+   */
   groupGauges: Gauge[];
-  /** groups are all the groups that should exist at genesis */
+  /**
+   * groups are all the groups that should exist at genesis
+   */
   groups: Group[];
 }
 export interface GenesisStateProtoMsg {
@@ -43,9 +52,14 @@ export interface GenesisStateProtoMsg {
 /**
  * GenesisState defines the incentives module's various parameters when first
  * initialized
+ * @name GenesisStateAmino
+ * @package symphony.incentives
+ * @see proto type: symphony.incentives.GenesisState
  */
 export interface GenesisStateAmino {
-  /** params are all the parameters of the module */
+  /**
+   * params are all the parameters of the module
+   */
   params?: ParamsAmino;
   /**
    * gauges are all gauges (not including group gauges) that should exist at
@@ -62,9 +76,13 @@ export interface GenesisStateAmino {
    * the next gauge after genesis
    */
   last_gauge_id?: string;
-  /** gauges are all group gauges that should exist at genesis */
+  /**
+   * gauges are all group gauges that should exist at genesis
+   */
   group_gauges?: GaugeAmino[];
-  /** groups are all the groups that should exist at genesis */
+  /**
+   * groups are all the groups that should exist at genesis
+   */
   groups?: GroupAmino[];
 }
 export interface GenesisStateAminoMsg {
@@ -74,6 +92,9 @@ export interface GenesisStateAminoMsg {
 /**
  * GenesisState defines the incentives module's various parameters when first
  * initialized
+ * @name GenesisStateSDKType
+ * @package symphony.incentives
+ * @see proto type: symphony.incentives.GenesisState
  */
 export interface GenesisStateSDKType {
   params: ParamsSDKType;
@@ -93,6 +114,13 @@ function createBaseGenesisState(): GenesisState {
     groups: [],
   };
 }
+/**
+ * GenesisState defines the incentives module's various parameters when first
+ * initialized
+ * @name GenesisState
+ * @package symphony.incentives
+ * @see proto type: symphony.incentives.GenesisState
+ */
 export const GenesisState = {
   typeUrl: '/symphony.incentives.GenesisState',
   is(o: any): o is GenesisState {

@@ -2,25 +2,44 @@
 import { Params, ParamsAmino, ParamsSDKType } from './incentives';
 import { BinaryReader, BinaryWriter } from '../../../binary';
 import { GlobalDecoderRegistry } from '../../../registry';
-/** GenesisState defines the market module's genesis state. */
+/**
+ * GenesisState defines the market module's genesis state.
+ * @name GenesisState
+ * @package symphony.stablestakingincentives.v1beta1
+ * @see proto type: symphony.stablestakingincentives.v1beta1.GenesisState
+ */
 export interface GenesisState {
-  /** params defines all the parameters of the module. */
+  /**
+   * params defines all the parameters of the module.
+   */
   params: Params;
 }
 export interface GenesisStateProtoMsg {
   typeUrl: '/symphony.stablestakingincentives.v1beta1.GenesisState';
   value: Uint8Array;
 }
-/** GenesisState defines the market module's genesis state. */
+/**
+ * GenesisState defines the market module's genesis state.
+ * @name GenesisStateAmino
+ * @package symphony.stablestakingincentives.v1beta1
+ * @see proto type: symphony.stablestakingincentives.v1beta1.GenesisState
+ */
 export interface GenesisStateAmino {
-  /** params defines all the parameters of the module. */
+  /**
+   * params defines all the parameters of the module.
+   */
   params?: ParamsAmino;
 }
 export interface GenesisStateAminoMsg {
   type: '/symphony.stablestakingincentives.v1beta1.GenesisState';
   value: GenesisStateAmino;
 }
-/** GenesisState defines the market module's genesis state. */
+/**
+ * GenesisState defines the market module's genesis state.
+ * @name GenesisStateSDKType
+ * @package symphony.stablestakingincentives.v1beta1
+ * @see proto type: symphony.stablestakingincentives.v1beta1.GenesisState
+ */
 export interface GenesisStateSDKType {
   params: ParamsSDKType;
 }
@@ -29,6 +48,12 @@ function createBaseGenesisState(): GenesisState {
     params: Params.fromPartial({}),
   };
 }
+/**
+ * GenesisState defines the market module's genesis state.
+ * @name GenesisState
+ * @package symphony.stablestakingincentives.v1beta1
+ * @see proto type: symphony.stablestakingincentives.v1beta1.GenesisState
+ */
 export const GenesisState = {
   typeUrl: '/symphony.stablestakingincentives.v1beta1.GenesisState',
   is(o: any): o is GenesisState {

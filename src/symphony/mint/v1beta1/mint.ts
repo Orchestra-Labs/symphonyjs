@@ -2,25 +2,44 @@
 import { BinaryReader, BinaryWriter } from '../../../binary';
 import { Decimal } from '@cosmjs/math';
 import { GlobalDecoderRegistry } from '../../../registry';
-/** Minter represents the minting state. */
+/**
+ * Minter represents the minting state.
+ * @name Minter
+ * @package symphony.mint.v1beta1
+ * @see proto type: symphony.mint.v1beta1.Minter
+ */
 export interface Minter {
-  /** epoch_provisions represent rewards for the current epoch. */
+  /**
+   * epoch_provisions represent rewards for the current epoch.
+   */
   epochProvisions: string;
 }
 export interface MinterProtoMsg {
   typeUrl: '/symphony.mint.v1beta1.Minter';
   value: Uint8Array;
 }
-/** Minter represents the minting state. */
+/**
+ * Minter represents the minting state.
+ * @name MinterAmino
+ * @package symphony.mint.v1beta1
+ * @see proto type: symphony.mint.v1beta1.Minter
+ */
 export interface MinterAmino {
-  /** epoch_provisions represent rewards for the current epoch. */
+  /**
+   * epoch_provisions represent rewards for the current epoch.
+   */
   epoch_provisions?: string;
 }
 export interface MinterAminoMsg {
   type: '/symphony.mint.v1beta1.Minter';
   value: MinterAmino;
 }
-/** Minter represents the minting state. */
+/**
+ * Minter represents the minting state.
+ * @name MinterSDKType
+ * @package symphony.mint.v1beta1
+ * @see proto type: symphony.mint.v1beta1.Minter
+ */
 export interface MinterSDKType {
   epoch_provisions: string;
 }
@@ -28,6 +47,9 @@ export interface MinterSDKType {
  * WeightedAddress represents an address with a weight assigned to it.
  * The weight is used to determine the proportion of the total minted
  * tokens to be minted to the address.
+ * @name WeightedAddress
+ * @package symphony.mint.v1beta1
+ * @see proto type: symphony.mint.v1beta1.WeightedAddress
  */
 export interface WeightedAddress {
   address: string;
@@ -41,6 +63,9 @@ export interface WeightedAddressProtoMsg {
  * WeightedAddress represents an address with a weight assigned to it.
  * The weight is used to determine the proportion of the total minted
  * tokens to be minted to the address.
+ * @name WeightedAddressAmino
+ * @package symphony.mint.v1beta1
+ * @see proto type: symphony.mint.v1beta1.WeightedAddress
  */
 export interface WeightedAddressAmino {
   address?: string;
@@ -54,6 +79,9 @@ export interface WeightedAddressAminoMsg {
  * WeightedAddress represents an address with a weight assigned to it.
  * The weight is used to determine the proportion of the total minted
  * tokens to be minted to the address.
+ * @name WeightedAddressSDKType
+ * @package symphony.mint.v1beta1
+ * @see proto type: symphony.mint.v1beta1.WeightedAddress
  */
 export interface WeightedAddressSDKType {
   address: string;
@@ -63,6 +91,9 @@ export interface WeightedAddressSDKType {
  * DistributionProportions defines the distribution proportions of the minted
  * denom. In other words, defines which stakeholders will receive the minted
  * denoms and how much.
+ * @name DistributionProportions
+ * @package symphony.mint.v1beta1
+ * @see proto type: symphony.mint.v1beta1.DistributionProportions
  */
 export interface DistributionProportions {
   /**
@@ -94,6 +125,9 @@ export interface DistributionProportionsProtoMsg {
  * DistributionProportions defines the distribution proportions of the minted
  * denom. In other words, defines which stakeholders will receive the minted
  * denoms and how much.
+ * @name DistributionProportionsAmino
+ * @package symphony.mint.v1beta1
+ * @see proto type: symphony.mint.v1beta1.DistributionProportions
  */
 export interface DistributionProportionsAmino {
   /**
@@ -125,6 +159,9 @@ export interface DistributionProportionsAminoMsg {
  * DistributionProportions defines the distribution proportions of the minted
  * denom. In other words, defines which stakeholders will receive the minted
  * denoms and how much.
+ * @name DistributionProportionsSDKType
+ * @package symphony.mint.v1beta1
+ * @see proto type: symphony.mint.v1beta1.DistributionProportions
  */
 export interface DistributionProportionsSDKType {
   staking: string;
@@ -132,13 +169,24 @@ export interface DistributionProportionsSDKType {
   developer_rewards: string;
   community_pool: string;
 }
-/** Params holds parameters for the x/mint module. */
+/**
+ * Params holds parameters for the x/mint module.
+ * @name Params
+ * @package symphony.mint.v1beta1
+ * @see proto type: symphony.mint.v1beta1.Params
+ */
 export interface Params {
-  /** mint_denom is the denom of the coin to mint. */
+  /**
+   * mint_denom is the denom of the coin to mint.
+   */
   mintDenom: string;
-  /** genesis_epoch_provisions epoch provisions from the first epoch. */
+  /**
+   * genesis_epoch_provisions epoch provisions from the first epoch.
+   */
   genesisEpochProvisions: string;
-  /** epoch_identifier mint epoch identifier e.g. (day, week). */
+  /**
+   * epoch_identifier mint epoch identifier e.g. (day, week).
+   */
   epochIdentifier: string;
   /**
    * reduction_period_in_epochs the number of epochs it takes
@@ -173,13 +221,24 @@ export interface ParamsProtoMsg {
   typeUrl: '/symphony.mint.v1beta1.Params';
   value: Uint8Array;
 }
-/** Params holds parameters for the x/mint module. */
+/**
+ * Params holds parameters for the x/mint module.
+ * @name ParamsAmino
+ * @package symphony.mint.v1beta1
+ * @see proto type: symphony.mint.v1beta1.Params
+ */
 export interface ParamsAmino {
-  /** mint_denom is the denom of the coin to mint. */
+  /**
+   * mint_denom is the denom of the coin to mint.
+   */
   mint_denom?: string;
-  /** genesis_epoch_provisions epoch provisions from the first epoch. */
+  /**
+   * genesis_epoch_provisions epoch provisions from the first epoch.
+   */
   genesis_epoch_provisions?: string;
-  /** epoch_identifier mint epoch identifier e.g. (day, week). */
+  /**
+   * epoch_identifier mint epoch identifier e.g. (day, week).
+   */
   epoch_identifier?: string;
   /**
    * reduction_period_in_epochs the number of epochs it takes
@@ -214,7 +273,12 @@ export interface ParamsAminoMsg {
   type: '/symphony.mint.v1beta1.Params';
   value: ParamsAmino;
 }
-/** Params holds parameters for the x/mint module. */
+/**
+ * Params holds parameters for the x/mint module.
+ * @name ParamsSDKType
+ * @package symphony.mint.v1beta1
+ * @see proto type: symphony.mint.v1beta1.Params
+ */
 export interface ParamsSDKType {
   mint_denom: string;
   genesis_epoch_provisions: string;
@@ -230,6 +294,12 @@ function createBaseMinter(): Minter {
     epochProvisions: '',
   };
 }
+/**
+ * Minter represents the minting state.
+ * @name Minter
+ * @package symphony.mint.v1beta1
+ * @see proto type: symphony.mint.v1beta1.Minter
+ */
 export const Minter = {
   typeUrl: '/symphony.mint.v1beta1.Minter',
   is(o: any): o is Minter {
@@ -326,6 +396,14 @@ function createBaseWeightedAddress(): WeightedAddress {
     weight: '',
   };
 }
+/**
+ * WeightedAddress represents an address with a weight assigned to it.
+ * The weight is used to determine the proportion of the total minted
+ * tokens to be minted to the address.
+ * @name WeightedAddress
+ * @package symphony.mint.v1beta1
+ * @see proto type: symphony.mint.v1beta1.WeightedAddress
+ */
 export const WeightedAddress = {
   typeUrl: '/symphony.mint.v1beta1.WeightedAddress',
   is(o: any): o is WeightedAddress {
@@ -431,6 +509,14 @@ function createBaseDistributionProportions(): DistributionProportions {
     communityPool: '',
   };
 }
+/**
+ * DistributionProportions defines the distribution proportions of the minted
+ * denom. In other words, defines which stakeholders will receive the minted
+ * denoms and how much.
+ * @name DistributionProportions
+ * @package symphony.mint.v1beta1
+ * @see proto type: symphony.mint.v1beta1.DistributionProportions
+ */
 export const DistributionProportions = {
   typeUrl: '/symphony.mint.v1beta1.DistributionProportions',
   is(o: any): o is DistributionProportions {
@@ -609,6 +695,12 @@ function createBaseParams(): Params {
     mintingRewardsDistributionStartEpoch: BigInt(0),
   };
 }
+/**
+ * Params holds parameters for the x/mint module.
+ * @name Params
+ * @package symphony.mint.v1beta1
+ * @see proto type: symphony.mint.v1beta1.Params
+ */
 export const Params = {
   typeUrl: '/symphony.mint.v1beta1.Params',
   is(o: any): o is Params {

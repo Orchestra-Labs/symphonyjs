@@ -8,6 +8,11 @@ import { Coin, CoinAmino, CoinSDKType } from '../../cosmos/base/v1beta1/coin';
 import { PeriodLock, PeriodLockAmino, PeriodLockSDKType } from './lock';
 import { BinaryReader, BinaryWriter } from '../../binary';
 import { GlobalDecoderRegistry } from '../../registry';
+/**
+ * @name MsgLockTokens
+ * @package symphony.lockup
+ * @see proto type: symphony.lockup.MsgLockTokens
+ */
 export interface MsgLockTokens {
   owner: string;
   duration: Duration;
@@ -17,6 +22,11 @@ export interface MsgLockTokensProtoMsg {
   typeUrl: '/symphony.lockup.MsgLockTokens';
   value: Uint8Array;
 }
+/**
+ * @name MsgLockTokensAmino
+ * @package symphony.lockup
+ * @see proto type: symphony.lockup.MsgLockTokens
+ */
 export interface MsgLockTokensAmino {
   owner?: string;
   duration?: DurationAmino;
@@ -26,11 +36,21 @@ export interface MsgLockTokensAminoMsg {
   type: 'symphony/lockup/lock-tokens';
   value: MsgLockTokensAmino;
 }
+/**
+ * @name MsgLockTokensSDKType
+ * @package symphony.lockup
+ * @see proto type: symphony.lockup.MsgLockTokens
+ */
 export interface MsgLockTokensSDKType {
   owner: string;
   duration: DurationSDKType;
   coins: CoinSDKType[];
 }
+/**
+ * @name MsgLockTokensResponse
+ * @package symphony.lockup
+ * @see proto type: symphony.lockup.MsgLockTokensResponse
+ */
 export interface MsgLockTokensResponse {
   iD: bigint;
 }
@@ -38,6 +58,11 @@ export interface MsgLockTokensResponseProtoMsg {
   typeUrl: '/symphony.lockup.MsgLockTokensResponse';
   value: Uint8Array;
 }
+/**
+ * @name MsgLockTokensResponseAmino
+ * @package symphony.lockup
+ * @see proto type: symphony.lockup.MsgLockTokensResponse
+ */
 export interface MsgLockTokensResponseAmino {
   ID?: string;
 }
@@ -45,9 +70,19 @@ export interface MsgLockTokensResponseAminoMsg {
   type: '/symphony.lockup.MsgLockTokensResponse';
   value: MsgLockTokensResponseAmino;
 }
+/**
+ * @name MsgLockTokensResponseSDKType
+ * @package symphony.lockup
+ * @see proto type: symphony.lockup.MsgLockTokensResponse
+ */
 export interface MsgLockTokensResponseSDKType {
   ID: bigint;
 }
+/**
+ * @name MsgBeginUnlockingAll
+ * @package symphony.lockup
+ * @see proto type: symphony.lockup.MsgBeginUnlockingAll
+ */
 export interface MsgBeginUnlockingAll {
   owner: string;
 }
@@ -55,6 +90,11 @@ export interface MsgBeginUnlockingAllProtoMsg {
   typeUrl: '/symphony.lockup.MsgBeginUnlockingAll';
   value: Uint8Array;
 }
+/**
+ * @name MsgBeginUnlockingAllAmino
+ * @package symphony.lockup
+ * @see proto type: symphony.lockup.MsgBeginUnlockingAll
+ */
 export interface MsgBeginUnlockingAllAmino {
   owner?: string;
 }
@@ -62,9 +102,19 @@ export interface MsgBeginUnlockingAllAminoMsg {
   type: 'symphony/lockup/begin-unlock-tokens';
   value: MsgBeginUnlockingAllAmino;
 }
+/**
+ * @name MsgBeginUnlockingAllSDKType
+ * @package symphony.lockup
+ * @see proto type: symphony.lockup.MsgBeginUnlockingAll
+ */
 export interface MsgBeginUnlockingAllSDKType {
   owner: string;
 }
+/**
+ * @name MsgBeginUnlockingAllResponse
+ * @package symphony.lockup
+ * @see proto type: symphony.lockup.MsgBeginUnlockingAllResponse
+ */
 export interface MsgBeginUnlockingAllResponse {
   unlocks: PeriodLock[];
 }
@@ -72,6 +122,11 @@ export interface MsgBeginUnlockingAllResponseProtoMsg {
   typeUrl: '/symphony.lockup.MsgBeginUnlockingAllResponse';
   value: Uint8Array;
 }
+/**
+ * @name MsgBeginUnlockingAllResponseAmino
+ * @package symphony.lockup
+ * @see proto type: symphony.lockup.MsgBeginUnlockingAllResponse
+ */
 export interface MsgBeginUnlockingAllResponseAmino {
   unlocks?: PeriodLockAmino[];
 }
@@ -79,34 +134,63 @@ export interface MsgBeginUnlockingAllResponseAminoMsg {
   type: '/symphony.lockup.MsgBeginUnlockingAllResponse';
   value: MsgBeginUnlockingAllResponseAmino;
 }
+/**
+ * @name MsgBeginUnlockingAllResponseSDKType
+ * @package symphony.lockup
+ * @see proto type: symphony.lockup.MsgBeginUnlockingAllResponse
+ */
 export interface MsgBeginUnlockingAllResponseSDKType {
   unlocks: PeriodLockSDKType[];
 }
+/**
+ * @name MsgBeginUnlocking
+ * @package symphony.lockup
+ * @see proto type: symphony.lockup.MsgBeginUnlocking
+ */
 export interface MsgBeginUnlocking {
   owner: string;
   iD: bigint;
-  /** Amount of unlocking coins. Unlock all if not set. */
+  /**
+   * Amount of unlocking coins. Unlock all if not set.
+   */
   coins: Coin[];
 }
 export interface MsgBeginUnlockingProtoMsg {
   typeUrl: '/symphony.lockup.MsgBeginUnlocking';
   value: Uint8Array;
 }
+/**
+ * @name MsgBeginUnlockingAmino
+ * @package symphony.lockup
+ * @see proto type: symphony.lockup.MsgBeginUnlocking
+ */
 export interface MsgBeginUnlockingAmino {
   owner?: string;
   ID?: string;
-  /** Amount of unlocking coins. Unlock all if not set. */
+  /**
+   * Amount of unlocking coins. Unlock all if not set.
+   */
   coins?: CoinAmino[];
 }
 export interface MsgBeginUnlockingAminoMsg {
   type: 'symphony/lockup/begin-unlock-period-lock';
   value: MsgBeginUnlockingAmino;
 }
+/**
+ * @name MsgBeginUnlockingSDKType
+ * @package symphony.lockup
+ * @see proto type: symphony.lockup.MsgBeginUnlocking
+ */
 export interface MsgBeginUnlockingSDKType {
   owner: string;
   ID: bigint;
   coins: CoinSDKType[];
 }
+/**
+ * @name MsgBeginUnlockingResponse
+ * @package symphony.lockup
+ * @see proto type: symphony.lockup.MsgBeginUnlockingResponse
+ */
 export interface MsgBeginUnlockingResponse {
   success: boolean;
   unlockingLockID: bigint;
@@ -115,6 +199,11 @@ export interface MsgBeginUnlockingResponseProtoMsg {
   typeUrl: '/symphony.lockup.MsgBeginUnlockingResponse';
   value: Uint8Array;
 }
+/**
+ * @name MsgBeginUnlockingResponseAmino
+ * @package symphony.lockup
+ * @see proto type: symphony.lockup.MsgBeginUnlockingResponse
+ */
 export interface MsgBeginUnlockingResponseAmino {
   success?: boolean;
   unlockingLockID?: string;
@@ -123,6 +212,11 @@ export interface MsgBeginUnlockingResponseAminoMsg {
   type: '/symphony.lockup.MsgBeginUnlockingResponse';
   value: MsgBeginUnlockingResponseAmino;
 }
+/**
+ * @name MsgBeginUnlockingResponseSDKType
+ * @package symphony.lockup
+ * @see proto type: symphony.lockup.MsgBeginUnlockingResponse
+ */
 export interface MsgBeginUnlockingResponseSDKType {
   success: boolean;
   unlockingLockID: bigint;
@@ -130,6 +224,9 @@ export interface MsgBeginUnlockingResponseSDKType {
 /**
  * MsgExtendLockup extends the existing lockup's duration.
  * The new duration is longer than the original.
+ * @name MsgExtendLockup
+ * @package symphony.lockup
+ * @see proto type: symphony.lockup.MsgExtendLockup
  */
 export interface MsgExtendLockup {
   owner: string;
@@ -147,6 +244,9 @@ export interface MsgExtendLockupProtoMsg {
 /**
  * MsgExtendLockup extends the existing lockup's duration.
  * The new duration is longer than the original.
+ * @name MsgExtendLockupAmino
+ * @package symphony.lockup
+ * @see proto type: symphony.lockup.MsgExtendLockup
  */
 export interface MsgExtendLockupAmino {
   owner?: string;
@@ -164,12 +264,20 @@ export interface MsgExtendLockupAminoMsg {
 /**
  * MsgExtendLockup extends the existing lockup's duration.
  * The new duration is longer than the original.
+ * @name MsgExtendLockupSDKType
+ * @package symphony.lockup
+ * @see proto type: symphony.lockup.MsgExtendLockup
  */
 export interface MsgExtendLockupSDKType {
   owner: string;
   ID: bigint;
   duration: DurationSDKType;
 }
+/**
+ * @name MsgExtendLockupResponse
+ * @package symphony.lockup
+ * @see proto type: symphony.lockup.MsgExtendLockupResponse
+ */
 export interface MsgExtendLockupResponse {
   success: boolean;
 }
@@ -177,6 +285,11 @@ export interface MsgExtendLockupResponseProtoMsg {
   typeUrl: '/symphony.lockup.MsgExtendLockupResponse';
   value: Uint8Array;
 }
+/**
+ * @name MsgExtendLockupResponseAmino
+ * @package symphony.lockup
+ * @see proto type: symphony.lockup.MsgExtendLockupResponse
+ */
 export interface MsgExtendLockupResponseAmino {
   success?: boolean;
 }
@@ -184,17 +297,27 @@ export interface MsgExtendLockupResponseAminoMsg {
   type: '/symphony.lockup.MsgExtendLockupResponse';
   value: MsgExtendLockupResponseAmino;
 }
+/**
+ * @name MsgExtendLockupResponseSDKType
+ * @package symphony.lockup
+ * @see proto type: symphony.lockup.MsgExtendLockupResponse
+ */
 export interface MsgExtendLockupResponseSDKType {
   success: boolean;
 }
 /**
  * MsgForceUnlock unlocks locks immediately for
  * addresses registered via governance.
+ * @name MsgForceUnlock
+ * @package symphony.lockup
+ * @see proto type: symphony.lockup.MsgForceUnlock
  */
 export interface MsgForceUnlock {
   owner: string;
   iD: bigint;
-  /** Amount of unlocking coins. Unlock all if not set. */
+  /**
+   * Amount of unlocking coins. Unlock all if not set.
+   */
   coins: Coin[];
 }
 export interface MsgForceUnlockProtoMsg {
@@ -204,11 +327,16 @@ export interface MsgForceUnlockProtoMsg {
 /**
  * MsgForceUnlock unlocks locks immediately for
  * addresses registered via governance.
+ * @name MsgForceUnlockAmino
+ * @package symphony.lockup
+ * @see proto type: symphony.lockup.MsgForceUnlock
  */
 export interface MsgForceUnlockAmino {
   owner?: string;
   ID?: string;
-  /** Amount of unlocking coins. Unlock all if not set. */
+  /**
+   * Amount of unlocking coins. Unlock all if not set.
+   */
   coins?: CoinAmino[];
 }
 export interface MsgForceUnlockAminoMsg {
@@ -218,12 +346,20 @@ export interface MsgForceUnlockAminoMsg {
 /**
  * MsgForceUnlock unlocks locks immediately for
  * addresses registered via governance.
+ * @name MsgForceUnlockSDKType
+ * @package symphony.lockup
+ * @see proto type: symphony.lockup.MsgForceUnlock
  */
 export interface MsgForceUnlockSDKType {
   owner: string;
   ID: bigint;
   coins: CoinSDKType[];
 }
+/**
+ * @name MsgForceUnlockResponse
+ * @package symphony.lockup
+ * @see proto type: symphony.lockup.MsgForceUnlockResponse
+ */
 export interface MsgForceUnlockResponse {
   success: boolean;
 }
@@ -231,6 +367,11 @@ export interface MsgForceUnlockResponseProtoMsg {
   typeUrl: '/symphony.lockup.MsgForceUnlockResponse';
   value: Uint8Array;
 }
+/**
+ * @name MsgForceUnlockResponseAmino
+ * @package symphony.lockup
+ * @see proto type: symphony.lockup.MsgForceUnlockResponse
+ */
 export interface MsgForceUnlockResponseAmino {
   success?: boolean;
 }
@@ -238,9 +379,19 @@ export interface MsgForceUnlockResponseAminoMsg {
   type: '/symphony.lockup.MsgForceUnlockResponse';
   value: MsgForceUnlockResponseAmino;
 }
+/**
+ * @name MsgForceUnlockResponseSDKType
+ * @package symphony.lockup
+ * @see proto type: symphony.lockup.MsgForceUnlockResponse
+ */
 export interface MsgForceUnlockResponseSDKType {
   success: boolean;
 }
+/**
+ * @name MsgSetRewardReceiverAddress
+ * @package symphony.lockup
+ * @see proto type: symphony.lockup.MsgSetRewardReceiverAddress
+ */
 export interface MsgSetRewardReceiverAddress {
   owner: string;
   lockID: bigint;
@@ -250,6 +401,11 @@ export interface MsgSetRewardReceiverAddressProtoMsg {
   typeUrl: '/symphony.lockup.MsgSetRewardReceiverAddress';
   value: Uint8Array;
 }
+/**
+ * @name MsgSetRewardReceiverAddressAmino
+ * @package symphony.lockup
+ * @see proto type: symphony.lockup.MsgSetRewardReceiverAddress
+ */
 export interface MsgSetRewardReceiverAddressAmino {
   owner?: string;
   lockID?: string;
@@ -259,11 +415,21 @@ export interface MsgSetRewardReceiverAddressAminoMsg {
   type: 'symphony/lockup/set-reward-receiver-address';
   value: MsgSetRewardReceiverAddressAmino;
 }
+/**
+ * @name MsgSetRewardReceiverAddressSDKType
+ * @package symphony.lockup
+ * @see proto type: symphony.lockup.MsgSetRewardReceiverAddress
+ */
 export interface MsgSetRewardReceiverAddressSDKType {
   owner: string;
   lockID: bigint;
   reward_receiver: string;
 }
+/**
+ * @name MsgSetRewardReceiverAddressResponse
+ * @package symphony.lockup
+ * @see proto type: symphony.lockup.MsgSetRewardReceiverAddressResponse
+ */
 export interface MsgSetRewardReceiverAddressResponse {
   success: boolean;
 }
@@ -271,6 +437,11 @@ export interface MsgSetRewardReceiverAddressResponseProtoMsg {
   typeUrl: '/symphony.lockup.MsgSetRewardReceiverAddressResponse';
   value: Uint8Array;
 }
+/**
+ * @name MsgSetRewardReceiverAddressResponseAmino
+ * @package symphony.lockup
+ * @see proto type: symphony.lockup.MsgSetRewardReceiverAddressResponse
+ */
 export interface MsgSetRewardReceiverAddressResponseAmino {
   success?: boolean;
 }
@@ -278,6 +449,11 @@ export interface MsgSetRewardReceiverAddressResponseAminoMsg {
   type: '/symphony.lockup.MsgSetRewardReceiverAddressResponse';
   value: MsgSetRewardReceiverAddressResponseAmino;
 }
+/**
+ * @name MsgSetRewardReceiverAddressResponseSDKType
+ * @package symphony.lockup
+ * @see proto type: symphony.lockup.MsgSetRewardReceiverAddressResponse
+ */
 export interface MsgSetRewardReceiverAddressResponseSDKType {
   success: boolean;
 }
@@ -288,6 +464,11 @@ function createBaseMsgLockTokens(): MsgLockTokens {
     coins: [],
   };
 }
+/**
+ * @name MsgLockTokens
+ * @package symphony.lockup
+ * @see proto type: symphony.lockup.MsgLockTokens
+ */
 export const MsgLockTokens = {
   typeUrl: '/symphony.lockup.MsgLockTokens',
   aminoType: 'symphony/lockup/lock-tokens',
@@ -426,6 +607,11 @@ function createBaseMsgLockTokensResponse(): MsgLockTokensResponse {
     iD: BigInt(0),
   };
 }
+/**
+ * @name MsgLockTokensResponse
+ * @package symphony.lockup
+ * @see proto type: symphony.lockup.MsgLockTokensResponse
+ */
 export const MsgLockTokensResponse = {
   typeUrl: '/symphony.lockup.MsgLockTokensResponse',
   is(o: any): o is MsgLockTokensResponse {
@@ -521,6 +707,11 @@ function createBaseMsgBeginUnlockingAll(): MsgBeginUnlockingAll {
     owner: '',
   };
 }
+/**
+ * @name MsgBeginUnlockingAll
+ * @package symphony.lockup
+ * @see proto type: symphony.lockup.MsgBeginUnlockingAll
+ */
 export const MsgBeginUnlockingAll = {
   typeUrl: '/symphony.lockup.MsgBeginUnlockingAll',
   aminoType: 'symphony/lockup/begin-unlock-tokens',
@@ -627,6 +818,11 @@ function createBaseMsgBeginUnlockingAllResponse(): MsgBeginUnlockingAllResponse 
     unlocks: [],
   };
 }
+/**
+ * @name MsgBeginUnlockingAllResponse
+ * @package symphony.lockup
+ * @see proto type: symphony.lockup.MsgBeginUnlockingAllResponse
+ */
 export const MsgBeginUnlockingAllResponse = {
   typeUrl: '/symphony.lockup.MsgBeginUnlockingAllResponse',
   is(o: any): o is MsgBeginUnlockingAllResponse {
@@ -743,6 +939,11 @@ function createBaseMsgBeginUnlocking(): MsgBeginUnlocking {
     coins: [],
   };
 }
+/**
+ * @name MsgBeginUnlocking
+ * @package symphony.lockup
+ * @see proto type: symphony.lockup.MsgBeginUnlocking
+ */
 export const MsgBeginUnlocking = {
   typeUrl: '/symphony.lockup.MsgBeginUnlocking',
   aminoType: 'symphony/lockup/begin-unlock-period-lock',
@@ -880,6 +1081,11 @@ function createBaseMsgBeginUnlockingResponse(): MsgBeginUnlockingResponse {
     unlockingLockID: BigInt(0),
   };
 }
+/**
+ * @name MsgBeginUnlockingResponse
+ * @package symphony.lockup
+ * @see proto type: symphony.lockup.MsgBeginUnlockingResponse
+ */
 export const MsgBeginUnlockingResponse = {
   typeUrl: '/symphony.lockup.MsgBeginUnlockingResponse',
   is(o: any): o is MsgBeginUnlockingResponse {
@@ -1008,6 +1214,13 @@ function createBaseMsgExtendLockup(): MsgExtendLockup {
     duration: Duration.fromPartial({}),
   };
 }
+/**
+ * MsgExtendLockup extends the existing lockup's duration.
+ * The new duration is longer than the original.
+ * @name MsgExtendLockup
+ * @package symphony.lockup
+ * @see proto type: symphony.lockup.MsgExtendLockup
+ */
 export const MsgExtendLockup = {
   typeUrl: '/symphony.lockup.MsgExtendLockup',
   aminoType: 'symphony/lockup/extend-lockup',
@@ -1144,6 +1357,11 @@ function createBaseMsgExtendLockupResponse(): MsgExtendLockupResponse {
     success: false,
   };
 }
+/**
+ * @name MsgExtendLockupResponse
+ * @package symphony.lockup
+ * @see proto type: symphony.lockup.MsgExtendLockupResponse
+ */
 export const MsgExtendLockupResponse = {
   typeUrl: '/symphony.lockup.MsgExtendLockupResponse',
   is(o: any): o is MsgExtendLockupResponse {
@@ -1249,6 +1467,13 @@ function createBaseMsgForceUnlock(): MsgForceUnlock {
     coins: [],
   };
 }
+/**
+ * MsgForceUnlock unlocks locks immediately for
+ * addresses registered via governance.
+ * @name MsgForceUnlock
+ * @package symphony.lockup
+ * @see proto type: symphony.lockup.MsgForceUnlock
+ */
 export const MsgForceUnlock = {
   typeUrl: '/symphony.lockup.MsgForceUnlock',
   aminoType: 'symphony/lockup/force-unlock-tokens',
@@ -1385,6 +1610,11 @@ function createBaseMsgForceUnlockResponse(): MsgForceUnlockResponse {
     success: false,
   };
 }
+/**
+ * @name MsgForceUnlockResponse
+ * @package symphony.lockup
+ * @see proto type: symphony.lockup.MsgForceUnlockResponse
+ */
 export const MsgForceUnlockResponse = {
   typeUrl: '/symphony.lockup.MsgForceUnlockResponse',
   is(o: any): o is MsgForceUnlockResponse {
@@ -1484,6 +1714,11 @@ function createBaseMsgSetRewardReceiverAddress(): MsgSetRewardReceiverAddress {
     rewardReceiver: '',
   };
 }
+/**
+ * @name MsgSetRewardReceiverAddress
+ * @package symphony.lockup
+ * @see proto type: symphony.lockup.MsgSetRewardReceiverAddress
+ */
 export const MsgSetRewardReceiverAddress = {
   typeUrl: '/symphony.lockup.MsgSetRewardReceiverAddress',
   aminoType: 'symphony/lockup/set-reward-receiver-address',
@@ -1640,6 +1875,11 @@ function createBaseMsgSetRewardReceiverAddressResponse(): MsgSetRewardReceiverAd
     success: false,
   };
 }
+/**
+ * @name MsgSetRewardReceiverAddressResponse
+ * @package symphony.lockup
+ * @see proto type: symphony.lockup.MsgSetRewardReceiverAddressResponse
+ */
 export const MsgSetRewardReceiverAddressResponse = {
   typeUrl: '/symphony.lockup.MsgSetRewardReceiverAddressResponse',
   is(o: any): o is MsgSetRewardReceiverAddressResponse {

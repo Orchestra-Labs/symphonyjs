@@ -6,6 +6,11 @@ import {
 } from '../../../google/protobuf/duration';
 import { BinaryReader, BinaryWriter } from '../../../binary';
 import { GlobalDecoderRegistry } from '../../../registry';
+/**
+ * @name Params
+ * @package symphony.poolincentives.v1beta1
+ * @see proto type: symphony.poolincentives.v1beta1.Params
+ */
 export interface Params {
   /**
    * minted_denom is the denomination of the coin expected to be minted by the
@@ -19,6 +24,11 @@ export interface ParamsProtoMsg {
   typeUrl: '/symphony.poolincentives.v1beta1.Params';
   value: Uint8Array;
 }
+/**
+ * @name ParamsAmino
+ * @package symphony.poolincentives.v1beta1
+ * @see proto type: symphony.poolincentives.v1beta1.Params
+ */
 export interface ParamsAmino {
   /**
    * minted_denom is the denomination of the coin expected to be minted by the
@@ -32,9 +42,19 @@ export interface ParamsAminoMsg {
   type: '/symphony.poolincentives.v1beta1.Params';
   value: ParamsAmino;
 }
+/**
+ * @name ParamsSDKType
+ * @package symphony.poolincentives.v1beta1
+ * @see proto type: symphony.poolincentives.v1beta1.Params
+ */
 export interface ParamsSDKType {
   minted_denom: string;
 }
+/**
+ * @name LockableDurationsInfo
+ * @package symphony.poolincentives.v1beta1
+ * @see proto type: symphony.poolincentives.v1beta1.LockableDurationsInfo
+ */
 export interface LockableDurationsInfo {
   lockableDurations: Duration[];
 }
@@ -42,6 +62,11 @@ export interface LockableDurationsInfoProtoMsg {
   typeUrl: '/symphony.poolincentives.v1beta1.LockableDurationsInfo';
   value: Uint8Array;
 }
+/**
+ * @name LockableDurationsInfoAmino
+ * @package symphony.poolincentives.v1beta1
+ * @see proto type: symphony.poolincentives.v1beta1.LockableDurationsInfo
+ */
 export interface LockableDurationsInfoAmino {
   lockable_durations?: DurationAmino[];
 }
@@ -49,9 +74,19 @@ export interface LockableDurationsInfoAminoMsg {
   type: '/symphony.poolincentives.v1beta1.LockableDurationsInfo';
   value: LockableDurationsInfoAmino;
 }
+/**
+ * @name LockableDurationsInfoSDKType
+ * @package symphony.poolincentives.v1beta1
+ * @see proto type: symphony.poolincentives.v1beta1.LockableDurationsInfo
+ */
 export interface LockableDurationsInfoSDKType {
   lockable_durations: DurationSDKType[];
 }
+/**
+ * @name DistrInfo
+ * @package symphony.poolincentives.v1beta1
+ * @see proto type: symphony.poolincentives.v1beta1.DistrInfo
+ */
 export interface DistrInfo {
   totalWeight: string;
   records: DistrRecord[];
@@ -60,6 +95,11 @@ export interface DistrInfoProtoMsg {
   typeUrl: '/symphony.poolincentives.v1beta1.DistrInfo';
   value: Uint8Array;
 }
+/**
+ * @name DistrInfoAmino
+ * @package symphony.poolincentives.v1beta1
+ * @see proto type: symphony.poolincentives.v1beta1.DistrInfo
+ */
 export interface DistrInfoAmino {
   total_weight?: string;
   records?: DistrRecordAmino[];
@@ -68,10 +108,20 @@ export interface DistrInfoAminoMsg {
   type: '/symphony.poolincentives.v1beta1.DistrInfo';
   value: DistrInfoAmino;
 }
+/**
+ * @name DistrInfoSDKType
+ * @package symphony.poolincentives.v1beta1
+ * @see proto type: symphony.poolincentives.v1beta1.DistrInfo
+ */
 export interface DistrInfoSDKType {
   total_weight: string;
   records: DistrRecordSDKType[];
 }
+/**
+ * @name DistrRecord
+ * @package symphony.poolincentives.v1beta1
+ * @see proto type: symphony.poolincentives.v1beta1.DistrRecord
+ */
 export interface DistrRecord {
   gaugeId: bigint;
   weight: string;
@@ -80,6 +130,11 @@ export interface DistrRecordProtoMsg {
   typeUrl: '/symphony.poolincentives.v1beta1.DistrRecord';
   value: Uint8Array;
 }
+/**
+ * @name DistrRecordAmino
+ * @package symphony.poolincentives.v1beta1
+ * @see proto type: symphony.poolincentives.v1beta1.DistrRecord
+ */
 export interface DistrRecordAmino {
   gauge_id?: string;
   weight?: string;
@@ -88,10 +143,20 @@ export interface DistrRecordAminoMsg {
   type: '/symphony.poolincentives.v1beta1.DistrRecord';
   value: DistrRecordAmino;
 }
+/**
+ * @name DistrRecordSDKType
+ * @package symphony.poolincentives.v1beta1
+ * @see proto type: symphony.poolincentives.v1beta1.DistrRecord
+ */
 export interface DistrRecordSDKType {
   gauge_id: bigint;
   weight: string;
 }
+/**
+ * @name PoolToGauge
+ * @package symphony.poolincentives.v1beta1
+ * @see proto type: symphony.poolincentives.v1beta1.PoolToGauge
+ */
 export interface PoolToGauge {
   poolId: bigint;
   gaugeId: bigint;
@@ -101,6 +166,11 @@ export interface PoolToGaugeProtoMsg {
   typeUrl: '/symphony.poolincentives.v1beta1.PoolToGauge';
   value: Uint8Array;
 }
+/**
+ * @name PoolToGaugeAmino
+ * @package symphony.poolincentives.v1beta1
+ * @see proto type: symphony.poolincentives.v1beta1.PoolToGauge
+ */
 export interface PoolToGaugeAmino {
   pool_id?: string;
   gauge_id?: string;
@@ -110,11 +180,21 @@ export interface PoolToGaugeAminoMsg {
   type: '/symphony.poolincentives.v1beta1.PoolToGauge';
   value: PoolToGaugeAmino;
 }
+/**
+ * @name PoolToGaugeSDKType
+ * @package symphony.poolincentives.v1beta1
+ * @see proto type: symphony.poolincentives.v1beta1.PoolToGauge
+ */
 export interface PoolToGaugeSDKType {
   pool_id: bigint;
   gauge_id: bigint;
   duration: DurationSDKType;
 }
+/**
+ * @name AnyPoolToInternalGauges
+ * @package symphony.poolincentives.v1beta1
+ * @see proto type: symphony.poolincentives.v1beta1.AnyPoolToInternalGauges
+ */
 export interface AnyPoolToInternalGauges {
   poolToGauge: PoolToGauge[];
 }
@@ -122,6 +202,11 @@ export interface AnyPoolToInternalGaugesProtoMsg {
   typeUrl: '/symphony.poolincentives.v1beta1.AnyPoolToInternalGauges';
   value: Uint8Array;
 }
+/**
+ * @name AnyPoolToInternalGaugesAmino
+ * @package symphony.poolincentives.v1beta1
+ * @see proto type: symphony.poolincentives.v1beta1.AnyPoolToInternalGauges
+ */
 export interface AnyPoolToInternalGaugesAmino {
   pool_to_gauge?: PoolToGaugeAmino[];
 }
@@ -129,9 +214,19 @@ export interface AnyPoolToInternalGaugesAminoMsg {
   type: '/symphony.poolincentives.v1beta1.AnyPoolToInternalGauges';
   value: AnyPoolToInternalGaugesAmino;
 }
+/**
+ * @name AnyPoolToInternalGaugesSDKType
+ * @package symphony.poolincentives.v1beta1
+ * @see proto type: symphony.poolincentives.v1beta1.AnyPoolToInternalGauges
+ */
 export interface AnyPoolToInternalGaugesSDKType {
   pool_to_gauge: PoolToGaugeSDKType[];
 }
+/**
+ * @name ConcentratedPoolToNoLockGauges
+ * @package symphony.poolincentives.v1beta1
+ * @see proto type: symphony.poolincentives.v1beta1.ConcentratedPoolToNoLockGauges
+ */
 export interface ConcentratedPoolToNoLockGauges {
   poolToGauge: PoolToGauge[];
 }
@@ -139,6 +234,11 @@ export interface ConcentratedPoolToNoLockGaugesProtoMsg {
   typeUrl: '/symphony.poolincentives.v1beta1.ConcentratedPoolToNoLockGauges';
   value: Uint8Array;
 }
+/**
+ * @name ConcentratedPoolToNoLockGaugesAmino
+ * @package symphony.poolincentives.v1beta1
+ * @see proto type: symphony.poolincentives.v1beta1.ConcentratedPoolToNoLockGauges
+ */
 export interface ConcentratedPoolToNoLockGaugesAmino {
   pool_to_gauge?: PoolToGaugeAmino[];
 }
@@ -146,6 +246,11 @@ export interface ConcentratedPoolToNoLockGaugesAminoMsg {
   type: '/symphony.poolincentives.v1beta1.ConcentratedPoolToNoLockGauges';
   value: ConcentratedPoolToNoLockGaugesAmino;
 }
+/**
+ * @name ConcentratedPoolToNoLockGaugesSDKType
+ * @package symphony.poolincentives.v1beta1
+ * @see proto type: symphony.poolincentives.v1beta1.ConcentratedPoolToNoLockGauges
+ */
 export interface ConcentratedPoolToNoLockGaugesSDKType {
   pool_to_gauge: PoolToGaugeSDKType[];
 }
@@ -154,6 +259,11 @@ function createBaseParams(): Params {
     mintedDenom: '',
   };
 }
+/**
+ * @name Params
+ * @package symphony.poolincentives.v1beta1
+ * @see proto type: symphony.poolincentives.v1beta1.Params
+ */
 export const Params = {
   typeUrl: '/symphony.poolincentives.v1beta1.Params',
   is(o: any): o is Params {
@@ -238,6 +348,11 @@ function createBaseLockableDurationsInfo(): LockableDurationsInfo {
     lockableDurations: [],
   };
 }
+/**
+ * @name LockableDurationsInfo
+ * @package symphony.poolincentives.v1beta1
+ * @see proto type: symphony.poolincentives.v1beta1.LockableDurationsInfo
+ */
 export const LockableDurationsInfo = {
   typeUrl: '/symphony.poolincentives.v1beta1.LockableDurationsInfo',
   is(o: any): o is LockableDurationsInfo {
@@ -347,6 +462,11 @@ function createBaseDistrInfo(): DistrInfo {
     records: [],
   };
 }
+/**
+ * @name DistrInfo
+ * @package symphony.poolincentives.v1beta1
+ * @see proto type: symphony.poolincentives.v1beta1.DistrInfo
+ */
 export const DistrInfo = {
   typeUrl: '/symphony.poolincentives.v1beta1.DistrInfo',
   is(o: any): o is DistrInfo {
@@ -460,6 +580,11 @@ function createBaseDistrRecord(): DistrRecord {
     weight: '',
   };
 }
+/**
+ * @name DistrRecord
+ * @package symphony.poolincentives.v1beta1
+ * @see proto type: symphony.poolincentives.v1beta1.DistrRecord
+ */
 export const DistrRecord = {
   typeUrl: '/symphony.poolincentives.v1beta1.DistrRecord',
   is(o: any): o is DistrRecord {
@@ -566,6 +691,11 @@ function createBasePoolToGauge(): PoolToGauge {
     duration: Duration.fromPartial({}),
   };
 }
+/**
+ * @name PoolToGauge
+ * @package symphony.poolincentives.v1beta1
+ * @see proto type: symphony.poolincentives.v1beta1.PoolToGauge
+ */
 export const PoolToGauge = {
   typeUrl: '/symphony.poolincentives.v1beta1.PoolToGauge',
   is(o: any): o is PoolToGauge {
@@ -696,6 +826,11 @@ function createBaseAnyPoolToInternalGauges(): AnyPoolToInternalGauges {
     poolToGauge: [],
   };
 }
+/**
+ * @name AnyPoolToInternalGauges
+ * @package symphony.poolincentives.v1beta1
+ * @see proto type: symphony.poolincentives.v1beta1.AnyPoolToInternalGauges
+ */
 export const AnyPoolToInternalGauges = {
   typeUrl: '/symphony.poolincentives.v1beta1.AnyPoolToInternalGauges',
   is(o: any): o is AnyPoolToInternalGauges {
@@ -808,6 +943,11 @@ function createBaseConcentratedPoolToNoLockGauges(): ConcentratedPoolToNoLockGau
     poolToGauge: [],
   };
 }
+/**
+ * @name ConcentratedPoolToNoLockGauges
+ * @package symphony.poolincentives.v1beta1
+ * @see proto type: symphony.poolincentives.v1beta1.ConcentratedPoolToNoLockGauges
+ */
 export const ConcentratedPoolToNoLockGauges = {
   typeUrl: '/symphony.poolincentives.v1beta1.ConcentratedPoolToNoLockGauges',
   is(o: any): o is ConcentratedPoolToNoLockGauges {

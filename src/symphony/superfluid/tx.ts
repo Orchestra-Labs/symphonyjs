@@ -5,6 +5,11 @@ import { BinaryReader, BinaryWriter } from '../../binary';
 import { GlobalDecoderRegistry } from '../../registry';
 import { Decimal } from '@cosmjs/math';
 import { toTimestamp, fromTimestamp } from '../../helpers';
+/**
+ * @name MsgSuperfluidDelegate
+ * @package symphony.superfluid
+ * @see proto type: symphony.superfluid.MsgSuperfluidDelegate
+ */
 export interface MsgSuperfluidDelegate {
   sender: string;
   lockId: bigint;
@@ -14,6 +19,11 @@ export interface MsgSuperfluidDelegateProtoMsg {
   typeUrl: '/symphony.superfluid.MsgSuperfluidDelegate';
   value: Uint8Array;
 }
+/**
+ * @name MsgSuperfluidDelegateAmino
+ * @package symphony.superfluid
+ * @see proto type: symphony.superfluid.MsgSuperfluidDelegate
+ */
 export interface MsgSuperfluidDelegateAmino {
   sender?: string;
   lock_id?: string;
@@ -23,22 +33,47 @@ export interface MsgSuperfluidDelegateAminoMsg {
   type: 'symphony/superfluid-delegate';
   value: MsgSuperfluidDelegateAmino;
 }
+/**
+ * @name MsgSuperfluidDelegateSDKType
+ * @package symphony.superfluid
+ * @see proto type: symphony.superfluid.MsgSuperfluidDelegate
+ */
 export interface MsgSuperfluidDelegateSDKType {
   sender: string;
   lock_id: bigint;
   val_addr: string;
 }
+/**
+ * @name MsgSuperfluidDelegateResponse
+ * @package symphony.superfluid
+ * @see proto type: symphony.superfluid.MsgSuperfluidDelegateResponse
+ */
 export interface MsgSuperfluidDelegateResponse {}
 export interface MsgSuperfluidDelegateResponseProtoMsg {
   typeUrl: '/symphony.superfluid.MsgSuperfluidDelegateResponse';
   value: Uint8Array;
 }
+/**
+ * @name MsgSuperfluidDelegateResponseAmino
+ * @package symphony.superfluid
+ * @see proto type: symphony.superfluid.MsgSuperfluidDelegateResponse
+ */
 export interface MsgSuperfluidDelegateResponseAmino {}
 export interface MsgSuperfluidDelegateResponseAminoMsg {
   type: '/symphony.superfluid.MsgSuperfluidDelegateResponse';
   value: MsgSuperfluidDelegateResponseAmino;
 }
+/**
+ * @name MsgSuperfluidDelegateResponseSDKType
+ * @package symphony.superfluid
+ * @see proto type: symphony.superfluid.MsgSuperfluidDelegateResponse
+ */
 export interface MsgSuperfluidDelegateResponseSDKType {}
+/**
+ * @name MsgSuperfluidUndelegate
+ * @package symphony.superfluid
+ * @see proto type: symphony.superfluid.MsgSuperfluidUndelegate
+ */
 export interface MsgSuperfluidUndelegate {
   sender: string;
   lockId: bigint;
@@ -47,6 +82,11 @@ export interface MsgSuperfluidUndelegateProtoMsg {
   typeUrl: '/symphony.superfluid.MsgSuperfluidUndelegate';
   value: Uint8Array;
 }
+/**
+ * @name MsgSuperfluidUndelegateAmino
+ * @package symphony.superfluid
+ * @see proto type: symphony.superfluid.MsgSuperfluidUndelegate
+ */
 export interface MsgSuperfluidUndelegateAmino {
   sender?: string;
   lock_id?: string;
@@ -55,21 +95,46 @@ export interface MsgSuperfluidUndelegateAminoMsg {
   type: 'symphony/superfluid-undelegate';
   value: MsgSuperfluidUndelegateAmino;
 }
+/**
+ * @name MsgSuperfluidUndelegateSDKType
+ * @package symphony.superfluid
+ * @see proto type: symphony.superfluid.MsgSuperfluidUndelegate
+ */
 export interface MsgSuperfluidUndelegateSDKType {
   sender: string;
   lock_id: bigint;
 }
+/**
+ * @name MsgSuperfluidUndelegateResponse
+ * @package symphony.superfluid
+ * @see proto type: symphony.superfluid.MsgSuperfluidUndelegateResponse
+ */
 export interface MsgSuperfluidUndelegateResponse {}
 export interface MsgSuperfluidUndelegateResponseProtoMsg {
   typeUrl: '/symphony.superfluid.MsgSuperfluidUndelegateResponse';
   value: Uint8Array;
 }
+/**
+ * @name MsgSuperfluidUndelegateResponseAmino
+ * @package symphony.superfluid
+ * @see proto type: symphony.superfluid.MsgSuperfluidUndelegateResponse
+ */
 export interface MsgSuperfluidUndelegateResponseAmino {}
 export interface MsgSuperfluidUndelegateResponseAminoMsg {
   type: '/symphony.superfluid.MsgSuperfluidUndelegateResponse';
   value: MsgSuperfluidUndelegateResponseAmino;
 }
+/**
+ * @name MsgSuperfluidUndelegateResponseSDKType
+ * @package symphony.superfluid
+ * @see proto type: symphony.superfluid.MsgSuperfluidUndelegateResponse
+ */
 export interface MsgSuperfluidUndelegateResponseSDKType {}
+/**
+ * @name MsgSuperfluidUnbondLock
+ * @package symphony.superfluid
+ * @see proto type: symphony.superfluid.MsgSuperfluidUnbondLock
+ */
 export interface MsgSuperfluidUnbondLock {
   sender: string;
   lockId: bigint;
@@ -78,6 +143,11 @@ export interface MsgSuperfluidUnbondLockProtoMsg {
   typeUrl: '/symphony.superfluid.MsgSuperfluidUnbondLock';
   value: Uint8Array;
 }
+/**
+ * @name MsgSuperfluidUnbondLockAmino
+ * @package symphony.superfluid
+ * @see proto type: symphony.superfluid.MsgSuperfluidUnbondLock
+ */
 export interface MsgSuperfluidUnbondLockAmino {
   sender?: string;
   lock_id?: string;
@@ -86,46 +156,90 @@ export interface MsgSuperfluidUnbondLockAminoMsg {
   type: 'symphony/superfluid-unbond-lock';
   value: MsgSuperfluidUnbondLockAmino;
 }
+/**
+ * @name MsgSuperfluidUnbondLockSDKType
+ * @package symphony.superfluid
+ * @see proto type: symphony.superfluid.MsgSuperfluidUnbondLock
+ */
 export interface MsgSuperfluidUnbondLockSDKType {
   sender: string;
   lock_id: bigint;
 }
+/**
+ * @name MsgSuperfluidUnbondLockResponse
+ * @package symphony.superfluid
+ * @see proto type: symphony.superfluid.MsgSuperfluidUnbondLockResponse
+ */
 export interface MsgSuperfluidUnbondLockResponse {}
 export interface MsgSuperfluidUnbondLockResponseProtoMsg {
   typeUrl: '/symphony.superfluid.MsgSuperfluidUnbondLockResponse';
   value: Uint8Array;
 }
+/**
+ * @name MsgSuperfluidUnbondLockResponseAmino
+ * @package symphony.superfluid
+ * @see proto type: symphony.superfluid.MsgSuperfluidUnbondLockResponse
+ */
 export interface MsgSuperfluidUnbondLockResponseAmino {}
 export interface MsgSuperfluidUnbondLockResponseAminoMsg {
   type: '/symphony.superfluid.MsgSuperfluidUnbondLockResponse';
   value: MsgSuperfluidUnbondLockResponseAmino;
 }
+/**
+ * @name MsgSuperfluidUnbondLockResponseSDKType
+ * @package symphony.superfluid
+ * @see proto type: symphony.superfluid.MsgSuperfluidUnbondLockResponse
+ */
 export interface MsgSuperfluidUnbondLockResponseSDKType {}
+/**
+ * @name MsgSuperfluidUndelegateAndUnbondLock
+ * @package symphony.superfluid
+ * @see proto type: symphony.superfluid.MsgSuperfluidUndelegateAndUnbondLock
+ */
 export interface MsgSuperfluidUndelegateAndUnbondLock {
   sender: string;
   lockId: bigint;
-  /** Amount of unlocking coin. */
+  /**
+   * Amount of unlocking coin.
+   */
   coin: Coin;
 }
 export interface MsgSuperfluidUndelegateAndUnbondLockProtoMsg {
   typeUrl: '/symphony.superfluid.MsgSuperfluidUndelegateAndUnbondLock';
   value: Uint8Array;
 }
+/**
+ * @name MsgSuperfluidUndelegateAndUnbondLockAmino
+ * @package symphony.superfluid
+ * @see proto type: symphony.superfluid.MsgSuperfluidUndelegateAndUnbondLock
+ */
 export interface MsgSuperfluidUndelegateAndUnbondLockAmino {
   sender?: string;
   lock_id?: string;
-  /** Amount of unlocking coin. */
+  /**
+   * Amount of unlocking coin.
+   */
   coin?: CoinAmino;
 }
 export interface MsgSuperfluidUndelegateAndUnbondLockAminoMsg {
   type: 'symphony/superfluid-undelegate-unbond-lock';
   value: MsgSuperfluidUndelegateAndUnbondLockAmino;
 }
+/**
+ * @name MsgSuperfluidUndelegateAndUnbondLockSDKType
+ * @package symphony.superfluid
+ * @see proto type: symphony.superfluid.MsgSuperfluidUndelegateAndUnbondLock
+ */
 export interface MsgSuperfluidUndelegateAndUnbondLockSDKType {
   sender: string;
   lock_id: bigint;
   coin: CoinSDKType;
 }
+/**
+ * @name MsgSuperfluidUndelegateAndUnbondLockResponse
+ * @package symphony.superfluid
+ * @see proto type: symphony.superfluid.MsgSuperfluidUndelegateAndUnbondLockResponse
+ */
 export interface MsgSuperfluidUndelegateAndUnbondLockResponse {
   /**
    * lock id of the new lock created for the remaining amount.
@@ -138,6 +252,11 @@ export interface MsgSuperfluidUndelegateAndUnbondLockResponseProtoMsg {
   typeUrl: '/symphony.superfluid.MsgSuperfluidUndelegateAndUnbondLockResponse';
   value: Uint8Array;
 }
+/**
+ * @name MsgSuperfluidUndelegateAndUnbondLockResponseAmino
+ * @package symphony.superfluid
+ * @see proto type: symphony.superfluid.MsgSuperfluidUndelegateAndUnbondLockResponse
+ */
 export interface MsgSuperfluidUndelegateAndUnbondLockResponseAmino {
   /**
    * lock id of the new lock created for the remaining amount.
@@ -150,6 +269,11 @@ export interface MsgSuperfluidUndelegateAndUnbondLockResponseAminoMsg {
   type: '/symphony.superfluid.MsgSuperfluidUndelegateAndUnbondLockResponse';
   value: MsgSuperfluidUndelegateAndUnbondLockResponseAmino;
 }
+/**
+ * @name MsgSuperfluidUndelegateAndUnbondLockResponseSDKType
+ * @package symphony.superfluid
+ * @see proto type: symphony.superfluid.MsgSuperfluidUndelegateAndUnbondLockResponse
+ */
 export interface MsgSuperfluidUndelegateAndUnbondLockResponseSDKType {
   lock_id: bigint;
 }
@@ -157,6 +281,9 @@ export interface MsgSuperfluidUndelegateAndUnbondLockResponseSDKType {
  * MsgLockAndSuperfluidDelegate locks coins with the unbonding period duration,
  * and then does a superfluid lock from the newly created lockup, to the
  * specified validator addr.
+ * @name MsgLockAndSuperfluidDelegate
+ * @package symphony.superfluid
+ * @see proto type: symphony.superfluid.MsgLockAndSuperfluidDelegate
  */
 export interface MsgLockAndSuperfluidDelegate {
   sender: string;
@@ -171,6 +298,9 @@ export interface MsgLockAndSuperfluidDelegateProtoMsg {
  * MsgLockAndSuperfluidDelegate locks coins with the unbonding period duration,
  * and then does a superfluid lock from the newly created lockup, to the
  * specified validator addr.
+ * @name MsgLockAndSuperfluidDelegateAmino
+ * @package symphony.superfluid
+ * @see proto type: symphony.superfluid.MsgLockAndSuperfluidDelegate
  */
 export interface MsgLockAndSuperfluidDelegateAmino {
   sender?: string;
@@ -185,12 +315,20 @@ export interface MsgLockAndSuperfluidDelegateAminoMsg {
  * MsgLockAndSuperfluidDelegate locks coins with the unbonding period duration,
  * and then does a superfluid lock from the newly created lockup, to the
  * specified validator addr.
+ * @name MsgLockAndSuperfluidDelegateSDKType
+ * @package symphony.superfluid
+ * @see proto type: symphony.superfluid.MsgLockAndSuperfluidDelegate
  */
 export interface MsgLockAndSuperfluidDelegateSDKType {
   sender: string;
   coins: CoinSDKType[];
   val_addr: string;
 }
+/**
+ * @name MsgLockAndSuperfluidDelegateResponse
+ * @package symphony.superfluid
+ * @see proto type: symphony.superfluid.MsgLockAndSuperfluidDelegateResponse
+ */
 export interface MsgLockAndSuperfluidDelegateResponse {
   iD: bigint;
 }
@@ -198,6 +336,11 @@ export interface MsgLockAndSuperfluidDelegateResponseProtoMsg {
   typeUrl: '/symphony.superfluid.MsgLockAndSuperfluidDelegateResponse';
   value: Uint8Array;
 }
+/**
+ * @name MsgLockAndSuperfluidDelegateResponseAmino
+ * @package symphony.superfluid
+ * @see proto type: symphony.superfluid.MsgLockAndSuperfluidDelegateResponse
+ */
 export interface MsgLockAndSuperfluidDelegateResponseAmino {
   ID?: string;
 }
@@ -205,12 +348,20 @@ export interface MsgLockAndSuperfluidDelegateResponseAminoMsg {
   type: '/symphony.superfluid.MsgLockAndSuperfluidDelegateResponse';
   value: MsgLockAndSuperfluidDelegateResponseAmino;
 }
+/**
+ * @name MsgLockAndSuperfluidDelegateResponseSDKType
+ * @package symphony.superfluid
+ * @see proto type: symphony.superfluid.MsgLockAndSuperfluidDelegateResponse
+ */
 export interface MsgLockAndSuperfluidDelegateResponseSDKType {
   ID: bigint;
 }
 /**
  * MsgCreateFullRangePositionAndSuperfluidDelegate creates a full range position
  * in a concentrated liquidity pool, then superfluid delegates.
+ * @name MsgCreateFullRangePositionAndSuperfluidDelegate
+ * @package symphony.superfluid
+ * @see proto type: symphony.superfluid.MsgCreateFullRangePositionAndSuperfluidDelegate
  */
 export interface MsgCreateFullRangePositionAndSuperfluidDelegate {
   sender: string;
@@ -225,6 +376,9 @@ export interface MsgCreateFullRangePositionAndSuperfluidDelegateProtoMsg {
 /**
  * MsgCreateFullRangePositionAndSuperfluidDelegate creates a full range position
  * in a concentrated liquidity pool, then superfluid delegates.
+ * @name MsgCreateFullRangePositionAndSuperfluidDelegateAmino
+ * @package symphony.superfluid
+ * @see proto type: symphony.superfluid.MsgCreateFullRangePositionAndSuperfluidDelegate
  */
 export interface MsgCreateFullRangePositionAndSuperfluidDelegateAmino {
   sender?: string;
@@ -239,6 +393,9 @@ export interface MsgCreateFullRangePositionAndSuperfluidDelegateAminoMsg {
 /**
  * MsgCreateFullRangePositionAndSuperfluidDelegate creates a full range position
  * in a concentrated liquidity pool, then superfluid delegates.
+ * @name MsgCreateFullRangePositionAndSuperfluidDelegateSDKType
+ * @package symphony.superfluid
+ * @see proto type: symphony.superfluid.MsgCreateFullRangePositionAndSuperfluidDelegate
  */
 export interface MsgCreateFullRangePositionAndSuperfluidDelegateSDKType {
   sender: string;
@@ -246,6 +403,11 @@ export interface MsgCreateFullRangePositionAndSuperfluidDelegateSDKType {
   val_addr: string;
   pool_id: bigint;
 }
+/**
+ * @name MsgCreateFullRangePositionAndSuperfluidDelegateResponse
+ * @package symphony.superfluid
+ * @see proto type: symphony.superfluid.MsgCreateFullRangePositionAndSuperfluidDelegateResponse
+ */
 export interface MsgCreateFullRangePositionAndSuperfluidDelegateResponse {
   lockID: bigint;
   positionID: bigint;
@@ -254,6 +416,11 @@ export interface MsgCreateFullRangePositionAndSuperfluidDelegateResponseProtoMsg
   typeUrl: '/symphony.superfluid.MsgCreateFullRangePositionAndSuperfluidDelegateResponse';
   value: Uint8Array;
 }
+/**
+ * @name MsgCreateFullRangePositionAndSuperfluidDelegateResponseAmino
+ * @package symphony.superfluid
+ * @see proto type: symphony.superfluid.MsgCreateFullRangePositionAndSuperfluidDelegateResponse
+ */
 export interface MsgCreateFullRangePositionAndSuperfluidDelegateResponseAmino {
   lockID?: string;
   positionID?: string;
@@ -262,6 +429,11 @@ export interface MsgCreateFullRangePositionAndSuperfluidDelegateResponseAminoMsg
   type: '/symphony.superfluid.MsgCreateFullRangePositionAndSuperfluidDelegateResponse';
   value: MsgCreateFullRangePositionAndSuperfluidDelegateResponseAmino;
 }
+/**
+ * @name MsgCreateFullRangePositionAndSuperfluidDelegateResponseSDKType
+ * @package symphony.superfluid
+ * @see proto type: symphony.superfluid.MsgCreateFullRangePositionAndSuperfluidDelegateResponse
+ */
 export interface MsgCreateFullRangePositionAndSuperfluidDelegateResponseSDKType {
   lockID: bigint;
   positionID: bigint;
@@ -275,6 +447,9 @@ export interface MsgCreateFullRangePositionAndSuperfluidDelegateResponseSDKType 
  * lock for every constituent token, with the duration associated with the lock.
  * If the lock was unbonding, the new lockup durations should be the time left
  * until unbond completion.
+ * @name MsgUnPoolWhitelistedPool
+ * @package symphony.superfluid
+ * @see proto type: symphony.superfluid.MsgUnPoolWhitelistedPool
  */
 export interface MsgUnPoolWhitelistedPool {
   sender: string;
@@ -293,6 +468,9 @@ export interface MsgUnPoolWhitelistedPoolProtoMsg {
  * lock for every constituent token, with the duration associated with the lock.
  * If the lock was unbonding, the new lockup durations should be the time left
  * until unbond completion.
+ * @name MsgUnPoolWhitelistedPoolAmino
+ * @package symphony.superfluid
+ * @see proto type: symphony.superfluid.MsgUnPoolWhitelistedPool
  */
 export interface MsgUnPoolWhitelistedPoolAmino {
   sender?: string;
@@ -311,11 +489,19 @@ export interface MsgUnPoolWhitelistedPoolAminoMsg {
  * lock for every constituent token, with the duration associated with the lock.
  * If the lock was unbonding, the new lockup durations should be the time left
  * until unbond completion.
+ * @name MsgUnPoolWhitelistedPoolSDKType
+ * @package symphony.superfluid
+ * @see proto type: symphony.superfluid.MsgUnPoolWhitelistedPool
  */
 export interface MsgUnPoolWhitelistedPoolSDKType {
   sender: string;
   pool_id: bigint;
 }
+/**
+ * @name MsgUnPoolWhitelistedPoolResponse
+ * @package symphony.superfluid
+ * @see proto type: symphony.superfluid.MsgUnPoolWhitelistedPoolResponse
+ */
 export interface MsgUnPoolWhitelistedPoolResponse {
   exitedLockIds: bigint[];
 }
@@ -323,6 +509,11 @@ export interface MsgUnPoolWhitelistedPoolResponseProtoMsg {
   typeUrl: '/symphony.superfluid.MsgUnPoolWhitelistedPoolResponse';
   value: Uint8Array;
 }
+/**
+ * @name MsgUnPoolWhitelistedPoolResponseAmino
+ * @package symphony.superfluid
+ * @see proto type: symphony.superfluid.MsgUnPoolWhitelistedPoolResponse
+ */
 export interface MsgUnPoolWhitelistedPoolResponseAmino {
   exited_lock_ids?: string[];
 }
@@ -330,18 +521,28 @@ export interface MsgUnPoolWhitelistedPoolResponseAminoMsg {
   type: '/symphony.superfluid.MsgUnPoolWhitelistedPoolResponse';
   value: MsgUnPoolWhitelistedPoolResponseAmino;
 }
+/**
+ * @name MsgUnPoolWhitelistedPoolResponseSDKType
+ * @package symphony.superfluid
+ * @see proto type: symphony.superfluid.MsgUnPoolWhitelistedPoolResponse
+ */
 export interface MsgUnPoolWhitelistedPoolResponseSDKType {
   exited_lock_ids: bigint[];
 }
 /**
  * =====================
  * MsgUnlockAndMigrateSharesToFullRangeConcentratedPosition
+ * @name MsgUnlockAndMigrateSharesToFullRangeConcentratedPosition
+ * @package symphony.superfluid
+ * @see proto type: symphony.superfluid.MsgUnlockAndMigrateSharesToFullRangeConcentratedPosition
  */
 export interface MsgUnlockAndMigrateSharesToFullRangeConcentratedPosition {
   sender: string;
   lockId: bigint;
   sharesToMigrate: Coin;
-  /** token_out_mins indicates minimum token to exit Balancer pool with. */
+  /**
+   * token_out_mins indicates minimum token to exit Balancer pool with.
+   */
   tokenOutMins: Coin[];
 }
 export interface MsgUnlockAndMigrateSharesToFullRangeConcentratedPositionProtoMsg {
@@ -351,12 +552,17 @@ export interface MsgUnlockAndMigrateSharesToFullRangeConcentratedPositionProtoMs
 /**
  * =====================
  * MsgUnlockAndMigrateSharesToFullRangeConcentratedPosition
+ * @name MsgUnlockAndMigrateSharesToFullRangeConcentratedPositionAmino
+ * @package symphony.superfluid
+ * @see proto type: symphony.superfluid.MsgUnlockAndMigrateSharesToFullRangeConcentratedPosition
  */
 export interface MsgUnlockAndMigrateSharesToFullRangeConcentratedPositionAmino {
   sender?: string;
   lock_id?: string;
   shares_to_migrate?: CoinAmino;
-  /** token_out_mins indicates minimum token to exit Balancer pool with. */
+  /**
+   * token_out_mins indicates minimum token to exit Balancer pool with.
+   */
   token_out_mins?: CoinAmino[];
 }
 export interface MsgUnlockAndMigrateSharesToFullRangeConcentratedPositionAminoMsg {
@@ -366,6 +572,9 @@ export interface MsgUnlockAndMigrateSharesToFullRangeConcentratedPositionAminoMs
 /**
  * =====================
  * MsgUnlockAndMigrateSharesToFullRangeConcentratedPosition
+ * @name MsgUnlockAndMigrateSharesToFullRangeConcentratedPositionSDKType
+ * @package symphony.superfluid
+ * @see proto type: symphony.superfluid.MsgUnlockAndMigrateSharesToFullRangeConcentratedPosition
  */
 export interface MsgUnlockAndMigrateSharesToFullRangeConcentratedPositionSDKType {
   sender: string;
@@ -373,6 +582,11 @@ export interface MsgUnlockAndMigrateSharesToFullRangeConcentratedPositionSDKType
   shares_to_migrate: CoinSDKType;
   token_out_mins: CoinSDKType[];
 }
+/**
+ * @name MsgUnlockAndMigrateSharesToFullRangeConcentratedPositionResponse
+ * @package symphony.superfluid
+ * @see proto type: symphony.superfluid.MsgUnlockAndMigrateSharesToFullRangeConcentratedPositionResponse
+ */
 export interface MsgUnlockAndMigrateSharesToFullRangeConcentratedPositionResponse {
   amount0: string;
   amount1: string;
@@ -383,6 +597,11 @@ export interface MsgUnlockAndMigrateSharesToFullRangeConcentratedPositionRespons
   typeUrl: '/symphony.superfluid.MsgUnlockAndMigrateSharesToFullRangeConcentratedPositionResponse';
   value: Uint8Array;
 }
+/**
+ * @name MsgUnlockAndMigrateSharesToFullRangeConcentratedPositionResponseAmino
+ * @package symphony.superfluid
+ * @see proto type: symphony.superfluid.MsgUnlockAndMigrateSharesToFullRangeConcentratedPositionResponse
+ */
 export interface MsgUnlockAndMigrateSharesToFullRangeConcentratedPositionResponseAmino {
   amount0?: string;
   amount1?: string;
@@ -393,13 +612,23 @@ export interface MsgUnlockAndMigrateSharesToFullRangeConcentratedPositionRespons
   type: '/symphony.superfluid.MsgUnlockAndMigrateSharesToFullRangeConcentratedPositionResponse';
   value: MsgUnlockAndMigrateSharesToFullRangeConcentratedPositionResponseAmino;
 }
+/**
+ * @name MsgUnlockAndMigrateSharesToFullRangeConcentratedPositionResponseSDKType
+ * @package symphony.superfluid
+ * @see proto type: symphony.superfluid.MsgUnlockAndMigrateSharesToFullRangeConcentratedPositionResponse
+ */
 export interface MsgUnlockAndMigrateSharesToFullRangeConcentratedPositionResponseSDKType {
   amount0: string;
   amount1: string;
   liquidity_created: string;
   join_time: Date;
 }
-/** ===================== MsgAddToConcentratedLiquiditySuperfluidPosition */
+/**
+ * ===================== MsgAddToConcentratedLiquiditySuperfluidPosition
+ * @name MsgAddToConcentratedLiquiditySuperfluidPosition
+ * @package symphony.superfluid
+ * @see proto type: symphony.superfluid.MsgAddToConcentratedLiquiditySuperfluidPosition
+ */
 export interface MsgAddToConcentratedLiquiditySuperfluidPosition {
   positionId: bigint;
   sender: string;
@@ -410,7 +639,12 @@ export interface MsgAddToConcentratedLiquiditySuperfluidPositionProtoMsg {
   typeUrl: '/symphony.superfluid.MsgAddToConcentratedLiquiditySuperfluidPosition';
   value: Uint8Array;
 }
-/** ===================== MsgAddToConcentratedLiquiditySuperfluidPosition */
+/**
+ * ===================== MsgAddToConcentratedLiquiditySuperfluidPosition
+ * @name MsgAddToConcentratedLiquiditySuperfluidPositionAmino
+ * @package symphony.superfluid
+ * @see proto type: symphony.superfluid.MsgAddToConcentratedLiquiditySuperfluidPosition
+ */
 export interface MsgAddToConcentratedLiquiditySuperfluidPositionAmino {
   position_id?: string;
   sender?: string;
@@ -421,13 +655,23 @@ export interface MsgAddToConcentratedLiquiditySuperfluidPositionAminoMsg {
   type: 'symphony/add-to-cl-superfluid-position';
   value: MsgAddToConcentratedLiquiditySuperfluidPositionAmino;
 }
-/** ===================== MsgAddToConcentratedLiquiditySuperfluidPosition */
+/**
+ * ===================== MsgAddToConcentratedLiquiditySuperfluidPosition
+ * @name MsgAddToConcentratedLiquiditySuperfluidPositionSDKType
+ * @package symphony.superfluid
+ * @see proto type: symphony.superfluid.MsgAddToConcentratedLiquiditySuperfluidPosition
+ */
 export interface MsgAddToConcentratedLiquiditySuperfluidPositionSDKType {
   position_id: bigint;
   sender: string;
   token_desired0: CoinSDKType;
   token_desired1: CoinSDKType;
 }
+/**
+ * @name MsgAddToConcentratedLiquiditySuperfluidPositionResponse
+ * @package symphony.superfluid
+ * @see proto type: symphony.superfluid.MsgAddToConcentratedLiquiditySuperfluidPositionResponse
+ */
 export interface MsgAddToConcentratedLiquiditySuperfluidPositionResponse {
   positionId: bigint;
   amount0: string;
@@ -444,6 +688,11 @@ export interface MsgAddToConcentratedLiquiditySuperfluidPositionResponseProtoMsg
   typeUrl: '/symphony.superfluid.MsgAddToConcentratedLiquiditySuperfluidPositionResponse';
   value: Uint8Array;
 }
+/**
+ * @name MsgAddToConcentratedLiquiditySuperfluidPositionResponseAmino
+ * @package symphony.superfluid
+ * @see proto type: symphony.superfluid.MsgAddToConcentratedLiquiditySuperfluidPositionResponse
+ */
 export interface MsgAddToConcentratedLiquiditySuperfluidPositionResponseAmino {
   position_id?: string;
   amount0?: string;
@@ -460,6 +709,11 @@ export interface MsgAddToConcentratedLiquiditySuperfluidPositionResponseAminoMsg
   type: '/symphony.superfluid.MsgAddToConcentratedLiquiditySuperfluidPositionResponse';
   value: MsgAddToConcentratedLiquiditySuperfluidPositionResponseAmino;
 }
+/**
+ * @name MsgAddToConcentratedLiquiditySuperfluidPositionResponseSDKType
+ * @package symphony.superfluid
+ * @see proto type: symphony.superfluid.MsgAddToConcentratedLiquiditySuperfluidPositionResponse
+ */
 export interface MsgAddToConcentratedLiquiditySuperfluidPositionResponseSDKType {
   position_id: bigint;
   amount0: string;
@@ -467,7 +721,12 @@ export interface MsgAddToConcentratedLiquiditySuperfluidPositionResponseSDKType 
   new_liquidity: string;
   lock_id: bigint;
 }
-/** ===================== MsgUnbondConvertAndStake */
+/**
+ * ===================== MsgUnbondConvertAndStake
+ * @name MsgUnbondConvertAndStake
+ * @package symphony.superfluid
+ * @see proto type: symphony.superfluid.MsgUnbondConvertAndStake
+ */
 export interface MsgUnbondConvertAndStake {
   /**
    * lock ID to convert and stake.
@@ -481,7 +740,9 @@ export interface MsgUnbondConvertAndStake {
    * valset-preference module.
    */
   valAddr: string;
-  /** min_amt_to_stake indicates the minimum amount to stake after conversion */
+  /**
+   * min_amt_to_stake indicates the minimum amount to stake after conversion
+   */
   minAmtToStake: string;
   /**
    * shares_to_convert indicates shares wanted to stake.
@@ -494,7 +755,12 @@ export interface MsgUnbondConvertAndStakeProtoMsg {
   typeUrl: '/symphony.superfluid.MsgUnbondConvertAndStake';
   value: Uint8Array;
 }
-/** ===================== MsgUnbondConvertAndStake */
+/**
+ * ===================== MsgUnbondConvertAndStake
+ * @name MsgUnbondConvertAndStakeAmino
+ * @package symphony.superfluid
+ * @see proto type: symphony.superfluid.MsgUnbondConvertAndStake
+ */
 export interface MsgUnbondConvertAndStakeAmino {
   /**
    * lock ID to convert and stake.
@@ -508,7 +774,9 @@ export interface MsgUnbondConvertAndStakeAmino {
    * valset-preference module.
    */
   val_addr?: string;
-  /** min_amt_to_stake indicates the minimum amount to stake after conversion */
+  /**
+   * min_amt_to_stake indicates the minimum amount to stake after conversion
+   */
   min_amt_to_stake?: string;
   /**
    * shares_to_convert indicates shares wanted to stake.
@@ -521,7 +789,12 @@ export interface MsgUnbondConvertAndStakeAminoMsg {
   type: 'symphony/unbond-convert-and-stake';
   value: MsgUnbondConvertAndStakeAmino;
 }
-/** ===================== MsgUnbondConvertAndStake */
+/**
+ * ===================== MsgUnbondConvertAndStake
+ * @name MsgUnbondConvertAndStakeSDKType
+ * @package symphony.superfluid
+ * @see proto type: symphony.superfluid.MsgUnbondConvertAndStake
+ */
 export interface MsgUnbondConvertAndStakeSDKType {
   lock_id: bigint;
   sender: string;
@@ -529,6 +802,11 @@ export interface MsgUnbondConvertAndStakeSDKType {
   min_amt_to_stake: string;
   shares_to_convert: CoinSDKType;
 }
+/**
+ * @name MsgUnbondConvertAndStakeResponse
+ * @package symphony.superfluid
+ * @see proto type: symphony.superfluid.MsgUnbondConvertAndStakeResponse
+ */
 export interface MsgUnbondConvertAndStakeResponse {
   totalAmtStaked: string;
 }
@@ -536,6 +814,11 @@ export interface MsgUnbondConvertAndStakeResponseProtoMsg {
   typeUrl: '/symphony.superfluid.MsgUnbondConvertAndStakeResponse';
   value: Uint8Array;
 }
+/**
+ * @name MsgUnbondConvertAndStakeResponseAmino
+ * @package symphony.superfluid
+ * @see proto type: symphony.superfluid.MsgUnbondConvertAndStakeResponse
+ */
 export interface MsgUnbondConvertAndStakeResponseAmino {
   total_amt_staked?: string;
 }
@@ -543,6 +826,11 @@ export interface MsgUnbondConvertAndStakeResponseAminoMsg {
   type: '/symphony.superfluid.MsgUnbondConvertAndStakeResponse';
   value: MsgUnbondConvertAndStakeResponseAmino;
 }
+/**
+ * @name MsgUnbondConvertAndStakeResponseSDKType
+ * @package symphony.superfluid
+ * @see proto type: symphony.superfluid.MsgUnbondConvertAndStakeResponse
+ */
 export interface MsgUnbondConvertAndStakeResponseSDKType {
   total_amt_staked: string;
 }
@@ -553,6 +841,11 @@ function createBaseMsgSuperfluidDelegate(): MsgSuperfluidDelegate {
     valAddr: '',
   };
 }
+/**
+ * @name MsgSuperfluidDelegate
+ * @package symphony.superfluid
+ * @see proto type: symphony.superfluid.MsgSuperfluidDelegate
+ */
 export const MsgSuperfluidDelegate = {
   typeUrl: '/symphony.superfluid.MsgSuperfluidDelegate',
   aminoType: 'symphony/superfluid-delegate',
@@ -689,6 +982,11 @@ GlobalDecoderRegistry.registerAminoProtoMapping(
 function createBaseMsgSuperfluidDelegateResponse(): MsgSuperfluidDelegateResponse {
   return {};
 }
+/**
+ * @name MsgSuperfluidDelegateResponse
+ * @package symphony.superfluid
+ * @see proto type: symphony.superfluid.MsgSuperfluidDelegateResponse
+ */
 export const MsgSuperfluidDelegateResponse = {
   typeUrl: '/symphony.superfluid.MsgSuperfluidDelegateResponse',
   is(o: any): o is MsgSuperfluidDelegateResponse {
@@ -774,6 +1072,11 @@ function createBaseMsgSuperfluidUndelegate(): MsgSuperfluidUndelegate {
     lockId: BigInt(0),
   };
 }
+/**
+ * @name MsgSuperfluidUndelegate
+ * @package symphony.superfluid
+ * @see proto type: symphony.superfluid.MsgSuperfluidUndelegate
+ */
 export const MsgSuperfluidUndelegate = {
   typeUrl: '/symphony.superfluid.MsgSuperfluidUndelegate',
   aminoType: 'symphony/superfluid-undelegate',
@@ -903,6 +1206,11 @@ GlobalDecoderRegistry.registerAminoProtoMapping(
 function createBaseMsgSuperfluidUndelegateResponse(): MsgSuperfluidUndelegateResponse {
   return {};
 }
+/**
+ * @name MsgSuperfluidUndelegateResponse
+ * @package symphony.superfluid
+ * @see proto type: symphony.superfluid.MsgSuperfluidUndelegateResponse
+ */
 export const MsgSuperfluidUndelegateResponse = {
   typeUrl: '/symphony.superfluid.MsgSuperfluidUndelegateResponse',
   is(o: any): o is MsgSuperfluidUndelegateResponse {
@@ -988,6 +1296,11 @@ function createBaseMsgSuperfluidUnbondLock(): MsgSuperfluidUnbondLock {
     lockId: BigInt(0),
   };
 }
+/**
+ * @name MsgSuperfluidUnbondLock
+ * @package symphony.superfluid
+ * @see proto type: symphony.superfluid.MsgSuperfluidUnbondLock
+ */
 export const MsgSuperfluidUnbondLock = {
   typeUrl: '/symphony.superfluid.MsgSuperfluidUnbondLock',
   aminoType: 'symphony/superfluid-unbond-lock',
@@ -1117,6 +1430,11 @@ GlobalDecoderRegistry.registerAminoProtoMapping(
 function createBaseMsgSuperfluidUnbondLockResponse(): MsgSuperfluidUnbondLockResponse {
   return {};
 }
+/**
+ * @name MsgSuperfluidUnbondLockResponse
+ * @package symphony.superfluid
+ * @see proto type: symphony.superfluid.MsgSuperfluidUnbondLockResponse
+ */
 export const MsgSuperfluidUnbondLockResponse = {
   typeUrl: '/symphony.superfluid.MsgSuperfluidUnbondLockResponse',
   is(o: any): o is MsgSuperfluidUnbondLockResponse {
@@ -1203,6 +1521,11 @@ function createBaseMsgSuperfluidUndelegateAndUnbondLock(): MsgSuperfluidUndelega
     coin: Coin.fromPartial({}),
   };
 }
+/**
+ * @name MsgSuperfluidUndelegateAndUnbondLock
+ * @package symphony.superfluid
+ * @see proto type: symphony.superfluid.MsgSuperfluidUndelegateAndUnbondLock
+ */
 export const MsgSuperfluidUndelegateAndUnbondLock = {
   typeUrl: '/symphony.superfluid.MsgSuperfluidUndelegateAndUnbondLock',
   aminoType: 'symphony/superfluid-undelegate-unbond-lock',
@@ -1358,6 +1681,11 @@ function createBaseMsgSuperfluidUndelegateAndUnbondLockResponse(): MsgSuperfluid
     lockId: BigInt(0),
   };
 }
+/**
+ * @name MsgSuperfluidUndelegateAndUnbondLockResponse
+ * @package symphony.superfluid
+ * @see proto type: symphony.superfluid.MsgSuperfluidUndelegateAndUnbondLockResponse
+ */
 export const MsgSuperfluidUndelegateAndUnbondLockResponse = {
   typeUrl: '/symphony.superfluid.MsgSuperfluidUndelegateAndUnbondLockResponse',
   is(o: any): o is MsgSuperfluidUndelegateAndUnbondLockResponse {
@@ -1475,6 +1803,14 @@ function createBaseMsgLockAndSuperfluidDelegate(): MsgLockAndSuperfluidDelegate 
     valAddr: '',
   };
 }
+/**
+ * MsgLockAndSuperfluidDelegate locks coins with the unbonding period duration,
+ * and then does a superfluid lock from the newly created lockup, to the
+ * specified validator addr.
+ * @name MsgLockAndSuperfluidDelegate
+ * @package symphony.superfluid
+ * @see proto type: symphony.superfluid.MsgLockAndSuperfluidDelegate
+ */
 export const MsgLockAndSuperfluidDelegate = {
   typeUrl: '/symphony.superfluid.MsgLockAndSuperfluidDelegate',
   aminoType: 'symphony/lock-and-superfluid-delegate',
@@ -1628,6 +1964,11 @@ function createBaseMsgLockAndSuperfluidDelegateResponse(): MsgLockAndSuperfluidD
     iD: BigInt(0),
   };
 }
+/**
+ * @name MsgLockAndSuperfluidDelegateResponse
+ * @package symphony.superfluid
+ * @see proto type: symphony.superfluid.MsgLockAndSuperfluidDelegateResponse
+ */
 export const MsgLockAndSuperfluidDelegateResponse = {
   typeUrl: '/symphony.superfluid.MsgLockAndSuperfluidDelegateResponse',
   is(o: any): o is MsgLockAndSuperfluidDelegateResponse {
@@ -1741,6 +2082,13 @@ function createBaseMsgCreateFullRangePositionAndSuperfluidDelegate(): MsgCreateF
     poolId: BigInt(0),
   };
 }
+/**
+ * MsgCreateFullRangePositionAndSuperfluidDelegate creates a full range position
+ * in a concentrated liquidity pool, then superfluid delegates.
+ * @name MsgCreateFullRangePositionAndSuperfluidDelegate
+ * @package symphony.superfluid
+ * @see proto type: symphony.superfluid.MsgCreateFullRangePositionAndSuperfluidDelegate
+ */
 export const MsgCreateFullRangePositionAndSuperfluidDelegate = {
   typeUrl:
     '/symphony.superfluid.MsgCreateFullRangePositionAndSuperfluidDelegate',
@@ -1926,6 +2274,11 @@ function createBaseMsgCreateFullRangePositionAndSuperfluidDelegateResponse(): Ms
     positionID: BigInt(0),
   };
 }
+/**
+ * @name MsgCreateFullRangePositionAndSuperfluidDelegateResponse
+ * @package symphony.superfluid
+ * @see proto type: symphony.superfluid.MsgCreateFullRangePositionAndSuperfluidDelegateResponse
+ */
 export const MsgCreateFullRangePositionAndSuperfluidDelegateResponse = {
   typeUrl:
     '/symphony.superfluid.MsgCreateFullRangePositionAndSuperfluidDelegateResponse',
@@ -2078,6 +2431,19 @@ function createBaseMsgUnPoolWhitelistedPool(): MsgUnPoolWhitelistedPool {
     poolId: BigInt(0),
   };
 }
+/**
+ * MsgUnPoolWhitelistedPool Unpools every lock the sender has, that is
+ * associated with pool pool_id. If pool_id is not approved for unpooling by
+ * governance, this is a no-op. Unpooling takes the locked gamm shares, and runs
+ * "ExitPool" on it, to get the constituent tokens. e.g. z gamm/pool/1 tokens
+ * ExitPools into constituent tokens x uatom, y uosmo. Then it creates a new
+ * lock for every constituent token, with the duration associated with the lock.
+ * If the lock was unbonding, the new lockup durations should be the time left
+ * until unbond completion.
+ * @name MsgUnPoolWhitelistedPool
+ * @package symphony.superfluid
+ * @see proto type: symphony.superfluid.MsgUnPoolWhitelistedPool
+ */
 export const MsgUnPoolWhitelistedPool = {
   typeUrl: '/symphony.superfluid.MsgUnPoolWhitelistedPool',
   aminoType: 'symphony/unpool-whitelisted-pool',
@@ -2209,6 +2575,11 @@ function createBaseMsgUnPoolWhitelistedPoolResponse(): MsgUnPoolWhitelistedPoolR
     exitedLockIds: [],
   };
 }
+/**
+ * @name MsgUnPoolWhitelistedPoolResponse
+ * @package symphony.superfluid
+ * @see proto type: symphony.superfluid.MsgUnPoolWhitelistedPoolResponse
+ */
 export const MsgUnPoolWhitelistedPoolResponse = {
   typeUrl: '/symphony.superfluid.MsgUnPoolWhitelistedPoolResponse',
   is(o: any): o is MsgUnPoolWhitelistedPoolResponse {
@@ -2336,6 +2707,13 @@ function createBaseMsgUnlockAndMigrateSharesToFullRangeConcentratedPosition(): M
     tokenOutMins: [],
   };
 }
+/**
+ * =====================
+ * MsgUnlockAndMigrateSharesToFullRangeConcentratedPosition
+ * @name MsgUnlockAndMigrateSharesToFullRangeConcentratedPosition
+ * @package symphony.superfluid
+ * @see proto type: symphony.superfluid.MsgUnlockAndMigrateSharesToFullRangeConcentratedPosition
+ */
 export const MsgUnlockAndMigrateSharesToFullRangeConcentratedPosition = {
   typeUrl:
     '/symphony.superfluid.MsgUnlockAndMigrateSharesToFullRangeConcentratedPosition',
@@ -2548,6 +2926,11 @@ function createBaseMsgUnlockAndMigrateSharesToFullRangeConcentratedPositionRespo
     joinTime: new Date(),
   };
 }
+/**
+ * @name MsgUnlockAndMigrateSharesToFullRangeConcentratedPositionResponse
+ * @package symphony.superfluid
+ * @see proto type: symphony.superfluid.MsgUnlockAndMigrateSharesToFullRangeConcentratedPositionResponse
+ */
 export const MsgUnlockAndMigrateSharesToFullRangeConcentratedPositionResponse =
   {
     typeUrl:
@@ -2742,6 +3125,12 @@ function createBaseMsgAddToConcentratedLiquiditySuperfluidPosition(): MsgAddToCo
     tokenDesired1: Coin.fromPartial({}),
   };
 }
+/**
+ * ===================== MsgAddToConcentratedLiquiditySuperfluidPosition
+ * @name MsgAddToConcentratedLiquiditySuperfluidPosition
+ * @package symphony.superfluid
+ * @see proto type: symphony.superfluid.MsgAddToConcentratedLiquiditySuperfluidPosition
+ */
 export const MsgAddToConcentratedLiquiditySuperfluidPosition = {
   typeUrl:
     '/symphony.superfluid.MsgAddToConcentratedLiquiditySuperfluidPosition',
@@ -2937,6 +3326,11 @@ function createBaseMsgAddToConcentratedLiquiditySuperfluidPositionResponse(): Ms
     lockId: BigInt(0),
   };
 }
+/**
+ * @name MsgAddToConcentratedLiquiditySuperfluidPositionResponse
+ * @package symphony.superfluid
+ * @see proto type: symphony.superfluid.MsgAddToConcentratedLiquiditySuperfluidPositionResponse
+ */
 export const MsgAddToConcentratedLiquiditySuperfluidPositionResponse = {
   typeUrl:
     '/symphony.superfluid.MsgAddToConcentratedLiquiditySuperfluidPositionResponse',
@@ -3143,6 +3537,12 @@ function createBaseMsgUnbondConvertAndStake(): MsgUnbondConvertAndStake {
     sharesToConvert: Coin.fromPartial({}),
   };
 }
+/**
+ * ===================== MsgUnbondConvertAndStake
+ * @name MsgUnbondConvertAndStake
+ * @package symphony.superfluid
+ * @see proto type: symphony.superfluid.MsgUnbondConvertAndStake
+ */
 export const MsgUnbondConvertAndStake = {
   typeUrl: '/symphony.superfluid.MsgUnbondConvertAndStake',
   aminoType: 'symphony/unbond-convert-and-stake',
@@ -3331,6 +3731,11 @@ function createBaseMsgUnbondConvertAndStakeResponse(): MsgUnbondConvertAndStakeR
     totalAmtStaked: '',
   };
 }
+/**
+ * @name MsgUnbondConvertAndStakeResponse
+ * @package symphony.superfluid
+ * @see proto type: symphony.superfluid.MsgUnbondConvertAndStakeResponse
+ */
 export const MsgUnbondConvertAndStakeResponse = {
   typeUrl: '/symphony.superfluid.MsgUnbondConvertAndStakeResponse',
   is(o: any): o is MsgUnbondConvertAndStakeResponse {

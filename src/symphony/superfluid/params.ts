@@ -2,7 +2,12 @@
 import { BinaryReader, BinaryWriter } from '../../binary';
 import { Decimal } from '@cosmjs/math';
 import { GlobalDecoderRegistry } from '../../registry';
-/** Params holds parameters for the superfluid module */
+/**
+ * Params holds parameters for the superfluid module
+ * @name Params
+ * @package symphony.superfluid
+ * @see proto type: symphony.superfluid.Params
+ */
 export interface Params {
   /**
    * minimum_risk_factor is to be cut on OSMO equivalent value of lp tokens for
@@ -16,7 +21,12 @@ export interface ParamsProtoMsg {
   typeUrl: '/symphony.superfluid.Params';
   value: Uint8Array;
 }
-/** Params holds parameters for the superfluid module */
+/**
+ * Params holds parameters for the superfluid module
+ * @name ParamsAmino
+ * @package symphony.superfluid
+ * @see proto type: symphony.superfluid.Params
+ */
 export interface ParamsAmino {
   /**
    * minimum_risk_factor is to be cut on OSMO equivalent value of lp tokens for
@@ -30,7 +40,12 @@ export interface ParamsAminoMsg {
   type: '/symphony.superfluid.Params';
   value: ParamsAmino;
 }
-/** Params holds parameters for the superfluid module */
+/**
+ * Params holds parameters for the superfluid module
+ * @name ParamsSDKType
+ * @package symphony.superfluid
+ * @see proto type: symphony.superfluid.Params
+ */
 export interface ParamsSDKType {
   minimum_risk_factor: string;
 }
@@ -39,6 +54,12 @@ function createBaseParams(): Params {
     minimumRiskFactor: '',
   };
 }
+/**
+ * Params holds parameters for the superfluid module
+ * @name Params
+ * @package symphony.superfluid
+ * @see proto type: symphony.superfluid.Params
+ */
 export const Params = {
   typeUrl: '/symphony.superfluid.Params',
   is(o: any): o is Params {

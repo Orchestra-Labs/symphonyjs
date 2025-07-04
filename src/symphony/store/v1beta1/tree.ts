@@ -2,6 +2,11 @@
 import { BinaryReader, BinaryWriter } from '../../../binary';
 import { GlobalDecoderRegistry } from '../../../registry';
 import { bytesFromBase64, base64FromBytes } from '../../../helpers';
+/**
+ * @name Node
+ * @package symphony.store.v1beta1
+ * @see proto type: symphony.store.v1beta1.Node
+ */
 export interface Node {
   children: Child[];
 }
@@ -9,6 +14,11 @@ export interface NodeProtoMsg {
   typeUrl: '/symphony.store.v1beta1.Node';
   value: Uint8Array;
 }
+/**
+ * @name NodeAmino
+ * @package symphony.store.v1beta1
+ * @see proto type: symphony.store.v1beta1.Node
+ */
 export interface NodeAmino {
   children?: ChildAmino[];
 }
@@ -16,9 +26,19 @@ export interface NodeAminoMsg {
   type: '/symphony.store.v1beta1.Node';
   value: NodeAmino;
 }
+/**
+ * @name NodeSDKType
+ * @package symphony.store.v1beta1
+ * @see proto type: symphony.store.v1beta1.Node
+ */
 export interface NodeSDKType {
   children: ChildSDKType[];
 }
+/**
+ * @name Child
+ * @package symphony.store.v1beta1
+ * @see proto type: symphony.store.v1beta1.Child
+ */
 export interface Child {
   index: Uint8Array;
   accumulation: string;
@@ -27,6 +47,11 @@ export interface ChildProtoMsg {
   typeUrl: '/symphony.store.v1beta1.Child';
   value: Uint8Array;
 }
+/**
+ * @name ChildAmino
+ * @package symphony.store.v1beta1
+ * @see proto type: symphony.store.v1beta1.Child
+ */
 export interface ChildAmino {
   index?: string;
   accumulation?: string;
@@ -35,10 +60,20 @@ export interface ChildAminoMsg {
   type: '/symphony.store.v1beta1.Child';
   value: ChildAmino;
 }
+/**
+ * @name ChildSDKType
+ * @package symphony.store.v1beta1
+ * @see proto type: symphony.store.v1beta1.Child
+ */
 export interface ChildSDKType {
   index: Uint8Array;
   accumulation: string;
 }
+/**
+ * @name Leaf
+ * @package symphony.store.v1beta1
+ * @see proto type: symphony.store.v1beta1.Leaf
+ */
 export interface Leaf {
   leaf?: Child;
 }
@@ -46,6 +81,11 @@ export interface LeafProtoMsg {
   typeUrl: '/symphony.store.v1beta1.Leaf';
   value: Uint8Array;
 }
+/**
+ * @name LeafAmino
+ * @package symphony.store.v1beta1
+ * @see proto type: symphony.store.v1beta1.Leaf
+ */
 export interface LeafAmino {
   leaf?: ChildAmino;
 }
@@ -53,6 +93,11 @@ export interface LeafAminoMsg {
   type: '/symphony.store.v1beta1.Leaf';
   value: LeafAmino;
 }
+/**
+ * @name LeafSDKType
+ * @package symphony.store.v1beta1
+ * @see proto type: symphony.store.v1beta1.Leaf
+ */
 export interface LeafSDKType {
   leaf?: ChildSDKType;
 }
@@ -61,6 +106,11 @@ function createBaseNode(): Node {
     children: [],
   };
 }
+/**
+ * @name Node
+ * @package symphony.store.v1beta1
+ * @see proto type: symphony.store.v1beta1.Node
+ */
 export const Node = {
   typeUrl: '/symphony.store.v1beta1.Node',
   is(o: any): o is Node {
@@ -158,6 +208,11 @@ function createBaseChild(): Child {
     accumulation: '',
   };
 }
+/**
+ * @name Child
+ * @package symphony.store.v1beta1
+ * @see proto type: symphony.store.v1beta1.Child
+ */
 export const Child = {
   typeUrl: '/symphony.store.v1beta1.Child',
   is(o: any): o is Child {
@@ -262,6 +317,11 @@ function createBaseLeaf(): Leaf {
     leaf: undefined,
   };
 }
+/**
+ * @name Leaf
+ * @package symphony.store.v1beta1
+ * @see proto type: symphony.store.v1beta1.Leaf
+ */
 export const Leaf = {
   typeUrl: '/symphony.store.v1beta1.Leaf',
   is(o: any): o is Leaf {

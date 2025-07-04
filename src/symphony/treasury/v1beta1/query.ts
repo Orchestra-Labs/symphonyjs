@@ -3,23 +3,41 @@ import { Params, ParamsAmino, ParamsSDKType } from './treasury';
 import { BinaryReader, BinaryWriter } from '../../../binary';
 import { GlobalDecoderRegistry } from '../../../registry';
 import { Decimal } from '@cosmjs/math';
-/** QueryTaxRateRequest is the request type for the Query/TaxRate RPC method. */
+/**
+ * QueryTaxRateRequest is the request type for the Query/TaxRate RPC method.
+ * @name QueryTaxRateRequest
+ * @package symphony.treasury.v1beta1
+ * @see proto type: symphony.treasury.v1beta1.QueryTaxRateRequest
+ */
 export interface QueryTaxRateRequest {}
 export interface QueryTaxRateRequestProtoMsg {
   typeUrl: '/symphony.treasury.v1beta1.QueryTaxRateRequest';
   value: Uint8Array;
 }
-/** QueryTaxRateRequest is the request type for the Query/TaxRate RPC method. */
+/**
+ * QueryTaxRateRequest is the request type for the Query/TaxRate RPC method.
+ * @name QueryTaxRateRequestAmino
+ * @package symphony.treasury.v1beta1
+ * @see proto type: symphony.treasury.v1beta1.QueryTaxRateRequest
+ */
 export interface QueryTaxRateRequestAmino {}
 export interface QueryTaxRateRequestAminoMsg {
   type: '/symphony.treasury.v1beta1.QueryTaxRateRequest';
   value: QueryTaxRateRequestAmino;
 }
-/** QueryTaxRateRequest is the request type for the Query/TaxRate RPC method. */
+/**
+ * QueryTaxRateRequest is the request type for the Query/TaxRate RPC method.
+ * @name QueryTaxRateRequestSDKType
+ * @package symphony.treasury.v1beta1
+ * @see proto type: symphony.treasury.v1beta1.QueryTaxRateRequest
+ */
 export interface QueryTaxRateRequestSDKType {}
 /**
  * QueryTaxRateResponse is response type for the
  * Query/TaxRate RPC method.
+ * @name QueryTaxRateResponse
+ * @package symphony.treasury.v1beta1
+ * @see proto type: symphony.treasury.v1beta1.QueryTaxRateResponse
  */
 export interface QueryTaxRateResponse {
   taxRate: string;
@@ -31,6 +49,9 @@ export interface QueryTaxRateResponseProtoMsg {
 /**
  * QueryTaxRateResponse is response type for the
  * Query/TaxRate RPC method.
+ * @name QueryTaxRateResponseAmino
+ * @package symphony.treasury.v1beta1
+ * @see proto type: symphony.treasury.v1beta1.QueryTaxRateResponse
  */
 export interface QueryTaxRateResponseAmino {
   tax_rate?: string;
@@ -42,49 +63,92 @@ export interface QueryTaxRateResponseAminoMsg {
 /**
  * QueryTaxRateResponse is response type for the
  * Query/TaxRate RPC method.
+ * @name QueryTaxRateResponseSDKType
+ * @package symphony.treasury.v1beta1
+ * @see proto type: symphony.treasury.v1beta1.QueryTaxRateResponse
  */
 export interface QueryTaxRateResponseSDKType {
   tax_rate: string;
 }
-/** QueryParamsRequest is the request type for the Query/Params RPC method. */
+/**
+ * QueryParamsRequest is the request type for the Query/Params RPC method.
+ * @name QueryParamsRequest
+ * @package symphony.treasury.v1beta1
+ * @see proto type: symphony.treasury.v1beta1.QueryParamsRequest
+ */
 export interface QueryParamsRequest {}
 export interface QueryParamsRequestProtoMsg {
   typeUrl: '/symphony.treasury.v1beta1.QueryParamsRequest';
   value: Uint8Array;
 }
-/** QueryParamsRequest is the request type for the Query/Params RPC method. */
+/**
+ * QueryParamsRequest is the request type for the Query/Params RPC method.
+ * @name QueryParamsRequestAmino
+ * @package symphony.treasury.v1beta1
+ * @see proto type: symphony.treasury.v1beta1.QueryParamsRequest
+ */
 export interface QueryParamsRequestAmino {}
 export interface QueryParamsRequestAminoMsg {
   type: '/symphony.treasury.v1beta1.QueryParamsRequest';
   value: QueryParamsRequestAmino;
 }
-/** QueryParamsRequest is the request type for the Query/Params RPC method. */
+/**
+ * QueryParamsRequest is the request type for the Query/Params RPC method.
+ * @name QueryParamsRequestSDKType
+ * @package symphony.treasury.v1beta1
+ * @see proto type: symphony.treasury.v1beta1.QueryParamsRequest
+ */
 export interface QueryParamsRequestSDKType {}
-/** QueryParamsResponse is the response type for the Query/Params RPC method. */
+/**
+ * QueryParamsResponse is the response type for the Query/Params RPC method.
+ * @name QueryParamsResponse
+ * @package symphony.treasury.v1beta1
+ * @see proto type: symphony.treasury.v1beta1.QueryParamsResponse
+ */
 export interface QueryParamsResponse {
-  /** params defines the parameters of the module. */
+  /**
+   * params defines the parameters of the module.
+   */
   params: Params;
 }
 export interface QueryParamsResponseProtoMsg {
   typeUrl: '/symphony.treasury.v1beta1.QueryParamsResponse';
   value: Uint8Array;
 }
-/** QueryParamsResponse is the response type for the Query/Params RPC method. */
+/**
+ * QueryParamsResponse is the response type for the Query/Params RPC method.
+ * @name QueryParamsResponseAmino
+ * @package symphony.treasury.v1beta1
+ * @see proto type: symphony.treasury.v1beta1.QueryParamsResponse
+ */
 export interface QueryParamsResponseAmino {
-  /** params defines the parameters of the module. */
+  /**
+   * params defines the parameters of the module.
+   */
   params?: ParamsAmino;
 }
 export interface QueryParamsResponseAminoMsg {
   type: '/symphony.treasury.v1beta1.QueryParamsResponse';
   value: QueryParamsResponseAmino;
 }
-/** QueryParamsResponse is the response type for the Query/Params RPC method. */
+/**
+ * QueryParamsResponse is the response type for the Query/Params RPC method.
+ * @name QueryParamsResponseSDKType
+ * @package symphony.treasury.v1beta1
+ * @see proto type: symphony.treasury.v1beta1.QueryParamsResponse
+ */
 export interface QueryParamsResponseSDKType {
   params: ParamsSDKType;
 }
 function createBaseQueryTaxRateRequest(): QueryTaxRateRequest {
   return {};
 }
+/**
+ * QueryTaxRateRequest is the request type for the Query/TaxRate RPC method.
+ * @name QueryTaxRateRequest
+ * @package symphony.treasury.v1beta1
+ * @see proto type: symphony.treasury.v1beta1.QueryTaxRateRequest
+ */
 export const QueryTaxRateRequest = {
   typeUrl: '/symphony.treasury.v1beta1.QueryTaxRateRequest',
   is(o: any): o is QueryTaxRateRequest {
@@ -157,6 +221,13 @@ function createBaseQueryTaxRateResponse(): QueryTaxRateResponse {
     taxRate: '',
   };
 }
+/**
+ * QueryTaxRateResponse is response type for the
+ * Query/TaxRate RPC method.
+ * @name QueryTaxRateResponse
+ * @package symphony.treasury.v1beta1
+ * @see proto type: symphony.treasury.v1beta1.QueryTaxRateResponse
+ */
 export const QueryTaxRateResponse = {
   typeUrl: '/symphony.treasury.v1beta1.QueryTaxRateResponse',
   is(o: any): o is QueryTaxRateResponse {
@@ -252,6 +323,12 @@ GlobalDecoderRegistry.register(
 function createBaseQueryParamsRequest(): QueryParamsRequest {
   return {};
 }
+/**
+ * QueryParamsRequest is the request type for the Query/Params RPC method.
+ * @name QueryParamsRequest
+ * @package symphony.treasury.v1beta1
+ * @see proto type: symphony.treasury.v1beta1.QueryParamsRequest
+ */
 export const QueryParamsRequest = {
   typeUrl: '/symphony.treasury.v1beta1.QueryParamsRequest',
   is(o: any): o is QueryParamsRequest {
@@ -321,6 +398,12 @@ function createBaseQueryParamsResponse(): QueryParamsResponse {
     params: Params.fromPartial({}),
   };
 }
+/**
+ * QueryParamsResponse is the response type for the Query/Params RPC method.
+ * @name QueryParamsResponse
+ * @package symphony.treasury.v1beta1
+ * @see proto type: symphony.treasury.v1beta1.QueryParamsResponse
+ */
 export const QueryParamsResponse = {
   typeUrl: '/symphony.treasury.v1beta1.QueryParamsResponse',
   is(o: any): o is QueryParamsResponse {

@@ -7,45 +7,72 @@ import {
 import { BinaryReader, BinaryWriter } from '../../../../binary';
 import { GlobalDecoderRegistry } from '../../../../registry';
 import { Decimal } from '@cosmjs/math';
-/** ===================== SwapExactAmountIn */
+/**
+ * ===================== SwapExactAmountIn
+ * @name SwapExactAmountIn
+ * @package symphony.cosmwasmpool.v1beta1
+ * @see proto type: symphony.cosmwasmpool.v1beta1.SwapExactAmountIn
+ */
 export interface SwapExactAmountIn {
   sender: string;
-  /** token_in is the token to be sent to the pool. */
+  /**
+   * token_in is the token to be sent to the pool.
+   */
   tokenIn: Coin;
-  /** token_out_denom is the token denom to be received from the pool. */
+  /**
+   * token_out_denom is the token denom to be received from the pool.
+   */
   tokenOutDenom: string;
   /**
    * token_out_min_amount is the minimum amount of token_out to be received from
    * the pool.
    */
   tokenOutMinAmount: string;
-  /** swap_fee is the swap fee for this swap estimate. */
+  /**
+   * swap_fee is the swap fee for this swap estimate.
+   */
   swapFee: string;
 }
 export interface SwapExactAmountInProtoMsg {
   typeUrl: '/symphony.cosmwasmpool.v1beta1.SwapExactAmountIn';
   value: Uint8Array;
 }
-/** ===================== SwapExactAmountIn */
+/**
+ * ===================== SwapExactAmountIn
+ * @name SwapExactAmountInAmino
+ * @package symphony.cosmwasmpool.v1beta1
+ * @see proto type: symphony.cosmwasmpool.v1beta1.SwapExactAmountIn
+ */
 export interface SwapExactAmountInAmino {
   sender?: string;
-  /** token_in is the token to be sent to the pool. */
+  /**
+   * token_in is the token to be sent to the pool.
+   */
   token_in?: CoinAmino;
-  /** token_out_denom is the token denom to be received from the pool. */
+  /**
+   * token_out_denom is the token denom to be received from the pool.
+   */
   token_out_denom?: string;
   /**
    * token_out_min_amount is the minimum amount of token_out to be received from
    * the pool.
    */
   token_out_min_amount?: string;
-  /** swap_fee is the swap fee for this swap estimate. */
+  /**
+   * swap_fee is the swap fee for this swap estimate.
+   */
   swap_fee?: string;
 }
 export interface SwapExactAmountInAminoMsg {
   type: '/symphony.cosmwasmpool.v1beta1.SwapExactAmountIn';
   value: SwapExactAmountInAmino;
 }
-/** ===================== SwapExactAmountIn */
+/**
+ * ===================== SwapExactAmountIn
+ * @name SwapExactAmountInSDKType
+ * @package symphony.cosmwasmpool.v1beta1
+ * @see proto type: symphony.cosmwasmpool.v1beta1.SwapExactAmountIn
+ */
 export interface SwapExactAmountInSDKType {
   sender: string;
   token_in: CoinSDKType;
@@ -53,6 +80,11 @@ export interface SwapExactAmountInSDKType {
   token_out_min_amount: string;
   swap_fee: string;
 }
+/**
+ * @name SwapExactAmountInSudoMsg
+ * @package symphony.cosmwasmpool.v1beta1
+ * @see proto type: symphony.cosmwasmpool.v1beta1.SwapExactAmountInSudoMsg
+ */
 export interface SwapExactAmountInSudoMsg {
   /**
    * swap_exact_amount_in is the structure containing all the request
@@ -64,6 +96,11 @@ export interface SwapExactAmountInSudoMsgProtoMsg {
   typeUrl: '/symphony.cosmwasmpool.v1beta1.SwapExactAmountInSudoMsg';
   value: Uint8Array;
 }
+/**
+ * @name SwapExactAmountInSudoMsgAmino
+ * @package symphony.cosmwasmpool.v1beta1
+ * @see proto type: symphony.cosmwasmpool.v1beta1.SwapExactAmountInSudoMsg
+ */
 export interface SwapExactAmountInSudoMsgAmino {
   /**
    * swap_exact_amount_in is the structure containing all the request
@@ -75,67 +112,118 @@ export interface SwapExactAmountInSudoMsgAminoMsg {
   type: '/symphony.cosmwasmpool.v1beta1.SwapExactAmountInSudoMsg';
   value: SwapExactAmountInSudoMsgAmino;
 }
+/**
+ * @name SwapExactAmountInSudoMsgSDKType
+ * @package symphony.cosmwasmpool.v1beta1
+ * @see proto type: symphony.cosmwasmpool.v1beta1.SwapExactAmountInSudoMsg
+ */
 export interface SwapExactAmountInSudoMsgSDKType {
   swap_exact_amount_in: SwapExactAmountInSDKType;
 }
+/**
+ * @name SwapExactAmountInSudoMsgResponse
+ * @package symphony.cosmwasmpool.v1beta1
+ * @see proto type: symphony.cosmwasmpool.v1beta1.SwapExactAmountInSudoMsgResponse
+ */
 export interface SwapExactAmountInSudoMsgResponse {
-  /** token_out_amount is the token out computed from this swap estimate call. */
+  /**
+   * token_out_amount is the token out computed from this swap estimate call.
+   */
   tokenOutAmount: string;
 }
 export interface SwapExactAmountInSudoMsgResponseProtoMsg {
   typeUrl: '/symphony.cosmwasmpool.v1beta1.SwapExactAmountInSudoMsgResponse';
   value: Uint8Array;
 }
+/**
+ * @name SwapExactAmountInSudoMsgResponseAmino
+ * @package symphony.cosmwasmpool.v1beta1
+ * @see proto type: symphony.cosmwasmpool.v1beta1.SwapExactAmountInSudoMsgResponse
+ */
 export interface SwapExactAmountInSudoMsgResponseAmino {
-  /** token_out_amount is the token out computed from this swap estimate call. */
+  /**
+   * token_out_amount is the token out computed from this swap estimate call.
+   */
   token_out_amount?: string;
 }
 export interface SwapExactAmountInSudoMsgResponseAminoMsg {
   type: '/symphony.cosmwasmpool.v1beta1.SwapExactAmountInSudoMsgResponse';
   value: SwapExactAmountInSudoMsgResponseAmino;
 }
+/**
+ * @name SwapExactAmountInSudoMsgResponseSDKType
+ * @package symphony.cosmwasmpool.v1beta1
+ * @see proto type: symphony.cosmwasmpool.v1beta1.SwapExactAmountInSudoMsgResponse
+ */
 export interface SwapExactAmountInSudoMsgResponseSDKType {
   token_out_amount: string;
 }
-/** ===================== SwapExactAmountOut */
+/**
+ * ===================== SwapExactAmountOut
+ * @name SwapExactAmountOut
+ * @package symphony.cosmwasmpool.v1beta1
+ * @see proto type: symphony.cosmwasmpool.v1beta1.SwapExactAmountOut
+ */
 export interface SwapExactAmountOut {
   sender: string;
-  /** token_out is the token to be sent out of the pool. */
+  /**
+   * token_out is the token to be sent out of the pool.
+   */
   tokenOut: Coin;
-  /** token_in_denom is the token denom to be sent too the pool. */
+  /**
+   * token_in_denom is the token denom to be sent too the pool.
+   */
   tokenInDenom: string;
   /**
    * token_in_max_amount is the maximum amount of token_in to be sent to the
    * pool.
    */
   tokenInMaxAmount: string;
-  /** swap_fee is the swap fee for this swap estimate. */
+  /**
+   * swap_fee is the swap fee for this swap estimate.
+   */
   swapFee: string;
 }
 export interface SwapExactAmountOutProtoMsg {
   typeUrl: '/symphony.cosmwasmpool.v1beta1.SwapExactAmountOut';
   value: Uint8Array;
 }
-/** ===================== SwapExactAmountOut */
+/**
+ * ===================== SwapExactAmountOut
+ * @name SwapExactAmountOutAmino
+ * @package symphony.cosmwasmpool.v1beta1
+ * @see proto type: symphony.cosmwasmpool.v1beta1.SwapExactAmountOut
+ */
 export interface SwapExactAmountOutAmino {
   sender?: string;
-  /** token_out is the token to be sent out of the pool. */
+  /**
+   * token_out is the token to be sent out of the pool.
+   */
   token_out?: CoinAmino;
-  /** token_in_denom is the token denom to be sent too the pool. */
+  /**
+   * token_in_denom is the token denom to be sent too the pool.
+   */
   token_in_denom?: string;
   /**
    * token_in_max_amount is the maximum amount of token_in to be sent to the
    * pool.
    */
   token_in_max_amount?: string;
-  /** swap_fee is the swap fee for this swap estimate. */
+  /**
+   * swap_fee is the swap fee for this swap estimate.
+   */
   swap_fee?: string;
 }
 export interface SwapExactAmountOutAminoMsg {
   type: '/symphony.cosmwasmpool.v1beta1.SwapExactAmountOut';
   value: SwapExactAmountOutAmino;
 }
-/** ===================== SwapExactAmountOut */
+/**
+ * ===================== SwapExactAmountOut
+ * @name SwapExactAmountOutSDKType
+ * @package symphony.cosmwasmpool.v1beta1
+ * @see proto type: symphony.cosmwasmpool.v1beta1.SwapExactAmountOut
+ */
 export interface SwapExactAmountOutSDKType {
   sender: string;
   token_out: CoinSDKType;
@@ -143,6 +231,11 @@ export interface SwapExactAmountOutSDKType {
   token_in_max_amount: string;
   swap_fee: string;
 }
+/**
+ * @name SwapExactAmountOutSudoMsg
+ * @package symphony.cosmwasmpool.v1beta1
+ * @see proto type: symphony.cosmwasmpool.v1beta1.SwapExactAmountOutSudoMsg
+ */
 export interface SwapExactAmountOutSudoMsg {
   /**
    * swap_exact_amount_out is the structure containing all the request
@@ -154,6 +247,11 @@ export interface SwapExactAmountOutSudoMsgProtoMsg {
   typeUrl: '/symphony.cosmwasmpool.v1beta1.SwapExactAmountOutSudoMsg';
   value: Uint8Array;
 }
+/**
+ * @name SwapExactAmountOutSudoMsgAmino
+ * @package symphony.cosmwasmpool.v1beta1
+ * @see proto type: symphony.cosmwasmpool.v1beta1.SwapExactAmountOutSudoMsg
+ */
 export interface SwapExactAmountOutSudoMsgAmino {
   /**
    * swap_exact_amount_out is the structure containing all the request
@@ -165,25 +263,49 @@ export interface SwapExactAmountOutSudoMsgAminoMsg {
   type: '/symphony.cosmwasmpool.v1beta1.SwapExactAmountOutSudoMsg';
   value: SwapExactAmountOutSudoMsgAmino;
 }
+/**
+ * @name SwapExactAmountOutSudoMsgSDKType
+ * @package symphony.cosmwasmpool.v1beta1
+ * @see proto type: symphony.cosmwasmpool.v1beta1.SwapExactAmountOutSudoMsg
+ */
 export interface SwapExactAmountOutSudoMsgSDKType {
   swap_exact_amount_out: SwapExactAmountOutSDKType;
 }
+/**
+ * @name SwapExactAmountOutSudoMsgResponse
+ * @package symphony.cosmwasmpool.v1beta1
+ * @see proto type: symphony.cosmwasmpool.v1beta1.SwapExactAmountOutSudoMsgResponse
+ */
 export interface SwapExactAmountOutSudoMsgResponse {
-  /** token_in_amount is the token in computed from this swap estimate call. */
+  /**
+   * token_in_amount is the token in computed from this swap estimate call.
+   */
   tokenInAmount: string;
 }
 export interface SwapExactAmountOutSudoMsgResponseProtoMsg {
   typeUrl: '/symphony.cosmwasmpool.v1beta1.SwapExactAmountOutSudoMsgResponse';
   value: Uint8Array;
 }
+/**
+ * @name SwapExactAmountOutSudoMsgResponseAmino
+ * @package symphony.cosmwasmpool.v1beta1
+ * @see proto type: symphony.cosmwasmpool.v1beta1.SwapExactAmountOutSudoMsgResponse
+ */
 export interface SwapExactAmountOutSudoMsgResponseAmino {
-  /** token_in_amount is the token in computed from this swap estimate call. */
+  /**
+   * token_in_amount is the token in computed from this swap estimate call.
+   */
   token_in_amount?: string;
 }
 export interface SwapExactAmountOutSudoMsgResponseAminoMsg {
   type: '/symphony.cosmwasmpool.v1beta1.SwapExactAmountOutSudoMsgResponse';
   value: SwapExactAmountOutSudoMsgResponseAmino;
 }
+/**
+ * @name SwapExactAmountOutSudoMsgResponseSDKType
+ * @package symphony.cosmwasmpool.v1beta1
+ * @see proto type: symphony.cosmwasmpool.v1beta1.SwapExactAmountOutSudoMsgResponse
+ */
 export interface SwapExactAmountOutSudoMsgResponseSDKType {
   token_in_amount: string;
 }
@@ -196,6 +318,12 @@ function createBaseSwapExactAmountIn(): SwapExactAmountIn {
     swapFee: '',
   };
 }
+/**
+ * ===================== SwapExactAmountIn
+ * @name SwapExactAmountIn
+ * @package symphony.cosmwasmpool.v1beta1
+ * @see proto type: symphony.cosmwasmpool.v1beta1.SwapExactAmountIn
+ */
 export const SwapExactAmountIn = {
   typeUrl: '/symphony.cosmwasmpool.v1beta1.SwapExactAmountIn',
   is(o: any): o is SwapExactAmountIn {
@@ -354,6 +482,11 @@ function createBaseSwapExactAmountInSudoMsg(): SwapExactAmountInSudoMsg {
     swapExactAmountIn: SwapExactAmountIn.fromPartial({}),
   };
 }
+/**
+ * @name SwapExactAmountInSudoMsg
+ * @package symphony.cosmwasmpool.v1beta1
+ * @see proto type: symphony.cosmwasmpool.v1beta1.SwapExactAmountInSudoMsg
+ */
 export const SwapExactAmountInSudoMsg = {
   typeUrl: '/symphony.cosmwasmpool.v1beta1.SwapExactAmountInSudoMsg',
   is(o: any): o is SwapExactAmountInSudoMsg {
@@ -474,6 +607,11 @@ function createBaseSwapExactAmountInSudoMsgResponse(): SwapExactAmountInSudoMsgR
     tokenOutAmount: '',
   };
 }
+/**
+ * @name SwapExactAmountInSudoMsgResponse
+ * @package symphony.cosmwasmpool.v1beta1
+ * @see proto type: symphony.cosmwasmpool.v1beta1.SwapExactAmountInSudoMsgResponse
+ */
 export const SwapExactAmountInSudoMsgResponse = {
   typeUrl: '/symphony.cosmwasmpool.v1beta1.SwapExactAmountInSudoMsgResponse',
   is(o: any): o is SwapExactAmountInSudoMsgResponse {
@@ -590,6 +728,12 @@ function createBaseSwapExactAmountOut(): SwapExactAmountOut {
     swapFee: '',
   };
 }
+/**
+ * ===================== SwapExactAmountOut
+ * @name SwapExactAmountOut
+ * @package symphony.cosmwasmpool.v1beta1
+ * @see proto type: symphony.cosmwasmpool.v1beta1.SwapExactAmountOut
+ */
 export const SwapExactAmountOut = {
   typeUrl: '/symphony.cosmwasmpool.v1beta1.SwapExactAmountOut',
   is(o: any): o is SwapExactAmountOut {
@@ -750,6 +894,11 @@ function createBaseSwapExactAmountOutSudoMsg(): SwapExactAmountOutSudoMsg {
     swapExactAmountOut: SwapExactAmountOut.fromPartial({}),
   };
 }
+/**
+ * @name SwapExactAmountOutSudoMsg
+ * @package symphony.cosmwasmpool.v1beta1
+ * @see proto type: symphony.cosmwasmpool.v1beta1.SwapExactAmountOutSudoMsg
+ */
 export const SwapExactAmountOutSudoMsg = {
   typeUrl: '/symphony.cosmwasmpool.v1beta1.SwapExactAmountOutSudoMsg',
   is(o: any): o is SwapExactAmountOutSudoMsg {
@@ -870,6 +1019,11 @@ function createBaseSwapExactAmountOutSudoMsgResponse(): SwapExactAmountOutSudoMs
     tokenInAmount: '',
   };
 }
+/**
+ * @name SwapExactAmountOutSudoMsgResponse
+ * @package symphony.cosmwasmpool.v1beta1
+ * @see proto type: symphony.cosmwasmpool.v1beta1.SwapExactAmountOutSudoMsgResponse
+ */
 export const SwapExactAmountOutSudoMsgResponse = {
   typeUrl: '/symphony.cosmwasmpool.v1beta1.SwapExactAmountOutSudoMsgResponse',
   is(o: any): o is SwapExactAmountOutSudoMsgResponse {

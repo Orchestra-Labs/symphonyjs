@@ -21,10 +21,15 @@ import { GlobalDecoderRegistry } from '../../../registry';
  * <factory/{creatorAddress}/{subdenom}>. The resulting denom's admin is
  * originally set to be the creator, but this can be changed later. The token
  * denom does not indicate the current admin.
+ * @name MsgCreateDenom
+ * @package symphony.tokenfactory.v1beta1
+ * @see proto type: symphony.tokenfactory.v1beta1.MsgCreateDenom
  */
 export interface MsgCreateDenom {
   sender: string;
-  /** subdenom can be up to 44 "alphanumeric" characters long. */
+  /**
+   * subdenom can be up to 44 "alphanumeric" characters long.
+   */
   subdenom: string;
 }
 export interface MsgCreateDenomProtoMsg {
@@ -41,10 +46,15 @@ export interface MsgCreateDenomProtoMsg {
  * <factory/{creatorAddress}/{subdenom}>. The resulting denom's admin is
  * originally set to be the creator, but this can be changed later. The token
  * denom does not indicate the current admin.
+ * @name MsgCreateDenomAmino
+ * @package symphony.tokenfactory.v1beta1
+ * @see proto type: symphony.tokenfactory.v1beta1.MsgCreateDenom
  */
 export interface MsgCreateDenomAmino {
   sender?: string;
-  /** subdenom can be up to 44 "alphanumeric" characters long. */
+  /**
+   * subdenom can be up to 44 "alphanumeric" characters long.
+   */
   subdenom?: string;
 }
 export interface MsgCreateDenomAminoMsg {
@@ -61,6 +71,9 @@ export interface MsgCreateDenomAminoMsg {
  * <factory/{creatorAddress}/{subdenom}>. The resulting denom's admin is
  * originally set to be the creator, but this can be changed later. The token
  * denom does not indicate the current admin.
+ * @name MsgCreateDenomSDKType
+ * @package symphony.tokenfactory.v1beta1
+ * @see proto type: symphony.tokenfactory.v1beta1.MsgCreateDenom
  */
 export interface MsgCreateDenomSDKType {
   sender: string;
@@ -69,6 +82,9 @@ export interface MsgCreateDenomSDKType {
 /**
  * MsgCreateDenomResponse is the return value of MsgCreateDenom
  * It returns the full string of the newly created denom
+ * @name MsgCreateDenomResponse
+ * @package symphony.tokenfactory.v1beta1
+ * @see proto type: symphony.tokenfactory.v1beta1.MsgCreateDenomResponse
  */
 export interface MsgCreateDenomResponse {
   newTokenDenom: string;
@@ -80,6 +96,9 @@ export interface MsgCreateDenomResponseProtoMsg {
 /**
  * MsgCreateDenomResponse is the return value of MsgCreateDenom
  * It returns the full string of the newly created denom
+ * @name MsgCreateDenomResponseAmino
+ * @package symphony.tokenfactory.v1beta1
+ * @see proto type: symphony.tokenfactory.v1beta1.MsgCreateDenomResponse
  */
 export interface MsgCreateDenomResponseAmino {
   new_token_denom?: string;
@@ -91,6 +110,9 @@ export interface MsgCreateDenomResponseAminoMsg {
 /**
  * MsgCreateDenomResponse is the return value of MsgCreateDenom
  * It returns the full string of the newly created denom
+ * @name MsgCreateDenomResponseSDKType
+ * @package symphony.tokenfactory.v1beta1
+ * @see proto type: symphony.tokenfactory.v1beta1.MsgCreateDenomResponse
  */
 export interface MsgCreateDenomResponseSDKType {
   new_token_denom: string;
@@ -100,6 +122,9 @@ export interface MsgCreateDenomResponseSDKType {
  * more of a token.
  * Only the admin of the token factory denom has permission to mint unless
  * the denom does not have any admin.
+ * @name MsgMint
+ * @package symphony.tokenfactory.v1beta1
+ * @see proto type: symphony.tokenfactory.v1beta1.MsgMint
  */
 export interface MsgMint {
   sender: string;
@@ -115,6 +140,9 @@ export interface MsgMintProtoMsg {
  * more of a token.
  * Only the admin of the token factory denom has permission to mint unless
  * the denom does not have any admin.
+ * @name MsgMintAmino
+ * @package symphony.tokenfactory.v1beta1
+ * @see proto type: symphony.tokenfactory.v1beta1.MsgMint
  */
 export interface MsgMintAmino {
   sender?: string;
@@ -130,28 +158,49 @@ export interface MsgMintAminoMsg {
  * more of a token.
  * Only the admin of the token factory denom has permission to mint unless
  * the denom does not have any admin.
+ * @name MsgMintSDKType
+ * @package symphony.tokenfactory.v1beta1
+ * @see proto type: symphony.tokenfactory.v1beta1.MsgMint
  */
 export interface MsgMintSDKType {
   sender: string;
   amount: CoinSDKType;
   mintToAddress: string;
 }
+/**
+ * @name MsgMintResponse
+ * @package symphony.tokenfactory.v1beta1
+ * @see proto type: symphony.tokenfactory.v1beta1.MsgMintResponse
+ */
 export interface MsgMintResponse {}
 export interface MsgMintResponseProtoMsg {
   typeUrl: '/symphony.tokenfactory.v1beta1.MsgMintResponse';
   value: Uint8Array;
 }
+/**
+ * @name MsgMintResponseAmino
+ * @package symphony.tokenfactory.v1beta1
+ * @see proto type: symphony.tokenfactory.v1beta1.MsgMintResponse
+ */
 export interface MsgMintResponseAmino {}
 export interface MsgMintResponseAminoMsg {
   type: '/symphony.tokenfactory.v1beta1.MsgMintResponse';
   value: MsgMintResponseAmino;
 }
+/**
+ * @name MsgMintResponseSDKType
+ * @package symphony.tokenfactory.v1beta1
+ * @see proto type: symphony.tokenfactory.v1beta1.MsgMintResponse
+ */
 export interface MsgMintResponseSDKType {}
 /**
  * MsgBurn is the sdk.Msg type for allowing an admin account to burn
  * a token.
  * Only the admin of the token factory denom has permission to burn unless
  * the denom does not have any admin.
+ * @name MsgBurn
+ * @package symphony.tokenfactory.v1beta1
+ * @see proto type: symphony.tokenfactory.v1beta1.MsgBurn
  */
 export interface MsgBurn {
   sender: string;
@@ -167,6 +216,9 @@ export interface MsgBurnProtoMsg {
  * a token.
  * Only the admin of the token factory denom has permission to burn unless
  * the denom does not have any admin.
+ * @name MsgBurnAmino
+ * @package symphony.tokenfactory.v1beta1
+ * @see proto type: symphony.tokenfactory.v1beta1.MsgBurn
  */
 export interface MsgBurnAmino {
   sender?: string;
@@ -182,26 +234,47 @@ export interface MsgBurnAminoMsg {
  * a token.
  * Only the admin of the token factory denom has permission to burn unless
  * the denom does not have any admin.
+ * @name MsgBurnSDKType
+ * @package symphony.tokenfactory.v1beta1
+ * @see proto type: symphony.tokenfactory.v1beta1.MsgBurn
  */
 export interface MsgBurnSDKType {
   sender: string;
   amount: CoinSDKType;
   burnFromAddress: string;
 }
+/**
+ * @name MsgBurnResponse
+ * @package symphony.tokenfactory.v1beta1
+ * @see proto type: symphony.tokenfactory.v1beta1.MsgBurnResponse
+ */
 export interface MsgBurnResponse {}
 export interface MsgBurnResponseProtoMsg {
   typeUrl: '/symphony.tokenfactory.v1beta1.MsgBurnResponse';
   value: Uint8Array;
 }
+/**
+ * @name MsgBurnResponseAmino
+ * @package symphony.tokenfactory.v1beta1
+ * @see proto type: symphony.tokenfactory.v1beta1.MsgBurnResponse
+ */
 export interface MsgBurnResponseAmino {}
 export interface MsgBurnResponseAminoMsg {
   type: '/symphony.tokenfactory.v1beta1.MsgBurnResponse';
   value: MsgBurnResponseAmino;
 }
+/**
+ * @name MsgBurnResponseSDKType
+ * @package symphony.tokenfactory.v1beta1
+ * @see proto type: symphony.tokenfactory.v1beta1.MsgBurnResponse
+ */
 export interface MsgBurnResponseSDKType {}
 /**
  * MsgChangeAdmin is the sdk.Msg type for allowing an admin account to reassign
  * adminship of a denom to a new account
+ * @name MsgChangeAdmin
+ * @package symphony.tokenfactory.v1beta1
+ * @see proto type: symphony.tokenfactory.v1beta1.MsgChangeAdmin
  */
 export interface MsgChangeAdmin {
   sender: string;
@@ -215,6 +288,9 @@ export interface MsgChangeAdminProtoMsg {
 /**
  * MsgChangeAdmin is the sdk.Msg type for allowing an admin account to reassign
  * adminship of a denom to a new account
+ * @name MsgChangeAdminAmino
+ * @package symphony.tokenfactory.v1beta1
+ * @see proto type: symphony.tokenfactory.v1beta1.MsgChangeAdmin
  */
 export interface MsgChangeAdminAmino {
   sender?: string;
@@ -228,6 +304,9 @@ export interface MsgChangeAdminAminoMsg {
 /**
  * MsgChangeAdmin is the sdk.Msg type for allowing an admin account to reassign
  * adminship of a denom to a new account
+ * @name MsgChangeAdminSDKType
+ * @package symphony.tokenfactory.v1beta1
+ * @see proto type: symphony.tokenfactory.v1beta1.MsgChangeAdmin
  */
 export interface MsgChangeAdminSDKType {
   sender: string;
@@ -237,6 +316,9 @@ export interface MsgChangeAdminSDKType {
 /**
  * MsgChangeAdminResponse defines the response structure for an executed
  * MsgChangeAdmin message.
+ * @name MsgChangeAdminResponse
+ * @package symphony.tokenfactory.v1beta1
+ * @see proto type: symphony.tokenfactory.v1beta1.MsgChangeAdminResponse
  */
 export interface MsgChangeAdminResponse {}
 export interface MsgChangeAdminResponseProtoMsg {
@@ -246,6 +328,9 @@ export interface MsgChangeAdminResponseProtoMsg {
 /**
  * MsgChangeAdminResponse defines the response structure for an executed
  * MsgChangeAdmin message.
+ * @name MsgChangeAdminResponseAmino
+ * @package symphony.tokenfactory.v1beta1
+ * @see proto type: symphony.tokenfactory.v1beta1.MsgChangeAdminResponse
  */
 export interface MsgChangeAdminResponseAmino {}
 export interface MsgChangeAdminResponseAminoMsg {
@@ -255,11 +340,17 @@ export interface MsgChangeAdminResponseAminoMsg {
 /**
  * MsgChangeAdminResponse defines the response structure for an executed
  * MsgChangeAdmin message.
+ * @name MsgChangeAdminResponseSDKType
+ * @package symphony.tokenfactory.v1beta1
+ * @see proto type: symphony.tokenfactory.v1beta1.MsgChangeAdminResponse
  */
 export interface MsgChangeAdminResponseSDKType {}
 /**
  * MsgSetBeforeSendHook is the sdk.Msg type for allowing an admin account to
  * assign a CosmWasm contract to call with a BeforeSend hook
+ * @name MsgSetBeforeSendHook
+ * @package symphony.tokenfactory.v1beta1
+ * @see proto type: symphony.tokenfactory.v1beta1.MsgSetBeforeSendHook
  */
 export interface MsgSetBeforeSendHook {
   sender: string;
@@ -273,6 +364,9 @@ export interface MsgSetBeforeSendHookProtoMsg {
 /**
  * MsgSetBeforeSendHook is the sdk.Msg type for allowing an admin account to
  * assign a CosmWasm contract to call with a BeforeSend hook
+ * @name MsgSetBeforeSendHookAmino
+ * @package symphony.tokenfactory.v1beta1
+ * @see proto type: symphony.tokenfactory.v1beta1.MsgSetBeforeSendHook
  */
 export interface MsgSetBeforeSendHookAmino {
   sender?: string;
@@ -286,6 +380,9 @@ export interface MsgSetBeforeSendHookAminoMsg {
 /**
  * MsgSetBeforeSendHook is the sdk.Msg type for allowing an admin account to
  * assign a CosmWasm contract to call with a BeforeSend hook
+ * @name MsgSetBeforeSendHookSDKType
+ * @package symphony.tokenfactory.v1beta1
+ * @see proto type: symphony.tokenfactory.v1beta1.MsgSetBeforeSendHook
  */
 export interface MsgSetBeforeSendHookSDKType {
   sender: string;
@@ -295,6 +392,9 @@ export interface MsgSetBeforeSendHookSDKType {
 /**
  * MsgSetBeforeSendHookResponse defines the response structure for an executed
  * MsgSetBeforeSendHook message.
+ * @name MsgSetBeforeSendHookResponse
+ * @package symphony.tokenfactory.v1beta1
+ * @see proto type: symphony.tokenfactory.v1beta1.MsgSetBeforeSendHookResponse
  */
 export interface MsgSetBeforeSendHookResponse {}
 export interface MsgSetBeforeSendHookResponseProtoMsg {
@@ -304,6 +404,9 @@ export interface MsgSetBeforeSendHookResponseProtoMsg {
 /**
  * MsgSetBeforeSendHookResponse defines the response structure for an executed
  * MsgSetBeforeSendHook message.
+ * @name MsgSetBeforeSendHookResponseAmino
+ * @package symphony.tokenfactory.v1beta1
+ * @see proto type: symphony.tokenfactory.v1beta1.MsgSetBeforeSendHookResponse
  */
 export interface MsgSetBeforeSendHookResponseAmino {}
 export interface MsgSetBeforeSendHookResponseAminoMsg {
@@ -313,11 +416,17 @@ export interface MsgSetBeforeSendHookResponseAminoMsg {
 /**
  * MsgSetBeforeSendHookResponse defines the response structure for an executed
  * MsgSetBeforeSendHook message.
+ * @name MsgSetBeforeSendHookResponseSDKType
+ * @package symphony.tokenfactory.v1beta1
+ * @see proto type: symphony.tokenfactory.v1beta1.MsgSetBeforeSendHookResponse
  */
 export interface MsgSetBeforeSendHookResponseSDKType {}
 /**
  * MsgSetDenomMetadata is the sdk.Msg type for allowing an admin account to set
  * the denom's bank metadata
+ * @name MsgSetDenomMetadata
+ * @package symphony.tokenfactory.v1beta1
+ * @see proto type: symphony.tokenfactory.v1beta1.MsgSetDenomMetadata
  */
 export interface MsgSetDenomMetadata {
   sender: string;
@@ -330,6 +439,9 @@ export interface MsgSetDenomMetadataProtoMsg {
 /**
  * MsgSetDenomMetadata is the sdk.Msg type for allowing an admin account to set
  * the denom's bank metadata
+ * @name MsgSetDenomMetadataAmino
+ * @package symphony.tokenfactory.v1beta1
+ * @see proto type: symphony.tokenfactory.v1beta1.MsgSetDenomMetadata
  */
 export interface MsgSetDenomMetadataAmino {
   sender?: string;
@@ -342,6 +454,9 @@ export interface MsgSetDenomMetadataAminoMsg {
 /**
  * MsgSetDenomMetadata is the sdk.Msg type for allowing an admin account to set
  * the denom's bank metadata
+ * @name MsgSetDenomMetadataSDKType
+ * @package symphony.tokenfactory.v1beta1
+ * @see proto type: symphony.tokenfactory.v1beta1.MsgSetDenomMetadata
  */
 export interface MsgSetDenomMetadataSDKType {
   sender: string;
@@ -350,6 +465,9 @@ export interface MsgSetDenomMetadataSDKType {
 /**
  * MsgSetDenomMetadataResponse defines the response structure for an executed
  * MsgSetDenomMetadata message.
+ * @name MsgSetDenomMetadataResponse
+ * @package symphony.tokenfactory.v1beta1
+ * @see proto type: symphony.tokenfactory.v1beta1.MsgSetDenomMetadataResponse
  */
 export interface MsgSetDenomMetadataResponse {}
 export interface MsgSetDenomMetadataResponseProtoMsg {
@@ -359,6 +477,9 @@ export interface MsgSetDenomMetadataResponseProtoMsg {
 /**
  * MsgSetDenomMetadataResponse defines the response structure for an executed
  * MsgSetDenomMetadata message.
+ * @name MsgSetDenomMetadataResponseAmino
+ * @package symphony.tokenfactory.v1beta1
+ * @see proto type: symphony.tokenfactory.v1beta1.MsgSetDenomMetadataResponse
  */
 export interface MsgSetDenomMetadataResponseAmino {}
 export interface MsgSetDenomMetadataResponseAminoMsg {
@@ -368,8 +489,16 @@ export interface MsgSetDenomMetadataResponseAminoMsg {
 /**
  * MsgSetDenomMetadataResponse defines the response structure for an executed
  * MsgSetDenomMetadata message.
+ * @name MsgSetDenomMetadataResponseSDKType
+ * @package symphony.tokenfactory.v1beta1
+ * @see proto type: symphony.tokenfactory.v1beta1.MsgSetDenomMetadataResponse
  */
 export interface MsgSetDenomMetadataResponseSDKType {}
+/**
+ * @name MsgForceTransfer
+ * @package symphony.tokenfactory.v1beta1
+ * @see proto type: symphony.tokenfactory.v1beta1.MsgForceTransfer
+ */
 export interface MsgForceTransfer {
   sender: string;
   amount: Coin;
@@ -380,6 +509,11 @@ export interface MsgForceTransferProtoMsg {
   typeUrl: '/symphony.tokenfactory.v1beta1.MsgForceTransfer';
   value: Uint8Array;
 }
+/**
+ * @name MsgForceTransferAmino
+ * @package symphony.tokenfactory.v1beta1
+ * @see proto type: symphony.tokenfactory.v1beta1.MsgForceTransfer
+ */
 export interface MsgForceTransferAmino {
   sender?: string;
   amount?: CoinAmino;
@@ -390,22 +524,42 @@ export interface MsgForceTransferAminoMsg {
   type: 'symphony/tokenfactory/force-transfer';
   value: MsgForceTransferAmino;
 }
+/**
+ * @name MsgForceTransferSDKType
+ * @package symphony.tokenfactory.v1beta1
+ * @see proto type: symphony.tokenfactory.v1beta1.MsgForceTransfer
+ */
 export interface MsgForceTransferSDKType {
   sender: string;
   amount: CoinSDKType;
   transferFromAddress: string;
   transferToAddress: string;
 }
+/**
+ * @name MsgForceTransferResponse
+ * @package symphony.tokenfactory.v1beta1
+ * @see proto type: symphony.tokenfactory.v1beta1.MsgForceTransferResponse
+ */
 export interface MsgForceTransferResponse {}
 export interface MsgForceTransferResponseProtoMsg {
   typeUrl: '/symphony.tokenfactory.v1beta1.MsgForceTransferResponse';
   value: Uint8Array;
 }
+/**
+ * @name MsgForceTransferResponseAmino
+ * @package symphony.tokenfactory.v1beta1
+ * @see proto type: symphony.tokenfactory.v1beta1.MsgForceTransferResponse
+ */
 export interface MsgForceTransferResponseAmino {}
 export interface MsgForceTransferResponseAminoMsg {
   type: '/symphony.tokenfactory.v1beta1.MsgForceTransferResponse';
   value: MsgForceTransferResponseAmino;
 }
+/**
+ * @name MsgForceTransferResponseSDKType
+ * @package symphony.tokenfactory.v1beta1
+ * @see proto type: symphony.tokenfactory.v1beta1.MsgForceTransferResponse
+ */
 export interface MsgForceTransferResponseSDKType {}
 function createBaseMsgCreateDenom(): MsgCreateDenom {
   return {
@@ -413,6 +567,20 @@ function createBaseMsgCreateDenom(): MsgCreateDenom {
     subdenom: '',
   };
 }
+/**
+ * MsgCreateDenom defines the message structure for the CreateDenom gRPC service
+ * method. It allows an account to create a new denom. It requires a sender
+ * address and a sub denomination. The (sender_address, sub_denomination) tuple
+ * must be unique and cannot be re-used.
+ *
+ * The resulting denom created is defined as
+ * <factory/{creatorAddress}/{subdenom}>. The resulting denom's admin is
+ * originally set to be the creator, but this can be changed later. The token
+ * denom does not indicate the current admin.
+ * @name MsgCreateDenom
+ * @package symphony.tokenfactory.v1beta1
+ * @see proto type: symphony.tokenfactory.v1beta1.MsgCreateDenom
+ */
 export const MsgCreateDenom = {
   typeUrl: '/symphony.tokenfactory.v1beta1.MsgCreateDenom',
   aminoType: 'symphony/tokenfactory/create-denom',
@@ -524,6 +692,13 @@ function createBaseMsgCreateDenomResponse(): MsgCreateDenomResponse {
     newTokenDenom: '',
   };
 }
+/**
+ * MsgCreateDenomResponse is the return value of MsgCreateDenom
+ * It returns the full string of the newly created denom
+ * @name MsgCreateDenomResponse
+ * @package symphony.tokenfactory.v1beta1
+ * @see proto type: symphony.tokenfactory.v1beta1.MsgCreateDenomResponse
+ */
 export const MsgCreateDenomResponse = {
   typeUrl: '/symphony.tokenfactory.v1beta1.MsgCreateDenomResponse',
   is(o: any): o is MsgCreateDenomResponse {
@@ -627,6 +802,15 @@ function createBaseMsgMint(): MsgMint {
     mintToAddress: '',
   };
 }
+/**
+ * MsgMint is the sdk.Msg type for allowing an admin account to mint
+ * more of a token.
+ * Only the admin of the token factory denom has permission to mint unless
+ * the denom does not have any admin.
+ * @name MsgMint
+ * @package symphony.tokenfactory.v1beta1
+ * @see proto type: symphony.tokenfactory.v1beta1.MsgMint
+ */
 export const MsgMint = {
   typeUrl: '/symphony.tokenfactory.v1beta1.MsgMint',
   aminoType: 'symphony/tokenfactory/mint',
@@ -756,6 +940,11 @@ GlobalDecoderRegistry.registerAminoProtoMapping(
 function createBaseMsgMintResponse(): MsgMintResponse {
   return {};
 }
+/**
+ * @name MsgMintResponse
+ * @package symphony.tokenfactory.v1beta1
+ * @see proto type: symphony.tokenfactory.v1beta1.MsgMintResponse
+ */
 export const MsgMintResponse = {
   typeUrl: '/symphony.tokenfactory.v1beta1.MsgMintResponse',
   is(o: any): o is MsgMintResponse {
@@ -824,6 +1013,15 @@ function createBaseMsgBurn(): MsgBurn {
     burnFromAddress: '',
   };
 }
+/**
+ * MsgBurn is the sdk.Msg type for allowing an admin account to burn
+ * a token.
+ * Only the admin of the token factory denom has permission to burn unless
+ * the denom does not have any admin.
+ * @name MsgBurn
+ * @package symphony.tokenfactory.v1beta1
+ * @see proto type: symphony.tokenfactory.v1beta1.MsgBurn
+ */
 export const MsgBurn = {
   typeUrl: '/symphony.tokenfactory.v1beta1.MsgBurn',
   aminoType: 'symphony/tokenfactory/burn',
@@ -956,6 +1154,11 @@ GlobalDecoderRegistry.registerAminoProtoMapping(
 function createBaseMsgBurnResponse(): MsgBurnResponse {
   return {};
 }
+/**
+ * @name MsgBurnResponse
+ * @package symphony.tokenfactory.v1beta1
+ * @see proto type: symphony.tokenfactory.v1beta1.MsgBurnResponse
+ */
 export const MsgBurnResponse = {
   typeUrl: '/symphony.tokenfactory.v1beta1.MsgBurnResponse',
   is(o: any): o is MsgBurnResponse {
@@ -1024,6 +1227,13 @@ function createBaseMsgChangeAdmin(): MsgChangeAdmin {
     newAdmin: '',
   };
 }
+/**
+ * MsgChangeAdmin is the sdk.Msg type for allowing an admin account to reassign
+ * adminship of a denom to a new account
+ * @name MsgChangeAdmin
+ * @package symphony.tokenfactory.v1beta1
+ * @see proto type: symphony.tokenfactory.v1beta1.MsgChangeAdmin
+ */
 export const MsgChangeAdmin = {
   typeUrl: '/symphony.tokenfactory.v1beta1.MsgChangeAdmin',
   aminoType: 'symphony/tokenfactory/change-admin',
@@ -1150,6 +1360,13 @@ GlobalDecoderRegistry.registerAminoProtoMapping(
 function createBaseMsgChangeAdminResponse(): MsgChangeAdminResponse {
   return {};
 }
+/**
+ * MsgChangeAdminResponse defines the response structure for an executed
+ * MsgChangeAdmin message.
+ * @name MsgChangeAdminResponse
+ * @package symphony.tokenfactory.v1beta1
+ * @see proto type: symphony.tokenfactory.v1beta1.MsgChangeAdminResponse
+ */
 export const MsgChangeAdminResponse = {
   typeUrl: '/symphony.tokenfactory.v1beta1.MsgChangeAdminResponse',
   is(o: any): o is MsgChangeAdminResponse {
@@ -1226,6 +1443,13 @@ function createBaseMsgSetBeforeSendHook(): MsgSetBeforeSendHook {
     cosmwasmAddress: '',
   };
 }
+/**
+ * MsgSetBeforeSendHook is the sdk.Msg type for allowing an admin account to
+ * assign a CosmWasm contract to call with a BeforeSend hook
+ * @name MsgSetBeforeSendHook
+ * @package symphony.tokenfactory.v1beta1
+ * @see proto type: symphony.tokenfactory.v1beta1.MsgSetBeforeSendHook
+ */
 export const MsgSetBeforeSendHook = {
   typeUrl: '/symphony.tokenfactory.v1beta1.MsgSetBeforeSendHook',
   aminoType: 'symphony/tokenfactory/set-bef-send-hook',
@@ -1361,6 +1585,13 @@ GlobalDecoderRegistry.registerAminoProtoMapping(
 function createBaseMsgSetBeforeSendHookResponse(): MsgSetBeforeSendHookResponse {
   return {};
 }
+/**
+ * MsgSetBeforeSendHookResponse defines the response structure for an executed
+ * MsgSetBeforeSendHook message.
+ * @name MsgSetBeforeSendHookResponse
+ * @package symphony.tokenfactory.v1beta1
+ * @see proto type: symphony.tokenfactory.v1beta1.MsgSetBeforeSendHookResponse
+ */
 export const MsgSetBeforeSendHookResponse = {
   typeUrl: '/symphony.tokenfactory.v1beta1.MsgSetBeforeSendHookResponse',
   is(o: any): o is MsgSetBeforeSendHookResponse {
@@ -1444,6 +1675,13 @@ function createBaseMsgSetDenomMetadata(): MsgSetDenomMetadata {
     metadata: Metadata.fromPartial({}),
   };
 }
+/**
+ * MsgSetDenomMetadata is the sdk.Msg type for allowing an admin account to set
+ * the denom's bank metadata
+ * @name MsgSetDenomMetadata
+ * @package symphony.tokenfactory.v1beta1
+ * @see proto type: symphony.tokenfactory.v1beta1.MsgSetDenomMetadata
+ */
 export const MsgSetDenomMetadata = {
   typeUrl: '/symphony.tokenfactory.v1beta1.MsgSetDenomMetadata',
   aminoType: 'symphony/tokenfactory/set-denom-metadata',
@@ -1564,6 +1802,13 @@ GlobalDecoderRegistry.registerAminoProtoMapping(
 function createBaseMsgSetDenomMetadataResponse(): MsgSetDenomMetadataResponse {
   return {};
 }
+/**
+ * MsgSetDenomMetadataResponse defines the response structure for an executed
+ * MsgSetDenomMetadata message.
+ * @name MsgSetDenomMetadataResponse
+ * @package symphony.tokenfactory.v1beta1
+ * @see proto type: symphony.tokenfactory.v1beta1.MsgSetDenomMetadataResponse
+ */
 export const MsgSetDenomMetadataResponse = {
   typeUrl: '/symphony.tokenfactory.v1beta1.MsgSetDenomMetadataResponse',
   is(o: any): o is MsgSetDenomMetadataResponse {
@@ -1647,6 +1892,11 @@ function createBaseMsgForceTransfer(): MsgForceTransfer {
     transferToAddress: '',
   };
 }
+/**
+ * @name MsgForceTransfer
+ * @package symphony.tokenfactory.v1beta1
+ * @see proto type: symphony.tokenfactory.v1beta1.MsgForceTransfer
+ */
 export const MsgForceTransfer = {
   typeUrl: '/symphony.tokenfactory.v1beta1.MsgForceTransfer',
   aminoType: 'symphony/tokenfactory/force-transfer',
@@ -1800,6 +2050,11 @@ GlobalDecoderRegistry.registerAminoProtoMapping(
 function createBaseMsgForceTransferResponse(): MsgForceTransferResponse {
   return {};
 }
+/**
+ * @name MsgForceTransferResponse
+ * @package symphony.tokenfactory.v1beta1
+ * @see proto type: symphony.tokenfactory.v1beta1.MsgForceTransferResponse
+ */
 export const MsgForceTransferResponse = {
   typeUrl: '/symphony.tokenfactory.v1beta1.MsgForceTransferResponse',
   is(o: any): o is MsgForceTransferResponse {

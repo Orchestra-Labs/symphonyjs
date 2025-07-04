@@ -1,6 +1,11 @@
 //@ts-nocheck
 import { BinaryReader, BinaryWriter } from '../../binary';
 import { GlobalDecoderRegistry } from '../../registry';
+/**
+ * @name MsgEmitIBCAck
+ * @package symphony.ibchooks
+ * @see proto type: symphony.ibchooks.MsgEmitIBCAck
+ */
 export interface MsgEmitIBCAck {
   sender: string;
   packetSequence: bigint;
@@ -10,6 +15,11 @@ export interface MsgEmitIBCAckProtoMsg {
   typeUrl: '/symphony.ibchooks.MsgEmitIBCAck';
   value: Uint8Array;
 }
+/**
+ * @name MsgEmitIBCAckAmino
+ * @package symphony.ibchooks
+ * @see proto type: symphony.ibchooks.MsgEmitIBCAck
+ */
 export interface MsgEmitIBCAckAmino {
   sender?: string;
   packet_sequence?: string;
@@ -19,11 +29,21 @@ export interface MsgEmitIBCAckAminoMsg {
   type: 'symphony/MsgEmitIBCAck';
   value: MsgEmitIBCAckAmino;
 }
+/**
+ * @name MsgEmitIBCAckSDKType
+ * @package symphony.ibchooks
+ * @see proto type: symphony.ibchooks.MsgEmitIBCAck
+ */
 export interface MsgEmitIBCAckSDKType {
   sender: string;
   packet_sequence: bigint;
   channel: string;
 }
+/**
+ * @name MsgEmitIBCAckResponse
+ * @package symphony.ibchooks
+ * @see proto type: symphony.ibchooks.MsgEmitIBCAckResponse
+ */
 export interface MsgEmitIBCAckResponse {
   contractResult: string;
   ibcAck: string;
@@ -32,6 +52,11 @@ export interface MsgEmitIBCAckResponseProtoMsg {
   typeUrl: '/symphony.ibchooks.MsgEmitIBCAckResponse';
   value: Uint8Array;
 }
+/**
+ * @name MsgEmitIBCAckResponseAmino
+ * @package symphony.ibchooks
+ * @see proto type: symphony.ibchooks.MsgEmitIBCAckResponse
+ */
 export interface MsgEmitIBCAckResponseAmino {
   contract_result?: string;
   ibc_ack?: string;
@@ -40,6 +65,11 @@ export interface MsgEmitIBCAckResponseAminoMsg {
   type: '/symphony.ibchooks.MsgEmitIBCAckResponse';
   value: MsgEmitIBCAckResponseAmino;
 }
+/**
+ * @name MsgEmitIBCAckResponseSDKType
+ * @package symphony.ibchooks
+ * @see proto type: symphony.ibchooks.MsgEmitIBCAckResponse
+ */
 export interface MsgEmitIBCAckResponseSDKType {
   contract_result: string;
   ibc_ack: string;
@@ -51,6 +81,11 @@ function createBaseMsgEmitIBCAck(): MsgEmitIBCAck {
     channel: '',
   };
 }
+/**
+ * @name MsgEmitIBCAck
+ * @package symphony.ibchooks
+ * @see proto type: symphony.ibchooks.MsgEmitIBCAck
+ */
 export const MsgEmitIBCAck = {
   typeUrl: '/symphony.ibchooks.MsgEmitIBCAck',
   aminoType: 'symphony/MsgEmitIBCAck',
@@ -189,6 +224,11 @@ function createBaseMsgEmitIBCAckResponse(): MsgEmitIBCAckResponse {
     ibcAck: '',
   };
 }
+/**
+ * @name MsgEmitIBCAckResponse
+ * @package symphony.ibchooks
+ * @see proto type: symphony.ibchooks.MsgEmitIBCAckResponse
+ */
 export const MsgEmitIBCAckResponse = {
   typeUrl: '/symphony.ibchooks.MsgEmitIBCAckResponse',
   is(o: any): o is MsgEmitIBCAckResponse {

@@ -1,6 +1,11 @@
 //@ts-nocheck
 import { BinaryReader, BinaryWriter } from '../../../binary';
 import { GlobalDecoderRegistry } from '../../../registry';
+/**
+ * @name Params
+ * @package symphony.stablestakingincentives.v1beta1
+ * @see proto type: symphony.stablestakingincentives.v1beta1.Params
+ */
 export interface Params {
   /**
    * distribution_contract_address is the address of the distribution contract that receives the minted coins
@@ -12,6 +17,11 @@ export interface ParamsProtoMsg {
   typeUrl: '/symphony.stablestakingincentives.v1beta1.Params';
   value: Uint8Array;
 }
+/**
+ * @name ParamsAmino
+ * @package symphony.stablestakingincentives.v1beta1
+ * @see proto type: symphony.stablestakingincentives.v1beta1.Params
+ */
 export interface ParamsAmino {
   /**
    * distribution_contract_address is the address of the distribution contract that receives the minted coins
@@ -23,6 +33,11 @@ export interface ParamsAminoMsg {
   type: '/symphony.stablestakingincentives.v1beta1.Params';
   value: ParamsAmino;
 }
+/**
+ * @name ParamsSDKType
+ * @package symphony.stablestakingincentives.v1beta1
+ * @see proto type: symphony.stablestakingincentives.v1beta1.Params
+ */
 export interface ParamsSDKType {
   distribution_contract_address: string;
 }
@@ -31,6 +46,11 @@ function createBaseParams(): Params {
     distributionContractAddress: '',
   };
 }
+/**
+ * @name Params
+ * @package symphony.stablestakingincentives.v1beta1
+ * @see proto type: symphony.stablestakingincentives.v1beta1.Params
+ */
 export const Params = {
   typeUrl: '/symphony.stablestakingincentives.v1beta1.Params',
   is(o: any): o is Params {

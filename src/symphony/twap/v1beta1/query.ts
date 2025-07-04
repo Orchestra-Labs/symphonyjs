@@ -5,6 +5,11 @@ import { BinaryReader, BinaryWriter } from '../../../binary';
 import { toTimestamp, fromTimestamp } from '../../../helpers';
 import { GlobalDecoderRegistry } from '../../../registry';
 import { Decimal } from '@cosmjs/math';
+/**
+ * @name ArithmeticTwapRequest
+ * @package symphony.twap.v1beta1
+ * @see proto type: symphony.twap.v1beta1.ArithmeticTwapRequest
+ */
 export interface ArithmeticTwapRequest {
   poolId: bigint;
   baseAsset: string;
@@ -16,6 +21,11 @@ export interface ArithmeticTwapRequestProtoMsg {
   typeUrl: '/symphony.twap.v1beta1.ArithmeticTwapRequest';
   value: Uint8Array;
 }
+/**
+ * @name ArithmeticTwapRequestAmino
+ * @package symphony.twap.v1beta1
+ * @see proto type: symphony.twap.v1beta1.ArithmeticTwapRequest
+ */
 export interface ArithmeticTwapRequestAmino {
   pool_id?: string;
   base_asset?: string;
@@ -27,6 +37,11 @@ export interface ArithmeticTwapRequestAminoMsg {
   type: '/symphony.twap.v1beta1.ArithmeticTwapRequest';
   value: ArithmeticTwapRequestAmino;
 }
+/**
+ * @name ArithmeticTwapRequestSDKType
+ * @package symphony.twap.v1beta1
+ * @see proto type: symphony.twap.v1beta1.ArithmeticTwapRequest
+ */
 export interface ArithmeticTwapRequestSDKType {
   pool_id: bigint;
   base_asset: string;
@@ -34,6 +49,11 @@ export interface ArithmeticTwapRequestSDKType {
   start_time: Date;
   end_time?: Date;
 }
+/**
+ * @name ArithmeticTwapResponse
+ * @package symphony.twap.v1beta1
+ * @see proto type: symphony.twap.v1beta1.ArithmeticTwapResponse
+ */
 export interface ArithmeticTwapResponse {
   arithmeticTwap: string;
 }
@@ -41,6 +61,11 @@ export interface ArithmeticTwapResponseProtoMsg {
   typeUrl: '/symphony.twap.v1beta1.ArithmeticTwapResponse';
   value: Uint8Array;
 }
+/**
+ * @name ArithmeticTwapResponseAmino
+ * @package symphony.twap.v1beta1
+ * @see proto type: symphony.twap.v1beta1.ArithmeticTwapResponse
+ */
 export interface ArithmeticTwapResponseAmino {
   arithmetic_twap?: string;
 }
@@ -48,9 +73,19 @@ export interface ArithmeticTwapResponseAminoMsg {
   type: '/symphony.twap.v1beta1.ArithmeticTwapResponse';
   value: ArithmeticTwapResponseAmino;
 }
+/**
+ * @name ArithmeticTwapResponseSDKType
+ * @package symphony.twap.v1beta1
+ * @see proto type: symphony.twap.v1beta1.ArithmeticTwapResponse
+ */
 export interface ArithmeticTwapResponseSDKType {
   arithmetic_twap: string;
 }
+/**
+ * @name ArithmeticTwapToNowRequest
+ * @package symphony.twap.v1beta1
+ * @see proto type: symphony.twap.v1beta1.ArithmeticTwapToNowRequest
+ */
 export interface ArithmeticTwapToNowRequest {
   poolId: bigint;
   baseAsset: string;
@@ -61,6 +96,11 @@ export interface ArithmeticTwapToNowRequestProtoMsg {
   typeUrl: '/symphony.twap.v1beta1.ArithmeticTwapToNowRequest';
   value: Uint8Array;
 }
+/**
+ * @name ArithmeticTwapToNowRequestAmino
+ * @package symphony.twap.v1beta1
+ * @see proto type: symphony.twap.v1beta1.ArithmeticTwapToNowRequest
+ */
 export interface ArithmeticTwapToNowRequestAmino {
   pool_id?: string;
   base_asset?: string;
@@ -71,12 +111,22 @@ export interface ArithmeticTwapToNowRequestAminoMsg {
   type: '/symphony.twap.v1beta1.ArithmeticTwapToNowRequest';
   value: ArithmeticTwapToNowRequestAmino;
 }
+/**
+ * @name ArithmeticTwapToNowRequestSDKType
+ * @package symphony.twap.v1beta1
+ * @see proto type: symphony.twap.v1beta1.ArithmeticTwapToNowRequest
+ */
 export interface ArithmeticTwapToNowRequestSDKType {
   pool_id: bigint;
   base_asset: string;
   quote_asset: string;
   start_time: Date;
 }
+/**
+ * @name ArithmeticTwapToNowResponse
+ * @package symphony.twap.v1beta1
+ * @see proto type: symphony.twap.v1beta1.ArithmeticTwapToNowResponse
+ */
 export interface ArithmeticTwapToNowResponse {
   arithmeticTwap: string;
 }
@@ -84,6 +134,11 @@ export interface ArithmeticTwapToNowResponseProtoMsg {
   typeUrl: '/symphony.twap.v1beta1.ArithmeticTwapToNowResponse';
   value: Uint8Array;
 }
+/**
+ * @name ArithmeticTwapToNowResponseAmino
+ * @package symphony.twap.v1beta1
+ * @see proto type: symphony.twap.v1beta1.ArithmeticTwapToNowResponse
+ */
 export interface ArithmeticTwapToNowResponseAmino {
   arithmetic_twap?: string;
 }
@@ -91,9 +146,19 @@ export interface ArithmeticTwapToNowResponseAminoMsg {
   type: '/symphony.twap.v1beta1.ArithmeticTwapToNowResponse';
   value: ArithmeticTwapToNowResponseAmino;
 }
+/**
+ * @name ArithmeticTwapToNowResponseSDKType
+ * @package symphony.twap.v1beta1
+ * @see proto type: symphony.twap.v1beta1.ArithmeticTwapToNowResponse
+ */
 export interface ArithmeticTwapToNowResponseSDKType {
   arithmetic_twap: string;
 }
+/**
+ * @name GeometricTwapRequest
+ * @package symphony.twap.v1beta1
+ * @see proto type: symphony.twap.v1beta1.GeometricTwapRequest
+ */
 export interface GeometricTwapRequest {
   poolId: bigint;
   baseAsset: string;
@@ -105,6 +170,11 @@ export interface GeometricTwapRequestProtoMsg {
   typeUrl: '/symphony.twap.v1beta1.GeometricTwapRequest';
   value: Uint8Array;
 }
+/**
+ * @name GeometricTwapRequestAmino
+ * @package symphony.twap.v1beta1
+ * @see proto type: symphony.twap.v1beta1.GeometricTwapRequest
+ */
 export interface GeometricTwapRequestAmino {
   pool_id?: string;
   base_asset?: string;
@@ -116,6 +186,11 @@ export interface GeometricTwapRequestAminoMsg {
   type: '/symphony.twap.v1beta1.GeometricTwapRequest';
   value: GeometricTwapRequestAmino;
 }
+/**
+ * @name GeometricTwapRequestSDKType
+ * @package symphony.twap.v1beta1
+ * @see proto type: symphony.twap.v1beta1.GeometricTwapRequest
+ */
 export interface GeometricTwapRequestSDKType {
   pool_id: bigint;
   base_asset: string;
@@ -123,6 +198,11 @@ export interface GeometricTwapRequestSDKType {
   start_time: Date;
   end_time?: Date;
 }
+/**
+ * @name GeometricTwapResponse
+ * @package symphony.twap.v1beta1
+ * @see proto type: symphony.twap.v1beta1.GeometricTwapResponse
+ */
 export interface GeometricTwapResponse {
   geometricTwap: string;
 }
@@ -130,6 +210,11 @@ export interface GeometricTwapResponseProtoMsg {
   typeUrl: '/symphony.twap.v1beta1.GeometricTwapResponse';
   value: Uint8Array;
 }
+/**
+ * @name GeometricTwapResponseAmino
+ * @package symphony.twap.v1beta1
+ * @see proto type: symphony.twap.v1beta1.GeometricTwapResponse
+ */
 export interface GeometricTwapResponseAmino {
   geometric_twap?: string;
 }
@@ -137,9 +222,19 @@ export interface GeometricTwapResponseAminoMsg {
   type: '/symphony.twap.v1beta1.GeometricTwapResponse';
   value: GeometricTwapResponseAmino;
 }
+/**
+ * @name GeometricTwapResponseSDKType
+ * @package symphony.twap.v1beta1
+ * @see proto type: symphony.twap.v1beta1.GeometricTwapResponse
+ */
 export interface GeometricTwapResponseSDKType {
   geometric_twap: string;
 }
+/**
+ * @name GeometricTwapToNowRequest
+ * @package symphony.twap.v1beta1
+ * @see proto type: symphony.twap.v1beta1.GeometricTwapToNowRequest
+ */
 export interface GeometricTwapToNowRequest {
   poolId: bigint;
   baseAsset: string;
@@ -150,6 +245,11 @@ export interface GeometricTwapToNowRequestProtoMsg {
   typeUrl: '/symphony.twap.v1beta1.GeometricTwapToNowRequest';
   value: Uint8Array;
 }
+/**
+ * @name GeometricTwapToNowRequestAmino
+ * @package symphony.twap.v1beta1
+ * @see proto type: symphony.twap.v1beta1.GeometricTwapToNowRequest
+ */
 export interface GeometricTwapToNowRequestAmino {
   pool_id?: string;
   base_asset?: string;
@@ -160,12 +260,22 @@ export interface GeometricTwapToNowRequestAminoMsg {
   type: '/symphony.twap.v1beta1.GeometricTwapToNowRequest';
   value: GeometricTwapToNowRequestAmino;
 }
+/**
+ * @name GeometricTwapToNowRequestSDKType
+ * @package symphony.twap.v1beta1
+ * @see proto type: symphony.twap.v1beta1.GeometricTwapToNowRequest
+ */
 export interface GeometricTwapToNowRequestSDKType {
   pool_id: bigint;
   base_asset: string;
   quote_asset: string;
   start_time: Date;
 }
+/**
+ * @name GeometricTwapToNowResponse
+ * @package symphony.twap.v1beta1
+ * @see proto type: symphony.twap.v1beta1.GeometricTwapToNowResponse
+ */
 export interface GeometricTwapToNowResponse {
   geometricTwap: string;
 }
@@ -173,6 +283,11 @@ export interface GeometricTwapToNowResponseProtoMsg {
   typeUrl: '/symphony.twap.v1beta1.GeometricTwapToNowResponse';
   value: Uint8Array;
 }
+/**
+ * @name GeometricTwapToNowResponseAmino
+ * @package symphony.twap.v1beta1
+ * @see proto type: symphony.twap.v1beta1.GeometricTwapToNowResponse
+ */
 export interface GeometricTwapToNowResponseAmino {
   geometric_twap?: string;
 }
@@ -180,20 +295,45 @@ export interface GeometricTwapToNowResponseAminoMsg {
   type: '/symphony.twap.v1beta1.GeometricTwapToNowResponse';
   value: GeometricTwapToNowResponseAmino;
 }
+/**
+ * @name GeometricTwapToNowResponseSDKType
+ * @package symphony.twap.v1beta1
+ * @see proto type: symphony.twap.v1beta1.GeometricTwapToNowResponse
+ */
 export interface GeometricTwapToNowResponseSDKType {
   geometric_twap: string;
 }
+/**
+ * @name ParamsRequest
+ * @package symphony.twap.v1beta1
+ * @see proto type: symphony.twap.v1beta1.ParamsRequest
+ */
 export interface ParamsRequest {}
 export interface ParamsRequestProtoMsg {
   typeUrl: '/symphony.twap.v1beta1.ParamsRequest';
   value: Uint8Array;
 }
+/**
+ * @name ParamsRequestAmino
+ * @package symphony.twap.v1beta1
+ * @see proto type: symphony.twap.v1beta1.ParamsRequest
+ */
 export interface ParamsRequestAmino {}
 export interface ParamsRequestAminoMsg {
   type: '/symphony.twap.v1beta1.ParamsRequest';
   value: ParamsRequestAmino;
 }
+/**
+ * @name ParamsRequestSDKType
+ * @package symphony.twap.v1beta1
+ * @see proto type: symphony.twap.v1beta1.ParamsRequest
+ */
 export interface ParamsRequestSDKType {}
+/**
+ * @name ParamsResponse
+ * @package symphony.twap.v1beta1
+ * @see proto type: symphony.twap.v1beta1.ParamsResponse
+ */
 export interface ParamsResponse {
   params: Params;
 }
@@ -201,6 +341,11 @@ export interface ParamsResponseProtoMsg {
   typeUrl: '/symphony.twap.v1beta1.ParamsResponse';
   value: Uint8Array;
 }
+/**
+ * @name ParamsResponseAmino
+ * @package symphony.twap.v1beta1
+ * @see proto type: symphony.twap.v1beta1.ParamsResponse
+ */
 export interface ParamsResponseAmino {
   params?: ParamsAmino;
 }
@@ -208,6 +353,11 @@ export interface ParamsResponseAminoMsg {
   type: '/symphony.twap.v1beta1.ParamsResponse';
   value: ParamsResponseAmino;
 }
+/**
+ * @name ParamsResponseSDKType
+ * @package symphony.twap.v1beta1
+ * @see proto type: symphony.twap.v1beta1.ParamsResponse
+ */
 export interface ParamsResponseSDKType {
   params: ParamsSDKType;
 }
@@ -220,6 +370,11 @@ function createBaseArithmeticTwapRequest(): ArithmeticTwapRequest {
     endTime: undefined,
   };
 }
+/**
+ * @name ArithmeticTwapRequest
+ * @package symphony.twap.v1beta1
+ * @see proto type: symphony.twap.v1beta1.ArithmeticTwapRequest
+ */
 export const ArithmeticTwapRequest = {
   typeUrl: '/symphony.twap.v1beta1.ArithmeticTwapRequest',
   is(o: any): o is ArithmeticTwapRequest {
@@ -387,6 +542,11 @@ function createBaseArithmeticTwapResponse(): ArithmeticTwapResponse {
     arithmeticTwap: '',
   };
 }
+/**
+ * @name ArithmeticTwapResponse
+ * @package symphony.twap.v1beta1
+ * @see proto type: symphony.twap.v1beta1.ArithmeticTwapResponse
+ */
 export const ArithmeticTwapResponse = {
   typeUrl: '/symphony.twap.v1beta1.ArithmeticTwapResponse',
   is(o: any): o is ArithmeticTwapResponse {
@@ -496,6 +656,11 @@ function createBaseArithmeticTwapToNowRequest(): ArithmeticTwapToNowRequest {
     startTime: new Date(),
   };
 }
+/**
+ * @name ArithmeticTwapToNowRequest
+ * @package symphony.twap.v1beta1
+ * @see proto type: symphony.twap.v1beta1.ArithmeticTwapToNowRequest
+ */
 export const ArithmeticTwapToNowRequest = {
   typeUrl: '/symphony.twap.v1beta1.ArithmeticTwapToNowRequest',
   is(o: any): o is ArithmeticTwapToNowRequest {
@@ -657,6 +822,11 @@ function createBaseArithmeticTwapToNowResponse(): ArithmeticTwapToNowResponse {
     arithmeticTwap: '',
   };
 }
+/**
+ * @name ArithmeticTwapToNowResponse
+ * @package symphony.twap.v1beta1
+ * @see proto type: symphony.twap.v1beta1.ArithmeticTwapToNowResponse
+ */
 export const ArithmeticTwapToNowResponse = {
   typeUrl: '/symphony.twap.v1beta1.ArithmeticTwapToNowResponse',
   is(o: any): o is ArithmeticTwapToNowResponse {
@@ -777,6 +947,11 @@ function createBaseGeometricTwapRequest(): GeometricTwapRequest {
     endTime: undefined,
   };
 }
+/**
+ * @name GeometricTwapRequest
+ * @package symphony.twap.v1beta1
+ * @see proto type: symphony.twap.v1beta1.GeometricTwapRequest
+ */
 export const GeometricTwapRequest = {
   typeUrl: '/symphony.twap.v1beta1.GeometricTwapRequest',
   is(o: any): o is GeometricTwapRequest {
@@ -944,6 +1119,11 @@ function createBaseGeometricTwapResponse(): GeometricTwapResponse {
     geometricTwap: '',
   };
 }
+/**
+ * @name GeometricTwapResponse
+ * @package symphony.twap.v1beta1
+ * @see proto type: symphony.twap.v1beta1.GeometricTwapResponse
+ */
 export const GeometricTwapResponse = {
   typeUrl: '/symphony.twap.v1beta1.GeometricTwapResponse',
   is(o: any): o is GeometricTwapResponse {
@@ -1048,6 +1228,11 @@ function createBaseGeometricTwapToNowRequest(): GeometricTwapToNowRequest {
     startTime: new Date(),
   };
 }
+/**
+ * @name GeometricTwapToNowRequest
+ * @package symphony.twap.v1beta1
+ * @see proto type: symphony.twap.v1beta1.GeometricTwapToNowRequest
+ */
 export const GeometricTwapToNowRequest = {
   typeUrl: '/symphony.twap.v1beta1.GeometricTwapToNowRequest',
   is(o: any): o is GeometricTwapToNowRequest {
@@ -1205,6 +1390,11 @@ function createBaseGeometricTwapToNowResponse(): GeometricTwapToNowResponse {
     geometricTwap: '',
   };
 }
+/**
+ * @name GeometricTwapToNowResponse
+ * @package symphony.twap.v1beta1
+ * @see proto type: symphony.twap.v1beta1.GeometricTwapToNowResponse
+ */
 export const GeometricTwapToNowResponse = {
   typeUrl: '/symphony.twap.v1beta1.GeometricTwapToNowResponse',
   is(o: any): o is GeometricTwapToNowResponse {
@@ -1316,6 +1506,11 @@ GlobalDecoderRegistry.register(
 function createBaseParamsRequest(): ParamsRequest {
   return {};
 }
+/**
+ * @name ParamsRequest
+ * @package symphony.twap.v1beta1
+ * @see proto type: symphony.twap.v1beta1.ParamsRequest
+ */
 export const ParamsRequest = {
   typeUrl: '/symphony.twap.v1beta1.ParamsRequest',
   is(o: any): o is ParamsRequest {
@@ -1382,6 +1577,11 @@ function createBaseParamsResponse(): ParamsResponse {
     params: Params.fromPartial({}),
   };
 }
+/**
+ * @name ParamsResponse
+ * @package symphony.twap.v1beta1
+ * @see proto type: symphony.twap.v1beta1.ParamsResponse
+ */
 export const ParamsResponse = {
   typeUrl: '/symphony.twap.v1beta1.ParamsResponse',
   is(o: any): o is ParamsResponse {

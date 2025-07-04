@@ -12,50 +12,95 @@ import {
 } from './protorev';
 import { BinaryReader, BinaryWriter } from '../../../binary';
 import { GlobalDecoderRegistry } from '../../../registry';
-/** MsgSetHotRoutes defines the Msg/SetHotRoutes request type. */
+/**
+ * MsgSetHotRoutes defines the Msg/SetHotRoutes request type.
+ * @name MsgSetHotRoutes
+ * @package symphony.protorev.v1beta1
+ * @see proto type: symphony.protorev.v1beta1.MsgSetHotRoutes
+ */
 export interface MsgSetHotRoutes {
-  /** admin is the account that is authorized to set the hot routes. */
+  /**
+   * admin is the account that is authorized to set the hot routes.
+   */
   admin: string;
-  /** hot_routes is the list of hot routes to set. */
+  /**
+   * hot_routes is the list of hot routes to set.
+   */
   hotRoutes: TokenPairArbRoutes[];
 }
 export interface MsgSetHotRoutesProtoMsg {
   typeUrl: '/symphony.protorev.v1beta1.MsgSetHotRoutes';
   value: Uint8Array;
 }
-/** MsgSetHotRoutes defines the Msg/SetHotRoutes request type. */
+/**
+ * MsgSetHotRoutes defines the Msg/SetHotRoutes request type.
+ * @name MsgSetHotRoutesAmino
+ * @package symphony.protorev.v1beta1
+ * @see proto type: symphony.protorev.v1beta1.MsgSetHotRoutes
+ */
 export interface MsgSetHotRoutesAmino {
-  /** admin is the account that is authorized to set the hot routes. */
+  /**
+   * admin is the account that is authorized to set the hot routes.
+   */
   admin?: string;
-  /** hot_routes is the list of hot routes to set. */
+  /**
+   * hot_routes is the list of hot routes to set.
+   */
   hot_routes?: TokenPairArbRoutesAmino[];
 }
 export interface MsgSetHotRoutesAminoMsg {
   type: 'symphony/MsgSetHotRoutes';
   value: MsgSetHotRoutesAmino;
 }
-/** MsgSetHotRoutes defines the Msg/SetHotRoutes request type. */
+/**
+ * MsgSetHotRoutes defines the Msg/SetHotRoutes request type.
+ * @name MsgSetHotRoutesSDKType
+ * @package symphony.protorev.v1beta1
+ * @see proto type: symphony.protorev.v1beta1.MsgSetHotRoutes
+ */
 export interface MsgSetHotRoutesSDKType {
   admin: string;
   hot_routes: TokenPairArbRoutesSDKType[];
 }
-/** MsgSetHotRoutesResponse defines the Msg/SetHotRoutes response type. */
+/**
+ * MsgSetHotRoutesResponse defines the Msg/SetHotRoutes response type.
+ * @name MsgSetHotRoutesResponse
+ * @package symphony.protorev.v1beta1
+ * @see proto type: symphony.protorev.v1beta1.MsgSetHotRoutesResponse
+ */
 export interface MsgSetHotRoutesResponse {}
 export interface MsgSetHotRoutesResponseProtoMsg {
   typeUrl: '/symphony.protorev.v1beta1.MsgSetHotRoutesResponse';
   value: Uint8Array;
 }
-/** MsgSetHotRoutesResponse defines the Msg/SetHotRoutes response type. */
+/**
+ * MsgSetHotRoutesResponse defines the Msg/SetHotRoutes response type.
+ * @name MsgSetHotRoutesResponseAmino
+ * @package symphony.protorev.v1beta1
+ * @see proto type: symphony.protorev.v1beta1.MsgSetHotRoutesResponse
+ */
 export interface MsgSetHotRoutesResponseAmino {}
 export interface MsgSetHotRoutesResponseAminoMsg {
   type: '/symphony.protorev.v1beta1.MsgSetHotRoutesResponse';
   value: MsgSetHotRoutesResponseAmino;
 }
-/** MsgSetHotRoutesResponse defines the Msg/SetHotRoutes response type. */
+/**
+ * MsgSetHotRoutesResponse defines the Msg/SetHotRoutes response type.
+ * @name MsgSetHotRoutesResponseSDKType
+ * @package symphony.protorev.v1beta1
+ * @see proto type: symphony.protorev.v1beta1.MsgSetHotRoutesResponse
+ */
 export interface MsgSetHotRoutesResponseSDKType {}
-/** MsgSetDeveloperAccount defines the Msg/SetDeveloperAccount request type. */
+/**
+ * MsgSetDeveloperAccount defines the Msg/SetDeveloperAccount request type.
+ * @name MsgSetDeveloperAccount
+ * @package symphony.protorev.v1beta1
+ * @see proto type: symphony.protorev.v1beta1.MsgSetDeveloperAccount
+ */
 export interface MsgSetDeveloperAccount {
-  /** admin is the account that is authorized to set the developer account. */
+  /**
+   * admin is the account that is authorized to set the developer account.
+   */
   admin: string;
   /**
    * developer_account is the account that will receive a portion of the profits
@@ -67,9 +112,16 @@ export interface MsgSetDeveloperAccountProtoMsg {
   typeUrl: '/symphony.protorev.v1beta1.MsgSetDeveloperAccount';
   value: Uint8Array;
 }
-/** MsgSetDeveloperAccount defines the Msg/SetDeveloperAccount request type. */
+/**
+ * MsgSetDeveloperAccount defines the Msg/SetDeveloperAccount request type.
+ * @name MsgSetDeveloperAccountAmino
+ * @package symphony.protorev.v1beta1
+ * @see proto type: symphony.protorev.v1beta1.MsgSetDeveloperAccount
+ */
 export interface MsgSetDeveloperAccountAmino {
-  /** admin is the account that is authorized to set the developer account. */
+  /**
+   * admin is the account that is authorized to set the developer account.
+   */
   admin?: string;
   /**
    * developer_account is the account that will receive a portion of the profits
@@ -81,7 +133,12 @@ export interface MsgSetDeveloperAccountAminoMsg {
   type: 'symphony/MsgSetDeveloperAccount';
   value: MsgSetDeveloperAccountAmino;
 }
-/** MsgSetDeveloperAccount defines the Msg/SetDeveloperAccount request type. */
+/**
+ * MsgSetDeveloperAccount defines the Msg/SetDeveloperAccount request type.
+ * @name MsgSetDeveloperAccountSDKType
+ * @package symphony.protorev.v1beta1
+ * @see proto type: symphony.protorev.v1beta1.MsgSetDeveloperAccount
+ */
 export interface MsgSetDeveloperAccountSDKType {
   admin: string;
   developer_account: string;
@@ -89,6 +146,9 @@ export interface MsgSetDeveloperAccountSDKType {
 /**
  * MsgSetDeveloperAccountResponse defines the Msg/SetDeveloperAccount response
  * type.
+ * @name MsgSetDeveloperAccountResponse
+ * @package symphony.protorev.v1beta1
+ * @see proto type: symphony.protorev.v1beta1.MsgSetDeveloperAccountResponse
  */
 export interface MsgSetDeveloperAccountResponse {}
 export interface MsgSetDeveloperAccountResponseProtoMsg {
@@ -98,6 +158,9 @@ export interface MsgSetDeveloperAccountResponseProtoMsg {
 /**
  * MsgSetDeveloperAccountResponse defines the Msg/SetDeveloperAccount response
  * type.
+ * @name MsgSetDeveloperAccountResponseAmino
+ * @package symphony.protorev.v1beta1
+ * @see proto type: symphony.protorev.v1beta1.MsgSetDeveloperAccountResponse
  */
 export interface MsgSetDeveloperAccountResponseAmino {}
 export interface MsgSetDeveloperAccountResponseAminoMsg {
@@ -107,52 +170,100 @@ export interface MsgSetDeveloperAccountResponseAminoMsg {
 /**
  * MsgSetDeveloperAccountResponse defines the Msg/SetDeveloperAccount response
  * type.
+ * @name MsgSetDeveloperAccountResponseSDKType
+ * @package symphony.protorev.v1beta1
+ * @see proto type: symphony.protorev.v1beta1.MsgSetDeveloperAccountResponse
  */
 export interface MsgSetDeveloperAccountResponseSDKType {}
-/** MsgSetInfoByPoolType defines the Msg/SetInfoByPoolType request type. */
+/**
+ * MsgSetInfoByPoolType defines the Msg/SetInfoByPoolType request type.
+ * @name MsgSetInfoByPoolType
+ * @package symphony.protorev.v1beta1
+ * @see proto type: symphony.protorev.v1beta1.MsgSetInfoByPoolType
+ */
 export interface MsgSetInfoByPoolType {
-  /** admin is the account that is authorized to set the pool weights. */
+  /**
+   * admin is the account that is authorized to set the pool weights.
+   */
   admin: string;
-  /** info_by_pool_type contains information about the pool types. */
+  /**
+   * info_by_pool_type contains information about the pool types.
+   */
   infoByPoolType: InfoByPoolType;
 }
 export interface MsgSetInfoByPoolTypeProtoMsg {
   typeUrl: '/symphony.protorev.v1beta1.MsgSetInfoByPoolType';
   value: Uint8Array;
 }
-/** MsgSetInfoByPoolType defines the Msg/SetInfoByPoolType request type. */
+/**
+ * MsgSetInfoByPoolType defines the Msg/SetInfoByPoolType request type.
+ * @name MsgSetInfoByPoolTypeAmino
+ * @package symphony.protorev.v1beta1
+ * @see proto type: symphony.protorev.v1beta1.MsgSetInfoByPoolType
+ */
 export interface MsgSetInfoByPoolTypeAmino {
-  /** admin is the account that is authorized to set the pool weights. */
+  /**
+   * admin is the account that is authorized to set the pool weights.
+   */
   admin?: string;
-  /** info_by_pool_type contains information about the pool types. */
+  /**
+   * info_by_pool_type contains information about the pool types.
+   */
   info_by_pool_type?: InfoByPoolTypeAmino;
 }
 export interface MsgSetInfoByPoolTypeAminoMsg {
   type: 'symphony/MsgSetInfoByPoolType';
   value: MsgSetInfoByPoolTypeAmino;
 }
-/** MsgSetInfoByPoolType defines the Msg/SetInfoByPoolType request type. */
+/**
+ * MsgSetInfoByPoolType defines the Msg/SetInfoByPoolType request type.
+ * @name MsgSetInfoByPoolTypeSDKType
+ * @package symphony.protorev.v1beta1
+ * @see proto type: symphony.protorev.v1beta1.MsgSetInfoByPoolType
+ */
 export interface MsgSetInfoByPoolTypeSDKType {
   admin: string;
   info_by_pool_type: InfoByPoolTypeSDKType;
 }
-/** MsgSetInfoByPoolTypeResponse defines the Msg/SetInfoByPoolType response type. */
+/**
+ * MsgSetInfoByPoolTypeResponse defines the Msg/SetInfoByPoolType response type.
+ * @name MsgSetInfoByPoolTypeResponse
+ * @package symphony.protorev.v1beta1
+ * @see proto type: symphony.protorev.v1beta1.MsgSetInfoByPoolTypeResponse
+ */
 export interface MsgSetInfoByPoolTypeResponse {}
 export interface MsgSetInfoByPoolTypeResponseProtoMsg {
   typeUrl: '/symphony.protorev.v1beta1.MsgSetInfoByPoolTypeResponse';
   value: Uint8Array;
 }
-/** MsgSetInfoByPoolTypeResponse defines the Msg/SetInfoByPoolType response type. */
+/**
+ * MsgSetInfoByPoolTypeResponse defines the Msg/SetInfoByPoolType response type.
+ * @name MsgSetInfoByPoolTypeResponseAmino
+ * @package symphony.protorev.v1beta1
+ * @see proto type: symphony.protorev.v1beta1.MsgSetInfoByPoolTypeResponse
+ */
 export interface MsgSetInfoByPoolTypeResponseAmino {}
 export interface MsgSetInfoByPoolTypeResponseAminoMsg {
   type: '/symphony.protorev.v1beta1.MsgSetInfoByPoolTypeResponse';
   value: MsgSetInfoByPoolTypeResponseAmino;
 }
-/** MsgSetInfoByPoolTypeResponse defines the Msg/SetInfoByPoolType response type. */
+/**
+ * MsgSetInfoByPoolTypeResponse defines the Msg/SetInfoByPoolType response type.
+ * @name MsgSetInfoByPoolTypeResponseSDKType
+ * @package symphony.protorev.v1beta1
+ * @see proto type: symphony.protorev.v1beta1.MsgSetInfoByPoolTypeResponse
+ */
 export interface MsgSetInfoByPoolTypeResponseSDKType {}
-/** MsgSetMaxPoolPointsPerTx defines the Msg/SetMaxPoolPointsPerTx request type. */
+/**
+ * MsgSetMaxPoolPointsPerTx defines the Msg/SetMaxPoolPointsPerTx request type.
+ * @name MsgSetMaxPoolPointsPerTx
+ * @package symphony.protorev.v1beta1
+ * @see proto type: symphony.protorev.v1beta1.MsgSetMaxPoolPointsPerTx
+ */
 export interface MsgSetMaxPoolPointsPerTx {
-  /** admin is the account that is authorized to set the max pool points per tx. */
+  /**
+   * admin is the account that is authorized to set the max pool points per tx.
+   */
   admin: string;
   /**
    * max_pool_points_per_tx is the maximum number of pool points that can be
@@ -164,9 +275,16 @@ export interface MsgSetMaxPoolPointsPerTxProtoMsg {
   typeUrl: '/symphony.protorev.v1beta1.MsgSetMaxPoolPointsPerTx';
   value: Uint8Array;
 }
-/** MsgSetMaxPoolPointsPerTx defines the Msg/SetMaxPoolPointsPerTx request type. */
+/**
+ * MsgSetMaxPoolPointsPerTx defines the Msg/SetMaxPoolPointsPerTx request type.
+ * @name MsgSetMaxPoolPointsPerTxAmino
+ * @package symphony.protorev.v1beta1
+ * @see proto type: symphony.protorev.v1beta1.MsgSetMaxPoolPointsPerTx
+ */
 export interface MsgSetMaxPoolPointsPerTxAmino {
-  /** admin is the account that is authorized to set the max pool points per tx. */
+  /**
+   * admin is the account that is authorized to set the max pool points per tx.
+   */
   admin?: string;
   /**
    * max_pool_points_per_tx is the maximum number of pool points that can be
@@ -178,7 +296,12 @@ export interface MsgSetMaxPoolPointsPerTxAminoMsg {
   type: 'symphony/MsgSetMaxPoolPointsPerTx';
   value: MsgSetMaxPoolPointsPerTxAmino;
 }
-/** MsgSetMaxPoolPointsPerTx defines the Msg/SetMaxPoolPointsPerTx request type. */
+/**
+ * MsgSetMaxPoolPointsPerTx defines the Msg/SetMaxPoolPointsPerTx request type.
+ * @name MsgSetMaxPoolPointsPerTxSDKType
+ * @package symphony.protorev.v1beta1
+ * @see proto type: symphony.protorev.v1beta1.MsgSetMaxPoolPointsPerTx
+ */
 export interface MsgSetMaxPoolPointsPerTxSDKType {
   admin: string;
   max_pool_points_per_tx: bigint;
@@ -186,6 +309,9 @@ export interface MsgSetMaxPoolPointsPerTxSDKType {
 /**
  * MsgSetMaxPoolPointsPerTxResponse defines the Msg/SetMaxPoolPointsPerTx
  * response type.
+ * @name MsgSetMaxPoolPointsPerTxResponse
+ * @package symphony.protorev.v1beta1
+ * @see proto type: symphony.protorev.v1beta1.MsgSetMaxPoolPointsPerTxResponse
  */
 export interface MsgSetMaxPoolPointsPerTxResponse {}
 export interface MsgSetMaxPoolPointsPerTxResponseProtoMsg {
@@ -195,6 +321,9 @@ export interface MsgSetMaxPoolPointsPerTxResponseProtoMsg {
 /**
  * MsgSetMaxPoolPointsPerTxResponse defines the Msg/SetMaxPoolPointsPerTx
  * response type.
+ * @name MsgSetMaxPoolPointsPerTxResponseAmino
+ * @package symphony.protorev.v1beta1
+ * @see proto type: symphony.protorev.v1beta1.MsgSetMaxPoolPointsPerTxResponse
  */
 export interface MsgSetMaxPoolPointsPerTxResponseAmino {}
 export interface MsgSetMaxPoolPointsPerTxResponseAminoMsg {
@@ -204,11 +333,17 @@ export interface MsgSetMaxPoolPointsPerTxResponseAminoMsg {
 /**
  * MsgSetMaxPoolPointsPerTxResponse defines the Msg/SetMaxPoolPointsPerTx
  * response type.
+ * @name MsgSetMaxPoolPointsPerTxResponseSDKType
+ * @package symphony.protorev.v1beta1
+ * @see proto type: symphony.protorev.v1beta1.MsgSetMaxPoolPointsPerTxResponse
  */
 export interface MsgSetMaxPoolPointsPerTxResponseSDKType {}
 /**
  * MsgSetMaxPoolPointsPerBlock defines the Msg/SetMaxPoolPointsPerBlock request
  * type.
+ * @name MsgSetMaxPoolPointsPerBlock
+ * @package symphony.protorev.v1beta1
+ * @see proto type: symphony.protorev.v1beta1.MsgSetMaxPoolPointsPerBlock
  */
 export interface MsgSetMaxPoolPointsPerBlock {
   /**
@@ -229,6 +364,9 @@ export interface MsgSetMaxPoolPointsPerBlockProtoMsg {
 /**
  * MsgSetMaxPoolPointsPerBlock defines the Msg/SetMaxPoolPointsPerBlock request
  * type.
+ * @name MsgSetMaxPoolPointsPerBlockAmino
+ * @package symphony.protorev.v1beta1
+ * @see proto type: symphony.protorev.v1beta1.MsgSetMaxPoolPointsPerBlock
  */
 export interface MsgSetMaxPoolPointsPerBlockAmino {
   /**
@@ -249,6 +387,9 @@ export interface MsgSetMaxPoolPointsPerBlockAminoMsg {
 /**
  * MsgSetMaxPoolPointsPerBlock defines the Msg/SetMaxPoolPointsPerBlock request
  * type.
+ * @name MsgSetMaxPoolPointsPerBlockSDKType
+ * @package symphony.protorev.v1beta1
+ * @see proto type: symphony.protorev.v1beta1.MsgSetMaxPoolPointsPerBlock
  */
 export interface MsgSetMaxPoolPointsPerBlockSDKType {
   admin: string;
@@ -257,6 +398,9 @@ export interface MsgSetMaxPoolPointsPerBlockSDKType {
 /**
  * MsgSetMaxPoolPointsPerBlockResponse defines the
  * Msg/SetMaxPoolPointsPerBlock response type.
+ * @name MsgSetMaxPoolPointsPerBlockResponse
+ * @package symphony.protorev.v1beta1
+ * @see proto type: symphony.protorev.v1beta1.MsgSetMaxPoolPointsPerBlockResponse
  */
 export interface MsgSetMaxPoolPointsPerBlockResponse {}
 export interface MsgSetMaxPoolPointsPerBlockResponseProtoMsg {
@@ -266,6 +410,9 @@ export interface MsgSetMaxPoolPointsPerBlockResponseProtoMsg {
 /**
  * MsgSetMaxPoolPointsPerBlockResponse defines the
  * Msg/SetMaxPoolPointsPerBlock response type.
+ * @name MsgSetMaxPoolPointsPerBlockResponseAmino
+ * @package symphony.protorev.v1beta1
+ * @see proto type: symphony.protorev.v1beta1.MsgSetMaxPoolPointsPerBlockResponse
  */
 export interface MsgSetMaxPoolPointsPerBlockResponseAmino {}
 export interface MsgSetMaxPoolPointsPerBlockResponseAminoMsg {
@@ -275,48 +422,89 @@ export interface MsgSetMaxPoolPointsPerBlockResponseAminoMsg {
 /**
  * MsgSetMaxPoolPointsPerBlockResponse defines the
  * Msg/SetMaxPoolPointsPerBlock response type.
+ * @name MsgSetMaxPoolPointsPerBlockResponseSDKType
+ * @package symphony.protorev.v1beta1
+ * @see proto type: symphony.protorev.v1beta1.MsgSetMaxPoolPointsPerBlockResponse
  */
 export interface MsgSetMaxPoolPointsPerBlockResponseSDKType {}
-/** MsgSetBaseDenoms defines the Msg/SetBaseDenoms request type. */
+/**
+ * MsgSetBaseDenoms defines the Msg/SetBaseDenoms request type.
+ * @name MsgSetBaseDenoms
+ * @package symphony.protorev.v1beta1
+ * @see proto type: symphony.protorev.v1beta1.MsgSetBaseDenoms
+ */
 export interface MsgSetBaseDenoms {
-  /** admin is the account that is authorized to set the base denoms. */
+  /**
+   * admin is the account that is authorized to set the base denoms.
+   */
   admin: string;
-  /** base_denoms is the list of base denoms to set. */
+  /**
+   * base_denoms is the list of base denoms to set.
+   */
   baseDenoms: BaseDenom[];
 }
 export interface MsgSetBaseDenomsProtoMsg {
   typeUrl: '/symphony.protorev.v1beta1.MsgSetBaseDenoms';
   value: Uint8Array;
 }
-/** MsgSetBaseDenoms defines the Msg/SetBaseDenoms request type. */
+/**
+ * MsgSetBaseDenoms defines the Msg/SetBaseDenoms request type.
+ * @name MsgSetBaseDenomsAmino
+ * @package symphony.protorev.v1beta1
+ * @see proto type: symphony.protorev.v1beta1.MsgSetBaseDenoms
+ */
 export interface MsgSetBaseDenomsAmino {
-  /** admin is the account that is authorized to set the base denoms. */
+  /**
+   * admin is the account that is authorized to set the base denoms.
+   */
   admin?: string;
-  /** base_denoms is the list of base denoms to set. */
+  /**
+   * base_denoms is the list of base denoms to set.
+   */
   base_denoms?: BaseDenomAmino[];
 }
 export interface MsgSetBaseDenomsAminoMsg {
   type: 'symphony/MsgSetBaseDenoms';
   value: MsgSetBaseDenomsAmino;
 }
-/** MsgSetBaseDenoms defines the Msg/SetBaseDenoms request type. */
+/**
+ * MsgSetBaseDenoms defines the Msg/SetBaseDenoms request type.
+ * @name MsgSetBaseDenomsSDKType
+ * @package symphony.protorev.v1beta1
+ * @see proto type: symphony.protorev.v1beta1.MsgSetBaseDenoms
+ */
 export interface MsgSetBaseDenomsSDKType {
   admin: string;
   base_denoms: BaseDenomSDKType[];
 }
-/** MsgSetBaseDenomsResponse defines the Msg/SetBaseDenoms response type. */
+/**
+ * MsgSetBaseDenomsResponse defines the Msg/SetBaseDenoms response type.
+ * @name MsgSetBaseDenomsResponse
+ * @package symphony.protorev.v1beta1
+ * @see proto type: symphony.protorev.v1beta1.MsgSetBaseDenomsResponse
+ */
 export interface MsgSetBaseDenomsResponse {}
 export interface MsgSetBaseDenomsResponseProtoMsg {
   typeUrl: '/symphony.protorev.v1beta1.MsgSetBaseDenomsResponse';
   value: Uint8Array;
 }
-/** MsgSetBaseDenomsResponse defines the Msg/SetBaseDenoms response type. */
+/**
+ * MsgSetBaseDenomsResponse defines the Msg/SetBaseDenoms response type.
+ * @name MsgSetBaseDenomsResponseAmino
+ * @package symphony.protorev.v1beta1
+ * @see proto type: symphony.protorev.v1beta1.MsgSetBaseDenomsResponse
+ */
 export interface MsgSetBaseDenomsResponseAmino {}
 export interface MsgSetBaseDenomsResponseAminoMsg {
   type: '/symphony.protorev.v1beta1.MsgSetBaseDenomsResponse';
   value: MsgSetBaseDenomsResponseAmino;
 }
-/** MsgSetBaseDenomsResponse defines the Msg/SetBaseDenoms response type. */
+/**
+ * MsgSetBaseDenomsResponse defines the Msg/SetBaseDenoms response type.
+ * @name MsgSetBaseDenomsResponseSDKType
+ * @package symphony.protorev.v1beta1
+ * @see proto type: symphony.protorev.v1beta1.MsgSetBaseDenomsResponse
+ */
 export interface MsgSetBaseDenomsResponseSDKType {}
 function createBaseMsgSetHotRoutes(): MsgSetHotRoutes {
   return {
@@ -324,6 +512,12 @@ function createBaseMsgSetHotRoutes(): MsgSetHotRoutes {
     hotRoutes: [],
   };
 }
+/**
+ * MsgSetHotRoutes defines the Msg/SetHotRoutes request type.
+ * @name MsgSetHotRoutes
+ * @package symphony.protorev.v1beta1
+ * @see proto type: symphony.protorev.v1beta1.MsgSetHotRoutes
+ */
 export const MsgSetHotRoutes = {
   typeUrl: '/symphony.protorev.v1beta1.MsgSetHotRoutes',
   aminoType: 'symphony/MsgSetHotRoutes',
@@ -448,6 +642,12 @@ GlobalDecoderRegistry.registerAminoProtoMapping(
 function createBaseMsgSetHotRoutesResponse(): MsgSetHotRoutesResponse {
   return {};
 }
+/**
+ * MsgSetHotRoutesResponse defines the Msg/SetHotRoutes response type.
+ * @name MsgSetHotRoutesResponse
+ * @package symphony.protorev.v1beta1
+ * @see proto type: symphony.protorev.v1beta1.MsgSetHotRoutesResponse
+ */
 export const MsgSetHotRoutesResponse = {
   typeUrl: '/symphony.protorev.v1beta1.MsgSetHotRoutesResponse',
   is(o: any): o is MsgSetHotRoutesResponse {
@@ -527,6 +727,12 @@ function createBaseMsgSetDeveloperAccount(): MsgSetDeveloperAccount {
     developerAccount: '',
   };
 }
+/**
+ * MsgSetDeveloperAccount defines the Msg/SetDeveloperAccount request type.
+ * @name MsgSetDeveloperAccount
+ * @package symphony.protorev.v1beta1
+ * @see proto type: symphony.protorev.v1beta1.MsgSetDeveloperAccount
+ */
 export const MsgSetDeveloperAccount = {
   typeUrl: '/symphony.protorev.v1beta1.MsgSetDeveloperAccount',
   aminoType: 'symphony/MsgSetDeveloperAccount',
@@ -650,6 +856,13 @@ GlobalDecoderRegistry.registerAminoProtoMapping(
 function createBaseMsgSetDeveloperAccountResponse(): MsgSetDeveloperAccountResponse {
   return {};
 }
+/**
+ * MsgSetDeveloperAccountResponse defines the Msg/SetDeveloperAccount response
+ * type.
+ * @name MsgSetDeveloperAccountResponse
+ * @package symphony.protorev.v1beta1
+ * @see proto type: symphony.protorev.v1beta1.MsgSetDeveloperAccountResponse
+ */
 export const MsgSetDeveloperAccountResponse = {
   typeUrl: '/symphony.protorev.v1beta1.MsgSetDeveloperAccountResponse',
   is(o: any): o is MsgSetDeveloperAccountResponse {
@@ -735,6 +948,12 @@ function createBaseMsgSetInfoByPoolType(): MsgSetInfoByPoolType {
     infoByPoolType: InfoByPoolType.fromPartial({}),
   };
 }
+/**
+ * MsgSetInfoByPoolType defines the Msg/SetInfoByPoolType request type.
+ * @name MsgSetInfoByPoolType
+ * @package symphony.protorev.v1beta1
+ * @see proto type: symphony.protorev.v1beta1.MsgSetInfoByPoolType
+ */
 export const MsgSetInfoByPoolType = {
   typeUrl: '/symphony.protorev.v1beta1.MsgSetInfoByPoolType',
   aminoType: 'symphony/MsgSetInfoByPoolType',
@@ -868,6 +1087,12 @@ GlobalDecoderRegistry.registerAminoProtoMapping(
 function createBaseMsgSetInfoByPoolTypeResponse(): MsgSetInfoByPoolTypeResponse {
   return {};
 }
+/**
+ * MsgSetInfoByPoolTypeResponse defines the Msg/SetInfoByPoolType response type.
+ * @name MsgSetInfoByPoolTypeResponse
+ * @package symphony.protorev.v1beta1
+ * @see proto type: symphony.protorev.v1beta1.MsgSetInfoByPoolTypeResponse
+ */
 export const MsgSetInfoByPoolTypeResponse = {
   typeUrl: '/symphony.protorev.v1beta1.MsgSetInfoByPoolTypeResponse',
   is(o: any): o is MsgSetInfoByPoolTypeResponse {
@@ -951,6 +1176,12 @@ function createBaseMsgSetMaxPoolPointsPerTx(): MsgSetMaxPoolPointsPerTx {
     maxPoolPointsPerTx: BigInt(0),
   };
 }
+/**
+ * MsgSetMaxPoolPointsPerTx defines the Msg/SetMaxPoolPointsPerTx request type.
+ * @name MsgSetMaxPoolPointsPerTx
+ * @package symphony.protorev.v1beta1
+ * @see proto type: symphony.protorev.v1beta1.MsgSetMaxPoolPointsPerTx
+ */
 export const MsgSetMaxPoolPointsPerTx = {
   typeUrl: '/symphony.protorev.v1beta1.MsgSetMaxPoolPointsPerTx',
   aminoType: 'symphony/MsgSetMaxPoolPointsPerTx',
@@ -1089,6 +1320,13 @@ GlobalDecoderRegistry.registerAminoProtoMapping(
 function createBaseMsgSetMaxPoolPointsPerTxResponse(): MsgSetMaxPoolPointsPerTxResponse {
   return {};
 }
+/**
+ * MsgSetMaxPoolPointsPerTxResponse defines the Msg/SetMaxPoolPointsPerTx
+ * response type.
+ * @name MsgSetMaxPoolPointsPerTxResponse
+ * @package symphony.protorev.v1beta1
+ * @see proto type: symphony.protorev.v1beta1.MsgSetMaxPoolPointsPerTxResponse
+ */
 export const MsgSetMaxPoolPointsPerTxResponse = {
   typeUrl: '/symphony.protorev.v1beta1.MsgSetMaxPoolPointsPerTxResponse',
   is(o: any): o is MsgSetMaxPoolPointsPerTxResponse {
@@ -1174,6 +1412,13 @@ function createBaseMsgSetMaxPoolPointsPerBlock(): MsgSetMaxPoolPointsPerBlock {
     maxPoolPointsPerBlock: BigInt(0),
   };
 }
+/**
+ * MsgSetMaxPoolPointsPerBlock defines the Msg/SetMaxPoolPointsPerBlock request
+ * type.
+ * @name MsgSetMaxPoolPointsPerBlock
+ * @package symphony.protorev.v1beta1
+ * @see proto type: symphony.protorev.v1beta1.MsgSetMaxPoolPointsPerBlock
+ */
 export const MsgSetMaxPoolPointsPerBlock = {
   typeUrl: '/symphony.protorev.v1beta1.MsgSetMaxPoolPointsPerBlock',
   aminoType: 'symphony/MsgSetPoolWeights',
@@ -1316,6 +1561,13 @@ GlobalDecoderRegistry.registerAminoProtoMapping(
 function createBaseMsgSetMaxPoolPointsPerBlockResponse(): MsgSetMaxPoolPointsPerBlockResponse {
   return {};
 }
+/**
+ * MsgSetMaxPoolPointsPerBlockResponse defines the
+ * Msg/SetMaxPoolPointsPerBlock response type.
+ * @name MsgSetMaxPoolPointsPerBlockResponse
+ * @package symphony.protorev.v1beta1
+ * @see proto type: symphony.protorev.v1beta1.MsgSetMaxPoolPointsPerBlockResponse
+ */
 export const MsgSetMaxPoolPointsPerBlockResponse = {
   typeUrl: '/symphony.protorev.v1beta1.MsgSetMaxPoolPointsPerBlockResponse',
   is(o: any): o is MsgSetMaxPoolPointsPerBlockResponse {
@@ -1401,6 +1653,12 @@ function createBaseMsgSetBaseDenoms(): MsgSetBaseDenoms {
     baseDenoms: [],
   };
 }
+/**
+ * MsgSetBaseDenoms defines the Msg/SetBaseDenoms request type.
+ * @name MsgSetBaseDenoms
+ * @package symphony.protorev.v1beta1
+ * @see proto type: symphony.protorev.v1beta1.MsgSetBaseDenoms
+ */
 export const MsgSetBaseDenoms = {
   typeUrl: '/symphony.protorev.v1beta1.MsgSetBaseDenoms',
   aminoType: 'symphony/MsgSetBaseDenoms',
@@ -1522,6 +1780,12 @@ GlobalDecoderRegistry.registerAminoProtoMapping(
 function createBaseMsgSetBaseDenomsResponse(): MsgSetBaseDenomsResponse {
   return {};
 }
+/**
+ * MsgSetBaseDenomsResponse defines the Msg/SetBaseDenoms response type.
+ * @name MsgSetBaseDenomsResponse
+ * @package symphony.protorev.v1beta1
+ * @see proto type: symphony.protorev.v1beta1.MsgSetBaseDenomsResponse
+ */
 export const MsgSetBaseDenomsResponse = {
   typeUrl: '/symphony.protorev.v1beta1.MsgSetBaseDenomsResponse',
   is(o: any): o is MsgSetBaseDenomsResponse {

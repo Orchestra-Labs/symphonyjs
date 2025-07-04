@@ -37,36 +37,75 @@ import {
 import { BinaryReader, BinaryWriter } from '../../binary';
 import { GlobalDecoderRegistry } from '../../registry';
 import { isSet } from '../../helpers';
+/**
+ * @name QueryParamsRequest
+ * @package symphony.superfluid
+ * @see proto type: symphony.superfluid.QueryParamsRequest
+ */
 export interface QueryParamsRequest {}
 export interface QueryParamsRequestProtoMsg {
   typeUrl: '/symphony.superfluid.QueryParamsRequest';
   value: Uint8Array;
 }
+/**
+ * @name QueryParamsRequestAmino
+ * @package symphony.superfluid
+ * @see proto type: symphony.superfluid.QueryParamsRequest
+ */
 export interface QueryParamsRequestAmino {}
 export interface QueryParamsRequestAminoMsg {
   type: '/symphony.superfluid.QueryParamsRequest';
   value: QueryParamsRequestAmino;
 }
+/**
+ * @name QueryParamsRequestSDKType
+ * @package symphony.superfluid
+ * @see proto type: symphony.superfluid.QueryParamsRequest
+ */
 export interface QueryParamsRequestSDKType {}
+/**
+ * @name QueryParamsResponse
+ * @package symphony.superfluid
+ * @see proto type: symphony.superfluid.QueryParamsResponse
+ */
 export interface QueryParamsResponse {
-  /** params defines the parameters of the module. */
+  /**
+   * params defines the parameters of the module.
+   */
   params: Params;
 }
 export interface QueryParamsResponseProtoMsg {
   typeUrl: '/symphony.superfluid.QueryParamsResponse';
   value: Uint8Array;
 }
+/**
+ * @name QueryParamsResponseAmino
+ * @package symphony.superfluid
+ * @see proto type: symphony.superfluid.QueryParamsResponse
+ */
 export interface QueryParamsResponseAmino {
-  /** params defines the parameters of the module. */
+  /**
+   * params defines the parameters of the module.
+   */
   params?: ParamsAmino;
 }
 export interface QueryParamsResponseAminoMsg {
   type: '/symphony.superfluid.QueryParamsResponse';
   value: QueryParamsResponseAmino;
 }
+/**
+ * @name QueryParamsResponseSDKType
+ * @package symphony.superfluid
+ * @see proto type: symphony.superfluid.QueryParamsResponse
+ */
 export interface QueryParamsResponseSDKType {
   params: ParamsSDKType;
 }
+/**
+ * @name AssetTypeRequest
+ * @package symphony.superfluid
+ * @see proto type: symphony.superfluid.AssetTypeRequest
+ */
 export interface AssetTypeRequest {
   denom: string;
 }
@@ -74,6 +113,11 @@ export interface AssetTypeRequestProtoMsg {
   typeUrl: '/symphony.superfluid.AssetTypeRequest';
   value: Uint8Array;
 }
+/**
+ * @name AssetTypeRequestAmino
+ * @package symphony.superfluid
+ * @see proto type: symphony.superfluid.AssetTypeRequest
+ */
 export interface AssetTypeRequestAmino {
   denom?: string;
 }
@@ -81,9 +125,19 @@ export interface AssetTypeRequestAminoMsg {
   type: '/symphony.superfluid.AssetTypeRequest';
   value: AssetTypeRequestAmino;
 }
+/**
+ * @name AssetTypeRequestSDKType
+ * @package symphony.superfluid
+ * @see proto type: symphony.superfluid.AssetTypeRequest
+ */
 export interface AssetTypeRequestSDKType {
   denom: string;
 }
+/**
+ * @name AssetTypeResponse
+ * @package symphony.superfluid
+ * @see proto type: symphony.superfluid.AssetTypeResponse
+ */
 export interface AssetTypeResponse {
   assetType: SuperfluidAssetType;
 }
@@ -91,6 +145,11 @@ export interface AssetTypeResponseProtoMsg {
   typeUrl: '/symphony.superfluid.AssetTypeResponse';
   value: Uint8Array;
 }
+/**
+ * @name AssetTypeResponseAmino
+ * @package symphony.superfluid
+ * @see proto type: symphony.superfluid.AssetTypeResponse
+ */
 export interface AssetTypeResponseAmino {
   asset_type?: SuperfluidAssetType;
 }
@@ -98,20 +157,45 @@ export interface AssetTypeResponseAminoMsg {
   type: '/symphony.superfluid.AssetTypeResponse';
   value: AssetTypeResponseAmino;
 }
+/**
+ * @name AssetTypeResponseSDKType
+ * @package symphony.superfluid
+ * @see proto type: symphony.superfluid.AssetTypeResponse
+ */
 export interface AssetTypeResponseSDKType {
   asset_type: SuperfluidAssetType;
 }
+/**
+ * @name AllAssetsRequest
+ * @package symphony.superfluid
+ * @see proto type: symphony.superfluid.AllAssetsRequest
+ */
 export interface AllAssetsRequest {}
 export interface AllAssetsRequestProtoMsg {
   typeUrl: '/symphony.superfluid.AllAssetsRequest';
   value: Uint8Array;
 }
+/**
+ * @name AllAssetsRequestAmino
+ * @package symphony.superfluid
+ * @see proto type: symphony.superfluid.AllAssetsRequest
+ */
 export interface AllAssetsRequestAmino {}
 export interface AllAssetsRequestAminoMsg {
   type: '/symphony.superfluid.AllAssetsRequest';
   value: AllAssetsRequestAmino;
 }
+/**
+ * @name AllAssetsRequestSDKType
+ * @package symphony.superfluid
+ * @see proto type: symphony.superfluid.AllAssetsRequest
+ */
 export interface AllAssetsRequestSDKType {}
+/**
+ * @name AllAssetsResponse
+ * @package symphony.superfluid
+ * @see proto type: symphony.superfluid.AllAssetsResponse
+ */
 export interface AllAssetsResponse {
   assets: SuperfluidAsset[];
 }
@@ -119,6 +203,11 @@ export interface AllAssetsResponseProtoMsg {
   typeUrl: '/symphony.superfluid.AllAssetsResponse';
   value: Uint8Array;
 }
+/**
+ * @name AllAssetsResponseAmino
+ * @package symphony.superfluid
+ * @see proto type: symphony.superfluid.AllAssetsResponse
+ */
 export interface AllAssetsResponseAmino {
   assets?: SuperfluidAssetAmino[];
 }
@@ -126,9 +215,19 @@ export interface AllAssetsResponseAminoMsg {
   type: '/symphony.superfluid.AllAssetsResponse';
   value: AllAssetsResponseAmino;
 }
+/**
+ * @name AllAssetsResponseSDKType
+ * @package symphony.superfluid
+ * @see proto type: symphony.superfluid.AllAssetsResponse
+ */
 export interface AllAssetsResponseSDKType {
   assets: SuperfluidAssetSDKType[];
 }
+/**
+ * @name AssetMultiplierRequest
+ * @package symphony.superfluid
+ * @see proto type: symphony.superfluid.AssetMultiplierRequest
+ */
 export interface AssetMultiplierRequest {
   denom: string;
 }
@@ -136,6 +235,11 @@ export interface AssetMultiplierRequestProtoMsg {
   typeUrl: '/symphony.superfluid.AssetMultiplierRequest';
   value: Uint8Array;
 }
+/**
+ * @name AssetMultiplierRequestAmino
+ * @package symphony.superfluid
+ * @see proto type: symphony.superfluid.AssetMultiplierRequest
+ */
 export interface AssetMultiplierRequestAmino {
   denom?: string;
 }
@@ -143,9 +247,19 @@ export interface AssetMultiplierRequestAminoMsg {
   type: '/symphony.superfluid.AssetMultiplierRequest';
   value: AssetMultiplierRequestAmino;
 }
+/**
+ * @name AssetMultiplierRequestSDKType
+ * @package symphony.superfluid
+ * @see proto type: symphony.superfluid.AssetMultiplierRequest
+ */
 export interface AssetMultiplierRequestSDKType {
   denom: string;
 }
+/**
+ * @name AssetMultiplierResponse
+ * @package symphony.superfluid
+ * @see proto type: symphony.superfluid.AssetMultiplierResponse
+ */
 export interface AssetMultiplierResponse {
   osmoEquivalentMultiplier?: OsmoEquivalentMultiplierRecord;
 }
@@ -153,6 +267,11 @@ export interface AssetMultiplierResponseProtoMsg {
   typeUrl: '/symphony.superfluid.AssetMultiplierResponse';
   value: Uint8Array;
 }
+/**
+ * @name AssetMultiplierResponseAmino
+ * @package symphony.superfluid
+ * @see proto type: symphony.superfluid.AssetMultiplierResponse
+ */
 export interface AssetMultiplierResponseAmino {
   osmo_equivalent_multiplier?: OsmoEquivalentMultiplierRecordAmino;
 }
@@ -160,9 +279,19 @@ export interface AssetMultiplierResponseAminoMsg {
   type: '/symphony.superfluid.AssetMultiplierResponse';
   value: AssetMultiplierResponseAmino;
 }
+/**
+ * @name AssetMultiplierResponseSDKType
+ * @package symphony.superfluid
+ * @see proto type: symphony.superfluid.AssetMultiplierResponse
+ */
 export interface AssetMultiplierResponseSDKType {
   osmo_equivalent_multiplier?: OsmoEquivalentMultiplierRecordSDKType;
 }
+/**
+ * @name SuperfluidIntermediaryAccountInfo
+ * @package symphony.superfluid
+ * @see proto type: symphony.superfluid.SuperfluidIntermediaryAccountInfo
+ */
 export interface SuperfluidIntermediaryAccountInfo {
   denom: string;
   valAddr: string;
@@ -173,6 +302,11 @@ export interface SuperfluidIntermediaryAccountInfoProtoMsg {
   typeUrl: '/symphony.superfluid.SuperfluidIntermediaryAccountInfo';
   value: Uint8Array;
 }
+/**
+ * @name SuperfluidIntermediaryAccountInfoAmino
+ * @package symphony.superfluid
+ * @see proto type: symphony.superfluid.SuperfluidIntermediaryAccountInfo
+ */
 export interface SuperfluidIntermediaryAccountInfoAmino {
   denom?: string;
   val_addr?: string;
@@ -183,12 +317,22 @@ export interface SuperfluidIntermediaryAccountInfoAminoMsg {
   type: '/symphony.superfluid.SuperfluidIntermediaryAccountInfo';
   value: SuperfluidIntermediaryAccountInfoAmino;
 }
+/**
+ * @name SuperfluidIntermediaryAccountInfoSDKType
+ * @package symphony.superfluid
+ * @see proto type: symphony.superfluid.SuperfluidIntermediaryAccountInfo
+ */
 export interface SuperfluidIntermediaryAccountInfoSDKType {
   denom: string;
   val_addr: string;
   gauge_id: bigint;
   address: string;
 }
+/**
+ * @name AllIntermediaryAccountsRequest
+ * @package symphony.superfluid
+ * @see proto type: symphony.superfluid.AllIntermediaryAccountsRequest
+ */
 export interface AllIntermediaryAccountsRequest {
   pagination?: PageRequest;
 }
@@ -196,6 +340,11 @@ export interface AllIntermediaryAccountsRequestProtoMsg {
   typeUrl: '/symphony.superfluid.AllIntermediaryAccountsRequest';
   value: Uint8Array;
 }
+/**
+ * @name AllIntermediaryAccountsRequestAmino
+ * @package symphony.superfluid
+ * @see proto type: symphony.superfluid.AllIntermediaryAccountsRequest
+ */
 export interface AllIntermediaryAccountsRequestAmino {
   pagination?: PageRequestAmino;
 }
@@ -203,9 +352,19 @@ export interface AllIntermediaryAccountsRequestAminoMsg {
   type: '/symphony.superfluid.AllIntermediaryAccountsRequest';
   value: AllIntermediaryAccountsRequestAmino;
 }
+/**
+ * @name AllIntermediaryAccountsRequestSDKType
+ * @package symphony.superfluid
+ * @see proto type: symphony.superfluid.AllIntermediaryAccountsRequest
+ */
 export interface AllIntermediaryAccountsRequestSDKType {
   pagination?: PageRequestSDKType;
 }
+/**
+ * @name AllIntermediaryAccountsResponse
+ * @package symphony.superfluid
+ * @see proto type: symphony.superfluid.AllIntermediaryAccountsResponse
+ */
 export interface AllIntermediaryAccountsResponse {
   accounts: SuperfluidIntermediaryAccountInfo[];
   pagination?: PageResponse;
@@ -214,6 +373,11 @@ export interface AllIntermediaryAccountsResponseProtoMsg {
   typeUrl: '/symphony.superfluid.AllIntermediaryAccountsResponse';
   value: Uint8Array;
 }
+/**
+ * @name AllIntermediaryAccountsResponseAmino
+ * @package symphony.superfluid
+ * @see proto type: symphony.superfluid.AllIntermediaryAccountsResponse
+ */
 export interface AllIntermediaryAccountsResponseAmino {
   accounts?: SuperfluidIntermediaryAccountInfoAmino[];
   pagination?: PageResponseAmino;
@@ -222,10 +386,20 @@ export interface AllIntermediaryAccountsResponseAminoMsg {
   type: '/symphony.superfluid.AllIntermediaryAccountsResponse';
   value: AllIntermediaryAccountsResponseAmino;
 }
+/**
+ * @name AllIntermediaryAccountsResponseSDKType
+ * @package symphony.superfluid
+ * @see proto type: symphony.superfluid.AllIntermediaryAccountsResponse
+ */
 export interface AllIntermediaryAccountsResponseSDKType {
   accounts: SuperfluidIntermediaryAccountInfoSDKType[];
   pagination?: PageResponseSDKType;
 }
+/**
+ * @name ConnectedIntermediaryAccountRequest
+ * @package symphony.superfluid
+ * @see proto type: symphony.superfluid.ConnectedIntermediaryAccountRequest
+ */
 export interface ConnectedIntermediaryAccountRequest {
   lockId: bigint;
 }
@@ -233,6 +407,11 @@ export interface ConnectedIntermediaryAccountRequestProtoMsg {
   typeUrl: '/symphony.superfluid.ConnectedIntermediaryAccountRequest';
   value: Uint8Array;
 }
+/**
+ * @name ConnectedIntermediaryAccountRequestAmino
+ * @package symphony.superfluid
+ * @see proto type: symphony.superfluid.ConnectedIntermediaryAccountRequest
+ */
 export interface ConnectedIntermediaryAccountRequestAmino {
   lock_id?: string;
 }
@@ -240,9 +419,19 @@ export interface ConnectedIntermediaryAccountRequestAminoMsg {
   type: '/symphony.superfluid.ConnectedIntermediaryAccountRequest';
   value: ConnectedIntermediaryAccountRequestAmino;
 }
+/**
+ * @name ConnectedIntermediaryAccountRequestSDKType
+ * @package symphony.superfluid
+ * @see proto type: symphony.superfluid.ConnectedIntermediaryAccountRequest
+ */
 export interface ConnectedIntermediaryAccountRequestSDKType {
   lock_id: bigint;
 }
+/**
+ * @name ConnectedIntermediaryAccountResponse
+ * @package symphony.superfluid
+ * @see proto type: symphony.superfluid.ConnectedIntermediaryAccountResponse
+ */
 export interface ConnectedIntermediaryAccountResponse {
   account?: SuperfluidIntermediaryAccountInfo;
 }
@@ -250,6 +439,11 @@ export interface ConnectedIntermediaryAccountResponseProtoMsg {
   typeUrl: '/symphony.superfluid.ConnectedIntermediaryAccountResponse';
   value: Uint8Array;
 }
+/**
+ * @name ConnectedIntermediaryAccountResponseAmino
+ * @package symphony.superfluid
+ * @see proto type: symphony.superfluid.ConnectedIntermediaryAccountResponse
+ */
 export interface ConnectedIntermediaryAccountResponseAmino {
   account?: SuperfluidIntermediaryAccountInfoAmino;
 }
@@ -257,9 +451,19 @@ export interface ConnectedIntermediaryAccountResponseAminoMsg {
   type: '/symphony.superfluid.ConnectedIntermediaryAccountResponse';
   value: ConnectedIntermediaryAccountResponseAmino;
 }
+/**
+ * @name ConnectedIntermediaryAccountResponseSDKType
+ * @package symphony.superfluid
+ * @see proto type: symphony.superfluid.ConnectedIntermediaryAccountResponse
+ */
 export interface ConnectedIntermediaryAccountResponseSDKType {
   account?: SuperfluidIntermediaryAccountInfoSDKType;
 }
+/**
+ * @name QueryTotalDelegationByValidatorForDenomRequest
+ * @package symphony.superfluid
+ * @see proto type: symphony.superfluid.QueryTotalDelegationByValidatorForDenomRequest
+ */
 export interface QueryTotalDelegationByValidatorForDenomRequest {
   denom: string;
 }
@@ -267,6 +471,11 @@ export interface QueryTotalDelegationByValidatorForDenomRequestProtoMsg {
   typeUrl: '/symphony.superfluid.QueryTotalDelegationByValidatorForDenomRequest';
   value: Uint8Array;
 }
+/**
+ * @name QueryTotalDelegationByValidatorForDenomRequestAmino
+ * @package symphony.superfluid
+ * @see proto type: symphony.superfluid.QueryTotalDelegationByValidatorForDenomRequest
+ */
 export interface QueryTotalDelegationByValidatorForDenomRequestAmino {
   denom?: string;
 }
@@ -274,9 +483,19 @@ export interface QueryTotalDelegationByValidatorForDenomRequestAminoMsg {
   type: '/symphony.superfluid.QueryTotalDelegationByValidatorForDenomRequest';
   value: QueryTotalDelegationByValidatorForDenomRequestAmino;
 }
+/**
+ * @name QueryTotalDelegationByValidatorForDenomRequestSDKType
+ * @package symphony.superfluid
+ * @see proto type: symphony.superfluid.QueryTotalDelegationByValidatorForDenomRequest
+ */
 export interface QueryTotalDelegationByValidatorForDenomRequestSDKType {
   denom: string;
 }
+/**
+ * @name QueryTotalDelegationByValidatorForDenomResponse
+ * @package symphony.superfluid
+ * @see proto type: symphony.superfluid.QueryTotalDelegationByValidatorForDenomResponse
+ */
 export interface QueryTotalDelegationByValidatorForDenomResponse {
   assets: Delegations[];
 }
@@ -284,6 +503,11 @@ export interface QueryTotalDelegationByValidatorForDenomResponseProtoMsg {
   typeUrl: '/symphony.superfluid.QueryTotalDelegationByValidatorForDenomResponse';
   value: Uint8Array;
 }
+/**
+ * @name QueryTotalDelegationByValidatorForDenomResponseAmino
+ * @package symphony.superfluid
+ * @see proto type: symphony.superfluid.QueryTotalDelegationByValidatorForDenomResponse
+ */
 export interface QueryTotalDelegationByValidatorForDenomResponseAmino {
   assets?: DelegationsAmino[];
 }
@@ -291,9 +515,19 @@ export interface QueryTotalDelegationByValidatorForDenomResponseAminoMsg {
   type: '/symphony.superfluid.QueryTotalDelegationByValidatorForDenomResponse';
   value: QueryTotalDelegationByValidatorForDenomResponseAmino;
 }
+/**
+ * @name QueryTotalDelegationByValidatorForDenomResponseSDKType
+ * @package symphony.superfluid
+ * @see proto type: symphony.superfluid.QueryTotalDelegationByValidatorForDenomResponse
+ */
 export interface QueryTotalDelegationByValidatorForDenomResponseSDKType {
   assets: DelegationsSDKType[];
 }
+/**
+ * @name Delegations
+ * @package symphony.superfluid
+ * @see proto type: symphony.superfluid.Delegations
+ */
 export interface Delegations {
   valAddr: string;
   amountSfsd: string;
@@ -303,6 +537,11 @@ export interface DelegationsProtoMsg {
   typeUrl: '/symphony.superfluid.Delegations';
   value: Uint8Array;
 }
+/**
+ * @name DelegationsAmino
+ * @package symphony.superfluid
+ * @see proto type: symphony.superfluid.Delegations
+ */
 export interface DelegationsAmino {
   val_addr?: string;
   amount_sfsd?: string;
@@ -312,22 +551,47 @@ export interface DelegationsAminoMsg {
   type: '/symphony.superfluid.Delegations';
   value: DelegationsAmino;
 }
+/**
+ * @name DelegationsSDKType
+ * @package symphony.superfluid
+ * @see proto type: symphony.superfluid.Delegations
+ */
 export interface DelegationsSDKType {
   val_addr: string;
   amount_sfsd: string;
   osmo_equivalent: string;
 }
+/**
+ * @name TotalSuperfluidDelegationsRequest
+ * @package symphony.superfluid
+ * @see proto type: symphony.superfluid.TotalSuperfluidDelegationsRequest
+ */
 export interface TotalSuperfluidDelegationsRequest {}
 export interface TotalSuperfluidDelegationsRequestProtoMsg {
   typeUrl: '/symphony.superfluid.TotalSuperfluidDelegationsRequest';
   value: Uint8Array;
 }
+/**
+ * @name TotalSuperfluidDelegationsRequestAmino
+ * @package symphony.superfluid
+ * @see proto type: symphony.superfluid.TotalSuperfluidDelegationsRequest
+ */
 export interface TotalSuperfluidDelegationsRequestAmino {}
 export interface TotalSuperfluidDelegationsRequestAminoMsg {
   type: '/symphony.superfluid.TotalSuperfluidDelegationsRequest';
   value: TotalSuperfluidDelegationsRequestAmino;
 }
+/**
+ * @name TotalSuperfluidDelegationsRequestSDKType
+ * @package symphony.superfluid
+ * @see proto type: symphony.superfluid.TotalSuperfluidDelegationsRequest
+ */
 export interface TotalSuperfluidDelegationsRequestSDKType {}
+/**
+ * @name TotalSuperfluidDelegationsResponse
+ * @package symphony.superfluid
+ * @see proto type: symphony.superfluid.TotalSuperfluidDelegationsResponse
+ */
 export interface TotalSuperfluidDelegationsResponse {
   totalDelegations: string;
 }
@@ -335,6 +599,11 @@ export interface TotalSuperfluidDelegationsResponseProtoMsg {
   typeUrl: '/symphony.superfluid.TotalSuperfluidDelegationsResponse';
   value: Uint8Array;
 }
+/**
+ * @name TotalSuperfluidDelegationsResponseAmino
+ * @package symphony.superfluid
+ * @see proto type: symphony.superfluid.TotalSuperfluidDelegationsResponse
+ */
 export interface TotalSuperfluidDelegationsResponseAmino {
   total_delegations?: string;
 }
@@ -342,9 +611,19 @@ export interface TotalSuperfluidDelegationsResponseAminoMsg {
   type: '/symphony.superfluid.TotalSuperfluidDelegationsResponse';
   value: TotalSuperfluidDelegationsResponseAmino;
 }
+/**
+ * @name TotalSuperfluidDelegationsResponseSDKType
+ * @package symphony.superfluid
+ * @see proto type: symphony.superfluid.TotalSuperfluidDelegationsResponse
+ */
 export interface TotalSuperfluidDelegationsResponseSDKType {
   total_delegations: string;
 }
+/**
+ * @name SuperfluidDelegationAmountRequest
+ * @package symphony.superfluid
+ * @see proto type: symphony.superfluid.SuperfluidDelegationAmountRequest
+ */
 export interface SuperfluidDelegationAmountRequest {
   delegatorAddress: string;
   validatorAddress: string;
@@ -354,6 +633,11 @@ export interface SuperfluidDelegationAmountRequestProtoMsg {
   typeUrl: '/symphony.superfluid.SuperfluidDelegationAmountRequest';
   value: Uint8Array;
 }
+/**
+ * @name SuperfluidDelegationAmountRequestAmino
+ * @package symphony.superfluid
+ * @see proto type: symphony.superfluid.SuperfluidDelegationAmountRequest
+ */
 export interface SuperfluidDelegationAmountRequestAmino {
   delegator_address?: string;
   validator_address?: string;
@@ -363,11 +647,21 @@ export interface SuperfluidDelegationAmountRequestAminoMsg {
   type: '/symphony.superfluid.SuperfluidDelegationAmountRequest';
   value: SuperfluidDelegationAmountRequestAmino;
 }
+/**
+ * @name SuperfluidDelegationAmountRequestSDKType
+ * @package symphony.superfluid
+ * @see proto type: symphony.superfluid.SuperfluidDelegationAmountRequest
+ */
 export interface SuperfluidDelegationAmountRequestSDKType {
   delegator_address: string;
   validator_address: string;
   denom: string;
 }
+/**
+ * @name SuperfluidDelegationAmountResponse
+ * @package symphony.superfluid
+ * @see proto type: symphony.superfluid.SuperfluidDelegationAmountResponse
+ */
 export interface SuperfluidDelegationAmountResponse {
   amount: Coin[];
 }
@@ -375,6 +669,11 @@ export interface SuperfluidDelegationAmountResponseProtoMsg {
   typeUrl: '/symphony.superfluid.SuperfluidDelegationAmountResponse';
   value: Uint8Array;
 }
+/**
+ * @name SuperfluidDelegationAmountResponseAmino
+ * @package symphony.superfluid
+ * @see proto type: symphony.superfluid.SuperfluidDelegationAmountResponse
+ */
 export interface SuperfluidDelegationAmountResponseAmino {
   amount?: CoinAmino[];
 }
@@ -382,9 +681,19 @@ export interface SuperfluidDelegationAmountResponseAminoMsg {
   type: '/symphony.superfluid.SuperfluidDelegationAmountResponse';
   value: SuperfluidDelegationAmountResponseAmino;
 }
+/**
+ * @name SuperfluidDelegationAmountResponseSDKType
+ * @package symphony.superfluid
+ * @see proto type: symphony.superfluid.SuperfluidDelegationAmountResponse
+ */
 export interface SuperfluidDelegationAmountResponseSDKType {
   amount: CoinSDKType[];
 }
+/**
+ * @name SuperfluidDelegationsByDelegatorRequest
+ * @package symphony.superfluid
+ * @see proto type: symphony.superfluid.SuperfluidDelegationsByDelegatorRequest
+ */
 export interface SuperfluidDelegationsByDelegatorRequest {
   delegatorAddress: string;
 }
@@ -392,6 +701,11 @@ export interface SuperfluidDelegationsByDelegatorRequestProtoMsg {
   typeUrl: '/symphony.superfluid.SuperfluidDelegationsByDelegatorRequest';
   value: Uint8Array;
 }
+/**
+ * @name SuperfluidDelegationsByDelegatorRequestAmino
+ * @package symphony.superfluid
+ * @see proto type: symphony.superfluid.SuperfluidDelegationsByDelegatorRequest
+ */
 export interface SuperfluidDelegationsByDelegatorRequestAmino {
   delegator_address?: string;
 }
@@ -399,9 +713,19 @@ export interface SuperfluidDelegationsByDelegatorRequestAminoMsg {
   type: '/symphony.superfluid.SuperfluidDelegationsByDelegatorRequest';
   value: SuperfluidDelegationsByDelegatorRequestAmino;
 }
+/**
+ * @name SuperfluidDelegationsByDelegatorRequestSDKType
+ * @package symphony.superfluid
+ * @see proto type: symphony.superfluid.SuperfluidDelegationsByDelegatorRequest
+ */
 export interface SuperfluidDelegationsByDelegatorRequestSDKType {
   delegator_address: string;
 }
+/**
+ * @name SuperfluidDelegationsByDelegatorResponse
+ * @package symphony.superfluid
+ * @see proto type: symphony.superfluid.SuperfluidDelegationsByDelegatorResponse
+ */
 export interface SuperfluidDelegationsByDelegatorResponse {
   superfluidDelegationRecords: SuperfluidDelegationRecord[];
   totalDelegatedCoins: Coin[];
@@ -411,6 +735,11 @@ export interface SuperfluidDelegationsByDelegatorResponseProtoMsg {
   typeUrl: '/symphony.superfluid.SuperfluidDelegationsByDelegatorResponse';
   value: Uint8Array;
 }
+/**
+ * @name SuperfluidDelegationsByDelegatorResponseAmino
+ * @package symphony.superfluid
+ * @see proto type: symphony.superfluid.SuperfluidDelegationsByDelegatorResponse
+ */
 export interface SuperfluidDelegationsByDelegatorResponseAmino {
   superfluid_delegation_records?: SuperfluidDelegationRecordAmino[];
   total_delegated_coins?: CoinAmino[];
@@ -420,11 +749,21 @@ export interface SuperfluidDelegationsByDelegatorResponseAminoMsg {
   type: '/symphony.superfluid.SuperfluidDelegationsByDelegatorResponse';
   value: SuperfluidDelegationsByDelegatorResponseAmino;
 }
+/**
+ * @name SuperfluidDelegationsByDelegatorResponseSDKType
+ * @package symphony.superfluid
+ * @see proto type: symphony.superfluid.SuperfluidDelegationsByDelegatorResponse
+ */
 export interface SuperfluidDelegationsByDelegatorResponseSDKType {
   superfluid_delegation_records: SuperfluidDelegationRecordSDKType[];
   total_delegated_coins: CoinSDKType[];
   total_equivalent_staked_amount: CoinSDKType;
 }
+/**
+ * @name SuperfluidUndelegationsByDelegatorRequest
+ * @package symphony.superfluid
+ * @see proto type: symphony.superfluid.SuperfluidUndelegationsByDelegatorRequest
+ */
 export interface SuperfluidUndelegationsByDelegatorRequest {
   delegatorAddress: string;
   denom: string;
@@ -433,6 +772,11 @@ export interface SuperfluidUndelegationsByDelegatorRequestProtoMsg {
   typeUrl: '/symphony.superfluid.SuperfluidUndelegationsByDelegatorRequest';
   value: Uint8Array;
 }
+/**
+ * @name SuperfluidUndelegationsByDelegatorRequestAmino
+ * @package symphony.superfluid
+ * @see proto type: symphony.superfluid.SuperfluidUndelegationsByDelegatorRequest
+ */
 export interface SuperfluidUndelegationsByDelegatorRequestAmino {
   delegator_address?: string;
   denom?: string;
@@ -441,10 +785,20 @@ export interface SuperfluidUndelegationsByDelegatorRequestAminoMsg {
   type: '/symphony.superfluid.SuperfluidUndelegationsByDelegatorRequest';
   value: SuperfluidUndelegationsByDelegatorRequestAmino;
 }
+/**
+ * @name SuperfluidUndelegationsByDelegatorRequestSDKType
+ * @package symphony.superfluid
+ * @see proto type: symphony.superfluid.SuperfluidUndelegationsByDelegatorRequest
+ */
 export interface SuperfluidUndelegationsByDelegatorRequestSDKType {
   delegator_address: string;
   denom: string;
 }
+/**
+ * @name SuperfluidUndelegationsByDelegatorResponse
+ * @package symphony.superfluid
+ * @see proto type: symphony.superfluid.SuperfluidUndelegationsByDelegatorResponse
+ */
 export interface SuperfluidUndelegationsByDelegatorResponse {
   superfluidDelegationRecords: SuperfluidDelegationRecord[];
   totalUndelegatedCoins: Coin[];
@@ -454,6 +808,11 @@ export interface SuperfluidUndelegationsByDelegatorResponseProtoMsg {
   typeUrl: '/symphony.superfluid.SuperfluidUndelegationsByDelegatorResponse';
   value: Uint8Array;
 }
+/**
+ * @name SuperfluidUndelegationsByDelegatorResponseAmino
+ * @package symphony.superfluid
+ * @see proto type: symphony.superfluid.SuperfluidUndelegationsByDelegatorResponse
+ */
 export interface SuperfluidUndelegationsByDelegatorResponseAmino {
   superfluid_delegation_records?: SuperfluidDelegationRecordAmino[];
   total_undelegated_coins?: CoinAmino[];
@@ -463,11 +822,21 @@ export interface SuperfluidUndelegationsByDelegatorResponseAminoMsg {
   type: '/symphony.superfluid.SuperfluidUndelegationsByDelegatorResponse';
   value: SuperfluidUndelegationsByDelegatorResponseAmino;
 }
+/**
+ * @name SuperfluidUndelegationsByDelegatorResponseSDKType
+ * @package symphony.superfluid
+ * @see proto type: symphony.superfluid.SuperfluidUndelegationsByDelegatorResponse
+ */
 export interface SuperfluidUndelegationsByDelegatorResponseSDKType {
   superfluid_delegation_records: SuperfluidDelegationRecordSDKType[];
   total_undelegated_coins: CoinSDKType[];
   synthetic_locks: SyntheticLockSDKType[];
 }
+/**
+ * @name SuperfluidDelegationsByValidatorDenomRequest
+ * @package symphony.superfluid
+ * @see proto type: symphony.superfluid.SuperfluidDelegationsByValidatorDenomRequest
+ */
 export interface SuperfluidDelegationsByValidatorDenomRequest {
   validatorAddress: string;
   denom: string;
@@ -476,6 +845,11 @@ export interface SuperfluidDelegationsByValidatorDenomRequestProtoMsg {
   typeUrl: '/symphony.superfluid.SuperfluidDelegationsByValidatorDenomRequest';
   value: Uint8Array;
 }
+/**
+ * @name SuperfluidDelegationsByValidatorDenomRequestAmino
+ * @package symphony.superfluid
+ * @see proto type: symphony.superfluid.SuperfluidDelegationsByValidatorDenomRequest
+ */
 export interface SuperfluidDelegationsByValidatorDenomRequestAmino {
   validator_address?: string;
   denom?: string;
@@ -484,10 +858,20 @@ export interface SuperfluidDelegationsByValidatorDenomRequestAminoMsg {
   type: '/symphony.superfluid.SuperfluidDelegationsByValidatorDenomRequest';
   value: SuperfluidDelegationsByValidatorDenomRequestAmino;
 }
+/**
+ * @name SuperfluidDelegationsByValidatorDenomRequestSDKType
+ * @package symphony.superfluid
+ * @see proto type: symphony.superfluid.SuperfluidDelegationsByValidatorDenomRequest
+ */
 export interface SuperfluidDelegationsByValidatorDenomRequestSDKType {
   validator_address: string;
   denom: string;
 }
+/**
+ * @name SuperfluidDelegationsByValidatorDenomResponse
+ * @package symphony.superfluid
+ * @see proto type: symphony.superfluid.SuperfluidDelegationsByValidatorDenomResponse
+ */
 export interface SuperfluidDelegationsByValidatorDenomResponse {
   superfluidDelegationRecords: SuperfluidDelegationRecord[];
 }
@@ -495,6 +879,11 @@ export interface SuperfluidDelegationsByValidatorDenomResponseProtoMsg {
   typeUrl: '/symphony.superfluid.SuperfluidDelegationsByValidatorDenomResponse';
   value: Uint8Array;
 }
+/**
+ * @name SuperfluidDelegationsByValidatorDenomResponseAmino
+ * @package symphony.superfluid
+ * @see proto type: symphony.superfluid.SuperfluidDelegationsByValidatorDenomResponse
+ */
 export interface SuperfluidDelegationsByValidatorDenomResponseAmino {
   superfluid_delegation_records?: SuperfluidDelegationRecordAmino[];
 }
@@ -502,9 +891,19 @@ export interface SuperfluidDelegationsByValidatorDenomResponseAminoMsg {
   type: '/symphony.superfluid.SuperfluidDelegationsByValidatorDenomResponse';
   value: SuperfluidDelegationsByValidatorDenomResponseAmino;
 }
+/**
+ * @name SuperfluidDelegationsByValidatorDenomResponseSDKType
+ * @package symphony.superfluid
+ * @see proto type: symphony.superfluid.SuperfluidDelegationsByValidatorDenomResponse
+ */
 export interface SuperfluidDelegationsByValidatorDenomResponseSDKType {
   superfluid_delegation_records: SuperfluidDelegationRecordSDKType[];
 }
+/**
+ * @name EstimateSuperfluidDelegatedAmountByValidatorDenomRequest
+ * @package symphony.superfluid
+ * @see proto type: symphony.superfluid.EstimateSuperfluidDelegatedAmountByValidatorDenomRequest
+ */
 export interface EstimateSuperfluidDelegatedAmountByValidatorDenomRequest {
   validatorAddress: string;
   denom: string;
@@ -513,6 +912,11 @@ export interface EstimateSuperfluidDelegatedAmountByValidatorDenomRequestProtoMs
   typeUrl: '/symphony.superfluid.EstimateSuperfluidDelegatedAmountByValidatorDenomRequest';
   value: Uint8Array;
 }
+/**
+ * @name EstimateSuperfluidDelegatedAmountByValidatorDenomRequestAmino
+ * @package symphony.superfluid
+ * @see proto type: symphony.superfluid.EstimateSuperfluidDelegatedAmountByValidatorDenomRequest
+ */
 export interface EstimateSuperfluidDelegatedAmountByValidatorDenomRequestAmino {
   validator_address?: string;
   denom?: string;
@@ -521,10 +925,20 @@ export interface EstimateSuperfluidDelegatedAmountByValidatorDenomRequestAminoMs
   type: '/symphony.superfluid.EstimateSuperfluidDelegatedAmountByValidatorDenomRequest';
   value: EstimateSuperfluidDelegatedAmountByValidatorDenomRequestAmino;
 }
+/**
+ * @name EstimateSuperfluidDelegatedAmountByValidatorDenomRequestSDKType
+ * @package symphony.superfluid
+ * @see proto type: symphony.superfluid.EstimateSuperfluidDelegatedAmountByValidatorDenomRequest
+ */
 export interface EstimateSuperfluidDelegatedAmountByValidatorDenomRequestSDKType {
   validator_address: string;
   denom: string;
 }
+/**
+ * @name EstimateSuperfluidDelegatedAmountByValidatorDenomResponse
+ * @package symphony.superfluid
+ * @see proto type: symphony.superfluid.EstimateSuperfluidDelegatedAmountByValidatorDenomResponse
+ */
 export interface EstimateSuperfluidDelegatedAmountByValidatorDenomResponse {
   totalDelegatedCoins: Coin[];
 }
@@ -532,6 +946,11 @@ export interface EstimateSuperfluidDelegatedAmountByValidatorDenomResponseProtoM
   typeUrl: '/symphony.superfluid.EstimateSuperfluidDelegatedAmountByValidatorDenomResponse';
   value: Uint8Array;
 }
+/**
+ * @name EstimateSuperfluidDelegatedAmountByValidatorDenomResponseAmino
+ * @package symphony.superfluid
+ * @see proto type: symphony.superfluid.EstimateSuperfluidDelegatedAmountByValidatorDenomResponse
+ */
 export interface EstimateSuperfluidDelegatedAmountByValidatorDenomResponseAmino {
   total_delegated_coins?: CoinAmino[];
 }
@@ -539,9 +958,19 @@ export interface EstimateSuperfluidDelegatedAmountByValidatorDenomResponseAminoM
   type: '/symphony.superfluid.EstimateSuperfluidDelegatedAmountByValidatorDenomResponse';
   value: EstimateSuperfluidDelegatedAmountByValidatorDenomResponseAmino;
 }
+/**
+ * @name EstimateSuperfluidDelegatedAmountByValidatorDenomResponseSDKType
+ * @package symphony.superfluid
+ * @see proto type: symphony.superfluid.EstimateSuperfluidDelegatedAmountByValidatorDenomResponse
+ */
 export interface EstimateSuperfluidDelegatedAmountByValidatorDenomResponseSDKType {
   total_delegated_coins: CoinSDKType[];
 }
+/**
+ * @name QueryTotalDelegationByDelegatorRequest
+ * @package symphony.superfluid
+ * @see proto type: symphony.superfluid.QueryTotalDelegationByDelegatorRequest
+ */
 export interface QueryTotalDelegationByDelegatorRequest {
   delegatorAddress: string;
 }
@@ -549,6 +978,11 @@ export interface QueryTotalDelegationByDelegatorRequestProtoMsg {
   typeUrl: '/symphony.superfluid.QueryTotalDelegationByDelegatorRequest';
   value: Uint8Array;
 }
+/**
+ * @name QueryTotalDelegationByDelegatorRequestAmino
+ * @package symphony.superfluid
+ * @see proto type: symphony.superfluid.QueryTotalDelegationByDelegatorRequest
+ */
 export interface QueryTotalDelegationByDelegatorRequestAmino {
   delegator_address?: string;
 }
@@ -556,9 +990,19 @@ export interface QueryTotalDelegationByDelegatorRequestAminoMsg {
   type: '/symphony.superfluid.QueryTotalDelegationByDelegatorRequest';
   value: QueryTotalDelegationByDelegatorRequestAmino;
 }
+/**
+ * @name QueryTotalDelegationByDelegatorRequestSDKType
+ * @package symphony.superfluid
+ * @see proto type: symphony.superfluid.QueryTotalDelegationByDelegatorRequest
+ */
 export interface QueryTotalDelegationByDelegatorRequestSDKType {
   delegator_address: string;
 }
+/**
+ * @name QueryTotalDelegationByDelegatorResponse
+ * @package symphony.superfluid
+ * @see proto type: symphony.superfluid.QueryTotalDelegationByDelegatorResponse
+ */
 export interface QueryTotalDelegationByDelegatorResponse {
   superfluidDelegationRecords: SuperfluidDelegationRecord[];
   delegationResponse: DelegationResponse[];
@@ -569,6 +1013,11 @@ export interface QueryTotalDelegationByDelegatorResponseProtoMsg {
   typeUrl: '/symphony.superfluid.QueryTotalDelegationByDelegatorResponse';
   value: Uint8Array;
 }
+/**
+ * @name QueryTotalDelegationByDelegatorResponseAmino
+ * @package symphony.superfluid
+ * @see proto type: symphony.superfluid.QueryTotalDelegationByDelegatorResponse
+ */
 export interface QueryTotalDelegationByDelegatorResponseAmino {
   superfluid_delegation_records?: SuperfluidDelegationRecordAmino[];
   delegation_response?: DelegationResponseAmino[];
@@ -579,23 +1028,48 @@ export interface QueryTotalDelegationByDelegatorResponseAminoMsg {
   type: '/symphony.superfluid.QueryTotalDelegationByDelegatorResponse';
   value: QueryTotalDelegationByDelegatorResponseAmino;
 }
+/**
+ * @name QueryTotalDelegationByDelegatorResponseSDKType
+ * @package symphony.superfluid
+ * @see proto type: symphony.superfluid.QueryTotalDelegationByDelegatorResponse
+ */
 export interface QueryTotalDelegationByDelegatorResponseSDKType {
   superfluid_delegation_records: SuperfluidDelegationRecordSDKType[];
   delegation_response: DelegationResponseSDKType[];
   total_delegated_coins: CoinSDKType[];
   total_equivalent_staked_amount: CoinSDKType;
 }
+/**
+ * @name QueryUnpoolWhitelistRequest
+ * @package symphony.superfluid
+ * @see proto type: symphony.superfluid.QueryUnpoolWhitelistRequest
+ */
 export interface QueryUnpoolWhitelistRequest {}
 export interface QueryUnpoolWhitelistRequestProtoMsg {
   typeUrl: '/symphony.superfluid.QueryUnpoolWhitelistRequest';
   value: Uint8Array;
 }
+/**
+ * @name QueryUnpoolWhitelistRequestAmino
+ * @package symphony.superfluid
+ * @see proto type: symphony.superfluid.QueryUnpoolWhitelistRequest
+ */
 export interface QueryUnpoolWhitelistRequestAmino {}
 export interface QueryUnpoolWhitelistRequestAminoMsg {
   type: '/symphony.superfluid.QueryUnpoolWhitelistRequest';
   value: QueryUnpoolWhitelistRequestAmino;
 }
+/**
+ * @name QueryUnpoolWhitelistRequestSDKType
+ * @package symphony.superfluid
+ * @see proto type: symphony.superfluid.QueryUnpoolWhitelistRequest
+ */
 export interface QueryUnpoolWhitelistRequestSDKType {}
+/**
+ * @name QueryUnpoolWhitelistResponse
+ * @package symphony.superfluid
+ * @see proto type: symphony.superfluid.QueryUnpoolWhitelistResponse
+ */
 export interface QueryUnpoolWhitelistResponse {
   poolIds: bigint[];
 }
@@ -603,6 +1077,11 @@ export interface QueryUnpoolWhitelistResponseProtoMsg {
   typeUrl: '/symphony.superfluid.QueryUnpoolWhitelistResponse';
   value: Uint8Array;
 }
+/**
+ * @name QueryUnpoolWhitelistResponseAmino
+ * @package symphony.superfluid
+ * @see proto type: symphony.superfluid.QueryUnpoolWhitelistResponse
+ */
 export interface QueryUnpoolWhitelistResponseAmino {
   pool_ids?: string[];
 }
@@ -610,9 +1089,19 @@ export interface QueryUnpoolWhitelistResponseAminoMsg {
   type: '/symphony.superfluid.QueryUnpoolWhitelistResponse';
   value: QueryUnpoolWhitelistResponseAmino;
 }
+/**
+ * @name QueryUnpoolWhitelistResponseSDKType
+ * @package symphony.superfluid
+ * @see proto type: symphony.superfluid.QueryUnpoolWhitelistResponse
+ */
 export interface QueryUnpoolWhitelistResponseSDKType {
   pool_ids: bigint[];
 }
+/**
+ * @name UserConcentratedSuperfluidPositionsDelegatedRequest
+ * @package symphony.superfluid
+ * @see proto type: symphony.superfluid.UserConcentratedSuperfluidPositionsDelegatedRequest
+ */
 export interface UserConcentratedSuperfluidPositionsDelegatedRequest {
   delegatorAddress: string;
 }
@@ -620,6 +1109,11 @@ export interface UserConcentratedSuperfluidPositionsDelegatedRequestProtoMsg {
   typeUrl: '/symphony.superfluid.UserConcentratedSuperfluidPositionsDelegatedRequest';
   value: Uint8Array;
 }
+/**
+ * @name UserConcentratedSuperfluidPositionsDelegatedRequestAmino
+ * @package symphony.superfluid
+ * @see proto type: symphony.superfluid.UserConcentratedSuperfluidPositionsDelegatedRequest
+ */
 export interface UserConcentratedSuperfluidPositionsDelegatedRequestAmino {
   delegator_address?: string;
 }
@@ -627,9 +1121,19 @@ export interface UserConcentratedSuperfluidPositionsDelegatedRequestAminoMsg {
   type: '/symphony.superfluid.UserConcentratedSuperfluidPositionsDelegatedRequest';
   value: UserConcentratedSuperfluidPositionsDelegatedRequestAmino;
 }
+/**
+ * @name UserConcentratedSuperfluidPositionsDelegatedRequestSDKType
+ * @package symphony.superfluid
+ * @see proto type: symphony.superfluid.UserConcentratedSuperfluidPositionsDelegatedRequest
+ */
 export interface UserConcentratedSuperfluidPositionsDelegatedRequestSDKType {
   delegator_address: string;
 }
+/**
+ * @name UserConcentratedSuperfluidPositionsDelegatedResponse
+ * @package symphony.superfluid
+ * @see proto type: symphony.superfluid.UserConcentratedSuperfluidPositionsDelegatedResponse
+ */
 export interface UserConcentratedSuperfluidPositionsDelegatedResponse {
   clPoolUserPositionRecords: ConcentratedPoolUserPositionRecord[];
 }
@@ -637,6 +1141,11 @@ export interface UserConcentratedSuperfluidPositionsDelegatedResponseProtoMsg {
   typeUrl: '/symphony.superfluid.UserConcentratedSuperfluidPositionsDelegatedResponse';
   value: Uint8Array;
 }
+/**
+ * @name UserConcentratedSuperfluidPositionsDelegatedResponseAmino
+ * @package symphony.superfluid
+ * @see proto type: symphony.superfluid.UserConcentratedSuperfluidPositionsDelegatedResponse
+ */
 export interface UserConcentratedSuperfluidPositionsDelegatedResponseAmino {
   cl_pool_user_position_records?: ConcentratedPoolUserPositionRecordAmino[];
 }
@@ -644,9 +1153,19 @@ export interface UserConcentratedSuperfluidPositionsDelegatedResponseAminoMsg {
   type: '/symphony.superfluid.UserConcentratedSuperfluidPositionsDelegatedResponse';
   value: UserConcentratedSuperfluidPositionsDelegatedResponseAmino;
 }
+/**
+ * @name UserConcentratedSuperfluidPositionsDelegatedResponseSDKType
+ * @package symphony.superfluid
+ * @see proto type: symphony.superfluid.UserConcentratedSuperfluidPositionsDelegatedResponse
+ */
 export interface UserConcentratedSuperfluidPositionsDelegatedResponseSDKType {
   cl_pool_user_position_records: ConcentratedPoolUserPositionRecordSDKType[];
 }
+/**
+ * @name UserConcentratedSuperfluidPositionsUndelegatingRequest
+ * @package symphony.superfluid
+ * @see proto type: symphony.superfluid.UserConcentratedSuperfluidPositionsUndelegatingRequest
+ */
 export interface UserConcentratedSuperfluidPositionsUndelegatingRequest {
   delegatorAddress: string;
 }
@@ -654,6 +1173,11 @@ export interface UserConcentratedSuperfluidPositionsUndelegatingRequestProtoMsg 
   typeUrl: '/symphony.superfluid.UserConcentratedSuperfluidPositionsUndelegatingRequest';
   value: Uint8Array;
 }
+/**
+ * @name UserConcentratedSuperfluidPositionsUndelegatingRequestAmino
+ * @package symphony.superfluid
+ * @see proto type: symphony.superfluid.UserConcentratedSuperfluidPositionsUndelegatingRequest
+ */
 export interface UserConcentratedSuperfluidPositionsUndelegatingRequestAmino {
   delegator_address?: string;
 }
@@ -661,9 +1185,19 @@ export interface UserConcentratedSuperfluidPositionsUndelegatingRequestAminoMsg 
   type: '/symphony.superfluid.UserConcentratedSuperfluidPositionsUndelegatingRequest';
   value: UserConcentratedSuperfluidPositionsUndelegatingRequestAmino;
 }
+/**
+ * @name UserConcentratedSuperfluidPositionsUndelegatingRequestSDKType
+ * @package symphony.superfluid
+ * @see proto type: symphony.superfluid.UserConcentratedSuperfluidPositionsUndelegatingRequest
+ */
 export interface UserConcentratedSuperfluidPositionsUndelegatingRequestSDKType {
   delegator_address: string;
 }
+/**
+ * @name UserConcentratedSuperfluidPositionsUndelegatingResponse
+ * @package symphony.superfluid
+ * @see proto type: symphony.superfluid.UserConcentratedSuperfluidPositionsUndelegatingResponse
+ */
 export interface UserConcentratedSuperfluidPositionsUndelegatingResponse {
   clPoolUserPositionRecords: ConcentratedPoolUserPositionRecord[];
 }
@@ -671,6 +1205,11 @@ export interface UserConcentratedSuperfluidPositionsUndelegatingResponseProtoMsg
   typeUrl: '/symphony.superfluid.UserConcentratedSuperfluidPositionsUndelegatingResponse';
   value: Uint8Array;
 }
+/**
+ * @name UserConcentratedSuperfluidPositionsUndelegatingResponseAmino
+ * @package symphony.superfluid
+ * @see proto type: symphony.superfluid.UserConcentratedSuperfluidPositionsUndelegatingResponse
+ */
 export interface UserConcentratedSuperfluidPositionsUndelegatingResponseAmino {
   cl_pool_user_position_records?: ConcentratedPoolUserPositionRecordAmino[];
 }
@@ -678,10 +1217,20 @@ export interface UserConcentratedSuperfluidPositionsUndelegatingResponseAminoMsg
   type: '/symphony.superfluid.UserConcentratedSuperfluidPositionsUndelegatingResponse';
   value: UserConcentratedSuperfluidPositionsUndelegatingResponseAmino;
 }
+/**
+ * @name UserConcentratedSuperfluidPositionsUndelegatingResponseSDKType
+ * @package symphony.superfluid
+ * @see proto type: symphony.superfluid.UserConcentratedSuperfluidPositionsUndelegatingResponse
+ */
 export interface UserConcentratedSuperfluidPositionsUndelegatingResponseSDKType {
   cl_pool_user_position_records: ConcentratedPoolUserPositionRecordSDKType[];
 }
-/** THIS QUERY IS TEMPORARY */
+/**
+ * THIS QUERY IS TEMPORARY
+ * @name QueryRestSupplyRequest
+ * @package symphony.superfluid
+ * @see proto type: symphony.superfluid.QueryRestSupplyRequest
+ */
 export interface QueryRestSupplyRequest {
   denom: string;
 }
@@ -689,7 +1238,12 @@ export interface QueryRestSupplyRequestProtoMsg {
   typeUrl: '/symphony.superfluid.QueryRestSupplyRequest';
   value: Uint8Array;
 }
-/** THIS QUERY IS TEMPORARY */
+/**
+ * THIS QUERY IS TEMPORARY
+ * @name QueryRestSupplyRequestAmino
+ * @package symphony.superfluid
+ * @see proto type: symphony.superfluid.QueryRestSupplyRequest
+ */
 export interface QueryRestSupplyRequestAmino {
   denom?: string;
 }
@@ -697,32 +1251,61 @@ export interface QueryRestSupplyRequestAminoMsg {
   type: '/symphony.superfluid.QueryRestSupplyRequest';
   value: QueryRestSupplyRequestAmino;
 }
-/** THIS QUERY IS TEMPORARY */
+/**
+ * THIS QUERY IS TEMPORARY
+ * @name QueryRestSupplyRequestSDKType
+ * @package symphony.superfluid
+ * @see proto type: symphony.superfluid.QueryRestSupplyRequest
+ */
 export interface QueryRestSupplyRequestSDKType {
   denom: string;
 }
+/**
+ * @name QueryRestSupplyResponse
+ * @package symphony.superfluid
+ * @see proto type: symphony.superfluid.QueryRestSupplyResponse
+ */
 export interface QueryRestSupplyResponse {
-  /** amount is the supply of the coin. */
+  /**
+   * amount is the supply of the coin.
+   */
   amount: Coin;
 }
 export interface QueryRestSupplyResponseProtoMsg {
   typeUrl: '/symphony.superfluid.QueryRestSupplyResponse';
   value: Uint8Array;
 }
+/**
+ * @name QueryRestSupplyResponseAmino
+ * @package symphony.superfluid
+ * @see proto type: symphony.superfluid.QueryRestSupplyResponse
+ */
 export interface QueryRestSupplyResponseAmino {
-  /** amount is the supply of the coin. */
+  /**
+   * amount is the supply of the coin.
+   */
   amount?: CoinAmino;
 }
 export interface QueryRestSupplyResponseAminoMsg {
   type: '/symphony.superfluid.QueryRestSupplyResponse';
   value: QueryRestSupplyResponseAmino;
 }
+/**
+ * @name QueryRestSupplyResponseSDKType
+ * @package symphony.superfluid
+ * @see proto type: symphony.superfluid.QueryRestSupplyResponse
+ */
 export interface QueryRestSupplyResponseSDKType {
   amount: CoinSDKType;
 }
 function createBaseQueryParamsRequest(): QueryParamsRequest {
   return {};
 }
+/**
+ * @name QueryParamsRequest
+ * @package symphony.superfluid
+ * @see proto type: symphony.superfluid.QueryParamsRequest
+ */
 export const QueryParamsRequest = {
   typeUrl: '/symphony.superfluid.QueryParamsRequest',
   is(o: any): o is QueryParamsRequest {
@@ -792,6 +1375,11 @@ function createBaseQueryParamsResponse(): QueryParamsResponse {
     params: Params.fromPartial({}),
   };
 }
+/**
+ * @name QueryParamsResponse
+ * @package symphony.superfluid
+ * @see proto type: symphony.superfluid.QueryParamsResponse
+ */
 export const QueryParamsResponse = {
   typeUrl: '/symphony.superfluid.QueryParamsResponse',
   is(o: any): o is QueryParamsResponse {
@@ -886,6 +1474,11 @@ function createBaseAssetTypeRequest(): AssetTypeRequest {
     denom: '',
   };
 }
+/**
+ * @name AssetTypeRequest
+ * @package symphony.superfluid
+ * @see proto type: symphony.superfluid.AssetTypeRequest
+ */
 export const AssetTypeRequest = {
   typeUrl: '/symphony.superfluid.AssetTypeRequest',
   is(o: any): o is AssetTypeRequest {
@@ -972,6 +1565,11 @@ function createBaseAssetTypeResponse(): AssetTypeResponse {
     assetType: 0,
   };
 }
+/**
+ * @name AssetTypeResponse
+ * @package symphony.superfluid
+ * @see proto type: symphony.superfluid.AssetTypeResponse
+ */
 export const AssetTypeResponse = {
   typeUrl: '/symphony.superfluid.AssetTypeResponse',
   is(o: any): o is AssetTypeResponse {
@@ -1053,6 +1651,11 @@ GlobalDecoderRegistry.register(AssetTypeResponse.typeUrl, AssetTypeResponse);
 function createBaseAllAssetsRequest(): AllAssetsRequest {
   return {};
 }
+/**
+ * @name AllAssetsRequest
+ * @package symphony.superfluid
+ * @see proto type: symphony.superfluid.AllAssetsRequest
+ */
 export const AllAssetsRequest = {
   typeUrl: '/symphony.superfluid.AllAssetsRequest',
   is(o: any): o is AllAssetsRequest {
@@ -1119,6 +1722,11 @@ function createBaseAllAssetsResponse(): AllAssetsResponse {
     assets: [],
   };
 }
+/**
+ * @name AllAssetsResponse
+ * @package symphony.superfluid
+ * @see proto type: symphony.superfluid.AllAssetsResponse
+ */
 export const AllAssetsResponse = {
   typeUrl: '/symphony.superfluid.AllAssetsResponse',
   is(o: any): o is AllAssetsResponse {
@@ -1217,6 +1825,11 @@ function createBaseAssetMultiplierRequest(): AssetMultiplierRequest {
     denom: '',
   };
 }
+/**
+ * @name AssetMultiplierRequest
+ * @package symphony.superfluid
+ * @see proto type: symphony.superfluid.AssetMultiplierRequest
+ */
 export const AssetMultiplierRequest = {
   typeUrl: '/symphony.superfluid.AssetMultiplierRequest',
   is(o: any): o is AssetMultiplierRequest {
@@ -1314,6 +1927,11 @@ function createBaseAssetMultiplierResponse(): AssetMultiplierResponse {
     osmoEquivalentMultiplier: undefined,
   };
 }
+/**
+ * @name AssetMultiplierResponse
+ * @package symphony.superfluid
+ * @see proto type: symphony.superfluid.AssetMultiplierResponse
+ */
 export const AssetMultiplierResponse = {
   typeUrl: '/symphony.superfluid.AssetMultiplierResponse',
   is(o: any): o is AssetMultiplierResponse {
@@ -1426,6 +2044,11 @@ function createBaseSuperfluidIntermediaryAccountInfo(): SuperfluidIntermediaryAc
     address: '',
   };
 }
+/**
+ * @name SuperfluidIntermediaryAccountInfo
+ * @package symphony.superfluid
+ * @see proto type: symphony.superfluid.SuperfluidIntermediaryAccountInfo
+ */
 export const SuperfluidIntermediaryAccountInfo = {
   typeUrl: '/symphony.superfluid.SuperfluidIntermediaryAccountInfo',
   is(o: any): o is SuperfluidIntermediaryAccountInfo {
@@ -1579,6 +2202,11 @@ function createBaseAllIntermediaryAccountsRequest(): AllIntermediaryAccountsRequ
     pagination: undefined,
   };
 }
+/**
+ * @name AllIntermediaryAccountsRequest
+ * @package symphony.superfluid
+ * @see proto type: symphony.superfluid.AllIntermediaryAccountsRequest
+ */
 export const AllIntermediaryAccountsRequest = {
   typeUrl: '/symphony.superfluid.AllIntermediaryAccountsRequest',
   is(o: any): o is AllIntermediaryAccountsRequest {
@@ -1680,6 +2308,11 @@ function createBaseAllIntermediaryAccountsResponse(): AllIntermediaryAccountsRes
     pagination: undefined,
   };
 }
+/**
+ * @name AllIntermediaryAccountsResponse
+ * @package symphony.superfluid
+ * @see proto type: symphony.superfluid.AllIntermediaryAccountsResponse
+ */
 export const AllIntermediaryAccountsResponse = {
   typeUrl: '/symphony.superfluid.AllIntermediaryAccountsResponse',
   is(o: any): o is AllIntermediaryAccountsResponse {
@@ -1827,6 +2460,11 @@ function createBaseConnectedIntermediaryAccountRequest(): ConnectedIntermediaryA
     lockId: BigInt(0),
   };
 }
+/**
+ * @name ConnectedIntermediaryAccountRequest
+ * @package symphony.superfluid
+ * @see proto type: symphony.superfluid.ConnectedIntermediaryAccountRequest
+ */
 export const ConnectedIntermediaryAccountRequest = {
   typeUrl: '/symphony.superfluid.ConnectedIntermediaryAccountRequest',
   is(o: any): o is ConnectedIntermediaryAccountRequest {
@@ -1938,6 +2576,11 @@ function createBaseConnectedIntermediaryAccountResponse(): ConnectedIntermediary
     account: undefined,
   };
 }
+/**
+ * @name ConnectedIntermediaryAccountResponse
+ * @package symphony.superfluid
+ * @see proto type: symphony.superfluid.ConnectedIntermediaryAccountResponse
+ */
 export const ConnectedIntermediaryAccountResponse = {
   typeUrl: '/symphony.superfluid.ConnectedIntermediaryAccountResponse',
   is(o: any): o is ConnectedIntermediaryAccountResponse {
@@ -2046,6 +2689,11 @@ function createBaseQueryTotalDelegationByValidatorForDenomRequest(): QueryTotalD
     denom: '',
   };
 }
+/**
+ * @name QueryTotalDelegationByValidatorForDenomRequest
+ * @package symphony.superfluid
+ * @see proto type: symphony.superfluid.QueryTotalDelegationByValidatorForDenomRequest
+ */
 export const QueryTotalDelegationByValidatorForDenomRequest = {
   typeUrl:
     '/symphony.superfluid.QueryTotalDelegationByValidatorForDenomRequest',
@@ -2160,6 +2808,11 @@ function createBaseQueryTotalDelegationByValidatorForDenomResponse(): QueryTotal
     assets: [],
   };
 }
+/**
+ * @name QueryTotalDelegationByValidatorForDenomResponse
+ * @package symphony.superfluid
+ * @see proto type: symphony.superfluid.QueryTotalDelegationByValidatorForDenomResponse
+ */
 export const QueryTotalDelegationByValidatorForDenomResponse = {
   typeUrl:
     '/symphony.superfluid.QueryTotalDelegationByValidatorForDenomResponse',
@@ -2289,6 +2942,11 @@ function createBaseDelegations(): Delegations {
     osmoEquivalent: '',
   };
 }
+/**
+ * @name Delegations
+ * @package symphony.superfluid
+ * @see proto type: symphony.superfluid.Delegations
+ */
 export const Delegations = {
   typeUrl: '/symphony.superfluid.Delegations',
   is(o: any): o is Delegations {
@@ -2409,6 +3067,11 @@ GlobalDecoderRegistry.register(Delegations.typeUrl, Delegations);
 function createBaseTotalSuperfluidDelegationsRequest(): TotalSuperfluidDelegationsRequest {
   return {};
 }
+/**
+ * @name TotalSuperfluidDelegationsRequest
+ * @package symphony.superfluid
+ * @see proto type: symphony.superfluid.TotalSuperfluidDelegationsRequest
+ */
 export const TotalSuperfluidDelegationsRequest = {
   typeUrl: '/symphony.superfluid.TotalSuperfluidDelegationsRequest',
   is(o: any): o is TotalSuperfluidDelegationsRequest {
@@ -2493,6 +3156,11 @@ function createBaseTotalSuperfluidDelegationsResponse(): TotalSuperfluidDelegati
     totalDelegations: '',
   };
 }
+/**
+ * @name TotalSuperfluidDelegationsResponse
+ * @package symphony.superfluid
+ * @see proto type: symphony.superfluid.TotalSuperfluidDelegationsResponse
+ */
 export const TotalSuperfluidDelegationsResponse = {
   typeUrl: '/symphony.superfluid.TotalSuperfluidDelegationsResponse',
   is(o: any): o is TotalSuperfluidDelegationsResponse {
@@ -2606,6 +3274,11 @@ function createBaseSuperfluidDelegationAmountRequest(): SuperfluidDelegationAmou
     denom: '',
   };
 }
+/**
+ * @name SuperfluidDelegationAmountRequest
+ * @package symphony.superfluid
+ * @see proto type: symphony.superfluid.SuperfluidDelegationAmountRequest
+ */
 export const SuperfluidDelegationAmountRequest = {
   typeUrl: '/symphony.superfluid.SuperfluidDelegationAmountRequest',
   is(o: any): o is SuperfluidDelegationAmountRequest {
@@ -2749,6 +3422,11 @@ function createBaseSuperfluidDelegationAmountResponse(): SuperfluidDelegationAmo
     amount: [],
   };
 }
+/**
+ * @name SuperfluidDelegationAmountResponse
+ * @package symphony.superfluid
+ * @see proto type: symphony.superfluid.SuperfluidDelegationAmountResponse
+ */
 export const SuperfluidDelegationAmountResponse = {
   typeUrl: '/symphony.superfluid.SuperfluidDelegationAmountResponse',
   is(o: any): o is SuperfluidDelegationAmountResponse {
@@ -2860,6 +3538,11 @@ function createBaseSuperfluidDelegationsByDelegatorRequest(): SuperfluidDelegati
     delegatorAddress: '',
   };
 }
+/**
+ * @name SuperfluidDelegationsByDelegatorRequest
+ * @package symphony.superfluid
+ * @see proto type: symphony.superfluid.SuperfluidDelegationsByDelegatorRequest
+ */
 export const SuperfluidDelegationsByDelegatorRequest = {
   typeUrl: '/symphony.superfluid.SuperfluidDelegationsByDelegatorRequest',
   is(o: any): o is SuperfluidDelegationsByDelegatorRequest {
@@ -2973,6 +3656,11 @@ function createBaseSuperfluidDelegationsByDelegatorResponse(): SuperfluidDelegat
     totalEquivalentStakedAmount: Coin.fromPartial({}),
   };
 }
+/**
+ * @name SuperfluidDelegationsByDelegatorResponse
+ * @package symphony.superfluid
+ * @see proto type: symphony.superfluid.SuperfluidDelegationsByDelegatorResponse
+ */
 export const SuperfluidDelegationsByDelegatorResponse = {
   typeUrl: '/symphony.superfluid.SuperfluidDelegationsByDelegatorResponse',
   is(o: any): o is SuperfluidDelegationsByDelegatorResponse {
@@ -3163,6 +3851,11 @@ function createBaseSuperfluidUndelegationsByDelegatorRequest(): SuperfluidUndele
     denom: '',
   };
 }
+/**
+ * @name SuperfluidUndelegationsByDelegatorRequest
+ * @package symphony.superfluid
+ * @see proto type: symphony.superfluid.SuperfluidUndelegationsByDelegatorRequest
+ */
 export const SuperfluidUndelegationsByDelegatorRequest = {
   typeUrl: '/symphony.superfluid.SuperfluidUndelegationsByDelegatorRequest',
   is(o: any): o is SuperfluidUndelegationsByDelegatorRequest {
@@ -3289,6 +3982,11 @@ function createBaseSuperfluidUndelegationsByDelegatorResponse(): SuperfluidUndel
     syntheticLocks: [],
   };
 }
+/**
+ * @name SuperfluidUndelegationsByDelegatorResponse
+ * @package symphony.superfluid
+ * @see proto type: symphony.superfluid.SuperfluidUndelegationsByDelegatorResponse
+ */
 export const SuperfluidUndelegationsByDelegatorResponse = {
   typeUrl: '/symphony.superfluid.SuperfluidUndelegationsByDelegatorResponse',
   is(o: any): o is SuperfluidUndelegationsByDelegatorResponse {
@@ -3477,6 +4175,11 @@ function createBaseSuperfluidDelegationsByValidatorDenomRequest(): SuperfluidDel
     denom: '',
   };
 }
+/**
+ * @name SuperfluidDelegationsByValidatorDenomRequest
+ * @package symphony.superfluid
+ * @see proto type: symphony.superfluid.SuperfluidDelegationsByValidatorDenomRequest
+ */
 export const SuperfluidDelegationsByValidatorDenomRequest = {
   typeUrl: '/symphony.superfluid.SuperfluidDelegationsByValidatorDenomRequest',
   is(o: any): o is SuperfluidDelegationsByValidatorDenomRequest {
@@ -3605,6 +4308,11 @@ function createBaseSuperfluidDelegationsByValidatorDenomResponse(): SuperfluidDe
     superfluidDelegationRecords: [],
   };
 }
+/**
+ * @name SuperfluidDelegationsByValidatorDenomResponse
+ * @package symphony.superfluid
+ * @see proto type: symphony.superfluid.SuperfluidDelegationsByValidatorDenomResponse
+ */
 export const SuperfluidDelegationsByValidatorDenomResponse = {
   typeUrl: '/symphony.superfluid.SuperfluidDelegationsByValidatorDenomResponse',
   is(o: any): o is SuperfluidDelegationsByValidatorDenomResponse {
@@ -3742,6 +4450,11 @@ function createBaseEstimateSuperfluidDelegatedAmountByValidatorDenomRequest(): E
     denom: '',
   };
 }
+/**
+ * @name EstimateSuperfluidDelegatedAmountByValidatorDenomRequest
+ * @package symphony.superfluid
+ * @see proto type: symphony.superfluid.EstimateSuperfluidDelegatedAmountByValidatorDenomRequest
+ */
 export const EstimateSuperfluidDelegatedAmountByValidatorDenomRequest = {
   typeUrl:
     '/symphony.superfluid.EstimateSuperfluidDelegatedAmountByValidatorDenomRequest',
@@ -3889,6 +4602,11 @@ function createBaseEstimateSuperfluidDelegatedAmountByValidatorDenomResponse(): 
     totalDelegatedCoins: [],
   };
 }
+/**
+ * @name EstimateSuperfluidDelegatedAmountByValidatorDenomResponse
+ * @package symphony.superfluid
+ * @see proto type: symphony.superfluid.EstimateSuperfluidDelegatedAmountByValidatorDenomResponse
+ */
 export const EstimateSuperfluidDelegatedAmountByValidatorDenomResponse = {
   typeUrl:
     '/symphony.superfluid.EstimateSuperfluidDelegatedAmountByValidatorDenomResponse',
@@ -4032,6 +4750,11 @@ function createBaseQueryTotalDelegationByDelegatorRequest(): QueryTotalDelegatio
     delegatorAddress: '',
   };
 }
+/**
+ * @name QueryTotalDelegationByDelegatorRequest
+ * @package symphony.superfluid
+ * @see proto type: symphony.superfluid.QueryTotalDelegationByDelegatorRequest
+ */
 export const QueryTotalDelegationByDelegatorRequest = {
   typeUrl: '/symphony.superfluid.QueryTotalDelegationByDelegatorRequest',
   is(o: any): o is QueryTotalDelegationByDelegatorRequest {
@@ -4146,6 +4869,11 @@ function createBaseQueryTotalDelegationByDelegatorResponse(): QueryTotalDelegati
     totalEquivalentStakedAmount: Coin.fromPartial({}),
   };
 }
+/**
+ * @name QueryTotalDelegationByDelegatorResponse
+ * @package symphony.superfluid
+ * @see proto type: symphony.superfluid.QueryTotalDelegationByDelegatorResponse
+ */
 export const QueryTotalDelegationByDelegatorResponse = {
   typeUrl: '/symphony.superfluid.QueryTotalDelegationByDelegatorResponse',
   is(o: any): o is QueryTotalDelegationByDelegatorResponse {
@@ -4363,6 +5091,11 @@ GlobalDecoderRegistry.register(
 function createBaseQueryUnpoolWhitelistRequest(): QueryUnpoolWhitelistRequest {
   return {};
 }
+/**
+ * @name QueryUnpoolWhitelistRequest
+ * @package symphony.superfluid
+ * @see proto type: symphony.superfluid.QueryUnpoolWhitelistRequest
+ */
 export const QueryUnpoolWhitelistRequest = {
   typeUrl: '/symphony.superfluid.QueryUnpoolWhitelistRequest',
   is(o: any): o is QueryUnpoolWhitelistRequest {
@@ -4443,6 +5176,11 @@ function createBaseQueryUnpoolWhitelistResponse(): QueryUnpoolWhitelistResponse 
     poolIds: [],
   };
 }
+/**
+ * @name QueryUnpoolWhitelistResponse
+ * @package symphony.superfluid
+ * @see proto type: symphony.superfluid.QueryUnpoolWhitelistResponse
+ */
 export const QueryUnpoolWhitelistResponse = {
   typeUrl: '/symphony.superfluid.QueryUnpoolWhitelistResponse',
   is(o: any): o is QueryUnpoolWhitelistResponse {
@@ -4564,6 +5302,11 @@ function createBaseUserConcentratedSuperfluidPositionsDelegatedRequest(): UserCo
     delegatorAddress: '',
   };
 }
+/**
+ * @name UserConcentratedSuperfluidPositionsDelegatedRequest
+ * @package symphony.superfluid
+ * @see proto type: symphony.superfluid.UserConcentratedSuperfluidPositionsDelegatedRequest
+ */
 export const UserConcentratedSuperfluidPositionsDelegatedRequest = {
   typeUrl:
     '/symphony.superfluid.UserConcentratedSuperfluidPositionsDelegatedRequest',
@@ -4698,6 +5441,11 @@ function createBaseUserConcentratedSuperfluidPositionsDelegatedResponse(): UserC
     clPoolUserPositionRecords: [],
   };
 }
+/**
+ * @name UserConcentratedSuperfluidPositionsDelegatedResponse
+ * @package symphony.superfluid
+ * @see proto type: symphony.superfluid.UserConcentratedSuperfluidPositionsDelegatedResponse
+ */
 export const UserConcentratedSuperfluidPositionsDelegatedResponse = {
   typeUrl:
     '/symphony.superfluid.UserConcentratedSuperfluidPositionsDelegatedResponse',
@@ -4855,6 +5603,11 @@ function createBaseUserConcentratedSuperfluidPositionsUndelegatingRequest(): Use
     delegatorAddress: '',
   };
 }
+/**
+ * @name UserConcentratedSuperfluidPositionsUndelegatingRequest
+ * @package symphony.superfluid
+ * @see proto type: symphony.superfluid.UserConcentratedSuperfluidPositionsUndelegatingRequest
+ */
 export const UserConcentratedSuperfluidPositionsUndelegatingRequest = {
   typeUrl:
     '/symphony.superfluid.UserConcentratedSuperfluidPositionsUndelegatingRequest',
@@ -4989,6 +5742,11 @@ function createBaseUserConcentratedSuperfluidPositionsUndelegatingResponse(): Us
     clPoolUserPositionRecords: [],
   };
 }
+/**
+ * @name UserConcentratedSuperfluidPositionsUndelegatingResponse
+ * @package symphony.superfluid
+ * @see proto type: symphony.superfluid.UserConcentratedSuperfluidPositionsUndelegatingResponse
+ */
 export const UserConcentratedSuperfluidPositionsUndelegatingResponse = {
   typeUrl:
     '/symphony.superfluid.UserConcentratedSuperfluidPositionsUndelegatingResponse',
@@ -5146,6 +5904,12 @@ function createBaseQueryRestSupplyRequest(): QueryRestSupplyRequest {
     denom: '',
   };
 }
+/**
+ * THIS QUERY IS TEMPORARY
+ * @name QueryRestSupplyRequest
+ * @package symphony.superfluid
+ * @see proto type: symphony.superfluid.QueryRestSupplyRequest
+ */
 export const QueryRestSupplyRequest = {
   typeUrl: '/symphony.superfluid.QueryRestSupplyRequest',
   is(o: any): o is QueryRestSupplyRequest {
@@ -5243,6 +6007,11 @@ function createBaseQueryRestSupplyResponse(): QueryRestSupplyResponse {
     amount: Coin.fromPartial({}),
   };
 }
+/**
+ * @name QueryRestSupplyResponse
+ * @package symphony.superfluid
+ * @see proto type: symphony.superfluid.QueryRestSupplyResponse
+ */
 export const QueryRestSupplyResponse = {
   typeUrl: '/symphony.superfluid.QueryRestSupplyResponse',
   is(o: any): o is QueryRestSupplyResponse {

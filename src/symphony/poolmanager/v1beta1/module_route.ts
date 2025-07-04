@@ -65,9 +65,14 @@ export function poolTypeToJSON(object: PoolType): string {
  * It is used as the value of a mapping from pool id to the pool type,
  * allowing the pool manager to know which module to route swaps to given the
  * pool id.
+ * @name ModuleRoute
+ * @package symphony.poolmanager.v1beta1
+ * @see proto type: symphony.poolmanager.v1beta1.ModuleRoute
  */
 export interface ModuleRoute {
-  /** pool_type specifies the type of the pool */
+  /**
+   * pool_type specifies the type of the pool
+   */
   poolType: PoolType;
   poolId?: bigint;
 }
@@ -80,9 +85,14 @@ export interface ModuleRouteProtoMsg {
  * It is used as the value of a mapping from pool id to the pool type,
  * allowing the pool manager to know which module to route swaps to given the
  * pool id.
+ * @name ModuleRouteAmino
+ * @package symphony.poolmanager.v1beta1
+ * @see proto type: symphony.poolmanager.v1beta1.ModuleRoute
  */
 export interface ModuleRouteAmino {
-  /** pool_type specifies the type of the pool */
+  /**
+   * pool_type specifies the type of the pool
+   */
   pool_type?: PoolType;
   pool_id?: string;
 }
@@ -95,6 +105,9 @@ export interface ModuleRouteAminoMsg {
  * It is used as the value of a mapping from pool id to the pool type,
  * allowing the pool manager to know which module to route swaps to given the
  * pool id.
+ * @name ModuleRouteSDKType
+ * @package symphony.poolmanager.v1beta1
+ * @see proto type: symphony.poolmanager.v1beta1.ModuleRoute
  */
 export interface ModuleRouteSDKType {
   pool_type: PoolType;
@@ -106,6 +119,15 @@ function createBaseModuleRoute(): ModuleRoute {
     poolId: undefined,
   };
 }
+/**
+ * ModuleRouter defines a route encapsulating pool type.
+ * It is used as the value of a mapping from pool id to the pool type,
+ * allowing the pool manager to know which module to route swaps to given the
+ * pool id.
+ * @name ModuleRoute
+ * @package symphony.poolmanager.v1beta1
+ * @see proto type: symphony.poolmanager.v1beta1.ModuleRoute
+ */
 export const ModuleRoute = {
   typeUrl: '/symphony.poolmanager.v1beta1.ModuleRoute',
   is(o: any): o is ModuleRoute {

@@ -27,10 +27,17 @@ import { PoolProtoMsg as Pool3ProtoMsg } from './balancerPool';
 import { PoolSDKType as Pool3SDKType } from './balancerPool';
 import { BinaryReader, BinaryWriter } from '../../../binary';
 import { GlobalDecoderRegistry } from '../../../registry';
-/** GenesisState defines the gamm module's genesis state. */
+/**
+ * GenesisState defines the gamm module's genesis state.
+ * @name GenesisState
+ * @package symphony.gamm.v1beta1
+ * @see proto type: symphony.gamm.v1beta1.GenesisState
+ */
 export interface GenesisState {
   pools: (Pool1 | CosmWasmPool | Pool2 | Pool3 | Any)[] | Any[];
-  /** will be renamed to next_pool_id in an upcoming version */
+  /**
+   * will be renamed to next_pool_id in an upcoming version
+   */
   nextPoolNumber: bigint;
   params: Params;
   migrationRecords?: MigrationRecords;
@@ -48,10 +55,17 @@ export type GenesisStateEncoded = Omit<GenesisState, 'pools'> & {
     | AnyProtoMsg
   )[];
 };
-/** GenesisState defines the gamm module's genesis state. */
+/**
+ * GenesisState defines the gamm module's genesis state.
+ * @name GenesisStateAmino
+ * @package symphony.gamm.v1beta1
+ * @see proto type: symphony.gamm.v1beta1.GenesisState
+ */
 export interface GenesisStateAmino {
   pools?: AnyAmino[];
-  /** will be renamed to next_pool_id in an upcoming version */
+  /**
+   * will be renamed to next_pool_id in an upcoming version
+   */
   next_pool_number?: string;
   params?: ParamsAmino;
   migration_records?: MigrationRecordsAmino;
@@ -60,7 +74,12 @@ export interface GenesisStateAminoMsg {
   type: '/symphony.gamm.v1beta1.GenesisState';
   value: GenesisStateAmino;
 }
-/** GenesisState defines the gamm module's genesis state. */
+/**
+ * GenesisState defines the gamm module's genesis state.
+ * @name GenesisStateSDKType
+ * @package symphony.gamm.v1beta1
+ * @see proto type: symphony.gamm.v1beta1.GenesisState
+ */
 export interface GenesisStateSDKType {
   pools: (
     | Pool1SDKType
@@ -81,6 +100,12 @@ function createBaseGenesisState(): GenesisState {
     migrationRecords: undefined,
   };
 }
+/**
+ * GenesisState defines the gamm module's genesis state.
+ * @name GenesisState
+ * @package symphony.gamm.v1beta1
+ * @see proto type: symphony.gamm.v1beta1.GenesisState
+ */
 export const GenesisState = {
   typeUrl: '/symphony.gamm.v1beta1.GenesisState',
   is(o: any): o is GenesisState {

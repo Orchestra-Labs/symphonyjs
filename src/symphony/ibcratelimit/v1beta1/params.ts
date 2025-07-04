@@ -1,7 +1,12 @@
 //@ts-nocheck
 import { BinaryReader, BinaryWriter } from '../../../binary';
 import { GlobalDecoderRegistry } from '../../../registry';
-/** Params defines the parameters for the ibc-rate-limit module. */
+/**
+ * Params defines the parameters for the ibc-rate-limit module.
+ * @name Params
+ * @package symphony.ibcratelimit.v1beta1
+ * @see proto type: symphony.ibcratelimit.v1beta1.Params
+ */
 export interface Params {
   contractAddress: string;
 }
@@ -9,7 +14,12 @@ export interface ParamsProtoMsg {
   typeUrl: '/symphony.ibcratelimit.v1beta1.Params';
   value: Uint8Array;
 }
-/** Params defines the parameters for the ibc-rate-limit module. */
+/**
+ * Params defines the parameters for the ibc-rate-limit module.
+ * @name ParamsAmino
+ * @package symphony.ibcratelimit.v1beta1
+ * @see proto type: symphony.ibcratelimit.v1beta1.Params
+ */
 export interface ParamsAmino {
   contract_address?: string;
 }
@@ -17,7 +27,12 @@ export interface ParamsAminoMsg {
   type: '/symphony.ibcratelimit.v1beta1.Params';
   value: ParamsAmino;
 }
-/** Params defines the parameters for the ibc-rate-limit module. */
+/**
+ * Params defines the parameters for the ibc-rate-limit module.
+ * @name ParamsSDKType
+ * @package symphony.ibcratelimit.v1beta1
+ * @see proto type: symphony.ibcratelimit.v1beta1.Params
+ */
 export interface ParamsSDKType {
   contract_address: string;
 }
@@ -26,6 +41,12 @@ function createBaseParams(): Params {
     contractAddress: '',
   };
 }
+/**
+ * Params defines the parameters for the ibc-rate-limit module.
+ * @name Params
+ * @package symphony.ibcratelimit.v1beta1
+ * @see proto type: symphony.ibcratelimit.v1beta1.Params
+ */
 export const Params = {
   typeUrl: '/symphony.ibcratelimit.v1beta1.Params',
   is(o: any): o is Params {

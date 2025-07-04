@@ -17,6 +17,9 @@ import { GlobalDecoderRegistry } from '../../../registry';
 /**
  * ===================== MsgJoinPool
  * This is really MsgJoinPoolNoSwap
+ * @name MsgJoinPool
+ * @package symphony.gamm.v1beta1
+ * @see proto type: symphony.gamm.v1beta1.MsgJoinPool
  */
 export interface MsgJoinPool {
   sender: string;
@@ -31,6 +34,9 @@ export interface MsgJoinPoolProtoMsg {
 /**
  * ===================== MsgJoinPool
  * This is really MsgJoinPoolNoSwap
+ * @name MsgJoinPoolAmino
+ * @package symphony.gamm.v1beta1
+ * @see proto type: symphony.gamm.v1beta1.MsgJoinPool
  */
 export interface MsgJoinPoolAmino {
   sender?: string;
@@ -45,6 +51,9 @@ export interface MsgJoinPoolAminoMsg {
 /**
  * ===================== MsgJoinPool
  * This is really MsgJoinPoolNoSwap
+ * @name MsgJoinPoolSDKType
+ * @package symphony.gamm.v1beta1
+ * @see proto type: symphony.gamm.v1beta1.MsgJoinPool
  */
 export interface MsgJoinPoolSDKType {
   sender: string;
@@ -52,6 +61,11 @@ export interface MsgJoinPoolSDKType {
   share_out_amount: string;
   token_in_maxs: CoinSDKType[];
 }
+/**
+ * @name MsgJoinPoolResponse
+ * @package symphony.gamm.v1beta1
+ * @see proto type: symphony.gamm.v1beta1.MsgJoinPoolResponse
+ */
 export interface MsgJoinPoolResponse {
   shareOutAmount: string;
   tokenIn: Coin[];
@@ -60,6 +74,11 @@ export interface MsgJoinPoolResponseProtoMsg {
   typeUrl: '/symphony.gamm.v1beta1.MsgJoinPoolResponse';
   value: Uint8Array;
 }
+/**
+ * @name MsgJoinPoolResponseAmino
+ * @package symphony.gamm.v1beta1
+ * @see proto type: symphony.gamm.v1beta1.MsgJoinPoolResponse
+ */
 export interface MsgJoinPoolResponseAmino {
   share_out_amount?: string;
   token_in?: CoinAmino[];
@@ -68,11 +87,21 @@ export interface MsgJoinPoolResponseAminoMsg {
   type: '/symphony.gamm.v1beta1.MsgJoinPoolResponse';
   value: MsgJoinPoolResponseAmino;
 }
+/**
+ * @name MsgJoinPoolResponseSDKType
+ * @package symphony.gamm.v1beta1
+ * @see proto type: symphony.gamm.v1beta1.MsgJoinPoolResponse
+ */
 export interface MsgJoinPoolResponseSDKType {
   share_out_amount: string;
   token_in: CoinSDKType[];
 }
-/** ===================== MsgExitPool */
+/**
+ * ===================== MsgExitPool
+ * @name MsgExitPool
+ * @package symphony.gamm.v1beta1
+ * @see proto type: symphony.gamm.v1beta1.MsgExitPool
+ */
 export interface MsgExitPool {
   sender: string;
   poolId: bigint;
@@ -83,7 +112,12 @@ export interface MsgExitPoolProtoMsg {
   typeUrl: '/symphony.gamm.v1beta1.MsgExitPool';
   value: Uint8Array;
 }
-/** ===================== MsgExitPool */
+/**
+ * ===================== MsgExitPool
+ * @name MsgExitPoolAmino
+ * @package symphony.gamm.v1beta1
+ * @see proto type: symphony.gamm.v1beta1.MsgExitPool
+ */
 export interface MsgExitPoolAmino {
   sender?: string;
   pool_id?: string;
@@ -94,13 +128,23 @@ export interface MsgExitPoolAminoMsg {
   type: 'symphony/gamm/exit-pool';
   value: MsgExitPoolAmino;
 }
-/** ===================== MsgExitPool */
+/**
+ * ===================== MsgExitPool
+ * @name MsgExitPoolSDKType
+ * @package symphony.gamm.v1beta1
+ * @see proto type: symphony.gamm.v1beta1.MsgExitPool
+ */
 export interface MsgExitPoolSDKType {
   sender: string;
   pool_id: bigint;
   share_in_amount: string;
   token_out_mins: CoinSDKType[];
 }
+/**
+ * @name MsgExitPoolResponse
+ * @package symphony.gamm.v1beta1
+ * @see proto type: symphony.gamm.v1beta1.MsgExitPoolResponse
+ */
 export interface MsgExitPoolResponse {
   tokenOut: Coin[];
 }
@@ -108,6 +152,11 @@ export interface MsgExitPoolResponseProtoMsg {
   typeUrl: '/symphony.gamm.v1beta1.MsgExitPoolResponse';
   value: Uint8Array;
 }
+/**
+ * @name MsgExitPoolResponseAmino
+ * @package symphony.gamm.v1beta1
+ * @see proto type: symphony.gamm.v1beta1.MsgExitPoolResponse
+ */
 export interface MsgExitPoolResponseAmino {
   token_out?: CoinAmino[];
 }
@@ -115,10 +164,20 @@ export interface MsgExitPoolResponseAminoMsg {
   type: '/symphony.gamm.v1beta1.MsgExitPoolResponse';
   value: MsgExitPoolResponseAmino;
 }
+/**
+ * @name MsgExitPoolResponseSDKType
+ * @package symphony.gamm.v1beta1
+ * @see proto type: symphony.gamm.v1beta1.MsgExitPoolResponse
+ */
 export interface MsgExitPoolResponseSDKType {
   token_out: CoinSDKType[];
 }
-/** ===================== MsgSwapExactAmountIn */
+/**
+ * ===================== MsgSwapExactAmountIn
+ * @name MsgSwapExactAmountIn
+ * @package symphony.gamm.v1beta1
+ * @see proto type: symphony.gamm.v1beta1.MsgSwapExactAmountIn
+ */
 export interface MsgSwapExactAmountIn {
   sender: string;
   routes: SwapAmountInRoute[];
@@ -129,7 +188,12 @@ export interface MsgSwapExactAmountInProtoMsg {
   typeUrl: '/symphony.gamm.v1beta1.MsgSwapExactAmountIn';
   value: Uint8Array;
 }
-/** ===================== MsgSwapExactAmountIn */
+/**
+ * ===================== MsgSwapExactAmountIn
+ * @name MsgSwapExactAmountInAmino
+ * @package symphony.gamm.v1beta1
+ * @see proto type: symphony.gamm.v1beta1.MsgSwapExactAmountIn
+ */
 export interface MsgSwapExactAmountInAmino {
   sender?: string;
   routes?: SwapAmountInRouteAmino[];
@@ -140,13 +204,23 @@ export interface MsgSwapExactAmountInAminoMsg {
   type: 'symphony/gamm/swap-exact-amount-in';
   value: MsgSwapExactAmountInAmino;
 }
-/** ===================== MsgSwapExactAmountIn */
+/**
+ * ===================== MsgSwapExactAmountIn
+ * @name MsgSwapExactAmountInSDKType
+ * @package symphony.gamm.v1beta1
+ * @see proto type: symphony.gamm.v1beta1.MsgSwapExactAmountIn
+ */
 export interface MsgSwapExactAmountInSDKType {
   sender: string;
   routes: SwapAmountInRouteSDKType[];
   token_in: CoinSDKType;
   token_out_min_amount: string;
 }
+/**
+ * @name MsgSwapExactAmountInResponse
+ * @package symphony.gamm.v1beta1
+ * @see proto type: symphony.gamm.v1beta1.MsgSwapExactAmountInResponse
+ */
 export interface MsgSwapExactAmountInResponse {
   tokenOutAmount: string;
 }
@@ -154,6 +228,11 @@ export interface MsgSwapExactAmountInResponseProtoMsg {
   typeUrl: '/symphony.gamm.v1beta1.MsgSwapExactAmountInResponse';
   value: Uint8Array;
 }
+/**
+ * @name MsgSwapExactAmountInResponseAmino
+ * @package symphony.gamm.v1beta1
+ * @see proto type: symphony.gamm.v1beta1.MsgSwapExactAmountInResponse
+ */
 export interface MsgSwapExactAmountInResponseAmino {
   token_out_amount?: string;
 }
@@ -161,9 +240,19 @@ export interface MsgSwapExactAmountInResponseAminoMsg {
   type: '/symphony.gamm.v1beta1.MsgSwapExactAmountInResponse';
   value: MsgSwapExactAmountInResponseAmino;
 }
+/**
+ * @name MsgSwapExactAmountInResponseSDKType
+ * @package symphony.gamm.v1beta1
+ * @see proto type: symphony.gamm.v1beta1.MsgSwapExactAmountInResponse
+ */
 export interface MsgSwapExactAmountInResponseSDKType {
   token_out_amount: string;
 }
+/**
+ * @name MsgSwapExactAmountOut
+ * @package symphony.gamm.v1beta1
+ * @see proto type: symphony.gamm.v1beta1.MsgSwapExactAmountOut
+ */
 export interface MsgSwapExactAmountOut {
   sender: string;
   routes: SwapAmountOutRoute[];
@@ -174,6 +263,11 @@ export interface MsgSwapExactAmountOutProtoMsg {
   typeUrl: '/symphony.gamm.v1beta1.MsgSwapExactAmountOut';
   value: Uint8Array;
 }
+/**
+ * @name MsgSwapExactAmountOutAmino
+ * @package symphony.gamm.v1beta1
+ * @see proto type: symphony.gamm.v1beta1.MsgSwapExactAmountOut
+ */
 export interface MsgSwapExactAmountOutAmino {
   sender?: string;
   routes?: SwapAmountOutRouteAmino[];
@@ -184,12 +278,22 @@ export interface MsgSwapExactAmountOutAminoMsg {
   type: 'symphony/gamm/swap-exact-amount-out';
   value: MsgSwapExactAmountOutAmino;
 }
+/**
+ * @name MsgSwapExactAmountOutSDKType
+ * @package symphony.gamm.v1beta1
+ * @see proto type: symphony.gamm.v1beta1.MsgSwapExactAmountOut
+ */
 export interface MsgSwapExactAmountOutSDKType {
   sender: string;
   routes: SwapAmountOutRouteSDKType[];
   token_in_max_amount: string;
   token_out: CoinSDKType;
 }
+/**
+ * @name MsgSwapExactAmountOutResponse
+ * @package symphony.gamm.v1beta1
+ * @see proto type: symphony.gamm.v1beta1.MsgSwapExactAmountOutResponse
+ */
 export interface MsgSwapExactAmountOutResponse {
   tokenInAmount: string;
 }
@@ -197,6 +301,11 @@ export interface MsgSwapExactAmountOutResponseProtoMsg {
   typeUrl: '/symphony.gamm.v1beta1.MsgSwapExactAmountOutResponse';
   value: Uint8Array;
 }
+/**
+ * @name MsgSwapExactAmountOutResponseAmino
+ * @package symphony.gamm.v1beta1
+ * @see proto type: symphony.gamm.v1beta1.MsgSwapExactAmountOutResponse
+ */
 export interface MsgSwapExactAmountOutResponseAmino {
   token_in_amount?: string;
 }
@@ -204,12 +313,20 @@ export interface MsgSwapExactAmountOutResponseAminoMsg {
   type: '/symphony.gamm.v1beta1.MsgSwapExactAmountOutResponse';
   value: MsgSwapExactAmountOutResponseAmino;
 }
+/**
+ * @name MsgSwapExactAmountOutResponseSDKType
+ * @package symphony.gamm.v1beta1
+ * @see proto type: symphony.gamm.v1beta1.MsgSwapExactAmountOutResponse
+ */
 export interface MsgSwapExactAmountOutResponseSDKType {
   token_in_amount: string;
 }
 /**
  * ===================== MsgJoinSwapExternAmountIn
  * TODO: Rename to MsgJoinSwapExactAmountIn
+ * @name MsgJoinSwapExternAmountIn
+ * @package symphony.gamm.v1beta1
+ * @see proto type: symphony.gamm.v1beta1.MsgJoinSwapExternAmountIn
  */
 export interface MsgJoinSwapExternAmountIn {
   sender: string;
@@ -224,6 +341,9 @@ export interface MsgJoinSwapExternAmountInProtoMsg {
 /**
  * ===================== MsgJoinSwapExternAmountIn
  * TODO: Rename to MsgJoinSwapExactAmountIn
+ * @name MsgJoinSwapExternAmountInAmino
+ * @package symphony.gamm.v1beta1
+ * @see proto type: symphony.gamm.v1beta1.MsgJoinSwapExternAmountIn
  */
 export interface MsgJoinSwapExternAmountInAmino {
   sender?: string;
@@ -238,6 +358,9 @@ export interface MsgJoinSwapExternAmountInAminoMsg {
 /**
  * ===================== MsgJoinSwapExternAmountIn
  * TODO: Rename to MsgJoinSwapExactAmountIn
+ * @name MsgJoinSwapExternAmountInSDKType
+ * @package symphony.gamm.v1beta1
+ * @see proto type: symphony.gamm.v1beta1.MsgJoinSwapExternAmountIn
  */
 export interface MsgJoinSwapExternAmountInSDKType {
   sender: string;
@@ -245,6 +368,11 @@ export interface MsgJoinSwapExternAmountInSDKType {
   token_in: CoinSDKType;
   share_out_min_amount: string;
 }
+/**
+ * @name MsgJoinSwapExternAmountInResponse
+ * @package symphony.gamm.v1beta1
+ * @see proto type: symphony.gamm.v1beta1.MsgJoinSwapExternAmountInResponse
+ */
 export interface MsgJoinSwapExternAmountInResponse {
   shareOutAmount: string;
 }
@@ -252,6 +380,11 @@ export interface MsgJoinSwapExternAmountInResponseProtoMsg {
   typeUrl: '/symphony.gamm.v1beta1.MsgJoinSwapExternAmountInResponse';
   value: Uint8Array;
 }
+/**
+ * @name MsgJoinSwapExternAmountInResponseAmino
+ * @package symphony.gamm.v1beta1
+ * @see proto type: symphony.gamm.v1beta1.MsgJoinSwapExternAmountInResponse
+ */
 export interface MsgJoinSwapExternAmountInResponseAmino {
   share_out_amount?: string;
 }
@@ -259,10 +392,20 @@ export interface MsgJoinSwapExternAmountInResponseAminoMsg {
   type: '/symphony.gamm.v1beta1.MsgJoinSwapExternAmountInResponse';
   value: MsgJoinSwapExternAmountInResponseAmino;
 }
+/**
+ * @name MsgJoinSwapExternAmountInResponseSDKType
+ * @package symphony.gamm.v1beta1
+ * @see proto type: symphony.gamm.v1beta1.MsgJoinSwapExternAmountInResponse
+ */
 export interface MsgJoinSwapExternAmountInResponseSDKType {
   share_out_amount: string;
 }
-/** ===================== MsgJoinSwapShareAmountOut */
+/**
+ * ===================== MsgJoinSwapShareAmountOut
+ * @name MsgJoinSwapShareAmountOut
+ * @package symphony.gamm.v1beta1
+ * @see proto type: symphony.gamm.v1beta1.MsgJoinSwapShareAmountOut
+ */
 export interface MsgJoinSwapShareAmountOut {
   sender: string;
   poolId: bigint;
@@ -274,7 +417,12 @@ export interface MsgJoinSwapShareAmountOutProtoMsg {
   typeUrl: '/symphony.gamm.v1beta1.MsgJoinSwapShareAmountOut';
   value: Uint8Array;
 }
-/** ===================== MsgJoinSwapShareAmountOut */
+/**
+ * ===================== MsgJoinSwapShareAmountOut
+ * @name MsgJoinSwapShareAmountOutAmino
+ * @package symphony.gamm.v1beta1
+ * @see proto type: symphony.gamm.v1beta1.MsgJoinSwapShareAmountOut
+ */
 export interface MsgJoinSwapShareAmountOutAmino {
   sender?: string;
   pool_id?: string;
@@ -286,7 +434,12 @@ export interface MsgJoinSwapShareAmountOutAminoMsg {
   type: 'symphony/gamm/join-swap-share-amount-out';
   value: MsgJoinSwapShareAmountOutAmino;
 }
-/** ===================== MsgJoinSwapShareAmountOut */
+/**
+ * ===================== MsgJoinSwapShareAmountOut
+ * @name MsgJoinSwapShareAmountOutSDKType
+ * @package symphony.gamm.v1beta1
+ * @see proto type: symphony.gamm.v1beta1.MsgJoinSwapShareAmountOut
+ */
 export interface MsgJoinSwapShareAmountOutSDKType {
   sender: string;
   pool_id: bigint;
@@ -294,6 +447,11 @@ export interface MsgJoinSwapShareAmountOutSDKType {
   share_out_amount: string;
   token_in_max_amount: string;
 }
+/**
+ * @name MsgJoinSwapShareAmountOutResponse
+ * @package symphony.gamm.v1beta1
+ * @see proto type: symphony.gamm.v1beta1.MsgJoinSwapShareAmountOutResponse
+ */
 export interface MsgJoinSwapShareAmountOutResponse {
   tokenInAmount: string;
 }
@@ -301,6 +459,11 @@ export interface MsgJoinSwapShareAmountOutResponseProtoMsg {
   typeUrl: '/symphony.gamm.v1beta1.MsgJoinSwapShareAmountOutResponse';
   value: Uint8Array;
 }
+/**
+ * @name MsgJoinSwapShareAmountOutResponseAmino
+ * @package symphony.gamm.v1beta1
+ * @see proto type: symphony.gamm.v1beta1.MsgJoinSwapShareAmountOutResponse
+ */
 export interface MsgJoinSwapShareAmountOutResponseAmino {
   token_in_amount?: string;
 }
@@ -308,10 +471,20 @@ export interface MsgJoinSwapShareAmountOutResponseAminoMsg {
   type: '/symphony.gamm.v1beta1.MsgJoinSwapShareAmountOutResponse';
   value: MsgJoinSwapShareAmountOutResponseAmino;
 }
+/**
+ * @name MsgJoinSwapShareAmountOutResponseSDKType
+ * @package symphony.gamm.v1beta1
+ * @see proto type: symphony.gamm.v1beta1.MsgJoinSwapShareAmountOutResponse
+ */
 export interface MsgJoinSwapShareAmountOutResponseSDKType {
   token_in_amount: string;
 }
-/** ===================== MsgExitSwapShareAmountIn */
+/**
+ * ===================== MsgExitSwapShareAmountIn
+ * @name MsgExitSwapShareAmountIn
+ * @package symphony.gamm.v1beta1
+ * @see proto type: symphony.gamm.v1beta1.MsgExitSwapShareAmountIn
+ */
 export interface MsgExitSwapShareAmountIn {
   sender: string;
   poolId: bigint;
@@ -323,7 +496,12 @@ export interface MsgExitSwapShareAmountInProtoMsg {
   typeUrl: '/symphony.gamm.v1beta1.MsgExitSwapShareAmountIn';
   value: Uint8Array;
 }
-/** ===================== MsgExitSwapShareAmountIn */
+/**
+ * ===================== MsgExitSwapShareAmountIn
+ * @name MsgExitSwapShareAmountInAmino
+ * @package symphony.gamm.v1beta1
+ * @see proto type: symphony.gamm.v1beta1.MsgExitSwapShareAmountIn
+ */
 export interface MsgExitSwapShareAmountInAmino {
   sender?: string;
   pool_id?: string;
@@ -335,7 +513,12 @@ export interface MsgExitSwapShareAmountInAminoMsg {
   type: 'symphony/gamm/exit-swap-share-amount-in';
   value: MsgExitSwapShareAmountInAmino;
 }
-/** ===================== MsgExitSwapShareAmountIn */
+/**
+ * ===================== MsgExitSwapShareAmountIn
+ * @name MsgExitSwapShareAmountInSDKType
+ * @package symphony.gamm.v1beta1
+ * @see proto type: symphony.gamm.v1beta1.MsgExitSwapShareAmountIn
+ */
 export interface MsgExitSwapShareAmountInSDKType {
   sender: string;
   pool_id: bigint;
@@ -343,6 +526,11 @@ export interface MsgExitSwapShareAmountInSDKType {
   share_in_amount: string;
   token_out_min_amount: string;
 }
+/**
+ * @name MsgExitSwapShareAmountInResponse
+ * @package symphony.gamm.v1beta1
+ * @see proto type: symphony.gamm.v1beta1.MsgExitSwapShareAmountInResponse
+ */
 export interface MsgExitSwapShareAmountInResponse {
   tokenOutAmount: string;
 }
@@ -350,6 +538,11 @@ export interface MsgExitSwapShareAmountInResponseProtoMsg {
   typeUrl: '/symphony.gamm.v1beta1.MsgExitSwapShareAmountInResponse';
   value: Uint8Array;
 }
+/**
+ * @name MsgExitSwapShareAmountInResponseAmino
+ * @package symphony.gamm.v1beta1
+ * @see proto type: symphony.gamm.v1beta1.MsgExitSwapShareAmountInResponse
+ */
 export interface MsgExitSwapShareAmountInResponseAmino {
   token_out_amount?: string;
 }
@@ -357,10 +550,20 @@ export interface MsgExitSwapShareAmountInResponseAminoMsg {
   type: '/symphony.gamm.v1beta1.MsgExitSwapShareAmountInResponse';
   value: MsgExitSwapShareAmountInResponseAmino;
 }
+/**
+ * @name MsgExitSwapShareAmountInResponseSDKType
+ * @package symphony.gamm.v1beta1
+ * @see proto type: symphony.gamm.v1beta1.MsgExitSwapShareAmountInResponse
+ */
 export interface MsgExitSwapShareAmountInResponseSDKType {
   token_out_amount: string;
 }
-/** ===================== MsgExitSwapExternAmountOut */
+/**
+ * ===================== MsgExitSwapExternAmountOut
+ * @name MsgExitSwapExternAmountOut
+ * @package symphony.gamm.v1beta1
+ * @see proto type: symphony.gamm.v1beta1.MsgExitSwapExternAmountOut
+ */
 export interface MsgExitSwapExternAmountOut {
   sender: string;
   poolId: bigint;
@@ -371,7 +574,12 @@ export interface MsgExitSwapExternAmountOutProtoMsg {
   typeUrl: '/symphony.gamm.v1beta1.MsgExitSwapExternAmountOut';
   value: Uint8Array;
 }
-/** ===================== MsgExitSwapExternAmountOut */
+/**
+ * ===================== MsgExitSwapExternAmountOut
+ * @name MsgExitSwapExternAmountOutAmino
+ * @package symphony.gamm.v1beta1
+ * @see proto type: symphony.gamm.v1beta1.MsgExitSwapExternAmountOut
+ */
 export interface MsgExitSwapExternAmountOutAmino {
   sender?: string;
   pool_id?: string;
@@ -382,13 +590,23 @@ export interface MsgExitSwapExternAmountOutAminoMsg {
   type: 'symphony/gamm/exit-swap-extern-amount-out';
   value: MsgExitSwapExternAmountOutAmino;
 }
-/** ===================== MsgExitSwapExternAmountOut */
+/**
+ * ===================== MsgExitSwapExternAmountOut
+ * @name MsgExitSwapExternAmountOutSDKType
+ * @package symphony.gamm.v1beta1
+ * @see proto type: symphony.gamm.v1beta1.MsgExitSwapExternAmountOut
+ */
 export interface MsgExitSwapExternAmountOutSDKType {
   sender: string;
   pool_id: bigint;
   token_out: CoinSDKType;
   share_in_max_amount: string;
 }
+/**
+ * @name MsgExitSwapExternAmountOutResponse
+ * @package symphony.gamm.v1beta1
+ * @see proto type: symphony.gamm.v1beta1.MsgExitSwapExternAmountOutResponse
+ */
 export interface MsgExitSwapExternAmountOutResponse {
   shareInAmount: string;
 }
@@ -396,6 +614,11 @@ export interface MsgExitSwapExternAmountOutResponseProtoMsg {
   typeUrl: '/symphony.gamm.v1beta1.MsgExitSwapExternAmountOutResponse';
   value: Uint8Array;
 }
+/**
+ * @name MsgExitSwapExternAmountOutResponseAmino
+ * @package symphony.gamm.v1beta1
+ * @see proto type: symphony.gamm.v1beta1.MsgExitSwapExternAmountOutResponse
+ */
 export interface MsgExitSwapExternAmountOutResponseAmino {
   share_in_amount?: string;
 }
@@ -403,6 +626,11 @@ export interface MsgExitSwapExternAmountOutResponseAminoMsg {
   type: '/symphony.gamm.v1beta1.MsgExitSwapExternAmountOutResponse';
   value: MsgExitSwapExternAmountOutResponseAmino;
 }
+/**
+ * @name MsgExitSwapExternAmountOutResponseSDKType
+ * @package symphony.gamm.v1beta1
+ * @see proto type: symphony.gamm.v1beta1.MsgExitSwapExternAmountOutResponse
+ */
 export interface MsgExitSwapExternAmountOutResponseSDKType {
   share_in_amount: string;
 }
@@ -414,6 +642,13 @@ function createBaseMsgJoinPool(): MsgJoinPool {
     tokenInMaxs: [],
   };
 }
+/**
+ * ===================== MsgJoinPool
+ * This is really MsgJoinPoolNoSwap
+ * @name MsgJoinPool
+ * @package symphony.gamm.v1beta1
+ * @see proto type: symphony.gamm.v1beta1.MsgJoinPool
+ */
 export const MsgJoinPool = {
   typeUrl: '/symphony.gamm.v1beta1.MsgJoinPool',
   aminoType: 'symphony/gamm/join-pool',
@@ -574,6 +809,11 @@ function createBaseMsgJoinPoolResponse(): MsgJoinPoolResponse {
     tokenIn: [],
   };
 }
+/**
+ * @name MsgJoinPoolResponse
+ * @package symphony.gamm.v1beta1
+ * @see proto type: symphony.gamm.v1beta1.MsgJoinPoolResponse
+ */
 export const MsgJoinPoolResponse = {
   typeUrl: '/symphony.gamm.v1beta1.MsgJoinPoolResponse',
   is(o: any): o is MsgJoinPoolResponse {
@@ -697,6 +937,12 @@ function createBaseMsgExitPool(): MsgExitPool {
     tokenOutMins: [],
   };
 }
+/**
+ * ===================== MsgExitPool
+ * @name MsgExitPool
+ * @package symphony.gamm.v1beta1
+ * @see proto type: symphony.gamm.v1beta1.MsgExitPool
+ */
 export const MsgExitPool = {
   typeUrl: '/symphony.gamm.v1beta1.MsgExitPool',
   aminoType: 'symphony/gamm/exit-pool',
@@ -856,6 +1102,11 @@ function createBaseMsgExitPoolResponse(): MsgExitPoolResponse {
     tokenOut: [],
   };
 }
+/**
+ * @name MsgExitPoolResponse
+ * @package symphony.gamm.v1beta1
+ * @see proto type: symphony.gamm.v1beta1.MsgExitPoolResponse
+ */
 export const MsgExitPoolResponse = {
   typeUrl: '/symphony.gamm.v1beta1.MsgExitPoolResponse',
   is(o: any): o is MsgExitPoolResponse {
@@ -961,6 +1212,12 @@ function createBaseMsgSwapExactAmountIn(): MsgSwapExactAmountIn {
     tokenOutMinAmount: '',
   };
 }
+/**
+ * ===================== MsgSwapExactAmountIn
+ * @name MsgSwapExactAmountIn
+ * @package symphony.gamm.v1beta1
+ * @see proto type: symphony.gamm.v1beta1.MsgSwapExactAmountIn
+ */
 export const MsgSwapExactAmountIn = {
   typeUrl: '/symphony.gamm.v1beta1.MsgSwapExactAmountIn',
   aminoType: 'symphony/gamm/swap-exact-amount-in',
@@ -1127,6 +1384,11 @@ function createBaseMsgSwapExactAmountInResponse(): MsgSwapExactAmountInResponse 
     tokenOutAmount: '',
   };
 }
+/**
+ * @name MsgSwapExactAmountInResponse
+ * @package symphony.gamm.v1beta1
+ * @see proto type: symphony.gamm.v1beta1.MsgSwapExactAmountInResponse
+ */
 export const MsgSwapExactAmountInResponse = {
   typeUrl: '/symphony.gamm.v1beta1.MsgSwapExactAmountInResponse',
   is(o: any): o is MsgSwapExactAmountInResponse {
@@ -1241,6 +1503,11 @@ function createBaseMsgSwapExactAmountOut(): MsgSwapExactAmountOut {
     tokenOut: Coin.fromPartial({}),
   };
 }
+/**
+ * @name MsgSwapExactAmountOut
+ * @package symphony.gamm.v1beta1
+ * @see proto type: symphony.gamm.v1beta1.MsgSwapExactAmountOut
+ */
 export const MsgSwapExactAmountOut = {
   typeUrl: '/symphony.gamm.v1beta1.MsgSwapExactAmountOut',
   aminoType: 'symphony/gamm/swap-exact-amount-out',
@@ -1409,6 +1676,11 @@ function createBaseMsgSwapExactAmountOutResponse(): MsgSwapExactAmountOutRespons
     tokenInAmount: '',
   };
 }
+/**
+ * @name MsgSwapExactAmountOutResponse
+ * @package symphony.gamm.v1beta1
+ * @see proto type: symphony.gamm.v1beta1.MsgSwapExactAmountOutResponse
+ */
 export const MsgSwapExactAmountOutResponse = {
   typeUrl: '/symphony.gamm.v1beta1.MsgSwapExactAmountOutResponse',
   is(o: any): o is MsgSwapExactAmountOutResponse {
@@ -1523,6 +1795,13 @@ function createBaseMsgJoinSwapExternAmountIn(): MsgJoinSwapExternAmountIn {
     shareOutMinAmount: '',
   };
 }
+/**
+ * ===================== MsgJoinSwapExternAmountIn
+ * TODO: Rename to MsgJoinSwapExactAmountIn
+ * @name MsgJoinSwapExternAmountIn
+ * @package symphony.gamm.v1beta1
+ * @see proto type: symphony.gamm.v1beta1.MsgJoinSwapExternAmountIn
+ */
 export const MsgJoinSwapExternAmountIn = {
   typeUrl: '/symphony.gamm.v1beta1.MsgJoinSwapExternAmountIn',
   aminoType: 'symphony/gamm/join-swap-extern-amount-in',
@@ -1692,6 +1971,11 @@ function createBaseMsgJoinSwapExternAmountInResponse(): MsgJoinSwapExternAmountI
     shareOutAmount: '',
   };
 }
+/**
+ * @name MsgJoinSwapExternAmountInResponse
+ * @package symphony.gamm.v1beta1
+ * @see proto type: symphony.gamm.v1beta1.MsgJoinSwapExternAmountInResponse
+ */
 export const MsgJoinSwapExternAmountInResponse = {
   typeUrl: '/symphony.gamm.v1beta1.MsgJoinSwapExternAmountInResponse',
   is(o: any): o is MsgJoinSwapExternAmountInResponse {
@@ -1807,6 +2091,12 @@ function createBaseMsgJoinSwapShareAmountOut(): MsgJoinSwapShareAmountOut {
     tokenInMaxAmount: '',
   };
 }
+/**
+ * ===================== MsgJoinSwapShareAmountOut
+ * @name MsgJoinSwapShareAmountOut
+ * @package symphony.gamm.v1beta1
+ * @see proto type: symphony.gamm.v1beta1.MsgJoinSwapShareAmountOut
+ */
 export const MsgJoinSwapShareAmountOut = {
   typeUrl: '/symphony.gamm.v1beta1.MsgJoinSwapShareAmountOut',
   aminoType: 'symphony/gamm/join-swap-share-amount-out',
@@ -1992,6 +2282,11 @@ function createBaseMsgJoinSwapShareAmountOutResponse(): MsgJoinSwapShareAmountOu
     tokenInAmount: '',
   };
 }
+/**
+ * @name MsgJoinSwapShareAmountOutResponse
+ * @package symphony.gamm.v1beta1
+ * @see proto type: symphony.gamm.v1beta1.MsgJoinSwapShareAmountOutResponse
+ */
 export const MsgJoinSwapShareAmountOutResponse = {
   typeUrl: '/symphony.gamm.v1beta1.MsgJoinSwapShareAmountOutResponse',
   is(o: any): o is MsgJoinSwapShareAmountOutResponse {
@@ -2107,6 +2402,12 @@ function createBaseMsgExitSwapShareAmountIn(): MsgExitSwapShareAmountIn {
     tokenOutMinAmount: '',
   };
 }
+/**
+ * ===================== MsgExitSwapShareAmountIn
+ * @name MsgExitSwapShareAmountIn
+ * @package symphony.gamm.v1beta1
+ * @see proto type: symphony.gamm.v1beta1.MsgExitSwapShareAmountIn
+ */
 export const MsgExitSwapShareAmountIn = {
   typeUrl: '/symphony.gamm.v1beta1.MsgExitSwapShareAmountIn',
   aminoType: 'symphony/gamm/exit-swap-share-amount-in',
@@ -2295,6 +2596,11 @@ function createBaseMsgExitSwapShareAmountInResponse(): MsgExitSwapShareAmountInR
     tokenOutAmount: '',
   };
 }
+/**
+ * @name MsgExitSwapShareAmountInResponse
+ * @package symphony.gamm.v1beta1
+ * @see proto type: symphony.gamm.v1beta1.MsgExitSwapShareAmountInResponse
+ */
 export const MsgExitSwapShareAmountInResponse = {
   typeUrl: '/symphony.gamm.v1beta1.MsgExitSwapShareAmountInResponse',
   is(o: any): o is MsgExitSwapShareAmountInResponse {
@@ -2409,6 +2715,12 @@ function createBaseMsgExitSwapExternAmountOut(): MsgExitSwapExternAmountOut {
     shareInMaxAmount: '',
   };
 }
+/**
+ * ===================== MsgExitSwapExternAmountOut
+ * @name MsgExitSwapExternAmountOut
+ * @package symphony.gamm.v1beta1
+ * @see proto type: symphony.gamm.v1beta1.MsgExitSwapExternAmountOut
+ */
 export const MsgExitSwapExternAmountOut = {
   typeUrl: '/symphony.gamm.v1beta1.MsgExitSwapExternAmountOut',
   aminoType: 'symphony/gamm/exit-swap-extern-amount-out',
@@ -2584,6 +2896,11 @@ function createBaseMsgExitSwapExternAmountOutResponse(): MsgExitSwapExternAmount
     shareInAmount: '',
   };
 }
+/**
+ * @name MsgExitSwapExternAmountOutResponse
+ * @package symphony.gamm.v1beta1
+ * @see proto type: symphony.gamm.v1beta1.MsgExitSwapExternAmountOutResponse
+ */
 export const MsgExitSwapExternAmountOutResponse = {
   typeUrl: '/symphony.gamm.v1beta1.MsgExitSwapExternAmountOutResponse',
   is(o: any): o is MsgExitSwapExternAmountOutResponse {

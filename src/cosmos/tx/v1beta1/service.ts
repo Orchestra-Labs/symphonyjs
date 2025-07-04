@@ -141,20 +141,23 @@ export function broadcastModeToJSON(object: BroadcastMode): string {
 /**
  * GetTxsEventRequest is the request type for the Service.TxsByEvents
  * RPC method.
+ * @name GetTxsEventRequest
+ * @package cosmos.tx.v1beta1
+ * @see proto type: cosmos.tx.v1beta1.GetTxsEventRequest
  */
 export interface GetTxsEventRequest {
   /**
    * events is the list of transaction event type.
    * Deprecated post v0.47.x: use query instead, which should contain a valid
    * events query.
+   * @deprecated
    */
-  /** @deprecated */
   events: string[];
   /**
    * pagination defines a pagination for the request.
    * Deprecated post v0.46.x: use page and limit instead.
+   * @deprecated
    */
-  /** @deprecated */
   pagination?: PageRequest;
   orderBy: OrderBy;
   /**
@@ -182,20 +185,23 @@ export interface GetTxsEventRequestProtoMsg {
 /**
  * GetTxsEventRequest is the request type for the Service.TxsByEvents
  * RPC method.
+ * @name GetTxsEventRequestAmino
+ * @package cosmos.tx.v1beta1
+ * @see proto type: cosmos.tx.v1beta1.GetTxsEventRequest
  */
 export interface GetTxsEventRequestAmino {
   /**
    * events is the list of transaction event type.
    * Deprecated post v0.47.x: use query instead, which should contain a valid
    * events query.
+   * @deprecated
    */
-  /** @deprecated */
   events?: string[];
   /**
    * pagination defines a pagination for the request.
    * Deprecated post v0.46.x: use page and limit instead.
+   * @deprecated
    */
-  /** @deprecated */
   pagination?: PageRequestAmino;
   order_by?: OrderBy;
   /**
@@ -223,11 +229,18 @@ export interface GetTxsEventRequestAminoMsg {
 /**
  * GetTxsEventRequest is the request type for the Service.TxsByEvents
  * RPC method.
+ * @name GetTxsEventRequestSDKType
+ * @package cosmos.tx.v1beta1
+ * @see proto type: cosmos.tx.v1beta1.GetTxsEventRequest
  */
 export interface GetTxsEventRequestSDKType {
-  /** @deprecated */
+  /**
+   * @deprecated
+   */
   events: string[];
-  /** @deprecated */
+  /**
+   * @deprecated
+   */
   pagination?: PageRequestSDKType;
   order_by: OrderBy;
   page: bigint;
@@ -237,19 +250,28 @@ export interface GetTxsEventRequestSDKType {
 /**
  * GetTxsEventResponse is the response type for the Service.TxsByEvents
  * RPC method.
+ * @name GetTxsEventResponse
+ * @package cosmos.tx.v1beta1
+ * @see proto type: cosmos.tx.v1beta1.GetTxsEventResponse
  */
 export interface GetTxsEventResponse {
-  /** txs is the list of queried transactions. */
+  /**
+   * txs is the list of queried transactions.
+   */
   txs: Tx[];
-  /** tx_responses is the list of queried TxResponses. */
+  /**
+   * tx_responses is the list of queried TxResponses.
+   */
   txResponses: TxResponse[];
   /**
    * pagination defines a pagination for the response.
    * Deprecated post v0.46.x: use total instead.
+   * @deprecated
    */
-  /** @deprecated */
   pagination?: PageResponse;
-  /** total is total number of results available */
+  /**
+   * total is total number of results available
+   */
   total: bigint;
 }
 export interface GetTxsEventResponseProtoMsg {
@@ -259,19 +281,28 @@ export interface GetTxsEventResponseProtoMsg {
 /**
  * GetTxsEventResponse is the response type for the Service.TxsByEvents
  * RPC method.
+ * @name GetTxsEventResponseAmino
+ * @package cosmos.tx.v1beta1
+ * @see proto type: cosmos.tx.v1beta1.GetTxsEventResponse
  */
 export interface GetTxsEventResponseAmino {
-  /** txs is the list of queried transactions. */
+  /**
+   * txs is the list of queried transactions.
+   */
   txs?: TxAmino[];
-  /** tx_responses is the list of queried TxResponses. */
+  /**
+   * tx_responses is the list of queried TxResponses.
+   */
   tx_responses?: TxResponseAmino[];
   /**
    * pagination defines a pagination for the response.
    * Deprecated post v0.46.x: use total instead.
+   * @deprecated
    */
-  /** @deprecated */
   pagination?: PageResponseAmino;
-  /** total is total number of results available */
+  /**
+   * total is total number of results available
+   */
   total?: string;
 }
 export interface GetTxsEventResponseAminoMsg {
@@ -281,20 +312,30 @@ export interface GetTxsEventResponseAminoMsg {
 /**
  * GetTxsEventResponse is the response type for the Service.TxsByEvents
  * RPC method.
+ * @name GetTxsEventResponseSDKType
+ * @package cosmos.tx.v1beta1
+ * @see proto type: cosmos.tx.v1beta1.GetTxsEventResponse
  */
 export interface GetTxsEventResponseSDKType {
   txs: TxSDKType[];
   tx_responses: TxResponseSDKType[];
-  /** @deprecated */
+  /**
+   * @deprecated
+   */
   pagination?: PageResponseSDKType;
   total: bigint;
 }
 /**
  * BroadcastTxRequest is the request type for the Service.BroadcastTxRequest
  * RPC method.
+ * @name BroadcastTxRequest
+ * @package cosmos.tx.v1beta1
+ * @see proto type: cosmos.tx.v1beta1.BroadcastTxRequest
  */
 export interface BroadcastTxRequest {
-  /** tx_bytes is the raw transaction. */
+  /**
+   * tx_bytes is the raw transaction.
+   */
   txBytes: Uint8Array;
   mode: BroadcastMode;
 }
@@ -305,9 +346,14 @@ export interface BroadcastTxRequestProtoMsg {
 /**
  * BroadcastTxRequest is the request type for the Service.BroadcastTxRequest
  * RPC method.
+ * @name BroadcastTxRequestAmino
+ * @package cosmos.tx.v1beta1
+ * @see proto type: cosmos.tx.v1beta1.BroadcastTxRequest
  */
 export interface BroadcastTxRequestAmino {
-  /** tx_bytes is the raw transaction. */
+  /**
+   * tx_bytes is the raw transaction.
+   */
   tx_bytes?: string;
   mode?: BroadcastMode;
 }
@@ -318,6 +364,9 @@ export interface BroadcastTxRequestAminoMsg {
 /**
  * BroadcastTxRequest is the request type for the Service.BroadcastTxRequest
  * RPC method.
+ * @name BroadcastTxRequestSDKType
+ * @package cosmos.tx.v1beta1
+ * @see proto type: cosmos.tx.v1beta1.BroadcastTxRequest
  */
 export interface BroadcastTxRequestSDKType {
   tx_bytes: Uint8Array;
@@ -326,9 +375,14 @@ export interface BroadcastTxRequestSDKType {
 /**
  * BroadcastTxResponse is the response type for the
  * Service.BroadcastTx method.
+ * @name BroadcastTxResponse
+ * @package cosmos.tx.v1beta1
+ * @see proto type: cosmos.tx.v1beta1.BroadcastTxResponse
  */
 export interface BroadcastTxResponse {
-  /** tx_response is the queried TxResponses. */
+  /**
+   * tx_response is the queried TxResponses.
+   */
   txResponse?: TxResponse;
 }
 export interface BroadcastTxResponseProtoMsg {
@@ -338,9 +392,14 @@ export interface BroadcastTxResponseProtoMsg {
 /**
  * BroadcastTxResponse is the response type for the
  * Service.BroadcastTx method.
+ * @name BroadcastTxResponseAmino
+ * @package cosmos.tx.v1beta1
+ * @see proto type: cosmos.tx.v1beta1.BroadcastTxResponse
  */
 export interface BroadcastTxResponseAmino {
-  /** tx_response is the queried TxResponses. */
+  /**
+   * tx_response is the queried TxResponses.
+   */
   tx_response?: TxResponseAmino;
 }
 export interface BroadcastTxResponseAminoMsg {
@@ -350,6 +409,9 @@ export interface BroadcastTxResponseAminoMsg {
 /**
  * BroadcastTxResponse is the response type for the
  * Service.BroadcastTx method.
+ * @name BroadcastTxResponseSDKType
+ * @package cosmos.tx.v1beta1
+ * @see proto type: cosmos.tx.v1beta1.BroadcastTxResponse
  */
 export interface BroadcastTxResponseSDKType {
   tx_response?: TxResponseSDKType;
@@ -357,13 +419,16 @@ export interface BroadcastTxResponseSDKType {
 /**
  * SimulateRequest is the request type for the Service.Simulate
  * RPC method.
+ * @name SimulateRequest
+ * @package cosmos.tx.v1beta1
+ * @see proto type: cosmos.tx.v1beta1.SimulateRequest
  */
 export interface SimulateRequest {
   /**
    * tx is the transaction to simulate.
    * Deprecated. Send raw tx bytes instead.
+   * @deprecated
    */
-  /** @deprecated */
   tx?: Tx;
   /**
    * tx_bytes is the raw transaction.
@@ -379,13 +444,16 @@ export interface SimulateRequestProtoMsg {
 /**
  * SimulateRequest is the request type for the Service.Simulate
  * RPC method.
+ * @name SimulateRequestAmino
+ * @package cosmos.tx.v1beta1
+ * @see proto type: cosmos.tx.v1beta1.SimulateRequest
  */
 export interface SimulateRequestAmino {
   /**
    * tx is the transaction to simulate.
    * Deprecated. Send raw tx bytes instead.
+   * @deprecated
    */
-  /** @deprecated */
   tx?: TxAmino;
   /**
    * tx_bytes is the raw transaction.
@@ -401,20 +469,32 @@ export interface SimulateRequestAminoMsg {
 /**
  * SimulateRequest is the request type for the Service.Simulate
  * RPC method.
+ * @name SimulateRequestSDKType
+ * @package cosmos.tx.v1beta1
+ * @see proto type: cosmos.tx.v1beta1.SimulateRequest
  */
 export interface SimulateRequestSDKType {
-  /** @deprecated */
+  /**
+   * @deprecated
+   */
   tx?: TxSDKType;
   tx_bytes: Uint8Array;
 }
 /**
  * SimulateResponse is the response type for the
  * Service.SimulateRPC method.
+ * @name SimulateResponse
+ * @package cosmos.tx.v1beta1
+ * @see proto type: cosmos.tx.v1beta1.SimulateResponse
  */
 export interface SimulateResponse {
-  /** gas_info is the information about gas used in the simulation. */
+  /**
+   * gas_info is the information about gas used in the simulation.
+   */
   gasInfo?: GasInfo;
-  /** result is the result of the simulation. */
+  /**
+   * result is the result of the simulation.
+   */
   result?: Result;
 }
 export interface SimulateResponseProtoMsg {
@@ -424,11 +504,18 @@ export interface SimulateResponseProtoMsg {
 /**
  * SimulateResponse is the response type for the
  * Service.SimulateRPC method.
+ * @name SimulateResponseAmino
+ * @package cosmos.tx.v1beta1
+ * @see proto type: cosmos.tx.v1beta1.SimulateResponse
  */
 export interface SimulateResponseAmino {
-  /** gas_info is the information about gas used in the simulation. */
+  /**
+   * gas_info is the information about gas used in the simulation.
+   */
   gas_info?: GasInfoAmino;
-  /** result is the result of the simulation. */
+  /**
+   * result is the result of the simulation.
+   */
   result?: ResultAmino;
 }
 export interface SimulateResponseAminoMsg {
@@ -438,6 +525,9 @@ export interface SimulateResponseAminoMsg {
 /**
  * SimulateResponse is the response type for the
  * Service.SimulateRPC method.
+ * @name SimulateResponseSDKType
+ * @package cosmos.tx.v1beta1
+ * @see proto type: cosmos.tx.v1beta1.SimulateResponse
  */
 export interface SimulateResponseSDKType {
   gas_info?: GasInfoSDKType;
@@ -446,9 +536,14 @@ export interface SimulateResponseSDKType {
 /**
  * GetTxRequest is the request type for the Service.GetTx
  * RPC method.
+ * @name GetTxRequest
+ * @package cosmos.tx.v1beta1
+ * @see proto type: cosmos.tx.v1beta1.GetTxRequest
  */
 export interface GetTxRequest {
-  /** hash is the tx hash to query, encoded as a hex string. */
+  /**
+   * hash is the tx hash to query, encoded as a hex string.
+   */
   hash: string;
 }
 export interface GetTxRequestProtoMsg {
@@ -458,9 +553,14 @@ export interface GetTxRequestProtoMsg {
 /**
  * GetTxRequest is the request type for the Service.GetTx
  * RPC method.
+ * @name GetTxRequestAmino
+ * @package cosmos.tx.v1beta1
+ * @see proto type: cosmos.tx.v1beta1.GetTxRequest
  */
 export interface GetTxRequestAmino {
-  /** hash is the tx hash to query, encoded as a hex string. */
+  /**
+   * hash is the tx hash to query, encoded as a hex string.
+   */
   hash?: string;
 }
 export interface GetTxRequestAminoMsg {
@@ -470,33 +570,59 @@ export interface GetTxRequestAminoMsg {
 /**
  * GetTxRequest is the request type for the Service.GetTx
  * RPC method.
+ * @name GetTxRequestSDKType
+ * @package cosmos.tx.v1beta1
+ * @see proto type: cosmos.tx.v1beta1.GetTxRequest
  */
 export interface GetTxRequestSDKType {
   hash: string;
 }
-/** GetTxResponse is the response type for the Service.GetTx method. */
+/**
+ * GetTxResponse is the response type for the Service.GetTx method.
+ * @name GetTxResponse
+ * @package cosmos.tx.v1beta1
+ * @see proto type: cosmos.tx.v1beta1.GetTxResponse
+ */
 export interface GetTxResponse {
-  /** tx is the queried transaction. */
+  /**
+   * tx is the queried transaction.
+   */
   tx?: Tx;
-  /** tx_response is the queried TxResponses. */
+  /**
+   * tx_response is the queried TxResponses.
+   */
   txResponse?: TxResponse;
 }
 export interface GetTxResponseProtoMsg {
   typeUrl: '/cosmos.tx.v1beta1.GetTxResponse';
   value: Uint8Array;
 }
-/** GetTxResponse is the response type for the Service.GetTx method. */
+/**
+ * GetTxResponse is the response type for the Service.GetTx method.
+ * @name GetTxResponseAmino
+ * @package cosmos.tx.v1beta1
+ * @see proto type: cosmos.tx.v1beta1.GetTxResponse
+ */
 export interface GetTxResponseAmino {
-  /** tx is the queried transaction. */
+  /**
+   * tx is the queried transaction.
+   */
   tx?: TxAmino;
-  /** tx_response is the queried TxResponses. */
+  /**
+   * tx_response is the queried TxResponses.
+   */
   tx_response?: TxResponseAmino;
 }
 export interface GetTxResponseAminoMsg {
   type: 'cosmos-sdk/GetTxResponse';
   value: GetTxResponseAmino;
 }
-/** GetTxResponse is the response type for the Service.GetTx method. */
+/**
+ * GetTxResponse is the response type for the Service.GetTx method.
+ * @name GetTxResponseSDKType
+ * @package cosmos.tx.v1beta1
+ * @see proto type: cosmos.tx.v1beta1.GetTxResponse
+ */
 export interface GetTxResponseSDKType {
   tx?: TxSDKType;
   tx_response?: TxResponseSDKType;
@@ -506,11 +632,18 @@ export interface GetTxResponseSDKType {
  * RPC method.
  *
  * Since: cosmos-sdk 0.45.2
+ * @name GetBlockWithTxsRequest
+ * @package cosmos.tx.v1beta1
+ * @see proto type: cosmos.tx.v1beta1.GetBlockWithTxsRequest
  */
 export interface GetBlockWithTxsRequest {
-  /** height is the height of the block to query. */
+  /**
+   * height is the height of the block to query.
+   */
   height: bigint;
-  /** pagination defines a pagination for the request. */
+  /**
+   * pagination defines a pagination for the request.
+   */
   pagination?: PageRequest;
 }
 export interface GetBlockWithTxsRequestProtoMsg {
@@ -522,11 +655,18 @@ export interface GetBlockWithTxsRequestProtoMsg {
  * RPC method.
  *
  * Since: cosmos-sdk 0.45.2
+ * @name GetBlockWithTxsRequestAmino
+ * @package cosmos.tx.v1beta1
+ * @see proto type: cosmos.tx.v1beta1.GetBlockWithTxsRequest
  */
 export interface GetBlockWithTxsRequestAmino {
-  /** height is the height of the block to query. */
+  /**
+   * height is the height of the block to query.
+   */
   height?: string;
-  /** pagination defines a pagination for the request. */
+  /**
+   * pagination defines a pagination for the request.
+   */
   pagination?: PageRequestAmino;
 }
 export interface GetBlockWithTxsRequestAminoMsg {
@@ -538,6 +678,9 @@ export interface GetBlockWithTxsRequestAminoMsg {
  * RPC method.
  *
  * Since: cosmos-sdk 0.45.2
+ * @name GetBlockWithTxsRequestSDKType
+ * @package cosmos.tx.v1beta1
+ * @see proto type: cosmos.tx.v1beta1.GetBlockWithTxsRequest
  */
 export interface GetBlockWithTxsRequestSDKType {
   height: bigint;
@@ -548,13 +691,20 @@ export interface GetBlockWithTxsRequestSDKType {
  * method.
  *
  * Since: cosmos-sdk 0.45.2
+ * @name GetBlockWithTxsResponse
+ * @package cosmos.tx.v1beta1
+ * @see proto type: cosmos.tx.v1beta1.GetBlockWithTxsResponse
  */
 export interface GetBlockWithTxsResponse {
-  /** txs are the transactions in the block. */
+  /**
+   * txs are the transactions in the block.
+   */
   txs: Tx[];
   blockId?: BlockID;
   block?: Block;
-  /** pagination defines a pagination for the response. */
+  /**
+   * pagination defines a pagination for the response.
+   */
   pagination?: PageResponse;
 }
 export interface GetBlockWithTxsResponseProtoMsg {
@@ -566,13 +716,20 @@ export interface GetBlockWithTxsResponseProtoMsg {
  * method.
  *
  * Since: cosmos-sdk 0.45.2
+ * @name GetBlockWithTxsResponseAmino
+ * @package cosmos.tx.v1beta1
+ * @see proto type: cosmos.tx.v1beta1.GetBlockWithTxsResponse
  */
 export interface GetBlockWithTxsResponseAmino {
-  /** txs are the transactions in the block. */
+  /**
+   * txs are the transactions in the block.
+   */
   txs?: TxAmino[];
   block_id?: BlockIDAmino;
   block?: BlockAmino;
-  /** pagination defines a pagination for the response. */
+  /**
+   * pagination defines a pagination for the response.
+   */
   pagination?: PageResponseAmino;
 }
 export interface GetBlockWithTxsResponseAminoMsg {
@@ -584,6 +741,9 @@ export interface GetBlockWithTxsResponseAminoMsg {
  * method.
  *
  * Since: cosmos-sdk 0.45.2
+ * @name GetBlockWithTxsResponseSDKType
+ * @package cosmos.tx.v1beta1
+ * @see proto type: cosmos.tx.v1beta1.GetBlockWithTxsResponse
  */
 export interface GetBlockWithTxsResponseSDKType {
   txs: TxSDKType[];
@@ -596,9 +756,14 @@ export interface GetBlockWithTxsResponseSDKType {
  * RPC method.
  *
  * Since: cosmos-sdk 0.47
+ * @name TxDecodeRequest
+ * @package cosmos.tx.v1beta1
+ * @see proto type: cosmos.tx.v1beta1.TxDecodeRequest
  */
 export interface TxDecodeRequest {
-  /** tx_bytes is the raw transaction. */
+  /**
+   * tx_bytes is the raw transaction.
+   */
   txBytes: Uint8Array;
 }
 export interface TxDecodeRequestProtoMsg {
@@ -610,9 +775,14 @@ export interface TxDecodeRequestProtoMsg {
  * RPC method.
  *
  * Since: cosmos-sdk 0.47
+ * @name TxDecodeRequestAmino
+ * @package cosmos.tx.v1beta1
+ * @see proto type: cosmos.tx.v1beta1.TxDecodeRequest
  */
 export interface TxDecodeRequestAmino {
-  /** tx_bytes is the raw transaction. */
+  /**
+   * tx_bytes is the raw transaction.
+   */
   tx_bytes?: string;
 }
 export interface TxDecodeRequestAminoMsg {
@@ -624,6 +794,9 @@ export interface TxDecodeRequestAminoMsg {
  * RPC method.
  *
  * Since: cosmos-sdk 0.47
+ * @name TxDecodeRequestSDKType
+ * @package cosmos.tx.v1beta1
+ * @see proto type: cosmos.tx.v1beta1.TxDecodeRequest
  */
 export interface TxDecodeRequestSDKType {
   tx_bytes: Uint8Array;
@@ -633,9 +806,14 @@ export interface TxDecodeRequestSDKType {
  * Service.TxDecode method.
  *
  * Since: cosmos-sdk 0.47
+ * @name TxDecodeResponse
+ * @package cosmos.tx.v1beta1
+ * @see proto type: cosmos.tx.v1beta1.TxDecodeResponse
  */
 export interface TxDecodeResponse {
-  /** tx is the decoded transaction. */
+  /**
+   * tx is the decoded transaction.
+   */
   tx?: Tx;
 }
 export interface TxDecodeResponseProtoMsg {
@@ -647,9 +825,14 @@ export interface TxDecodeResponseProtoMsg {
  * Service.TxDecode method.
  *
  * Since: cosmos-sdk 0.47
+ * @name TxDecodeResponseAmino
+ * @package cosmos.tx.v1beta1
+ * @see proto type: cosmos.tx.v1beta1.TxDecodeResponse
  */
 export interface TxDecodeResponseAmino {
-  /** tx is the decoded transaction. */
+  /**
+   * tx is the decoded transaction.
+   */
   tx?: TxAmino;
 }
 export interface TxDecodeResponseAminoMsg {
@@ -661,6 +844,9 @@ export interface TxDecodeResponseAminoMsg {
  * Service.TxDecode method.
  *
  * Since: cosmos-sdk 0.47
+ * @name TxDecodeResponseSDKType
+ * @package cosmos.tx.v1beta1
+ * @see proto type: cosmos.tx.v1beta1.TxDecodeResponse
  */
 export interface TxDecodeResponseSDKType {
   tx?: TxSDKType;
@@ -670,9 +856,14 @@ export interface TxDecodeResponseSDKType {
  * RPC method.
  *
  * Since: cosmos-sdk 0.47
+ * @name TxEncodeRequest
+ * @package cosmos.tx.v1beta1
+ * @see proto type: cosmos.tx.v1beta1.TxEncodeRequest
  */
 export interface TxEncodeRequest {
-  /** tx is the transaction to encode. */
+  /**
+   * tx is the transaction to encode.
+   */
   tx?: Tx;
 }
 export interface TxEncodeRequestProtoMsg {
@@ -684,9 +875,14 @@ export interface TxEncodeRequestProtoMsg {
  * RPC method.
  *
  * Since: cosmos-sdk 0.47
+ * @name TxEncodeRequestAmino
+ * @package cosmos.tx.v1beta1
+ * @see proto type: cosmos.tx.v1beta1.TxEncodeRequest
  */
 export interface TxEncodeRequestAmino {
-  /** tx is the transaction to encode. */
+  /**
+   * tx is the transaction to encode.
+   */
   tx?: TxAmino;
 }
 export interface TxEncodeRequestAminoMsg {
@@ -698,6 +894,9 @@ export interface TxEncodeRequestAminoMsg {
  * RPC method.
  *
  * Since: cosmos-sdk 0.47
+ * @name TxEncodeRequestSDKType
+ * @package cosmos.tx.v1beta1
+ * @see proto type: cosmos.tx.v1beta1.TxEncodeRequest
  */
 export interface TxEncodeRequestSDKType {
   tx?: TxSDKType;
@@ -707,9 +906,14 @@ export interface TxEncodeRequestSDKType {
  * Service.TxEncode method.
  *
  * Since: cosmos-sdk 0.47
+ * @name TxEncodeResponse
+ * @package cosmos.tx.v1beta1
+ * @see proto type: cosmos.tx.v1beta1.TxEncodeResponse
  */
 export interface TxEncodeResponse {
-  /** tx_bytes is the encoded transaction bytes. */
+  /**
+   * tx_bytes is the encoded transaction bytes.
+   */
   txBytes: Uint8Array;
 }
 export interface TxEncodeResponseProtoMsg {
@@ -721,9 +925,14 @@ export interface TxEncodeResponseProtoMsg {
  * Service.TxEncode method.
  *
  * Since: cosmos-sdk 0.47
+ * @name TxEncodeResponseAmino
+ * @package cosmos.tx.v1beta1
+ * @see proto type: cosmos.tx.v1beta1.TxEncodeResponse
  */
 export interface TxEncodeResponseAmino {
-  /** tx_bytes is the encoded transaction bytes. */
+  /**
+   * tx_bytes is the encoded transaction bytes.
+   */
   tx_bytes?: string;
 }
 export interface TxEncodeResponseAminoMsg {
@@ -735,6 +944,9 @@ export interface TxEncodeResponseAminoMsg {
  * Service.TxEncode method.
  *
  * Since: cosmos-sdk 0.47
+ * @name TxEncodeResponseSDKType
+ * @package cosmos.tx.v1beta1
+ * @see proto type: cosmos.tx.v1beta1.TxEncodeResponse
  */
 export interface TxEncodeResponseSDKType {
   tx_bytes: Uint8Array;
@@ -744,6 +956,9 @@ export interface TxEncodeResponseSDKType {
  * RPC method.
  *
  * Since: cosmos-sdk 0.47
+ * @name TxEncodeAminoRequest
+ * @package cosmos.tx.v1beta1
+ * @see proto type: cosmos.tx.v1beta1.TxEncodeAminoRequest
  */
 export interface TxEncodeAminoRequest {
   aminoJson: string;
@@ -757,6 +972,9 @@ export interface TxEncodeAminoRequestProtoMsg {
  * RPC method.
  *
  * Since: cosmos-sdk 0.47
+ * @name TxEncodeAminoRequestAmino
+ * @package cosmos.tx.v1beta1
+ * @see proto type: cosmos.tx.v1beta1.TxEncodeAminoRequest
  */
 export interface TxEncodeAminoRequestAmino {
   amino_json?: string;
@@ -770,6 +988,9 @@ export interface TxEncodeAminoRequestAminoMsg {
  * RPC method.
  *
  * Since: cosmos-sdk 0.47
+ * @name TxEncodeAminoRequestSDKType
+ * @package cosmos.tx.v1beta1
+ * @see proto type: cosmos.tx.v1beta1.TxEncodeAminoRequest
  */
 export interface TxEncodeAminoRequestSDKType {
   amino_json: string;
@@ -779,6 +1000,9 @@ export interface TxEncodeAminoRequestSDKType {
  * RPC method.
  *
  * Since: cosmos-sdk 0.47
+ * @name TxEncodeAminoResponse
+ * @package cosmos.tx.v1beta1
+ * @see proto type: cosmos.tx.v1beta1.TxEncodeAminoResponse
  */
 export interface TxEncodeAminoResponse {
   aminoBinary: Uint8Array;
@@ -792,6 +1016,9 @@ export interface TxEncodeAminoResponseProtoMsg {
  * RPC method.
  *
  * Since: cosmos-sdk 0.47
+ * @name TxEncodeAminoResponseAmino
+ * @package cosmos.tx.v1beta1
+ * @see proto type: cosmos.tx.v1beta1.TxEncodeAminoResponse
  */
 export interface TxEncodeAminoResponseAmino {
   amino_binary?: string;
@@ -805,6 +1032,9 @@ export interface TxEncodeAminoResponseAminoMsg {
  * RPC method.
  *
  * Since: cosmos-sdk 0.47
+ * @name TxEncodeAminoResponseSDKType
+ * @package cosmos.tx.v1beta1
+ * @see proto type: cosmos.tx.v1beta1.TxEncodeAminoResponse
  */
 export interface TxEncodeAminoResponseSDKType {
   amino_binary: Uint8Array;
@@ -814,6 +1044,9 @@ export interface TxEncodeAminoResponseSDKType {
  * RPC method.
  *
  * Since: cosmos-sdk 0.47
+ * @name TxDecodeAminoRequest
+ * @package cosmos.tx.v1beta1
+ * @see proto type: cosmos.tx.v1beta1.TxDecodeAminoRequest
  */
 export interface TxDecodeAminoRequest {
   aminoBinary: Uint8Array;
@@ -827,6 +1060,9 @@ export interface TxDecodeAminoRequestProtoMsg {
  * RPC method.
  *
  * Since: cosmos-sdk 0.47
+ * @name TxDecodeAminoRequestAmino
+ * @package cosmos.tx.v1beta1
+ * @see proto type: cosmos.tx.v1beta1.TxDecodeAminoRequest
  */
 export interface TxDecodeAminoRequestAmino {
   amino_binary?: string;
@@ -840,6 +1076,9 @@ export interface TxDecodeAminoRequestAminoMsg {
  * RPC method.
  *
  * Since: cosmos-sdk 0.47
+ * @name TxDecodeAminoRequestSDKType
+ * @package cosmos.tx.v1beta1
+ * @see proto type: cosmos.tx.v1beta1.TxDecodeAminoRequest
  */
 export interface TxDecodeAminoRequestSDKType {
   amino_binary: Uint8Array;
@@ -849,6 +1088,9 @@ export interface TxDecodeAminoRequestSDKType {
  * RPC method.
  *
  * Since: cosmos-sdk 0.47
+ * @name TxDecodeAminoResponse
+ * @package cosmos.tx.v1beta1
+ * @see proto type: cosmos.tx.v1beta1.TxDecodeAminoResponse
  */
 export interface TxDecodeAminoResponse {
   aminoJson: string;
@@ -862,6 +1104,9 @@ export interface TxDecodeAminoResponseProtoMsg {
  * RPC method.
  *
  * Since: cosmos-sdk 0.47
+ * @name TxDecodeAminoResponseAmino
+ * @package cosmos.tx.v1beta1
+ * @see proto type: cosmos.tx.v1beta1.TxDecodeAminoResponse
  */
 export interface TxDecodeAminoResponseAmino {
   amino_json?: string;
@@ -875,6 +1120,9 @@ export interface TxDecodeAminoResponseAminoMsg {
  * RPC method.
  *
  * Since: cosmos-sdk 0.47
+ * @name TxDecodeAminoResponseSDKType
+ * @package cosmos.tx.v1beta1
+ * @see proto type: cosmos.tx.v1beta1.TxDecodeAminoResponse
  */
 export interface TxDecodeAminoResponseSDKType {
   amino_json: string;
@@ -889,6 +1137,13 @@ function createBaseGetTxsEventRequest(): GetTxsEventRequest {
     query: '',
   };
 }
+/**
+ * GetTxsEventRequest is the request type for the Service.TxsByEvents
+ * RPC method.
+ * @name GetTxsEventRequest
+ * @package cosmos.tx.v1beta1
+ * @see proto type: cosmos.tx.v1beta1.GetTxsEventRequest
+ */
 export const GetTxsEventRequest = {
   typeUrl: '/cosmos.tx.v1beta1.GetTxsEventRequest',
   aminoType: 'cosmos-sdk/GetTxsEventRequest',
@@ -1080,6 +1335,13 @@ function createBaseGetTxsEventResponse(): GetTxsEventResponse {
     total: BigInt(0),
   };
 }
+/**
+ * GetTxsEventResponse is the response type for the Service.TxsByEvents
+ * RPC method.
+ * @name GetTxsEventResponse
+ * @package cosmos.tx.v1beta1
+ * @see proto type: cosmos.tx.v1beta1.GetTxsEventResponse
+ */
 export const GetTxsEventResponse = {
   typeUrl: '/cosmos.tx.v1beta1.GetTxsEventResponse',
   aminoType: 'cosmos-sdk/GetTxsEventResponse',
@@ -1252,6 +1514,13 @@ function createBaseBroadcastTxRequest(): BroadcastTxRequest {
     mode: 0,
   };
 }
+/**
+ * BroadcastTxRequest is the request type for the Service.BroadcastTxRequest
+ * RPC method.
+ * @name BroadcastTxRequest
+ * @package cosmos.tx.v1beta1
+ * @see proto type: cosmos.tx.v1beta1.BroadcastTxRequest
+ */
 export const BroadcastTxRequest = {
   typeUrl: '/cosmos.tx.v1beta1.BroadcastTxRequest',
   aminoType: 'cosmos-sdk/BroadcastTxRequest',
@@ -1371,6 +1640,13 @@ function createBaseBroadcastTxResponse(): BroadcastTxResponse {
     txResponse: undefined,
   };
 }
+/**
+ * BroadcastTxResponse is the response type for the
+ * Service.BroadcastTx method.
+ * @name BroadcastTxResponse
+ * @package cosmos.tx.v1beta1
+ * @see proto type: cosmos.tx.v1beta1.BroadcastTxResponse
+ */
 export const BroadcastTxResponse = {
   typeUrl: '/cosmos.tx.v1beta1.BroadcastTxResponse',
   aminoType: 'cosmos-sdk/BroadcastTxResponse',
@@ -1471,6 +1747,13 @@ function createBaseSimulateRequest(): SimulateRequest {
     txBytes: new Uint8Array(),
   };
 }
+/**
+ * SimulateRequest is the request type for the Service.Simulate
+ * RPC method.
+ * @name SimulateRequest
+ * @package cosmos.tx.v1beta1
+ * @see proto type: cosmos.tx.v1beta1.SimulateRequest
+ */
 export const SimulateRequest = {
   typeUrl: '/cosmos.tx.v1beta1.SimulateRequest',
   aminoType: 'cosmos-sdk/SimulateRequest',
@@ -1591,6 +1874,13 @@ function createBaseSimulateResponse(): SimulateResponse {
     result: undefined,
   };
 }
+/**
+ * SimulateResponse is the response type for the
+ * Service.SimulateRPC method.
+ * @name SimulateResponse
+ * @package cosmos.tx.v1beta1
+ * @see proto type: cosmos.tx.v1beta1.SimulateResponse
+ */
 export const SimulateResponse = {
   typeUrl: '/cosmos.tx.v1beta1.SimulateResponse',
   aminoType: 'cosmos-sdk/SimulateResponse',
@@ -1698,6 +1988,13 @@ function createBaseGetTxRequest(): GetTxRequest {
     hash: '',
   };
 }
+/**
+ * GetTxRequest is the request type for the Service.GetTx
+ * RPC method.
+ * @name GetTxRequest
+ * @package cosmos.tx.v1beta1
+ * @see proto type: cosmos.tx.v1beta1.GetTxRequest
+ */
 export const GetTxRequest = {
   typeUrl: '/cosmos.tx.v1beta1.GetTxRequest',
   aminoType: 'cosmos-sdk/GetTxRequest',
@@ -1793,6 +2090,12 @@ function createBaseGetTxResponse(): GetTxResponse {
     txResponse: undefined,
   };
 }
+/**
+ * GetTxResponse is the response type for the Service.GetTx method.
+ * @name GetTxResponse
+ * @package cosmos.tx.v1beta1
+ * @see proto type: cosmos.tx.v1beta1.GetTxResponse
+ */
 export const GetTxResponse = {
   typeUrl: '/cosmos.tx.v1beta1.GetTxResponse',
   aminoType: 'cosmos-sdk/GetTxResponse',
@@ -1901,6 +2204,15 @@ function createBaseGetBlockWithTxsRequest(): GetBlockWithTxsRequest {
     pagination: undefined,
   };
 }
+/**
+ * GetBlockWithTxsRequest is the request type for the Service.GetBlockWithTxs
+ * RPC method.
+ *
+ * Since: cosmos-sdk 0.45.2
+ * @name GetBlockWithTxsRequest
+ * @package cosmos.tx.v1beta1
+ * @see proto type: cosmos.tx.v1beta1.GetBlockWithTxsRequest
+ */
 export const GetBlockWithTxsRequest = {
   typeUrl: '/cosmos.tx.v1beta1.GetBlockWithTxsRequest',
   aminoType: 'cosmos-sdk/GetBlockWithTxsRequest',
@@ -2032,6 +2344,15 @@ function createBaseGetBlockWithTxsResponse(): GetBlockWithTxsResponse {
     pagination: undefined,
   };
 }
+/**
+ * GetBlockWithTxsResponse is the response type for the Service.GetBlockWithTxs
+ * method.
+ *
+ * Since: cosmos-sdk 0.45.2
+ * @name GetBlockWithTxsResponse
+ * @package cosmos.tx.v1beta1
+ * @see proto type: cosmos.tx.v1beta1.GetBlockWithTxsResponse
+ */
 export const GetBlockWithTxsResponse = {
   typeUrl: '/cosmos.tx.v1beta1.GetBlockWithTxsResponse',
   aminoType: 'cosmos-sdk/GetBlockWithTxsResponse',
@@ -2199,6 +2520,15 @@ function createBaseTxDecodeRequest(): TxDecodeRequest {
     txBytes: new Uint8Array(),
   };
 }
+/**
+ * TxDecodeRequest is the request type for the Service.TxDecode
+ * RPC method.
+ *
+ * Since: cosmos-sdk 0.47
+ * @name TxDecodeRequest
+ * @package cosmos.tx.v1beta1
+ * @see proto type: cosmos.tx.v1beta1.TxDecodeRequest
+ */
 export const TxDecodeRequest = {
   typeUrl: '/cosmos.tx.v1beta1.TxDecodeRequest',
   aminoType: 'cosmos-sdk/TxDecodeRequest',
@@ -2304,6 +2634,15 @@ function createBaseTxDecodeResponse(): TxDecodeResponse {
     tx: undefined,
   };
 }
+/**
+ * TxDecodeResponse is the response type for the
+ * Service.TxDecode method.
+ *
+ * Since: cosmos-sdk 0.47
+ * @name TxDecodeResponse
+ * @package cosmos.tx.v1beta1
+ * @see proto type: cosmos.tx.v1beta1.TxDecodeResponse
+ */
 export const TxDecodeResponse = {
   typeUrl: '/cosmos.tx.v1beta1.TxDecodeResponse',
   aminoType: 'cosmos-sdk/TxDecodeResponse',
@@ -2395,6 +2734,15 @@ function createBaseTxEncodeRequest(): TxEncodeRequest {
     tx: undefined,
   };
 }
+/**
+ * TxEncodeRequest is the request type for the Service.TxEncode
+ * RPC method.
+ *
+ * Since: cosmos-sdk 0.47
+ * @name TxEncodeRequest
+ * @package cosmos.tx.v1beta1
+ * @see proto type: cosmos.tx.v1beta1.TxEncodeRequest
+ */
 export const TxEncodeRequest = {
   typeUrl: '/cosmos.tx.v1beta1.TxEncodeRequest',
   aminoType: 'cosmos-sdk/TxEncodeRequest',
@@ -2486,6 +2834,15 @@ function createBaseTxEncodeResponse(): TxEncodeResponse {
     txBytes: new Uint8Array(),
   };
 }
+/**
+ * TxEncodeResponse is the response type for the
+ * Service.TxEncode method.
+ *
+ * Since: cosmos-sdk 0.47
+ * @name TxEncodeResponse
+ * @package cosmos.tx.v1beta1
+ * @see proto type: cosmos.tx.v1beta1.TxEncodeResponse
+ */
 export const TxEncodeResponse = {
   typeUrl: '/cosmos.tx.v1beta1.TxEncodeResponse',
   aminoType: 'cosmos-sdk/TxEncodeResponse',
@@ -2591,6 +2948,15 @@ function createBaseTxEncodeAminoRequest(): TxEncodeAminoRequest {
     aminoJson: '',
   };
 }
+/**
+ * TxEncodeAminoRequest is the request type for the Service.TxEncodeAmino
+ * RPC method.
+ *
+ * Since: cosmos-sdk 0.47
+ * @name TxEncodeAminoRequest
+ * @package cosmos.tx.v1beta1
+ * @see proto type: cosmos.tx.v1beta1.TxEncodeAminoRequest
+ */
 export const TxEncodeAminoRequest = {
   typeUrl: '/cosmos.tx.v1beta1.TxEncodeAminoRequest',
   aminoType: 'cosmos-sdk/TxEncodeAminoRequest',
@@ -2697,6 +3063,15 @@ function createBaseTxEncodeAminoResponse(): TxEncodeAminoResponse {
     aminoBinary: new Uint8Array(),
   };
 }
+/**
+ * TxEncodeAminoResponse is the response type for the Service.TxEncodeAmino
+ * RPC method.
+ *
+ * Since: cosmos-sdk 0.47
+ * @name TxEncodeAminoResponse
+ * @package cosmos.tx.v1beta1
+ * @see proto type: cosmos.tx.v1beta1.TxEncodeAminoResponse
+ */
 export const TxEncodeAminoResponse = {
   typeUrl: '/cosmos.tx.v1beta1.TxEncodeAminoResponse',
   aminoType: 'cosmos-sdk/TxEncodeAminoResponse',
@@ -2808,6 +3183,15 @@ function createBaseTxDecodeAminoRequest(): TxDecodeAminoRequest {
     aminoBinary: new Uint8Array(),
   };
 }
+/**
+ * TxDecodeAminoRequest is the request type for the Service.TxDecodeAmino
+ * RPC method.
+ *
+ * Since: cosmos-sdk 0.47
+ * @name TxDecodeAminoRequest
+ * @package cosmos.tx.v1beta1
+ * @see proto type: cosmos.tx.v1beta1.TxDecodeAminoRequest
+ */
 export const TxDecodeAminoRequest = {
   typeUrl: '/cosmos.tx.v1beta1.TxDecodeAminoRequest',
   aminoType: 'cosmos-sdk/TxDecodeAminoRequest',
@@ -2919,6 +3303,15 @@ function createBaseTxDecodeAminoResponse(): TxDecodeAminoResponse {
     aminoJson: '',
   };
 }
+/**
+ * TxDecodeAminoResponse is the response type for the Service.TxDecodeAmino
+ * RPC method.
+ *
+ * Since: cosmos-sdk 0.47
+ * @name TxDecodeAminoResponse
+ * @package cosmos.tx.v1beta1
+ * @see proto type: cosmos.tx.v1beta1.TxDecodeAminoResponse
+ */
 export const TxDecodeAminoResponse = {
   typeUrl: '/cosmos.tx.v1beta1.TxDecodeAminoResponse',
   aminoType: 'cosmos-sdk/TxDecodeAminoResponse',

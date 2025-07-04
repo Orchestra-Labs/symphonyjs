@@ -3,7 +3,12 @@ import { Params, ParamsAmino, ParamsSDKType } from './treasury';
 import { BinaryReader, BinaryWriter } from '../../../binary';
 import { GlobalDecoderRegistry } from '../../../registry';
 import { Decimal } from '@cosmjs/math';
-/** GenesisState defines the oracle module's genesis state. */
+/**
+ * GenesisState defines the oracle module's genesis state.
+ * @name GenesisState
+ * @package symphony.treasury.v1beta1
+ * @see proto type: symphony.treasury.v1beta1.GenesisState
+ */
 export interface GenesisState {
   params: Params;
   taxRate: string;
@@ -12,7 +17,12 @@ export interface GenesisStateProtoMsg {
   typeUrl: '/symphony.treasury.v1beta1.GenesisState';
   value: Uint8Array;
 }
-/** GenesisState defines the oracle module's genesis state. */
+/**
+ * GenesisState defines the oracle module's genesis state.
+ * @name GenesisStateAmino
+ * @package symphony.treasury.v1beta1
+ * @see proto type: symphony.treasury.v1beta1.GenesisState
+ */
 export interface GenesisStateAmino {
   params?: ParamsAmino;
   tax_rate?: string;
@@ -21,7 +31,12 @@ export interface GenesisStateAminoMsg {
   type: '/symphony.treasury.v1beta1.GenesisState';
   value: GenesisStateAmino;
 }
-/** GenesisState defines the oracle module's genesis state. */
+/**
+ * GenesisState defines the oracle module's genesis state.
+ * @name GenesisStateSDKType
+ * @package symphony.treasury.v1beta1
+ * @see proto type: symphony.treasury.v1beta1.GenesisState
+ */
 export interface GenesisStateSDKType {
   params: ParamsSDKType;
   tax_rate: string;
@@ -32,6 +47,12 @@ function createBaseGenesisState(): GenesisState {
     taxRate: '',
   };
 }
+/**
+ * GenesisState defines the oracle module's genesis state.
+ * @name GenesisState
+ * @package symphony.treasury.v1beta1
+ * @see proto type: symphony.treasury.v1beta1.GenesisState
+ */
 export const GenesisState = {
   typeUrl: '/symphony.treasury.v1beta1.GenesisState',
   is(o: any): o is GenesisState {

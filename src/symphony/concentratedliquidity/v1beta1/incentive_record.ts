@@ -19,12 +19,19 @@ import { toTimestamp, fromTimestamp } from '../../../helpers';
  * incentive being distributed on a pool. Note that PoolId, Denom, and MinUptime
  * are included in the key so we avoid storing them in state, hence the
  * distinction between IncentiveRecord and IncentiveRecordBody.
+ * @name IncentiveRecord
+ * @package symphony.concentratedliquidity.v1beta1
+ * @see proto type: symphony.concentratedliquidity.v1beta1.IncentiveRecord
  */
 export interface IncentiveRecord {
-  /** incentive_id is the id uniquely identifying this incentive record. */
+  /**
+   * incentive_id is the id uniquely identifying this incentive record.
+   */
   incentiveId: bigint;
   poolId: bigint;
-  /** incentive record body holds necessary */
+  /**
+   * incentive record body holds necessary
+   */
   incentiveRecordBody: IncentiveRecordBody;
   /**
    * min_uptime is the minimum uptime required for liquidity to qualify for this
@@ -42,12 +49,19 @@ export interface IncentiveRecordProtoMsg {
  * incentive being distributed on a pool. Note that PoolId, Denom, and MinUptime
  * are included in the key so we avoid storing them in state, hence the
  * distinction between IncentiveRecord and IncentiveRecordBody.
+ * @name IncentiveRecordAmino
+ * @package symphony.concentratedliquidity.v1beta1
+ * @see proto type: symphony.concentratedliquidity.v1beta1.IncentiveRecord
  */
 export interface IncentiveRecordAmino {
-  /** incentive_id is the id uniquely identifying this incentive record. */
+  /**
+   * incentive_id is the id uniquely identifying this incentive record.
+   */
   incentive_id?: string;
   pool_id?: string;
-  /** incentive record body holds necessary */
+  /**
+   * incentive record body holds necessary
+   */
   incentive_record_body?: IncentiveRecordBodyAmino;
   /**
    * min_uptime is the minimum uptime required for liquidity to qualify for this
@@ -65,6 +79,9 @@ export interface IncentiveRecordAminoMsg {
  * incentive being distributed on a pool. Note that PoolId, Denom, and MinUptime
  * are included in the key so we avoid storing them in state, hence the
  * distinction between IncentiveRecord and IncentiveRecordBody.
+ * @name IncentiveRecordSDKType
+ * @package symphony.concentratedliquidity.v1beta1
+ * @see proto type: symphony.concentratedliquidity.v1beta1.IncentiveRecord
  */
 export interface IncentiveRecordSDKType {
   incentive_id: bigint;
@@ -75,13 +92,22 @@ export interface IncentiveRecordSDKType {
 /**
  * IncentiveRecordBody represents the body stored in state for each individual
  * record.
+ * @name IncentiveRecordBody
+ * @package symphony.concentratedliquidity.v1beta1
+ * @see proto type: symphony.concentratedliquidity.v1beta1.IncentiveRecordBody
  */
 export interface IncentiveRecordBody {
-  /** remaining_coin is the total amount of incentives to be distributed */
+  /**
+   * remaining_coin is the total amount of incentives to be distributed
+   */
   remainingCoin: DecCoin;
-  /** emission_rate is the incentive emission rate per second */
+  /**
+   * emission_rate is the incentive emission rate per second
+   */
   emissionRate: string;
-  /** start_time is the time when the incentive starts distributing */
+  /**
+   * start_time is the time when the incentive starts distributing
+   */
   startTime: Date;
 }
 export interface IncentiveRecordBodyProtoMsg {
@@ -91,13 +117,22 @@ export interface IncentiveRecordBodyProtoMsg {
 /**
  * IncentiveRecordBody represents the body stored in state for each individual
  * record.
+ * @name IncentiveRecordBodyAmino
+ * @package symphony.concentratedliquidity.v1beta1
+ * @see proto type: symphony.concentratedliquidity.v1beta1.IncentiveRecordBody
  */
 export interface IncentiveRecordBodyAmino {
-  /** remaining_coin is the total amount of incentives to be distributed */
+  /**
+   * remaining_coin is the total amount of incentives to be distributed
+   */
   remaining_coin?: DecCoinAmino;
-  /** emission_rate is the incentive emission rate per second */
+  /**
+   * emission_rate is the incentive emission rate per second
+   */
   emission_rate?: string;
-  /** start_time is the time when the incentive starts distributing */
+  /**
+   * start_time is the time when the incentive starts distributing
+   */
   start_time?: string;
 }
 export interface IncentiveRecordBodyAminoMsg {
@@ -107,6 +142,9 @@ export interface IncentiveRecordBodyAminoMsg {
 /**
  * IncentiveRecordBody represents the body stored in state for each individual
  * record.
+ * @name IncentiveRecordBodySDKType
+ * @package symphony.concentratedliquidity.v1beta1
+ * @see proto type: symphony.concentratedliquidity.v1beta1.IncentiveRecordBody
  */
 export interface IncentiveRecordBodySDKType {
   remaining_coin: DecCoinSDKType;
@@ -121,6 +159,15 @@ function createBaseIncentiveRecord(): IncentiveRecord {
     minUptime: Duration.fromPartial({}),
   };
 }
+/**
+ * IncentiveRecord is the high-level struct we use to deal with an independent
+ * incentive being distributed on a pool. Note that PoolId, Denom, and MinUptime
+ * are included in the key so we avoid storing them in state, hence the
+ * distinction between IncentiveRecord and IncentiveRecordBody.
+ * @name IncentiveRecord
+ * @package symphony.concentratedliquidity.v1beta1
+ * @see proto type: symphony.concentratedliquidity.v1beta1.IncentiveRecord
+ */
 export const IncentiveRecord = {
   typeUrl: '/symphony.concentratedliquidity.v1beta1.IncentiveRecord',
   is(o: any): o is IncentiveRecord {
@@ -286,6 +333,13 @@ function createBaseIncentiveRecordBody(): IncentiveRecordBody {
     startTime: new Date(),
   };
 }
+/**
+ * IncentiveRecordBody represents the body stored in state for each individual
+ * record.
+ * @name IncentiveRecordBody
+ * @package symphony.concentratedliquidity.v1beta1
+ * @see proto type: symphony.concentratedliquidity.v1beta1.IncentiveRecordBody
+ */
 export const IncentiveRecordBody = {
   typeUrl: '/symphony.concentratedliquidity.v1beta1.IncentiveRecordBody',
   is(o: any): o is IncentiveRecordBody {

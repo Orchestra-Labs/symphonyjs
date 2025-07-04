@@ -1,6 +1,11 @@
 //@ts-nocheck
 import { BinaryReader, BinaryWriter } from '../../binary';
 import { GlobalDecoderRegistry } from '../../registry';
+/**
+ * @name Params
+ * @package symphony.lockup
+ * @see proto type: symphony.lockup.Params
+ */
 export interface Params {
   forceUnlockAllowedAddresses: string[];
 }
@@ -8,6 +13,11 @@ export interface ParamsProtoMsg {
   typeUrl: '/symphony.lockup.Params';
   value: Uint8Array;
 }
+/**
+ * @name ParamsAmino
+ * @package symphony.lockup
+ * @see proto type: symphony.lockup.Params
+ */
 export interface ParamsAmino {
   force_unlock_allowed_addresses?: string[];
 }
@@ -15,6 +25,11 @@ export interface ParamsAminoMsg {
   type: '/symphony.lockup.Params';
   value: ParamsAmino;
 }
+/**
+ * @name ParamsSDKType
+ * @package symphony.lockup
+ * @see proto type: symphony.lockup.Params
+ */
 export interface ParamsSDKType {
   force_unlock_allowed_addresses: string[];
 }
@@ -23,6 +38,11 @@ function createBaseParams(): Params {
     forceUnlockAllowedAddresses: [],
   };
 }
+/**
+ * @name Params
+ * @package symphony.lockup
+ * @see proto type: symphony.lockup.Params
+ */
 export const Params = {
   typeUrl: '/symphony.lockup.Params',
   is(o: any): o is Params {

@@ -7,11 +7,16 @@ import { bytesFromBase64, base64FromBytes } from '../../../helpers';
  * UploadCosmWasmPoolCodeAndWhiteListProposal is a gov Content type for
  * uploading coswasm pool code and adding it to internal whitelist. Only the
  * code ids created by this message are eligible for being x/cosmwasmpool pools.
+ * @name UploadCosmWasmPoolCodeAndWhiteListProposal
+ * @package symphony.cosmwasmpool.v1beta1
+ * @see proto type: symphony.cosmwasmpool.v1beta1.UploadCosmWasmPoolCodeAndWhiteListProposal
  */
 export interface UploadCosmWasmPoolCodeAndWhiteListProposal {
   title: string;
   description: string;
-  /** WASMByteCode can be raw or gzip compressed */
+  /**
+   * WASMByteCode can be raw or gzip compressed
+   */
   wasmByteCode: Uint8Array;
 }
 export interface UploadCosmWasmPoolCodeAndWhiteListProposalProtoMsg {
@@ -22,11 +27,16 @@ export interface UploadCosmWasmPoolCodeAndWhiteListProposalProtoMsg {
  * UploadCosmWasmPoolCodeAndWhiteListProposal is a gov Content type for
  * uploading coswasm pool code and adding it to internal whitelist. Only the
  * code ids created by this message are eligible for being x/cosmwasmpool pools.
+ * @name UploadCosmWasmPoolCodeAndWhiteListProposalAmino
+ * @package symphony.cosmwasmpool.v1beta1
+ * @see proto type: symphony.cosmwasmpool.v1beta1.UploadCosmWasmPoolCodeAndWhiteListProposal
  */
 export interface UploadCosmWasmPoolCodeAndWhiteListProposalAmino {
   title?: string;
   description?: string;
-  /** WASMByteCode can be raw or gzip compressed */
+  /**
+   * WASMByteCode can be raw or gzip compressed
+   */
   wasm_byte_code?: string;
 }
 export interface UploadCosmWasmPoolCodeAndWhiteListProposalAminoMsg {
@@ -37,6 +47,9 @@ export interface UploadCosmWasmPoolCodeAndWhiteListProposalAminoMsg {
  * UploadCosmWasmPoolCodeAndWhiteListProposal is a gov Content type for
  * uploading coswasm pool code and adding it to internal whitelist. Only the
  * code ids created by this message are eligible for being x/cosmwasmpool pools.
+ * @name UploadCosmWasmPoolCodeAndWhiteListProposalSDKType
+ * @package symphony.cosmwasmpool.v1beta1
+ * @see proto type: symphony.cosmwasmpool.v1beta1.UploadCosmWasmPoolCodeAndWhiteListProposal
  */
 export interface UploadCosmWasmPoolCodeAndWhiteListProposalSDKType {
   title: string;
@@ -70,6 +83,9 @@ export interface UploadCosmWasmPoolCodeAndWhiteListProposalSDKType {
  * launch). The proposal fails if more. Note that 20 was chosen arbitrarily to
  * have a constant bound on the number of pools migrated at once. This size will
  * be configured by a module parameter so it can be changed by a constant.
+ * @name MigratePoolContractsProposal
+ * @package symphony.cosmwasmpool.v1beta1
+ * @see proto type: symphony.cosmwasmpool.v1beta1.MigratePoolContractsProposal
  */
 export interface MigratePoolContractsProposal {
   title: string;
@@ -92,7 +108,9 @@ export interface MigratePoolContractsProposal {
    * Only one of new_code_id and wasm_byte_code should be set.
    */
   wasmByteCode: Uint8Array;
-  /** MigrateMsg migrate message to be used for migrating the pool contracts. */
+  /**
+   * MigrateMsg migrate message to be used for migrating the pool contracts.
+   */
   migrateMsg: Uint8Array;
 }
 export interface MigratePoolContractsProposalProtoMsg {
@@ -126,6 +144,9 @@ export interface MigratePoolContractsProposalProtoMsg {
  * launch). The proposal fails if more. Note that 20 was chosen arbitrarily to
  * have a constant bound on the number of pools migrated at once. This size will
  * be configured by a module parameter so it can be changed by a constant.
+ * @name MigratePoolContractsProposalAmino
+ * @package symphony.cosmwasmpool.v1beta1
+ * @see proto type: symphony.cosmwasmpool.v1beta1.MigratePoolContractsProposal
  */
 export interface MigratePoolContractsProposalAmino {
   title?: string;
@@ -148,7 +169,9 @@ export interface MigratePoolContractsProposalAmino {
    * Only one of new_code_id and wasm_byte_code should be set.
    */
   wasm_byte_code?: string;
-  /** MigrateMsg migrate message to be used for migrating the pool contracts. */
+  /**
+   * MigrateMsg migrate message to be used for migrating the pool contracts.
+   */
   migrate_msg?: string;
 }
 export interface MigratePoolContractsProposalAminoMsg {
@@ -182,6 +205,9 @@ export interface MigratePoolContractsProposalAminoMsg {
  * launch). The proposal fails if more. Note that 20 was chosen arbitrarily to
  * have a constant bound on the number of pools migrated at once. This size will
  * be configured by a module parameter so it can be changed by a constant.
+ * @name MigratePoolContractsProposalSDKType
+ * @package symphony.cosmwasmpool.v1beta1
+ * @see proto type: symphony.cosmwasmpool.v1beta1.MigratePoolContractsProposal
  */
 export interface MigratePoolContractsProposalSDKType {
   title: string;
@@ -198,6 +224,14 @@ function createBaseUploadCosmWasmPoolCodeAndWhiteListProposal(): UploadCosmWasmP
     wasmByteCode: new Uint8Array(),
   };
 }
+/**
+ * UploadCosmWasmPoolCodeAndWhiteListProposal is a gov Content type for
+ * uploading coswasm pool code and adding it to internal whitelist. Only the
+ * code ids created by this message are eligible for being x/cosmwasmpool pools.
+ * @name UploadCosmWasmPoolCodeAndWhiteListProposal
+ * @package symphony.cosmwasmpool.v1beta1
+ * @see proto type: symphony.cosmwasmpool.v1beta1.UploadCosmWasmPoolCodeAndWhiteListProposal
+ */
 export const UploadCosmWasmPoolCodeAndWhiteListProposal = {
   typeUrl:
     '/symphony.cosmwasmpool.v1beta1.UploadCosmWasmPoolCodeAndWhiteListProposal',
@@ -347,6 +381,37 @@ function createBaseMigratePoolContractsProposal(): MigratePoolContractsProposal 
     migrateMsg: new Uint8Array(),
   };
 }
+/**
+ * MigratePoolContractsProposal is a gov Content type for
+ * migrating  given pools to the new contract code and adding to internal
+ * whitelist if needed. It has two options to perform the migration:
+ *
+ * 1. If the codeID is non-zero, it will migrate the pool contracts to a given
+ * codeID assuming that it has already been uploaded. uploadByteCode must be
+ * empty in such a case. Fails if codeID does not exist. Fails if uploadByteCode
+ * is not empty.
+ *
+ * 2. If the codeID is zero, it will upload the given uploadByteCode and use the
+ * new resulting code id to migrate the pool to. Errors if uploadByteCode is
+ * empty or invalid.
+ *
+ * In both cases, if one of the pools specified by the given poolID does not
+ * exist, the proposal fails.
+ *
+ * The reason for having poolIDs be a slice of ids is to account for the
+ * potential need for emergency migration of all old code ids associated with
+ * particular pools to new code ids, or simply having the flexibility of
+ * migrating multiple older pool contracts to a new one at once when there is a
+ * release.
+ *
+ * poolD count to be submitted at once is gated by a governance paramets (20 at
+ * launch). The proposal fails if more. Note that 20 was chosen arbitrarily to
+ * have a constant bound on the number of pools migrated at once. This size will
+ * be configured by a module parameter so it can be changed by a constant.
+ * @name MigratePoolContractsProposal
+ * @package symphony.cosmwasmpool.v1beta1
+ * @see proto type: symphony.cosmwasmpool.v1beta1.MigratePoolContractsProposal
+ */
 export const MigratePoolContractsProposal = {
   typeUrl: '/symphony.cosmwasmpool.v1beta1.MigratePoolContractsProposal',
   is(o: any): o is MigratePoolContractsProposal {

@@ -1,7 +1,12 @@
 //@ts-nocheck
 import { BinaryReader, BinaryWriter } from '../../../binary';
 import { GlobalDecoderRegistry } from '../../../registry';
-/** Params holds parameters for the txfees module */
+/**
+ * Params holds parameters for the txfees module
+ * @name Params
+ * @package symphony.txfees.v1beta1
+ * @see proto type: symphony.txfees.v1beta1.Params
+ */
 export interface Params {
   swapFeesEpochIdentifier: string;
 }
@@ -9,7 +14,12 @@ export interface ParamsProtoMsg {
   typeUrl: '/symphony.txfees.v1beta1.Params';
   value: Uint8Array;
 }
-/** Params holds parameters for the txfees module */
+/**
+ * Params holds parameters for the txfees module
+ * @name ParamsAmino
+ * @package symphony.txfees.v1beta1
+ * @see proto type: symphony.txfees.v1beta1.Params
+ */
 export interface ParamsAmino {
   swap_fees_epoch_identifier?: string;
 }
@@ -17,7 +27,12 @@ export interface ParamsAminoMsg {
   type: '/symphony.txfees.v1beta1.Params';
   value: ParamsAmino;
 }
-/** Params holds parameters for the txfees module */
+/**
+ * Params holds parameters for the txfees module
+ * @name ParamsSDKType
+ * @package symphony.txfees.v1beta1
+ * @see proto type: symphony.txfees.v1beta1.Params
+ */
 export interface ParamsSDKType {
   swap_fees_epoch_identifier: string;
 }
@@ -26,6 +41,12 @@ function createBaseParams(): Params {
     swapFeesEpochIdentifier: '',
   };
 }
+/**
+ * Params holds parameters for the txfees module
+ * @name Params
+ * @package symphony.txfees.v1beta1
+ * @see proto type: symphony.txfees.v1beta1.Params
+ */
 export const Params = {
   typeUrl: '/symphony.txfees.v1beta1.Params',
   is(o: any): o is Params {

@@ -9,11 +9,20 @@ import {
 } from './mint';
 import { BinaryReader, BinaryWriter } from '../../../binary';
 import { GlobalDecoderRegistry } from '../../../registry';
-/** GenesisState defines the mint module's genesis state. */
+/**
+ * GenesisState defines the mint module's genesis state.
+ * @name GenesisState
+ * @package symphony.mint.v1beta1
+ * @see proto type: symphony.mint.v1beta1.GenesisState
+ */
 export interface GenesisState {
-  /** minter is an abstraction for holding current rewards information. */
+  /**
+   * minter is an abstraction for holding current rewards information.
+   */
   minter: Minter;
-  /** params defines all the parameters of the mint module. */
+  /**
+   * params defines all the parameters of the mint module.
+   */
   params: Params;
   /**
    * reduction_started_epoch is the first epoch in which the reduction of mint
@@ -25,11 +34,20 @@ export interface GenesisStateProtoMsg {
   typeUrl: '/symphony.mint.v1beta1.GenesisState';
   value: Uint8Array;
 }
-/** GenesisState defines the mint module's genesis state. */
+/**
+ * GenesisState defines the mint module's genesis state.
+ * @name GenesisStateAmino
+ * @package symphony.mint.v1beta1
+ * @see proto type: symphony.mint.v1beta1.GenesisState
+ */
 export interface GenesisStateAmino {
-  /** minter is an abstraction for holding current rewards information. */
+  /**
+   * minter is an abstraction for holding current rewards information.
+   */
   minter?: MinterAmino;
-  /** params defines all the parameters of the mint module. */
+  /**
+   * params defines all the parameters of the mint module.
+   */
   params?: ParamsAmino;
   /**
    * reduction_started_epoch is the first epoch in which the reduction of mint
@@ -41,7 +59,12 @@ export interface GenesisStateAminoMsg {
   type: '/symphony.mint.v1beta1.GenesisState';
   value: GenesisStateAmino;
 }
-/** GenesisState defines the mint module's genesis state. */
+/**
+ * GenesisState defines the mint module's genesis state.
+ * @name GenesisStateSDKType
+ * @package symphony.mint.v1beta1
+ * @see proto type: symphony.mint.v1beta1.GenesisState
+ */
 export interface GenesisStateSDKType {
   minter: MinterSDKType;
   params: ParamsSDKType;
@@ -54,6 +77,12 @@ function createBaseGenesisState(): GenesisState {
     reductionStartedEpoch: BigInt(0),
   };
 }
+/**
+ * GenesisState defines the mint module's genesis state.
+ * @name GenesisState
+ * @package symphony.mint.v1beta1
+ * @see proto type: symphony.mint.v1beta1.GenesisState
+ */
 export const GenesisState = {
   typeUrl: '/symphony.mint.v1beta1.GenesisState',
   is(o: any): o is GenesisState {

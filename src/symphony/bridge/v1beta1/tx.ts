@@ -19,15 +19,26 @@ import { GlobalDecoderRegistry } from '../../../registry';
  * get the equivalent amount of the corresponding token (specified in subdenom)
  * on Osmosis in return. The tokens are minted through the x/tokenfactory module
  * to the destination address.
+ * @name MsgInboundTransfer
+ * @package symphony.bridge.v1beta1
+ * @see proto type: symphony.bridge.v1beta1.MsgInboundTransfer
  */
 export interface MsgInboundTransfer {
-  /** Sender is a sender's address */
+  /**
+   * Sender is a sender's address
+   */
   sender: string;
-  /** DestAddr is a destination Osmosis address */
+  /**
+   * DestAddr is a destination Osmosis address
+   */
   destAddr: string;
-  /** Asset contains a source chain and a target denom */
+  /**
+   * Asset contains a source chain and a target denom
+   */
   asset: Asset;
-  /** Amount of coins to transfer */
+  /**
+   * Amount of coins to transfer
+   */
   amount: string;
 }
 export interface MsgInboundTransferProtoMsg {
@@ -41,15 +52,26 @@ export interface MsgInboundTransferProtoMsg {
  * get the equivalent amount of the corresponding token (specified in subdenom)
  * on Osmosis in return. The tokens are minted through the x/tokenfactory module
  * to the destination address.
+ * @name MsgInboundTransferAmino
+ * @package symphony.bridge.v1beta1
+ * @see proto type: symphony.bridge.v1beta1.MsgInboundTransfer
  */
 export interface MsgInboundTransferAmino {
-  /** Sender is a sender's address */
+  /**
+   * Sender is a sender's address
+   */
   sender?: string;
-  /** DestAddr is a destination Osmosis address */
+  /**
+   * DestAddr is a destination Osmosis address
+   */
   dest_addr?: string;
-  /** Asset contains a source chain and a target denom */
+  /**
+   * Asset contains a source chain and a target denom
+   */
   asset?: AssetAmino;
-  /** Amount of coins to transfer */
+  /**
+   * Amount of coins to transfer
+   */
   amount?: string;
 }
 export interface MsgInboundTransferAminoMsg {
@@ -63,6 +85,9 @@ export interface MsgInboundTransferAminoMsg {
  * get the equivalent amount of the corresponding token (specified in subdenom)
  * on Osmosis in return. The tokens are minted through the x/tokenfactory module
  * to the destination address.
+ * @name MsgInboundTransferSDKType
+ * @package symphony.bridge.v1beta1
+ * @see proto type: symphony.bridge.v1beta1.MsgInboundTransfer
  */
 export interface MsgInboundTransferSDKType {
   sender: string;
@@ -70,16 +95,31 @@ export interface MsgInboundTransferSDKType {
   asset: AssetSDKType;
   amount: string;
 }
+/**
+ * @name MsgInboundTransferResponse
+ * @package symphony.bridge.v1beta1
+ * @see proto type: symphony.bridge.v1beta1.MsgInboundTransferResponse
+ */
 export interface MsgInboundTransferResponse {}
 export interface MsgInboundTransferResponseProtoMsg {
   typeUrl: '/symphony.bridge.v1beta1.MsgInboundTransferResponse';
   value: Uint8Array;
 }
+/**
+ * @name MsgInboundTransferResponseAmino
+ * @package symphony.bridge.v1beta1
+ * @see proto type: symphony.bridge.v1beta1.MsgInboundTransferResponse
+ */
 export interface MsgInboundTransferResponseAmino {}
 export interface MsgInboundTransferResponseAminoMsg {
   type: '/symphony.bridge.v1beta1.MsgInboundTransferResponse';
   value: MsgInboundTransferResponseAmino;
 }
+/**
+ * @name MsgInboundTransferResponseSDKType
+ * @package symphony.bridge.v1beta1
+ * @see proto type: symphony.bridge.v1beta1.MsgInboundTransferResponse
+ */
 export interface MsgInboundTransferResponseSDKType {}
 /**
  * MsgOutboundTransfer defines the message structure for the OutboundTransfer
@@ -87,15 +127,26 @@ export interface MsgInboundTransferResponseSDKType {}
  * transfer, i.e., to transfer their tokens from Osmosis to the destination
  * chain. The tokens are burned through the x/tokenfactory module from the
  * sender's address.
+ * @name MsgOutboundTransfer
+ * @package symphony.bridge.v1beta1
+ * @see proto type: symphony.bridge.v1beta1.MsgOutboundTransfer
  */
 export interface MsgOutboundTransfer {
-  /** Sender is a sender's Osmosis address */
+  /**
+   * Sender is a sender's Osmosis address
+   */
   sender: string;
-  /** DestAddr is a destination address */
+  /**
+   * DestAddr is a destination address
+   */
   destAddr: string;
-  /** Asset contains a target chain and a source denom */
+  /**
+   * Asset contains a target chain and a source denom
+   */
   asset: Asset;
-  /** Amount of coins to transfer */
+  /**
+   * Amount of coins to transfer
+   */
   amount: string;
 }
 export interface MsgOutboundTransferProtoMsg {
@@ -108,15 +159,26 @@ export interface MsgOutboundTransferProtoMsg {
  * transfer, i.e., to transfer their tokens from Osmosis to the destination
  * chain. The tokens are burned through the x/tokenfactory module from the
  * sender's address.
+ * @name MsgOutboundTransferAmino
+ * @package symphony.bridge.v1beta1
+ * @see proto type: symphony.bridge.v1beta1.MsgOutboundTransfer
  */
 export interface MsgOutboundTransferAmino {
-  /** Sender is a sender's Osmosis address */
+  /**
+   * Sender is a sender's Osmosis address
+   */
   sender?: string;
-  /** DestAddr is a destination address */
+  /**
+   * DestAddr is a destination address
+   */
   dest_addr?: string;
-  /** Asset contains a target chain and a source denom */
+  /**
+   * Asset contains a target chain and a source denom
+   */
   asset?: AssetAmino;
-  /** Amount of coins to transfer */
+  /**
+   * Amount of coins to transfer
+   */
   amount?: string;
 }
 export interface MsgOutboundTransferAminoMsg {
@@ -129,6 +191,9 @@ export interface MsgOutboundTransferAminoMsg {
  * transfer, i.e., to transfer their tokens from Osmosis to the destination
  * chain. The tokens are burned through the x/tokenfactory module from the
  * sender's address.
+ * @name MsgOutboundTransferSDKType
+ * @package symphony.bridge.v1beta1
+ * @see proto type: symphony.bridge.v1beta1.MsgOutboundTransfer
  */
 export interface MsgOutboundTransferSDKType {
   sender: string;
@@ -136,27 +201,49 @@ export interface MsgOutboundTransferSDKType {
   asset: AssetSDKType;
   amount: string;
 }
+/**
+ * @name MsgOutboundTransferResponse
+ * @package symphony.bridge.v1beta1
+ * @see proto type: symphony.bridge.v1beta1.MsgOutboundTransferResponse
+ */
 export interface MsgOutboundTransferResponse {}
 export interface MsgOutboundTransferResponseProtoMsg {
   typeUrl: '/symphony.bridge.v1beta1.MsgOutboundTransferResponse';
   value: Uint8Array;
 }
+/**
+ * @name MsgOutboundTransferResponseAmino
+ * @package symphony.bridge.v1beta1
+ * @see proto type: symphony.bridge.v1beta1.MsgOutboundTransferResponse
+ */
 export interface MsgOutboundTransferResponseAmino {}
 export interface MsgOutboundTransferResponseAminoMsg {
   type: '/symphony.bridge.v1beta1.MsgOutboundTransferResponse';
   value: MsgOutboundTransferResponseAmino;
 }
+/**
+ * @name MsgOutboundTransferResponseSDKType
+ * @package symphony.bridge.v1beta1
+ * @see proto type: symphony.bridge.v1beta1.MsgOutboundTransferResponse
+ */
 export interface MsgOutboundTransferResponseSDKType {}
 /**
  * MsgUpdateParams allows to update module params. It contains UpdateParams
  * instead of just Params to forbid status updating using this method.
  * All new assets introduced with this method have ASSET_STATUS_BLOCKED_BOTH
  * status by default.
+ * @name MsgUpdateParams
+ * @package symphony.bridge.v1beta1
+ * @see proto type: symphony.bridge.v1beta1.MsgUpdateParams
  */
 export interface MsgUpdateParams {
-  /** Sender is a sender's address */
+  /**
+   * Sender is a sender's address
+   */
   sender: string;
-  /** NewParams should be fully populated */
+  /**
+   * NewParams should be fully populated
+   */
   newParams: Params;
 }
 export interface MsgUpdateParamsProtoMsg {
@@ -168,11 +255,18 @@ export interface MsgUpdateParamsProtoMsg {
  * instead of just Params to forbid status updating using this method.
  * All new assets introduced with this method have ASSET_STATUS_BLOCKED_BOTH
  * status by default.
+ * @name MsgUpdateParamsAmino
+ * @package symphony.bridge.v1beta1
+ * @see proto type: symphony.bridge.v1beta1.MsgUpdateParams
  */
 export interface MsgUpdateParamsAmino {
-  /** Sender is a sender's address */
+  /**
+   * Sender is a sender's address
+   */
   sender?: string;
-  /** NewParams should be fully populated */
+  /**
+   * NewParams should be fully populated
+   */
   new_params?: ParamsAmino;
 }
 export interface MsgUpdateParamsAminoMsg {
@@ -184,25 +278,50 @@ export interface MsgUpdateParamsAminoMsg {
  * instead of just Params to forbid status updating using this method.
  * All new assets introduced with this method have ASSET_STATUS_BLOCKED_BOTH
  * status by default.
+ * @name MsgUpdateParamsSDKType
+ * @package symphony.bridge.v1beta1
+ * @see proto type: symphony.bridge.v1beta1.MsgUpdateParams
  */
 export interface MsgUpdateParamsSDKType {
   sender: string;
   new_params: ParamsSDKType;
 }
+/**
+ * @name MsgUpdateParamsResponse
+ * @package symphony.bridge.v1beta1
+ * @see proto type: symphony.bridge.v1beta1.MsgUpdateParamsResponse
+ */
 export interface MsgUpdateParamsResponse {}
 export interface MsgUpdateParamsResponseProtoMsg {
   typeUrl: '/symphony.bridge.v1beta1.MsgUpdateParamsResponse';
   value: Uint8Array;
 }
+/**
+ * @name MsgUpdateParamsResponseAmino
+ * @package symphony.bridge.v1beta1
+ * @see proto type: symphony.bridge.v1beta1.MsgUpdateParamsResponse
+ */
 export interface MsgUpdateParamsResponseAmino {}
 export interface MsgUpdateParamsResponseAminoMsg {
   type: '/symphony.bridge.v1beta1.MsgUpdateParamsResponse';
   value: MsgUpdateParamsResponseAmino;
 }
+/**
+ * @name MsgUpdateParamsResponseSDKType
+ * @package symphony.bridge.v1beta1
+ * @see proto type: symphony.bridge.v1beta1.MsgUpdateParamsResponse
+ */
 export interface MsgUpdateParamsResponseSDKType {}
-/** MsgChangeAssetStatus changes the status of the provided asset. */
+/**
+ * MsgChangeAssetStatus changes the status of the provided asset.
+ * @name MsgChangeAssetStatus
+ * @package symphony.bridge.v1beta1
+ * @see proto type: symphony.bridge.v1beta1.MsgChangeAssetStatus
+ */
 export interface MsgChangeAssetStatus {
-  /** Sender is a sender's address */
+  /**
+   * Sender is a sender's address
+   */
   sender: string;
   /**
    * NewAssetStatus is a pair of the asset and its new status.
@@ -214,9 +333,16 @@ export interface MsgChangeAssetStatusProtoMsg {
   typeUrl: '/symphony.bridge.v1beta1.MsgChangeAssetStatus';
   value: Uint8Array;
 }
-/** MsgChangeAssetStatus changes the status of the provided asset. */
+/**
+ * MsgChangeAssetStatus changes the status of the provided asset.
+ * @name MsgChangeAssetStatusAmino
+ * @package symphony.bridge.v1beta1
+ * @see proto type: symphony.bridge.v1beta1.MsgChangeAssetStatus
+ */
 export interface MsgChangeAssetStatusAmino {
-  /** Sender is a sender's address */
+  /**
+   * Sender is a sender's address
+   */
   sender?: string;
   /**
    * NewAssetStatus is a pair of the asset and its new status.
@@ -228,21 +354,41 @@ export interface MsgChangeAssetStatusAminoMsg {
   type: 'symphony/bridge/change-asset-status';
   value: MsgChangeAssetStatusAmino;
 }
-/** MsgChangeAssetStatus changes the status of the provided asset. */
+/**
+ * MsgChangeAssetStatus changes the status of the provided asset.
+ * @name MsgChangeAssetStatusSDKType
+ * @package symphony.bridge.v1beta1
+ * @see proto type: symphony.bridge.v1beta1.MsgChangeAssetStatus
+ */
 export interface MsgChangeAssetStatusSDKType {
   sender: string;
   new_asset_status: AssetWithStatusSDKType;
 }
+/**
+ * @name MsgChangeAssetStatusResponse
+ * @package symphony.bridge.v1beta1
+ * @see proto type: symphony.bridge.v1beta1.MsgChangeAssetStatusResponse
+ */
 export interface MsgChangeAssetStatusResponse {}
 export interface MsgChangeAssetStatusResponseProtoMsg {
   typeUrl: '/symphony.bridge.v1beta1.MsgChangeAssetStatusResponse';
   value: Uint8Array;
 }
+/**
+ * @name MsgChangeAssetStatusResponseAmino
+ * @package symphony.bridge.v1beta1
+ * @see proto type: symphony.bridge.v1beta1.MsgChangeAssetStatusResponse
+ */
 export interface MsgChangeAssetStatusResponseAmino {}
 export interface MsgChangeAssetStatusResponseAminoMsg {
   type: '/symphony.bridge.v1beta1.MsgChangeAssetStatusResponse';
   value: MsgChangeAssetStatusResponseAmino;
 }
+/**
+ * @name MsgChangeAssetStatusResponseSDKType
+ * @package symphony.bridge.v1beta1
+ * @see proto type: symphony.bridge.v1beta1.MsgChangeAssetStatusResponse
+ */
 export interface MsgChangeAssetStatusResponseSDKType {}
 function createBaseMsgInboundTransfer(): MsgInboundTransfer {
   return {
@@ -252,6 +398,17 @@ function createBaseMsgInboundTransfer(): MsgInboundTransfer {
     amount: '',
   };
 }
+/**
+ * MsgInboundTransfer defines the message structure for the InboundTransfer gRPC
+ * service method. It allows a sender to perform an inbound cross-chain
+ * transfer, i.e., to transfer their tokens from the source chain to Osmosis and
+ * get the equivalent amount of the corresponding token (specified in subdenom)
+ * on Osmosis in return. The tokens are minted through the x/tokenfactory module
+ * to the destination address.
+ * @name MsgInboundTransfer
+ * @package symphony.bridge.v1beta1
+ * @see proto type: symphony.bridge.v1beta1.MsgInboundTransfer
+ */
 export const MsgInboundTransfer = {
   typeUrl: '/symphony.bridge.v1beta1.MsgInboundTransfer',
   aminoType: 'symphony/bridge/inbound-transfer',
@@ -398,6 +555,11 @@ GlobalDecoderRegistry.registerAminoProtoMapping(
 function createBaseMsgInboundTransferResponse(): MsgInboundTransferResponse {
   return {};
 }
+/**
+ * @name MsgInboundTransferResponse
+ * @package symphony.bridge.v1beta1
+ * @see proto type: symphony.bridge.v1beta1.MsgInboundTransferResponse
+ */
 export const MsgInboundTransferResponse = {
   typeUrl: '/symphony.bridge.v1beta1.MsgInboundTransferResponse',
   is(o: any): o is MsgInboundTransferResponse {
@@ -481,6 +643,16 @@ function createBaseMsgOutboundTransfer(): MsgOutboundTransfer {
     amount: '',
   };
 }
+/**
+ * MsgOutboundTransfer defines the message structure for the OutboundTransfer
+ * gRPC service method. It allows a sender to perform an outbound cross-chain
+ * transfer, i.e., to transfer their tokens from Osmosis to the destination
+ * chain. The tokens are burned through the x/tokenfactory module from the
+ * sender's address.
+ * @name MsgOutboundTransfer
+ * @package symphony.bridge.v1beta1
+ * @see proto type: symphony.bridge.v1beta1.MsgOutboundTransfer
+ */
 export const MsgOutboundTransfer = {
   typeUrl: '/symphony.bridge.v1beta1.MsgOutboundTransfer',
   aminoType: 'symphony/bridge/outbound-transfer',
@@ -630,6 +802,11 @@ GlobalDecoderRegistry.registerAminoProtoMapping(
 function createBaseMsgOutboundTransferResponse(): MsgOutboundTransferResponse {
   return {};
 }
+/**
+ * @name MsgOutboundTransferResponse
+ * @package symphony.bridge.v1beta1
+ * @see proto type: symphony.bridge.v1beta1.MsgOutboundTransferResponse
+ */
 export const MsgOutboundTransferResponse = {
   typeUrl: '/symphony.bridge.v1beta1.MsgOutboundTransferResponse',
   is(o: any): o is MsgOutboundTransferResponse {
@@ -711,6 +888,15 @@ function createBaseMsgUpdateParams(): MsgUpdateParams {
     newParams: Params.fromPartial({}),
   };
 }
+/**
+ * MsgUpdateParams allows to update module params. It contains UpdateParams
+ * instead of just Params to forbid status updating using this method.
+ * All new assets introduced with this method have ASSET_STATUS_BLOCKED_BOTH
+ * status by default.
+ * @name MsgUpdateParams
+ * @package symphony.bridge.v1beta1
+ * @see proto type: symphony.bridge.v1beta1.MsgUpdateParams
+ */
 export const MsgUpdateParams = {
   typeUrl: '/symphony.bridge.v1beta1.MsgUpdateParams',
   aminoType: 'symphony/bridge/update-params',
@@ -825,6 +1011,11 @@ GlobalDecoderRegistry.registerAminoProtoMapping(
 function createBaseMsgUpdateParamsResponse(): MsgUpdateParamsResponse {
   return {};
 }
+/**
+ * @name MsgUpdateParamsResponse
+ * @package symphony.bridge.v1beta1
+ * @see proto type: symphony.bridge.v1beta1.MsgUpdateParamsResponse
+ */
 export const MsgUpdateParamsResponse = {
   typeUrl: '/symphony.bridge.v1beta1.MsgUpdateParamsResponse',
   is(o: any): o is MsgUpdateParamsResponse {
@@ -904,6 +1095,12 @@ function createBaseMsgChangeAssetStatus(): MsgChangeAssetStatus {
     newAssetStatus: AssetWithStatus.fromPartial({}),
   };
 }
+/**
+ * MsgChangeAssetStatus changes the status of the provided asset.
+ * @name MsgChangeAssetStatus
+ * @package symphony.bridge.v1beta1
+ * @see proto type: symphony.bridge.v1beta1.MsgChangeAssetStatus
+ */
 export const MsgChangeAssetStatus = {
   typeUrl: '/symphony.bridge.v1beta1.MsgChangeAssetStatus',
   aminoType: 'symphony/bridge/change-asset-status',
@@ -1037,6 +1234,11 @@ GlobalDecoderRegistry.registerAminoProtoMapping(
 function createBaseMsgChangeAssetStatusResponse(): MsgChangeAssetStatusResponse {
   return {};
 }
+/**
+ * @name MsgChangeAssetStatusResponse
+ * @package symphony.bridge.v1beta1
+ * @see proto type: symphony.bridge.v1beta1.MsgChangeAssetStatusResponse
+ */
 export const MsgChangeAssetStatusResponse = {
   typeUrl: '/symphony.bridge.v1beta1.MsgChangeAssetStatusResponse',
   is(o: any): o is MsgChangeAssetStatusResponse {

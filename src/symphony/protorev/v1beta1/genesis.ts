@@ -24,11 +24,20 @@ import {
 } from '../../../cosmos/base/v1beta1/coin';
 import { BinaryReader, BinaryWriter } from '../../../binary';
 import { GlobalDecoderRegistry } from '../../../registry';
-/** GenesisState defines the protorev module's genesis state. */
+/**
+ * GenesisState defines the protorev module's genesis state.
+ * @name GenesisState
+ * @package symphony.protorev.v1beta1
+ * @see proto type: symphony.protorev.v1beta1.GenesisState
+ */
 export interface GenesisState {
-  /** Parameters for the protorev module. */
+  /**
+   * Parameters for the protorev module.
+   */
   params: Params;
-  /** Token pair arb routes for the protorev module (hot routes). */
+  /**
+   * Token pair arb routes for the protorev module (hot routes).
+   */
   tokenPairArbRoutes: TokenPairArbRoutes[];
   /**
    * The base denominations being used to create cyclic arbitrage routes via the
@@ -39,16 +48,24 @@ export interface GenesisState {
    * DEPRECATED: pool_weights are weights that are being used to calculate the
    * compute cost of each route. This field is deprecated.
    * It is replaced by the `info_by_pool_type` field.
+   * @deprecated
    */
-  /** @deprecated */
   poolWeights?: PoolWeights;
-  /** The number of days since module genesis. */
+  /**
+   * The number of days since module genesis.
+   */
   daysSinceModuleGenesis: bigint;
-  /** The fees the developer account has accumulated over time. */
+  /**
+   * The fees the developer account has accumulated over time.
+   */
   developerFees: Coin[];
-  /** The latest block height that the module has processed. */
+  /**
+   * The latest block height that the module has processed.
+   */
   latestBlockHeight: bigint;
-  /** The developer account address of the module. */
+  /**
+   * The developer account address of the module.
+   */
   developerAddress: string;
   /**
    * Max pool points per block i.e. the maximum compute time (in ms)
@@ -60,9 +77,13 @@ export interface GenesisState {
    * protorev can use per tx.
    */
   maxPoolPointsPerTx: bigint;
-  /** The number of pool points that have been consumed in the current block. */
+  /**
+   * The number of pool points that have been consumed in the current block.
+   */
   pointCountForBlock: bigint;
-  /** All of the profits that have been accumulated by the module. */
+  /**
+   * All of the profits that have been accumulated by the module.
+   */
   profits: Coin[];
   /**
    * Information that is used to estimate execution time / gas
@@ -75,11 +96,20 @@ export interface GenesisStateProtoMsg {
   typeUrl: '/symphony.protorev.v1beta1.GenesisState';
   value: Uint8Array;
 }
-/** GenesisState defines the protorev module's genesis state. */
+/**
+ * GenesisState defines the protorev module's genesis state.
+ * @name GenesisStateAmino
+ * @package symphony.protorev.v1beta1
+ * @see proto type: symphony.protorev.v1beta1.GenesisState
+ */
 export interface GenesisStateAmino {
-  /** Parameters for the protorev module. */
+  /**
+   * Parameters for the protorev module.
+   */
   params?: ParamsAmino;
-  /** Token pair arb routes for the protorev module (hot routes). */
+  /**
+   * Token pair arb routes for the protorev module (hot routes).
+   */
   token_pair_arb_routes?: TokenPairArbRoutesAmino[];
   /**
    * The base denominations being used to create cyclic arbitrage routes via the
@@ -90,16 +120,24 @@ export interface GenesisStateAmino {
    * DEPRECATED: pool_weights are weights that are being used to calculate the
    * compute cost of each route. This field is deprecated.
    * It is replaced by the `info_by_pool_type` field.
+   * @deprecated
    */
-  /** @deprecated */
   pool_weights?: PoolWeightsAmino;
-  /** The number of days since module genesis. */
+  /**
+   * The number of days since module genesis.
+   */
   days_since_module_genesis?: string;
-  /** The fees the developer account has accumulated over time. */
+  /**
+   * The fees the developer account has accumulated over time.
+   */
   developer_fees?: CoinAmino[];
-  /** The latest block height that the module has processed. */
+  /**
+   * The latest block height that the module has processed.
+   */
   latest_block_height?: string;
-  /** The developer account address of the module. */
+  /**
+   * The developer account address of the module.
+   */
   developer_address?: string;
   /**
    * Max pool points per block i.e. the maximum compute time (in ms)
@@ -111,9 +149,13 @@ export interface GenesisStateAmino {
    * protorev can use per tx.
    */
   max_pool_points_per_tx?: string;
-  /** The number of pool points that have been consumed in the current block. */
+  /**
+   * The number of pool points that have been consumed in the current block.
+   */
   point_count_for_block?: string;
-  /** All of the profits that have been accumulated by the module. */
+  /**
+   * All of the profits that have been accumulated by the module.
+   */
   profits?: CoinAmino[];
   /**
    * Information that is used to estimate execution time / gas
@@ -126,12 +168,19 @@ export interface GenesisStateAminoMsg {
   type: '/symphony.protorev.v1beta1.GenesisState';
   value: GenesisStateAmino;
 }
-/** GenesisState defines the protorev module's genesis state. */
+/**
+ * GenesisState defines the protorev module's genesis state.
+ * @name GenesisStateSDKType
+ * @package symphony.protorev.v1beta1
+ * @see proto type: symphony.protorev.v1beta1.GenesisState
+ */
 export interface GenesisStateSDKType {
   params: ParamsSDKType;
   token_pair_arb_routes: TokenPairArbRoutesSDKType[];
   base_denoms: BaseDenomSDKType[];
-  /** @deprecated */
+  /**
+   * @deprecated
+   */
   pool_weights?: PoolWeightsSDKType;
   days_since_module_genesis: bigint;
   developer_fees: CoinSDKType[];
@@ -162,6 +211,12 @@ function createBaseGenesisState(): GenesisState {
     cyclicArbTracker: undefined,
   };
 }
+/**
+ * GenesisState defines the protorev module's genesis state.
+ * @name GenesisState
+ * @package symphony.protorev.v1beta1
+ * @see proto type: symphony.protorev.v1beta1.GenesisState
+ */
 export const GenesisState = {
   typeUrl: '/symphony.protorev.v1beta1.GenesisState',
   is(o: any): o is GenesisState {

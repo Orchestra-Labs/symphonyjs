@@ -47,20 +47,40 @@ import { PoolSDKType as Pool3SDKType } from '../../gamm/v1beta1/balancerPool';
 import { BinaryReader, BinaryWriter } from '../../../binary';
 import { GlobalDecoderRegistry } from '../../../registry';
 import { Decimal } from '@cosmjs/math';
-/** =============================== Params */
+/**
+ * =============================== Params
+ * @name ParamsRequest
+ * @package symphony.poolmanager.v1beta1
+ * @see proto type: symphony.poolmanager.v1beta1.ParamsRequest
+ */
 export interface ParamsRequest {}
 export interface ParamsRequestProtoMsg {
   typeUrl: '/symphony.poolmanager.v1beta1.ParamsRequest';
   value: Uint8Array;
 }
-/** =============================== Params */
+/**
+ * =============================== Params
+ * @name ParamsRequestAmino
+ * @package symphony.poolmanager.v1beta1
+ * @see proto type: symphony.poolmanager.v1beta1.ParamsRequest
+ */
 export interface ParamsRequestAmino {}
 export interface ParamsRequestAminoMsg {
   type: '/symphony.poolmanager.v1beta1.ParamsRequest';
   value: ParamsRequestAmino;
 }
-/** =============================== Params */
+/**
+ * =============================== Params
+ * @name ParamsRequestSDKType
+ * @package symphony.poolmanager.v1beta1
+ * @see proto type: symphony.poolmanager.v1beta1.ParamsRequest
+ */
 export interface ParamsRequestSDKType {}
+/**
+ * @name ParamsResponse
+ * @package symphony.poolmanager.v1beta1
+ * @see proto type: symphony.poolmanager.v1beta1.ParamsResponse
+ */
 export interface ParamsResponse {
   params: Params;
 }
@@ -68,6 +88,11 @@ export interface ParamsResponseProtoMsg {
   typeUrl: '/symphony.poolmanager.v1beta1.ParamsResponse';
   value: Uint8Array;
 }
+/**
+ * @name ParamsResponseAmino
+ * @package symphony.poolmanager.v1beta1
+ * @see proto type: symphony.poolmanager.v1beta1.ParamsResponse
+ */
 export interface ParamsResponseAmino {
   params?: ParamsAmino;
 }
@@ -75,15 +100,29 @@ export interface ParamsResponseAminoMsg {
   type: '/symphony.poolmanager.v1beta1.ParamsResponse';
   value: ParamsResponseAmino;
 }
+/**
+ * @name ParamsResponseSDKType
+ * @package symphony.poolmanager.v1beta1
+ * @see proto type: symphony.poolmanager.v1beta1.ParamsResponse
+ */
 export interface ParamsResponseSDKType {
   params: ParamsSDKType;
 }
-/** =============================== EstimateSwapExactAmountIn */
+/**
+ * =============================== EstimateSwapExactAmountIn
+ * @name EstimateSwapExactAmountInRequest
+ * @package symphony.poolmanager.v1beta1
+ * @see proto type: symphony.poolmanager.v1beta1.EstimateSwapExactAmountInRequest
+ */
 export interface EstimateSwapExactAmountInRequest {
-  /** DEPRECATED */
-  /** @deprecated */
+  /**
+   * DEPRECATED
+   * @deprecated
+   */
   sender?: string;
-  /** @deprecated */
+  /**
+   * @deprecated
+   */
   poolId?: bigint;
   tokenIn: string;
   routes: SwapAmountInRoute[];
@@ -92,12 +131,21 @@ export interface EstimateSwapExactAmountInRequestProtoMsg {
   typeUrl: '/symphony.poolmanager.v1beta1.EstimateSwapExactAmountInRequest';
   value: Uint8Array;
 }
-/** =============================== EstimateSwapExactAmountIn */
+/**
+ * =============================== EstimateSwapExactAmountIn
+ * @name EstimateSwapExactAmountInRequestAmino
+ * @package symphony.poolmanager.v1beta1
+ * @see proto type: symphony.poolmanager.v1beta1.EstimateSwapExactAmountInRequest
+ */
 export interface EstimateSwapExactAmountInRequestAmino {
-  /** DEPRECATED */
-  /** @deprecated */
+  /**
+   * DEPRECATED
+   * @deprecated
+   */
   sender?: string;
-  /** @deprecated */
+  /**
+   * @deprecated
+   */
   pool_id?: string;
   token_in?: string;
   routes?: SwapAmountInRouteAmino[];
@@ -106,17 +154,33 @@ export interface EstimateSwapExactAmountInRequestAminoMsg {
   type: '/symphony.poolmanager.v1beta1.EstimateSwapExactAmountInRequest';
   value: EstimateSwapExactAmountInRequestAmino;
 }
-/** =============================== EstimateSwapExactAmountIn */
+/**
+ * =============================== EstimateSwapExactAmountIn
+ * @name EstimateSwapExactAmountInRequestSDKType
+ * @package symphony.poolmanager.v1beta1
+ * @see proto type: symphony.poolmanager.v1beta1.EstimateSwapExactAmountInRequest
+ */
 export interface EstimateSwapExactAmountInRequestSDKType {
-  /** @deprecated */
+  /**
+   * @deprecated
+   */
   sender?: string;
-  /** @deprecated */
+  /**
+   * @deprecated
+   */
   pool_id?: bigint;
   token_in: string;
   routes: SwapAmountInRouteSDKType[];
 }
+/**
+ * @name EstimateSwapExactAmountInWithPrimitiveTypesRequest
+ * @package symphony.poolmanager.v1beta1
+ * @see proto type: symphony.poolmanager.v1beta1.EstimateSwapExactAmountInWithPrimitiveTypesRequest
+ */
 export interface EstimateSwapExactAmountInWithPrimitiveTypesRequest {
-  /** @deprecated */
+  /**
+   * @deprecated
+   */
   poolId?: bigint;
   tokenIn: string;
   routesPoolId: bigint[];
@@ -126,8 +190,15 @@ export interface EstimateSwapExactAmountInWithPrimitiveTypesRequestProtoMsg {
   typeUrl: '/symphony.poolmanager.v1beta1.EstimateSwapExactAmountInWithPrimitiveTypesRequest';
   value: Uint8Array;
 }
+/**
+ * @name EstimateSwapExactAmountInWithPrimitiveTypesRequestAmino
+ * @package symphony.poolmanager.v1beta1
+ * @see proto type: symphony.poolmanager.v1beta1.EstimateSwapExactAmountInWithPrimitiveTypesRequest
+ */
 export interface EstimateSwapExactAmountInWithPrimitiveTypesRequestAmino {
-  /** @deprecated */
+  /**
+   * @deprecated
+   */
   pool_id?: string;
   token_in?: string;
   routes_pool_id?: string[];
@@ -137,13 +208,25 @@ export interface EstimateSwapExactAmountInWithPrimitiveTypesRequestAminoMsg {
   type: '/symphony.poolmanager.v1beta1.EstimateSwapExactAmountInWithPrimitiveTypesRequest';
   value: EstimateSwapExactAmountInWithPrimitiveTypesRequestAmino;
 }
+/**
+ * @name EstimateSwapExactAmountInWithPrimitiveTypesRequestSDKType
+ * @package symphony.poolmanager.v1beta1
+ * @see proto type: symphony.poolmanager.v1beta1.EstimateSwapExactAmountInWithPrimitiveTypesRequest
+ */
 export interface EstimateSwapExactAmountInWithPrimitiveTypesRequestSDKType {
-  /** @deprecated */
+  /**
+   * @deprecated
+   */
   pool_id?: bigint;
   token_in: string;
   routes_pool_id: bigint[];
   routes_token_out_denom: string[];
 }
+/**
+ * @name EstimateSinglePoolSwapExactAmountInRequest
+ * @package symphony.poolmanager.v1beta1
+ * @see proto type: symphony.poolmanager.v1beta1.EstimateSinglePoolSwapExactAmountInRequest
+ */
 export interface EstimateSinglePoolSwapExactAmountInRequest {
   poolId: bigint;
   tokenIn: string;
@@ -153,6 +236,11 @@ export interface EstimateSinglePoolSwapExactAmountInRequestProtoMsg {
   typeUrl: '/symphony.poolmanager.v1beta1.EstimateSinglePoolSwapExactAmountInRequest';
   value: Uint8Array;
 }
+/**
+ * @name EstimateSinglePoolSwapExactAmountInRequestAmino
+ * @package symphony.poolmanager.v1beta1
+ * @see proto type: symphony.poolmanager.v1beta1.EstimateSinglePoolSwapExactAmountInRequest
+ */
 export interface EstimateSinglePoolSwapExactAmountInRequestAmino {
   pool_id?: string;
   token_in?: string;
@@ -162,11 +250,21 @@ export interface EstimateSinglePoolSwapExactAmountInRequestAminoMsg {
   type: '/symphony.poolmanager.v1beta1.EstimateSinglePoolSwapExactAmountInRequest';
   value: EstimateSinglePoolSwapExactAmountInRequestAmino;
 }
+/**
+ * @name EstimateSinglePoolSwapExactAmountInRequestSDKType
+ * @package symphony.poolmanager.v1beta1
+ * @see proto type: symphony.poolmanager.v1beta1.EstimateSinglePoolSwapExactAmountInRequest
+ */
 export interface EstimateSinglePoolSwapExactAmountInRequestSDKType {
   pool_id: bigint;
   token_in: string;
   token_out_denom: string;
 }
+/**
+ * @name EstimateSwapExactAmountInResponse
+ * @package symphony.poolmanager.v1beta1
+ * @see proto type: symphony.poolmanager.v1beta1.EstimateSwapExactAmountInResponse
+ */
 export interface EstimateSwapExactAmountInResponse {
   tokenOutAmount: string;
 }
@@ -174,6 +272,11 @@ export interface EstimateSwapExactAmountInResponseProtoMsg {
   typeUrl: '/symphony.poolmanager.v1beta1.EstimateSwapExactAmountInResponse';
   value: Uint8Array;
 }
+/**
+ * @name EstimateSwapExactAmountInResponseAmino
+ * @package symphony.poolmanager.v1beta1
+ * @see proto type: symphony.poolmanager.v1beta1.EstimateSwapExactAmountInResponse
+ */
 export interface EstimateSwapExactAmountInResponseAmino {
   token_out_amount?: string;
 }
@@ -181,15 +284,29 @@ export interface EstimateSwapExactAmountInResponseAminoMsg {
   type: '/symphony.poolmanager.v1beta1.EstimateSwapExactAmountInResponse';
   value: EstimateSwapExactAmountInResponseAmino;
 }
+/**
+ * @name EstimateSwapExactAmountInResponseSDKType
+ * @package symphony.poolmanager.v1beta1
+ * @see proto type: symphony.poolmanager.v1beta1.EstimateSwapExactAmountInResponse
+ */
 export interface EstimateSwapExactAmountInResponseSDKType {
   token_out_amount: string;
 }
-/** =============================== EstimateSwapExactAmountOut */
+/**
+ * =============================== EstimateSwapExactAmountOut
+ * @name EstimateSwapExactAmountOutRequest
+ * @package symphony.poolmanager.v1beta1
+ * @see proto type: symphony.poolmanager.v1beta1.EstimateSwapExactAmountOutRequest
+ */
 export interface EstimateSwapExactAmountOutRequest {
-  /** DEPRECATED */
-  /** @deprecated */
+  /**
+   * DEPRECATED
+   * @deprecated
+   */
   sender?: string;
-  /** @deprecated */
+  /**
+   * @deprecated
+   */
   poolId?: bigint;
   routes: SwapAmountOutRoute[];
   tokenOut: string;
@@ -198,12 +315,21 @@ export interface EstimateSwapExactAmountOutRequestProtoMsg {
   typeUrl: '/symphony.poolmanager.v1beta1.EstimateSwapExactAmountOutRequest';
   value: Uint8Array;
 }
-/** =============================== EstimateSwapExactAmountOut */
+/**
+ * =============================== EstimateSwapExactAmountOut
+ * @name EstimateSwapExactAmountOutRequestAmino
+ * @package symphony.poolmanager.v1beta1
+ * @see proto type: symphony.poolmanager.v1beta1.EstimateSwapExactAmountOutRequest
+ */
 export interface EstimateSwapExactAmountOutRequestAmino {
-  /** DEPRECATED */
-  /** @deprecated */
+  /**
+   * DEPRECATED
+   * @deprecated
+   */
   sender?: string;
-  /** @deprecated */
+  /**
+   * @deprecated
+   */
   pool_id?: string;
   routes?: SwapAmountOutRouteAmino[];
   token_out?: string;
@@ -212,17 +338,33 @@ export interface EstimateSwapExactAmountOutRequestAminoMsg {
   type: '/symphony.poolmanager.v1beta1.EstimateSwapExactAmountOutRequest';
   value: EstimateSwapExactAmountOutRequestAmino;
 }
-/** =============================== EstimateSwapExactAmountOut */
+/**
+ * =============================== EstimateSwapExactAmountOut
+ * @name EstimateSwapExactAmountOutRequestSDKType
+ * @package symphony.poolmanager.v1beta1
+ * @see proto type: symphony.poolmanager.v1beta1.EstimateSwapExactAmountOutRequest
+ */
 export interface EstimateSwapExactAmountOutRequestSDKType {
-  /** @deprecated */
+  /**
+   * @deprecated
+   */
   sender?: string;
-  /** @deprecated */
+  /**
+   * @deprecated
+   */
   pool_id?: bigint;
   routes: SwapAmountOutRouteSDKType[];
   token_out: string;
 }
+/**
+ * @name EstimateSwapExactAmountOutWithPrimitiveTypesRequest
+ * @package symphony.poolmanager.v1beta1
+ * @see proto type: symphony.poolmanager.v1beta1.EstimateSwapExactAmountOutWithPrimitiveTypesRequest
+ */
 export interface EstimateSwapExactAmountOutWithPrimitiveTypesRequest {
-  /** @deprecated */
+  /**
+   * @deprecated
+   */
   poolId?: bigint;
   routesPoolId: bigint[];
   routesTokenInDenom: string[];
@@ -232,8 +374,15 @@ export interface EstimateSwapExactAmountOutWithPrimitiveTypesRequestProtoMsg {
   typeUrl: '/symphony.poolmanager.v1beta1.EstimateSwapExactAmountOutWithPrimitiveTypesRequest';
   value: Uint8Array;
 }
+/**
+ * @name EstimateSwapExactAmountOutWithPrimitiveTypesRequestAmino
+ * @package symphony.poolmanager.v1beta1
+ * @see proto type: symphony.poolmanager.v1beta1.EstimateSwapExactAmountOutWithPrimitiveTypesRequest
+ */
 export interface EstimateSwapExactAmountOutWithPrimitiveTypesRequestAmino {
-  /** @deprecated */
+  /**
+   * @deprecated
+   */
   pool_id?: string;
   routes_pool_id?: string[];
   routes_token_in_denom?: string[];
@@ -243,13 +392,25 @@ export interface EstimateSwapExactAmountOutWithPrimitiveTypesRequestAminoMsg {
   type: '/symphony.poolmanager.v1beta1.EstimateSwapExactAmountOutWithPrimitiveTypesRequest';
   value: EstimateSwapExactAmountOutWithPrimitiveTypesRequestAmino;
 }
+/**
+ * @name EstimateSwapExactAmountOutWithPrimitiveTypesRequestSDKType
+ * @package symphony.poolmanager.v1beta1
+ * @see proto type: symphony.poolmanager.v1beta1.EstimateSwapExactAmountOutWithPrimitiveTypesRequest
+ */
 export interface EstimateSwapExactAmountOutWithPrimitiveTypesRequestSDKType {
-  /** @deprecated */
+  /**
+   * @deprecated
+   */
   pool_id?: bigint;
   routes_pool_id: bigint[];
   routes_token_in_denom: string[];
   token_out: string;
 }
+/**
+ * @name EstimateSinglePoolSwapExactAmountOutRequest
+ * @package symphony.poolmanager.v1beta1
+ * @see proto type: symphony.poolmanager.v1beta1.EstimateSinglePoolSwapExactAmountOutRequest
+ */
 export interface EstimateSinglePoolSwapExactAmountOutRequest {
   poolId: bigint;
   tokenInDenom: string;
@@ -259,6 +420,11 @@ export interface EstimateSinglePoolSwapExactAmountOutRequestProtoMsg {
   typeUrl: '/symphony.poolmanager.v1beta1.EstimateSinglePoolSwapExactAmountOutRequest';
   value: Uint8Array;
 }
+/**
+ * @name EstimateSinglePoolSwapExactAmountOutRequestAmino
+ * @package symphony.poolmanager.v1beta1
+ * @see proto type: symphony.poolmanager.v1beta1.EstimateSinglePoolSwapExactAmountOutRequest
+ */
 export interface EstimateSinglePoolSwapExactAmountOutRequestAmino {
   pool_id?: string;
   token_in_denom?: string;
@@ -268,11 +434,21 @@ export interface EstimateSinglePoolSwapExactAmountOutRequestAminoMsg {
   type: '/symphony.poolmanager.v1beta1.EstimateSinglePoolSwapExactAmountOutRequest';
   value: EstimateSinglePoolSwapExactAmountOutRequestAmino;
 }
+/**
+ * @name EstimateSinglePoolSwapExactAmountOutRequestSDKType
+ * @package symphony.poolmanager.v1beta1
+ * @see proto type: symphony.poolmanager.v1beta1.EstimateSinglePoolSwapExactAmountOutRequest
+ */
 export interface EstimateSinglePoolSwapExactAmountOutRequestSDKType {
   pool_id: bigint;
   token_in_denom: string;
   token_out: string;
 }
+/**
+ * @name EstimateSwapExactAmountOutResponse
+ * @package symphony.poolmanager.v1beta1
+ * @see proto type: symphony.poolmanager.v1beta1.EstimateSwapExactAmountOutResponse
+ */
 export interface EstimateSwapExactAmountOutResponse {
   tokenInAmount: string;
 }
@@ -280,6 +456,11 @@ export interface EstimateSwapExactAmountOutResponseProtoMsg {
   typeUrl: '/symphony.poolmanager.v1beta1.EstimateSwapExactAmountOutResponse';
   value: Uint8Array;
 }
+/**
+ * @name EstimateSwapExactAmountOutResponseAmino
+ * @package symphony.poolmanager.v1beta1
+ * @see proto type: symphony.poolmanager.v1beta1.EstimateSwapExactAmountOutResponse
+ */
 export interface EstimateSwapExactAmountOutResponseAmino {
   token_in_amount?: string;
 }
@@ -287,23 +468,48 @@ export interface EstimateSwapExactAmountOutResponseAminoMsg {
   type: '/symphony.poolmanager.v1beta1.EstimateSwapExactAmountOutResponse';
   value: EstimateSwapExactAmountOutResponseAmino;
 }
+/**
+ * @name EstimateSwapExactAmountOutResponseSDKType
+ * @package symphony.poolmanager.v1beta1
+ * @see proto type: symphony.poolmanager.v1beta1.EstimateSwapExactAmountOutResponse
+ */
 export interface EstimateSwapExactAmountOutResponseSDKType {
   token_in_amount: string;
 }
-/** =============================== NumPools */
+/**
+ * =============================== NumPools
+ * @name NumPoolsRequest
+ * @package symphony.poolmanager.v1beta1
+ * @see proto type: symphony.poolmanager.v1beta1.NumPoolsRequest
+ */
 export interface NumPoolsRequest {}
 export interface NumPoolsRequestProtoMsg {
   typeUrl: '/symphony.poolmanager.v1beta1.NumPoolsRequest';
   value: Uint8Array;
 }
-/** =============================== NumPools */
+/**
+ * =============================== NumPools
+ * @name NumPoolsRequestAmino
+ * @package symphony.poolmanager.v1beta1
+ * @see proto type: symphony.poolmanager.v1beta1.NumPoolsRequest
+ */
 export interface NumPoolsRequestAmino {}
 export interface NumPoolsRequestAminoMsg {
   type: '/symphony.poolmanager.v1beta1.NumPoolsRequest';
   value: NumPoolsRequestAmino;
 }
-/** =============================== NumPools */
+/**
+ * =============================== NumPools
+ * @name NumPoolsRequestSDKType
+ * @package symphony.poolmanager.v1beta1
+ * @see proto type: symphony.poolmanager.v1beta1.NumPoolsRequest
+ */
 export interface NumPoolsRequestSDKType {}
+/**
+ * @name NumPoolsResponse
+ * @package symphony.poolmanager.v1beta1
+ * @see proto type: symphony.poolmanager.v1beta1.NumPoolsResponse
+ */
 export interface NumPoolsResponse {
   numPools: bigint;
 }
@@ -311,6 +517,11 @@ export interface NumPoolsResponseProtoMsg {
   typeUrl: '/symphony.poolmanager.v1beta1.NumPoolsResponse';
   value: Uint8Array;
 }
+/**
+ * @name NumPoolsResponseAmino
+ * @package symphony.poolmanager.v1beta1
+ * @see proto type: symphony.poolmanager.v1beta1.NumPoolsResponse
+ */
 export interface NumPoolsResponseAmino {
   num_pools?: string;
 }
@@ -318,10 +529,20 @@ export interface NumPoolsResponseAminoMsg {
   type: '/symphony.poolmanager.v1beta1.NumPoolsResponse';
   value: NumPoolsResponseAmino;
 }
+/**
+ * @name NumPoolsResponseSDKType
+ * @package symphony.poolmanager.v1beta1
+ * @see proto type: symphony.poolmanager.v1beta1.NumPoolsResponse
+ */
 export interface NumPoolsResponseSDKType {
   num_pools: bigint;
 }
-/** =============================== Pool */
+/**
+ * =============================== Pool
+ * @name PoolRequest
+ * @package symphony.poolmanager.v1beta1
+ * @see proto type: symphony.poolmanager.v1beta1.PoolRequest
+ */
 export interface PoolRequest {
   poolId: bigint;
 }
@@ -329,7 +550,12 @@ export interface PoolRequestProtoMsg {
   typeUrl: '/symphony.poolmanager.v1beta1.PoolRequest';
   value: Uint8Array;
 }
-/** =============================== Pool */
+/**
+ * =============================== Pool
+ * @name PoolRequestAmino
+ * @package symphony.poolmanager.v1beta1
+ * @see proto type: symphony.poolmanager.v1beta1.PoolRequest
+ */
 export interface PoolRequestAmino {
   pool_id?: string;
 }
@@ -337,10 +563,20 @@ export interface PoolRequestAminoMsg {
   type: '/symphony.poolmanager.v1beta1.PoolRequest';
   value: PoolRequestAmino;
 }
-/** =============================== Pool */
+/**
+ * =============================== Pool
+ * @name PoolRequestSDKType
+ * @package symphony.poolmanager.v1beta1
+ * @see proto type: symphony.poolmanager.v1beta1.PoolRequest
+ */
 export interface PoolRequestSDKType {
   pool_id: bigint;
 }
+/**
+ * @name PoolResponse
+ * @package symphony.poolmanager.v1beta1
+ * @see proto type: symphony.poolmanager.v1beta1.PoolResponse
+ */
 export interface PoolResponse {
   pool?: Pool1 | CosmWasmPool | Pool2 | Pool3 | Any | undefined;
 }
@@ -357,6 +593,11 @@ export type PoolResponseEncoded = Omit<PoolResponse, 'pool'> & {
     | AnyProtoMsg
     | undefined;
 };
+/**
+ * @name PoolResponseAmino
+ * @package symphony.poolmanager.v1beta1
+ * @see proto type: symphony.poolmanager.v1beta1.PoolResponse
+ */
 export interface PoolResponseAmino {
   pool?: AnyAmino;
 }
@@ -364,6 +605,11 @@ export interface PoolResponseAminoMsg {
   type: '/symphony.poolmanager.v1beta1.PoolResponse';
   value: PoolResponseAmino;
 }
+/**
+ * @name PoolResponseSDKType
+ * @package symphony.poolmanager.v1beta1
+ * @see proto type: symphony.poolmanager.v1beta1.PoolResponse
+ */
 export interface PoolResponseSDKType {
   pool?:
     | Pool1SDKType
@@ -373,20 +619,40 @@ export interface PoolResponseSDKType {
     | AnySDKType
     | undefined;
 }
-/** =============================== AllPools */
+/**
+ * =============================== AllPools
+ * @name AllPoolsRequest
+ * @package symphony.poolmanager.v1beta1
+ * @see proto type: symphony.poolmanager.v1beta1.AllPoolsRequest
+ */
 export interface AllPoolsRequest {}
 export interface AllPoolsRequestProtoMsg {
   typeUrl: '/symphony.poolmanager.v1beta1.AllPoolsRequest';
   value: Uint8Array;
 }
-/** =============================== AllPools */
+/**
+ * =============================== AllPools
+ * @name AllPoolsRequestAmino
+ * @package symphony.poolmanager.v1beta1
+ * @see proto type: symphony.poolmanager.v1beta1.AllPoolsRequest
+ */
 export interface AllPoolsRequestAmino {}
 export interface AllPoolsRequestAminoMsg {
   type: '/symphony.poolmanager.v1beta1.AllPoolsRequest';
   value: AllPoolsRequestAmino;
 }
-/** =============================== AllPools */
+/**
+ * =============================== AllPools
+ * @name AllPoolsRequestSDKType
+ * @package symphony.poolmanager.v1beta1
+ * @see proto type: symphony.poolmanager.v1beta1.AllPoolsRequest
+ */
 export interface AllPoolsRequestSDKType {}
+/**
+ * @name AllPoolsResponse
+ * @package symphony.poolmanager.v1beta1
+ * @see proto type: symphony.poolmanager.v1beta1.AllPoolsResponse
+ */
 export interface AllPoolsResponse {
   pools: (Pool1 | CosmWasmPool | Pool2 | Pool3 | Any)[] | Any[];
 }
@@ -403,6 +669,11 @@ export type AllPoolsResponseEncoded = Omit<AllPoolsResponse, 'pools'> & {
     | AnyProtoMsg
   )[];
 };
+/**
+ * @name AllPoolsResponseAmino
+ * @package symphony.poolmanager.v1beta1
+ * @see proto type: symphony.poolmanager.v1beta1.AllPoolsResponse
+ */
 export interface AllPoolsResponseAmino {
   pools?: AnyAmino[];
 }
@@ -410,6 +681,11 @@ export interface AllPoolsResponseAminoMsg {
   type: '/symphony.poolmanager.v1beta1.AllPoolsResponse';
   value: AllPoolsResponseAmino;
 }
+/**
+ * @name AllPoolsResponseSDKType
+ * @package symphony.poolmanager.v1beta1
+ * @see proto type: symphony.poolmanager.v1beta1.AllPoolsResponse
+ */
 export interface AllPoolsResponseSDKType {
   pools: (
     | Pool1SDKType
@@ -422,6 +698,9 @@ export interface AllPoolsResponseSDKType {
 /**
  * =======================================================
  * ListPoolsByDenomRequest
+ * @name ListPoolsByDenomRequest
+ * @package symphony.poolmanager.v1beta1
+ * @see proto type: symphony.poolmanager.v1beta1.ListPoolsByDenomRequest
  */
 export interface ListPoolsByDenomRequest {
   denom: string;
@@ -433,6 +712,9 @@ export interface ListPoolsByDenomRequestProtoMsg {
 /**
  * =======================================================
  * ListPoolsByDenomRequest
+ * @name ListPoolsByDenomRequestAmino
+ * @package symphony.poolmanager.v1beta1
+ * @see proto type: symphony.poolmanager.v1beta1.ListPoolsByDenomRequest
  */
 export interface ListPoolsByDenomRequestAmino {
   denom?: string;
@@ -444,10 +726,18 @@ export interface ListPoolsByDenomRequestAminoMsg {
 /**
  * =======================================================
  * ListPoolsByDenomRequest
+ * @name ListPoolsByDenomRequestSDKType
+ * @package symphony.poolmanager.v1beta1
+ * @see proto type: symphony.poolmanager.v1beta1.ListPoolsByDenomRequest
  */
 export interface ListPoolsByDenomRequestSDKType {
   denom: string;
 }
+/**
+ * @name ListPoolsByDenomResponse
+ * @package symphony.poolmanager.v1beta1
+ * @see proto type: symphony.poolmanager.v1beta1.ListPoolsByDenomResponse
+ */
 export interface ListPoolsByDenomResponse {
   pools: (Pool1 | CosmWasmPool | Pool2 | Pool3 | Any)[] | Any[];
 }
@@ -467,6 +757,11 @@ export type ListPoolsByDenomResponseEncoded = Omit<
     | AnyProtoMsg
   )[];
 };
+/**
+ * @name ListPoolsByDenomResponseAmino
+ * @package symphony.poolmanager.v1beta1
+ * @see proto type: symphony.poolmanager.v1beta1.ListPoolsByDenomResponse
+ */
 export interface ListPoolsByDenomResponseAmino {
   pools?: AnyAmino[];
 }
@@ -474,6 +769,11 @@ export interface ListPoolsByDenomResponseAminoMsg {
   type: '/symphony.poolmanager.v1beta1.ListPoolsByDenomResponse';
   value: ListPoolsByDenomResponseAmino;
 }
+/**
+ * @name ListPoolsByDenomResponseSDKType
+ * @package symphony.poolmanager.v1beta1
+ * @see proto type: symphony.poolmanager.v1beta1.ListPoolsByDenomResponse
+ */
 export interface ListPoolsByDenomResponseSDKType {
   pools: (
     | Pool1SDKType
@@ -487,6 +787,9 @@ export interface ListPoolsByDenomResponseSDKType {
  * ==========================================================
  * SpotPriceRequest defines the gRPC request structure for a SpotPrice
  * query.
+ * @name SpotPriceRequest
+ * @package symphony.poolmanager.v1beta1
+ * @see proto type: symphony.poolmanager.v1beta1.SpotPriceRequest
  */
 export interface SpotPriceRequest {
   poolId: bigint;
@@ -501,6 +804,9 @@ export interface SpotPriceRequestProtoMsg {
  * ==========================================================
  * SpotPriceRequest defines the gRPC request structure for a SpotPrice
  * query.
+ * @name SpotPriceRequestAmino
+ * @package symphony.poolmanager.v1beta1
+ * @see proto type: symphony.poolmanager.v1beta1.SpotPriceRequest
  */
 export interface SpotPriceRequestAmino {
   pool_id?: string;
@@ -515,6 +821,9 @@ export interface SpotPriceRequestAminoMsg {
  * ==========================================================
  * SpotPriceRequest defines the gRPC request structure for a SpotPrice
  * query.
+ * @name SpotPriceRequestSDKType
+ * @package symphony.poolmanager.v1beta1
+ * @see proto type: symphony.poolmanager.v1beta1.SpotPriceRequest
  */
 export interface SpotPriceRequestSDKType {
   pool_id: bigint;
@@ -524,9 +833,14 @@ export interface SpotPriceRequestSDKType {
 /**
  * SpotPriceResponse defines the gRPC response structure for a SpotPrice
  * query.
+ * @name SpotPriceResponse
+ * @package symphony.poolmanager.v1beta1
+ * @see proto type: symphony.poolmanager.v1beta1.SpotPriceResponse
  */
 export interface SpotPriceResponse {
-  /** String of the Dec. Ex) 10.203uatom */
+  /**
+   * String of the Dec. Ex) 10.203uatom
+   */
   spotPrice: string;
 }
 export interface SpotPriceResponseProtoMsg {
@@ -536,9 +850,14 @@ export interface SpotPriceResponseProtoMsg {
 /**
  * SpotPriceResponse defines the gRPC response structure for a SpotPrice
  * query.
+ * @name SpotPriceResponseAmino
+ * @package symphony.poolmanager.v1beta1
+ * @see proto type: symphony.poolmanager.v1beta1.SpotPriceResponse
  */
 export interface SpotPriceResponseAmino {
-  /** String of the Dec. Ex) 10.203uatom */
+  /**
+   * String of the Dec. Ex) 10.203uatom
+   */
   spot_price?: string;
 }
 export interface SpotPriceResponseAminoMsg {
@@ -548,11 +867,19 @@ export interface SpotPriceResponseAminoMsg {
 /**
  * SpotPriceResponse defines the gRPC response structure for a SpotPrice
  * query.
+ * @name SpotPriceResponseSDKType
+ * @package symphony.poolmanager.v1beta1
+ * @see proto type: symphony.poolmanager.v1beta1.SpotPriceResponse
  */
 export interface SpotPriceResponseSDKType {
   spot_price: string;
 }
-/** =============================== TotalPoolLiquidity */
+/**
+ * =============================== TotalPoolLiquidity
+ * @name TotalPoolLiquidityRequest
+ * @package symphony.poolmanager.v1beta1
+ * @see proto type: symphony.poolmanager.v1beta1.TotalPoolLiquidityRequest
+ */
 export interface TotalPoolLiquidityRequest {
   poolId: bigint;
 }
@@ -560,7 +887,12 @@ export interface TotalPoolLiquidityRequestProtoMsg {
   typeUrl: '/symphony.poolmanager.v1beta1.TotalPoolLiquidityRequest';
   value: Uint8Array;
 }
-/** =============================== TotalPoolLiquidity */
+/**
+ * =============================== TotalPoolLiquidity
+ * @name TotalPoolLiquidityRequestAmino
+ * @package symphony.poolmanager.v1beta1
+ * @see proto type: symphony.poolmanager.v1beta1.TotalPoolLiquidityRequest
+ */
 export interface TotalPoolLiquidityRequestAmino {
   pool_id?: string;
 }
@@ -568,10 +900,20 @@ export interface TotalPoolLiquidityRequestAminoMsg {
   type: '/symphony.poolmanager.v1beta1.TotalPoolLiquidityRequest';
   value: TotalPoolLiquidityRequestAmino;
 }
-/** =============================== TotalPoolLiquidity */
+/**
+ * =============================== TotalPoolLiquidity
+ * @name TotalPoolLiquidityRequestSDKType
+ * @package symphony.poolmanager.v1beta1
+ * @see proto type: symphony.poolmanager.v1beta1.TotalPoolLiquidityRequest
+ */
 export interface TotalPoolLiquidityRequestSDKType {
   pool_id: bigint;
 }
+/**
+ * @name TotalPoolLiquidityResponse
+ * @package symphony.poolmanager.v1beta1
+ * @see proto type: symphony.poolmanager.v1beta1.TotalPoolLiquidityResponse
+ */
 export interface TotalPoolLiquidityResponse {
   liquidity: Coin[];
 }
@@ -579,6 +921,11 @@ export interface TotalPoolLiquidityResponseProtoMsg {
   typeUrl: '/symphony.poolmanager.v1beta1.TotalPoolLiquidityResponse';
   value: Uint8Array;
 }
+/**
+ * @name TotalPoolLiquidityResponseAmino
+ * @package symphony.poolmanager.v1beta1
+ * @see proto type: symphony.poolmanager.v1beta1.TotalPoolLiquidityResponse
+ */
 export interface TotalPoolLiquidityResponseAmino {
   liquidity?: CoinAmino[];
 }
@@ -586,23 +933,48 @@ export interface TotalPoolLiquidityResponseAminoMsg {
   type: '/symphony.poolmanager.v1beta1.TotalPoolLiquidityResponse';
   value: TotalPoolLiquidityResponseAmino;
 }
+/**
+ * @name TotalPoolLiquidityResponseSDKType
+ * @package symphony.poolmanager.v1beta1
+ * @see proto type: symphony.poolmanager.v1beta1.TotalPoolLiquidityResponse
+ */
 export interface TotalPoolLiquidityResponseSDKType {
   liquidity: CoinSDKType[];
 }
-/** =============================== TotalLiquidity */
+/**
+ * =============================== TotalLiquidity
+ * @name TotalLiquidityRequest
+ * @package symphony.poolmanager.v1beta1
+ * @see proto type: symphony.poolmanager.v1beta1.TotalLiquidityRequest
+ */
 export interface TotalLiquidityRequest {}
 export interface TotalLiquidityRequestProtoMsg {
   typeUrl: '/symphony.poolmanager.v1beta1.TotalLiquidityRequest';
   value: Uint8Array;
 }
-/** =============================== TotalLiquidity */
+/**
+ * =============================== TotalLiquidity
+ * @name TotalLiquidityRequestAmino
+ * @package symphony.poolmanager.v1beta1
+ * @see proto type: symphony.poolmanager.v1beta1.TotalLiquidityRequest
+ */
 export interface TotalLiquidityRequestAmino {}
 export interface TotalLiquidityRequestAminoMsg {
   type: '/symphony.poolmanager.v1beta1.TotalLiquidityRequest';
   value: TotalLiquidityRequestAmino;
 }
-/** =============================== TotalLiquidity */
+/**
+ * =============================== TotalLiquidity
+ * @name TotalLiquidityRequestSDKType
+ * @package symphony.poolmanager.v1beta1
+ * @see proto type: symphony.poolmanager.v1beta1.TotalLiquidityRequest
+ */
 export interface TotalLiquidityRequestSDKType {}
+/**
+ * @name TotalLiquidityResponse
+ * @package symphony.poolmanager.v1beta1
+ * @see proto type: symphony.poolmanager.v1beta1.TotalLiquidityResponse
+ */
 export interface TotalLiquidityResponse {
   liquidity: Coin[];
 }
@@ -610,6 +982,11 @@ export interface TotalLiquidityResponseProtoMsg {
   typeUrl: '/symphony.poolmanager.v1beta1.TotalLiquidityResponse';
   value: Uint8Array;
 }
+/**
+ * @name TotalLiquidityResponseAmino
+ * @package symphony.poolmanager.v1beta1
+ * @see proto type: symphony.poolmanager.v1beta1.TotalLiquidityResponse
+ */
 export interface TotalLiquidityResponseAmino {
   liquidity?: CoinAmino[];
 }
@@ -617,10 +994,20 @@ export interface TotalLiquidityResponseAminoMsg {
   type: '/symphony.poolmanager.v1beta1.TotalLiquidityResponse';
   value: TotalLiquidityResponseAmino;
 }
+/**
+ * @name TotalLiquidityResponseSDKType
+ * @package symphony.poolmanager.v1beta1
+ * @see proto type: symphony.poolmanager.v1beta1.TotalLiquidityResponse
+ */
 export interface TotalLiquidityResponseSDKType {
   liquidity: CoinSDKType[];
 }
-/** =============================== TotalVolumeForPool */
+/**
+ * =============================== TotalVolumeForPool
+ * @name TotalVolumeForPoolRequest
+ * @package symphony.poolmanager.v1beta1
+ * @see proto type: symphony.poolmanager.v1beta1.TotalVolumeForPoolRequest
+ */
 export interface TotalVolumeForPoolRequest {
   poolId: bigint;
 }
@@ -628,7 +1015,12 @@ export interface TotalVolumeForPoolRequestProtoMsg {
   typeUrl: '/symphony.poolmanager.v1beta1.TotalVolumeForPoolRequest';
   value: Uint8Array;
 }
-/** =============================== TotalVolumeForPool */
+/**
+ * =============================== TotalVolumeForPool
+ * @name TotalVolumeForPoolRequestAmino
+ * @package symphony.poolmanager.v1beta1
+ * @see proto type: symphony.poolmanager.v1beta1.TotalVolumeForPoolRequest
+ */
 export interface TotalVolumeForPoolRequestAmino {
   pool_id?: string;
 }
@@ -636,10 +1028,20 @@ export interface TotalVolumeForPoolRequestAminoMsg {
   type: '/symphony.poolmanager.v1beta1.TotalVolumeForPoolRequest';
   value: TotalVolumeForPoolRequestAmino;
 }
-/** =============================== TotalVolumeForPool */
+/**
+ * =============================== TotalVolumeForPool
+ * @name TotalVolumeForPoolRequestSDKType
+ * @package symphony.poolmanager.v1beta1
+ * @see proto type: symphony.poolmanager.v1beta1.TotalVolumeForPoolRequest
+ */
 export interface TotalVolumeForPoolRequestSDKType {
   pool_id: bigint;
 }
+/**
+ * @name TotalVolumeForPoolResponse
+ * @package symphony.poolmanager.v1beta1
+ * @see proto type: symphony.poolmanager.v1beta1.TotalVolumeForPoolResponse
+ */
 export interface TotalVolumeForPoolResponse {
   volume: Coin[];
 }
@@ -647,6 +1049,11 @@ export interface TotalVolumeForPoolResponseProtoMsg {
   typeUrl: '/symphony.poolmanager.v1beta1.TotalVolumeForPoolResponse';
   value: Uint8Array;
 }
+/**
+ * @name TotalVolumeForPoolResponseAmino
+ * @package symphony.poolmanager.v1beta1
+ * @see proto type: symphony.poolmanager.v1beta1.TotalVolumeForPoolResponse
+ */
 export interface TotalVolumeForPoolResponseAmino {
   volume?: CoinAmino[];
 }
@@ -654,10 +1061,20 @@ export interface TotalVolumeForPoolResponseAminoMsg {
   type: '/symphony.poolmanager.v1beta1.TotalVolumeForPoolResponse';
   value: TotalVolumeForPoolResponseAmino;
 }
+/**
+ * @name TotalVolumeForPoolResponseSDKType
+ * @package symphony.poolmanager.v1beta1
+ * @see proto type: symphony.poolmanager.v1beta1.TotalVolumeForPoolResponse
+ */
 export interface TotalVolumeForPoolResponseSDKType {
   volume: CoinSDKType[];
 }
-/** =============================== TradingPairTakerFee */
+/**
+ * =============================== TradingPairTakerFee
+ * @name TradingPairTakerFeeRequest
+ * @package symphony.poolmanager.v1beta1
+ * @see proto type: symphony.poolmanager.v1beta1.TradingPairTakerFeeRequest
+ */
 export interface TradingPairTakerFeeRequest {
   denom0: string;
   denom1: string;
@@ -666,7 +1083,12 @@ export interface TradingPairTakerFeeRequestProtoMsg {
   typeUrl: '/symphony.poolmanager.v1beta1.TradingPairTakerFeeRequest';
   value: Uint8Array;
 }
-/** =============================== TradingPairTakerFee */
+/**
+ * =============================== TradingPairTakerFee
+ * @name TradingPairTakerFeeRequestAmino
+ * @package symphony.poolmanager.v1beta1
+ * @see proto type: symphony.poolmanager.v1beta1.TradingPairTakerFeeRequest
+ */
 export interface TradingPairTakerFeeRequestAmino {
   denom_0?: string;
   denom_1?: string;
@@ -675,11 +1097,21 @@ export interface TradingPairTakerFeeRequestAminoMsg {
   type: '/symphony.poolmanager.v1beta1.TradingPairTakerFeeRequest';
   value: TradingPairTakerFeeRequestAmino;
 }
-/** =============================== TradingPairTakerFee */
+/**
+ * =============================== TradingPairTakerFee
+ * @name TradingPairTakerFeeRequestSDKType
+ * @package symphony.poolmanager.v1beta1
+ * @see proto type: symphony.poolmanager.v1beta1.TradingPairTakerFeeRequest
+ */
 export interface TradingPairTakerFeeRequestSDKType {
   denom_0: string;
   denom_1: string;
 }
+/**
+ * @name TradingPairTakerFeeResponse
+ * @package symphony.poolmanager.v1beta1
+ * @see proto type: symphony.poolmanager.v1beta1.TradingPairTakerFeeResponse
+ */
 export interface TradingPairTakerFeeResponse {
   takerFee: string;
 }
@@ -687,6 +1119,11 @@ export interface TradingPairTakerFeeResponseProtoMsg {
   typeUrl: '/symphony.poolmanager.v1beta1.TradingPairTakerFeeResponse';
   value: Uint8Array;
 }
+/**
+ * @name TradingPairTakerFeeResponseAmino
+ * @package symphony.poolmanager.v1beta1
+ * @see proto type: symphony.poolmanager.v1beta1.TradingPairTakerFeeResponse
+ */
 export interface TradingPairTakerFeeResponseAmino {
   taker_fee?: string;
 }
@@ -694,6 +1131,11 @@ export interface TradingPairTakerFeeResponseAminoMsg {
   type: '/symphony.poolmanager.v1beta1.TradingPairTakerFeeResponse';
   value: TradingPairTakerFeeResponseAmino;
 }
+/**
+ * @name TradingPairTakerFeeResponseSDKType
+ * @package symphony.poolmanager.v1beta1
+ * @see proto type: symphony.poolmanager.v1beta1.TradingPairTakerFeeResponse
+ */
 export interface TradingPairTakerFeeResponseSDKType {
   taker_fee: string;
 }
@@ -701,9 +1143,14 @@ export interface TradingPairTakerFeeResponseSDKType {
  * EstimateTradeBasedOnPriceImpactRequest represents a request to estimate a
  * trade for Balancer/StableSwap/Concentrated liquidity pool types based on the
  * given parameters.
+ * @name EstimateTradeBasedOnPriceImpactRequest
+ * @package symphony.poolmanager.v1beta1
+ * @see proto type: symphony.poolmanager.v1beta1.EstimateTradeBasedOnPriceImpactRequest
  */
 export interface EstimateTradeBasedOnPriceImpactRequest {
-  /** from_coin is the total amount of tokens that the user wants to sell. */
+  /**
+   * from_coin is the total amount of tokens that the user wants to sell.
+   */
   fromCoin: Coin;
   /**
    * to_coin_denom is the denom identifier of the token that the user wants to
@@ -735,9 +1182,14 @@ export interface EstimateTradeBasedOnPriceImpactRequestProtoMsg {
  * EstimateTradeBasedOnPriceImpactRequest represents a request to estimate a
  * trade for Balancer/StableSwap/Concentrated liquidity pool types based on the
  * given parameters.
+ * @name EstimateTradeBasedOnPriceImpactRequestAmino
+ * @package symphony.poolmanager.v1beta1
+ * @see proto type: symphony.poolmanager.v1beta1.EstimateTradeBasedOnPriceImpactRequest
  */
 export interface EstimateTradeBasedOnPriceImpactRequestAmino {
-  /** from_coin is the total amount of tokens that the user wants to sell. */
+  /**
+   * from_coin is the total amount of tokens that the user wants to sell.
+   */
   from_coin?: CoinAmino;
   /**
    * to_coin_denom is the denom identifier of the token that the user wants to
@@ -769,6 +1221,9 @@ export interface EstimateTradeBasedOnPriceImpactRequestAminoMsg {
  * EstimateTradeBasedOnPriceImpactRequest represents a request to estimate a
  * trade for Balancer/StableSwap/Concentrated liquidity pool types based on the
  * given parameters.
+ * @name EstimateTradeBasedOnPriceImpactRequestSDKType
+ * @package symphony.poolmanager.v1beta1
+ * @see proto type: symphony.poolmanager.v1beta1.EstimateTradeBasedOnPriceImpactRequest
  */
 export interface EstimateTradeBasedOnPriceImpactRequestSDKType {
   from_coin: CoinSDKType;
@@ -782,6 +1237,9 @@ export interface EstimateTradeBasedOnPriceImpactRequestSDKType {
  * for an estimated trade based on price impact. If a trade fails to be
  * estimated the response would be 0,0 for input_coin and output_coin and will
  * not error.
+ * @name EstimateTradeBasedOnPriceImpactResponse
+ * @package symphony.poolmanager.v1beta1
+ * @see proto type: symphony.poolmanager.v1beta1.EstimateTradeBasedOnPriceImpactResponse
  */
 export interface EstimateTradeBasedOnPriceImpactResponse {
   /**
@@ -804,6 +1262,9 @@ export interface EstimateTradeBasedOnPriceImpactResponseProtoMsg {
  * for an estimated trade based on price impact. If a trade fails to be
  * estimated the response would be 0,0 for input_coin and output_coin and will
  * not error.
+ * @name EstimateTradeBasedOnPriceImpactResponseAmino
+ * @package symphony.poolmanager.v1beta1
+ * @see proto type: symphony.poolmanager.v1beta1.EstimateTradeBasedOnPriceImpactResponse
  */
 export interface EstimateTradeBasedOnPriceImpactResponseAmino {
   /**
@@ -826,22 +1287,45 @@ export interface EstimateTradeBasedOnPriceImpactResponseAminoMsg {
  * for an estimated trade based on price impact. If a trade fails to be
  * estimated the response would be 0,0 for input_coin and output_coin and will
  * not error.
+ * @name EstimateTradeBasedOnPriceImpactResponseSDKType
+ * @package symphony.poolmanager.v1beta1
+ * @see proto type: symphony.poolmanager.v1beta1.EstimateTradeBasedOnPriceImpactResponse
  */
 export interface EstimateTradeBasedOnPriceImpactResponseSDKType {
   input_coin: CoinSDKType;
   output_coin: CoinSDKType;
 }
+/**
+ * @name AllTakerFeeShareAgreementsRequest
+ * @package symphony.poolmanager.v1beta1
+ * @see proto type: symphony.poolmanager.v1beta1.AllTakerFeeShareAgreementsRequest
+ */
 export interface AllTakerFeeShareAgreementsRequest {}
 export interface AllTakerFeeShareAgreementsRequestProtoMsg {
   typeUrl: '/symphony.poolmanager.v1beta1.AllTakerFeeShareAgreementsRequest';
   value: Uint8Array;
 }
+/**
+ * @name AllTakerFeeShareAgreementsRequestAmino
+ * @package symphony.poolmanager.v1beta1
+ * @see proto type: symphony.poolmanager.v1beta1.AllTakerFeeShareAgreementsRequest
+ */
 export interface AllTakerFeeShareAgreementsRequestAmino {}
 export interface AllTakerFeeShareAgreementsRequestAminoMsg {
   type: '/symphony.poolmanager.v1beta1.AllTakerFeeShareAgreementsRequest';
   value: AllTakerFeeShareAgreementsRequestAmino;
 }
+/**
+ * @name AllTakerFeeShareAgreementsRequestSDKType
+ * @package symphony.poolmanager.v1beta1
+ * @see proto type: symphony.poolmanager.v1beta1.AllTakerFeeShareAgreementsRequest
+ */
 export interface AllTakerFeeShareAgreementsRequestSDKType {}
+/**
+ * @name AllTakerFeeShareAgreementsResponse
+ * @package symphony.poolmanager.v1beta1
+ * @see proto type: symphony.poolmanager.v1beta1.AllTakerFeeShareAgreementsResponse
+ */
 export interface AllTakerFeeShareAgreementsResponse {
   takerFeeShareAgreements: TakerFeeShareAgreement[];
 }
@@ -849,6 +1333,11 @@ export interface AllTakerFeeShareAgreementsResponseProtoMsg {
   typeUrl: '/symphony.poolmanager.v1beta1.AllTakerFeeShareAgreementsResponse';
   value: Uint8Array;
 }
+/**
+ * @name AllTakerFeeShareAgreementsResponseAmino
+ * @package symphony.poolmanager.v1beta1
+ * @see proto type: symphony.poolmanager.v1beta1.AllTakerFeeShareAgreementsResponse
+ */
 export interface AllTakerFeeShareAgreementsResponseAmino {
   taker_fee_share_agreements?: TakerFeeShareAgreementAmino[];
 }
@@ -856,9 +1345,19 @@ export interface AllTakerFeeShareAgreementsResponseAminoMsg {
   type: '/symphony.poolmanager.v1beta1.AllTakerFeeShareAgreementsResponse';
   value: AllTakerFeeShareAgreementsResponseAmino;
 }
+/**
+ * @name AllTakerFeeShareAgreementsResponseSDKType
+ * @package symphony.poolmanager.v1beta1
+ * @see proto type: symphony.poolmanager.v1beta1.AllTakerFeeShareAgreementsResponse
+ */
 export interface AllTakerFeeShareAgreementsResponseSDKType {
   taker_fee_share_agreements: TakerFeeShareAgreementSDKType[];
 }
+/**
+ * @name TakerFeeShareAgreementFromDenomRequest
+ * @package symphony.poolmanager.v1beta1
+ * @see proto type: symphony.poolmanager.v1beta1.TakerFeeShareAgreementFromDenomRequest
+ */
 export interface TakerFeeShareAgreementFromDenomRequest {
   denom: string;
 }
@@ -866,6 +1365,11 @@ export interface TakerFeeShareAgreementFromDenomRequestProtoMsg {
   typeUrl: '/symphony.poolmanager.v1beta1.TakerFeeShareAgreementFromDenomRequest';
   value: Uint8Array;
 }
+/**
+ * @name TakerFeeShareAgreementFromDenomRequestAmino
+ * @package symphony.poolmanager.v1beta1
+ * @see proto type: symphony.poolmanager.v1beta1.TakerFeeShareAgreementFromDenomRequest
+ */
 export interface TakerFeeShareAgreementFromDenomRequestAmino {
   denom?: string;
 }
@@ -873,9 +1377,19 @@ export interface TakerFeeShareAgreementFromDenomRequestAminoMsg {
   type: '/symphony.poolmanager.v1beta1.TakerFeeShareAgreementFromDenomRequest';
   value: TakerFeeShareAgreementFromDenomRequestAmino;
 }
+/**
+ * @name TakerFeeShareAgreementFromDenomRequestSDKType
+ * @package symphony.poolmanager.v1beta1
+ * @see proto type: symphony.poolmanager.v1beta1.TakerFeeShareAgreementFromDenomRequest
+ */
 export interface TakerFeeShareAgreementFromDenomRequestSDKType {
   denom: string;
 }
+/**
+ * @name TakerFeeShareAgreementFromDenomResponse
+ * @package symphony.poolmanager.v1beta1
+ * @see proto type: symphony.poolmanager.v1beta1.TakerFeeShareAgreementFromDenomResponse
+ */
 export interface TakerFeeShareAgreementFromDenomResponse {
   takerFeeShareAgreement: TakerFeeShareAgreement;
 }
@@ -883,6 +1397,11 @@ export interface TakerFeeShareAgreementFromDenomResponseProtoMsg {
   typeUrl: '/symphony.poolmanager.v1beta1.TakerFeeShareAgreementFromDenomResponse';
   value: Uint8Array;
 }
+/**
+ * @name TakerFeeShareAgreementFromDenomResponseAmino
+ * @package symphony.poolmanager.v1beta1
+ * @see proto type: symphony.poolmanager.v1beta1.TakerFeeShareAgreementFromDenomResponse
+ */
 export interface TakerFeeShareAgreementFromDenomResponseAmino {
   taker_fee_share_agreement?: TakerFeeShareAgreementAmino;
 }
@@ -890,9 +1409,19 @@ export interface TakerFeeShareAgreementFromDenomResponseAminoMsg {
   type: '/symphony.poolmanager.v1beta1.TakerFeeShareAgreementFromDenomResponse';
   value: TakerFeeShareAgreementFromDenomResponseAmino;
 }
+/**
+ * @name TakerFeeShareAgreementFromDenomResponseSDKType
+ * @package symphony.poolmanager.v1beta1
+ * @see proto type: symphony.poolmanager.v1beta1.TakerFeeShareAgreementFromDenomResponse
+ */
 export interface TakerFeeShareAgreementFromDenomResponseSDKType {
   taker_fee_share_agreement: TakerFeeShareAgreementSDKType;
 }
+/**
+ * @name TakerFeeShareDenomsToAccruedValueRequest
+ * @package symphony.poolmanager.v1beta1
+ * @see proto type: symphony.poolmanager.v1beta1.TakerFeeShareDenomsToAccruedValueRequest
+ */
 export interface TakerFeeShareDenomsToAccruedValueRequest {
   denom: string;
   takerFeeDenom: string;
@@ -901,6 +1430,11 @@ export interface TakerFeeShareDenomsToAccruedValueRequestProtoMsg {
   typeUrl: '/symphony.poolmanager.v1beta1.TakerFeeShareDenomsToAccruedValueRequest';
   value: Uint8Array;
 }
+/**
+ * @name TakerFeeShareDenomsToAccruedValueRequestAmino
+ * @package symphony.poolmanager.v1beta1
+ * @see proto type: symphony.poolmanager.v1beta1.TakerFeeShareDenomsToAccruedValueRequest
+ */
 export interface TakerFeeShareDenomsToAccruedValueRequestAmino {
   denom?: string;
   takerFeeDenom?: string;
@@ -909,10 +1443,20 @@ export interface TakerFeeShareDenomsToAccruedValueRequestAminoMsg {
   type: '/symphony.poolmanager.v1beta1.TakerFeeShareDenomsToAccruedValueRequest';
   value: TakerFeeShareDenomsToAccruedValueRequestAmino;
 }
+/**
+ * @name TakerFeeShareDenomsToAccruedValueRequestSDKType
+ * @package symphony.poolmanager.v1beta1
+ * @see proto type: symphony.poolmanager.v1beta1.TakerFeeShareDenomsToAccruedValueRequest
+ */
 export interface TakerFeeShareDenomsToAccruedValueRequestSDKType {
   denom: string;
   takerFeeDenom: string;
 }
+/**
+ * @name TakerFeeShareDenomsToAccruedValueResponse
+ * @package symphony.poolmanager.v1beta1
+ * @see proto type: symphony.poolmanager.v1beta1.TakerFeeShareDenomsToAccruedValueResponse
+ */
 export interface TakerFeeShareDenomsToAccruedValueResponse {
   amount: string;
 }
@@ -920,6 +1464,11 @@ export interface TakerFeeShareDenomsToAccruedValueResponseProtoMsg {
   typeUrl: '/symphony.poolmanager.v1beta1.TakerFeeShareDenomsToAccruedValueResponse';
   value: Uint8Array;
 }
+/**
+ * @name TakerFeeShareDenomsToAccruedValueResponseAmino
+ * @package symphony.poolmanager.v1beta1
+ * @see proto type: symphony.poolmanager.v1beta1.TakerFeeShareDenomsToAccruedValueResponse
+ */
 export interface TakerFeeShareDenomsToAccruedValueResponseAmino {
   amount?: string;
 }
@@ -927,20 +1476,45 @@ export interface TakerFeeShareDenomsToAccruedValueResponseAminoMsg {
   type: '/symphony.poolmanager.v1beta1.TakerFeeShareDenomsToAccruedValueResponse';
   value: TakerFeeShareDenomsToAccruedValueResponseAmino;
 }
+/**
+ * @name TakerFeeShareDenomsToAccruedValueResponseSDKType
+ * @package symphony.poolmanager.v1beta1
+ * @see proto type: symphony.poolmanager.v1beta1.TakerFeeShareDenomsToAccruedValueResponse
+ */
 export interface TakerFeeShareDenomsToAccruedValueResponseSDKType {
   amount: string;
 }
+/**
+ * @name AllTakerFeeShareAccumulatorsRequest
+ * @package symphony.poolmanager.v1beta1
+ * @see proto type: symphony.poolmanager.v1beta1.AllTakerFeeShareAccumulatorsRequest
+ */
 export interface AllTakerFeeShareAccumulatorsRequest {}
 export interface AllTakerFeeShareAccumulatorsRequestProtoMsg {
   typeUrl: '/symphony.poolmanager.v1beta1.AllTakerFeeShareAccumulatorsRequest';
   value: Uint8Array;
 }
+/**
+ * @name AllTakerFeeShareAccumulatorsRequestAmino
+ * @package symphony.poolmanager.v1beta1
+ * @see proto type: symphony.poolmanager.v1beta1.AllTakerFeeShareAccumulatorsRequest
+ */
 export interface AllTakerFeeShareAccumulatorsRequestAmino {}
 export interface AllTakerFeeShareAccumulatorsRequestAminoMsg {
   type: '/symphony.poolmanager.v1beta1.AllTakerFeeShareAccumulatorsRequest';
   value: AllTakerFeeShareAccumulatorsRequestAmino;
 }
+/**
+ * @name AllTakerFeeShareAccumulatorsRequestSDKType
+ * @package symphony.poolmanager.v1beta1
+ * @see proto type: symphony.poolmanager.v1beta1.AllTakerFeeShareAccumulatorsRequest
+ */
 export interface AllTakerFeeShareAccumulatorsRequestSDKType {}
+/**
+ * @name AllTakerFeeShareAccumulatorsResponse
+ * @package symphony.poolmanager.v1beta1
+ * @see proto type: symphony.poolmanager.v1beta1.AllTakerFeeShareAccumulatorsResponse
+ */
 export interface AllTakerFeeShareAccumulatorsResponse {
   takerFeeSkimAccumulators: TakerFeeSkimAccumulator[];
 }
@@ -948,6 +1522,11 @@ export interface AllTakerFeeShareAccumulatorsResponseProtoMsg {
   typeUrl: '/symphony.poolmanager.v1beta1.AllTakerFeeShareAccumulatorsResponse';
   value: Uint8Array;
 }
+/**
+ * @name AllTakerFeeShareAccumulatorsResponseAmino
+ * @package symphony.poolmanager.v1beta1
+ * @see proto type: symphony.poolmanager.v1beta1.AllTakerFeeShareAccumulatorsResponse
+ */
 export interface AllTakerFeeShareAccumulatorsResponseAmino {
   taker_fee_skim_accumulators?: TakerFeeSkimAccumulatorAmino[];
 }
@@ -955,9 +1534,19 @@ export interface AllTakerFeeShareAccumulatorsResponseAminoMsg {
   type: '/symphony.poolmanager.v1beta1.AllTakerFeeShareAccumulatorsResponse';
   value: AllTakerFeeShareAccumulatorsResponseAmino;
 }
+/**
+ * @name AllTakerFeeShareAccumulatorsResponseSDKType
+ * @package symphony.poolmanager.v1beta1
+ * @see proto type: symphony.poolmanager.v1beta1.AllTakerFeeShareAccumulatorsResponse
+ */
 export interface AllTakerFeeShareAccumulatorsResponseSDKType {
   taker_fee_skim_accumulators: TakerFeeSkimAccumulatorSDKType[];
 }
+/**
+ * @name RegisteredAlloyedPoolFromDenomRequest
+ * @package symphony.poolmanager.v1beta1
+ * @see proto type: symphony.poolmanager.v1beta1.RegisteredAlloyedPoolFromDenomRequest
+ */
 export interface RegisteredAlloyedPoolFromDenomRequest {
   denom: string;
 }
@@ -965,6 +1554,11 @@ export interface RegisteredAlloyedPoolFromDenomRequestProtoMsg {
   typeUrl: '/symphony.poolmanager.v1beta1.RegisteredAlloyedPoolFromDenomRequest';
   value: Uint8Array;
 }
+/**
+ * @name RegisteredAlloyedPoolFromDenomRequestAmino
+ * @package symphony.poolmanager.v1beta1
+ * @see proto type: symphony.poolmanager.v1beta1.RegisteredAlloyedPoolFromDenomRequest
+ */
 export interface RegisteredAlloyedPoolFromDenomRequestAmino {
   denom?: string;
 }
@@ -972,9 +1566,19 @@ export interface RegisteredAlloyedPoolFromDenomRequestAminoMsg {
   type: '/symphony.poolmanager.v1beta1.RegisteredAlloyedPoolFromDenomRequest';
   value: RegisteredAlloyedPoolFromDenomRequestAmino;
 }
+/**
+ * @name RegisteredAlloyedPoolFromDenomRequestSDKType
+ * @package symphony.poolmanager.v1beta1
+ * @see proto type: symphony.poolmanager.v1beta1.RegisteredAlloyedPoolFromDenomRequest
+ */
 export interface RegisteredAlloyedPoolFromDenomRequestSDKType {
   denom: string;
 }
+/**
+ * @name RegisteredAlloyedPoolFromDenomResponse
+ * @package symphony.poolmanager.v1beta1
+ * @see proto type: symphony.poolmanager.v1beta1.RegisteredAlloyedPoolFromDenomResponse
+ */
 export interface RegisteredAlloyedPoolFromDenomResponse {
   contractState: AlloyContractTakerFeeShareState;
 }
@@ -982,6 +1586,11 @@ export interface RegisteredAlloyedPoolFromDenomResponseProtoMsg {
   typeUrl: '/symphony.poolmanager.v1beta1.RegisteredAlloyedPoolFromDenomResponse';
   value: Uint8Array;
 }
+/**
+ * @name RegisteredAlloyedPoolFromDenomResponseAmino
+ * @package symphony.poolmanager.v1beta1
+ * @see proto type: symphony.poolmanager.v1beta1.RegisteredAlloyedPoolFromDenomResponse
+ */
 export interface RegisteredAlloyedPoolFromDenomResponseAmino {
   contract_state?: AlloyContractTakerFeeShareStateAmino;
 }
@@ -989,9 +1598,19 @@ export interface RegisteredAlloyedPoolFromDenomResponseAminoMsg {
   type: '/symphony.poolmanager.v1beta1.RegisteredAlloyedPoolFromDenomResponse';
   value: RegisteredAlloyedPoolFromDenomResponseAmino;
 }
+/**
+ * @name RegisteredAlloyedPoolFromDenomResponseSDKType
+ * @package symphony.poolmanager.v1beta1
+ * @see proto type: symphony.poolmanager.v1beta1.RegisteredAlloyedPoolFromDenomResponse
+ */
 export interface RegisteredAlloyedPoolFromDenomResponseSDKType {
   contract_state: AlloyContractTakerFeeShareStateSDKType;
 }
+/**
+ * @name RegisteredAlloyedPoolFromPoolIdRequest
+ * @package symphony.poolmanager.v1beta1
+ * @see proto type: symphony.poolmanager.v1beta1.RegisteredAlloyedPoolFromPoolIdRequest
+ */
 export interface RegisteredAlloyedPoolFromPoolIdRequest {
   poolId: bigint;
 }
@@ -999,6 +1618,11 @@ export interface RegisteredAlloyedPoolFromPoolIdRequestProtoMsg {
   typeUrl: '/symphony.poolmanager.v1beta1.RegisteredAlloyedPoolFromPoolIdRequest';
   value: Uint8Array;
 }
+/**
+ * @name RegisteredAlloyedPoolFromPoolIdRequestAmino
+ * @package symphony.poolmanager.v1beta1
+ * @see proto type: symphony.poolmanager.v1beta1.RegisteredAlloyedPoolFromPoolIdRequest
+ */
 export interface RegisteredAlloyedPoolFromPoolIdRequestAmino {
   pool_id?: string;
 }
@@ -1006,9 +1630,19 @@ export interface RegisteredAlloyedPoolFromPoolIdRequestAminoMsg {
   type: '/symphony.poolmanager.v1beta1.RegisteredAlloyedPoolFromPoolIdRequest';
   value: RegisteredAlloyedPoolFromPoolIdRequestAmino;
 }
+/**
+ * @name RegisteredAlloyedPoolFromPoolIdRequestSDKType
+ * @package symphony.poolmanager.v1beta1
+ * @see proto type: symphony.poolmanager.v1beta1.RegisteredAlloyedPoolFromPoolIdRequest
+ */
 export interface RegisteredAlloyedPoolFromPoolIdRequestSDKType {
   pool_id: bigint;
 }
+/**
+ * @name RegisteredAlloyedPoolFromPoolIdResponse
+ * @package symphony.poolmanager.v1beta1
+ * @see proto type: symphony.poolmanager.v1beta1.RegisteredAlloyedPoolFromPoolIdResponse
+ */
 export interface RegisteredAlloyedPoolFromPoolIdResponse {
   contractState: AlloyContractTakerFeeShareState;
 }
@@ -1016,6 +1650,11 @@ export interface RegisteredAlloyedPoolFromPoolIdResponseProtoMsg {
   typeUrl: '/symphony.poolmanager.v1beta1.RegisteredAlloyedPoolFromPoolIdResponse';
   value: Uint8Array;
 }
+/**
+ * @name RegisteredAlloyedPoolFromPoolIdResponseAmino
+ * @package symphony.poolmanager.v1beta1
+ * @see proto type: symphony.poolmanager.v1beta1.RegisteredAlloyedPoolFromPoolIdResponse
+ */
 export interface RegisteredAlloyedPoolFromPoolIdResponseAmino {
   contract_state?: AlloyContractTakerFeeShareStateAmino;
 }
@@ -1023,20 +1662,45 @@ export interface RegisteredAlloyedPoolFromPoolIdResponseAminoMsg {
   type: '/symphony.poolmanager.v1beta1.RegisteredAlloyedPoolFromPoolIdResponse';
   value: RegisteredAlloyedPoolFromPoolIdResponseAmino;
 }
+/**
+ * @name RegisteredAlloyedPoolFromPoolIdResponseSDKType
+ * @package symphony.poolmanager.v1beta1
+ * @see proto type: symphony.poolmanager.v1beta1.RegisteredAlloyedPoolFromPoolIdResponse
+ */
 export interface RegisteredAlloyedPoolFromPoolIdResponseSDKType {
   contract_state: AlloyContractTakerFeeShareStateSDKType;
 }
+/**
+ * @name AllRegisteredAlloyedPoolsRequest
+ * @package symphony.poolmanager.v1beta1
+ * @see proto type: symphony.poolmanager.v1beta1.AllRegisteredAlloyedPoolsRequest
+ */
 export interface AllRegisteredAlloyedPoolsRequest {}
 export interface AllRegisteredAlloyedPoolsRequestProtoMsg {
   typeUrl: '/symphony.poolmanager.v1beta1.AllRegisteredAlloyedPoolsRequest';
   value: Uint8Array;
 }
+/**
+ * @name AllRegisteredAlloyedPoolsRequestAmino
+ * @package symphony.poolmanager.v1beta1
+ * @see proto type: symphony.poolmanager.v1beta1.AllRegisteredAlloyedPoolsRequest
+ */
 export interface AllRegisteredAlloyedPoolsRequestAmino {}
 export interface AllRegisteredAlloyedPoolsRequestAminoMsg {
   type: '/symphony.poolmanager.v1beta1.AllRegisteredAlloyedPoolsRequest';
   value: AllRegisteredAlloyedPoolsRequestAmino;
 }
+/**
+ * @name AllRegisteredAlloyedPoolsRequestSDKType
+ * @package symphony.poolmanager.v1beta1
+ * @see proto type: symphony.poolmanager.v1beta1.AllRegisteredAlloyedPoolsRequest
+ */
 export interface AllRegisteredAlloyedPoolsRequestSDKType {}
+/**
+ * @name AllRegisteredAlloyedPoolsResponse
+ * @package symphony.poolmanager.v1beta1
+ * @see proto type: symphony.poolmanager.v1beta1.AllRegisteredAlloyedPoolsResponse
+ */
 export interface AllRegisteredAlloyedPoolsResponse {
   contractStates: AlloyContractTakerFeeShareState[];
 }
@@ -1044,6 +1708,11 @@ export interface AllRegisteredAlloyedPoolsResponseProtoMsg {
   typeUrl: '/symphony.poolmanager.v1beta1.AllRegisteredAlloyedPoolsResponse';
   value: Uint8Array;
 }
+/**
+ * @name AllRegisteredAlloyedPoolsResponseAmino
+ * @package symphony.poolmanager.v1beta1
+ * @see proto type: symphony.poolmanager.v1beta1.AllRegisteredAlloyedPoolsResponse
+ */
 export interface AllRegisteredAlloyedPoolsResponseAmino {
   contract_states?: AlloyContractTakerFeeShareStateAmino[];
 }
@@ -1051,12 +1720,23 @@ export interface AllRegisteredAlloyedPoolsResponseAminoMsg {
   type: '/symphony.poolmanager.v1beta1.AllRegisteredAlloyedPoolsResponse';
   value: AllRegisteredAlloyedPoolsResponseAmino;
 }
+/**
+ * @name AllRegisteredAlloyedPoolsResponseSDKType
+ * @package symphony.poolmanager.v1beta1
+ * @see proto type: symphony.poolmanager.v1beta1.AllRegisteredAlloyedPoolsResponse
+ */
 export interface AllRegisteredAlloyedPoolsResponseSDKType {
   contract_states: AlloyContractTakerFeeShareStateSDKType[];
 }
 function createBaseParamsRequest(): ParamsRequest {
   return {};
 }
+/**
+ * =============================== Params
+ * @name ParamsRequest
+ * @package symphony.poolmanager.v1beta1
+ * @see proto type: symphony.poolmanager.v1beta1.ParamsRequest
+ */
 export const ParamsRequest = {
   typeUrl: '/symphony.poolmanager.v1beta1.ParamsRequest',
   is(o: any): o is ParamsRequest {
@@ -1123,6 +1803,11 @@ function createBaseParamsResponse(): ParamsResponse {
     params: Params.fromPartial({}),
   };
 }
+/**
+ * @name ParamsResponse
+ * @package symphony.poolmanager.v1beta1
+ * @see proto type: symphony.poolmanager.v1beta1.ParamsResponse
+ */
 export const ParamsResponse = {
   typeUrl: '/symphony.poolmanager.v1beta1.ParamsResponse',
   is(o: any): o is ParamsResponse {
@@ -1210,6 +1895,12 @@ function createBaseEstimateSwapExactAmountInRequest(): EstimateSwapExactAmountIn
     routes: [],
   };
 }
+/**
+ * =============================== EstimateSwapExactAmountIn
+ * @name EstimateSwapExactAmountInRequest
+ * @package symphony.poolmanager.v1beta1
+ * @see proto type: symphony.poolmanager.v1beta1.EstimateSwapExactAmountInRequest
+ */
 export const EstimateSwapExactAmountInRequest = {
   typeUrl: '/symphony.poolmanager.v1beta1.EstimateSwapExactAmountInRequest',
   is(o: any): o is EstimateSwapExactAmountInRequest {
@@ -1371,6 +2062,11 @@ function createBaseEstimateSwapExactAmountInWithPrimitiveTypesRequest(): Estimat
     routesTokenOutDenom: [],
   };
 }
+/**
+ * @name EstimateSwapExactAmountInWithPrimitiveTypesRequest
+ * @package symphony.poolmanager.v1beta1
+ * @see proto type: symphony.poolmanager.v1beta1.EstimateSwapExactAmountInWithPrimitiveTypesRequest
+ */
 export const EstimateSwapExactAmountInWithPrimitiveTypesRequest = {
   typeUrl:
     '/symphony.poolmanager.v1beta1.EstimateSwapExactAmountInWithPrimitiveTypesRequest',
@@ -1572,6 +2268,11 @@ function createBaseEstimateSinglePoolSwapExactAmountInRequest(): EstimateSingleP
     tokenOutDenom: '',
   };
 }
+/**
+ * @name EstimateSinglePoolSwapExactAmountInRequest
+ * @package symphony.poolmanager.v1beta1
+ * @see proto type: symphony.poolmanager.v1beta1.EstimateSinglePoolSwapExactAmountInRequest
+ */
 export const EstimateSinglePoolSwapExactAmountInRequest = {
   typeUrl:
     '/symphony.poolmanager.v1beta1.EstimateSinglePoolSwapExactAmountInRequest',
@@ -1718,6 +2419,11 @@ function createBaseEstimateSwapExactAmountInResponse(): EstimateSwapExactAmountI
     tokenOutAmount: '',
   };
 }
+/**
+ * @name EstimateSwapExactAmountInResponse
+ * @package symphony.poolmanager.v1beta1
+ * @see proto type: symphony.poolmanager.v1beta1.EstimateSwapExactAmountInResponse
+ */
 export const EstimateSwapExactAmountInResponse = {
   typeUrl: '/symphony.poolmanager.v1beta1.EstimateSwapExactAmountInResponse',
   is(o: any): o is EstimateSwapExactAmountInResponse {
@@ -1833,6 +2539,12 @@ function createBaseEstimateSwapExactAmountOutRequest(): EstimateSwapExactAmountO
     tokenOut: '',
   };
 }
+/**
+ * =============================== EstimateSwapExactAmountOut
+ * @name EstimateSwapExactAmountOutRequest
+ * @package symphony.poolmanager.v1beta1
+ * @see proto type: symphony.poolmanager.v1beta1.EstimateSwapExactAmountOutRequest
+ */
 export const EstimateSwapExactAmountOutRequest = {
   typeUrl: '/symphony.poolmanager.v1beta1.EstimateSwapExactAmountOutRequest',
   is(o: any): o is EstimateSwapExactAmountOutRequest {
@@ -1995,6 +2707,11 @@ function createBaseEstimateSwapExactAmountOutWithPrimitiveTypesRequest(): Estima
     tokenOut: '',
   };
 }
+/**
+ * @name EstimateSwapExactAmountOutWithPrimitiveTypesRequest
+ * @package symphony.poolmanager.v1beta1
+ * @see proto type: symphony.poolmanager.v1beta1.EstimateSwapExactAmountOutWithPrimitiveTypesRequest
+ */
 export const EstimateSwapExactAmountOutWithPrimitiveTypesRequest = {
   typeUrl:
     '/symphony.poolmanager.v1beta1.EstimateSwapExactAmountOutWithPrimitiveTypesRequest',
@@ -2196,6 +2913,11 @@ function createBaseEstimateSinglePoolSwapExactAmountOutRequest(): EstimateSingle
     tokenOut: '',
   };
 }
+/**
+ * @name EstimateSinglePoolSwapExactAmountOutRequest
+ * @package symphony.poolmanager.v1beta1
+ * @see proto type: symphony.poolmanager.v1beta1.EstimateSinglePoolSwapExactAmountOutRequest
+ */
 export const EstimateSinglePoolSwapExactAmountOutRequest = {
   typeUrl:
     '/symphony.poolmanager.v1beta1.EstimateSinglePoolSwapExactAmountOutRequest',
@@ -2339,6 +3061,11 @@ function createBaseEstimateSwapExactAmountOutResponse(): EstimateSwapExactAmount
     tokenInAmount: '',
   };
 }
+/**
+ * @name EstimateSwapExactAmountOutResponse
+ * @package symphony.poolmanager.v1beta1
+ * @see proto type: symphony.poolmanager.v1beta1.EstimateSwapExactAmountOutResponse
+ */
 export const EstimateSwapExactAmountOutResponse = {
   typeUrl: '/symphony.poolmanager.v1beta1.EstimateSwapExactAmountOutResponse',
   is(o: any): o is EstimateSwapExactAmountOutResponse {
@@ -2449,6 +3176,12 @@ GlobalDecoderRegistry.register(
 function createBaseNumPoolsRequest(): NumPoolsRequest {
   return {};
 }
+/**
+ * =============================== NumPools
+ * @name NumPoolsRequest
+ * @package symphony.poolmanager.v1beta1
+ * @see proto type: symphony.poolmanager.v1beta1.NumPoolsRequest
+ */
 export const NumPoolsRequest = {
   typeUrl: '/symphony.poolmanager.v1beta1.NumPoolsRequest',
   is(o: any): o is NumPoolsRequest {
@@ -2515,6 +3248,11 @@ function createBaseNumPoolsResponse(): NumPoolsResponse {
     numPools: BigInt(0),
   };
 }
+/**
+ * @name NumPoolsResponse
+ * @package symphony.poolmanager.v1beta1
+ * @see proto type: symphony.poolmanager.v1beta1.NumPoolsResponse
+ */
 export const NumPoolsResponse = {
   typeUrl: '/symphony.poolmanager.v1beta1.NumPoolsResponse',
   is(o: any): o is NumPoolsResponse {
@@ -2608,6 +3346,12 @@ function createBasePoolRequest(): PoolRequest {
     poolId: BigInt(0),
   };
 }
+/**
+ * =============================== Pool
+ * @name PoolRequest
+ * @package symphony.poolmanager.v1beta1
+ * @see proto type: symphony.poolmanager.v1beta1.PoolRequest
+ */
 export const PoolRequest = {
   typeUrl: '/symphony.poolmanager.v1beta1.PoolRequest',
   is(o: any): o is PoolRequest {
@@ -2695,6 +3439,11 @@ function createBasePoolResponse(): PoolResponse {
     pool: undefined,
   };
 }
+/**
+ * @name PoolResponse
+ * @package symphony.poolmanager.v1beta1
+ * @see proto type: symphony.poolmanager.v1beta1.PoolResponse
+ */
 export const PoolResponse = {
   typeUrl: '/symphony.poolmanager.v1beta1.PoolResponse',
   is(o: any): o is PoolResponse {
@@ -2778,6 +3527,12 @@ GlobalDecoderRegistry.register(PoolResponse.typeUrl, PoolResponse);
 function createBaseAllPoolsRequest(): AllPoolsRequest {
   return {};
 }
+/**
+ * =============================== AllPools
+ * @name AllPoolsRequest
+ * @package symphony.poolmanager.v1beta1
+ * @see proto type: symphony.poolmanager.v1beta1.AllPoolsRequest
+ */
 export const AllPoolsRequest = {
   typeUrl: '/symphony.poolmanager.v1beta1.AllPoolsRequest',
   is(o: any): o is AllPoolsRequest {
@@ -2844,6 +3599,11 @@ function createBaseAllPoolsResponse(): AllPoolsResponse {
     pools: [],
   };
 }
+/**
+ * @name AllPoolsResponse
+ * @package symphony.poolmanager.v1beta1
+ * @see proto type: symphony.poolmanager.v1beta1.AllPoolsResponse
+ */
 export const AllPoolsResponse = {
   typeUrl: '/symphony.poolmanager.v1beta1.AllPoolsResponse',
   is(o: any): o is AllPoolsResponse {
@@ -2960,6 +3720,13 @@ function createBaseListPoolsByDenomRequest(): ListPoolsByDenomRequest {
     denom: '',
   };
 }
+/**
+ * =======================================================
+ * ListPoolsByDenomRequest
+ * @name ListPoolsByDenomRequest
+ * @package symphony.poolmanager.v1beta1
+ * @see proto type: symphony.poolmanager.v1beta1.ListPoolsByDenomRequest
+ */
 export const ListPoolsByDenomRequest = {
   typeUrl: '/symphony.poolmanager.v1beta1.ListPoolsByDenomRequest',
   is(o: any): o is ListPoolsByDenomRequest {
@@ -3063,6 +3830,11 @@ function createBaseListPoolsByDenomResponse(): ListPoolsByDenomResponse {
     pools: [],
   };
 }
+/**
+ * @name ListPoolsByDenomResponse
+ * @package symphony.poolmanager.v1beta1
+ * @see proto type: symphony.poolmanager.v1beta1.ListPoolsByDenomResponse
+ */
 export const ListPoolsByDenomResponse = {
   typeUrl: '/symphony.poolmanager.v1beta1.ListPoolsByDenomResponse',
   is(o: any): o is ListPoolsByDenomResponse {
@@ -3195,6 +3967,14 @@ function createBaseSpotPriceRequest(): SpotPriceRequest {
     quoteAssetDenom: '',
   };
 }
+/**
+ * ==========================================================
+ * SpotPriceRequest defines the gRPC request structure for a SpotPrice
+ * query.
+ * @name SpotPriceRequest
+ * @package symphony.poolmanager.v1beta1
+ * @see proto type: symphony.poolmanager.v1beta1.SpotPriceRequest
+ */
 export const SpotPriceRequest = {
   typeUrl: '/symphony.poolmanager.v1beta1.SpotPriceRequest',
   is(o: any): o is SpotPriceRequest {
@@ -3324,6 +4104,13 @@ function createBaseSpotPriceResponse(): SpotPriceResponse {
     spotPrice: '',
   };
 }
+/**
+ * SpotPriceResponse defines the gRPC response structure for a SpotPrice
+ * query.
+ * @name SpotPriceResponse
+ * @package symphony.poolmanager.v1beta1
+ * @see proto type: symphony.poolmanager.v1beta1.SpotPriceResponse
+ */
 export const SpotPriceResponse = {
   typeUrl: '/symphony.poolmanager.v1beta1.SpotPriceResponse',
   is(o: any): o is SpotPriceResponse {
@@ -3413,6 +4200,12 @@ function createBaseTotalPoolLiquidityRequest(): TotalPoolLiquidityRequest {
     poolId: BigInt(0),
   };
 }
+/**
+ * =============================== TotalPoolLiquidity
+ * @name TotalPoolLiquidityRequest
+ * @package symphony.poolmanager.v1beta1
+ * @see proto type: symphony.poolmanager.v1beta1.TotalPoolLiquidityRequest
+ */
 export const TotalPoolLiquidityRequest = {
   typeUrl: '/symphony.poolmanager.v1beta1.TotalPoolLiquidityRequest',
   is(o: any): o is TotalPoolLiquidityRequest {
@@ -3520,6 +4313,11 @@ function createBaseTotalPoolLiquidityResponse(): TotalPoolLiquidityResponse {
     liquidity: [],
   };
 }
+/**
+ * @name TotalPoolLiquidityResponse
+ * @package symphony.poolmanager.v1beta1
+ * @see proto type: symphony.poolmanager.v1beta1.TotalPoolLiquidityResponse
+ */
 export const TotalPoolLiquidityResponse = {
   typeUrl: '/symphony.poolmanager.v1beta1.TotalPoolLiquidityResponse',
   is(o: any): o is TotalPoolLiquidityResponse {
@@ -3632,6 +4430,12 @@ GlobalDecoderRegistry.register(
 function createBaseTotalLiquidityRequest(): TotalLiquidityRequest {
   return {};
 }
+/**
+ * =============================== TotalLiquidity
+ * @name TotalLiquidityRequest
+ * @package symphony.poolmanager.v1beta1
+ * @see proto type: symphony.poolmanager.v1beta1.TotalLiquidityRequest
+ */
 export const TotalLiquidityRequest = {
   typeUrl: '/symphony.poolmanager.v1beta1.TotalLiquidityRequest',
   is(o: any): o is TotalLiquidityRequest {
@@ -3704,6 +4508,11 @@ function createBaseTotalLiquidityResponse(): TotalLiquidityResponse {
     liquidity: [],
   };
 }
+/**
+ * @name TotalLiquidityResponse
+ * @package symphony.poolmanager.v1beta1
+ * @see proto type: symphony.poolmanager.v1beta1.TotalLiquidityResponse
+ */
 export const TotalLiquidityResponse = {
   typeUrl: '/symphony.poolmanager.v1beta1.TotalLiquidityResponse',
   is(o: any): o is TotalLiquidityResponse {
@@ -3808,6 +4617,12 @@ function createBaseTotalVolumeForPoolRequest(): TotalVolumeForPoolRequest {
     poolId: BigInt(0),
   };
 }
+/**
+ * =============================== TotalVolumeForPool
+ * @name TotalVolumeForPoolRequest
+ * @package symphony.poolmanager.v1beta1
+ * @see proto type: symphony.poolmanager.v1beta1.TotalVolumeForPoolRequest
+ */
 export const TotalVolumeForPoolRequest = {
   typeUrl: '/symphony.poolmanager.v1beta1.TotalVolumeForPoolRequest',
   is(o: any): o is TotalVolumeForPoolRequest {
@@ -3915,6 +4730,11 @@ function createBaseTotalVolumeForPoolResponse(): TotalVolumeForPoolResponse {
     volume: [],
   };
 }
+/**
+ * @name TotalVolumeForPoolResponse
+ * @package symphony.poolmanager.v1beta1
+ * @see proto type: symphony.poolmanager.v1beta1.TotalVolumeForPoolResponse
+ */
 export const TotalVolumeForPoolResponse = {
   typeUrl: '/symphony.poolmanager.v1beta1.TotalVolumeForPoolResponse',
   is(o: any): o is TotalVolumeForPoolResponse {
@@ -4027,6 +4847,12 @@ function createBaseTradingPairTakerFeeRequest(): TradingPairTakerFeeRequest {
     denom1: '',
   };
 }
+/**
+ * =============================== TradingPairTakerFee
+ * @name TradingPairTakerFeeRequest
+ * @package symphony.poolmanager.v1beta1
+ * @see proto type: symphony.poolmanager.v1beta1.TradingPairTakerFeeRequest
+ */
 export const TradingPairTakerFeeRequest = {
   typeUrl: '/symphony.poolmanager.v1beta1.TradingPairTakerFeeRequest',
   is(o: any): o is TradingPairTakerFeeRequest {
@@ -4145,6 +4971,11 @@ function createBaseTradingPairTakerFeeResponse(): TradingPairTakerFeeResponse {
     takerFee: '',
   };
 }
+/**
+ * @name TradingPairTakerFeeResponse
+ * @package symphony.poolmanager.v1beta1
+ * @see proto type: symphony.poolmanager.v1beta1.TradingPairTakerFeeResponse
+ */
 export const TradingPairTakerFeeResponse = {
   typeUrl: '/symphony.poolmanager.v1beta1.TradingPairTakerFeeResponse',
   is(o: any): o is TradingPairTakerFeeResponse {
@@ -4261,6 +5092,14 @@ function createBaseEstimateTradeBasedOnPriceImpactRequest(): EstimateTradeBasedO
     externalPrice: '',
   };
 }
+/**
+ * EstimateTradeBasedOnPriceImpactRequest represents a request to estimate a
+ * trade for Balancer/StableSwap/Concentrated liquidity pool types based on the
+ * given parameters.
+ * @name EstimateTradeBasedOnPriceImpactRequest
+ * @package symphony.poolmanager.v1beta1
+ * @see proto type: symphony.poolmanager.v1beta1.EstimateTradeBasedOnPriceImpactRequest
+ */
 export const EstimateTradeBasedOnPriceImpactRequest = {
   typeUrl:
     '/symphony.poolmanager.v1beta1.EstimateTradeBasedOnPriceImpactRequest',
@@ -4452,6 +5291,15 @@ function createBaseEstimateTradeBasedOnPriceImpactResponse(): EstimateTradeBased
     outputCoin: Coin.fromPartial({}),
   };
 }
+/**
+ * EstimateTradeBasedOnPriceImpactResponse represents the response data
+ * for an estimated trade based on price impact. If a trade fails to be
+ * estimated the response would be 0,0 for input_coin and output_coin and will
+ * not error.
+ * @name EstimateTradeBasedOnPriceImpactResponse
+ * @package symphony.poolmanager.v1beta1
+ * @see proto type: symphony.poolmanager.v1beta1.EstimateTradeBasedOnPriceImpactResponse
+ */
 export const EstimateTradeBasedOnPriceImpactResponse = {
   typeUrl:
     '/symphony.poolmanager.v1beta1.EstimateTradeBasedOnPriceImpactResponse',
@@ -4580,6 +5428,11 @@ GlobalDecoderRegistry.register(
 function createBaseAllTakerFeeShareAgreementsRequest(): AllTakerFeeShareAgreementsRequest {
   return {};
 }
+/**
+ * @name AllTakerFeeShareAgreementsRequest
+ * @package symphony.poolmanager.v1beta1
+ * @see proto type: symphony.poolmanager.v1beta1.AllTakerFeeShareAgreementsRequest
+ */
 export const AllTakerFeeShareAgreementsRequest = {
   typeUrl: '/symphony.poolmanager.v1beta1.AllTakerFeeShareAgreementsRequest',
   is(o: any): o is AllTakerFeeShareAgreementsRequest {
@@ -4665,6 +5518,11 @@ function createBaseAllTakerFeeShareAgreementsResponse(): AllTakerFeeShareAgreeme
     takerFeeShareAgreements: [],
   };
 }
+/**
+ * @name AllTakerFeeShareAgreementsResponse
+ * @package symphony.poolmanager.v1beta1
+ * @see proto type: symphony.poolmanager.v1beta1.AllTakerFeeShareAgreementsResponse
+ */
 export const AllTakerFeeShareAgreementsResponse = {
   typeUrl: '/symphony.poolmanager.v1beta1.AllTakerFeeShareAgreementsResponse',
   is(o: any): o is AllTakerFeeShareAgreementsResponse {
@@ -4791,6 +5649,11 @@ function createBaseTakerFeeShareAgreementFromDenomRequest(): TakerFeeShareAgreem
     denom: '',
   };
 }
+/**
+ * @name TakerFeeShareAgreementFromDenomRequest
+ * @package symphony.poolmanager.v1beta1
+ * @see proto type: symphony.poolmanager.v1beta1.TakerFeeShareAgreementFromDenomRequest
+ */
 export const TakerFeeShareAgreementFromDenomRequest = {
   typeUrl:
     '/symphony.poolmanager.v1beta1.TakerFeeShareAgreementFromDenomRequest',
@@ -4900,6 +5763,11 @@ function createBaseTakerFeeShareAgreementFromDenomResponse(): TakerFeeShareAgree
     takerFeeShareAgreement: TakerFeeShareAgreement.fromPartial({}),
   };
 }
+/**
+ * @name TakerFeeShareAgreementFromDenomResponse
+ * @package symphony.poolmanager.v1beta1
+ * @see proto type: symphony.poolmanager.v1beta1.TakerFeeShareAgreementFromDenomResponse
+ */
 export const TakerFeeShareAgreementFromDenomResponse = {
   typeUrl:
     '/symphony.poolmanager.v1beta1.TakerFeeShareAgreementFromDenomResponse',
@@ -5027,6 +5895,11 @@ function createBaseTakerFeeShareDenomsToAccruedValueRequest(): TakerFeeShareDeno
     takerFeeDenom: '',
   };
 }
+/**
+ * @name TakerFeeShareDenomsToAccruedValueRequest
+ * @package symphony.poolmanager.v1beta1
+ * @see proto type: symphony.poolmanager.v1beta1.TakerFeeShareDenomsToAccruedValueRequest
+ */
 export const TakerFeeShareDenomsToAccruedValueRequest = {
   typeUrl:
     '/symphony.poolmanager.v1beta1.TakerFeeShareDenomsToAccruedValueRequest',
@@ -5148,6 +6021,11 @@ function createBaseTakerFeeShareDenomsToAccruedValueResponse(): TakerFeeShareDen
     amount: '',
   };
 }
+/**
+ * @name TakerFeeShareDenomsToAccruedValueResponse
+ * @package symphony.poolmanager.v1beta1
+ * @see proto type: symphony.poolmanager.v1beta1.TakerFeeShareDenomsToAccruedValueResponse
+ */
 export const TakerFeeShareDenomsToAccruedValueResponse = {
   typeUrl:
     '/symphony.poolmanager.v1beta1.TakerFeeShareDenomsToAccruedValueResponse',
@@ -5255,6 +6133,11 @@ GlobalDecoderRegistry.register(
 function createBaseAllTakerFeeShareAccumulatorsRequest(): AllTakerFeeShareAccumulatorsRequest {
   return {};
 }
+/**
+ * @name AllTakerFeeShareAccumulatorsRequest
+ * @package symphony.poolmanager.v1beta1
+ * @see proto type: symphony.poolmanager.v1beta1.AllTakerFeeShareAccumulatorsRequest
+ */
 export const AllTakerFeeShareAccumulatorsRequest = {
   typeUrl: '/symphony.poolmanager.v1beta1.AllTakerFeeShareAccumulatorsRequest',
   is(o: any): o is AllTakerFeeShareAccumulatorsRequest {
@@ -5340,6 +6223,11 @@ function createBaseAllTakerFeeShareAccumulatorsResponse(): AllTakerFeeShareAccum
     takerFeeSkimAccumulators: [],
   };
 }
+/**
+ * @name AllTakerFeeShareAccumulatorsResponse
+ * @package symphony.poolmanager.v1beta1
+ * @see proto type: symphony.poolmanager.v1beta1.AllTakerFeeShareAccumulatorsResponse
+ */
 export const AllTakerFeeShareAccumulatorsResponse = {
   typeUrl: '/symphony.poolmanager.v1beta1.AllTakerFeeShareAccumulatorsResponse',
   is(o: any): o is AllTakerFeeShareAccumulatorsResponse {
@@ -5466,6 +6354,11 @@ function createBaseRegisteredAlloyedPoolFromDenomRequest(): RegisteredAlloyedPoo
     denom: '',
   };
 }
+/**
+ * @name RegisteredAlloyedPoolFromDenomRequest
+ * @package symphony.poolmanager.v1beta1
+ * @see proto type: symphony.poolmanager.v1beta1.RegisteredAlloyedPoolFromDenomRequest
+ */
 export const RegisteredAlloyedPoolFromDenomRequest = {
   typeUrl:
     '/symphony.poolmanager.v1beta1.RegisteredAlloyedPoolFromDenomRequest',
@@ -5575,6 +6468,11 @@ function createBaseRegisteredAlloyedPoolFromDenomResponse(): RegisteredAlloyedPo
     contractState: AlloyContractTakerFeeShareState.fromPartial({}),
   };
 }
+/**
+ * @name RegisteredAlloyedPoolFromDenomResponse
+ * @package symphony.poolmanager.v1beta1
+ * @see proto type: symphony.poolmanager.v1beta1.RegisteredAlloyedPoolFromDenomResponse
+ */
 export const RegisteredAlloyedPoolFromDenomResponse = {
   typeUrl:
     '/symphony.poolmanager.v1beta1.RegisteredAlloyedPoolFromDenomResponse',
@@ -5697,6 +6595,11 @@ function createBaseRegisteredAlloyedPoolFromPoolIdRequest(): RegisteredAlloyedPo
     poolId: BigInt(0),
   };
 }
+/**
+ * @name RegisteredAlloyedPoolFromPoolIdRequest
+ * @package symphony.poolmanager.v1beta1
+ * @see proto type: symphony.poolmanager.v1beta1.RegisteredAlloyedPoolFromPoolIdRequest
+ */
 export const RegisteredAlloyedPoolFromPoolIdRequest = {
   typeUrl:
     '/symphony.poolmanager.v1beta1.RegisteredAlloyedPoolFromPoolIdRequest',
@@ -5810,6 +6713,11 @@ function createBaseRegisteredAlloyedPoolFromPoolIdResponse(): RegisteredAlloyedP
     contractState: AlloyContractTakerFeeShareState.fromPartial({}),
   };
 }
+/**
+ * @name RegisteredAlloyedPoolFromPoolIdResponse
+ * @package symphony.poolmanager.v1beta1
+ * @see proto type: symphony.poolmanager.v1beta1.RegisteredAlloyedPoolFromPoolIdResponse
+ */
 export const RegisteredAlloyedPoolFromPoolIdResponse = {
   typeUrl:
     '/symphony.poolmanager.v1beta1.RegisteredAlloyedPoolFromPoolIdResponse',
@@ -5930,6 +6838,11 @@ GlobalDecoderRegistry.register(
 function createBaseAllRegisteredAlloyedPoolsRequest(): AllRegisteredAlloyedPoolsRequest {
   return {};
 }
+/**
+ * @name AllRegisteredAlloyedPoolsRequest
+ * @package symphony.poolmanager.v1beta1
+ * @see proto type: symphony.poolmanager.v1beta1.AllRegisteredAlloyedPoolsRequest
+ */
 export const AllRegisteredAlloyedPoolsRequest = {
   typeUrl: '/symphony.poolmanager.v1beta1.AllRegisteredAlloyedPoolsRequest',
   is(o: any): o is AllRegisteredAlloyedPoolsRequest {
@@ -6014,6 +6927,11 @@ function createBaseAllRegisteredAlloyedPoolsResponse(): AllRegisteredAlloyedPool
     contractStates: [],
   };
 }
+/**
+ * @name AllRegisteredAlloyedPoolsResponse
+ * @package symphony.poolmanager.v1beta1
+ * @see proto type: symphony.poolmanager.v1beta1.AllRegisteredAlloyedPoolsResponse
+ */
 export const AllRegisteredAlloyedPoolsResponse = {
   typeUrl: '/symphony.poolmanager.v1beta1.AllRegisteredAlloyedPoolsResponse',
   is(o: any): o is AllRegisteredAlloyedPoolsResponse {

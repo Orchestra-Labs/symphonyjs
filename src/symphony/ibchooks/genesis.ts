@@ -2,6 +2,11 @@
 import { Params, ParamsAmino, ParamsSDKType } from './params';
 import { BinaryReader, BinaryWriter } from '../../binary';
 import { GlobalDecoderRegistry } from '../../registry';
+/**
+ * @name GenesisState
+ * @package symphony.ibchooks
+ * @see proto type: symphony.ibchooks.GenesisState
+ */
 export interface GenesisState {
   params: Params;
 }
@@ -9,6 +14,11 @@ export interface GenesisStateProtoMsg {
   typeUrl: '/symphony.ibchooks.GenesisState';
   value: Uint8Array;
 }
+/**
+ * @name GenesisStateAmino
+ * @package symphony.ibchooks
+ * @see proto type: symphony.ibchooks.GenesisState
+ */
 export interface GenesisStateAmino {
   params?: ParamsAmino;
 }
@@ -16,6 +26,11 @@ export interface GenesisStateAminoMsg {
   type: '/symphony.ibchooks.GenesisState';
   value: GenesisStateAmino;
 }
+/**
+ * @name GenesisStateSDKType
+ * @package symphony.ibchooks
+ * @see proto type: symphony.ibchooks.GenesisState
+ */
 export interface GenesisStateSDKType {
   params: ParamsSDKType;
 }
@@ -24,6 +39,11 @@ function createBaseGenesisState(): GenesisState {
     params: Params.fromPartial({}),
   };
 }
+/**
+ * @name GenesisState
+ * @package symphony.ibchooks
+ * @see proto type: symphony.ibchooks.GenesisState
+ */
 export const GenesisState = {
   typeUrl: '/symphony.ibchooks.GenesisState',
   is(o: any): o is GenesisState {

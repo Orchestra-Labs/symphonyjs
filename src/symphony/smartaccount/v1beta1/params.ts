@@ -1,7 +1,12 @@
 //@ts-nocheck
 import { BinaryReader, BinaryWriter } from '../../../binary';
 import { GlobalDecoderRegistry } from '../../../registry';
-/** Params defines the parameters for the module. */
+/**
+ * Params defines the parameters for the module.
+ * @name Params
+ * @package symphony.smartaccount.v1beta1
+ * @see proto type: symphony.smartaccount.v1beta1.Params
+ */
 export interface Params {
   /**
    * MaximumUnauthenticatedGas defines the maximum amount of gas that can be
@@ -25,7 +30,12 @@ export interface ParamsProtoMsg {
   typeUrl: '/symphony.smartaccount.v1beta1.Params';
   value: Uint8Array;
 }
-/** Params defines the parameters for the module. */
+/**
+ * Params defines the parameters for the module.
+ * @name ParamsAmino
+ * @package symphony.smartaccount.v1beta1
+ * @see proto type: symphony.smartaccount.v1beta1.Params
+ */
 export interface ParamsAmino {
   /**
    * MaximumUnauthenticatedGas defines the maximum amount of gas that can be
@@ -49,7 +59,12 @@ export interface ParamsAminoMsg {
   type: '/symphony.smartaccount.v1beta1.Params';
   value: ParamsAmino;
 }
-/** Params defines the parameters for the module. */
+/**
+ * Params defines the parameters for the module.
+ * @name ParamsSDKType
+ * @package symphony.smartaccount.v1beta1
+ * @see proto type: symphony.smartaccount.v1beta1.Params
+ */
 export interface ParamsSDKType {
   maximum_unauthenticated_gas: bigint;
   is_smart_account_active: boolean;
@@ -62,6 +77,12 @@ function createBaseParams(): Params {
     circuitBreakerControllers: [],
   };
 }
+/**
+ * Params defines the parameters for the module.
+ * @name Params
+ * @package symphony.smartaccount.v1beta1
+ * @see proto type: symphony.smartaccount.v1beta1.Params
+ */
 export const Params = {
   typeUrl: '/symphony.smartaccount.v1beta1.Params',
   is(o: any): o is Params {

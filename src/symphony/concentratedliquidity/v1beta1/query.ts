@@ -57,7 +57,12 @@ import { PoolSDKType as Pool3SDKType } from '../../gamm/v1beta1/balancerPool';
 import { BinaryReader, BinaryWriter } from '../../../binary';
 import { GlobalDecoderRegistry } from '../../../registry';
 import { Decimal } from '@cosmjs/math';
-/** =============================== UserPositions */
+/**
+ * =============================== UserPositions
+ * @name UserPositionsRequest
+ * @package symphony.concentratedliquidity.v1beta1
+ * @see proto type: symphony.concentratedliquidity.v1beta1.UserPositionsRequest
+ */
 export interface UserPositionsRequest {
   address: string;
   poolId: bigint;
@@ -67,7 +72,12 @@ export interface UserPositionsRequestProtoMsg {
   typeUrl: '/symphony.concentratedliquidity.v1beta1.UserPositionsRequest';
   value: Uint8Array;
 }
-/** =============================== UserPositions */
+/**
+ * =============================== UserPositions
+ * @name UserPositionsRequestAmino
+ * @package symphony.concentratedliquidity.v1beta1
+ * @see proto type: symphony.concentratedliquidity.v1beta1.UserPositionsRequest
+ */
 export interface UserPositionsRequestAmino {
   address?: string;
   pool_id?: string;
@@ -77,12 +87,22 @@ export interface UserPositionsRequestAminoMsg {
   type: '/symphony.concentratedliquidity.v1beta1.UserPositionsRequest';
   value: UserPositionsRequestAmino;
 }
-/** =============================== UserPositions */
+/**
+ * =============================== UserPositions
+ * @name UserPositionsRequestSDKType
+ * @package symphony.concentratedliquidity.v1beta1
+ * @see proto type: symphony.concentratedliquidity.v1beta1.UserPositionsRequest
+ */
 export interface UserPositionsRequestSDKType {
   address: string;
   pool_id: bigint;
   pagination?: PageRequestSDKType;
 }
+/**
+ * @name UserPositionsResponse
+ * @package symphony.concentratedliquidity.v1beta1
+ * @see proto type: symphony.concentratedliquidity.v1beta1.UserPositionsResponse
+ */
 export interface UserPositionsResponse {
   positions: FullPositionBreakdown[];
   pagination?: PageResponse;
@@ -91,6 +111,11 @@ export interface UserPositionsResponseProtoMsg {
   typeUrl: '/symphony.concentratedliquidity.v1beta1.UserPositionsResponse';
   value: Uint8Array;
 }
+/**
+ * @name UserPositionsResponseAmino
+ * @package symphony.concentratedliquidity.v1beta1
+ * @see proto type: symphony.concentratedliquidity.v1beta1.UserPositionsResponse
+ */
 export interface UserPositionsResponseAmino {
   positions?: FullPositionBreakdownAmino[];
   pagination?: PageResponseAmino;
@@ -99,11 +124,21 @@ export interface UserPositionsResponseAminoMsg {
   type: '/symphony.concentratedliquidity.v1beta1.UserPositionsResponse';
   value: UserPositionsResponseAmino;
 }
+/**
+ * @name UserPositionsResponseSDKType
+ * @package symphony.concentratedliquidity.v1beta1
+ * @see proto type: symphony.concentratedliquidity.v1beta1.UserPositionsResponse
+ */
 export interface UserPositionsResponseSDKType {
   positions: FullPositionBreakdownSDKType[];
   pagination?: PageResponseSDKType;
 }
-/** =============================== PositionById */
+/**
+ * =============================== PositionById
+ * @name PositionByIdRequest
+ * @package symphony.concentratedliquidity.v1beta1
+ * @see proto type: symphony.concentratedliquidity.v1beta1.PositionByIdRequest
+ */
 export interface PositionByIdRequest {
   positionId: bigint;
 }
@@ -111,7 +146,12 @@ export interface PositionByIdRequestProtoMsg {
   typeUrl: '/symphony.concentratedliquidity.v1beta1.PositionByIdRequest';
   value: Uint8Array;
 }
-/** =============================== PositionById */
+/**
+ * =============================== PositionById
+ * @name PositionByIdRequestAmino
+ * @package symphony.concentratedliquidity.v1beta1
+ * @see proto type: symphony.concentratedliquidity.v1beta1.PositionByIdRequest
+ */
 export interface PositionByIdRequestAmino {
   position_id?: string;
 }
@@ -119,10 +159,20 @@ export interface PositionByIdRequestAminoMsg {
   type: '/symphony.concentratedliquidity.v1beta1.PositionByIdRequest';
   value: PositionByIdRequestAmino;
 }
-/** =============================== PositionById */
+/**
+ * =============================== PositionById
+ * @name PositionByIdRequestSDKType
+ * @package symphony.concentratedliquidity.v1beta1
+ * @see proto type: symphony.concentratedliquidity.v1beta1.PositionByIdRequest
+ */
 export interface PositionByIdRequestSDKType {
   position_id: bigint;
 }
+/**
+ * @name PositionByIdResponse
+ * @package symphony.concentratedliquidity.v1beta1
+ * @see proto type: symphony.concentratedliquidity.v1beta1.PositionByIdResponse
+ */
 export interface PositionByIdResponse {
   position: FullPositionBreakdown;
 }
@@ -130,6 +180,11 @@ export interface PositionByIdResponseProtoMsg {
   typeUrl: '/symphony.concentratedliquidity.v1beta1.PositionByIdResponse';
   value: Uint8Array;
 }
+/**
+ * @name PositionByIdResponseAmino
+ * @package symphony.concentratedliquidity.v1beta1
+ * @see proto type: symphony.concentratedliquidity.v1beta1.PositionByIdResponse
+ */
 export interface PositionByIdResponseAmino {
   position?: FullPositionBreakdownAmino;
 }
@@ -137,9 +192,19 @@ export interface PositionByIdResponseAminoMsg {
   type: '/symphony.concentratedliquidity.v1beta1.PositionByIdResponse';
   value: PositionByIdResponseAmino;
 }
+/**
+ * @name PositionByIdResponseSDKType
+ * @package symphony.concentratedliquidity.v1beta1
+ * @see proto type: symphony.concentratedliquidity.v1beta1.PositionByIdResponse
+ */
 export interface PositionByIdResponseSDKType {
   position: FullPositionBreakdownSDKType;
 }
+/**
+ * @name NumPoolPositionsRequest
+ * @package symphony.concentratedliquidity.v1beta1
+ * @see proto type: symphony.concentratedliquidity.v1beta1.NumPoolPositionsRequest
+ */
 export interface NumPoolPositionsRequest {
   poolId: bigint;
 }
@@ -147,6 +212,11 @@ export interface NumPoolPositionsRequestProtoMsg {
   typeUrl: '/symphony.concentratedliquidity.v1beta1.NumPoolPositionsRequest';
   value: Uint8Array;
 }
+/**
+ * @name NumPoolPositionsRequestAmino
+ * @package symphony.concentratedliquidity.v1beta1
+ * @see proto type: symphony.concentratedliquidity.v1beta1.NumPoolPositionsRequest
+ */
 export interface NumPoolPositionsRequestAmino {
   pool_id?: string;
 }
@@ -154,9 +224,19 @@ export interface NumPoolPositionsRequestAminoMsg {
   type: '/symphony.concentratedliquidity.v1beta1.NumPoolPositionsRequest';
   value: NumPoolPositionsRequestAmino;
 }
+/**
+ * @name NumPoolPositionsRequestSDKType
+ * @package symphony.concentratedliquidity.v1beta1
+ * @see proto type: symphony.concentratedliquidity.v1beta1.NumPoolPositionsRequest
+ */
 export interface NumPoolPositionsRequestSDKType {
   pool_id: bigint;
 }
+/**
+ * @name NumPoolPositionsResponse
+ * @package symphony.concentratedliquidity.v1beta1
+ * @see proto type: symphony.concentratedliquidity.v1beta1.NumPoolPositionsResponse
+ */
 export interface NumPoolPositionsResponse {
   positionCount: bigint;
 }
@@ -164,6 +244,11 @@ export interface NumPoolPositionsResponseProtoMsg {
   typeUrl: '/symphony.concentratedliquidity.v1beta1.NumPoolPositionsResponse';
   value: Uint8Array;
 }
+/**
+ * @name NumPoolPositionsResponseAmino
+ * @package symphony.concentratedliquidity.v1beta1
+ * @see proto type: symphony.concentratedliquidity.v1beta1.NumPoolPositionsResponse
+ */
 export interface NumPoolPositionsResponseAmino {
   position_count?: string;
 }
@@ -171,34 +256,65 @@ export interface NumPoolPositionsResponseAminoMsg {
   type: '/symphony.concentratedliquidity.v1beta1.NumPoolPositionsResponse';
   value: NumPoolPositionsResponseAmino;
 }
+/**
+ * @name NumPoolPositionsResponseSDKType
+ * @package symphony.concentratedliquidity.v1beta1
+ * @see proto type: symphony.concentratedliquidity.v1beta1.NumPoolPositionsResponse
+ */
 export interface NumPoolPositionsResponseSDKType {
   position_count: bigint;
 }
-/** =============================== Pools */
+/**
+ * =============================== Pools
+ * @name PoolsRequest
+ * @package symphony.concentratedliquidity.v1beta1
+ * @see proto type: symphony.concentratedliquidity.v1beta1.PoolsRequest
+ */
 export interface PoolsRequest {
-  /** pagination defines an optional pagination for the request. */
+  /**
+   * pagination defines an optional pagination for the request.
+   */
   pagination?: PageRequest;
 }
 export interface PoolsRequestProtoMsg {
   typeUrl: '/symphony.concentratedliquidity.v1beta1.PoolsRequest';
   value: Uint8Array;
 }
-/** =============================== Pools */
+/**
+ * =============================== Pools
+ * @name PoolsRequestAmino
+ * @package symphony.concentratedliquidity.v1beta1
+ * @see proto type: symphony.concentratedliquidity.v1beta1.PoolsRequest
+ */
 export interface PoolsRequestAmino {
-  /** pagination defines an optional pagination for the request. */
+  /**
+   * pagination defines an optional pagination for the request.
+   */
   pagination?: PageRequestAmino;
 }
 export interface PoolsRequestAminoMsg {
   type: '/symphony.concentratedliquidity.v1beta1.PoolsRequest';
   value: PoolsRequestAmino;
 }
-/** =============================== Pools */
+/**
+ * =============================== Pools
+ * @name PoolsRequestSDKType
+ * @package symphony.concentratedliquidity.v1beta1
+ * @see proto type: symphony.concentratedliquidity.v1beta1.PoolsRequest
+ */
 export interface PoolsRequestSDKType {
   pagination?: PageRequestSDKType;
 }
+/**
+ * @name PoolsResponse
+ * @package symphony.concentratedliquidity.v1beta1
+ * @see proto type: symphony.concentratedliquidity.v1beta1.PoolsResponse
+ */
 export interface PoolsResponse {
   pools: (Pool1 | CosmWasmPool | Pool2 | Pool3 | Any)[] | Any[];
-  /** pagination defines the pagination in the response. */
+  /**
+   * pagination defines the pagination in the response.
+   */
   pagination?: PageResponse;
 }
 export interface PoolsResponseProtoMsg {
@@ -214,15 +330,27 @@ export type PoolsResponseEncoded = Omit<PoolsResponse, 'pools'> & {
     | AnyProtoMsg
   )[];
 };
+/**
+ * @name PoolsResponseAmino
+ * @package symphony.concentratedliquidity.v1beta1
+ * @see proto type: symphony.concentratedliquidity.v1beta1.PoolsResponse
+ */
 export interface PoolsResponseAmino {
   pools?: AnyAmino[];
-  /** pagination defines the pagination in the response. */
+  /**
+   * pagination defines the pagination in the response.
+   */
   pagination?: PageResponseAmino;
 }
 export interface PoolsResponseAminoMsg {
   type: '/symphony.concentratedliquidity.v1beta1.PoolsResponse';
   value: PoolsResponseAmino;
 }
+/**
+ * @name PoolsResponseSDKType
+ * @package symphony.concentratedliquidity.v1beta1
+ * @see proto type: symphony.concentratedliquidity.v1beta1.PoolsResponse
+ */
 export interface PoolsResponseSDKType {
   pools: (
     | Pool1SDKType
@@ -233,20 +361,40 @@ export interface PoolsResponseSDKType {
   )[];
   pagination?: PageResponseSDKType;
 }
-/** =============================== ModuleParams */
+/**
+ * =============================== ModuleParams
+ * @name ParamsRequest
+ * @package symphony.concentratedliquidity.v1beta1
+ * @see proto type: symphony.concentratedliquidity.v1beta1.ParamsRequest
+ */
 export interface ParamsRequest {}
 export interface ParamsRequestProtoMsg {
   typeUrl: '/symphony.concentratedliquidity.v1beta1.ParamsRequest';
   value: Uint8Array;
 }
-/** =============================== ModuleParams */
+/**
+ * =============================== ModuleParams
+ * @name ParamsRequestAmino
+ * @package symphony.concentratedliquidity.v1beta1
+ * @see proto type: symphony.concentratedliquidity.v1beta1.ParamsRequest
+ */
 export interface ParamsRequestAmino {}
 export interface ParamsRequestAminoMsg {
   type: '/symphony.concentratedliquidity.v1beta1.ParamsRequest';
   value: ParamsRequestAmino;
 }
-/** =============================== ModuleParams */
+/**
+ * =============================== ModuleParams
+ * @name ParamsRequestSDKType
+ * @package symphony.concentratedliquidity.v1beta1
+ * @see proto type: symphony.concentratedliquidity.v1beta1.ParamsRequest
+ */
 export interface ParamsRequestSDKType {}
+/**
+ * @name ParamsResponse
+ * @package symphony.concentratedliquidity.v1beta1
+ * @see proto type: symphony.concentratedliquidity.v1beta1.ParamsResponse
+ */
 export interface ParamsResponse {
   params: Params;
 }
@@ -254,6 +402,11 @@ export interface ParamsResponseProtoMsg {
   typeUrl: '/symphony.concentratedliquidity.v1beta1.ParamsResponse';
   value: Uint8Array;
 }
+/**
+ * @name ParamsResponseAmino
+ * @package symphony.concentratedliquidity.v1beta1
+ * @see proto type: symphony.concentratedliquidity.v1beta1.ParamsResponse
+ */
 export interface ParamsResponseAmino {
   params?: ParamsAmino;
 }
@@ -261,9 +414,19 @@ export interface ParamsResponseAminoMsg {
   type: '/symphony.concentratedliquidity.v1beta1.ParamsResponse';
   value: ParamsResponseAmino;
 }
+/**
+ * @name ParamsResponseSDKType
+ * @package symphony.concentratedliquidity.v1beta1
+ * @see proto type: symphony.concentratedliquidity.v1beta1.ParamsResponse
+ */
 export interface ParamsResponseSDKType {
   params: ParamsSDKType;
 }
+/**
+ * @name TickLiquidityNet
+ * @package symphony.concentratedliquidity.v1beta1
+ * @see proto type: symphony.concentratedliquidity.v1beta1.TickLiquidityNet
+ */
 export interface TickLiquidityNet {
   liquidityNet: string;
   tickIndex: bigint;
@@ -272,6 +435,11 @@ export interface TickLiquidityNetProtoMsg {
   typeUrl: '/symphony.concentratedliquidity.v1beta1.TickLiquidityNet';
   value: Uint8Array;
 }
+/**
+ * @name TickLiquidityNetAmino
+ * @package symphony.concentratedliquidity.v1beta1
+ * @see proto type: symphony.concentratedliquidity.v1beta1.TickLiquidityNet
+ */
 export interface TickLiquidityNetAmino {
   liquidity_net?: string;
   tick_index?: string;
@@ -280,10 +448,20 @@ export interface TickLiquidityNetAminoMsg {
   type: '/symphony.concentratedliquidity.v1beta1.TickLiquidityNet';
   value: TickLiquidityNetAmino;
 }
+/**
+ * @name TickLiquidityNetSDKType
+ * @package symphony.concentratedliquidity.v1beta1
+ * @see proto type: symphony.concentratedliquidity.v1beta1.TickLiquidityNet
+ */
 export interface TickLiquidityNetSDKType {
   liquidity_net: string;
   tick_index: bigint;
 }
+/**
+ * @name LiquidityDepthWithRange
+ * @package symphony.concentratedliquidity.v1beta1
+ * @see proto type: symphony.concentratedliquidity.v1beta1.LiquidityDepthWithRange
+ */
 export interface LiquidityDepthWithRange {
   liquidityAmount: string;
   lowerTick: bigint;
@@ -293,6 +471,11 @@ export interface LiquidityDepthWithRangeProtoMsg {
   typeUrl: '/symphony.concentratedliquidity.v1beta1.LiquidityDepthWithRange';
   value: Uint8Array;
 }
+/**
+ * @name LiquidityDepthWithRangeAmino
+ * @package symphony.concentratedliquidity.v1beta1
+ * @see proto type: symphony.concentratedliquidity.v1beta1.LiquidityDepthWithRange
+ */
 export interface LiquidityDepthWithRangeAmino {
   liquidity_amount?: string;
   lower_tick?: string;
@@ -302,12 +485,22 @@ export interface LiquidityDepthWithRangeAminoMsg {
   type: '/symphony.concentratedliquidity.v1beta1.LiquidityDepthWithRange';
   value: LiquidityDepthWithRangeAmino;
 }
+/**
+ * @name LiquidityDepthWithRangeSDKType
+ * @package symphony.concentratedliquidity.v1beta1
+ * @see proto type: symphony.concentratedliquidity.v1beta1.LiquidityDepthWithRange
+ */
 export interface LiquidityDepthWithRangeSDKType {
   liquidity_amount: string;
   lower_tick: bigint;
   upper_tick: bigint;
 }
-/** =============================== LiquidityNetInDirection */
+/**
+ * =============================== LiquidityNetInDirection
+ * @name LiquidityNetInDirectionRequest
+ * @package symphony.concentratedliquidity.v1beta1
+ * @see proto type: symphony.concentratedliquidity.v1beta1.LiquidityNetInDirectionRequest
+ */
 export interface LiquidityNetInDirectionRequest {
   poolId: bigint;
   tokenIn: string;
@@ -320,7 +513,12 @@ export interface LiquidityNetInDirectionRequestProtoMsg {
   typeUrl: '/symphony.concentratedliquidity.v1beta1.LiquidityNetInDirectionRequest';
   value: Uint8Array;
 }
-/** =============================== LiquidityNetInDirection */
+/**
+ * =============================== LiquidityNetInDirection
+ * @name LiquidityNetInDirectionRequestAmino
+ * @package symphony.concentratedliquidity.v1beta1
+ * @see proto type: symphony.concentratedliquidity.v1beta1.LiquidityNetInDirectionRequest
+ */
 export interface LiquidityNetInDirectionRequestAmino {
   pool_id?: string;
   token_in?: string;
@@ -333,7 +531,12 @@ export interface LiquidityNetInDirectionRequestAminoMsg {
   type: '/symphony.concentratedliquidity.v1beta1.LiquidityNetInDirectionRequest';
   value: LiquidityNetInDirectionRequestAmino;
 }
-/** =============================== LiquidityNetInDirection */
+/**
+ * =============================== LiquidityNetInDirection
+ * @name LiquidityNetInDirectionRequestSDKType
+ * @package symphony.concentratedliquidity.v1beta1
+ * @see proto type: symphony.concentratedliquidity.v1beta1.LiquidityNetInDirectionRequest
+ */
 export interface LiquidityNetInDirectionRequestSDKType {
   pool_id: bigint;
   token_in: string;
@@ -342,6 +545,11 @@ export interface LiquidityNetInDirectionRequestSDKType {
   bound_tick: bigint;
   use_no_bound: boolean;
 }
+/**
+ * @name LiquidityNetInDirectionResponse
+ * @package symphony.concentratedliquidity.v1beta1
+ * @see proto type: symphony.concentratedliquidity.v1beta1.LiquidityNetInDirectionResponse
+ */
 export interface LiquidityNetInDirectionResponse {
   liquidityDepths: TickLiquidityNet[];
   currentTick: bigint;
@@ -352,6 +560,11 @@ export interface LiquidityNetInDirectionResponseProtoMsg {
   typeUrl: '/symphony.concentratedliquidity.v1beta1.LiquidityNetInDirectionResponse';
   value: Uint8Array;
 }
+/**
+ * @name LiquidityNetInDirectionResponseAmino
+ * @package symphony.concentratedliquidity.v1beta1
+ * @see proto type: symphony.concentratedliquidity.v1beta1.LiquidityNetInDirectionResponse
+ */
 export interface LiquidityNetInDirectionResponseAmino {
   liquidity_depths?: TickLiquidityNetAmino[];
   current_tick?: string;
@@ -362,13 +575,23 @@ export interface LiquidityNetInDirectionResponseAminoMsg {
   type: '/symphony.concentratedliquidity.v1beta1.LiquidityNetInDirectionResponse';
   value: LiquidityNetInDirectionResponseAmino;
 }
+/**
+ * @name LiquidityNetInDirectionResponseSDKType
+ * @package symphony.concentratedliquidity.v1beta1
+ * @see proto type: symphony.concentratedliquidity.v1beta1.LiquidityNetInDirectionResponse
+ */
 export interface LiquidityNetInDirectionResponseSDKType {
   liquidity_depths: TickLiquidityNetSDKType[];
   current_tick: bigint;
   current_liquidity: string;
   current_sqrt_price: string;
 }
-/** =============================== LiquidityPerTickRange */
+/**
+ * =============================== LiquidityPerTickRange
+ * @name LiquidityPerTickRangeRequest
+ * @package symphony.concentratedliquidity.v1beta1
+ * @see proto type: symphony.concentratedliquidity.v1beta1.LiquidityPerTickRangeRequest
+ */
 export interface LiquidityPerTickRangeRequest {
   poolId: bigint;
 }
@@ -376,7 +599,12 @@ export interface LiquidityPerTickRangeRequestProtoMsg {
   typeUrl: '/symphony.concentratedliquidity.v1beta1.LiquidityPerTickRangeRequest';
   value: Uint8Array;
 }
-/** =============================== LiquidityPerTickRange */
+/**
+ * =============================== LiquidityPerTickRange
+ * @name LiquidityPerTickRangeRequestAmino
+ * @package symphony.concentratedliquidity.v1beta1
+ * @see proto type: symphony.concentratedliquidity.v1beta1.LiquidityPerTickRangeRequest
+ */
 export interface LiquidityPerTickRangeRequestAmino {
   pool_id?: string;
 }
@@ -384,10 +612,20 @@ export interface LiquidityPerTickRangeRequestAminoMsg {
   type: '/symphony.concentratedliquidity.v1beta1.LiquidityPerTickRangeRequest';
   value: LiquidityPerTickRangeRequestAmino;
 }
-/** =============================== LiquidityPerTickRange */
+/**
+ * =============================== LiquidityPerTickRange
+ * @name LiquidityPerTickRangeRequestSDKType
+ * @package symphony.concentratedliquidity.v1beta1
+ * @see proto type: symphony.concentratedliquidity.v1beta1.LiquidityPerTickRangeRequest
+ */
 export interface LiquidityPerTickRangeRequestSDKType {
   pool_id: bigint;
 }
+/**
+ * @name LiquidityPerTickRangeResponse
+ * @package symphony.concentratedliquidity.v1beta1
+ * @see proto type: symphony.concentratedliquidity.v1beta1.LiquidityPerTickRangeResponse
+ */
 export interface LiquidityPerTickRangeResponse {
   liquidity: LiquidityDepthWithRange[];
   bucketIndex: bigint;
@@ -396,6 +634,11 @@ export interface LiquidityPerTickRangeResponseProtoMsg {
   typeUrl: '/symphony.concentratedliquidity.v1beta1.LiquidityPerTickRangeResponse';
   value: Uint8Array;
 }
+/**
+ * @name LiquidityPerTickRangeResponseAmino
+ * @package symphony.concentratedliquidity.v1beta1
+ * @see proto type: symphony.concentratedliquidity.v1beta1.LiquidityPerTickRangeResponse
+ */
 export interface LiquidityPerTickRangeResponseAmino {
   liquidity?: LiquidityDepthWithRangeAmino[];
   bucket_index?: string;
@@ -404,11 +647,21 @@ export interface LiquidityPerTickRangeResponseAminoMsg {
   type: '/symphony.concentratedliquidity.v1beta1.LiquidityPerTickRangeResponse';
   value: LiquidityPerTickRangeResponseAmino;
 }
+/**
+ * @name LiquidityPerTickRangeResponseSDKType
+ * @package symphony.concentratedliquidity.v1beta1
+ * @see proto type: symphony.concentratedliquidity.v1beta1.LiquidityPerTickRangeResponse
+ */
 export interface LiquidityPerTickRangeResponseSDKType {
   liquidity: LiquidityDepthWithRangeSDKType[];
   bucket_index: bigint;
 }
-/** ===================== QueryClaimableSpreadRewards */
+/**
+ * ===================== QueryClaimableSpreadRewards
+ * @name ClaimableSpreadRewardsRequest
+ * @package symphony.concentratedliquidity.v1beta1
+ * @see proto type: symphony.concentratedliquidity.v1beta1.ClaimableSpreadRewardsRequest
+ */
 export interface ClaimableSpreadRewardsRequest {
   positionId: bigint;
 }
@@ -416,7 +669,12 @@ export interface ClaimableSpreadRewardsRequestProtoMsg {
   typeUrl: '/symphony.concentratedliquidity.v1beta1.ClaimableSpreadRewardsRequest';
   value: Uint8Array;
 }
-/** ===================== QueryClaimableSpreadRewards */
+/**
+ * ===================== QueryClaimableSpreadRewards
+ * @name ClaimableSpreadRewardsRequestAmino
+ * @package symphony.concentratedliquidity.v1beta1
+ * @see proto type: symphony.concentratedliquidity.v1beta1.ClaimableSpreadRewardsRequest
+ */
 export interface ClaimableSpreadRewardsRequestAmino {
   position_id?: string;
 }
@@ -424,10 +682,20 @@ export interface ClaimableSpreadRewardsRequestAminoMsg {
   type: '/symphony.concentratedliquidity.v1beta1.ClaimableSpreadRewardsRequest';
   value: ClaimableSpreadRewardsRequestAmino;
 }
-/** ===================== QueryClaimableSpreadRewards */
+/**
+ * ===================== QueryClaimableSpreadRewards
+ * @name ClaimableSpreadRewardsRequestSDKType
+ * @package symphony.concentratedliquidity.v1beta1
+ * @see proto type: symphony.concentratedliquidity.v1beta1.ClaimableSpreadRewardsRequest
+ */
 export interface ClaimableSpreadRewardsRequestSDKType {
   position_id: bigint;
 }
+/**
+ * @name ClaimableSpreadRewardsResponse
+ * @package symphony.concentratedliquidity.v1beta1
+ * @see proto type: symphony.concentratedliquidity.v1beta1.ClaimableSpreadRewardsResponse
+ */
 export interface ClaimableSpreadRewardsResponse {
   claimableSpreadRewards: Coin[];
 }
@@ -435,6 +703,11 @@ export interface ClaimableSpreadRewardsResponseProtoMsg {
   typeUrl: '/symphony.concentratedliquidity.v1beta1.ClaimableSpreadRewardsResponse';
   value: Uint8Array;
 }
+/**
+ * @name ClaimableSpreadRewardsResponseAmino
+ * @package symphony.concentratedliquidity.v1beta1
+ * @see proto type: symphony.concentratedliquidity.v1beta1.ClaimableSpreadRewardsResponse
+ */
 export interface ClaimableSpreadRewardsResponseAmino {
   claimable_spread_rewards?: CoinAmino[];
 }
@@ -442,10 +715,20 @@ export interface ClaimableSpreadRewardsResponseAminoMsg {
   type: '/symphony.concentratedliquidity.v1beta1.ClaimableSpreadRewardsResponse';
   value: ClaimableSpreadRewardsResponseAmino;
 }
+/**
+ * @name ClaimableSpreadRewardsResponseSDKType
+ * @package symphony.concentratedliquidity.v1beta1
+ * @see proto type: symphony.concentratedliquidity.v1beta1.ClaimableSpreadRewardsResponse
+ */
 export interface ClaimableSpreadRewardsResponseSDKType {
   claimable_spread_rewards: CoinSDKType[];
 }
-/** ===================== QueryClaimableIncentives */
+/**
+ * ===================== QueryClaimableIncentives
+ * @name ClaimableIncentivesRequest
+ * @package symphony.concentratedliquidity.v1beta1
+ * @see proto type: symphony.concentratedliquidity.v1beta1.ClaimableIncentivesRequest
+ */
 export interface ClaimableIncentivesRequest {
   positionId: bigint;
 }
@@ -453,7 +736,12 @@ export interface ClaimableIncentivesRequestProtoMsg {
   typeUrl: '/symphony.concentratedliquidity.v1beta1.ClaimableIncentivesRequest';
   value: Uint8Array;
 }
-/** ===================== QueryClaimableIncentives */
+/**
+ * ===================== QueryClaimableIncentives
+ * @name ClaimableIncentivesRequestAmino
+ * @package symphony.concentratedliquidity.v1beta1
+ * @see proto type: symphony.concentratedliquidity.v1beta1.ClaimableIncentivesRequest
+ */
 export interface ClaimableIncentivesRequestAmino {
   position_id?: string;
 }
@@ -461,10 +749,20 @@ export interface ClaimableIncentivesRequestAminoMsg {
   type: '/symphony.concentratedliquidity.v1beta1.ClaimableIncentivesRequest';
   value: ClaimableIncentivesRequestAmino;
 }
-/** ===================== QueryClaimableIncentives */
+/**
+ * ===================== QueryClaimableIncentives
+ * @name ClaimableIncentivesRequestSDKType
+ * @package symphony.concentratedliquidity.v1beta1
+ * @see proto type: symphony.concentratedliquidity.v1beta1.ClaimableIncentivesRequest
+ */
 export interface ClaimableIncentivesRequestSDKType {
   position_id: bigint;
 }
+/**
+ * @name ClaimableIncentivesResponse
+ * @package symphony.concentratedliquidity.v1beta1
+ * @see proto type: symphony.concentratedliquidity.v1beta1.ClaimableIncentivesResponse
+ */
 export interface ClaimableIncentivesResponse {
   claimableIncentives: Coin[];
   forfeitedIncentives: Coin[];
@@ -473,6 +771,11 @@ export interface ClaimableIncentivesResponseProtoMsg {
   typeUrl: '/symphony.concentratedliquidity.v1beta1.ClaimableIncentivesResponse';
   value: Uint8Array;
 }
+/**
+ * @name ClaimableIncentivesResponseAmino
+ * @package symphony.concentratedliquidity.v1beta1
+ * @see proto type: symphony.concentratedliquidity.v1beta1.ClaimableIncentivesResponse
+ */
 export interface ClaimableIncentivesResponseAmino {
   claimable_incentives?: CoinAmino[];
   forfeited_incentives?: CoinAmino[];
@@ -481,11 +784,21 @@ export interface ClaimableIncentivesResponseAminoMsg {
   type: '/symphony.concentratedliquidity.v1beta1.ClaimableIncentivesResponse';
   value: ClaimableIncentivesResponseAmino;
 }
+/**
+ * @name ClaimableIncentivesResponseSDKType
+ * @package symphony.concentratedliquidity.v1beta1
+ * @see proto type: symphony.concentratedliquidity.v1beta1.ClaimableIncentivesResponse
+ */
 export interface ClaimableIncentivesResponseSDKType {
   claimable_incentives: CoinSDKType[];
   forfeited_incentives: CoinSDKType[];
 }
-/** ===================== QueryPoolAccumulatorRewards */
+/**
+ * ===================== QueryPoolAccumulatorRewards
+ * @name PoolAccumulatorRewardsRequest
+ * @package symphony.concentratedliquidity.v1beta1
+ * @see proto type: symphony.concentratedliquidity.v1beta1.PoolAccumulatorRewardsRequest
+ */
 export interface PoolAccumulatorRewardsRequest {
   poolId: bigint;
 }
@@ -493,7 +806,12 @@ export interface PoolAccumulatorRewardsRequestProtoMsg {
   typeUrl: '/symphony.concentratedliquidity.v1beta1.PoolAccumulatorRewardsRequest';
   value: Uint8Array;
 }
-/** ===================== QueryPoolAccumulatorRewards */
+/**
+ * ===================== QueryPoolAccumulatorRewards
+ * @name PoolAccumulatorRewardsRequestAmino
+ * @package symphony.concentratedliquidity.v1beta1
+ * @see proto type: symphony.concentratedliquidity.v1beta1.PoolAccumulatorRewardsRequest
+ */
 export interface PoolAccumulatorRewardsRequestAmino {
   pool_id?: string;
 }
@@ -501,10 +819,20 @@ export interface PoolAccumulatorRewardsRequestAminoMsg {
   type: '/symphony.concentratedliquidity.v1beta1.PoolAccumulatorRewardsRequest';
   value: PoolAccumulatorRewardsRequestAmino;
 }
-/** ===================== QueryPoolAccumulatorRewards */
+/**
+ * ===================== QueryPoolAccumulatorRewards
+ * @name PoolAccumulatorRewardsRequestSDKType
+ * @package symphony.concentratedliquidity.v1beta1
+ * @see proto type: symphony.concentratedliquidity.v1beta1.PoolAccumulatorRewardsRequest
+ */
 export interface PoolAccumulatorRewardsRequestSDKType {
   pool_id: bigint;
 }
+/**
+ * @name PoolAccumulatorRewardsResponse
+ * @package symphony.concentratedliquidity.v1beta1
+ * @see proto type: symphony.concentratedliquidity.v1beta1.PoolAccumulatorRewardsResponse
+ */
 export interface PoolAccumulatorRewardsResponse {
   spreadRewardGrowthGlobal: DecCoin[];
   uptimeGrowthGlobal: UptimeTracker[];
@@ -513,6 +841,11 @@ export interface PoolAccumulatorRewardsResponseProtoMsg {
   typeUrl: '/symphony.concentratedliquidity.v1beta1.PoolAccumulatorRewardsResponse';
   value: Uint8Array;
 }
+/**
+ * @name PoolAccumulatorRewardsResponseAmino
+ * @package symphony.concentratedliquidity.v1beta1
+ * @see proto type: symphony.concentratedliquidity.v1beta1.PoolAccumulatorRewardsResponse
+ */
 export interface PoolAccumulatorRewardsResponseAmino {
   spread_reward_growth_global?: DecCoinAmino[];
   uptime_growth_global?: UptimeTrackerAmino[];
@@ -521,11 +854,21 @@ export interface PoolAccumulatorRewardsResponseAminoMsg {
   type: '/symphony.concentratedliquidity.v1beta1.PoolAccumulatorRewardsResponse';
   value: PoolAccumulatorRewardsResponseAmino;
 }
+/**
+ * @name PoolAccumulatorRewardsResponseSDKType
+ * @package symphony.concentratedliquidity.v1beta1
+ * @see proto type: symphony.concentratedliquidity.v1beta1.PoolAccumulatorRewardsResponse
+ */
 export interface PoolAccumulatorRewardsResponseSDKType {
   spread_reward_growth_global: DecCoinSDKType[];
   uptime_growth_global: UptimeTrackerSDKType[];
 }
-/** ===================== QueryTickAccumulatorTrackers */
+/**
+ * ===================== QueryTickAccumulatorTrackers
+ * @name TickAccumulatorTrackersRequest
+ * @package symphony.concentratedliquidity.v1beta1
+ * @see proto type: symphony.concentratedliquidity.v1beta1.TickAccumulatorTrackersRequest
+ */
 export interface TickAccumulatorTrackersRequest {
   poolId: bigint;
   tickIndex: bigint;
@@ -534,7 +877,12 @@ export interface TickAccumulatorTrackersRequestProtoMsg {
   typeUrl: '/symphony.concentratedliquidity.v1beta1.TickAccumulatorTrackersRequest';
   value: Uint8Array;
 }
-/** ===================== QueryTickAccumulatorTrackers */
+/**
+ * ===================== QueryTickAccumulatorTrackers
+ * @name TickAccumulatorTrackersRequestAmino
+ * @package symphony.concentratedliquidity.v1beta1
+ * @see proto type: symphony.concentratedliquidity.v1beta1.TickAccumulatorTrackersRequest
+ */
 export interface TickAccumulatorTrackersRequestAmino {
   pool_id?: string;
   tick_index?: string;
@@ -543,11 +891,21 @@ export interface TickAccumulatorTrackersRequestAminoMsg {
   type: '/symphony.concentratedliquidity.v1beta1.TickAccumulatorTrackersRequest';
   value: TickAccumulatorTrackersRequestAmino;
 }
-/** ===================== QueryTickAccumulatorTrackers */
+/**
+ * ===================== QueryTickAccumulatorTrackers
+ * @name TickAccumulatorTrackersRequestSDKType
+ * @package symphony.concentratedliquidity.v1beta1
+ * @see proto type: symphony.concentratedliquidity.v1beta1.TickAccumulatorTrackersRequest
+ */
 export interface TickAccumulatorTrackersRequestSDKType {
   pool_id: bigint;
   tick_index: bigint;
 }
+/**
+ * @name TickAccumulatorTrackersResponse
+ * @package symphony.concentratedliquidity.v1beta1
+ * @see proto type: symphony.concentratedliquidity.v1beta1.TickAccumulatorTrackersResponse
+ */
 export interface TickAccumulatorTrackersResponse {
   spreadRewardGrowthOppositeDirectionOfLastTraversal: DecCoin[];
   uptimeTrackers: UptimeTracker[];
@@ -556,6 +914,11 @@ export interface TickAccumulatorTrackersResponseProtoMsg {
   typeUrl: '/symphony.concentratedliquidity.v1beta1.TickAccumulatorTrackersResponse';
   value: Uint8Array;
 }
+/**
+ * @name TickAccumulatorTrackersResponseAmino
+ * @package symphony.concentratedliquidity.v1beta1
+ * @see proto type: symphony.concentratedliquidity.v1beta1.TickAccumulatorTrackersResponse
+ */
 export interface TickAccumulatorTrackersResponseAmino {
   spread_reward_growth_opposite_direction_of_last_traversal?: DecCoinAmino[];
   uptime_trackers?: UptimeTrackerAmino[];
@@ -564,11 +927,21 @@ export interface TickAccumulatorTrackersResponseAminoMsg {
   type: '/symphony.concentratedliquidity.v1beta1.TickAccumulatorTrackersResponse';
   value: TickAccumulatorTrackersResponseAmino;
 }
+/**
+ * @name TickAccumulatorTrackersResponseSDKType
+ * @package symphony.concentratedliquidity.v1beta1
+ * @see proto type: symphony.concentratedliquidity.v1beta1.TickAccumulatorTrackersResponse
+ */
 export interface TickAccumulatorTrackersResponseSDKType {
   spread_reward_growth_opposite_direction_of_last_traversal: DecCoinSDKType[];
   uptime_trackers: UptimeTrackerSDKType[];
 }
-/** ===================== QueryIncentiveRecords */
+/**
+ * ===================== QueryIncentiveRecords
+ * @name IncentiveRecordsRequest
+ * @package symphony.concentratedliquidity.v1beta1
+ * @see proto type: symphony.concentratedliquidity.v1beta1.IncentiveRecordsRequest
+ */
 export interface IncentiveRecordsRequest {
   poolId: bigint;
   pagination?: PageRequest;
@@ -577,7 +950,12 @@ export interface IncentiveRecordsRequestProtoMsg {
   typeUrl: '/symphony.concentratedliquidity.v1beta1.IncentiveRecordsRequest';
   value: Uint8Array;
 }
-/** ===================== QueryIncentiveRecords */
+/**
+ * ===================== QueryIncentiveRecords
+ * @name IncentiveRecordsRequestAmino
+ * @package symphony.concentratedliquidity.v1beta1
+ * @see proto type: symphony.concentratedliquidity.v1beta1.IncentiveRecordsRequest
+ */
 export interface IncentiveRecordsRequestAmino {
   pool_id?: string;
   pagination?: PageRequestAmino;
@@ -586,34 +964,63 @@ export interface IncentiveRecordsRequestAminoMsg {
   type: '/symphony.concentratedliquidity.v1beta1.IncentiveRecordsRequest';
   value: IncentiveRecordsRequestAmino;
 }
-/** ===================== QueryIncentiveRecords */
+/**
+ * ===================== QueryIncentiveRecords
+ * @name IncentiveRecordsRequestSDKType
+ * @package symphony.concentratedliquidity.v1beta1
+ * @see proto type: symphony.concentratedliquidity.v1beta1.IncentiveRecordsRequest
+ */
 export interface IncentiveRecordsRequestSDKType {
   pool_id: bigint;
   pagination?: PageRequestSDKType;
 }
+/**
+ * @name IncentiveRecordsResponse
+ * @package symphony.concentratedliquidity.v1beta1
+ * @see proto type: symphony.concentratedliquidity.v1beta1.IncentiveRecordsResponse
+ */
 export interface IncentiveRecordsResponse {
   incentiveRecords: IncentiveRecord[];
-  /** pagination defines the pagination in the response. */
+  /**
+   * pagination defines the pagination in the response.
+   */
   pagination?: PageResponse;
 }
 export interface IncentiveRecordsResponseProtoMsg {
   typeUrl: '/symphony.concentratedliquidity.v1beta1.IncentiveRecordsResponse';
   value: Uint8Array;
 }
+/**
+ * @name IncentiveRecordsResponseAmino
+ * @package symphony.concentratedliquidity.v1beta1
+ * @see proto type: symphony.concentratedliquidity.v1beta1.IncentiveRecordsResponse
+ */
 export interface IncentiveRecordsResponseAmino {
   incentive_records?: IncentiveRecordAmino[];
-  /** pagination defines the pagination in the response. */
+  /**
+   * pagination defines the pagination in the response.
+   */
   pagination?: PageResponseAmino;
 }
 export interface IncentiveRecordsResponseAminoMsg {
   type: '/symphony.concentratedliquidity.v1beta1.IncentiveRecordsResponse';
   value: IncentiveRecordsResponseAmino;
 }
+/**
+ * @name IncentiveRecordsResponseSDKType
+ * @package symphony.concentratedliquidity.v1beta1
+ * @see proto type: symphony.concentratedliquidity.v1beta1.IncentiveRecordsResponse
+ */
 export interface IncentiveRecordsResponseSDKType {
   incentive_records: IncentiveRecordSDKType[];
   pagination?: PageResponseSDKType;
 }
-/** =============================== CFMMPoolIdLinkFromConcentratedPoolId */
+/**
+ * =============================== CFMMPoolIdLinkFromConcentratedPoolId
+ * @name CFMMPoolIdLinkFromConcentratedPoolIdRequest
+ * @package symphony.concentratedliquidity.v1beta1
+ * @see proto type: symphony.concentratedliquidity.v1beta1.CFMMPoolIdLinkFromConcentratedPoolIdRequest
+ */
 export interface CFMMPoolIdLinkFromConcentratedPoolIdRequest {
   concentratedPoolId: bigint;
 }
@@ -621,7 +1028,12 @@ export interface CFMMPoolIdLinkFromConcentratedPoolIdRequestProtoMsg {
   typeUrl: '/symphony.concentratedliquidity.v1beta1.CFMMPoolIdLinkFromConcentratedPoolIdRequest';
   value: Uint8Array;
 }
-/** =============================== CFMMPoolIdLinkFromConcentratedPoolId */
+/**
+ * =============================== CFMMPoolIdLinkFromConcentratedPoolId
+ * @name CFMMPoolIdLinkFromConcentratedPoolIdRequestAmino
+ * @package symphony.concentratedliquidity.v1beta1
+ * @see proto type: symphony.concentratedliquidity.v1beta1.CFMMPoolIdLinkFromConcentratedPoolIdRequest
+ */
 export interface CFMMPoolIdLinkFromConcentratedPoolIdRequestAmino {
   concentrated_pool_id?: string;
 }
@@ -629,10 +1041,20 @@ export interface CFMMPoolIdLinkFromConcentratedPoolIdRequestAminoMsg {
   type: '/symphony.concentratedliquidity.v1beta1.CFMMPoolIdLinkFromConcentratedPoolIdRequest';
   value: CFMMPoolIdLinkFromConcentratedPoolIdRequestAmino;
 }
-/** =============================== CFMMPoolIdLinkFromConcentratedPoolId */
+/**
+ * =============================== CFMMPoolIdLinkFromConcentratedPoolId
+ * @name CFMMPoolIdLinkFromConcentratedPoolIdRequestSDKType
+ * @package symphony.concentratedliquidity.v1beta1
+ * @see proto type: symphony.concentratedliquidity.v1beta1.CFMMPoolIdLinkFromConcentratedPoolIdRequest
+ */
 export interface CFMMPoolIdLinkFromConcentratedPoolIdRequestSDKType {
   concentrated_pool_id: bigint;
 }
+/**
+ * @name CFMMPoolIdLinkFromConcentratedPoolIdResponse
+ * @package symphony.concentratedliquidity.v1beta1
+ * @see proto type: symphony.concentratedliquidity.v1beta1.CFMMPoolIdLinkFromConcentratedPoolIdResponse
+ */
 export interface CFMMPoolIdLinkFromConcentratedPoolIdResponse {
   cfmmPoolId: bigint;
 }
@@ -640,6 +1062,11 @@ export interface CFMMPoolIdLinkFromConcentratedPoolIdResponseProtoMsg {
   typeUrl: '/symphony.concentratedliquidity.v1beta1.CFMMPoolIdLinkFromConcentratedPoolIdResponse';
   value: Uint8Array;
 }
+/**
+ * @name CFMMPoolIdLinkFromConcentratedPoolIdResponseAmino
+ * @package symphony.concentratedliquidity.v1beta1
+ * @see proto type: symphony.concentratedliquidity.v1beta1.CFMMPoolIdLinkFromConcentratedPoolIdResponse
+ */
 export interface CFMMPoolIdLinkFromConcentratedPoolIdResponseAmino {
   cfmm_pool_id?: string;
 }
@@ -647,10 +1074,20 @@ export interface CFMMPoolIdLinkFromConcentratedPoolIdResponseAminoMsg {
   type: '/symphony.concentratedliquidity.v1beta1.CFMMPoolIdLinkFromConcentratedPoolIdResponse';
   value: CFMMPoolIdLinkFromConcentratedPoolIdResponseAmino;
 }
+/**
+ * @name CFMMPoolIdLinkFromConcentratedPoolIdResponseSDKType
+ * @package symphony.concentratedliquidity.v1beta1
+ * @see proto type: symphony.concentratedliquidity.v1beta1.CFMMPoolIdLinkFromConcentratedPoolIdResponse
+ */
 export interface CFMMPoolIdLinkFromConcentratedPoolIdResponseSDKType {
   cfmm_pool_id: bigint;
 }
-/** =============================== UserUnbondingPositions */
+/**
+ * =============================== UserUnbondingPositions
+ * @name UserUnbondingPositionsRequest
+ * @package symphony.concentratedliquidity.v1beta1
+ * @see proto type: symphony.concentratedliquidity.v1beta1.UserUnbondingPositionsRequest
+ */
 export interface UserUnbondingPositionsRequest {
   address: string;
 }
@@ -658,7 +1095,12 @@ export interface UserUnbondingPositionsRequestProtoMsg {
   typeUrl: '/symphony.concentratedliquidity.v1beta1.UserUnbondingPositionsRequest';
   value: Uint8Array;
 }
-/** =============================== UserUnbondingPositions */
+/**
+ * =============================== UserUnbondingPositions
+ * @name UserUnbondingPositionsRequestAmino
+ * @package symphony.concentratedliquidity.v1beta1
+ * @see proto type: symphony.concentratedliquidity.v1beta1.UserUnbondingPositionsRequest
+ */
 export interface UserUnbondingPositionsRequestAmino {
   address?: string;
 }
@@ -666,10 +1108,20 @@ export interface UserUnbondingPositionsRequestAminoMsg {
   type: '/symphony.concentratedliquidity.v1beta1.UserUnbondingPositionsRequest';
   value: UserUnbondingPositionsRequestAmino;
 }
-/** =============================== UserUnbondingPositions */
+/**
+ * =============================== UserUnbondingPositions
+ * @name UserUnbondingPositionsRequestSDKType
+ * @package symphony.concentratedliquidity.v1beta1
+ * @see proto type: symphony.concentratedliquidity.v1beta1.UserUnbondingPositionsRequest
+ */
 export interface UserUnbondingPositionsRequestSDKType {
   address: string;
 }
+/**
+ * @name UserUnbondingPositionsResponse
+ * @package symphony.concentratedliquidity.v1beta1
+ * @see proto type: symphony.concentratedliquidity.v1beta1.UserUnbondingPositionsResponse
+ */
 export interface UserUnbondingPositionsResponse {
   positionsWithPeriodLock: PositionWithPeriodLock[];
 }
@@ -677,6 +1129,11 @@ export interface UserUnbondingPositionsResponseProtoMsg {
   typeUrl: '/symphony.concentratedliquidity.v1beta1.UserUnbondingPositionsResponse';
   value: Uint8Array;
 }
+/**
+ * @name UserUnbondingPositionsResponseAmino
+ * @package symphony.concentratedliquidity.v1beta1
+ * @see proto type: symphony.concentratedliquidity.v1beta1.UserUnbondingPositionsResponse
+ */
 export interface UserUnbondingPositionsResponseAmino {
   positions_with_period_lock?: PositionWithPeriodLockAmino[];
 }
@@ -684,23 +1141,48 @@ export interface UserUnbondingPositionsResponseAminoMsg {
   type: '/symphony.concentratedliquidity.v1beta1.UserUnbondingPositionsResponse';
   value: UserUnbondingPositionsResponseAmino;
 }
+/**
+ * @name UserUnbondingPositionsResponseSDKType
+ * @package symphony.concentratedliquidity.v1beta1
+ * @see proto type: symphony.concentratedliquidity.v1beta1.UserUnbondingPositionsResponse
+ */
 export interface UserUnbondingPositionsResponseSDKType {
   positions_with_period_lock: PositionWithPeriodLockSDKType[];
 }
-/** =============================== GetTotalLiquidity */
+/**
+ * =============================== GetTotalLiquidity
+ * @name GetTotalLiquidityRequest
+ * @package symphony.concentratedliquidity.v1beta1
+ * @see proto type: symphony.concentratedliquidity.v1beta1.GetTotalLiquidityRequest
+ */
 export interface GetTotalLiquidityRequest {}
 export interface GetTotalLiquidityRequestProtoMsg {
   typeUrl: '/symphony.concentratedliquidity.v1beta1.GetTotalLiquidityRequest';
   value: Uint8Array;
 }
-/** =============================== GetTotalLiquidity */
+/**
+ * =============================== GetTotalLiquidity
+ * @name GetTotalLiquidityRequestAmino
+ * @package symphony.concentratedliquidity.v1beta1
+ * @see proto type: symphony.concentratedliquidity.v1beta1.GetTotalLiquidityRequest
+ */
 export interface GetTotalLiquidityRequestAmino {}
 export interface GetTotalLiquidityRequestAminoMsg {
   type: '/symphony.concentratedliquidity.v1beta1.GetTotalLiquidityRequest';
   value: GetTotalLiquidityRequestAmino;
 }
-/** =============================== GetTotalLiquidity */
+/**
+ * =============================== GetTotalLiquidity
+ * @name GetTotalLiquidityRequestSDKType
+ * @package symphony.concentratedliquidity.v1beta1
+ * @see proto type: symphony.concentratedliquidity.v1beta1.GetTotalLiquidityRequest
+ */
 export interface GetTotalLiquidityRequestSDKType {}
+/**
+ * @name GetTotalLiquidityResponse
+ * @package symphony.concentratedliquidity.v1beta1
+ * @see proto type: symphony.concentratedliquidity.v1beta1.GetTotalLiquidityResponse
+ */
 export interface GetTotalLiquidityResponse {
   totalLiquidity: Coin[];
 }
@@ -708,6 +1190,11 @@ export interface GetTotalLiquidityResponseProtoMsg {
   typeUrl: '/symphony.concentratedliquidity.v1beta1.GetTotalLiquidityResponse';
   value: Uint8Array;
 }
+/**
+ * @name GetTotalLiquidityResponseAmino
+ * @package symphony.concentratedliquidity.v1beta1
+ * @see proto type: symphony.concentratedliquidity.v1beta1.GetTotalLiquidityResponse
+ */
 export interface GetTotalLiquidityResponseAmino {
   total_liquidity?: CoinAmino[];
 }
@@ -715,10 +1202,20 @@ export interface GetTotalLiquidityResponseAminoMsg {
   type: '/symphony.concentratedliquidity.v1beta1.GetTotalLiquidityResponse';
   value: GetTotalLiquidityResponseAmino;
 }
+/**
+ * @name GetTotalLiquidityResponseSDKType
+ * @package symphony.concentratedliquidity.v1beta1
+ * @see proto type: symphony.concentratedliquidity.v1beta1.GetTotalLiquidityResponse
+ */
 export interface GetTotalLiquidityResponseSDKType {
   total_liquidity: CoinSDKType[];
 }
-/** =============================== NumNextInitializedTicks */
+/**
+ * =============================== NumNextInitializedTicks
+ * @name NumNextInitializedTicksRequest
+ * @package symphony.concentratedliquidity.v1beta1
+ * @see proto type: symphony.concentratedliquidity.v1beta1.NumNextInitializedTicksRequest
+ */
 export interface NumNextInitializedTicksRequest {
   poolId: bigint;
   tokenInDenom: string;
@@ -728,7 +1225,12 @@ export interface NumNextInitializedTicksRequestProtoMsg {
   typeUrl: '/symphony.concentratedliquidity.v1beta1.NumNextInitializedTicksRequest';
   value: Uint8Array;
 }
-/** =============================== NumNextInitializedTicks */
+/**
+ * =============================== NumNextInitializedTicks
+ * @name NumNextInitializedTicksRequestAmino
+ * @package symphony.concentratedliquidity.v1beta1
+ * @see proto type: symphony.concentratedliquidity.v1beta1.NumNextInitializedTicksRequest
+ */
 export interface NumNextInitializedTicksRequestAmino {
   pool_id?: string;
   token_in_denom?: string;
@@ -738,12 +1240,22 @@ export interface NumNextInitializedTicksRequestAminoMsg {
   type: '/symphony.concentratedliquidity.v1beta1.NumNextInitializedTicksRequest';
   value: NumNextInitializedTicksRequestAmino;
 }
-/** =============================== NumNextInitializedTicks */
+/**
+ * =============================== NumNextInitializedTicks
+ * @name NumNextInitializedTicksRequestSDKType
+ * @package symphony.concentratedliquidity.v1beta1
+ * @see proto type: symphony.concentratedliquidity.v1beta1.NumNextInitializedTicksRequest
+ */
 export interface NumNextInitializedTicksRequestSDKType {
   pool_id: bigint;
   token_in_denom: string;
   num_next_initialized_ticks: bigint;
 }
+/**
+ * @name NumNextInitializedTicksResponse
+ * @package symphony.concentratedliquidity.v1beta1
+ * @see proto type: symphony.concentratedliquidity.v1beta1.NumNextInitializedTicksResponse
+ */
 export interface NumNextInitializedTicksResponse {
   liquidityDepths: TickLiquidityNet[];
   currentTick: bigint;
@@ -753,6 +1265,11 @@ export interface NumNextInitializedTicksResponseProtoMsg {
   typeUrl: '/symphony.concentratedliquidity.v1beta1.NumNextInitializedTicksResponse';
   value: Uint8Array;
 }
+/**
+ * @name NumNextInitializedTicksResponseAmino
+ * @package symphony.concentratedliquidity.v1beta1
+ * @see proto type: symphony.concentratedliquidity.v1beta1.NumNextInitializedTicksResponse
+ */
 export interface NumNextInitializedTicksResponseAmino {
   liquidity_depths?: TickLiquidityNetAmino[];
   current_tick?: string;
@@ -762,6 +1279,11 @@ export interface NumNextInitializedTicksResponseAminoMsg {
   type: '/symphony.concentratedliquidity.v1beta1.NumNextInitializedTicksResponse';
   value: NumNextInitializedTicksResponseAmino;
 }
+/**
+ * @name NumNextInitializedTicksResponseSDKType
+ * @package symphony.concentratedliquidity.v1beta1
+ * @see proto type: symphony.concentratedliquidity.v1beta1.NumNextInitializedTicksResponse
+ */
 export interface NumNextInitializedTicksResponseSDKType {
   liquidity_depths: TickLiquidityNetSDKType[];
   current_tick: bigint;
@@ -774,6 +1296,12 @@ function createBaseUserPositionsRequest(): UserPositionsRequest {
     pagination: undefined,
   };
 }
+/**
+ * =============================== UserPositions
+ * @name UserPositionsRequest
+ * @package symphony.concentratedliquidity.v1beta1
+ * @see proto type: symphony.concentratedliquidity.v1beta1.UserPositionsRequest
+ */
 export const UserPositionsRequest = {
   typeUrl: '/symphony.concentratedliquidity.v1beta1.UserPositionsRequest',
   is(o: any): o is UserPositionsRequest {
@@ -901,6 +1429,11 @@ function createBaseUserPositionsResponse(): UserPositionsResponse {
     pagination: undefined,
   };
 }
+/**
+ * @name UserPositionsResponse
+ * @package symphony.concentratedliquidity.v1beta1
+ * @see proto type: symphony.concentratedliquidity.v1beta1.UserPositionsResponse
+ */
 export const UserPositionsResponse = {
   typeUrl: '/symphony.concentratedliquidity.v1beta1.UserPositionsResponse',
   is(o: any): o is UserPositionsResponse {
@@ -1027,6 +1560,12 @@ function createBasePositionByIdRequest(): PositionByIdRequest {
     positionId: BigInt(0),
   };
 }
+/**
+ * =============================== PositionById
+ * @name PositionByIdRequest
+ * @package symphony.concentratedliquidity.v1beta1
+ * @see proto type: symphony.concentratedliquidity.v1beta1.PositionByIdRequest
+ */
 export const PositionByIdRequest = {
   typeUrl: '/symphony.concentratedliquidity.v1beta1.PositionByIdRequest',
   is(o: any): o is PositionByIdRequest {
@@ -1128,6 +1667,11 @@ function createBasePositionByIdResponse(): PositionByIdResponse {
     position: FullPositionBreakdown.fromPartial({}),
   };
 }
+/**
+ * @name PositionByIdResponse
+ * @package symphony.concentratedliquidity.v1beta1
+ * @see proto type: symphony.concentratedliquidity.v1beta1.PositionByIdResponse
+ */
 export const PositionByIdResponse = {
   typeUrl: '/symphony.concentratedliquidity.v1beta1.PositionByIdResponse',
   is(o: any): o is PositionByIdResponse {
@@ -1234,6 +1778,11 @@ function createBaseNumPoolPositionsRequest(): NumPoolPositionsRequest {
     poolId: BigInt(0),
   };
 }
+/**
+ * @name NumPoolPositionsRequest
+ * @package symphony.concentratedliquidity.v1beta1
+ * @see proto type: symphony.concentratedliquidity.v1beta1.NumPoolPositionsRequest
+ */
 export const NumPoolPositionsRequest = {
   typeUrl: '/symphony.concentratedliquidity.v1beta1.NumPoolPositionsRequest',
   is(o: any): o is NumPoolPositionsRequest {
@@ -1342,6 +1891,11 @@ function createBaseNumPoolPositionsResponse(): NumPoolPositionsResponse {
     positionCount: BigInt(0),
   };
 }
+/**
+ * @name NumPoolPositionsResponse
+ * @package symphony.concentratedliquidity.v1beta1
+ * @see proto type: symphony.concentratedliquidity.v1beta1.NumPoolPositionsResponse
+ */
 export const NumPoolPositionsResponse = {
   typeUrl: '/symphony.concentratedliquidity.v1beta1.NumPoolPositionsResponse',
   is(o: any): o is NumPoolPositionsResponse {
@@ -1452,6 +2006,12 @@ function createBasePoolsRequest(): PoolsRequest {
     pagination: undefined,
   };
 }
+/**
+ * =============================== Pools
+ * @name PoolsRequest
+ * @package symphony.concentratedliquidity.v1beta1
+ * @see proto type: symphony.concentratedliquidity.v1beta1.PoolsRequest
+ */
 export const PoolsRequest = {
   typeUrl: '/symphony.concentratedliquidity.v1beta1.PoolsRequest',
   is(o: any): o is PoolsRequest {
@@ -1535,6 +2095,11 @@ function createBasePoolsResponse(): PoolsResponse {
     pagination: undefined,
   };
 }
+/**
+ * @name PoolsResponse
+ * @package symphony.concentratedliquidity.v1beta1
+ * @see proto type: symphony.concentratedliquidity.v1beta1.PoolsResponse
+ */
 export const PoolsResponse = {
   typeUrl: '/symphony.concentratedliquidity.v1beta1.PoolsResponse',
   is(o: any): o is PoolsResponse {
@@ -1668,6 +2233,12 @@ GlobalDecoderRegistry.register(PoolsResponse.typeUrl, PoolsResponse);
 function createBaseParamsRequest(): ParamsRequest {
   return {};
 }
+/**
+ * =============================== ModuleParams
+ * @name ParamsRequest
+ * @package symphony.concentratedliquidity.v1beta1
+ * @see proto type: symphony.concentratedliquidity.v1beta1.ParamsRequest
+ */
 export const ParamsRequest = {
   typeUrl: '/symphony.concentratedliquidity.v1beta1.ParamsRequest',
   is(o: any): o is ParamsRequest {
@@ -1734,6 +2305,11 @@ function createBaseParamsResponse(): ParamsResponse {
     params: Params.fromPartial({}),
   };
 }
+/**
+ * @name ParamsResponse
+ * @package symphony.concentratedliquidity.v1beta1
+ * @see proto type: symphony.concentratedliquidity.v1beta1.ParamsResponse
+ */
 export const ParamsResponse = {
   typeUrl: '/symphony.concentratedliquidity.v1beta1.ParamsResponse',
   is(o: any): o is ParamsResponse {
@@ -1819,6 +2395,11 @@ function createBaseTickLiquidityNet(): TickLiquidityNet {
     tickIndex: BigInt(0),
   };
 }
+/**
+ * @name TickLiquidityNet
+ * @package symphony.concentratedliquidity.v1beta1
+ * @see proto type: symphony.concentratedliquidity.v1beta1.TickLiquidityNet
+ */
 export const TickLiquidityNet = {
   typeUrl: '/symphony.concentratedliquidity.v1beta1.TickLiquidityNet',
   is(o: any): o is TickLiquidityNet {
@@ -1935,6 +2516,11 @@ function createBaseLiquidityDepthWithRange(): LiquidityDepthWithRange {
     upperTick: BigInt(0),
   };
 }
+/**
+ * @name LiquidityDepthWithRange
+ * @package symphony.concentratedliquidity.v1beta1
+ * @see proto type: symphony.concentratedliquidity.v1beta1.LiquidityDepthWithRange
+ */
 export const LiquidityDepthWithRange = {
   typeUrl: '/symphony.concentratedliquidity.v1beta1.LiquidityDepthWithRange',
   is(o: any): o is LiquidityDepthWithRange {
@@ -2093,6 +2679,12 @@ function createBaseLiquidityNetInDirectionRequest(): LiquidityNetInDirectionRequ
     useNoBound: false,
   };
 }
+/**
+ * =============================== LiquidityNetInDirection
+ * @name LiquidityNetInDirectionRequest
+ * @package symphony.concentratedliquidity.v1beta1
+ * @see proto type: symphony.concentratedliquidity.v1beta1.LiquidityNetInDirectionRequest
+ */
 export const LiquidityNetInDirectionRequest = {
   typeUrl:
     '/symphony.concentratedliquidity.v1beta1.LiquidityNetInDirectionRequest',
@@ -2293,6 +2885,11 @@ function createBaseLiquidityNetInDirectionResponse(): LiquidityNetInDirectionRes
     currentSqrtPrice: '',
   };
 }
+/**
+ * @name LiquidityNetInDirectionResponse
+ * @package symphony.concentratedliquidity.v1beta1
+ * @see proto type: symphony.concentratedliquidity.v1beta1.LiquidityNetInDirectionResponse
+ */
 export const LiquidityNetInDirectionResponse = {
   typeUrl:
     '/symphony.concentratedliquidity.v1beta1.LiquidityNetInDirectionResponse',
@@ -2477,6 +3074,12 @@ function createBaseLiquidityPerTickRangeRequest(): LiquidityPerTickRangeRequest 
     poolId: BigInt(0),
   };
 }
+/**
+ * =============================== LiquidityPerTickRange
+ * @name LiquidityPerTickRangeRequest
+ * @package symphony.concentratedliquidity.v1beta1
+ * @see proto type: symphony.concentratedliquidity.v1beta1.LiquidityPerTickRangeRequest
+ */
 export const LiquidityPerTickRangeRequest = {
   typeUrl:
     '/symphony.concentratedliquidity.v1beta1.LiquidityPerTickRangeRequest',
@@ -2591,6 +3194,11 @@ function createBaseLiquidityPerTickRangeResponse(): LiquidityPerTickRangeRespons
     bucketIndex: BigInt(0),
   };
 }
+/**
+ * @name LiquidityPerTickRangeResponse
+ * @package symphony.concentratedliquidity.v1beta1
+ * @see proto type: symphony.concentratedliquidity.v1beta1.LiquidityPerTickRangeResponse
+ */
 export const LiquidityPerTickRangeResponse = {
   typeUrl:
     '/symphony.concentratedliquidity.v1beta1.LiquidityPerTickRangeResponse',
@@ -2733,6 +3341,12 @@ function createBaseClaimableSpreadRewardsRequest(): ClaimableSpreadRewardsReques
     positionId: BigInt(0),
   };
 }
+/**
+ * ===================== QueryClaimableSpreadRewards
+ * @name ClaimableSpreadRewardsRequest
+ * @package symphony.concentratedliquidity.v1beta1
+ * @see proto type: symphony.concentratedliquidity.v1beta1.ClaimableSpreadRewardsRequest
+ */
 export const ClaimableSpreadRewardsRequest = {
   typeUrl:
     '/symphony.concentratedliquidity.v1beta1.ClaimableSpreadRewardsRequest',
@@ -2848,6 +3462,11 @@ function createBaseClaimableSpreadRewardsResponse(): ClaimableSpreadRewardsRespo
     claimableSpreadRewards: [],
   };
 }
+/**
+ * @name ClaimableSpreadRewardsResponse
+ * @package symphony.concentratedliquidity.v1beta1
+ * @see proto type: symphony.concentratedliquidity.v1beta1.ClaimableSpreadRewardsResponse
+ */
 export const ClaimableSpreadRewardsResponse = {
   typeUrl:
     '/symphony.concentratedliquidity.v1beta1.ClaimableSpreadRewardsResponse',
@@ -2971,6 +3590,12 @@ function createBaseClaimableIncentivesRequest(): ClaimableIncentivesRequest {
     positionId: BigInt(0),
   };
 }
+/**
+ * ===================== QueryClaimableIncentives
+ * @name ClaimableIncentivesRequest
+ * @package symphony.concentratedliquidity.v1beta1
+ * @see proto type: symphony.concentratedliquidity.v1beta1.ClaimableIncentivesRequest
+ */
 export const ClaimableIncentivesRequest = {
   typeUrl: '/symphony.concentratedliquidity.v1beta1.ClaimableIncentivesRequest',
   is(o: any): o is ClaimableIncentivesRequest {
@@ -3086,6 +3711,11 @@ function createBaseClaimableIncentivesResponse(): ClaimableIncentivesResponse {
     forfeitedIncentives: [],
   };
 }
+/**
+ * @name ClaimableIncentivesResponse
+ * @package symphony.concentratedliquidity.v1beta1
+ * @see proto type: symphony.concentratedliquidity.v1beta1.ClaimableIncentivesResponse
+ */
 export const ClaimableIncentivesResponse = {
   typeUrl:
     '/symphony.concentratedliquidity.v1beta1.ClaimableIncentivesResponse',
@@ -3236,6 +3866,12 @@ function createBasePoolAccumulatorRewardsRequest(): PoolAccumulatorRewardsReques
     poolId: BigInt(0),
   };
 }
+/**
+ * ===================== QueryPoolAccumulatorRewards
+ * @name PoolAccumulatorRewardsRequest
+ * @package symphony.concentratedliquidity.v1beta1
+ * @see proto type: symphony.concentratedliquidity.v1beta1.PoolAccumulatorRewardsRequest
+ */
 export const PoolAccumulatorRewardsRequest = {
   typeUrl:
     '/symphony.concentratedliquidity.v1beta1.PoolAccumulatorRewardsRequest',
@@ -3350,6 +3986,11 @@ function createBasePoolAccumulatorRewardsResponse(): PoolAccumulatorRewardsRespo
     uptimeGrowthGlobal: [],
   };
 }
+/**
+ * @name PoolAccumulatorRewardsResponse
+ * @package symphony.concentratedliquidity.v1beta1
+ * @see proto type: symphony.concentratedliquidity.v1beta1.PoolAccumulatorRewardsResponse
+ */
 export const PoolAccumulatorRewardsResponse = {
   typeUrl:
     '/symphony.concentratedliquidity.v1beta1.PoolAccumulatorRewardsResponse',
@@ -3502,6 +4143,12 @@ function createBaseTickAccumulatorTrackersRequest(): TickAccumulatorTrackersRequ
     tickIndex: BigInt(0),
   };
 }
+/**
+ * ===================== QueryTickAccumulatorTrackers
+ * @name TickAccumulatorTrackersRequest
+ * @package symphony.concentratedliquidity.v1beta1
+ * @see proto type: symphony.concentratedliquidity.v1beta1.TickAccumulatorTrackersRequest
+ */
 export const TickAccumulatorTrackersRequest = {
   typeUrl:
     '/symphony.concentratedliquidity.v1beta1.TickAccumulatorTrackersRequest',
@@ -3633,6 +4280,11 @@ function createBaseTickAccumulatorTrackersResponse(): TickAccumulatorTrackersRes
     uptimeTrackers: [],
   };
 }
+/**
+ * @name TickAccumulatorTrackersResponse
+ * @package symphony.concentratedliquidity.v1beta1
+ * @see proto type: symphony.concentratedliquidity.v1beta1.TickAccumulatorTrackersResponse
+ */
 export const TickAccumulatorTrackersResponse = {
   typeUrl:
     '/symphony.concentratedliquidity.v1beta1.TickAccumulatorTrackersResponse',
@@ -3802,6 +4454,12 @@ function createBaseIncentiveRecordsRequest(): IncentiveRecordsRequest {
     pagination: undefined,
   };
 }
+/**
+ * ===================== QueryIncentiveRecords
+ * @name IncentiveRecordsRequest
+ * @package symphony.concentratedliquidity.v1beta1
+ * @see proto type: symphony.concentratedliquidity.v1beta1.IncentiveRecordsRequest
+ */
 export const IncentiveRecordsRequest = {
   typeUrl: '/symphony.concentratedliquidity.v1beta1.IncentiveRecordsRequest',
   is(o: any): o is IncentiveRecordsRequest {
@@ -3927,6 +4585,11 @@ function createBaseIncentiveRecordsResponse(): IncentiveRecordsResponse {
     pagination: undefined,
   };
 }
+/**
+ * @name IncentiveRecordsResponse
+ * @package symphony.concentratedliquidity.v1beta1
+ * @see proto type: symphony.concentratedliquidity.v1beta1.IncentiveRecordsResponse
+ */
 export const IncentiveRecordsResponse = {
   typeUrl: '/symphony.concentratedliquidity.v1beta1.IncentiveRecordsResponse',
   is(o: any): o is IncentiveRecordsResponse {
@@ -4064,6 +4727,12 @@ function createBaseCFMMPoolIdLinkFromConcentratedPoolIdRequest(): CFMMPoolIdLink
     concentratedPoolId: BigInt(0),
   };
 }
+/**
+ * =============================== CFMMPoolIdLinkFromConcentratedPoolId
+ * @name CFMMPoolIdLinkFromConcentratedPoolIdRequest
+ * @package symphony.concentratedliquidity.v1beta1
+ * @see proto type: symphony.concentratedliquidity.v1beta1.CFMMPoolIdLinkFromConcentratedPoolIdRequest
+ */
 export const CFMMPoolIdLinkFromConcentratedPoolIdRequest = {
   typeUrl:
     '/symphony.concentratedliquidity.v1beta1.CFMMPoolIdLinkFromConcentratedPoolIdRequest',
@@ -4184,6 +4853,11 @@ function createBaseCFMMPoolIdLinkFromConcentratedPoolIdResponse(): CFMMPoolIdLin
     cfmmPoolId: BigInt(0),
   };
 }
+/**
+ * @name CFMMPoolIdLinkFromConcentratedPoolIdResponse
+ * @package symphony.concentratedliquidity.v1beta1
+ * @see proto type: symphony.concentratedliquidity.v1beta1.CFMMPoolIdLinkFromConcentratedPoolIdResponse
+ */
 export const CFMMPoolIdLinkFromConcentratedPoolIdResponse = {
   typeUrl:
     '/symphony.concentratedliquidity.v1beta1.CFMMPoolIdLinkFromConcentratedPoolIdResponse',
@@ -4302,6 +4976,12 @@ function createBaseUserUnbondingPositionsRequest(): UserUnbondingPositionsReques
     address: '',
   };
 }
+/**
+ * =============================== UserUnbondingPositions
+ * @name UserUnbondingPositionsRequest
+ * @package symphony.concentratedliquidity.v1beta1
+ * @see proto type: symphony.concentratedliquidity.v1beta1.UserUnbondingPositionsRequest
+ */
 export const UserUnbondingPositionsRequest = {
   typeUrl:
     '/symphony.concentratedliquidity.v1beta1.UserUnbondingPositionsRequest',
@@ -4411,6 +5091,11 @@ function createBaseUserUnbondingPositionsResponse(): UserUnbondingPositionsRespo
     positionsWithPeriodLock: [],
   };
 }
+/**
+ * @name UserUnbondingPositionsResponse
+ * @package symphony.concentratedliquidity.v1beta1
+ * @see proto type: symphony.concentratedliquidity.v1beta1.UserUnbondingPositionsResponse
+ */
 export const UserUnbondingPositionsResponse = {
   typeUrl:
     '/symphony.concentratedliquidity.v1beta1.UserUnbondingPositionsResponse',
@@ -4536,6 +5221,12 @@ GlobalDecoderRegistry.register(
 function createBaseGetTotalLiquidityRequest(): GetTotalLiquidityRequest {
   return {};
 }
+/**
+ * =============================== GetTotalLiquidity
+ * @name GetTotalLiquidityRequest
+ * @package symphony.concentratedliquidity.v1beta1
+ * @see proto type: symphony.concentratedliquidity.v1beta1.GetTotalLiquidityRequest
+ */
 export const GetTotalLiquidityRequest = {
   typeUrl: '/symphony.concentratedliquidity.v1beta1.GetTotalLiquidityRequest',
   is(o: any): o is GetTotalLiquidityRequest {
@@ -4615,6 +5306,11 @@ function createBaseGetTotalLiquidityResponse(): GetTotalLiquidityResponse {
     totalLiquidity: [],
   };
 }
+/**
+ * @name GetTotalLiquidityResponse
+ * @package symphony.concentratedliquidity.v1beta1
+ * @see proto type: symphony.concentratedliquidity.v1beta1.GetTotalLiquidityResponse
+ */
 export const GetTotalLiquidityResponse = {
   typeUrl: '/symphony.concentratedliquidity.v1beta1.GetTotalLiquidityResponse',
   is(o: any): o is GetTotalLiquidityResponse {
@@ -4730,6 +5426,12 @@ function createBaseNumNextInitializedTicksRequest(): NumNextInitializedTicksRequ
     numNextInitializedTicks: BigInt(0),
   };
 }
+/**
+ * =============================== NumNextInitializedTicks
+ * @name NumNextInitializedTicksRequest
+ * @package symphony.concentratedliquidity.v1beta1
+ * @see proto type: symphony.concentratedliquidity.v1beta1.NumNextInitializedTicksRequest
+ */
 export const NumNextInitializedTicksRequest = {
   typeUrl:
     '/symphony.concentratedliquidity.v1beta1.NumNextInitializedTicksRequest',
@@ -4886,6 +5588,11 @@ function createBaseNumNextInitializedTicksResponse(): NumNextInitializedTicksRes
     currentLiquidity: '',
   };
 }
+/**
+ * @name NumNextInitializedTicksResponse
+ * @package symphony.concentratedliquidity.v1beta1
+ * @see proto type: symphony.concentratedliquidity.v1beta1.NumNextInitializedTicksResponse
+ */
 export const NumNextInitializedTicksResponse = {
   typeUrl:
     '/symphony.concentratedliquidity.v1beta1.NumNextInitializedTicksResponse',

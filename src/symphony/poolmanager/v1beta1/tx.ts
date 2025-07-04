@@ -21,7 +21,12 @@ import {
 import { BinaryReader, BinaryWriter } from '../../../binary';
 import { GlobalDecoderRegistry } from '../../../registry';
 import { Decimal } from '@cosmjs/math';
-/** ===================== MsgSwapExactAmountIn */
+/**
+ * ===================== MsgSwapExactAmountIn
+ * @name MsgSwapExactAmountIn
+ * @package symphony.poolmanager.v1beta1
+ * @see proto type: symphony.poolmanager.v1beta1.MsgSwapExactAmountIn
+ */
 export interface MsgSwapExactAmountIn {
   sender: string;
   routes: SwapAmountInRoute[];
@@ -32,7 +37,12 @@ export interface MsgSwapExactAmountInProtoMsg {
   typeUrl: '/symphony.poolmanager.v1beta1.MsgSwapExactAmountIn';
   value: Uint8Array;
 }
-/** ===================== MsgSwapExactAmountIn */
+/**
+ * ===================== MsgSwapExactAmountIn
+ * @name MsgSwapExactAmountInAmino
+ * @package symphony.poolmanager.v1beta1
+ * @see proto type: symphony.poolmanager.v1beta1.MsgSwapExactAmountIn
+ */
 export interface MsgSwapExactAmountInAmino {
   sender?: string;
   routes?: SwapAmountInRouteAmino[];
@@ -43,13 +53,23 @@ export interface MsgSwapExactAmountInAminoMsg {
   type: 'symphony/poolmanager/swap-exact-amount-in';
   value: MsgSwapExactAmountInAmino;
 }
-/** ===================== MsgSwapExactAmountIn */
+/**
+ * ===================== MsgSwapExactAmountIn
+ * @name MsgSwapExactAmountInSDKType
+ * @package symphony.poolmanager.v1beta1
+ * @see proto type: symphony.poolmanager.v1beta1.MsgSwapExactAmountIn
+ */
 export interface MsgSwapExactAmountInSDKType {
   sender: string;
   routes: SwapAmountInRouteSDKType[];
   token_in: CoinSDKType;
   token_out_min_amount: string;
 }
+/**
+ * @name MsgSwapExactAmountInResponse
+ * @package symphony.poolmanager.v1beta1
+ * @see proto type: symphony.poolmanager.v1beta1.MsgSwapExactAmountInResponse
+ */
 export interface MsgSwapExactAmountInResponse {
   tokenOutAmount: string;
 }
@@ -57,6 +77,11 @@ export interface MsgSwapExactAmountInResponseProtoMsg {
   typeUrl: '/symphony.poolmanager.v1beta1.MsgSwapExactAmountInResponse';
   value: Uint8Array;
 }
+/**
+ * @name MsgSwapExactAmountInResponseAmino
+ * @package symphony.poolmanager.v1beta1
+ * @see proto type: symphony.poolmanager.v1beta1.MsgSwapExactAmountInResponse
+ */
 export interface MsgSwapExactAmountInResponseAmino {
   token_out_amount?: string;
 }
@@ -64,10 +89,20 @@ export interface MsgSwapExactAmountInResponseAminoMsg {
   type: '/symphony.poolmanager.v1beta1.MsgSwapExactAmountInResponse';
   value: MsgSwapExactAmountInResponseAmino;
 }
+/**
+ * @name MsgSwapExactAmountInResponseSDKType
+ * @package symphony.poolmanager.v1beta1
+ * @see proto type: symphony.poolmanager.v1beta1.MsgSwapExactAmountInResponse
+ */
 export interface MsgSwapExactAmountInResponseSDKType {
   token_out_amount: string;
 }
-/** ===================== MsgSplitRouteSwapExactAmountIn */
+/**
+ * ===================== MsgSplitRouteSwapExactAmountIn
+ * @name MsgSplitRouteSwapExactAmountIn
+ * @package symphony.poolmanager.v1beta1
+ * @see proto type: symphony.poolmanager.v1beta1.MsgSplitRouteSwapExactAmountIn
+ */
 export interface MsgSplitRouteSwapExactAmountIn {
   sender: string;
   routes: SwapAmountInSplitRoute[];
@@ -78,7 +113,12 @@ export interface MsgSplitRouteSwapExactAmountInProtoMsg {
   typeUrl: '/symphony.poolmanager.v1beta1.MsgSplitRouteSwapExactAmountIn';
   value: Uint8Array;
 }
-/** ===================== MsgSplitRouteSwapExactAmountIn */
+/**
+ * ===================== MsgSplitRouteSwapExactAmountIn
+ * @name MsgSplitRouteSwapExactAmountInAmino
+ * @package symphony.poolmanager.v1beta1
+ * @see proto type: symphony.poolmanager.v1beta1.MsgSplitRouteSwapExactAmountIn
+ */
 export interface MsgSplitRouteSwapExactAmountInAmino {
   sender?: string;
   routes?: SwapAmountInSplitRouteAmino[];
@@ -89,13 +129,23 @@ export interface MsgSplitRouteSwapExactAmountInAminoMsg {
   type: 'symphony/poolmanager/split-amount-in';
   value: MsgSplitRouteSwapExactAmountInAmino;
 }
-/** ===================== MsgSplitRouteSwapExactAmountIn */
+/**
+ * ===================== MsgSplitRouteSwapExactAmountIn
+ * @name MsgSplitRouteSwapExactAmountInSDKType
+ * @package symphony.poolmanager.v1beta1
+ * @see proto type: symphony.poolmanager.v1beta1.MsgSplitRouteSwapExactAmountIn
+ */
 export interface MsgSplitRouteSwapExactAmountInSDKType {
   sender: string;
   routes: SwapAmountInSplitRouteSDKType[];
   token_in_denom: string;
   token_out_min_amount: string;
 }
+/**
+ * @name MsgSplitRouteSwapExactAmountInResponse
+ * @package symphony.poolmanager.v1beta1
+ * @see proto type: symphony.poolmanager.v1beta1.MsgSplitRouteSwapExactAmountInResponse
+ */
 export interface MsgSplitRouteSwapExactAmountInResponse {
   tokenOutAmount: string;
 }
@@ -103,6 +153,11 @@ export interface MsgSplitRouteSwapExactAmountInResponseProtoMsg {
   typeUrl: '/symphony.poolmanager.v1beta1.MsgSplitRouteSwapExactAmountInResponse';
   value: Uint8Array;
 }
+/**
+ * @name MsgSplitRouteSwapExactAmountInResponseAmino
+ * @package symphony.poolmanager.v1beta1
+ * @see proto type: symphony.poolmanager.v1beta1.MsgSplitRouteSwapExactAmountInResponse
+ */
 export interface MsgSplitRouteSwapExactAmountInResponseAmino {
   token_out_amount?: string;
 }
@@ -110,10 +165,20 @@ export interface MsgSplitRouteSwapExactAmountInResponseAminoMsg {
   type: '/symphony.poolmanager.v1beta1.MsgSplitRouteSwapExactAmountInResponse';
   value: MsgSplitRouteSwapExactAmountInResponseAmino;
 }
+/**
+ * @name MsgSplitRouteSwapExactAmountInResponseSDKType
+ * @package symphony.poolmanager.v1beta1
+ * @see proto type: symphony.poolmanager.v1beta1.MsgSplitRouteSwapExactAmountInResponse
+ */
 export interface MsgSplitRouteSwapExactAmountInResponseSDKType {
   token_out_amount: string;
 }
-/** ===================== MsgSwapExactAmountOut */
+/**
+ * ===================== MsgSwapExactAmountOut
+ * @name MsgSwapExactAmountOut
+ * @package symphony.poolmanager.v1beta1
+ * @see proto type: symphony.poolmanager.v1beta1.MsgSwapExactAmountOut
+ */
 export interface MsgSwapExactAmountOut {
   sender: string;
   routes: SwapAmountOutRoute[];
@@ -124,7 +189,12 @@ export interface MsgSwapExactAmountOutProtoMsg {
   typeUrl: '/symphony.poolmanager.v1beta1.MsgSwapExactAmountOut';
   value: Uint8Array;
 }
-/** ===================== MsgSwapExactAmountOut */
+/**
+ * ===================== MsgSwapExactAmountOut
+ * @name MsgSwapExactAmountOutAmino
+ * @package symphony.poolmanager.v1beta1
+ * @see proto type: symphony.poolmanager.v1beta1.MsgSwapExactAmountOut
+ */
 export interface MsgSwapExactAmountOutAmino {
   sender?: string;
   routes?: SwapAmountOutRouteAmino[];
@@ -135,13 +205,23 @@ export interface MsgSwapExactAmountOutAminoMsg {
   type: 'symphony/poolmanager/swap-exact-amount-out';
   value: MsgSwapExactAmountOutAmino;
 }
-/** ===================== MsgSwapExactAmountOut */
+/**
+ * ===================== MsgSwapExactAmountOut
+ * @name MsgSwapExactAmountOutSDKType
+ * @package symphony.poolmanager.v1beta1
+ * @see proto type: symphony.poolmanager.v1beta1.MsgSwapExactAmountOut
+ */
 export interface MsgSwapExactAmountOutSDKType {
   sender: string;
   routes: SwapAmountOutRouteSDKType[];
   token_in_max_amount: string;
   token_out: CoinSDKType;
 }
+/**
+ * @name MsgSwapExactAmountOutResponse
+ * @package symphony.poolmanager.v1beta1
+ * @see proto type: symphony.poolmanager.v1beta1.MsgSwapExactAmountOutResponse
+ */
 export interface MsgSwapExactAmountOutResponse {
   tokenInAmount: string;
 }
@@ -149,6 +229,11 @@ export interface MsgSwapExactAmountOutResponseProtoMsg {
   typeUrl: '/symphony.poolmanager.v1beta1.MsgSwapExactAmountOutResponse';
   value: Uint8Array;
 }
+/**
+ * @name MsgSwapExactAmountOutResponseAmino
+ * @package symphony.poolmanager.v1beta1
+ * @see proto type: symphony.poolmanager.v1beta1.MsgSwapExactAmountOutResponse
+ */
 export interface MsgSwapExactAmountOutResponseAmino {
   token_in_amount?: string;
 }
@@ -156,10 +241,20 @@ export interface MsgSwapExactAmountOutResponseAminoMsg {
   type: '/symphony.poolmanager.v1beta1.MsgSwapExactAmountOutResponse';
   value: MsgSwapExactAmountOutResponseAmino;
 }
+/**
+ * @name MsgSwapExactAmountOutResponseSDKType
+ * @package symphony.poolmanager.v1beta1
+ * @see proto type: symphony.poolmanager.v1beta1.MsgSwapExactAmountOutResponse
+ */
 export interface MsgSwapExactAmountOutResponseSDKType {
   token_in_amount: string;
 }
-/** ===================== MsgSplitRouteSwapExactAmountOut */
+/**
+ * ===================== MsgSplitRouteSwapExactAmountOut
+ * @name MsgSplitRouteSwapExactAmountOut
+ * @package symphony.poolmanager.v1beta1
+ * @see proto type: symphony.poolmanager.v1beta1.MsgSplitRouteSwapExactAmountOut
+ */
 export interface MsgSplitRouteSwapExactAmountOut {
   sender: string;
   routes: SwapAmountOutSplitRoute[];
@@ -170,7 +265,12 @@ export interface MsgSplitRouteSwapExactAmountOutProtoMsg {
   typeUrl: '/symphony.poolmanager.v1beta1.MsgSplitRouteSwapExactAmountOut';
   value: Uint8Array;
 }
-/** ===================== MsgSplitRouteSwapExactAmountOut */
+/**
+ * ===================== MsgSplitRouteSwapExactAmountOut
+ * @name MsgSplitRouteSwapExactAmountOutAmino
+ * @package symphony.poolmanager.v1beta1
+ * @see proto type: symphony.poolmanager.v1beta1.MsgSplitRouteSwapExactAmountOut
+ */
 export interface MsgSplitRouteSwapExactAmountOutAmino {
   sender?: string;
   routes?: SwapAmountOutSplitRouteAmino[];
@@ -181,13 +281,23 @@ export interface MsgSplitRouteSwapExactAmountOutAminoMsg {
   type: 'symphony/poolmanager/split-amount-out';
   value: MsgSplitRouteSwapExactAmountOutAmino;
 }
-/** ===================== MsgSplitRouteSwapExactAmountOut */
+/**
+ * ===================== MsgSplitRouteSwapExactAmountOut
+ * @name MsgSplitRouteSwapExactAmountOutSDKType
+ * @package symphony.poolmanager.v1beta1
+ * @see proto type: symphony.poolmanager.v1beta1.MsgSplitRouteSwapExactAmountOut
+ */
 export interface MsgSplitRouteSwapExactAmountOutSDKType {
   sender: string;
   routes: SwapAmountOutSplitRouteSDKType[];
   token_out_denom: string;
   token_in_max_amount: string;
 }
+/**
+ * @name MsgSplitRouteSwapExactAmountOutResponse
+ * @package symphony.poolmanager.v1beta1
+ * @see proto type: symphony.poolmanager.v1beta1.MsgSplitRouteSwapExactAmountOutResponse
+ */
 export interface MsgSplitRouteSwapExactAmountOutResponse {
   tokenInAmount: string;
 }
@@ -195,6 +305,11 @@ export interface MsgSplitRouteSwapExactAmountOutResponseProtoMsg {
   typeUrl: '/symphony.poolmanager.v1beta1.MsgSplitRouteSwapExactAmountOutResponse';
   value: Uint8Array;
 }
+/**
+ * @name MsgSplitRouteSwapExactAmountOutResponseAmino
+ * @package symphony.poolmanager.v1beta1
+ * @see proto type: symphony.poolmanager.v1beta1.MsgSplitRouteSwapExactAmountOutResponse
+ */
 export interface MsgSplitRouteSwapExactAmountOutResponseAmino {
   token_in_amount?: string;
 }
@@ -202,10 +317,20 @@ export interface MsgSplitRouteSwapExactAmountOutResponseAminoMsg {
   type: '/symphony.poolmanager.v1beta1.MsgSplitRouteSwapExactAmountOutResponse';
   value: MsgSplitRouteSwapExactAmountOutResponseAmino;
 }
+/**
+ * @name MsgSplitRouteSwapExactAmountOutResponseSDKType
+ * @package symphony.poolmanager.v1beta1
+ * @see proto type: symphony.poolmanager.v1beta1.MsgSplitRouteSwapExactAmountOutResponse
+ */
 export interface MsgSplitRouteSwapExactAmountOutResponseSDKType {
   token_in_amount: string;
 }
-/** ===================== MsgSetDenomPairTakerFee */
+/**
+ * ===================== MsgSetDenomPairTakerFee
+ * @name MsgSetDenomPairTakerFee
+ * @package symphony.poolmanager.v1beta1
+ * @see proto type: symphony.poolmanager.v1beta1.MsgSetDenomPairTakerFee
+ */
 export interface MsgSetDenomPairTakerFee {
   sender: string;
   denomPairTakerFee: DenomPairTakerFee[];
@@ -214,7 +339,12 @@ export interface MsgSetDenomPairTakerFeeProtoMsg {
   typeUrl: '/symphony.poolmanager.v1beta1.MsgSetDenomPairTakerFee';
   value: Uint8Array;
 }
-/** ===================== MsgSetDenomPairTakerFee */
+/**
+ * ===================== MsgSetDenomPairTakerFee
+ * @name MsgSetDenomPairTakerFeeAmino
+ * @package symphony.poolmanager.v1beta1
+ * @see proto type: symphony.poolmanager.v1beta1.MsgSetDenomPairTakerFee
+ */
 export interface MsgSetDenomPairTakerFeeAmino {
   sender?: string;
   denom_pair_taker_fee?: DenomPairTakerFeeAmino[];
@@ -223,11 +353,21 @@ export interface MsgSetDenomPairTakerFeeAminoMsg {
   type: 'symphony/poolmanager/set-denom-pair-taker-fee';
   value: MsgSetDenomPairTakerFeeAmino;
 }
-/** ===================== MsgSetDenomPairTakerFee */
+/**
+ * ===================== MsgSetDenomPairTakerFee
+ * @name MsgSetDenomPairTakerFeeSDKType
+ * @package symphony.poolmanager.v1beta1
+ * @see proto type: symphony.poolmanager.v1beta1.MsgSetDenomPairTakerFee
+ */
 export interface MsgSetDenomPairTakerFeeSDKType {
   sender: string;
   denom_pair_taker_fee: DenomPairTakerFeeSDKType[];
 }
+/**
+ * @name MsgSetDenomPairTakerFeeResponse
+ * @package symphony.poolmanager.v1beta1
+ * @see proto type: symphony.poolmanager.v1beta1.MsgSetDenomPairTakerFeeResponse
+ */
 export interface MsgSetDenomPairTakerFeeResponse {
   success: boolean;
 }
@@ -235,6 +375,11 @@ export interface MsgSetDenomPairTakerFeeResponseProtoMsg {
   typeUrl: '/symphony.poolmanager.v1beta1.MsgSetDenomPairTakerFeeResponse';
   value: Uint8Array;
 }
+/**
+ * @name MsgSetDenomPairTakerFeeResponseAmino
+ * @package symphony.poolmanager.v1beta1
+ * @see proto type: symphony.poolmanager.v1beta1.MsgSetDenomPairTakerFeeResponse
+ */
 export interface MsgSetDenomPairTakerFeeResponseAmino {
   success?: boolean;
 }
@@ -242,10 +387,20 @@ export interface MsgSetDenomPairTakerFeeResponseAminoMsg {
   type: '/symphony.poolmanager.v1beta1.MsgSetDenomPairTakerFeeResponse';
   value: MsgSetDenomPairTakerFeeResponseAmino;
 }
+/**
+ * @name MsgSetDenomPairTakerFeeResponseSDKType
+ * @package symphony.poolmanager.v1beta1
+ * @see proto type: symphony.poolmanager.v1beta1.MsgSetDenomPairTakerFeeResponse
+ */
 export interface MsgSetDenomPairTakerFeeResponseSDKType {
   success: boolean;
 }
-/** ===================== MsgSetTakerFeeShareAgreementForDenom */
+/**
+ * ===================== MsgSetTakerFeeShareAgreementForDenom
+ * @name MsgSetTakerFeeShareAgreementForDenom
+ * @package symphony.poolmanager.v1beta1
+ * @see proto type: symphony.poolmanager.v1beta1.MsgSetTakerFeeShareAgreementForDenom
+ */
 export interface MsgSetTakerFeeShareAgreementForDenom {
   sender: string;
   /**
@@ -271,7 +426,12 @@ export interface MsgSetTakerFeeShareAgreementForDenomProtoMsg {
   typeUrl: '/symphony.poolmanager.v1beta1.MsgSetTakerFeeShareAgreementForDenom';
   value: Uint8Array;
 }
-/** ===================== MsgSetTakerFeeShareAgreementForDenom */
+/**
+ * ===================== MsgSetTakerFeeShareAgreementForDenom
+ * @name MsgSetTakerFeeShareAgreementForDenomAmino
+ * @package symphony.poolmanager.v1beta1
+ * @see proto type: symphony.poolmanager.v1beta1.MsgSetTakerFeeShareAgreementForDenom
+ */
 export interface MsgSetTakerFeeShareAgreementForDenomAmino {
   sender?: string;
   /**
@@ -297,25 +457,50 @@ export interface MsgSetTakerFeeShareAgreementForDenomAminoMsg {
   type: 'symphony/poolmanager/set-taker-fee-share-agreement-for-denom';
   value: MsgSetTakerFeeShareAgreementForDenomAmino;
 }
-/** ===================== MsgSetTakerFeeShareAgreementForDenom */
+/**
+ * ===================== MsgSetTakerFeeShareAgreementForDenom
+ * @name MsgSetTakerFeeShareAgreementForDenomSDKType
+ * @package symphony.poolmanager.v1beta1
+ * @see proto type: symphony.poolmanager.v1beta1.MsgSetTakerFeeShareAgreementForDenom
+ */
 export interface MsgSetTakerFeeShareAgreementForDenomSDKType {
   sender: string;
   denom: string;
   skim_percent: string;
   skim_address: string;
 }
+/**
+ * @name MsgSetTakerFeeShareAgreementForDenomResponse
+ * @package symphony.poolmanager.v1beta1
+ * @see proto type: symphony.poolmanager.v1beta1.MsgSetTakerFeeShareAgreementForDenomResponse
+ */
 export interface MsgSetTakerFeeShareAgreementForDenomResponse {}
 export interface MsgSetTakerFeeShareAgreementForDenomResponseProtoMsg {
   typeUrl: '/symphony.poolmanager.v1beta1.MsgSetTakerFeeShareAgreementForDenomResponse';
   value: Uint8Array;
 }
+/**
+ * @name MsgSetTakerFeeShareAgreementForDenomResponseAmino
+ * @package symphony.poolmanager.v1beta1
+ * @see proto type: symphony.poolmanager.v1beta1.MsgSetTakerFeeShareAgreementForDenomResponse
+ */
 export interface MsgSetTakerFeeShareAgreementForDenomResponseAmino {}
 export interface MsgSetTakerFeeShareAgreementForDenomResponseAminoMsg {
   type: '/symphony.poolmanager.v1beta1.MsgSetTakerFeeShareAgreementForDenomResponse';
   value: MsgSetTakerFeeShareAgreementForDenomResponseAmino;
 }
+/**
+ * @name MsgSetTakerFeeShareAgreementForDenomResponseSDKType
+ * @package symphony.poolmanager.v1beta1
+ * @see proto type: symphony.poolmanager.v1beta1.MsgSetTakerFeeShareAgreementForDenomResponse
+ */
 export interface MsgSetTakerFeeShareAgreementForDenomResponseSDKType {}
-/** ===================== MsgSetRegisteredAlloyedPool */
+/**
+ * ===================== MsgSetRegisteredAlloyedPool
+ * @name MsgSetRegisteredAlloyedPool
+ * @package symphony.poolmanager.v1beta1
+ * @see proto type: symphony.poolmanager.v1beta1.MsgSetRegisteredAlloyedPool
+ */
 export interface MsgSetRegisteredAlloyedPool {
   sender: string;
   /**
@@ -329,7 +514,12 @@ export interface MsgSetRegisteredAlloyedPoolProtoMsg {
   typeUrl: '/symphony.poolmanager.v1beta1.MsgSetRegisteredAlloyedPool';
   value: Uint8Array;
 }
-/** ===================== MsgSetRegisteredAlloyedPool */
+/**
+ * ===================== MsgSetRegisteredAlloyedPool
+ * @name MsgSetRegisteredAlloyedPoolAmino
+ * @package symphony.poolmanager.v1beta1
+ * @see proto type: symphony.poolmanager.v1beta1.MsgSetRegisteredAlloyedPool
+ */
 export interface MsgSetRegisteredAlloyedPoolAmino {
   sender?: string;
   /**
@@ -343,31 +533,58 @@ export interface MsgSetRegisteredAlloyedPoolAminoMsg {
   type: 'symphony/poolmanager/set-registered-alloyed-pool';
   value: MsgSetRegisteredAlloyedPoolAmino;
 }
-/** ===================== MsgSetRegisteredAlloyedPool */
+/**
+ * ===================== MsgSetRegisteredAlloyedPool
+ * @name MsgSetRegisteredAlloyedPoolSDKType
+ * @package symphony.poolmanager.v1beta1
+ * @see proto type: symphony.poolmanager.v1beta1.MsgSetRegisteredAlloyedPool
+ */
 export interface MsgSetRegisteredAlloyedPoolSDKType {
   sender: string;
   pool_id: bigint;
 }
+/**
+ * @name MsgSetRegisteredAlloyedPoolResponse
+ * @package symphony.poolmanager.v1beta1
+ * @see proto type: symphony.poolmanager.v1beta1.MsgSetRegisteredAlloyedPoolResponse
+ */
 export interface MsgSetRegisteredAlloyedPoolResponse {}
 export interface MsgSetRegisteredAlloyedPoolResponseProtoMsg {
   typeUrl: '/symphony.poolmanager.v1beta1.MsgSetRegisteredAlloyedPoolResponse';
   value: Uint8Array;
 }
+/**
+ * @name MsgSetRegisteredAlloyedPoolResponseAmino
+ * @package symphony.poolmanager.v1beta1
+ * @see proto type: symphony.poolmanager.v1beta1.MsgSetRegisteredAlloyedPoolResponse
+ */
 export interface MsgSetRegisteredAlloyedPoolResponseAmino {}
 export interface MsgSetRegisteredAlloyedPoolResponseAminoMsg {
   type: '/symphony.poolmanager.v1beta1.MsgSetRegisteredAlloyedPoolResponse';
   value: MsgSetRegisteredAlloyedPoolResponseAmino;
 }
+/**
+ * @name MsgSetRegisteredAlloyedPoolResponseSDKType
+ * @package symphony.poolmanager.v1beta1
+ * @see proto type: symphony.poolmanager.v1beta1.MsgSetRegisteredAlloyedPoolResponse
+ */
 export interface MsgSetRegisteredAlloyedPoolResponseSDKType {}
+/**
+ * @name DenomPairTakerFee
+ * @package symphony.poolmanager.v1beta1
+ * @see proto type: symphony.poolmanager.v1beta1.DenomPairTakerFee
+ */
 export interface DenomPairTakerFee {
   /**
    * DEPRECATED: Now that we are using uni-directional trading pairs, we are
    * using tokenInDenom and tokenOutDenom instead of denom0 and denom1 to
    * prevent confusion.
+   * @deprecated
    */
-  /** @deprecated */
   denom0?: string;
-  /** @deprecated */
+  /**
+   * @deprecated
+   */
   denom1?: string;
   takerFee: string;
   tokenInDenom: string;
@@ -377,15 +594,22 @@ export interface DenomPairTakerFeeProtoMsg {
   typeUrl: '/symphony.poolmanager.v1beta1.DenomPairTakerFee';
   value: Uint8Array;
 }
+/**
+ * @name DenomPairTakerFeeAmino
+ * @package symphony.poolmanager.v1beta1
+ * @see proto type: symphony.poolmanager.v1beta1.DenomPairTakerFee
+ */
 export interface DenomPairTakerFeeAmino {
   /**
    * DEPRECATED: Now that we are using uni-directional trading pairs, we are
    * using tokenInDenom and tokenOutDenom instead of denom0 and denom1 to
    * prevent confusion.
+   * @deprecated
    */
-  /** @deprecated */
   denom0?: string;
-  /** @deprecated */
+  /**
+   * @deprecated
+   */
   denom1?: string;
   taker_fee?: string;
   tokenInDenom?: string;
@@ -395,10 +619,19 @@ export interface DenomPairTakerFeeAminoMsg {
   type: '/symphony.poolmanager.v1beta1.DenomPairTakerFee';
   value: DenomPairTakerFeeAmino;
 }
+/**
+ * @name DenomPairTakerFeeSDKType
+ * @package symphony.poolmanager.v1beta1
+ * @see proto type: symphony.poolmanager.v1beta1.DenomPairTakerFee
+ */
 export interface DenomPairTakerFeeSDKType {
-  /** @deprecated */
+  /**
+   * @deprecated
+   */
   denom0?: string;
-  /** @deprecated */
+  /**
+   * @deprecated
+   */
   denom1?: string;
   taker_fee: string;
   tokenInDenom: string;
@@ -412,6 +645,12 @@ function createBaseMsgSwapExactAmountIn(): MsgSwapExactAmountIn {
     tokenOutMinAmount: '',
   };
 }
+/**
+ * ===================== MsgSwapExactAmountIn
+ * @name MsgSwapExactAmountIn
+ * @package symphony.poolmanager.v1beta1
+ * @see proto type: symphony.poolmanager.v1beta1.MsgSwapExactAmountIn
+ */
 export const MsgSwapExactAmountIn = {
   typeUrl: '/symphony.poolmanager.v1beta1.MsgSwapExactAmountIn',
   aminoType: 'symphony/poolmanager/swap-exact-amount-in',
@@ -578,6 +817,11 @@ function createBaseMsgSwapExactAmountInResponse(): MsgSwapExactAmountInResponse 
     tokenOutAmount: '',
   };
 }
+/**
+ * @name MsgSwapExactAmountInResponse
+ * @package symphony.poolmanager.v1beta1
+ * @see proto type: symphony.poolmanager.v1beta1.MsgSwapExactAmountInResponse
+ */
 export const MsgSwapExactAmountInResponse = {
   typeUrl: '/symphony.poolmanager.v1beta1.MsgSwapExactAmountInResponse',
   is(o: any): o is MsgSwapExactAmountInResponse {
@@ -692,6 +936,12 @@ function createBaseMsgSplitRouteSwapExactAmountIn(): MsgSplitRouteSwapExactAmoun
     tokenOutMinAmount: '',
   };
 }
+/**
+ * ===================== MsgSplitRouteSwapExactAmountIn
+ * @name MsgSplitRouteSwapExactAmountIn
+ * @package symphony.poolmanager.v1beta1
+ * @see proto type: symphony.poolmanager.v1beta1.MsgSplitRouteSwapExactAmountIn
+ */
 export const MsgSplitRouteSwapExactAmountIn = {
   typeUrl: '/symphony.poolmanager.v1beta1.MsgSplitRouteSwapExactAmountIn',
   aminoType: 'symphony/poolmanager/split-amount-in',
@@ -870,6 +1120,11 @@ function createBaseMsgSplitRouteSwapExactAmountInResponse(): MsgSplitRouteSwapEx
     tokenOutAmount: '',
   };
 }
+/**
+ * @name MsgSplitRouteSwapExactAmountInResponse
+ * @package symphony.poolmanager.v1beta1
+ * @see proto type: symphony.poolmanager.v1beta1.MsgSplitRouteSwapExactAmountInResponse
+ */
 export const MsgSplitRouteSwapExactAmountInResponse = {
   typeUrl:
     '/symphony.poolmanager.v1beta1.MsgSplitRouteSwapExactAmountInResponse',
@@ -986,6 +1241,12 @@ function createBaseMsgSwapExactAmountOut(): MsgSwapExactAmountOut {
     tokenOut: Coin.fromPartial({}),
   };
 }
+/**
+ * ===================== MsgSwapExactAmountOut
+ * @name MsgSwapExactAmountOut
+ * @package symphony.poolmanager.v1beta1
+ * @see proto type: symphony.poolmanager.v1beta1.MsgSwapExactAmountOut
+ */
 export const MsgSwapExactAmountOut = {
   typeUrl: '/symphony.poolmanager.v1beta1.MsgSwapExactAmountOut',
   aminoType: 'symphony/poolmanager/swap-exact-amount-out',
@@ -1154,6 +1415,11 @@ function createBaseMsgSwapExactAmountOutResponse(): MsgSwapExactAmountOutRespons
     tokenInAmount: '',
   };
 }
+/**
+ * @name MsgSwapExactAmountOutResponse
+ * @package symphony.poolmanager.v1beta1
+ * @see proto type: symphony.poolmanager.v1beta1.MsgSwapExactAmountOutResponse
+ */
 export const MsgSwapExactAmountOutResponse = {
   typeUrl: '/symphony.poolmanager.v1beta1.MsgSwapExactAmountOutResponse',
   is(o: any): o is MsgSwapExactAmountOutResponse {
@@ -1268,6 +1534,12 @@ function createBaseMsgSplitRouteSwapExactAmountOut(): MsgSplitRouteSwapExactAmou
     tokenInMaxAmount: '',
   };
 }
+/**
+ * ===================== MsgSplitRouteSwapExactAmountOut
+ * @name MsgSplitRouteSwapExactAmountOut
+ * @package symphony.poolmanager.v1beta1
+ * @see proto type: symphony.poolmanager.v1beta1.MsgSplitRouteSwapExactAmountOut
+ */
 export const MsgSplitRouteSwapExactAmountOut = {
   typeUrl: '/symphony.poolmanager.v1beta1.MsgSplitRouteSwapExactAmountOut',
   aminoType: 'symphony/poolmanager/split-amount-out',
@@ -1449,6 +1721,11 @@ function createBaseMsgSplitRouteSwapExactAmountOutResponse(): MsgSplitRouteSwapE
     tokenInAmount: '',
   };
 }
+/**
+ * @name MsgSplitRouteSwapExactAmountOutResponse
+ * @package symphony.poolmanager.v1beta1
+ * @see proto type: symphony.poolmanager.v1beta1.MsgSplitRouteSwapExactAmountOutResponse
+ */
 export const MsgSplitRouteSwapExactAmountOutResponse = {
   typeUrl:
     '/symphony.poolmanager.v1beta1.MsgSplitRouteSwapExactAmountOutResponse',
@@ -1563,6 +1840,12 @@ function createBaseMsgSetDenomPairTakerFee(): MsgSetDenomPairTakerFee {
     denomPairTakerFee: [],
   };
 }
+/**
+ * ===================== MsgSetDenomPairTakerFee
+ * @name MsgSetDenomPairTakerFee
+ * @package symphony.poolmanager.v1beta1
+ * @see proto type: symphony.poolmanager.v1beta1.MsgSetDenomPairTakerFee
+ */
 export const MsgSetDenomPairTakerFee = {
   typeUrl: '/symphony.poolmanager.v1beta1.MsgSetDenomPairTakerFee',
   aminoType: 'symphony/poolmanager/set-denom-pair-taker-fee',
@@ -1709,6 +1992,11 @@ function createBaseMsgSetDenomPairTakerFeeResponse(): MsgSetDenomPairTakerFeeRes
     success: false,
   };
 }
+/**
+ * @name MsgSetDenomPairTakerFeeResponse
+ * @package symphony.poolmanager.v1beta1
+ * @see proto type: symphony.poolmanager.v1beta1.MsgSetDenomPairTakerFeeResponse
+ */
 export const MsgSetDenomPairTakerFeeResponse = {
   typeUrl: '/symphony.poolmanager.v1beta1.MsgSetDenomPairTakerFeeResponse',
   is(o: any): o is MsgSetDenomPairTakerFeeResponse {
@@ -1819,6 +2107,12 @@ function createBaseMsgSetTakerFeeShareAgreementForDenom(): MsgSetTakerFeeShareAg
     skimAddress: '',
   };
 }
+/**
+ * ===================== MsgSetTakerFeeShareAgreementForDenom
+ * @name MsgSetTakerFeeShareAgreementForDenom
+ * @package symphony.poolmanager.v1beta1
+ * @see proto type: symphony.poolmanager.v1beta1.MsgSetTakerFeeShareAgreementForDenom
+ */
 export const MsgSetTakerFeeShareAgreementForDenom = {
   typeUrl: '/symphony.poolmanager.v1beta1.MsgSetTakerFeeShareAgreementForDenom',
   aminoType: 'symphony/poolmanager/set-taker-fee-share-agreement-for-denom',
@@ -1987,6 +2281,11 @@ GlobalDecoderRegistry.registerAminoProtoMapping(
 function createBaseMsgSetTakerFeeShareAgreementForDenomResponse(): MsgSetTakerFeeShareAgreementForDenomResponse {
   return {};
 }
+/**
+ * @name MsgSetTakerFeeShareAgreementForDenomResponse
+ * @package symphony.poolmanager.v1beta1
+ * @see proto type: symphony.poolmanager.v1beta1.MsgSetTakerFeeShareAgreementForDenomResponse
+ */
 export const MsgSetTakerFeeShareAgreementForDenomResponse = {
   typeUrl:
     '/symphony.poolmanager.v1beta1.MsgSetTakerFeeShareAgreementForDenomResponse',
@@ -2083,6 +2382,12 @@ function createBaseMsgSetRegisteredAlloyedPool(): MsgSetRegisteredAlloyedPool {
     poolId: BigInt(0),
   };
 }
+/**
+ * ===================== MsgSetRegisteredAlloyedPool
+ * @name MsgSetRegisteredAlloyedPool
+ * @package symphony.poolmanager.v1beta1
+ * @see proto type: symphony.poolmanager.v1beta1.MsgSetRegisteredAlloyedPool
+ */
 export const MsgSetRegisteredAlloyedPool = {
   typeUrl: '/symphony.poolmanager.v1beta1.MsgSetRegisteredAlloyedPool',
   aminoType: 'symphony/poolmanager/set-registered-alloyed-pool',
@@ -2216,6 +2521,11 @@ GlobalDecoderRegistry.registerAminoProtoMapping(
 function createBaseMsgSetRegisteredAlloyedPoolResponse(): MsgSetRegisteredAlloyedPoolResponse {
   return {};
 }
+/**
+ * @name MsgSetRegisteredAlloyedPoolResponse
+ * @package symphony.poolmanager.v1beta1
+ * @see proto type: symphony.poolmanager.v1beta1.MsgSetRegisteredAlloyedPoolResponse
+ */
 export const MsgSetRegisteredAlloyedPoolResponse = {
   typeUrl: '/symphony.poolmanager.v1beta1.MsgSetRegisteredAlloyedPoolResponse',
   is(o: any): o is MsgSetRegisteredAlloyedPoolResponse {
@@ -2305,6 +2615,11 @@ function createBaseDenomPairTakerFee(): DenomPairTakerFee {
     tokenOutDenom: '',
   };
 }
+/**
+ * @name DenomPairTakerFee
+ * @package symphony.poolmanager.v1beta1
+ * @see proto type: symphony.poolmanager.v1beta1.DenomPairTakerFee
+ */
 export const DenomPairTakerFee = {
   typeUrl: '/symphony.poolmanager.v1beta1.DenomPairTakerFee',
   is(o: any): o is DenomPairTakerFee {

@@ -16,7 +16,12 @@ import {
 } from './superfluid';
 import { BinaryReader, BinaryWriter } from '../../binary';
 import { GlobalDecoderRegistry } from '../../registry';
-/** GenesisState defines the module's genesis state. */
+/**
+ * GenesisState defines the module's genesis state.
+ * @name GenesisState
+ * @package symphony.superfluid
+ * @see proto type: symphony.superfluid.GenesisState
+ */
 export interface GenesisState {
   params: Params;
   /**
@@ -40,7 +45,12 @@ export interface GenesisStateProtoMsg {
   typeUrl: '/symphony.superfluid.GenesisState';
   value: Uint8Array;
 }
-/** GenesisState defines the module's genesis state. */
+/**
+ * GenesisState defines the module's genesis state.
+ * @name GenesisStateAmino
+ * @package symphony.superfluid
+ * @see proto type: symphony.superfluid.GenesisState
+ */
 export interface GenesisStateAmino {
   params?: ParamsAmino;
   /**
@@ -64,7 +74,12 @@ export interface GenesisStateAminoMsg {
   type: '/symphony.superfluid.GenesisState';
   value: GenesisStateAmino;
 }
-/** GenesisState defines the module's genesis state. */
+/**
+ * GenesisState defines the module's genesis state.
+ * @name GenesisStateSDKType
+ * @package symphony.superfluid
+ * @see proto type: symphony.superfluid.GenesisState
+ */
 export interface GenesisStateSDKType {
   params: ParamsSDKType;
   superfluid_assets: SuperfluidAssetSDKType[];
@@ -81,6 +96,12 @@ function createBaseGenesisState(): GenesisState {
     intemediaryAccountConnections: [],
   };
 }
+/**
+ * GenesisState defines the module's genesis state.
+ * @name GenesisState
+ * @package symphony.superfluid
+ * @see proto type: symphony.superfluid.GenesisState
+ */
 export const GenesisState = {
   typeUrl: '/symphony.superfluid.GenesisState',
   is(o: any): o is GenesisState {

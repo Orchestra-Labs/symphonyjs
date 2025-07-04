@@ -11,6 +11,9 @@ import { GlobalDecoderRegistry } from '../../../registry';
  * AccumulatorContent is the state-entry for the global accumulator.
  * It contains the name of the global accumulator and the total value of
  * shares belonging to it from all positions.
+ * @name AccumulatorContent
+ * @package symphony.accum.v1beta1
+ * @see proto type: symphony.accum.v1beta1.AccumulatorContent
  */
 export interface AccumulatorContent {
   accumValue: DecCoin[];
@@ -24,6 +27,9 @@ export interface AccumulatorContentProtoMsg {
  * AccumulatorContent is the state-entry for the global accumulator.
  * It contains the name of the global accumulator and the total value of
  * shares belonging to it from all positions.
+ * @name AccumulatorContentAmino
+ * @package symphony.accum.v1beta1
+ * @see proto type: symphony.accum.v1beta1.AccumulatorContent
  */
 export interface AccumulatorContentAmino {
   accum_value?: DecCoinAmino[];
@@ -37,25 +43,46 @@ export interface AccumulatorContentAminoMsg {
  * AccumulatorContent is the state-entry for the global accumulator.
  * It contains the name of the global accumulator and the total value of
  * shares belonging to it from all positions.
+ * @name AccumulatorContentSDKType
+ * @package symphony.accum.v1beta1
+ * @see proto type: symphony.accum.v1beta1.AccumulatorContent
  */
 export interface AccumulatorContentSDKType {
   accum_value: DecCoinSDKType[];
   total_shares: string;
 }
+/**
+ * @name Options
+ * @package symphony.accum.v1beta1
+ * @see proto type: symphony.accum.v1beta1.Options
+ */
 export interface Options {}
 export interface OptionsProtoMsg {
   typeUrl: '/symphony.accum.v1beta1.Options';
   value: Uint8Array;
 }
+/**
+ * @name OptionsAmino
+ * @package symphony.accum.v1beta1
+ * @see proto type: symphony.accum.v1beta1.Options
+ */
 export interface OptionsAmino {}
 export interface OptionsAminoMsg {
   type: '/symphony.accum.v1beta1.Options';
   value: OptionsAmino;
 }
+/**
+ * @name OptionsSDKType
+ * @package symphony.accum.v1beta1
+ * @see proto type: symphony.accum.v1beta1.Options
+ */
 export interface OptionsSDKType {}
 /**
  * Record corresponds to an individual position value belonging to the
  * global accumulator.
+ * @name Record
+ * @package symphony.accum.v1beta1
+ * @see proto type: symphony.accum.v1beta1.Record
  */
 export interface Record {
   /**
@@ -100,6 +127,9 @@ export interface RecordProtoMsg {
 /**
  * Record corresponds to an individual position value belonging to the
  * global accumulator.
+ * @name RecordAmino
+ * @package symphony.accum.v1beta1
+ * @see proto type: symphony.accum.v1beta1.Record
  */
 export interface RecordAmino {
   /**
@@ -144,6 +174,9 @@ export interface RecordAminoMsg {
 /**
  * Record corresponds to an individual position value belonging to the
  * global accumulator.
+ * @name RecordSDKType
+ * @package symphony.accum.v1beta1
+ * @see proto type: symphony.accum.v1beta1.Record
  */
 export interface RecordSDKType {
   num_shares: string;
@@ -157,6 +190,14 @@ function createBaseAccumulatorContent(): AccumulatorContent {
     totalShares: '',
   };
 }
+/**
+ * AccumulatorContent is the state-entry for the global accumulator.
+ * It contains the name of the global accumulator and the total value of
+ * shares belonging to it from all positions.
+ * @name AccumulatorContent
+ * @package symphony.accum.v1beta1
+ * @see proto type: symphony.accum.v1beta1.AccumulatorContent
+ */
 export const AccumulatorContent = {
   typeUrl: '/symphony.accum.v1beta1.AccumulatorContent',
   is(o: any): o is AccumulatorContent {
@@ -276,6 +317,11 @@ GlobalDecoderRegistry.register(AccumulatorContent.typeUrl, AccumulatorContent);
 function createBaseOptions(): Options {
   return {};
 }
+/**
+ * @name Options
+ * @package symphony.accum.v1beta1
+ * @see proto type: symphony.accum.v1beta1.Options
+ */
 export const Options = {
   typeUrl: '/symphony.accum.v1beta1.Options',
   is(o: any): o is Options {
@@ -345,6 +391,13 @@ function createBaseRecord(): Record {
     options: undefined,
   };
 }
+/**
+ * Record corresponds to an individual position value belonging to the
+ * global accumulator.
+ * @name Record
+ * @package symphony.accum.v1beta1
+ * @see proto type: symphony.accum.v1beta1.Record
+ */
 export const Record = {
   typeUrl: '/symphony.accum.v1beta1.Record',
   is(o: any): o is Record {

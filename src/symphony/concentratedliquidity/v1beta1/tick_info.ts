@@ -7,6 +7,11 @@ import {
 import { BinaryReader, BinaryWriter } from '../../../binary';
 import { Decimal } from '@cosmjs/math';
 import { GlobalDecoderRegistry } from '../../../registry';
+/**
+ * @name TickInfo
+ * @package symphony.concentratedliquidity.v1beta1
+ * @see proto type: symphony.concentratedliquidity.v1beta1.TickInfo
+ */
 export interface TickInfo {
   liquidityGross: string;
   liquidityNet: string;
@@ -23,6 +28,11 @@ export interface TickInfoProtoMsg {
   typeUrl: '/symphony.concentratedliquidity.v1beta1.TickInfo';
   value: Uint8Array;
 }
+/**
+ * @name TickInfoAmino
+ * @package symphony.concentratedliquidity.v1beta1
+ * @see proto type: symphony.concentratedliquidity.v1beta1.TickInfo
+ */
 export interface TickInfoAmino {
   liquidity_gross?: string;
   liquidity_net?: string;
@@ -39,12 +49,22 @@ export interface TickInfoAminoMsg {
   type: '/symphony.concentratedliquidity.v1beta1.TickInfo';
   value: TickInfoAmino;
 }
+/**
+ * @name TickInfoSDKType
+ * @package symphony.concentratedliquidity.v1beta1
+ * @see proto type: symphony.concentratedliquidity.v1beta1.TickInfo
+ */
 export interface TickInfoSDKType {
   liquidity_gross: string;
   liquidity_net: string;
   spread_reward_growth_opposite_direction_of_last_traversal: DecCoinSDKType[];
   uptime_trackers: UptimeTrackersSDKType;
 }
+/**
+ * @name UptimeTrackers
+ * @package symphony.concentratedliquidity.v1beta1
+ * @see proto type: symphony.concentratedliquidity.v1beta1.UptimeTrackers
+ */
 export interface UptimeTrackers {
   list: UptimeTracker[];
 }
@@ -52,6 +72,11 @@ export interface UptimeTrackersProtoMsg {
   typeUrl: '/symphony.concentratedliquidity.v1beta1.UptimeTrackers';
   value: Uint8Array;
 }
+/**
+ * @name UptimeTrackersAmino
+ * @package symphony.concentratedliquidity.v1beta1
+ * @see proto type: symphony.concentratedliquidity.v1beta1.UptimeTrackers
+ */
 export interface UptimeTrackersAmino {
   list?: UptimeTrackerAmino[];
 }
@@ -59,9 +84,19 @@ export interface UptimeTrackersAminoMsg {
   type: '/symphony.concentratedliquidity.v1beta1.UptimeTrackers';
   value: UptimeTrackersAmino;
 }
+/**
+ * @name UptimeTrackersSDKType
+ * @package symphony.concentratedliquidity.v1beta1
+ * @see proto type: symphony.concentratedliquidity.v1beta1.UptimeTrackers
+ */
 export interface UptimeTrackersSDKType {
   list: UptimeTrackerSDKType[];
 }
+/**
+ * @name UptimeTracker
+ * @package symphony.concentratedliquidity.v1beta1
+ * @see proto type: symphony.concentratedliquidity.v1beta1.UptimeTracker
+ */
 export interface UptimeTracker {
   uptimeGrowthOutside: DecCoin[];
 }
@@ -69,6 +104,11 @@ export interface UptimeTrackerProtoMsg {
   typeUrl: '/symphony.concentratedliquidity.v1beta1.UptimeTracker';
   value: Uint8Array;
 }
+/**
+ * @name UptimeTrackerAmino
+ * @package symphony.concentratedliquidity.v1beta1
+ * @see proto type: symphony.concentratedliquidity.v1beta1.UptimeTracker
+ */
 export interface UptimeTrackerAmino {
   uptime_growth_outside?: DecCoinAmino[];
 }
@@ -76,6 +116,11 @@ export interface UptimeTrackerAminoMsg {
   type: '/symphony.concentratedliquidity.v1beta1.UptimeTracker';
   value: UptimeTrackerAmino;
 }
+/**
+ * @name UptimeTrackerSDKType
+ * @package symphony.concentratedliquidity.v1beta1
+ * @see proto type: symphony.concentratedliquidity.v1beta1.UptimeTracker
+ */
 export interface UptimeTrackerSDKType {
   uptime_growth_outside: DecCoinSDKType[];
 }
@@ -87,6 +132,11 @@ function createBaseTickInfo(): TickInfo {
     uptimeTrackers: UptimeTrackers.fromPartial({}),
   };
 }
+/**
+ * @name TickInfo
+ * @package symphony.concentratedliquidity.v1beta1
+ * @see proto type: symphony.concentratedliquidity.v1beta1.TickInfo
+ */
 export const TickInfo = {
   typeUrl: '/symphony.concentratedliquidity.v1beta1.TickInfo',
   is(o: any): o is TickInfo {
@@ -279,6 +329,11 @@ function createBaseUptimeTrackers(): UptimeTrackers {
     list: [],
   };
 }
+/**
+ * @name UptimeTrackers
+ * @package symphony.concentratedliquidity.v1beta1
+ * @see proto type: symphony.concentratedliquidity.v1beta1.UptimeTrackers
+ */
 export const UptimeTrackers = {
   typeUrl: '/symphony.concentratedliquidity.v1beta1.UptimeTrackers',
   is(o: any): o is UptimeTrackers {
@@ -375,6 +430,11 @@ function createBaseUptimeTracker(): UptimeTracker {
     uptimeGrowthOutside: [],
   };
 }
+/**
+ * @name UptimeTracker
+ * @package symphony.concentratedliquidity.v1beta1
+ * @see proto type: symphony.concentratedliquidity.v1beta1.UptimeTracker
+ */
 export const UptimeTracker = {
   typeUrl: '/symphony.concentratedliquidity.v1beta1.UptimeTracker',
   is(o: any): o is UptimeTracker {

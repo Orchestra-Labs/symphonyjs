@@ -2,7 +2,12 @@
 import { BinaryReader, BinaryWriter } from '../../../../../binary';
 import { Decimal } from '@cosmjs/math';
 import { GlobalDecoderRegistry } from '../../../../../registry';
-/** ===================== MsgCreateConcentratedPool */
+/**
+ * ===================== MsgCreateConcentratedPool
+ * @name MsgCreateConcentratedPool
+ * @package symphony.concentratedliquidity.poolmodel.concentrated.v1beta1
+ * @see proto type: symphony.concentratedliquidity.poolmodel.concentrated.v1beta1.MsgCreateConcentratedPool
+ */
 export interface MsgCreateConcentratedPool {
   sender: string;
   denom0: string;
@@ -14,7 +19,12 @@ export interface MsgCreateConcentratedPoolProtoMsg {
   typeUrl: '/symphony.concentratedliquidity.poolmodel.concentrated.v1beta1.MsgCreateConcentratedPool';
   value: Uint8Array;
 }
-/** ===================== MsgCreateConcentratedPool */
+/**
+ * ===================== MsgCreateConcentratedPool
+ * @name MsgCreateConcentratedPoolAmino
+ * @package symphony.concentratedliquidity.poolmodel.concentrated.v1beta1
+ * @see proto type: symphony.concentratedliquidity.poolmodel.concentrated.v1beta1.MsgCreateConcentratedPool
+ */
 export interface MsgCreateConcentratedPoolAmino {
   sender?: string;
   denom0?: string;
@@ -26,7 +36,12 @@ export interface MsgCreateConcentratedPoolAminoMsg {
   type: 'symphony/create-concentrated-pool';
   value: MsgCreateConcentratedPoolAmino;
 }
-/** ===================== MsgCreateConcentratedPool */
+/**
+ * ===================== MsgCreateConcentratedPool
+ * @name MsgCreateConcentratedPoolSDKType
+ * @package symphony.concentratedliquidity.poolmodel.concentrated.v1beta1
+ * @see proto type: symphony.concentratedliquidity.poolmodel.concentrated.v1beta1.MsgCreateConcentratedPool
+ */
 export interface MsgCreateConcentratedPoolSDKType {
   sender: string;
   denom0: string;
@@ -34,7 +49,12 @@ export interface MsgCreateConcentratedPoolSDKType {
   tick_spacing: bigint;
   spread_factor: string;
 }
-/** Returns a unique poolID to identify the pool with. */
+/**
+ * Returns a unique poolID to identify the pool with.
+ * @name MsgCreateConcentratedPoolResponse
+ * @package symphony.concentratedliquidity.poolmodel.concentrated.v1beta1
+ * @see proto type: symphony.concentratedliquidity.poolmodel.concentrated.v1beta1.MsgCreateConcentratedPoolResponse
+ */
 export interface MsgCreateConcentratedPoolResponse {
   poolId: bigint;
 }
@@ -42,7 +62,12 @@ export interface MsgCreateConcentratedPoolResponseProtoMsg {
   typeUrl: '/symphony.concentratedliquidity.poolmodel.concentrated.v1beta1.MsgCreateConcentratedPoolResponse';
   value: Uint8Array;
 }
-/** Returns a unique poolID to identify the pool with. */
+/**
+ * Returns a unique poolID to identify the pool with.
+ * @name MsgCreateConcentratedPoolResponseAmino
+ * @package symphony.concentratedliquidity.poolmodel.concentrated.v1beta1
+ * @see proto type: symphony.concentratedliquidity.poolmodel.concentrated.v1beta1.MsgCreateConcentratedPoolResponse
+ */
 export interface MsgCreateConcentratedPoolResponseAmino {
   pool_id?: string;
 }
@@ -50,7 +75,12 @@ export interface MsgCreateConcentratedPoolResponseAminoMsg {
   type: '/symphony.concentratedliquidity.poolmodel.concentrated.v1beta1.MsgCreateConcentratedPoolResponse';
   value: MsgCreateConcentratedPoolResponseAmino;
 }
-/** Returns a unique poolID to identify the pool with. */
+/**
+ * Returns a unique poolID to identify the pool with.
+ * @name MsgCreateConcentratedPoolResponseSDKType
+ * @package symphony.concentratedliquidity.poolmodel.concentrated.v1beta1
+ * @see proto type: symphony.concentratedliquidity.poolmodel.concentrated.v1beta1.MsgCreateConcentratedPoolResponse
+ */
 export interface MsgCreateConcentratedPoolResponseSDKType {
   pool_id: bigint;
 }
@@ -63,6 +93,12 @@ function createBaseMsgCreateConcentratedPool(): MsgCreateConcentratedPool {
     spreadFactor: '',
   };
 }
+/**
+ * ===================== MsgCreateConcentratedPool
+ * @name MsgCreateConcentratedPool
+ * @package symphony.concentratedliquidity.poolmodel.concentrated.v1beta1
+ * @see proto type: symphony.concentratedliquidity.poolmodel.concentrated.v1beta1.MsgCreateConcentratedPool
+ */
 export const MsgCreateConcentratedPool = {
   typeUrl:
     '/symphony.concentratedliquidity.poolmodel.concentrated.v1beta1.MsgCreateConcentratedPool',
@@ -249,6 +285,12 @@ function createBaseMsgCreateConcentratedPoolResponse(): MsgCreateConcentratedPoo
     poolId: BigInt(0),
   };
 }
+/**
+ * Returns a unique poolID to identify the pool with.
+ * @name MsgCreateConcentratedPoolResponse
+ * @package symphony.concentratedliquidity.poolmodel.concentrated.v1beta1
+ * @see proto type: symphony.concentratedliquidity.poolmodel.concentrated.v1beta1.MsgCreateConcentratedPoolResponse
+ */
 export const MsgCreateConcentratedPoolResponse = {
   typeUrl:
     '/symphony.concentratedliquidity.poolmodel.concentrated.v1beta1.MsgCreateConcentratedPoolResponse',

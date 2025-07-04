@@ -17,14 +17,23 @@ import { GlobalDecoderRegistry } from '../../../registry';
  * given SDK today. Would rather we optimize for readability and correctness,
  * than an optimal state storage format. The system bottleneck is elsewhere for
  * now.
+ * @name TwapRecord
+ * @package symphony.twap.v1beta1
+ * @see proto type: symphony.twap.v1beta1.TwapRecord
  */
 export interface TwapRecord {
   poolId: bigint;
-  /** Lexicographically smaller denom of the pair */
+  /**
+   * Lexicographically smaller denom of the pair
+   */
   asset0Denom: string;
-  /** Lexicographically larger denom of the pair */
+  /**
+   * Lexicographically larger denom of the pair
+   */
   asset1Denom: string;
-  /** height this record corresponds to, for debugging purposes */
+  /**
+   * height this record corresponds to, for debugging purposes
+   */
   height: bigint;
   /**
    * This field should only exist until we have a global registry in the state
@@ -59,14 +68,23 @@ export interface TwapRecordProtoMsg {
  * given SDK today. Would rather we optimize for readability and correctness,
  * than an optimal state storage format. The system bottleneck is elsewhere for
  * now.
+ * @name TwapRecordAmino
+ * @package symphony.twap.v1beta1
+ * @see proto type: symphony.twap.v1beta1.TwapRecord
  */
 export interface TwapRecordAmino {
   pool_id?: string;
-  /** Lexicographically smaller denom of the pair */
+  /**
+   * Lexicographically smaller denom of the pair
+   */
   asset0_denom?: string;
-  /** Lexicographically larger denom of the pair */
+  /**
+   * Lexicographically larger denom of the pair
+   */
   asset1_denom?: string;
-  /** height this record corresponds to, for debugging purposes */
+  /**
+   * height this record corresponds to, for debugging purposes
+   */
   height: string;
   /**
    * This field should only exist until we have a global registry in the state
@@ -101,6 +119,9 @@ export interface TwapRecordAminoMsg {
  * given SDK today. Would rather we optimize for readability and correctness,
  * than an optimal state storage format. The system bottleneck is elsewhere for
  * now.
+ * @name TwapRecordSDKType
+ * @package symphony.twap.v1beta1
+ * @see proto type: symphony.twap.v1beta1.TwapRecord
  */
 export interface TwapRecordSDKType {
   pool_id: bigint;
@@ -118,6 +139,9 @@ export interface TwapRecordSDKType {
 /**
  * PruningState allows us to spread out the pruning of TWAP records over time,
  * instead of pruning all at once at the end of the epoch.
+ * @name PruningState
+ * @package symphony.twap.v1beta1
+ * @see proto type: symphony.twap.v1beta1.PruningState
  */
 export interface PruningState {
   /**
@@ -132,8 +156,10 @@ export interface PruningState {
    * last_kept_time and should be pruned.
    */
   lastKeptTime: Date;
-  /** Deprecated: This field is deprecated. */
-  /** @deprecated */
+  /**
+   * Deprecated: This field is deprecated.
+   * @deprecated
+   */
   lastKeySeen?: Uint8Array;
   /**
    * last_seen_pool_id is the pool_id that we will begin pruning in the next
@@ -150,6 +176,9 @@ export interface PruningStateProtoMsg {
 /**
  * PruningState allows us to spread out the pruning of TWAP records over time,
  * instead of pruning all at once at the end of the epoch.
+ * @name PruningStateAmino
+ * @package symphony.twap.v1beta1
+ * @see proto type: symphony.twap.v1beta1.PruningState
  */
 export interface PruningStateAmino {
   /**
@@ -164,8 +193,10 @@ export interface PruningStateAmino {
    * last_kept_time and should be pruned.
    */
   last_kept_time?: string;
-  /** Deprecated: This field is deprecated. */
-  /** @deprecated */
+  /**
+   * Deprecated: This field is deprecated.
+   * @deprecated
+   */
   last_key_seen?: string;
   /**
    * last_seen_pool_id is the pool_id that we will begin pruning in the next
@@ -182,11 +213,16 @@ export interface PruningStateAminoMsg {
 /**
  * PruningState allows us to spread out the pruning of TWAP records over time,
  * instead of pruning all at once at the end of the epoch.
+ * @name PruningStateSDKType
+ * @package symphony.twap.v1beta1
+ * @see proto type: symphony.twap.v1beta1.PruningState
  */
 export interface PruningStateSDKType {
   is_pruning: boolean;
   last_kept_time: Date;
-  /** @deprecated */
+  /**
+   * @deprecated
+   */
   last_key_seen?: Uint8Array;
   last_seen_pool_id: bigint;
 }
@@ -205,6 +241,18 @@ function createBaseTwapRecord(): TwapRecord {
     lastErrorTime: new Date(),
   };
 }
+/**
+ * A TWAP record should be indexed in state by pool_id, (asset pair), timestamp
+ * The asset pair assets should be lexicographically sorted.
+ * Technically (pool_id, asset_0_denom, asset_1_denom, height) do not need to
+ * appear in the struct however we view this as the wrong performance tradeoff
+ * given SDK today. Would rather we optimize for readability and correctness,
+ * than an optimal state storage format. The system bottleneck is elsewhere for
+ * now.
+ * @name TwapRecord
+ * @package symphony.twap.v1beta1
+ * @see proto type: symphony.twap.v1beta1.TwapRecord
+ */
 export const TwapRecord = {
   typeUrl: '/symphony.twap.v1beta1.TwapRecord',
   is(o: any): o is TwapRecord {
@@ -528,6 +576,13 @@ function createBasePruningState(): PruningState {
     lastSeenPoolId: BigInt(0),
   };
 }
+/**
+ * PruningState allows us to spread out the pruning of TWAP records over time,
+ * instead of pruning all at once at the end of the epoch.
+ * @name PruningState
+ * @package symphony.twap.v1beta1
+ * @see proto type: symphony.twap.v1beta1.PruningState
+ */
 export const PruningState = {
   typeUrl: '/symphony.twap.v1beta1.PruningState',
   is(o: any): o is PruningState {

@@ -6,7 +6,12 @@ import {
 } from '../../../../google/protobuf/duration';
 import { BinaryReader, BinaryWriter } from '../../../../binary';
 import { GlobalDecoderRegistry } from '../../../../registry';
-/** Module is the config object of the group module. */
+/**
+ * Module is the config object of the group module.
+ * @name Module
+ * @package cosmos.group.module.v1
+ * @see proto type: cosmos.group.module.v1.Module
+ */
 export interface Module {
   /**
    * max_execution_period defines the max duration after a proposal's voting period ends that members can send a MsgExec
@@ -23,7 +28,12 @@ export interface ModuleProtoMsg {
   typeUrl: '/cosmos.group.module.v1.Module';
   value: Uint8Array;
 }
-/** Module is the config object of the group module. */
+/**
+ * Module is the config object of the group module.
+ * @name ModuleAmino
+ * @package cosmos.group.module.v1
+ * @see proto type: cosmos.group.module.v1.Module
+ */
 export interface ModuleAmino {
   /**
    * max_execution_period defines the max duration after a proposal's voting period ends that members can send a MsgExec
@@ -40,7 +50,12 @@ export interface ModuleAminoMsg {
   type: 'cosmos-sdk/Module';
   value: ModuleAmino;
 }
-/** Module is the config object of the group module. */
+/**
+ * Module is the config object of the group module.
+ * @name ModuleSDKType
+ * @package cosmos.group.module.v1
+ * @see proto type: cosmos.group.module.v1.Module
+ */
 export interface ModuleSDKType {
   max_execution_period: DurationSDKType;
   max_metadata_len: bigint;
@@ -51,6 +66,12 @@ function createBaseModule(): Module {
     maxMetadataLen: BigInt(0),
   };
 }
+/**
+ * Module is the config object of the group module.
+ * @name Module
+ * @package cosmos.group.module.v1
+ * @see proto type: cosmos.group.module.v1.Module
+ */
 export const Module = {
   typeUrl: '/cosmos.group.module.v1.Module',
   aminoType: 'cosmos-sdk/Module',

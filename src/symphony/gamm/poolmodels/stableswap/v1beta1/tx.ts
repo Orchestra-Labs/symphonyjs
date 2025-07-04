@@ -11,7 +11,12 @@ import {
 } from '../../../../../cosmos/base/v1beta1/coin';
 import { BinaryReader, BinaryWriter } from '../../../../../binary';
 import { GlobalDecoderRegistry } from '../../../../../registry';
-/** ===================== MsgCreatePool */
+/**
+ * ===================== MsgCreatePool
+ * @name MsgCreateStableswapPool
+ * @package symphony.gamm.poolmodels.stableswap.v1beta1
+ * @see proto type: symphony.gamm.poolmodels.stableswap.v1beta1.MsgCreateStableswapPool
+ */
 export interface MsgCreateStableswapPool {
   sender: string;
   poolParams?: PoolParams;
@@ -24,7 +29,12 @@ export interface MsgCreateStableswapPoolProtoMsg {
   typeUrl: '/symphony.gamm.poolmodels.stableswap.v1beta1.MsgCreateStableswapPool';
   value: Uint8Array;
 }
-/** ===================== MsgCreatePool */
+/**
+ * ===================== MsgCreatePool
+ * @name MsgCreateStableswapPoolAmino
+ * @package symphony.gamm.poolmodels.stableswap.v1beta1
+ * @see proto type: symphony.gamm.poolmodels.stableswap.v1beta1.MsgCreateStableswapPool
+ */
 export interface MsgCreateStableswapPoolAmino {
   sender?: string;
   pool_params?: PoolParamsAmino;
@@ -37,7 +47,12 @@ export interface MsgCreateStableswapPoolAminoMsg {
   type: 'symphony/gamm/create-stableswap-pool';
   value: MsgCreateStableswapPoolAmino;
 }
-/** ===================== MsgCreatePool */
+/**
+ * ===================== MsgCreatePool
+ * @name MsgCreateStableswapPoolSDKType
+ * @package symphony.gamm.poolmodels.stableswap.v1beta1
+ * @see proto type: symphony.gamm.poolmodels.stableswap.v1beta1.MsgCreateStableswapPool
+ */
 export interface MsgCreateStableswapPoolSDKType {
   sender: string;
   pool_params?: PoolParamsSDKType;
@@ -46,7 +61,12 @@ export interface MsgCreateStableswapPoolSDKType {
   future_pool_governor: string;
   scaling_factor_controller: string;
 }
-/** Returns a poolID with custom poolName. */
+/**
+ * Returns a poolID with custom poolName.
+ * @name MsgCreateStableswapPoolResponse
+ * @package symphony.gamm.poolmodels.stableswap.v1beta1
+ * @see proto type: symphony.gamm.poolmodels.stableswap.v1beta1.MsgCreateStableswapPoolResponse
+ */
 export interface MsgCreateStableswapPoolResponse {
   poolId: bigint;
 }
@@ -54,7 +74,12 @@ export interface MsgCreateStableswapPoolResponseProtoMsg {
   typeUrl: '/symphony.gamm.poolmodels.stableswap.v1beta1.MsgCreateStableswapPoolResponse';
   value: Uint8Array;
 }
-/** Returns a poolID with custom poolName. */
+/**
+ * Returns a poolID with custom poolName.
+ * @name MsgCreateStableswapPoolResponseAmino
+ * @package symphony.gamm.poolmodels.stableswap.v1beta1
+ * @see proto type: symphony.gamm.poolmodels.stableswap.v1beta1.MsgCreateStableswapPoolResponse
+ */
 export interface MsgCreateStableswapPoolResponseAmino {
   pool_id?: string;
 }
@@ -62,13 +87,21 @@ export interface MsgCreateStableswapPoolResponseAminoMsg {
   type: '/symphony.gamm.poolmodels.stableswap.v1beta1.MsgCreateStableswapPoolResponse';
   value: MsgCreateStableswapPoolResponseAmino;
 }
-/** Returns a poolID with custom poolName. */
+/**
+ * Returns a poolID with custom poolName.
+ * @name MsgCreateStableswapPoolResponseSDKType
+ * @package symphony.gamm.poolmodels.stableswap.v1beta1
+ * @see proto type: symphony.gamm.poolmodels.stableswap.v1beta1.MsgCreateStableswapPoolResponse
+ */
 export interface MsgCreateStableswapPoolResponseSDKType {
   pool_id: bigint;
 }
 /**
  * Sender must be the pool's scaling_factor_governor in order for the tx to
  * succeed. Adjusts stableswap scaling factors.
+ * @name MsgStableSwapAdjustScalingFactors
+ * @package symphony.gamm.poolmodels.stableswap.v1beta1
+ * @see proto type: symphony.gamm.poolmodels.stableswap.v1beta1.MsgStableSwapAdjustScalingFactors
  */
 export interface MsgStableSwapAdjustScalingFactors {
   sender: string;
@@ -82,6 +115,9 @@ export interface MsgStableSwapAdjustScalingFactorsProtoMsg {
 /**
  * Sender must be the pool's scaling_factor_governor in order for the tx to
  * succeed. Adjusts stableswap scaling factors.
+ * @name MsgStableSwapAdjustScalingFactorsAmino
+ * @package symphony.gamm.poolmodels.stableswap.v1beta1
+ * @see proto type: symphony.gamm.poolmodels.stableswap.v1beta1.MsgStableSwapAdjustScalingFactors
  */
 export interface MsgStableSwapAdjustScalingFactorsAmino {
   sender?: string;
@@ -95,22 +131,40 @@ export interface MsgStableSwapAdjustScalingFactorsAminoMsg {
 /**
  * Sender must be the pool's scaling_factor_governor in order for the tx to
  * succeed. Adjusts stableswap scaling factors.
+ * @name MsgStableSwapAdjustScalingFactorsSDKType
+ * @package symphony.gamm.poolmodels.stableswap.v1beta1
+ * @see proto type: symphony.gamm.poolmodels.stableswap.v1beta1.MsgStableSwapAdjustScalingFactors
  */
 export interface MsgStableSwapAdjustScalingFactorsSDKType {
   sender: string;
   pool_id: bigint;
   scaling_factors: bigint[];
 }
+/**
+ * @name MsgStableSwapAdjustScalingFactorsResponse
+ * @package symphony.gamm.poolmodels.stableswap.v1beta1
+ * @see proto type: symphony.gamm.poolmodels.stableswap.v1beta1.MsgStableSwapAdjustScalingFactorsResponse
+ */
 export interface MsgStableSwapAdjustScalingFactorsResponse {}
 export interface MsgStableSwapAdjustScalingFactorsResponseProtoMsg {
   typeUrl: '/symphony.gamm.poolmodels.stableswap.v1beta1.MsgStableSwapAdjustScalingFactorsResponse';
   value: Uint8Array;
 }
+/**
+ * @name MsgStableSwapAdjustScalingFactorsResponseAmino
+ * @package symphony.gamm.poolmodels.stableswap.v1beta1
+ * @see proto type: symphony.gamm.poolmodels.stableswap.v1beta1.MsgStableSwapAdjustScalingFactorsResponse
+ */
 export interface MsgStableSwapAdjustScalingFactorsResponseAmino {}
 export interface MsgStableSwapAdjustScalingFactorsResponseAminoMsg {
   type: '/symphony.gamm.poolmodels.stableswap.v1beta1.MsgStableSwapAdjustScalingFactorsResponse';
   value: MsgStableSwapAdjustScalingFactorsResponseAmino;
 }
+/**
+ * @name MsgStableSwapAdjustScalingFactorsResponseSDKType
+ * @package symphony.gamm.poolmodels.stableswap.v1beta1
+ * @see proto type: symphony.gamm.poolmodels.stableswap.v1beta1.MsgStableSwapAdjustScalingFactorsResponse
+ */
 export interface MsgStableSwapAdjustScalingFactorsResponseSDKType {}
 function createBaseMsgCreateStableswapPool(): MsgCreateStableswapPool {
   return {
@@ -122,6 +176,12 @@ function createBaseMsgCreateStableswapPool(): MsgCreateStableswapPool {
     scalingFactorController: '',
   };
 }
+/**
+ * ===================== MsgCreatePool
+ * @name MsgCreateStableswapPool
+ * @package symphony.gamm.poolmodels.stableswap.v1beta1
+ * @see proto type: symphony.gamm.poolmodels.stableswap.v1beta1.MsgCreateStableswapPool
+ */
 export const MsgCreateStableswapPool = {
   typeUrl:
     '/symphony.gamm.poolmodels.stableswap.v1beta1.MsgCreateStableswapPool',
@@ -356,6 +416,12 @@ function createBaseMsgCreateStableswapPoolResponse(): MsgCreateStableswapPoolRes
     poolId: BigInt(0),
   };
 }
+/**
+ * Returns a poolID with custom poolName.
+ * @name MsgCreateStableswapPoolResponse
+ * @package symphony.gamm.poolmodels.stableswap.v1beta1
+ * @see proto type: symphony.gamm.poolmodels.stableswap.v1beta1.MsgCreateStableswapPoolResponse
+ */
 export const MsgCreateStableswapPoolResponse = {
   typeUrl:
     '/symphony.gamm.poolmodels.stableswap.v1beta1.MsgCreateStableswapPoolResponse',
@@ -471,6 +537,13 @@ function createBaseMsgStableSwapAdjustScalingFactors(): MsgStableSwapAdjustScali
     scalingFactors: [],
   };
 }
+/**
+ * Sender must be the pool's scaling_factor_governor in order for the tx to
+ * succeed. Adjusts stableswap scaling factors.
+ * @name MsgStableSwapAdjustScalingFactors
+ * @package symphony.gamm.poolmodels.stableswap.v1beta1
+ * @see proto type: symphony.gamm.poolmodels.stableswap.v1beta1.MsgStableSwapAdjustScalingFactors
+ */
 export const MsgStableSwapAdjustScalingFactors = {
   typeUrl:
     '/symphony.gamm.poolmodels.stableswap.v1beta1.MsgStableSwapAdjustScalingFactors',
@@ -641,6 +714,11 @@ GlobalDecoderRegistry.registerAminoProtoMapping(
 function createBaseMsgStableSwapAdjustScalingFactorsResponse(): MsgStableSwapAdjustScalingFactorsResponse {
   return {};
 }
+/**
+ * @name MsgStableSwapAdjustScalingFactorsResponse
+ * @package symphony.gamm.poolmodels.stableswap.v1beta1
+ * @see proto type: symphony.gamm.poolmodels.stableswap.v1beta1.MsgStableSwapAdjustScalingFactorsResponse
+ */
 export const MsgStableSwapAdjustScalingFactorsResponse = {
   typeUrl:
     '/symphony.gamm.poolmodels.stableswap.v1beta1.MsgStableSwapAdjustScalingFactorsResponse',

@@ -2,17 +2,37 @@
 import { BinaryReader, BinaryWriter } from '../../../binary';
 import { GlobalDecoderRegistry } from '../../../registry';
 import { Decimal } from '@cosmjs/math';
+/**
+ * @name QueryFeeTokensRequest
+ * @package symphony.txfees.v1beta1
+ * @see proto type: symphony.txfees.v1beta1.QueryFeeTokensRequest
+ */
 export interface QueryFeeTokensRequest {}
 export interface QueryFeeTokensRequestProtoMsg {
   typeUrl: '/symphony.txfees.v1beta1.QueryFeeTokensRequest';
   value: Uint8Array;
 }
+/**
+ * @name QueryFeeTokensRequestAmino
+ * @package symphony.txfees.v1beta1
+ * @see proto type: symphony.txfees.v1beta1.QueryFeeTokensRequest
+ */
 export interface QueryFeeTokensRequestAmino {}
 export interface QueryFeeTokensRequestAminoMsg {
   type: '/symphony.txfees.v1beta1.QueryFeeTokensRequest';
   value: QueryFeeTokensRequestAmino;
 }
+/**
+ * @name QueryFeeTokensRequestSDKType
+ * @package symphony.txfees.v1beta1
+ * @see proto type: symphony.txfees.v1beta1.QueryFeeTokensRequest
+ */
 export interface QueryFeeTokensRequestSDKType {}
+/**
+ * @name QueryFeeTokensResponse
+ * @package symphony.txfees.v1beta1
+ * @see proto type: symphony.txfees.v1beta1.QueryFeeTokensResponse
+ */
 export interface QueryFeeTokensResponse {
   feeTokens: string[];
 }
@@ -20,6 +40,11 @@ export interface QueryFeeTokensResponseProtoMsg {
   typeUrl: '/symphony.txfees.v1beta1.QueryFeeTokensResponse';
   value: Uint8Array;
 }
+/**
+ * @name QueryFeeTokensResponseAmino
+ * @package symphony.txfees.v1beta1
+ * @see proto type: symphony.txfees.v1beta1.QueryFeeTokensResponse
+ */
 export interface QueryFeeTokensResponseAmino {
   fee_tokens?: string[];
 }
@@ -27,12 +52,20 @@ export interface QueryFeeTokensResponseAminoMsg {
   type: '/symphony.txfees.v1beta1.QueryFeeTokensResponse';
   value: QueryFeeTokensResponseAmino;
 }
+/**
+ * @name QueryFeeTokensResponseSDKType
+ * @package symphony.txfees.v1beta1
+ * @see proto type: symphony.txfees.v1beta1.QueryFeeTokensResponse
+ */
 export interface QueryFeeTokensResponseSDKType {
   fee_tokens: string[];
 }
 /**
  * QueryDenomSpotPriceRequest defines grpc request structure for querying spot
  * price for the specified tx fee denom
+ * @name QueryDenomSpotPriceRequest
+ * @package symphony.txfees.v1beta1
+ * @see proto type: symphony.txfees.v1beta1.QueryDenomSpotPriceRequest
  */
 export interface QueryDenomSpotPriceRequest {
   denom: string;
@@ -44,6 +77,9 @@ export interface QueryDenomSpotPriceRequestProtoMsg {
 /**
  * QueryDenomSpotPriceRequest defines grpc request structure for querying spot
  * price for the specified tx fee denom
+ * @name QueryDenomSpotPriceRequestAmino
+ * @package symphony.txfees.v1beta1
+ * @see proto type: symphony.txfees.v1beta1.QueryDenomSpotPriceRequest
  */
 export interface QueryDenomSpotPriceRequestAmino {
   denom?: string;
@@ -55,6 +91,9 @@ export interface QueryDenomSpotPriceRequestAminoMsg {
 /**
  * QueryDenomSpotPriceRequest defines grpc request structure for querying spot
  * price for the specified tx fee denom
+ * @name QueryDenomSpotPriceRequestSDKType
+ * @package symphony.txfees.v1beta1
+ * @see proto type: symphony.txfees.v1beta1.QueryDenomSpotPriceRequest
  */
 export interface QueryDenomSpotPriceRequestSDKType {
   denom: string;
@@ -62,6 +101,9 @@ export interface QueryDenomSpotPriceRequestSDKType {
 /**
  * QueryDenomSpotPriceRequest defines grpc response structure for querying spot
  * price for the specified tx fee denom
+ * @name QueryDenomSpotPriceResponse
+ * @package symphony.txfees.v1beta1
+ * @see proto type: symphony.txfees.v1beta1.QueryDenomSpotPriceResponse
  */
 export interface QueryDenomSpotPriceResponse {
   spotPrice: string;
@@ -73,6 +115,9 @@ export interface QueryDenomSpotPriceResponseProtoMsg {
 /**
  * QueryDenomSpotPriceRequest defines grpc response structure for querying spot
  * price for the specified tx fee denom
+ * @name QueryDenomSpotPriceResponseAmino
+ * @package symphony.txfees.v1beta1
+ * @see proto type: symphony.txfees.v1beta1.QueryDenomSpotPriceResponse
  */
 export interface QueryDenomSpotPriceResponseAmino {
   spot_price?: string;
@@ -84,21 +129,44 @@ export interface QueryDenomSpotPriceResponseAminoMsg {
 /**
  * QueryDenomSpotPriceRequest defines grpc response structure for querying spot
  * price for the specified tx fee denom
+ * @name QueryDenomSpotPriceResponseSDKType
+ * @package symphony.txfees.v1beta1
+ * @see proto type: symphony.txfees.v1beta1.QueryDenomSpotPriceResponse
  */
 export interface QueryDenomSpotPriceResponseSDKType {
   spot_price: string;
 }
+/**
+ * @name QueryEipBaseFeeRequest
+ * @package symphony.txfees.v1beta1
+ * @see proto type: symphony.txfees.v1beta1.QueryEipBaseFeeRequest
+ */
 export interface QueryEipBaseFeeRequest {}
 export interface QueryEipBaseFeeRequestProtoMsg {
   typeUrl: '/symphony.txfees.v1beta1.QueryEipBaseFeeRequest';
   value: Uint8Array;
 }
+/**
+ * @name QueryEipBaseFeeRequestAmino
+ * @package symphony.txfees.v1beta1
+ * @see proto type: symphony.txfees.v1beta1.QueryEipBaseFeeRequest
+ */
 export interface QueryEipBaseFeeRequestAmino {}
 export interface QueryEipBaseFeeRequestAminoMsg {
   type: '/symphony.txfees.v1beta1.QueryEipBaseFeeRequest';
   value: QueryEipBaseFeeRequestAmino;
 }
+/**
+ * @name QueryEipBaseFeeRequestSDKType
+ * @package symphony.txfees.v1beta1
+ * @see proto type: symphony.txfees.v1beta1.QueryEipBaseFeeRequest
+ */
 export interface QueryEipBaseFeeRequestSDKType {}
+/**
+ * @name QueryEipBaseFeeResponse
+ * @package symphony.txfees.v1beta1
+ * @see proto type: symphony.txfees.v1beta1.QueryEipBaseFeeResponse
+ */
 export interface QueryEipBaseFeeResponse {
   baseFee: string;
 }
@@ -106,6 +174,11 @@ export interface QueryEipBaseFeeResponseProtoMsg {
   typeUrl: '/symphony.txfees.v1beta1.QueryEipBaseFeeResponse';
   value: Uint8Array;
 }
+/**
+ * @name QueryEipBaseFeeResponseAmino
+ * @package symphony.txfees.v1beta1
+ * @see proto type: symphony.txfees.v1beta1.QueryEipBaseFeeResponse
+ */
 export interface QueryEipBaseFeeResponseAmino {
   base_fee?: string;
 }
@@ -113,12 +186,22 @@ export interface QueryEipBaseFeeResponseAminoMsg {
   type: '/symphony.txfees.v1beta1.QueryEipBaseFeeResponse';
   value: QueryEipBaseFeeResponseAmino;
 }
+/**
+ * @name QueryEipBaseFeeResponseSDKType
+ * @package symphony.txfees.v1beta1
+ * @see proto type: symphony.txfees.v1beta1.QueryEipBaseFeeResponse
+ */
 export interface QueryEipBaseFeeResponseSDKType {
   base_fee: string;
 }
 function createBaseQueryFeeTokensRequest(): QueryFeeTokensRequest {
   return {};
 }
+/**
+ * @name QueryFeeTokensRequest
+ * @package symphony.txfees.v1beta1
+ * @see proto type: symphony.txfees.v1beta1.QueryFeeTokensRequest
+ */
 export const QueryFeeTokensRequest = {
   typeUrl: '/symphony.txfees.v1beta1.QueryFeeTokensRequest',
   is(o: any): o is QueryFeeTokensRequest {
@@ -191,6 +274,11 @@ function createBaseQueryFeeTokensResponse(): QueryFeeTokensResponse {
     feeTokens: [],
   };
 }
+/**
+ * @name QueryFeeTokensResponse
+ * @package symphony.txfees.v1beta1
+ * @see proto type: symphony.txfees.v1beta1.QueryFeeTokensResponse
+ */
 export const QueryFeeTokensResponse = {
   typeUrl: '/symphony.txfees.v1beta1.QueryFeeTokensResponse',
   is(o: any): o is QueryFeeTokensResponse {
@@ -293,6 +381,13 @@ function createBaseQueryDenomSpotPriceRequest(): QueryDenomSpotPriceRequest {
     denom: '',
   };
 }
+/**
+ * QueryDenomSpotPriceRequest defines grpc request structure for querying spot
+ * price for the specified tx fee denom
+ * @name QueryDenomSpotPriceRequest
+ * @package symphony.txfees.v1beta1
+ * @see proto type: symphony.txfees.v1beta1.QueryDenomSpotPriceRequest
+ */
 export const QueryDenomSpotPriceRequest = {
   typeUrl: '/symphony.txfees.v1beta1.QueryDenomSpotPriceRequest',
   is(o: any): o is QueryDenomSpotPriceRequest {
@@ -400,6 +495,13 @@ function createBaseQueryDenomSpotPriceResponse(): QueryDenomSpotPriceResponse {
     spotPrice: '',
   };
 }
+/**
+ * QueryDenomSpotPriceRequest defines grpc response structure for querying spot
+ * price for the specified tx fee denom
+ * @name QueryDenomSpotPriceResponse
+ * @package symphony.txfees.v1beta1
+ * @see proto type: symphony.txfees.v1beta1.QueryDenomSpotPriceResponse
+ */
 export const QueryDenomSpotPriceResponse = {
   typeUrl: '/symphony.txfees.v1beta1.QueryDenomSpotPriceResponse',
   is(o: any): o is QueryDenomSpotPriceResponse {
@@ -510,6 +612,11 @@ GlobalDecoderRegistry.register(
 function createBaseQueryEipBaseFeeRequest(): QueryEipBaseFeeRequest {
   return {};
 }
+/**
+ * @name QueryEipBaseFeeRequest
+ * @package symphony.txfees.v1beta1
+ * @see proto type: symphony.txfees.v1beta1.QueryEipBaseFeeRequest
+ */
 export const QueryEipBaseFeeRequest = {
   typeUrl: '/symphony.txfees.v1beta1.QueryEipBaseFeeRequest',
   is(o: any): o is QueryEipBaseFeeRequest {
@@ -584,6 +691,11 @@ function createBaseQueryEipBaseFeeResponse(): QueryEipBaseFeeResponse {
     baseFee: '',
   };
 }
+/**
+ * @name QueryEipBaseFeeResponse
+ * @package symphony.txfees.v1beta1
+ * @see proto type: symphony.txfees.v1beta1.QueryEipBaseFeeResponse
+ */
 export const QueryEipBaseFeeResponse = {
   typeUrl: '/symphony.txfees.v1beta1.QueryEipBaseFeeResponse',
   is(o: any): o is QueryEipBaseFeeResponse {

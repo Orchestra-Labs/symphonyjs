@@ -16,7 +16,12 @@ import {
 } from './bank';
 import { BinaryReader, BinaryWriter } from '../../../binary';
 import { GlobalDecoderRegistry } from '../../../registry';
-/** MsgSend represents a message to send coins from one account to another. */
+/**
+ * MsgSend represents a message to send coins from one account to another.
+ * @name MsgSend
+ * @package cosmos.bank.v1beta1
+ * @see proto type: cosmos.bank.v1beta1.MsgSend
+ */
 export interface MsgSend {
   fromAddress: string;
   toAddress: string;
@@ -26,7 +31,12 @@ export interface MsgSendProtoMsg {
   typeUrl: '/cosmos.bank.v1beta1.MsgSend';
   value: Uint8Array;
 }
-/** MsgSend represents a message to send coins from one account to another. */
+/**
+ * MsgSend represents a message to send coins from one account to another.
+ * @name MsgSendAmino
+ * @package cosmos.bank.v1beta1
+ * @see proto type: cosmos.bank.v1beta1.MsgSend
+ */
 export interface MsgSendAmino {
   from_address?: string;
   to_address?: string;
@@ -36,27 +46,52 @@ export interface MsgSendAminoMsg {
   type: 'cosmos-sdk/MsgSend';
   value: MsgSendAmino;
 }
-/** MsgSend represents a message to send coins from one account to another. */
+/**
+ * MsgSend represents a message to send coins from one account to another.
+ * @name MsgSendSDKType
+ * @package cosmos.bank.v1beta1
+ * @see proto type: cosmos.bank.v1beta1.MsgSend
+ */
 export interface MsgSendSDKType {
   from_address: string;
   to_address: string;
   amount: CoinSDKType[];
 }
-/** MsgSendResponse defines the Msg/Send response type. */
+/**
+ * MsgSendResponse defines the Msg/Send response type.
+ * @name MsgSendResponse
+ * @package cosmos.bank.v1beta1
+ * @see proto type: cosmos.bank.v1beta1.MsgSendResponse
+ */
 export interface MsgSendResponse {}
 export interface MsgSendResponseProtoMsg {
   typeUrl: '/cosmos.bank.v1beta1.MsgSendResponse';
   value: Uint8Array;
 }
-/** MsgSendResponse defines the Msg/Send response type. */
+/**
+ * MsgSendResponse defines the Msg/Send response type.
+ * @name MsgSendResponseAmino
+ * @package cosmos.bank.v1beta1
+ * @see proto type: cosmos.bank.v1beta1.MsgSendResponse
+ */
 export interface MsgSendResponseAmino {}
 export interface MsgSendResponseAminoMsg {
   type: 'cosmos-sdk/MsgSendResponse';
   value: MsgSendResponseAmino;
 }
-/** MsgSendResponse defines the Msg/Send response type. */
+/**
+ * MsgSendResponse defines the Msg/Send response type.
+ * @name MsgSendResponseSDKType
+ * @package cosmos.bank.v1beta1
+ * @see proto type: cosmos.bank.v1beta1.MsgSendResponse
+ */
 export interface MsgSendResponseSDKType {}
-/** MsgMultiSend represents an arbitrary multi-in, multi-out send message. */
+/**
+ * MsgMultiSend represents an arbitrary multi-in, multi-out send message.
+ * @name MsgMultiSend
+ * @package cosmos.bank.v1beta1
+ * @see proto type: cosmos.bank.v1beta1.MsgMultiSend
+ */
 export interface MsgMultiSend {
   /**
    * Inputs, despite being `repeated`, only allows one sender input. This is
@@ -69,7 +104,12 @@ export interface MsgMultiSendProtoMsg {
   typeUrl: '/cosmos.bank.v1beta1.MsgMultiSend';
   value: Uint8Array;
 }
-/** MsgMultiSend represents an arbitrary multi-in, multi-out send message. */
+/**
+ * MsgMultiSend represents an arbitrary multi-in, multi-out send message.
+ * @name MsgMultiSendAmino
+ * @package cosmos.bank.v1beta1
+ * @see proto type: cosmos.bank.v1beta1.MsgMultiSend
+ */
 export interface MsgMultiSendAmino {
   /**
    * Inputs, despite being `repeated`, only allows one sender input. This is
@@ -82,32 +122,57 @@ export interface MsgMultiSendAminoMsg {
   type: 'cosmos-sdk/MsgMultiSend';
   value: MsgMultiSendAmino;
 }
-/** MsgMultiSend represents an arbitrary multi-in, multi-out send message. */
+/**
+ * MsgMultiSend represents an arbitrary multi-in, multi-out send message.
+ * @name MsgMultiSendSDKType
+ * @package cosmos.bank.v1beta1
+ * @see proto type: cosmos.bank.v1beta1.MsgMultiSend
+ */
 export interface MsgMultiSendSDKType {
   inputs: InputSDKType[];
   outputs: OutputSDKType[];
 }
-/** MsgMultiSendResponse defines the Msg/MultiSend response type. */
+/**
+ * MsgMultiSendResponse defines the Msg/MultiSend response type.
+ * @name MsgMultiSendResponse
+ * @package cosmos.bank.v1beta1
+ * @see proto type: cosmos.bank.v1beta1.MsgMultiSendResponse
+ */
 export interface MsgMultiSendResponse {}
 export interface MsgMultiSendResponseProtoMsg {
   typeUrl: '/cosmos.bank.v1beta1.MsgMultiSendResponse';
   value: Uint8Array;
 }
-/** MsgMultiSendResponse defines the Msg/MultiSend response type. */
+/**
+ * MsgMultiSendResponse defines the Msg/MultiSend response type.
+ * @name MsgMultiSendResponseAmino
+ * @package cosmos.bank.v1beta1
+ * @see proto type: cosmos.bank.v1beta1.MsgMultiSendResponse
+ */
 export interface MsgMultiSendResponseAmino {}
 export interface MsgMultiSendResponseAminoMsg {
   type: 'cosmos-sdk/MsgMultiSendResponse';
   value: MsgMultiSendResponseAmino;
 }
-/** MsgMultiSendResponse defines the Msg/MultiSend response type. */
+/**
+ * MsgMultiSendResponse defines the Msg/MultiSend response type.
+ * @name MsgMultiSendResponseSDKType
+ * @package cosmos.bank.v1beta1
+ * @see proto type: cosmos.bank.v1beta1.MsgMultiSendResponse
+ */
 export interface MsgMultiSendResponseSDKType {}
 /**
  * MsgUpdateParams is the Msg/UpdateParams request type.
  *
  * Since: cosmos-sdk 0.47
+ * @name MsgUpdateParams
+ * @package cosmos.bank.v1beta1
+ * @see proto type: cosmos.bank.v1beta1.MsgUpdateParams
  */
 export interface MsgUpdateParams {
-  /** authority is the address that controls the module (defaults to x/gov unless overwritten). */
+  /**
+   * authority is the address that controls the module (defaults to x/gov unless overwritten).
+   */
   authority: string;
   /**
    * params defines the x/bank parameters to update.
@@ -124,9 +189,14 @@ export interface MsgUpdateParamsProtoMsg {
  * MsgUpdateParams is the Msg/UpdateParams request type.
  *
  * Since: cosmos-sdk 0.47
+ * @name MsgUpdateParamsAmino
+ * @package cosmos.bank.v1beta1
+ * @see proto type: cosmos.bank.v1beta1.MsgUpdateParams
  */
 export interface MsgUpdateParamsAmino {
-  /** authority is the address that controls the module (defaults to x/gov unless overwritten). */
+  /**
+   * authority is the address that controls the module (defaults to x/gov unless overwritten).
+   */
   authority?: string;
   /**
    * params defines the x/bank parameters to update.
@@ -143,6 +213,9 @@ export interface MsgUpdateParamsAminoMsg {
  * MsgUpdateParams is the Msg/UpdateParams request type.
  *
  * Since: cosmos-sdk 0.47
+ * @name MsgUpdateParamsSDKType
+ * @package cosmos.bank.v1beta1
+ * @see proto type: cosmos.bank.v1beta1.MsgUpdateParams
  */
 export interface MsgUpdateParamsSDKType {
   authority: string;
@@ -153,6 +226,9 @@ export interface MsgUpdateParamsSDKType {
  * MsgUpdateParams message.
  *
  * Since: cosmos-sdk 0.47
+ * @name MsgUpdateParamsResponse
+ * @package cosmos.bank.v1beta1
+ * @see proto type: cosmos.bank.v1beta1.MsgUpdateParamsResponse
  */
 export interface MsgUpdateParamsResponse {}
 export interface MsgUpdateParamsResponseProtoMsg {
@@ -164,6 +240,9 @@ export interface MsgUpdateParamsResponseProtoMsg {
  * MsgUpdateParams message.
  *
  * Since: cosmos-sdk 0.47
+ * @name MsgUpdateParamsResponseAmino
+ * @package cosmos.bank.v1beta1
+ * @see proto type: cosmos.bank.v1beta1.MsgUpdateParamsResponse
  */
 export interface MsgUpdateParamsResponseAmino {}
 export interface MsgUpdateParamsResponseAminoMsg {
@@ -175,6 +254,9 @@ export interface MsgUpdateParamsResponseAminoMsg {
  * MsgUpdateParams message.
  *
  * Since: cosmos-sdk 0.47
+ * @name MsgUpdateParamsResponseSDKType
+ * @package cosmos.bank.v1beta1
+ * @see proto type: cosmos.bank.v1beta1.MsgUpdateParamsResponse
  */
 export interface MsgUpdateParamsResponseSDKType {}
 /**
@@ -185,11 +267,18 @@ export interface MsgUpdateParamsResponseSDKType {}
  * message are left unchanged.
  *
  * Since: cosmos-sdk 0.47
+ * @name MsgSetSendEnabled
+ * @package cosmos.bank.v1beta1
+ * @see proto type: cosmos.bank.v1beta1.MsgSetSendEnabled
  */
 export interface MsgSetSendEnabled {
-  /** authority is the address that controls the module. */
+  /**
+   * authority is the address that controls the module.
+   */
   authority: string;
-  /** send_enabled is the list of entries to add or update. */
+  /**
+   * send_enabled is the list of entries to add or update.
+   */
   sendEnabled: SendEnabled[];
   /**
    * use_default_for is a list of denoms that should use the params.default_send_enabled value.
@@ -211,11 +300,18 @@ export interface MsgSetSendEnabledProtoMsg {
  * message are left unchanged.
  *
  * Since: cosmos-sdk 0.47
+ * @name MsgSetSendEnabledAmino
+ * @package cosmos.bank.v1beta1
+ * @see proto type: cosmos.bank.v1beta1.MsgSetSendEnabled
  */
 export interface MsgSetSendEnabledAmino {
-  /** authority is the address that controls the module. */
+  /**
+   * authority is the address that controls the module.
+   */
   authority?: string;
-  /** send_enabled is the list of entries to add or update. */
+  /**
+   * send_enabled is the list of entries to add or update.
+   */
   send_enabled?: SendEnabledAmino[];
   /**
    * use_default_for is a list of denoms that should use the params.default_send_enabled value.
@@ -237,6 +333,9 @@ export interface MsgSetSendEnabledAminoMsg {
  * message are left unchanged.
  *
  * Since: cosmos-sdk 0.47
+ * @name MsgSetSendEnabledSDKType
+ * @package cosmos.bank.v1beta1
+ * @see proto type: cosmos.bank.v1beta1.MsgSetSendEnabled
  */
 export interface MsgSetSendEnabledSDKType {
   authority: string;
@@ -247,6 +346,9 @@ export interface MsgSetSendEnabledSDKType {
  * MsgSetSendEnabledResponse defines the Msg/SetSendEnabled response type.
  *
  * Since: cosmos-sdk 0.47
+ * @name MsgSetSendEnabledResponse
+ * @package cosmos.bank.v1beta1
+ * @see proto type: cosmos.bank.v1beta1.MsgSetSendEnabledResponse
  */
 export interface MsgSetSendEnabledResponse {}
 export interface MsgSetSendEnabledResponseProtoMsg {
@@ -257,6 +359,9 @@ export interface MsgSetSendEnabledResponseProtoMsg {
  * MsgSetSendEnabledResponse defines the Msg/SetSendEnabled response type.
  *
  * Since: cosmos-sdk 0.47
+ * @name MsgSetSendEnabledResponseAmino
+ * @package cosmos.bank.v1beta1
+ * @see proto type: cosmos.bank.v1beta1.MsgSetSendEnabledResponse
  */
 export interface MsgSetSendEnabledResponseAmino {}
 export interface MsgSetSendEnabledResponseAminoMsg {
@@ -267,6 +372,9 @@ export interface MsgSetSendEnabledResponseAminoMsg {
  * MsgSetSendEnabledResponse defines the Msg/SetSendEnabled response type.
  *
  * Since: cosmos-sdk 0.47
+ * @name MsgSetSendEnabledResponseSDKType
+ * @package cosmos.bank.v1beta1
+ * @see proto type: cosmos.bank.v1beta1.MsgSetSendEnabledResponse
  */
 export interface MsgSetSendEnabledResponseSDKType {}
 function createBaseMsgSend(): MsgSend {
@@ -276,6 +384,12 @@ function createBaseMsgSend(): MsgSend {
     amount: [],
   };
 }
+/**
+ * MsgSend represents a message to send coins from one account to another.
+ * @name MsgSend
+ * @package cosmos.bank.v1beta1
+ * @see proto type: cosmos.bank.v1beta1.MsgSend
+ */
 export const MsgSend = {
   typeUrl: '/cosmos.bank.v1beta1.MsgSend',
   aminoType: 'cosmos-sdk/MsgSend',
@@ -408,6 +522,12 @@ GlobalDecoderRegistry.registerAminoProtoMapping(
 function createBaseMsgSendResponse(): MsgSendResponse {
   return {};
 }
+/**
+ * MsgSendResponse defines the Msg/Send response type.
+ * @name MsgSendResponse
+ * @package cosmos.bank.v1beta1
+ * @see proto type: cosmos.bank.v1beta1.MsgSendResponse
+ */
 export const MsgSendResponse = {
   typeUrl: '/cosmos.bank.v1beta1.MsgSendResponse',
   aminoType: 'cosmos-sdk/MsgSendResponse',
@@ -486,6 +606,12 @@ function createBaseMsgMultiSend(): MsgMultiSend {
     outputs: [],
   };
 }
+/**
+ * MsgMultiSend represents an arbitrary multi-in, multi-out send message.
+ * @name MsgMultiSend
+ * @package cosmos.bank.v1beta1
+ * @see proto type: cosmos.bank.v1beta1.MsgMultiSend
+ */
 export const MsgMultiSend = {
   typeUrl: '/cosmos.bank.v1beta1.MsgMultiSend',
   aminoType: 'cosmos-sdk/MsgMultiSend',
@@ -610,6 +736,12 @@ GlobalDecoderRegistry.registerAminoProtoMapping(
 function createBaseMsgMultiSendResponse(): MsgMultiSendResponse {
   return {};
 }
+/**
+ * MsgMultiSendResponse defines the Msg/MultiSend response type.
+ * @name MsgMultiSendResponse
+ * @package cosmos.bank.v1beta1
+ * @see proto type: cosmos.bank.v1beta1.MsgMultiSendResponse
+ */
 export const MsgMultiSendResponse = {
   typeUrl: '/cosmos.bank.v1beta1.MsgMultiSendResponse',
   aminoType: 'cosmos-sdk/MsgMultiSendResponse',
@@ -694,6 +826,14 @@ function createBaseMsgUpdateParams(): MsgUpdateParams {
     params: Params.fromPartial({}),
   };
 }
+/**
+ * MsgUpdateParams is the Msg/UpdateParams request type.
+ *
+ * Since: cosmos-sdk 0.47
+ * @name MsgUpdateParams
+ * @package cosmos.bank.v1beta1
+ * @see proto type: cosmos.bank.v1beta1.MsgUpdateParams
+ */
 export const MsgUpdateParams = {
   typeUrl: '/cosmos.bank.v1beta1.MsgUpdateParams',
   aminoType: 'cosmos-sdk/x/bank/MsgUpdateParams',
@@ -808,6 +948,15 @@ GlobalDecoderRegistry.registerAminoProtoMapping(
 function createBaseMsgUpdateParamsResponse(): MsgUpdateParamsResponse {
   return {};
 }
+/**
+ * MsgUpdateParamsResponse defines the response structure for executing a
+ * MsgUpdateParams message.
+ *
+ * Since: cosmos-sdk 0.47
+ * @name MsgUpdateParamsResponse
+ * @package cosmos.bank.v1beta1
+ * @see proto type: cosmos.bank.v1beta1.MsgUpdateParamsResponse
+ */
 export const MsgUpdateParamsResponse = {
   typeUrl: '/cosmos.bank.v1beta1.MsgUpdateParamsResponse',
   aminoType: 'cosmos-sdk/MsgUpdateParamsResponse',
@@ -901,6 +1050,18 @@ function createBaseMsgSetSendEnabled(): MsgSetSendEnabled {
     useDefaultFor: [],
   };
 }
+/**
+ * MsgSetSendEnabled is the Msg/SetSendEnabled request type.
+ *
+ * Only entries to add/update/delete need to be included.
+ * Existing SendEnabled entries that are not included in this
+ * message are left unchanged.
+ *
+ * Since: cosmos-sdk 0.47
+ * @name MsgSetSendEnabled
+ * @package cosmos.bank.v1beta1
+ * @see proto type: cosmos.bank.v1beta1.MsgSetSendEnabled
+ */
 export const MsgSetSendEnabled = {
   typeUrl: '/cosmos.bank.v1beta1.MsgSetSendEnabled',
   aminoType: 'cosmos-sdk/MsgSetSendEnabled',
@@ -1043,6 +1204,14 @@ GlobalDecoderRegistry.registerAminoProtoMapping(
 function createBaseMsgSetSendEnabledResponse(): MsgSetSendEnabledResponse {
   return {};
 }
+/**
+ * MsgSetSendEnabledResponse defines the Msg/SetSendEnabled response type.
+ *
+ * Since: cosmos-sdk 0.47
+ * @name MsgSetSendEnabledResponse
+ * @package cosmos.bank.v1beta1
+ * @see proto type: cosmos.bank.v1beta1.MsgSetSendEnabledResponse
+ */
 export const MsgSetSendEnabledResponse = {
   typeUrl: '/cosmos.bank.v1beta1.MsgSetSendEnabledResponse',
   aminoType: 'cosmos-sdk/MsgSetSendEnabledResponse',

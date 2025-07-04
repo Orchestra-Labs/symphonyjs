@@ -4,6 +4,9 @@ import { GlobalDecoderRegistry } from '../../../registry';
 /**
  * SpotPriceRequest defines the gRPC request structure for a SpotPrice
  * query.
+ * @name SpotPriceRequest
+ * @package symphony.poolmanager.v2
+ * @see proto type: symphony.poolmanager.v2.SpotPriceRequest
  */
 export interface SpotPriceRequest {
   poolId: bigint;
@@ -17,6 +20,9 @@ export interface SpotPriceRequestProtoMsg {
 /**
  * SpotPriceRequest defines the gRPC request structure for a SpotPrice
  * query.
+ * @name SpotPriceRequestAmino
+ * @package symphony.poolmanager.v2
+ * @see proto type: symphony.poolmanager.v2.SpotPriceRequest
  */
 export interface SpotPriceRequestAmino {
   pool_id?: string;
@@ -30,6 +36,9 @@ export interface SpotPriceRequestAminoMsg {
 /**
  * SpotPriceRequest defines the gRPC request structure for a SpotPrice
  * query.
+ * @name SpotPriceRequestSDKType
+ * @package symphony.poolmanager.v2
+ * @see proto type: symphony.poolmanager.v2.SpotPriceRequest
  */
 export interface SpotPriceRequestSDKType {
   pool_id: bigint;
@@ -39,9 +48,14 @@ export interface SpotPriceRequestSDKType {
 /**
  * SpotPriceResponse defines the gRPC response structure for a SpotPrice
  * query.
+ * @name SpotPriceResponse
+ * @package symphony.poolmanager.v2
+ * @see proto type: symphony.poolmanager.v2.SpotPriceResponse
  */
 export interface SpotPriceResponse {
-  /** String of the BigDec. Ex) 10.203uatom */
+  /**
+   * String of the BigDec. Ex) 10.203uatom
+   */
   spotPrice: string;
 }
 export interface SpotPriceResponseProtoMsg {
@@ -51,9 +65,14 @@ export interface SpotPriceResponseProtoMsg {
 /**
  * SpotPriceResponse defines the gRPC response structure for a SpotPrice
  * query.
+ * @name SpotPriceResponseAmino
+ * @package symphony.poolmanager.v2
+ * @see proto type: symphony.poolmanager.v2.SpotPriceResponse
  */
 export interface SpotPriceResponseAmino {
-  /** String of the BigDec. Ex) 10.203uatom */
+  /**
+   * String of the BigDec. Ex) 10.203uatom
+   */
   spot_price?: string;
 }
 export interface SpotPriceResponseAminoMsg {
@@ -63,6 +82,9 @@ export interface SpotPriceResponseAminoMsg {
 /**
  * SpotPriceResponse defines the gRPC response structure for a SpotPrice
  * query.
+ * @name SpotPriceResponseSDKType
+ * @package symphony.poolmanager.v2
+ * @see proto type: symphony.poolmanager.v2.SpotPriceResponse
  */
 export interface SpotPriceResponseSDKType {
   spot_price: string;
@@ -74,6 +96,13 @@ function createBaseSpotPriceRequest(): SpotPriceRequest {
     quoteAssetDenom: '',
   };
 }
+/**
+ * SpotPriceRequest defines the gRPC request structure for a SpotPrice
+ * query.
+ * @name SpotPriceRequest
+ * @package symphony.poolmanager.v2
+ * @see proto type: symphony.poolmanager.v2.SpotPriceRequest
+ */
 export const SpotPriceRequest = {
   typeUrl: '/symphony.poolmanager.v2.SpotPriceRequest',
   is(o: any): o is SpotPriceRequest {
@@ -203,6 +232,13 @@ function createBaseSpotPriceResponse(): SpotPriceResponse {
     spotPrice: '',
   };
 }
+/**
+ * SpotPriceResponse defines the gRPC response structure for a SpotPrice
+ * query.
+ * @name SpotPriceResponse
+ * @package symphony.poolmanager.v2
+ * @see proto type: symphony.poolmanager.v2.SpotPriceResponse
+ */
 export const SpotPriceResponse = {
   typeUrl: '/symphony.poolmanager.v2.SpotPriceResponse',
   is(o: any): o is SpotPriceResponse {

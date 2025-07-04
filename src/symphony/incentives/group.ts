@@ -37,6 +37,9 @@ export function splittingPolicyToJSON(object: SplittingPolicy): string {
  * readable (pool-incentives distribution abstractions are used in a very
  * specific way that does not directly relate to gauge logic). This also helps
  * us sidestep a refactor to avoid an import cycle.
+ * @name InternalGaugeInfo
+ * @package symphony.incentives
+ * @see proto type: symphony.incentives.InternalGaugeInfo
  */
 export interface InternalGaugeInfo {
   totalWeight: string;
@@ -53,6 +56,9 @@ export interface InternalGaugeInfoProtoMsg {
  * readable (pool-incentives distribution abstractions are used in a very
  * specific way that does not directly relate to gauge logic). This also helps
  * us sidestep a refactor to avoid an import cycle.
+ * @name InternalGaugeInfoAmino
+ * @package symphony.incentives
+ * @see proto type: symphony.incentives.InternalGaugeInfo
  */
 export interface InternalGaugeInfoAmino {
   total_weight?: string;
@@ -69,11 +75,19 @@ export interface InternalGaugeInfoAminoMsg {
  * readable (pool-incentives distribution abstractions are used in a very
  * specific way that does not directly relate to gauge logic). This also helps
  * us sidestep a refactor to avoid an import cycle.
+ * @name InternalGaugeInfoSDKType
+ * @package symphony.incentives
+ * @see proto type: symphony.incentives.InternalGaugeInfo
  */
 export interface InternalGaugeInfoSDKType {
   total_weight: string;
   gauge_records: InternalGaugeRecordSDKType[];
 }
+/**
+ * @name InternalGaugeRecord
+ * @package symphony.incentives
+ * @see proto type: symphony.incentives.InternalGaugeRecord
+ */
 export interface InternalGaugeRecord {
   gaugeId: bigint;
   /**
@@ -93,6 +107,11 @@ export interface InternalGaugeRecordProtoMsg {
   typeUrl: '/symphony.incentives.InternalGaugeRecord';
   value: Uint8Array;
 }
+/**
+ * @name InternalGaugeRecordAmino
+ * @package symphony.incentives
+ * @see proto type: symphony.incentives.InternalGaugeRecord
+ */
 export interface InternalGaugeRecordAmino {
   gauge_id?: string;
   /**
@@ -112,6 +131,11 @@ export interface InternalGaugeRecordAminoMsg {
   type: '/symphony.incentives.InternalGaugeRecord';
   value: InternalGaugeRecordAmino;
 }
+/**
+ * @name InternalGaugeRecordSDKType
+ * @package symphony.incentives
+ * @see proto type: symphony.incentives.InternalGaugeRecord
+ */
 export interface InternalGaugeRecordSDKType {
   gauge_id: bigint;
   current_weight: string;
@@ -122,6 +146,9 @@ export interface InternalGaugeRecordSDKType {
  * info, and a splitting policy. These are grouped into a single abstraction to
  * allow for distribution of group incentives to internal gauges according to
  * the specified splitting policy.
+ * @name Group
+ * @package symphony.incentives
+ * @see proto type: symphony.incentives.Group
  */
 export interface Group {
   groupGaugeId: bigint;
@@ -137,6 +164,9 @@ export interface GroupProtoMsg {
  * info, and a splitting policy. These are grouped into a single abstraction to
  * allow for distribution of group incentives to internal gauges according to
  * the specified splitting policy.
+ * @name GroupAmino
+ * @package symphony.incentives
+ * @see proto type: symphony.incentives.Group
  */
 export interface GroupAmino {
   group_gauge_id?: string;
@@ -152,6 +182,9 @@ export interface GroupAminoMsg {
  * info, and a splitting policy. These are grouped into a single abstraction to
  * allow for distribution of group incentives to internal gauges according to
  * the specified splitting policy.
+ * @name GroupSDKType
+ * @package symphony.incentives
+ * @see proto type: symphony.incentives.Group
  */
 export interface GroupSDKType {
   group_gauge_id: bigint;
@@ -161,6 +194,9 @@ export interface GroupSDKType {
 /**
  * CreateGroup is called via governance to create a new group.
  * It takes an array of pool IDs to split the incentives across.
+ * @name CreateGroup
+ * @package symphony.incentives
+ * @see proto type: symphony.incentives.CreateGroup
  */
 export interface CreateGroup {
   poolIds: bigint[];
@@ -172,6 +208,9 @@ export interface CreateGroupProtoMsg {
 /**
  * CreateGroup is called via governance to create a new group.
  * It takes an array of pool IDs to split the incentives across.
+ * @name CreateGroupAmino
+ * @package symphony.incentives
+ * @see proto type: symphony.incentives.CreateGroup
  */
 export interface CreateGroupAmino {
   pool_ids?: string[];
@@ -183,6 +222,9 @@ export interface CreateGroupAminoMsg {
 /**
  * CreateGroup is called via governance to create a new group.
  * It takes an array of pool IDs to split the incentives across.
+ * @name CreateGroupSDKType
+ * @package symphony.incentives
+ * @see proto type: symphony.incentives.CreateGroup
  */
 export interface CreateGroupSDKType {
   pool_ids: bigint[];
@@ -190,6 +232,9 @@ export interface CreateGroupSDKType {
 /**
  * GroupsWithGauge is a helper struct that stores a group and its
  * associated gauge.
+ * @name GroupsWithGauge
+ * @package symphony.incentives
+ * @see proto type: symphony.incentives.GroupsWithGauge
  */
 export interface GroupsWithGauge {
   group: Group;
@@ -202,6 +247,9 @@ export interface GroupsWithGaugeProtoMsg {
 /**
  * GroupsWithGauge is a helper struct that stores a group and its
  * associated gauge.
+ * @name GroupsWithGaugeAmino
+ * @package symphony.incentives
+ * @see proto type: symphony.incentives.GroupsWithGauge
  */
 export interface GroupsWithGaugeAmino {
   group?: GroupAmino;
@@ -214,6 +262,9 @@ export interface GroupsWithGaugeAminoMsg {
 /**
  * GroupsWithGauge is a helper struct that stores a group and its
  * associated gauge.
+ * @name GroupsWithGaugeSDKType
+ * @package symphony.incentives
+ * @see proto type: symphony.incentives.GroupsWithGauge
  */
 export interface GroupsWithGaugeSDKType {
   group: GroupSDKType;
@@ -225,6 +276,17 @@ function createBaseInternalGaugeInfo(): InternalGaugeInfo {
     gaugeRecords: [],
   };
 }
+/**
+ * Note that while both InternalGaugeInfo and InternalGaugeRecord could
+ * technically be replaced by DistrInfo and DistrRecord from the pool-incentives
+ * module, we create separate types here to keep our abstractions clean and
+ * readable (pool-incentives distribution abstractions are used in a very
+ * specific way that does not directly relate to gauge logic). This also helps
+ * us sidestep a refactor to avoid an import cycle.
+ * @name InternalGaugeInfo
+ * @package symphony.incentives
+ * @see proto type: symphony.incentives.InternalGaugeInfo
+ */
 export const InternalGaugeInfo = {
   typeUrl: '/symphony.incentives.InternalGaugeInfo',
   is(o: any): o is InternalGaugeInfo {
@@ -345,6 +407,11 @@ function createBaseInternalGaugeRecord(): InternalGaugeRecord {
     cumulativeWeight: '',
   };
 }
+/**
+ * @name InternalGaugeRecord
+ * @package symphony.incentives
+ * @see proto type: symphony.incentives.InternalGaugeRecord
+ */
 export const InternalGaugeRecord = {
   typeUrl: '/symphony.incentives.InternalGaugeRecord',
   is(o: any): o is InternalGaugeRecord {
@@ -479,6 +546,15 @@ function createBaseGroup(): Group {
     splittingPolicy: 0,
   };
 }
+/**
+ * Group is an object that stores a 1:1 mapped gauge ID, a list of pool gauge
+ * info, and a splitting policy. These are grouped into a single abstraction to
+ * allow for distribution of group incentives to internal gauges according to
+ * the specified splitting policy.
+ * @name Group
+ * @package symphony.incentives
+ * @see proto type: symphony.incentives.Group
+ */
 export const Group = {
   typeUrl: '/symphony.incentives.Group',
   is(o: any): o is Group {
@@ -623,6 +699,13 @@ function createBaseCreateGroup(): CreateGroup {
     poolIds: [],
   };
 }
+/**
+ * CreateGroup is called via governance to create a new group.
+ * It takes an array of pool IDs to split the incentives across.
+ * @name CreateGroup
+ * @package symphony.incentives
+ * @see proto type: symphony.incentives.CreateGroup
+ */
 export const CreateGroup = {
   typeUrl: '/symphony.incentives.CreateGroup',
   is(o: any): o is CreateGroup {
@@ -727,6 +810,13 @@ function createBaseGroupsWithGauge(): GroupsWithGauge {
     gauge: Gauge.fromPartial({}),
   };
 }
+/**
+ * GroupsWithGauge is a helper struct that stores a group and its
+ * associated gauge.
+ * @name GroupsWithGauge
+ * @package symphony.incentives
+ * @see proto type: symphony.incentives.GroupsWithGauge
+ */
 export const GroupsWithGauge = {
   typeUrl: '/symphony.incentives.GroupsWithGauge',
   is(o: any): o is GroupsWithGauge {

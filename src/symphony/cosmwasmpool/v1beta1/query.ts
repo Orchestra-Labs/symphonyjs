@@ -30,20 +30,40 @@ import { PoolProtoMsg as Pool3ProtoMsg } from '../../gamm/v1beta1/balancerPool';
 import { PoolSDKType as Pool3SDKType } from '../../gamm/v1beta1/balancerPool';
 import { BinaryReader, BinaryWriter } from '../../../binary';
 import { GlobalDecoderRegistry } from '../../../registry';
-/** =============================== ContractInfoByPoolId */
+/**
+ * =============================== ContractInfoByPoolId
+ * @name ParamsRequest
+ * @package symphony.cosmwasmpool.v1beta1
+ * @see proto type: symphony.cosmwasmpool.v1beta1.ParamsRequest
+ */
 export interface ParamsRequest {}
 export interface ParamsRequestProtoMsg {
   typeUrl: '/symphony.cosmwasmpool.v1beta1.ParamsRequest';
   value: Uint8Array;
 }
-/** =============================== ContractInfoByPoolId */
+/**
+ * =============================== ContractInfoByPoolId
+ * @name ParamsRequestAmino
+ * @package symphony.cosmwasmpool.v1beta1
+ * @see proto type: symphony.cosmwasmpool.v1beta1.ParamsRequest
+ */
 export interface ParamsRequestAmino {}
 export interface ParamsRequestAminoMsg {
   type: '/symphony.cosmwasmpool.v1beta1.ParamsRequest';
   value: ParamsRequestAmino;
 }
-/** =============================== ContractInfoByPoolId */
+/**
+ * =============================== ContractInfoByPoolId
+ * @name ParamsRequestSDKType
+ * @package symphony.cosmwasmpool.v1beta1
+ * @see proto type: symphony.cosmwasmpool.v1beta1.ParamsRequest
+ */
 export interface ParamsRequestSDKType {}
+/**
+ * @name ParamsResponse
+ * @package symphony.cosmwasmpool.v1beta1
+ * @see proto type: symphony.cosmwasmpool.v1beta1.ParamsResponse
+ */
 export interface ParamsResponse {
   params: Params;
 }
@@ -51,6 +71,11 @@ export interface ParamsResponseProtoMsg {
   typeUrl: '/symphony.cosmwasmpool.v1beta1.ParamsResponse';
   value: Uint8Array;
 }
+/**
+ * @name ParamsResponseAmino
+ * @package symphony.cosmwasmpool.v1beta1
+ * @see proto type: symphony.cosmwasmpool.v1beta1.ParamsResponse
+ */
 export interface ParamsResponseAmino {
   params?: ParamsAmino;
 }
@@ -58,34 +83,65 @@ export interface ParamsResponseAminoMsg {
   type: '/symphony.cosmwasmpool.v1beta1.ParamsResponse';
   value: ParamsResponseAmino;
 }
+/**
+ * @name ParamsResponseSDKType
+ * @package symphony.cosmwasmpool.v1beta1
+ * @see proto type: symphony.cosmwasmpool.v1beta1.ParamsResponse
+ */
 export interface ParamsResponseSDKType {
   params: ParamsSDKType;
 }
-/** =============================== Pools */
+/**
+ * =============================== Pools
+ * @name PoolsRequest
+ * @package symphony.cosmwasmpool.v1beta1
+ * @see proto type: symphony.cosmwasmpool.v1beta1.PoolsRequest
+ */
 export interface PoolsRequest {
-  /** pagination defines an optional pagination for the request. */
+  /**
+   * pagination defines an optional pagination for the request.
+   */
   pagination?: PageRequest;
 }
 export interface PoolsRequestProtoMsg {
   typeUrl: '/symphony.cosmwasmpool.v1beta1.PoolsRequest';
   value: Uint8Array;
 }
-/** =============================== Pools */
+/**
+ * =============================== Pools
+ * @name PoolsRequestAmino
+ * @package symphony.cosmwasmpool.v1beta1
+ * @see proto type: symphony.cosmwasmpool.v1beta1.PoolsRequest
+ */
 export interface PoolsRequestAmino {
-  /** pagination defines an optional pagination for the request. */
+  /**
+   * pagination defines an optional pagination for the request.
+   */
   pagination?: PageRequestAmino;
 }
 export interface PoolsRequestAminoMsg {
   type: '/symphony.cosmwasmpool.v1beta1.PoolsRequest';
   value: PoolsRequestAmino;
 }
-/** =============================== Pools */
+/**
+ * =============================== Pools
+ * @name PoolsRequestSDKType
+ * @package symphony.cosmwasmpool.v1beta1
+ * @see proto type: symphony.cosmwasmpool.v1beta1.PoolsRequest
+ */
 export interface PoolsRequestSDKType {
   pagination?: PageRequestSDKType;
 }
+/**
+ * @name PoolsResponse
+ * @package symphony.cosmwasmpool.v1beta1
+ * @see proto type: symphony.cosmwasmpool.v1beta1.PoolsResponse
+ */
 export interface PoolsResponse {
   pools: (Pool1 | CosmWasmPool | Pool2 | Pool3 | Any)[] | Any[];
-  /** pagination defines the pagination in the response. */
+  /**
+   * pagination defines the pagination in the response.
+   */
   pagination?: PageResponse;
 }
 export interface PoolsResponseProtoMsg {
@@ -101,15 +157,27 @@ export type PoolsResponseEncoded = Omit<PoolsResponse, 'pools'> & {
     | AnyProtoMsg
   )[];
 };
+/**
+ * @name PoolsResponseAmino
+ * @package symphony.cosmwasmpool.v1beta1
+ * @see proto type: symphony.cosmwasmpool.v1beta1.PoolsResponse
+ */
 export interface PoolsResponseAmino {
   pools?: AnyAmino[];
-  /** pagination defines the pagination in the response. */
+  /**
+   * pagination defines the pagination in the response.
+   */
   pagination?: PageResponseAmino;
 }
 export interface PoolsResponseAminoMsg {
   type: '/symphony.cosmwasmpool.v1beta1.PoolsResponse';
   value: PoolsResponseAmino;
 }
+/**
+ * @name PoolsResponseSDKType
+ * @package symphony.cosmwasmpool.v1beta1
+ * @see proto type: symphony.cosmwasmpool.v1beta1.PoolsResponse
+ */
 export interface PoolsResponseSDKType {
   pools: (
     | Pool1SDKType
@@ -120,54 +188,92 @@ export interface PoolsResponseSDKType {
   )[];
   pagination?: PageResponseSDKType;
 }
-/** =============================== ContractInfoByPoolId */
+/**
+ * =============================== ContractInfoByPoolId
+ * @name ContractInfoByPoolIdRequest
+ * @package symphony.cosmwasmpool.v1beta1
+ * @see proto type: symphony.cosmwasmpool.v1beta1.ContractInfoByPoolIdRequest
+ */
 export interface ContractInfoByPoolIdRequest {
-  /** pool_id is the pool id of the requested pool. */
+  /**
+   * pool_id is the pool id of the requested pool.
+   */
   poolId: bigint;
 }
 export interface ContractInfoByPoolIdRequestProtoMsg {
   typeUrl: '/symphony.cosmwasmpool.v1beta1.ContractInfoByPoolIdRequest';
   value: Uint8Array;
 }
-/** =============================== ContractInfoByPoolId */
+/**
+ * =============================== ContractInfoByPoolId
+ * @name ContractInfoByPoolIdRequestAmino
+ * @package symphony.cosmwasmpool.v1beta1
+ * @see proto type: symphony.cosmwasmpool.v1beta1.ContractInfoByPoolIdRequest
+ */
 export interface ContractInfoByPoolIdRequestAmino {
-  /** pool_id is the pool id of the requested pool. */
+  /**
+   * pool_id is the pool id of the requested pool.
+   */
   pool_id?: string;
 }
 export interface ContractInfoByPoolIdRequestAminoMsg {
   type: '/symphony.cosmwasmpool.v1beta1.ContractInfoByPoolIdRequest';
   value: ContractInfoByPoolIdRequestAmino;
 }
-/** =============================== ContractInfoByPoolId */
+/**
+ * =============================== ContractInfoByPoolId
+ * @name ContractInfoByPoolIdRequestSDKType
+ * @package symphony.cosmwasmpool.v1beta1
+ * @see proto type: symphony.cosmwasmpool.v1beta1.ContractInfoByPoolIdRequest
+ */
 export interface ContractInfoByPoolIdRequestSDKType {
   pool_id: bigint;
 }
+/**
+ * @name ContractInfoByPoolIdResponse
+ * @package symphony.cosmwasmpool.v1beta1
+ * @see proto type: symphony.cosmwasmpool.v1beta1.ContractInfoByPoolIdResponse
+ */
 export interface ContractInfoByPoolIdResponse {
   /**
    * contract_address is the pool address and contract address
    * of the requested pool id.
    */
   contractAddress: string;
-  /** code_id is the code id of the requested pool id. */
+  /**
+   * code_id is the code id of the requested pool id.
+   */
   codeId: bigint;
 }
 export interface ContractInfoByPoolIdResponseProtoMsg {
   typeUrl: '/symphony.cosmwasmpool.v1beta1.ContractInfoByPoolIdResponse';
   value: Uint8Array;
 }
+/**
+ * @name ContractInfoByPoolIdResponseAmino
+ * @package symphony.cosmwasmpool.v1beta1
+ * @see proto type: symphony.cosmwasmpool.v1beta1.ContractInfoByPoolIdResponse
+ */
 export interface ContractInfoByPoolIdResponseAmino {
   /**
    * contract_address is the pool address and contract address
    * of the requested pool id.
    */
   contract_address?: string;
-  /** code_id is the code id of the requested pool id. */
+  /**
+   * code_id is the code id of the requested pool id.
+   */
   code_id?: string;
 }
 export interface ContractInfoByPoolIdResponseAminoMsg {
   type: '/symphony.cosmwasmpool.v1beta1.ContractInfoByPoolIdResponse';
   value: ContractInfoByPoolIdResponseAmino;
 }
+/**
+ * @name ContractInfoByPoolIdResponseSDKType
+ * @package symphony.cosmwasmpool.v1beta1
+ * @see proto type: symphony.cosmwasmpool.v1beta1.ContractInfoByPoolIdResponse
+ */
 export interface ContractInfoByPoolIdResponseSDKType {
   contract_address: string;
   code_id: bigint;
@@ -175,6 +281,12 @@ export interface ContractInfoByPoolIdResponseSDKType {
 function createBaseParamsRequest(): ParamsRequest {
   return {};
 }
+/**
+ * =============================== ContractInfoByPoolId
+ * @name ParamsRequest
+ * @package symphony.cosmwasmpool.v1beta1
+ * @see proto type: symphony.cosmwasmpool.v1beta1.ParamsRequest
+ */
 export const ParamsRequest = {
   typeUrl: '/symphony.cosmwasmpool.v1beta1.ParamsRequest',
   is(o: any): o is ParamsRequest {
@@ -241,6 +353,11 @@ function createBaseParamsResponse(): ParamsResponse {
     params: Params.fromPartial({}),
   };
 }
+/**
+ * @name ParamsResponse
+ * @package symphony.cosmwasmpool.v1beta1
+ * @see proto type: symphony.cosmwasmpool.v1beta1.ParamsResponse
+ */
 export const ParamsResponse = {
   typeUrl: '/symphony.cosmwasmpool.v1beta1.ParamsResponse',
   is(o: any): o is ParamsResponse {
@@ -325,6 +442,12 @@ function createBasePoolsRequest(): PoolsRequest {
     pagination: undefined,
   };
 }
+/**
+ * =============================== Pools
+ * @name PoolsRequest
+ * @package symphony.cosmwasmpool.v1beta1
+ * @see proto type: symphony.cosmwasmpool.v1beta1.PoolsRequest
+ */
 export const PoolsRequest = {
   typeUrl: '/symphony.cosmwasmpool.v1beta1.PoolsRequest',
   is(o: any): o is PoolsRequest {
@@ -408,6 +531,11 @@ function createBasePoolsResponse(): PoolsResponse {
     pagination: undefined,
   };
 }
+/**
+ * @name PoolsResponse
+ * @package symphony.cosmwasmpool.v1beta1
+ * @see proto type: symphony.cosmwasmpool.v1beta1.PoolsResponse
+ */
 export const PoolsResponse = {
   typeUrl: '/symphony.cosmwasmpool.v1beta1.PoolsResponse',
   is(o: any): o is PoolsResponse {
@@ -543,6 +671,12 @@ function createBaseContractInfoByPoolIdRequest(): ContractInfoByPoolIdRequest {
     poolId: BigInt(0),
   };
 }
+/**
+ * =============================== ContractInfoByPoolId
+ * @name ContractInfoByPoolIdRequest
+ * @package symphony.cosmwasmpool.v1beta1
+ * @see proto type: symphony.cosmwasmpool.v1beta1.ContractInfoByPoolIdRequest
+ */
 export const ContractInfoByPoolIdRequest = {
   typeUrl: '/symphony.cosmwasmpool.v1beta1.ContractInfoByPoolIdRequest',
   is(o: any): o is ContractInfoByPoolIdRequest {
@@ -655,6 +789,11 @@ function createBaseContractInfoByPoolIdResponse(): ContractInfoByPoolIdResponse 
     codeId: BigInt(0),
   };
 }
+/**
+ * @name ContractInfoByPoolIdResponse
+ * @package symphony.cosmwasmpool.v1beta1
+ * @see proto type: symphony.cosmwasmpool.v1beta1.ContractInfoByPoolIdResponse
+ */
 export const ContractInfoByPoolIdResponse = {
   typeUrl: '/symphony.cosmwasmpool.v1beta1.ContractInfoByPoolIdResponse',
   is(o: any): o is ContractInfoByPoolIdResponse {

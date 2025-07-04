@@ -16,9 +16,14 @@ import { GlobalDecoderRegistry } from '../../../registry';
  * in the skim_address field at the end of each epoch. These skim_percents are
  * additive, so if three taker fee agreements have skim percents of 10%, 20%,
  * and 30%, the total skim percent for the route will be 60%.
+ * @name TakerFeeShareAgreement
+ * @package symphony.poolmanager.v1beta1
+ * @see proto type: symphony.poolmanager.v1beta1.TakerFeeShareAgreement
  */
 export interface TakerFeeShareAgreement {
-  /** denom is the denom that has the taker fee share agreement. */
+  /**
+   * denom is the denom that has the taker fee share agreement.
+   */
   denom: string;
   /**
    * skim_percent is the percentage of taker fees that will be skimmed for the
@@ -44,9 +49,14 @@ export interface TakerFeeShareAgreementProtoMsg {
  * in the skim_address field at the end of each epoch. These skim_percents are
  * additive, so if three taker fee agreements have skim percents of 10%, 20%,
  * and 30%, the total skim percent for the route will be 60%.
+ * @name TakerFeeShareAgreementAmino
+ * @package symphony.poolmanager.v1beta1
+ * @see proto type: symphony.poolmanager.v1beta1.TakerFeeShareAgreement
  */
 export interface TakerFeeShareAgreementAmino {
-  /** denom is the denom that has the taker fee share agreement. */
+  /**
+   * denom is the denom that has the taker fee share agreement.
+   */
   denom?: string;
   /**
    * skim_percent is the percentage of taker fees that will be skimmed for the
@@ -72,6 +82,9 @@ export interface TakerFeeShareAgreementAminoMsg {
  * in the skim_address field at the end of each epoch. These skim_percents are
  * additive, so if three taker fee agreements have skim percents of 10%, 20%,
  * and 30%, the total skim percent for the route will be 60%.
+ * @name TakerFeeShareAgreementSDKType
+ * @package symphony.poolmanager.v1beta1
+ * @see proto type: symphony.poolmanager.v1beta1.TakerFeeShareAgreement
  */
 export interface TakerFeeShareAgreementSDKType {
   denom: string;
@@ -81,11 +94,18 @@ export interface TakerFeeShareAgreementSDKType {
 /**
  * TakerFeeSkimAccumulator accumulates the total skimmed taker fees for each
  * denom that has a taker fee share agreement.
+ * @name TakerFeeSkimAccumulator
+ * @package symphony.poolmanager.v1beta1
+ * @see proto type: symphony.poolmanager.v1beta1.TakerFeeSkimAccumulator
  */
 export interface TakerFeeSkimAccumulator {
-  /** denom is the denom that has the taker fee share agreement. */
+  /**
+   * denom is the denom that has the taker fee share agreement.
+   */
   denom: string;
-  /** skimmed_taker_fees is the total skimmed taker fees for the denom. */
+  /**
+   * skimmed_taker_fees is the total skimmed taker fees for the denom.
+   */
   skimmedTakerFees: Coin[];
 }
 export interface TakerFeeSkimAccumulatorProtoMsg {
@@ -95,11 +115,18 @@ export interface TakerFeeSkimAccumulatorProtoMsg {
 /**
  * TakerFeeSkimAccumulator accumulates the total skimmed taker fees for each
  * denom that has a taker fee share agreement.
+ * @name TakerFeeSkimAccumulatorAmino
+ * @package symphony.poolmanager.v1beta1
+ * @see proto type: symphony.poolmanager.v1beta1.TakerFeeSkimAccumulator
  */
 export interface TakerFeeSkimAccumulatorAmino {
-  /** denom is the denom that has the taker fee share agreement. */
+  /**
+   * denom is the denom that has the taker fee share agreement.
+   */
   denom?: string;
-  /** skimmed_taker_fees is the total skimmed taker fees for the denom. */
+  /**
+   * skimmed_taker_fees is the total skimmed taker fees for the denom.
+   */
   skimmed_taker_fees?: CoinAmino[];
 }
 export interface TakerFeeSkimAccumulatorAminoMsg {
@@ -109,6 +136,9 @@ export interface TakerFeeSkimAccumulatorAminoMsg {
 /**
  * TakerFeeSkimAccumulator accumulates the total skimmed taker fees for each
  * denom that has a taker fee share agreement.
+ * @name TakerFeeSkimAccumulatorSDKType
+ * @package symphony.poolmanager.v1beta1
+ * @see proto type: symphony.poolmanager.v1beta1.TakerFeeSkimAccumulator
  */
 export interface TakerFeeSkimAccumulatorSDKType {
   denom: string;
@@ -122,9 +152,14 @@ export interface TakerFeeSkimAccumulatorSDKType {
  * makes up 50 percent, and denom A has a taker fee share agreement with a skim
  * percent of 10%, then the adjusted taker fee share agreement for denomA will
  * be 5%.
+ * @name AlloyContractTakerFeeShareState
+ * @package symphony.poolmanager.v1beta1
+ * @see proto type: symphony.poolmanager.v1beta1.AlloyContractTakerFeeShareState
  */
 export interface AlloyContractTakerFeeShareState {
-  /** contract_address is the address of the alloyed asset pool contract. */
+  /**
+   * contract_address is the address of the alloyed asset pool contract.
+   */
   contractAddress: string;
   /**
    * taker_fee_share_agreements is the adjusted taker fee share agreements for
@@ -145,9 +180,14 @@ export interface AlloyContractTakerFeeShareStateProtoMsg {
  * makes up 50 percent, and denom A has a taker fee share agreement with a skim
  * percent of 10%, then the adjusted taker fee share agreement for denomA will
  * be 5%.
+ * @name AlloyContractTakerFeeShareStateAmino
+ * @package symphony.poolmanager.v1beta1
+ * @see proto type: symphony.poolmanager.v1beta1.AlloyContractTakerFeeShareState
  */
 export interface AlloyContractTakerFeeShareStateAmino {
-  /** contract_address is the address of the alloyed asset pool contract. */
+  /**
+   * contract_address is the address of the alloyed asset pool contract.
+   */
   contract_address?: string;
   /**
    * taker_fee_share_agreements is the adjusted taker fee share agreements for
@@ -168,6 +208,9 @@ export interface AlloyContractTakerFeeShareStateAminoMsg {
  * makes up 50 percent, and denom A has a taker fee share agreement with a skim
  * percent of 10%, then the adjusted taker fee share agreement for denomA will
  * be 5%.
+ * @name AlloyContractTakerFeeShareStateSDKType
+ * @package symphony.poolmanager.v1beta1
+ * @see proto type: symphony.poolmanager.v1beta1.AlloyContractTakerFeeShareState
  */
 export interface AlloyContractTakerFeeShareStateSDKType {
   contract_address: string;
@@ -180,6 +223,19 @@ function createBaseTakerFeeShareAgreement(): TakerFeeShareAgreement {
     skimAddress: '',
   };
 }
+/**
+ * TakerFeeShareAgreement represents the agreement between the Osmosis protocol
+ * and a specific denom to share a certain percent of taker fees generated in
+ * any route that contains said denom. For example, if the agreement specifies a
+ * 10% skim_percent, this means 10% of the taker fees generated in a swap route
+ * containing the specified denom will be sent to the address specified
+ * in the skim_address field at the end of each epoch. These skim_percents are
+ * additive, so if three taker fee agreements have skim percents of 10%, 20%,
+ * and 30%, the total skim percent for the route will be 60%.
+ * @name TakerFeeShareAgreement
+ * @package symphony.poolmanager.v1beta1
+ * @see proto type: symphony.poolmanager.v1beta1.TakerFeeShareAgreement
+ */
 export const TakerFeeShareAgreement = {
   typeUrl: '/symphony.poolmanager.v1beta1.TakerFeeShareAgreement',
   is(o: any): o is TakerFeeShareAgreement {
@@ -313,6 +369,13 @@ function createBaseTakerFeeSkimAccumulator(): TakerFeeSkimAccumulator {
     skimmedTakerFees: [],
   };
 }
+/**
+ * TakerFeeSkimAccumulator accumulates the total skimmed taker fees for each
+ * denom that has a taker fee share agreement.
+ * @name TakerFeeSkimAccumulator
+ * @package symphony.poolmanager.v1beta1
+ * @see proto type: symphony.poolmanager.v1beta1.TakerFeeSkimAccumulator
+ */
 export const TakerFeeSkimAccumulator = {
   typeUrl: '/symphony.poolmanager.v1beta1.TakerFeeSkimAccumulator',
   is(o: any): o is TakerFeeSkimAccumulator {
@@ -442,6 +505,18 @@ function createBaseAlloyContractTakerFeeShareState(): AlloyContractTakerFeeShare
     takerFeeShareAgreements: [],
   };
 }
+/**
+ * AlloyContractTakerFeeShareState contains the contract address of the alloyed
+ * asset pool, along with the adjusted taker fee share agreements for any asset
+ * within the alloyed asset pool that has a taker fee share agreement. If for
+ * instance there are two denoms, and denomA makes up 50 percent and denomB
+ * makes up 50 percent, and denom A has a taker fee share agreement with a skim
+ * percent of 10%, then the adjusted taker fee share agreement for denomA will
+ * be 5%.
+ * @name AlloyContractTakerFeeShareState
+ * @package symphony.poolmanager.v1beta1
+ * @see proto type: symphony.poolmanager.v1beta1.AlloyContractTakerFeeShareState
+ */
 export const AlloyContractTakerFeeShareState = {
   typeUrl: '/symphony.poolmanager.v1beta1.AlloyContractTakerFeeShareState',
   is(o: any): o is AlloyContractTakerFeeShareState {

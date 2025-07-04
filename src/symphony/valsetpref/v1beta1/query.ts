@@ -6,29 +6,53 @@ import {
 } from './state';
 import { BinaryReader, BinaryWriter } from '../../../binary';
 import { GlobalDecoderRegistry } from '../../../registry';
-/** Request type for UserValidatorPreferences. */
+/**
+ * Request type for UserValidatorPreferences.
+ * @name UserValidatorPreferencesRequest
+ * @package symphony.valsetpref.v1beta1
+ * @see proto type: symphony.valsetpref.v1beta1.UserValidatorPreferencesRequest
+ */
 export interface UserValidatorPreferencesRequest {
-  /** user account address */
+  /**
+   * user account address
+   */
   address: string;
 }
 export interface UserValidatorPreferencesRequestProtoMsg {
   typeUrl: '/symphony.valsetpref.v1beta1.UserValidatorPreferencesRequest';
   value: Uint8Array;
 }
-/** Request type for UserValidatorPreferences. */
+/**
+ * Request type for UserValidatorPreferences.
+ * @name UserValidatorPreferencesRequestAmino
+ * @package symphony.valsetpref.v1beta1
+ * @see proto type: symphony.valsetpref.v1beta1.UserValidatorPreferencesRequest
+ */
 export interface UserValidatorPreferencesRequestAmino {
-  /** user account address */
+  /**
+   * user account address
+   */
   address?: string;
 }
 export interface UserValidatorPreferencesRequestAminoMsg {
   type: '/symphony.valsetpref.v1beta1.UserValidatorPreferencesRequest';
   value: UserValidatorPreferencesRequestAmino;
 }
-/** Request type for UserValidatorPreferences. */
+/**
+ * Request type for UserValidatorPreferences.
+ * @name UserValidatorPreferencesRequestSDKType
+ * @package symphony.valsetpref.v1beta1
+ * @see proto type: symphony.valsetpref.v1beta1.UserValidatorPreferencesRequest
+ */
 export interface UserValidatorPreferencesRequestSDKType {
   address: string;
 }
-/** Response type the QueryUserValidatorPreferences query request */
+/**
+ * Response type the QueryUserValidatorPreferences query request
+ * @name UserValidatorPreferencesResponse
+ * @package symphony.valsetpref.v1beta1
+ * @see proto type: symphony.valsetpref.v1beta1.UserValidatorPreferencesResponse
+ */
 export interface UserValidatorPreferencesResponse {
   preferences: ValidatorPreference[];
 }
@@ -36,7 +60,12 @@ export interface UserValidatorPreferencesResponseProtoMsg {
   typeUrl: '/symphony.valsetpref.v1beta1.UserValidatorPreferencesResponse';
   value: Uint8Array;
 }
-/** Response type the QueryUserValidatorPreferences query request */
+/**
+ * Response type the QueryUserValidatorPreferences query request
+ * @name UserValidatorPreferencesResponseAmino
+ * @package symphony.valsetpref.v1beta1
+ * @see proto type: symphony.valsetpref.v1beta1.UserValidatorPreferencesResponse
+ */
 export interface UserValidatorPreferencesResponseAmino {
   preferences?: ValidatorPreferenceAmino[];
 }
@@ -44,7 +73,12 @@ export interface UserValidatorPreferencesResponseAminoMsg {
   type: '/symphony.valsetpref.v1beta1.UserValidatorPreferencesResponse';
   value: UserValidatorPreferencesResponseAmino;
 }
-/** Response type the QueryUserValidatorPreferences query request */
+/**
+ * Response type the QueryUserValidatorPreferences query request
+ * @name UserValidatorPreferencesResponseSDKType
+ * @package symphony.valsetpref.v1beta1
+ * @see proto type: symphony.valsetpref.v1beta1.UserValidatorPreferencesResponse
+ */
 export interface UserValidatorPreferencesResponseSDKType {
   preferences: ValidatorPreferenceSDKType[];
 }
@@ -53,6 +87,12 @@ function createBaseUserValidatorPreferencesRequest(): UserValidatorPreferencesRe
     address: '',
   };
 }
+/**
+ * Request type for UserValidatorPreferences.
+ * @name UserValidatorPreferencesRequest
+ * @package symphony.valsetpref.v1beta1
+ * @see proto type: symphony.valsetpref.v1beta1.UserValidatorPreferencesRequest
+ */
 export const UserValidatorPreferencesRequest = {
   typeUrl: '/symphony.valsetpref.v1beta1.UserValidatorPreferencesRequest',
   is(o: any): o is UserValidatorPreferencesRequest {
@@ -160,6 +200,12 @@ function createBaseUserValidatorPreferencesResponse(): UserValidatorPreferencesR
     preferences: [],
   };
 }
+/**
+ * Response type the QueryUserValidatorPreferences query request
+ * @name UserValidatorPreferencesResponse
+ * @package symphony.valsetpref.v1beta1
+ * @see proto type: symphony.valsetpref.v1beta1.UserValidatorPreferencesResponse
+ */
 export const UserValidatorPreferencesResponse = {
   typeUrl: '/symphony.valsetpref.v1beta1.UserValidatorPreferencesResponse',
   is(o: any): o is UserValidatorPreferencesResponse {
