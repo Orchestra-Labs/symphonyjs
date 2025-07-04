@@ -1,6 +1,6 @@
 //@ts-nocheck
-import { BinaryReader, BinaryWriter } from '../../../binary';
-import { GlobalDecoderRegistry } from '../../../registry';
+import { BinaryReader, BinaryWriter } from "../../../binary";
+import { GlobalDecoderRegistry } from "../../../registry";
 /**
  * DenomAuthorityMetadata specifies metadata for addresses that have specific
  * capabilities over a token factory denom. Right now there is only one Admin
@@ -11,7 +11,7 @@ export interface DenomAuthorityMetadata {
   admin: string;
 }
 export interface DenomAuthorityMetadataProtoMsg {
-  typeUrl: '/symphony.tokenfactory.v1beta1.DenomAuthorityMetadata';
+  typeUrl: "/symphony.tokenfactory.v1beta1.DenomAuthorityMetadata";
   value: Uint8Array;
 }
 /**
@@ -24,7 +24,7 @@ export interface DenomAuthorityMetadataAmino {
   admin?: string;
 }
 export interface DenomAuthorityMetadataAminoMsg {
-  type: '/symphony.tokenfactory.v1beta1.DenomAuthorityMetadata';
+  type: "/symphony.tokenfactory.v1beta1.DenomAuthorityMetadata";
   value: DenomAuthorityMetadataAmino;
 }
 /**
@@ -37,47 +37,28 @@ export interface DenomAuthorityMetadataSDKType {
 }
 function createBaseDenomAuthorityMetadata(): DenomAuthorityMetadata {
   return {
-    admin: '',
+    admin: ""
   };
 }
 export const DenomAuthorityMetadata = {
-  typeUrl: '/symphony.tokenfactory.v1beta1.DenomAuthorityMetadata',
+  typeUrl: "/symphony.tokenfactory.v1beta1.DenomAuthorityMetadata",
   is(o: any): o is DenomAuthorityMetadata {
-    return (
-      o &&
-      (o.$typeUrl === DenomAuthorityMetadata.typeUrl ||
-        typeof o.admin === 'string')
-    );
+    return o && (o.$typeUrl === DenomAuthorityMetadata.typeUrl || typeof o.admin === "string");
   },
   isSDK(o: any): o is DenomAuthorityMetadataSDKType {
-    return (
-      o &&
-      (o.$typeUrl === DenomAuthorityMetadata.typeUrl ||
-        typeof o.admin === 'string')
-    );
+    return o && (o.$typeUrl === DenomAuthorityMetadata.typeUrl || typeof o.admin === "string");
   },
   isAmino(o: any): o is DenomAuthorityMetadataAmino {
-    return (
-      o &&
-      (o.$typeUrl === DenomAuthorityMetadata.typeUrl ||
-        typeof o.admin === 'string')
-    );
+    return o && (o.$typeUrl === DenomAuthorityMetadata.typeUrl || typeof o.admin === "string");
   },
-  encode(
-    message: DenomAuthorityMetadata,
-    writer: BinaryWriter = BinaryWriter.create(),
-  ): BinaryWriter {
-    if (message.admin !== '') {
+  encode(message: DenomAuthorityMetadata, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
+    if (message.admin !== "") {
       writer.uint32(10).string(message.admin);
     }
     return writer;
   },
-  decode(
-    input: BinaryReader | Uint8Array,
-    length?: number,
-  ): DenomAuthorityMetadata {
-    const reader =
-      input instanceof BinaryReader ? input : new BinaryReader(input);
+  decode(input: BinaryReader | Uint8Array, length?: number): DenomAuthorityMetadata {
+    const reader = input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseDenomAuthorityMetadata();
     while (reader.pos < end) {
@@ -95,7 +76,7 @@ export const DenomAuthorityMetadata = {
   },
   fromPartial(object: Partial<DenomAuthorityMetadata>): DenomAuthorityMetadata {
     const message = createBaseDenomAuthorityMetadata();
-    message.admin = object.admin ?? '';
+    message.admin = object.admin ?? "";
     return message;
   },
   fromAmino(object: DenomAuthorityMetadataAmino): DenomAuthorityMetadata {
@@ -107,15 +88,13 @@ export const DenomAuthorityMetadata = {
   },
   toAmino(message: DenomAuthorityMetadata): DenomAuthorityMetadataAmino {
     const obj: any = {};
-    obj.admin = message.admin === '' ? undefined : message.admin;
+    obj.admin = message.admin === "" ? undefined : message.admin;
     return obj;
   },
   fromAminoMsg(object: DenomAuthorityMetadataAminoMsg): DenomAuthorityMetadata {
     return DenomAuthorityMetadata.fromAmino(object.value);
   },
-  fromProtoMsg(
-    message: DenomAuthorityMetadataProtoMsg,
-  ): DenomAuthorityMetadata {
+  fromProtoMsg(message: DenomAuthorityMetadataProtoMsg): DenomAuthorityMetadata {
     return DenomAuthorityMetadata.decode(message.value);
   },
   toProto(message: DenomAuthorityMetadata): Uint8Array {
@@ -123,12 +102,9 @@ export const DenomAuthorityMetadata = {
   },
   toProtoMsg(message: DenomAuthorityMetadata): DenomAuthorityMetadataProtoMsg {
     return {
-      typeUrl: '/symphony.tokenfactory.v1beta1.DenomAuthorityMetadata',
-      value: DenomAuthorityMetadata.encode(message).finish(),
+      typeUrl: "/symphony.tokenfactory.v1beta1.DenomAuthorityMetadata",
+      value: DenomAuthorityMetadata.encode(message).finish()
     };
-  },
+  }
 };
-GlobalDecoderRegistry.register(
-  DenomAuthorityMetadata.typeUrl,
-  DenomAuthorityMetadata,
-);
+GlobalDecoderRegistry.register(DenomAuthorityMetadata.typeUrl, DenomAuthorityMetadata);

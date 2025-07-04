@@ -1,39 +1,21 @@
 //@ts-nocheck
-import {
-  PageRequest,
-  PageRequestAmino,
-  PageRequestSDKType,
-  PageResponse,
-  PageResponseAmino,
-  PageResponseSDKType,
-} from '../../cosmos/base/query/v1beta1/pagination';
-import { Coin, CoinAmino, CoinSDKType } from '../../cosmos/base/v1beta1/coin';
-import { Gauge, GaugeAmino, GaugeSDKType } from './gauge';
-import {
-  Duration,
-  DurationAmino,
-  DurationSDKType,
-} from '../../google/protobuf/duration';
-import {
-  Group,
-  GroupAmino,
-  GroupSDKType,
-  GroupsWithGauge,
-  GroupsWithGaugeAmino,
-  GroupsWithGaugeSDKType,
-} from './group';
-import { Params, ParamsAmino, ParamsSDKType } from './params';
-import { BinaryReader, BinaryWriter } from '../../binary';
-import { GlobalDecoderRegistry } from '../../registry';
-import { Decimal } from '@cosmjs/math';
+import { PageRequest, PageRequestAmino, PageRequestSDKType, PageResponse, PageResponseAmino, PageResponseSDKType } from "../../cosmos/base/query/v1beta1/pagination";
+import { Coin, CoinAmino, CoinSDKType } from "../../cosmos/base/v1beta1/coin";
+import { Gauge, GaugeAmino, GaugeSDKType } from "./gauge";
+import { Duration, DurationAmino, DurationSDKType } from "../../google/protobuf/duration";
+import { Group, GroupAmino, GroupSDKType, GroupsWithGauge, GroupsWithGaugeAmino, GroupsWithGaugeSDKType } from "./group";
+import { Params, ParamsAmino, ParamsSDKType } from "./params";
+import { BinaryReader, BinaryWriter } from "../../binary";
+import { GlobalDecoderRegistry } from "../../registry";
+import { Decimal } from "@cosmjs/math";
 export interface ModuleToDistributeCoinsRequest {}
 export interface ModuleToDistributeCoinsRequestProtoMsg {
-  typeUrl: '/symphony.incentives.ModuleToDistributeCoinsRequest';
+  typeUrl: "/symphony.incentives.ModuleToDistributeCoinsRequest";
   value: Uint8Array;
 }
 export interface ModuleToDistributeCoinsRequestAmino {}
 export interface ModuleToDistributeCoinsRequestAminoMsg {
-  type: '/symphony.incentives.ModuleToDistributeCoinsRequest';
+  type: "/symphony.incentives.ModuleToDistributeCoinsRequest";
   value: ModuleToDistributeCoinsRequestAmino;
 }
 export interface ModuleToDistributeCoinsRequestSDKType {}
@@ -42,7 +24,7 @@ export interface ModuleToDistributeCoinsResponse {
   coins: Coin[];
 }
 export interface ModuleToDistributeCoinsResponseProtoMsg {
-  typeUrl: '/symphony.incentives.ModuleToDistributeCoinsResponse';
+  typeUrl: "/symphony.incentives.ModuleToDistributeCoinsResponse";
   value: Uint8Array;
 }
 export interface ModuleToDistributeCoinsResponseAmino {
@@ -50,7 +32,7 @@ export interface ModuleToDistributeCoinsResponseAmino {
   coins?: CoinAmino[];
 }
 export interface ModuleToDistributeCoinsResponseAminoMsg {
-  type: '/symphony.incentives.ModuleToDistributeCoinsResponse';
+  type: "/symphony.incentives.ModuleToDistributeCoinsResponse";
   value: ModuleToDistributeCoinsResponseAmino;
 }
 export interface ModuleToDistributeCoinsResponseSDKType {
@@ -61,7 +43,7 @@ export interface GaugeByIDRequest {
   id: bigint;
 }
 export interface GaugeByIDRequestProtoMsg {
-  typeUrl: '/symphony.incentives.GaugeByIDRequest';
+  typeUrl: "/symphony.incentives.GaugeByIDRequest";
   value: Uint8Array;
 }
 export interface GaugeByIDRequestAmino {
@@ -69,7 +51,7 @@ export interface GaugeByIDRequestAmino {
   id?: string;
 }
 export interface GaugeByIDRequestAminoMsg {
-  type: '/symphony.incentives.GaugeByIDRequest';
+  type: "/symphony.incentives.GaugeByIDRequest";
   value: GaugeByIDRequestAmino;
 }
 export interface GaugeByIDRequestSDKType {
@@ -80,7 +62,7 @@ export interface GaugeByIDResponse {
   gauge?: Gauge;
 }
 export interface GaugeByIDResponseProtoMsg {
-  typeUrl: '/symphony.incentives.GaugeByIDResponse';
+  typeUrl: "/symphony.incentives.GaugeByIDResponse";
   value: Uint8Array;
 }
 export interface GaugeByIDResponseAmino {
@@ -88,7 +70,7 @@ export interface GaugeByIDResponseAmino {
   gauge?: GaugeAmino;
 }
 export interface GaugeByIDResponseAminoMsg {
-  type: '/symphony.incentives.GaugeByIDResponse';
+  type: "/symphony.incentives.GaugeByIDResponse";
   value: GaugeByIDResponseAmino;
 }
 export interface GaugeByIDResponseSDKType {
@@ -99,7 +81,7 @@ export interface GaugesRequest {
   pagination?: PageRequest;
 }
 export interface GaugesRequestProtoMsg {
-  typeUrl: '/symphony.incentives.GaugesRequest';
+  typeUrl: "/symphony.incentives.GaugesRequest";
   value: Uint8Array;
 }
 export interface GaugesRequestAmino {
@@ -107,7 +89,7 @@ export interface GaugesRequestAmino {
   pagination?: PageRequestAmino;
 }
 export interface GaugesRequestAminoMsg {
-  type: '/symphony.incentives.GaugesRequest';
+  type: "/symphony.incentives.GaugesRequest";
   value: GaugesRequestAmino;
 }
 export interface GaugesRequestSDKType {
@@ -120,7 +102,7 @@ export interface GaugesResponse {
   pagination?: PageResponse;
 }
 export interface GaugesResponseProtoMsg {
-  typeUrl: '/symphony.incentives.GaugesResponse';
+  typeUrl: "/symphony.incentives.GaugesResponse";
   value: Uint8Array;
 }
 export interface GaugesResponseAmino {
@@ -130,7 +112,7 @@ export interface GaugesResponseAmino {
   pagination?: PageResponseAmino;
 }
 export interface GaugesResponseAminoMsg {
-  type: '/symphony.incentives.GaugesResponse';
+  type: "/symphony.incentives.GaugesResponse";
   value: GaugesResponseAmino;
 }
 export interface GaugesResponseSDKType {
@@ -142,7 +124,7 @@ export interface ActiveGaugesRequest {
   pagination?: PageRequest;
 }
 export interface ActiveGaugesRequestProtoMsg {
-  typeUrl: '/symphony.incentives.ActiveGaugesRequest';
+  typeUrl: "/symphony.incentives.ActiveGaugesRequest";
   value: Uint8Array;
 }
 export interface ActiveGaugesRequestAmino {
@@ -150,7 +132,7 @@ export interface ActiveGaugesRequestAmino {
   pagination?: PageRequestAmino;
 }
 export interface ActiveGaugesRequestAminoMsg {
-  type: '/symphony.incentives.ActiveGaugesRequest';
+  type: "/symphony.incentives.ActiveGaugesRequest";
   value: ActiveGaugesRequestAmino;
 }
 export interface ActiveGaugesRequestSDKType {
@@ -163,7 +145,7 @@ export interface ActiveGaugesResponse {
   pagination?: PageResponse;
 }
 export interface ActiveGaugesResponseProtoMsg {
-  typeUrl: '/symphony.incentives.ActiveGaugesResponse';
+  typeUrl: "/symphony.incentives.ActiveGaugesResponse";
   value: Uint8Array;
 }
 export interface ActiveGaugesResponseAmino {
@@ -173,7 +155,7 @@ export interface ActiveGaugesResponseAmino {
   pagination?: PageResponseAmino;
 }
 export interface ActiveGaugesResponseAminoMsg {
-  type: '/symphony.incentives.ActiveGaugesResponse';
+  type: "/symphony.incentives.ActiveGaugesResponse";
   value: ActiveGaugesResponseAmino;
 }
 export interface ActiveGaugesResponseSDKType {
@@ -187,7 +169,7 @@ export interface ActiveGaugesPerDenomRequest {
   pagination?: PageRequest;
 }
 export interface ActiveGaugesPerDenomRequestProtoMsg {
-  typeUrl: '/symphony.incentives.ActiveGaugesPerDenomRequest';
+  typeUrl: "/symphony.incentives.ActiveGaugesPerDenomRequest";
   value: Uint8Array;
 }
 export interface ActiveGaugesPerDenomRequestAmino {
@@ -197,7 +179,7 @@ export interface ActiveGaugesPerDenomRequestAmino {
   pagination?: PageRequestAmino;
 }
 export interface ActiveGaugesPerDenomRequestAminoMsg {
-  type: '/symphony.incentives.ActiveGaugesPerDenomRequest';
+  type: "/symphony.incentives.ActiveGaugesPerDenomRequest";
   value: ActiveGaugesPerDenomRequestAmino;
 }
 export interface ActiveGaugesPerDenomRequestSDKType {
@@ -211,7 +193,7 @@ export interface ActiveGaugesPerDenomResponse {
   pagination?: PageResponse;
 }
 export interface ActiveGaugesPerDenomResponseProtoMsg {
-  typeUrl: '/symphony.incentives.ActiveGaugesPerDenomResponse';
+  typeUrl: "/symphony.incentives.ActiveGaugesPerDenomResponse";
   value: Uint8Array;
 }
 export interface ActiveGaugesPerDenomResponseAmino {
@@ -221,7 +203,7 @@ export interface ActiveGaugesPerDenomResponseAmino {
   pagination?: PageResponseAmino;
 }
 export interface ActiveGaugesPerDenomResponseAminoMsg {
-  type: '/symphony.incentives.ActiveGaugesPerDenomResponse';
+  type: "/symphony.incentives.ActiveGaugesPerDenomResponse";
   value: ActiveGaugesPerDenomResponseAmino;
 }
 export interface ActiveGaugesPerDenomResponseSDKType {
@@ -233,7 +215,7 @@ export interface UpcomingGaugesRequest {
   pagination?: PageRequest;
 }
 export interface UpcomingGaugesRequestProtoMsg {
-  typeUrl: '/symphony.incentives.UpcomingGaugesRequest';
+  typeUrl: "/symphony.incentives.UpcomingGaugesRequest";
   value: Uint8Array;
 }
 export interface UpcomingGaugesRequestAmino {
@@ -241,7 +223,7 @@ export interface UpcomingGaugesRequestAmino {
   pagination?: PageRequestAmino;
 }
 export interface UpcomingGaugesRequestAminoMsg {
-  type: '/symphony.incentives.UpcomingGaugesRequest';
+  type: "/symphony.incentives.UpcomingGaugesRequest";
   value: UpcomingGaugesRequestAmino;
 }
 export interface UpcomingGaugesRequestSDKType {
@@ -254,7 +236,7 @@ export interface UpcomingGaugesResponse {
   pagination?: PageResponse;
 }
 export interface UpcomingGaugesResponseProtoMsg {
-  typeUrl: '/symphony.incentives.UpcomingGaugesResponse';
+  typeUrl: "/symphony.incentives.UpcomingGaugesResponse";
   value: Uint8Array;
 }
 export interface UpcomingGaugesResponseAmino {
@@ -264,7 +246,7 @@ export interface UpcomingGaugesResponseAmino {
   pagination?: PageResponseAmino;
 }
 export interface UpcomingGaugesResponseAminoMsg {
-  type: '/symphony.incentives.UpcomingGaugesResponse';
+  type: "/symphony.incentives.UpcomingGaugesResponse";
   value: UpcomingGaugesResponseAmino;
 }
 export interface UpcomingGaugesResponseSDKType {
@@ -278,7 +260,7 @@ export interface UpcomingGaugesPerDenomRequest {
   pagination?: PageRequest;
 }
 export interface UpcomingGaugesPerDenomRequestProtoMsg {
-  typeUrl: '/symphony.incentives.UpcomingGaugesPerDenomRequest';
+  typeUrl: "/symphony.incentives.UpcomingGaugesPerDenomRequest";
   value: Uint8Array;
 }
 export interface UpcomingGaugesPerDenomRequestAmino {
@@ -288,7 +270,7 @@ export interface UpcomingGaugesPerDenomRequestAmino {
   pagination?: PageRequestAmino;
 }
 export interface UpcomingGaugesPerDenomRequestAminoMsg {
-  type: '/symphony.incentives.UpcomingGaugesPerDenomRequest';
+  type: "/symphony.incentives.UpcomingGaugesPerDenomRequest";
   value: UpcomingGaugesPerDenomRequestAmino;
 }
 export interface UpcomingGaugesPerDenomRequestSDKType {
@@ -302,7 +284,7 @@ export interface UpcomingGaugesPerDenomResponse {
   pagination?: PageResponse;
 }
 export interface UpcomingGaugesPerDenomResponseProtoMsg {
-  typeUrl: '/symphony.incentives.UpcomingGaugesPerDenomResponse';
+  typeUrl: "/symphony.incentives.UpcomingGaugesPerDenomResponse";
   value: Uint8Array;
 }
 export interface UpcomingGaugesPerDenomResponseAmino {
@@ -312,7 +294,7 @@ export interface UpcomingGaugesPerDenomResponseAmino {
   pagination?: PageResponseAmino;
 }
 export interface UpcomingGaugesPerDenomResponseAminoMsg {
-  type: '/symphony.incentives.UpcomingGaugesPerDenomResponse';
+  type: "/symphony.incentives.UpcomingGaugesPerDenomResponse";
   value: UpcomingGaugesPerDenomResponseAmino;
 }
 export interface UpcomingGaugesPerDenomResponseSDKType {
@@ -331,7 +313,7 @@ export interface RewardsEstRequest {
   endEpoch: bigint;
 }
 export interface RewardsEstRequestProtoMsg {
-  typeUrl: '/symphony.incentives.RewardsEstRequest';
+  typeUrl: "/symphony.incentives.RewardsEstRequest";
   value: Uint8Array;
 }
 export interface RewardsEstRequestAmino {
@@ -346,7 +328,7 @@ export interface RewardsEstRequestAmino {
   end_epoch?: string;
 }
 export interface RewardsEstRequestAminoMsg {
-  type: '/symphony.incentives.RewardsEstRequest';
+  type: "/symphony.incentives.RewardsEstRequest";
   value: RewardsEstRequestAmino;
 }
 export interface RewardsEstRequestSDKType {
@@ -362,7 +344,7 @@ export interface RewardsEstResponse {
   coins: Coin[];
 }
 export interface RewardsEstResponseProtoMsg {
-  typeUrl: '/symphony.incentives.RewardsEstResponse';
+  typeUrl: "/symphony.incentives.RewardsEstResponse";
   value: Uint8Array;
 }
 export interface RewardsEstResponseAmino {
@@ -373,7 +355,7 @@ export interface RewardsEstResponseAmino {
   coins?: CoinAmino[];
 }
 export interface RewardsEstResponseAminoMsg {
-  type: '/symphony.incentives.RewardsEstResponse';
+  type: "/symphony.incentives.RewardsEstResponse";
   value: RewardsEstResponseAmino;
 }
 export interface RewardsEstResponseSDKType {
@@ -381,12 +363,12 @@ export interface RewardsEstResponseSDKType {
 }
 export interface QueryLockableDurationsRequest {}
 export interface QueryLockableDurationsRequestProtoMsg {
-  typeUrl: '/symphony.incentives.QueryLockableDurationsRequest';
+  typeUrl: "/symphony.incentives.QueryLockableDurationsRequest";
   value: Uint8Array;
 }
 export interface QueryLockableDurationsRequestAmino {}
 export interface QueryLockableDurationsRequestAminoMsg {
-  type: '/symphony.incentives.QueryLockableDurationsRequest';
+  type: "/symphony.incentives.QueryLockableDurationsRequest";
   value: QueryLockableDurationsRequestAmino;
 }
 export interface QueryLockableDurationsRequestSDKType {}
@@ -395,7 +377,7 @@ export interface QueryLockableDurationsResponse {
   lockableDurations: Duration[];
 }
 export interface QueryLockableDurationsResponseProtoMsg {
-  typeUrl: '/symphony.incentives.QueryLockableDurationsResponse';
+  typeUrl: "/symphony.incentives.QueryLockableDurationsResponse";
   value: Uint8Array;
 }
 export interface QueryLockableDurationsResponseAmino {
@@ -403,7 +385,7 @@ export interface QueryLockableDurationsResponseAmino {
   lockable_durations?: DurationAmino[];
 }
 export interface QueryLockableDurationsResponseAminoMsg {
-  type: '/symphony.incentives.QueryLockableDurationsResponse';
+  type: "/symphony.incentives.QueryLockableDurationsResponse";
   value: QueryLockableDurationsResponseAmino;
 }
 export interface QueryLockableDurationsResponseSDKType {
@@ -411,12 +393,12 @@ export interface QueryLockableDurationsResponseSDKType {
 }
 export interface QueryAllGroupsRequest {}
 export interface QueryAllGroupsRequestProtoMsg {
-  typeUrl: '/symphony.incentives.QueryAllGroupsRequest';
+  typeUrl: "/symphony.incentives.QueryAllGroupsRequest";
   value: Uint8Array;
 }
 export interface QueryAllGroupsRequestAmino {}
 export interface QueryAllGroupsRequestAminoMsg {
-  type: '/symphony.incentives.QueryAllGroupsRequest';
+  type: "/symphony.incentives.QueryAllGroupsRequest";
   value: QueryAllGroupsRequestAmino;
 }
 export interface QueryAllGroupsRequestSDKType {}
@@ -424,14 +406,14 @@ export interface QueryAllGroupsResponse {
   groups: Group[];
 }
 export interface QueryAllGroupsResponseProtoMsg {
-  typeUrl: '/symphony.incentives.QueryAllGroupsResponse';
+  typeUrl: "/symphony.incentives.QueryAllGroupsResponse";
   value: Uint8Array;
 }
 export interface QueryAllGroupsResponseAmino {
   groups?: GroupAmino[];
 }
 export interface QueryAllGroupsResponseAminoMsg {
-  type: '/symphony.incentives.QueryAllGroupsResponse';
+  type: "/symphony.incentives.QueryAllGroupsResponse";
   value: QueryAllGroupsResponseAmino;
 }
 export interface QueryAllGroupsResponseSDKType {
@@ -439,12 +421,12 @@ export interface QueryAllGroupsResponseSDKType {
 }
 export interface QueryAllGroupsGaugesRequest {}
 export interface QueryAllGroupsGaugesRequestProtoMsg {
-  typeUrl: '/symphony.incentives.QueryAllGroupsGaugesRequest';
+  typeUrl: "/symphony.incentives.QueryAllGroupsGaugesRequest";
   value: Uint8Array;
 }
 export interface QueryAllGroupsGaugesRequestAmino {}
 export interface QueryAllGroupsGaugesRequestAminoMsg {
-  type: '/symphony.incentives.QueryAllGroupsGaugesRequest';
+  type: "/symphony.incentives.QueryAllGroupsGaugesRequest";
   value: QueryAllGroupsGaugesRequestAmino;
 }
 export interface QueryAllGroupsGaugesRequestSDKType {}
@@ -452,14 +434,14 @@ export interface QueryAllGroupsGaugesResponse {
   gauges: Gauge[];
 }
 export interface QueryAllGroupsGaugesResponseProtoMsg {
-  typeUrl: '/symphony.incentives.QueryAllGroupsGaugesResponse';
+  typeUrl: "/symphony.incentives.QueryAllGroupsGaugesResponse";
   value: Uint8Array;
 }
 export interface QueryAllGroupsGaugesResponseAmino {
   gauges?: GaugeAmino[];
 }
 export interface QueryAllGroupsGaugesResponseAminoMsg {
-  type: '/symphony.incentives.QueryAllGroupsGaugesResponse';
+  type: "/symphony.incentives.QueryAllGroupsGaugesResponse";
   value: QueryAllGroupsGaugesResponseAmino;
 }
 export interface QueryAllGroupsGaugesResponseSDKType {
@@ -467,12 +449,12 @@ export interface QueryAllGroupsGaugesResponseSDKType {
 }
 export interface QueryAllGroupsWithGaugeRequest {}
 export interface QueryAllGroupsWithGaugeRequestProtoMsg {
-  typeUrl: '/symphony.incentives.QueryAllGroupsWithGaugeRequest';
+  typeUrl: "/symphony.incentives.QueryAllGroupsWithGaugeRequest";
   value: Uint8Array;
 }
 export interface QueryAllGroupsWithGaugeRequestAmino {}
 export interface QueryAllGroupsWithGaugeRequestAminoMsg {
-  type: '/symphony.incentives.QueryAllGroupsWithGaugeRequest';
+  type: "/symphony.incentives.QueryAllGroupsWithGaugeRequest";
   value: QueryAllGroupsWithGaugeRequestAmino;
 }
 export interface QueryAllGroupsWithGaugeRequestSDKType {}
@@ -480,14 +462,14 @@ export interface QueryAllGroupsWithGaugeResponse {
   groupsWithGauge: GroupsWithGauge[];
 }
 export interface QueryAllGroupsWithGaugeResponseProtoMsg {
-  typeUrl: '/symphony.incentives.QueryAllGroupsWithGaugeResponse';
+  typeUrl: "/symphony.incentives.QueryAllGroupsWithGaugeResponse";
   value: Uint8Array;
 }
 export interface QueryAllGroupsWithGaugeResponseAmino {
   groups_with_gauge?: GroupsWithGaugeAmino[];
 }
 export interface QueryAllGroupsWithGaugeResponseAminoMsg {
-  type: '/symphony.incentives.QueryAllGroupsWithGaugeResponse';
+  type: "/symphony.incentives.QueryAllGroupsWithGaugeResponse";
   value: QueryAllGroupsWithGaugeResponseAmino;
 }
 export interface QueryAllGroupsWithGaugeResponseSDKType {
@@ -497,14 +479,14 @@ export interface QueryGroupByGroupGaugeIDRequest {
   id: bigint;
 }
 export interface QueryGroupByGroupGaugeIDRequestProtoMsg {
-  typeUrl: '/symphony.incentives.QueryGroupByGroupGaugeIDRequest';
+  typeUrl: "/symphony.incentives.QueryGroupByGroupGaugeIDRequest";
   value: Uint8Array;
 }
 export interface QueryGroupByGroupGaugeIDRequestAmino {
   id?: string;
 }
 export interface QueryGroupByGroupGaugeIDRequestAminoMsg {
-  type: '/symphony.incentives.QueryGroupByGroupGaugeIDRequest';
+  type: "/symphony.incentives.QueryGroupByGroupGaugeIDRequest";
   value: QueryGroupByGroupGaugeIDRequestAmino;
 }
 export interface QueryGroupByGroupGaugeIDRequestSDKType {
@@ -514,14 +496,14 @@ export interface QueryGroupByGroupGaugeIDResponse {
   group: Group;
 }
 export interface QueryGroupByGroupGaugeIDResponseProtoMsg {
-  typeUrl: '/symphony.incentives.QueryGroupByGroupGaugeIDResponse';
+  typeUrl: "/symphony.incentives.QueryGroupByGroupGaugeIDResponse";
   value: Uint8Array;
 }
 export interface QueryGroupByGroupGaugeIDResponseAmino {
   group?: GroupAmino;
 }
 export interface QueryGroupByGroupGaugeIDResponseAminoMsg {
-  type: '/symphony.incentives.QueryGroupByGroupGaugeIDResponse';
+  type: "/symphony.incentives.QueryGroupByGroupGaugeIDResponse";
   value: QueryGroupByGroupGaugeIDResponseAmino;
 }
 export interface QueryGroupByGroupGaugeIDResponseSDKType {
@@ -531,14 +513,14 @@ export interface QueryCurrentWeightByGroupGaugeIDRequest {
   groupGaugeId: bigint;
 }
 export interface QueryCurrentWeightByGroupGaugeIDRequestProtoMsg {
-  typeUrl: '/symphony.incentives.QueryCurrentWeightByGroupGaugeIDRequest';
+  typeUrl: "/symphony.incentives.QueryCurrentWeightByGroupGaugeIDRequest";
   value: Uint8Array;
 }
 export interface QueryCurrentWeightByGroupGaugeIDRequestAmino {
   group_gauge_id?: string;
 }
 export interface QueryCurrentWeightByGroupGaugeIDRequestAminoMsg {
-  type: '/symphony.incentives.QueryCurrentWeightByGroupGaugeIDRequest';
+  type: "/symphony.incentives.QueryCurrentWeightByGroupGaugeIDRequest";
   value: QueryCurrentWeightByGroupGaugeIDRequestAmino;
 }
 export interface QueryCurrentWeightByGroupGaugeIDRequestSDKType {
@@ -548,14 +530,14 @@ export interface QueryCurrentWeightByGroupGaugeIDResponse {
   gaugeWeight: GaugeWeight[];
 }
 export interface QueryCurrentWeightByGroupGaugeIDResponseProtoMsg {
-  typeUrl: '/symphony.incentives.QueryCurrentWeightByGroupGaugeIDResponse';
+  typeUrl: "/symphony.incentives.QueryCurrentWeightByGroupGaugeIDResponse";
   value: Uint8Array;
 }
 export interface QueryCurrentWeightByGroupGaugeIDResponseAmino {
   gauge_weight?: GaugeWeightAmino[];
 }
 export interface QueryCurrentWeightByGroupGaugeIDResponseAminoMsg {
-  type: '/symphony.incentives.QueryCurrentWeightByGroupGaugeIDResponse';
+  type: "/symphony.incentives.QueryCurrentWeightByGroupGaugeIDResponse";
   value: QueryCurrentWeightByGroupGaugeIDResponseAmino;
 }
 export interface QueryCurrentWeightByGroupGaugeIDResponseSDKType {
@@ -566,7 +548,7 @@ export interface GaugeWeight {
   weightRatio: string;
 }
 export interface GaugeWeightProtoMsg {
-  typeUrl: '/symphony.incentives.GaugeWeight';
+  typeUrl: "/symphony.incentives.GaugeWeight";
   value: Uint8Array;
 }
 export interface GaugeWeightAmino {
@@ -574,7 +556,7 @@ export interface GaugeWeightAmino {
   weight_ratio?: string;
 }
 export interface GaugeWeightAminoMsg {
-  type: '/symphony.incentives.GaugeWeight';
+  type: "/symphony.incentives.GaugeWeight";
   value: GaugeWeightAmino;
 }
 export interface GaugeWeightSDKType {
@@ -583,12 +565,12 @@ export interface GaugeWeightSDKType {
 }
 export interface ParamsRequest {}
 export interface ParamsRequestProtoMsg {
-  typeUrl: '/symphony.incentives.ParamsRequest';
+  typeUrl: "/symphony.incentives.ParamsRequest";
   value: Uint8Array;
 }
 export interface ParamsRequestAmino {}
 export interface ParamsRequestAminoMsg {
-  type: '/symphony.incentives.ParamsRequest';
+  type: "/symphony.incentives.ParamsRequest";
   value: ParamsRequestAmino;
 }
 export interface ParamsRequestSDKType {}
@@ -596,14 +578,14 @@ export interface ParamsResponse {
   params: Params;
 }
 export interface ParamsResponseProtoMsg {
-  typeUrl: '/symphony.incentives.ParamsResponse';
+  typeUrl: "/symphony.incentives.ParamsResponse";
   value: Uint8Array;
 }
 export interface ParamsResponseAmino {
   params?: ParamsAmino;
 }
 export interface ParamsResponseAminoMsg {
-  type: '/symphony.incentives.ParamsResponse';
+  type: "/symphony.incentives.ParamsResponse";
   value: ParamsResponseAmino;
 }
 export interface ParamsResponseSDKType {
@@ -613,7 +595,7 @@ function createBaseModuleToDistributeCoinsRequest(): ModuleToDistributeCoinsRequ
   return {};
 }
 export const ModuleToDistributeCoinsRequest = {
-  typeUrl: '/symphony.incentives.ModuleToDistributeCoinsRequest',
+  typeUrl: "/symphony.incentives.ModuleToDistributeCoinsRequest",
   is(o: any): o is ModuleToDistributeCoinsRequest {
     return o && o.$typeUrl === ModuleToDistributeCoinsRequest.typeUrl;
   },
@@ -623,18 +605,11 @@ export const ModuleToDistributeCoinsRequest = {
   isAmino(o: any): o is ModuleToDistributeCoinsRequestAmino {
     return o && o.$typeUrl === ModuleToDistributeCoinsRequest.typeUrl;
   },
-  encode(
-    _: ModuleToDistributeCoinsRequest,
-    writer: BinaryWriter = BinaryWriter.create(),
-  ): BinaryWriter {
+  encode(_: ModuleToDistributeCoinsRequest, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
     return writer;
   },
-  decode(
-    input: BinaryReader | Uint8Array,
-    length?: number,
-  ): ModuleToDistributeCoinsRequest {
-    const reader =
-      input instanceof BinaryReader ? input : new BinaryReader(input);
+  decode(input: BinaryReader | Uint8Array, length?: number): ModuleToDistributeCoinsRequest {
+    const reader = input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseModuleToDistributeCoinsRequest();
     while (reader.pos < end) {
@@ -647,94 +622,59 @@ export const ModuleToDistributeCoinsRequest = {
     }
     return message;
   },
-  fromPartial(
-    _: Partial<ModuleToDistributeCoinsRequest>,
-  ): ModuleToDistributeCoinsRequest {
+  fromPartial(_: Partial<ModuleToDistributeCoinsRequest>): ModuleToDistributeCoinsRequest {
     const message = createBaseModuleToDistributeCoinsRequest();
     return message;
   },
-  fromAmino(
-    _: ModuleToDistributeCoinsRequestAmino,
-  ): ModuleToDistributeCoinsRequest {
+  fromAmino(_: ModuleToDistributeCoinsRequestAmino): ModuleToDistributeCoinsRequest {
     const message = createBaseModuleToDistributeCoinsRequest();
     return message;
   },
-  toAmino(
-    _: ModuleToDistributeCoinsRequest,
-  ): ModuleToDistributeCoinsRequestAmino {
+  toAmino(_: ModuleToDistributeCoinsRequest): ModuleToDistributeCoinsRequestAmino {
     const obj: any = {};
     return obj;
   },
-  fromAminoMsg(
-    object: ModuleToDistributeCoinsRequestAminoMsg,
-  ): ModuleToDistributeCoinsRequest {
+  fromAminoMsg(object: ModuleToDistributeCoinsRequestAminoMsg): ModuleToDistributeCoinsRequest {
     return ModuleToDistributeCoinsRequest.fromAmino(object.value);
   },
-  fromProtoMsg(
-    message: ModuleToDistributeCoinsRequestProtoMsg,
-  ): ModuleToDistributeCoinsRequest {
+  fromProtoMsg(message: ModuleToDistributeCoinsRequestProtoMsg): ModuleToDistributeCoinsRequest {
     return ModuleToDistributeCoinsRequest.decode(message.value);
   },
   toProto(message: ModuleToDistributeCoinsRequest): Uint8Array {
     return ModuleToDistributeCoinsRequest.encode(message).finish();
   },
-  toProtoMsg(
-    message: ModuleToDistributeCoinsRequest,
-  ): ModuleToDistributeCoinsRequestProtoMsg {
+  toProtoMsg(message: ModuleToDistributeCoinsRequest): ModuleToDistributeCoinsRequestProtoMsg {
     return {
-      typeUrl: '/symphony.incentives.ModuleToDistributeCoinsRequest',
-      value: ModuleToDistributeCoinsRequest.encode(message).finish(),
+      typeUrl: "/symphony.incentives.ModuleToDistributeCoinsRequest",
+      value: ModuleToDistributeCoinsRequest.encode(message).finish()
     };
-  },
+  }
 };
-GlobalDecoderRegistry.register(
-  ModuleToDistributeCoinsRequest.typeUrl,
-  ModuleToDistributeCoinsRequest,
-);
+GlobalDecoderRegistry.register(ModuleToDistributeCoinsRequest.typeUrl, ModuleToDistributeCoinsRequest);
 function createBaseModuleToDistributeCoinsResponse(): ModuleToDistributeCoinsResponse {
   return {
-    coins: [],
+    coins: []
   };
 }
 export const ModuleToDistributeCoinsResponse = {
-  typeUrl: '/symphony.incentives.ModuleToDistributeCoinsResponse',
+  typeUrl: "/symphony.incentives.ModuleToDistributeCoinsResponse",
   is(o: any): o is ModuleToDistributeCoinsResponse {
-    return (
-      o &&
-      (o.$typeUrl === ModuleToDistributeCoinsResponse.typeUrl ||
-        (Array.isArray(o.coins) && (!o.coins.length || Coin.is(o.coins[0]))))
-    );
+    return o && (o.$typeUrl === ModuleToDistributeCoinsResponse.typeUrl || Array.isArray(o.coins) && (!o.coins.length || Coin.is(o.coins[0])));
   },
   isSDK(o: any): o is ModuleToDistributeCoinsResponseSDKType {
-    return (
-      o &&
-      (o.$typeUrl === ModuleToDistributeCoinsResponse.typeUrl ||
-        (Array.isArray(o.coins) && (!o.coins.length || Coin.isSDK(o.coins[0]))))
-    );
+    return o && (o.$typeUrl === ModuleToDistributeCoinsResponse.typeUrl || Array.isArray(o.coins) && (!o.coins.length || Coin.isSDK(o.coins[0])));
   },
   isAmino(o: any): o is ModuleToDistributeCoinsResponseAmino {
-    return (
-      o &&
-      (o.$typeUrl === ModuleToDistributeCoinsResponse.typeUrl ||
-        (Array.isArray(o.coins) &&
-          (!o.coins.length || Coin.isAmino(o.coins[0]))))
-    );
+    return o && (o.$typeUrl === ModuleToDistributeCoinsResponse.typeUrl || Array.isArray(o.coins) && (!o.coins.length || Coin.isAmino(o.coins[0])));
   },
-  encode(
-    message: ModuleToDistributeCoinsResponse,
-    writer: BinaryWriter = BinaryWriter.create(),
-  ): BinaryWriter {
+  encode(message: ModuleToDistributeCoinsResponse, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
     for (const v of message.coins) {
       Coin.encode(v!, writer.uint32(10).fork()).ldelim();
     }
     return writer;
   },
-  decode(
-    input: BinaryReader | Uint8Array,
-    length?: number,
-  ): ModuleToDistributeCoinsResponse {
-    const reader =
-      input instanceof BinaryReader ? input : new BinaryReader(input);
+  decode(input: BinaryReader | Uint8Array, length?: number): ModuleToDistributeCoinsResponse {
+    const reader = input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseModuleToDistributeCoinsResponse();
     while (reader.pos < end) {
@@ -750,91 +690,66 @@ export const ModuleToDistributeCoinsResponse = {
     }
     return message;
   },
-  fromPartial(
-    object: Partial<ModuleToDistributeCoinsResponse>,
-  ): ModuleToDistributeCoinsResponse {
+  fromPartial(object: Partial<ModuleToDistributeCoinsResponse>): ModuleToDistributeCoinsResponse {
     const message = createBaseModuleToDistributeCoinsResponse();
     message.coins = object.coins?.map(e => Coin.fromPartial(e)) || [];
     return message;
   },
-  fromAmino(
-    object: ModuleToDistributeCoinsResponseAmino,
-  ): ModuleToDistributeCoinsResponse {
+  fromAmino(object: ModuleToDistributeCoinsResponseAmino): ModuleToDistributeCoinsResponse {
     const message = createBaseModuleToDistributeCoinsResponse();
     message.coins = object.coins?.map(e => Coin.fromAmino(e)) || [];
     return message;
   },
-  toAmino(
-    message: ModuleToDistributeCoinsResponse,
-  ): ModuleToDistributeCoinsResponseAmino {
+  toAmino(message: ModuleToDistributeCoinsResponse): ModuleToDistributeCoinsResponseAmino {
     const obj: any = {};
     if (message.coins) {
-      obj.coins = message.coins.map(e => (e ? Coin.toAmino(e) : undefined));
+      obj.coins = message.coins.map(e => e ? Coin.toAmino(e) : undefined);
     } else {
       obj.coins = message.coins;
     }
     return obj;
   },
-  fromAminoMsg(
-    object: ModuleToDistributeCoinsResponseAminoMsg,
-  ): ModuleToDistributeCoinsResponse {
+  fromAminoMsg(object: ModuleToDistributeCoinsResponseAminoMsg): ModuleToDistributeCoinsResponse {
     return ModuleToDistributeCoinsResponse.fromAmino(object.value);
   },
-  fromProtoMsg(
-    message: ModuleToDistributeCoinsResponseProtoMsg,
-  ): ModuleToDistributeCoinsResponse {
+  fromProtoMsg(message: ModuleToDistributeCoinsResponseProtoMsg): ModuleToDistributeCoinsResponse {
     return ModuleToDistributeCoinsResponse.decode(message.value);
   },
   toProto(message: ModuleToDistributeCoinsResponse): Uint8Array {
     return ModuleToDistributeCoinsResponse.encode(message).finish();
   },
-  toProtoMsg(
-    message: ModuleToDistributeCoinsResponse,
-  ): ModuleToDistributeCoinsResponseProtoMsg {
+  toProtoMsg(message: ModuleToDistributeCoinsResponse): ModuleToDistributeCoinsResponseProtoMsg {
     return {
-      typeUrl: '/symphony.incentives.ModuleToDistributeCoinsResponse',
-      value: ModuleToDistributeCoinsResponse.encode(message).finish(),
+      typeUrl: "/symphony.incentives.ModuleToDistributeCoinsResponse",
+      value: ModuleToDistributeCoinsResponse.encode(message).finish()
     };
-  },
+  }
 };
-GlobalDecoderRegistry.register(
-  ModuleToDistributeCoinsResponse.typeUrl,
-  ModuleToDistributeCoinsResponse,
-);
+GlobalDecoderRegistry.register(ModuleToDistributeCoinsResponse.typeUrl, ModuleToDistributeCoinsResponse);
 function createBaseGaugeByIDRequest(): GaugeByIDRequest {
   return {
-    id: BigInt(0),
+    id: BigInt(0)
   };
 }
 export const GaugeByIDRequest = {
-  typeUrl: '/symphony.incentives.GaugeByIDRequest',
+  typeUrl: "/symphony.incentives.GaugeByIDRequest",
   is(o: any): o is GaugeByIDRequest {
-    return (
-      o && (o.$typeUrl === GaugeByIDRequest.typeUrl || typeof o.id === 'bigint')
-    );
+    return o && (o.$typeUrl === GaugeByIDRequest.typeUrl || typeof o.id === "bigint");
   },
   isSDK(o: any): o is GaugeByIDRequestSDKType {
-    return (
-      o && (o.$typeUrl === GaugeByIDRequest.typeUrl || typeof o.id === 'bigint')
-    );
+    return o && (o.$typeUrl === GaugeByIDRequest.typeUrl || typeof o.id === "bigint");
   },
   isAmino(o: any): o is GaugeByIDRequestAmino {
-    return (
-      o && (o.$typeUrl === GaugeByIDRequest.typeUrl || typeof o.id === 'bigint')
-    );
+    return o && (o.$typeUrl === GaugeByIDRequest.typeUrl || typeof o.id === "bigint");
   },
-  encode(
-    message: GaugeByIDRequest,
-    writer: BinaryWriter = BinaryWriter.create(),
-  ): BinaryWriter {
+  encode(message: GaugeByIDRequest, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
     if (message.id !== BigInt(0)) {
       writer.uint32(8).uint64(message.id);
     }
     return writer;
   },
   decode(input: BinaryReader | Uint8Array, length?: number): GaugeByIDRequest {
-    const reader =
-      input instanceof BinaryReader ? input : new BinaryReader(input);
+    const reader = input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseGaugeByIDRequest();
     while (reader.pos < end) {
@@ -852,10 +767,7 @@ export const GaugeByIDRequest = {
   },
   fromPartial(object: Partial<GaugeByIDRequest>): GaugeByIDRequest {
     const message = createBaseGaugeByIDRequest();
-    message.id =
-      object.id !== undefined && object.id !== null
-        ? BigInt(object.id.toString())
-        : BigInt(0);
+    message.id = object.id !== undefined && object.id !== null ? BigInt(object.id.toString()) : BigInt(0);
     return message;
   },
   fromAmino(object: GaugeByIDRequestAmino): GaugeByIDRequest {
@@ -881,19 +793,19 @@ export const GaugeByIDRequest = {
   },
   toProtoMsg(message: GaugeByIDRequest): GaugeByIDRequestProtoMsg {
     return {
-      typeUrl: '/symphony.incentives.GaugeByIDRequest',
-      value: GaugeByIDRequest.encode(message).finish(),
+      typeUrl: "/symphony.incentives.GaugeByIDRequest",
+      value: GaugeByIDRequest.encode(message).finish()
     };
-  },
+  }
 };
 GlobalDecoderRegistry.register(GaugeByIDRequest.typeUrl, GaugeByIDRequest);
 function createBaseGaugeByIDResponse(): GaugeByIDResponse {
   return {
-    gauge: undefined,
+    gauge: undefined
   };
 }
 export const GaugeByIDResponse = {
-  typeUrl: '/symphony.incentives.GaugeByIDResponse',
+  typeUrl: "/symphony.incentives.GaugeByIDResponse",
   is(o: any): o is GaugeByIDResponse {
     return o && o.$typeUrl === GaugeByIDResponse.typeUrl;
   },
@@ -903,18 +815,14 @@ export const GaugeByIDResponse = {
   isAmino(o: any): o is GaugeByIDResponseAmino {
     return o && o.$typeUrl === GaugeByIDResponse.typeUrl;
   },
-  encode(
-    message: GaugeByIDResponse,
-    writer: BinaryWriter = BinaryWriter.create(),
-  ): BinaryWriter {
+  encode(message: GaugeByIDResponse, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
     if (message.gauge !== undefined) {
       Gauge.encode(message.gauge, writer.uint32(10).fork()).ldelim();
     }
     return writer;
   },
   decode(input: BinaryReader | Uint8Array, length?: number): GaugeByIDResponse {
-    const reader =
-      input instanceof BinaryReader ? input : new BinaryReader(input);
+    const reader = input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseGaugeByIDResponse();
     while (reader.pos < end) {
@@ -932,10 +840,7 @@ export const GaugeByIDResponse = {
   },
   fromPartial(object: Partial<GaugeByIDResponse>): GaugeByIDResponse {
     const message = createBaseGaugeByIDResponse();
-    message.gauge =
-      object.gauge !== undefined && object.gauge !== null
-        ? Gauge.fromPartial(object.gauge)
-        : undefined;
+    message.gauge = object.gauge !== undefined && object.gauge !== null ? Gauge.fromPartial(object.gauge) : undefined;
     return message;
   },
   fromAmino(object: GaugeByIDResponseAmino): GaugeByIDResponse {
@@ -961,19 +866,19 @@ export const GaugeByIDResponse = {
   },
   toProtoMsg(message: GaugeByIDResponse): GaugeByIDResponseProtoMsg {
     return {
-      typeUrl: '/symphony.incentives.GaugeByIDResponse',
-      value: GaugeByIDResponse.encode(message).finish(),
+      typeUrl: "/symphony.incentives.GaugeByIDResponse",
+      value: GaugeByIDResponse.encode(message).finish()
     };
-  },
+  }
 };
 GlobalDecoderRegistry.register(GaugeByIDResponse.typeUrl, GaugeByIDResponse);
 function createBaseGaugesRequest(): GaugesRequest {
   return {
-    pagination: undefined,
+    pagination: undefined
   };
 }
 export const GaugesRequest = {
-  typeUrl: '/symphony.incentives.GaugesRequest',
+  typeUrl: "/symphony.incentives.GaugesRequest",
   is(o: any): o is GaugesRequest {
     return o && o.$typeUrl === GaugesRequest.typeUrl;
   },
@@ -983,18 +888,14 @@ export const GaugesRequest = {
   isAmino(o: any): o is GaugesRequestAmino {
     return o && o.$typeUrl === GaugesRequest.typeUrl;
   },
-  encode(
-    message: GaugesRequest,
-    writer: BinaryWriter = BinaryWriter.create(),
-  ): BinaryWriter {
+  encode(message: GaugesRequest, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
     if (message.pagination !== undefined) {
       PageRequest.encode(message.pagination, writer.uint32(10).fork()).ldelim();
     }
     return writer;
   },
   decode(input: BinaryReader | Uint8Array, length?: number): GaugesRequest {
-    const reader =
-      input instanceof BinaryReader ? input : new BinaryReader(input);
+    const reader = input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseGaugesRequest();
     while (reader.pos < end) {
@@ -1012,10 +913,7 @@ export const GaugesRequest = {
   },
   fromPartial(object: Partial<GaugesRequest>): GaugesRequest {
     const message = createBaseGaugesRequest();
-    message.pagination =
-      object.pagination !== undefined && object.pagination !== null
-        ? PageRequest.fromPartial(object.pagination)
-        : undefined;
+    message.pagination = object.pagination !== undefined && object.pagination !== null ? PageRequest.fromPartial(object.pagination) : undefined;
     return message;
   },
   fromAmino(object: GaugesRequestAmino): GaugesRequest {
@@ -1027,9 +925,7 @@ export const GaugesRequest = {
   },
   toAmino(message: GaugesRequest): GaugesRequestAmino {
     const obj: any = {};
-    obj.pagination = message.pagination
-      ? PageRequest.toAmino(message.pagination)
-      : undefined;
+    obj.pagination = message.pagination ? PageRequest.toAmino(message.pagination) : undefined;
     return obj;
   },
   fromAminoMsg(object: GaugesRequestAminoMsg): GaugesRequest {
@@ -1043,59 +939,40 @@ export const GaugesRequest = {
   },
   toProtoMsg(message: GaugesRequest): GaugesRequestProtoMsg {
     return {
-      typeUrl: '/symphony.incentives.GaugesRequest',
-      value: GaugesRequest.encode(message).finish(),
+      typeUrl: "/symphony.incentives.GaugesRequest",
+      value: GaugesRequest.encode(message).finish()
     };
-  },
+  }
 };
 GlobalDecoderRegistry.register(GaugesRequest.typeUrl, GaugesRequest);
 function createBaseGaugesResponse(): GaugesResponse {
   return {
     data: [],
-    pagination: undefined,
+    pagination: undefined
   };
 }
 export const GaugesResponse = {
-  typeUrl: '/symphony.incentives.GaugesResponse',
+  typeUrl: "/symphony.incentives.GaugesResponse",
   is(o: any): o is GaugesResponse {
-    return (
-      o &&
-      (o.$typeUrl === GaugesResponse.typeUrl ||
-        (Array.isArray(o.data) && (!o.data.length || Gauge.is(o.data[0]))))
-    );
+    return o && (o.$typeUrl === GaugesResponse.typeUrl || Array.isArray(o.data) && (!o.data.length || Gauge.is(o.data[0])));
   },
   isSDK(o: any): o is GaugesResponseSDKType {
-    return (
-      o &&
-      (o.$typeUrl === GaugesResponse.typeUrl ||
-        (Array.isArray(o.data) && (!o.data.length || Gauge.isSDK(o.data[0]))))
-    );
+    return o && (o.$typeUrl === GaugesResponse.typeUrl || Array.isArray(o.data) && (!o.data.length || Gauge.isSDK(o.data[0])));
   },
   isAmino(o: any): o is GaugesResponseAmino {
-    return (
-      o &&
-      (o.$typeUrl === GaugesResponse.typeUrl ||
-        (Array.isArray(o.data) && (!o.data.length || Gauge.isAmino(o.data[0]))))
-    );
+    return o && (o.$typeUrl === GaugesResponse.typeUrl || Array.isArray(o.data) && (!o.data.length || Gauge.isAmino(o.data[0])));
   },
-  encode(
-    message: GaugesResponse,
-    writer: BinaryWriter = BinaryWriter.create(),
-  ): BinaryWriter {
+  encode(message: GaugesResponse, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
     for (const v of message.data) {
       Gauge.encode(v!, writer.uint32(10).fork()).ldelim();
     }
     if (message.pagination !== undefined) {
-      PageResponse.encode(
-        message.pagination,
-        writer.uint32(18).fork(),
-      ).ldelim();
+      PageResponse.encode(message.pagination, writer.uint32(18).fork()).ldelim();
     }
     return writer;
   },
   decode(input: BinaryReader | Uint8Array, length?: number): GaugesResponse {
-    const reader =
-      input instanceof BinaryReader ? input : new BinaryReader(input);
+    const reader = input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseGaugesResponse();
     while (reader.pos < end) {
@@ -1117,10 +994,7 @@ export const GaugesResponse = {
   fromPartial(object: Partial<GaugesResponse>): GaugesResponse {
     const message = createBaseGaugesResponse();
     message.data = object.data?.map(e => Gauge.fromPartial(e)) || [];
-    message.pagination =
-      object.pagination !== undefined && object.pagination !== null
-        ? PageResponse.fromPartial(object.pagination)
-        : undefined;
+    message.pagination = object.pagination !== undefined && object.pagination !== null ? PageResponse.fromPartial(object.pagination) : undefined;
     return message;
   },
   fromAmino(object: GaugesResponseAmino): GaugesResponse {
@@ -1134,13 +1008,11 @@ export const GaugesResponse = {
   toAmino(message: GaugesResponse): GaugesResponseAmino {
     const obj: any = {};
     if (message.data) {
-      obj.data = message.data.map(e => (e ? Gauge.toAmino(e) : undefined));
+      obj.data = message.data.map(e => e ? Gauge.toAmino(e) : undefined);
     } else {
       obj.data = message.data;
     }
-    obj.pagination = message.pagination
-      ? PageResponse.toAmino(message.pagination)
-      : undefined;
+    obj.pagination = message.pagination ? PageResponse.toAmino(message.pagination) : undefined;
     return obj;
   },
   fromAminoMsg(object: GaugesResponseAminoMsg): GaugesResponse {
@@ -1154,19 +1026,19 @@ export const GaugesResponse = {
   },
   toProtoMsg(message: GaugesResponse): GaugesResponseProtoMsg {
     return {
-      typeUrl: '/symphony.incentives.GaugesResponse',
-      value: GaugesResponse.encode(message).finish(),
+      typeUrl: "/symphony.incentives.GaugesResponse",
+      value: GaugesResponse.encode(message).finish()
     };
-  },
+  }
 };
 GlobalDecoderRegistry.register(GaugesResponse.typeUrl, GaugesResponse);
 function createBaseActiveGaugesRequest(): ActiveGaugesRequest {
   return {
-    pagination: undefined,
+    pagination: undefined
   };
 }
 export const ActiveGaugesRequest = {
-  typeUrl: '/symphony.incentives.ActiveGaugesRequest',
+  typeUrl: "/symphony.incentives.ActiveGaugesRequest",
   is(o: any): o is ActiveGaugesRequest {
     return o && o.$typeUrl === ActiveGaugesRequest.typeUrl;
   },
@@ -1176,21 +1048,14 @@ export const ActiveGaugesRequest = {
   isAmino(o: any): o is ActiveGaugesRequestAmino {
     return o && o.$typeUrl === ActiveGaugesRequest.typeUrl;
   },
-  encode(
-    message: ActiveGaugesRequest,
-    writer: BinaryWriter = BinaryWriter.create(),
-  ): BinaryWriter {
+  encode(message: ActiveGaugesRequest, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
     if (message.pagination !== undefined) {
       PageRequest.encode(message.pagination, writer.uint32(10).fork()).ldelim();
     }
     return writer;
   },
-  decode(
-    input: BinaryReader | Uint8Array,
-    length?: number,
-  ): ActiveGaugesRequest {
-    const reader =
-      input instanceof BinaryReader ? input : new BinaryReader(input);
+  decode(input: BinaryReader | Uint8Array, length?: number): ActiveGaugesRequest {
+    const reader = input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseActiveGaugesRequest();
     while (reader.pos < end) {
@@ -1208,10 +1073,7 @@ export const ActiveGaugesRequest = {
   },
   fromPartial(object: Partial<ActiveGaugesRequest>): ActiveGaugesRequest {
     const message = createBaseActiveGaugesRequest();
-    message.pagination =
-      object.pagination !== undefined && object.pagination !== null
-        ? PageRequest.fromPartial(object.pagination)
-        : undefined;
+    message.pagination = object.pagination !== undefined && object.pagination !== null ? PageRequest.fromPartial(object.pagination) : undefined;
     return message;
   },
   fromAmino(object: ActiveGaugesRequestAmino): ActiveGaugesRequest {
@@ -1223,9 +1085,7 @@ export const ActiveGaugesRequest = {
   },
   toAmino(message: ActiveGaugesRequest): ActiveGaugesRequestAmino {
     const obj: any = {};
-    obj.pagination = message.pagination
-      ? PageRequest.toAmino(message.pagination)
-      : undefined;
+    obj.pagination = message.pagination ? PageRequest.toAmino(message.pagination) : undefined;
     return obj;
   },
   fromAminoMsg(object: ActiveGaugesRequestAminoMsg): ActiveGaugesRequest {
@@ -1239,65 +1099,40 @@ export const ActiveGaugesRequest = {
   },
   toProtoMsg(message: ActiveGaugesRequest): ActiveGaugesRequestProtoMsg {
     return {
-      typeUrl: '/symphony.incentives.ActiveGaugesRequest',
-      value: ActiveGaugesRequest.encode(message).finish(),
+      typeUrl: "/symphony.incentives.ActiveGaugesRequest",
+      value: ActiveGaugesRequest.encode(message).finish()
     };
-  },
+  }
 };
-GlobalDecoderRegistry.register(
-  ActiveGaugesRequest.typeUrl,
-  ActiveGaugesRequest,
-);
+GlobalDecoderRegistry.register(ActiveGaugesRequest.typeUrl, ActiveGaugesRequest);
 function createBaseActiveGaugesResponse(): ActiveGaugesResponse {
   return {
     data: [],
-    pagination: undefined,
+    pagination: undefined
   };
 }
 export const ActiveGaugesResponse = {
-  typeUrl: '/symphony.incentives.ActiveGaugesResponse',
+  typeUrl: "/symphony.incentives.ActiveGaugesResponse",
   is(o: any): o is ActiveGaugesResponse {
-    return (
-      o &&
-      (o.$typeUrl === ActiveGaugesResponse.typeUrl ||
-        (Array.isArray(o.data) && (!o.data.length || Gauge.is(o.data[0]))))
-    );
+    return o && (o.$typeUrl === ActiveGaugesResponse.typeUrl || Array.isArray(o.data) && (!o.data.length || Gauge.is(o.data[0])));
   },
   isSDK(o: any): o is ActiveGaugesResponseSDKType {
-    return (
-      o &&
-      (o.$typeUrl === ActiveGaugesResponse.typeUrl ||
-        (Array.isArray(o.data) && (!o.data.length || Gauge.isSDK(o.data[0]))))
-    );
+    return o && (o.$typeUrl === ActiveGaugesResponse.typeUrl || Array.isArray(o.data) && (!o.data.length || Gauge.isSDK(o.data[0])));
   },
   isAmino(o: any): o is ActiveGaugesResponseAmino {
-    return (
-      o &&
-      (o.$typeUrl === ActiveGaugesResponse.typeUrl ||
-        (Array.isArray(o.data) && (!o.data.length || Gauge.isAmino(o.data[0]))))
-    );
+    return o && (o.$typeUrl === ActiveGaugesResponse.typeUrl || Array.isArray(o.data) && (!o.data.length || Gauge.isAmino(o.data[0])));
   },
-  encode(
-    message: ActiveGaugesResponse,
-    writer: BinaryWriter = BinaryWriter.create(),
-  ): BinaryWriter {
+  encode(message: ActiveGaugesResponse, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
     for (const v of message.data) {
       Gauge.encode(v!, writer.uint32(10).fork()).ldelim();
     }
     if (message.pagination !== undefined) {
-      PageResponse.encode(
-        message.pagination,
-        writer.uint32(18).fork(),
-      ).ldelim();
+      PageResponse.encode(message.pagination, writer.uint32(18).fork()).ldelim();
     }
     return writer;
   },
-  decode(
-    input: BinaryReader | Uint8Array,
-    length?: number,
-  ): ActiveGaugesResponse {
-    const reader =
-      input instanceof BinaryReader ? input : new BinaryReader(input);
+  decode(input: BinaryReader | Uint8Array, length?: number): ActiveGaugesResponse {
+    const reader = input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseActiveGaugesResponse();
     while (reader.pos < end) {
@@ -1319,10 +1154,7 @@ export const ActiveGaugesResponse = {
   fromPartial(object: Partial<ActiveGaugesResponse>): ActiveGaugesResponse {
     const message = createBaseActiveGaugesResponse();
     message.data = object.data?.map(e => Gauge.fromPartial(e)) || [];
-    message.pagination =
-      object.pagination !== undefined && object.pagination !== null
-        ? PageResponse.fromPartial(object.pagination)
-        : undefined;
+    message.pagination = object.pagination !== undefined && object.pagination !== null ? PageResponse.fromPartial(object.pagination) : undefined;
     return message;
   },
   fromAmino(object: ActiveGaugesResponseAmino): ActiveGaugesResponse {
@@ -1336,13 +1168,11 @@ export const ActiveGaugesResponse = {
   toAmino(message: ActiveGaugesResponse): ActiveGaugesResponseAmino {
     const obj: any = {};
     if (message.data) {
-      obj.data = message.data.map(e => (e ? Gauge.toAmino(e) : undefined));
+      obj.data = message.data.map(e => e ? Gauge.toAmino(e) : undefined);
     } else {
       obj.data = message.data;
     }
-    obj.pagination = message.pagination
-      ? PageResponse.toAmino(message.pagination)
-      : undefined;
+    obj.pagination = message.pagination ? PageResponse.toAmino(message.pagination) : undefined;
     return obj;
   },
   fromAminoMsg(object: ActiveGaugesResponseAminoMsg): ActiveGaugesResponse {
@@ -1356,49 +1186,31 @@ export const ActiveGaugesResponse = {
   },
   toProtoMsg(message: ActiveGaugesResponse): ActiveGaugesResponseProtoMsg {
     return {
-      typeUrl: '/symphony.incentives.ActiveGaugesResponse',
-      value: ActiveGaugesResponse.encode(message).finish(),
+      typeUrl: "/symphony.incentives.ActiveGaugesResponse",
+      value: ActiveGaugesResponse.encode(message).finish()
     };
-  },
+  }
 };
-GlobalDecoderRegistry.register(
-  ActiveGaugesResponse.typeUrl,
-  ActiveGaugesResponse,
-);
+GlobalDecoderRegistry.register(ActiveGaugesResponse.typeUrl, ActiveGaugesResponse);
 function createBaseActiveGaugesPerDenomRequest(): ActiveGaugesPerDenomRequest {
   return {
-    denom: '',
-    pagination: undefined,
+    denom: "",
+    pagination: undefined
   };
 }
 export const ActiveGaugesPerDenomRequest = {
-  typeUrl: '/symphony.incentives.ActiveGaugesPerDenomRequest',
+  typeUrl: "/symphony.incentives.ActiveGaugesPerDenomRequest",
   is(o: any): o is ActiveGaugesPerDenomRequest {
-    return (
-      o &&
-      (o.$typeUrl === ActiveGaugesPerDenomRequest.typeUrl ||
-        typeof o.denom === 'string')
-    );
+    return o && (o.$typeUrl === ActiveGaugesPerDenomRequest.typeUrl || typeof o.denom === "string");
   },
   isSDK(o: any): o is ActiveGaugesPerDenomRequestSDKType {
-    return (
-      o &&
-      (o.$typeUrl === ActiveGaugesPerDenomRequest.typeUrl ||
-        typeof o.denom === 'string')
-    );
+    return o && (o.$typeUrl === ActiveGaugesPerDenomRequest.typeUrl || typeof o.denom === "string");
   },
   isAmino(o: any): o is ActiveGaugesPerDenomRequestAmino {
-    return (
-      o &&
-      (o.$typeUrl === ActiveGaugesPerDenomRequest.typeUrl ||
-        typeof o.denom === 'string')
-    );
+    return o && (o.$typeUrl === ActiveGaugesPerDenomRequest.typeUrl || typeof o.denom === "string");
   },
-  encode(
-    message: ActiveGaugesPerDenomRequest,
-    writer: BinaryWriter = BinaryWriter.create(),
-  ): BinaryWriter {
-    if (message.denom !== '') {
+  encode(message: ActiveGaugesPerDenomRequest, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
+    if (message.denom !== "") {
       writer.uint32(10).string(message.denom);
     }
     if (message.pagination !== undefined) {
@@ -1406,12 +1218,8 @@ export const ActiveGaugesPerDenomRequest = {
     }
     return writer;
   },
-  decode(
-    input: BinaryReader | Uint8Array,
-    length?: number,
-  ): ActiveGaugesPerDenomRequest {
-    const reader =
-      input instanceof BinaryReader ? input : new BinaryReader(input);
+  decode(input: BinaryReader | Uint8Array, length?: number): ActiveGaugesPerDenomRequest {
+    const reader = input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseActiveGaugesPerDenomRequest();
     while (reader.pos < end) {
@@ -1430,20 +1238,13 @@ export const ActiveGaugesPerDenomRequest = {
     }
     return message;
   },
-  fromPartial(
-    object: Partial<ActiveGaugesPerDenomRequest>,
-  ): ActiveGaugesPerDenomRequest {
+  fromPartial(object: Partial<ActiveGaugesPerDenomRequest>): ActiveGaugesPerDenomRequest {
     const message = createBaseActiveGaugesPerDenomRequest();
-    message.denom = object.denom ?? '';
-    message.pagination =
-      object.pagination !== undefined && object.pagination !== null
-        ? PageRequest.fromPartial(object.pagination)
-        : undefined;
+    message.denom = object.denom ?? "";
+    message.pagination = object.pagination !== undefined && object.pagination !== null ? PageRequest.fromPartial(object.pagination) : undefined;
     return message;
   },
-  fromAmino(
-    object: ActiveGaugesPerDenomRequestAmino,
-  ): ActiveGaugesPerDenomRequest {
+  fromAmino(object: ActiveGaugesPerDenomRequestAmino): ActiveGaugesPerDenomRequest {
     const message = createBaseActiveGaugesPerDenomRequest();
     if (object.denom !== undefined && object.denom !== null) {
       message.denom = object.denom;
@@ -1453,92 +1254,57 @@ export const ActiveGaugesPerDenomRequest = {
     }
     return message;
   },
-  toAmino(
-    message: ActiveGaugesPerDenomRequest,
-  ): ActiveGaugesPerDenomRequestAmino {
+  toAmino(message: ActiveGaugesPerDenomRequest): ActiveGaugesPerDenomRequestAmino {
     const obj: any = {};
-    obj.denom = message.denom === '' ? undefined : message.denom;
-    obj.pagination = message.pagination
-      ? PageRequest.toAmino(message.pagination)
-      : undefined;
+    obj.denom = message.denom === "" ? undefined : message.denom;
+    obj.pagination = message.pagination ? PageRequest.toAmino(message.pagination) : undefined;
     return obj;
   },
-  fromAminoMsg(
-    object: ActiveGaugesPerDenomRequestAminoMsg,
-  ): ActiveGaugesPerDenomRequest {
+  fromAminoMsg(object: ActiveGaugesPerDenomRequestAminoMsg): ActiveGaugesPerDenomRequest {
     return ActiveGaugesPerDenomRequest.fromAmino(object.value);
   },
-  fromProtoMsg(
-    message: ActiveGaugesPerDenomRequestProtoMsg,
-  ): ActiveGaugesPerDenomRequest {
+  fromProtoMsg(message: ActiveGaugesPerDenomRequestProtoMsg): ActiveGaugesPerDenomRequest {
     return ActiveGaugesPerDenomRequest.decode(message.value);
   },
   toProto(message: ActiveGaugesPerDenomRequest): Uint8Array {
     return ActiveGaugesPerDenomRequest.encode(message).finish();
   },
-  toProtoMsg(
-    message: ActiveGaugesPerDenomRequest,
-  ): ActiveGaugesPerDenomRequestProtoMsg {
+  toProtoMsg(message: ActiveGaugesPerDenomRequest): ActiveGaugesPerDenomRequestProtoMsg {
     return {
-      typeUrl: '/symphony.incentives.ActiveGaugesPerDenomRequest',
-      value: ActiveGaugesPerDenomRequest.encode(message).finish(),
+      typeUrl: "/symphony.incentives.ActiveGaugesPerDenomRequest",
+      value: ActiveGaugesPerDenomRequest.encode(message).finish()
     };
-  },
+  }
 };
-GlobalDecoderRegistry.register(
-  ActiveGaugesPerDenomRequest.typeUrl,
-  ActiveGaugesPerDenomRequest,
-);
+GlobalDecoderRegistry.register(ActiveGaugesPerDenomRequest.typeUrl, ActiveGaugesPerDenomRequest);
 function createBaseActiveGaugesPerDenomResponse(): ActiveGaugesPerDenomResponse {
   return {
     data: [],
-    pagination: undefined,
+    pagination: undefined
   };
 }
 export const ActiveGaugesPerDenomResponse = {
-  typeUrl: '/symphony.incentives.ActiveGaugesPerDenomResponse',
+  typeUrl: "/symphony.incentives.ActiveGaugesPerDenomResponse",
   is(o: any): o is ActiveGaugesPerDenomResponse {
-    return (
-      o &&
-      (o.$typeUrl === ActiveGaugesPerDenomResponse.typeUrl ||
-        (Array.isArray(o.data) && (!o.data.length || Gauge.is(o.data[0]))))
-    );
+    return o && (o.$typeUrl === ActiveGaugesPerDenomResponse.typeUrl || Array.isArray(o.data) && (!o.data.length || Gauge.is(o.data[0])));
   },
   isSDK(o: any): o is ActiveGaugesPerDenomResponseSDKType {
-    return (
-      o &&
-      (o.$typeUrl === ActiveGaugesPerDenomResponse.typeUrl ||
-        (Array.isArray(o.data) && (!o.data.length || Gauge.isSDK(o.data[0]))))
-    );
+    return o && (o.$typeUrl === ActiveGaugesPerDenomResponse.typeUrl || Array.isArray(o.data) && (!o.data.length || Gauge.isSDK(o.data[0])));
   },
   isAmino(o: any): o is ActiveGaugesPerDenomResponseAmino {
-    return (
-      o &&
-      (o.$typeUrl === ActiveGaugesPerDenomResponse.typeUrl ||
-        (Array.isArray(o.data) && (!o.data.length || Gauge.isAmino(o.data[0]))))
-    );
+    return o && (o.$typeUrl === ActiveGaugesPerDenomResponse.typeUrl || Array.isArray(o.data) && (!o.data.length || Gauge.isAmino(o.data[0])));
   },
-  encode(
-    message: ActiveGaugesPerDenomResponse,
-    writer: BinaryWriter = BinaryWriter.create(),
-  ): BinaryWriter {
+  encode(message: ActiveGaugesPerDenomResponse, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
     for (const v of message.data) {
       Gauge.encode(v!, writer.uint32(10).fork()).ldelim();
     }
     if (message.pagination !== undefined) {
-      PageResponse.encode(
-        message.pagination,
-        writer.uint32(18).fork(),
-      ).ldelim();
+      PageResponse.encode(message.pagination, writer.uint32(18).fork()).ldelim();
     }
     return writer;
   },
-  decode(
-    input: BinaryReader | Uint8Array,
-    length?: number,
-  ): ActiveGaugesPerDenomResponse {
-    const reader =
-      input instanceof BinaryReader ? input : new BinaryReader(input);
+  decode(input: BinaryReader | Uint8Array, length?: number): ActiveGaugesPerDenomResponse {
+    const reader = input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseActiveGaugesPerDenomResponse();
     while (reader.pos < end) {
@@ -1557,20 +1323,13 @@ export const ActiveGaugesPerDenomResponse = {
     }
     return message;
   },
-  fromPartial(
-    object: Partial<ActiveGaugesPerDenomResponse>,
-  ): ActiveGaugesPerDenomResponse {
+  fromPartial(object: Partial<ActiveGaugesPerDenomResponse>): ActiveGaugesPerDenomResponse {
     const message = createBaseActiveGaugesPerDenomResponse();
     message.data = object.data?.map(e => Gauge.fromPartial(e)) || [];
-    message.pagination =
-      object.pagination !== undefined && object.pagination !== null
-        ? PageResponse.fromPartial(object.pagination)
-        : undefined;
+    message.pagination = object.pagination !== undefined && object.pagination !== null ? PageResponse.fromPartial(object.pagination) : undefined;
     return message;
   },
-  fromAmino(
-    object: ActiveGaugesPerDenomResponseAmino,
-  ): ActiveGaugesPerDenomResponse {
+  fromAmino(object: ActiveGaugesPerDenomResponseAmino): ActiveGaugesPerDenomResponse {
     const message = createBaseActiveGaugesPerDenomResponse();
     message.data = object.data?.map(e => Gauge.fromAmino(e)) || [];
     if (object.pagination !== undefined && object.pagination !== null) {
@@ -1578,53 +1337,40 @@ export const ActiveGaugesPerDenomResponse = {
     }
     return message;
   },
-  toAmino(
-    message: ActiveGaugesPerDenomResponse,
-  ): ActiveGaugesPerDenomResponseAmino {
+  toAmino(message: ActiveGaugesPerDenomResponse): ActiveGaugesPerDenomResponseAmino {
     const obj: any = {};
     if (message.data) {
-      obj.data = message.data.map(e => (e ? Gauge.toAmino(e) : undefined));
+      obj.data = message.data.map(e => e ? Gauge.toAmino(e) : undefined);
     } else {
       obj.data = message.data;
     }
-    obj.pagination = message.pagination
-      ? PageResponse.toAmino(message.pagination)
-      : undefined;
+    obj.pagination = message.pagination ? PageResponse.toAmino(message.pagination) : undefined;
     return obj;
   },
-  fromAminoMsg(
-    object: ActiveGaugesPerDenomResponseAminoMsg,
-  ): ActiveGaugesPerDenomResponse {
+  fromAminoMsg(object: ActiveGaugesPerDenomResponseAminoMsg): ActiveGaugesPerDenomResponse {
     return ActiveGaugesPerDenomResponse.fromAmino(object.value);
   },
-  fromProtoMsg(
-    message: ActiveGaugesPerDenomResponseProtoMsg,
-  ): ActiveGaugesPerDenomResponse {
+  fromProtoMsg(message: ActiveGaugesPerDenomResponseProtoMsg): ActiveGaugesPerDenomResponse {
     return ActiveGaugesPerDenomResponse.decode(message.value);
   },
   toProto(message: ActiveGaugesPerDenomResponse): Uint8Array {
     return ActiveGaugesPerDenomResponse.encode(message).finish();
   },
-  toProtoMsg(
-    message: ActiveGaugesPerDenomResponse,
-  ): ActiveGaugesPerDenomResponseProtoMsg {
+  toProtoMsg(message: ActiveGaugesPerDenomResponse): ActiveGaugesPerDenomResponseProtoMsg {
     return {
-      typeUrl: '/symphony.incentives.ActiveGaugesPerDenomResponse',
-      value: ActiveGaugesPerDenomResponse.encode(message).finish(),
+      typeUrl: "/symphony.incentives.ActiveGaugesPerDenomResponse",
+      value: ActiveGaugesPerDenomResponse.encode(message).finish()
     };
-  },
+  }
 };
-GlobalDecoderRegistry.register(
-  ActiveGaugesPerDenomResponse.typeUrl,
-  ActiveGaugesPerDenomResponse,
-);
+GlobalDecoderRegistry.register(ActiveGaugesPerDenomResponse.typeUrl, ActiveGaugesPerDenomResponse);
 function createBaseUpcomingGaugesRequest(): UpcomingGaugesRequest {
   return {
-    pagination: undefined,
+    pagination: undefined
   };
 }
 export const UpcomingGaugesRequest = {
-  typeUrl: '/symphony.incentives.UpcomingGaugesRequest',
+  typeUrl: "/symphony.incentives.UpcomingGaugesRequest",
   is(o: any): o is UpcomingGaugesRequest {
     return o && o.$typeUrl === UpcomingGaugesRequest.typeUrl;
   },
@@ -1634,21 +1380,14 @@ export const UpcomingGaugesRequest = {
   isAmino(o: any): o is UpcomingGaugesRequestAmino {
     return o && o.$typeUrl === UpcomingGaugesRequest.typeUrl;
   },
-  encode(
-    message: UpcomingGaugesRequest,
-    writer: BinaryWriter = BinaryWriter.create(),
-  ): BinaryWriter {
+  encode(message: UpcomingGaugesRequest, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
     if (message.pagination !== undefined) {
       PageRequest.encode(message.pagination, writer.uint32(10).fork()).ldelim();
     }
     return writer;
   },
-  decode(
-    input: BinaryReader | Uint8Array,
-    length?: number,
-  ): UpcomingGaugesRequest {
-    const reader =
-      input instanceof BinaryReader ? input : new BinaryReader(input);
+  decode(input: BinaryReader | Uint8Array, length?: number): UpcomingGaugesRequest {
+    const reader = input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseUpcomingGaugesRequest();
     while (reader.pos < end) {
@@ -1666,10 +1405,7 @@ export const UpcomingGaugesRequest = {
   },
   fromPartial(object: Partial<UpcomingGaugesRequest>): UpcomingGaugesRequest {
     const message = createBaseUpcomingGaugesRequest();
-    message.pagination =
-      object.pagination !== undefined && object.pagination !== null
-        ? PageRequest.fromPartial(object.pagination)
-        : undefined;
+    message.pagination = object.pagination !== undefined && object.pagination !== null ? PageRequest.fromPartial(object.pagination) : undefined;
     return message;
   },
   fromAmino(object: UpcomingGaugesRequestAmino): UpcomingGaugesRequest {
@@ -1681,9 +1417,7 @@ export const UpcomingGaugesRequest = {
   },
   toAmino(message: UpcomingGaugesRequest): UpcomingGaugesRequestAmino {
     const obj: any = {};
-    obj.pagination = message.pagination
-      ? PageRequest.toAmino(message.pagination)
-      : undefined;
+    obj.pagination = message.pagination ? PageRequest.toAmino(message.pagination) : undefined;
     return obj;
   },
   fromAminoMsg(object: UpcomingGaugesRequestAminoMsg): UpcomingGaugesRequest {
@@ -1697,65 +1431,40 @@ export const UpcomingGaugesRequest = {
   },
   toProtoMsg(message: UpcomingGaugesRequest): UpcomingGaugesRequestProtoMsg {
     return {
-      typeUrl: '/symphony.incentives.UpcomingGaugesRequest',
-      value: UpcomingGaugesRequest.encode(message).finish(),
+      typeUrl: "/symphony.incentives.UpcomingGaugesRequest",
+      value: UpcomingGaugesRequest.encode(message).finish()
     };
-  },
+  }
 };
-GlobalDecoderRegistry.register(
-  UpcomingGaugesRequest.typeUrl,
-  UpcomingGaugesRequest,
-);
+GlobalDecoderRegistry.register(UpcomingGaugesRequest.typeUrl, UpcomingGaugesRequest);
 function createBaseUpcomingGaugesResponse(): UpcomingGaugesResponse {
   return {
     data: [],
-    pagination: undefined,
+    pagination: undefined
   };
 }
 export const UpcomingGaugesResponse = {
-  typeUrl: '/symphony.incentives.UpcomingGaugesResponse',
+  typeUrl: "/symphony.incentives.UpcomingGaugesResponse",
   is(o: any): o is UpcomingGaugesResponse {
-    return (
-      o &&
-      (o.$typeUrl === UpcomingGaugesResponse.typeUrl ||
-        (Array.isArray(o.data) && (!o.data.length || Gauge.is(o.data[0]))))
-    );
+    return o && (o.$typeUrl === UpcomingGaugesResponse.typeUrl || Array.isArray(o.data) && (!o.data.length || Gauge.is(o.data[0])));
   },
   isSDK(o: any): o is UpcomingGaugesResponseSDKType {
-    return (
-      o &&
-      (o.$typeUrl === UpcomingGaugesResponse.typeUrl ||
-        (Array.isArray(o.data) && (!o.data.length || Gauge.isSDK(o.data[0]))))
-    );
+    return o && (o.$typeUrl === UpcomingGaugesResponse.typeUrl || Array.isArray(o.data) && (!o.data.length || Gauge.isSDK(o.data[0])));
   },
   isAmino(o: any): o is UpcomingGaugesResponseAmino {
-    return (
-      o &&
-      (o.$typeUrl === UpcomingGaugesResponse.typeUrl ||
-        (Array.isArray(o.data) && (!o.data.length || Gauge.isAmino(o.data[0]))))
-    );
+    return o && (o.$typeUrl === UpcomingGaugesResponse.typeUrl || Array.isArray(o.data) && (!o.data.length || Gauge.isAmino(o.data[0])));
   },
-  encode(
-    message: UpcomingGaugesResponse,
-    writer: BinaryWriter = BinaryWriter.create(),
-  ): BinaryWriter {
+  encode(message: UpcomingGaugesResponse, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
     for (const v of message.data) {
       Gauge.encode(v!, writer.uint32(10).fork()).ldelim();
     }
     if (message.pagination !== undefined) {
-      PageResponse.encode(
-        message.pagination,
-        writer.uint32(18).fork(),
-      ).ldelim();
+      PageResponse.encode(message.pagination, writer.uint32(18).fork()).ldelim();
     }
     return writer;
   },
-  decode(
-    input: BinaryReader | Uint8Array,
-    length?: number,
-  ): UpcomingGaugesResponse {
-    const reader =
-      input instanceof BinaryReader ? input : new BinaryReader(input);
+  decode(input: BinaryReader | Uint8Array, length?: number): UpcomingGaugesResponse {
+    const reader = input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseUpcomingGaugesResponse();
     while (reader.pos < end) {
@@ -1777,10 +1486,7 @@ export const UpcomingGaugesResponse = {
   fromPartial(object: Partial<UpcomingGaugesResponse>): UpcomingGaugesResponse {
     const message = createBaseUpcomingGaugesResponse();
     message.data = object.data?.map(e => Gauge.fromPartial(e)) || [];
-    message.pagination =
-      object.pagination !== undefined && object.pagination !== null
-        ? PageResponse.fromPartial(object.pagination)
-        : undefined;
+    message.pagination = object.pagination !== undefined && object.pagination !== null ? PageResponse.fromPartial(object.pagination) : undefined;
     return message;
   },
   fromAmino(object: UpcomingGaugesResponseAmino): UpcomingGaugesResponse {
@@ -1794,21 +1500,17 @@ export const UpcomingGaugesResponse = {
   toAmino(message: UpcomingGaugesResponse): UpcomingGaugesResponseAmino {
     const obj: any = {};
     if (message.data) {
-      obj.data = message.data.map(e => (e ? Gauge.toAmino(e) : undefined));
+      obj.data = message.data.map(e => e ? Gauge.toAmino(e) : undefined);
     } else {
       obj.data = message.data;
     }
-    obj.pagination = message.pagination
-      ? PageResponse.toAmino(message.pagination)
-      : undefined;
+    obj.pagination = message.pagination ? PageResponse.toAmino(message.pagination) : undefined;
     return obj;
   },
   fromAminoMsg(object: UpcomingGaugesResponseAminoMsg): UpcomingGaugesResponse {
     return UpcomingGaugesResponse.fromAmino(object.value);
   },
-  fromProtoMsg(
-    message: UpcomingGaugesResponseProtoMsg,
-  ): UpcomingGaugesResponse {
+  fromProtoMsg(message: UpcomingGaugesResponseProtoMsg): UpcomingGaugesResponse {
     return UpcomingGaugesResponse.decode(message.value);
   },
   toProto(message: UpcomingGaugesResponse): Uint8Array {
@@ -1816,49 +1518,31 @@ export const UpcomingGaugesResponse = {
   },
   toProtoMsg(message: UpcomingGaugesResponse): UpcomingGaugesResponseProtoMsg {
     return {
-      typeUrl: '/symphony.incentives.UpcomingGaugesResponse',
-      value: UpcomingGaugesResponse.encode(message).finish(),
+      typeUrl: "/symphony.incentives.UpcomingGaugesResponse",
+      value: UpcomingGaugesResponse.encode(message).finish()
     };
-  },
+  }
 };
-GlobalDecoderRegistry.register(
-  UpcomingGaugesResponse.typeUrl,
-  UpcomingGaugesResponse,
-);
+GlobalDecoderRegistry.register(UpcomingGaugesResponse.typeUrl, UpcomingGaugesResponse);
 function createBaseUpcomingGaugesPerDenomRequest(): UpcomingGaugesPerDenomRequest {
   return {
-    denom: '',
-    pagination: undefined,
+    denom: "",
+    pagination: undefined
   };
 }
 export const UpcomingGaugesPerDenomRequest = {
-  typeUrl: '/symphony.incentives.UpcomingGaugesPerDenomRequest',
+  typeUrl: "/symphony.incentives.UpcomingGaugesPerDenomRequest",
   is(o: any): o is UpcomingGaugesPerDenomRequest {
-    return (
-      o &&
-      (o.$typeUrl === UpcomingGaugesPerDenomRequest.typeUrl ||
-        typeof o.denom === 'string')
-    );
+    return o && (o.$typeUrl === UpcomingGaugesPerDenomRequest.typeUrl || typeof o.denom === "string");
   },
   isSDK(o: any): o is UpcomingGaugesPerDenomRequestSDKType {
-    return (
-      o &&
-      (o.$typeUrl === UpcomingGaugesPerDenomRequest.typeUrl ||
-        typeof o.denom === 'string')
-    );
+    return o && (o.$typeUrl === UpcomingGaugesPerDenomRequest.typeUrl || typeof o.denom === "string");
   },
   isAmino(o: any): o is UpcomingGaugesPerDenomRequestAmino {
-    return (
-      o &&
-      (o.$typeUrl === UpcomingGaugesPerDenomRequest.typeUrl ||
-        typeof o.denom === 'string')
-    );
+    return o && (o.$typeUrl === UpcomingGaugesPerDenomRequest.typeUrl || typeof o.denom === "string");
   },
-  encode(
-    message: UpcomingGaugesPerDenomRequest,
-    writer: BinaryWriter = BinaryWriter.create(),
-  ): BinaryWriter {
-    if (message.denom !== '') {
+  encode(message: UpcomingGaugesPerDenomRequest, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
+    if (message.denom !== "") {
       writer.uint32(10).string(message.denom);
     }
     if (message.pagination !== undefined) {
@@ -1866,12 +1550,8 @@ export const UpcomingGaugesPerDenomRequest = {
     }
     return writer;
   },
-  decode(
-    input: BinaryReader | Uint8Array,
-    length?: number,
-  ): UpcomingGaugesPerDenomRequest {
-    const reader =
-      input instanceof BinaryReader ? input : new BinaryReader(input);
+  decode(input: BinaryReader | Uint8Array, length?: number): UpcomingGaugesPerDenomRequest {
+    const reader = input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseUpcomingGaugesPerDenomRequest();
     while (reader.pos < end) {
@@ -1890,20 +1570,13 @@ export const UpcomingGaugesPerDenomRequest = {
     }
     return message;
   },
-  fromPartial(
-    object: Partial<UpcomingGaugesPerDenomRequest>,
-  ): UpcomingGaugesPerDenomRequest {
+  fromPartial(object: Partial<UpcomingGaugesPerDenomRequest>): UpcomingGaugesPerDenomRequest {
     const message = createBaseUpcomingGaugesPerDenomRequest();
-    message.denom = object.denom ?? '';
-    message.pagination =
-      object.pagination !== undefined && object.pagination !== null
-        ? PageRequest.fromPartial(object.pagination)
-        : undefined;
+    message.denom = object.denom ?? "";
+    message.pagination = object.pagination !== undefined && object.pagination !== null ? PageRequest.fromPartial(object.pagination) : undefined;
     return message;
   },
-  fromAmino(
-    object: UpcomingGaugesPerDenomRequestAmino,
-  ): UpcomingGaugesPerDenomRequest {
+  fromAmino(object: UpcomingGaugesPerDenomRequestAmino): UpcomingGaugesPerDenomRequest {
     const message = createBaseUpcomingGaugesPerDenomRequest();
     if (object.denom !== undefined && object.denom !== null) {
       message.denom = object.denom;
@@ -1913,95 +1586,57 @@ export const UpcomingGaugesPerDenomRequest = {
     }
     return message;
   },
-  toAmino(
-    message: UpcomingGaugesPerDenomRequest,
-  ): UpcomingGaugesPerDenomRequestAmino {
+  toAmino(message: UpcomingGaugesPerDenomRequest): UpcomingGaugesPerDenomRequestAmino {
     const obj: any = {};
-    obj.denom = message.denom === '' ? undefined : message.denom;
-    obj.pagination = message.pagination
-      ? PageRequest.toAmino(message.pagination)
-      : undefined;
+    obj.denom = message.denom === "" ? undefined : message.denom;
+    obj.pagination = message.pagination ? PageRequest.toAmino(message.pagination) : undefined;
     return obj;
   },
-  fromAminoMsg(
-    object: UpcomingGaugesPerDenomRequestAminoMsg,
-  ): UpcomingGaugesPerDenomRequest {
+  fromAminoMsg(object: UpcomingGaugesPerDenomRequestAminoMsg): UpcomingGaugesPerDenomRequest {
     return UpcomingGaugesPerDenomRequest.fromAmino(object.value);
   },
-  fromProtoMsg(
-    message: UpcomingGaugesPerDenomRequestProtoMsg,
-  ): UpcomingGaugesPerDenomRequest {
+  fromProtoMsg(message: UpcomingGaugesPerDenomRequestProtoMsg): UpcomingGaugesPerDenomRequest {
     return UpcomingGaugesPerDenomRequest.decode(message.value);
   },
   toProto(message: UpcomingGaugesPerDenomRequest): Uint8Array {
     return UpcomingGaugesPerDenomRequest.encode(message).finish();
   },
-  toProtoMsg(
-    message: UpcomingGaugesPerDenomRequest,
-  ): UpcomingGaugesPerDenomRequestProtoMsg {
+  toProtoMsg(message: UpcomingGaugesPerDenomRequest): UpcomingGaugesPerDenomRequestProtoMsg {
     return {
-      typeUrl: '/symphony.incentives.UpcomingGaugesPerDenomRequest',
-      value: UpcomingGaugesPerDenomRequest.encode(message).finish(),
+      typeUrl: "/symphony.incentives.UpcomingGaugesPerDenomRequest",
+      value: UpcomingGaugesPerDenomRequest.encode(message).finish()
     };
-  },
+  }
 };
-GlobalDecoderRegistry.register(
-  UpcomingGaugesPerDenomRequest.typeUrl,
-  UpcomingGaugesPerDenomRequest,
-);
+GlobalDecoderRegistry.register(UpcomingGaugesPerDenomRequest.typeUrl, UpcomingGaugesPerDenomRequest);
 function createBaseUpcomingGaugesPerDenomResponse(): UpcomingGaugesPerDenomResponse {
   return {
     upcomingGauges: [],
-    pagination: undefined,
+    pagination: undefined
   };
 }
 export const UpcomingGaugesPerDenomResponse = {
-  typeUrl: '/symphony.incentives.UpcomingGaugesPerDenomResponse',
+  typeUrl: "/symphony.incentives.UpcomingGaugesPerDenomResponse",
   is(o: any): o is UpcomingGaugesPerDenomResponse {
-    return (
-      o &&
-      (o.$typeUrl === UpcomingGaugesPerDenomResponse.typeUrl ||
-        (Array.isArray(o.upcomingGauges) &&
-          (!o.upcomingGauges.length || Gauge.is(o.upcomingGauges[0]))))
-    );
+    return o && (o.$typeUrl === UpcomingGaugesPerDenomResponse.typeUrl || Array.isArray(o.upcomingGauges) && (!o.upcomingGauges.length || Gauge.is(o.upcomingGauges[0])));
   },
   isSDK(o: any): o is UpcomingGaugesPerDenomResponseSDKType {
-    return (
-      o &&
-      (o.$typeUrl === UpcomingGaugesPerDenomResponse.typeUrl ||
-        (Array.isArray(o.upcoming_gauges) &&
-          (!o.upcoming_gauges.length || Gauge.isSDK(o.upcoming_gauges[0]))))
-    );
+    return o && (o.$typeUrl === UpcomingGaugesPerDenomResponse.typeUrl || Array.isArray(o.upcoming_gauges) && (!o.upcoming_gauges.length || Gauge.isSDK(o.upcoming_gauges[0])));
   },
   isAmino(o: any): o is UpcomingGaugesPerDenomResponseAmino {
-    return (
-      o &&
-      (o.$typeUrl === UpcomingGaugesPerDenomResponse.typeUrl ||
-        (Array.isArray(o.upcoming_gauges) &&
-          (!o.upcoming_gauges.length || Gauge.isAmino(o.upcoming_gauges[0]))))
-    );
+    return o && (o.$typeUrl === UpcomingGaugesPerDenomResponse.typeUrl || Array.isArray(o.upcoming_gauges) && (!o.upcoming_gauges.length || Gauge.isAmino(o.upcoming_gauges[0])));
   },
-  encode(
-    message: UpcomingGaugesPerDenomResponse,
-    writer: BinaryWriter = BinaryWriter.create(),
-  ): BinaryWriter {
+  encode(message: UpcomingGaugesPerDenomResponse, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
     for (const v of message.upcomingGauges) {
       Gauge.encode(v!, writer.uint32(10).fork()).ldelim();
     }
     if (message.pagination !== undefined) {
-      PageResponse.encode(
-        message.pagination,
-        writer.uint32(18).fork(),
-      ).ldelim();
+      PageResponse.encode(message.pagination, writer.uint32(18).fork()).ldelim();
     }
     return writer;
   },
-  decode(
-    input: BinaryReader | Uint8Array,
-    length?: number,
-  ): UpcomingGaugesPerDenomResponse {
-    const reader =
-      input instanceof BinaryReader ? input : new BinaryReader(input);
+  decode(input: BinaryReader | Uint8Array, length?: number): UpcomingGaugesPerDenomResponse {
+    const reader = input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseUpcomingGaugesPerDenomResponse();
     while (reader.pos < end) {
@@ -2020,115 +1655,67 @@ export const UpcomingGaugesPerDenomResponse = {
     }
     return message;
   },
-  fromPartial(
-    object: Partial<UpcomingGaugesPerDenomResponse>,
-  ): UpcomingGaugesPerDenomResponse {
+  fromPartial(object: Partial<UpcomingGaugesPerDenomResponse>): UpcomingGaugesPerDenomResponse {
     const message = createBaseUpcomingGaugesPerDenomResponse();
-    message.upcomingGauges =
-      object.upcomingGauges?.map(e => Gauge.fromPartial(e)) || [];
-    message.pagination =
-      object.pagination !== undefined && object.pagination !== null
-        ? PageResponse.fromPartial(object.pagination)
-        : undefined;
+    message.upcomingGauges = object.upcomingGauges?.map(e => Gauge.fromPartial(e)) || [];
+    message.pagination = object.pagination !== undefined && object.pagination !== null ? PageResponse.fromPartial(object.pagination) : undefined;
     return message;
   },
-  fromAmino(
-    object: UpcomingGaugesPerDenomResponseAmino,
-  ): UpcomingGaugesPerDenomResponse {
+  fromAmino(object: UpcomingGaugesPerDenomResponseAmino): UpcomingGaugesPerDenomResponse {
     const message = createBaseUpcomingGaugesPerDenomResponse();
-    message.upcomingGauges =
-      object.upcoming_gauges?.map(e => Gauge.fromAmino(e)) || [];
+    message.upcomingGauges = object.upcoming_gauges?.map(e => Gauge.fromAmino(e)) || [];
     if (object.pagination !== undefined && object.pagination !== null) {
       message.pagination = PageResponse.fromAmino(object.pagination);
     }
     return message;
   },
-  toAmino(
-    message: UpcomingGaugesPerDenomResponse,
-  ): UpcomingGaugesPerDenomResponseAmino {
+  toAmino(message: UpcomingGaugesPerDenomResponse): UpcomingGaugesPerDenomResponseAmino {
     const obj: any = {};
     if (message.upcomingGauges) {
-      obj.upcoming_gauges = message.upcomingGauges.map(e =>
-        e ? Gauge.toAmino(e) : undefined,
-      );
+      obj.upcoming_gauges = message.upcomingGauges.map(e => e ? Gauge.toAmino(e) : undefined);
     } else {
       obj.upcoming_gauges = message.upcomingGauges;
     }
-    obj.pagination = message.pagination
-      ? PageResponse.toAmino(message.pagination)
-      : undefined;
+    obj.pagination = message.pagination ? PageResponse.toAmino(message.pagination) : undefined;
     return obj;
   },
-  fromAminoMsg(
-    object: UpcomingGaugesPerDenomResponseAminoMsg,
-  ): UpcomingGaugesPerDenomResponse {
+  fromAminoMsg(object: UpcomingGaugesPerDenomResponseAminoMsg): UpcomingGaugesPerDenomResponse {
     return UpcomingGaugesPerDenomResponse.fromAmino(object.value);
   },
-  fromProtoMsg(
-    message: UpcomingGaugesPerDenomResponseProtoMsg,
-  ): UpcomingGaugesPerDenomResponse {
+  fromProtoMsg(message: UpcomingGaugesPerDenomResponseProtoMsg): UpcomingGaugesPerDenomResponse {
     return UpcomingGaugesPerDenomResponse.decode(message.value);
   },
   toProto(message: UpcomingGaugesPerDenomResponse): Uint8Array {
     return UpcomingGaugesPerDenomResponse.encode(message).finish();
   },
-  toProtoMsg(
-    message: UpcomingGaugesPerDenomResponse,
-  ): UpcomingGaugesPerDenomResponseProtoMsg {
+  toProtoMsg(message: UpcomingGaugesPerDenomResponse): UpcomingGaugesPerDenomResponseProtoMsg {
     return {
-      typeUrl: '/symphony.incentives.UpcomingGaugesPerDenomResponse',
-      value: UpcomingGaugesPerDenomResponse.encode(message).finish(),
+      typeUrl: "/symphony.incentives.UpcomingGaugesPerDenomResponse",
+      value: UpcomingGaugesPerDenomResponse.encode(message).finish()
     };
-  },
+  }
 };
-GlobalDecoderRegistry.register(
-  UpcomingGaugesPerDenomResponse.typeUrl,
-  UpcomingGaugesPerDenomResponse,
-);
+GlobalDecoderRegistry.register(UpcomingGaugesPerDenomResponse.typeUrl, UpcomingGaugesPerDenomResponse);
 function createBaseRewardsEstRequest(): RewardsEstRequest {
   return {
-    owner: '',
+    owner: "",
     lockIds: [],
-    endEpoch: BigInt(0),
+    endEpoch: BigInt(0)
   };
 }
 export const RewardsEstRequest = {
-  typeUrl: '/symphony.incentives.RewardsEstRequest',
+  typeUrl: "/symphony.incentives.RewardsEstRequest",
   is(o: any): o is RewardsEstRequest {
-    return (
-      o &&
-      (o.$typeUrl === RewardsEstRequest.typeUrl ||
-        (typeof o.owner === 'string' &&
-          Array.isArray(o.lockIds) &&
-          (!o.lockIds.length || typeof o.lockIds[0] === 'bigint') &&
-          typeof o.endEpoch === 'bigint'))
-    );
+    return o && (o.$typeUrl === RewardsEstRequest.typeUrl || typeof o.owner === "string" && Array.isArray(o.lockIds) && (!o.lockIds.length || typeof o.lockIds[0] === "bigint") && typeof o.endEpoch === "bigint");
   },
   isSDK(o: any): o is RewardsEstRequestSDKType {
-    return (
-      o &&
-      (o.$typeUrl === RewardsEstRequest.typeUrl ||
-        (typeof o.owner === 'string' &&
-          Array.isArray(o.lock_ids) &&
-          (!o.lock_ids.length || typeof o.lock_ids[0] === 'bigint') &&
-          typeof o.end_epoch === 'bigint'))
-    );
+    return o && (o.$typeUrl === RewardsEstRequest.typeUrl || typeof o.owner === "string" && Array.isArray(o.lock_ids) && (!o.lock_ids.length || typeof o.lock_ids[0] === "bigint") && typeof o.end_epoch === "bigint");
   },
   isAmino(o: any): o is RewardsEstRequestAmino {
-    return (
-      o &&
-      (o.$typeUrl === RewardsEstRequest.typeUrl ||
-        (typeof o.owner === 'string' &&
-          Array.isArray(o.lock_ids) &&
-          (!o.lock_ids.length || typeof o.lock_ids[0] === 'bigint') &&
-          typeof o.end_epoch === 'bigint'))
-    );
+    return o && (o.$typeUrl === RewardsEstRequest.typeUrl || typeof o.owner === "string" && Array.isArray(o.lock_ids) && (!o.lock_ids.length || typeof o.lock_ids[0] === "bigint") && typeof o.end_epoch === "bigint");
   },
-  encode(
-    message: RewardsEstRequest,
-    writer: BinaryWriter = BinaryWriter.create(),
-  ): BinaryWriter {
-    if (message.owner !== '') {
+  encode(message: RewardsEstRequest, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
+    if (message.owner !== "") {
       writer.uint32(10).string(message.owner);
     }
     writer.uint32(18).fork();
@@ -2142,8 +1729,7 @@ export const RewardsEstRequest = {
     return writer;
   },
   decode(input: BinaryReader | Uint8Array, length?: number): RewardsEstRequest {
-    const reader =
-      input instanceof BinaryReader ? input : new BinaryReader(input);
+    const reader = input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseRewardsEstRequest();
     while (reader.pos < end) {
@@ -2174,12 +1760,9 @@ export const RewardsEstRequest = {
   },
   fromPartial(object: Partial<RewardsEstRequest>): RewardsEstRequest {
     const message = createBaseRewardsEstRequest();
-    message.owner = object.owner ?? '';
+    message.owner = object.owner ?? "";
     message.lockIds = object.lockIds?.map(e => BigInt(e.toString())) || [];
-    message.endEpoch =
-      object.endEpoch !== undefined && object.endEpoch !== null
-        ? BigInt(object.endEpoch.toString())
-        : BigInt(0);
+    message.endEpoch = object.endEpoch !== undefined && object.endEpoch !== null ? BigInt(object.endEpoch.toString()) : BigInt(0);
     return message;
   },
   fromAmino(object: RewardsEstRequestAmino): RewardsEstRequest {
@@ -2195,14 +1778,13 @@ export const RewardsEstRequest = {
   },
   toAmino(message: RewardsEstRequest): RewardsEstRequestAmino {
     const obj: any = {};
-    obj.owner = message.owner === '' ? undefined : message.owner;
+    obj.owner = message.owner === "" ? undefined : message.owner;
     if (message.lockIds) {
       obj.lock_ids = message.lockIds.map(e => e.toString());
     } else {
       obj.lock_ids = message.lockIds;
     }
-    obj.end_epoch =
-      message.endEpoch !== BigInt(0) ? message.endEpoch?.toString() : undefined;
+    obj.end_epoch = message.endEpoch !== BigInt(0) ? message.endEpoch?.toString() : undefined;
     return obj;
   },
   fromAminoMsg(object: RewardsEstRequestAminoMsg): RewardsEstRequest {
@@ -2216,56 +1798,36 @@ export const RewardsEstRequest = {
   },
   toProtoMsg(message: RewardsEstRequest): RewardsEstRequestProtoMsg {
     return {
-      typeUrl: '/symphony.incentives.RewardsEstRequest',
-      value: RewardsEstRequest.encode(message).finish(),
+      typeUrl: "/symphony.incentives.RewardsEstRequest",
+      value: RewardsEstRequest.encode(message).finish()
     };
-  },
+  }
 };
 GlobalDecoderRegistry.register(RewardsEstRequest.typeUrl, RewardsEstRequest);
 function createBaseRewardsEstResponse(): RewardsEstResponse {
   return {
-    coins: [],
+    coins: []
   };
 }
 export const RewardsEstResponse = {
-  typeUrl: '/symphony.incentives.RewardsEstResponse',
+  typeUrl: "/symphony.incentives.RewardsEstResponse",
   is(o: any): o is RewardsEstResponse {
-    return (
-      o &&
-      (o.$typeUrl === RewardsEstResponse.typeUrl ||
-        (Array.isArray(o.coins) && (!o.coins.length || Coin.is(o.coins[0]))))
-    );
+    return o && (o.$typeUrl === RewardsEstResponse.typeUrl || Array.isArray(o.coins) && (!o.coins.length || Coin.is(o.coins[0])));
   },
   isSDK(o: any): o is RewardsEstResponseSDKType {
-    return (
-      o &&
-      (o.$typeUrl === RewardsEstResponse.typeUrl ||
-        (Array.isArray(o.coins) && (!o.coins.length || Coin.isSDK(o.coins[0]))))
-    );
+    return o && (o.$typeUrl === RewardsEstResponse.typeUrl || Array.isArray(o.coins) && (!o.coins.length || Coin.isSDK(o.coins[0])));
   },
   isAmino(o: any): o is RewardsEstResponseAmino {
-    return (
-      o &&
-      (o.$typeUrl === RewardsEstResponse.typeUrl ||
-        (Array.isArray(o.coins) &&
-          (!o.coins.length || Coin.isAmino(o.coins[0]))))
-    );
+    return o && (o.$typeUrl === RewardsEstResponse.typeUrl || Array.isArray(o.coins) && (!o.coins.length || Coin.isAmino(o.coins[0])));
   },
-  encode(
-    message: RewardsEstResponse,
-    writer: BinaryWriter = BinaryWriter.create(),
-  ): BinaryWriter {
+  encode(message: RewardsEstResponse, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
     for (const v of message.coins) {
       Coin.encode(v!, writer.uint32(10).fork()).ldelim();
     }
     return writer;
   },
-  decode(
-    input: BinaryReader | Uint8Array,
-    length?: number,
-  ): RewardsEstResponse {
-    const reader =
-      input instanceof BinaryReader ? input : new BinaryReader(input);
+  decode(input: BinaryReader | Uint8Array, length?: number): RewardsEstResponse {
+    const reader = input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseRewardsEstResponse();
     while (reader.pos < end) {
@@ -2294,7 +1856,7 @@ export const RewardsEstResponse = {
   toAmino(message: RewardsEstResponse): RewardsEstResponseAmino {
     const obj: any = {};
     if (message.coins) {
-      obj.coins = message.coins.map(e => (e ? Coin.toAmino(e) : undefined));
+      obj.coins = message.coins.map(e => e ? Coin.toAmino(e) : undefined);
     } else {
       obj.coins = message.coins;
     }
@@ -2311,17 +1873,17 @@ export const RewardsEstResponse = {
   },
   toProtoMsg(message: RewardsEstResponse): RewardsEstResponseProtoMsg {
     return {
-      typeUrl: '/symphony.incentives.RewardsEstResponse',
-      value: RewardsEstResponse.encode(message).finish(),
+      typeUrl: "/symphony.incentives.RewardsEstResponse",
+      value: RewardsEstResponse.encode(message).finish()
     };
-  },
+  }
 };
 GlobalDecoderRegistry.register(RewardsEstResponse.typeUrl, RewardsEstResponse);
 function createBaseQueryLockableDurationsRequest(): QueryLockableDurationsRequest {
   return {};
 }
 export const QueryLockableDurationsRequest = {
-  typeUrl: '/symphony.incentives.QueryLockableDurationsRequest',
+  typeUrl: "/symphony.incentives.QueryLockableDurationsRequest",
   is(o: any): o is QueryLockableDurationsRequest {
     return o && o.$typeUrl === QueryLockableDurationsRequest.typeUrl;
   },
@@ -2331,18 +1893,11 @@ export const QueryLockableDurationsRequest = {
   isAmino(o: any): o is QueryLockableDurationsRequestAmino {
     return o && o.$typeUrl === QueryLockableDurationsRequest.typeUrl;
   },
-  encode(
-    _: QueryLockableDurationsRequest,
-    writer: BinaryWriter = BinaryWriter.create(),
-  ): BinaryWriter {
+  encode(_: QueryLockableDurationsRequest, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
     return writer;
   },
-  decode(
-    input: BinaryReader | Uint8Array,
-    length?: number,
-  ): QueryLockableDurationsRequest {
-    const reader =
-      input instanceof BinaryReader ? input : new BinaryReader(input);
+  decode(input: BinaryReader | Uint8Array, length?: number): QueryLockableDurationsRequest {
+    const reader = input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseQueryLockableDurationsRequest();
     while (reader.pos < end) {
@@ -2355,107 +1910,66 @@ export const QueryLockableDurationsRequest = {
     }
     return message;
   },
-  fromPartial(
-    _: Partial<QueryLockableDurationsRequest>,
-  ): QueryLockableDurationsRequest {
+  fromPartial(_: Partial<QueryLockableDurationsRequest>): QueryLockableDurationsRequest {
     const message = createBaseQueryLockableDurationsRequest();
     return message;
   },
-  fromAmino(
-    _: QueryLockableDurationsRequestAmino,
-  ): QueryLockableDurationsRequest {
+  fromAmino(_: QueryLockableDurationsRequestAmino): QueryLockableDurationsRequest {
     const message = createBaseQueryLockableDurationsRequest();
     return message;
   },
-  toAmino(
-    _: QueryLockableDurationsRequest,
-  ): QueryLockableDurationsRequestAmino {
+  toAmino(_: QueryLockableDurationsRequest): QueryLockableDurationsRequestAmino {
     const obj: any = {};
     return obj;
   },
-  fromAminoMsg(
-    object: QueryLockableDurationsRequestAminoMsg,
-  ): QueryLockableDurationsRequest {
+  fromAminoMsg(object: QueryLockableDurationsRequestAminoMsg): QueryLockableDurationsRequest {
     return QueryLockableDurationsRequest.fromAmino(object.value);
   },
-  fromProtoMsg(
-    message: QueryLockableDurationsRequestProtoMsg,
-  ): QueryLockableDurationsRequest {
+  fromProtoMsg(message: QueryLockableDurationsRequestProtoMsg): QueryLockableDurationsRequest {
     return QueryLockableDurationsRequest.decode(message.value);
   },
   toProto(message: QueryLockableDurationsRequest): Uint8Array {
     return QueryLockableDurationsRequest.encode(message).finish();
   },
-  toProtoMsg(
-    message: QueryLockableDurationsRequest,
-  ): QueryLockableDurationsRequestProtoMsg {
+  toProtoMsg(message: QueryLockableDurationsRequest): QueryLockableDurationsRequestProtoMsg {
     return {
-      typeUrl: '/symphony.incentives.QueryLockableDurationsRequest',
-      value: QueryLockableDurationsRequest.encode(message).finish(),
+      typeUrl: "/symphony.incentives.QueryLockableDurationsRequest",
+      value: QueryLockableDurationsRequest.encode(message).finish()
     };
-  },
+  }
 };
-GlobalDecoderRegistry.register(
-  QueryLockableDurationsRequest.typeUrl,
-  QueryLockableDurationsRequest,
-);
+GlobalDecoderRegistry.register(QueryLockableDurationsRequest.typeUrl, QueryLockableDurationsRequest);
 function createBaseQueryLockableDurationsResponse(): QueryLockableDurationsResponse {
   return {
-    lockableDurations: [],
+    lockableDurations: []
   };
 }
 export const QueryLockableDurationsResponse = {
-  typeUrl: '/symphony.incentives.QueryLockableDurationsResponse',
+  typeUrl: "/symphony.incentives.QueryLockableDurationsResponse",
   is(o: any): o is QueryLockableDurationsResponse {
-    return (
-      o &&
-      (o.$typeUrl === QueryLockableDurationsResponse.typeUrl ||
-        (Array.isArray(o.lockableDurations) &&
-          (!o.lockableDurations.length || Duration.is(o.lockableDurations[0]))))
-    );
+    return o && (o.$typeUrl === QueryLockableDurationsResponse.typeUrl || Array.isArray(o.lockableDurations) && (!o.lockableDurations.length || Duration.is(o.lockableDurations[0])));
   },
   isSDK(o: any): o is QueryLockableDurationsResponseSDKType {
-    return (
-      o &&
-      (o.$typeUrl === QueryLockableDurationsResponse.typeUrl ||
-        (Array.isArray(o.lockable_durations) &&
-          (!o.lockable_durations.length ||
-            Duration.isSDK(o.lockable_durations[0]))))
-    );
+    return o && (o.$typeUrl === QueryLockableDurationsResponse.typeUrl || Array.isArray(o.lockable_durations) && (!o.lockable_durations.length || Duration.isSDK(o.lockable_durations[0])));
   },
   isAmino(o: any): o is QueryLockableDurationsResponseAmino {
-    return (
-      o &&
-      (o.$typeUrl === QueryLockableDurationsResponse.typeUrl ||
-        (Array.isArray(o.lockable_durations) &&
-          (!o.lockable_durations.length ||
-            Duration.isAmino(o.lockable_durations[0]))))
-    );
+    return o && (o.$typeUrl === QueryLockableDurationsResponse.typeUrl || Array.isArray(o.lockable_durations) && (!o.lockable_durations.length || Duration.isAmino(o.lockable_durations[0])));
   },
-  encode(
-    message: QueryLockableDurationsResponse,
-    writer: BinaryWriter = BinaryWriter.create(),
-  ): BinaryWriter {
+  encode(message: QueryLockableDurationsResponse, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
     for (const v of message.lockableDurations) {
       Duration.encode(v!, writer.uint32(10).fork()).ldelim();
     }
     return writer;
   },
-  decode(
-    input: BinaryReader | Uint8Array,
-    length?: number,
-  ): QueryLockableDurationsResponse {
-    const reader =
-      input instanceof BinaryReader ? input : new BinaryReader(input);
+  decode(input: BinaryReader | Uint8Array, length?: number): QueryLockableDurationsResponse {
+    const reader = input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseQueryLockableDurationsResponse();
     while (reader.pos < end) {
       const tag = reader.uint32();
       switch (tag >>> 3) {
         case 1:
-          message.lockableDurations.push(
-            Duration.decode(reader, reader.uint32()),
-          );
+          message.lockableDurations.push(Duration.decode(reader, reader.uint32()));
           break;
         default:
           reader.skipType(tag & 7);
@@ -2464,66 +1978,47 @@ export const QueryLockableDurationsResponse = {
     }
     return message;
   },
-  fromPartial(
-    object: Partial<QueryLockableDurationsResponse>,
-  ): QueryLockableDurationsResponse {
+  fromPartial(object: Partial<QueryLockableDurationsResponse>): QueryLockableDurationsResponse {
     const message = createBaseQueryLockableDurationsResponse();
-    message.lockableDurations =
-      object.lockableDurations?.map(e => Duration.fromPartial(e)) || [];
+    message.lockableDurations = object.lockableDurations?.map(e => Duration.fromPartial(e)) || [];
     return message;
   },
-  fromAmino(
-    object: QueryLockableDurationsResponseAmino,
-  ): QueryLockableDurationsResponse {
+  fromAmino(object: QueryLockableDurationsResponseAmino): QueryLockableDurationsResponse {
     const message = createBaseQueryLockableDurationsResponse();
-    message.lockableDurations =
-      object.lockable_durations?.map(e => Duration.fromAmino(e)) || [];
+    message.lockableDurations = object.lockable_durations?.map(e => Duration.fromAmino(e)) || [];
     return message;
   },
-  toAmino(
-    message: QueryLockableDurationsResponse,
-  ): QueryLockableDurationsResponseAmino {
+  toAmino(message: QueryLockableDurationsResponse): QueryLockableDurationsResponseAmino {
     const obj: any = {};
     if (message.lockableDurations) {
-      obj.lockable_durations = message.lockableDurations.map(e =>
-        e ? Duration.toAmino(e) : undefined,
-      );
+      obj.lockable_durations = message.lockableDurations.map(e => e ? Duration.toAmino(e) : undefined);
     } else {
       obj.lockable_durations = message.lockableDurations;
     }
     return obj;
   },
-  fromAminoMsg(
-    object: QueryLockableDurationsResponseAminoMsg,
-  ): QueryLockableDurationsResponse {
+  fromAminoMsg(object: QueryLockableDurationsResponseAminoMsg): QueryLockableDurationsResponse {
     return QueryLockableDurationsResponse.fromAmino(object.value);
   },
-  fromProtoMsg(
-    message: QueryLockableDurationsResponseProtoMsg,
-  ): QueryLockableDurationsResponse {
+  fromProtoMsg(message: QueryLockableDurationsResponseProtoMsg): QueryLockableDurationsResponse {
     return QueryLockableDurationsResponse.decode(message.value);
   },
   toProto(message: QueryLockableDurationsResponse): Uint8Array {
     return QueryLockableDurationsResponse.encode(message).finish();
   },
-  toProtoMsg(
-    message: QueryLockableDurationsResponse,
-  ): QueryLockableDurationsResponseProtoMsg {
+  toProtoMsg(message: QueryLockableDurationsResponse): QueryLockableDurationsResponseProtoMsg {
     return {
-      typeUrl: '/symphony.incentives.QueryLockableDurationsResponse',
-      value: QueryLockableDurationsResponse.encode(message).finish(),
+      typeUrl: "/symphony.incentives.QueryLockableDurationsResponse",
+      value: QueryLockableDurationsResponse.encode(message).finish()
     };
-  },
+  }
 };
-GlobalDecoderRegistry.register(
-  QueryLockableDurationsResponse.typeUrl,
-  QueryLockableDurationsResponse,
-);
+GlobalDecoderRegistry.register(QueryLockableDurationsResponse.typeUrl, QueryLockableDurationsResponse);
 function createBaseQueryAllGroupsRequest(): QueryAllGroupsRequest {
   return {};
 }
 export const QueryAllGroupsRequest = {
-  typeUrl: '/symphony.incentives.QueryAllGroupsRequest',
+  typeUrl: "/symphony.incentives.QueryAllGroupsRequest",
   is(o: any): o is QueryAllGroupsRequest {
     return o && o.$typeUrl === QueryAllGroupsRequest.typeUrl;
   },
@@ -2533,18 +2028,11 @@ export const QueryAllGroupsRequest = {
   isAmino(o: any): o is QueryAllGroupsRequestAmino {
     return o && o.$typeUrl === QueryAllGroupsRequest.typeUrl;
   },
-  encode(
-    _: QueryAllGroupsRequest,
-    writer: BinaryWriter = BinaryWriter.create(),
-  ): BinaryWriter {
+  encode(_: QueryAllGroupsRequest, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
     return writer;
   },
-  decode(
-    input: BinaryReader | Uint8Array,
-    length?: number,
-  ): QueryAllGroupsRequest {
-    const reader =
-      input instanceof BinaryReader ? input : new BinaryReader(input);
+  decode(input: BinaryReader | Uint8Array, length?: number): QueryAllGroupsRequest {
+    const reader = input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseQueryAllGroupsRequest();
     while (reader.pos < end) {
@@ -2580,61 +2068,36 @@ export const QueryAllGroupsRequest = {
   },
   toProtoMsg(message: QueryAllGroupsRequest): QueryAllGroupsRequestProtoMsg {
     return {
-      typeUrl: '/symphony.incentives.QueryAllGroupsRequest',
-      value: QueryAllGroupsRequest.encode(message).finish(),
+      typeUrl: "/symphony.incentives.QueryAllGroupsRequest",
+      value: QueryAllGroupsRequest.encode(message).finish()
     };
-  },
+  }
 };
-GlobalDecoderRegistry.register(
-  QueryAllGroupsRequest.typeUrl,
-  QueryAllGroupsRequest,
-);
+GlobalDecoderRegistry.register(QueryAllGroupsRequest.typeUrl, QueryAllGroupsRequest);
 function createBaseQueryAllGroupsResponse(): QueryAllGroupsResponse {
   return {
-    groups: [],
+    groups: []
   };
 }
 export const QueryAllGroupsResponse = {
-  typeUrl: '/symphony.incentives.QueryAllGroupsResponse',
+  typeUrl: "/symphony.incentives.QueryAllGroupsResponse",
   is(o: any): o is QueryAllGroupsResponse {
-    return (
-      o &&
-      (o.$typeUrl === QueryAllGroupsResponse.typeUrl ||
-        (Array.isArray(o.groups) &&
-          (!o.groups.length || Group.is(o.groups[0]))))
-    );
+    return o && (o.$typeUrl === QueryAllGroupsResponse.typeUrl || Array.isArray(o.groups) && (!o.groups.length || Group.is(o.groups[0])));
   },
   isSDK(o: any): o is QueryAllGroupsResponseSDKType {
-    return (
-      o &&
-      (o.$typeUrl === QueryAllGroupsResponse.typeUrl ||
-        (Array.isArray(o.groups) &&
-          (!o.groups.length || Group.isSDK(o.groups[0]))))
-    );
+    return o && (o.$typeUrl === QueryAllGroupsResponse.typeUrl || Array.isArray(o.groups) && (!o.groups.length || Group.isSDK(o.groups[0])));
   },
   isAmino(o: any): o is QueryAllGroupsResponseAmino {
-    return (
-      o &&
-      (o.$typeUrl === QueryAllGroupsResponse.typeUrl ||
-        (Array.isArray(o.groups) &&
-          (!o.groups.length || Group.isAmino(o.groups[0]))))
-    );
+    return o && (o.$typeUrl === QueryAllGroupsResponse.typeUrl || Array.isArray(o.groups) && (!o.groups.length || Group.isAmino(o.groups[0])));
   },
-  encode(
-    message: QueryAllGroupsResponse,
-    writer: BinaryWriter = BinaryWriter.create(),
-  ): BinaryWriter {
+  encode(message: QueryAllGroupsResponse, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
     for (const v of message.groups) {
       Group.encode(v!, writer.uint32(10).fork()).ldelim();
     }
     return writer;
   },
-  decode(
-    input: BinaryReader | Uint8Array,
-    length?: number,
-  ): QueryAllGroupsResponse {
-    const reader =
-      input instanceof BinaryReader ? input : new BinaryReader(input);
+  decode(input: BinaryReader | Uint8Array, length?: number): QueryAllGroupsResponse {
+    const reader = input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseQueryAllGroupsResponse();
     while (reader.pos < end) {
@@ -2663,7 +2126,7 @@ export const QueryAllGroupsResponse = {
   toAmino(message: QueryAllGroupsResponse): QueryAllGroupsResponseAmino {
     const obj: any = {};
     if (message.groups) {
-      obj.groups = message.groups.map(e => (e ? Group.toAmino(e) : undefined));
+      obj.groups = message.groups.map(e => e ? Group.toAmino(e) : undefined);
     } else {
       obj.groups = message.groups;
     }
@@ -2672,9 +2135,7 @@ export const QueryAllGroupsResponse = {
   fromAminoMsg(object: QueryAllGroupsResponseAminoMsg): QueryAllGroupsResponse {
     return QueryAllGroupsResponse.fromAmino(object.value);
   },
-  fromProtoMsg(
-    message: QueryAllGroupsResponseProtoMsg,
-  ): QueryAllGroupsResponse {
+  fromProtoMsg(message: QueryAllGroupsResponseProtoMsg): QueryAllGroupsResponse {
     return QueryAllGroupsResponse.decode(message.value);
   },
   toProto(message: QueryAllGroupsResponse): Uint8Array {
@@ -2682,20 +2143,17 @@ export const QueryAllGroupsResponse = {
   },
   toProtoMsg(message: QueryAllGroupsResponse): QueryAllGroupsResponseProtoMsg {
     return {
-      typeUrl: '/symphony.incentives.QueryAllGroupsResponse',
-      value: QueryAllGroupsResponse.encode(message).finish(),
+      typeUrl: "/symphony.incentives.QueryAllGroupsResponse",
+      value: QueryAllGroupsResponse.encode(message).finish()
     };
-  },
+  }
 };
-GlobalDecoderRegistry.register(
-  QueryAllGroupsResponse.typeUrl,
-  QueryAllGroupsResponse,
-);
+GlobalDecoderRegistry.register(QueryAllGroupsResponse.typeUrl, QueryAllGroupsResponse);
 function createBaseQueryAllGroupsGaugesRequest(): QueryAllGroupsGaugesRequest {
   return {};
 }
 export const QueryAllGroupsGaugesRequest = {
-  typeUrl: '/symphony.incentives.QueryAllGroupsGaugesRequest',
+  typeUrl: "/symphony.incentives.QueryAllGroupsGaugesRequest",
   is(o: any): o is QueryAllGroupsGaugesRequest {
     return o && o.$typeUrl === QueryAllGroupsGaugesRequest.typeUrl;
   },
@@ -2705,18 +2163,11 @@ export const QueryAllGroupsGaugesRequest = {
   isAmino(o: any): o is QueryAllGroupsGaugesRequestAmino {
     return o && o.$typeUrl === QueryAllGroupsGaugesRequest.typeUrl;
   },
-  encode(
-    _: QueryAllGroupsGaugesRequest,
-    writer: BinaryWriter = BinaryWriter.create(),
-  ): BinaryWriter {
+  encode(_: QueryAllGroupsGaugesRequest, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
     return writer;
   },
-  decode(
-    input: BinaryReader | Uint8Array,
-    length?: number,
-  ): QueryAllGroupsGaugesRequest {
-    const reader =
-      input instanceof BinaryReader ? input : new BinaryReader(input);
+  decode(input: BinaryReader | Uint8Array, length?: number): QueryAllGroupsGaugesRequest {
+    const reader = input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseQueryAllGroupsGaugesRequest();
     while (reader.pos < end) {
@@ -2729,9 +2180,7 @@ export const QueryAllGroupsGaugesRequest = {
     }
     return message;
   },
-  fromPartial(
-    _: Partial<QueryAllGroupsGaugesRequest>,
-  ): QueryAllGroupsGaugesRequest {
+  fromPartial(_: Partial<QueryAllGroupsGaugesRequest>): QueryAllGroupsGaugesRequest {
     const message = createBaseQueryAllGroupsGaugesRequest();
     return message;
   },
@@ -2743,78 +2192,47 @@ export const QueryAllGroupsGaugesRequest = {
     const obj: any = {};
     return obj;
   },
-  fromAminoMsg(
-    object: QueryAllGroupsGaugesRequestAminoMsg,
-  ): QueryAllGroupsGaugesRequest {
+  fromAminoMsg(object: QueryAllGroupsGaugesRequestAminoMsg): QueryAllGroupsGaugesRequest {
     return QueryAllGroupsGaugesRequest.fromAmino(object.value);
   },
-  fromProtoMsg(
-    message: QueryAllGroupsGaugesRequestProtoMsg,
-  ): QueryAllGroupsGaugesRequest {
+  fromProtoMsg(message: QueryAllGroupsGaugesRequestProtoMsg): QueryAllGroupsGaugesRequest {
     return QueryAllGroupsGaugesRequest.decode(message.value);
   },
   toProto(message: QueryAllGroupsGaugesRequest): Uint8Array {
     return QueryAllGroupsGaugesRequest.encode(message).finish();
   },
-  toProtoMsg(
-    message: QueryAllGroupsGaugesRequest,
-  ): QueryAllGroupsGaugesRequestProtoMsg {
+  toProtoMsg(message: QueryAllGroupsGaugesRequest): QueryAllGroupsGaugesRequestProtoMsg {
     return {
-      typeUrl: '/symphony.incentives.QueryAllGroupsGaugesRequest',
-      value: QueryAllGroupsGaugesRequest.encode(message).finish(),
+      typeUrl: "/symphony.incentives.QueryAllGroupsGaugesRequest",
+      value: QueryAllGroupsGaugesRequest.encode(message).finish()
     };
-  },
+  }
 };
-GlobalDecoderRegistry.register(
-  QueryAllGroupsGaugesRequest.typeUrl,
-  QueryAllGroupsGaugesRequest,
-);
+GlobalDecoderRegistry.register(QueryAllGroupsGaugesRequest.typeUrl, QueryAllGroupsGaugesRequest);
 function createBaseQueryAllGroupsGaugesResponse(): QueryAllGroupsGaugesResponse {
   return {
-    gauges: [],
+    gauges: []
   };
 }
 export const QueryAllGroupsGaugesResponse = {
-  typeUrl: '/symphony.incentives.QueryAllGroupsGaugesResponse',
+  typeUrl: "/symphony.incentives.QueryAllGroupsGaugesResponse",
   is(o: any): o is QueryAllGroupsGaugesResponse {
-    return (
-      o &&
-      (o.$typeUrl === QueryAllGroupsGaugesResponse.typeUrl ||
-        (Array.isArray(o.gauges) &&
-          (!o.gauges.length || Gauge.is(o.gauges[0]))))
-    );
+    return o && (o.$typeUrl === QueryAllGroupsGaugesResponse.typeUrl || Array.isArray(o.gauges) && (!o.gauges.length || Gauge.is(o.gauges[0])));
   },
   isSDK(o: any): o is QueryAllGroupsGaugesResponseSDKType {
-    return (
-      o &&
-      (o.$typeUrl === QueryAllGroupsGaugesResponse.typeUrl ||
-        (Array.isArray(o.gauges) &&
-          (!o.gauges.length || Gauge.isSDK(o.gauges[0]))))
-    );
+    return o && (o.$typeUrl === QueryAllGroupsGaugesResponse.typeUrl || Array.isArray(o.gauges) && (!o.gauges.length || Gauge.isSDK(o.gauges[0])));
   },
   isAmino(o: any): o is QueryAllGroupsGaugesResponseAmino {
-    return (
-      o &&
-      (o.$typeUrl === QueryAllGroupsGaugesResponse.typeUrl ||
-        (Array.isArray(o.gauges) &&
-          (!o.gauges.length || Gauge.isAmino(o.gauges[0]))))
-    );
+    return o && (o.$typeUrl === QueryAllGroupsGaugesResponse.typeUrl || Array.isArray(o.gauges) && (!o.gauges.length || Gauge.isAmino(o.gauges[0])));
   },
-  encode(
-    message: QueryAllGroupsGaugesResponse,
-    writer: BinaryWriter = BinaryWriter.create(),
-  ): BinaryWriter {
+  encode(message: QueryAllGroupsGaugesResponse, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
     for (const v of message.gauges) {
       Gauge.encode(v!, writer.uint32(10).fork()).ldelim();
     }
     return writer;
   },
-  decode(
-    input: BinaryReader | Uint8Array,
-    length?: number,
-  ): QueryAllGroupsGaugesResponse {
-    const reader =
-      input instanceof BinaryReader ? input : new BinaryReader(input);
+  decode(input: BinaryReader | Uint8Array, length?: number): QueryAllGroupsGaugesResponse {
+    const reader = input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseQueryAllGroupsGaugesResponse();
     while (reader.pos < end) {
@@ -2830,62 +2248,47 @@ export const QueryAllGroupsGaugesResponse = {
     }
     return message;
   },
-  fromPartial(
-    object: Partial<QueryAllGroupsGaugesResponse>,
-  ): QueryAllGroupsGaugesResponse {
+  fromPartial(object: Partial<QueryAllGroupsGaugesResponse>): QueryAllGroupsGaugesResponse {
     const message = createBaseQueryAllGroupsGaugesResponse();
     message.gauges = object.gauges?.map(e => Gauge.fromPartial(e)) || [];
     return message;
   },
-  fromAmino(
-    object: QueryAllGroupsGaugesResponseAmino,
-  ): QueryAllGroupsGaugesResponse {
+  fromAmino(object: QueryAllGroupsGaugesResponseAmino): QueryAllGroupsGaugesResponse {
     const message = createBaseQueryAllGroupsGaugesResponse();
     message.gauges = object.gauges?.map(e => Gauge.fromAmino(e)) || [];
     return message;
   },
-  toAmino(
-    message: QueryAllGroupsGaugesResponse,
-  ): QueryAllGroupsGaugesResponseAmino {
+  toAmino(message: QueryAllGroupsGaugesResponse): QueryAllGroupsGaugesResponseAmino {
     const obj: any = {};
     if (message.gauges) {
-      obj.gauges = message.gauges.map(e => (e ? Gauge.toAmino(e) : undefined));
+      obj.gauges = message.gauges.map(e => e ? Gauge.toAmino(e) : undefined);
     } else {
       obj.gauges = message.gauges;
     }
     return obj;
   },
-  fromAminoMsg(
-    object: QueryAllGroupsGaugesResponseAminoMsg,
-  ): QueryAllGroupsGaugesResponse {
+  fromAminoMsg(object: QueryAllGroupsGaugesResponseAminoMsg): QueryAllGroupsGaugesResponse {
     return QueryAllGroupsGaugesResponse.fromAmino(object.value);
   },
-  fromProtoMsg(
-    message: QueryAllGroupsGaugesResponseProtoMsg,
-  ): QueryAllGroupsGaugesResponse {
+  fromProtoMsg(message: QueryAllGroupsGaugesResponseProtoMsg): QueryAllGroupsGaugesResponse {
     return QueryAllGroupsGaugesResponse.decode(message.value);
   },
   toProto(message: QueryAllGroupsGaugesResponse): Uint8Array {
     return QueryAllGroupsGaugesResponse.encode(message).finish();
   },
-  toProtoMsg(
-    message: QueryAllGroupsGaugesResponse,
-  ): QueryAllGroupsGaugesResponseProtoMsg {
+  toProtoMsg(message: QueryAllGroupsGaugesResponse): QueryAllGroupsGaugesResponseProtoMsg {
     return {
-      typeUrl: '/symphony.incentives.QueryAllGroupsGaugesResponse',
-      value: QueryAllGroupsGaugesResponse.encode(message).finish(),
+      typeUrl: "/symphony.incentives.QueryAllGroupsGaugesResponse",
+      value: QueryAllGroupsGaugesResponse.encode(message).finish()
     };
-  },
+  }
 };
-GlobalDecoderRegistry.register(
-  QueryAllGroupsGaugesResponse.typeUrl,
-  QueryAllGroupsGaugesResponse,
-);
+GlobalDecoderRegistry.register(QueryAllGroupsGaugesResponse.typeUrl, QueryAllGroupsGaugesResponse);
 function createBaseQueryAllGroupsWithGaugeRequest(): QueryAllGroupsWithGaugeRequest {
   return {};
 }
 export const QueryAllGroupsWithGaugeRequest = {
-  typeUrl: '/symphony.incentives.QueryAllGroupsWithGaugeRequest',
+  typeUrl: "/symphony.incentives.QueryAllGroupsWithGaugeRequest",
   is(o: any): o is QueryAllGroupsWithGaugeRequest {
     return o && o.$typeUrl === QueryAllGroupsWithGaugeRequest.typeUrl;
   },
@@ -2895,18 +2298,11 @@ export const QueryAllGroupsWithGaugeRequest = {
   isAmino(o: any): o is QueryAllGroupsWithGaugeRequestAmino {
     return o && o.$typeUrl === QueryAllGroupsWithGaugeRequest.typeUrl;
   },
-  encode(
-    _: QueryAllGroupsWithGaugeRequest,
-    writer: BinaryWriter = BinaryWriter.create(),
-  ): BinaryWriter {
+  encode(_: QueryAllGroupsWithGaugeRequest, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
     return writer;
   },
-  decode(
-    input: BinaryReader | Uint8Array,
-    length?: number,
-  ): QueryAllGroupsWithGaugeRequest {
-    const reader =
-      input instanceof BinaryReader ? input : new BinaryReader(input);
+  decode(input: BinaryReader | Uint8Array, length?: number): QueryAllGroupsWithGaugeRequest {
+    const reader = input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseQueryAllGroupsWithGaugeRequest();
     while (reader.pos < end) {
@@ -2919,108 +2315,66 @@ export const QueryAllGroupsWithGaugeRequest = {
     }
     return message;
   },
-  fromPartial(
-    _: Partial<QueryAllGroupsWithGaugeRequest>,
-  ): QueryAllGroupsWithGaugeRequest {
+  fromPartial(_: Partial<QueryAllGroupsWithGaugeRequest>): QueryAllGroupsWithGaugeRequest {
     const message = createBaseQueryAllGroupsWithGaugeRequest();
     return message;
   },
-  fromAmino(
-    _: QueryAllGroupsWithGaugeRequestAmino,
-  ): QueryAllGroupsWithGaugeRequest {
+  fromAmino(_: QueryAllGroupsWithGaugeRequestAmino): QueryAllGroupsWithGaugeRequest {
     const message = createBaseQueryAllGroupsWithGaugeRequest();
     return message;
   },
-  toAmino(
-    _: QueryAllGroupsWithGaugeRequest,
-  ): QueryAllGroupsWithGaugeRequestAmino {
+  toAmino(_: QueryAllGroupsWithGaugeRequest): QueryAllGroupsWithGaugeRequestAmino {
     const obj: any = {};
     return obj;
   },
-  fromAminoMsg(
-    object: QueryAllGroupsWithGaugeRequestAminoMsg,
-  ): QueryAllGroupsWithGaugeRequest {
+  fromAminoMsg(object: QueryAllGroupsWithGaugeRequestAminoMsg): QueryAllGroupsWithGaugeRequest {
     return QueryAllGroupsWithGaugeRequest.fromAmino(object.value);
   },
-  fromProtoMsg(
-    message: QueryAllGroupsWithGaugeRequestProtoMsg,
-  ): QueryAllGroupsWithGaugeRequest {
+  fromProtoMsg(message: QueryAllGroupsWithGaugeRequestProtoMsg): QueryAllGroupsWithGaugeRequest {
     return QueryAllGroupsWithGaugeRequest.decode(message.value);
   },
   toProto(message: QueryAllGroupsWithGaugeRequest): Uint8Array {
     return QueryAllGroupsWithGaugeRequest.encode(message).finish();
   },
-  toProtoMsg(
-    message: QueryAllGroupsWithGaugeRequest,
-  ): QueryAllGroupsWithGaugeRequestProtoMsg {
+  toProtoMsg(message: QueryAllGroupsWithGaugeRequest): QueryAllGroupsWithGaugeRequestProtoMsg {
     return {
-      typeUrl: '/symphony.incentives.QueryAllGroupsWithGaugeRequest',
-      value: QueryAllGroupsWithGaugeRequest.encode(message).finish(),
+      typeUrl: "/symphony.incentives.QueryAllGroupsWithGaugeRequest",
+      value: QueryAllGroupsWithGaugeRequest.encode(message).finish()
     };
-  },
+  }
 };
-GlobalDecoderRegistry.register(
-  QueryAllGroupsWithGaugeRequest.typeUrl,
-  QueryAllGroupsWithGaugeRequest,
-);
+GlobalDecoderRegistry.register(QueryAllGroupsWithGaugeRequest.typeUrl, QueryAllGroupsWithGaugeRequest);
 function createBaseQueryAllGroupsWithGaugeResponse(): QueryAllGroupsWithGaugeResponse {
   return {
-    groupsWithGauge: [],
+    groupsWithGauge: []
   };
 }
 export const QueryAllGroupsWithGaugeResponse = {
-  typeUrl: '/symphony.incentives.QueryAllGroupsWithGaugeResponse',
+  typeUrl: "/symphony.incentives.QueryAllGroupsWithGaugeResponse",
   is(o: any): o is QueryAllGroupsWithGaugeResponse {
-    return (
-      o &&
-      (o.$typeUrl === QueryAllGroupsWithGaugeResponse.typeUrl ||
-        (Array.isArray(o.groupsWithGauge) &&
-          (!o.groupsWithGauge.length ||
-            GroupsWithGauge.is(o.groupsWithGauge[0]))))
-    );
+    return o && (o.$typeUrl === QueryAllGroupsWithGaugeResponse.typeUrl || Array.isArray(o.groupsWithGauge) && (!o.groupsWithGauge.length || GroupsWithGauge.is(o.groupsWithGauge[0])));
   },
   isSDK(o: any): o is QueryAllGroupsWithGaugeResponseSDKType {
-    return (
-      o &&
-      (o.$typeUrl === QueryAllGroupsWithGaugeResponse.typeUrl ||
-        (Array.isArray(o.groups_with_gauge) &&
-          (!o.groups_with_gauge.length ||
-            GroupsWithGauge.isSDK(o.groups_with_gauge[0]))))
-    );
+    return o && (o.$typeUrl === QueryAllGroupsWithGaugeResponse.typeUrl || Array.isArray(o.groups_with_gauge) && (!o.groups_with_gauge.length || GroupsWithGauge.isSDK(o.groups_with_gauge[0])));
   },
   isAmino(o: any): o is QueryAllGroupsWithGaugeResponseAmino {
-    return (
-      o &&
-      (o.$typeUrl === QueryAllGroupsWithGaugeResponse.typeUrl ||
-        (Array.isArray(o.groups_with_gauge) &&
-          (!o.groups_with_gauge.length ||
-            GroupsWithGauge.isAmino(o.groups_with_gauge[0]))))
-    );
+    return o && (o.$typeUrl === QueryAllGroupsWithGaugeResponse.typeUrl || Array.isArray(o.groups_with_gauge) && (!o.groups_with_gauge.length || GroupsWithGauge.isAmino(o.groups_with_gauge[0])));
   },
-  encode(
-    message: QueryAllGroupsWithGaugeResponse,
-    writer: BinaryWriter = BinaryWriter.create(),
-  ): BinaryWriter {
+  encode(message: QueryAllGroupsWithGaugeResponse, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
     for (const v of message.groupsWithGauge) {
       GroupsWithGauge.encode(v!, writer.uint32(10).fork()).ldelim();
     }
     return writer;
   },
-  decode(
-    input: BinaryReader | Uint8Array,
-    length?: number,
-  ): QueryAllGroupsWithGaugeResponse {
-    const reader =
-      input instanceof BinaryReader ? input : new BinaryReader(input);
+  decode(input: BinaryReader | Uint8Array, length?: number): QueryAllGroupsWithGaugeResponse {
+    const reader = input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseQueryAllGroupsWithGaugeResponse();
     while (reader.pos < end) {
       const tag = reader.uint32();
       switch (tag >>> 3) {
         case 1:
-          message.groupsWithGauge.push(
-            GroupsWithGauge.decode(reader, reader.uint32()),
-          );
+          message.groupsWithGauge.push(GroupsWithGauge.decode(reader, reader.uint32()));
           break;
         default:
           reader.skipType(tag & 7);
@@ -3029,104 +2383,66 @@ export const QueryAllGroupsWithGaugeResponse = {
     }
     return message;
   },
-  fromPartial(
-    object: Partial<QueryAllGroupsWithGaugeResponse>,
-  ): QueryAllGroupsWithGaugeResponse {
+  fromPartial(object: Partial<QueryAllGroupsWithGaugeResponse>): QueryAllGroupsWithGaugeResponse {
     const message = createBaseQueryAllGroupsWithGaugeResponse();
-    message.groupsWithGauge =
-      object.groupsWithGauge?.map(e => GroupsWithGauge.fromPartial(e)) || [];
+    message.groupsWithGauge = object.groupsWithGauge?.map(e => GroupsWithGauge.fromPartial(e)) || [];
     return message;
   },
-  fromAmino(
-    object: QueryAllGroupsWithGaugeResponseAmino,
-  ): QueryAllGroupsWithGaugeResponse {
+  fromAmino(object: QueryAllGroupsWithGaugeResponseAmino): QueryAllGroupsWithGaugeResponse {
     const message = createBaseQueryAllGroupsWithGaugeResponse();
-    message.groupsWithGauge =
-      object.groups_with_gauge?.map(e => GroupsWithGauge.fromAmino(e)) || [];
+    message.groupsWithGauge = object.groups_with_gauge?.map(e => GroupsWithGauge.fromAmino(e)) || [];
     return message;
   },
-  toAmino(
-    message: QueryAllGroupsWithGaugeResponse,
-  ): QueryAllGroupsWithGaugeResponseAmino {
+  toAmino(message: QueryAllGroupsWithGaugeResponse): QueryAllGroupsWithGaugeResponseAmino {
     const obj: any = {};
     if (message.groupsWithGauge) {
-      obj.groups_with_gauge = message.groupsWithGauge.map(e =>
-        e ? GroupsWithGauge.toAmino(e) : undefined,
-      );
+      obj.groups_with_gauge = message.groupsWithGauge.map(e => e ? GroupsWithGauge.toAmino(e) : undefined);
     } else {
       obj.groups_with_gauge = message.groupsWithGauge;
     }
     return obj;
   },
-  fromAminoMsg(
-    object: QueryAllGroupsWithGaugeResponseAminoMsg,
-  ): QueryAllGroupsWithGaugeResponse {
+  fromAminoMsg(object: QueryAllGroupsWithGaugeResponseAminoMsg): QueryAllGroupsWithGaugeResponse {
     return QueryAllGroupsWithGaugeResponse.fromAmino(object.value);
   },
-  fromProtoMsg(
-    message: QueryAllGroupsWithGaugeResponseProtoMsg,
-  ): QueryAllGroupsWithGaugeResponse {
+  fromProtoMsg(message: QueryAllGroupsWithGaugeResponseProtoMsg): QueryAllGroupsWithGaugeResponse {
     return QueryAllGroupsWithGaugeResponse.decode(message.value);
   },
   toProto(message: QueryAllGroupsWithGaugeResponse): Uint8Array {
     return QueryAllGroupsWithGaugeResponse.encode(message).finish();
   },
-  toProtoMsg(
-    message: QueryAllGroupsWithGaugeResponse,
-  ): QueryAllGroupsWithGaugeResponseProtoMsg {
+  toProtoMsg(message: QueryAllGroupsWithGaugeResponse): QueryAllGroupsWithGaugeResponseProtoMsg {
     return {
-      typeUrl: '/symphony.incentives.QueryAllGroupsWithGaugeResponse',
-      value: QueryAllGroupsWithGaugeResponse.encode(message).finish(),
+      typeUrl: "/symphony.incentives.QueryAllGroupsWithGaugeResponse",
+      value: QueryAllGroupsWithGaugeResponse.encode(message).finish()
     };
-  },
+  }
 };
-GlobalDecoderRegistry.register(
-  QueryAllGroupsWithGaugeResponse.typeUrl,
-  QueryAllGroupsWithGaugeResponse,
-);
+GlobalDecoderRegistry.register(QueryAllGroupsWithGaugeResponse.typeUrl, QueryAllGroupsWithGaugeResponse);
 function createBaseQueryGroupByGroupGaugeIDRequest(): QueryGroupByGroupGaugeIDRequest {
   return {
-    id: BigInt(0),
+    id: BigInt(0)
   };
 }
 export const QueryGroupByGroupGaugeIDRequest = {
-  typeUrl: '/symphony.incentives.QueryGroupByGroupGaugeIDRequest',
+  typeUrl: "/symphony.incentives.QueryGroupByGroupGaugeIDRequest",
   is(o: any): o is QueryGroupByGroupGaugeIDRequest {
-    return (
-      o &&
-      (o.$typeUrl === QueryGroupByGroupGaugeIDRequest.typeUrl ||
-        typeof o.id === 'bigint')
-    );
+    return o && (o.$typeUrl === QueryGroupByGroupGaugeIDRequest.typeUrl || typeof o.id === "bigint");
   },
   isSDK(o: any): o is QueryGroupByGroupGaugeIDRequestSDKType {
-    return (
-      o &&
-      (o.$typeUrl === QueryGroupByGroupGaugeIDRequest.typeUrl ||
-        typeof o.id === 'bigint')
-    );
+    return o && (o.$typeUrl === QueryGroupByGroupGaugeIDRequest.typeUrl || typeof o.id === "bigint");
   },
   isAmino(o: any): o is QueryGroupByGroupGaugeIDRequestAmino {
-    return (
-      o &&
-      (o.$typeUrl === QueryGroupByGroupGaugeIDRequest.typeUrl ||
-        typeof o.id === 'bigint')
-    );
+    return o && (o.$typeUrl === QueryGroupByGroupGaugeIDRequest.typeUrl || typeof o.id === "bigint");
   },
-  encode(
-    message: QueryGroupByGroupGaugeIDRequest,
-    writer: BinaryWriter = BinaryWriter.create(),
-  ): BinaryWriter {
+  encode(message: QueryGroupByGroupGaugeIDRequest, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
     if (message.id !== BigInt(0)) {
       writer.uint32(8).uint64(message.id);
     }
     return writer;
   },
-  decode(
-    input: BinaryReader | Uint8Array,
-    length?: number,
-  ): QueryGroupByGroupGaugeIDRequest {
-    const reader =
-      input instanceof BinaryReader ? input : new BinaryReader(input);
+  decode(input: BinaryReader | Uint8Array, length?: number): QueryGroupByGroupGaugeIDRequest {
+    const reader = input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseQueryGroupByGroupGaugeIDRequest();
     while (reader.pos < end) {
@@ -3142,101 +2458,64 @@ export const QueryGroupByGroupGaugeIDRequest = {
     }
     return message;
   },
-  fromPartial(
-    object: Partial<QueryGroupByGroupGaugeIDRequest>,
-  ): QueryGroupByGroupGaugeIDRequest {
+  fromPartial(object: Partial<QueryGroupByGroupGaugeIDRequest>): QueryGroupByGroupGaugeIDRequest {
     const message = createBaseQueryGroupByGroupGaugeIDRequest();
-    message.id =
-      object.id !== undefined && object.id !== null
-        ? BigInt(object.id.toString())
-        : BigInt(0);
+    message.id = object.id !== undefined && object.id !== null ? BigInt(object.id.toString()) : BigInt(0);
     return message;
   },
-  fromAmino(
-    object: QueryGroupByGroupGaugeIDRequestAmino,
-  ): QueryGroupByGroupGaugeIDRequest {
+  fromAmino(object: QueryGroupByGroupGaugeIDRequestAmino): QueryGroupByGroupGaugeIDRequest {
     const message = createBaseQueryGroupByGroupGaugeIDRequest();
     if (object.id !== undefined && object.id !== null) {
       message.id = BigInt(object.id);
     }
     return message;
   },
-  toAmino(
-    message: QueryGroupByGroupGaugeIDRequest,
-  ): QueryGroupByGroupGaugeIDRequestAmino {
+  toAmino(message: QueryGroupByGroupGaugeIDRequest): QueryGroupByGroupGaugeIDRequestAmino {
     const obj: any = {};
     obj.id = message.id !== BigInt(0) ? message.id?.toString() : undefined;
     return obj;
   },
-  fromAminoMsg(
-    object: QueryGroupByGroupGaugeIDRequestAminoMsg,
-  ): QueryGroupByGroupGaugeIDRequest {
+  fromAminoMsg(object: QueryGroupByGroupGaugeIDRequestAminoMsg): QueryGroupByGroupGaugeIDRequest {
     return QueryGroupByGroupGaugeIDRequest.fromAmino(object.value);
   },
-  fromProtoMsg(
-    message: QueryGroupByGroupGaugeIDRequestProtoMsg,
-  ): QueryGroupByGroupGaugeIDRequest {
+  fromProtoMsg(message: QueryGroupByGroupGaugeIDRequestProtoMsg): QueryGroupByGroupGaugeIDRequest {
     return QueryGroupByGroupGaugeIDRequest.decode(message.value);
   },
   toProto(message: QueryGroupByGroupGaugeIDRequest): Uint8Array {
     return QueryGroupByGroupGaugeIDRequest.encode(message).finish();
   },
-  toProtoMsg(
-    message: QueryGroupByGroupGaugeIDRequest,
-  ): QueryGroupByGroupGaugeIDRequestProtoMsg {
+  toProtoMsg(message: QueryGroupByGroupGaugeIDRequest): QueryGroupByGroupGaugeIDRequestProtoMsg {
     return {
-      typeUrl: '/symphony.incentives.QueryGroupByGroupGaugeIDRequest',
-      value: QueryGroupByGroupGaugeIDRequest.encode(message).finish(),
+      typeUrl: "/symphony.incentives.QueryGroupByGroupGaugeIDRequest",
+      value: QueryGroupByGroupGaugeIDRequest.encode(message).finish()
     };
-  },
+  }
 };
-GlobalDecoderRegistry.register(
-  QueryGroupByGroupGaugeIDRequest.typeUrl,
-  QueryGroupByGroupGaugeIDRequest,
-);
+GlobalDecoderRegistry.register(QueryGroupByGroupGaugeIDRequest.typeUrl, QueryGroupByGroupGaugeIDRequest);
 function createBaseQueryGroupByGroupGaugeIDResponse(): QueryGroupByGroupGaugeIDResponse {
   return {
-    group: Group.fromPartial({}),
+    group: Group.fromPartial({})
   };
 }
 export const QueryGroupByGroupGaugeIDResponse = {
-  typeUrl: '/symphony.incentives.QueryGroupByGroupGaugeIDResponse',
+  typeUrl: "/symphony.incentives.QueryGroupByGroupGaugeIDResponse",
   is(o: any): o is QueryGroupByGroupGaugeIDResponse {
-    return (
-      o &&
-      (o.$typeUrl === QueryGroupByGroupGaugeIDResponse.typeUrl ||
-        Group.is(o.group))
-    );
+    return o && (o.$typeUrl === QueryGroupByGroupGaugeIDResponse.typeUrl || Group.is(o.group));
   },
   isSDK(o: any): o is QueryGroupByGroupGaugeIDResponseSDKType {
-    return (
-      o &&
-      (o.$typeUrl === QueryGroupByGroupGaugeIDResponse.typeUrl ||
-        Group.isSDK(o.group))
-    );
+    return o && (o.$typeUrl === QueryGroupByGroupGaugeIDResponse.typeUrl || Group.isSDK(o.group));
   },
   isAmino(o: any): o is QueryGroupByGroupGaugeIDResponseAmino {
-    return (
-      o &&
-      (o.$typeUrl === QueryGroupByGroupGaugeIDResponse.typeUrl ||
-        Group.isAmino(o.group))
-    );
+    return o && (o.$typeUrl === QueryGroupByGroupGaugeIDResponse.typeUrl || Group.isAmino(o.group));
   },
-  encode(
-    message: QueryGroupByGroupGaugeIDResponse,
-    writer: BinaryWriter = BinaryWriter.create(),
-  ): BinaryWriter {
+  encode(message: QueryGroupByGroupGaugeIDResponse, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
     if (message.group !== undefined) {
       Group.encode(message.group, writer.uint32(10).fork()).ldelim();
     }
     return writer;
   },
-  decode(
-    input: BinaryReader | Uint8Array,
-    length?: number,
-  ): QueryGroupByGroupGaugeIDResponse {
-    const reader =
-      input instanceof BinaryReader ? input : new BinaryReader(input);
+  decode(input: BinaryReader | Uint8Array, length?: number): QueryGroupByGroupGaugeIDResponse {
+    const reader = input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseQueryGroupByGroupGaugeIDResponse();
     while (reader.pos < end) {
@@ -3252,101 +2531,64 @@ export const QueryGroupByGroupGaugeIDResponse = {
     }
     return message;
   },
-  fromPartial(
-    object: Partial<QueryGroupByGroupGaugeIDResponse>,
-  ): QueryGroupByGroupGaugeIDResponse {
+  fromPartial(object: Partial<QueryGroupByGroupGaugeIDResponse>): QueryGroupByGroupGaugeIDResponse {
     const message = createBaseQueryGroupByGroupGaugeIDResponse();
-    message.group =
-      object.group !== undefined && object.group !== null
-        ? Group.fromPartial(object.group)
-        : undefined;
+    message.group = object.group !== undefined && object.group !== null ? Group.fromPartial(object.group) : undefined;
     return message;
   },
-  fromAmino(
-    object: QueryGroupByGroupGaugeIDResponseAmino,
-  ): QueryGroupByGroupGaugeIDResponse {
+  fromAmino(object: QueryGroupByGroupGaugeIDResponseAmino): QueryGroupByGroupGaugeIDResponse {
     const message = createBaseQueryGroupByGroupGaugeIDResponse();
     if (object.group !== undefined && object.group !== null) {
       message.group = Group.fromAmino(object.group);
     }
     return message;
   },
-  toAmino(
-    message: QueryGroupByGroupGaugeIDResponse,
-  ): QueryGroupByGroupGaugeIDResponseAmino {
+  toAmino(message: QueryGroupByGroupGaugeIDResponse): QueryGroupByGroupGaugeIDResponseAmino {
     const obj: any = {};
     obj.group = message.group ? Group.toAmino(message.group) : undefined;
     return obj;
   },
-  fromAminoMsg(
-    object: QueryGroupByGroupGaugeIDResponseAminoMsg,
-  ): QueryGroupByGroupGaugeIDResponse {
+  fromAminoMsg(object: QueryGroupByGroupGaugeIDResponseAminoMsg): QueryGroupByGroupGaugeIDResponse {
     return QueryGroupByGroupGaugeIDResponse.fromAmino(object.value);
   },
-  fromProtoMsg(
-    message: QueryGroupByGroupGaugeIDResponseProtoMsg,
-  ): QueryGroupByGroupGaugeIDResponse {
+  fromProtoMsg(message: QueryGroupByGroupGaugeIDResponseProtoMsg): QueryGroupByGroupGaugeIDResponse {
     return QueryGroupByGroupGaugeIDResponse.decode(message.value);
   },
   toProto(message: QueryGroupByGroupGaugeIDResponse): Uint8Array {
     return QueryGroupByGroupGaugeIDResponse.encode(message).finish();
   },
-  toProtoMsg(
-    message: QueryGroupByGroupGaugeIDResponse,
-  ): QueryGroupByGroupGaugeIDResponseProtoMsg {
+  toProtoMsg(message: QueryGroupByGroupGaugeIDResponse): QueryGroupByGroupGaugeIDResponseProtoMsg {
     return {
-      typeUrl: '/symphony.incentives.QueryGroupByGroupGaugeIDResponse',
-      value: QueryGroupByGroupGaugeIDResponse.encode(message).finish(),
+      typeUrl: "/symphony.incentives.QueryGroupByGroupGaugeIDResponse",
+      value: QueryGroupByGroupGaugeIDResponse.encode(message).finish()
     };
-  },
+  }
 };
-GlobalDecoderRegistry.register(
-  QueryGroupByGroupGaugeIDResponse.typeUrl,
-  QueryGroupByGroupGaugeIDResponse,
-);
+GlobalDecoderRegistry.register(QueryGroupByGroupGaugeIDResponse.typeUrl, QueryGroupByGroupGaugeIDResponse);
 function createBaseQueryCurrentWeightByGroupGaugeIDRequest(): QueryCurrentWeightByGroupGaugeIDRequest {
   return {
-    groupGaugeId: BigInt(0),
+    groupGaugeId: BigInt(0)
   };
 }
 export const QueryCurrentWeightByGroupGaugeIDRequest = {
-  typeUrl: '/symphony.incentives.QueryCurrentWeightByGroupGaugeIDRequest',
+  typeUrl: "/symphony.incentives.QueryCurrentWeightByGroupGaugeIDRequest",
   is(o: any): o is QueryCurrentWeightByGroupGaugeIDRequest {
-    return (
-      o &&
-      (o.$typeUrl === QueryCurrentWeightByGroupGaugeIDRequest.typeUrl ||
-        typeof o.groupGaugeId === 'bigint')
-    );
+    return o && (o.$typeUrl === QueryCurrentWeightByGroupGaugeIDRequest.typeUrl || typeof o.groupGaugeId === "bigint");
   },
   isSDK(o: any): o is QueryCurrentWeightByGroupGaugeIDRequestSDKType {
-    return (
-      o &&
-      (o.$typeUrl === QueryCurrentWeightByGroupGaugeIDRequest.typeUrl ||
-        typeof o.group_gauge_id === 'bigint')
-    );
+    return o && (o.$typeUrl === QueryCurrentWeightByGroupGaugeIDRequest.typeUrl || typeof o.group_gauge_id === "bigint");
   },
   isAmino(o: any): o is QueryCurrentWeightByGroupGaugeIDRequestAmino {
-    return (
-      o &&
-      (o.$typeUrl === QueryCurrentWeightByGroupGaugeIDRequest.typeUrl ||
-        typeof o.group_gauge_id === 'bigint')
-    );
+    return o && (o.$typeUrl === QueryCurrentWeightByGroupGaugeIDRequest.typeUrl || typeof o.group_gauge_id === "bigint");
   },
-  encode(
-    message: QueryCurrentWeightByGroupGaugeIDRequest,
-    writer: BinaryWriter = BinaryWriter.create(),
-  ): BinaryWriter {
+  encode(message: QueryCurrentWeightByGroupGaugeIDRequest, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
     if (message.groupGaugeId !== BigInt(0)) {
       writer.uint32(8).uint64(message.groupGaugeId);
     }
     return writer;
   },
-  decode(
-    input: BinaryReader | Uint8Array,
-    length?: number,
-  ): QueryCurrentWeightByGroupGaugeIDRequest {
-    const reader =
-      input instanceof BinaryReader ? input : new BinaryReader(input);
+  decode(input: BinaryReader | Uint8Array, length?: number): QueryCurrentWeightByGroupGaugeIDRequest {
+    const reader = input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseQueryCurrentWeightByGroupGaugeIDRequest();
     while (reader.pos < end) {
@@ -3362,107 +2604,64 @@ export const QueryCurrentWeightByGroupGaugeIDRequest = {
     }
     return message;
   },
-  fromPartial(
-    object: Partial<QueryCurrentWeightByGroupGaugeIDRequest>,
-  ): QueryCurrentWeightByGroupGaugeIDRequest {
+  fromPartial(object: Partial<QueryCurrentWeightByGroupGaugeIDRequest>): QueryCurrentWeightByGroupGaugeIDRequest {
     const message = createBaseQueryCurrentWeightByGroupGaugeIDRequest();
-    message.groupGaugeId =
-      object.groupGaugeId !== undefined && object.groupGaugeId !== null
-        ? BigInt(object.groupGaugeId.toString())
-        : BigInt(0);
+    message.groupGaugeId = object.groupGaugeId !== undefined && object.groupGaugeId !== null ? BigInt(object.groupGaugeId.toString()) : BigInt(0);
     return message;
   },
-  fromAmino(
-    object: QueryCurrentWeightByGroupGaugeIDRequestAmino,
-  ): QueryCurrentWeightByGroupGaugeIDRequest {
+  fromAmino(object: QueryCurrentWeightByGroupGaugeIDRequestAmino): QueryCurrentWeightByGroupGaugeIDRequest {
     const message = createBaseQueryCurrentWeightByGroupGaugeIDRequest();
     if (object.group_gauge_id !== undefined && object.group_gauge_id !== null) {
       message.groupGaugeId = BigInt(object.group_gauge_id);
     }
     return message;
   },
-  toAmino(
-    message: QueryCurrentWeightByGroupGaugeIDRequest,
-  ): QueryCurrentWeightByGroupGaugeIDRequestAmino {
+  toAmino(message: QueryCurrentWeightByGroupGaugeIDRequest): QueryCurrentWeightByGroupGaugeIDRequestAmino {
     const obj: any = {};
-    obj.group_gauge_id =
-      message.groupGaugeId !== BigInt(0)
-        ? message.groupGaugeId?.toString()
-        : undefined;
+    obj.group_gauge_id = message.groupGaugeId !== BigInt(0) ? message.groupGaugeId?.toString() : undefined;
     return obj;
   },
-  fromAminoMsg(
-    object: QueryCurrentWeightByGroupGaugeIDRequestAminoMsg,
-  ): QueryCurrentWeightByGroupGaugeIDRequest {
+  fromAminoMsg(object: QueryCurrentWeightByGroupGaugeIDRequestAminoMsg): QueryCurrentWeightByGroupGaugeIDRequest {
     return QueryCurrentWeightByGroupGaugeIDRequest.fromAmino(object.value);
   },
-  fromProtoMsg(
-    message: QueryCurrentWeightByGroupGaugeIDRequestProtoMsg,
-  ): QueryCurrentWeightByGroupGaugeIDRequest {
+  fromProtoMsg(message: QueryCurrentWeightByGroupGaugeIDRequestProtoMsg): QueryCurrentWeightByGroupGaugeIDRequest {
     return QueryCurrentWeightByGroupGaugeIDRequest.decode(message.value);
   },
   toProto(message: QueryCurrentWeightByGroupGaugeIDRequest): Uint8Array {
     return QueryCurrentWeightByGroupGaugeIDRequest.encode(message).finish();
   },
-  toProtoMsg(
-    message: QueryCurrentWeightByGroupGaugeIDRequest,
-  ): QueryCurrentWeightByGroupGaugeIDRequestProtoMsg {
+  toProtoMsg(message: QueryCurrentWeightByGroupGaugeIDRequest): QueryCurrentWeightByGroupGaugeIDRequestProtoMsg {
     return {
-      typeUrl: '/symphony.incentives.QueryCurrentWeightByGroupGaugeIDRequest',
-      value: QueryCurrentWeightByGroupGaugeIDRequest.encode(message).finish(),
+      typeUrl: "/symphony.incentives.QueryCurrentWeightByGroupGaugeIDRequest",
+      value: QueryCurrentWeightByGroupGaugeIDRequest.encode(message).finish()
     };
-  },
+  }
 };
-GlobalDecoderRegistry.register(
-  QueryCurrentWeightByGroupGaugeIDRequest.typeUrl,
-  QueryCurrentWeightByGroupGaugeIDRequest,
-);
+GlobalDecoderRegistry.register(QueryCurrentWeightByGroupGaugeIDRequest.typeUrl, QueryCurrentWeightByGroupGaugeIDRequest);
 function createBaseQueryCurrentWeightByGroupGaugeIDResponse(): QueryCurrentWeightByGroupGaugeIDResponse {
   return {
-    gaugeWeight: [],
+    gaugeWeight: []
   };
 }
 export const QueryCurrentWeightByGroupGaugeIDResponse = {
-  typeUrl: '/symphony.incentives.QueryCurrentWeightByGroupGaugeIDResponse',
+  typeUrl: "/symphony.incentives.QueryCurrentWeightByGroupGaugeIDResponse",
   is(o: any): o is QueryCurrentWeightByGroupGaugeIDResponse {
-    return (
-      o &&
-      (o.$typeUrl === QueryCurrentWeightByGroupGaugeIDResponse.typeUrl ||
-        (Array.isArray(o.gaugeWeight) &&
-          (!o.gaugeWeight.length || GaugeWeight.is(o.gaugeWeight[0]))))
-    );
+    return o && (o.$typeUrl === QueryCurrentWeightByGroupGaugeIDResponse.typeUrl || Array.isArray(o.gaugeWeight) && (!o.gaugeWeight.length || GaugeWeight.is(o.gaugeWeight[0])));
   },
   isSDK(o: any): o is QueryCurrentWeightByGroupGaugeIDResponseSDKType {
-    return (
-      o &&
-      (o.$typeUrl === QueryCurrentWeightByGroupGaugeIDResponse.typeUrl ||
-        (Array.isArray(o.gauge_weight) &&
-          (!o.gauge_weight.length || GaugeWeight.isSDK(o.gauge_weight[0]))))
-    );
+    return o && (o.$typeUrl === QueryCurrentWeightByGroupGaugeIDResponse.typeUrl || Array.isArray(o.gauge_weight) && (!o.gauge_weight.length || GaugeWeight.isSDK(o.gauge_weight[0])));
   },
   isAmino(o: any): o is QueryCurrentWeightByGroupGaugeIDResponseAmino {
-    return (
-      o &&
-      (o.$typeUrl === QueryCurrentWeightByGroupGaugeIDResponse.typeUrl ||
-        (Array.isArray(o.gauge_weight) &&
-          (!o.gauge_weight.length || GaugeWeight.isAmino(o.gauge_weight[0]))))
-    );
+    return o && (o.$typeUrl === QueryCurrentWeightByGroupGaugeIDResponse.typeUrl || Array.isArray(o.gauge_weight) && (!o.gauge_weight.length || GaugeWeight.isAmino(o.gauge_weight[0])));
   },
-  encode(
-    message: QueryCurrentWeightByGroupGaugeIDResponse,
-    writer: BinaryWriter = BinaryWriter.create(),
-  ): BinaryWriter {
+  encode(message: QueryCurrentWeightByGroupGaugeIDResponse, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
     for (const v of message.gaugeWeight) {
       GaugeWeight.encode(v!, writer.uint32(10).fork()).ldelim();
     }
     return writer;
   },
-  decode(
-    input: BinaryReader | Uint8Array,
-    length?: number,
-  ): QueryCurrentWeightByGroupGaugeIDResponse {
-    const reader =
-      input instanceof BinaryReader ? input : new BinaryReader(input);
+  decode(input: BinaryReader | Uint8Array, length?: number): QueryCurrentWeightByGroupGaugeIDResponse {
+    const reader = input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseQueryCurrentWeightByGroupGaugeIDResponse();
     while (reader.pos < end) {
@@ -3478,107 +2677,70 @@ export const QueryCurrentWeightByGroupGaugeIDResponse = {
     }
     return message;
   },
-  fromPartial(
-    object: Partial<QueryCurrentWeightByGroupGaugeIDResponse>,
-  ): QueryCurrentWeightByGroupGaugeIDResponse {
+  fromPartial(object: Partial<QueryCurrentWeightByGroupGaugeIDResponse>): QueryCurrentWeightByGroupGaugeIDResponse {
     const message = createBaseQueryCurrentWeightByGroupGaugeIDResponse();
-    message.gaugeWeight =
-      object.gaugeWeight?.map(e => GaugeWeight.fromPartial(e)) || [];
+    message.gaugeWeight = object.gaugeWeight?.map(e => GaugeWeight.fromPartial(e)) || [];
     return message;
   },
-  fromAmino(
-    object: QueryCurrentWeightByGroupGaugeIDResponseAmino,
-  ): QueryCurrentWeightByGroupGaugeIDResponse {
+  fromAmino(object: QueryCurrentWeightByGroupGaugeIDResponseAmino): QueryCurrentWeightByGroupGaugeIDResponse {
     const message = createBaseQueryCurrentWeightByGroupGaugeIDResponse();
-    message.gaugeWeight =
-      object.gauge_weight?.map(e => GaugeWeight.fromAmino(e)) || [];
+    message.gaugeWeight = object.gauge_weight?.map(e => GaugeWeight.fromAmino(e)) || [];
     return message;
   },
-  toAmino(
-    message: QueryCurrentWeightByGroupGaugeIDResponse,
-  ): QueryCurrentWeightByGroupGaugeIDResponseAmino {
+  toAmino(message: QueryCurrentWeightByGroupGaugeIDResponse): QueryCurrentWeightByGroupGaugeIDResponseAmino {
     const obj: any = {};
     if (message.gaugeWeight) {
-      obj.gauge_weight = message.gaugeWeight.map(e =>
-        e ? GaugeWeight.toAmino(e) : undefined,
-      );
+      obj.gauge_weight = message.gaugeWeight.map(e => e ? GaugeWeight.toAmino(e) : undefined);
     } else {
       obj.gauge_weight = message.gaugeWeight;
     }
     return obj;
   },
-  fromAminoMsg(
-    object: QueryCurrentWeightByGroupGaugeIDResponseAminoMsg,
-  ): QueryCurrentWeightByGroupGaugeIDResponse {
+  fromAminoMsg(object: QueryCurrentWeightByGroupGaugeIDResponseAminoMsg): QueryCurrentWeightByGroupGaugeIDResponse {
     return QueryCurrentWeightByGroupGaugeIDResponse.fromAmino(object.value);
   },
-  fromProtoMsg(
-    message: QueryCurrentWeightByGroupGaugeIDResponseProtoMsg,
-  ): QueryCurrentWeightByGroupGaugeIDResponse {
+  fromProtoMsg(message: QueryCurrentWeightByGroupGaugeIDResponseProtoMsg): QueryCurrentWeightByGroupGaugeIDResponse {
     return QueryCurrentWeightByGroupGaugeIDResponse.decode(message.value);
   },
   toProto(message: QueryCurrentWeightByGroupGaugeIDResponse): Uint8Array {
     return QueryCurrentWeightByGroupGaugeIDResponse.encode(message).finish();
   },
-  toProtoMsg(
-    message: QueryCurrentWeightByGroupGaugeIDResponse,
-  ): QueryCurrentWeightByGroupGaugeIDResponseProtoMsg {
+  toProtoMsg(message: QueryCurrentWeightByGroupGaugeIDResponse): QueryCurrentWeightByGroupGaugeIDResponseProtoMsg {
     return {
-      typeUrl: '/symphony.incentives.QueryCurrentWeightByGroupGaugeIDResponse',
-      value: QueryCurrentWeightByGroupGaugeIDResponse.encode(message).finish(),
+      typeUrl: "/symphony.incentives.QueryCurrentWeightByGroupGaugeIDResponse",
+      value: QueryCurrentWeightByGroupGaugeIDResponse.encode(message).finish()
     };
-  },
+  }
 };
-GlobalDecoderRegistry.register(
-  QueryCurrentWeightByGroupGaugeIDResponse.typeUrl,
-  QueryCurrentWeightByGroupGaugeIDResponse,
-);
+GlobalDecoderRegistry.register(QueryCurrentWeightByGroupGaugeIDResponse.typeUrl, QueryCurrentWeightByGroupGaugeIDResponse);
 function createBaseGaugeWeight(): GaugeWeight {
   return {
     gaugeId: BigInt(0),
-    weightRatio: '',
+    weightRatio: ""
   };
 }
 export const GaugeWeight = {
-  typeUrl: '/symphony.incentives.GaugeWeight',
+  typeUrl: "/symphony.incentives.GaugeWeight",
   is(o: any): o is GaugeWeight {
-    return (
-      o &&
-      (o.$typeUrl === GaugeWeight.typeUrl ||
-        (typeof o.gaugeId === 'bigint' && typeof o.weightRatio === 'string'))
-    );
+    return o && (o.$typeUrl === GaugeWeight.typeUrl || typeof o.gaugeId === "bigint" && typeof o.weightRatio === "string");
   },
   isSDK(o: any): o is GaugeWeightSDKType {
-    return (
-      o &&
-      (o.$typeUrl === GaugeWeight.typeUrl ||
-        (typeof o.gauge_id === 'bigint' && typeof o.weight_ratio === 'string'))
-    );
+    return o && (o.$typeUrl === GaugeWeight.typeUrl || typeof o.gauge_id === "bigint" && typeof o.weight_ratio === "string");
   },
   isAmino(o: any): o is GaugeWeightAmino {
-    return (
-      o &&
-      (o.$typeUrl === GaugeWeight.typeUrl ||
-        (typeof o.gauge_id === 'bigint' && typeof o.weight_ratio === 'string'))
-    );
+    return o && (o.$typeUrl === GaugeWeight.typeUrl || typeof o.gauge_id === "bigint" && typeof o.weight_ratio === "string");
   },
-  encode(
-    message: GaugeWeight,
-    writer: BinaryWriter = BinaryWriter.create(),
-  ): BinaryWriter {
+  encode(message: GaugeWeight, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
     if (message.gaugeId !== BigInt(0)) {
       writer.uint32(8).uint64(message.gaugeId);
     }
-    if (message.weightRatio !== '') {
-      writer
-        .uint32(18)
-        .string(Decimal.fromUserInput(message.weightRatio, 18).atomics);
+    if (message.weightRatio !== "") {
+      writer.uint32(18).string(Decimal.fromUserInput(message.weightRatio, 18).atomics);
     }
     return writer;
   },
   decode(input: BinaryReader | Uint8Array, length?: number): GaugeWeight {
-    const reader =
-      input instanceof BinaryReader ? input : new BinaryReader(input);
+    const reader = input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseGaugeWeight();
     while (reader.pos < end) {
@@ -3588,10 +2750,7 @@ export const GaugeWeight = {
           message.gaugeId = reader.uint64();
           break;
         case 2:
-          message.weightRatio = Decimal.fromAtomics(
-            reader.string(),
-            18,
-          ).toString();
+          message.weightRatio = Decimal.fromAtomics(reader.string(), 18).toString();
           break;
         default:
           reader.skipType(tag & 7);
@@ -3602,11 +2761,8 @@ export const GaugeWeight = {
   },
   fromPartial(object: Partial<GaugeWeight>): GaugeWeight {
     const message = createBaseGaugeWeight();
-    message.gaugeId =
-      object.gaugeId !== undefined && object.gaugeId !== null
-        ? BigInt(object.gaugeId.toString())
-        : BigInt(0);
-    message.weightRatio = object.weightRatio ?? '';
+    message.gaugeId = object.gaugeId !== undefined && object.gaugeId !== null ? BigInt(object.gaugeId.toString()) : BigInt(0);
+    message.weightRatio = object.weightRatio ?? "";
     return message;
   },
   fromAmino(object: GaugeWeightAmino): GaugeWeight {
@@ -3621,10 +2777,8 @@ export const GaugeWeight = {
   },
   toAmino(message: GaugeWeight): GaugeWeightAmino {
     const obj: any = {};
-    obj.gauge_id =
-      message.gaugeId !== BigInt(0) ? message.gaugeId?.toString() : undefined;
-    obj.weight_ratio =
-      message.weightRatio === '' ? undefined : message.weightRatio;
+    obj.gauge_id = message.gaugeId !== BigInt(0) ? message.gaugeId?.toString() : undefined;
+    obj.weight_ratio = message.weightRatio === "" ? undefined : message.weightRatio;
     return obj;
   },
   fromAminoMsg(object: GaugeWeightAminoMsg): GaugeWeight {
@@ -3638,17 +2792,17 @@ export const GaugeWeight = {
   },
   toProtoMsg(message: GaugeWeight): GaugeWeightProtoMsg {
     return {
-      typeUrl: '/symphony.incentives.GaugeWeight',
-      value: GaugeWeight.encode(message).finish(),
+      typeUrl: "/symphony.incentives.GaugeWeight",
+      value: GaugeWeight.encode(message).finish()
     };
-  },
+  }
 };
 GlobalDecoderRegistry.register(GaugeWeight.typeUrl, GaugeWeight);
 function createBaseParamsRequest(): ParamsRequest {
   return {};
 }
 export const ParamsRequest = {
-  typeUrl: '/symphony.incentives.ParamsRequest',
+  typeUrl: "/symphony.incentives.ParamsRequest",
   is(o: any): o is ParamsRequest {
     return o && o.$typeUrl === ParamsRequest.typeUrl;
   },
@@ -3658,15 +2812,11 @@ export const ParamsRequest = {
   isAmino(o: any): o is ParamsRequestAmino {
     return o && o.$typeUrl === ParamsRequest.typeUrl;
   },
-  encode(
-    _: ParamsRequest,
-    writer: BinaryWriter = BinaryWriter.create(),
-  ): BinaryWriter {
+  encode(_: ParamsRequest, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
     return writer;
   },
   decode(input: BinaryReader | Uint8Array, length?: number): ParamsRequest {
-    const reader =
-      input instanceof BinaryReader ? input : new BinaryReader(input);
+    const reader = input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseParamsRequest();
     while (reader.pos < end) {
@@ -3702,44 +2852,36 @@ export const ParamsRequest = {
   },
   toProtoMsg(message: ParamsRequest): ParamsRequestProtoMsg {
     return {
-      typeUrl: '/symphony.incentives.ParamsRequest',
-      value: ParamsRequest.encode(message).finish(),
+      typeUrl: "/symphony.incentives.ParamsRequest",
+      value: ParamsRequest.encode(message).finish()
     };
-  },
+  }
 };
 GlobalDecoderRegistry.register(ParamsRequest.typeUrl, ParamsRequest);
 function createBaseParamsResponse(): ParamsResponse {
   return {
-    params: Params.fromPartial({}),
+    params: Params.fromPartial({})
   };
 }
 export const ParamsResponse = {
-  typeUrl: '/symphony.incentives.ParamsResponse',
+  typeUrl: "/symphony.incentives.ParamsResponse",
   is(o: any): o is ParamsResponse {
     return o && (o.$typeUrl === ParamsResponse.typeUrl || Params.is(o.params));
   },
   isSDK(o: any): o is ParamsResponseSDKType {
-    return (
-      o && (o.$typeUrl === ParamsResponse.typeUrl || Params.isSDK(o.params))
-    );
+    return o && (o.$typeUrl === ParamsResponse.typeUrl || Params.isSDK(o.params));
   },
   isAmino(o: any): o is ParamsResponseAmino {
-    return (
-      o && (o.$typeUrl === ParamsResponse.typeUrl || Params.isAmino(o.params))
-    );
+    return o && (o.$typeUrl === ParamsResponse.typeUrl || Params.isAmino(o.params));
   },
-  encode(
-    message: ParamsResponse,
-    writer: BinaryWriter = BinaryWriter.create(),
-  ): BinaryWriter {
+  encode(message: ParamsResponse, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
     if (message.params !== undefined) {
       Params.encode(message.params, writer.uint32(10).fork()).ldelim();
     }
     return writer;
   },
   decode(input: BinaryReader | Uint8Array, length?: number): ParamsResponse {
-    const reader =
-      input instanceof BinaryReader ? input : new BinaryReader(input);
+    const reader = input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseParamsResponse();
     while (reader.pos < end) {
@@ -3757,10 +2899,7 @@ export const ParamsResponse = {
   },
   fromPartial(object: Partial<ParamsResponse>): ParamsResponse {
     const message = createBaseParamsResponse();
-    message.params =
-      object.params !== undefined && object.params !== null
-        ? Params.fromPartial(object.params)
-        : undefined;
+    message.params = object.params !== undefined && object.params !== null ? Params.fromPartial(object.params) : undefined;
     return message;
   },
   fromAmino(object: ParamsResponseAmino): ParamsResponse {
@@ -3786,9 +2925,9 @@ export const ParamsResponse = {
   },
   toProtoMsg(message: ParamsResponse): ParamsResponseProtoMsg {
     return {
-      typeUrl: '/symphony.incentives.ParamsResponse',
-      value: ParamsResponse.encode(message).finish(),
+      typeUrl: "/symphony.incentives.ParamsResponse",
+      value: ParamsResponse.encode(message).finish()
     };
-  },
+  }
 };
 GlobalDecoderRegistry.register(ParamsResponse.typeUrl, ParamsResponse);

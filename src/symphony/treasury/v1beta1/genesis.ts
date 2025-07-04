@@ -1,15 +1,15 @@
 //@ts-nocheck
-import { Params, ParamsAmino, ParamsSDKType } from './treasury';
-import { BinaryReader, BinaryWriter } from '../../../binary';
-import { GlobalDecoderRegistry } from '../../../registry';
-import { Decimal } from '@cosmjs/math';
+import { Params, ParamsAmino, ParamsSDKType } from "./treasury";
+import { BinaryReader, BinaryWriter } from "../../../binary";
+import { GlobalDecoderRegistry } from "../../../registry";
+import { Decimal } from "@cosmjs/math";
 /** GenesisState defines the oracle module's genesis state. */
 export interface GenesisState {
   params: Params;
   taxRate: string;
 }
 export interface GenesisStateProtoMsg {
-  typeUrl: '/symphony.treasury.v1beta1.GenesisState';
+  typeUrl: "/symphony.treasury.v1beta1.GenesisState";
   value: Uint8Array;
 }
 /** GenesisState defines the oracle module's genesis state. */
@@ -18,7 +18,7 @@ export interface GenesisStateAmino {
   tax_rate?: string;
 }
 export interface GenesisStateAminoMsg {
-  type: '/symphony.treasury.v1beta1.GenesisState';
+  type: "/symphony.treasury.v1beta1.GenesisState";
   value: GenesisStateAmino;
 }
 /** GenesisState defines the oracle module's genesis state. */
@@ -29,49 +29,31 @@ export interface GenesisStateSDKType {
 function createBaseGenesisState(): GenesisState {
   return {
     params: Params.fromPartial({}),
-    taxRate: '',
+    taxRate: ""
   };
 }
 export const GenesisState = {
-  typeUrl: '/symphony.treasury.v1beta1.GenesisState',
+  typeUrl: "/symphony.treasury.v1beta1.GenesisState",
   is(o: any): o is GenesisState {
-    return (
-      o &&
-      (o.$typeUrl === GenesisState.typeUrl ||
-        (Params.is(o.params) && typeof o.taxRate === 'string'))
-    );
+    return o && (o.$typeUrl === GenesisState.typeUrl || Params.is(o.params) && typeof o.taxRate === "string");
   },
   isSDK(o: any): o is GenesisStateSDKType {
-    return (
-      o &&
-      (o.$typeUrl === GenesisState.typeUrl ||
-        (Params.isSDK(o.params) && typeof o.tax_rate === 'string'))
-    );
+    return o && (o.$typeUrl === GenesisState.typeUrl || Params.isSDK(o.params) && typeof o.tax_rate === "string");
   },
   isAmino(o: any): o is GenesisStateAmino {
-    return (
-      o &&
-      (o.$typeUrl === GenesisState.typeUrl ||
-        (Params.isAmino(o.params) && typeof o.tax_rate === 'string'))
-    );
+    return o && (o.$typeUrl === GenesisState.typeUrl || Params.isAmino(o.params) && typeof o.tax_rate === "string");
   },
-  encode(
-    message: GenesisState,
-    writer: BinaryWriter = BinaryWriter.create(),
-  ): BinaryWriter {
+  encode(message: GenesisState, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
     if (message.params !== undefined) {
       Params.encode(message.params, writer.uint32(10).fork()).ldelim();
     }
-    if (message.taxRate !== '') {
-      writer
-        .uint32(18)
-        .string(Decimal.fromUserInput(message.taxRate, 18).atomics);
+    if (message.taxRate !== "") {
+      writer.uint32(18).string(Decimal.fromUserInput(message.taxRate, 18).atomics);
     }
     return writer;
   },
   decode(input: BinaryReader | Uint8Array, length?: number): GenesisState {
-    const reader =
-      input instanceof BinaryReader ? input : new BinaryReader(input);
+    const reader = input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseGenesisState();
     while (reader.pos < end) {
@@ -92,11 +74,8 @@ export const GenesisState = {
   },
   fromPartial(object: Partial<GenesisState>): GenesisState {
     const message = createBaseGenesisState();
-    message.params =
-      object.params !== undefined && object.params !== null
-        ? Params.fromPartial(object.params)
-        : undefined;
-    message.taxRate = object.taxRate ?? '';
+    message.params = object.params !== undefined && object.params !== null ? Params.fromPartial(object.params) : undefined;
+    message.taxRate = object.taxRate ?? "";
     return message;
   },
   fromAmino(object: GenesisStateAmino): GenesisState {
@@ -112,7 +91,7 @@ export const GenesisState = {
   toAmino(message: GenesisState): GenesisStateAmino {
     const obj: any = {};
     obj.params = message.params ? Params.toAmino(message.params) : undefined;
-    obj.tax_rate = message.taxRate === '' ? undefined : message.taxRate;
+    obj.tax_rate = message.taxRate === "" ? undefined : message.taxRate;
     return obj;
   },
   fromAminoMsg(object: GenesisStateAminoMsg): GenesisState {
@@ -126,9 +105,9 @@ export const GenesisState = {
   },
   toProtoMsg(message: GenesisState): GenesisStateProtoMsg {
     return {
-      typeUrl: '/symphony.treasury.v1beta1.GenesisState',
-      value: GenesisState.encode(message).finish(),
+      typeUrl: "/symphony.treasury.v1beta1.GenesisState",
+      value: GenesisState.encode(message).finish()
     };
-  },
+  }
 };
 GlobalDecoderRegistry.register(GenesisState.typeUrl, GenesisState);

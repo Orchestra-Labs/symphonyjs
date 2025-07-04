@@ -1,6 +1,6 @@
 //@ts-nocheck
-import { BinaryReader, BinaryWriter } from '../../../binary';
-import { GlobalDecoderRegistry } from '../../../registry';
+import { BinaryReader, BinaryWriter } from "../../../binary";
+import { GlobalDecoderRegistry } from "../../../registry";
 /** Params defines the parameters for the module. */
 export interface Params {
   /**
@@ -22,7 +22,7 @@ export interface Params {
   circuitBreakerControllers: string[];
 }
 export interface ParamsProtoMsg {
-  typeUrl: '/symphony.smartaccount.v1beta1.Params';
+  typeUrl: "/symphony.smartaccount.v1beta1.Params";
   value: Uint8Array;
 }
 /** Params defines the parameters for the module. */
@@ -46,7 +46,7 @@ export interface ParamsAmino {
   circuit_breaker_controllers?: string[];
 }
 export interface ParamsAminoMsg {
-  type: '/symphony.smartaccount.v1beta1.Params';
+  type: "/symphony.smartaccount.v1beta1.Params";
   value: ParamsAmino;
 }
 /** Params defines the parameters for the module. */
@@ -59,48 +59,21 @@ function createBaseParams(): Params {
   return {
     maximumUnauthenticatedGas: BigInt(0),
     isSmartAccountActive: false,
-    circuitBreakerControllers: [],
+    circuitBreakerControllers: []
   };
 }
 export const Params = {
-  typeUrl: '/symphony.smartaccount.v1beta1.Params',
+  typeUrl: "/symphony.smartaccount.v1beta1.Params",
   is(o: any): o is Params {
-    return (
-      o &&
-      (o.$typeUrl === Params.typeUrl ||
-        (typeof o.maximumUnauthenticatedGas === 'bigint' &&
-          typeof o.isSmartAccountActive === 'boolean' &&
-          Array.isArray(o.circuitBreakerControllers) &&
-          (!o.circuitBreakerControllers.length ||
-            typeof o.circuitBreakerControllers[0] === 'string')))
-    );
+    return o && (o.$typeUrl === Params.typeUrl || typeof o.maximumUnauthenticatedGas === "bigint" && typeof o.isSmartAccountActive === "boolean" && Array.isArray(o.circuitBreakerControllers) && (!o.circuitBreakerControllers.length || typeof o.circuitBreakerControllers[0] === "string"));
   },
   isSDK(o: any): o is ParamsSDKType {
-    return (
-      o &&
-      (o.$typeUrl === Params.typeUrl ||
-        (typeof o.maximum_unauthenticated_gas === 'bigint' &&
-          typeof o.is_smart_account_active === 'boolean' &&
-          Array.isArray(o.circuit_breaker_controllers) &&
-          (!o.circuit_breaker_controllers.length ||
-            typeof o.circuit_breaker_controllers[0] === 'string')))
-    );
+    return o && (o.$typeUrl === Params.typeUrl || typeof o.maximum_unauthenticated_gas === "bigint" && typeof o.is_smart_account_active === "boolean" && Array.isArray(o.circuit_breaker_controllers) && (!o.circuit_breaker_controllers.length || typeof o.circuit_breaker_controllers[0] === "string"));
   },
   isAmino(o: any): o is ParamsAmino {
-    return (
-      o &&
-      (o.$typeUrl === Params.typeUrl ||
-        (typeof o.maximum_unauthenticated_gas === 'bigint' &&
-          typeof o.is_smart_account_active === 'boolean' &&
-          Array.isArray(o.circuit_breaker_controllers) &&
-          (!o.circuit_breaker_controllers.length ||
-            typeof o.circuit_breaker_controllers[0] === 'string')))
-    );
+    return o && (o.$typeUrl === Params.typeUrl || typeof o.maximum_unauthenticated_gas === "bigint" && typeof o.is_smart_account_active === "boolean" && Array.isArray(o.circuit_breaker_controllers) && (!o.circuit_breaker_controllers.length || typeof o.circuit_breaker_controllers[0] === "string"));
   },
-  encode(
-    message: Params,
-    writer: BinaryWriter = BinaryWriter.create(),
-  ): BinaryWriter {
+  encode(message: Params, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
     if (message.maximumUnauthenticatedGas !== BigInt(0)) {
       writer.uint32(8).uint64(message.maximumUnauthenticatedGas);
     }
@@ -113,8 +86,7 @@ export const Params = {
     return writer;
   },
   decode(input: BinaryReader | Uint8Array, length?: number): Params {
-    const reader =
-      input instanceof BinaryReader ? input : new BinaryReader(input);
+    const reader = input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseParams();
     while (reader.pos < end) {
@@ -138,50 +110,28 @@ export const Params = {
   },
   fromPartial(object: Partial<Params>): Params {
     const message = createBaseParams();
-    message.maximumUnauthenticatedGas =
-      object.maximumUnauthenticatedGas !== undefined &&
-      object.maximumUnauthenticatedGas !== null
-        ? BigInt(object.maximumUnauthenticatedGas.toString())
-        : BigInt(0);
+    message.maximumUnauthenticatedGas = object.maximumUnauthenticatedGas !== undefined && object.maximumUnauthenticatedGas !== null ? BigInt(object.maximumUnauthenticatedGas.toString()) : BigInt(0);
     message.isSmartAccountActive = object.isSmartAccountActive ?? false;
-    message.circuitBreakerControllers =
-      object.circuitBreakerControllers?.map(e => e) || [];
+    message.circuitBreakerControllers = object.circuitBreakerControllers?.map(e => e) || [];
     return message;
   },
   fromAmino(object: ParamsAmino): Params {
     const message = createBaseParams();
-    if (
-      object.maximum_unauthenticated_gas !== undefined &&
-      object.maximum_unauthenticated_gas !== null
-    ) {
-      message.maximumUnauthenticatedGas = BigInt(
-        object.maximum_unauthenticated_gas,
-      );
+    if (object.maximum_unauthenticated_gas !== undefined && object.maximum_unauthenticated_gas !== null) {
+      message.maximumUnauthenticatedGas = BigInt(object.maximum_unauthenticated_gas);
     }
-    if (
-      object.is_smart_account_active !== undefined &&
-      object.is_smart_account_active !== null
-    ) {
+    if (object.is_smart_account_active !== undefined && object.is_smart_account_active !== null) {
       message.isSmartAccountActive = object.is_smart_account_active;
     }
-    message.circuitBreakerControllers =
-      object.circuit_breaker_controllers?.map(e => e) || [];
+    message.circuitBreakerControllers = object.circuit_breaker_controllers?.map(e => e) || [];
     return message;
   },
   toAmino(message: Params): ParamsAmino {
     const obj: any = {};
-    obj.maximum_unauthenticated_gas =
-      message.maximumUnauthenticatedGas !== BigInt(0)
-        ? message.maximumUnauthenticatedGas?.toString()
-        : undefined;
-    obj.is_smart_account_active =
-      message.isSmartAccountActive === false
-        ? undefined
-        : message.isSmartAccountActive;
+    obj.maximum_unauthenticated_gas = message.maximumUnauthenticatedGas !== BigInt(0) ? message.maximumUnauthenticatedGas?.toString() : undefined;
+    obj.is_smart_account_active = message.isSmartAccountActive === false ? undefined : message.isSmartAccountActive;
     if (message.circuitBreakerControllers) {
-      obj.circuit_breaker_controllers = message.circuitBreakerControllers.map(
-        e => e,
-      );
+      obj.circuit_breaker_controllers = message.circuitBreakerControllers.map(e => e);
     } else {
       obj.circuit_breaker_controllers = message.circuitBreakerControllers;
     }
@@ -198,9 +148,9 @@ export const Params = {
   },
   toProtoMsg(message: Params): ParamsProtoMsg {
     return {
-      typeUrl: '/symphony.smartaccount.v1beta1.Params',
-      value: Params.encode(message).finish(),
+      typeUrl: "/symphony.smartaccount.v1beta1.Params",
+      value: Params.encode(message).finish()
     };
-  },
+  }
 };
 GlobalDecoderRegistry.register(Params.typeUrl, Params);

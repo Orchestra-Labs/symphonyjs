@@ -1,39 +1,20 @@
 //@ts-nocheck
-import { Rpc } from '../../helpers';
-import { BinaryReader } from '../../binary';
-import {
-  MsgLockTokens,
-  MsgLockTokensResponse,
-  MsgBeginUnlockingAll,
-  MsgBeginUnlockingAllResponse,
-  MsgBeginUnlocking,
-  MsgBeginUnlockingResponse,
-  MsgExtendLockup,
-  MsgExtendLockupResponse,
-  MsgForceUnlock,
-  MsgForceUnlockResponse,
-  MsgSetRewardReceiverAddress,
-  MsgSetRewardReceiverAddressResponse,
-} from './tx';
+import { Rpc } from "../../helpers";
+import { BinaryReader } from "../../binary";
+import { MsgLockTokens, MsgLockTokensResponse, MsgBeginUnlockingAll, MsgBeginUnlockingAllResponse, MsgBeginUnlocking, MsgBeginUnlockingResponse, MsgExtendLockup, MsgExtendLockupResponse, MsgForceUnlock, MsgForceUnlockResponse, MsgSetRewardReceiverAddress, MsgSetRewardReceiverAddressResponse } from "./tx";
 /** Msg defines the Msg service. */
 export interface Msg {
   /** LockTokens lock tokens */
   lockTokens(request: MsgLockTokens): Promise<MsgLockTokensResponse>;
   /** BeginUnlockingAll begin unlocking all tokens */
-  beginUnlockingAll(
-    request: MsgBeginUnlockingAll,
-  ): Promise<MsgBeginUnlockingAllResponse>;
+  beginUnlockingAll(request: MsgBeginUnlockingAll): Promise<MsgBeginUnlockingAllResponse>;
   /** MsgBeginUnlocking begins unlocking tokens by lock ID */
-  beginUnlocking(
-    request: MsgBeginUnlocking,
-  ): Promise<MsgBeginUnlockingResponse>;
+  beginUnlocking(request: MsgBeginUnlocking): Promise<MsgBeginUnlockingResponse>;
   /** MsgEditLockup edits the existing lockups by lock ID */
   extendLockup(request: MsgExtendLockup): Promise<MsgExtendLockupResponse>;
   forceUnlock(request: MsgForceUnlock): Promise<MsgForceUnlockResponse>;
   /** SetRewardReceiverAddress edits the reward receiver for the given lock ID */
-  setRewardReceiverAddress(
-    request: MsgSetRewardReceiverAddress,
-  ): Promise<MsgSetRewardReceiverAddressResponse>;
+  setRewardReceiverAddress(request: MsgSetRewardReceiverAddress): Promise<MsgSetRewardReceiverAddressResponse>;
 }
 export class MsgClientImpl implements Msg {
   private readonly rpc: Rpc;
@@ -48,71 +29,33 @@ export class MsgClientImpl implements Msg {
   }
   lockTokens(request: MsgLockTokens): Promise<MsgLockTokensResponse> {
     const data = MsgLockTokens.encode(request).finish();
-    const promise = this.rpc.request('symphony.lockup.Msg', 'LockTokens', data);
-    return promise.then(data =>
-      MsgLockTokensResponse.decode(new BinaryReader(data)),
-    );
+    const promise = this.rpc.request("symphony.lockup.Msg", "LockTokens", data);
+    return promise.then(data => MsgLockTokensResponse.decode(new BinaryReader(data)));
   }
-  beginUnlockingAll(
-    request: MsgBeginUnlockingAll,
-  ): Promise<MsgBeginUnlockingAllResponse> {
+  beginUnlockingAll(request: MsgBeginUnlockingAll): Promise<MsgBeginUnlockingAllResponse> {
     const data = MsgBeginUnlockingAll.encode(request).finish();
-    const promise = this.rpc.request(
-      'symphony.lockup.Msg',
-      'BeginUnlockingAll',
-      data,
-    );
-    return promise.then(data =>
-      MsgBeginUnlockingAllResponse.decode(new BinaryReader(data)),
-    );
+    const promise = this.rpc.request("symphony.lockup.Msg", "BeginUnlockingAll", data);
+    return promise.then(data => MsgBeginUnlockingAllResponse.decode(new BinaryReader(data)));
   }
-  beginUnlocking(
-    request: MsgBeginUnlocking,
-  ): Promise<MsgBeginUnlockingResponse> {
+  beginUnlocking(request: MsgBeginUnlocking): Promise<MsgBeginUnlockingResponse> {
     const data = MsgBeginUnlocking.encode(request).finish();
-    const promise = this.rpc.request(
-      'symphony.lockup.Msg',
-      'BeginUnlocking',
-      data,
-    );
-    return promise.then(data =>
-      MsgBeginUnlockingResponse.decode(new BinaryReader(data)),
-    );
+    const promise = this.rpc.request("symphony.lockup.Msg", "BeginUnlocking", data);
+    return promise.then(data => MsgBeginUnlockingResponse.decode(new BinaryReader(data)));
   }
   extendLockup(request: MsgExtendLockup): Promise<MsgExtendLockupResponse> {
     const data = MsgExtendLockup.encode(request).finish();
-    const promise = this.rpc.request(
-      'symphony.lockup.Msg',
-      'ExtendLockup',
-      data,
-    );
-    return promise.then(data =>
-      MsgExtendLockupResponse.decode(new BinaryReader(data)),
-    );
+    const promise = this.rpc.request("symphony.lockup.Msg", "ExtendLockup", data);
+    return promise.then(data => MsgExtendLockupResponse.decode(new BinaryReader(data)));
   }
   forceUnlock(request: MsgForceUnlock): Promise<MsgForceUnlockResponse> {
     const data = MsgForceUnlock.encode(request).finish();
-    const promise = this.rpc.request(
-      'symphony.lockup.Msg',
-      'ForceUnlock',
-      data,
-    );
-    return promise.then(data =>
-      MsgForceUnlockResponse.decode(new BinaryReader(data)),
-    );
+    const promise = this.rpc.request("symphony.lockup.Msg", "ForceUnlock", data);
+    return promise.then(data => MsgForceUnlockResponse.decode(new BinaryReader(data)));
   }
-  setRewardReceiverAddress(
-    request: MsgSetRewardReceiverAddress,
-  ): Promise<MsgSetRewardReceiverAddressResponse> {
+  setRewardReceiverAddress(request: MsgSetRewardReceiverAddress): Promise<MsgSetRewardReceiverAddressResponse> {
     const data = MsgSetRewardReceiverAddress.encode(request).finish();
-    const promise = this.rpc.request(
-      'symphony.lockup.Msg',
-      'SetRewardReceiverAddress',
-      data,
-    );
-    return promise.then(data =>
-      MsgSetRewardReceiverAddressResponse.decode(new BinaryReader(data)),
-    );
+    const promise = this.rpc.request("symphony.lockup.Msg", "SetRewardReceiverAddress", data);
+    return promise.then(data => MsgSetRewardReceiverAddressResponse.decode(new BinaryReader(data)));
   }
 }
 export const createClientImpl = (rpc: Rpc) => {

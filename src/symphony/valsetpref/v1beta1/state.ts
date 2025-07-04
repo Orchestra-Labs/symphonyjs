@@ -1,7 +1,7 @@
 //@ts-nocheck
-import { BinaryReader, BinaryWriter } from '../../../binary';
-import { Decimal } from '@cosmjs/math';
-import { GlobalDecoderRegistry } from '../../../registry';
+import { BinaryReader, BinaryWriter } from "../../../binary";
+import { Decimal } from "@cosmjs/math";
+import { GlobalDecoderRegistry } from "../../../registry";
 /**
  * ValidatorPreference defines the message structure for
  * CreateValidatorSetPreference. It allows a user to set {val_addr, weight} in
@@ -19,7 +19,7 @@ export interface ValidatorPreference {
   weight: string;
 }
 export interface ValidatorPreferenceProtoMsg {
-  typeUrl: '/symphony.valsetpref.v1beta1.ValidatorPreference';
+  typeUrl: "/symphony.valsetpref.v1beta1.ValidatorPreference";
   value: Uint8Array;
 }
 /**
@@ -39,7 +39,7 @@ export interface ValidatorPreferenceAmino {
   weight?: string;
 }
 export interface ValidatorPreferenceAminoMsg {
-  type: '/symphony.valsetpref.v1beta1.ValidatorPreference';
+  type: "/symphony.valsetpref.v1beta1.ValidatorPreference";
   value: ValidatorPreferenceAmino;
 }
 /**
@@ -64,7 +64,7 @@ export interface ValidatorSetPreferences {
   preferences: ValidatorPreference[];
 }
 export interface ValidatorSetPreferencesProtoMsg {
-  typeUrl: '/symphony.valsetpref.v1beta1.ValidatorSetPreferences';
+  typeUrl: "/symphony.valsetpref.v1beta1.ValidatorSetPreferences";
   value: Uint8Array;
 }
 /**
@@ -78,7 +78,7 @@ export interface ValidatorSetPreferencesAmino {
   preferences?: ValidatorPreferenceAmino[];
 }
 export interface ValidatorSetPreferencesAminoMsg {
-  type: '/symphony.valsetpref.v1beta1.ValidatorSetPreferences';
+  type: "/symphony.valsetpref.v1beta1.ValidatorSetPreferences";
   value: ValidatorSetPreferencesAmino;
 }
 /**
@@ -92,55 +92,32 @@ export interface ValidatorSetPreferencesSDKType {
 }
 function createBaseValidatorPreference(): ValidatorPreference {
   return {
-    valOperAddress: '',
-    weight: '',
+    valOperAddress: "",
+    weight: ""
   };
 }
 export const ValidatorPreference = {
-  typeUrl: '/symphony.valsetpref.v1beta1.ValidatorPreference',
+  typeUrl: "/symphony.valsetpref.v1beta1.ValidatorPreference",
   is(o: any): o is ValidatorPreference {
-    return (
-      o &&
-      (o.$typeUrl === ValidatorPreference.typeUrl ||
-        (typeof o.valOperAddress === 'string' && typeof o.weight === 'string'))
-    );
+    return o && (o.$typeUrl === ValidatorPreference.typeUrl || typeof o.valOperAddress === "string" && typeof o.weight === "string");
   },
   isSDK(o: any): o is ValidatorPreferenceSDKType {
-    return (
-      o &&
-      (o.$typeUrl === ValidatorPreference.typeUrl ||
-        (typeof o.val_oper_address === 'string' &&
-          typeof o.weight === 'string'))
-    );
+    return o && (o.$typeUrl === ValidatorPreference.typeUrl || typeof o.val_oper_address === "string" && typeof o.weight === "string");
   },
   isAmino(o: any): o is ValidatorPreferenceAmino {
-    return (
-      o &&
-      (o.$typeUrl === ValidatorPreference.typeUrl ||
-        (typeof o.val_oper_address === 'string' &&
-          typeof o.weight === 'string'))
-    );
+    return o && (o.$typeUrl === ValidatorPreference.typeUrl || typeof o.val_oper_address === "string" && typeof o.weight === "string");
   },
-  encode(
-    message: ValidatorPreference,
-    writer: BinaryWriter = BinaryWriter.create(),
-  ): BinaryWriter {
-    if (message.valOperAddress !== '') {
+  encode(message: ValidatorPreference, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
+    if (message.valOperAddress !== "") {
       writer.uint32(10).string(message.valOperAddress);
     }
-    if (message.weight !== '') {
-      writer
-        .uint32(18)
-        .string(Decimal.fromUserInput(message.weight, 18).atomics);
+    if (message.weight !== "") {
+      writer.uint32(18).string(Decimal.fromUserInput(message.weight, 18).atomics);
     }
     return writer;
   },
-  decode(
-    input: BinaryReader | Uint8Array,
-    length?: number,
-  ): ValidatorPreference {
-    const reader =
-      input instanceof BinaryReader ? input : new BinaryReader(input);
+  decode(input: BinaryReader | Uint8Array, length?: number): ValidatorPreference {
+    const reader = input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseValidatorPreference();
     while (reader.pos < end) {
@@ -161,16 +138,13 @@ export const ValidatorPreference = {
   },
   fromPartial(object: Partial<ValidatorPreference>): ValidatorPreference {
     const message = createBaseValidatorPreference();
-    message.valOperAddress = object.valOperAddress ?? '';
-    message.weight = object.weight ?? '';
+    message.valOperAddress = object.valOperAddress ?? "";
+    message.weight = object.weight ?? "";
     return message;
   },
   fromAmino(object: ValidatorPreferenceAmino): ValidatorPreference {
     const message = createBaseValidatorPreference();
-    if (
-      object.val_oper_address !== undefined &&
-      object.val_oper_address !== null
-    ) {
+    if (object.val_oper_address !== undefined && object.val_oper_address !== null) {
       message.valOperAddress = object.val_oper_address;
     }
     if (object.weight !== undefined && object.weight !== null) {
@@ -180,9 +154,8 @@ export const ValidatorPreference = {
   },
   toAmino(message: ValidatorPreference): ValidatorPreferenceAmino {
     const obj: any = {};
-    obj.val_oper_address =
-      message.valOperAddress === '' ? undefined : message.valOperAddress;
-    obj.weight = message.weight === '' ? undefined : message.weight;
+    obj.val_oper_address = message.valOperAddress === "" ? undefined : message.valOperAddress;
+    obj.weight = message.weight === "" ? undefined : message.weight;
     return obj;
   },
   fromAminoMsg(object: ValidatorPreferenceAminoMsg): ValidatorPreference {
@@ -196,72 +169,43 @@ export const ValidatorPreference = {
   },
   toProtoMsg(message: ValidatorPreference): ValidatorPreferenceProtoMsg {
     return {
-      typeUrl: '/symphony.valsetpref.v1beta1.ValidatorPreference',
-      value: ValidatorPreference.encode(message).finish(),
+      typeUrl: "/symphony.valsetpref.v1beta1.ValidatorPreference",
+      value: ValidatorPreference.encode(message).finish()
     };
-  },
+  }
 };
-GlobalDecoderRegistry.register(
-  ValidatorPreference.typeUrl,
-  ValidatorPreference,
-);
+GlobalDecoderRegistry.register(ValidatorPreference.typeUrl, ValidatorPreference);
 function createBaseValidatorSetPreferences(): ValidatorSetPreferences {
   return {
-    preferences: [],
+    preferences: []
   };
 }
 export const ValidatorSetPreferences = {
-  typeUrl: '/symphony.valsetpref.v1beta1.ValidatorSetPreferences',
+  typeUrl: "/symphony.valsetpref.v1beta1.ValidatorSetPreferences",
   is(o: any): o is ValidatorSetPreferences {
-    return (
-      o &&
-      (o.$typeUrl === ValidatorSetPreferences.typeUrl ||
-        (Array.isArray(o.preferences) &&
-          (!o.preferences.length || ValidatorPreference.is(o.preferences[0]))))
-    );
+    return o && (o.$typeUrl === ValidatorSetPreferences.typeUrl || Array.isArray(o.preferences) && (!o.preferences.length || ValidatorPreference.is(o.preferences[0])));
   },
   isSDK(o: any): o is ValidatorSetPreferencesSDKType {
-    return (
-      o &&
-      (o.$typeUrl === ValidatorSetPreferences.typeUrl ||
-        (Array.isArray(o.preferences) &&
-          (!o.preferences.length ||
-            ValidatorPreference.isSDK(o.preferences[0]))))
-    );
+    return o && (o.$typeUrl === ValidatorSetPreferences.typeUrl || Array.isArray(o.preferences) && (!o.preferences.length || ValidatorPreference.isSDK(o.preferences[0])));
   },
   isAmino(o: any): o is ValidatorSetPreferencesAmino {
-    return (
-      o &&
-      (o.$typeUrl === ValidatorSetPreferences.typeUrl ||
-        (Array.isArray(o.preferences) &&
-          (!o.preferences.length ||
-            ValidatorPreference.isAmino(o.preferences[0]))))
-    );
+    return o && (o.$typeUrl === ValidatorSetPreferences.typeUrl || Array.isArray(o.preferences) && (!o.preferences.length || ValidatorPreference.isAmino(o.preferences[0])));
   },
-  encode(
-    message: ValidatorSetPreferences,
-    writer: BinaryWriter = BinaryWriter.create(),
-  ): BinaryWriter {
+  encode(message: ValidatorSetPreferences, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
     for (const v of message.preferences) {
       ValidatorPreference.encode(v!, writer.uint32(18).fork()).ldelim();
     }
     return writer;
   },
-  decode(
-    input: BinaryReader | Uint8Array,
-    length?: number,
-  ): ValidatorSetPreferences {
-    const reader =
-      input instanceof BinaryReader ? input : new BinaryReader(input);
+  decode(input: BinaryReader | Uint8Array, length?: number): ValidatorSetPreferences {
+    const reader = input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseValidatorSetPreferences();
     while (reader.pos < end) {
       const tag = reader.uint32();
       switch (tag >>> 3) {
         case 2:
-          message.preferences.push(
-            ValidatorPreference.decode(reader, reader.uint32()),
-          );
+          message.preferences.push(ValidatorPreference.decode(reader, reader.uint32()));
           break;
         default:
           reader.skipType(tag & 7);
@@ -270,54 +214,39 @@ export const ValidatorSetPreferences = {
     }
     return message;
   },
-  fromPartial(
-    object: Partial<ValidatorSetPreferences>,
-  ): ValidatorSetPreferences {
+  fromPartial(object: Partial<ValidatorSetPreferences>): ValidatorSetPreferences {
     const message = createBaseValidatorSetPreferences();
-    message.preferences =
-      object.preferences?.map(e => ValidatorPreference.fromPartial(e)) || [];
+    message.preferences = object.preferences?.map(e => ValidatorPreference.fromPartial(e)) || [];
     return message;
   },
   fromAmino(object: ValidatorSetPreferencesAmino): ValidatorSetPreferences {
     const message = createBaseValidatorSetPreferences();
-    message.preferences =
-      object.preferences?.map(e => ValidatorPreference.fromAmino(e)) || [];
+    message.preferences = object.preferences?.map(e => ValidatorPreference.fromAmino(e)) || [];
     return message;
   },
   toAmino(message: ValidatorSetPreferences): ValidatorSetPreferencesAmino {
     const obj: any = {};
     if (message.preferences) {
-      obj.preferences = message.preferences.map(e =>
-        e ? ValidatorPreference.toAmino(e) : undefined,
-      );
+      obj.preferences = message.preferences.map(e => e ? ValidatorPreference.toAmino(e) : undefined);
     } else {
       obj.preferences = message.preferences;
     }
     return obj;
   },
-  fromAminoMsg(
-    object: ValidatorSetPreferencesAminoMsg,
-  ): ValidatorSetPreferences {
+  fromAminoMsg(object: ValidatorSetPreferencesAminoMsg): ValidatorSetPreferences {
     return ValidatorSetPreferences.fromAmino(object.value);
   },
-  fromProtoMsg(
-    message: ValidatorSetPreferencesProtoMsg,
-  ): ValidatorSetPreferences {
+  fromProtoMsg(message: ValidatorSetPreferencesProtoMsg): ValidatorSetPreferences {
     return ValidatorSetPreferences.decode(message.value);
   },
   toProto(message: ValidatorSetPreferences): Uint8Array {
     return ValidatorSetPreferences.encode(message).finish();
   },
-  toProtoMsg(
-    message: ValidatorSetPreferences,
-  ): ValidatorSetPreferencesProtoMsg {
+  toProtoMsg(message: ValidatorSetPreferences): ValidatorSetPreferencesProtoMsg {
     return {
-      typeUrl: '/symphony.valsetpref.v1beta1.ValidatorSetPreferences',
-      value: ValidatorSetPreferences.encode(message).finish(),
+      typeUrl: "/symphony.valsetpref.v1beta1.ValidatorSetPreferences",
+      value: ValidatorSetPreferences.encode(message).finish()
     };
-  },
+  }
 };
-GlobalDecoderRegistry.register(
-  ValidatorSetPreferences.typeUrl,
-  ValidatorSetPreferences,
-);
+GlobalDecoderRegistry.register(ValidatorSetPreferences.typeUrl, ValidatorSetPreferences);

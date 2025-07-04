@@ -1,34 +1,7 @@
 //@ts-nocheck
-import { GeneratedType, Registry } from '@cosmjs/proto-signing';
-import {
-  MsgJoinPool,
-  MsgExitPool,
-  MsgSwapExactAmountIn,
-  MsgSwapExactAmountOut,
-  MsgJoinSwapExternAmountIn,
-  MsgJoinSwapShareAmountOut,
-  MsgExitSwapExternAmountOut,
-  MsgExitSwapShareAmountIn,
-} from './tx';
-export const registry: ReadonlyArray<[string, GeneratedType]> = [
-  ['/symphony.gamm.v1beta1.MsgJoinPool', MsgJoinPool],
-  ['/symphony.gamm.v1beta1.MsgExitPool', MsgExitPool],
-  ['/symphony.gamm.v1beta1.MsgSwapExactAmountIn', MsgSwapExactAmountIn],
-  ['/symphony.gamm.v1beta1.MsgSwapExactAmountOut', MsgSwapExactAmountOut],
-  [
-    '/symphony.gamm.v1beta1.MsgJoinSwapExternAmountIn',
-    MsgJoinSwapExternAmountIn,
-  ],
-  [
-    '/symphony.gamm.v1beta1.MsgJoinSwapShareAmountOut',
-    MsgJoinSwapShareAmountOut,
-  ],
-  [
-    '/symphony.gamm.v1beta1.MsgExitSwapExternAmountOut',
-    MsgExitSwapExternAmountOut,
-  ],
-  ['/symphony.gamm.v1beta1.MsgExitSwapShareAmountIn', MsgExitSwapShareAmountIn],
-];
+import { GeneratedType, Registry } from "@cosmjs/proto-signing";
+import { MsgJoinPool, MsgExitPool, MsgSwapExactAmountIn, MsgSwapExactAmountOut, MsgJoinSwapExternAmountIn, MsgJoinSwapShareAmountOut, MsgExitSwapExternAmountOut, MsgExitSwapShareAmountIn } from "./tx";
+export const registry: ReadonlyArray<[string, GeneratedType]> = [["/symphony.gamm.v1beta1.MsgJoinPool", MsgJoinPool], ["/symphony.gamm.v1beta1.MsgExitPool", MsgExitPool], ["/symphony.gamm.v1beta1.MsgSwapExactAmountIn", MsgSwapExactAmountIn], ["/symphony.gamm.v1beta1.MsgSwapExactAmountOut", MsgSwapExactAmountOut], ["/symphony.gamm.v1beta1.MsgJoinSwapExternAmountIn", MsgJoinSwapExternAmountIn], ["/symphony.gamm.v1beta1.MsgJoinSwapShareAmountOut", MsgJoinSwapShareAmountOut], ["/symphony.gamm.v1beta1.MsgExitSwapExternAmountOut", MsgExitSwapExternAmountOut], ["/symphony.gamm.v1beta1.MsgExitSwapShareAmountIn", MsgExitSwapShareAmountIn]];
 export const load = (protoRegistry: Registry) => {
   registry.forEach(([typeUrl, mod]) => {
     protoRegistry.register(typeUrl, mod);
@@ -38,151 +11,151 @@ export const MessageComposer = {
   encoded: {
     joinPool(value: MsgJoinPool) {
       return {
-        typeUrl: '/symphony.gamm.v1beta1.MsgJoinPool',
-        value: MsgJoinPool.encode(value).finish(),
+        typeUrl: "/symphony.gamm.v1beta1.MsgJoinPool",
+        value: MsgJoinPool.encode(value).finish()
       };
     },
     exitPool(value: MsgExitPool) {
       return {
-        typeUrl: '/symphony.gamm.v1beta1.MsgExitPool',
-        value: MsgExitPool.encode(value).finish(),
+        typeUrl: "/symphony.gamm.v1beta1.MsgExitPool",
+        value: MsgExitPool.encode(value).finish()
       };
     },
     swapExactAmountIn(value: MsgSwapExactAmountIn) {
       return {
-        typeUrl: '/symphony.gamm.v1beta1.MsgSwapExactAmountIn',
-        value: MsgSwapExactAmountIn.encode(value).finish(),
+        typeUrl: "/symphony.gamm.v1beta1.MsgSwapExactAmountIn",
+        value: MsgSwapExactAmountIn.encode(value).finish()
       };
     },
     swapExactAmountOut(value: MsgSwapExactAmountOut) {
       return {
-        typeUrl: '/symphony.gamm.v1beta1.MsgSwapExactAmountOut',
-        value: MsgSwapExactAmountOut.encode(value).finish(),
+        typeUrl: "/symphony.gamm.v1beta1.MsgSwapExactAmountOut",
+        value: MsgSwapExactAmountOut.encode(value).finish()
       };
     },
     joinSwapExternAmountIn(value: MsgJoinSwapExternAmountIn) {
       return {
-        typeUrl: '/symphony.gamm.v1beta1.MsgJoinSwapExternAmountIn',
-        value: MsgJoinSwapExternAmountIn.encode(value).finish(),
+        typeUrl: "/symphony.gamm.v1beta1.MsgJoinSwapExternAmountIn",
+        value: MsgJoinSwapExternAmountIn.encode(value).finish()
       };
     },
     joinSwapShareAmountOut(value: MsgJoinSwapShareAmountOut) {
       return {
-        typeUrl: '/symphony.gamm.v1beta1.MsgJoinSwapShareAmountOut',
-        value: MsgJoinSwapShareAmountOut.encode(value).finish(),
+        typeUrl: "/symphony.gamm.v1beta1.MsgJoinSwapShareAmountOut",
+        value: MsgJoinSwapShareAmountOut.encode(value).finish()
       };
     },
     exitSwapExternAmountOut(value: MsgExitSwapExternAmountOut) {
       return {
-        typeUrl: '/symphony.gamm.v1beta1.MsgExitSwapExternAmountOut',
-        value: MsgExitSwapExternAmountOut.encode(value).finish(),
+        typeUrl: "/symphony.gamm.v1beta1.MsgExitSwapExternAmountOut",
+        value: MsgExitSwapExternAmountOut.encode(value).finish()
       };
     },
     exitSwapShareAmountIn(value: MsgExitSwapShareAmountIn) {
       return {
-        typeUrl: '/symphony.gamm.v1beta1.MsgExitSwapShareAmountIn',
-        value: MsgExitSwapShareAmountIn.encode(value).finish(),
+        typeUrl: "/symphony.gamm.v1beta1.MsgExitSwapShareAmountIn",
+        value: MsgExitSwapShareAmountIn.encode(value).finish()
       };
-    },
+    }
   },
   withTypeUrl: {
     joinPool(value: MsgJoinPool) {
       return {
-        typeUrl: '/symphony.gamm.v1beta1.MsgJoinPool',
-        value,
+        typeUrl: "/symphony.gamm.v1beta1.MsgJoinPool",
+        value
       };
     },
     exitPool(value: MsgExitPool) {
       return {
-        typeUrl: '/symphony.gamm.v1beta1.MsgExitPool',
-        value,
+        typeUrl: "/symphony.gamm.v1beta1.MsgExitPool",
+        value
       };
     },
     swapExactAmountIn(value: MsgSwapExactAmountIn) {
       return {
-        typeUrl: '/symphony.gamm.v1beta1.MsgSwapExactAmountIn',
-        value,
+        typeUrl: "/symphony.gamm.v1beta1.MsgSwapExactAmountIn",
+        value
       };
     },
     swapExactAmountOut(value: MsgSwapExactAmountOut) {
       return {
-        typeUrl: '/symphony.gamm.v1beta1.MsgSwapExactAmountOut',
-        value,
+        typeUrl: "/symphony.gamm.v1beta1.MsgSwapExactAmountOut",
+        value
       };
     },
     joinSwapExternAmountIn(value: MsgJoinSwapExternAmountIn) {
       return {
-        typeUrl: '/symphony.gamm.v1beta1.MsgJoinSwapExternAmountIn',
-        value,
+        typeUrl: "/symphony.gamm.v1beta1.MsgJoinSwapExternAmountIn",
+        value
       };
     },
     joinSwapShareAmountOut(value: MsgJoinSwapShareAmountOut) {
       return {
-        typeUrl: '/symphony.gamm.v1beta1.MsgJoinSwapShareAmountOut',
-        value,
+        typeUrl: "/symphony.gamm.v1beta1.MsgJoinSwapShareAmountOut",
+        value
       };
     },
     exitSwapExternAmountOut(value: MsgExitSwapExternAmountOut) {
       return {
-        typeUrl: '/symphony.gamm.v1beta1.MsgExitSwapExternAmountOut',
-        value,
+        typeUrl: "/symphony.gamm.v1beta1.MsgExitSwapExternAmountOut",
+        value
       };
     },
     exitSwapShareAmountIn(value: MsgExitSwapShareAmountIn) {
       return {
-        typeUrl: '/symphony.gamm.v1beta1.MsgExitSwapShareAmountIn',
-        value,
+        typeUrl: "/symphony.gamm.v1beta1.MsgExitSwapShareAmountIn",
+        value
       };
-    },
+    }
   },
   fromPartial: {
     joinPool(value: MsgJoinPool) {
       return {
-        typeUrl: '/symphony.gamm.v1beta1.MsgJoinPool',
-        value: MsgJoinPool.fromPartial(value),
+        typeUrl: "/symphony.gamm.v1beta1.MsgJoinPool",
+        value: MsgJoinPool.fromPartial(value)
       };
     },
     exitPool(value: MsgExitPool) {
       return {
-        typeUrl: '/symphony.gamm.v1beta1.MsgExitPool',
-        value: MsgExitPool.fromPartial(value),
+        typeUrl: "/symphony.gamm.v1beta1.MsgExitPool",
+        value: MsgExitPool.fromPartial(value)
       };
     },
     swapExactAmountIn(value: MsgSwapExactAmountIn) {
       return {
-        typeUrl: '/symphony.gamm.v1beta1.MsgSwapExactAmountIn',
-        value: MsgSwapExactAmountIn.fromPartial(value),
+        typeUrl: "/symphony.gamm.v1beta1.MsgSwapExactAmountIn",
+        value: MsgSwapExactAmountIn.fromPartial(value)
       };
     },
     swapExactAmountOut(value: MsgSwapExactAmountOut) {
       return {
-        typeUrl: '/symphony.gamm.v1beta1.MsgSwapExactAmountOut',
-        value: MsgSwapExactAmountOut.fromPartial(value),
+        typeUrl: "/symphony.gamm.v1beta1.MsgSwapExactAmountOut",
+        value: MsgSwapExactAmountOut.fromPartial(value)
       };
     },
     joinSwapExternAmountIn(value: MsgJoinSwapExternAmountIn) {
       return {
-        typeUrl: '/symphony.gamm.v1beta1.MsgJoinSwapExternAmountIn',
-        value: MsgJoinSwapExternAmountIn.fromPartial(value),
+        typeUrl: "/symphony.gamm.v1beta1.MsgJoinSwapExternAmountIn",
+        value: MsgJoinSwapExternAmountIn.fromPartial(value)
       };
     },
     joinSwapShareAmountOut(value: MsgJoinSwapShareAmountOut) {
       return {
-        typeUrl: '/symphony.gamm.v1beta1.MsgJoinSwapShareAmountOut',
-        value: MsgJoinSwapShareAmountOut.fromPartial(value),
+        typeUrl: "/symphony.gamm.v1beta1.MsgJoinSwapShareAmountOut",
+        value: MsgJoinSwapShareAmountOut.fromPartial(value)
       };
     },
     exitSwapExternAmountOut(value: MsgExitSwapExternAmountOut) {
       return {
-        typeUrl: '/symphony.gamm.v1beta1.MsgExitSwapExternAmountOut',
-        value: MsgExitSwapExternAmountOut.fromPartial(value),
+        typeUrl: "/symphony.gamm.v1beta1.MsgExitSwapExternAmountOut",
+        value: MsgExitSwapExternAmountOut.fromPartial(value)
       };
     },
     exitSwapShareAmountIn(value: MsgExitSwapShareAmountIn) {
       return {
-        typeUrl: '/symphony.gamm.v1beta1.MsgExitSwapShareAmountIn',
-        value: MsgExitSwapShareAmountIn.fromPartial(value),
+        typeUrl: "/symphony.gamm.v1beta1.MsgExitSwapShareAmountIn",
+        value: MsgExitSwapShareAmountIn.fromPartial(value)
       };
-    },
-  },
+    }
+  }
 };

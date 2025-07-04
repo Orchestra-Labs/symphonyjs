@@ -1,18 +1,18 @@
 //@ts-nocheck
-import { BinaryReader, BinaryWriter } from '../../binary';
-import { GlobalDecoderRegistry } from '../../registry';
+import { BinaryReader, BinaryWriter } from "../../binary";
+import { GlobalDecoderRegistry } from "../../registry";
 export interface Params {
   forceUnlockAllowedAddresses: string[];
 }
 export interface ParamsProtoMsg {
-  typeUrl: '/symphony.lockup.Params';
+  typeUrl: "/symphony.lockup.Params";
   value: Uint8Array;
 }
 export interface ParamsAmino {
   force_unlock_allowed_addresses?: string[];
 }
 export interface ParamsAminoMsg {
-  type: '/symphony.lockup.Params';
+  type: "/symphony.lockup.Params";
   value: ParamsAmino;
 }
 export interface ParamsSDKType {
@@ -20,50 +20,28 @@ export interface ParamsSDKType {
 }
 function createBaseParams(): Params {
   return {
-    forceUnlockAllowedAddresses: [],
+    forceUnlockAllowedAddresses: []
   };
 }
 export const Params = {
-  typeUrl: '/symphony.lockup.Params',
+  typeUrl: "/symphony.lockup.Params",
   is(o: any): o is Params {
-    return (
-      o &&
-      (o.$typeUrl === Params.typeUrl ||
-        (Array.isArray(o.forceUnlockAllowedAddresses) &&
-          (!o.forceUnlockAllowedAddresses.length ||
-            typeof o.forceUnlockAllowedAddresses[0] === 'string')))
-    );
+    return o && (o.$typeUrl === Params.typeUrl || Array.isArray(o.forceUnlockAllowedAddresses) && (!o.forceUnlockAllowedAddresses.length || typeof o.forceUnlockAllowedAddresses[0] === "string"));
   },
   isSDK(o: any): o is ParamsSDKType {
-    return (
-      o &&
-      (o.$typeUrl === Params.typeUrl ||
-        (Array.isArray(o.force_unlock_allowed_addresses) &&
-          (!o.force_unlock_allowed_addresses.length ||
-            typeof o.force_unlock_allowed_addresses[0] === 'string')))
-    );
+    return o && (o.$typeUrl === Params.typeUrl || Array.isArray(o.force_unlock_allowed_addresses) && (!o.force_unlock_allowed_addresses.length || typeof o.force_unlock_allowed_addresses[0] === "string"));
   },
   isAmino(o: any): o is ParamsAmino {
-    return (
-      o &&
-      (o.$typeUrl === Params.typeUrl ||
-        (Array.isArray(o.force_unlock_allowed_addresses) &&
-          (!o.force_unlock_allowed_addresses.length ||
-            typeof o.force_unlock_allowed_addresses[0] === 'string')))
-    );
+    return o && (o.$typeUrl === Params.typeUrl || Array.isArray(o.force_unlock_allowed_addresses) && (!o.force_unlock_allowed_addresses.length || typeof o.force_unlock_allowed_addresses[0] === "string"));
   },
-  encode(
-    message: Params,
-    writer: BinaryWriter = BinaryWriter.create(),
-  ): BinaryWriter {
+  encode(message: Params, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
     for (const v of message.forceUnlockAllowedAddresses) {
       writer.uint32(10).string(v!);
     }
     return writer;
   },
   decode(input: BinaryReader | Uint8Array, length?: number): Params {
-    const reader =
-      input instanceof BinaryReader ? input : new BinaryReader(input);
+    const reader = input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseParams();
     while (reader.pos < end) {
@@ -81,21 +59,18 @@ export const Params = {
   },
   fromPartial(object: Partial<Params>): Params {
     const message = createBaseParams();
-    message.forceUnlockAllowedAddresses =
-      object.forceUnlockAllowedAddresses?.map(e => e) || [];
+    message.forceUnlockAllowedAddresses = object.forceUnlockAllowedAddresses?.map(e => e) || [];
     return message;
   },
   fromAmino(object: ParamsAmino): Params {
     const message = createBaseParams();
-    message.forceUnlockAllowedAddresses =
-      object.force_unlock_allowed_addresses?.map(e => e) || [];
+    message.forceUnlockAllowedAddresses = object.force_unlock_allowed_addresses?.map(e => e) || [];
     return message;
   },
   toAmino(message: Params): ParamsAmino {
     const obj: any = {};
     if (message.forceUnlockAllowedAddresses) {
-      obj.force_unlock_allowed_addresses =
-        message.forceUnlockAllowedAddresses.map(e => e);
+      obj.force_unlock_allowed_addresses = message.forceUnlockAllowedAddresses.map(e => e);
     } else {
       obj.force_unlock_allowed_addresses = message.forceUnlockAllowedAddresses;
     }
@@ -112,9 +87,9 @@ export const Params = {
   },
   toProtoMsg(message: Params): ParamsProtoMsg {
     return {
-      typeUrl: '/symphony.lockup.Params',
-      value: Params.encode(message).finish(),
+      typeUrl: "/symphony.lockup.Params",
+      value: Params.encode(message).finish()
     };
-  },
+  }
 };
 GlobalDecoderRegistry.register(Params.typeUrl, Params);

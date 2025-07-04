@@ -1,18 +1,14 @@
 //@ts-nocheck
-import {
-  Coin,
-  CoinAmino,
-  CoinSDKType,
-} from '../../../../../cosmos/base/v1beta1/coin';
-import { BinaryReader, BinaryWriter } from '../../../../../binary';
-import { GlobalDecoderRegistry } from '../../../../../registry';
+import { Coin, CoinAmino, CoinSDKType } from "../../../../../cosmos/base/v1beta1/coin";
+import { BinaryReader, BinaryWriter } from "../../../../../binary";
+import { GlobalDecoderRegistry } from "../../../../../registry";
 /** ===================== ShareDenomResponse */
 export interface ShareDenomResponse {
   /** share_denom is the share denomination. */
   shareDenom: string;
 }
 export interface ShareDenomResponseProtoMsg {
-  typeUrl: '/symphony.cosmwasmpool.v1beta1.model.v3.ShareDenomResponse';
+  typeUrl: "/symphony.cosmwasmpool.v1beta1.model.v3.ShareDenomResponse";
   value: Uint8Array;
 }
 /** ===================== ShareDenomResponse */
@@ -21,7 +17,7 @@ export interface ShareDenomResponseAmino {
   share_denom?: string;
 }
 export interface ShareDenomResponseAminoMsg {
-  type: '/symphony.cosmwasmpool.v1beta1.model.v3.ShareDenomResponse';
+  type: "/symphony.cosmwasmpool.v1beta1.model.v3.ShareDenomResponse";
   value: ShareDenomResponseAmino;
 }
 /** ===================== ShareDenomResponse */
@@ -37,7 +33,7 @@ export interface TotalPoolLiquidityResponse {
   totalPoolLiquidity: Coin[];
 }
 export interface TotalPoolLiquidityResponseProtoMsg {
-  typeUrl: '/symphony.cosmwasmpool.v1beta1.model.v3.TotalPoolLiquidityResponse';
+  typeUrl: "/symphony.cosmwasmpool.v1beta1.model.v3.TotalPoolLiquidityResponse";
   value: Uint8Array;
 }
 /** ===================== TotalPoolLiquidityResponse */
@@ -49,7 +45,7 @@ export interface TotalPoolLiquidityResponseAmino {
   total_pool_liquidity?: CoinAmino[];
 }
 export interface TotalPoolLiquidityResponseAminoMsg {
-  type: '/symphony.cosmwasmpool.v1beta1.model.v3.TotalPoolLiquidityResponse';
+  type: "/symphony.cosmwasmpool.v1beta1.model.v3.TotalPoolLiquidityResponse";
   value: TotalPoolLiquidityResponseAmino;
 }
 /** ===================== TotalPoolLiquidityResponse */
@@ -64,7 +60,7 @@ export interface AssetConfig {
   normalizationFactor: string;
 }
 export interface AssetConfigProtoMsg {
-  typeUrl: '/symphony.cosmwasmpool.v1beta1.model.v3.AssetConfig';
+  typeUrl: "/symphony.cosmwasmpool.v1beta1.model.v3.AssetConfig";
   value: Uint8Array;
 }
 /** ===================== AssetConfig */
@@ -75,7 +71,7 @@ export interface AssetConfigAmino {
   normalization_factor?: string;
 }
 export interface AssetConfigAminoMsg {
-  type: '/symphony.cosmwasmpool.v1beta1.model.v3.AssetConfig';
+  type: "/symphony.cosmwasmpool.v1beta1.model.v3.AssetConfig";
   value: AssetConfigAmino;
 }
 /** ===================== AssetConfig */
@@ -89,7 +85,7 @@ export interface ListAssetConfigsResponse {
   assetConfigs: AssetConfig[];
 }
 export interface ListAssetConfigsResponseProtoMsg {
-  typeUrl: '/symphony.cosmwasmpool.v1beta1.model.v3.ListAssetConfigsResponse';
+  typeUrl: "/symphony.cosmwasmpool.v1beta1.model.v3.ListAssetConfigsResponse";
   value: Uint8Array;
 }
 /** ===================== ListAssetConfigsResponse */
@@ -98,7 +94,7 @@ export interface ListAssetConfigsResponseAmino {
   asset_configs?: AssetConfigAmino[];
 }
 export interface ListAssetConfigsResponseAminoMsg {
-  type: '/symphony.cosmwasmpool.v1beta1.model.v3.ListAssetConfigsResponse';
+  type: "/symphony.cosmwasmpool.v1beta1.model.v3.ListAssetConfigsResponse";
   value: ListAssetConfigsResponseAmino;
 }
 /** ===================== ListAssetConfigsResponse */
@@ -107,47 +103,28 @@ export interface ListAssetConfigsResponseSDKType {
 }
 function createBaseShareDenomResponse(): ShareDenomResponse {
   return {
-    shareDenom: '',
+    shareDenom: ""
   };
 }
 export const ShareDenomResponse = {
-  typeUrl: '/symphony.cosmwasmpool.v1beta1.model.v3.ShareDenomResponse',
+  typeUrl: "/symphony.cosmwasmpool.v1beta1.model.v3.ShareDenomResponse",
   is(o: any): o is ShareDenomResponse {
-    return (
-      o &&
-      (o.$typeUrl === ShareDenomResponse.typeUrl ||
-        typeof o.shareDenom === 'string')
-    );
+    return o && (o.$typeUrl === ShareDenomResponse.typeUrl || typeof o.shareDenom === "string");
   },
   isSDK(o: any): o is ShareDenomResponseSDKType {
-    return (
-      o &&
-      (o.$typeUrl === ShareDenomResponse.typeUrl ||
-        typeof o.share_denom === 'string')
-    );
+    return o && (o.$typeUrl === ShareDenomResponse.typeUrl || typeof o.share_denom === "string");
   },
   isAmino(o: any): o is ShareDenomResponseAmino {
-    return (
-      o &&
-      (o.$typeUrl === ShareDenomResponse.typeUrl ||
-        typeof o.share_denom === 'string')
-    );
+    return o && (o.$typeUrl === ShareDenomResponse.typeUrl || typeof o.share_denom === "string");
   },
-  encode(
-    message: ShareDenomResponse,
-    writer: BinaryWriter = BinaryWriter.create(),
-  ): BinaryWriter {
-    if (message.shareDenom !== '') {
+  encode(message: ShareDenomResponse, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
+    if (message.shareDenom !== "") {
       writer.uint32(10).string(message.shareDenom);
     }
     return writer;
   },
-  decode(
-    input: BinaryReader | Uint8Array,
-    length?: number,
-  ): ShareDenomResponse {
-    const reader =
-      input instanceof BinaryReader ? input : new BinaryReader(input);
+  decode(input: BinaryReader | Uint8Array, length?: number): ShareDenomResponse {
+    const reader = input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseShareDenomResponse();
     while (reader.pos < end) {
@@ -165,7 +142,7 @@ export const ShareDenomResponse = {
   },
   fromPartial(object: Partial<ShareDenomResponse>): ShareDenomResponse {
     const message = createBaseShareDenomResponse();
-    message.shareDenom = object.shareDenom ?? '';
+    message.shareDenom = object.shareDenom ?? "";
     return message;
   },
   fromAmino(object: ShareDenomResponseAmino): ShareDenomResponse {
@@ -177,8 +154,7 @@ export const ShareDenomResponse = {
   },
   toAmino(message: ShareDenomResponse): ShareDenomResponseAmino {
     const obj: any = {};
-    obj.share_denom =
-      message.shareDenom === '' ? undefined : message.shareDenom;
+    obj.share_denom = message.shareDenom === "" ? undefined : message.shareDenom;
     return obj;
   },
   fromAminoMsg(object: ShareDenomResponseAminoMsg): ShareDenomResponse {
@@ -192,60 +168,36 @@ export const ShareDenomResponse = {
   },
   toProtoMsg(message: ShareDenomResponse): ShareDenomResponseProtoMsg {
     return {
-      typeUrl: '/symphony.cosmwasmpool.v1beta1.model.v3.ShareDenomResponse',
-      value: ShareDenomResponse.encode(message).finish(),
+      typeUrl: "/symphony.cosmwasmpool.v1beta1.model.v3.ShareDenomResponse",
+      value: ShareDenomResponse.encode(message).finish()
     };
-  },
+  }
 };
 GlobalDecoderRegistry.register(ShareDenomResponse.typeUrl, ShareDenomResponse);
 function createBaseTotalPoolLiquidityResponse(): TotalPoolLiquidityResponse {
   return {
-    totalPoolLiquidity: [],
+    totalPoolLiquidity: []
   };
 }
 export const TotalPoolLiquidityResponse = {
-  typeUrl: '/symphony.cosmwasmpool.v1beta1.model.v3.TotalPoolLiquidityResponse',
+  typeUrl: "/symphony.cosmwasmpool.v1beta1.model.v3.TotalPoolLiquidityResponse",
   is(o: any): o is TotalPoolLiquidityResponse {
-    return (
-      o &&
-      (o.$typeUrl === TotalPoolLiquidityResponse.typeUrl ||
-        (Array.isArray(o.totalPoolLiquidity) &&
-          (!o.totalPoolLiquidity.length || Coin.is(o.totalPoolLiquidity[0]))))
-    );
+    return o && (o.$typeUrl === TotalPoolLiquidityResponse.typeUrl || Array.isArray(o.totalPoolLiquidity) && (!o.totalPoolLiquidity.length || Coin.is(o.totalPoolLiquidity[0])));
   },
   isSDK(o: any): o is TotalPoolLiquidityResponseSDKType {
-    return (
-      o &&
-      (o.$typeUrl === TotalPoolLiquidityResponse.typeUrl ||
-        (Array.isArray(o.total_pool_liquidity) &&
-          (!o.total_pool_liquidity.length ||
-            Coin.isSDK(o.total_pool_liquidity[0]))))
-    );
+    return o && (o.$typeUrl === TotalPoolLiquidityResponse.typeUrl || Array.isArray(o.total_pool_liquidity) && (!o.total_pool_liquidity.length || Coin.isSDK(o.total_pool_liquidity[0])));
   },
   isAmino(o: any): o is TotalPoolLiquidityResponseAmino {
-    return (
-      o &&
-      (o.$typeUrl === TotalPoolLiquidityResponse.typeUrl ||
-        (Array.isArray(o.total_pool_liquidity) &&
-          (!o.total_pool_liquidity.length ||
-            Coin.isAmino(o.total_pool_liquidity[0]))))
-    );
+    return o && (o.$typeUrl === TotalPoolLiquidityResponse.typeUrl || Array.isArray(o.total_pool_liquidity) && (!o.total_pool_liquidity.length || Coin.isAmino(o.total_pool_liquidity[0])));
   },
-  encode(
-    message: TotalPoolLiquidityResponse,
-    writer: BinaryWriter = BinaryWriter.create(),
-  ): BinaryWriter {
+  encode(message: TotalPoolLiquidityResponse, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
     for (const v of message.totalPoolLiquidity) {
       Coin.encode(v!, writer.uint32(10).fork()).ldelim();
     }
     return writer;
   },
-  decode(
-    input: BinaryReader | Uint8Array,
-    length?: number,
-  ): TotalPoolLiquidityResponse {
-    const reader =
-      input instanceof BinaryReader ? input : new BinaryReader(input);
+  decode(input: BinaryReader | Uint8Array, length?: number): TotalPoolLiquidityResponse {
+    const reader = input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseTotalPoolLiquidityResponse();
     while (reader.pos < end) {
@@ -261,109 +213,70 @@ export const TotalPoolLiquidityResponse = {
     }
     return message;
   },
-  fromPartial(
-    object: Partial<TotalPoolLiquidityResponse>,
-  ): TotalPoolLiquidityResponse {
+  fromPartial(object: Partial<TotalPoolLiquidityResponse>): TotalPoolLiquidityResponse {
     const message = createBaseTotalPoolLiquidityResponse();
-    message.totalPoolLiquidity =
-      object.totalPoolLiquidity?.map(e => Coin.fromPartial(e)) || [];
+    message.totalPoolLiquidity = object.totalPoolLiquidity?.map(e => Coin.fromPartial(e)) || [];
     return message;
   },
-  fromAmino(
-    object: TotalPoolLiquidityResponseAmino,
-  ): TotalPoolLiquidityResponse {
+  fromAmino(object: TotalPoolLiquidityResponseAmino): TotalPoolLiquidityResponse {
     const message = createBaseTotalPoolLiquidityResponse();
-    message.totalPoolLiquidity =
-      object.total_pool_liquidity?.map(e => Coin.fromAmino(e)) || [];
+    message.totalPoolLiquidity = object.total_pool_liquidity?.map(e => Coin.fromAmino(e)) || [];
     return message;
   },
-  toAmino(
-    message: TotalPoolLiquidityResponse,
-  ): TotalPoolLiquidityResponseAmino {
+  toAmino(message: TotalPoolLiquidityResponse): TotalPoolLiquidityResponseAmino {
     const obj: any = {};
     if (message.totalPoolLiquidity) {
-      obj.total_pool_liquidity = message.totalPoolLiquidity.map(e =>
-        e ? Coin.toAmino(e) : undefined,
-      );
+      obj.total_pool_liquidity = message.totalPoolLiquidity.map(e => e ? Coin.toAmino(e) : undefined);
     } else {
       obj.total_pool_liquidity = message.totalPoolLiquidity;
     }
     return obj;
   },
-  fromAminoMsg(
-    object: TotalPoolLiquidityResponseAminoMsg,
-  ): TotalPoolLiquidityResponse {
+  fromAminoMsg(object: TotalPoolLiquidityResponseAminoMsg): TotalPoolLiquidityResponse {
     return TotalPoolLiquidityResponse.fromAmino(object.value);
   },
-  fromProtoMsg(
-    message: TotalPoolLiquidityResponseProtoMsg,
-  ): TotalPoolLiquidityResponse {
+  fromProtoMsg(message: TotalPoolLiquidityResponseProtoMsg): TotalPoolLiquidityResponse {
     return TotalPoolLiquidityResponse.decode(message.value);
   },
   toProto(message: TotalPoolLiquidityResponse): Uint8Array {
     return TotalPoolLiquidityResponse.encode(message).finish();
   },
-  toProtoMsg(
-    message: TotalPoolLiquidityResponse,
-  ): TotalPoolLiquidityResponseProtoMsg {
+  toProtoMsg(message: TotalPoolLiquidityResponse): TotalPoolLiquidityResponseProtoMsg {
     return {
-      typeUrl:
-        '/symphony.cosmwasmpool.v1beta1.model.v3.TotalPoolLiquidityResponse',
-      value: TotalPoolLiquidityResponse.encode(message).finish(),
+      typeUrl: "/symphony.cosmwasmpool.v1beta1.model.v3.TotalPoolLiquidityResponse",
+      value: TotalPoolLiquidityResponse.encode(message).finish()
     };
-  },
+  }
 };
-GlobalDecoderRegistry.register(
-  TotalPoolLiquidityResponse.typeUrl,
-  TotalPoolLiquidityResponse,
-);
+GlobalDecoderRegistry.register(TotalPoolLiquidityResponse.typeUrl, TotalPoolLiquidityResponse);
 function createBaseAssetConfig(): AssetConfig {
   return {
-    denom: '',
-    normalizationFactor: '',
+    denom: "",
+    normalizationFactor: ""
   };
 }
 export const AssetConfig = {
-  typeUrl: '/symphony.cosmwasmpool.v1beta1.model.v3.AssetConfig',
+  typeUrl: "/symphony.cosmwasmpool.v1beta1.model.v3.AssetConfig",
   is(o: any): o is AssetConfig {
-    return (
-      o &&
-      (o.$typeUrl === AssetConfig.typeUrl ||
-        (typeof o.denom === 'string' &&
-          typeof o.normalizationFactor === 'string'))
-    );
+    return o && (o.$typeUrl === AssetConfig.typeUrl || typeof o.denom === "string" && typeof o.normalizationFactor === "string");
   },
   isSDK(o: any): o is AssetConfigSDKType {
-    return (
-      o &&
-      (o.$typeUrl === AssetConfig.typeUrl ||
-        (typeof o.denom === 'string' &&
-          typeof o.normalization_factor === 'string'))
-    );
+    return o && (o.$typeUrl === AssetConfig.typeUrl || typeof o.denom === "string" && typeof o.normalization_factor === "string");
   },
   isAmino(o: any): o is AssetConfigAmino {
-    return (
-      o &&
-      (o.$typeUrl === AssetConfig.typeUrl ||
-        (typeof o.denom === 'string' &&
-          typeof o.normalization_factor === 'string'))
-    );
+    return o && (o.$typeUrl === AssetConfig.typeUrl || typeof o.denom === "string" && typeof o.normalization_factor === "string");
   },
-  encode(
-    message: AssetConfig,
-    writer: BinaryWriter = BinaryWriter.create(),
-  ): BinaryWriter {
-    if (message.denom !== '') {
+  encode(message: AssetConfig, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
+    if (message.denom !== "") {
       writer.uint32(10).string(message.denom);
     }
-    if (message.normalizationFactor !== '') {
+    if (message.normalizationFactor !== "") {
       writer.uint32(18).string(message.normalizationFactor);
     }
     return writer;
   },
   decode(input: BinaryReader | Uint8Array, length?: number): AssetConfig {
-    const reader =
-      input instanceof BinaryReader ? input : new BinaryReader(input);
+    const reader = input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseAssetConfig();
     while (reader.pos < end) {
@@ -384,8 +297,8 @@ export const AssetConfig = {
   },
   fromPartial(object: Partial<AssetConfig>): AssetConfig {
     const message = createBaseAssetConfig();
-    message.denom = object.denom ?? '';
-    message.normalizationFactor = object.normalizationFactor ?? '';
+    message.denom = object.denom ?? "";
+    message.normalizationFactor = object.normalizationFactor ?? "";
     return message;
   },
   fromAmino(object: AssetConfigAmino): AssetConfig {
@@ -393,21 +306,15 @@ export const AssetConfig = {
     if (object.denom !== undefined && object.denom !== null) {
       message.denom = object.denom;
     }
-    if (
-      object.normalization_factor !== undefined &&
-      object.normalization_factor !== null
-    ) {
+    if (object.normalization_factor !== undefined && object.normalization_factor !== null) {
       message.normalizationFactor = object.normalization_factor;
     }
     return message;
   },
   toAmino(message: AssetConfig): AssetConfigAmino {
     const obj: any = {};
-    obj.denom = message.denom === '' ? undefined : message.denom;
-    obj.normalization_factor =
-      message.normalizationFactor === ''
-        ? undefined
-        : message.normalizationFactor;
+    obj.denom = message.denom === "" ? undefined : message.denom;
+    obj.normalization_factor = message.normalizationFactor === "" ? undefined : message.normalizationFactor;
     return obj;
   },
   fromAminoMsg(object: AssetConfigAminoMsg): AssetConfig {
@@ -421,67 +328,43 @@ export const AssetConfig = {
   },
   toProtoMsg(message: AssetConfig): AssetConfigProtoMsg {
     return {
-      typeUrl: '/symphony.cosmwasmpool.v1beta1.model.v3.AssetConfig',
-      value: AssetConfig.encode(message).finish(),
+      typeUrl: "/symphony.cosmwasmpool.v1beta1.model.v3.AssetConfig",
+      value: AssetConfig.encode(message).finish()
     };
-  },
+  }
 };
 GlobalDecoderRegistry.register(AssetConfig.typeUrl, AssetConfig);
 function createBaseListAssetConfigsResponse(): ListAssetConfigsResponse {
   return {
-    assetConfigs: [],
+    assetConfigs: []
   };
 }
 export const ListAssetConfigsResponse = {
-  typeUrl: '/symphony.cosmwasmpool.v1beta1.model.v3.ListAssetConfigsResponse',
+  typeUrl: "/symphony.cosmwasmpool.v1beta1.model.v3.ListAssetConfigsResponse",
   is(o: any): o is ListAssetConfigsResponse {
-    return (
-      o &&
-      (o.$typeUrl === ListAssetConfigsResponse.typeUrl ||
-        (Array.isArray(o.assetConfigs) &&
-          (!o.assetConfigs.length || AssetConfig.is(o.assetConfigs[0]))))
-    );
+    return o && (o.$typeUrl === ListAssetConfigsResponse.typeUrl || Array.isArray(o.assetConfigs) && (!o.assetConfigs.length || AssetConfig.is(o.assetConfigs[0])));
   },
   isSDK(o: any): o is ListAssetConfigsResponseSDKType {
-    return (
-      o &&
-      (o.$typeUrl === ListAssetConfigsResponse.typeUrl ||
-        (Array.isArray(o.asset_configs) &&
-          (!o.asset_configs.length || AssetConfig.isSDK(o.asset_configs[0]))))
-    );
+    return o && (o.$typeUrl === ListAssetConfigsResponse.typeUrl || Array.isArray(o.asset_configs) && (!o.asset_configs.length || AssetConfig.isSDK(o.asset_configs[0])));
   },
   isAmino(o: any): o is ListAssetConfigsResponseAmino {
-    return (
-      o &&
-      (o.$typeUrl === ListAssetConfigsResponse.typeUrl ||
-        (Array.isArray(o.asset_configs) &&
-          (!o.asset_configs.length || AssetConfig.isAmino(o.asset_configs[0]))))
-    );
+    return o && (o.$typeUrl === ListAssetConfigsResponse.typeUrl || Array.isArray(o.asset_configs) && (!o.asset_configs.length || AssetConfig.isAmino(o.asset_configs[0])));
   },
-  encode(
-    message: ListAssetConfigsResponse,
-    writer: BinaryWriter = BinaryWriter.create(),
-  ): BinaryWriter {
+  encode(message: ListAssetConfigsResponse, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
     for (const v of message.assetConfigs) {
       AssetConfig.encode(v!, writer.uint32(10).fork()).ldelim();
     }
     return writer;
   },
-  decode(
-    input: BinaryReader | Uint8Array,
-    length?: number,
-  ): ListAssetConfigsResponse {
-    const reader =
-      input instanceof BinaryReader ? input : new BinaryReader(input);
+  decode(input: BinaryReader | Uint8Array, length?: number): ListAssetConfigsResponse {
+    const reader = input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseListAssetConfigsResponse();
     while (reader.pos < end) {
       const tag = reader.uint32();
       switch (tag >>> 3) {
         case 1:
-          message.assetConfigs.push(
-            AssetConfig.decode(reader, reader.uint32()),
-          );
+          message.assetConfigs.push(AssetConfig.decode(reader, reader.uint32()));
           break;
         default:
           reader.skipType(tag & 7);
@@ -490,55 +373,39 @@ export const ListAssetConfigsResponse = {
     }
     return message;
   },
-  fromPartial(
-    object: Partial<ListAssetConfigsResponse>,
-  ): ListAssetConfigsResponse {
+  fromPartial(object: Partial<ListAssetConfigsResponse>): ListAssetConfigsResponse {
     const message = createBaseListAssetConfigsResponse();
-    message.assetConfigs =
-      object.assetConfigs?.map(e => AssetConfig.fromPartial(e)) || [];
+    message.assetConfigs = object.assetConfigs?.map(e => AssetConfig.fromPartial(e)) || [];
     return message;
   },
   fromAmino(object: ListAssetConfigsResponseAmino): ListAssetConfigsResponse {
     const message = createBaseListAssetConfigsResponse();
-    message.assetConfigs =
-      object.asset_configs?.map(e => AssetConfig.fromAmino(e)) || [];
+    message.assetConfigs = object.asset_configs?.map(e => AssetConfig.fromAmino(e)) || [];
     return message;
   },
   toAmino(message: ListAssetConfigsResponse): ListAssetConfigsResponseAmino {
     const obj: any = {};
     if (message.assetConfigs) {
-      obj.asset_configs = message.assetConfigs.map(e =>
-        e ? AssetConfig.toAmino(e) : undefined,
-      );
+      obj.asset_configs = message.assetConfigs.map(e => e ? AssetConfig.toAmino(e) : undefined);
     } else {
       obj.asset_configs = message.assetConfigs;
     }
     return obj;
   },
-  fromAminoMsg(
-    object: ListAssetConfigsResponseAminoMsg,
-  ): ListAssetConfigsResponse {
+  fromAminoMsg(object: ListAssetConfigsResponseAminoMsg): ListAssetConfigsResponse {
     return ListAssetConfigsResponse.fromAmino(object.value);
   },
-  fromProtoMsg(
-    message: ListAssetConfigsResponseProtoMsg,
-  ): ListAssetConfigsResponse {
+  fromProtoMsg(message: ListAssetConfigsResponseProtoMsg): ListAssetConfigsResponse {
     return ListAssetConfigsResponse.decode(message.value);
   },
   toProto(message: ListAssetConfigsResponse): Uint8Array {
     return ListAssetConfigsResponse.encode(message).finish();
   },
-  toProtoMsg(
-    message: ListAssetConfigsResponse,
-  ): ListAssetConfigsResponseProtoMsg {
+  toProtoMsg(message: ListAssetConfigsResponse): ListAssetConfigsResponseProtoMsg {
     return {
-      typeUrl:
-        '/symphony.cosmwasmpool.v1beta1.model.v3.ListAssetConfigsResponse',
-      value: ListAssetConfigsResponse.encode(message).finish(),
+      typeUrl: "/symphony.cosmwasmpool.v1beta1.model.v3.ListAssetConfigsResponse",
+      value: ListAssetConfigsResponse.encode(message).finish()
     };
-  },
+  }
 };
-GlobalDecoderRegistry.register(
-  ListAssetConfigsResponse.typeUrl,
-  ListAssetConfigsResponse,
-);
+GlobalDecoderRegistry.register(ListAssetConfigsResponse.typeUrl, ListAssetConfigsResponse);

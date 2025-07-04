@@ -1,15 +1,15 @@
 //@ts-nocheck
-import { Params, ParamsAmino, ParamsSDKType } from './incentives';
-import { BinaryReader, BinaryWriter } from '../../../binary';
-import { GlobalDecoderRegistry } from '../../../registry';
+import { Params, ParamsAmino, ParamsSDKType } from "./incentives";
+import { BinaryReader, BinaryWriter } from "../../../binary";
+import { GlobalDecoderRegistry } from "../../../registry";
 export interface QueryParamsRequest {}
 export interface QueryParamsRequestProtoMsg {
-  typeUrl: '/symphony.stablestakingincentives.v1beta1.QueryParamsRequest';
+  typeUrl: "/symphony.stablestakingincentives.v1beta1.QueryParamsRequest";
   value: Uint8Array;
 }
 export interface QueryParamsRequestAmino {}
 export interface QueryParamsRequestAminoMsg {
-  type: '/symphony.stablestakingincentives.v1beta1.QueryParamsRequest';
+  type: "/symphony.stablestakingincentives.v1beta1.QueryParamsRequest";
   value: QueryParamsRequestAmino;
 }
 export interface QueryParamsRequestSDKType {}
@@ -17,14 +17,14 @@ export interface QueryParamsResponse {
   params: Params;
 }
 export interface QueryParamsResponseProtoMsg {
-  typeUrl: '/symphony.stablestakingincentives.v1beta1.QueryParamsResponse';
+  typeUrl: "/symphony.stablestakingincentives.v1beta1.QueryParamsResponse";
   value: Uint8Array;
 }
 export interface QueryParamsResponseAmino {
   params?: ParamsAmino;
 }
 export interface QueryParamsResponseAminoMsg {
-  type: '/symphony.stablestakingincentives.v1beta1.QueryParamsResponse';
+  type: "/symphony.stablestakingincentives.v1beta1.QueryParamsResponse";
   value: QueryParamsResponseAmino;
 }
 export interface QueryParamsResponseSDKType {
@@ -34,7 +34,7 @@ function createBaseQueryParamsRequest(): QueryParamsRequest {
   return {};
 }
 export const QueryParamsRequest = {
-  typeUrl: '/symphony.stablestakingincentives.v1beta1.QueryParamsRequest',
+  typeUrl: "/symphony.stablestakingincentives.v1beta1.QueryParamsRequest",
   is(o: any): o is QueryParamsRequest {
     return o && o.$typeUrl === QueryParamsRequest.typeUrl;
   },
@@ -44,18 +44,11 @@ export const QueryParamsRequest = {
   isAmino(o: any): o is QueryParamsRequestAmino {
     return o && o.$typeUrl === QueryParamsRequest.typeUrl;
   },
-  encode(
-    _: QueryParamsRequest,
-    writer: BinaryWriter = BinaryWriter.create(),
-  ): BinaryWriter {
+  encode(_: QueryParamsRequest, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
     return writer;
   },
-  decode(
-    input: BinaryReader | Uint8Array,
-    length?: number,
-  ): QueryParamsRequest {
-    const reader =
-      input instanceof BinaryReader ? input : new BinaryReader(input);
+  decode(input: BinaryReader | Uint8Array, length?: number): QueryParamsRequest {
+    const reader = input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseQueryParamsRequest();
     while (reader.pos < end) {
@@ -91,51 +84,36 @@ export const QueryParamsRequest = {
   },
   toProtoMsg(message: QueryParamsRequest): QueryParamsRequestProtoMsg {
     return {
-      typeUrl: '/symphony.stablestakingincentives.v1beta1.QueryParamsRequest',
-      value: QueryParamsRequest.encode(message).finish(),
+      typeUrl: "/symphony.stablestakingincentives.v1beta1.QueryParamsRequest",
+      value: QueryParamsRequest.encode(message).finish()
     };
-  },
+  }
 };
 GlobalDecoderRegistry.register(QueryParamsRequest.typeUrl, QueryParamsRequest);
 function createBaseQueryParamsResponse(): QueryParamsResponse {
   return {
-    params: Params.fromPartial({}),
+    params: Params.fromPartial({})
   };
 }
 export const QueryParamsResponse = {
-  typeUrl: '/symphony.stablestakingincentives.v1beta1.QueryParamsResponse',
+  typeUrl: "/symphony.stablestakingincentives.v1beta1.QueryParamsResponse",
   is(o: any): o is QueryParamsResponse {
-    return (
-      o && (o.$typeUrl === QueryParamsResponse.typeUrl || Params.is(o.params))
-    );
+    return o && (o.$typeUrl === QueryParamsResponse.typeUrl || Params.is(o.params));
   },
   isSDK(o: any): o is QueryParamsResponseSDKType {
-    return (
-      o &&
-      (o.$typeUrl === QueryParamsResponse.typeUrl || Params.isSDK(o.params))
-    );
+    return o && (o.$typeUrl === QueryParamsResponse.typeUrl || Params.isSDK(o.params));
   },
   isAmino(o: any): o is QueryParamsResponseAmino {
-    return (
-      o &&
-      (o.$typeUrl === QueryParamsResponse.typeUrl || Params.isAmino(o.params))
-    );
+    return o && (o.$typeUrl === QueryParamsResponse.typeUrl || Params.isAmino(o.params));
   },
-  encode(
-    message: QueryParamsResponse,
-    writer: BinaryWriter = BinaryWriter.create(),
-  ): BinaryWriter {
+  encode(message: QueryParamsResponse, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
     if (message.params !== undefined) {
       Params.encode(message.params, writer.uint32(10).fork()).ldelim();
     }
     return writer;
   },
-  decode(
-    input: BinaryReader | Uint8Array,
-    length?: number,
-  ): QueryParamsResponse {
-    const reader =
-      input instanceof BinaryReader ? input : new BinaryReader(input);
+  decode(input: BinaryReader | Uint8Array, length?: number): QueryParamsResponse {
+    const reader = input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseQueryParamsResponse();
     while (reader.pos < end) {
@@ -153,10 +131,7 @@ export const QueryParamsResponse = {
   },
   fromPartial(object: Partial<QueryParamsResponse>): QueryParamsResponse {
     const message = createBaseQueryParamsResponse();
-    message.params =
-      object.params !== undefined && object.params !== null
-        ? Params.fromPartial(object.params)
-        : undefined;
+    message.params = object.params !== undefined && object.params !== null ? Params.fromPartial(object.params) : undefined;
     return message;
   },
   fromAmino(object: QueryParamsResponseAmino): QueryParamsResponse {
@@ -182,12 +157,9 @@ export const QueryParamsResponse = {
   },
   toProtoMsg(message: QueryParamsResponse): QueryParamsResponseProtoMsg {
     return {
-      typeUrl: '/symphony.stablestakingincentives.v1beta1.QueryParamsResponse',
-      value: QueryParamsResponse.encode(message).finish(),
+      typeUrl: "/symphony.stablestakingincentives.v1beta1.QueryParamsResponse",
+      value: QueryParamsResponse.encode(message).finish()
     };
-  },
+  }
 };
-GlobalDecoderRegistry.register(
-  QueryParamsResponse.typeUrl,
-  QueryParamsResponse,
-);
+GlobalDecoderRegistry.register(QueryParamsResponse.typeUrl, QueryParamsResponse);

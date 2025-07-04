@@ -1,13 +1,8 @@
 //@ts-nocheck
-import { Rpc } from '../../../helpers';
-import { BinaryReader } from '../../../binary';
-import { QueryClient, createProtobufRpcClient } from '@cosmjs/stargate';
-import {
-  QueryTaxRateRequest,
-  QueryTaxRateResponse,
-  QueryParamsRequest,
-  QueryParamsResponse,
-} from './query';
+import { Rpc } from "../../../helpers";
+import { BinaryReader } from "../../../binary";
+import { QueryClient, createProtobufRpcClient } from "@cosmjs/stargate";
+import { QueryTaxRateRequest, QueryTaxRateResponse, QueryParamsRequest, QueryParamsResponse } from "./query";
 /** Query defines the gRPC querier service. */
 export interface Query {
   /** TaxRate return the current tax rate */
@@ -24,25 +19,13 @@ export class QueryClientImpl implements Query {
   }
   taxRate(request: QueryTaxRateRequest = {}): Promise<QueryTaxRateResponse> {
     const data = QueryTaxRateRequest.encode(request).finish();
-    const promise = this.rpc.request(
-      'symphony.treasury.v1beta1.Query',
-      'TaxRate',
-      data,
-    );
-    return promise.then(data =>
-      QueryTaxRateResponse.decode(new BinaryReader(data)),
-    );
+    const promise = this.rpc.request("symphony.treasury.v1beta1.Query", "TaxRate", data);
+    return promise.then(data => QueryTaxRateResponse.decode(new BinaryReader(data)));
   }
   params(request: QueryParamsRequest = {}): Promise<QueryParamsResponse> {
     const data = QueryParamsRequest.encode(request).finish();
-    const promise = this.rpc.request(
-      'symphony.treasury.v1beta1.Query',
-      'Params',
-      data,
-    );
-    return promise.then(data =>
-      QueryParamsResponse.decode(new BinaryReader(data)),
-    );
+    const promise = this.rpc.request("symphony.treasury.v1beta1.Query", "Params", data);
+    return promise.then(data => QueryParamsResponse.decode(new BinaryReader(data)));
   }
 }
 export const createRpcQueryExtension = (base: QueryClient) => {
@@ -54,6 +37,6 @@ export const createRpcQueryExtension = (base: QueryClient) => {
     },
     params(request?: QueryParamsRequest): Promise<QueryParamsResponse> {
       return queryService.params(request);
-    },
+    }
   };
 };

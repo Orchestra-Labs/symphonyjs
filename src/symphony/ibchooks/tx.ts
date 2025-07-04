@@ -1,13 +1,13 @@
 //@ts-nocheck
-import { BinaryReader, BinaryWriter } from '../../binary';
-import { GlobalDecoderRegistry } from '../../registry';
+import { BinaryReader, BinaryWriter } from "../../binary";
+import { GlobalDecoderRegistry } from "../../registry";
 export interface MsgEmitIBCAck {
   sender: string;
   packetSequence: bigint;
   channel: string;
 }
 export interface MsgEmitIBCAckProtoMsg {
-  typeUrl: '/symphony.ibchooks.MsgEmitIBCAck';
+  typeUrl: "/symphony.ibchooks.MsgEmitIBCAck";
   value: Uint8Array;
 }
 export interface MsgEmitIBCAckAmino {
@@ -16,7 +16,7 @@ export interface MsgEmitIBCAckAmino {
   channel?: string;
 }
 export interface MsgEmitIBCAckAminoMsg {
-  type: 'symphony/MsgEmitIBCAck';
+  type: "symphony/MsgEmitIBCAck";
   value: MsgEmitIBCAckAmino;
 }
 export interface MsgEmitIBCAckSDKType {
@@ -29,7 +29,7 @@ export interface MsgEmitIBCAckResponse {
   ibcAck: string;
 }
 export interface MsgEmitIBCAckResponseProtoMsg {
-  typeUrl: '/symphony.ibchooks.MsgEmitIBCAckResponse';
+  typeUrl: "/symphony.ibchooks.MsgEmitIBCAckResponse";
   value: Uint8Array;
 }
 export interface MsgEmitIBCAckResponseAmino {
@@ -37,7 +37,7 @@ export interface MsgEmitIBCAckResponseAmino {
   ibc_ack?: string;
 }
 export interface MsgEmitIBCAckResponseAminoMsg {
-  type: '/symphony.ibchooks.MsgEmitIBCAckResponse';
+  type: "/symphony.ibchooks.MsgEmitIBCAckResponse";
   value: MsgEmitIBCAckResponseAmino;
 }
 export interface MsgEmitIBCAckResponseSDKType {
@@ -46,59 +46,37 @@ export interface MsgEmitIBCAckResponseSDKType {
 }
 function createBaseMsgEmitIBCAck(): MsgEmitIBCAck {
   return {
-    sender: '',
+    sender: "",
     packetSequence: BigInt(0),
-    channel: '',
+    channel: ""
   };
 }
 export const MsgEmitIBCAck = {
-  typeUrl: '/symphony.ibchooks.MsgEmitIBCAck',
-  aminoType: 'symphony/MsgEmitIBCAck',
+  typeUrl: "/symphony.ibchooks.MsgEmitIBCAck",
+  aminoType: "symphony/MsgEmitIBCAck",
   is(o: any): o is MsgEmitIBCAck {
-    return (
-      o &&
-      (o.$typeUrl === MsgEmitIBCAck.typeUrl ||
-        (typeof o.sender === 'string' &&
-          typeof o.packetSequence === 'bigint' &&
-          typeof o.channel === 'string'))
-    );
+    return o && (o.$typeUrl === MsgEmitIBCAck.typeUrl || typeof o.sender === "string" && typeof o.packetSequence === "bigint" && typeof o.channel === "string");
   },
   isSDK(o: any): o is MsgEmitIBCAckSDKType {
-    return (
-      o &&
-      (o.$typeUrl === MsgEmitIBCAck.typeUrl ||
-        (typeof o.sender === 'string' &&
-          typeof o.packet_sequence === 'bigint' &&
-          typeof o.channel === 'string'))
-    );
+    return o && (o.$typeUrl === MsgEmitIBCAck.typeUrl || typeof o.sender === "string" && typeof o.packet_sequence === "bigint" && typeof o.channel === "string");
   },
   isAmino(o: any): o is MsgEmitIBCAckAmino {
-    return (
-      o &&
-      (o.$typeUrl === MsgEmitIBCAck.typeUrl ||
-        (typeof o.sender === 'string' &&
-          typeof o.packet_sequence === 'bigint' &&
-          typeof o.channel === 'string'))
-    );
+    return o && (o.$typeUrl === MsgEmitIBCAck.typeUrl || typeof o.sender === "string" && typeof o.packet_sequence === "bigint" && typeof o.channel === "string");
   },
-  encode(
-    message: MsgEmitIBCAck,
-    writer: BinaryWriter = BinaryWriter.create(),
-  ): BinaryWriter {
-    if (message.sender !== '') {
+  encode(message: MsgEmitIBCAck, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
+    if (message.sender !== "") {
       writer.uint32(10).string(message.sender);
     }
     if (message.packetSequence !== BigInt(0)) {
       writer.uint32(16).uint64(message.packetSequence);
     }
-    if (message.channel !== '') {
+    if (message.channel !== "") {
       writer.uint32(26).string(message.channel);
     }
     return writer;
   },
   decode(input: BinaryReader | Uint8Array, length?: number): MsgEmitIBCAck {
-    const reader =
-      input instanceof BinaryReader ? input : new BinaryReader(input);
+    const reader = input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseMsgEmitIBCAck();
     while (reader.pos < end) {
@@ -122,12 +100,9 @@ export const MsgEmitIBCAck = {
   },
   fromPartial(object: Partial<MsgEmitIBCAck>): MsgEmitIBCAck {
     const message = createBaseMsgEmitIBCAck();
-    message.sender = object.sender ?? '';
-    message.packetSequence =
-      object.packetSequence !== undefined && object.packetSequence !== null
-        ? BigInt(object.packetSequence.toString())
-        : BigInt(0);
-    message.channel = object.channel ?? '';
+    message.sender = object.sender ?? "";
+    message.packetSequence = object.packetSequence !== undefined && object.packetSequence !== null ? BigInt(object.packetSequence.toString()) : BigInt(0);
+    message.channel = object.channel ?? "";
     return message;
   },
   fromAmino(object: MsgEmitIBCAckAmino): MsgEmitIBCAck {
@@ -135,10 +110,7 @@ export const MsgEmitIBCAck = {
     if (object.sender !== undefined && object.sender !== null) {
       message.sender = object.sender;
     }
-    if (
-      object.packet_sequence !== undefined &&
-      object.packet_sequence !== null
-    ) {
+    if (object.packet_sequence !== undefined && object.packet_sequence !== null) {
       message.packetSequence = BigInt(object.packet_sequence);
     }
     if (object.channel !== undefined && object.channel !== null) {
@@ -148,12 +120,9 @@ export const MsgEmitIBCAck = {
   },
   toAmino(message: MsgEmitIBCAck): MsgEmitIBCAckAmino {
     const obj: any = {};
-    obj.sender = message.sender === '' ? undefined : message.sender;
-    obj.packet_sequence =
-      message.packetSequence !== BigInt(0)
-        ? message.packetSequence?.toString()
-        : undefined;
-    obj.channel = message.channel === '' ? undefined : message.channel;
+    obj.sender = message.sender === "" ? undefined : message.sender;
+    obj.packet_sequence = message.packetSequence !== BigInt(0) ? message.packetSequence?.toString() : undefined;
+    obj.channel = message.channel === "" ? undefined : message.channel;
     return obj;
   },
   fromAminoMsg(object: MsgEmitIBCAckAminoMsg): MsgEmitIBCAck {
@@ -161,8 +130,8 @@ export const MsgEmitIBCAck = {
   },
   toAminoMsg(message: MsgEmitIBCAck): MsgEmitIBCAckAminoMsg {
     return {
-      type: 'symphony/MsgEmitIBCAck',
-      value: MsgEmitIBCAck.toAmino(message),
+      type: "symphony/MsgEmitIBCAck",
+      value: MsgEmitIBCAck.toAmino(message)
     };
   },
   fromProtoMsg(message: MsgEmitIBCAckProtoMsg): MsgEmitIBCAck {
@@ -173,65 +142,41 @@ export const MsgEmitIBCAck = {
   },
   toProtoMsg(message: MsgEmitIBCAck): MsgEmitIBCAckProtoMsg {
     return {
-      typeUrl: '/symphony.ibchooks.MsgEmitIBCAck',
-      value: MsgEmitIBCAck.encode(message).finish(),
+      typeUrl: "/symphony.ibchooks.MsgEmitIBCAck",
+      value: MsgEmitIBCAck.encode(message).finish()
     };
-  },
+  }
 };
 GlobalDecoderRegistry.register(MsgEmitIBCAck.typeUrl, MsgEmitIBCAck);
-GlobalDecoderRegistry.registerAminoProtoMapping(
-  MsgEmitIBCAck.aminoType,
-  MsgEmitIBCAck.typeUrl,
-);
+GlobalDecoderRegistry.registerAminoProtoMapping(MsgEmitIBCAck.aminoType, MsgEmitIBCAck.typeUrl);
 function createBaseMsgEmitIBCAckResponse(): MsgEmitIBCAckResponse {
   return {
-    contractResult: '',
-    ibcAck: '',
+    contractResult: "",
+    ibcAck: ""
   };
 }
 export const MsgEmitIBCAckResponse = {
-  typeUrl: '/symphony.ibchooks.MsgEmitIBCAckResponse',
+  typeUrl: "/symphony.ibchooks.MsgEmitIBCAckResponse",
   is(o: any): o is MsgEmitIBCAckResponse {
-    return (
-      o &&
-      (o.$typeUrl === MsgEmitIBCAckResponse.typeUrl ||
-        (typeof o.contractResult === 'string' && typeof o.ibcAck === 'string'))
-    );
+    return o && (o.$typeUrl === MsgEmitIBCAckResponse.typeUrl || typeof o.contractResult === "string" && typeof o.ibcAck === "string");
   },
   isSDK(o: any): o is MsgEmitIBCAckResponseSDKType {
-    return (
-      o &&
-      (o.$typeUrl === MsgEmitIBCAckResponse.typeUrl ||
-        (typeof o.contract_result === 'string' &&
-          typeof o.ibc_ack === 'string'))
-    );
+    return o && (o.$typeUrl === MsgEmitIBCAckResponse.typeUrl || typeof o.contract_result === "string" && typeof o.ibc_ack === "string");
   },
   isAmino(o: any): o is MsgEmitIBCAckResponseAmino {
-    return (
-      o &&
-      (o.$typeUrl === MsgEmitIBCAckResponse.typeUrl ||
-        (typeof o.contract_result === 'string' &&
-          typeof o.ibc_ack === 'string'))
-    );
+    return o && (o.$typeUrl === MsgEmitIBCAckResponse.typeUrl || typeof o.contract_result === "string" && typeof o.ibc_ack === "string");
   },
-  encode(
-    message: MsgEmitIBCAckResponse,
-    writer: BinaryWriter = BinaryWriter.create(),
-  ): BinaryWriter {
-    if (message.contractResult !== '') {
+  encode(message: MsgEmitIBCAckResponse, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
+    if (message.contractResult !== "") {
       writer.uint32(10).string(message.contractResult);
     }
-    if (message.ibcAck !== '') {
+    if (message.ibcAck !== "") {
       writer.uint32(18).string(message.ibcAck);
     }
     return writer;
   },
-  decode(
-    input: BinaryReader | Uint8Array,
-    length?: number,
-  ): MsgEmitIBCAckResponse {
-    const reader =
-      input instanceof BinaryReader ? input : new BinaryReader(input);
+  decode(input: BinaryReader | Uint8Array, length?: number): MsgEmitIBCAckResponse {
+    const reader = input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseMsgEmitIBCAckResponse();
     while (reader.pos < end) {
@@ -252,16 +197,13 @@ export const MsgEmitIBCAckResponse = {
   },
   fromPartial(object: Partial<MsgEmitIBCAckResponse>): MsgEmitIBCAckResponse {
     const message = createBaseMsgEmitIBCAckResponse();
-    message.contractResult = object.contractResult ?? '';
-    message.ibcAck = object.ibcAck ?? '';
+    message.contractResult = object.contractResult ?? "";
+    message.ibcAck = object.ibcAck ?? "";
     return message;
   },
   fromAmino(object: MsgEmitIBCAckResponseAmino): MsgEmitIBCAckResponse {
     const message = createBaseMsgEmitIBCAckResponse();
-    if (
-      object.contract_result !== undefined &&
-      object.contract_result !== null
-    ) {
+    if (object.contract_result !== undefined && object.contract_result !== null) {
       message.contractResult = object.contract_result;
     }
     if (object.ibc_ack !== undefined && object.ibc_ack !== null) {
@@ -271,9 +213,8 @@ export const MsgEmitIBCAckResponse = {
   },
   toAmino(message: MsgEmitIBCAckResponse): MsgEmitIBCAckResponseAmino {
     const obj: any = {};
-    obj.contract_result =
-      message.contractResult === '' ? undefined : message.contractResult;
-    obj.ibc_ack = message.ibcAck === '' ? undefined : message.ibcAck;
+    obj.contract_result = message.contractResult === "" ? undefined : message.contractResult;
+    obj.ibc_ack = message.ibcAck === "" ? undefined : message.ibcAck;
     return obj;
   },
   fromAminoMsg(object: MsgEmitIBCAckResponseAminoMsg): MsgEmitIBCAckResponse {
@@ -287,12 +228,9 @@ export const MsgEmitIBCAckResponse = {
   },
   toProtoMsg(message: MsgEmitIBCAckResponse): MsgEmitIBCAckResponseProtoMsg {
     return {
-      typeUrl: '/symphony.ibchooks.MsgEmitIBCAckResponse',
-      value: MsgEmitIBCAckResponse.encode(message).finish(),
+      typeUrl: "/symphony.ibchooks.MsgEmitIBCAckResponse",
+      value: MsgEmitIBCAckResponse.encode(message).finish()
     };
-  },
+  }
 };
-GlobalDecoderRegistry.register(
-  MsgEmitIBCAckResponse.typeUrl,
-  MsgEmitIBCAckResponse,
-);
+GlobalDecoderRegistry.register(MsgEmitIBCAckResponse.typeUrl, MsgEmitIBCAckResponse);

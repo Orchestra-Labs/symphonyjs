@@ -1,12 +1,8 @@
 //@ts-nocheck
-import {
-  Coin,
-  CoinAmino,
-  CoinSDKType,
-} from '../../../cosmos/base/v1beta1/coin';
-import { BinaryReader, BinaryWriter } from '../../../binary';
-import { Decimal } from '@cosmjs/math';
-import { GlobalDecoderRegistry } from '../../../registry';
+import { Coin, CoinAmino, CoinSDKType } from "../../../cosmos/base/v1beta1/coin";
+import { BinaryReader, BinaryWriter } from "../../../binary";
+import { Decimal } from "@cosmjs/math";
+import { GlobalDecoderRegistry } from "../../../registry";
 /**
  * TakerFeeShareAgreement represents the agreement between the Osmosis protocol
  * and a specific denom to share a certain percent of taker fees generated in
@@ -32,7 +28,7 @@ export interface TakerFeeShareAgreement {
   skimAddress: string;
 }
 export interface TakerFeeShareAgreementProtoMsg {
-  typeUrl: '/symphony.poolmanager.v1beta1.TakerFeeShareAgreement';
+  typeUrl: "/symphony.poolmanager.v1beta1.TakerFeeShareAgreement";
   value: Uint8Array;
 }
 /**
@@ -60,7 +56,7 @@ export interface TakerFeeShareAgreementAmino {
   skim_address?: string;
 }
 export interface TakerFeeShareAgreementAminoMsg {
-  type: '/symphony.poolmanager.v1beta1.TakerFeeShareAgreement';
+  type: "/symphony.poolmanager.v1beta1.TakerFeeShareAgreement";
   value: TakerFeeShareAgreementAmino;
 }
 /**
@@ -89,7 +85,7 @@ export interface TakerFeeSkimAccumulator {
   skimmedTakerFees: Coin[];
 }
 export interface TakerFeeSkimAccumulatorProtoMsg {
-  typeUrl: '/symphony.poolmanager.v1beta1.TakerFeeSkimAccumulator';
+  typeUrl: "/symphony.poolmanager.v1beta1.TakerFeeSkimAccumulator";
   value: Uint8Array;
 }
 /**
@@ -103,7 +99,7 @@ export interface TakerFeeSkimAccumulatorAmino {
   skimmed_taker_fees?: CoinAmino[];
 }
 export interface TakerFeeSkimAccumulatorAminoMsg {
-  type: '/symphony.poolmanager.v1beta1.TakerFeeSkimAccumulator';
+  type: "/symphony.poolmanager.v1beta1.TakerFeeSkimAccumulator";
   value: TakerFeeSkimAccumulatorAmino;
 }
 /**
@@ -134,7 +130,7 @@ export interface AlloyContractTakerFeeShareState {
   takerFeeShareAgreements: TakerFeeShareAgreement[];
 }
 export interface AlloyContractTakerFeeShareStateProtoMsg {
-  typeUrl: '/symphony.poolmanager.v1beta1.AlloyContractTakerFeeShareState';
+  typeUrl: "/symphony.poolmanager.v1beta1.AlloyContractTakerFeeShareState";
   value: Uint8Array;
 }
 /**
@@ -157,7 +153,7 @@ export interface AlloyContractTakerFeeShareStateAmino {
   taker_fee_share_agreements?: TakerFeeShareAgreementAmino[];
 }
 export interface AlloyContractTakerFeeShareStateAminoMsg {
-  type: '/symphony.poolmanager.v1beta1.AlloyContractTakerFeeShareState';
+  type: "/symphony.poolmanager.v1beta1.AlloyContractTakerFeeShareState";
   value: AlloyContractTakerFeeShareStateAmino;
 }
 /**
@@ -175,63 +171,36 @@ export interface AlloyContractTakerFeeShareStateSDKType {
 }
 function createBaseTakerFeeShareAgreement(): TakerFeeShareAgreement {
   return {
-    denom: '',
-    skimPercent: '',
-    skimAddress: '',
+    denom: "",
+    skimPercent: "",
+    skimAddress: ""
   };
 }
 export const TakerFeeShareAgreement = {
-  typeUrl: '/symphony.poolmanager.v1beta1.TakerFeeShareAgreement',
+  typeUrl: "/symphony.poolmanager.v1beta1.TakerFeeShareAgreement",
   is(o: any): o is TakerFeeShareAgreement {
-    return (
-      o &&
-      (o.$typeUrl === TakerFeeShareAgreement.typeUrl ||
-        (typeof o.denom === 'string' &&
-          typeof o.skimPercent === 'string' &&
-          typeof o.skimAddress === 'string'))
-    );
+    return o && (o.$typeUrl === TakerFeeShareAgreement.typeUrl || typeof o.denom === "string" && typeof o.skimPercent === "string" && typeof o.skimAddress === "string");
   },
   isSDK(o: any): o is TakerFeeShareAgreementSDKType {
-    return (
-      o &&
-      (o.$typeUrl === TakerFeeShareAgreement.typeUrl ||
-        (typeof o.denom === 'string' &&
-          typeof o.skim_percent === 'string' &&
-          typeof o.skim_address === 'string'))
-    );
+    return o && (o.$typeUrl === TakerFeeShareAgreement.typeUrl || typeof o.denom === "string" && typeof o.skim_percent === "string" && typeof o.skim_address === "string");
   },
   isAmino(o: any): o is TakerFeeShareAgreementAmino {
-    return (
-      o &&
-      (o.$typeUrl === TakerFeeShareAgreement.typeUrl ||
-        (typeof o.denom === 'string' &&
-          typeof o.skim_percent === 'string' &&
-          typeof o.skim_address === 'string'))
-    );
+    return o && (o.$typeUrl === TakerFeeShareAgreement.typeUrl || typeof o.denom === "string" && typeof o.skim_percent === "string" && typeof o.skim_address === "string");
   },
-  encode(
-    message: TakerFeeShareAgreement,
-    writer: BinaryWriter = BinaryWriter.create(),
-  ): BinaryWriter {
-    if (message.denom !== '') {
+  encode(message: TakerFeeShareAgreement, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
+    if (message.denom !== "") {
       writer.uint32(10).string(message.denom);
     }
-    if (message.skimPercent !== '') {
-      writer
-        .uint32(18)
-        .string(Decimal.fromUserInput(message.skimPercent, 18).atomics);
+    if (message.skimPercent !== "") {
+      writer.uint32(18).string(Decimal.fromUserInput(message.skimPercent, 18).atomics);
     }
-    if (message.skimAddress !== '') {
+    if (message.skimAddress !== "") {
       writer.uint32(26).string(message.skimAddress);
     }
     return writer;
   },
-  decode(
-    input: BinaryReader | Uint8Array,
-    length?: number,
-  ): TakerFeeShareAgreement {
-    const reader =
-      input instanceof BinaryReader ? input : new BinaryReader(input);
+  decode(input: BinaryReader | Uint8Array, length?: number): TakerFeeShareAgreement {
+    const reader = input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseTakerFeeShareAgreement();
     while (reader.pos < end) {
@@ -241,10 +210,7 @@ export const TakerFeeShareAgreement = {
           message.denom = reader.string();
           break;
         case 2:
-          message.skimPercent = Decimal.fromAtomics(
-            reader.string(),
-            18,
-          ).toString();
+          message.skimPercent = Decimal.fromAtomics(reader.string(), 18).toString();
           break;
         case 3:
           message.skimAddress = reader.string();
@@ -258,9 +224,9 @@ export const TakerFeeShareAgreement = {
   },
   fromPartial(object: Partial<TakerFeeShareAgreement>): TakerFeeShareAgreement {
     const message = createBaseTakerFeeShareAgreement();
-    message.denom = object.denom ?? '';
-    message.skimPercent = object.skimPercent ?? '';
-    message.skimAddress = object.skimAddress ?? '';
+    message.denom = object.denom ?? "";
+    message.skimPercent = object.skimPercent ?? "";
+    message.skimAddress = object.skimAddress ?? "";
     return message;
   },
   fromAmino(object: TakerFeeShareAgreementAmino): TakerFeeShareAgreement {
@@ -278,19 +244,15 @@ export const TakerFeeShareAgreement = {
   },
   toAmino(message: TakerFeeShareAgreement): TakerFeeShareAgreementAmino {
     const obj: any = {};
-    obj.denom = message.denom === '' ? undefined : message.denom;
-    obj.skim_percent =
-      message.skimPercent === '' ? undefined : message.skimPercent;
-    obj.skim_address =
-      message.skimAddress === '' ? undefined : message.skimAddress;
+    obj.denom = message.denom === "" ? undefined : message.denom;
+    obj.skim_percent = message.skimPercent === "" ? undefined : message.skimPercent;
+    obj.skim_address = message.skimAddress === "" ? undefined : message.skimAddress;
     return obj;
   },
   fromAminoMsg(object: TakerFeeShareAgreementAminoMsg): TakerFeeShareAgreement {
     return TakerFeeShareAgreement.fromAmino(object.value);
   },
-  fromProtoMsg(
-    message: TakerFeeShareAgreementProtoMsg,
-  ): TakerFeeShareAgreement {
+  fromProtoMsg(message: TakerFeeShareAgreementProtoMsg): TakerFeeShareAgreement {
     return TakerFeeShareAgreement.decode(message.value);
   },
   toProto(message: TakerFeeShareAgreement): Uint8Array {
@@ -298,57 +260,31 @@ export const TakerFeeShareAgreement = {
   },
   toProtoMsg(message: TakerFeeShareAgreement): TakerFeeShareAgreementProtoMsg {
     return {
-      typeUrl: '/symphony.poolmanager.v1beta1.TakerFeeShareAgreement',
-      value: TakerFeeShareAgreement.encode(message).finish(),
+      typeUrl: "/symphony.poolmanager.v1beta1.TakerFeeShareAgreement",
+      value: TakerFeeShareAgreement.encode(message).finish()
     };
-  },
+  }
 };
-GlobalDecoderRegistry.register(
-  TakerFeeShareAgreement.typeUrl,
-  TakerFeeShareAgreement,
-);
+GlobalDecoderRegistry.register(TakerFeeShareAgreement.typeUrl, TakerFeeShareAgreement);
 function createBaseTakerFeeSkimAccumulator(): TakerFeeSkimAccumulator {
   return {
-    denom: '',
-    skimmedTakerFees: [],
+    denom: "",
+    skimmedTakerFees: []
   };
 }
 export const TakerFeeSkimAccumulator = {
-  typeUrl: '/symphony.poolmanager.v1beta1.TakerFeeSkimAccumulator',
+  typeUrl: "/symphony.poolmanager.v1beta1.TakerFeeSkimAccumulator",
   is(o: any): o is TakerFeeSkimAccumulator {
-    return (
-      o &&
-      (o.$typeUrl === TakerFeeSkimAccumulator.typeUrl ||
-        (typeof o.denom === 'string' &&
-          Array.isArray(o.skimmedTakerFees) &&
-          (!o.skimmedTakerFees.length || Coin.is(o.skimmedTakerFees[0]))))
-    );
+    return o && (o.$typeUrl === TakerFeeSkimAccumulator.typeUrl || typeof o.denom === "string" && Array.isArray(o.skimmedTakerFees) && (!o.skimmedTakerFees.length || Coin.is(o.skimmedTakerFees[0])));
   },
   isSDK(o: any): o is TakerFeeSkimAccumulatorSDKType {
-    return (
-      o &&
-      (o.$typeUrl === TakerFeeSkimAccumulator.typeUrl ||
-        (typeof o.denom === 'string' &&
-          Array.isArray(o.skimmed_taker_fees) &&
-          (!o.skimmed_taker_fees.length ||
-            Coin.isSDK(o.skimmed_taker_fees[0]))))
-    );
+    return o && (o.$typeUrl === TakerFeeSkimAccumulator.typeUrl || typeof o.denom === "string" && Array.isArray(o.skimmed_taker_fees) && (!o.skimmed_taker_fees.length || Coin.isSDK(o.skimmed_taker_fees[0])));
   },
   isAmino(o: any): o is TakerFeeSkimAccumulatorAmino {
-    return (
-      o &&
-      (o.$typeUrl === TakerFeeSkimAccumulator.typeUrl ||
-        (typeof o.denom === 'string' &&
-          Array.isArray(o.skimmed_taker_fees) &&
-          (!o.skimmed_taker_fees.length ||
-            Coin.isAmino(o.skimmed_taker_fees[0]))))
-    );
+    return o && (o.$typeUrl === TakerFeeSkimAccumulator.typeUrl || typeof o.denom === "string" && Array.isArray(o.skimmed_taker_fees) && (!o.skimmed_taker_fees.length || Coin.isAmino(o.skimmed_taker_fees[0])));
   },
-  encode(
-    message: TakerFeeSkimAccumulator,
-    writer: BinaryWriter = BinaryWriter.create(),
-  ): BinaryWriter {
-    if (message.denom !== '') {
+  encode(message: TakerFeeSkimAccumulator, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
+    if (message.denom !== "") {
       writer.uint32(10).string(message.denom);
     }
     for (const v of message.skimmedTakerFees) {
@@ -356,12 +292,8 @@ export const TakerFeeSkimAccumulator = {
     }
     return writer;
   },
-  decode(
-    input: BinaryReader | Uint8Array,
-    length?: number,
-  ): TakerFeeSkimAccumulator {
-    const reader =
-      input instanceof BinaryReader ? input : new BinaryReader(input);
+  decode(input: BinaryReader | Uint8Array, length?: number): TakerFeeSkimAccumulator {
+    const reader = input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseTakerFeeSkimAccumulator();
     while (reader.pos < end) {
@@ -380,13 +312,10 @@ export const TakerFeeSkimAccumulator = {
     }
     return message;
   },
-  fromPartial(
-    object: Partial<TakerFeeSkimAccumulator>,
-  ): TakerFeeSkimAccumulator {
+  fromPartial(object: Partial<TakerFeeSkimAccumulator>): TakerFeeSkimAccumulator {
     const message = createBaseTakerFeeSkimAccumulator();
-    message.denom = object.denom ?? '';
-    message.skimmedTakerFees =
-      object.skimmedTakerFees?.map(e => Coin.fromPartial(e)) || [];
+    message.denom = object.denom ?? "";
+    message.skimmedTakerFees = object.skimmedTakerFees?.map(e => Coin.fromPartial(e)) || [];
     return message;
   },
   fromAmino(object: TakerFeeSkimAccumulatorAmino): TakerFeeSkimAccumulator {
@@ -394,91 +323,55 @@ export const TakerFeeSkimAccumulator = {
     if (object.denom !== undefined && object.denom !== null) {
       message.denom = object.denom;
     }
-    message.skimmedTakerFees =
-      object.skimmed_taker_fees?.map(e => Coin.fromAmino(e)) || [];
+    message.skimmedTakerFees = object.skimmed_taker_fees?.map(e => Coin.fromAmino(e)) || [];
     return message;
   },
   toAmino(message: TakerFeeSkimAccumulator): TakerFeeSkimAccumulatorAmino {
     const obj: any = {};
-    obj.denom = message.denom === '' ? undefined : message.denom;
+    obj.denom = message.denom === "" ? undefined : message.denom;
     if (message.skimmedTakerFees) {
-      obj.skimmed_taker_fees = message.skimmedTakerFees.map(e =>
-        e ? Coin.toAmino(e) : undefined,
-      );
+      obj.skimmed_taker_fees = message.skimmedTakerFees.map(e => e ? Coin.toAmino(e) : undefined);
     } else {
       obj.skimmed_taker_fees = message.skimmedTakerFees;
     }
     return obj;
   },
-  fromAminoMsg(
-    object: TakerFeeSkimAccumulatorAminoMsg,
-  ): TakerFeeSkimAccumulator {
+  fromAminoMsg(object: TakerFeeSkimAccumulatorAminoMsg): TakerFeeSkimAccumulator {
     return TakerFeeSkimAccumulator.fromAmino(object.value);
   },
-  fromProtoMsg(
-    message: TakerFeeSkimAccumulatorProtoMsg,
-  ): TakerFeeSkimAccumulator {
+  fromProtoMsg(message: TakerFeeSkimAccumulatorProtoMsg): TakerFeeSkimAccumulator {
     return TakerFeeSkimAccumulator.decode(message.value);
   },
   toProto(message: TakerFeeSkimAccumulator): Uint8Array {
     return TakerFeeSkimAccumulator.encode(message).finish();
   },
-  toProtoMsg(
-    message: TakerFeeSkimAccumulator,
-  ): TakerFeeSkimAccumulatorProtoMsg {
+  toProtoMsg(message: TakerFeeSkimAccumulator): TakerFeeSkimAccumulatorProtoMsg {
     return {
-      typeUrl: '/symphony.poolmanager.v1beta1.TakerFeeSkimAccumulator',
-      value: TakerFeeSkimAccumulator.encode(message).finish(),
+      typeUrl: "/symphony.poolmanager.v1beta1.TakerFeeSkimAccumulator",
+      value: TakerFeeSkimAccumulator.encode(message).finish()
     };
-  },
+  }
 };
-GlobalDecoderRegistry.register(
-  TakerFeeSkimAccumulator.typeUrl,
-  TakerFeeSkimAccumulator,
-);
+GlobalDecoderRegistry.register(TakerFeeSkimAccumulator.typeUrl, TakerFeeSkimAccumulator);
 function createBaseAlloyContractTakerFeeShareState(): AlloyContractTakerFeeShareState {
   return {
-    contractAddress: '',
-    takerFeeShareAgreements: [],
+    contractAddress: "",
+    takerFeeShareAgreements: []
   };
 }
 export const AlloyContractTakerFeeShareState = {
-  typeUrl: '/symphony.poolmanager.v1beta1.AlloyContractTakerFeeShareState',
+  typeUrl: "/symphony.poolmanager.v1beta1.AlloyContractTakerFeeShareState",
   is(o: any): o is AlloyContractTakerFeeShareState {
-    return (
-      o &&
-      (o.$typeUrl === AlloyContractTakerFeeShareState.typeUrl ||
-        (typeof o.contractAddress === 'string' &&
-          Array.isArray(o.takerFeeShareAgreements) &&
-          (!o.takerFeeShareAgreements.length ||
-            TakerFeeShareAgreement.is(o.takerFeeShareAgreements[0]))))
-    );
+    return o && (o.$typeUrl === AlloyContractTakerFeeShareState.typeUrl || typeof o.contractAddress === "string" && Array.isArray(o.takerFeeShareAgreements) && (!o.takerFeeShareAgreements.length || TakerFeeShareAgreement.is(o.takerFeeShareAgreements[0])));
   },
   isSDK(o: any): o is AlloyContractTakerFeeShareStateSDKType {
-    return (
-      o &&
-      (o.$typeUrl === AlloyContractTakerFeeShareState.typeUrl ||
-        (typeof o.contract_address === 'string' &&
-          Array.isArray(o.taker_fee_share_agreements) &&
-          (!o.taker_fee_share_agreements.length ||
-            TakerFeeShareAgreement.isSDK(o.taker_fee_share_agreements[0]))))
-    );
+    return o && (o.$typeUrl === AlloyContractTakerFeeShareState.typeUrl || typeof o.contract_address === "string" && Array.isArray(o.taker_fee_share_agreements) && (!o.taker_fee_share_agreements.length || TakerFeeShareAgreement.isSDK(o.taker_fee_share_agreements[0])));
   },
   isAmino(o: any): o is AlloyContractTakerFeeShareStateAmino {
-    return (
-      o &&
-      (o.$typeUrl === AlloyContractTakerFeeShareState.typeUrl ||
-        (typeof o.contract_address === 'string' &&
-          Array.isArray(o.taker_fee_share_agreements) &&
-          (!o.taker_fee_share_agreements.length ||
-            TakerFeeShareAgreement.isAmino(o.taker_fee_share_agreements[0]))))
-    );
+    return o && (o.$typeUrl === AlloyContractTakerFeeShareState.typeUrl || typeof o.contract_address === "string" && Array.isArray(o.taker_fee_share_agreements) && (!o.taker_fee_share_agreements.length || TakerFeeShareAgreement.isAmino(o.taker_fee_share_agreements[0])));
   },
-  encode(
-    message: AlloyContractTakerFeeShareState,
-    writer: BinaryWriter = BinaryWriter.create(),
-  ): BinaryWriter {
-    if (message.contractAddress !== '') {
+  encode(message: AlloyContractTakerFeeShareState, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
+    if (message.contractAddress !== "") {
       writer.uint32(10).string(message.contractAddress);
     }
     for (const v of message.takerFeeShareAgreements) {
@@ -486,12 +379,8 @@ export const AlloyContractTakerFeeShareState = {
     }
     return writer;
   },
-  decode(
-    input: BinaryReader | Uint8Array,
-    length?: number,
-  ): AlloyContractTakerFeeShareState {
-    const reader =
-      input instanceof BinaryReader ? input : new BinaryReader(input);
+  decode(input: BinaryReader | Uint8Array, length?: number): AlloyContractTakerFeeShareState {
+    const reader = input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseAlloyContractTakerFeeShareState();
     while (reader.pos < end) {
@@ -501,9 +390,7 @@ export const AlloyContractTakerFeeShareState = {
           message.contractAddress = reader.string();
           break;
         case 2:
-          message.takerFeeShareAgreements.push(
-            TakerFeeShareAgreement.decode(reader, reader.uint32()),
-          );
+          message.takerFeeShareAgreements.push(TakerFeeShareAgreement.decode(reader, reader.uint32()));
           break;
         default:
           reader.skipType(tag & 7);
@@ -512,71 +399,44 @@ export const AlloyContractTakerFeeShareState = {
     }
     return message;
   },
-  fromPartial(
-    object: Partial<AlloyContractTakerFeeShareState>,
-  ): AlloyContractTakerFeeShareState {
+  fromPartial(object: Partial<AlloyContractTakerFeeShareState>): AlloyContractTakerFeeShareState {
     const message = createBaseAlloyContractTakerFeeShareState();
-    message.contractAddress = object.contractAddress ?? '';
-    message.takerFeeShareAgreements =
-      object.takerFeeShareAgreements?.map(e =>
-        TakerFeeShareAgreement.fromPartial(e),
-      ) || [];
+    message.contractAddress = object.contractAddress ?? "";
+    message.takerFeeShareAgreements = object.takerFeeShareAgreements?.map(e => TakerFeeShareAgreement.fromPartial(e)) || [];
     return message;
   },
-  fromAmino(
-    object: AlloyContractTakerFeeShareStateAmino,
-  ): AlloyContractTakerFeeShareState {
+  fromAmino(object: AlloyContractTakerFeeShareStateAmino): AlloyContractTakerFeeShareState {
     const message = createBaseAlloyContractTakerFeeShareState();
-    if (
-      object.contract_address !== undefined &&
-      object.contract_address !== null
-    ) {
+    if (object.contract_address !== undefined && object.contract_address !== null) {
       message.contractAddress = object.contract_address;
     }
-    message.takerFeeShareAgreements =
-      object.taker_fee_share_agreements?.map(e =>
-        TakerFeeShareAgreement.fromAmino(e),
-      ) || [];
+    message.takerFeeShareAgreements = object.taker_fee_share_agreements?.map(e => TakerFeeShareAgreement.fromAmino(e)) || [];
     return message;
   },
-  toAmino(
-    message: AlloyContractTakerFeeShareState,
-  ): AlloyContractTakerFeeShareStateAmino {
+  toAmino(message: AlloyContractTakerFeeShareState): AlloyContractTakerFeeShareStateAmino {
     const obj: any = {};
-    obj.contract_address =
-      message.contractAddress === '' ? undefined : message.contractAddress;
+    obj.contract_address = message.contractAddress === "" ? undefined : message.contractAddress;
     if (message.takerFeeShareAgreements) {
-      obj.taker_fee_share_agreements = message.takerFeeShareAgreements.map(e =>
-        e ? TakerFeeShareAgreement.toAmino(e) : undefined,
-      );
+      obj.taker_fee_share_agreements = message.takerFeeShareAgreements.map(e => e ? TakerFeeShareAgreement.toAmino(e) : undefined);
     } else {
       obj.taker_fee_share_agreements = message.takerFeeShareAgreements;
     }
     return obj;
   },
-  fromAminoMsg(
-    object: AlloyContractTakerFeeShareStateAminoMsg,
-  ): AlloyContractTakerFeeShareState {
+  fromAminoMsg(object: AlloyContractTakerFeeShareStateAminoMsg): AlloyContractTakerFeeShareState {
     return AlloyContractTakerFeeShareState.fromAmino(object.value);
   },
-  fromProtoMsg(
-    message: AlloyContractTakerFeeShareStateProtoMsg,
-  ): AlloyContractTakerFeeShareState {
+  fromProtoMsg(message: AlloyContractTakerFeeShareStateProtoMsg): AlloyContractTakerFeeShareState {
     return AlloyContractTakerFeeShareState.decode(message.value);
   },
   toProto(message: AlloyContractTakerFeeShareState): Uint8Array {
     return AlloyContractTakerFeeShareState.encode(message).finish();
   },
-  toProtoMsg(
-    message: AlloyContractTakerFeeShareState,
-  ): AlloyContractTakerFeeShareStateProtoMsg {
+  toProtoMsg(message: AlloyContractTakerFeeShareState): AlloyContractTakerFeeShareStateProtoMsg {
     return {
-      typeUrl: '/symphony.poolmanager.v1beta1.AlloyContractTakerFeeShareState',
-      value: AlloyContractTakerFeeShareState.encode(message).finish(),
+      typeUrl: "/symphony.poolmanager.v1beta1.AlloyContractTakerFeeShareState",
+      value: AlloyContractTakerFeeShareState.encode(message).finish()
     };
-  },
+  }
 };
-GlobalDecoderRegistry.register(
-  AlloyContractTakerFeeShareState.typeUrl,
-  AlloyContractTakerFeeShareState,
-);
+GlobalDecoderRegistry.register(AlloyContractTakerFeeShareState.typeUrl, AlloyContractTakerFeeShareState);

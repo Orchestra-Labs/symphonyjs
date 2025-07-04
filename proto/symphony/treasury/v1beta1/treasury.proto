@@ -5,7 +5,7 @@ import "cosmos/base/v1beta1/coin.proto";
 import "cosmos_proto/cosmos.proto";
 import "gogoproto/gogo.proto";
 
-option go_package = "github.com/osmosis-labs/osmosis/v26/x/treasury/types";
+option go_package = "github.com/osmosis-labs/osmosis/v27/x/treasury/types";
 
 // Params defines the parameters for the oracle module.
 message Params {
@@ -22,7 +22,8 @@ message Params {
     (gogoproto.customtype) = "cosmossdk.io/math.LegacyDec",
     (gogoproto.nullable) = false
   ];
-  string update_treasury_epoch_identifier = 3 [ (gogoproto.moretags) = "yaml:\"update_treasury_epoch_identifier\"" ];
+  string update_treasury_epoch_identifier = 3
+      [ (gogoproto.moretags) = "yaml:\"update_treasury_epoch_identifier\"" ];
   uint64 window_short = 4 [ (gogoproto.moretags) = "yaml:\"window_short\"" ];
   uint64 window_long = 5 [ (gogoproto.moretags) = "yaml:\"window_long\"" ];
   uint64 window_probation = 6

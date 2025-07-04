@@ -1,45 +1,29 @@
 //@ts-nocheck
-import {
-  PageRequest,
-  PageRequestAmino,
-  PageRequestSDKType,
-  PageResponse,
-  PageResponseAmino,
-  PageResponseSDKType,
-} from '../../../cosmos/base/query/v1beta1/pagination';
-import { Params, ParamsAmino, ParamsSDKType } from './params';
-import {
-  Any,
-  AnyProtoMsg,
-  AnyAmino,
-  AnySDKType,
-} from '../../../google/protobuf/any';
-import { Pool as Pool1 } from '../../concentratedliquidity/v1beta1/pool';
-import { PoolProtoMsg as Pool1ProtoMsg } from '../../concentratedliquidity/v1beta1/pool';
-import { PoolSDKType as Pool1SDKType } from '../../concentratedliquidity/v1beta1/pool';
-import {
-  CosmWasmPool,
-  CosmWasmPoolProtoMsg,
-  CosmWasmPoolSDKType,
-} from './model/pool';
-import { Pool as Pool2 } from '../../gamm/poolmodels/stableswap/v1beta1/stableswap_pool';
-import { PoolProtoMsg as Pool2ProtoMsg } from '../../gamm/poolmodels/stableswap/v1beta1/stableswap_pool';
-import { PoolSDKType as Pool2SDKType } from '../../gamm/poolmodels/stableswap/v1beta1/stableswap_pool';
-import { Pool as Pool3 } from '../../gamm/v1beta1/balancerPool';
-import { PoolProtoMsg as Pool3ProtoMsg } from '../../gamm/v1beta1/balancerPool';
-import { PoolSDKType as Pool3SDKType } from '../../gamm/v1beta1/balancerPool';
-import { BinaryReader, BinaryWriter } from '../../../binary';
-import { GlobalDecoderRegistry } from '../../../registry';
+import { PageRequest, PageRequestAmino, PageRequestSDKType, PageResponse, PageResponseAmino, PageResponseSDKType } from "../../../cosmos/base/query/v1beta1/pagination";
+import { Params, ParamsAmino, ParamsSDKType } from "./params";
+import { Any, AnyProtoMsg, AnyAmino, AnySDKType } from "../../../google/protobuf/any";
+import { Pool as Pool1 } from "../../concentratedliquidity/v1beta1/pool";
+import { PoolProtoMsg as Pool1ProtoMsg } from "../../concentratedliquidity/v1beta1/pool";
+import { PoolSDKType as Pool1SDKType } from "../../concentratedliquidity/v1beta1/pool";
+import { CosmWasmPool, CosmWasmPoolProtoMsg, CosmWasmPoolSDKType } from "./model/pool";
+import { Pool as Pool2 } from "../../gamm/poolmodels/stableswap/v1beta1/stableswap_pool";
+import { PoolProtoMsg as Pool2ProtoMsg } from "../../gamm/poolmodels/stableswap/v1beta1/stableswap_pool";
+import { PoolSDKType as Pool2SDKType } from "../../gamm/poolmodels/stableswap/v1beta1/stableswap_pool";
+import { Pool as Pool3 } from "../../gamm/v1beta1/balancerPool";
+import { PoolProtoMsg as Pool3ProtoMsg } from "../../gamm/v1beta1/balancerPool";
+import { PoolSDKType as Pool3SDKType } from "../../gamm/v1beta1/balancerPool";
+import { BinaryReader, BinaryWriter } from "../../../binary";
+import { GlobalDecoderRegistry } from "../../../registry";
 /** =============================== ContractInfoByPoolId */
 export interface ParamsRequest {}
 export interface ParamsRequestProtoMsg {
-  typeUrl: '/symphony.cosmwasmpool.v1beta1.ParamsRequest';
+  typeUrl: "/symphony.cosmwasmpool.v1beta1.ParamsRequest";
   value: Uint8Array;
 }
 /** =============================== ContractInfoByPoolId */
 export interface ParamsRequestAmino {}
 export interface ParamsRequestAminoMsg {
-  type: '/symphony.cosmwasmpool.v1beta1.ParamsRequest';
+  type: "/symphony.cosmwasmpool.v1beta1.ParamsRequest";
   value: ParamsRequestAmino;
 }
 /** =============================== ContractInfoByPoolId */
@@ -48,14 +32,14 @@ export interface ParamsResponse {
   params: Params;
 }
 export interface ParamsResponseProtoMsg {
-  typeUrl: '/symphony.cosmwasmpool.v1beta1.ParamsResponse';
+  typeUrl: "/symphony.cosmwasmpool.v1beta1.ParamsResponse";
   value: Uint8Array;
 }
 export interface ParamsResponseAmino {
   params?: ParamsAmino;
 }
 export interface ParamsResponseAminoMsg {
-  type: '/symphony.cosmwasmpool.v1beta1.ParamsResponse';
+  type: "/symphony.cosmwasmpool.v1beta1.ParamsResponse";
   value: ParamsResponseAmino;
 }
 export interface ParamsResponseSDKType {
@@ -67,7 +51,7 @@ export interface PoolsRequest {
   pagination?: PageRequest;
 }
 export interface PoolsRequestProtoMsg {
-  typeUrl: '/symphony.cosmwasmpool.v1beta1.PoolsRequest';
+  typeUrl: "/symphony.cosmwasmpool.v1beta1.PoolsRequest";
   value: Uint8Array;
 }
 /** =============================== Pools */
@@ -76,7 +60,7 @@ export interface PoolsRequestAmino {
   pagination?: PageRequestAmino;
 }
 export interface PoolsRequestAminoMsg {
-  type: '/symphony.cosmwasmpool.v1beta1.PoolsRequest';
+  type: "/symphony.cosmwasmpool.v1beta1.PoolsRequest";
   value: PoolsRequestAmino;
 }
 /** =============================== Pools */
@@ -89,17 +73,11 @@ export interface PoolsResponse {
   pagination?: PageResponse;
 }
 export interface PoolsResponseProtoMsg {
-  typeUrl: '/symphony.cosmwasmpool.v1beta1.PoolsResponse';
+  typeUrl: "/symphony.cosmwasmpool.v1beta1.PoolsResponse";
   value: Uint8Array;
 }
-export type PoolsResponseEncoded = Omit<PoolsResponse, 'pools'> & {
-  pools: (
-    | Pool1ProtoMsg
-    | CosmWasmPoolProtoMsg
-    | Pool2ProtoMsg
-    | Pool3ProtoMsg
-    | AnyProtoMsg
-  )[];
+export type PoolsResponseEncoded = Omit<PoolsResponse, "pools"> & {
+  pools: (Pool1ProtoMsg | CosmWasmPoolProtoMsg | Pool2ProtoMsg | Pool3ProtoMsg | AnyProtoMsg)[];
 };
 export interface PoolsResponseAmino {
   pools?: AnyAmino[];
@@ -107,17 +85,11 @@ export interface PoolsResponseAmino {
   pagination?: PageResponseAmino;
 }
 export interface PoolsResponseAminoMsg {
-  type: '/symphony.cosmwasmpool.v1beta1.PoolsResponse';
+  type: "/symphony.cosmwasmpool.v1beta1.PoolsResponse";
   value: PoolsResponseAmino;
 }
 export interface PoolsResponseSDKType {
-  pools: (
-    | Pool1SDKType
-    | CosmWasmPoolSDKType
-    | Pool2SDKType
-    | Pool3SDKType
-    | AnySDKType
-  )[];
+  pools: (Pool1SDKType | CosmWasmPoolSDKType | Pool2SDKType | Pool3SDKType | AnySDKType)[];
   pagination?: PageResponseSDKType;
 }
 /** =============================== ContractInfoByPoolId */
@@ -126,7 +98,7 @@ export interface ContractInfoByPoolIdRequest {
   poolId: bigint;
 }
 export interface ContractInfoByPoolIdRequestProtoMsg {
-  typeUrl: '/symphony.cosmwasmpool.v1beta1.ContractInfoByPoolIdRequest';
+  typeUrl: "/symphony.cosmwasmpool.v1beta1.ContractInfoByPoolIdRequest";
   value: Uint8Array;
 }
 /** =============================== ContractInfoByPoolId */
@@ -135,7 +107,7 @@ export interface ContractInfoByPoolIdRequestAmino {
   pool_id?: string;
 }
 export interface ContractInfoByPoolIdRequestAminoMsg {
-  type: '/symphony.cosmwasmpool.v1beta1.ContractInfoByPoolIdRequest';
+  type: "/symphony.cosmwasmpool.v1beta1.ContractInfoByPoolIdRequest";
   value: ContractInfoByPoolIdRequestAmino;
 }
 /** =============================== ContractInfoByPoolId */
@@ -152,7 +124,7 @@ export interface ContractInfoByPoolIdResponse {
   codeId: bigint;
 }
 export interface ContractInfoByPoolIdResponseProtoMsg {
-  typeUrl: '/symphony.cosmwasmpool.v1beta1.ContractInfoByPoolIdResponse';
+  typeUrl: "/symphony.cosmwasmpool.v1beta1.ContractInfoByPoolIdResponse";
   value: Uint8Array;
 }
 export interface ContractInfoByPoolIdResponseAmino {
@@ -165,7 +137,7 @@ export interface ContractInfoByPoolIdResponseAmino {
   code_id?: string;
 }
 export interface ContractInfoByPoolIdResponseAminoMsg {
-  type: '/symphony.cosmwasmpool.v1beta1.ContractInfoByPoolIdResponse';
+  type: "/symphony.cosmwasmpool.v1beta1.ContractInfoByPoolIdResponse";
   value: ContractInfoByPoolIdResponseAmino;
 }
 export interface ContractInfoByPoolIdResponseSDKType {
@@ -176,7 +148,7 @@ function createBaseParamsRequest(): ParamsRequest {
   return {};
 }
 export const ParamsRequest = {
-  typeUrl: '/symphony.cosmwasmpool.v1beta1.ParamsRequest',
+  typeUrl: "/symphony.cosmwasmpool.v1beta1.ParamsRequest",
   is(o: any): o is ParamsRequest {
     return o && o.$typeUrl === ParamsRequest.typeUrl;
   },
@@ -186,15 +158,11 @@ export const ParamsRequest = {
   isAmino(o: any): o is ParamsRequestAmino {
     return o && o.$typeUrl === ParamsRequest.typeUrl;
   },
-  encode(
-    _: ParamsRequest,
-    writer: BinaryWriter = BinaryWriter.create(),
-  ): BinaryWriter {
+  encode(_: ParamsRequest, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
     return writer;
   },
   decode(input: BinaryReader | Uint8Array, length?: number): ParamsRequest {
-    const reader =
-      input instanceof BinaryReader ? input : new BinaryReader(input);
+    const reader = input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseParamsRequest();
     while (reader.pos < end) {
@@ -230,44 +198,36 @@ export const ParamsRequest = {
   },
   toProtoMsg(message: ParamsRequest): ParamsRequestProtoMsg {
     return {
-      typeUrl: '/symphony.cosmwasmpool.v1beta1.ParamsRequest',
-      value: ParamsRequest.encode(message).finish(),
+      typeUrl: "/symphony.cosmwasmpool.v1beta1.ParamsRequest",
+      value: ParamsRequest.encode(message).finish()
     };
-  },
+  }
 };
 GlobalDecoderRegistry.register(ParamsRequest.typeUrl, ParamsRequest);
 function createBaseParamsResponse(): ParamsResponse {
   return {
-    params: Params.fromPartial({}),
+    params: Params.fromPartial({})
   };
 }
 export const ParamsResponse = {
-  typeUrl: '/symphony.cosmwasmpool.v1beta1.ParamsResponse',
+  typeUrl: "/symphony.cosmwasmpool.v1beta1.ParamsResponse",
   is(o: any): o is ParamsResponse {
     return o && (o.$typeUrl === ParamsResponse.typeUrl || Params.is(o.params));
   },
   isSDK(o: any): o is ParamsResponseSDKType {
-    return (
-      o && (o.$typeUrl === ParamsResponse.typeUrl || Params.isSDK(o.params))
-    );
+    return o && (o.$typeUrl === ParamsResponse.typeUrl || Params.isSDK(o.params));
   },
   isAmino(o: any): o is ParamsResponseAmino {
-    return (
-      o && (o.$typeUrl === ParamsResponse.typeUrl || Params.isAmino(o.params))
-    );
+    return o && (o.$typeUrl === ParamsResponse.typeUrl || Params.isAmino(o.params));
   },
-  encode(
-    message: ParamsResponse,
-    writer: BinaryWriter = BinaryWriter.create(),
-  ): BinaryWriter {
+  encode(message: ParamsResponse, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
     if (message.params !== undefined) {
       Params.encode(message.params, writer.uint32(10).fork()).ldelim();
     }
     return writer;
   },
   decode(input: BinaryReader | Uint8Array, length?: number): ParamsResponse {
-    const reader =
-      input instanceof BinaryReader ? input : new BinaryReader(input);
+    const reader = input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseParamsResponse();
     while (reader.pos < end) {
@@ -285,10 +245,7 @@ export const ParamsResponse = {
   },
   fromPartial(object: Partial<ParamsResponse>): ParamsResponse {
     const message = createBaseParamsResponse();
-    message.params =
-      object.params !== undefined && object.params !== null
-        ? Params.fromPartial(object.params)
-        : undefined;
+    message.params = object.params !== undefined && object.params !== null ? Params.fromPartial(object.params) : undefined;
     return message;
   },
   fromAmino(object: ParamsResponseAmino): ParamsResponse {
@@ -314,19 +271,19 @@ export const ParamsResponse = {
   },
   toProtoMsg(message: ParamsResponse): ParamsResponseProtoMsg {
     return {
-      typeUrl: '/symphony.cosmwasmpool.v1beta1.ParamsResponse',
-      value: ParamsResponse.encode(message).finish(),
+      typeUrl: "/symphony.cosmwasmpool.v1beta1.ParamsResponse",
+      value: ParamsResponse.encode(message).finish()
     };
-  },
+  }
 };
 GlobalDecoderRegistry.register(ParamsResponse.typeUrl, ParamsResponse);
 function createBasePoolsRequest(): PoolsRequest {
   return {
-    pagination: undefined,
+    pagination: undefined
   };
 }
 export const PoolsRequest = {
-  typeUrl: '/symphony.cosmwasmpool.v1beta1.PoolsRequest',
+  typeUrl: "/symphony.cosmwasmpool.v1beta1.PoolsRequest",
   is(o: any): o is PoolsRequest {
     return o && o.$typeUrl === PoolsRequest.typeUrl;
   },
@@ -336,18 +293,14 @@ export const PoolsRequest = {
   isAmino(o: any): o is PoolsRequestAmino {
     return o && o.$typeUrl === PoolsRequest.typeUrl;
   },
-  encode(
-    message: PoolsRequest,
-    writer: BinaryWriter = BinaryWriter.create(),
-  ): BinaryWriter {
+  encode(message: PoolsRequest, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
     if (message.pagination !== undefined) {
       PageRequest.encode(message.pagination, writer.uint32(18).fork()).ldelim();
     }
     return writer;
   },
   decode(input: BinaryReader | Uint8Array, length?: number): PoolsRequest {
-    const reader =
-      input instanceof BinaryReader ? input : new BinaryReader(input);
+    const reader = input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBasePoolsRequest();
     while (reader.pos < end) {
@@ -365,10 +318,7 @@ export const PoolsRequest = {
   },
   fromPartial(object: Partial<PoolsRequest>): PoolsRequest {
     const message = createBasePoolsRequest();
-    message.pagination =
-      object.pagination !== undefined && object.pagination !== null
-        ? PageRequest.fromPartial(object.pagination)
-        : undefined;
+    message.pagination = object.pagination !== undefined && object.pagination !== null ? PageRequest.fromPartial(object.pagination) : undefined;
     return message;
   },
   fromAmino(object: PoolsRequestAmino): PoolsRequest {
@@ -380,9 +330,7 @@ export const PoolsRequest = {
   },
   toAmino(message: PoolsRequest): PoolsRequestAmino {
     const obj: any = {};
-    obj.pagination = message.pagination
-      ? PageRequest.toAmino(message.pagination)
-      : undefined;
+    obj.pagination = message.pagination ? PageRequest.toAmino(message.pagination) : undefined;
     return obj;
   },
   fromAminoMsg(object: PoolsRequestAminoMsg): PoolsRequest {
@@ -396,80 +344,40 @@ export const PoolsRequest = {
   },
   toProtoMsg(message: PoolsRequest): PoolsRequestProtoMsg {
     return {
-      typeUrl: '/symphony.cosmwasmpool.v1beta1.PoolsRequest',
-      value: PoolsRequest.encode(message).finish(),
+      typeUrl: "/symphony.cosmwasmpool.v1beta1.PoolsRequest",
+      value: PoolsRequest.encode(message).finish()
     };
-  },
+  }
 };
 GlobalDecoderRegistry.register(PoolsRequest.typeUrl, PoolsRequest);
 function createBasePoolsResponse(): PoolsResponse {
   return {
     pools: [],
-    pagination: undefined,
+    pagination: undefined
   };
 }
 export const PoolsResponse = {
-  typeUrl: '/symphony.cosmwasmpool.v1beta1.PoolsResponse',
+  typeUrl: "/symphony.cosmwasmpool.v1beta1.PoolsResponse",
   is(o: any): o is PoolsResponse {
-    return (
-      o &&
-      (o.$typeUrl === PoolsResponse.typeUrl ||
-        (Array.isArray(o.pools) &&
-          (!o.pools.length ||
-            Pool1.is(o.pools[0]) ||
-            CosmWasmPool.is(o.pools[0]) ||
-            Pool2.is(o.pools[0]) ||
-            Pool3.is(o.pools[0]) ||
-            Any.is(o.pools[0]))))
-    );
+    return o && (o.$typeUrl === PoolsResponse.typeUrl || Array.isArray(o.pools) && (!o.pools.length || Pool1.is(o.pools[0]) || CosmWasmPool.is(o.pools[0]) || Pool2.is(o.pools[0]) || Pool3.is(o.pools[0]) || Any.is(o.pools[0])));
   },
   isSDK(o: any): o is PoolsResponseSDKType {
-    return (
-      o &&
-      (o.$typeUrl === PoolsResponse.typeUrl ||
-        (Array.isArray(o.pools) &&
-          (!o.pools.length ||
-            Pool1.isSDK(o.pools[0]) ||
-            CosmWasmPool.isSDK(o.pools[0]) ||
-            Pool2.isSDK(o.pools[0]) ||
-            Pool3.isSDK(o.pools[0]) ||
-            Any.isSDK(o.pools[0]))))
-    );
+    return o && (o.$typeUrl === PoolsResponse.typeUrl || Array.isArray(o.pools) && (!o.pools.length || Pool1.isSDK(o.pools[0]) || CosmWasmPool.isSDK(o.pools[0]) || Pool2.isSDK(o.pools[0]) || Pool3.isSDK(o.pools[0]) || Any.isSDK(o.pools[0])));
   },
   isAmino(o: any): o is PoolsResponseAmino {
-    return (
-      o &&
-      (o.$typeUrl === PoolsResponse.typeUrl ||
-        (Array.isArray(o.pools) &&
-          (!o.pools.length ||
-            Pool1.isAmino(o.pools[0]) ||
-            CosmWasmPool.isAmino(o.pools[0]) ||
-            Pool2.isAmino(o.pools[0]) ||
-            Pool3.isAmino(o.pools[0]) ||
-            Any.isAmino(o.pools[0]))))
-    );
+    return o && (o.$typeUrl === PoolsResponse.typeUrl || Array.isArray(o.pools) && (!o.pools.length || Pool1.isAmino(o.pools[0]) || CosmWasmPool.isAmino(o.pools[0]) || Pool2.isAmino(o.pools[0]) || Pool3.isAmino(o.pools[0]) || Any.isAmino(o.pools[0])));
   },
-  encode(
-    message: PoolsResponse,
-    writer: BinaryWriter = BinaryWriter.create(),
-  ): BinaryWriter {
+  encode(message: PoolsResponse, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
     for (const v of message.pools) {
-      Any.encode(
-        GlobalDecoderRegistry.wrapAny(v!),
-        writer.uint32(10).fork(),
-      ).ldelim();
+      Any.encode(GlobalDecoderRegistry.wrapAny(v!), writer.uint32(10).fork()).ldelim();
     }
     if (message.pagination !== undefined) {
-      PageResponse.encode(
-        message.pagination,
-        writer.uint32(18).fork(),
-      ).ldelim();
+      PageResponse.encode(message.pagination, writer.uint32(18).fork()).ldelim();
     }
     return writer;
   },
   decode(input: BinaryReader | Uint8Array, length?: number): PoolsResponse {
-    const reader =
-      input instanceof BinaryReader ? input : new BinaryReader(input);
+    const reader = input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBasePoolsResponse();
     while (reader.pos < end) {
@@ -490,18 +398,13 @@ export const PoolsResponse = {
   },
   fromPartial(object: Partial<PoolsResponse>): PoolsResponse {
     const message = createBasePoolsResponse();
-    message.pools =
-      object.pools?.map(e => GlobalDecoderRegistry.fromPartial(e) as any) || [];
-    message.pagination =
-      object.pagination !== undefined && object.pagination !== null
-        ? PageResponse.fromPartial(object.pagination)
-        : undefined;
+    message.pools = object.pools?.map(e => GlobalDecoderRegistry.fromPartial(e) as any) || [];
+    message.pagination = object.pagination !== undefined && object.pagination !== null ? PageResponse.fromPartial(object.pagination) : undefined;
     return message;
   },
   fromAmino(object: PoolsResponseAmino): PoolsResponse {
     const message = createBasePoolsResponse();
-    message.pools =
-      object.pools?.map(e => GlobalDecoderRegistry.fromAminoMsg(e)) || [];
+    message.pools = object.pools?.map(e => GlobalDecoderRegistry.fromAminoMsg(e)) || [];
     if (object.pagination !== undefined && object.pagination !== null) {
       message.pagination = PageResponse.fromAmino(object.pagination);
     }
@@ -510,15 +413,11 @@ export const PoolsResponse = {
   toAmino(message: PoolsResponse): PoolsResponseAmino {
     const obj: any = {};
     if (message.pools) {
-      obj.pools = message.pools.map(e =>
-        e ? GlobalDecoderRegistry.toAminoMsg(e) : undefined,
-      );
+      obj.pools = message.pools.map(e => e ? GlobalDecoderRegistry.toAminoMsg(e) : undefined);
     } else {
       obj.pools = message.pools;
     }
-    obj.pagination = message.pagination
-      ? PageResponse.toAmino(message.pagination)
-      : undefined;
+    obj.pagination = message.pagination ? PageResponse.toAmino(message.pagination) : undefined;
     return obj;
   },
   fromAminoMsg(object: PoolsResponseAminoMsg): PoolsResponse {
@@ -532,55 +431,36 @@ export const PoolsResponse = {
   },
   toProtoMsg(message: PoolsResponse): PoolsResponseProtoMsg {
     return {
-      typeUrl: '/symphony.cosmwasmpool.v1beta1.PoolsResponse',
-      value: PoolsResponse.encode(message).finish(),
+      typeUrl: "/symphony.cosmwasmpool.v1beta1.PoolsResponse",
+      value: PoolsResponse.encode(message).finish()
     };
-  },
+  }
 };
 GlobalDecoderRegistry.register(PoolsResponse.typeUrl, PoolsResponse);
 function createBaseContractInfoByPoolIdRequest(): ContractInfoByPoolIdRequest {
   return {
-    poolId: BigInt(0),
+    poolId: BigInt(0)
   };
 }
 export const ContractInfoByPoolIdRequest = {
-  typeUrl: '/symphony.cosmwasmpool.v1beta1.ContractInfoByPoolIdRequest',
+  typeUrl: "/symphony.cosmwasmpool.v1beta1.ContractInfoByPoolIdRequest",
   is(o: any): o is ContractInfoByPoolIdRequest {
-    return (
-      o &&
-      (o.$typeUrl === ContractInfoByPoolIdRequest.typeUrl ||
-        typeof o.poolId === 'bigint')
-    );
+    return o && (o.$typeUrl === ContractInfoByPoolIdRequest.typeUrl || typeof o.poolId === "bigint");
   },
   isSDK(o: any): o is ContractInfoByPoolIdRequestSDKType {
-    return (
-      o &&
-      (o.$typeUrl === ContractInfoByPoolIdRequest.typeUrl ||
-        typeof o.pool_id === 'bigint')
-    );
+    return o && (o.$typeUrl === ContractInfoByPoolIdRequest.typeUrl || typeof o.pool_id === "bigint");
   },
   isAmino(o: any): o is ContractInfoByPoolIdRequestAmino {
-    return (
-      o &&
-      (o.$typeUrl === ContractInfoByPoolIdRequest.typeUrl ||
-        typeof o.pool_id === 'bigint')
-    );
+    return o && (o.$typeUrl === ContractInfoByPoolIdRequest.typeUrl || typeof o.pool_id === "bigint");
   },
-  encode(
-    message: ContractInfoByPoolIdRequest,
-    writer: BinaryWriter = BinaryWriter.create(),
-  ): BinaryWriter {
+  encode(message: ContractInfoByPoolIdRequest, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
     if (message.poolId !== BigInt(0)) {
       writer.uint32(8).uint64(message.poolId);
     }
     return writer;
   },
-  decode(
-    input: BinaryReader | Uint8Array,
-    length?: number,
-  ): ContractInfoByPoolIdRequest {
-    const reader =
-      input instanceof BinaryReader ? input : new BinaryReader(input);
+  decode(input: BinaryReader | Uint8Array, length?: number): ContractInfoByPoolIdRequest {
+    const reader = input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseContractInfoByPoolIdRequest();
     while (reader.pos < end) {
@@ -596,95 +476,59 @@ export const ContractInfoByPoolIdRequest = {
     }
     return message;
   },
-  fromPartial(
-    object: Partial<ContractInfoByPoolIdRequest>,
-  ): ContractInfoByPoolIdRequest {
+  fromPartial(object: Partial<ContractInfoByPoolIdRequest>): ContractInfoByPoolIdRequest {
     const message = createBaseContractInfoByPoolIdRequest();
-    message.poolId =
-      object.poolId !== undefined && object.poolId !== null
-        ? BigInt(object.poolId.toString())
-        : BigInt(0);
+    message.poolId = object.poolId !== undefined && object.poolId !== null ? BigInt(object.poolId.toString()) : BigInt(0);
     return message;
   },
-  fromAmino(
-    object: ContractInfoByPoolIdRequestAmino,
-  ): ContractInfoByPoolIdRequest {
+  fromAmino(object: ContractInfoByPoolIdRequestAmino): ContractInfoByPoolIdRequest {
     const message = createBaseContractInfoByPoolIdRequest();
     if (object.pool_id !== undefined && object.pool_id !== null) {
       message.poolId = BigInt(object.pool_id);
     }
     return message;
   },
-  toAmino(
-    message: ContractInfoByPoolIdRequest,
-  ): ContractInfoByPoolIdRequestAmino {
+  toAmino(message: ContractInfoByPoolIdRequest): ContractInfoByPoolIdRequestAmino {
     const obj: any = {};
-    obj.pool_id =
-      message.poolId !== BigInt(0) ? message.poolId?.toString() : undefined;
+    obj.pool_id = message.poolId !== BigInt(0) ? message.poolId?.toString() : undefined;
     return obj;
   },
-  fromAminoMsg(
-    object: ContractInfoByPoolIdRequestAminoMsg,
-  ): ContractInfoByPoolIdRequest {
+  fromAminoMsg(object: ContractInfoByPoolIdRequestAminoMsg): ContractInfoByPoolIdRequest {
     return ContractInfoByPoolIdRequest.fromAmino(object.value);
   },
-  fromProtoMsg(
-    message: ContractInfoByPoolIdRequestProtoMsg,
-  ): ContractInfoByPoolIdRequest {
+  fromProtoMsg(message: ContractInfoByPoolIdRequestProtoMsg): ContractInfoByPoolIdRequest {
     return ContractInfoByPoolIdRequest.decode(message.value);
   },
   toProto(message: ContractInfoByPoolIdRequest): Uint8Array {
     return ContractInfoByPoolIdRequest.encode(message).finish();
   },
-  toProtoMsg(
-    message: ContractInfoByPoolIdRequest,
-  ): ContractInfoByPoolIdRequestProtoMsg {
+  toProtoMsg(message: ContractInfoByPoolIdRequest): ContractInfoByPoolIdRequestProtoMsg {
     return {
-      typeUrl: '/symphony.cosmwasmpool.v1beta1.ContractInfoByPoolIdRequest',
-      value: ContractInfoByPoolIdRequest.encode(message).finish(),
+      typeUrl: "/symphony.cosmwasmpool.v1beta1.ContractInfoByPoolIdRequest",
+      value: ContractInfoByPoolIdRequest.encode(message).finish()
     };
-  },
+  }
 };
-GlobalDecoderRegistry.register(
-  ContractInfoByPoolIdRequest.typeUrl,
-  ContractInfoByPoolIdRequest,
-);
+GlobalDecoderRegistry.register(ContractInfoByPoolIdRequest.typeUrl, ContractInfoByPoolIdRequest);
 function createBaseContractInfoByPoolIdResponse(): ContractInfoByPoolIdResponse {
   return {
-    contractAddress: '',
-    codeId: BigInt(0),
+    contractAddress: "",
+    codeId: BigInt(0)
   };
 }
 export const ContractInfoByPoolIdResponse = {
-  typeUrl: '/symphony.cosmwasmpool.v1beta1.ContractInfoByPoolIdResponse',
+  typeUrl: "/symphony.cosmwasmpool.v1beta1.ContractInfoByPoolIdResponse",
   is(o: any): o is ContractInfoByPoolIdResponse {
-    return (
-      o &&
-      (o.$typeUrl === ContractInfoByPoolIdResponse.typeUrl ||
-        (typeof o.contractAddress === 'string' && typeof o.codeId === 'bigint'))
-    );
+    return o && (o.$typeUrl === ContractInfoByPoolIdResponse.typeUrl || typeof o.contractAddress === "string" && typeof o.codeId === "bigint");
   },
   isSDK(o: any): o is ContractInfoByPoolIdResponseSDKType {
-    return (
-      o &&
-      (o.$typeUrl === ContractInfoByPoolIdResponse.typeUrl ||
-        (typeof o.contract_address === 'string' &&
-          typeof o.code_id === 'bigint'))
-    );
+    return o && (o.$typeUrl === ContractInfoByPoolIdResponse.typeUrl || typeof o.contract_address === "string" && typeof o.code_id === "bigint");
   },
   isAmino(o: any): o is ContractInfoByPoolIdResponseAmino {
-    return (
-      o &&
-      (o.$typeUrl === ContractInfoByPoolIdResponse.typeUrl ||
-        (typeof o.contract_address === 'string' &&
-          typeof o.code_id === 'bigint'))
-    );
+    return o && (o.$typeUrl === ContractInfoByPoolIdResponse.typeUrl || typeof o.contract_address === "string" && typeof o.code_id === "bigint");
   },
-  encode(
-    message: ContractInfoByPoolIdResponse,
-    writer: BinaryWriter = BinaryWriter.create(),
-  ): BinaryWriter {
-    if (message.contractAddress !== '') {
+  encode(message: ContractInfoByPoolIdResponse, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
+    if (message.contractAddress !== "") {
       writer.uint32(10).string(message.contractAddress);
     }
     if (message.codeId !== BigInt(0)) {
@@ -692,12 +536,8 @@ export const ContractInfoByPoolIdResponse = {
     }
     return writer;
   },
-  decode(
-    input: BinaryReader | Uint8Array,
-    length?: number,
-  ): ContractInfoByPoolIdResponse {
-    const reader =
-      input instanceof BinaryReader ? input : new BinaryReader(input);
+  decode(input: BinaryReader | Uint8Array, length?: number): ContractInfoByPoolIdResponse {
+    const reader = input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseContractInfoByPoolIdResponse();
     while (reader.pos < end) {
@@ -716,25 +556,15 @@ export const ContractInfoByPoolIdResponse = {
     }
     return message;
   },
-  fromPartial(
-    object: Partial<ContractInfoByPoolIdResponse>,
-  ): ContractInfoByPoolIdResponse {
+  fromPartial(object: Partial<ContractInfoByPoolIdResponse>): ContractInfoByPoolIdResponse {
     const message = createBaseContractInfoByPoolIdResponse();
-    message.contractAddress = object.contractAddress ?? '';
-    message.codeId =
-      object.codeId !== undefined && object.codeId !== null
-        ? BigInt(object.codeId.toString())
-        : BigInt(0);
+    message.contractAddress = object.contractAddress ?? "";
+    message.codeId = object.codeId !== undefined && object.codeId !== null ? BigInt(object.codeId.toString()) : BigInt(0);
     return message;
   },
-  fromAmino(
-    object: ContractInfoByPoolIdResponseAmino,
-  ): ContractInfoByPoolIdResponse {
+  fromAmino(object: ContractInfoByPoolIdResponseAmino): ContractInfoByPoolIdResponse {
     const message = createBaseContractInfoByPoolIdResponse();
-    if (
-      object.contract_address !== undefined &&
-      object.contract_address !== null
-    ) {
+    if (object.contract_address !== undefined && object.contract_address !== null) {
       message.contractAddress = object.contract_address;
     }
     if (object.code_id !== undefined && object.code_id !== null) {
@@ -742,39 +572,26 @@ export const ContractInfoByPoolIdResponse = {
     }
     return message;
   },
-  toAmino(
-    message: ContractInfoByPoolIdResponse,
-  ): ContractInfoByPoolIdResponseAmino {
+  toAmino(message: ContractInfoByPoolIdResponse): ContractInfoByPoolIdResponseAmino {
     const obj: any = {};
-    obj.contract_address =
-      message.contractAddress === '' ? undefined : message.contractAddress;
-    obj.code_id =
-      message.codeId !== BigInt(0) ? message.codeId?.toString() : undefined;
+    obj.contract_address = message.contractAddress === "" ? undefined : message.contractAddress;
+    obj.code_id = message.codeId !== BigInt(0) ? message.codeId?.toString() : undefined;
     return obj;
   },
-  fromAminoMsg(
-    object: ContractInfoByPoolIdResponseAminoMsg,
-  ): ContractInfoByPoolIdResponse {
+  fromAminoMsg(object: ContractInfoByPoolIdResponseAminoMsg): ContractInfoByPoolIdResponse {
     return ContractInfoByPoolIdResponse.fromAmino(object.value);
   },
-  fromProtoMsg(
-    message: ContractInfoByPoolIdResponseProtoMsg,
-  ): ContractInfoByPoolIdResponse {
+  fromProtoMsg(message: ContractInfoByPoolIdResponseProtoMsg): ContractInfoByPoolIdResponse {
     return ContractInfoByPoolIdResponse.decode(message.value);
   },
   toProto(message: ContractInfoByPoolIdResponse): Uint8Array {
     return ContractInfoByPoolIdResponse.encode(message).finish();
   },
-  toProtoMsg(
-    message: ContractInfoByPoolIdResponse,
-  ): ContractInfoByPoolIdResponseProtoMsg {
+  toProtoMsg(message: ContractInfoByPoolIdResponse): ContractInfoByPoolIdResponseProtoMsg {
     return {
-      typeUrl: '/symphony.cosmwasmpool.v1beta1.ContractInfoByPoolIdResponse',
-      value: ContractInfoByPoolIdResponse.encode(message).finish(),
+      typeUrl: "/symphony.cosmwasmpool.v1beta1.ContractInfoByPoolIdResponse",
+      value: ContractInfoByPoolIdResponse.encode(message).finish()
     };
-  },
+  }
 };
-GlobalDecoderRegistry.register(
-  ContractInfoByPoolIdResponse.typeUrl,
-  ContractInfoByPoolIdResponse,
-);
+GlobalDecoderRegistry.register(ContractInfoByPoolIdResponse.typeUrl, ContractInfoByPoolIdResponse);

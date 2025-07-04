@@ -1,16 +1,8 @@
 //@ts-nocheck
-import {
-  ValidatorPreference,
-  ValidatorPreferenceAmino,
-  ValidatorPreferenceSDKType,
-} from './state';
-import {
-  Coin,
-  CoinAmino,
-  CoinSDKType,
-} from '../../../cosmos/base/v1beta1/coin';
-import { BinaryReader, BinaryWriter } from '../../../binary';
-import { GlobalDecoderRegistry } from '../../../registry';
+import { ValidatorPreference, ValidatorPreferenceAmino, ValidatorPreferenceSDKType } from "./state";
+import { Coin, CoinAmino, CoinSDKType } from "../../../cosmos/base/v1beta1/coin";
+import { BinaryReader, BinaryWriter } from "../../../binary";
+import { GlobalDecoderRegistry } from "../../../registry";
 /** MsgCreateValidatorSetPreference is a list that holds validator-set. */
 export interface MsgSetValidatorSetPreference {
   /** delegator is the user who is trying to create a validator-set. */
@@ -19,7 +11,7 @@ export interface MsgSetValidatorSetPreference {
   preferences: ValidatorPreference[];
 }
 export interface MsgSetValidatorSetPreferenceProtoMsg {
-  typeUrl: '/symphony.valsetpref.v1beta1.MsgSetValidatorSetPreference';
+  typeUrl: "/symphony.valsetpref.v1beta1.MsgSetValidatorSetPreference";
   value: Uint8Array;
 }
 /** MsgCreateValidatorSetPreference is a list that holds validator-set. */
@@ -30,7 +22,7 @@ export interface MsgSetValidatorSetPreferenceAmino {
   preferences?: ValidatorPreferenceAmino[];
 }
 export interface MsgSetValidatorSetPreferenceAminoMsg {
-  type: 'symphony/MsgSetValidatorSetPreference';
+  type: "symphony/MsgSetValidatorSetPreference";
   value: MsgSetValidatorSetPreferenceAmino;
 }
 /** MsgCreateValidatorSetPreference is a list that holds validator-set. */
@@ -40,12 +32,12 @@ export interface MsgSetValidatorSetPreferenceSDKType {
 }
 export interface MsgSetValidatorSetPreferenceResponse {}
 export interface MsgSetValidatorSetPreferenceResponseProtoMsg {
-  typeUrl: '/symphony.valsetpref.v1beta1.MsgSetValidatorSetPreferenceResponse';
+  typeUrl: "/symphony.valsetpref.v1beta1.MsgSetValidatorSetPreferenceResponse";
   value: Uint8Array;
 }
 export interface MsgSetValidatorSetPreferenceResponseAmino {}
 export interface MsgSetValidatorSetPreferenceResponseAminoMsg {
-  type: '/symphony.valsetpref.v1beta1.MsgSetValidatorSetPreferenceResponse';
+  type: "/symphony.valsetpref.v1beta1.MsgSetValidatorSetPreferenceResponse";
   value: MsgSetValidatorSetPreferenceResponseAmino;
 }
 export interface MsgSetValidatorSetPreferenceResponseSDKType {}
@@ -65,7 +57,7 @@ export interface MsgDelegateToValidatorSet {
   coin: Coin;
 }
 export interface MsgDelegateToValidatorSetProtoMsg {
-  typeUrl: '/symphony.valsetpref.v1beta1.MsgDelegateToValidatorSet';
+  typeUrl: "/symphony.valsetpref.v1beta1.MsgDelegateToValidatorSet";
   value: Uint8Array;
 }
 /**
@@ -84,7 +76,7 @@ export interface MsgDelegateToValidatorSetAmino {
   coin?: CoinAmino;
 }
 export interface MsgDelegateToValidatorSetAminoMsg {
-  type: 'symphony/MsgDelegateToValidatorSet';
+  type: "symphony/MsgDelegateToValidatorSet";
   value: MsgDelegateToValidatorSetAmino;
 }
 /**
@@ -97,12 +89,12 @@ export interface MsgDelegateToValidatorSetSDKType {
 }
 export interface MsgDelegateToValidatorSetResponse {}
 export interface MsgDelegateToValidatorSetResponseProtoMsg {
-  typeUrl: '/symphony.valsetpref.v1beta1.MsgDelegateToValidatorSetResponse';
+  typeUrl: "/symphony.valsetpref.v1beta1.MsgDelegateToValidatorSetResponse";
   value: Uint8Array;
 }
 export interface MsgDelegateToValidatorSetResponseAmino {}
 export interface MsgDelegateToValidatorSetResponseAminoMsg {
-  type: '/symphony.valsetpref.v1beta1.MsgDelegateToValidatorSetResponse';
+  type: "/symphony.valsetpref.v1beta1.MsgDelegateToValidatorSetResponse";
   value: MsgDelegateToValidatorSetResponseAmino;
 }
 export interface MsgDelegateToValidatorSetResponseSDKType {}
@@ -119,7 +111,7 @@ export interface MsgUndelegateFromValidatorSet {
   coin: Coin;
 }
 export interface MsgUndelegateFromValidatorSetProtoMsg {
-  typeUrl: '/symphony.valsetpref.v1beta1.MsgUndelegateFromValidatorSet';
+  typeUrl: "/symphony.valsetpref.v1beta1.MsgUndelegateFromValidatorSet";
   value: Uint8Array;
 }
 export interface MsgUndelegateFromValidatorSetAmino {
@@ -135,7 +127,7 @@ export interface MsgUndelegateFromValidatorSetAmino {
   coin?: CoinAmino;
 }
 export interface MsgUndelegateFromValidatorSetAminoMsg {
-  type: 'symphony/MsgUndelegateFromValidatorSet';
+  type: "symphony/MsgUndelegateFromValidatorSet";
   value: MsgUndelegateFromValidatorSetAmino;
 }
 export interface MsgUndelegateFromValidatorSetSDKType {
@@ -144,12 +136,12 @@ export interface MsgUndelegateFromValidatorSetSDKType {
 }
 export interface MsgUndelegateFromValidatorSetResponse {}
 export interface MsgUndelegateFromValidatorSetResponseProtoMsg {
-  typeUrl: '/symphony.valsetpref.v1beta1.MsgUndelegateFromValidatorSetResponse';
+  typeUrl: "/symphony.valsetpref.v1beta1.MsgUndelegateFromValidatorSetResponse";
   value: Uint8Array;
 }
 export interface MsgUndelegateFromValidatorSetResponseAmino {}
 export interface MsgUndelegateFromValidatorSetResponseAminoMsg {
-  type: '/symphony.valsetpref.v1beta1.MsgUndelegateFromValidatorSetResponse';
+  type: "/symphony.valsetpref.v1beta1.MsgUndelegateFromValidatorSetResponse";
   value: MsgUndelegateFromValidatorSetResponseAmino;
 }
 export interface MsgUndelegateFromValidatorSetResponseSDKType {}
@@ -168,7 +160,7 @@ export interface MsgUndelegateFromRebalancedValidatorSet {
   coin: Coin;
 }
 export interface MsgUndelegateFromRebalancedValidatorSetProtoMsg {
-  typeUrl: '/symphony.valsetpref.v1beta1.MsgUndelegateFromRebalancedValidatorSet';
+  typeUrl: "/symphony.valsetpref.v1beta1.MsgUndelegateFromRebalancedValidatorSet";
   value: Uint8Array;
 }
 export interface MsgUndelegateFromRebalancedValidatorSetAmino {
@@ -186,7 +178,7 @@ export interface MsgUndelegateFromRebalancedValidatorSetAmino {
   coin?: CoinAmino;
 }
 export interface MsgUndelegateFromRebalancedValidatorSetAminoMsg {
-  type: 'symphony/MsgUndelegateFromRebalValset';
+  type: "symphony/MsgUndelegateFromRebalValset";
   value: MsgUndelegateFromRebalancedValidatorSetAmino;
 }
 export interface MsgUndelegateFromRebalancedValidatorSetSDKType {
@@ -195,12 +187,12 @@ export interface MsgUndelegateFromRebalancedValidatorSetSDKType {
 }
 export interface MsgUndelegateFromRebalancedValidatorSetResponse {}
 export interface MsgUndelegateFromRebalancedValidatorSetResponseProtoMsg {
-  typeUrl: '/symphony.valsetpref.v1beta1.MsgUndelegateFromRebalancedValidatorSetResponse';
+  typeUrl: "/symphony.valsetpref.v1beta1.MsgUndelegateFromRebalancedValidatorSetResponse";
   value: Uint8Array;
 }
 export interface MsgUndelegateFromRebalancedValidatorSetResponseAmino {}
 export interface MsgUndelegateFromRebalancedValidatorSetResponseAminoMsg {
-  type: '/symphony.valsetpref.v1beta1.MsgUndelegateFromRebalancedValidatorSetResponse';
+  type: "/symphony.valsetpref.v1beta1.MsgUndelegateFromRebalancedValidatorSetResponse";
   value: MsgUndelegateFromRebalancedValidatorSetResponseAmino;
 }
 export interface MsgUndelegateFromRebalancedValidatorSetResponseSDKType {}
@@ -211,7 +203,7 @@ export interface MsgRedelegateValidatorSet {
   preferences: ValidatorPreference[];
 }
 export interface MsgRedelegateValidatorSetProtoMsg {
-  typeUrl: '/symphony.valsetpref.v1beta1.MsgRedelegateValidatorSet';
+  typeUrl: "/symphony.valsetpref.v1beta1.MsgRedelegateValidatorSet";
   value: Uint8Array;
 }
 export interface MsgRedelegateValidatorSetAmino {
@@ -221,7 +213,7 @@ export interface MsgRedelegateValidatorSetAmino {
   preferences?: ValidatorPreferenceAmino[];
 }
 export interface MsgRedelegateValidatorSetAminoMsg {
-  type: 'symphony/MsgRedelegateValidatorSet';
+  type: "symphony/MsgRedelegateValidatorSet";
   value: MsgRedelegateValidatorSetAmino;
 }
 export interface MsgRedelegateValidatorSetSDKType {
@@ -230,12 +222,12 @@ export interface MsgRedelegateValidatorSetSDKType {
 }
 export interface MsgRedelegateValidatorSetResponse {}
 export interface MsgRedelegateValidatorSetResponseProtoMsg {
-  typeUrl: '/symphony.valsetpref.v1beta1.MsgRedelegateValidatorSetResponse';
+  typeUrl: "/symphony.valsetpref.v1beta1.MsgRedelegateValidatorSetResponse";
   value: Uint8Array;
 }
 export interface MsgRedelegateValidatorSetResponseAmino {}
 export interface MsgRedelegateValidatorSetResponseAminoMsg {
-  type: '/symphony.valsetpref.v1beta1.MsgRedelegateValidatorSetResponse';
+  type: "/symphony.valsetpref.v1beta1.MsgRedelegateValidatorSetResponse";
   value: MsgRedelegateValidatorSetResponseAmino;
 }
 export interface MsgRedelegateValidatorSetResponseSDKType {}
@@ -248,7 +240,7 @@ export interface MsgWithdrawDelegationRewards {
   delegator: string;
 }
 export interface MsgWithdrawDelegationRewardsProtoMsg {
-  typeUrl: '/symphony.valsetpref.v1beta1.MsgWithdrawDelegationRewards';
+  typeUrl: "/symphony.valsetpref.v1beta1.MsgWithdrawDelegationRewards";
   value: Uint8Array;
 }
 /**
@@ -260,7 +252,7 @@ export interface MsgWithdrawDelegationRewardsAmino {
   delegator?: string;
 }
 export interface MsgWithdrawDelegationRewardsAminoMsg {
-  type: 'symphony/MsgWithdrawDelegationRewards';
+  type: "symphony/MsgWithdrawDelegationRewards";
   value: MsgWithdrawDelegationRewardsAmino;
 }
 /**
@@ -272,12 +264,12 @@ export interface MsgWithdrawDelegationRewardsSDKType {
 }
 export interface MsgWithdrawDelegationRewardsResponse {}
 export interface MsgWithdrawDelegationRewardsResponseProtoMsg {
-  typeUrl: '/symphony.valsetpref.v1beta1.MsgWithdrawDelegationRewardsResponse';
+  typeUrl: "/symphony.valsetpref.v1beta1.MsgWithdrawDelegationRewardsResponse";
   value: Uint8Array;
 }
 export interface MsgWithdrawDelegationRewardsResponseAmino {}
 export interface MsgWithdrawDelegationRewardsResponseAminoMsg {
-  type: '/symphony.valsetpref.v1beta1.MsgWithdrawDelegationRewardsResponse';
+  type: "/symphony.valsetpref.v1beta1.MsgWithdrawDelegationRewardsResponse";
   value: MsgWithdrawDelegationRewardsResponseAmino;
 }
 export interface MsgWithdrawDelegationRewardsResponseSDKType {}
@@ -293,7 +285,7 @@ export interface MsgDelegateBondedTokens {
   lockID: bigint;
 }
 export interface MsgDelegateBondedTokensProtoMsg {
-  typeUrl: '/symphony.valsetpref.v1beta1.MsgDelegateBondedTokens';
+  typeUrl: "/symphony.valsetpref.v1beta1.MsgDelegateBondedTokens";
   value: Uint8Array;
 }
 /**
@@ -308,7 +300,7 @@ export interface MsgDelegateBondedTokensAmino {
   lockID?: string;
 }
 export interface MsgDelegateBondedTokensAminoMsg {
-  type: 'symphony/MsgDelegateBondedTokens';
+  type: "symphony/MsgDelegateBondedTokens";
   value: MsgDelegateBondedTokensAmino;
 }
 /**
@@ -322,58 +314,35 @@ export interface MsgDelegateBondedTokensSDKType {
 }
 export interface MsgDelegateBondedTokensResponse {}
 export interface MsgDelegateBondedTokensResponseProtoMsg {
-  typeUrl: '/symphony.valsetpref.v1beta1.MsgDelegateBondedTokensResponse';
+  typeUrl: "/symphony.valsetpref.v1beta1.MsgDelegateBondedTokensResponse";
   value: Uint8Array;
 }
 export interface MsgDelegateBondedTokensResponseAmino {}
 export interface MsgDelegateBondedTokensResponseAminoMsg {
-  type: '/symphony.valsetpref.v1beta1.MsgDelegateBondedTokensResponse';
+  type: "/symphony.valsetpref.v1beta1.MsgDelegateBondedTokensResponse";
   value: MsgDelegateBondedTokensResponseAmino;
 }
 export interface MsgDelegateBondedTokensResponseSDKType {}
 function createBaseMsgSetValidatorSetPreference(): MsgSetValidatorSetPreference {
   return {
-    delegator: '',
-    preferences: [],
+    delegator: "",
+    preferences: []
   };
 }
 export const MsgSetValidatorSetPreference = {
-  typeUrl: '/symphony.valsetpref.v1beta1.MsgSetValidatorSetPreference',
-  aminoType: 'symphony/MsgSetValidatorSetPreference',
+  typeUrl: "/symphony.valsetpref.v1beta1.MsgSetValidatorSetPreference",
+  aminoType: "symphony/MsgSetValidatorSetPreference",
   is(o: any): o is MsgSetValidatorSetPreference {
-    return (
-      o &&
-      (o.$typeUrl === MsgSetValidatorSetPreference.typeUrl ||
-        (typeof o.delegator === 'string' &&
-          Array.isArray(o.preferences) &&
-          (!o.preferences.length || ValidatorPreference.is(o.preferences[0]))))
-    );
+    return o && (o.$typeUrl === MsgSetValidatorSetPreference.typeUrl || typeof o.delegator === "string" && Array.isArray(o.preferences) && (!o.preferences.length || ValidatorPreference.is(o.preferences[0])));
   },
   isSDK(o: any): o is MsgSetValidatorSetPreferenceSDKType {
-    return (
-      o &&
-      (o.$typeUrl === MsgSetValidatorSetPreference.typeUrl ||
-        (typeof o.delegator === 'string' &&
-          Array.isArray(o.preferences) &&
-          (!o.preferences.length ||
-            ValidatorPreference.isSDK(o.preferences[0]))))
-    );
+    return o && (o.$typeUrl === MsgSetValidatorSetPreference.typeUrl || typeof o.delegator === "string" && Array.isArray(o.preferences) && (!o.preferences.length || ValidatorPreference.isSDK(o.preferences[0])));
   },
   isAmino(o: any): o is MsgSetValidatorSetPreferenceAmino {
-    return (
-      o &&
-      (o.$typeUrl === MsgSetValidatorSetPreference.typeUrl ||
-        (typeof o.delegator === 'string' &&
-          Array.isArray(o.preferences) &&
-          (!o.preferences.length ||
-            ValidatorPreference.isAmino(o.preferences[0]))))
-    );
+    return o && (o.$typeUrl === MsgSetValidatorSetPreference.typeUrl || typeof o.delegator === "string" && Array.isArray(o.preferences) && (!o.preferences.length || ValidatorPreference.isAmino(o.preferences[0])));
   },
-  encode(
-    message: MsgSetValidatorSetPreference,
-    writer: BinaryWriter = BinaryWriter.create(),
-  ): BinaryWriter {
-    if (message.delegator !== '') {
+  encode(message: MsgSetValidatorSetPreference, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
+    if (message.delegator !== "") {
       writer.uint32(10).string(message.delegator);
     }
     for (const v of message.preferences) {
@@ -381,12 +350,8 @@ export const MsgSetValidatorSetPreference = {
     }
     return writer;
   },
-  decode(
-    input: BinaryReader | Uint8Array,
-    length?: number,
-  ): MsgSetValidatorSetPreference {
-    const reader =
-      input instanceof BinaryReader ? input : new BinaryReader(input);
+  decode(input: BinaryReader | Uint8Array, length?: number): MsgSetValidatorSetPreference {
+    const reader = input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseMsgSetValidatorSetPreference();
     while (reader.pos < end) {
@@ -396,9 +361,7 @@ export const MsgSetValidatorSetPreference = {
           message.delegator = reader.string();
           break;
         case 2:
-          message.preferences.push(
-            ValidatorPreference.decode(reader, reader.uint32()),
-          );
+          message.preferences.push(ValidatorPreference.decode(reader, reader.uint32()));
           break;
         default:
           reader.skipType(tag & 7);
@@ -407,83 +370,59 @@ export const MsgSetValidatorSetPreference = {
     }
     return message;
   },
-  fromPartial(
-    object: Partial<MsgSetValidatorSetPreference>,
-  ): MsgSetValidatorSetPreference {
+  fromPartial(object: Partial<MsgSetValidatorSetPreference>): MsgSetValidatorSetPreference {
     const message = createBaseMsgSetValidatorSetPreference();
-    message.delegator = object.delegator ?? '';
-    message.preferences =
-      object.preferences?.map(e => ValidatorPreference.fromPartial(e)) || [];
+    message.delegator = object.delegator ?? "";
+    message.preferences = object.preferences?.map(e => ValidatorPreference.fromPartial(e)) || [];
     return message;
   },
-  fromAmino(
-    object: MsgSetValidatorSetPreferenceAmino,
-  ): MsgSetValidatorSetPreference {
+  fromAmino(object: MsgSetValidatorSetPreferenceAmino): MsgSetValidatorSetPreference {
     const message = createBaseMsgSetValidatorSetPreference();
     if (object.delegator !== undefined && object.delegator !== null) {
       message.delegator = object.delegator;
     }
-    message.preferences =
-      object.preferences?.map(e => ValidatorPreference.fromAmino(e)) || [];
+    message.preferences = object.preferences?.map(e => ValidatorPreference.fromAmino(e)) || [];
     return message;
   },
-  toAmino(
-    message: MsgSetValidatorSetPreference,
-  ): MsgSetValidatorSetPreferenceAmino {
+  toAmino(message: MsgSetValidatorSetPreference): MsgSetValidatorSetPreferenceAmino {
     const obj: any = {};
-    obj.delegator = message.delegator === '' ? undefined : message.delegator;
+    obj.delegator = message.delegator === "" ? undefined : message.delegator;
     if (message.preferences) {
-      obj.preferences = message.preferences.map(e =>
-        e ? ValidatorPreference.toAmino(e) : undefined,
-      );
+      obj.preferences = message.preferences.map(e => e ? ValidatorPreference.toAmino(e) : undefined);
     } else {
       obj.preferences = message.preferences;
     }
     return obj;
   },
-  fromAminoMsg(
-    object: MsgSetValidatorSetPreferenceAminoMsg,
-  ): MsgSetValidatorSetPreference {
+  fromAminoMsg(object: MsgSetValidatorSetPreferenceAminoMsg): MsgSetValidatorSetPreference {
     return MsgSetValidatorSetPreference.fromAmino(object.value);
   },
-  toAminoMsg(
-    message: MsgSetValidatorSetPreference,
-  ): MsgSetValidatorSetPreferenceAminoMsg {
+  toAminoMsg(message: MsgSetValidatorSetPreference): MsgSetValidatorSetPreferenceAminoMsg {
     return {
-      type: 'symphony/MsgSetValidatorSetPreference',
-      value: MsgSetValidatorSetPreference.toAmino(message),
+      type: "symphony/MsgSetValidatorSetPreference",
+      value: MsgSetValidatorSetPreference.toAmino(message)
     };
   },
-  fromProtoMsg(
-    message: MsgSetValidatorSetPreferenceProtoMsg,
-  ): MsgSetValidatorSetPreference {
+  fromProtoMsg(message: MsgSetValidatorSetPreferenceProtoMsg): MsgSetValidatorSetPreference {
     return MsgSetValidatorSetPreference.decode(message.value);
   },
   toProto(message: MsgSetValidatorSetPreference): Uint8Array {
     return MsgSetValidatorSetPreference.encode(message).finish();
   },
-  toProtoMsg(
-    message: MsgSetValidatorSetPreference,
-  ): MsgSetValidatorSetPreferenceProtoMsg {
+  toProtoMsg(message: MsgSetValidatorSetPreference): MsgSetValidatorSetPreferenceProtoMsg {
     return {
-      typeUrl: '/symphony.valsetpref.v1beta1.MsgSetValidatorSetPreference',
-      value: MsgSetValidatorSetPreference.encode(message).finish(),
+      typeUrl: "/symphony.valsetpref.v1beta1.MsgSetValidatorSetPreference",
+      value: MsgSetValidatorSetPreference.encode(message).finish()
     };
-  },
+  }
 };
-GlobalDecoderRegistry.register(
-  MsgSetValidatorSetPreference.typeUrl,
-  MsgSetValidatorSetPreference,
-);
-GlobalDecoderRegistry.registerAminoProtoMapping(
-  MsgSetValidatorSetPreference.aminoType,
-  MsgSetValidatorSetPreference.typeUrl,
-);
+GlobalDecoderRegistry.register(MsgSetValidatorSetPreference.typeUrl, MsgSetValidatorSetPreference);
+GlobalDecoderRegistry.registerAminoProtoMapping(MsgSetValidatorSetPreference.aminoType, MsgSetValidatorSetPreference.typeUrl);
 function createBaseMsgSetValidatorSetPreferenceResponse(): MsgSetValidatorSetPreferenceResponse {
   return {};
 }
 export const MsgSetValidatorSetPreferenceResponse = {
-  typeUrl: '/symphony.valsetpref.v1beta1.MsgSetValidatorSetPreferenceResponse',
+  typeUrl: "/symphony.valsetpref.v1beta1.MsgSetValidatorSetPreferenceResponse",
   is(o: any): o is MsgSetValidatorSetPreferenceResponse {
     return o && o.$typeUrl === MsgSetValidatorSetPreferenceResponse.typeUrl;
   },
@@ -493,18 +432,11 @@ export const MsgSetValidatorSetPreferenceResponse = {
   isAmino(o: any): o is MsgSetValidatorSetPreferenceResponseAmino {
     return o && o.$typeUrl === MsgSetValidatorSetPreferenceResponse.typeUrl;
   },
-  encode(
-    _: MsgSetValidatorSetPreferenceResponse,
-    writer: BinaryWriter = BinaryWriter.create(),
-  ): BinaryWriter {
+  encode(_: MsgSetValidatorSetPreferenceResponse, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
     return writer;
   },
-  decode(
-    input: BinaryReader | Uint8Array,
-    length?: number,
-  ): MsgSetValidatorSetPreferenceResponse {
-    const reader =
-      input instanceof BinaryReader ? input : new BinaryReader(input);
+  decode(input: BinaryReader | Uint8Array, length?: number): MsgSetValidatorSetPreferenceResponse {
+    const reader = input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseMsgSetValidatorSetPreferenceResponse();
     while (reader.pos < end) {
@@ -517,86 +449,55 @@ export const MsgSetValidatorSetPreferenceResponse = {
     }
     return message;
   },
-  fromPartial(
-    _: Partial<MsgSetValidatorSetPreferenceResponse>,
-  ): MsgSetValidatorSetPreferenceResponse {
+  fromPartial(_: Partial<MsgSetValidatorSetPreferenceResponse>): MsgSetValidatorSetPreferenceResponse {
     const message = createBaseMsgSetValidatorSetPreferenceResponse();
     return message;
   },
-  fromAmino(
-    _: MsgSetValidatorSetPreferenceResponseAmino,
-  ): MsgSetValidatorSetPreferenceResponse {
+  fromAmino(_: MsgSetValidatorSetPreferenceResponseAmino): MsgSetValidatorSetPreferenceResponse {
     const message = createBaseMsgSetValidatorSetPreferenceResponse();
     return message;
   },
-  toAmino(
-    _: MsgSetValidatorSetPreferenceResponse,
-  ): MsgSetValidatorSetPreferenceResponseAmino {
+  toAmino(_: MsgSetValidatorSetPreferenceResponse): MsgSetValidatorSetPreferenceResponseAmino {
     const obj: any = {};
     return obj;
   },
-  fromAminoMsg(
-    object: MsgSetValidatorSetPreferenceResponseAminoMsg,
-  ): MsgSetValidatorSetPreferenceResponse {
+  fromAminoMsg(object: MsgSetValidatorSetPreferenceResponseAminoMsg): MsgSetValidatorSetPreferenceResponse {
     return MsgSetValidatorSetPreferenceResponse.fromAmino(object.value);
   },
-  fromProtoMsg(
-    message: MsgSetValidatorSetPreferenceResponseProtoMsg,
-  ): MsgSetValidatorSetPreferenceResponse {
+  fromProtoMsg(message: MsgSetValidatorSetPreferenceResponseProtoMsg): MsgSetValidatorSetPreferenceResponse {
     return MsgSetValidatorSetPreferenceResponse.decode(message.value);
   },
   toProto(message: MsgSetValidatorSetPreferenceResponse): Uint8Array {
     return MsgSetValidatorSetPreferenceResponse.encode(message).finish();
   },
-  toProtoMsg(
-    message: MsgSetValidatorSetPreferenceResponse,
-  ): MsgSetValidatorSetPreferenceResponseProtoMsg {
+  toProtoMsg(message: MsgSetValidatorSetPreferenceResponse): MsgSetValidatorSetPreferenceResponseProtoMsg {
     return {
-      typeUrl:
-        '/symphony.valsetpref.v1beta1.MsgSetValidatorSetPreferenceResponse',
-      value: MsgSetValidatorSetPreferenceResponse.encode(message).finish(),
+      typeUrl: "/symphony.valsetpref.v1beta1.MsgSetValidatorSetPreferenceResponse",
+      value: MsgSetValidatorSetPreferenceResponse.encode(message).finish()
     };
-  },
+  }
 };
-GlobalDecoderRegistry.register(
-  MsgSetValidatorSetPreferenceResponse.typeUrl,
-  MsgSetValidatorSetPreferenceResponse,
-);
+GlobalDecoderRegistry.register(MsgSetValidatorSetPreferenceResponse.typeUrl, MsgSetValidatorSetPreferenceResponse);
 function createBaseMsgDelegateToValidatorSet(): MsgDelegateToValidatorSet {
   return {
-    delegator: '',
-    coin: Coin.fromPartial({}),
+    delegator: "",
+    coin: Coin.fromPartial({})
   };
 }
 export const MsgDelegateToValidatorSet = {
-  typeUrl: '/symphony.valsetpref.v1beta1.MsgDelegateToValidatorSet',
-  aminoType: 'symphony/MsgDelegateToValidatorSet',
+  typeUrl: "/symphony.valsetpref.v1beta1.MsgDelegateToValidatorSet",
+  aminoType: "symphony/MsgDelegateToValidatorSet",
   is(o: any): o is MsgDelegateToValidatorSet {
-    return (
-      o &&
-      (o.$typeUrl === MsgDelegateToValidatorSet.typeUrl ||
-        (typeof o.delegator === 'string' && Coin.is(o.coin)))
-    );
+    return o && (o.$typeUrl === MsgDelegateToValidatorSet.typeUrl || typeof o.delegator === "string" && Coin.is(o.coin));
   },
   isSDK(o: any): o is MsgDelegateToValidatorSetSDKType {
-    return (
-      o &&
-      (o.$typeUrl === MsgDelegateToValidatorSet.typeUrl ||
-        (typeof o.delegator === 'string' && Coin.isSDK(o.coin)))
-    );
+    return o && (o.$typeUrl === MsgDelegateToValidatorSet.typeUrl || typeof o.delegator === "string" && Coin.isSDK(o.coin));
   },
   isAmino(o: any): o is MsgDelegateToValidatorSetAmino {
-    return (
-      o &&
-      (o.$typeUrl === MsgDelegateToValidatorSet.typeUrl ||
-        (typeof o.delegator === 'string' && Coin.isAmino(o.coin)))
-    );
+    return o && (o.$typeUrl === MsgDelegateToValidatorSet.typeUrl || typeof o.delegator === "string" && Coin.isAmino(o.coin));
   },
-  encode(
-    message: MsgDelegateToValidatorSet,
-    writer: BinaryWriter = BinaryWriter.create(),
-  ): BinaryWriter {
-    if (message.delegator !== '') {
+  encode(message: MsgDelegateToValidatorSet, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
+    if (message.delegator !== "") {
       writer.uint32(10).string(message.delegator);
     }
     if (message.coin !== undefined) {
@@ -604,12 +505,8 @@ export const MsgDelegateToValidatorSet = {
     }
     return writer;
   },
-  decode(
-    input: BinaryReader | Uint8Array,
-    length?: number,
-  ): MsgDelegateToValidatorSet {
-    const reader =
-      input instanceof BinaryReader ? input : new BinaryReader(input);
+  decode(input: BinaryReader | Uint8Array, length?: number): MsgDelegateToValidatorSet {
+    const reader = input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseMsgDelegateToValidatorSet();
     while (reader.pos < end) {
@@ -628,15 +525,10 @@ export const MsgDelegateToValidatorSet = {
     }
     return message;
   },
-  fromPartial(
-    object: Partial<MsgDelegateToValidatorSet>,
-  ): MsgDelegateToValidatorSet {
+  fromPartial(object: Partial<MsgDelegateToValidatorSet>): MsgDelegateToValidatorSet {
     const message = createBaseMsgDelegateToValidatorSet();
-    message.delegator = object.delegator ?? '';
-    message.coin =
-      object.coin !== undefined && object.coin !== null
-        ? Coin.fromPartial(object.coin)
-        : undefined;
+    message.delegator = object.delegator ?? "";
+    message.coin = object.coin !== undefined && object.coin !== null ? Coin.fromPartial(object.coin) : undefined;
     return message;
   },
   fromAmino(object: MsgDelegateToValidatorSetAmino): MsgDelegateToValidatorSet {
@@ -651,53 +543,39 @@ export const MsgDelegateToValidatorSet = {
   },
   toAmino(message: MsgDelegateToValidatorSet): MsgDelegateToValidatorSetAmino {
     const obj: any = {};
-    obj.delegator = message.delegator === '' ? undefined : message.delegator;
+    obj.delegator = message.delegator === "" ? undefined : message.delegator;
     obj.coin = message.coin ? Coin.toAmino(message.coin) : undefined;
     return obj;
   },
-  fromAminoMsg(
-    object: MsgDelegateToValidatorSetAminoMsg,
-  ): MsgDelegateToValidatorSet {
+  fromAminoMsg(object: MsgDelegateToValidatorSetAminoMsg): MsgDelegateToValidatorSet {
     return MsgDelegateToValidatorSet.fromAmino(object.value);
   },
-  toAminoMsg(
-    message: MsgDelegateToValidatorSet,
-  ): MsgDelegateToValidatorSetAminoMsg {
+  toAminoMsg(message: MsgDelegateToValidatorSet): MsgDelegateToValidatorSetAminoMsg {
     return {
-      type: 'symphony/MsgDelegateToValidatorSet',
-      value: MsgDelegateToValidatorSet.toAmino(message),
+      type: "symphony/MsgDelegateToValidatorSet",
+      value: MsgDelegateToValidatorSet.toAmino(message)
     };
   },
-  fromProtoMsg(
-    message: MsgDelegateToValidatorSetProtoMsg,
-  ): MsgDelegateToValidatorSet {
+  fromProtoMsg(message: MsgDelegateToValidatorSetProtoMsg): MsgDelegateToValidatorSet {
     return MsgDelegateToValidatorSet.decode(message.value);
   },
   toProto(message: MsgDelegateToValidatorSet): Uint8Array {
     return MsgDelegateToValidatorSet.encode(message).finish();
   },
-  toProtoMsg(
-    message: MsgDelegateToValidatorSet,
-  ): MsgDelegateToValidatorSetProtoMsg {
+  toProtoMsg(message: MsgDelegateToValidatorSet): MsgDelegateToValidatorSetProtoMsg {
     return {
-      typeUrl: '/symphony.valsetpref.v1beta1.MsgDelegateToValidatorSet',
-      value: MsgDelegateToValidatorSet.encode(message).finish(),
+      typeUrl: "/symphony.valsetpref.v1beta1.MsgDelegateToValidatorSet",
+      value: MsgDelegateToValidatorSet.encode(message).finish()
     };
-  },
+  }
 };
-GlobalDecoderRegistry.register(
-  MsgDelegateToValidatorSet.typeUrl,
-  MsgDelegateToValidatorSet,
-);
-GlobalDecoderRegistry.registerAminoProtoMapping(
-  MsgDelegateToValidatorSet.aminoType,
-  MsgDelegateToValidatorSet.typeUrl,
-);
+GlobalDecoderRegistry.register(MsgDelegateToValidatorSet.typeUrl, MsgDelegateToValidatorSet);
+GlobalDecoderRegistry.registerAminoProtoMapping(MsgDelegateToValidatorSet.aminoType, MsgDelegateToValidatorSet.typeUrl);
 function createBaseMsgDelegateToValidatorSetResponse(): MsgDelegateToValidatorSetResponse {
   return {};
 }
 export const MsgDelegateToValidatorSetResponse = {
-  typeUrl: '/symphony.valsetpref.v1beta1.MsgDelegateToValidatorSetResponse',
+  typeUrl: "/symphony.valsetpref.v1beta1.MsgDelegateToValidatorSetResponse",
   is(o: any): o is MsgDelegateToValidatorSetResponse {
     return o && o.$typeUrl === MsgDelegateToValidatorSetResponse.typeUrl;
   },
@@ -707,18 +585,11 @@ export const MsgDelegateToValidatorSetResponse = {
   isAmino(o: any): o is MsgDelegateToValidatorSetResponseAmino {
     return o && o.$typeUrl === MsgDelegateToValidatorSetResponse.typeUrl;
   },
-  encode(
-    _: MsgDelegateToValidatorSetResponse,
-    writer: BinaryWriter = BinaryWriter.create(),
-  ): BinaryWriter {
+  encode(_: MsgDelegateToValidatorSetResponse, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
     return writer;
   },
-  decode(
-    input: BinaryReader | Uint8Array,
-    length?: number,
-  ): MsgDelegateToValidatorSetResponse {
-    const reader =
-      input instanceof BinaryReader ? input : new BinaryReader(input);
+  decode(input: BinaryReader | Uint8Array, length?: number): MsgDelegateToValidatorSetResponse {
+    const reader = input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseMsgDelegateToValidatorSetResponse();
     while (reader.pos < end) {
@@ -731,85 +602,55 @@ export const MsgDelegateToValidatorSetResponse = {
     }
     return message;
   },
-  fromPartial(
-    _: Partial<MsgDelegateToValidatorSetResponse>,
-  ): MsgDelegateToValidatorSetResponse {
+  fromPartial(_: Partial<MsgDelegateToValidatorSetResponse>): MsgDelegateToValidatorSetResponse {
     const message = createBaseMsgDelegateToValidatorSetResponse();
     return message;
   },
-  fromAmino(
-    _: MsgDelegateToValidatorSetResponseAmino,
-  ): MsgDelegateToValidatorSetResponse {
+  fromAmino(_: MsgDelegateToValidatorSetResponseAmino): MsgDelegateToValidatorSetResponse {
     const message = createBaseMsgDelegateToValidatorSetResponse();
     return message;
   },
-  toAmino(
-    _: MsgDelegateToValidatorSetResponse,
-  ): MsgDelegateToValidatorSetResponseAmino {
+  toAmino(_: MsgDelegateToValidatorSetResponse): MsgDelegateToValidatorSetResponseAmino {
     const obj: any = {};
     return obj;
   },
-  fromAminoMsg(
-    object: MsgDelegateToValidatorSetResponseAminoMsg,
-  ): MsgDelegateToValidatorSetResponse {
+  fromAminoMsg(object: MsgDelegateToValidatorSetResponseAminoMsg): MsgDelegateToValidatorSetResponse {
     return MsgDelegateToValidatorSetResponse.fromAmino(object.value);
   },
-  fromProtoMsg(
-    message: MsgDelegateToValidatorSetResponseProtoMsg,
-  ): MsgDelegateToValidatorSetResponse {
+  fromProtoMsg(message: MsgDelegateToValidatorSetResponseProtoMsg): MsgDelegateToValidatorSetResponse {
     return MsgDelegateToValidatorSetResponse.decode(message.value);
   },
   toProto(message: MsgDelegateToValidatorSetResponse): Uint8Array {
     return MsgDelegateToValidatorSetResponse.encode(message).finish();
   },
-  toProtoMsg(
-    message: MsgDelegateToValidatorSetResponse,
-  ): MsgDelegateToValidatorSetResponseProtoMsg {
+  toProtoMsg(message: MsgDelegateToValidatorSetResponse): MsgDelegateToValidatorSetResponseProtoMsg {
     return {
-      typeUrl: '/symphony.valsetpref.v1beta1.MsgDelegateToValidatorSetResponse',
-      value: MsgDelegateToValidatorSetResponse.encode(message).finish(),
+      typeUrl: "/symphony.valsetpref.v1beta1.MsgDelegateToValidatorSetResponse",
+      value: MsgDelegateToValidatorSetResponse.encode(message).finish()
     };
-  },
+  }
 };
-GlobalDecoderRegistry.register(
-  MsgDelegateToValidatorSetResponse.typeUrl,
-  MsgDelegateToValidatorSetResponse,
-);
+GlobalDecoderRegistry.register(MsgDelegateToValidatorSetResponse.typeUrl, MsgDelegateToValidatorSetResponse);
 function createBaseMsgUndelegateFromValidatorSet(): MsgUndelegateFromValidatorSet {
   return {
-    delegator: '',
-    coin: Coin.fromPartial({}),
+    delegator: "",
+    coin: Coin.fromPartial({})
   };
 }
 export const MsgUndelegateFromValidatorSet = {
-  typeUrl: '/symphony.valsetpref.v1beta1.MsgUndelegateFromValidatorSet',
-  aminoType: 'symphony/MsgUndelegateFromValidatorSet',
+  typeUrl: "/symphony.valsetpref.v1beta1.MsgUndelegateFromValidatorSet",
+  aminoType: "symphony/MsgUndelegateFromValidatorSet",
   is(o: any): o is MsgUndelegateFromValidatorSet {
-    return (
-      o &&
-      (o.$typeUrl === MsgUndelegateFromValidatorSet.typeUrl ||
-        (typeof o.delegator === 'string' && Coin.is(o.coin)))
-    );
+    return o && (o.$typeUrl === MsgUndelegateFromValidatorSet.typeUrl || typeof o.delegator === "string" && Coin.is(o.coin));
   },
   isSDK(o: any): o is MsgUndelegateFromValidatorSetSDKType {
-    return (
-      o &&
-      (o.$typeUrl === MsgUndelegateFromValidatorSet.typeUrl ||
-        (typeof o.delegator === 'string' && Coin.isSDK(o.coin)))
-    );
+    return o && (o.$typeUrl === MsgUndelegateFromValidatorSet.typeUrl || typeof o.delegator === "string" && Coin.isSDK(o.coin));
   },
   isAmino(o: any): o is MsgUndelegateFromValidatorSetAmino {
-    return (
-      o &&
-      (o.$typeUrl === MsgUndelegateFromValidatorSet.typeUrl ||
-        (typeof o.delegator === 'string' && Coin.isAmino(o.coin)))
-    );
+    return o && (o.$typeUrl === MsgUndelegateFromValidatorSet.typeUrl || typeof o.delegator === "string" && Coin.isAmino(o.coin));
   },
-  encode(
-    message: MsgUndelegateFromValidatorSet,
-    writer: BinaryWriter = BinaryWriter.create(),
-  ): BinaryWriter {
-    if (message.delegator !== '') {
+  encode(message: MsgUndelegateFromValidatorSet, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
+    if (message.delegator !== "") {
       writer.uint32(10).string(message.delegator);
     }
     if (message.coin !== undefined) {
@@ -817,12 +658,8 @@ export const MsgUndelegateFromValidatorSet = {
     }
     return writer;
   },
-  decode(
-    input: BinaryReader | Uint8Array,
-    length?: number,
-  ): MsgUndelegateFromValidatorSet {
-    const reader =
-      input instanceof BinaryReader ? input : new BinaryReader(input);
+  decode(input: BinaryReader | Uint8Array, length?: number): MsgUndelegateFromValidatorSet {
+    const reader = input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseMsgUndelegateFromValidatorSet();
     while (reader.pos < end) {
@@ -841,20 +678,13 @@ export const MsgUndelegateFromValidatorSet = {
     }
     return message;
   },
-  fromPartial(
-    object: Partial<MsgUndelegateFromValidatorSet>,
-  ): MsgUndelegateFromValidatorSet {
+  fromPartial(object: Partial<MsgUndelegateFromValidatorSet>): MsgUndelegateFromValidatorSet {
     const message = createBaseMsgUndelegateFromValidatorSet();
-    message.delegator = object.delegator ?? '';
-    message.coin =
-      object.coin !== undefined && object.coin !== null
-        ? Coin.fromPartial(object.coin)
-        : undefined;
+    message.delegator = object.delegator ?? "";
+    message.coin = object.coin !== undefined && object.coin !== null ? Coin.fromPartial(object.coin) : undefined;
     return message;
   },
-  fromAmino(
-    object: MsgUndelegateFromValidatorSetAmino,
-  ): MsgUndelegateFromValidatorSet {
+  fromAmino(object: MsgUndelegateFromValidatorSetAmino): MsgUndelegateFromValidatorSet {
     const message = createBaseMsgUndelegateFromValidatorSet();
     if (object.delegator !== undefined && object.delegator !== null) {
       message.delegator = object.delegator;
@@ -864,57 +694,41 @@ export const MsgUndelegateFromValidatorSet = {
     }
     return message;
   },
-  toAmino(
-    message: MsgUndelegateFromValidatorSet,
-  ): MsgUndelegateFromValidatorSetAmino {
+  toAmino(message: MsgUndelegateFromValidatorSet): MsgUndelegateFromValidatorSetAmino {
     const obj: any = {};
-    obj.delegator = message.delegator === '' ? undefined : message.delegator;
+    obj.delegator = message.delegator === "" ? undefined : message.delegator;
     obj.coin = message.coin ? Coin.toAmino(message.coin) : undefined;
     return obj;
   },
-  fromAminoMsg(
-    object: MsgUndelegateFromValidatorSetAminoMsg,
-  ): MsgUndelegateFromValidatorSet {
+  fromAminoMsg(object: MsgUndelegateFromValidatorSetAminoMsg): MsgUndelegateFromValidatorSet {
     return MsgUndelegateFromValidatorSet.fromAmino(object.value);
   },
-  toAminoMsg(
-    message: MsgUndelegateFromValidatorSet,
-  ): MsgUndelegateFromValidatorSetAminoMsg {
+  toAminoMsg(message: MsgUndelegateFromValidatorSet): MsgUndelegateFromValidatorSetAminoMsg {
     return {
-      type: 'symphony/MsgUndelegateFromValidatorSet',
-      value: MsgUndelegateFromValidatorSet.toAmino(message),
+      type: "symphony/MsgUndelegateFromValidatorSet",
+      value: MsgUndelegateFromValidatorSet.toAmino(message)
     };
   },
-  fromProtoMsg(
-    message: MsgUndelegateFromValidatorSetProtoMsg,
-  ): MsgUndelegateFromValidatorSet {
+  fromProtoMsg(message: MsgUndelegateFromValidatorSetProtoMsg): MsgUndelegateFromValidatorSet {
     return MsgUndelegateFromValidatorSet.decode(message.value);
   },
   toProto(message: MsgUndelegateFromValidatorSet): Uint8Array {
     return MsgUndelegateFromValidatorSet.encode(message).finish();
   },
-  toProtoMsg(
-    message: MsgUndelegateFromValidatorSet,
-  ): MsgUndelegateFromValidatorSetProtoMsg {
+  toProtoMsg(message: MsgUndelegateFromValidatorSet): MsgUndelegateFromValidatorSetProtoMsg {
     return {
-      typeUrl: '/symphony.valsetpref.v1beta1.MsgUndelegateFromValidatorSet',
-      value: MsgUndelegateFromValidatorSet.encode(message).finish(),
+      typeUrl: "/symphony.valsetpref.v1beta1.MsgUndelegateFromValidatorSet",
+      value: MsgUndelegateFromValidatorSet.encode(message).finish()
     };
-  },
+  }
 };
-GlobalDecoderRegistry.register(
-  MsgUndelegateFromValidatorSet.typeUrl,
-  MsgUndelegateFromValidatorSet,
-);
-GlobalDecoderRegistry.registerAminoProtoMapping(
-  MsgUndelegateFromValidatorSet.aminoType,
-  MsgUndelegateFromValidatorSet.typeUrl,
-);
+GlobalDecoderRegistry.register(MsgUndelegateFromValidatorSet.typeUrl, MsgUndelegateFromValidatorSet);
+GlobalDecoderRegistry.registerAminoProtoMapping(MsgUndelegateFromValidatorSet.aminoType, MsgUndelegateFromValidatorSet.typeUrl);
 function createBaseMsgUndelegateFromValidatorSetResponse(): MsgUndelegateFromValidatorSetResponse {
   return {};
 }
 export const MsgUndelegateFromValidatorSetResponse = {
-  typeUrl: '/symphony.valsetpref.v1beta1.MsgUndelegateFromValidatorSetResponse',
+  typeUrl: "/symphony.valsetpref.v1beta1.MsgUndelegateFromValidatorSetResponse",
   is(o: any): o is MsgUndelegateFromValidatorSetResponse {
     return o && o.$typeUrl === MsgUndelegateFromValidatorSetResponse.typeUrl;
   },
@@ -924,18 +738,11 @@ export const MsgUndelegateFromValidatorSetResponse = {
   isAmino(o: any): o is MsgUndelegateFromValidatorSetResponseAmino {
     return o && o.$typeUrl === MsgUndelegateFromValidatorSetResponse.typeUrl;
   },
-  encode(
-    _: MsgUndelegateFromValidatorSetResponse,
-    writer: BinaryWriter = BinaryWriter.create(),
-  ): BinaryWriter {
+  encode(_: MsgUndelegateFromValidatorSetResponse, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
     return writer;
   },
-  decode(
-    input: BinaryReader | Uint8Array,
-    length?: number,
-  ): MsgUndelegateFromValidatorSetResponse {
-    const reader =
-      input instanceof BinaryReader ? input : new BinaryReader(input);
+  decode(input: BinaryReader | Uint8Array, length?: number): MsgUndelegateFromValidatorSetResponse {
+    const reader = input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseMsgUndelegateFromValidatorSetResponse();
     while (reader.pos < end) {
@@ -948,87 +755,55 @@ export const MsgUndelegateFromValidatorSetResponse = {
     }
     return message;
   },
-  fromPartial(
-    _: Partial<MsgUndelegateFromValidatorSetResponse>,
-  ): MsgUndelegateFromValidatorSetResponse {
+  fromPartial(_: Partial<MsgUndelegateFromValidatorSetResponse>): MsgUndelegateFromValidatorSetResponse {
     const message = createBaseMsgUndelegateFromValidatorSetResponse();
     return message;
   },
-  fromAmino(
-    _: MsgUndelegateFromValidatorSetResponseAmino,
-  ): MsgUndelegateFromValidatorSetResponse {
+  fromAmino(_: MsgUndelegateFromValidatorSetResponseAmino): MsgUndelegateFromValidatorSetResponse {
     const message = createBaseMsgUndelegateFromValidatorSetResponse();
     return message;
   },
-  toAmino(
-    _: MsgUndelegateFromValidatorSetResponse,
-  ): MsgUndelegateFromValidatorSetResponseAmino {
+  toAmino(_: MsgUndelegateFromValidatorSetResponse): MsgUndelegateFromValidatorSetResponseAmino {
     const obj: any = {};
     return obj;
   },
-  fromAminoMsg(
-    object: MsgUndelegateFromValidatorSetResponseAminoMsg,
-  ): MsgUndelegateFromValidatorSetResponse {
+  fromAminoMsg(object: MsgUndelegateFromValidatorSetResponseAminoMsg): MsgUndelegateFromValidatorSetResponse {
     return MsgUndelegateFromValidatorSetResponse.fromAmino(object.value);
   },
-  fromProtoMsg(
-    message: MsgUndelegateFromValidatorSetResponseProtoMsg,
-  ): MsgUndelegateFromValidatorSetResponse {
+  fromProtoMsg(message: MsgUndelegateFromValidatorSetResponseProtoMsg): MsgUndelegateFromValidatorSetResponse {
     return MsgUndelegateFromValidatorSetResponse.decode(message.value);
   },
   toProto(message: MsgUndelegateFromValidatorSetResponse): Uint8Array {
     return MsgUndelegateFromValidatorSetResponse.encode(message).finish();
   },
-  toProtoMsg(
-    message: MsgUndelegateFromValidatorSetResponse,
-  ): MsgUndelegateFromValidatorSetResponseProtoMsg {
+  toProtoMsg(message: MsgUndelegateFromValidatorSetResponse): MsgUndelegateFromValidatorSetResponseProtoMsg {
     return {
-      typeUrl:
-        '/symphony.valsetpref.v1beta1.MsgUndelegateFromValidatorSetResponse',
-      value: MsgUndelegateFromValidatorSetResponse.encode(message).finish(),
+      typeUrl: "/symphony.valsetpref.v1beta1.MsgUndelegateFromValidatorSetResponse",
+      value: MsgUndelegateFromValidatorSetResponse.encode(message).finish()
     };
-  },
+  }
 };
-GlobalDecoderRegistry.register(
-  MsgUndelegateFromValidatorSetResponse.typeUrl,
-  MsgUndelegateFromValidatorSetResponse,
-);
+GlobalDecoderRegistry.register(MsgUndelegateFromValidatorSetResponse.typeUrl, MsgUndelegateFromValidatorSetResponse);
 function createBaseMsgUndelegateFromRebalancedValidatorSet(): MsgUndelegateFromRebalancedValidatorSet {
   return {
-    delegator: '',
-    coin: Coin.fromPartial({}),
+    delegator: "",
+    coin: Coin.fromPartial({})
   };
 }
 export const MsgUndelegateFromRebalancedValidatorSet = {
-  typeUrl:
-    '/symphony.valsetpref.v1beta1.MsgUndelegateFromRebalancedValidatorSet',
-  aminoType: 'symphony/MsgUndelegateFromRebalValset',
+  typeUrl: "/symphony.valsetpref.v1beta1.MsgUndelegateFromRebalancedValidatorSet",
+  aminoType: "symphony/MsgUndelegateFromRebalValset",
   is(o: any): o is MsgUndelegateFromRebalancedValidatorSet {
-    return (
-      o &&
-      (o.$typeUrl === MsgUndelegateFromRebalancedValidatorSet.typeUrl ||
-        (typeof o.delegator === 'string' && Coin.is(o.coin)))
-    );
+    return o && (o.$typeUrl === MsgUndelegateFromRebalancedValidatorSet.typeUrl || typeof o.delegator === "string" && Coin.is(o.coin));
   },
   isSDK(o: any): o is MsgUndelegateFromRebalancedValidatorSetSDKType {
-    return (
-      o &&
-      (o.$typeUrl === MsgUndelegateFromRebalancedValidatorSet.typeUrl ||
-        (typeof o.delegator === 'string' && Coin.isSDK(o.coin)))
-    );
+    return o && (o.$typeUrl === MsgUndelegateFromRebalancedValidatorSet.typeUrl || typeof o.delegator === "string" && Coin.isSDK(o.coin));
   },
   isAmino(o: any): o is MsgUndelegateFromRebalancedValidatorSetAmino {
-    return (
-      o &&
-      (o.$typeUrl === MsgUndelegateFromRebalancedValidatorSet.typeUrl ||
-        (typeof o.delegator === 'string' && Coin.isAmino(o.coin)))
-    );
+    return o && (o.$typeUrl === MsgUndelegateFromRebalancedValidatorSet.typeUrl || typeof o.delegator === "string" && Coin.isAmino(o.coin));
   },
-  encode(
-    message: MsgUndelegateFromRebalancedValidatorSet,
-    writer: BinaryWriter = BinaryWriter.create(),
-  ): BinaryWriter {
-    if (message.delegator !== '') {
+  encode(message: MsgUndelegateFromRebalancedValidatorSet, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
+    if (message.delegator !== "") {
       writer.uint32(10).string(message.delegator);
     }
     if (message.coin !== undefined) {
@@ -1036,12 +811,8 @@ export const MsgUndelegateFromRebalancedValidatorSet = {
     }
     return writer;
   },
-  decode(
-    input: BinaryReader | Uint8Array,
-    length?: number,
-  ): MsgUndelegateFromRebalancedValidatorSet {
-    const reader =
-      input instanceof BinaryReader ? input : new BinaryReader(input);
+  decode(input: BinaryReader | Uint8Array, length?: number): MsgUndelegateFromRebalancedValidatorSet {
+    const reader = input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseMsgUndelegateFromRebalancedValidatorSet();
     while (reader.pos < end) {
@@ -1060,20 +831,13 @@ export const MsgUndelegateFromRebalancedValidatorSet = {
     }
     return message;
   },
-  fromPartial(
-    object: Partial<MsgUndelegateFromRebalancedValidatorSet>,
-  ): MsgUndelegateFromRebalancedValidatorSet {
+  fromPartial(object: Partial<MsgUndelegateFromRebalancedValidatorSet>): MsgUndelegateFromRebalancedValidatorSet {
     const message = createBaseMsgUndelegateFromRebalancedValidatorSet();
-    message.delegator = object.delegator ?? '';
-    message.coin =
-      object.coin !== undefined && object.coin !== null
-        ? Coin.fromPartial(object.coin)
-        : undefined;
+    message.delegator = object.delegator ?? "";
+    message.coin = object.coin !== undefined && object.coin !== null ? Coin.fromPartial(object.coin) : undefined;
     return message;
   },
-  fromAmino(
-    object: MsgUndelegateFromRebalancedValidatorSetAmino,
-  ): MsgUndelegateFromRebalancedValidatorSet {
+  fromAmino(object: MsgUndelegateFromRebalancedValidatorSetAmino): MsgUndelegateFromRebalancedValidatorSet {
     const message = createBaseMsgUndelegateFromRebalancedValidatorSet();
     if (object.delegator !== undefined && object.delegator !== null) {
       message.delegator = object.delegator;
@@ -1083,89 +847,55 @@ export const MsgUndelegateFromRebalancedValidatorSet = {
     }
     return message;
   },
-  toAmino(
-    message: MsgUndelegateFromRebalancedValidatorSet,
-  ): MsgUndelegateFromRebalancedValidatorSetAmino {
+  toAmino(message: MsgUndelegateFromRebalancedValidatorSet): MsgUndelegateFromRebalancedValidatorSetAmino {
     const obj: any = {};
-    obj.delegator = message.delegator === '' ? undefined : message.delegator;
+    obj.delegator = message.delegator === "" ? undefined : message.delegator;
     obj.coin = message.coin ? Coin.toAmino(message.coin) : undefined;
     return obj;
   },
-  fromAminoMsg(
-    object: MsgUndelegateFromRebalancedValidatorSetAminoMsg,
-  ): MsgUndelegateFromRebalancedValidatorSet {
+  fromAminoMsg(object: MsgUndelegateFromRebalancedValidatorSetAminoMsg): MsgUndelegateFromRebalancedValidatorSet {
     return MsgUndelegateFromRebalancedValidatorSet.fromAmino(object.value);
   },
-  toAminoMsg(
-    message: MsgUndelegateFromRebalancedValidatorSet,
-  ): MsgUndelegateFromRebalancedValidatorSetAminoMsg {
+  toAminoMsg(message: MsgUndelegateFromRebalancedValidatorSet): MsgUndelegateFromRebalancedValidatorSetAminoMsg {
     return {
-      type: 'symphony/MsgUndelegateFromRebalValset',
-      value: MsgUndelegateFromRebalancedValidatorSet.toAmino(message),
+      type: "symphony/MsgUndelegateFromRebalValset",
+      value: MsgUndelegateFromRebalancedValidatorSet.toAmino(message)
     };
   },
-  fromProtoMsg(
-    message: MsgUndelegateFromRebalancedValidatorSetProtoMsg,
-  ): MsgUndelegateFromRebalancedValidatorSet {
+  fromProtoMsg(message: MsgUndelegateFromRebalancedValidatorSetProtoMsg): MsgUndelegateFromRebalancedValidatorSet {
     return MsgUndelegateFromRebalancedValidatorSet.decode(message.value);
   },
   toProto(message: MsgUndelegateFromRebalancedValidatorSet): Uint8Array {
     return MsgUndelegateFromRebalancedValidatorSet.encode(message).finish();
   },
-  toProtoMsg(
-    message: MsgUndelegateFromRebalancedValidatorSet,
-  ): MsgUndelegateFromRebalancedValidatorSetProtoMsg {
+  toProtoMsg(message: MsgUndelegateFromRebalancedValidatorSet): MsgUndelegateFromRebalancedValidatorSetProtoMsg {
     return {
-      typeUrl:
-        '/symphony.valsetpref.v1beta1.MsgUndelegateFromRebalancedValidatorSet',
-      value: MsgUndelegateFromRebalancedValidatorSet.encode(message).finish(),
+      typeUrl: "/symphony.valsetpref.v1beta1.MsgUndelegateFromRebalancedValidatorSet",
+      value: MsgUndelegateFromRebalancedValidatorSet.encode(message).finish()
     };
-  },
+  }
 };
-GlobalDecoderRegistry.register(
-  MsgUndelegateFromRebalancedValidatorSet.typeUrl,
-  MsgUndelegateFromRebalancedValidatorSet,
-);
-GlobalDecoderRegistry.registerAminoProtoMapping(
-  MsgUndelegateFromRebalancedValidatorSet.aminoType,
-  MsgUndelegateFromRebalancedValidatorSet.typeUrl,
-);
+GlobalDecoderRegistry.register(MsgUndelegateFromRebalancedValidatorSet.typeUrl, MsgUndelegateFromRebalancedValidatorSet);
+GlobalDecoderRegistry.registerAminoProtoMapping(MsgUndelegateFromRebalancedValidatorSet.aminoType, MsgUndelegateFromRebalancedValidatorSet.typeUrl);
 function createBaseMsgUndelegateFromRebalancedValidatorSetResponse(): MsgUndelegateFromRebalancedValidatorSetResponse {
   return {};
 }
 export const MsgUndelegateFromRebalancedValidatorSetResponse = {
-  typeUrl:
-    '/symphony.valsetpref.v1beta1.MsgUndelegateFromRebalancedValidatorSetResponse',
+  typeUrl: "/symphony.valsetpref.v1beta1.MsgUndelegateFromRebalancedValidatorSetResponse",
   is(o: any): o is MsgUndelegateFromRebalancedValidatorSetResponse {
-    return (
-      o &&
-      o.$typeUrl === MsgUndelegateFromRebalancedValidatorSetResponse.typeUrl
-    );
+    return o && o.$typeUrl === MsgUndelegateFromRebalancedValidatorSetResponse.typeUrl;
   },
   isSDK(o: any): o is MsgUndelegateFromRebalancedValidatorSetResponseSDKType {
-    return (
-      o &&
-      o.$typeUrl === MsgUndelegateFromRebalancedValidatorSetResponse.typeUrl
-    );
+    return o && o.$typeUrl === MsgUndelegateFromRebalancedValidatorSetResponse.typeUrl;
   },
   isAmino(o: any): o is MsgUndelegateFromRebalancedValidatorSetResponseAmino {
-    return (
-      o &&
-      o.$typeUrl === MsgUndelegateFromRebalancedValidatorSetResponse.typeUrl
-    );
+    return o && o.$typeUrl === MsgUndelegateFromRebalancedValidatorSetResponse.typeUrl;
   },
-  encode(
-    _: MsgUndelegateFromRebalancedValidatorSetResponse,
-    writer: BinaryWriter = BinaryWriter.create(),
-  ): BinaryWriter {
+  encode(_: MsgUndelegateFromRebalancedValidatorSetResponse, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
     return writer;
   },
-  decode(
-    input: BinaryReader | Uint8Array,
-    length?: number,
-  ): MsgUndelegateFromRebalancedValidatorSetResponse {
-    const reader =
-      input instanceof BinaryReader ? input : new BinaryReader(input);
+  decode(input: BinaryReader | Uint8Array, length?: number): MsgUndelegateFromRebalancedValidatorSetResponse {
+    const reader = input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseMsgUndelegateFromRebalancedValidatorSetResponse();
     while (reader.pos < end) {
@@ -1178,105 +908,55 @@ export const MsgUndelegateFromRebalancedValidatorSetResponse = {
     }
     return message;
   },
-  fromPartial(
-    _: Partial<MsgUndelegateFromRebalancedValidatorSetResponse>,
-  ): MsgUndelegateFromRebalancedValidatorSetResponse {
+  fromPartial(_: Partial<MsgUndelegateFromRebalancedValidatorSetResponse>): MsgUndelegateFromRebalancedValidatorSetResponse {
     const message = createBaseMsgUndelegateFromRebalancedValidatorSetResponse();
     return message;
   },
-  fromAmino(
-    _: MsgUndelegateFromRebalancedValidatorSetResponseAmino,
-  ): MsgUndelegateFromRebalancedValidatorSetResponse {
+  fromAmino(_: MsgUndelegateFromRebalancedValidatorSetResponseAmino): MsgUndelegateFromRebalancedValidatorSetResponse {
     const message = createBaseMsgUndelegateFromRebalancedValidatorSetResponse();
     return message;
   },
-  toAmino(
-    _: MsgUndelegateFromRebalancedValidatorSetResponse,
-  ): MsgUndelegateFromRebalancedValidatorSetResponseAmino {
+  toAmino(_: MsgUndelegateFromRebalancedValidatorSetResponse): MsgUndelegateFromRebalancedValidatorSetResponseAmino {
     const obj: any = {};
     return obj;
   },
-  fromAminoMsg(
-    object: MsgUndelegateFromRebalancedValidatorSetResponseAminoMsg,
-  ): MsgUndelegateFromRebalancedValidatorSetResponse {
-    return MsgUndelegateFromRebalancedValidatorSetResponse.fromAmino(
-      object.value,
-    );
+  fromAminoMsg(object: MsgUndelegateFromRebalancedValidatorSetResponseAminoMsg): MsgUndelegateFromRebalancedValidatorSetResponse {
+    return MsgUndelegateFromRebalancedValidatorSetResponse.fromAmino(object.value);
   },
-  fromProtoMsg(
-    message: MsgUndelegateFromRebalancedValidatorSetResponseProtoMsg,
-  ): MsgUndelegateFromRebalancedValidatorSetResponse {
-    return MsgUndelegateFromRebalancedValidatorSetResponse.decode(
-      message.value,
-    );
+  fromProtoMsg(message: MsgUndelegateFromRebalancedValidatorSetResponseProtoMsg): MsgUndelegateFromRebalancedValidatorSetResponse {
+    return MsgUndelegateFromRebalancedValidatorSetResponse.decode(message.value);
   },
-  toProto(
-    message: MsgUndelegateFromRebalancedValidatorSetResponse,
-  ): Uint8Array {
-    return MsgUndelegateFromRebalancedValidatorSetResponse.encode(
-      message,
-    ).finish();
+  toProto(message: MsgUndelegateFromRebalancedValidatorSetResponse): Uint8Array {
+    return MsgUndelegateFromRebalancedValidatorSetResponse.encode(message).finish();
   },
-  toProtoMsg(
-    message: MsgUndelegateFromRebalancedValidatorSetResponse,
-  ): MsgUndelegateFromRebalancedValidatorSetResponseProtoMsg {
+  toProtoMsg(message: MsgUndelegateFromRebalancedValidatorSetResponse): MsgUndelegateFromRebalancedValidatorSetResponseProtoMsg {
     return {
-      typeUrl:
-        '/symphony.valsetpref.v1beta1.MsgUndelegateFromRebalancedValidatorSetResponse',
-      value:
-        MsgUndelegateFromRebalancedValidatorSetResponse.encode(
-          message,
-        ).finish(),
+      typeUrl: "/symphony.valsetpref.v1beta1.MsgUndelegateFromRebalancedValidatorSetResponse",
+      value: MsgUndelegateFromRebalancedValidatorSetResponse.encode(message).finish()
     };
-  },
+  }
 };
-GlobalDecoderRegistry.register(
-  MsgUndelegateFromRebalancedValidatorSetResponse.typeUrl,
-  MsgUndelegateFromRebalancedValidatorSetResponse,
-);
+GlobalDecoderRegistry.register(MsgUndelegateFromRebalancedValidatorSetResponse.typeUrl, MsgUndelegateFromRebalancedValidatorSetResponse);
 function createBaseMsgRedelegateValidatorSet(): MsgRedelegateValidatorSet {
   return {
-    delegator: '',
-    preferences: [],
+    delegator: "",
+    preferences: []
   };
 }
 export const MsgRedelegateValidatorSet = {
-  typeUrl: '/symphony.valsetpref.v1beta1.MsgRedelegateValidatorSet',
-  aminoType: 'symphony/MsgRedelegateValidatorSet',
+  typeUrl: "/symphony.valsetpref.v1beta1.MsgRedelegateValidatorSet",
+  aminoType: "symphony/MsgRedelegateValidatorSet",
   is(o: any): o is MsgRedelegateValidatorSet {
-    return (
-      o &&
-      (o.$typeUrl === MsgRedelegateValidatorSet.typeUrl ||
-        (typeof o.delegator === 'string' &&
-          Array.isArray(o.preferences) &&
-          (!o.preferences.length || ValidatorPreference.is(o.preferences[0]))))
-    );
+    return o && (o.$typeUrl === MsgRedelegateValidatorSet.typeUrl || typeof o.delegator === "string" && Array.isArray(o.preferences) && (!o.preferences.length || ValidatorPreference.is(o.preferences[0])));
   },
   isSDK(o: any): o is MsgRedelegateValidatorSetSDKType {
-    return (
-      o &&
-      (o.$typeUrl === MsgRedelegateValidatorSet.typeUrl ||
-        (typeof o.delegator === 'string' &&
-          Array.isArray(o.preferences) &&
-          (!o.preferences.length ||
-            ValidatorPreference.isSDK(o.preferences[0]))))
-    );
+    return o && (o.$typeUrl === MsgRedelegateValidatorSet.typeUrl || typeof o.delegator === "string" && Array.isArray(o.preferences) && (!o.preferences.length || ValidatorPreference.isSDK(o.preferences[0])));
   },
   isAmino(o: any): o is MsgRedelegateValidatorSetAmino {
-    return (
-      o &&
-      (o.$typeUrl === MsgRedelegateValidatorSet.typeUrl ||
-        (typeof o.delegator === 'string' &&
-          Array.isArray(o.preferences) &&
-          (!o.preferences.length ||
-            ValidatorPreference.isAmino(o.preferences[0]))))
-    );
+    return o && (o.$typeUrl === MsgRedelegateValidatorSet.typeUrl || typeof o.delegator === "string" && Array.isArray(o.preferences) && (!o.preferences.length || ValidatorPreference.isAmino(o.preferences[0])));
   },
-  encode(
-    message: MsgRedelegateValidatorSet,
-    writer: BinaryWriter = BinaryWriter.create(),
-  ): BinaryWriter {
-    if (message.delegator !== '') {
+  encode(message: MsgRedelegateValidatorSet, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
+    if (message.delegator !== "") {
       writer.uint32(10).string(message.delegator);
     }
     for (const v of message.preferences) {
@@ -1284,12 +964,8 @@ export const MsgRedelegateValidatorSet = {
     }
     return writer;
   },
-  decode(
-    input: BinaryReader | Uint8Array,
-    length?: number,
-  ): MsgRedelegateValidatorSet {
-    const reader =
-      input instanceof BinaryReader ? input : new BinaryReader(input);
+  decode(input: BinaryReader | Uint8Array, length?: number): MsgRedelegateValidatorSet {
+    const reader = input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseMsgRedelegateValidatorSet();
     while (reader.pos < end) {
@@ -1299,9 +975,7 @@ export const MsgRedelegateValidatorSet = {
           message.delegator = reader.string();
           break;
         case 2:
-          message.preferences.push(
-            ValidatorPreference.decode(reader, reader.uint32()),
-          );
+          message.preferences.push(ValidatorPreference.decode(reader, reader.uint32()));
           break;
         default:
           reader.skipType(tag & 7);
@@ -1310,13 +984,10 @@ export const MsgRedelegateValidatorSet = {
     }
     return message;
   },
-  fromPartial(
-    object: Partial<MsgRedelegateValidatorSet>,
-  ): MsgRedelegateValidatorSet {
+  fromPartial(object: Partial<MsgRedelegateValidatorSet>): MsgRedelegateValidatorSet {
     const message = createBaseMsgRedelegateValidatorSet();
-    message.delegator = object.delegator ?? '';
-    message.preferences =
-      object.preferences?.map(e => ValidatorPreference.fromPartial(e)) || [];
+    message.delegator = object.delegator ?? "";
+    message.preferences = object.preferences?.map(e => ValidatorPreference.fromPartial(e)) || [];
     return message;
   },
   fromAmino(object: MsgRedelegateValidatorSetAmino): MsgRedelegateValidatorSet {
@@ -1324,65 +995,48 @@ export const MsgRedelegateValidatorSet = {
     if (object.delegator !== undefined && object.delegator !== null) {
       message.delegator = object.delegator;
     }
-    message.preferences =
-      object.preferences?.map(e => ValidatorPreference.fromAmino(e)) || [];
+    message.preferences = object.preferences?.map(e => ValidatorPreference.fromAmino(e)) || [];
     return message;
   },
   toAmino(message: MsgRedelegateValidatorSet): MsgRedelegateValidatorSetAmino {
     const obj: any = {};
-    obj.delegator = message.delegator === '' ? undefined : message.delegator;
+    obj.delegator = message.delegator === "" ? undefined : message.delegator;
     if (message.preferences) {
-      obj.preferences = message.preferences.map(e =>
-        e ? ValidatorPreference.toAmino(e) : undefined,
-      );
+      obj.preferences = message.preferences.map(e => e ? ValidatorPreference.toAmino(e) : undefined);
     } else {
       obj.preferences = message.preferences;
     }
     return obj;
   },
-  fromAminoMsg(
-    object: MsgRedelegateValidatorSetAminoMsg,
-  ): MsgRedelegateValidatorSet {
+  fromAminoMsg(object: MsgRedelegateValidatorSetAminoMsg): MsgRedelegateValidatorSet {
     return MsgRedelegateValidatorSet.fromAmino(object.value);
   },
-  toAminoMsg(
-    message: MsgRedelegateValidatorSet,
-  ): MsgRedelegateValidatorSetAminoMsg {
+  toAminoMsg(message: MsgRedelegateValidatorSet): MsgRedelegateValidatorSetAminoMsg {
     return {
-      type: 'symphony/MsgRedelegateValidatorSet',
-      value: MsgRedelegateValidatorSet.toAmino(message),
+      type: "symphony/MsgRedelegateValidatorSet",
+      value: MsgRedelegateValidatorSet.toAmino(message)
     };
   },
-  fromProtoMsg(
-    message: MsgRedelegateValidatorSetProtoMsg,
-  ): MsgRedelegateValidatorSet {
+  fromProtoMsg(message: MsgRedelegateValidatorSetProtoMsg): MsgRedelegateValidatorSet {
     return MsgRedelegateValidatorSet.decode(message.value);
   },
   toProto(message: MsgRedelegateValidatorSet): Uint8Array {
     return MsgRedelegateValidatorSet.encode(message).finish();
   },
-  toProtoMsg(
-    message: MsgRedelegateValidatorSet,
-  ): MsgRedelegateValidatorSetProtoMsg {
+  toProtoMsg(message: MsgRedelegateValidatorSet): MsgRedelegateValidatorSetProtoMsg {
     return {
-      typeUrl: '/symphony.valsetpref.v1beta1.MsgRedelegateValidatorSet',
-      value: MsgRedelegateValidatorSet.encode(message).finish(),
+      typeUrl: "/symphony.valsetpref.v1beta1.MsgRedelegateValidatorSet",
+      value: MsgRedelegateValidatorSet.encode(message).finish()
     };
-  },
+  }
 };
-GlobalDecoderRegistry.register(
-  MsgRedelegateValidatorSet.typeUrl,
-  MsgRedelegateValidatorSet,
-);
-GlobalDecoderRegistry.registerAminoProtoMapping(
-  MsgRedelegateValidatorSet.aminoType,
-  MsgRedelegateValidatorSet.typeUrl,
-);
+GlobalDecoderRegistry.register(MsgRedelegateValidatorSet.typeUrl, MsgRedelegateValidatorSet);
+GlobalDecoderRegistry.registerAminoProtoMapping(MsgRedelegateValidatorSet.aminoType, MsgRedelegateValidatorSet.typeUrl);
 function createBaseMsgRedelegateValidatorSetResponse(): MsgRedelegateValidatorSetResponse {
   return {};
 }
 export const MsgRedelegateValidatorSetResponse = {
-  typeUrl: '/symphony.valsetpref.v1beta1.MsgRedelegateValidatorSetResponse',
+  typeUrl: "/symphony.valsetpref.v1beta1.MsgRedelegateValidatorSetResponse",
   is(o: any): o is MsgRedelegateValidatorSetResponse {
     return o && o.$typeUrl === MsgRedelegateValidatorSetResponse.typeUrl;
   },
@@ -1392,18 +1046,11 @@ export const MsgRedelegateValidatorSetResponse = {
   isAmino(o: any): o is MsgRedelegateValidatorSetResponseAmino {
     return o && o.$typeUrl === MsgRedelegateValidatorSetResponse.typeUrl;
   },
-  encode(
-    _: MsgRedelegateValidatorSetResponse,
-    writer: BinaryWriter = BinaryWriter.create(),
-  ): BinaryWriter {
+  encode(_: MsgRedelegateValidatorSetResponse, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
     return writer;
   },
-  decode(
-    input: BinaryReader | Uint8Array,
-    length?: number,
-  ): MsgRedelegateValidatorSetResponse {
-    const reader =
-      input instanceof BinaryReader ? input : new BinaryReader(input);
+  decode(input: BinaryReader | Uint8Array, length?: number): MsgRedelegateValidatorSetResponse {
+    const reader = input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseMsgRedelegateValidatorSetResponse();
     while (reader.pos < end) {
@@ -1416,94 +1063,60 @@ export const MsgRedelegateValidatorSetResponse = {
     }
     return message;
   },
-  fromPartial(
-    _: Partial<MsgRedelegateValidatorSetResponse>,
-  ): MsgRedelegateValidatorSetResponse {
+  fromPartial(_: Partial<MsgRedelegateValidatorSetResponse>): MsgRedelegateValidatorSetResponse {
     const message = createBaseMsgRedelegateValidatorSetResponse();
     return message;
   },
-  fromAmino(
-    _: MsgRedelegateValidatorSetResponseAmino,
-  ): MsgRedelegateValidatorSetResponse {
+  fromAmino(_: MsgRedelegateValidatorSetResponseAmino): MsgRedelegateValidatorSetResponse {
     const message = createBaseMsgRedelegateValidatorSetResponse();
     return message;
   },
-  toAmino(
-    _: MsgRedelegateValidatorSetResponse,
-  ): MsgRedelegateValidatorSetResponseAmino {
+  toAmino(_: MsgRedelegateValidatorSetResponse): MsgRedelegateValidatorSetResponseAmino {
     const obj: any = {};
     return obj;
   },
-  fromAminoMsg(
-    object: MsgRedelegateValidatorSetResponseAminoMsg,
-  ): MsgRedelegateValidatorSetResponse {
+  fromAminoMsg(object: MsgRedelegateValidatorSetResponseAminoMsg): MsgRedelegateValidatorSetResponse {
     return MsgRedelegateValidatorSetResponse.fromAmino(object.value);
   },
-  fromProtoMsg(
-    message: MsgRedelegateValidatorSetResponseProtoMsg,
-  ): MsgRedelegateValidatorSetResponse {
+  fromProtoMsg(message: MsgRedelegateValidatorSetResponseProtoMsg): MsgRedelegateValidatorSetResponse {
     return MsgRedelegateValidatorSetResponse.decode(message.value);
   },
   toProto(message: MsgRedelegateValidatorSetResponse): Uint8Array {
     return MsgRedelegateValidatorSetResponse.encode(message).finish();
   },
-  toProtoMsg(
-    message: MsgRedelegateValidatorSetResponse,
-  ): MsgRedelegateValidatorSetResponseProtoMsg {
+  toProtoMsg(message: MsgRedelegateValidatorSetResponse): MsgRedelegateValidatorSetResponseProtoMsg {
     return {
-      typeUrl: '/symphony.valsetpref.v1beta1.MsgRedelegateValidatorSetResponse',
-      value: MsgRedelegateValidatorSetResponse.encode(message).finish(),
+      typeUrl: "/symphony.valsetpref.v1beta1.MsgRedelegateValidatorSetResponse",
+      value: MsgRedelegateValidatorSetResponse.encode(message).finish()
     };
-  },
+  }
 };
-GlobalDecoderRegistry.register(
-  MsgRedelegateValidatorSetResponse.typeUrl,
-  MsgRedelegateValidatorSetResponse,
-);
+GlobalDecoderRegistry.register(MsgRedelegateValidatorSetResponse.typeUrl, MsgRedelegateValidatorSetResponse);
 function createBaseMsgWithdrawDelegationRewards(): MsgWithdrawDelegationRewards {
   return {
-    delegator: '',
+    delegator: ""
   };
 }
 export const MsgWithdrawDelegationRewards = {
-  typeUrl: '/symphony.valsetpref.v1beta1.MsgWithdrawDelegationRewards',
-  aminoType: 'symphony/MsgWithdrawDelegationRewards',
+  typeUrl: "/symphony.valsetpref.v1beta1.MsgWithdrawDelegationRewards",
+  aminoType: "symphony/MsgWithdrawDelegationRewards",
   is(o: any): o is MsgWithdrawDelegationRewards {
-    return (
-      o &&
-      (o.$typeUrl === MsgWithdrawDelegationRewards.typeUrl ||
-        typeof o.delegator === 'string')
-    );
+    return o && (o.$typeUrl === MsgWithdrawDelegationRewards.typeUrl || typeof o.delegator === "string");
   },
   isSDK(o: any): o is MsgWithdrawDelegationRewardsSDKType {
-    return (
-      o &&
-      (o.$typeUrl === MsgWithdrawDelegationRewards.typeUrl ||
-        typeof o.delegator === 'string')
-    );
+    return o && (o.$typeUrl === MsgWithdrawDelegationRewards.typeUrl || typeof o.delegator === "string");
   },
   isAmino(o: any): o is MsgWithdrawDelegationRewardsAmino {
-    return (
-      o &&
-      (o.$typeUrl === MsgWithdrawDelegationRewards.typeUrl ||
-        typeof o.delegator === 'string')
-    );
+    return o && (o.$typeUrl === MsgWithdrawDelegationRewards.typeUrl || typeof o.delegator === "string");
   },
-  encode(
-    message: MsgWithdrawDelegationRewards,
-    writer: BinaryWriter = BinaryWriter.create(),
-  ): BinaryWriter {
-    if (message.delegator !== '') {
+  encode(message: MsgWithdrawDelegationRewards, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
+    if (message.delegator !== "") {
       writer.uint32(10).string(message.delegator);
     }
     return writer;
   },
-  decode(
-    input: BinaryReader | Uint8Array,
-    length?: number,
-  ): MsgWithdrawDelegationRewards {
-    const reader =
-      input instanceof BinaryReader ? input : new BinaryReader(input);
+  decode(input: BinaryReader | Uint8Array, length?: number): MsgWithdrawDelegationRewards {
+    const reader = input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseMsgWithdrawDelegationRewards();
     while (reader.pos < end) {
@@ -1519,72 +1132,52 @@ export const MsgWithdrawDelegationRewards = {
     }
     return message;
   },
-  fromPartial(
-    object: Partial<MsgWithdrawDelegationRewards>,
-  ): MsgWithdrawDelegationRewards {
+  fromPartial(object: Partial<MsgWithdrawDelegationRewards>): MsgWithdrawDelegationRewards {
     const message = createBaseMsgWithdrawDelegationRewards();
-    message.delegator = object.delegator ?? '';
+    message.delegator = object.delegator ?? "";
     return message;
   },
-  fromAmino(
-    object: MsgWithdrawDelegationRewardsAmino,
-  ): MsgWithdrawDelegationRewards {
+  fromAmino(object: MsgWithdrawDelegationRewardsAmino): MsgWithdrawDelegationRewards {
     const message = createBaseMsgWithdrawDelegationRewards();
     if (object.delegator !== undefined && object.delegator !== null) {
       message.delegator = object.delegator;
     }
     return message;
   },
-  toAmino(
-    message: MsgWithdrawDelegationRewards,
-  ): MsgWithdrawDelegationRewardsAmino {
+  toAmino(message: MsgWithdrawDelegationRewards): MsgWithdrawDelegationRewardsAmino {
     const obj: any = {};
-    obj.delegator = message.delegator === '' ? undefined : message.delegator;
+    obj.delegator = message.delegator === "" ? undefined : message.delegator;
     return obj;
   },
-  fromAminoMsg(
-    object: MsgWithdrawDelegationRewardsAminoMsg,
-  ): MsgWithdrawDelegationRewards {
+  fromAminoMsg(object: MsgWithdrawDelegationRewardsAminoMsg): MsgWithdrawDelegationRewards {
     return MsgWithdrawDelegationRewards.fromAmino(object.value);
   },
-  toAminoMsg(
-    message: MsgWithdrawDelegationRewards,
-  ): MsgWithdrawDelegationRewardsAminoMsg {
+  toAminoMsg(message: MsgWithdrawDelegationRewards): MsgWithdrawDelegationRewardsAminoMsg {
     return {
-      type: 'symphony/MsgWithdrawDelegationRewards',
-      value: MsgWithdrawDelegationRewards.toAmino(message),
+      type: "symphony/MsgWithdrawDelegationRewards",
+      value: MsgWithdrawDelegationRewards.toAmino(message)
     };
   },
-  fromProtoMsg(
-    message: MsgWithdrawDelegationRewardsProtoMsg,
-  ): MsgWithdrawDelegationRewards {
+  fromProtoMsg(message: MsgWithdrawDelegationRewardsProtoMsg): MsgWithdrawDelegationRewards {
     return MsgWithdrawDelegationRewards.decode(message.value);
   },
   toProto(message: MsgWithdrawDelegationRewards): Uint8Array {
     return MsgWithdrawDelegationRewards.encode(message).finish();
   },
-  toProtoMsg(
-    message: MsgWithdrawDelegationRewards,
-  ): MsgWithdrawDelegationRewardsProtoMsg {
+  toProtoMsg(message: MsgWithdrawDelegationRewards): MsgWithdrawDelegationRewardsProtoMsg {
     return {
-      typeUrl: '/symphony.valsetpref.v1beta1.MsgWithdrawDelegationRewards',
-      value: MsgWithdrawDelegationRewards.encode(message).finish(),
+      typeUrl: "/symphony.valsetpref.v1beta1.MsgWithdrawDelegationRewards",
+      value: MsgWithdrawDelegationRewards.encode(message).finish()
     };
-  },
+  }
 };
-GlobalDecoderRegistry.register(
-  MsgWithdrawDelegationRewards.typeUrl,
-  MsgWithdrawDelegationRewards,
-);
-GlobalDecoderRegistry.registerAminoProtoMapping(
-  MsgWithdrawDelegationRewards.aminoType,
-  MsgWithdrawDelegationRewards.typeUrl,
-);
+GlobalDecoderRegistry.register(MsgWithdrawDelegationRewards.typeUrl, MsgWithdrawDelegationRewards);
+GlobalDecoderRegistry.registerAminoProtoMapping(MsgWithdrawDelegationRewards.aminoType, MsgWithdrawDelegationRewards.typeUrl);
 function createBaseMsgWithdrawDelegationRewardsResponse(): MsgWithdrawDelegationRewardsResponse {
   return {};
 }
 export const MsgWithdrawDelegationRewardsResponse = {
-  typeUrl: '/symphony.valsetpref.v1beta1.MsgWithdrawDelegationRewardsResponse',
+  typeUrl: "/symphony.valsetpref.v1beta1.MsgWithdrawDelegationRewardsResponse",
   is(o: any): o is MsgWithdrawDelegationRewardsResponse {
     return o && o.$typeUrl === MsgWithdrawDelegationRewardsResponse.typeUrl;
   },
@@ -1594,18 +1187,11 @@ export const MsgWithdrawDelegationRewardsResponse = {
   isAmino(o: any): o is MsgWithdrawDelegationRewardsResponseAmino {
     return o && o.$typeUrl === MsgWithdrawDelegationRewardsResponse.typeUrl;
   },
-  encode(
-    _: MsgWithdrawDelegationRewardsResponse,
-    writer: BinaryWriter = BinaryWriter.create(),
-  ): BinaryWriter {
+  encode(_: MsgWithdrawDelegationRewardsResponse, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
     return writer;
   },
-  decode(
-    input: BinaryReader | Uint8Array,
-    length?: number,
-  ): MsgWithdrawDelegationRewardsResponse {
-    const reader =
-      input instanceof BinaryReader ? input : new BinaryReader(input);
+  decode(input: BinaryReader | Uint8Array, length?: number): MsgWithdrawDelegationRewardsResponse {
+    const reader = input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseMsgWithdrawDelegationRewardsResponse();
     while (reader.pos < end) {
@@ -1618,86 +1204,55 @@ export const MsgWithdrawDelegationRewardsResponse = {
     }
     return message;
   },
-  fromPartial(
-    _: Partial<MsgWithdrawDelegationRewardsResponse>,
-  ): MsgWithdrawDelegationRewardsResponse {
+  fromPartial(_: Partial<MsgWithdrawDelegationRewardsResponse>): MsgWithdrawDelegationRewardsResponse {
     const message = createBaseMsgWithdrawDelegationRewardsResponse();
     return message;
   },
-  fromAmino(
-    _: MsgWithdrawDelegationRewardsResponseAmino,
-  ): MsgWithdrawDelegationRewardsResponse {
+  fromAmino(_: MsgWithdrawDelegationRewardsResponseAmino): MsgWithdrawDelegationRewardsResponse {
     const message = createBaseMsgWithdrawDelegationRewardsResponse();
     return message;
   },
-  toAmino(
-    _: MsgWithdrawDelegationRewardsResponse,
-  ): MsgWithdrawDelegationRewardsResponseAmino {
+  toAmino(_: MsgWithdrawDelegationRewardsResponse): MsgWithdrawDelegationRewardsResponseAmino {
     const obj: any = {};
     return obj;
   },
-  fromAminoMsg(
-    object: MsgWithdrawDelegationRewardsResponseAminoMsg,
-  ): MsgWithdrawDelegationRewardsResponse {
+  fromAminoMsg(object: MsgWithdrawDelegationRewardsResponseAminoMsg): MsgWithdrawDelegationRewardsResponse {
     return MsgWithdrawDelegationRewardsResponse.fromAmino(object.value);
   },
-  fromProtoMsg(
-    message: MsgWithdrawDelegationRewardsResponseProtoMsg,
-  ): MsgWithdrawDelegationRewardsResponse {
+  fromProtoMsg(message: MsgWithdrawDelegationRewardsResponseProtoMsg): MsgWithdrawDelegationRewardsResponse {
     return MsgWithdrawDelegationRewardsResponse.decode(message.value);
   },
   toProto(message: MsgWithdrawDelegationRewardsResponse): Uint8Array {
     return MsgWithdrawDelegationRewardsResponse.encode(message).finish();
   },
-  toProtoMsg(
-    message: MsgWithdrawDelegationRewardsResponse,
-  ): MsgWithdrawDelegationRewardsResponseProtoMsg {
+  toProtoMsg(message: MsgWithdrawDelegationRewardsResponse): MsgWithdrawDelegationRewardsResponseProtoMsg {
     return {
-      typeUrl:
-        '/symphony.valsetpref.v1beta1.MsgWithdrawDelegationRewardsResponse',
-      value: MsgWithdrawDelegationRewardsResponse.encode(message).finish(),
+      typeUrl: "/symphony.valsetpref.v1beta1.MsgWithdrawDelegationRewardsResponse",
+      value: MsgWithdrawDelegationRewardsResponse.encode(message).finish()
     };
-  },
+  }
 };
-GlobalDecoderRegistry.register(
-  MsgWithdrawDelegationRewardsResponse.typeUrl,
-  MsgWithdrawDelegationRewardsResponse,
-);
+GlobalDecoderRegistry.register(MsgWithdrawDelegationRewardsResponse.typeUrl, MsgWithdrawDelegationRewardsResponse);
 function createBaseMsgDelegateBondedTokens(): MsgDelegateBondedTokens {
   return {
-    delegator: '',
-    lockID: BigInt(0),
+    delegator: "",
+    lockID: BigInt(0)
   };
 }
 export const MsgDelegateBondedTokens = {
-  typeUrl: '/symphony.valsetpref.v1beta1.MsgDelegateBondedTokens',
-  aminoType: 'symphony/MsgDelegateBondedTokens',
+  typeUrl: "/symphony.valsetpref.v1beta1.MsgDelegateBondedTokens",
+  aminoType: "symphony/MsgDelegateBondedTokens",
   is(o: any): o is MsgDelegateBondedTokens {
-    return (
-      o &&
-      (o.$typeUrl === MsgDelegateBondedTokens.typeUrl ||
-        (typeof o.delegator === 'string' && typeof o.lockID === 'bigint'))
-    );
+    return o && (o.$typeUrl === MsgDelegateBondedTokens.typeUrl || typeof o.delegator === "string" && typeof o.lockID === "bigint");
   },
   isSDK(o: any): o is MsgDelegateBondedTokensSDKType {
-    return (
-      o &&
-      (o.$typeUrl === MsgDelegateBondedTokens.typeUrl ||
-        (typeof o.delegator === 'string' && typeof o.lockID === 'bigint'))
-    );
+    return o && (o.$typeUrl === MsgDelegateBondedTokens.typeUrl || typeof o.delegator === "string" && typeof o.lockID === "bigint");
   },
   isAmino(o: any): o is MsgDelegateBondedTokensAmino {
-    return (
-      o &&
-      (o.$typeUrl === MsgDelegateBondedTokens.typeUrl ||
-        (typeof o.delegator === 'string' && typeof o.lockID === 'bigint'))
-    );
+    return o && (o.$typeUrl === MsgDelegateBondedTokens.typeUrl || typeof o.delegator === "string" && typeof o.lockID === "bigint");
   },
-  encode(
-    message: MsgDelegateBondedTokens,
-    writer: BinaryWriter = BinaryWriter.create(),
-  ): BinaryWriter {
-    if (message.delegator !== '') {
+  encode(message: MsgDelegateBondedTokens, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
+    if (message.delegator !== "") {
       writer.uint32(10).string(message.delegator);
     }
     if (message.lockID !== BigInt(0)) {
@@ -1705,12 +1260,8 @@ export const MsgDelegateBondedTokens = {
     }
     return writer;
   },
-  decode(
-    input: BinaryReader | Uint8Array,
-    length?: number,
-  ): MsgDelegateBondedTokens {
-    const reader =
-      input instanceof BinaryReader ? input : new BinaryReader(input);
+  decode(input: BinaryReader | Uint8Array, length?: number): MsgDelegateBondedTokens {
+    const reader = input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseMsgDelegateBondedTokens();
     while (reader.pos < end) {
@@ -1729,15 +1280,10 @@ export const MsgDelegateBondedTokens = {
     }
     return message;
   },
-  fromPartial(
-    object: Partial<MsgDelegateBondedTokens>,
-  ): MsgDelegateBondedTokens {
+  fromPartial(object: Partial<MsgDelegateBondedTokens>): MsgDelegateBondedTokens {
     const message = createBaseMsgDelegateBondedTokens();
-    message.delegator = object.delegator ?? '';
-    message.lockID =
-      object.lockID !== undefined && object.lockID !== null
-        ? BigInt(object.lockID.toString())
-        : BigInt(0);
+    message.delegator = object.delegator ?? "";
+    message.lockID = object.lockID !== undefined && object.lockID !== null ? BigInt(object.lockID.toString()) : BigInt(0);
     return message;
   },
   fromAmino(object: MsgDelegateBondedTokensAmino): MsgDelegateBondedTokens {
@@ -1752,54 +1298,39 @@ export const MsgDelegateBondedTokens = {
   },
   toAmino(message: MsgDelegateBondedTokens): MsgDelegateBondedTokensAmino {
     const obj: any = {};
-    obj.delegator = message.delegator === '' ? undefined : message.delegator;
-    obj.lockID =
-      message.lockID !== BigInt(0) ? message.lockID?.toString() : undefined;
+    obj.delegator = message.delegator === "" ? undefined : message.delegator;
+    obj.lockID = message.lockID !== BigInt(0) ? message.lockID?.toString() : undefined;
     return obj;
   },
-  fromAminoMsg(
-    object: MsgDelegateBondedTokensAminoMsg,
-  ): MsgDelegateBondedTokens {
+  fromAminoMsg(object: MsgDelegateBondedTokensAminoMsg): MsgDelegateBondedTokens {
     return MsgDelegateBondedTokens.fromAmino(object.value);
   },
-  toAminoMsg(
-    message: MsgDelegateBondedTokens,
-  ): MsgDelegateBondedTokensAminoMsg {
+  toAminoMsg(message: MsgDelegateBondedTokens): MsgDelegateBondedTokensAminoMsg {
     return {
-      type: 'symphony/MsgDelegateBondedTokens',
-      value: MsgDelegateBondedTokens.toAmino(message),
+      type: "symphony/MsgDelegateBondedTokens",
+      value: MsgDelegateBondedTokens.toAmino(message)
     };
   },
-  fromProtoMsg(
-    message: MsgDelegateBondedTokensProtoMsg,
-  ): MsgDelegateBondedTokens {
+  fromProtoMsg(message: MsgDelegateBondedTokensProtoMsg): MsgDelegateBondedTokens {
     return MsgDelegateBondedTokens.decode(message.value);
   },
   toProto(message: MsgDelegateBondedTokens): Uint8Array {
     return MsgDelegateBondedTokens.encode(message).finish();
   },
-  toProtoMsg(
-    message: MsgDelegateBondedTokens,
-  ): MsgDelegateBondedTokensProtoMsg {
+  toProtoMsg(message: MsgDelegateBondedTokens): MsgDelegateBondedTokensProtoMsg {
     return {
-      typeUrl: '/symphony.valsetpref.v1beta1.MsgDelegateBondedTokens',
-      value: MsgDelegateBondedTokens.encode(message).finish(),
+      typeUrl: "/symphony.valsetpref.v1beta1.MsgDelegateBondedTokens",
+      value: MsgDelegateBondedTokens.encode(message).finish()
     };
-  },
+  }
 };
-GlobalDecoderRegistry.register(
-  MsgDelegateBondedTokens.typeUrl,
-  MsgDelegateBondedTokens,
-);
-GlobalDecoderRegistry.registerAminoProtoMapping(
-  MsgDelegateBondedTokens.aminoType,
-  MsgDelegateBondedTokens.typeUrl,
-);
+GlobalDecoderRegistry.register(MsgDelegateBondedTokens.typeUrl, MsgDelegateBondedTokens);
+GlobalDecoderRegistry.registerAminoProtoMapping(MsgDelegateBondedTokens.aminoType, MsgDelegateBondedTokens.typeUrl);
 function createBaseMsgDelegateBondedTokensResponse(): MsgDelegateBondedTokensResponse {
   return {};
 }
 export const MsgDelegateBondedTokensResponse = {
-  typeUrl: '/symphony.valsetpref.v1beta1.MsgDelegateBondedTokensResponse',
+  typeUrl: "/symphony.valsetpref.v1beta1.MsgDelegateBondedTokensResponse",
   is(o: any): o is MsgDelegateBondedTokensResponse {
     return o && o.$typeUrl === MsgDelegateBondedTokensResponse.typeUrl;
   },
@@ -1809,18 +1340,11 @@ export const MsgDelegateBondedTokensResponse = {
   isAmino(o: any): o is MsgDelegateBondedTokensResponseAmino {
     return o && o.$typeUrl === MsgDelegateBondedTokensResponse.typeUrl;
   },
-  encode(
-    _: MsgDelegateBondedTokensResponse,
-    writer: BinaryWriter = BinaryWriter.create(),
-  ): BinaryWriter {
+  encode(_: MsgDelegateBondedTokensResponse, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
     return writer;
   },
-  decode(
-    input: BinaryReader | Uint8Array,
-    length?: number,
-  ): MsgDelegateBondedTokensResponse {
-    const reader =
-      input instanceof BinaryReader ? input : new BinaryReader(input);
+  decode(input: BinaryReader | Uint8Array, length?: number): MsgDelegateBondedTokensResponse {
+    const reader = input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseMsgDelegateBondedTokensResponse();
     while (reader.pos < end) {
@@ -1833,47 +1357,32 @@ export const MsgDelegateBondedTokensResponse = {
     }
     return message;
   },
-  fromPartial(
-    _: Partial<MsgDelegateBondedTokensResponse>,
-  ): MsgDelegateBondedTokensResponse {
+  fromPartial(_: Partial<MsgDelegateBondedTokensResponse>): MsgDelegateBondedTokensResponse {
     const message = createBaseMsgDelegateBondedTokensResponse();
     return message;
   },
-  fromAmino(
-    _: MsgDelegateBondedTokensResponseAmino,
-  ): MsgDelegateBondedTokensResponse {
+  fromAmino(_: MsgDelegateBondedTokensResponseAmino): MsgDelegateBondedTokensResponse {
     const message = createBaseMsgDelegateBondedTokensResponse();
     return message;
   },
-  toAmino(
-    _: MsgDelegateBondedTokensResponse,
-  ): MsgDelegateBondedTokensResponseAmino {
+  toAmino(_: MsgDelegateBondedTokensResponse): MsgDelegateBondedTokensResponseAmino {
     const obj: any = {};
     return obj;
   },
-  fromAminoMsg(
-    object: MsgDelegateBondedTokensResponseAminoMsg,
-  ): MsgDelegateBondedTokensResponse {
+  fromAminoMsg(object: MsgDelegateBondedTokensResponseAminoMsg): MsgDelegateBondedTokensResponse {
     return MsgDelegateBondedTokensResponse.fromAmino(object.value);
   },
-  fromProtoMsg(
-    message: MsgDelegateBondedTokensResponseProtoMsg,
-  ): MsgDelegateBondedTokensResponse {
+  fromProtoMsg(message: MsgDelegateBondedTokensResponseProtoMsg): MsgDelegateBondedTokensResponse {
     return MsgDelegateBondedTokensResponse.decode(message.value);
   },
   toProto(message: MsgDelegateBondedTokensResponse): Uint8Array {
     return MsgDelegateBondedTokensResponse.encode(message).finish();
   },
-  toProtoMsg(
-    message: MsgDelegateBondedTokensResponse,
-  ): MsgDelegateBondedTokensResponseProtoMsg {
+  toProtoMsg(message: MsgDelegateBondedTokensResponse): MsgDelegateBondedTokensResponseProtoMsg {
     return {
-      typeUrl: '/symphony.valsetpref.v1beta1.MsgDelegateBondedTokensResponse',
-      value: MsgDelegateBondedTokensResponse.encode(message).finish(),
+      typeUrl: "/symphony.valsetpref.v1beta1.MsgDelegateBondedTokensResponse",
+      value: MsgDelegateBondedTokensResponse.encode(message).finish()
     };
-  },
+  }
 };
-GlobalDecoderRegistry.register(
-  MsgDelegateBondedTokensResponse.typeUrl,
-  MsgDelegateBondedTokensResponse,
-);
+GlobalDecoderRegistry.register(MsgDelegateBondedTokensResponse.typeUrl, MsgDelegateBondedTokensResponse);

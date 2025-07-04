@@ -1,14 +1,13 @@
 //@ts-nocheck
-import { LCDClient } from '@cosmology/lcd';
-import {
-  ConfigRequest,
-  ConfigResponseSDKType,
-  StatusRequest,
-  StatusResponseSDKType,
-} from './query';
+import { LCDClient } from "@cosmology/lcd";
+import { ConfigRequest, ConfigResponseSDKType, StatusRequest, StatusResponseSDKType } from "./query";
 export class LCDQueryClient {
   req: LCDClient;
-  constructor({ requestClient }: { requestClient: LCDClient }) {
+  constructor({
+    requestClient
+  }: {
+    requestClient: LCDClient;
+  }) {
     this.req = requestClient;
     this.config = this.config.bind(this);
     this.status = this.status.bind(this);

@@ -1,39 +1,19 @@
 //@ts-nocheck
-import { Params, ParamsAmino, ParamsSDKType } from './params';
-import {
-  Coin,
-  CoinAmino,
-  CoinSDKType,
-} from '../../../cosmos/base/v1beta1/coin';
-import {
-  RouteStatistics,
-  RouteStatisticsAmino,
-  RouteStatisticsSDKType,
-  TokenPairArbRoutes,
-  TokenPairArbRoutesAmino,
-  TokenPairArbRoutesSDKType,
-  InfoByPoolType,
-  InfoByPoolTypeAmino,
-  InfoByPoolTypeSDKType,
-  BaseDenom,
-  BaseDenomAmino,
-  BaseDenomSDKType,
-  AllProtocolRevenue,
-  AllProtocolRevenueAmino,
-  AllProtocolRevenueSDKType,
-} from './protorev';
-import { BinaryReader, BinaryWriter } from '../../../binary';
-import { GlobalDecoderRegistry } from '../../../registry';
+import { Params, ParamsAmino, ParamsSDKType } from "./params";
+import { Coin, CoinAmino, CoinSDKType } from "../../../cosmos/base/v1beta1/coin";
+import { RouteStatistics, RouteStatisticsAmino, RouteStatisticsSDKType, TokenPairArbRoutes, TokenPairArbRoutesAmino, TokenPairArbRoutesSDKType, InfoByPoolType, InfoByPoolTypeAmino, InfoByPoolTypeSDKType, BaseDenom, BaseDenomAmino, BaseDenomSDKType, AllProtocolRevenue, AllProtocolRevenueAmino, AllProtocolRevenueSDKType } from "./protorev";
+import { BinaryReader, BinaryWriter } from "../../../binary";
+import { GlobalDecoderRegistry } from "../../../registry";
 /** QueryParamsRequest is request type for the Query/Params RPC method. */
 export interface QueryParamsRequest {}
 export interface QueryParamsRequestProtoMsg {
-  typeUrl: '/symphony.protorev.v1beta1.QueryParamsRequest';
+  typeUrl: "/symphony.protorev.v1beta1.QueryParamsRequest";
   value: Uint8Array;
 }
 /** QueryParamsRequest is request type for the Query/Params RPC method. */
 export interface QueryParamsRequestAmino {}
 export interface QueryParamsRequestAminoMsg {
-  type: '/symphony.protorev.v1beta1.QueryParamsRequest';
+  type: "/symphony.protorev.v1beta1.QueryParamsRequest";
   value: QueryParamsRequestAmino;
 }
 /** QueryParamsRequest is request type for the Query/Params RPC method. */
@@ -44,7 +24,7 @@ export interface QueryParamsResponse {
   params: Params;
 }
 export interface QueryParamsResponseProtoMsg {
-  typeUrl: '/symphony.protorev.v1beta1.QueryParamsResponse';
+  typeUrl: "/symphony.protorev.v1beta1.QueryParamsResponse";
   value: Uint8Array;
 }
 /** QueryParamsResponse is response type for the Query/Params RPC method. */
@@ -53,7 +33,7 @@ export interface QueryParamsResponseAmino {
   params?: ParamsAmino;
 }
 export interface QueryParamsResponseAminoMsg {
-  type: '/symphony.protorev.v1beta1.QueryParamsResponse';
+  type: "/symphony.protorev.v1beta1.QueryParamsResponse";
   value: QueryParamsResponseAmino;
 }
 /** QueryParamsResponse is response type for the Query/Params RPC method. */
@@ -66,7 +46,7 @@ export interface QueryParamsResponseSDKType {
  */
 export interface QueryGetProtoRevNumberOfTradesRequest {}
 export interface QueryGetProtoRevNumberOfTradesRequestProtoMsg {
-  typeUrl: '/symphony.protorev.v1beta1.QueryGetProtoRevNumberOfTradesRequest';
+  typeUrl: "/symphony.protorev.v1beta1.QueryGetProtoRevNumberOfTradesRequest";
   value: Uint8Array;
 }
 /**
@@ -75,7 +55,7 @@ export interface QueryGetProtoRevNumberOfTradesRequestProtoMsg {
  */
 export interface QueryGetProtoRevNumberOfTradesRequestAmino {}
 export interface QueryGetProtoRevNumberOfTradesRequestAminoMsg {
-  type: '/symphony.protorev.v1beta1.QueryGetProtoRevNumberOfTradesRequest';
+  type: "/symphony.protorev.v1beta1.QueryGetProtoRevNumberOfTradesRequest";
   value: QueryGetProtoRevNumberOfTradesRequestAmino;
 }
 /**
@@ -92,7 +72,7 @@ export interface QueryGetProtoRevNumberOfTradesResponse {
   numberOfTrades: string;
 }
 export interface QueryGetProtoRevNumberOfTradesResponseProtoMsg {
-  typeUrl: '/symphony.protorev.v1beta1.QueryGetProtoRevNumberOfTradesResponse';
+  typeUrl: "/symphony.protorev.v1beta1.QueryGetProtoRevNumberOfTradesResponse";
   value: Uint8Array;
 }
 /**
@@ -104,7 +84,7 @@ export interface QueryGetProtoRevNumberOfTradesResponseAmino {
   number_of_trades?: string;
 }
 export interface QueryGetProtoRevNumberOfTradesResponseAminoMsg {
-  type: '/symphony.protorev.v1beta1.QueryGetProtoRevNumberOfTradesResponse';
+  type: "/symphony.protorev.v1beta1.QueryGetProtoRevNumberOfTradesResponse";
   value: QueryGetProtoRevNumberOfTradesResponseAmino;
 }
 /**
@@ -123,7 +103,7 @@ export interface QueryGetProtoRevProfitsByDenomRequest {
   denom: string;
 }
 export interface QueryGetProtoRevProfitsByDenomRequestProtoMsg {
-  typeUrl: '/symphony.protorev.v1beta1.QueryGetProtoRevProfitsByDenomRequest';
+  typeUrl: "/symphony.protorev.v1beta1.QueryGetProtoRevProfitsByDenomRequest";
   value: Uint8Array;
 }
 /**
@@ -135,7 +115,7 @@ export interface QueryGetProtoRevProfitsByDenomRequestAmino {
   denom?: string;
 }
 export interface QueryGetProtoRevProfitsByDenomRequestAminoMsg {
-  type: '/symphony.protorev.v1beta1.QueryGetProtoRevProfitsByDenomRequest';
+  type: "/symphony.protorev.v1beta1.QueryGetProtoRevProfitsByDenomRequest";
   value: QueryGetProtoRevProfitsByDenomRequestAmino;
 }
 /**
@@ -154,7 +134,7 @@ export interface QueryGetProtoRevProfitsByDenomResponse {
   profit?: Coin;
 }
 export interface QueryGetProtoRevProfitsByDenomResponseProtoMsg {
-  typeUrl: '/symphony.protorev.v1beta1.QueryGetProtoRevProfitsByDenomResponse';
+  typeUrl: "/symphony.protorev.v1beta1.QueryGetProtoRevProfitsByDenomResponse";
   value: Uint8Array;
 }
 /**
@@ -166,7 +146,7 @@ export interface QueryGetProtoRevProfitsByDenomResponseAmino {
   profit?: CoinAmino;
 }
 export interface QueryGetProtoRevProfitsByDenomResponseAminoMsg {
-  type: '/symphony.protorev.v1beta1.QueryGetProtoRevProfitsByDenomResponse';
+  type: "/symphony.protorev.v1beta1.QueryGetProtoRevProfitsByDenomResponse";
   value: QueryGetProtoRevProfitsByDenomResponseAmino;
 }
 /**
@@ -182,7 +162,7 @@ export interface QueryGetProtoRevProfitsByDenomResponseSDKType {
  */
 export interface QueryGetProtoRevAllProfitsRequest {}
 export interface QueryGetProtoRevAllProfitsRequestProtoMsg {
-  typeUrl: '/symphony.protorev.v1beta1.QueryGetProtoRevAllProfitsRequest';
+  typeUrl: "/symphony.protorev.v1beta1.QueryGetProtoRevAllProfitsRequest";
   value: Uint8Array;
 }
 /**
@@ -191,7 +171,7 @@ export interface QueryGetProtoRevAllProfitsRequestProtoMsg {
  */
 export interface QueryGetProtoRevAllProfitsRequestAmino {}
 export interface QueryGetProtoRevAllProfitsRequestAminoMsg {
-  type: '/symphony.protorev.v1beta1.QueryGetProtoRevAllProfitsRequest';
+  type: "/symphony.protorev.v1beta1.QueryGetProtoRevAllProfitsRequest";
   value: QueryGetProtoRevAllProfitsRequestAmino;
 }
 /**
@@ -208,7 +188,7 @@ export interface QueryGetProtoRevAllProfitsResponse {
   profits: Coin[];
 }
 export interface QueryGetProtoRevAllProfitsResponseProtoMsg {
-  typeUrl: '/symphony.protorev.v1beta1.QueryGetProtoRevAllProfitsResponse';
+  typeUrl: "/symphony.protorev.v1beta1.QueryGetProtoRevAllProfitsResponse";
   value: Uint8Array;
 }
 /**
@@ -220,7 +200,7 @@ export interface QueryGetProtoRevAllProfitsResponseAmino {
   profits?: CoinAmino[];
 }
 export interface QueryGetProtoRevAllProfitsResponseAminoMsg {
-  type: '/symphony.protorev.v1beta1.QueryGetProtoRevAllProfitsResponse';
+  type: "/symphony.protorev.v1beta1.QueryGetProtoRevAllProfitsResponse";
   value: QueryGetProtoRevAllProfitsResponseAmino;
 }
 /**
@@ -239,7 +219,7 @@ export interface QueryGetProtoRevStatisticsByRouteRequest {
   route: bigint[];
 }
 export interface QueryGetProtoRevStatisticsByRouteRequestProtoMsg {
-  typeUrl: '/symphony.protorev.v1beta1.QueryGetProtoRevStatisticsByRouteRequest';
+  typeUrl: "/symphony.protorev.v1beta1.QueryGetProtoRevStatisticsByRouteRequest";
   value: Uint8Array;
 }
 /**
@@ -251,7 +231,7 @@ export interface QueryGetProtoRevStatisticsByRouteRequestAmino {
   route?: string[];
 }
 export interface QueryGetProtoRevStatisticsByRouteRequestAminoMsg {
-  type: '/symphony.protorev.v1beta1.QueryGetProtoRevStatisticsByRouteRequest';
+  type: "/symphony.protorev.v1beta1.QueryGetProtoRevStatisticsByRouteRequest";
   value: QueryGetProtoRevStatisticsByRouteRequestAmino;
 }
 /**
@@ -273,7 +253,7 @@ export interface QueryGetProtoRevStatisticsByRouteResponse {
   statistics: RouteStatistics;
 }
 export interface QueryGetProtoRevStatisticsByRouteResponseProtoMsg {
-  typeUrl: '/symphony.protorev.v1beta1.QueryGetProtoRevStatisticsByRouteResponse';
+  typeUrl: "/symphony.protorev.v1beta1.QueryGetProtoRevStatisticsByRouteResponse";
   value: Uint8Array;
 }
 /**
@@ -288,7 +268,7 @@ export interface QueryGetProtoRevStatisticsByRouteResponseAmino {
   statistics?: RouteStatisticsAmino;
 }
 export interface QueryGetProtoRevStatisticsByRouteResponseAminoMsg {
-  type: '/symphony.protorev.v1beta1.QueryGetProtoRevStatisticsByRouteResponse';
+  type: "/symphony.protorev.v1beta1.QueryGetProtoRevStatisticsByRouteResponse";
   value: QueryGetProtoRevStatisticsByRouteResponseAmino;
 }
 /**
@@ -304,7 +284,7 @@ export interface QueryGetProtoRevStatisticsByRouteResponseSDKType {
  */
 export interface QueryGetProtoRevAllRouteStatisticsRequest {}
 export interface QueryGetProtoRevAllRouteStatisticsRequestProtoMsg {
-  typeUrl: '/symphony.protorev.v1beta1.QueryGetProtoRevAllRouteStatisticsRequest';
+  typeUrl: "/symphony.protorev.v1beta1.QueryGetProtoRevAllRouteStatisticsRequest";
   value: Uint8Array;
 }
 /**
@@ -313,7 +293,7 @@ export interface QueryGetProtoRevAllRouteStatisticsRequestProtoMsg {
  */
 export interface QueryGetProtoRevAllRouteStatisticsRequestAmino {}
 export interface QueryGetProtoRevAllRouteStatisticsRequestAminoMsg {
-  type: '/symphony.protorev.v1beta1.QueryGetProtoRevAllRouteStatisticsRequest';
+  type: "/symphony.protorev.v1beta1.QueryGetProtoRevAllRouteStatisticsRequest";
   value: QueryGetProtoRevAllRouteStatisticsRequestAmino;
 }
 /**
@@ -333,7 +313,7 @@ export interface QueryGetProtoRevAllRouteStatisticsResponse {
   statistics: RouteStatistics[];
 }
 export interface QueryGetProtoRevAllRouteStatisticsResponseProtoMsg {
-  typeUrl: '/symphony.protorev.v1beta1.QueryGetProtoRevAllRouteStatisticsResponse';
+  typeUrl: "/symphony.protorev.v1beta1.QueryGetProtoRevAllRouteStatisticsResponse";
   value: Uint8Array;
 }
 /**
@@ -348,7 +328,7 @@ export interface QueryGetProtoRevAllRouteStatisticsResponseAmino {
   statistics?: RouteStatisticsAmino[];
 }
 export interface QueryGetProtoRevAllRouteStatisticsResponseAminoMsg {
-  type: '/symphony.protorev.v1beta1.QueryGetProtoRevAllRouteStatisticsResponse';
+  type: "/symphony.protorev.v1beta1.QueryGetProtoRevAllRouteStatisticsResponse";
   value: QueryGetProtoRevAllRouteStatisticsResponseAmino;
 }
 /**
@@ -364,7 +344,7 @@ export interface QueryGetProtoRevAllRouteStatisticsResponseSDKType {
  */
 export interface QueryGetProtoRevTokenPairArbRoutesRequest {}
 export interface QueryGetProtoRevTokenPairArbRoutesRequestProtoMsg {
-  typeUrl: '/symphony.protorev.v1beta1.QueryGetProtoRevTokenPairArbRoutesRequest';
+  typeUrl: "/symphony.protorev.v1beta1.QueryGetProtoRevTokenPairArbRoutesRequest";
   value: Uint8Array;
 }
 /**
@@ -373,7 +353,7 @@ export interface QueryGetProtoRevTokenPairArbRoutesRequestProtoMsg {
  */
 export interface QueryGetProtoRevTokenPairArbRoutesRequestAmino {}
 export interface QueryGetProtoRevTokenPairArbRoutesRequestAminoMsg {
-  type: '/symphony.protorev.v1beta1.QueryGetProtoRevTokenPairArbRoutesRequest';
+  type: "/symphony.protorev.v1beta1.QueryGetProtoRevTokenPairArbRoutesRequest";
   value: QueryGetProtoRevTokenPairArbRoutesRequestAmino;
 }
 /**
@@ -393,7 +373,7 @@ export interface QueryGetProtoRevTokenPairArbRoutesResponse {
   routes: TokenPairArbRoutes[];
 }
 export interface QueryGetProtoRevTokenPairArbRoutesResponseProtoMsg {
-  typeUrl: '/symphony.protorev.v1beta1.QueryGetProtoRevTokenPairArbRoutesResponse';
+  typeUrl: "/symphony.protorev.v1beta1.QueryGetProtoRevTokenPairArbRoutesResponse";
   value: Uint8Array;
 }
 /**
@@ -408,7 +388,7 @@ export interface QueryGetProtoRevTokenPairArbRoutesResponseAmino {
   routes?: TokenPairArbRoutesAmino[];
 }
 export interface QueryGetProtoRevTokenPairArbRoutesResponseAminoMsg {
-  type: '/symphony.protorev.v1beta1.QueryGetProtoRevTokenPairArbRoutesResponse';
+  type: "/symphony.protorev.v1beta1.QueryGetProtoRevTokenPairArbRoutesResponse";
   value: QueryGetProtoRevTokenPairArbRoutesResponseAmino;
 }
 /**
@@ -424,7 +404,7 @@ export interface QueryGetProtoRevTokenPairArbRoutesResponseSDKType {
  */
 export interface QueryGetProtoRevAdminAccountRequest {}
 export interface QueryGetProtoRevAdminAccountRequestProtoMsg {
-  typeUrl: '/symphony.protorev.v1beta1.QueryGetProtoRevAdminAccountRequest';
+  typeUrl: "/symphony.protorev.v1beta1.QueryGetProtoRevAdminAccountRequest";
   value: Uint8Array;
 }
 /**
@@ -433,7 +413,7 @@ export interface QueryGetProtoRevAdminAccountRequestProtoMsg {
  */
 export interface QueryGetProtoRevAdminAccountRequestAmino {}
 export interface QueryGetProtoRevAdminAccountRequestAminoMsg {
-  type: '/symphony.protorev.v1beta1.QueryGetProtoRevAdminAccountRequest';
+  type: "/symphony.protorev.v1beta1.QueryGetProtoRevAdminAccountRequest";
   value: QueryGetProtoRevAdminAccountRequestAmino;
 }
 /**
@@ -450,7 +430,7 @@ export interface QueryGetProtoRevAdminAccountResponse {
   adminAccount: string;
 }
 export interface QueryGetProtoRevAdminAccountResponseProtoMsg {
-  typeUrl: '/symphony.protorev.v1beta1.QueryGetProtoRevAdminAccountResponse';
+  typeUrl: "/symphony.protorev.v1beta1.QueryGetProtoRevAdminAccountResponse";
   value: Uint8Array;
 }
 /**
@@ -462,7 +442,7 @@ export interface QueryGetProtoRevAdminAccountResponseAmino {
   admin_account?: string;
 }
 export interface QueryGetProtoRevAdminAccountResponseAminoMsg {
-  type: '/symphony.protorev.v1beta1.QueryGetProtoRevAdminAccountResponse';
+  type: "/symphony.protorev.v1beta1.QueryGetProtoRevAdminAccountResponse";
   value: QueryGetProtoRevAdminAccountResponseAmino;
 }
 /**
@@ -478,7 +458,7 @@ export interface QueryGetProtoRevAdminAccountResponseSDKType {
  */
 export interface QueryGetProtoRevDeveloperAccountRequest {}
 export interface QueryGetProtoRevDeveloperAccountRequestProtoMsg {
-  typeUrl: '/symphony.protorev.v1beta1.QueryGetProtoRevDeveloperAccountRequest';
+  typeUrl: "/symphony.protorev.v1beta1.QueryGetProtoRevDeveloperAccountRequest";
   value: Uint8Array;
 }
 /**
@@ -487,7 +467,7 @@ export interface QueryGetProtoRevDeveloperAccountRequestProtoMsg {
  */
 export interface QueryGetProtoRevDeveloperAccountRequestAmino {}
 export interface QueryGetProtoRevDeveloperAccountRequestAminoMsg {
-  type: '/symphony.protorev.v1beta1.QueryGetProtoRevDeveloperAccountRequest';
+  type: "/symphony.protorev.v1beta1.QueryGetProtoRevDeveloperAccountRequest";
   value: QueryGetProtoRevDeveloperAccountRequestAmino;
 }
 /**
@@ -504,7 +484,7 @@ export interface QueryGetProtoRevDeveloperAccountResponse {
   developerAccount: string;
 }
 export interface QueryGetProtoRevDeveloperAccountResponseProtoMsg {
-  typeUrl: '/symphony.protorev.v1beta1.QueryGetProtoRevDeveloperAccountResponse';
+  typeUrl: "/symphony.protorev.v1beta1.QueryGetProtoRevDeveloperAccountResponse";
   value: Uint8Array;
 }
 /**
@@ -516,7 +496,7 @@ export interface QueryGetProtoRevDeveloperAccountResponseAmino {
   developer_account?: string;
 }
 export interface QueryGetProtoRevDeveloperAccountResponseAminoMsg {
-  type: '/symphony.protorev.v1beta1.QueryGetProtoRevDeveloperAccountResponse';
+  type: "/symphony.protorev.v1beta1.QueryGetProtoRevDeveloperAccountResponse";
   value: QueryGetProtoRevDeveloperAccountResponseAmino;
 }
 /**
@@ -532,7 +512,7 @@ export interface QueryGetProtoRevDeveloperAccountResponseSDKType {
  */
 export interface QueryGetProtoRevInfoByPoolTypeRequest {}
 export interface QueryGetProtoRevInfoByPoolTypeRequestProtoMsg {
-  typeUrl: '/symphony.protorev.v1beta1.QueryGetProtoRevInfoByPoolTypeRequest';
+  typeUrl: "/symphony.protorev.v1beta1.QueryGetProtoRevInfoByPoolTypeRequest";
   value: Uint8Array;
 }
 /**
@@ -541,7 +521,7 @@ export interface QueryGetProtoRevInfoByPoolTypeRequestProtoMsg {
  */
 export interface QueryGetProtoRevInfoByPoolTypeRequestAmino {}
 export interface QueryGetProtoRevInfoByPoolTypeRequestAminoMsg {
-  type: '/symphony.protorev.v1beta1.QueryGetProtoRevInfoByPoolTypeRequest';
+  type: "/symphony.protorev.v1beta1.QueryGetProtoRevInfoByPoolTypeRequest";
   value: QueryGetProtoRevInfoByPoolTypeRequestAmino;
 }
 /**
@@ -561,7 +541,7 @@ export interface QueryGetProtoRevInfoByPoolTypeResponse {
   infoByPoolType: InfoByPoolType;
 }
 export interface QueryGetProtoRevInfoByPoolTypeResponseProtoMsg {
-  typeUrl: '/symphony.protorev.v1beta1.QueryGetProtoRevInfoByPoolTypeResponse';
+  typeUrl: "/symphony.protorev.v1beta1.QueryGetProtoRevInfoByPoolTypeResponse";
   value: Uint8Array;
 }
 /**
@@ -576,7 +556,7 @@ export interface QueryGetProtoRevInfoByPoolTypeResponseAmino {
   info_by_pool_type?: InfoByPoolTypeAmino;
 }
 export interface QueryGetProtoRevInfoByPoolTypeResponseAminoMsg {
-  type: '/symphony.protorev.v1beta1.QueryGetProtoRevInfoByPoolTypeResponse';
+  type: "/symphony.protorev.v1beta1.QueryGetProtoRevInfoByPoolTypeResponse";
   value: QueryGetProtoRevInfoByPoolTypeResponseAmino;
 }
 /**
@@ -592,7 +572,7 @@ export interface QueryGetProtoRevInfoByPoolTypeResponseSDKType {
  */
 export interface QueryGetProtoRevMaxPoolPointsPerBlockRequest {}
 export interface QueryGetProtoRevMaxPoolPointsPerBlockRequestProtoMsg {
-  typeUrl: '/symphony.protorev.v1beta1.QueryGetProtoRevMaxPoolPointsPerBlockRequest';
+  typeUrl: "/symphony.protorev.v1beta1.QueryGetProtoRevMaxPoolPointsPerBlockRequest";
   value: Uint8Array;
 }
 /**
@@ -601,7 +581,7 @@ export interface QueryGetProtoRevMaxPoolPointsPerBlockRequestProtoMsg {
  */
 export interface QueryGetProtoRevMaxPoolPointsPerBlockRequestAmino {}
 export interface QueryGetProtoRevMaxPoolPointsPerBlockRequestAminoMsg {
-  type: '/symphony.protorev.v1beta1.QueryGetProtoRevMaxPoolPointsPerBlockRequest';
+  type: "/symphony.protorev.v1beta1.QueryGetProtoRevMaxPoolPointsPerBlockRequest";
   value: QueryGetProtoRevMaxPoolPointsPerBlockRequestAmino;
 }
 /**
@@ -621,7 +601,7 @@ export interface QueryGetProtoRevMaxPoolPointsPerBlockResponse {
   maxPoolPointsPerBlock: bigint;
 }
 export interface QueryGetProtoRevMaxPoolPointsPerBlockResponseProtoMsg {
-  typeUrl: '/symphony.protorev.v1beta1.QueryGetProtoRevMaxPoolPointsPerBlockResponse';
+  typeUrl: "/symphony.protorev.v1beta1.QueryGetProtoRevMaxPoolPointsPerBlockResponse";
   value: Uint8Array;
 }
 /**
@@ -636,7 +616,7 @@ export interface QueryGetProtoRevMaxPoolPointsPerBlockResponseAmino {
   max_pool_points_per_block?: string;
 }
 export interface QueryGetProtoRevMaxPoolPointsPerBlockResponseAminoMsg {
-  type: '/symphony.protorev.v1beta1.QueryGetProtoRevMaxPoolPointsPerBlockResponse';
+  type: "/symphony.protorev.v1beta1.QueryGetProtoRevMaxPoolPointsPerBlockResponse";
   value: QueryGetProtoRevMaxPoolPointsPerBlockResponseAmino;
 }
 /**
@@ -652,7 +632,7 @@ export interface QueryGetProtoRevMaxPoolPointsPerBlockResponseSDKType {
  */
 export interface QueryGetProtoRevMaxPoolPointsPerTxRequest {}
 export interface QueryGetProtoRevMaxPoolPointsPerTxRequestProtoMsg {
-  typeUrl: '/symphony.protorev.v1beta1.QueryGetProtoRevMaxPoolPointsPerTxRequest';
+  typeUrl: "/symphony.protorev.v1beta1.QueryGetProtoRevMaxPoolPointsPerTxRequest";
   value: Uint8Array;
 }
 /**
@@ -661,7 +641,7 @@ export interface QueryGetProtoRevMaxPoolPointsPerTxRequestProtoMsg {
  */
 export interface QueryGetProtoRevMaxPoolPointsPerTxRequestAmino {}
 export interface QueryGetProtoRevMaxPoolPointsPerTxRequestAminoMsg {
-  type: '/symphony.protorev.v1beta1.QueryGetProtoRevMaxPoolPointsPerTxRequest';
+  type: "/symphony.protorev.v1beta1.QueryGetProtoRevMaxPoolPointsPerTxRequest";
   value: QueryGetProtoRevMaxPoolPointsPerTxRequestAmino;
 }
 /**
@@ -681,7 +661,7 @@ export interface QueryGetProtoRevMaxPoolPointsPerTxResponse {
   maxPoolPointsPerTx: bigint;
 }
 export interface QueryGetProtoRevMaxPoolPointsPerTxResponseProtoMsg {
-  typeUrl: '/symphony.protorev.v1beta1.QueryGetProtoRevMaxPoolPointsPerTxResponse';
+  typeUrl: "/symphony.protorev.v1beta1.QueryGetProtoRevMaxPoolPointsPerTxResponse";
   value: Uint8Array;
 }
 /**
@@ -696,7 +676,7 @@ export interface QueryGetProtoRevMaxPoolPointsPerTxResponseAmino {
   max_pool_points_per_tx?: string;
 }
 export interface QueryGetProtoRevMaxPoolPointsPerTxResponseAminoMsg {
-  type: '/symphony.protorev.v1beta1.QueryGetProtoRevMaxPoolPointsPerTxResponse';
+  type: "/symphony.protorev.v1beta1.QueryGetProtoRevMaxPoolPointsPerTxResponse";
   value: QueryGetProtoRevMaxPoolPointsPerTxResponseAmino;
 }
 /**
@@ -712,7 +692,7 @@ export interface QueryGetProtoRevMaxPoolPointsPerTxResponseSDKType {
  */
 export interface QueryGetProtoRevBaseDenomsRequest {}
 export interface QueryGetProtoRevBaseDenomsRequestProtoMsg {
-  typeUrl: '/symphony.protorev.v1beta1.QueryGetProtoRevBaseDenomsRequest';
+  typeUrl: "/symphony.protorev.v1beta1.QueryGetProtoRevBaseDenomsRequest";
   value: Uint8Array;
 }
 /**
@@ -721,7 +701,7 @@ export interface QueryGetProtoRevBaseDenomsRequestProtoMsg {
  */
 export interface QueryGetProtoRevBaseDenomsRequestAmino {}
 export interface QueryGetProtoRevBaseDenomsRequestAminoMsg {
-  type: '/symphony.protorev.v1beta1.QueryGetProtoRevBaseDenomsRequest';
+  type: "/symphony.protorev.v1beta1.QueryGetProtoRevBaseDenomsRequest";
   value: QueryGetProtoRevBaseDenomsRequestAmino;
 }
 /**
@@ -738,7 +718,7 @@ export interface QueryGetProtoRevBaseDenomsResponse {
   baseDenoms: BaseDenom[];
 }
 export interface QueryGetProtoRevBaseDenomsResponseProtoMsg {
-  typeUrl: '/symphony.protorev.v1beta1.QueryGetProtoRevBaseDenomsResponse';
+  typeUrl: "/symphony.protorev.v1beta1.QueryGetProtoRevBaseDenomsResponse";
   value: Uint8Array;
 }
 /**
@@ -750,7 +730,7 @@ export interface QueryGetProtoRevBaseDenomsResponseAmino {
   base_denoms?: BaseDenomAmino[];
 }
 export interface QueryGetProtoRevBaseDenomsResponseAminoMsg {
-  type: '/symphony.protorev.v1beta1.QueryGetProtoRevBaseDenomsResponse';
+  type: "/symphony.protorev.v1beta1.QueryGetProtoRevBaseDenomsResponse";
   value: QueryGetProtoRevBaseDenomsResponseAmino;
 }
 /**
@@ -766,7 +746,7 @@ export interface QueryGetProtoRevBaseDenomsResponseSDKType {
  */
 export interface QueryGetProtoRevEnabledRequest {}
 export interface QueryGetProtoRevEnabledRequestProtoMsg {
-  typeUrl: '/symphony.protorev.v1beta1.QueryGetProtoRevEnabledRequest';
+  typeUrl: "/symphony.protorev.v1beta1.QueryGetProtoRevEnabledRequest";
   value: Uint8Array;
 }
 /**
@@ -775,7 +755,7 @@ export interface QueryGetProtoRevEnabledRequestProtoMsg {
  */
 export interface QueryGetProtoRevEnabledRequestAmino {}
 export interface QueryGetProtoRevEnabledRequestAminoMsg {
-  type: '/symphony.protorev.v1beta1.QueryGetProtoRevEnabledRequest';
+  type: "/symphony.protorev.v1beta1.QueryGetProtoRevEnabledRequest";
   value: QueryGetProtoRevEnabledRequestAmino;
 }
 /**
@@ -792,7 +772,7 @@ export interface QueryGetProtoRevEnabledResponse {
   enabled: boolean;
 }
 export interface QueryGetProtoRevEnabledResponseProtoMsg {
-  typeUrl: '/symphony.protorev.v1beta1.QueryGetProtoRevEnabledResponse';
+  typeUrl: "/symphony.protorev.v1beta1.QueryGetProtoRevEnabledResponse";
   value: Uint8Array;
 }
 /**
@@ -804,7 +784,7 @@ export interface QueryGetProtoRevEnabledResponseAmino {
   enabled?: boolean;
 }
 export interface QueryGetProtoRevEnabledResponseAminoMsg {
-  type: '/symphony.protorev.v1beta1.QueryGetProtoRevEnabledResponse';
+  type: "/symphony.protorev.v1beta1.QueryGetProtoRevEnabledResponse";
   value: QueryGetProtoRevEnabledResponseAmino;
 }
 /**
@@ -828,7 +808,7 @@ export interface QueryGetProtoRevPoolRequest {
   otherDenom: string;
 }
 export interface QueryGetProtoRevPoolRequestProtoMsg {
-  typeUrl: '/symphony.protorev.v1beta1.QueryGetProtoRevPoolRequest';
+  typeUrl: "/symphony.protorev.v1beta1.QueryGetProtoRevPoolRequest";
   value: Uint8Array;
 }
 /**
@@ -845,7 +825,7 @@ export interface QueryGetProtoRevPoolRequestAmino {
   other_denom?: string;
 }
 export interface QueryGetProtoRevPoolRequestAminoMsg {
-  type: '/symphony.protorev.v1beta1.QueryGetProtoRevPoolRequest';
+  type: "/symphony.protorev.v1beta1.QueryGetProtoRevPoolRequest";
   value: QueryGetProtoRevPoolRequestAmino;
 }
 /**
@@ -865,7 +845,7 @@ export interface QueryGetProtoRevPoolResponse {
   poolId: bigint;
 }
 export interface QueryGetProtoRevPoolResponseProtoMsg {
-  typeUrl: '/symphony.protorev.v1beta1.QueryGetProtoRevPoolResponse';
+  typeUrl: "/symphony.protorev.v1beta1.QueryGetProtoRevPoolResponse";
   value: Uint8Array;
 }
 /**
@@ -877,7 +857,7 @@ export interface QueryGetProtoRevPoolResponseAmino {
   pool_id?: string;
 }
 export interface QueryGetProtoRevPoolResponseAminoMsg {
-  type: '/symphony.protorev.v1beta1.QueryGetProtoRevPoolResponse';
+  type: "/symphony.protorev.v1beta1.QueryGetProtoRevPoolResponse";
   value: QueryGetProtoRevPoolResponseAmino;
 }
 /**
@@ -889,12 +869,12 @@ export interface QueryGetProtoRevPoolResponseSDKType {
 }
 export interface QueryGetAllProtocolRevenueRequest {}
 export interface QueryGetAllProtocolRevenueRequestProtoMsg {
-  typeUrl: '/symphony.protorev.v1beta1.QueryGetAllProtocolRevenueRequest';
+  typeUrl: "/symphony.protorev.v1beta1.QueryGetAllProtocolRevenueRequest";
   value: Uint8Array;
 }
 export interface QueryGetAllProtocolRevenueRequestAmino {}
 export interface QueryGetAllProtocolRevenueRequestAminoMsg {
-  type: '/symphony.protorev.v1beta1.QueryGetAllProtocolRevenueRequest';
+  type: "/symphony.protorev.v1beta1.QueryGetAllProtocolRevenueRequest";
   value: QueryGetAllProtocolRevenueRequestAmino;
 }
 export interface QueryGetAllProtocolRevenueRequestSDKType {}
@@ -902,14 +882,14 @@ export interface QueryGetAllProtocolRevenueResponse {
   allProtocolRevenue: AllProtocolRevenue;
 }
 export interface QueryGetAllProtocolRevenueResponseProtoMsg {
-  typeUrl: '/symphony.protorev.v1beta1.QueryGetAllProtocolRevenueResponse';
+  typeUrl: "/symphony.protorev.v1beta1.QueryGetAllProtocolRevenueResponse";
   value: Uint8Array;
 }
 export interface QueryGetAllProtocolRevenueResponseAmino {
   all_protocol_revenue?: AllProtocolRevenueAmino;
 }
 export interface QueryGetAllProtocolRevenueResponseAminoMsg {
-  type: '/symphony.protorev.v1beta1.QueryGetAllProtocolRevenueResponse';
+  type: "/symphony.protorev.v1beta1.QueryGetAllProtocolRevenueResponse";
   value: QueryGetAllProtocolRevenueResponseAmino;
 }
 export interface QueryGetAllProtocolRevenueResponseSDKType {
@@ -919,7 +899,7 @@ function createBaseQueryParamsRequest(): QueryParamsRequest {
   return {};
 }
 export const QueryParamsRequest = {
-  typeUrl: '/symphony.protorev.v1beta1.QueryParamsRequest',
+  typeUrl: "/symphony.protorev.v1beta1.QueryParamsRequest",
   is(o: any): o is QueryParamsRequest {
     return o && o.$typeUrl === QueryParamsRequest.typeUrl;
   },
@@ -929,18 +909,11 @@ export const QueryParamsRequest = {
   isAmino(o: any): o is QueryParamsRequestAmino {
     return o && o.$typeUrl === QueryParamsRequest.typeUrl;
   },
-  encode(
-    _: QueryParamsRequest,
-    writer: BinaryWriter = BinaryWriter.create(),
-  ): BinaryWriter {
+  encode(_: QueryParamsRequest, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
     return writer;
   },
-  decode(
-    input: BinaryReader | Uint8Array,
-    length?: number,
-  ): QueryParamsRequest {
-    const reader =
-      input instanceof BinaryReader ? input : new BinaryReader(input);
+  decode(input: BinaryReader | Uint8Array, length?: number): QueryParamsRequest {
+    const reader = input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseQueryParamsRequest();
     while (reader.pos < end) {
@@ -976,51 +949,36 @@ export const QueryParamsRequest = {
   },
   toProtoMsg(message: QueryParamsRequest): QueryParamsRequestProtoMsg {
     return {
-      typeUrl: '/symphony.protorev.v1beta1.QueryParamsRequest',
-      value: QueryParamsRequest.encode(message).finish(),
+      typeUrl: "/symphony.protorev.v1beta1.QueryParamsRequest",
+      value: QueryParamsRequest.encode(message).finish()
     };
-  },
+  }
 };
 GlobalDecoderRegistry.register(QueryParamsRequest.typeUrl, QueryParamsRequest);
 function createBaseQueryParamsResponse(): QueryParamsResponse {
   return {
-    params: Params.fromPartial({}),
+    params: Params.fromPartial({})
   };
 }
 export const QueryParamsResponse = {
-  typeUrl: '/symphony.protorev.v1beta1.QueryParamsResponse',
+  typeUrl: "/symphony.protorev.v1beta1.QueryParamsResponse",
   is(o: any): o is QueryParamsResponse {
-    return (
-      o && (o.$typeUrl === QueryParamsResponse.typeUrl || Params.is(o.params))
-    );
+    return o && (o.$typeUrl === QueryParamsResponse.typeUrl || Params.is(o.params));
   },
   isSDK(o: any): o is QueryParamsResponseSDKType {
-    return (
-      o &&
-      (o.$typeUrl === QueryParamsResponse.typeUrl || Params.isSDK(o.params))
-    );
+    return o && (o.$typeUrl === QueryParamsResponse.typeUrl || Params.isSDK(o.params));
   },
   isAmino(o: any): o is QueryParamsResponseAmino {
-    return (
-      o &&
-      (o.$typeUrl === QueryParamsResponse.typeUrl || Params.isAmino(o.params))
-    );
+    return o && (o.$typeUrl === QueryParamsResponse.typeUrl || Params.isAmino(o.params));
   },
-  encode(
-    message: QueryParamsResponse,
-    writer: BinaryWriter = BinaryWriter.create(),
-  ): BinaryWriter {
+  encode(message: QueryParamsResponse, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
     if (message.params !== undefined) {
       Params.encode(message.params, writer.uint32(10).fork()).ldelim();
     }
     return writer;
   },
-  decode(
-    input: BinaryReader | Uint8Array,
-    length?: number,
-  ): QueryParamsResponse {
-    const reader =
-      input instanceof BinaryReader ? input : new BinaryReader(input);
+  decode(input: BinaryReader | Uint8Array, length?: number): QueryParamsResponse {
+    const reader = input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseQueryParamsResponse();
     while (reader.pos < end) {
@@ -1038,10 +996,7 @@ export const QueryParamsResponse = {
   },
   fromPartial(object: Partial<QueryParamsResponse>): QueryParamsResponse {
     const message = createBaseQueryParamsResponse();
-    message.params =
-      object.params !== undefined && object.params !== null
-        ? Params.fromPartial(object.params)
-        : undefined;
+    message.params = object.params !== undefined && object.params !== null ? Params.fromPartial(object.params) : undefined;
     return message;
   },
   fromAmino(object: QueryParamsResponseAmino): QueryParamsResponse {
@@ -1067,20 +1022,17 @@ export const QueryParamsResponse = {
   },
   toProtoMsg(message: QueryParamsResponse): QueryParamsResponseProtoMsg {
     return {
-      typeUrl: '/symphony.protorev.v1beta1.QueryParamsResponse',
-      value: QueryParamsResponse.encode(message).finish(),
+      typeUrl: "/symphony.protorev.v1beta1.QueryParamsResponse",
+      value: QueryParamsResponse.encode(message).finish()
     };
-  },
+  }
 };
-GlobalDecoderRegistry.register(
-  QueryParamsResponse.typeUrl,
-  QueryParamsResponse,
-);
+GlobalDecoderRegistry.register(QueryParamsResponse.typeUrl, QueryParamsResponse);
 function createBaseQueryGetProtoRevNumberOfTradesRequest(): QueryGetProtoRevNumberOfTradesRequest {
   return {};
 }
 export const QueryGetProtoRevNumberOfTradesRequest = {
-  typeUrl: '/symphony.protorev.v1beta1.QueryGetProtoRevNumberOfTradesRequest',
+  typeUrl: "/symphony.protorev.v1beta1.QueryGetProtoRevNumberOfTradesRequest",
   is(o: any): o is QueryGetProtoRevNumberOfTradesRequest {
     return o && o.$typeUrl === QueryGetProtoRevNumberOfTradesRequest.typeUrl;
   },
@@ -1090,18 +1042,11 @@ export const QueryGetProtoRevNumberOfTradesRequest = {
   isAmino(o: any): o is QueryGetProtoRevNumberOfTradesRequestAmino {
     return o && o.$typeUrl === QueryGetProtoRevNumberOfTradesRequest.typeUrl;
   },
-  encode(
-    _: QueryGetProtoRevNumberOfTradesRequest,
-    writer: BinaryWriter = BinaryWriter.create(),
-  ): BinaryWriter {
+  encode(_: QueryGetProtoRevNumberOfTradesRequest, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
     return writer;
   },
-  decode(
-    input: BinaryReader | Uint8Array,
-    length?: number,
-  ): QueryGetProtoRevNumberOfTradesRequest {
-    const reader =
-      input instanceof BinaryReader ? input : new BinaryReader(input);
+  decode(input: BinaryReader | Uint8Array, length?: number): QueryGetProtoRevNumberOfTradesRequest {
+    const reader = input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseQueryGetProtoRevNumberOfTradesRequest();
     while (reader.pos < end) {
@@ -1114,94 +1059,59 @@ export const QueryGetProtoRevNumberOfTradesRequest = {
     }
     return message;
   },
-  fromPartial(
-    _: Partial<QueryGetProtoRevNumberOfTradesRequest>,
-  ): QueryGetProtoRevNumberOfTradesRequest {
+  fromPartial(_: Partial<QueryGetProtoRevNumberOfTradesRequest>): QueryGetProtoRevNumberOfTradesRequest {
     const message = createBaseQueryGetProtoRevNumberOfTradesRequest();
     return message;
   },
-  fromAmino(
-    _: QueryGetProtoRevNumberOfTradesRequestAmino,
-  ): QueryGetProtoRevNumberOfTradesRequest {
+  fromAmino(_: QueryGetProtoRevNumberOfTradesRequestAmino): QueryGetProtoRevNumberOfTradesRequest {
     const message = createBaseQueryGetProtoRevNumberOfTradesRequest();
     return message;
   },
-  toAmino(
-    _: QueryGetProtoRevNumberOfTradesRequest,
-  ): QueryGetProtoRevNumberOfTradesRequestAmino {
+  toAmino(_: QueryGetProtoRevNumberOfTradesRequest): QueryGetProtoRevNumberOfTradesRequestAmino {
     const obj: any = {};
     return obj;
   },
-  fromAminoMsg(
-    object: QueryGetProtoRevNumberOfTradesRequestAminoMsg,
-  ): QueryGetProtoRevNumberOfTradesRequest {
+  fromAminoMsg(object: QueryGetProtoRevNumberOfTradesRequestAminoMsg): QueryGetProtoRevNumberOfTradesRequest {
     return QueryGetProtoRevNumberOfTradesRequest.fromAmino(object.value);
   },
-  fromProtoMsg(
-    message: QueryGetProtoRevNumberOfTradesRequestProtoMsg,
-  ): QueryGetProtoRevNumberOfTradesRequest {
+  fromProtoMsg(message: QueryGetProtoRevNumberOfTradesRequestProtoMsg): QueryGetProtoRevNumberOfTradesRequest {
     return QueryGetProtoRevNumberOfTradesRequest.decode(message.value);
   },
   toProto(message: QueryGetProtoRevNumberOfTradesRequest): Uint8Array {
     return QueryGetProtoRevNumberOfTradesRequest.encode(message).finish();
   },
-  toProtoMsg(
-    message: QueryGetProtoRevNumberOfTradesRequest,
-  ): QueryGetProtoRevNumberOfTradesRequestProtoMsg {
+  toProtoMsg(message: QueryGetProtoRevNumberOfTradesRequest): QueryGetProtoRevNumberOfTradesRequestProtoMsg {
     return {
-      typeUrl:
-        '/symphony.protorev.v1beta1.QueryGetProtoRevNumberOfTradesRequest',
-      value: QueryGetProtoRevNumberOfTradesRequest.encode(message).finish(),
+      typeUrl: "/symphony.protorev.v1beta1.QueryGetProtoRevNumberOfTradesRequest",
+      value: QueryGetProtoRevNumberOfTradesRequest.encode(message).finish()
     };
-  },
+  }
 };
-GlobalDecoderRegistry.register(
-  QueryGetProtoRevNumberOfTradesRequest.typeUrl,
-  QueryGetProtoRevNumberOfTradesRequest,
-);
+GlobalDecoderRegistry.register(QueryGetProtoRevNumberOfTradesRequest.typeUrl, QueryGetProtoRevNumberOfTradesRequest);
 function createBaseQueryGetProtoRevNumberOfTradesResponse(): QueryGetProtoRevNumberOfTradesResponse {
   return {
-    numberOfTrades: '',
+    numberOfTrades: ""
   };
 }
 export const QueryGetProtoRevNumberOfTradesResponse = {
-  typeUrl: '/symphony.protorev.v1beta1.QueryGetProtoRevNumberOfTradesResponse',
+  typeUrl: "/symphony.protorev.v1beta1.QueryGetProtoRevNumberOfTradesResponse",
   is(o: any): o is QueryGetProtoRevNumberOfTradesResponse {
-    return (
-      o &&
-      (o.$typeUrl === QueryGetProtoRevNumberOfTradesResponse.typeUrl ||
-        typeof o.numberOfTrades === 'string')
-    );
+    return o && (o.$typeUrl === QueryGetProtoRevNumberOfTradesResponse.typeUrl || typeof o.numberOfTrades === "string");
   },
   isSDK(o: any): o is QueryGetProtoRevNumberOfTradesResponseSDKType {
-    return (
-      o &&
-      (o.$typeUrl === QueryGetProtoRevNumberOfTradesResponse.typeUrl ||
-        typeof o.number_of_trades === 'string')
-    );
+    return o && (o.$typeUrl === QueryGetProtoRevNumberOfTradesResponse.typeUrl || typeof o.number_of_trades === "string");
   },
   isAmino(o: any): o is QueryGetProtoRevNumberOfTradesResponseAmino {
-    return (
-      o &&
-      (o.$typeUrl === QueryGetProtoRevNumberOfTradesResponse.typeUrl ||
-        typeof o.number_of_trades === 'string')
-    );
+    return o && (o.$typeUrl === QueryGetProtoRevNumberOfTradesResponse.typeUrl || typeof o.number_of_trades === "string");
   },
-  encode(
-    message: QueryGetProtoRevNumberOfTradesResponse,
-    writer: BinaryWriter = BinaryWriter.create(),
-  ): BinaryWriter {
-    if (message.numberOfTrades !== '') {
+  encode(message: QueryGetProtoRevNumberOfTradesResponse, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
+    if (message.numberOfTrades !== "") {
       writer.uint32(10).string(message.numberOfTrades);
     }
     return writer;
   },
-  decode(
-    input: BinaryReader | Uint8Array,
-    length?: number,
-  ): QueryGetProtoRevNumberOfTradesResponse {
-    const reader =
-      input instanceof BinaryReader ? input : new BinaryReader(input);
+  decode(input: BinaryReader | Uint8Array, length?: number): QueryGetProtoRevNumberOfTradesResponse {
+    const reader = input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseQueryGetProtoRevNumberOfTradesResponse();
     while (reader.pos < end) {
@@ -1217,103 +1127,64 @@ export const QueryGetProtoRevNumberOfTradesResponse = {
     }
     return message;
   },
-  fromPartial(
-    object: Partial<QueryGetProtoRevNumberOfTradesResponse>,
-  ): QueryGetProtoRevNumberOfTradesResponse {
+  fromPartial(object: Partial<QueryGetProtoRevNumberOfTradesResponse>): QueryGetProtoRevNumberOfTradesResponse {
     const message = createBaseQueryGetProtoRevNumberOfTradesResponse();
-    message.numberOfTrades = object.numberOfTrades ?? '';
+    message.numberOfTrades = object.numberOfTrades ?? "";
     return message;
   },
-  fromAmino(
-    object: QueryGetProtoRevNumberOfTradesResponseAmino,
-  ): QueryGetProtoRevNumberOfTradesResponse {
+  fromAmino(object: QueryGetProtoRevNumberOfTradesResponseAmino): QueryGetProtoRevNumberOfTradesResponse {
     const message = createBaseQueryGetProtoRevNumberOfTradesResponse();
-    if (
-      object.number_of_trades !== undefined &&
-      object.number_of_trades !== null
-    ) {
+    if (object.number_of_trades !== undefined && object.number_of_trades !== null) {
       message.numberOfTrades = object.number_of_trades;
     }
     return message;
   },
-  toAmino(
-    message: QueryGetProtoRevNumberOfTradesResponse,
-  ): QueryGetProtoRevNumberOfTradesResponseAmino {
+  toAmino(message: QueryGetProtoRevNumberOfTradesResponse): QueryGetProtoRevNumberOfTradesResponseAmino {
     const obj: any = {};
-    obj.number_of_trades =
-      message.numberOfTrades === '' ? undefined : message.numberOfTrades;
+    obj.number_of_trades = message.numberOfTrades === "" ? undefined : message.numberOfTrades;
     return obj;
   },
-  fromAminoMsg(
-    object: QueryGetProtoRevNumberOfTradesResponseAminoMsg,
-  ): QueryGetProtoRevNumberOfTradesResponse {
+  fromAminoMsg(object: QueryGetProtoRevNumberOfTradesResponseAminoMsg): QueryGetProtoRevNumberOfTradesResponse {
     return QueryGetProtoRevNumberOfTradesResponse.fromAmino(object.value);
   },
-  fromProtoMsg(
-    message: QueryGetProtoRevNumberOfTradesResponseProtoMsg,
-  ): QueryGetProtoRevNumberOfTradesResponse {
+  fromProtoMsg(message: QueryGetProtoRevNumberOfTradesResponseProtoMsg): QueryGetProtoRevNumberOfTradesResponse {
     return QueryGetProtoRevNumberOfTradesResponse.decode(message.value);
   },
   toProto(message: QueryGetProtoRevNumberOfTradesResponse): Uint8Array {
     return QueryGetProtoRevNumberOfTradesResponse.encode(message).finish();
   },
-  toProtoMsg(
-    message: QueryGetProtoRevNumberOfTradesResponse,
-  ): QueryGetProtoRevNumberOfTradesResponseProtoMsg {
+  toProtoMsg(message: QueryGetProtoRevNumberOfTradesResponse): QueryGetProtoRevNumberOfTradesResponseProtoMsg {
     return {
-      typeUrl:
-        '/symphony.protorev.v1beta1.QueryGetProtoRevNumberOfTradesResponse',
-      value: QueryGetProtoRevNumberOfTradesResponse.encode(message).finish(),
+      typeUrl: "/symphony.protorev.v1beta1.QueryGetProtoRevNumberOfTradesResponse",
+      value: QueryGetProtoRevNumberOfTradesResponse.encode(message).finish()
     };
-  },
+  }
 };
-GlobalDecoderRegistry.register(
-  QueryGetProtoRevNumberOfTradesResponse.typeUrl,
-  QueryGetProtoRevNumberOfTradesResponse,
-);
+GlobalDecoderRegistry.register(QueryGetProtoRevNumberOfTradesResponse.typeUrl, QueryGetProtoRevNumberOfTradesResponse);
 function createBaseQueryGetProtoRevProfitsByDenomRequest(): QueryGetProtoRevProfitsByDenomRequest {
   return {
-    denom: '',
+    denom: ""
   };
 }
 export const QueryGetProtoRevProfitsByDenomRequest = {
-  typeUrl: '/symphony.protorev.v1beta1.QueryGetProtoRevProfitsByDenomRequest',
+  typeUrl: "/symphony.protorev.v1beta1.QueryGetProtoRevProfitsByDenomRequest",
   is(o: any): o is QueryGetProtoRevProfitsByDenomRequest {
-    return (
-      o &&
-      (o.$typeUrl === QueryGetProtoRevProfitsByDenomRequest.typeUrl ||
-        typeof o.denom === 'string')
-    );
+    return o && (o.$typeUrl === QueryGetProtoRevProfitsByDenomRequest.typeUrl || typeof o.denom === "string");
   },
   isSDK(o: any): o is QueryGetProtoRevProfitsByDenomRequestSDKType {
-    return (
-      o &&
-      (o.$typeUrl === QueryGetProtoRevProfitsByDenomRequest.typeUrl ||
-        typeof o.denom === 'string')
-    );
+    return o && (o.$typeUrl === QueryGetProtoRevProfitsByDenomRequest.typeUrl || typeof o.denom === "string");
   },
   isAmino(o: any): o is QueryGetProtoRevProfitsByDenomRequestAmino {
-    return (
-      o &&
-      (o.$typeUrl === QueryGetProtoRevProfitsByDenomRequest.typeUrl ||
-        typeof o.denom === 'string')
-    );
+    return o && (o.$typeUrl === QueryGetProtoRevProfitsByDenomRequest.typeUrl || typeof o.denom === "string");
   },
-  encode(
-    message: QueryGetProtoRevProfitsByDenomRequest,
-    writer: BinaryWriter = BinaryWriter.create(),
-  ): BinaryWriter {
-    if (message.denom !== '') {
+  encode(message: QueryGetProtoRevProfitsByDenomRequest, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
+    if (message.denom !== "") {
       writer.uint32(10).string(message.denom);
     }
     return writer;
   },
-  decode(
-    input: BinaryReader | Uint8Array,
-    length?: number,
-  ): QueryGetProtoRevProfitsByDenomRequest {
-    const reader =
-      input instanceof BinaryReader ? input : new BinaryReader(input);
+  decode(input: BinaryReader | Uint8Array, length?: number): QueryGetProtoRevProfitsByDenomRequest {
+    const reader = input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseQueryGetProtoRevProfitsByDenomRequest();
     while (reader.pos < end) {
@@ -1329,63 +1200,47 @@ export const QueryGetProtoRevProfitsByDenomRequest = {
     }
     return message;
   },
-  fromPartial(
-    object: Partial<QueryGetProtoRevProfitsByDenomRequest>,
-  ): QueryGetProtoRevProfitsByDenomRequest {
+  fromPartial(object: Partial<QueryGetProtoRevProfitsByDenomRequest>): QueryGetProtoRevProfitsByDenomRequest {
     const message = createBaseQueryGetProtoRevProfitsByDenomRequest();
-    message.denom = object.denom ?? '';
+    message.denom = object.denom ?? "";
     return message;
   },
-  fromAmino(
-    object: QueryGetProtoRevProfitsByDenomRequestAmino,
-  ): QueryGetProtoRevProfitsByDenomRequest {
+  fromAmino(object: QueryGetProtoRevProfitsByDenomRequestAmino): QueryGetProtoRevProfitsByDenomRequest {
     const message = createBaseQueryGetProtoRevProfitsByDenomRequest();
     if (object.denom !== undefined && object.denom !== null) {
       message.denom = object.denom;
     }
     return message;
   },
-  toAmino(
-    message: QueryGetProtoRevProfitsByDenomRequest,
-  ): QueryGetProtoRevProfitsByDenomRequestAmino {
+  toAmino(message: QueryGetProtoRevProfitsByDenomRequest): QueryGetProtoRevProfitsByDenomRequestAmino {
     const obj: any = {};
-    obj.denom = message.denom === '' ? undefined : message.denom;
+    obj.denom = message.denom === "" ? undefined : message.denom;
     return obj;
   },
-  fromAminoMsg(
-    object: QueryGetProtoRevProfitsByDenomRequestAminoMsg,
-  ): QueryGetProtoRevProfitsByDenomRequest {
+  fromAminoMsg(object: QueryGetProtoRevProfitsByDenomRequestAminoMsg): QueryGetProtoRevProfitsByDenomRequest {
     return QueryGetProtoRevProfitsByDenomRequest.fromAmino(object.value);
   },
-  fromProtoMsg(
-    message: QueryGetProtoRevProfitsByDenomRequestProtoMsg,
-  ): QueryGetProtoRevProfitsByDenomRequest {
+  fromProtoMsg(message: QueryGetProtoRevProfitsByDenomRequestProtoMsg): QueryGetProtoRevProfitsByDenomRequest {
     return QueryGetProtoRevProfitsByDenomRequest.decode(message.value);
   },
   toProto(message: QueryGetProtoRevProfitsByDenomRequest): Uint8Array {
     return QueryGetProtoRevProfitsByDenomRequest.encode(message).finish();
   },
-  toProtoMsg(
-    message: QueryGetProtoRevProfitsByDenomRequest,
-  ): QueryGetProtoRevProfitsByDenomRequestProtoMsg {
+  toProtoMsg(message: QueryGetProtoRevProfitsByDenomRequest): QueryGetProtoRevProfitsByDenomRequestProtoMsg {
     return {
-      typeUrl:
-        '/symphony.protorev.v1beta1.QueryGetProtoRevProfitsByDenomRequest',
-      value: QueryGetProtoRevProfitsByDenomRequest.encode(message).finish(),
+      typeUrl: "/symphony.protorev.v1beta1.QueryGetProtoRevProfitsByDenomRequest",
+      value: QueryGetProtoRevProfitsByDenomRequest.encode(message).finish()
     };
-  },
+  }
 };
-GlobalDecoderRegistry.register(
-  QueryGetProtoRevProfitsByDenomRequest.typeUrl,
-  QueryGetProtoRevProfitsByDenomRequest,
-);
+GlobalDecoderRegistry.register(QueryGetProtoRevProfitsByDenomRequest.typeUrl, QueryGetProtoRevProfitsByDenomRequest);
 function createBaseQueryGetProtoRevProfitsByDenomResponse(): QueryGetProtoRevProfitsByDenomResponse {
   return {
-    profit: undefined,
+    profit: undefined
   };
 }
 export const QueryGetProtoRevProfitsByDenomResponse = {
-  typeUrl: '/symphony.protorev.v1beta1.QueryGetProtoRevProfitsByDenomResponse',
+  typeUrl: "/symphony.protorev.v1beta1.QueryGetProtoRevProfitsByDenomResponse",
   is(o: any): o is QueryGetProtoRevProfitsByDenomResponse {
     return o && o.$typeUrl === QueryGetProtoRevProfitsByDenomResponse.typeUrl;
   },
@@ -1395,21 +1250,14 @@ export const QueryGetProtoRevProfitsByDenomResponse = {
   isAmino(o: any): o is QueryGetProtoRevProfitsByDenomResponseAmino {
     return o && o.$typeUrl === QueryGetProtoRevProfitsByDenomResponse.typeUrl;
   },
-  encode(
-    message: QueryGetProtoRevProfitsByDenomResponse,
-    writer: BinaryWriter = BinaryWriter.create(),
-  ): BinaryWriter {
+  encode(message: QueryGetProtoRevProfitsByDenomResponse, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
     if (message.profit !== undefined) {
       Coin.encode(message.profit, writer.uint32(10).fork()).ldelim();
     }
     return writer;
   },
-  decode(
-    input: BinaryReader | Uint8Array,
-    length?: number,
-  ): QueryGetProtoRevProfitsByDenomResponse {
-    const reader =
-      input instanceof BinaryReader ? input : new BinaryReader(input);
+  decode(input: BinaryReader | Uint8Array, length?: number): QueryGetProtoRevProfitsByDenomResponse {
+    const reader = input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseQueryGetProtoRevProfitsByDenomResponse();
     while (reader.pos < end) {
@@ -1425,64 +1273,45 @@ export const QueryGetProtoRevProfitsByDenomResponse = {
     }
     return message;
   },
-  fromPartial(
-    object: Partial<QueryGetProtoRevProfitsByDenomResponse>,
-  ): QueryGetProtoRevProfitsByDenomResponse {
+  fromPartial(object: Partial<QueryGetProtoRevProfitsByDenomResponse>): QueryGetProtoRevProfitsByDenomResponse {
     const message = createBaseQueryGetProtoRevProfitsByDenomResponse();
-    message.profit =
-      object.profit !== undefined && object.profit !== null
-        ? Coin.fromPartial(object.profit)
-        : undefined;
+    message.profit = object.profit !== undefined && object.profit !== null ? Coin.fromPartial(object.profit) : undefined;
     return message;
   },
-  fromAmino(
-    object: QueryGetProtoRevProfitsByDenomResponseAmino,
-  ): QueryGetProtoRevProfitsByDenomResponse {
+  fromAmino(object: QueryGetProtoRevProfitsByDenomResponseAmino): QueryGetProtoRevProfitsByDenomResponse {
     const message = createBaseQueryGetProtoRevProfitsByDenomResponse();
     if (object.profit !== undefined && object.profit !== null) {
       message.profit = Coin.fromAmino(object.profit);
     }
     return message;
   },
-  toAmino(
-    message: QueryGetProtoRevProfitsByDenomResponse,
-  ): QueryGetProtoRevProfitsByDenomResponseAmino {
+  toAmino(message: QueryGetProtoRevProfitsByDenomResponse): QueryGetProtoRevProfitsByDenomResponseAmino {
     const obj: any = {};
     obj.profit = message.profit ? Coin.toAmino(message.profit) : undefined;
     return obj;
   },
-  fromAminoMsg(
-    object: QueryGetProtoRevProfitsByDenomResponseAminoMsg,
-  ): QueryGetProtoRevProfitsByDenomResponse {
+  fromAminoMsg(object: QueryGetProtoRevProfitsByDenomResponseAminoMsg): QueryGetProtoRevProfitsByDenomResponse {
     return QueryGetProtoRevProfitsByDenomResponse.fromAmino(object.value);
   },
-  fromProtoMsg(
-    message: QueryGetProtoRevProfitsByDenomResponseProtoMsg,
-  ): QueryGetProtoRevProfitsByDenomResponse {
+  fromProtoMsg(message: QueryGetProtoRevProfitsByDenomResponseProtoMsg): QueryGetProtoRevProfitsByDenomResponse {
     return QueryGetProtoRevProfitsByDenomResponse.decode(message.value);
   },
   toProto(message: QueryGetProtoRevProfitsByDenomResponse): Uint8Array {
     return QueryGetProtoRevProfitsByDenomResponse.encode(message).finish();
   },
-  toProtoMsg(
-    message: QueryGetProtoRevProfitsByDenomResponse,
-  ): QueryGetProtoRevProfitsByDenomResponseProtoMsg {
+  toProtoMsg(message: QueryGetProtoRevProfitsByDenomResponse): QueryGetProtoRevProfitsByDenomResponseProtoMsg {
     return {
-      typeUrl:
-        '/symphony.protorev.v1beta1.QueryGetProtoRevProfitsByDenomResponse',
-      value: QueryGetProtoRevProfitsByDenomResponse.encode(message).finish(),
+      typeUrl: "/symphony.protorev.v1beta1.QueryGetProtoRevProfitsByDenomResponse",
+      value: QueryGetProtoRevProfitsByDenomResponse.encode(message).finish()
     };
-  },
+  }
 };
-GlobalDecoderRegistry.register(
-  QueryGetProtoRevProfitsByDenomResponse.typeUrl,
-  QueryGetProtoRevProfitsByDenomResponse,
-);
+GlobalDecoderRegistry.register(QueryGetProtoRevProfitsByDenomResponse.typeUrl, QueryGetProtoRevProfitsByDenomResponse);
 function createBaseQueryGetProtoRevAllProfitsRequest(): QueryGetProtoRevAllProfitsRequest {
   return {};
 }
 export const QueryGetProtoRevAllProfitsRequest = {
-  typeUrl: '/symphony.protorev.v1beta1.QueryGetProtoRevAllProfitsRequest',
+  typeUrl: "/symphony.protorev.v1beta1.QueryGetProtoRevAllProfitsRequest",
   is(o: any): o is QueryGetProtoRevAllProfitsRequest {
     return o && o.$typeUrl === QueryGetProtoRevAllProfitsRequest.typeUrl;
   },
@@ -1492,18 +1321,11 @@ export const QueryGetProtoRevAllProfitsRequest = {
   isAmino(o: any): o is QueryGetProtoRevAllProfitsRequestAmino {
     return o && o.$typeUrl === QueryGetProtoRevAllProfitsRequest.typeUrl;
   },
-  encode(
-    _: QueryGetProtoRevAllProfitsRequest,
-    writer: BinaryWriter = BinaryWriter.create(),
-  ): BinaryWriter {
+  encode(_: QueryGetProtoRevAllProfitsRequest, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
     return writer;
   },
-  decode(
-    input: BinaryReader | Uint8Array,
-    length?: number,
-  ): QueryGetProtoRevAllProfitsRequest {
-    const reader =
-      input instanceof BinaryReader ? input : new BinaryReader(input);
+  decode(input: BinaryReader | Uint8Array, length?: number): QueryGetProtoRevAllProfitsRequest {
+    const reader = input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseQueryGetProtoRevAllProfitsRequest();
     while (reader.pos < end) {
@@ -1516,96 +1338,59 @@ export const QueryGetProtoRevAllProfitsRequest = {
     }
     return message;
   },
-  fromPartial(
-    _: Partial<QueryGetProtoRevAllProfitsRequest>,
-  ): QueryGetProtoRevAllProfitsRequest {
+  fromPartial(_: Partial<QueryGetProtoRevAllProfitsRequest>): QueryGetProtoRevAllProfitsRequest {
     const message = createBaseQueryGetProtoRevAllProfitsRequest();
     return message;
   },
-  fromAmino(
-    _: QueryGetProtoRevAllProfitsRequestAmino,
-  ): QueryGetProtoRevAllProfitsRequest {
+  fromAmino(_: QueryGetProtoRevAllProfitsRequestAmino): QueryGetProtoRevAllProfitsRequest {
     const message = createBaseQueryGetProtoRevAllProfitsRequest();
     return message;
   },
-  toAmino(
-    _: QueryGetProtoRevAllProfitsRequest,
-  ): QueryGetProtoRevAllProfitsRequestAmino {
+  toAmino(_: QueryGetProtoRevAllProfitsRequest): QueryGetProtoRevAllProfitsRequestAmino {
     const obj: any = {};
     return obj;
   },
-  fromAminoMsg(
-    object: QueryGetProtoRevAllProfitsRequestAminoMsg,
-  ): QueryGetProtoRevAllProfitsRequest {
+  fromAminoMsg(object: QueryGetProtoRevAllProfitsRequestAminoMsg): QueryGetProtoRevAllProfitsRequest {
     return QueryGetProtoRevAllProfitsRequest.fromAmino(object.value);
   },
-  fromProtoMsg(
-    message: QueryGetProtoRevAllProfitsRequestProtoMsg,
-  ): QueryGetProtoRevAllProfitsRequest {
+  fromProtoMsg(message: QueryGetProtoRevAllProfitsRequestProtoMsg): QueryGetProtoRevAllProfitsRequest {
     return QueryGetProtoRevAllProfitsRequest.decode(message.value);
   },
   toProto(message: QueryGetProtoRevAllProfitsRequest): Uint8Array {
     return QueryGetProtoRevAllProfitsRequest.encode(message).finish();
   },
-  toProtoMsg(
-    message: QueryGetProtoRevAllProfitsRequest,
-  ): QueryGetProtoRevAllProfitsRequestProtoMsg {
+  toProtoMsg(message: QueryGetProtoRevAllProfitsRequest): QueryGetProtoRevAllProfitsRequestProtoMsg {
     return {
-      typeUrl: '/symphony.protorev.v1beta1.QueryGetProtoRevAllProfitsRequest',
-      value: QueryGetProtoRevAllProfitsRequest.encode(message).finish(),
+      typeUrl: "/symphony.protorev.v1beta1.QueryGetProtoRevAllProfitsRequest",
+      value: QueryGetProtoRevAllProfitsRequest.encode(message).finish()
     };
-  },
+  }
 };
-GlobalDecoderRegistry.register(
-  QueryGetProtoRevAllProfitsRequest.typeUrl,
-  QueryGetProtoRevAllProfitsRequest,
-);
+GlobalDecoderRegistry.register(QueryGetProtoRevAllProfitsRequest.typeUrl, QueryGetProtoRevAllProfitsRequest);
 function createBaseQueryGetProtoRevAllProfitsResponse(): QueryGetProtoRevAllProfitsResponse {
   return {
-    profits: [],
+    profits: []
   };
 }
 export const QueryGetProtoRevAllProfitsResponse = {
-  typeUrl: '/symphony.protorev.v1beta1.QueryGetProtoRevAllProfitsResponse',
+  typeUrl: "/symphony.protorev.v1beta1.QueryGetProtoRevAllProfitsResponse",
   is(o: any): o is QueryGetProtoRevAllProfitsResponse {
-    return (
-      o &&
-      (o.$typeUrl === QueryGetProtoRevAllProfitsResponse.typeUrl ||
-        (Array.isArray(o.profits) &&
-          (!o.profits.length || Coin.is(o.profits[0]))))
-    );
+    return o && (o.$typeUrl === QueryGetProtoRevAllProfitsResponse.typeUrl || Array.isArray(o.profits) && (!o.profits.length || Coin.is(o.profits[0])));
   },
   isSDK(o: any): o is QueryGetProtoRevAllProfitsResponseSDKType {
-    return (
-      o &&
-      (o.$typeUrl === QueryGetProtoRevAllProfitsResponse.typeUrl ||
-        (Array.isArray(o.profits) &&
-          (!o.profits.length || Coin.isSDK(o.profits[0]))))
-    );
+    return o && (o.$typeUrl === QueryGetProtoRevAllProfitsResponse.typeUrl || Array.isArray(o.profits) && (!o.profits.length || Coin.isSDK(o.profits[0])));
   },
   isAmino(o: any): o is QueryGetProtoRevAllProfitsResponseAmino {
-    return (
-      o &&
-      (o.$typeUrl === QueryGetProtoRevAllProfitsResponse.typeUrl ||
-        (Array.isArray(o.profits) &&
-          (!o.profits.length || Coin.isAmino(o.profits[0]))))
-    );
+    return o && (o.$typeUrl === QueryGetProtoRevAllProfitsResponse.typeUrl || Array.isArray(o.profits) && (!o.profits.length || Coin.isAmino(o.profits[0])));
   },
-  encode(
-    message: QueryGetProtoRevAllProfitsResponse,
-    writer: BinaryWriter = BinaryWriter.create(),
-  ): BinaryWriter {
+  encode(message: QueryGetProtoRevAllProfitsResponse, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
     for (const v of message.profits) {
       Coin.encode(v!, writer.uint32(10).fork()).ldelim();
     }
     return writer;
   },
-  decode(
-    input: BinaryReader | Uint8Array,
-    length?: number,
-  ): QueryGetProtoRevAllProfitsResponse {
-    const reader =
-      input instanceof BinaryReader ? input : new BinaryReader(input);
+  decode(input: BinaryReader | Uint8Array, length?: number): QueryGetProtoRevAllProfitsResponse {
+    const reader = input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseQueryGetProtoRevAllProfitsResponse();
     while (reader.pos < end) {
@@ -1621,93 +1406,59 @@ export const QueryGetProtoRevAllProfitsResponse = {
     }
     return message;
   },
-  fromPartial(
-    object: Partial<QueryGetProtoRevAllProfitsResponse>,
-  ): QueryGetProtoRevAllProfitsResponse {
+  fromPartial(object: Partial<QueryGetProtoRevAllProfitsResponse>): QueryGetProtoRevAllProfitsResponse {
     const message = createBaseQueryGetProtoRevAllProfitsResponse();
     message.profits = object.profits?.map(e => Coin.fromPartial(e)) || [];
     return message;
   },
-  fromAmino(
-    object: QueryGetProtoRevAllProfitsResponseAmino,
-  ): QueryGetProtoRevAllProfitsResponse {
+  fromAmino(object: QueryGetProtoRevAllProfitsResponseAmino): QueryGetProtoRevAllProfitsResponse {
     const message = createBaseQueryGetProtoRevAllProfitsResponse();
     message.profits = object.profits?.map(e => Coin.fromAmino(e)) || [];
     return message;
   },
-  toAmino(
-    message: QueryGetProtoRevAllProfitsResponse,
-  ): QueryGetProtoRevAllProfitsResponseAmino {
+  toAmino(message: QueryGetProtoRevAllProfitsResponse): QueryGetProtoRevAllProfitsResponseAmino {
     const obj: any = {};
     if (message.profits) {
-      obj.profits = message.profits.map(e => (e ? Coin.toAmino(e) : undefined));
+      obj.profits = message.profits.map(e => e ? Coin.toAmino(e) : undefined);
     } else {
       obj.profits = message.profits;
     }
     return obj;
   },
-  fromAminoMsg(
-    object: QueryGetProtoRevAllProfitsResponseAminoMsg,
-  ): QueryGetProtoRevAllProfitsResponse {
+  fromAminoMsg(object: QueryGetProtoRevAllProfitsResponseAminoMsg): QueryGetProtoRevAllProfitsResponse {
     return QueryGetProtoRevAllProfitsResponse.fromAmino(object.value);
   },
-  fromProtoMsg(
-    message: QueryGetProtoRevAllProfitsResponseProtoMsg,
-  ): QueryGetProtoRevAllProfitsResponse {
+  fromProtoMsg(message: QueryGetProtoRevAllProfitsResponseProtoMsg): QueryGetProtoRevAllProfitsResponse {
     return QueryGetProtoRevAllProfitsResponse.decode(message.value);
   },
   toProto(message: QueryGetProtoRevAllProfitsResponse): Uint8Array {
     return QueryGetProtoRevAllProfitsResponse.encode(message).finish();
   },
-  toProtoMsg(
-    message: QueryGetProtoRevAllProfitsResponse,
-  ): QueryGetProtoRevAllProfitsResponseProtoMsg {
+  toProtoMsg(message: QueryGetProtoRevAllProfitsResponse): QueryGetProtoRevAllProfitsResponseProtoMsg {
     return {
-      typeUrl: '/symphony.protorev.v1beta1.QueryGetProtoRevAllProfitsResponse',
-      value: QueryGetProtoRevAllProfitsResponse.encode(message).finish(),
+      typeUrl: "/symphony.protorev.v1beta1.QueryGetProtoRevAllProfitsResponse",
+      value: QueryGetProtoRevAllProfitsResponse.encode(message).finish()
     };
-  },
+  }
 };
-GlobalDecoderRegistry.register(
-  QueryGetProtoRevAllProfitsResponse.typeUrl,
-  QueryGetProtoRevAllProfitsResponse,
-);
+GlobalDecoderRegistry.register(QueryGetProtoRevAllProfitsResponse.typeUrl, QueryGetProtoRevAllProfitsResponse);
 function createBaseQueryGetProtoRevStatisticsByRouteRequest(): QueryGetProtoRevStatisticsByRouteRequest {
   return {
-    route: [],
+    route: []
   };
 }
 export const QueryGetProtoRevStatisticsByRouteRequest = {
-  typeUrl:
-    '/symphony.protorev.v1beta1.QueryGetProtoRevStatisticsByRouteRequest',
+  typeUrl: "/symphony.protorev.v1beta1.QueryGetProtoRevStatisticsByRouteRequest",
   is(o: any): o is QueryGetProtoRevStatisticsByRouteRequest {
-    return (
-      o &&
-      (o.$typeUrl === QueryGetProtoRevStatisticsByRouteRequest.typeUrl ||
-        (Array.isArray(o.route) &&
-          (!o.route.length || typeof o.route[0] === 'bigint')))
-    );
+    return o && (o.$typeUrl === QueryGetProtoRevStatisticsByRouteRequest.typeUrl || Array.isArray(o.route) && (!o.route.length || typeof o.route[0] === "bigint"));
   },
   isSDK(o: any): o is QueryGetProtoRevStatisticsByRouteRequestSDKType {
-    return (
-      o &&
-      (o.$typeUrl === QueryGetProtoRevStatisticsByRouteRequest.typeUrl ||
-        (Array.isArray(o.route) &&
-          (!o.route.length || typeof o.route[0] === 'bigint')))
-    );
+    return o && (o.$typeUrl === QueryGetProtoRevStatisticsByRouteRequest.typeUrl || Array.isArray(o.route) && (!o.route.length || typeof o.route[0] === "bigint"));
   },
   isAmino(o: any): o is QueryGetProtoRevStatisticsByRouteRequestAmino {
-    return (
-      o &&
-      (o.$typeUrl === QueryGetProtoRevStatisticsByRouteRequest.typeUrl ||
-        (Array.isArray(o.route) &&
-          (!o.route.length || typeof o.route[0] === 'bigint')))
-    );
+    return o && (o.$typeUrl === QueryGetProtoRevStatisticsByRouteRequest.typeUrl || Array.isArray(o.route) && (!o.route.length || typeof o.route[0] === "bigint"));
   },
-  encode(
-    message: QueryGetProtoRevStatisticsByRouteRequest,
-    writer: BinaryWriter = BinaryWriter.create(),
-  ): BinaryWriter {
+  encode(message: QueryGetProtoRevStatisticsByRouteRequest, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
     writer.uint32(10).fork();
     for (const v of message.route) {
       writer.uint64(v);
@@ -1715,12 +1466,8 @@ export const QueryGetProtoRevStatisticsByRouteRequest = {
     writer.ldelim();
     return writer;
   },
-  decode(
-    input: BinaryReader | Uint8Array,
-    length?: number,
-  ): QueryGetProtoRevStatisticsByRouteRequest {
-    const reader =
-      input instanceof BinaryReader ? input : new BinaryReader(input);
+  decode(input: BinaryReader | Uint8Array, length?: number): QueryGetProtoRevStatisticsByRouteRequest {
+    const reader = input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseQueryGetProtoRevStatisticsByRouteRequest();
     while (reader.pos < end) {
@@ -1743,23 +1490,17 @@ export const QueryGetProtoRevStatisticsByRouteRequest = {
     }
     return message;
   },
-  fromPartial(
-    object: Partial<QueryGetProtoRevStatisticsByRouteRequest>,
-  ): QueryGetProtoRevStatisticsByRouteRequest {
+  fromPartial(object: Partial<QueryGetProtoRevStatisticsByRouteRequest>): QueryGetProtoRevStatisticsByRouteRequest {
     const message = createBaseQueryGetProtoRevStatisticsByRouteRequest();
     message.route = object.route?.map(e => BigInt(e.toString())) || [];
     return message;
   },
-  fromAmino(
-    object: QueryGetProtoRevStatisticsByRouteRequestAmino,
-  ): QueryGetProtoRevStatisticsByRouteRequest {
+  fromAmino(object: QueryGetProtoRevStatisticsByRouteRequestAmino): QueryGetProtoRevStatisticsByRouteRequest {
     const message = createBaseQueryGetProtoRevStatisticsByRouteRequest();
     message.route = object.route?.map(e => BigInt(e)) || [];
     return message;
   },
-  toAmino(
-    message: QueryGetProtoRevStatisticsByRouteRequest,
-  ): QueryGetProtoRevStatisticsByRouteRequestAmino {
+  toAmino(message: QueryGetProtoRevStatisticsByRouteRequest): QueryGetProtoRevStatisticsByRouteRequestAmino {
     const obj: any = {};
     if (message.route) {
       obj.route = message.route.map(e => e.toString());
@@ -1768,80 +1509,47 @@ export const QueryGetProtoRevStatisticsByRouteRequest = {
     }
     return obj;
   },
-  fromAminoMsg(
-    object: QueryGetProtoRevStatisticsByRouteRequestAminoMsg,
-  ): QueryGetProtoRevStatisticsByRouteRequest {
+  fromAminoMsg(object: QueryGetProtoRevStatisticsByRouteRequestAminoMsg): QueryGetProtoRevStatisticsByRouteRequest {
     return QueryGetProtoRevStatisticsByRouteRequest.fromAmino(object.value);
   },
-  fromProtoMsg(
-    message: QueryGetProtoRevStatisticsByRouteRequestProtoMsg,
-  ): QueryGetProtoRevStatisticsByRouteRequest {
+  fromProtoMsg(message: QueryGetProtoRevStatisticsByRouteRequestProtoMsg): QueryGetProtoRevStatisticsByRouteRequest {
     return QueryGetProtoRevStatisticsByRouteRequest.decode(message.value);
   },
   toProto(message: QueryGetProtoRevStatisticsByRouteRequest): Uint8Array {
     return QueryGetProtoRevStatisticsByRouteRequest.encode(message).finish();
   },
-  toProtoMsg(
-    message: QueryGetProtoRevStatisticsByRouteRequest,
-  ): QueryGetProtoRevStatisticsByRouteRequestProtoMsg {
+  toProtoMsg(message: QueryGetProtoRevStatisticsByRouteRequest): QueryGetProtoRevStatisticsByRouteRequestProtoMsg {
     return {
-      typeUrl:
-        '/symphony.protorev.v1beta1.QueryGetProtoRevStatisticsByRouteRequest',
-      value: QueryGetProtoRevStatisticsByRouteRequest.encode(message).finish(),
+      typeUrl: "/symphony.protorev.v1beta1.QueryGetProtoRevStatisticsByRouteRequest",
+      value: QueryGetProtoRevStatisticsByRouteRequest.encode(message).finish()
     };
-  },
+  }
 };
-GlobalDecoderRegistry.register(
-  QueryGetProtoRevStatisticsByRouteRequest.typeUrl,
-  QueryGetProtoRevStatisticsByRouteRequest,
-);
+GlobalDecoderRegistry.register(QueryGetProtoRevStatisticsByRouteRequest.typeUrl, QueryGetProtoRevStatisticsByRouteRequest);
 function createBaseQueryGetProtoRevStatisticsByRouteResponse(): QueryGetProtoRevStatisticsByRouteResponse {
   return {
-    statistics: RouteStatistics.fromPartial({}),
+    statistics: RouteStatistics.fromPartial({})
   };
 }
 export const QueryGetProtoRevStatisticsByRouteResponse = {
-  typeUrl:
-    '/symphony.protorev.v1beta1.QueryGetProtoRevStatisticsByRouteResponse',
+  typeUrl: "/symphony.protorev.v1beta1.QueryGetProtoRevStatisticsByRouteResponse",
   is(o: any): o is QueryGetProtoRevStatisticsByRouteResponse {
-    return (
-      o &&
-      (o.$typeUrl === QueryGetProtoRevStatisticsByRouteResponse.typeUrl ||
-        RouteStatistics.is(o.statistics))
-    );
+    return o && (o.$typeUrl === QueryGetProtoRevStatisticsByRouteResponse.typeUrl || RouteStatistics.is(o.statistics));
   },
   isSDK(o: any): o is QueryGetProtoRevStatisticsByRouteResponseSDKType {
-    return (
-      o &&
-      (o.$typeUrl === QueryGetProtoRevStatisticsByRouteResponse.typeUrl ||
-        RouteStatistics.isSDK(o.statistics))
-    );
+    return o && (o.$typeUrl === QueryGetProtoRevStatisticsByRouteResponse.typeUrl || RouteStatistics.isSDK(o.statistics));
   },
   isAmino(o: any): o is QueryGetProtoRevStatisticsByRouteResponseAmino {
-    return (
-      o &&
-      (o.$typeUrl === QueryGetProtoRevStatisticsByRouteResponse.typeUrl ||
-        RouteStatistics.isAmino(o.statistics))
-    );
+    return o && (o.$typeUrl === QueryGetProtoRevStatisticsByRouteResponse.typeUrl || RouteStatistics.isAmino(o.statistics));
   },
-  encode(
-    message: QueryGetProtoRevStatisticsByRouteResponse,
-    writer: BinaryWriter = BinaryWriter.create(),
-  ): BinaryWriter {
+  encode(message: QueryGetProtoRevStatisticsByRouteResponse, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
     if (message.statistics !== undefined) {
-      RouteStatistics.encode(
-        message.statistics,
-        writer.uint32(10).fork(),
-      ).ldelim();
+      RouteStatistics.encode(message.statistics, writer.uint32(10).fork()).ldelim();
     }
     return writer;
   },
-  decode(
-    input: BinaryReader | Uint8Array,
-    length?: number,
-  ): QueryGetProtoRevStatisticsByRouteResponse {
-    const reader =
-      input instanceof BinaryReader ? input : new BinaryReader(input);
+  decode(input: BinaryReader | Uint8Array, length?: number): QueryGetProtoRevStatisticsByRouteResponse {
+    const reader = input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseQueryGetProtoRevStatisticsByRouteResponse();
     while (reader.pos < end) {
@@ -1857,94 +1565,59 @@ export const QueryGetProtoRevStatisticsByRouteResponse = {
     }
     return message;
   },
-  fromPartial(
-    object: Partial<QueryGetProtoRevStatisticsByRouteResponse>,
-  ): QueryGetProtoRevStatisticsByRouteResponse {
+  fromPartial(object: Partial<QueryGetProtoRevStatisticsByRouteResponse>): QueryGetProtoRevStatisticsByRouteResponse {
     const message = createBaseQueryGetProtoRevStatisticsByRouteResponse();
-    message.statistics =
-      object.statistics !== undefined && object.statistics !== null
-        ? RouteStatistics.fromPartial(object.statistics)
-        : undefined;
+    message.statistics = object.statistics !== undefined && object.statistics !== null ? RouteStatistics.fromPartial(object.statistics) : undefined;
     return message;
   },
-  fromAmino(
-    object: QueryGetProtoRevStatisticsByRouteResponseAmino,
-  ): QueryGetProtoRevStatisticsByRouteResponse {
+  fromAmino(object: QueryGetProtoRevStatisticsByRouteResponseAmino): QueryGetProtoRevStatisticsByRouteResponse {
     const message = createBaseQueryGetProtoRevStatisticsByRouteResponse();
     if (object.statistics !== undefined && object.statistics !== null) {
       message.statistics = RouteStatistics.fromAmino(object.statistics);
     }
     return message;
   },
-  toAmino(
-    message: QueryGetProtoRevStatisticsByRouteResponse,
-  ): QueryGetProtoRevStatisticsByRouteResponseAmino {
+  toAmino(message: QueryGetProtoRevStatisticsByRouteResponse): QueryGetProtoRevStatisticsByRouteResponseAmino {
     const obj: any = {};
-    obj.statistics = message.statistics
-      ? RouteStatistics.toAmino(message.statistics)
-      : undefined;
+    obj.statistics = message.statistics ? RouteStatistics.toAmino(message.statistics) : undefined;
     return obj;
   },
-  fromAminoMsg(
-    object: QueryGetProtoRevStatisticsByRouteResponseAminoMsg,
-  ): QueryGetProtoRevStatisticsByRouteResponse {
+  fromAminoMsg(object: QueryGetProtoRevStatisticsByRouteResponseAminoMsg): QueryGetProtoRevStatisticsByRouteResponse {
     return QueryGetProtoRevStatisticsByRouteResponse.fromAmino(object.value);
   },
-  fromProtoMsg(
-    message: QueryGetProtoRevStatisticsByRouteResponseProtoMsg,
-  ): QueryGetProtoRevStatisticsByRouteResponse {
+  fromProtoMsg(message: QueryGetProtoRevStatisticsByRouteResponseProtoMsg): QueryGetProtoRevStatisticsByRouteResponse {
     return QueryGetProtoRevStatisticsByRouteResponse.decode(message.value);
   },
   toProto(message: QueryGetProtoRevStatisticsByRouteResponse): Uint8Array {
     return QueryGetProtoRevStatisticsByRouteResponse.encode(message).finish();
   },
-  toProtoMsg(
-    message: QueryGetProtoRevStatisticsByRouteResponse,
-  ): QueryGetProtoRevStatisticsByRouteResponseProtoMsg {
+  toProtoMsg(message: QueryGetProtoRevStatisticsByRouteResponse): QueryGetProtoRevStatisticsByRouteResponseProtoMsg {
     return {
-      typeUrl:
-        '/symphony.protorev.v1beta1.QueryGetProtoRevStatisticsByRouteResponse',
-      value: QueryGetProtoRevStatisticsByRouteResponse.encode(message).finish(),
+      typeUrl: "/symphony.protorev.v1beta1.QueryGetProtoRevStatisticsByRouteResponse",
+      value: QueryGetProtoRevStatisticsByRouteResponse.encode(message).finish()
     };
-  },
+  }
 };
-GlobalDecoderRegistry.register(
-  QueryGetProtoRevStatisticsByRouteResponse.typeUrl,
-  QueryGetProtoRevStatisticsByRouteResponse,
-);
+GlobalDecoderRegistry.register(QueryGetProtoRevStatisticsByRouteResponse.typeUrl, QueryGetProtoRevStatisticsByRouteResponse);
 function createBaseQueryGetProtoRevAllRouteStatisticsRequest(): QueryGetProtoRevAllRouteStatisticsRequest {
   return {};
 }
 export const QueryGetProtoRevAllRouteStatisticsRequest = {
-  typeUrl:
-    '/symphony.protorev.v1beta1.QueryGetProtoRevAllRouteStatisticsRequest',
+  typeUrl: "/symphony.protorev.v1beta1.QueryGetProtoRevAllRouteStatisticsRequest",
   is(o: any): o is QueryGetProtoRevAllRouteStatisticsRequest {
-    return (
-      o && o.$typeUrl === QueryGetProtoRevAllRouteStatisticsRequest.typeUrl
-    );
+    return o && o.$typeUrl === QueryGetProtoRevAllRouteStatisticsRequest.typeUrl;
   },
   isSDK(o: any): o is QueryGetProtoRevAllRouteStatisticsRequestSDKType {
-    return (
-      o && o.$typeUrl === QueryGetProtoRevAllRouteStatisticsRequest.typeUrl
-    );
+    return o && o.$typeUrl === QueryGetProtoRevAllRouteStatisticsRequest.typeUrl;
   },
   isAmino(o: any): o is QueryGetProtoRevAllRouteStatisticsRequestAmino {
-    return (
-      o && o.$typeUrl === QueryGetProtoRevAllRouteStatisticsRequest.typeUrl
-    );
+    return o && o.$typeUrl === QueryGetProtoRevAllRouteStatisticsRequest.typeUrl;
   },
-  encode(
-    _: QueryGetProtoRevAllRouteStatisticsRequest,
-    writer: BinaryWriter = BinaryWriter.create(),
-  ): BinaryWriter {
+  encode(_: QueryGetProtoRevAllRouteStatisticsRequest, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
     return writer;
   },
-  decode(
-    input: BinaryReader | Uint8Array,
-    length?: number,
-  ): QueryGetProtoRevAllRouteStatisticsRequest {
-    const reader =
-      input instanceof BinaryReader ? input : new BinaryReader(input);
+  decode(input: BinaryReader | Uint8Array, length?: number): QueryGetProtoRevAllRouteStatisticsRequest {
+    const reader = input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseQueryGetProtoRevAllRouteStatisticsRequest();
     while (reader.pos < end) {
@@ -1957,107 +1630,66 @@ export const QueryGetProtoRevAllRouteStatisticsRequest = {
     }
     return message;
   },
-  fromPartial(
-    _: Partial<QueryGetProtoRevAllRouteStatisticsRequest>,
-  ): QueryGetProtoRevAllRouteStatisticsRequest {
+  fromPartial(_: Partial<QueryGetProtoRevAllRouteStatisticsRequest>): QueryGetProtoRevAllRouteStatisticsRequest {
     const message = createBaseQueryGetProtoRevAllRouteStatisticsRequest();
     return message;
   },
-  fromAmino(
-    _: QueryGetProtoRevAllRouteStatisticsRequestAmino,
-  ): QueryGetProtoRevAllRouteStatisticsRequest {
+  fromAmino(_: QueryGetProtoRevAllRouteStatisticsRequestAmino): QueryGetProtoRevAllRouteStatisticsRequest {
     const message = createBaseQueryGetProtoRevAllRouteStatisticsRequest();
     return message;
   },
-  toAmino(
-    _: QueryGetProtoRevAllRouteStatisticsRequest,
-  ): QueryGetProtoRevAllRouteStatisticsRequestAmino {
+  toAmino(_: QueryGetProtoRevAllRouteStatisticsRequest): QueryGetProtoRevAllRouteStatisticsRequestAmino {
     const obj: any = {};
     return obj;
   },
-  fromAminoMsg(
-    object: QueryGetProtoRevAllRouteStatisticsRequestAminoMsg,
-  ): QueryGetProtoRevAllRouteStatisticsRequest {
+  fromAminoMsg(object: QueryGetProtoRevAllRouteStatisticsRequestAminoMsg): QueryGetProtoRevAllRouteStatisticsRequest {
     return QueryGetProtoRevAllRouteStatisticsRequest.fromAmino(object.value);
   },
-  fromProtoMsg(
-    message: QueryGetProtoRevAllRouteStatisticsRequestProtoMsg,
-  ): QueryGetProtoRevAllRouteStatisticsRequest {
+  fromProtoMsg(message: QueryGetProtoRevAllRouteStatisticsRequestProtoMsg): QueryGetProtoRevAllRouteStatisticsRequest {
     return QueryGetProtoRevAllRouteStatisticsRequest.decode(message.value);
   },
   toProto(message: QueryGetProtoRevAllRouteStatisticsRequest): Uint8Array {
     return QueryGetProtoRevAllRouteStatisticsRequest.encode(message).finish();
   },
-  toProtoMsg(
-    message: QueryGetProtoRevAllRouteStatisticsRequest,
-  ): QueryGetProtoRevAllRouteStatisticsRequestProtoMsg {
+  toProtoMsg(message: QueryGetProtoRevAllRouteStatisticsRequest): QueryGetProtoRevAllRouteStatisticsRequestProtoMsg {
     return {
-      typeUrl:
-        '/symphony.protorev.v1beta1.QueryGetProtoRevAllRouteStatisticsRequest',
-      value: QueryGetProtoRevAllRouteStatisticsRequest.encode(message).finish(),
+      typeUrl: "/symphony.protorev.v1beta1.QueryGetProtoRevAllRouteStatisticsRequest",
+      value: QueryGetProtoRevAllRouteStatisticsRequest.encode(message).finish()
     };
-  },
+  }
 };
-GlobalDecoderRegistry.register(
-  QueryGetProtoRevAllRouteStatisticsRequest.typeUrl,
-  QueryGetProtoRevAllRouteStatisticsRequest,
-);
+GlobalDecoderRegistry.register(QueryGetProtoRevAllRouteStatisticsRequest.typeUrl, QueryGetProtoRevAllRouteStatisticsRequest);
 function createBaseQueryGetProtoRevAllRouteStatisticsResponse(): QueryGetProtoRevAllRouteStatisticsResponse {
   return {
-    statistics: [],
+    statistics: []
   };
 }
 export const QueryGetProtoRevAllRouteStatisticsResponse = {
-  typeUrl:
-    '/symphony.protorev.v1beta1.QueryGetProtoRevAllRouteStatisticsResponse',
+  typeUrl: "/symphony.protorev.v1beta1.QueryGetProtoRevAllRouteStatisticsResponse",
   is(o: any): o is QueryGetProtoRevAllRouteStatisticsResponse {
-    return (
-      o &&
-      (o.$typeUrl === QueryGetProtoRevAllRouteStatisticsResponse.typeUrl ||
-        (Array.isArray(o.statistics) &&
-          (!o.statistics.length || RouteStatistics.is(o.statistics[0]))))
-    );
+    return o && (o.$typeUrl === QueryGetProtoRevAllRouteStatisticsResponse.typeUrl || Array.isArray(o.statistics) && (!o.statistics.length || RouteStatistics.is(o.statistics[0])));
   },
   isSDK(o: any): o is QueryGetProtoRevAllRouteStatisticsResponseSDKType {
-    return (
-      o &&
-      (o.$typeUrl === QueryGetProtoRevAllRouteStatisticsResponse.typeUrl ||
-        (Array.isArray(o.statistics) &&
-          (!o.statistics.length || RouteStatistics.isSDK(o.statistics[0]))))
-    );
+    return o && (o.$typeUrl === QueryGetProtoRevAllRouteStatisticsResponse.typeUrl || Array.isArray(o.statistics) && (!o.statistics.length || RouteStatistics.isSDK(o.statistics[0])));
   },
   isAmino(o: any): o is QueryGetProtoRevAllRouteStatisticsResponseAmino {
-    return (
-      o &&
-      (o.$typeUrl === QueryGetProtoRevAllRouteStatisticsResponse.typeUrl ||
-        (Array.isArray(o.statistics) &&
-          (!o.statistics.length || RouteStatistics.isAmino(o.statistics[0]))))
-    );
+    return o && (o.$typeUrl === QueryGetProtoRevAllRouteStatisticsResponse.typeUrl || Array.isArray(o.statistics) && (!o.statistics.length || RouteStatistics.isAmino(o.statistics[0])));
   },
-  encode(
-    message: QueryGetProtoRevAllRouteStatisticsResponse,
-    writer: BinaryWriter = BinaryWriter.create(),
-  ): BinaryWriter {
+  encode(message: QueryGetProtoRevAllRouteStatisticsResponse, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
     for (const v of message.statistics) {
       RouteStatistics.encode(v!, writer.uint32(10).fork()).ldelim();
     }
     return writer;
   },
-  decode(
-    input: BinaryReader | Uint8Array,
-    length?: number,
-  ): QueryGetProtoRevAllRouteStatisticsResponse {
-    const reader =
-      input instanceof BinaryReader ? input : new BinaryReader(input);
+  decode(input: BinaryReader | Uint8Array, length?: number): QueryGetProtoRevAllRouteStatisticsResponse {
+    const reader = input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseQueryGetProtoRevAllRouteStatisticsResponse();
     while (reader.pos < end) {
       const tag = reader.uint32();
       switch (tag >>> 3) {
         case 1:
-          message.statistics.push(
-            RouteStatistics.decode(reader, reader.uint32()),
-          );
+          message.statistics.push(RouteStatistics.decode(reader, reader.uint32()));
           break;
         default:
           reader.skipType(tag & 7);
@@ -2066,96 +1698,61 @@ export const QueryGetProtoRevAllRouteStatisticsResponse = {
     }
     return message;
   },
-  fromPartial(
-    object: Partial<QueryGetProtoRevAllRouteStatisticsResponse>,
-  ): QueryGetProtoRevAllRouteStatisticsResponse {
+  fromPartial(object: Partial<QueryGetProtoRevAllRouteStatisticsResponse>): QueryGetProtoRevAllRouteStatisticsResponse {
     const message = createBaseQueryGetProtoRevAllRouteStatisticsResponse();
-    message.statistics =
-      object.statistics?.map(e => RouteStatistics.fromPartial(e)) || [];
+    message.statistics = object.statistics?.map(e => RouteStatistics.fromPartial(e)) || [];
     return message;
   },
-  fromAmino(
-    object: QueryGetProtoRevAllRouteStatisticsResponseAmino,
-  ): QueryGetProtoRevAllRouteStatisticsResponse {
+  fromAmino(object: QueryGetProtoRevAllRouteStatisticsResponseAmino): QueryGetProtoRevAllRouteStatisticsResponse {
     const message = createBaseQueryGetProtoRevAllRouteStatisticsResponse();
-    message.statistics =
-      object.statistics?.map(e => RouteStatistics.fromAmino(e)) || [];
+    message.statistics = object.statistics?.map(e => RouteStatistics.fromAmino(e)) || [];
     return message;
   },
-  toAmino(
-    message: QueryGetProtoRevAllRouteStatisticsResponse,
-  ): QueryGetProtoRevAllRouteStatisticsResponseAmino {
+  toAmino(message: QueryGetProtoRevAllRouteStatisticsResponse): QueryGetProtoRevAllRouteStatisticsResponseAmino {
     const obj: any = {};
     if (message.statistics) {
-      obj.statistics = message.statistics.map(e =>
-        e ? RouteStatistics.toAmino(e) : undefined,
-      );
+      obj.statistics = message.statistics.map(e => e ? RouteStatistics.toAmino(e) : undefined);
     } else {
       obj.statistics = message.statistics;
     }
     return obj;
   },
-  fromAminoMsg(
-    object: QueryGetProtoRevAllRouteStatisticsResponseAminoMsg,
-  ): QueryGetProtoRevAllRouteStatisticsResponse {
+  fromAminoMsg(object: QueryGetProtoRevAllRouteStatisticsResponseAminoMsg): QueryGetProtoRevAllRouteStatisticsResponse {
     return QueryGetProtoRevAllRouteStatisticsResponse.fromAmino(object.value);
   },
-  fromProtoMsg(
-    message: QueryGetProtoRevAllRouteStatisticsResponseProtoMsg,
-  ): QueryGetProtoRevAllRouteStatisticsResponse {
+  fromProtoMsg(message: QueryGetProtoRevAllRouteStatisticsResponseProtoMsg): QueryGetProtoRevAllRouteStatisticsResponse {
     return QueryGetProtoRevAllRouteStatisticsResponse.decode(message.value);
   },
   toProto(message: QueryGetProtoRevAllRouteStatisticsResponse): Uint8Array {
     return QueryGetProtoRevAllRouteStatisticsResponse.encode(message).finish();
   },
-  toProtoMsg(
-    message: QueryGetProtoRevAllRouteStatisticsResponse,
-  ): QueryGetProtoRevAllRouteStatisticsResponseProtoMsg {
+  toProtoMsg(message: QueryGetProtoRevAllRouteStatisticsResponse): QueryGetProtoRevAllRouteStatisticsResponseProtoMsg {
     return {
-      typeUrl:
-        '/symphony.protorev.v1beta1.QueryGetProtoRevAllRouteStatisticsResponse',
-      value:
-        QueryGetProtoRevAllRouteStatisticsResponse.encode(message).finish(),
+      typeUrl: "/symphony.protorev.v1beta1.QueryGetProtoRevAllRouteStatisticsResponse",
+      value: QueryGetProtoRevAllRouteStatisticsResponse.encode(message).finish()
     };
-  },
+  }
 };
-GlobalDecoderRegistry.register(
-  QueryGetProtoRevAllRouteStatisticsResponse.typeUrl,
-  QueryGetProtoRevAllRouteStatisticsResponse,
-);
+GlobalDecoderRegistry.register(QueryGetProtoRevAllRouteStatisticsResponse.typeUrl, QueryGetProtoRevAllRouteStatisticsResponse);
 function createBaseQueryGetProtoRevTokenPairArbRoutesRequest(): QueryGetProtoRevTokenPairArbRoutesRequest {
   return {};
 }
 export const QueryGetProtoRevTokenPairArbRoutesRequest = {
-  typeUrl:
-    '/symphony.protorev.v1beta1.QueryGetProtoRevTokenPairArbRoutesRequest',
+  typeUrl: "/symphony.protorev.v1beta1.QueryGetProtoRevTokenPairArbRoutesRequest",
   is(o: any): o is QueryGetProtoRevTokenPairArbRoutesRequest {
-    return (
-      o && o.$typeUrl === QueryGetProtoRevTokenPairArbRoutesRequest.typeUrl
-    );
+    return o && o.$typeUrl === QueryGetProtoRevTokenPairArbRoutesRequest.typeUrl;
   },
   isSDK(o: any): o is QueryGetProtoRevTokenPairArbRoutesRequestSDKType {
-    return (
-      o && o.$typeUrl === QueryGetProtoRevTokenPairArbRoutesRequest.typeUrl
-    );
+    return o && o.$typeUrl === QueryGetProtoRevTokenPairArbRoutesRequest.typeUrl;
   },
   isAmino(o: any): o is QueryGetProtoRevTokenPairArbRoutesRequestAmino {
-    return (
-      o && o.$typeUrl === QueryGetProtoRevTokenPairArbRoutesRequest.typeUrl
-    );
+    return o && o.$typeUrl === QueryGetProtoRevTokenPairArbRoutesRequest.typeUrl;
   },
-  encode(
-    _: QueryGetProtoRevTokenPairArbRoutesRequest,
-    writer: BinaryWriter = BinaryWriter.create(),
-  ): BinaryWriter {
+  encode(_: QueryGetProtoRevTokenPairArbRoutesRequest, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
     return writer;
   },
-  decode(
-    input: BinaryReader | Uint8Array,
-    length?: number,
-  ): QueryGetProtoRevTokenPairArbRoutesRequest {
-    const reader =
-      input instanceof BinaryReader ? input : new BinaryReader(input);
+  decode(input: BinaryReader | Uint8Array, length?: number): QueryGetProtoRevTokenPairArbRoutesRequest {
+    const reader = input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseQueryGetProtoRevTokenPairArbRoutesRequest();
     while (reader.pos < end) {
@@ -2168,107 +1765,66 @@ export const QueryGetProtoRevTokenPairArbRoutesRequest = {
     }
     return message;
   },
-  fromPartial(
-    _: Partial<QueryGetProtoRevTokenPairArbRoutesRequest>,
-  ): QueryGetProtoRevTokenPairArbRoutesRequest {
+  fromPartial(_: Partial<QueryGetProtoRevTokenPairArbRoutesRequest>): QueryGetProtoRevTokenPairArbRoutesRequest {
     const message = createBaseQueryGetProtoRevTokenPairArbRoutesRequest();
     return message;
   },
-  fromAmino(
-    _: QueryGetProtoRevTokenPairArbRoutesRequestAmino,
-  ): QueryGetProtoRevTokenPairArbRoutesRequest {
+  fromAmino(_: QueryGetProtoRevTokenPairArbRoutesRequestAmino): QueryGetProtoRevTokenPairArbRoutesRequest {
     const message = createBaseQueryGetProtoRevTokenPairArbRoutesRequest();
     return message;
   },
-  toAmino(
-    _: QueryGetProtoRevTokenPairArbRoutesRequest,
-  ): QueryGetProtoRevTokenPairArbRoutesRequestAmino {
+  toAmino(_: QueryGetProtoRevTokenPairArbRoutesRequest): QueryGetProtoRevTokenPairArbRoutesRequestAmino {
     const obj: any = {};
     return obj;
   },
-  fromAminoMsg(
-    object: QueryGetProtoRevTokenPairArbRoutesRequestAminoMsg,
-  ): QueryGetProtoRevTokenPairArbRoutesRequest {
+  fromAminoMsg(object: QueryGetProtoRevTokenPairArbRoutesRequestAminoMsg): QueryGetProtoRevTokenPairArbRoutesRequest {
     return QueryGetProtoRevTokenPairArbRoutesRequest.fromAmino(object.value);
   },
-  fromProtoMsg(
-    message: QueryGetProtoRevTokenPairArbRoutesRequestProtoMsg,
-  ): QueryGetProtoRevTokenPairArbRoutesRequest {
+  fromProtoMsg(message: QueryGetProtoRevTokenPairArbRoutesRequestProtoMsg): QueryGetProtoRevTokenPairArbRoutesRequest {
     return QueryGetProtoRevTokenPairArbRoutesRequest.decode(message.value);
   },
   toProto(message: QueryGetProtoRevTokenPairArbRoutesRequest): Uint8Array {
     return QueryGetProtoRevTokenPairArbRoutesRequest.encode(message).finish();
   },
-  toProtoMsg(
-    message: QueryGetProtoRevTokenPairArbRoutesRequest,
-  ): QueryGetProtoRevTokenPairArbRoutesRequestProtoMsg {
+  toProtoMsg(message: QueryGetProtoRevTokenPairArbRoutesRequest): QueryGetProtoRevTokenPairArbRoutesRequestProtoMsg {
     return {
-      typeUrl:
-        '/symphony.protorev.v1beta1.QueryGetProtoRevTokenPairArbRoutesRequest',
-      value: QueryGetProtoRevTokenPairArbRoutesRequest.encode(message).finish(),
+      typeUrl: "/symphony.protorev.v1beta1.QueryGetProtoRevTokenPairArbRoutesRequest",
+      value: QueryGetProtoRevTokenPairArbRoutesRequest.encode(message).finish()
     };
-  },
+  }
 };
-GlobalDecoderRegistry.register(
-  QueryGetProtoRevTokenPairArbRoutesRequest.typeUrl,
-  QueryGetProtoRevTokenPairArbRoutesRequest,
-);
+GlobalDecoderRegistry.register(QueryGetProtoRevTokenPairArbRoutesRequest.typeUrl, QueryGetProtoRevTokenPairArbRoutesRequest);
 function createBaseQueryGetProtoRevTokenPairArbRoutesResponse(): QueryGetProtoRevTokenPairArbRoutesResponse {
   return {
-    routes: [],
+    routes: []
   };
 }
 export const QueryGetProtoRevTokenPairArbRoutesResponse = {
-  typeUrl:
-    '/symphony.protorev.v1beta1.QueryGetProtoRevTokenPairArbRoutesResponse',
+  typeUrl: "/symphony.protorev.v1beta1.QueryGetProtoRevTokenPairArbRoutesResponse",
   is(o: any): o is QueryGetProtoRevTokenPairArbRoutesResponse {
-    return (
-      o &&
-      (o.$typeUrl === QueryGetProtoRevTokenPairArbRoutesResponse.typeUrl ||
-        (Array.isArray(o.routes) &&
-          (!o.routes.length || TokenPairArbRoutes.is(o.routes[0]))))
-    );
+    return o && (o.$typeUrl === QueryGetProtoRevTokenPairArbRoutesResponse.typeUrl || Array.isArray(o.routes) && (!o.routes.length || TokenPairArbRoutes.is(o.routes[0])));
   },
   isSDK(o: any): o is QueryGetProtoRevTokenPairArbRoutesResponseSDKType {
-    return (
-      o &&
-      (o.$typeUrl === QueryGetProtoRevTokenPairArbRoutesResponse.typeUrl ||
-        (Array.isArray(o.routes) &&
-          (!o.routes.length || TokenPairArbRoutes.isSDK(o.routes[0]))))
-    );
+    return o && (o.$typeUrl === QueryGetProtoRevTokenPairArbRoutesResponse.typeUrl || Array.isArray(o.routes) && (!o.routes.length || TokenPairArbRoutes.isSDK(o.routes[0])));
   },
   isAmino(o: any): o is QueryGetProtoRevTokenPairArbRoutesResponseAmino {
-    return (
-      o &&
-      (o.$typeUrl === QueryGetProtoRevTokenPairArbRoutesResponse.typeUrl ||
-        (Array.isArray(o.routes) &&
-          (!o.routes.length || TokenPairArbRoutes.isAmino(o.routes[0]))))
-    );
+    return o && (o.$typeUrl === QueryGetProtoRevTokenPairArbRoutesResponse.typeUrl || Array.isArray(o.routes) && (!o.routes.length || TokenPairArbRoutes.isAmino(o.routes[0])));
   },
-  encode(
-    message: QueryGetProtoRevTokenPairArbRoutesResponse,
-    writer: BinaryWriter = BinaryWriter.create(),
-  ): BinaryWriter {
+  encode(message: QueryGetProtoRevTokenPairArbRoutesResponse, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
     for (const v of message.routes) {
       TokenPairArbRoutes.encode(v!, writer.uint32(10).fork()).ldelim();
     }
     return writer;
   },
-  decode(
-    input: BinaryReader | Uint8Array,
-    length?: number,
-  ): QueryGetProtoRevTokenPairArbRoutesResponse {
-    const reader =
-      input instanceof BinaryReader ? input : new BinaryReader(input);
+  decode(input: BinaryReader | Uint8Array, length?: number): QueryGetProtoRevTokenPairArbRoutesResponse {
+    const reader = input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseQueryGetProtoRevTokenPairArbRoutesResponse();
     while (reader.pos < end) {
       const tag = reader.uint32();
       switch (tag >>> 3) {
         case 1:
-          message.routes.push(
-            TokenPairArbRoutes.decode(reader, reader.uint32()),
-          );
+          message.routes.push(TokenPairArbRoutes.decode(reader, reader.uint32()));
           break;
         default:
           reader.skipType(tag & 7);
@@ -2277,68 +1833,47 @@ export const QueryGetProtoRevTokenPairArbRoutesResponse = {
     }
     return message;
   },
-  fromPartial(
-    object: Partial<QueryGetProtoRevTokenPairArbRoutesResponse>,
-  ): QueryGetProtoRevTokenPairArbRoutesResponse {
+  fromPartial(object: Partial<QueryGetProtoRevTokenPairArbRoutesResponse>): QueryGetProtoRevTokenPairArbRoutesResponse {
     const message = createBaseQueryGetProtoRevTokenPairArbRoutesResponse();
-    message.routes =
-      object.routes?.map(e => TokenPairArbRoutes.fromPartial(e)) || [];
+    message.routes = object.routes?.map(e => TokenPairArbRoutes.fromPartial(e)) || [];
     return message;
   },
-  fromAmino(
-    object: QueryGetProtoRevTokenPairArbRoutesResponseAmino,
-  ): QueryGetProtoRevTokenPairArbRoutesResponse {
+  fromAmino(object: QueryGetProtoRevTokenPairArbRoutesResponseAmino): QueryGetProtoRevTokenPairArbRoutesResponse {
     const message = createBaseQueryGetProtoRevTokenPairArbRoutesResponse();
-    message.routes =
-      object.routes?.map(e => TokenPairArbRoutes.fromAmino(e)) || [];
+    message.routes = object.routes?.map(e => TokenPairArbRoutes.fromAmino(e)) || [];
     return message;
   },
-  toAmino(
-    message: QueryGetProtoRevTokenPairArbRoutesResponse,
-  ): QueryGetProtoRevTokenPairArbRoutesResponseAmino {
+  toAmino(message: QueryGetProtoRevTokenPairArbRoutesResponse): QueryGetProtoRevTokenPairArbRoutesResponseAmino {
     const obj: any = {};
     if (message.routes) {
-      obj.routes = message.routes.map(e =>
-        e ? TokenPairArbRoutes.toAmino(e) : undefined,
-      );
+      obj.routes = message.routes.map(e => e ? TokenPairArbRoutes.toAmino(e) : undefined);
     } else {
       obj.routes = message.routes;
     }
     return obj;
   },
-  fromAminoMsg(
-    object: QueryGetProtoRevTokenPairArbRoutesResponseAminoMsg,
-  ): QueryGetProtoRevTokenPairArbRoutesResponse {
+  fromAminoMsg(object: QueryGetProtoRevTokenPairArbRoutesResponseAminoMsg): QueryGetProtoRevTokenPairArbRoutesResponse {
     return QueryGetProtoRevTokenPairArbRoutesResponse.fromAmino(object.value);
   },
-  fromProtoMsg(
-    message: QueryGetProtoRevTokenPairArbRoutesResponseProtoMsg,
-  ): QueryGetProtoRevTokenPairArbRoutesResponse {
+  fromProtoMsg(message: QueryGetProtoRevTokenPairArbRoutesResponseProtoMsg): QueryGetProtoRevTokenPairArbRoutesResponse {
     return QueryGetProtoRevTokenPairArbRoutesResponse.decode(message.value);
   },
   toProto(message: QueryGetProtoRevTokenPairArbRoutesResponse): Uint8Array {
     return QueryGetProtoRevTokenPairArbRoutesResponse.encode(message).finish();
   },
-  toProtoMsg(
-    message: QueryGetProtoRevTokenPairArbRoutesResponse,
-  ): QueryGetProtoRevTokenPairArbRoutesResponseProtoMsg {
+  toProtoMsg(message: QueryGetProtoRevTokenPairArbRoutesResponse): QueryGetProtoRevTokenPairArbRoutesResponseProtoMsg {
     return {
-      typeUrl:
-        '/symphony.protorev.v1beta1.QueryGetProtoRevTokenPairArbRoutesResponse',
-      value:
-        QueryGetProtoRevTokenPairArbRoutesResponse.encode(message).finish(),
+      typeUrl: "/symphony.protorev.v1beta1.QueryGetProtoRevTokenPairArbRoutesResponse",
+      value: QueryGetProtoRevTokenPairArbRoutesResponse.encode(message).finish()
     };
-  },
+  }
 };
-GlobalDecoderRegistry.register(
-  QueryGetProtoRevTokenPairArbRoutesResponse.typeUrl,
-  QueryGetProtoRevTokenPairArbRoutesResponse,
-);
+GlobalDecoderRegistry.register(QueryGetProtoRevTokenPairArbRoutesResponse.typeUrl, QueryGetProtoRevTokenPairArbRoutesResponse);
 function createBaseQueryGetProtoRevAdminAccountRequest(): QueryGetProtoRevAdminAccountRequest {
   return {};
 }
 export const QueryGetProtoRevAdminAccountRequest = {
-  typeUrl: '/symphony.protorev.v1beta1.QueryGetProtoRevAdminAccountRequest',
+  typeUrl: "/symphony.protorev.v1beta1.QueryGetProtoRevAdminAccountRequest",
   is(o: any): o is QueryGetProtoRevAdminAccountRequest {
     return o && o.$typeUrl === QueryGetProtoRevAdminAccountRequest.typeUrl;
   },
@@ -2348,18 +1883,11 @@ export const QueryGetProtoRevAdminAccountRequest = {
   isAmino(o: any): o is QueryGetProtoRevAdminAccountRequestAmino {
     return o && o.$typeUrl === QueryGetProtoRevAdminAccountRequest.typeUrl;
   },
-  encode(
-    _: QueryGetProtoRevAdminAccountRequest,
-    writer: BinaryWriter = BinaryWriter.create(),
-  ): BinaryWriter {
+  encode(_: QueryGetProtoRevAdminAccountRequest, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
     return writer;
   },
-  decode(
-    input: BinaryReader | Uint8Array,
-    length?: number,
-  ): QueryGetProtoRevAdminAccountRequest {
-    const reader =
-      input instanceof BinaryReader ? input : new BinaryReader(input);
+  decode(input: BinaryReader | Uint8Array, length?: number): QueryGetProtoRevAdminAccountRequest {
+    const reader = input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseQueryGetProtoRevAdminAccountRequest();
     while (reader.pos < end) {
@@ -2372,93 +1900,59 @@ export const QueryGetProtoRevAdminAccountRequest = {
     }
     return message;
   },
-  fromPartial(
-    _: Partial<QueryGetProtoRevAdminAccountRequest>,
-  ): QueryGetProtoRevAdminAccountRequest {
+  fromPartial(_: Partial<QueryGetProtoRevAdminAccountRequest>): QueryGetProtoRevAdminAccountRequest {
     const message = createBaseQueryGetProtoRevAdminAccountRequest();
     return message;
   },
-  fromAmino(
-    _: QueryGetProtoRevAdminAccountRequestAmino,
-  ): QueryGetProtoRevAdminAccountRequest {
+  fromAmino(_: QueryGetProtoRevAdminAccountRequestAmino): QueryGetProtoRevAdminAccountRequest {
     const message = createBaseQueryGetProtoRevAdminAccountRequest();
     return message;
   },
-  toAmino(
-    _: QueryGetProtoRevAdminAccountRequest,
-  ): QueryGetProtoRevAdminAccountRequestAmino {
+  toAmino(_: QueryGetProtoRevAdminAccountRequest): QueryGetProtoRevAdminAccountRequestAmino {
     const obj: any = {};
     return obj;
   },
-  fromAminoMsg(
-    object: QueryGetProtoRevAdminAccountRequestAminoMsg,
-  ): QueryGetProtoRevAdminAccountRequest {
+  fromAminoMsg(object: QueryGetProtoRevAdminAccountRequestAminoMsg): QueryGetProtoRevAdminAccountRequest {
     return QueryGetProtoRevAdminAccountRequest.fromAmino(object.value);
   },
-  fromProtoMsg(
-    message: QueryGetProtoRevAdminAccountRequestProtoMsg,
-  ): QueryGetProtoRevAdminAccountRequest {
+  fromProtoMsg(message: QueryGetProtoRevAdminAccountRequestProtoMsg): QueryGetProtoRevAdminAccountRequest {
     return QueryGetProtoRevAdminAccountRequest.decode(message.value);
   },
   toProto(message: QueryGetProtoRevAdminAccountRequest): Uint8Array {
     return QueryGetProtoRevAdminAccountRequest.encode(message).finish();
   },
-  toProtoMsg(
-    message: QueryGetProtoRevAdminAccountRequest,
-  ): QueryGetProtoRevAdminAccountRequestProtoMsg {
+  toProtoMsg(message: QueryGetProtoRevAdminAccountRequest): QueryGetProtoRevAdminAccountRequestProtoMsg {
     return {
-      typeUrl: '/symphony.protorev.v1beta1.QueryGetProtoRevAdminAccountRequest',
-      value: QueryGetProtoRevAdminAccountRequest.encode(message).finish(),
+      typeUrl: "/symphony.protorev.v1beta1.QueryGetProtoRevAdminAccountRequest",
+      value: QueryGetProtoRevAdminAccountRequest.encode(message).finish()
     };
-  },
+  }
 };
-GlobalDecoderRegistry.register(
-  QueryGetProtoRevAdminAccountRequest.typeUrl,
-  QueryGetProtoRevAdminAccountRequest,
-);
+GlobalDecoderRegistry.register(QueryGetProtoRevAdminAccountRequest.typeUrl, QueryGetProtoRevAdminAccountRequest);
 function createBaseQueryGetProtoRevAdminAccountResponse(): QueryGetProtoRevAdminAccountResponse {
   return {
-    adminAccount: '',
+    adminAccount: ""
   };
 }
 export const QueryGetProtoRevAdminAccountResponse = {
-  typeUrl: '/symphony.protorev.v1beta1.QueryGetProtoRevAdminAccountResponse',
+  typeUrl: "/symphony.protorev.v1beta1.QueryGetProtoRevAdminAccountResponse",
   is(o: any): o is QueryGetProtoRevAdminAccountResponse {
-    return (
-      o &&
-      (o.$typeUrl === QueryGetProtoRevAdminAccountResponse.typeUrl ||
-        typeof o.adminAccount === 'string')
-    );
+    return o && (o.$typeUrl === QueryGetProtoRevAdminAccountResponse.typeUrl || typeof o.adminAccount === "string");
   },
   isSDK(o: any): o is QueryGetProtoRevAdminAccountResponseSDKType {
-    return (
-      o &&
-      (o.$typeUrl === QueryGetProtoRevAdminAccountResponse.typeUrl ||
-        typeof o.admin_account === 'string')
-    );
+    return o && (o.$typeUrl === QueryGetProtoRevAdminAccountResponse.typeUrl || typeof o.admin_account === "string");
   },
   isAmino(o: any): o is QueryGetProtoRevAdminAccountResponseAmino {
-    return (
-      o &&
-      (o.$typeUrl === QueryGetProtoRevAdminAccountResponse.typeUrl ||
-        typeof o.admin_account === 'string')
-    );
+    return o && (o.$typeUrl === QueryGetProtoRevAdminAccountResponse.typeUrl || typeof o.admin_account === "string");
   },
-  encode(
-    message: QueryGetProtoRevAdminAccountResponse,
-    writer: BinaryWriter = BinaryWriter.create(),
-  ): BinaryWriter {
-    if (message.adminAccount !== '') {
+  encode(message: QueryGetProtoRevAdminAccountResponse, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
+    if (message.adminAccount !== "") {
       writer.uint32(10).string(message.adminAccount);
     }
     return writer;
   },
-  decode(
-    input: BinaryReader | Uint8Array,
-    length?: number,
-  ): QueryGetProtoRevAdminAccountResponse {
-    const reader =
-      input instanceof BinaryReader ? input : new BinaryReader(input);
+  decode(input: BinaryReader | Uint8Array, length?: number): QueryGetProtoRevAdminAccountResponse {
+    const reader = input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseQueryGetProtoRevAdminAccountResponse();
     while (reader.pos < end) {
@@ -2474,62 +1968,45 @@ export const QueryGetProtoRevAdminAccountResponse = {
     }
     return message;
   },
-  fromPartial(
-    object: Partial<QueryGetProtoRevAdminAccountResponse>,
-  ): QueryGetProtoRevAdminAccountResponse {
+  fromPartial(object: Partial<QueryGetProtoRevAdminAccountResponse>): QueryGetProtoRevAdminAccountResponse {
     const message = createBaseQueryGetProtoRevAdminAccountResponse();
-    message.adminAccount = object.adminAccount ?? '';
+    message.adminAccount = object.adminAccount ?? "";
     return message;
   },
-  fromAmino(
-    object: QueryGetProtoRevAdminAccountResponseAmino,
-  ): QueryGetProtoRevAdminAccountResponse {
+  fromAmino(object: QueryGetProtoRevAdminAccountResponseAmino): QueryGetProtoRevAdminAccountResponse {
     const message = createBaseQueryGetProtoRevAdminAccountResponse();
     if (object.admin_account !== undefined && object.admin_account !== null) {
       message.adminAccount = object.admin_account;
     }
     return message;
   },
-  toAmino(
-    message: QueryGetProtoRevAdminAccountResponse,
-  ): QueryGetProtoRevAdminAccountResponseAmino {
+  toAmino(message: QueryGetProtoRevAdminAccountResponse): QueryGetProtoRevAdminAccountResponseAmino {
     const obj: any = {};
-    obj.admin_account =
-      message.adminAccount === '' ? undefined : message.adminAccount;
+    obj.admin_account = message.adminAccount === "" ? undefined : message.adminAccount;
     return obj;
   },
-  fromAminoMsg(
-    object: QueryGetProtoRevAdminAccountResponseAminoMsg,
-  ): QueryGetProtoRevAdminAccountResponse {
+  fromAminoMsg(object: QueryGetProtoRevAdminAccountResponseAminoMsg): QueryGetProtoRevAdminAccountResponse {
     return QueryGetProtoRevAdminAccountResponse.fromAmino(object.value);
   },
-  fromProtoMsg(
-    message: QueryGetProtoRevAdminAccountResponseProtoMsg,
-  ): QueryGetProtoRevAdminAccountResponse {
+  fromProtoMsg(message: QueryGetProtoRevAdminAccountResponseProtoMsg): QueryGetProtoRevAdminAccountResponse {
     return QueryGetProtoRevAdminAccountResponse.decode(message.value);
   },
   toProto(message: QueryGetProtoRevAdminAccountResponse): Uint8Array {
     return QueryGetProtoRevAdminAccountResponse.encode(message).finish();
   },
-  toProtoMsg(
-    message: QueryGetProtoRevAdminAccountResponse,
-  ): QueryGetProtoRevAdminAccountResponseProtoMsg {
+  toProtoMsg(message: QueryGetProtoRevAdminAccountResponse): QueryGetProtoRevAdminAccountResponseProtoMsg {
     return {
-      typeUrl:
-        '/symphony.protorev.v1beta1.QueryGetProtoRevAdminAccountResponse',
-      value: QueryGetProtoRevAdminAccountResponse.encode(message).finish(),
+      typeUrl: "/symphony.protorev.v1beta1.QueryGetProtoRevAdminAccountResponse",
+      value: QueryGetProtoRevAdminAccountResponse.encode(message).finish()
     };
-  },
+  }
 };
-GlobalDecoderRegistry.register(
-  QueryGetProtoRevAdminAccountResponse.typeUrl,
-  QueryGetProtoRevAdminAccountResponse,
-);
+GlobalDecoderRegistry.register(QueryGetProtoRevAdminAccountResponse.typeUrl, QueryGetProtoRevAdminAccountResponse);
 function createBaseQueryGetProtoRevDeveloperAccountRequest(): QueryGetProtoRevDeveloperAccountRequest {
   return {};
 }
 export const QueryGetProtoRevDeveloperAccountRequest = {
-  typeUrl: '/symphony.protorev.v1beta1.QueryGetProtoRevDeveloperAccountRequest',
+  typeUrl: "/symphony.protorev.v1beta1.QueryGetProtoRevDeveloperAccountRequest",
   is(o: any): o is QueryGetProtoRevDeveloperAccountRequest {
     return o && o.$typeUrl === QueryGetProtoRevDeveloperAccountRequest.typeUrl;
   },
@@ -2539,18 +2016,11 @@ export const QueryGetProtoRevDeveloperAccountRequest = {
   isAmino(o: any): o is QueryGetProtoRevDeveloperAccountRequestAmino {
     return o && o.$typeUrl === QueryGetProtoRevDeveloperAccountRequest.typeUrl;
   },
-  encode(
-    _: QueryGetProtoRevDeveloperAccountRequest,
-    writer: BinaryWriter = BinaryWriter.create(),
-  ): BinaryWriter {
+  encode(_: QueryGetProtoRevDeveloperAccountRequest, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
     return writer;
   },
-  decode(
-    input: BinaryReader | Uint8Array,
-    length?: number,
-  ): QueryGetProtoRevDeveloperAccountRequest {
-    const reader =
-      input instanceof BinaryReader ? input : new BinaryReader(input);
+  decode(input: BinaryReader | Uint8Array, length?: number): QueryGetProtoRevDeveloperAccountRequest {
+    const reader = input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseQueryGetProtoRevDeveloperAccountRequest();
     while (reader.pos < end) {
@@ -2563,95 +2033,59 @@ export const QueryGetProtoRevDeveloperAccountRequest = {
     }
     return message;
   },
-  fromPartial(
-    _: Partial<QueryGetProtoRevDeveloperAccountRequest>,
-  ): QueryGetProtoRevDeveloperAccountRequest {
+  fromPartial(_: Partial<QueryGetProtoRevDeveloperAccountRequest>): QueryGetProtoRevDeveloperAccountRequest {
     const message = createBaseQueryGetProtoRevDeveloperAccountRequest();
     return message;
   },
-  fromAmino(
-    _: QueryGetProtoRevDeveloperAccountRequestAmino,
-  ): QueryGetProtoRevDeveloperAccountRequest {
+  fromAmino(_: QueryGetProtoRevDeveloperAccountRequestAmino): QueryGetProtoRevDeveloperAccountRequest {
     const message = createBaseQueryGetProtoRevDeveloperAccountRequest();
     return message;
   },
-  toAmino(
-    _: QueryGetProtoRevDeveloperAccountRequest,
-  ): QueryGetProtoRevDeveloperAccountRequestAmino {
+  toAmino(_: QueryGetProtoRevDeveloperAccountRequest): QueryGetProtoRevDeveloperAccountRequestAmino {
     const obj: any = {};
     return obj;
   },
-  fromAminoMsg(
-    object: QueryGetProtoRevDeveloperAccountRequestAminoMsg,
-  ): QueryGetProtoRevDeveloperAccountRequest {
+  fromAminoMsg(object: QueryGetProtoRevDeveloperAccountRequestAminoMsg): QueryGetProtoRevDeveloperAccountRequest {
     return QueryGetProtoRevDeveloperAccountRequest.fromAmino(object.value);
   },
-  fromProtoMsg(
-    message: QueryGetProtoRevDeveloperAccountRequestProtoMsg,
-  ): QueryGetProtoRevDeveloperAccountRequest {
+  fromProtoMsg(message: QueryGetProtoRevDeveloperAccountRequestProtoMsg): QueryGetProtoRevDeveloperAccountRequest {
     return QueryGetProtoRevDeveloperAccountRequest.decode(message.value);
   },
   toProto(message: QueryGetProtoRevDeveloperAccountRequest): Uint8Array {
     return QueryGetProtoRevDeveloperAccountRequest.encode(message).finish();
   },
-  toProtoMsg(
-    message: QueryGetProtoRevDeveloperAccountRequest,
-  ): QueryGetProtoRevDeveloperAccountRequestProtoMsg {
+  toProtoMsg(message: QueryGetProtoRevDeveloperAccountRequest): QueryGetProtoRevDeveloperAccountRequestProtoMsg {
     return {
-      typeUrl:
-        '/symphony.protorev.v1beta1.QueryGetProtoRevDeveloperAccountRequest',
-      value: QueryGetProtoRevDeveloperAccountRequest.encode(message).finish(),
+      typeUrl: "/symphony.protorev.v1beta1.QueryGetProtoRevDeveloperAccountRequest",
+      value: QueryGetProtoRevDeveloperAccountRequest.encode(message).finish()
     };
-  },
+  }
 };
-GlobalDecoderRegistry.register(
-  QueryGetProtoRevDeveloperAccountRequest.typeUrl,
-  QueryGetProtoRevDeveloperAccountRequest,
-);
+GlobalDecoderRegistry.register(QueryGetProtoRevDeveloperAccountRequest.typeUrl, QueryGetProtoRevDeveloperAccountRequest);
 function createBaseQueryGetProtoRevDeveloperAccountResponse(): QueryGetProtoRevDeveloperAccountResponse {
   return {
-    developerAccount: '',
+    developerAccount: ""
   };
 }
 export const QueryGetProtoRevDeveloperAccountResponse = {
-  typeUrl:
-    '/symphony.protorev.v1beta1.QueryGetProtoRevDeveloperAccountResponse',
+  typeUrl: "/symphony.protorev.v1beta1.QueryGetProtoRevDeveloperAccountResponse",
   is(o: any): o is QueryGetProtoRevDeveloperAccountResponse {
-    return (
-      o &&
-      (o.$typeUrl === QueryGetProtoRevDeveloperAccountResponse.typeUrl ||
-        typeof o.developerAccount === 'string')
-    );
+    return o && (o.$typeUrl === QueryGetProtoRevDeveloperAccountResponse.typeUrl || typeof o.developerAccount === "string");
   },
   isSDK(o: any): o is QueryGetProtoRevDeveloperAccountResponseSDKType {
-    return (
-      o &&
-      (o.$typeUrl === QueryGetProtoRevDeveloperAccountResponse.typeUrl ||
-        typeof o.developer_account === 'string')
-    );
+    return o && (o.$typeUrl === QueryGetProtoRevDeveloperAccountResponse.typeUrl || typeof o.developer_account === "string");
   },
   isAmino(o: any): o is QueryGetProtoRevDeveloperAccountResponseAmino {
-    return (
-      o &&
-      (o.$typeUrl === QueryGetProtoRevDeveloperAccountResponse.typeUrl ||
-        typeof o.developer_account === 'string')
-    );
+    return o && (o.$typeUrl === QueryGetProtoRevDeveloperAccountResponse.typeUrl || typeof o.developer_account === "string");
   },
-  encode(
-    message: QueryGetProtoRevDeveloperAccountResponse,
-    writer: BinaryWriter = BinaryWriter.create(),
-  ): BinaryWriter {
-    if (message.developerAccount !== '') {
+  encode(message: QueryGetProtoRevDeveloperAccountResponse, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
+    if (message.developerAccount !== "") {
       writer.uint32(10).string(message.developerAccount);
     }
     return writer;
   },
-  decode(
-    input: BinaryReader | Uint8Array,
-    length?: number,
-  ): QueryGetProtoRevDeveloperAccountResponse {
-    const reader =
-      input instanceof BinaryReader ? input : new BinaryReader(input);
+  decode(input: BinaryReader | Uint8Array, length?: number): QueryGetProtoRevDeveloperAccountResponse {
+    const reader = input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseQueryGetProtoRevDeveloperAccountResponse();
     while (reader.pos < end) {
@@ -2667,65 +2101,45 @@ export const QueryGetProtoRevDeveloperAccountResponse = {
     }
     return message;
   },
-  fromPartial(
-    object: Partial<QueryGetProtoRevDeveloperAccountResponse>,
-  ): QueryGetProtoRevDeveloperAccountResponse {
+  fromPartial(object: Partial<QueryGetProtoRevDeveloperAccountResponse>): QueryGetProtoRevDeveloperAccountResponse {
     const message = createBaseQueryGetProtoRevDeveloperAccountResponse();
-    message.developerAccount = object.developerAccount ?? '';
+    message.developerAccount = object.developerAccount ?? "";
     return message;
   },
-  fromAmino(
-    object: QueryGetProtoRevDeveloperAccountResponseAmino,
-  ): QueryGetProtoRevDeveloperAccountResponse {
+  fromAmino(object: QueryGetProtoRevDeveloperAccountResponseAmino): QueryGetProtoRevDeveloperAccountResponse {
     const message = createBaseQueryGetProtoRevDeveloperAccountResponse();
-    if (
-      object.developer_account !== undefined &&
-      object.developer_account !== null
-    ) {
+    if (object.developer_account !== undefined && object.developer_account !== null) {
       message.developerAccount = object.developer_account;
     }
     return message;
   },
-  toAmino(
-    message: QueryGetProtoRevDeveloperAccountResponse,
-  ): QueryGetProtoRevDeveloperAccountResponseAmino {
+  toAmino(message: QueryGetProtoRevDeveloperAccountResponse): QueryGetProtoRevDeveloperAccountResponseAmino {
     const obj: any = {};
-    obj.developer_account =
-      message.developerAccount === '' ? undefined : message.developerAccount;
+    obj.developer_account = message.developerAccount === "" ? undefined : message.developerAccount;
     return obj;
   },
-  fromAminoMsg(
-    object: QueryGetProtoRevDeveloperAccountResponseAminoMsg,
-  ): QueryGetProtoRevDeveloperAccountResponse {
+  fromAminoMsg(object: QueryGetProtoRevDeveloperAccountResponseAminoMsg): QueryGetProtoRevDeveloperAccountResponse {
     return QueryGetProtoRevDeveloperAccountResponse.fromAmino(object.value);
   },
-  fromProtoMsg(
-    message: QueryGetProtoRevDeveloperAccountResponseProtoMsg,
-  ): QueryGetProtoRevDeveloperAccountResponse {
+  fromProtoMsg(message: QueryGetProtoRevDeveloperAccountResponseProtoMsg): QueryGetProtoRevDeveloperAccountResponse {
     return QueryGetProtoRevDeveloperAccountResponse.decode(message.value);
   },
   toProto(message: QueryGetProtoRevDeveloperAccountResponse): Uint8Array {
     return QueryGetProtoRevDeveloperAccountResponse.encode(message).finish();
   },
-  toProtoMsg(
-    message: QueryGetProtoRevDeveloperAccountResponse,
-  ): QueryGetProtoRevDeveloperAccountResponseProtoMsg {
+  toProtoMsg(message: QueryGetProtoRevDeveloperAccountResponse): QueryGetProtoRevDeveloperAccountResponseProtoMsg {
     return {
-      typeUrl:
-        '/symphony.protorev.v1beta1.QueryGetProtoRevDeveloperAccountResponse',
-      value: QueryGetProtoRevDeveloperAccountResponse.encode(message).finish(),
+      typeUrl: "/symphony.protorev.v1beta1.QueryGetProtoRevDeveloperAccountResponse",
+      value: QueryGetProtoRevDeveloperAccountResponse.encode(message).finish()
     };
-  },
+  }
 };
-GlobalDecoderRegistry.register(
-  QueryGetProtoRevDeveloperAccountResponse.typeUrl,
-  QueryGetProtoRevDeveloperAccountResponse,
-);
+GlobalDecoderRegistry.register(QueryGetProtoRevDeveloperAccountResponse.typeUrl, QueryGetProtoRevDeveloperAccountResponse);
 function createBaseQueryGetProtoRevInfoByPoolTypeRequest(): QueryGetProtoRevInfoByPoolTypeRequest {
   return {};
 }
 export const QueryGetProtoRevInfoByPoolTypeRequest = {
-  typeUrl: '/symphony.protorev.v1beta1.QueryGetProtoRevInfoByPoolTypeRequest',
+  typeUrl: "/symphony.protorev.v1beta1.QueryGetProtoRevInfoByPoolTypeRequest",
   is(o: any): o is QueryGetProtoRevInfoByPoolTypeRequest {
     return o && o.$typeUrl === QueryGetProtoRevInfoByPoolTypeRequest.typeUrl;
   },
@@ -2735,18 +2149,11 @@ export const QueryGetProtoRevInfoByPoolTypeRequest = {
   isAmino(o: any): o is QueryGetProtoRevInfoByPoolTypeRequestAmino {
     return o && o.$typeUrl === QueryGetProtoRevInfoByPoolTypeRequest.typeUrl;
   },
-  encode(
-    _: QueryGetProtoRevInfoByPoolTypeRequest,
-    writer: BinaryWriter = BinaryWriter.create(),
-  ): BinaryWriter {
+  encode(_: QueryGetProtoRevInfoByPoolTypeRequest, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
     return writer;
   },
-  decode(
-    input: BinaryReader | Uint8Array,
-    length?: number,
-  ): QueryGetProtoRevInfoByPoolTypeRequest {
-    const reader =
-      input instanceof BinaryReader ? input : new BinaryReader(input);
+  decode(input: BinaryReader | Uint8Array, length?: number): QueryGetProtoRevInfoByPoolTypeRequest {
+    const reader = input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseQueryGetProtoRevInfoByPoolTypeRequest();
     while (reader.pos < end) {
@@ -2759,107 +2166,66 @@ export const QueryGetProtoRevInfoByPoolTypeRequest = {
     }
     return message;
   },
-  fromPartial(
-    _: Partial<QueryGetProtoRevInfoByPoolTypeRequest>,
-  ): QueryGetProtoRevInfoByPoolTypeRequest {
+  fromPartial(_: Partial<QueryGetProtoRevInfoByPoolTypeRequest>): QueryGetProtoRevInfoByPoolTypeRequest {
     const message = createBaseQueryGetProtoRevInfoByPoolTypeRequest();
     return message;
   },
-  fromAmino(
-    _: QueryGetProtoRevInfoByPoolTypeRequestAmino,
-  ): QueryGetProtoRevInfoByPoolTypeRequest {
+  fromAmino(_: QueryGetProtoRevInfoByPoolTypeRequestAmino): QueryGetProtoRevInfoByPoolTypeRequest {
     const message = createBaseQueryGetProtoRevInfoByPoolTypeRequest();
     return message;
   },
-  toAmino(
-    _: QueryGetProtoRevInfoByPoolTypeRequest,
-  ): QueryGetProtoRevInfoByPoolTypeRequestAmino {
+  toAmino(_: QueryGetProtoRevInfoByPoolTypeRequest): QueryGetProtoRevInfoByPoolTypeRequestAmino {
     const obj: any = {};
     return obj;
   },
-  fromAminoMsg(
-    object: QueryGetProtoRevInfoByPoolTypeRequestAminoMsg,
-  ): QueryGetProtoRevInfoByPoolTypeRequest {
+  fromAminoMsg(object: QueryGetProtoRevInfoByPoolTypeRequestAminoMsg): QueryGetProtoRevInfoByPoolTypeRequest {
     return QueryGetProtoRevInfoByPoolTypeRequest.fromAmino(object.value);
   },
-  fromProtoMsg(
-    message: QueryGetProtoRevInfoByPoolTypeRequestProtoMsg,
-  ): QueryGetProtoRevInfoByPoolTypeRequest {
+  fromProtoMsg(message: QueryGetProtoRevInfoByPoolTypeRequestProtoMsg): QueryGetProtoRevInfoByPoolTypeRequest {
     return QueryGetProtoRevInfoByPoolTypeRequest.decode(message.value);
   },
   toProto(message: QueryGetProtoRevInfoByPoolTypeRequest): Uint8Array {
     return QueryGetProtoRevInfoByPoolTypeRequest.encode(message).finish();
   },
-  toProtoMsg(
-    message: QueryGetProtoRevInfoByPoolTypeRequest,
-  ): QueryGetProtoRevInfoByPoolTypeRequestProtoMsg {
+  toProtoMsg(message: QueryGetProtoRevInfoByPoolTypeRequest): QueryGetProtoRevInfoByPoolTypeRequestProtoMsg {
     return {
-      typeUrl:
-        '/symphony.protorev.v1beta1.QueryGetProtoRevInfoByPoolTypeRequest',
-      value: QueryGetProtoRevInfoByPoolTypeRequest.encode(message).finish(),
+      typeUrl: "/symphony.protorev.v1beta1.QueryGetProtoRevInfoByPoolTypeRequest",
+      value: QueryGetProtoRevInfoByPoolTypeRequest.encode(message).finish()
     };
-  },
+  }
 };
-GlobalDecoderRegistry.register(
-  QueryGetProtoRevInfoByPoolTypeRequest.typeUrl,
-  QueryGetProtoRevInfoByPoolTypeRequest,
-);
+GlobalDecoderRegistry.register(QueryGetProtoRevInfoByPoolTypeRequest.typeUrl, QueryGetProtoRevInfoByPoolTypeRequest);
 function createBaseQueryGetProtoRevInfoByPoolTypeResponse(): QueryGetProtoRevInfoByPoolTypeResponse {
   return {
-    infoByPoolType: InfoByPoolType.fromPartial({}),
+    infoByPoolType: InfoByPoolType.fromPartial({})
   };
 }
 export const QueryGetProtoRevInfoByPoolTypeResponse = {
-  typeUrl: '/symphony.protorev.v1beta1.QueryGetProtoRevInfoByPoolTypeResponse',
+  typeUrl: "/symphony.protorev.v1beta1.QueryGetProtoRevInfoByPoolTypeResponse",
   is(o: any): o is QueryGetProtoRevInfoByPoolTypeResponse {
-    return (
-      o &&
-      (o.$typeUrl === QueryGetProtoRevInfoByPoolTypeResponse.typeUrl ||
-        InfoByPoolType.is(o.infoByPoolType))
-    );
+    return o && (o.$typeUrl === QueryGetProtoRevInfoByPoolTypeResponse.typeUrl || InfoByPoolType.is(o.infoByPoolType));
   },
   isSDK(o: any): o is QueryGetProtoRevInfoByPoolTypeResponseSDKType {
-    return (
-      o &&
-      (o.$typeUrl === QueryGetProtoRevInfoByPoolTypeResponse.typeUrl ||
-        InfoByPoolType.isSDK(o.info_by_pool_type))
-    );
+    return o && (o.$typeUrl === QueryGetProtoRevInfoByPoolTypeResponse.typeUrl || InfoByPoolType.isSDK(o.info_by_pool_type));
   },
   isAmino(o: any): o is QueryGetProtoRevInfoByPoolTypeResponseAmino {
-    return (
-      o &&
-      (o.$typeUrl === QueryGetProtoRevInfoByPoolTypeResponse.typeUrl ||
-        InfoByPoolType.isAmino(o.info_by_pool_type))
-    );
+    return o && (o.$typeUrl === QueryGetProtoRevInfoByPoolTypeResponse.typeUrl || InfoByPoolType.isAmino(o.info_by_pool_type));
   },
-  encode(
-    message: QueryGetProtoRevInfoByPoolTypeResponse,
-    writer: BinaryWriter = BinaryWriter.create(),
-  ): BinaryWriter {
+  encode(message: QueryGetProtoRevInfoByPoolTypeResponse, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
     if (message.infoByPoolType !== undefined) {
-      InfoByPoolType.encode(
-        message.infoByPoolType,
-        writer.uint32(10).fork(),
-      ).ldelim();
+      InfoByPoolType.encode(message.infoByPoolType, writer.uint32(10).fork()).ldelim();
     }
     return writer;
   },
-  decode(
-    input: BinaryReader | Uint8Array,
-    length?: number,
-  ): QueryGetProtoRevInfoByPoolTypeResponse {
-    const reader =
-      input instanceof BinaryReader ? input : new BinaryReader(input);
+  decode(input: BinaryReader | Uint8Array, length?: number): QueryGetProtoRevInfoByPoolTypeResponse {
+    const reader = input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseQueryGetProtoRevInfoByPoolTypeResponse();
     while (reader.pos < end) {
       const tag = reader.uint32();
       switch (tag >>> 3) {
         case 1:
-          message.infoByPoolType = InfoByPoolType.decode(
-            reader,
-            reader.uint32(),
-          );
+          message.infoByPoolType = InfoByPoolType.decode(reader, reader.uint32());
           break;
         default:
           reader.skipType(tag & 7);
@@ -2868,99 +2234,59 @@ export const QueryGetProtoRevInfoByPoolTypeResponse = {
     }
     return message;
   },
-  fromPartial(
-    object: Partial<QueryGetProtoRevInfoByPoolTypeResponse>,
-  ): QueryGetProtoRevInfoByPoolTypeResponse {
+  fromPartial(object: Partial<QueryGetProtoRevInfoByPoolTypeResponse>): QueryGetProtoRevInfoByPoolTypeResponse {
     const message = createBaseQueryGetProtoRevInfoByPoolTypeResponse();
-    message.infoByPoolType =
-      object.infoByPoolType !== undefined && object.infoByPoolType !== null
-        ? InfoByPoolType.fromPartial(object.infoByPoolType)
-        : undefined;
+    message.infoByPoolType = object.infoByPoolType !== undefined && object.infoByPoolType !== null ? InfoByPoolType.fromPartial(object.infoByPoolType) : undefined;
     return message;
   },
-  fromAmino(
-    object: QueryGetProtoRevInfoByPoolTypeResponseAmino,
-  ): QueryGetProtoRevInfoByPoolTypeResponse {
+  fromAmino(object: QueryGetProtoRevInfoByPoolTypeResponseAmino): QueryGetProtoRevInfoByPoolTypeResponse {
     const message = createBaseQueryGetProtoRevInfoByPoolTypeResponse();
-    if (
-      object.info_by_pool_type !== undefined &&
-      object.info_by_pool_type !== null
-    ) {
-      message.infoByPoolType = InfoByPoolType.fromAmino(
-        object.info_by_pool_type,
-      );
+    if (object.info_by_pool_type !== undefined && object.info_by_pool_type !== null) {
+      message.infoByPoolType = InfoByPoolType.fromAmino(object.info_by_pool_type);
     }
     return message;
   },
-  toAmino(
-    message: QueryGetProtoRevInfoByPoolTypeResponse,
-  ): QueryGetProtoRevInfoByPoolTypeResponseAmino {
+  toAmino(message: QueryGetProtoRevInfoByPoolTypeResponse): QueryGetProtoRevInfoByPoolTypeResponseAmino {
     const obj: any = {};
-    obj.info_by_pool_type = message.infoByPoolType
-      ? InfoByPoolType.toAmino(message.infoByPoolType)
-      : undefined;
+    obj.info_by_pool_type = message.infoByPoolType ? InfoByPoolType.toAmino(message.infoByPoolType) : undefined;
     return obj;
   },
-  fromAminoMsg(
-    object: QueryGetProtoRevInfoByPoolTypeResponseAminoMsg,
-  ): QueryGetProtoRevInfoByPoolTypeResponse {
+  fromAminoMsg(object: QueryGetProtoRevInfoByPoolTypeResponseAminoMsg): QueryGetProtoRevInfoByPoolTypeResponse {
     return QueryGetProtoRevInfoByPoolTypeResponse.fromAmino(object.value);
   },
-  fromProtoMsg(
-    message: QueryGetProtoRevInfoByPoolTypeResponseProtoMsg,
-  ): QueryGetProtoRevInfoByPoolTypeResponse {
+  fromProtoMsg(message: QueryGetProtoRevInfoByPoolTypeResponseProtoMsg): QueryGetProtoRevInfoByPoolTypeResponse {
     return QueryGetProtoRevInfoByPoolTypeResponse.decode(message.value);
   },
   toProto(message: QueryGetProtoRevInfoByPoolTypeResponse): Uint8Array {
     return QueryGetProtoRevInfoByPoolTypeResponse.encode(message).finish();
   },
-  toProtoMsg(
-    message: QueryGetProtoRevInfoByPoolTypeResponse,
-  ): QueryGetProtoRevInfoByPoolTypeResponseProtoMsg {
+  toProtoMsg(message: QueryGetProtoRevInfoByPoolTypeResponse): QueryGetProtoRevInfoByPoolTypeResponseProtoMsg {
     return {
-      typeUrl:
-        '/symphony.protorev.v1beta1.QueryGetProtoRevInfoByPoolTypeResponse',
-      value: QueryGetProtoRevInfoByPoolTypeResponse.encode(message).finish(),
+      typeUrl: "/symphony.protorev.v1beta1.QueryGetProtoRevInfoByPoolTypeResponse",
+      value: QueryGetProtoRevInfoByPoolTypeResponse.encode(message).finish()
     };
-  },
+  }
 };
-GlobalDecoderRegistry.register(
-  QueryGetProtoRevInfoByPoolTypeResponse.typeUrl,
-  QueryGetProtoRevInfoByPoolTypeResponse,
-);
+GlobalDecoderRegistry.register(QueryGetProtoRevInfoByPoolTypeResponse.typeUrl, QueryGetProtoRevInfoByPoolTypeResponse);
 function createBaseQueryGetProtoRevMaxPoolPointsPerBlockRequest(): QueryGetProtoRevMaxPoolPointsPerBlockRequest {
   return {};
 }
 export const QueryGetProtoRevMaxPoolPointsPerBlockRequest = {
-  typeUrl:
-    '/symphony.protorev.v1beta1.QueryGetProtoRevMaxPoolPointsPerBlockRequest',
+  typeUrl: "/symphony.protorev.v1beta1.QueryGetProtoRevMaxPoolPointsPerBlockRequest",
   is(o: any): o is QueryGetProtoRevMaxPoolPointsPerBlockRequest {
-    return (
-      o && o.$typeUrl === QueryGetProtoRevMaxPoolPointsPerBlockRequest.typeUrl
-    );
+    return o && o.$typeUrl === QueryGetProtoRevMaxPoolPointsPerBlockRequest.typeUrl;
   },
   isSDK(o: any): o is QueryGetProtoRevMaxPoolPointsPerBlockRequestSDKType {
-    return (
-      o && o.$typeUrl === QueryGetProtoRevMaxPoolPointsPerBlockRequest.typeUrl
-    );
+    return o && o.$typeUrl === QueryGetProtoRevMaxPoolPointsPerBlockRequest.typeUrl;
   },
   isAmino(o: any): o is QueryGetProtoRevMaxPoolPointsPerBlockRequestAmino {
-    return (
-      o && o.$typeUrl === QueryGetProtoRevMaxPoolPointsPerBlockRequest.typeUrl
-    );
+    return o && o.$typeUrl === QueryGetProtoRevMaxPoolPointsPerBlockRequest.typeUrl;
   },
-  encode(
-    _: QueryGetProtoRevMaxPoolPointsPerBlockRequest,
-    writer: BinaryWriter = BinaryWriter.create(),
-  ): BinaryWriter {
+  encode(_: QueryGetProtoRevMaxPoolPointsPerBlockRequest, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
     return writer;
   },
-  decode(
-    input: BinaryReader | Uint8Array,
-    length?: number,
-  ): QueryGetProtoRevMaxPoolPointsPerBlockRequest {
-    const reader =
-      input instanceof BinaryReader ? input : new BinaryReader(input);
+  decode(input: BinaryReader | Uint8Array, length?: number): QueryGetProtoRevMaxPoolPointsPerBlockRequest {
+    const reader = input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseQueryGetProtoRevMaxPoolPointsPerBlockRequest();
     while (reader.pos < end) {
@@ -2973,98 +2299,59 @@ export const QueryGetProtoRevMaxPoolPointsPerBlockRequest = {
     }
     return message;
   },
-  fromPartial(
-    _: Partial<QueryGetProtoRevMaxPoolPointsPerBlockRequest>,
-  ): QueryGetProtoRevMaxPoolPointsPerBlockRequest {
+  fromPartial(_: Partial<QueryGetProtoRevMaxPoolPointsPerBlockRequest>): QueryGetProtoRevMaxPoolPointsPerBlockRequest {
     const message = createBaseQueryGetProtoRevMaxPoolPointsPerBlockRequest();
     return message;
   },
-  fromAmino(
-    _: QueryGetProtoRevMaxPoolPointsPerBlockRequestAmino,
-  ): QueryGetProtoRevMaxPoolPointsPerBlockRequest {
+  fromAmino(_: QueryGetProtoRevMaxPoolPointsPerBlockRequestAmino): QueryGetProtoRevMaxPoolPointsPerBlockRequest {
     const message = createBaseQueryGetProtoRevMaxPoolPointsPerBlockRequest();
     return message;
   },
-  toAmino(
-    _: QueryGetProtoRevMaxPoolPointsPerBlockRequest,
-  ): QueryGetProtoRevMaxPoolPointsPerBlockRequestAmino {
+  toAmino(_: QueryGetProtoRevMaxPoolPointsPerBlockRequest): QueryGetProtoRevMaxPoolPointsPerBlockRequestAmino {
     const obj: any = {};
     return obj;
   },
-  fromAminoMsg(
-    object: QueryGetProtoRevMaxPoolPointsPerBlockRequestAminoMsg,
-  ): QueryGetProtoRevMaxPoolPointsPerBlockRequest {
+  fromAminoMsg(object: QueryGetProtoRevMaxPoolPointsPerBlockRequestAminoMsg): QueryGetProtoRevMaxPoolPointsPerBlockRequest {
     return QueryGetProtoRevMaxPoolPointsPerBlockRequest.fromAmino(object.value);
   },
-  fromProtoMsg(
-    message: QueryGetProtoRevMaxPoolPointsPerBlockRequestProtoMsg,
-  ): QueryGetProtoRevMaxPoolPointsPerBlockRequest {
+  fromProtoMsg(message: QueryGetProtoRevMaxPoolPointsPerBlockRequestProtoMsg): QueryGetProtoRevMaxPoolPointsPerBlockRequest {
     return QueryGetProtoRevMaxPoolPointsPerBlockRequest.decode(message.value);
   },
   toProto(message: QueryGetProtoRevMaxPoolPointsPerBlockRequest): Uint8Array {
-    return QueryGetProtoRevMaxPoolPointsPerBlockRequest.encode(
-      message,
-    ).finish();
+    return QueryGetProtoRevMaxPoolPointsPerBlockRequest.encode(message).finish();
   },
-  toProtoMsg(
-    message: QueryGetProtoRevMaxPoolPointsPerBlockRequest,
-  ): QueryGetProtoRevMaxPoolPointsPerBlockRequestProtoMsg {
+  toProtoMsg(message: QueryGetProtoRevMaxPoolPointsPerBlockRequest): QueryGetProtoRevMaxPoolPointsPerBlockRequestProtoMsg {
     return {
-      typeUrl:
-        '/symphony.protorev.v1beta1.QueryGetProtoRevMaxPoolPointsPerBlockRequest',
-      value:
-        QueryGetProtoRevMaxPoolPointsPerBlockRequest.encode(message).finish(),
+      typeUrl: "/symphony.protorev.v1beta1.QueryGetProtoRevMaxPoolPointsPerBlockRequest",
+      value: QueryGetProtoRevMaxPoolPointsPerBlockRequest.encode(message).finish()
     };
-  },
+  }
 };
-GlobalDecoderRegistry.register(
-  QueryGetProtoRevMaxPoolPointsPerBlockRequest.typeUrl,
-  QueryGetProtoRevMaxPoolPointsPerBlockRequest,
-);
+GlobalDecoderRegistry.register(QueryGetProtoRevMaxPoolPointsPerBlockRequest.typeUrl, QueryGetProtoRevMaxPoolPointsPerBlockRequest);
 function createBaseQueryGetProtoRevMaxPoolPointsPerBlockResponse(): QueryGetProtoRevMaxPoolPointsPerBlockResponse {
   return {
-    maxPoolPointsPerBlock: BigInt(0),
+    maxPoolPointsPerBlock: BigInt(0)
   };
 }
 export const QueryGetProtoRevMaxPoolPointsPerBlockResponse = {
-  typeUrl:
-    '/symphony.protorev.v1beta1.QueryGetProtoRevMaxPoolPointsPerBlockResponse',
+  typeUrl: "/symphony.protorev.v1beta1.QueryGetProtoRevMaxPoolPointsPerBlockResponse",
   is(o: any): o is QueryGetProtoRevMaxPoolPointsPerBlockResponse {
-    return (
-      o &&
-      (o.$typeUrl === QueryGetProtoRevMaxPoolPointsPerBlockResponse.typeUrl ||
-        typeof o.maxPoolPointsPerBlock === 'bigint')
-    );
+    return o && (o.$typeUrl === QueryGetProtoRevMaxPoolPointsPerBlockResponse.typeUrl || typeof o.maxPoolPointsPerBlock === "bigint");
   },
   isSDK(o: any): o is QueryGetProtoRevMaxPoolPointsPerBlockResponseSDKType {
-    return (
-      o &&
-      (o.$typeUrl === QueryGetProtoRevMaxPoolPointsPerBlockResponse.typeUrl ||
-        typeof o.max_pool_points_per_block === 'bigint')
-    );
+    return o && (o.$typeUrl === QueryGetProtoRevMaxPoolPointsPerBlockResponse.typeUrl || typeof o.max_pool_points_per_block === "bigint");
   },
   isAmino(o: any): o is QueryGetProtoRevMaxPoolPointsPerBlockResponseAmino {
-    return (
-      o &&
-      (o.$typeUrl === QueryGetProtoRevMaxPoolPointsPerBlockResponse.typeUrl ||
-        typeof o.max_pool_points_per_block === 'bigint')
-    );
+    return o && (o.$typeUrl === QueryGetProtoRevMaxPoolPointsPerBlockResponse.typeUrl || typeof o.max_pool_points_per_block === "bigint");
   },
-  encode(
-    message: QueryGetProtoRevMaxPoolPointsPerBlockResponse,
-    writer: BinaryWriter = BinaryWriter.create(),
-  ): BinaryWriter {
+  encode(message: QueryGetProtoRevMaxPoolPointsPerBlockResponse, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
     if (message.maxPoolPointsPerBlock !== BigInt(0)) {
       writer.uint32(8).uint64(message.maxPoolPointsPerBlock);
     }
     return writer;
   },
-  decode(
-    input: BinaryReader | Uint8Array,
-    length?: number,
-  ): QueryGetProtoRevMaxPoolPointsPerBlockResponse {
-    const reader =
-      input instanceof BinaryReader ? input : new BinaryReader(input);
+  decode(input: BinaryReader | Uint8Array, length?: number): QueryGetProtoRevMaxPoolPointsPerBlockResponse {
+    const reader = input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseQueryGetProtoRevMaxPoolPointsPerBlockResponse();
     while (reader.pos < end) {
@@ -3080,104 +2367,59 @@ export const QueryGetProtoRevMaxPoolPointsPerBlockResponse = {
     }
     return message;
   },
-  fromPartial(
-    object: Partial<QueryGetProtoRevMaxPoolPointsPerBlockResponse>,
-  ): QueryGetProtoRevMaxPoolPointsPerBlockResponse {
+  fromPartial(object: Partial<QueryGetProtoRevMaxPoolPointsPerBlockResponse>): QueryGetProtoRevMaxPoolPointsPerBlockResponse {
     const message = createBaseQueryGetProtoRevMaxPoolPointsPerBlockResponse();
-    message.maxPoolPointsPerBlock =
-      object.maxPoolPointsPerBlock !== undefined &&
-      object.maxPoolPointsPerBlock !== null
-        ? BigInt(object.maxPoolPointsPerBlock.toString())
-        : BigInt(0);
+    message.maxPoolPointsPerBlock = object.maxPoolPointsPerBlock !== undefined && object.maxPoolPointsPerBlock !== null ? BigInt(object.maxPoolPointsPerBlock.toString()) : BigInt(0);
     return message;
   },
-  fromAmino(
-    object: QueryGetProtoRevMaxPoolPointsPerBlockResponseAmino,
-  ): QueryGetProtoRevMaxPoolPointsPerBlockResponse {
+  fromAmino(object: QueryGetProtoRevMaxPoolPointsPerBlockResponseAmino): QueryGetProtoRevMaxPoolPointsPerBlockResponse {
     const message = createBaseQueryGetProtoRevMaxPoolPointsPerBlockResponse();
-    if (
-      object.max_pool_points_per_block !== undefined &&
-      object.max_pool_points_per_block !== null
-    ) {
+    if (object.max_pool_points_per_block !== undefined && object.max_pool_points_per_block !== null) {
       message.maxPoolPointsPerBlock = BigInt(object.max_pool_points_per_block);
     }
     return message;
   },
-  toAmino(
-    message: QueryGetProtoRevMaxPoolPointsPerBlockResponse,
-  ): QueryGetProtoRevMaxPoolPointsPerBlockResponseAmino {
+  toAmino(message: QueryGetProtoRevMaxPoolPointsPerBlockResponse): QueryGetProtoRevMaxPoolPointsPerBlockResponseAmino {
     const obj: any = {};
-    obj.max_pool_points_per_block =
-      message.maxPoolPointsPerBlock !== BigInt(0)
-        ? message.maxPoolPointsPerBlock?.toString()
-        : undefined;
+    obj.max_pool_points_per_block = message.maxPoolPointsPerBlock !== BigInt(0) ? message.maxPoolPointsPerBlock?.toString() : undefined;
     return obj;
   },
-  fromAminoMsg(
-    object: QueryGetProtoRevMaxPoolPointsPerBlockResponseAminoMsg,
-  ): QueryGetProtoRevMaxPoolPointsPerBlockResponse {
-    return QueryGetProtoRevMaxPoolPointsPerBlockResponse.fromAmino(
-      object.value,
-    );
+  fromAminoMsg(object: QueryGetProtoRevMaxPoolPointsPerBlockResponseAminoMsg): QueryGetProtoRevMaxPoolPointsPerBlockResponse {
+    return QueryGetProtoRevMaxPoolPointsPerBlockResponse.fromAmino(object.value);
   },
-  fromProtoMsg(
-    message: QueryGetProtoRevMaxPoolPointsPerBlockResponseProtoMsg,
-  ): QueryGetProtoRevMaxPoolPointsPerBlockResponse {
+  fromProtoMsg(message: QueryGetProtoRevMaxPoolPointsPerBlockResponseProtoMsg): QueryGetProtoRevMaxPoolPointsPerBlockResponse {
     return QueryGetProtoRevMaxPoolPointsPerBlockResponse.decode(message.value);
   },
   toProto(message: QueryGetProtoRevMaxPoolPointsPerBlockResponse): Uint8Array {
-    return QueryGetProtoRevMaxPoolPointsPerBlockResponse.encode(
-      message,
-    ).finish();
+    return QueryGetProtoRevMaxPoolPointsPerBlockResponse.encode(message).finish();
   },
-  toProtoMsg(
-    message: QueryGetProtoRevMaxPoolPointsPerBlockResponse,
-  ): QueryGetProtoRevMaxPoolPointsPerBlockResponseProtoMsg {
+  toProtoMsg(message: QueryGetProtoRevMaxPoolPointsPerBlockResponse): QueryGetProtoRevMaxPoolPointsPerBlockResponseProtoMsg {
     return {
-      typeUrl:
-        '/symphony.protorev.v1beta1.QueryGetProtoRevMaxPoolPointsPerBlockResponse',
-      value:
-        QueryGetProtoRevMaxPoolPointsPerBlockResponse.encode(message).finish(),
+      typeUrl: "/symphony.protorev.v1beta1.QueryGetProtoRevMaxPoolPointsPerBlockResponse",
+      value: QueryGetProtoRevMaxPoolPointsPerBlockResponse.encode(message).finish()
     };
-  },
+  }
 };
-GlobalDecoderRegistry.register(
-  QueryGetProtoRevMaxPoolPointsPerBlockResponse.typeUrl,
-  QueryGetProtoRevMaxPoolPointsPerBlockResponse,
-);
+GlobalDecoderRegistry.register(QueryGetProtoRevMaxPoolPointsPerBlockResponse.typeUrl, QueryGetProtoRevMaxPoolPointsPerBlockResponse);
 function createBaseQueryGetProtoRevMaxPoolPointsPerTxRequest(): QueryGetProtoRevMaxPoolPointsPerTxRequest {
   return {};
 }
 export const QueryGetProtoRevMaxPoolPointsPerTxRequest = {
-  typeUrl:
-    '/symphony.protorev.v1beta1.QueryGetProtoRevMaxPoolPointsPerTxRequest',
+  typeUrl: "/symphony.protorev.v1beta1.QueryGetProtoRevMaxPoolPointsPerTxRequest",
   is(o: any): o is QueryGetProtoRevMaxPoolPointsPerTxRequest {
-    return (
-      o && o.$typeUrl === QueryGetProtoRevMaxPoolPointsPerTxRequest.typeUrl
-    );
+    return o && o.$typeUrl === QueryGetProtoRevMaxPoolPointsPerTxRequest.typeUrl;
   },
   isSDK(o: any): o is QueryGetProtoRevMaxPoolPointsPerTxRequestSDKType {
-    return (
-      o && o.$typeUrl === QueryGetProtoRevMaxPoolPointsPerTxRequest.typeUrl
-    );
+    return o && o.$typeUrl === QueryGetProtoRevMaxPoolPointsPerTxRequest.typeUrl;
   },
   isAmino(o: any): o is QueryGetProtoRevMaxPoolPointsPerTxRequestAmino {
-    return (
-      o && o.$typeUrl === QueryGetProtoRevMaxPoolPointsPerTxRequest.typeUrl
-    );
+    return o && o.$typeUrl === QueryGetProtoRevMaxPoolPointsPerTxRequest.typeUrl;
   },
-  encode(
-    _: QueryGetProtoRevMaxPoolPointsPerTxRequest,
-    writer: BinaryWriter = BinaryWriter.create(),
-  ): BinaryWriter {
+  encode(_: QueryGetProtoRevMaxPoolPointsPerTxRequest, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
     return writer;
   },
-  decode(
-    input: BinaryReader | Uint8Array,
-    length?: number,
-  ): QueryGetProtoRevMaxPoolPointsPerTxRequest {
-    const reader =
-      input instanceof BinaryReader ? input : new BinaryReader(input);
+  decode(input: BinaryReader | Uint8Array, length?: number): QueryGetProtoRevMaxPoolPointsPerTxRequest {
+    const reader = input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseQueryGetProtoRevMaxPoolPointsPerTxRequest();
     while (reader.pos < end) {
@@ -3190,95 +2432,59 @@ export const QueryGetProtoRevMaxPoolPointsPerTxRequest = {
     }
     return message;
   },
-  fromPartial(
-    _: Partial<QueryGetProtoRevMaxPoolPointsPerTxRequest>,
-  ): QueryGetProtoRevMaxPoolPointsPerTxRequest {
+  fromPartial(_: Partial<QueryGetProtoRevMaxPoolPointsPerTxRequest>): QueryGetProtoRevMaxPoolPointsPerTxRequest {
     const message = createBaseQueryGetProtoRevMaxPoolPointsPerTxRequest();
     return message;
   },
-  fromAmino(
-    _: QueryGetProtoRevMaxPoolPointsPerTxRequestAmino,
-  ): QueryGetProtoRevMaxPoolPointsPerTxRequest {
+  fromAmino(_: QueryGetProtoRevMaxPoolPointsPerTxRequestAmino): QueryGetProtoRevMaxPoolPointsPerTxRequest {
     const message = createBaseQueryGetProtoRevMaxPoolPointsPerTxRequest();
     return message;
   },
-  toAmino(
-    _: QueryGetProtoRevMaxPoolPointsPerTxRequest,
-  ): QueryGetProtoRevMaxPoolPointsPerTxRequestAmino {
+  toAmino(_: QueryGetProtoRevMaxPoolPointsPerTxRequest): QueryGetProtoRevMaxPoolPointsPerTxRequestAmino {
     const obj: any = {};
     return obj;
   },
-  fromAminoMsg(
-    object: QueryGetProtoRevMaxPoolPointsPerTxRequestAminoMsg,
-  ): QueryGetProtoRevMaxPoolPointsPerTxRequest {
+  fromAminoMsg(object: QueryGetProtoRevMaxPoolPointsPerTxRequestAminoMsg): QueryGetProtoRevMaxPoolPointsPerTxRequest {
     return QueryGetProtoRevMaxPoolPointsPerTxRequest.fromAmino(object.value);
   },
-  fromProtoMsg(
-    message: QueryGetProtoRevMaxPoolPointsPerTxRequestProtoMsg,
-  ): QueryGetProtoRevMaxPoolPointsPerTxRequest {
+  fromProtoMsg(message: QueryGetProtoRevMaxPoolPointsPerTxRequestProtoMsg): QueryGetProtoRevMaxPoolPointsPerTxRequest {
     return QueryGetProtoRevMaxPoolPointsPerTxRequest.decode(message.value);
   },
   toProto(message: QueryGetProtoRevMaxPoolPointsPerTxRequest): Uint8Array {
     return QueryGetProtoRevMaxPoolPointsPerTxRequest.encode(message).finish();
   },
-  toProtoMsg(
-    message: QueryGetProtoRevMaxPoolPointsPerTxRequest,
-  ): QueryGetProtoRevMaxPoolPointsPerTxRequestProtoMsg {
+  toProtoMsg(message: QueryGetProtoRevMaxPoolPointsPerTxRequest): QueryGetProtoRevMaxPoolPointsPerTxRequestProtoMsg {
     return {
-      typeUrl:
-        '/symphony.protorev.v1beta1.QueryGetProtoRevMaxPoolPointsPerTxRequest',
-      value: QueryGetProtoRevMaxPoolPointsPerTxRequest.encode(message).finish(),
+      typeUrl: "/symphony.protorev.v1beta1.QueryGetProtoRevMaxPoolPointsPerTxRequest",
+      value: QueryGetProtoRevMaxPoolPointsPerTxRequest.encode(message).finish()
     };
-  },
+  }
 };
-GlobalDecoderRegistry.register(
-  QueryGetProtoRevMaxPoolPointsPerTxRequest.typeUrl,
-  QueryGetProtoRevMaxPoolPointsPerTxRequest,
-);
+GlobalDecoderRegistry.register(QueryGetProtoRevMaxPoolPointsPerTxRequest.typeUrl, QueryGetProtoRevMaxPoolPointsPerTxRequest);
 function createBaseQueryGetProtoRevMaxPoolPointsPerTxResponse(): QueryGetProtoRevMaxPoolPointsPerTxResponse {
   return {
-    maxPoolPointsPerTx: BigInt(0),
+    maxPoolPointsPerTx: BigInt(0)
   };
 }
 export const QueryGetProtoRevMaxPoolPointsPerTxResponse = {
-  typeUrl:
-    '/symphony.protorev.v1beta1.QueryGetProtoRevMaxPoolPointsPerTxResponse',
+  typeUrl: "/symphony.protorev.v1beta1.QueryGetProtoRevMaxPoolPointsPerTxResponse",
   is(o: any): o is QueryGetProtoRevMaxPoolPointsPerTxResponse {
-    return (
-      o &&
-      (o.$typeUrl === QueryGetProtoRevMaxPoolPointsPerTxResponse.typeUrl ||
-        typeof o.maxPoolPointsPerTx === 'bigint')
-    );
+    return o && (o.$typeUrl === QueryGetProtoRevMaxPoolPointsPerTxResponse.typeUrl || typeof o.maxPoolPointsPerTx === "bigint");
   },
   isSDK(o: any): o is QueryGetProtoRevMaxPoolPointsPerTxResponseSDKType {
-    return (
-      o &&
-      (o.$typeUrl === QueryGetProtoRevMaxPoolPointsPerTxResponse.typeUrl ||
-        typeof o.max_pool_points_per_tx === 'bigint')
-    );
+    return o && (o.$typeUrl === QueryGetProtoRevMaxPoolPointsPerTxResponse.typeUrl || typeof o.max_pool_points_per_tx === "bigint");
   },
   isAmino(o: any): o is QueryGetProtoRevMaxPoolPointsPerTxResponseAmino {
-    return (
-      o &&
-      (o.$typeUrl === QueryGetProtoRevMaxPoolPointsPerTxResponse.typeUrl ||
-        typeof o.max_pool_points_per_tx === 'bigint')
-    );
+    return o && (o.$typeUrl === QueryGetProtoRevMaxPoolPointsPerTxResponse.typeUrl || typeof o.max_pool_points_per_tx === "bigint");
   },
-  encode(
-    message: QueryGetProtoRevMaxPoolPointsPerTxResponse,
-    writer: BinaryWriter = BinaryWriter.create(),
-  ): BinaryWriter {
+  encode(message: QueryGetProtoRevMaxPoolPointsPerTxResponse, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
     if (message.maxPoolPointsPerTx !== BigInt(0)) {
       writer.uint32(8).uint64(message.maxPoolPointsPerTx);
     }
     return writer;
   },
-  decode(
-    input: BinaryReader | Uint8Array,
-    length?: number,
-  ): QueryGetProtoRevMaxPoolPointsPerTxResponse {
-    const reader =
-      input instanceof BinaryReader ? input : new BinaryReader(input);
+  decode(input: BinaryReader | Uint8Array, length?: number): QueryGetProtoRevMaxPoolPointsPerTxResponse {
+    const reader = input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseQueryGetProtoRevMaxPoolPointsPerTxResponse();
     while (reader.pos < end) {
@@ -3294,72 +2500,45 @@ export const QueryGetProtoRevMaxPoolPointsPerTxResponse = {
     }
     return message;
   },
-  fromPartial(
-    object: Partial<QueryGetProtoRevMaxPoolPointsPerTxResponse>,
-  ): QueryGetProtoRevMaxPoolPointsPerTxResponse {
+  fromPartial(object: Partial<QueryGetProtoRevMaxPoolPointsPerTxResponse>): QueryGetProtoRevMaxPoolPointsPerTxResponse {
     const message = createBaseQueryGetProtoRevMaxPoolPointsPerTxResponse();
-    message.maxPoolPointsPerTx =
-      object.maxPoolPointsPerTx !== undefined &&
-      object.maxPoolPointsPerTx !== null
-        ? BigInt(object.maxPoolPointsPerTx.toString())
-        : BigInt(0);
+    message.maxPoolPointsPerTx = object.maxPoolPointsPerTx !== undefined && object.maxPoolPointsPerTx !== null ? BigInt(object.maxPoolPointsPerTx.toString()) : BigInt(0);
     return message;
   },
-  fromAmino(
-    object: QueryGetProtoRevMaxPoolPointsPerTxResponseAmino,
-  ): QueryGetProtoRevMaxPoolPointsPerTxResponse {
+  fromAmino(object: QueryGetProtoRevMaxPoolPointsPerTxResponseAmino): QueryGetProtoRevMaxPoolPointsPerTxResponse {
     const message = createBaseQueryGetProtoRevMaxPoolPointsPerTxResponse();
-    if (
-      object.max_pool_points_per_tx !== undefined &&
-      object.max_pool_points_per_tx !== null
-    ) {
+    if (object.max_pool_points_per_tx !== undefined && object.max_pool_points_per_tx !== null) {
       message.maxPoolPointsPerTx = BigInt(object.max_pool_points_per_tx);
     }
     return message;
   },
-  toAmino(
-    message: QueryGetProtoRevMaxPoolPointsPerTxResponse,
-  ): QueryGetProtoRevMaxPoolPointsPerTxResponseAmino {
+  toAmino(message: QueryGetProtoRevMaxPoolPointsPerTxResponse): QueryGetProtoRevMaxPoolPointsPerTxResponseAmino {
     const obj: any = {};
-    obj.max_pool_points_per_tx =
-      message.maxPoolPointsPerTx !== BigInt(0)
-        ? message.maxPoolPointsPerTx?.toString()
-        : undefined;
+    obj.max_pool_points_per_tx = message.maxPoolPointsPerTx !== BigInt(0) ? message.maxPoolPointsPerTx?.toString() : undefined;
     return obj;
   },
-  fromAminoMsg(
-    object: QueryGetProtoRevMaxPoolPointsPerTxResponseAminoMsg,
-  ): QueryGetProtoRevMaxPoolPointsPerTxResponse {
+  fromAminoMsg(object: QueryGetProtoRevMaxPoolPointsPerTxResponseAminoMsg): QueryGetProtoRevMaxPoolPointsPerTxResponse {
     return QueryGetProtoRevMaxPoolPointsPerTxResponse.fromAmino(object.value);
   },
-  fromProtoMsg(
-    message: QueryGetProtoRevMaxPoolPointsPerTxResponseProtoMsg,
-  ): QueryGetProtoRevMaxPoolPointsPerTxResponse {
+  fromProtoMsg(message: QueryGetProtoRevMaxPoolPointsPerTxResponseProtoMsg): QueryGetProtoRevMaxPoolPointsPerTxResponse {
     return QueryGetProtoRevMaxPoolPointsPerTxResponse.decode(message.value);
   },
   toProto(message: QueryGetProtoRevMaxPoolPointsPerTxResponse): Uint8Array {
     return QueryGetProtoRevMaxPoolPointsPerTxResponse.encode(message).finish();
   },
-  toProtoMsg(
-    message: QueryGetProtoRevMaxPoolPointsPerTxResponse,
-  ): QueryGetProtoRevMaxPoolPointsPerTxResponseProtoMsg {
+  toProtoMsg(message: QueryGetProtoRevMaxPoolPointsPerTxResponse): QueryGetProtoRevMaxPoolPointsPerTxResponseProtoMsg {
     return {
-      typeUrl:
-        '/symphony.protorev.v1beta1.QueryGetProtoRevMaxPoolPointsPerTxResponse',
-      value:
-        QueryGetProtoRevMaxPoolPointsPerTxResponse.encode(message).finish(),
+      typeUrl: "/symphony.protorev.v1beta1.QueryGetProtoRevMaxPoolPointsPerTxResponse",
+      value: QueryGetProtoRevMaxPoolPointsPerTxResponse.encode(message).finish()
     };
-  },
+  }
 };
-GlobalDecoderRegistry.register(
-  QueryGetProtoRevMaxPoolPointsPerTxResponse.typeUrl,
-  QueryGetProtoRevMaxPoolPointsPerTxResponse,
-);
+GlobalDecoderRegistry.register(QueryGetProtoRevMaxPoolPointsPerTxResponse.typeUrl, QueryGetProtoRevMaxPoolPointsPerTxResponse);
 function createBaseQueryGetProtoRevBaseDenomsRequest(): QueryGetProtoRevBaseDenomsRequest {
   return {};
 }
 export const QueryGetProtoRevBaseDenomsRequest = {
-  typeUrl: '/symphony.protorev.v1beta1.QueryGetProtoRevBaseDenomsRequest',
+  typeUrl: "/symphony.protorev.v1beta1.QueryGetProtoRevBaseDenomsRequest",
   is(o: any): o is QueryGetProtoRevBaseDenomsRequest {
     return o && o.$typeUrl === QueryGetProtoRevBaseDenomsRequest.typeUrl;
   },
@@ -3369,18 +2548,11 @@ export const QueryGetProtoRevBaseDenomsRequest = {
   isAmino(o: any): o is QueryGetProtoRevBaseDenomsRequestAmino {
     return o && o.$typeUrl === QueryGetProtoRevBaseDenomsRequest.typeUrl;
   },
-  encode(
-    _: QueryGetProtoRevBaseDenomsRequest,
-    writer: BinaryWriter = BinaryWriter.create(),
-  ): BinaryWriter {
+  encode(_: QueryGetProtoRevBaseDenomsRequest, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
     return writer;
   },
-  decode(
-    input: BinaryReader | Uint8Array,
-    length?: number,
-  ): QueryGetProtoRevBaseDenomsRequest {
-    const reader =
-      input instanceof BinaryReader ? input : new BinaryReader(input);
+  decode(input: BinaryReader | Uint8Array, length?: number): QueryGetProtoRevBaseDenomsRequest {
+    const reader = input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseQueryGetProtoRevBaseDenomsRequest();
     while (reader.pos < end) {
@@ -3393,96 +2565,59 @@ export const QueryGetProtoRevBaseDenomsRequest = {
     }
     return message;
   },
-  fromPartial(
-    _: Partial<QueryGetProtoRevBaseDenomsRequest>,
-  ): QueryGetProtoRevBaseDenomsRequest {
+  fromPartial(_: Partial<QueryGetProtoRevBaseDenomsRequest>): QueryGetProtoRevBaseDenomsRequest {
     const message = createBaseQueryGetProtoRevBaseDenomsRequest();
     return message;
   },
-  fromAmino(
-    _: QueryGetProtoRevBaseDenomsRequestAmino,
-  ): QueryGetProtoRevBaseDenomsRequest {
+  fromAmino(_: QueryGetProtoRevBaseDenomsRequestAmino): QueryGetProtoRevBaseDenomsRequest {
     const message = createBaseQueryGetProtoRevBaseDenomsRequest();
     return message;
   },
-  toAmino(
-    _: QueryGetProtoRevBaseDenomsRequest,
-  ): QueryGetProtoRevBaseDenomsRequestAmino {
+  toAmino(_: QueryGetProtoRevBaseDenomsRequest): QueryGetProtoRevBaseDenomsRequestAmino {
     const obj: any = {};
     return obj;
   },
-  fromAminoMsg(
-    object: QueryGetProtoRevBaseDenomsRequestAminoMsg,
-  ): QueryGetProtoRevBaseDenomsRequest {
+  fromAminoMsg(object: QueryGetProtoRevBaseDenomsRequestAminoMsg): QueryGetProtoRevBaseDenomsRequest {
     return QueryGetProtoRevBaseDenomsRequest.fromAmino(object.value);
   },
-  fromProtoMsg(
-    message: QueryGetProtoRevBaseDenomsRequestProtoMsg,
-  ): QueryGetProtoRevBaseDenomsRequest {
+  fromProtoMsg(message: QueryGetProtoRevBaseDenomsRequestProtoMsg): QueryGetProtoRevBaseDenomsRequest {
     return QueryGetProtoRevBaseDenomsRequest.decode(message.value);
   },
   toProto(message: QueryGetProtoRevBaseDenomsRequest): Uint8Array {
     return QueryGetProtoRevBaseDenomsRequest.encode(message).finish();
   },
-  toProtoMsg(
-    message: QueryGetProtoRevBaseDenomsRequest,
-  ): QueryGetProtoRevBaseDenomsRequestProtoMsg {
+  toProtoMsg(message: QueryGetProtoRevBaseDenomsRequest): QueryGetProtoRevBaseDenomsRequestProtoMsg {
     return {
-      typeUrl: '/symphony.protorev.v1beta1.QueryGetProtoRevBaseDenomsRequest',
-      value: QueryGetProtoRevBaseDenomsRequest.encode(message).finish(),
+      typeUrl: "/symphony.protorev.v1beta1.QueryGetProtoRevBaseDenomsRequest",
+      value: QueryGetProtoRevBaseDenomsRequest.encode(message).finish()
     };
-  },
+  }
 };
-GlobalDecoderRegistry.register(
-  QueryGetProtoRevBaseDenomsRequest.typeUrl,
-  QueryGetProtoRevBaseDenomsRequest,
-);
+GlobalDecoderRegistry.register(QueryGetProtoRevBaseDenomsRequest.typeUrl, QueryGetProtoRevBaseDenomsRequest);
 function createBaseQueryGetProtoRevBaseDenomsResponse(): QueryGetProtoRevBaseDenomsResponse {
   return {
-    baseDenoms: [],
+    baseDenoms: []
   };
 }
 export const QueryGetProtoRevBaseDenomsResponse = {
-  typeUrl: '/symphony.protorev.v1beta1.QueryGetProtoRevBaseDenomsResponse',
+  typeUrl: "/symphony.protorev.v1beta1.QueryGetProtoRevBaseDenomsResponse",
   is(o: any): o is QueryGetProtoRevBaseDenomsResponse {
-    return (
-      o &&
-      (o.$typeUrl === QueryGetProtoRevBaseDenomsResponse.typeUrl ||
-        (Array.isArray(o.baseDenoms) &&
-          (!o.baseDenoms.length || BaseDenom.is(o.baseDenoms[0]))))
-    );
+    return o && (o.$typeUrl === QueryGetProtoRevBaseDenomsResponse.typeUrl || Array.isArray(o.baseDenoms) && (!o.baseDenoms.length || BaseDenom.is(o.baseDenoms[0])));
   },
   isSDK(o: any): o is QueryGetProtoRevBaseDenomsResponseSDKType {
-    return (
-      o &&
-      (o.$typeUrl === QueryGetProtoRevBaseDenomsResponse.typeUrl ||
-        (Array.isArray(o.base_denoms) &&
-          (!o.base_denoms.length || BaseDenom.isSDK(o.base_denoms[0]))))
-    );
+    return o && (o.$typeUrl === QueryGetProtoRevBaseDenomsResponse.typeUrl || Array.isArray(o.base_denoms) && (!o.base_denoms.length || BaseDenom.isSDK(o.base_denoms[0])));
   },
   isAmino(o: any): o is QueryGetProtoRevBaseDenomsResponseAmino {
-    return (
-      o &&
-      (o.$typeUrl === QueryGetProtoRevBaseDenomsResponse.typeUrl ||
-        (Array.isArray(o.base_denoms) &&
-          (!o.base_denoms.length || BaseDenom.isAmino(o.base_denoms[0]))))
-    );
+    return o && (o.$typeUrl === QueryGetProtoRevBaseDenomsResponse.typeUrl || Array.isArray(o.base_denoms) && (!o.base_denoms.length || BaseDenom.isAmino(o.base_denoms[0])));
   },
-  encode(
-    message: QueryGetProtoRevBaseDenomsResponse,
-    writer: BinaryWriter = BinaryWriter.create(),
-  ): BinaryWriter {
+  encode(message: QueryGetProtoRevBaseDenomsResponse, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
     for (const v of message.baseDenoms) {
       BaseDenom.encode(v!, writer.uint32(10).fork()).ldelim();
     }
     return writer;
   },
-  decode(
-    input: BinaryReader | Uint8Array,
-    length?: number,
-  ): QueryGetProtoRevBaseDenomsResponse {
-    const reader =
-      input instanceof BinaryReader ? input : new BinaryReader(input);
+  decode(input: BinaryReader | Uint8Array, length?: number): QueryGetProtoRevBaseDenomsResponse {
+    const reader = input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseQueryGetProtoRevBaseDenomsResponse();
     while (reader.pos < end) {
@@ -3498,66 +2633,47 @@ export const QueryGetProtoRevBaseDenomsResponse = {
     }
     return message;
   },
-  fromPartial(
-    object: Partial<QueryGetProtoRevBaseDenomsResponse>,
-  ): QueryGetProtoRevBaseDenomsResponse {
+  fromPartial(object: Partial<QueryGetProtoRevBaseDenomsResponse>): QueryGetProtoRevBaseDenomsResponse {
     const message = createBaseQueryGetProtoRevBaseDenomsResponse();
-    message.baseDenoms =
-      object.baseDenoms?.map(e => BaseDenom.fromPartial(e)) || [];
+    message.baseDenoms = object.baseDenoms?.map(e => BaseDenom.fromPartial(e)) || [];
     return message;
   },
-  fromAmino(
-    object: QueryGetProtoRevBaseDenomsResponseAmino,
-  ): QueryGetProtoRevBaseDenomsResponse {
+  fromAmino(object: QueryGetProtoRevBaseDenomsResponseAmino): QueryGetProtoRevBaseDenomsResponse {
     const message = createBaseQueryGetProtoRevBaseDenomsResponse();
-    message.baseDenoms =
-      object.base_denoms?.map(e => BaseDenom.fromAmino(e)) || [];
+    message.baseDenoms = object.base_denoms?.map(e => BaseDenom.fromAmino(e)) || [];
     return message;
   },
-  toAmino(
-    message: QueryGetProtoRevBaseDenomsResponse,
-  ): QueryGetProtoRevBaseDenomsResponseAmino {
+  toAmino(message: QueryGetProtoRevBaseDenomsResponse): QueryGetProtoRevBaseDenomsResponseAmino {
     const obj: any = {};
     if (message.baseDenoms) {
-      obj.base_denoms = message.baseDenoms.map(e =>
-        e ? BaseDenom.toAmino(e) : undefined,
-      );
+      obj.base_denoms = message.baseDenoms.map(e => e ? BaseDenom.toAmino(e) : undefined);
     } else {
       obj.base_denoms = message.baseDenoms;
     }
     return obj;
   },
-  fromAminoMsg(
-    object: QueryGetProtoRevBaseDenomsResponseAminoMsg,
-  ): QueryGetProtoRevBaseDenomsResponse {
+  fromAminoMsg(object: QueryGetProtoRevBaseDenomsResponseAminoMsg): QueryGetProtoRevBaseDenomsResponse {
     return QueryGetProtoRevBaseDenomsResponse.fromAmino(object.value);
   },
-  fromProtoMsg(
-    message: QueryGetProtoRevBaseDenomsResponseProtoMsg,
-  ): QueryGetProtoRevBaseDenomsResponse {
+  fromProtoMsg(message: QueryGetProtoRevBaseDenomsResponseProtoMsg): QueryGetProtoRevBaseDenomsResponse {
     return QueryGetProtoRevBaseDenomsResponse.decode(message.value);
   },
   toProto(message: QueryGetProtoRevBaseDenomsResponse): Uint8Array {
     return QueryGetProtoRevBaseDenomsResponse.encode(message).finish();
   },
-  toProtoMsg(
-    message: QueryGetProtoRevBaseDenomsResponse,
-  ): QueryGetProtoRevBaseDenomsResponseProtoMsg {
+  toProtoMsg(message: QueryGetProtoRevBaseDenomsResponse): QueryGetProtoRevBaseDenomsResponseProtoMsg {
     return {
-      typeUrl: '/symphony.protorev.v1beta1.QueryGetProtoRevBaseDenomsResponse',
-      value: QueryGetProtoRevBaseDenomsResponse.encode(message).finish(),
+      typeUrl: "/symphony.protorev.v1beta1.QueryGetProtoRevBaseDenomsResponse",
+      value: QueryGetProtoRevBaseDenomsResponse.encode(message).finish()
     };
-  },
+  }
 };
-GlobalDecoderRegistry.register(
-  QueryGetProtoRevBaseDenomsResponse.typeUrl,
-  QueryGetProtoRevBaseDenomsResponse,
-);
+GlobalDecoderRegistry.register(QueryGetProtoRevBaseDenomsResponse.typeUrl, QueryGetProtoRevBaseDenomsResponse);
 function createBaseQueryGetProtoRevEnabledRequest(): QueryGetProtoRevEnabledRequest {
   return {};
 }
 export const QueryGetProtoRevEnabledRequest = {
-  typeUrl: '/symphony.protorev.v1beta1.QueryGetProtoRevEnabledRequest',
+  typeUrl: "/symphony.protorev.v1beta1.QueryGetProtoRevEnabledRequest",
   is(o: any): o is QueryGetProtoRevEnabledRequest {
     return o && o.$typeUrl === QueryGetProtoRevEnabledRequest.typeUrl;
   },
@@ -3567,18 +2683,11 @@ export const QueryGetProtoRevEnabledRequest = {
   isAmino(o: any): o is QueryGetProtoRevEnabledRequestAmino {
     return o && o.$typeUrl === QueryGetProtoRevEnabledRequest.typeUrl;
   },
-  encode(
-    _: QueryGetProtoRevEnabledRequest,
-    writer: BinaryWriter = BinaryWriter.create(),
-  ): BinaryWriter {
+  encode(_: QueryGetProtoRevEnabledRequest, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
     return writer;
   },
-  decode(
-    input: BinaryReader | Uint8Array,
-    length?: number,
-  ): QueryGetProtoRevEnabledRequest {
-    const reader =
-      input instanceof BinaryReader ? input : new BinaryReader(input);
+  decode(input: BinaryReader | Uint8Array, length?: number): QueryGetProtoRevEnabledRequest {
+    const reader = input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseQueryGetProtoRevEnabledRequest();
     while (reader.pos < end) {
@@ -3591,93 +2700,59 @@ export const QueryGetProtoRevEnabledRequest = {
     }
     return message;
   },
-  fromPartial(
-    _: Partial<QueryGetProtoRevEnabledRequest>,
-  ): QueryGetProtoRevEnabledRequest {
+  fromPartial(_: Partial<QueryGetProtoRevEnabledRequest>): QueryGetProtoRevEnabledRequest {
     const message = createBaseQueryGetProtoRevEnabledRequest();
     return message;
   },
-  fromAmino(
-    _: QueryGetProtoRevEnabledRequestAmino,
-  ): QueryGetProtoRevEnabledRequest {
+  fromAmino(_: QueryGetProtoRevEnabledRequestAmino): QueryGetProtoRevEnabledRequest {
     const message = createBaseQueryGetProtoRevEnabledRequest();
     return message;
   },
-  toAmino(
-    _: QueryGetProtoRevEnabledRequest,
-  ): QueryGetProtoRevEnabledRequestAmino {
+  toAmino(_: QueryGetProtoRevEnabledRequest): QueryGetProtoRevEnabledRequestAmino {
     const obj: any = {};
     return obj;
   },
-  fromAminoMsg(
-    object: QueryGetProtoRevEnabledRequestAminoMsg,
-  ): QueryGetProtoRevEnabledRequest {
+  fromAminoMsg(object: QueryGetProtoRevEnabledRequestAminoMsg): QueryGetProtoRevEnabledRequest {
     return QueryGetProtoRevEnabledRequest.fromAmino(object.value);
   },
-  fromProtoMsg(
-    message: QueryGetProtoRevEnabledRequestProtoMsg,
-  ): QueryGetProtoRevEnabledRequest {
+  fromProtoMsg(message: QueryGetProtoRevEnabledRequestProtoMsg): QueryGetProtoRevEnabledRequest {
     return QueryGetProtoRevEnabledRequest.decode(message.value);
   },
   toProto(message: QueryGetProtoRevEnabledRequest): Uint8Array {
     return QueryGetProtoRevEnabledRequest.encode(message).finish();
   },
-  toProtoMsg(
-    message: QueryGetProtoRevEnabledRequest,
-  ): QueryGetProtoRevEnabledRequestProtoMsg {
+  toProtoMsg(message: QueryGetProtoRevEnabledRequest): QueryGetProtoRevEnabledRequestProtoMsg {
     return {
-      typeUrl: '/symphony.protorev.v1beta1.QueryGetProtoRevEnabledRequest',
-      value: QueryGetProtoRevEnabledRequest.encode(message).finish(),
+      typeUrl: "/symphony.protorev.v1beta1.QueryGetProtoRevEnabledRequest",
+      value: QueryGetProtoRevEnabledRequest.encode(message).finish()
     };
-  },
+  }
 };
-GlobalDecoderRegistry.register(
-  QueryGetProtoRevEnabledRequest.typeUrl,
-  QueryGetProtoRevEnabledRequest,
-);
+GlobalDecoderRegistry.register(QueryGetProtoRevEnabledRequest.typeUrl, QueryGetProtoRevEnabledRequest);
 function createBaseQueryGetProtoRevEnabledResponse(): QueryGetProtoRevEnabledResponse {
   return {
-    enabled: false,
+    enabled: false
   };
 }
 export const QueryGetProtoRevEnabledResponse = {
-  typeUrl: '/symphony.protorev.v1beta1.QueryGetProtoRevEnabledResponse',
+  typeUrl: "/symphony.protorev.v1beta1.QueryGetProtoRevEnabledResponse",
   is(o: any): o is QueryGetProtoRevEnabledResponse {
-    return (
-      o &&
-      (o.$typeUrl === QueryGetProtoRevEnabledResponse.typeUrl ||
-        typeof o.enabled === 'boolean')
-    );
+    return o && (o.$typeUrl === QueryGetProtoRevEnabledResponse.typeUrl || typeof o.enabled === "boolean");
   },
   isSDK(o: any): o is QueryGetProtoRevEnabledResponseSDKType {
-    return (
-      o &&
-      (o.$typeUrl === QueryGetProtoRevEnabledResponse.typeUrl ||
-        typeof o.enabled === 'boolean')
-    );
+    return o && (o.$typeUrl === QueryGetProtoRevEnabledResponse.typeUrl || typeof o.enabled === "boolean");
   },
   isAmino(o: any): o is QueryGetProtoRevEnabledResponseAmino {
-    return (
-      o &&
-      (o.$typeUrl === QueryGetProtoRevEnabledResponse.typeUrl ||
-        typeof o.enabled === 'boolean')
-    );
+    return o && (o.$typeUrl === QueryGetProtoRevEnabledResponse.typeUrl || typeof o.enabled === "boolean");
   },
-  encode(
-    message: QueryGetProtoRevEnabledResponse,
-    writer: BinaryWriter = BinaryWriter.create(),
-  ): BinaryWriter {
+  encode(message: QueryGetProtoRevEnabledResponse, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
     if (message.enabled === true) {
       writer.uint32(8).bool(message.enabled);
     }
     return writer;
   },
-  decode(
-    input: BinaryReader | Uint8Array,
-    length?: number,
-  ): QueryGetProtoRevEnabledResponse {
-    const reader =
-      input instanceof BinaryReader ? input : new BinaryReader(input);
+  decode(input: BinaryReader | Uint8Array, length?: number): QueryGetProtoRevEnabledResponse {
+    const reader = input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseQueryGetProtoRevEnabledResponse();
     while (reader.pos < end) {
@@ -3693,102 +2768,68 @@ export const QueryGetProtoRevEnabledResponse = {
     }
     return message;
   },
-  fromPartial(
-    object: Partial<QueryGetProtoRevEnabledResponse>,
-  ): QueryGetProtoRevEnabledResponse {
+  fromPartial(object: Partial<QueryGetProtoRevEnabledResponse>): QueryGetProtoRevEnabledResponse {
     const message = createBaseQueryGetProtoRevEnabledResponse();
     message.enabled = object.enabled ?? false;
     return message;
   },
-  fromAmino(
-    object: QueryGetProtoRevEnabledResponseAmino,
-  ): QueryGetProtoRevEnabledResponse {
+  fromAmino(object: QueryGetProtoRevEnabledResponseAmino): QueryGetProtoRevEnabledResponse {
     const message = createBaseQueryGetProtoRevEnabledResponse();
     if (object.enabled !== undefined && object.enabled !== null) {
       message.enabled = object.enabled;
     }
     return message;
   },
-  toAmino(
-    message: QueryGetProtoRevEnabledResponse,
-  ): QueryGetProtoRevEnabledResponseAmino {
+  toAmino(message: QueryGetProtoRevEnabledResponse): QueryGetProtoRevEnabledResponseAmino {
     const obj: any = {};
     obj.enabled = message.enabled === false ? undefined : message.enabled;
     return obj;
   },
-  fromAminoMsg(
-    object: QueryGetProtoRevEnabledResponseAminoMsg,
-  ): QueryGetProtoRevEnabledResponse {
+  fromAminoMsg(object: QueryGetProtoRevEnabledResponseAminoMsg): QueryGetProtoRevEnabledResponse {
     return QueryGetProtoRevEnabledResponse.fromAmino(object.value);
   },
-  fromProtoMsg(
-    message: QueryGetProtoRevEnabledResponseProtoMsg,
-  ): QueryGetProtoRevEnabledResponse {
+  fromProtoMsg(message: QueryGetProtoRevEnabledResponseProtoMsg): QueryGetProtoRevEnabledResponse {
     return QueryGetProtoRevEnabledResponse.decode(message.value);
   },
   toProto(message: QueryGetProtoRevEnabledResponse): Uint8Array {
     return QueryGetProtoRevEnabledResponse.encode(message).finish();
   },
-  toProtoMsg(
-    message: QueryGetProtoRevEnabledResponse,
-  ): QueryGetProtoRevEnabledResponseProtoMsg {
+  toProtoMsg(message: QueryGetProtoRevEnabledResponse): QueryGetProtoRevEnabledResponseProtoMsg {
     return {
-      typeUrl: '/symphony.protorev.v1beta1.QueryGetProtoRevEnabledResponse',
-      value: QueryGetProtoRevEnabledResponse.encode(message).finish(),
+      typeUrl: "/symphony.protorev.v1beta1.QueryGetProtoRevEnabledResponse",
+      value: QueryGetProtoRevEnabledResponse.encode(message).finish()
     };
-  },
+  }
 };
-GlobalDecoderRegistry.register(
-  QueryGetProtoRevEnabledResponse.typeUrl,
-  QueryGetProtoRevEnabledResponse,
-);
+GlobalDecoderRegistry.register(QueryGetProtoRevEnabledResponse.typeUrl, QueryGetProtoRevEnabledResponse);
 function createBaseQueryGetProtoRevPoolRequest(): QueryGetProtoRevPoolRequest {
   return {
-    baseDenom: '',
-    otherDenom: '',
+    baseDenom: "",
+    otherDenom: ""
   };
 }
 export const QueryGetProtoRevPoolRequest = {
-  typeUrl: '/symphony.protorev.v1beta1.QueryGetProtoRevPoolRequest',
+  typeUrl: "/symphony.protorev.v1beta1.QueryGetProtoRevPoolRequest",
   is(o: any): o is QueryGetProtoRevPoolRequest {
-    return (
-      o &&
-      (o.$typeUrl === QueryGetProtoRevPoolRequest.typeUrl ||
-        (typeof o.baseDenom === 'string' && typeof o.otherDenom === 'string'))
-    );
+    return o && (o.$typeUrl === QueryGetProtoRevPoolRequest.typeUrl || typeof o.baseDenom === "string" && typeof o.otherDenom === "string");
   },
   isSDK(o: any): o is QueryGetProtoRevPoolRequestSDKType {
-    return (
-      o &&
-      (o.$typeUrl === QueryGetProtoRevPoolRequest.typeUrl ||
-        (typeof o.base_denom === 'string' && typeof o.other_denom === 'string'))
-    );
+    return o && (o.$typeUrl === QueryGetProtoRevPoolRequest.typeUrl || typeof o.base_denom === "string" && typeof o.other_denom === "string");
   },
   isAmino(o: any): o is QueryGetProtoRevPoolRequestAmino {
-    return (
-      o &&
-      (o.$typeUrl === QueryGetProtoRevPoolRequest.typeUrl ||
-        (typeof o.base_denom === 'string' && typeof o.other_denom === 'string'))
-    );
+    return o && (o.$typeUrl === QueryGetProtoRevPoolRequest.typeUrl || typeof o.base_denom === "string" && typeof o.other_denom === "string");
   },
-  encode(
-    message: QueryGetProtoRevPoolRequest,
-    writer: BinaryWriter = BinaryWriter.create(),
-  ): BinaryWriter {
-    if (message.baseDenom !== '') {
+  encode(message: QueryGetProtoRevPoolRequest, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
+    if (message.baseDenom !== "") {
       writer.uint32(10).string(message.baseDenom);
     }
-    if (message.otherDenom !== '') {
+    if (message.otherDenom !== "") {
       writer.uint32(18).string(message.otherDenom);
     }
     return writer;
   },
-  decode(
-    input: BinaryReader | Uint8Array,
-    length?: number,
-  ): QueryGetProtoRevPoolRequest {
-    const reader =
-      input instanceof BinaryReader ? input : new BinaryReader(input);
+  decode(input: BinaryReader | Uint8Array, length?: number): QueryGetProtoRevPoolRequest {
+    const reader = input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseQueryGetProtoRevPoolRequest();
     while (reader.pos < end) {
@@ -3807,17 +2848,13 @@ export const QueryGetProtoRevPoolRequest = {
     }
     return message;
   },
-  fromPartial(
-    object: Partial<QueryGetProtoRevPoolRequest>,
-  ): QueryGetProtoRevPoolRequest {
+  fromPartial(object: Partial<QueryGetProtoRevPoolRequest>): QueryGetProtoRevPoolRequest {
     const message = createBaseQueryGetProtoRevPoolRequest();
-    message.baseDenom = object.baseDenom ?? '';
-    message.otherDenom = object.otherDenom ?? '';
+    message.baseDenom = object.baseDenom ?? "";
+    message.otherDenom = object.otherDenom ?? "";
     return message;
   },
-  fromAmino(
-    object: QueryGetProtoRevPoolRequestAmino,
-  ): QueryGetProtoRevPoolRequest {
+  fromAmino(object: QueryGetProtoRevPoolRequestAmino): QueryGetProtoRevPoolRequest {
     const message = createBaseQueryGetProtoRevPoolRequest();
     if (object.base_denom !== undefined && object.base_denom !== null) {
       message.baseDenom = object.base_denom;
@@ -3827,84 +2864,53 @@ export const QueryGetProtoRevPoolRequest = {
     }
     return message;
   },
-  toAmino(
-    message: QueryGetProtoRevPoolRequest,
-  ): QueryGetProtoRevPoolRequestAmino {
+  toAmino(message: QueryGetProtoRevPoolRequest): QueryGetProtoRevPoolRequestAmino {
     const obj: any = {};
-    obj.base_denom = message.baseDenom === '' ? undefined : message.baseDenom;
-    obj.other_denom =
-      message.otherDenom === '' ? undefined : message.otherDenom;
+    obj.base_denom = message.baseDenom === "" ? undefined : message.baseDenom;
+    obj.other_denom = message.otherDenom === "" ? undefined : message.otherDenom;
     return obj;
   },
-  fromAminoMsg(
-    object: QueryGetProtoRevPoolRequestAminoMsg,
-  ): QueryGetProtoRevPoolRequest {
+  fromAminoMsg(object: QueryGetProtoRevPoolRequestAminoMsg): QueryGetProtoRevPoolRequest {
     return QueryGetProtoRevPoolRequest.fromAmino(object.value);
   },
-  fromProtoMsg(
-    message: QueryGetProtoRevPoolRequestProtoMsg,
-  ): QueryGetProtoRevPoolRequest {
+  fromProtoMsg(message: QueryGetProtoRevPoolRequestProtoMsg): QueryGetProtoRevPoolRequest {
     return QueryGetProtoRevPoolRequest.decode(message.value);
   },
   toProto(message: QueryGetProtoRevPoolRequest): Uint8Array {
     return QueryGetProtoRevPoolRequest.encode(message).finish();
   },
-  toProtoMsg(
-    message: QueryGetProtoRevPoolRequest,
-  ): QueryGetProtoRevPoolRequestProtoMsg {
+  toProtoMsg(message: QueryGetProtoRevPoolRequest): QueryGetProtoRevPoolRequestProtoMsg {
     return {
-      typeUrl: '/symphony.protorev.v1beta1.QueryGetProtoRevPoolRequest',
-      value: QueryGetProtoRevPoolRequest.encode(message).finish(),
+      typeUrl: "/symphony.protorev.v1beta1.QueryGetProtoRevPoolRequest",
+      value: QueryGetProtoRevPoolRequest.encode(message).finish()
     };
-  },
+  }
 };
-GlobalDecoderRegistry.register(
-  QueryGetProtoRevPoolRequest.typeUrl,
-  QueryGetProtoRevPoolRequest,
-);
+GlobalDecoderRegistry.register(QueryGetProtoRevPoolRequest.typeUrl, QueryGetProtoRevPoolRequest);
 function createBaseQueryGetProtoRevPoolResponse(): QueryGetProtoRevPoolResponse {
   return {
-    poolId: BigInt(0),
+    poolId: BigInt(0)
   };
 }
 export const QueryGetProtoRevPoolResponse = {
-  typeUrl: '/symphony.protorev.v1beta1.QueryGetProtoRevPoolResponse',
+  typeUrl: "/symphony.protorev.v1beta1.QueryGetProtoRevPoolResponse",
   is(o: any): o is QueryGetProtoRevPoolResponse {
-    return (
-      o &&
-      (o.$typeUrl === QueryGetProtoRevPoolResponse.typeUrl ||
-        typeof o.poolId === 'bigint')
-    );
+    return o && (o.$typeUrl === QueryGetProtoRevPoolResponse.typeUrl || typeof o.poolId === "bigint");
   },
   isSDK(o: any): o is QueryGetProtoRevPoolResponseSDKType {
-    return (
-      o &&
-      (o.$typeUrl === QueryGetProtoRevPoolResponse.typeUrl ||
-        typeof o.pool_id === 'bigint')
-    );
+    return o && (o.$typeUrl === QueryGetProtoRevPoolResponse.typeUrl || typeof o.pool_id === "bigint");
   },
   isAmino(o: any): o is QueryGetProtoRevPoolResponseAmino {
-    return (
-      o &&
-      (o.$typeUrl === QueryGetProtoRevPoolResponse.typeUrl ||
-        typeof o.pool_id === 'bigint')
-    );
+    return o && (o.$typeUrl === QueryGetProtoRevPoolResponse.typeUrl || typeof o.pool_id === "bigint");
   },
-  encode(
-    message: QueryGetProtoRevPoolResponse,
-    writer: BinaryWriter = BinaryWriter.create(),
-  ): BinaryWriter {
+  encode(message: QueryGetProtoRevPoolResponse, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
     if (message.poolId !== BigInt(0)) {
       writer.uint32(8).uint64(message.poolId);
     }
     return writer;
   },
-  decode(
-    input: BinaryReader | Uint8Array,
-    length?: number,
-  ): QueryGetProtoRevPoolResponse {
-    const reader =
-      input instanceof BinaryReader ? input : new BinaryReader(input);
+  decode(input: BinaryReader | Uint8Array, length?: number): QueryGetProtoRevPoolResponse {
+    const reader = input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseQueryGetProtoRevPoolResponse();
     while (reader.pos < end) {
@@ -3920,64 +2926,45 @@ export const QueryGetProtoRevPoolResponse = {
     }
     return message;
   },
-  fromPartial(
-    object: Partial<QueryGetProtoRevPoolResponse>,
-  ): QueryGetProtoRevPoolResponse {
+  fromPartial(object: Partial<QueryGetProtoRevPoolResponse>): QueryGetProtoRevPoolResponse {
     const message = createBaseQueryGetProtoRevPoolResponse();
-    message.poolId =
-      object.poolId !== undefined && object.poolId !== null
-        ? BigInt(object.poolId.toString())
-        : BigInt(0);
+    message.poolId = object.poolId !== undefined && object.poolId !== null ? BigInt(object.poolId.toString()) : BigInt(0);
     return message;
   },
-  fromAmino(
-    object: QueryGetProtoRevPoolResponseAmino,
-  ): QueryGetProtoRevPoolResponse {
+  fromAmino(object: QueryGetProtoRevPoolResponseAmino): QueryGetProtoRevPoolResponse {
     const message = createBaseQueryGetProtoRevPoolResponse();
     if (object.pool_id !== undefined && object.pool_id !== null) {
       message.poolId = BigInt(object.pool_id);
     }
     return message;
   },
-  toAmino(
-    message: QueryGetProtoRevPoolResponse,
-  ): QueryGetProtoRevPoolResponseAmino {
+  toAmino(message: QueryGetProtoRevPoolResponse): QueryGetProtoRevPoolResponseAmino {
     const obj: any = {};
-    obj.pool_id =
-      message.poolId !== BigInt(0) ? message.poolId?.toString() : undefined;
+    obj.pool_id = message.poolId !== BigInt(0) ? message.poolId?.toString() : undefined;
     return obj;
   },
-  fromAminoMsg(
-    object: QueryGetProtoRevPoolResponseAminoMsg,
-  ): QueryGetProtoRevPoolResponse {
+  fromAminoMsg(object: QueryGetProtoRevPoolResponseAminoMsg): QueryGetProtoRevPoolResponse {
     return QueryGetProtoRevPoolResponse.fromAmino(object.value);
   },
-  fromProtoMsg(
-    message: QueryGetProtoRevPoolResponseProtoMsg,
-  ): QueryGetProtoRevPoolResponse {
+  fromProtoMsg(message: QueryGetProtoRevPoolResponseProtoMsg): QueryGetProtoRevPoolResponse {
     return QueryGetProtoRevPoolResponse.decode(message.value);
   },
   toProto(message: QueryGetProtoRevPoolResponse): Uint8Array {
     return QueryGetProtoRevPoolResponse.encode(message).finish();
   },
-  toProtoMsg(
-    message: QueryGetProtoRevPoolResponse,
-  ): QueryGetProtoRevPoolResponseProtoMsg {
+  toProtoMsg(message: QueryGetProtoRevPoolResponse): QueryGetProtoRevPoolResponseProtoMsg {
     return {
-      typeUrl: '/symphony.protorev.v1beta1.QueryGetProtoRevPoolResponse',
-      value: QueryGetProtoRevPoolResponse.encode(message).finish(),
+      typeUrl: "/symphony.protorev.v1beta1.QueryGetProtoRevPoolResponse",
+      value: QueryGetProtoRevPoolResponse.encode(message).finish()
     };
-  },
+  }
 };
-GlobalDecoderRegistry.register(
-  QueryGetProtoRevPoolResponse.typeUrl,
-  QueryGetProtoRevPoolResponse,
-);
+GlobalDecoderRegistry.register(QueryGetProtoRevPoolResponse.typeUrl, QueryGetProtoRevPoolResponse);
 function createBaseQueryGetAllProtocolRevenueRequest(): QueryGetAllProtocolRevenueRequest {
   return {};
 }
 export const QueryGetAllProtocolRevenueRequest = {
-  typeUrl: '/symphony.protorev.v1beta1.QueryGetAllProtocolRevenueRequest',
+  typeUrl: "/symphony.protorev.v1beta1.QueryGetAllProtocolRevenueRequest",
   is(o: any): o is QueryGetAllProtocolRevenueRequest {
     return o && o.$typeUrl === QueryGetAllProtocolRevenueRequest.typeUrl;
   },
@@ -3987,18 +2974,11 @@ export const QueryGetAllProtocolRevenueRequest = {
   isAmino(o: any): o is QueryGetAllProtocolRevenueRequestAmino {
     return o && o.$typeUrl === QueryGetAllProtocolRevenueRequest.typeUrl;
   },
-  encode(
-    _: QueryGetAllProtocolRevenueRequest,
-    writer: BinaryWriter = BinaryWriter.create(),
-  ): BinaryWriter {
+  encode(_: QueryGetAllProtocolRevenueRequest, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
     return writer;
   },
-  decode(
-    input: BinaryReader | Uint8Array,
-    length?: number,
-  ): QueryGetAllProtocolRevenueRequest {
-    const reader =
-      input instanceof BinaryReader ? input : new BinaryReader(input);
+  decode(input: BinaryReader | Uint8Array, length?: number): QueryGetAllProtocolRevenueRequest {
+    const reader = input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseQueryGetAllProtocolRevenueRequest();
     while (reader.pos < end) {
@@ -4011,106 +2991,66 @@ export const QueryGetAllProtocolRevenueRequest = {
     }
     return message;
   },
-  fromPartial(
-    _: Partial<QueryGetAllProtocolRevenueRequest>,
-  ): QueryGetAllProtocolRevenueRequest {
+  fromPartial(_: Partial<QueryGetAllProtocolRevenueRequest>): QueryGetAllProtocolRevenueRequest {
     const message = createBaseQueryGetAllProtocolRevenueRequest();
     return message;
   },
-  fromAmino(
-    _: QueryGetAllProtocolRevenueRequestAmino,
-  ): QueryGetAllProtocolRevenueRequest {
+  fromAmino(_: QueryGetAllProtocolRevenueRequestAmino): QueryGetAllProtocolRevenueRequest {
     const message = createBaseQueryGetAllProtocolRevenueRequest();
     return message;
   },
-  toAmino(
-    _: QueryGetAllProtocolRevenueRequest,
-  ): QueryGetAllProtocolRevenueRequestAmino {
+  toAmino(_: QueryGetAllProtocolRevenueRequest): QueryGetAllProtocolRevenueRequestAmino {
     const obj: any = {};
     return obj;
   },
-  fromAminoMsg(
-    object: QueryGetAllProtocolRevenueRequestAminoMsg,
-  ): QueryGetAllProtocolRevenueRequest {
+  fromAminoMsg(object: QueryGetAllProtocolRevenueRequestAminoMsg): QueryGetAllProtocolRevenueRequest {
     return QueryGetAllProtocolRevenueRequest.fromAmino(object.value);
   },
-  fromProtoMsg(
-    message: QueryGetAllProtocolRevenueRequestProtoMsg,
-  ): QueryGetAllProtocolRevenueRequest {
+  fromProtoMsg(message: QueryGetAllProtocolRevenueRequestProtoMsg): QueryGetAllProtocolRevenueRequest {
     return QueryGetAllProtocolRevenueRequest.decode(message.value);
   },
   toProto(message: QueryGetAllProtocolRevenueRequest): Uint8Array {
     return QueryGetAllProtocolRevenueRequest.encode(message).finish();
   },
-  toProtoMsg(
-    message: QueryGetAllProtocolRevenueRequest,
-  ): QueryGetAllProtocolRevenueRequestProtoMsg {
+  toProtoMsg(message: QueryGetAllProtocolRevenueRequest): QueryGetAllProtocolRevenueRequestProtoMsg {
     return {
-      typeUrl: '/symphony.protorev.v1beta1.QueryGetAllProtocolRevenueRequest',
-      value: QueryGetAllProtocolRevenueRequest.encode(message).finish(),
+      typeUrl: "/symphony.protorev.v1beta1.QueryGetAllProtocolRevenueRequest",
+      value: QueryGetAllProtocolRevenueRequest.encode(message).finish()
     };
-  },
+  }
 };
-GlobalDecoderRegistry.register(
-  QueryGetAllProtocolRevenueRequest.typeUrl,
-  QueryGetAllProtocolRevenueRequest,
-);
+GlobalDecoderRegistry.register(QueryGetAllProtocolRevenueRequest.typeUrl, QueryGetAllProtocolRevenueRequest);
 function createBaseQueryGetAllProtocolRevenueResponse(): QueryGetAllProtocolRevenueResponse {
   return {
-    allProtocolRevenue: AllProtocolRevenue.fromPartial({}),
+    allProtocolRevenue: AllProtocolRevenue.fromPartial({})
   };
 }
 export const QueryGetAllProtocolRevenueResponse = {
-  typeUrl: '/symphony.protorev.v1beta1.QueryGetAllProtocolRevenueResponse',
+  typeUrl: "/symphony.protorev.v1beta1.QueryGetAllProtocolRevenueResponse",
   is(o: any): o is QueryGetAllProtocolRevenueResponse {
-    return (
-      o &&
-      (o.$typeUrl === QueryGetAllProtocolRevenueResponse.typeUrl ||
-        AllProtocolRevenue.is(o.allProtocolRevenue))
-    );
+    return o && (o.$typeUrl === QueryGetAllProtocolRevenueResponse.typeUrl || AllProtocolRevenue.is(o.allProtocolRevenue));
   },
   isSDK(o: any): o is QueryGetAllProtocolRevenueResponseSDKType {
-    return (
-      o &&
-      (o.$typeUrl === QueryGetAllProtocolRevenueResponse.typeUrl ||
-        AllProtocolRevenue.isSDK(o.all_protocol_revenue))
-    );
+    return o && (o.$typeUrl === QueryGetAllProtocolRevenueResponse.typeUrl || AllProtocolRevenue.isSDK(o.all_protocol_revenue));
   },
   isAmino(o: any): o is QueryGetAllProtocolRevenueResponseAmino {
-    return (
-      o &&
-      (o.$typeUrl === QueryGetAllProtocolRevenueResponse.typeUrl ||
-        AllProtocolRevenue.isAmino(o.all_protocol_revenue))
-    );
+    return o && (o.$typeUrl === QueryGetAllProtocolRevenueResponse.typeUrl || AllProtocolRevenue.isAmino(o.all_protocol_revenue));
   },
-  encode(
-    message: QueryGetAllProtocolRevenueResponse,
-    writer: BinaryWriter = BinaryWriter.create(),
-  ): BinaryWriter {
+  encode(message: QueryGetAllProtocolRevenueResponse, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
     if (message.allProtocolRevenue !== undefined) {
-      AllProtocolRevenue.encode(
-        message.allProtocolRevenue,
-        writer.uint32(10).fork(),
-      ).ldelim();
+      AllProtocolRevenue.encode(message.allProtocolRevenue, writer.uint32(10).fork()).ldelim();
     }
     return writer;
   },
-  decode(
-    input: BinaryReader | Uint8Array,
-    length?: number,
-  ): QueryGetAllProtocolRevenueResponse {
-    const reader =
-      input instanceof BinaryReader ? input : new BinaryReader(input);
+  decode(input: BinaryReader | Uint8Array, length?: number): QueryGetAllProtocolRevenueResponse {
+    const reader = input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseQueryGetAllProtocolRevenueResponse();
     while (reader.pos < end) {
       const tag = reader.uint32();
       switch (tag >>> 3) {
         case 1:
-          message.allProtocolRevenue = AllProtocolRevenue.decode(
-            reader,
-            reader.uint32(),
-          );
+          message.allProtocolRevenue = AllProtocolRevenue.decode(reader, reader.uint32());
           break;
         default:
           reader.skipType(tag & 7);
@@ -4119,63 +3059,37 @@ export const QueryGetAllProtocolRevenueResponse = {
     }
     return message;
   },
-  fromPartial(
-    object: Partial<QueryGetAllProtocolRevenueResponse>,
-  ): QueryGetAllProtocolRevenueResponse {
+  fromPartial(object: Partial<QueryGetAllProtocolRevenueResponse>): QueryGetAllProtocolRevenueResponse {
     const message = createBaseQueryGetAllProtocolRevenueResponse();
-    message.allProtocolRevenue =
-      object.allProtocolRevenue !== undefined &&
-      object.allProtocolRevenue !== null
-        ? AllProtocolRevenue.fromPartial(object.allProtocolRevenue)
-        : undefined;
+    message.allProtocolRevenue = object.allProtocolRevenue !== undefined && object.allProtocolRevenue !== null ? AllProtocolRevenue.fromPartial(object.allProtocolRevenue) : undefined;
     return message;
   },
-  fromAmino(
-    object: QueryGetAllProtocolRevenueResponseAmino,
-  ): QueryGetAllProtocolRevenueResponse {
+  fromAmino(object: QueryGetAllProtocolRevenueResponseAmino): QueryGetAllProtocolRevenueResponse {
     const message = createBaseQueryGetAllProtocolRevenueResponse();
-    if (
-      object.all_protocol_revenue !== undefined &&
-      object.all_protocol_revenue !== null
-    ) {
-      message.allProtocolRevenue = AllProtocolRevenue.fromAmino(
-        object.all_protocol_revenue,
-      );
+    if (object.all_protocol_revenue !== undefined && object.all_protocol_revenue !== null) {
+      message.allProtocolRevenue = AllProtocolRevenue.fromAmino(object.all_protocol_revenue);
     }
     return message;
   },
-  toAmino(
-    message: QueryGetAllProtocolRevenueResponse,
-  ): QueryGetAllProtocolRevenueResponseAmino {
+  toAmino(message: QueryGetAllProtocolRevenueResponse): QueryGetAllProtocolRevenueResponseAmino {
     const obj: any = {};
-    obj.all_protocol_revenue = message.allProtocolRevenue
-      ? AllProtocolRevenue.toAmino(message.allProtocolRevenue)
-      : undefined;
+    obj.all_protocol_revenue = message.allProtocolRevenue ? AllProtocolRevenue.toAmino(message.allProtocolRevenue) : undefined;
     return obj;
   },
-  fromAminoMsg(
-    object: QueryGetAllProtocolRevenueResponseAminoMsg,
-  ): QueryGetAllProtocolRevenueResponse {
+  fromAminoMsg(object: QueryGetAllProtocolRevenueResponseAminoMsg): QueryGetAllProtocolRevenueResponse {
     return QueryGetAllProtocolRevenueResponse.fromAmino(object.value);
   },
-  fromProtoMsg(
-    message: QueryGetAllProtocolRevenueResponseProtoMsg,
-  ): QueryGetAllProtocolRevenueResponse {
+  fromProtoMsg(message: QueryGetAllProtocolRevenueResponseProtoMsg): QueryGetAllProtocolRevenueResponse {
     return QueryGetAllProtocolRevenueResponse.decode(message.value);
   },
   toProto(message: QueryGetAllProtocolRevenueResponse): Uint8Array {
     return QueryGetAllProtocolRevenueResponse.encode(message).finish();
   },
-  toProtoMsg(
-    message: QueryGetAllProtocolRevenueResponse,
-  ): QueryGetAllProtocolRevenueResponseProtoMsg {
+  toProtoMsg(message: QueryGetAllProtocolRevenueResponse): QueryGetAllProtocolRevenueResponseProtoMsg {
     return {
-      typeUrl: '/symphony.protorev.v1beta1.QueryGetAllProtocolRevenueResponse',
-      value: QueryGetAllProtocolRevenueResponse.encode(message).finish(),
+      typeUrl: "/symphony.protorev.v1beta1.QueryGetAllProtocolRevenueResponse",
+      value: QueryGetAllProtocolRevenueResponse.encode(message).finish()
     };
-  },
+  }
 };
-GlobalDecoderRegistry.register(
-  QueryGetAllProtocolRevenueResponse.typeUrl,
-  QueryGetAllProtocolRevenueResponse,
-);
+GlobalDecoderRegistry.register(QueryGetAllProtocolRevenueResponse.typeUrl, QueryGetAllProtocolRevenueResponse);
