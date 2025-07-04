@@ -1,48 +1,90 @@
 //@ts-nocheck
-import { Coin, CoinAmino, CoinSDKType } from "../../../cosmos/base/v1beta1/coin";
-import { BinaryReader, BinaryWriter } from "../../../binary";
-import { GlobalDecoderRegistry } from "../../../registry";
+import {
+  Coin,
+  CoinAmino,
+  CoinSDKType,
+} from '../../../cosmos/base/v1beta1/coin';
+import { BinaryReader, BinaryWriter } from '../../../binary';
+import { GlobalDecoderRegistry } from '../../../registry';
+/**
+ * @name TrackedVolume
+ * @package symphony.poolmanager.v1beta1
+ * @see proto type: symphony.poolmanager.v1beta1.TrackedVolume
+ */
 export interface TrackedVolume {
   amount: Coin[];
 }
 export interface TrackedVolumeProtoMsg {
-  typeUrl: "/symphony.poolmanager.v1beta1.TrackedVolume";
+  typeUrl: '/symphony.poolmanager.v1beta1.TrackedVolume';
   value: Uint8Array;
 }
+/**
+ * @name TrackedVolumeAmino
+ * @package symphony.poolmanager.v1beta1
+ * @see proto type: symphony.poolmanager.v1beta1.TrackedVolume
+ */
 export interface TrackedVolumeAmino {
   amount?: CoinAmino[];
 }
 export interface TrackedVolumeAminoMsg {
-  type: "/symphony.poolmanager.v1beta1.TrackedVolume";
+  type: '/symphony.poolmanager.v1beta1.TrackedVolume';
   value: TrackedVolumeAmino;
 }
+/**
+ * @name TrackedVolumeSDKType
+ * @package symphony.poolmanager.v1beta1
+ * @see proto type: symphony.poolmanager.v1beta1.TrackedVolume
+ */
 export interface TrackedVolumeSDKType {
   amount: CoinSDKType[];
 }
 function createBaseTrackedVolume(): TrackedVolume {
   return {
-    amount: []
+    amount: [],
   };
 }
+/**
+ * @name TrackedVolume
+ * @package symphony.poolmanager.v1beta1
+ * @see proto type: symphony.poolmanager.v1beta1.TrackedVolume
+ */
 export const TrackedVolume = {
-  typeUrl: "/symphony.poolmanager.v1beta1.TrackedVolume",
+  typeUrl: '/symphony.poolmanager.v1beta1.TrackedVolume',
   is(o: any): o is TrackedVolume {
-    return o && (o.$typeUrl === TrackedVolume.typeUrl || Array.isArray(o.amount) && (!o.amount.length || Coin.is(o.amount[0])));
+    return (
+      o &&
+      (o.$typeUrl === TrackedVolume.typeUrl ||
+        (Array.isArray(o.amount) && (!o.amount.length || Coin.is(o.amount[0]))))
+    );
   },
   isSDK(o: any): o is TrackedVolumeSDKType {
-    return o && (o.$typeUrl === TrackedVolume.typeUrl || Array.isArray(o.amount) && (!o.amount.length || Coin.isSDK(o.amount[0])));
+    return (
+      o &&
+      (o.$typeUrl === TrackedVolume.typeUrl ||
+        (Array.isArray(o.amount) &&
+          (!o.amount.length || Coin.isSDK(o.amount[0]))))
+    );
   },
   isAmino(o: any): o is TrackedVolumeAmino {
-    return o && (o.$typeUrl === TrackedVolume.typeUrl || Array.isArray(o.amount) && (!o.amount.length || Coin.isAmino(o.amount[0])));
+    return (
+      o &&
+      (o.$typeUrl === TrackedVolume.typeUrl ||
+        (Array.isArray(o.amount) &&
+          (!o.amount.length || Coin.isAmino(o.amount[0]))))
+    );
   },
-  encode(message: TrackedVolume, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
+  encode(
+    message: TrackedVolume,
+    writer: BinaryWriter = BinaryWriter.create(),
+  ): BinaryWriter {
     for (const v of message.amount) {
       Coin.encode(v!, writer.uint32(10).fork()).ldelim();
     }
     return writer;
   },
   decode(input: BinaryReader | Uint8Array, length?: number): TrackedVolume {
-    const reader = input instanceof BinaryReader ? input : new BinaryReader(input);
+    const reader =
+      input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseTrackedVolume();
     while (reader.pos < end) {
@@ -71,7 +113,7 @@ export const TrackedVolume = {
   toAmino(message: TrackedVolume): TrackedVolumeAmino {
     const obj: any = {};
     if (message.amount) {
-      obj.amount = message.amount.map(e => e ? Coin.toAmino(e) : undefined);
+      obj.amount = message.amount.map(e => (e ? Coin.toAmino(e) : undefined));
     } else {
       obj.amount = message.amount;
     }
@@ -88,9 +130,9 @@ export const TrackedVolume = {
   },
   toProtoMsg(message: TrackedVolume): TrackedVolumeProtoMsg {
     return {
-      typeUrl: "/symphony.poolmanager.v1beta1.TrackedVolume",
-      value: TrackedVolume.encode(message).finish()
+      typeUrl: '/symphony.poolmanager.v1beta1.TrackedVolume',
+      value: TrackedVolume.encode(message).finish(),
     };
-  }
+  },
 };
 GlobalDecoderRegistry.register(TrackedVolume.typeUrl, TrackedVolume);

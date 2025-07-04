@@ -1,9 +1,18 @@
 //@ts-nocheck
-import { Coin, CoinAmino, CoinSDKType } from "../../../cosmos/base/v1beta1/coin";
-import { BinaryReader, BinaryWriter } from "../../../binary";
-import { GlobalDecoderRegistry } from "../../../registry";
-import { Decimal } from "@cosmjs/math";
-/** ===================== MsgCreatePosition */
+import {
+  Coin,
+  CoinAmino,
+  CoinSDKType,
+} from '../../../cosmos/base/v1beta1/coin';
+import { BinaryReader, BinaryWriter } from '../../../binary';
+import { GlobalDecoderRegistry } from '../../../registry';
+import { Decimal } from '@cosmjs/math';
+/**
+ * ===================== MsgCreatePosition
+ * @name MsgCreatePosition
+ * @package symphony.concentratedliquidity.v1beta1
+ * @see proto type: symphony.concentratedliquidity.v1beta1.MsgCreatePosition
+ */
 export interface MsgCreatePosition {
   poolId: bigint;
   sender: string;
@@ -20,10 +29,15 @@ export interface MsgCreatePosition {
   tokenMinAmount1: string;
 }
 export interface MsgCreatePositionProtoMsg {
-  typeUrl: "/symphony.concentratedliquidity.v1beta1.MsgCreatePosition";
+  typeUrl: '/symphony.concentratedliquidity.v1beta1.MsgCreatePosition';
   value: Uint8Array;
 }
-/** ===================== MsgCreatePosition */
+/**
+ * ===================== MsgCreatePosition
+ * @name MsgCreatePositionAmino
+ * @package symphony.concentratedliquidity.v1beta1
+ * @see proto type: symphony.concentratedliquidity.v1beta1.MsgCreatePosition
+ */
 export interface MsgCreatePositionAmino {
   pool_id?: string;
   sender?: string;
@@ -40,10 +54,15 @@ export interface MsgCreatePositionAmino {
   token_min_amount1?: string;
 }
 export interface MsgCreatePositionAminoMsg {
-  type: "symphony/cl-create-position";
+  type: 'symphony/cl-create-position';
   value: MsgCreatePositionAmino;
 }
-/** ===================== MsgCreatePosition */
+/**
+ * ===================== MsgCreatePosition
+ * @name MsgCreatePositionSDKType
+ * @package symphony.concentratedliquidity.v1beta1
+ * @see proto type: symphony.concentratedliquidity.v1beta1.MsgCreatePosition
+ */
 export interface MsgCreatePositionSDKType {
   pool_id: bigint;
   sender: string;
@@ -53,6 +72,11 @@ export interface MsgCreatePositionSDKType {
   token_min_amount0: string;
   token_min_amount1: string;
 }
+/**
+ * @name MsgCreatePositionResponse
+ * @package symphony.concentratedliquidity.v1beta1
+ * @see proto type: symphony.concentratedliquidity.v1beta1.MsgCreatePositionResponse
+ */
 export interface MsgCreatePositionResponse {
   positionId: bigint;
   amount0: string;
@@ -68,9 +92,14 @@ export interface MsgCreatePositionResponse {
   upperTick: bigint;
 }
 export interface MsgCreatePositionResponseProtoMsg {
-  typeUrl: "/symphony.concentratedliquidity.v1beta1.MsgCreatePositionResponse";
+  typeUrl: '/symphony.concentratedliquidity.v1beta1.MsgCreatePositionResponse';
   value: Uint8Array;
 }
+/**
+ * @name MsgCreatePositionResponseAmino
+ * @package symphony.concentratedliquidity.v1beta1
+ * @see proto type: symphony.concentratedliquidity.v1beta1.MsgCreatePositionResponse
+ */
 export interface MsgCreatePositionResponseAmino {
   position_id?: string;
   amount0?: string;
@@ -86,9 +115,14 @@ export interface MsgCreatePositionResponseAmino {
   upper_tick?: string;
 }
 export interface MsgCreatePositionResponseAminoMsg {
-  type: "/symphony.concentratedliquidity.v1beta1.MsgCreatePositionResponse";
+  type: '/symphony.concentratedliquidity.v1beta1.MsgCreatePositionResponse';
   value: MsgCreatePositionResponseAmino;
 }
+/**
+ * @name MsgCreatePositionResponseSDKType
+ * @package symphony.concentratedliquidity.v1beta1
+ * @see proto type: symphony.concentratedliquidity.v1beta1.MsgCreatePositionResponse
+ */
 export interface MsgCreatePositionResponseSDKType {
   position_id: bigint;
   amount0: string;
@@ -97,13 +131,22 @@ export interface MsgCreatePositionResponseSDKType {
   lower_tick: bigint;
   upper_tick: bigint;
 }
-/** ===================== MsgAddToPosition */
+/**
+ * ===================== MsgAddToPosition
+ * @name MsgAddToPosition
+ * @package symphony.concentratedliquidity.v1beta1
+ * @see proto type: symphony.concentratedliquidity.v1beta1.MsgAddToPosition
+ */
 export interface MsgAddToPosition {
   positionId: bigint;
   sender: string;
-  /** amount0 represents the amount of token0 willing to put in. */
+  /**
+   * amount0 represents the amount of token0 willing to put in.
+   */
   amount0: string;
-  /** amount1 represents the amount of token1 willing to put in. */
+  /**
+   * amount1 represents the amount of token1 willing to put in.
+   */
   amount1: string;
   /**
    * token_min_amount0 represents the minimum amount of token0 desired from the
@@ -121,16 +164,25 @@ export interface MsgAddToPosition {
   tokenMinAmount1: string;
 }
 export interface MsgAddToPositionProtoMsg {
-  typeUrl: "/symphony.concentratedliquidity.v1beta1.MsgAddToPosition";
+  typeUrl: '/symphony.concentratedliquidity.v1beta1.MsgAddToPosition';
   value: Uint8Array;
 }
-/** ===================== MsgAddToPosition */
+/**
+ * ===================== MsgAddToPosition
+ * @name MsgAddToPositionAmino
+ * @package symphony.concentratedliquidity.v1beta1
+ * @see proto type: symphony.concentratedliquidity.v1beta1.MsgAddToPosition
+ */
 export interface MsgAddToPositionAmino {
   position_id?: string;
   sender?: string;
-  /** amount0 represents the amount of token0 willing to put in. */
+  /**
+   * amount0 represents the amount of token0 willing to put in.
+   */
   amount0?: string;
-  /** amount1 represents the amount of token1 willing to put in. */
+  /**
+   * amount1 represents the amount of token1 willing to put in.
+   */
   amount1?: string;
   /**
    * token_min_amount0 represents the minimum amount of token0 desired from the
@@ -148,10 +200,15 @@ export interface MsgAddToPositionAmino {
   token_min_amount1?: string;
 }
 export interface MsgAddToPositionAminoMsg {
-  type: "symphony/cl-add-to-position";
+  type: 'symphony/cl-add-to-position';
   value: MsgAddToPositionAmino;
 }
-/** ===================== MsgAddToPosition */
+/**
+ * ===================== MsgAddToPosition
+ * @name MsgAddToPositionSDKType
+ * @package symphony.concentratedliquidity.v1beta1
+ * @see proto type: symphony.concentratedliquidity.v1beta1.MsgAddToPosition
+ */
 export interface MsgAddToPositionSDKType {
   position_id: bigint;
   sender: string;
@@ -160,263 +217,470 @@ export interface MsgAddToPositionSDKType {
   token_min_amount0: string;
   token_min_amount1: string;
 }
+/**
+ * @name MsgAddToPositionResponse
+ * @package symphony.concentratedliquidity.v1beta1
+ * @see proto type: symphony.concentratedliquidity.v1beta1.MsgAddToPositionResponse
+ */
 export interface MsgAddToPositionResponse {
   positionId: bigint;
   amount0: string;
   amount1: string;
 }
 export interface MsgAddToPositionResponseProtoMsg {
-  typeUrl: "/symphony.concentratedliquidity.v1beta1.MsgAddToPositionResponse";
+  typeUrl: '/symphony.concentratedliquidity.v1beta1.MsgAddToPositionResponse';
   value: Uint8Array;
 }
+/**
+ * @name MsgAddToPositionResponseAmino
+ * @package symphony.concentratedliquidity.v1beta1
+ * @see proto type: symphony.concentratedliquidity.v1beta1.MsgAddToPositionResponse
+ */
 export interface MsgAddToPositionResponseAmino {
   position_id?: string;
   amount0?: string;
   amount1?: string;
 }
 export interface MsgAddToPositionResponseAminoMsg {
-  type: "/symphony.concentratedliquidity.v1beta1.MsgAddToPositionResponse";
+  type: '/symphony.concentratedliquidity.v1beta1.MsgAddToPositionResponse';
   value: MsgAddToPositionResponseAmino;
 }
+/**
+ * @name MsgAddToPositionResponseSDKType
+ * @package symphony.concentratedliquidity.v1beta1
+ * @see proto type: symphony.concentratedliquidity.v1beta1.MsgAddToPositionResponse
+ */
 export interface MsgAddToPositionResponseSDKType {
   position_id: bigint;
   amount0: string;
   amount1: string;
 }
-/** ===================== MsgWithdrawPosition */
+/**
+ * ===================== MsgWithdrawPosition
+ * @name MsgWithdrawPosition
+ * @package symphony.concentratedliquidity.v1beta1
+ * @see proto type: symphony.concentratedliquidity.v1beta1.MsgWithdrawPosition
+ */
 export interface MsgWithdrawPosition {
   positionId: bigint;
   sender: string;
   liquidityAmount: string;
 }
 export interface MsgWithdrawPositionProtoMsg {
-  typeUrl: "/symphony.concentratedliquidity.v1beta1.MsgWithdrawPosition";
+  typeUrl: '/symphony.concentratedliquidity.v1beta1.MsgWithdrawPosition';
   value: Uint8Array;
 }
-/** ===================== MsgWithdrawPosition */
+/**
+ * ===================== MsgWithdrawPosition
+ * @name MsgWithdrawPositionAmino
+ * @package symphony.concentratedliquidity.v1beta1
+ * @see proto type: symphony.concentratedliquidity.v1beta1.MsgWithdrawPosition
+ */
 export interface MsgWithdrawPositionAmino {
   position_id?: string;
   sender?: string;
   liquidity_amount?: string;
 }
 export interface MsgWithdrawPositionAminoMsg {
-  type: "symphony/cl-withdraw-position";
+  type: 'symphony/cl-withdraw-position';
   value: MsgWithdrawPositionAmino;
 }
-/** ===================== MsgWithdrawPosition */
+/**
+ * ===================== MsgWithdrawPosition
+ * @name MsgWithdrawPositionSDKType
+ * @package symphony.concentratedliquidity.v1beta1
+ * @see proto type: symphony.concentratedliquidity.v1beta1.MsgWithdrawPosition
+ */
 export interface MsgWithdrawPositionSDKType {
   position_id: bigint;
   sender: string;
   liquidity_amount: string;
 }
+/**
+ * @name MsgWithdrawPositionResponse
+ * @package symphony.concentratedliquidity.v1beta1
+ * @see proto type: symphony.concentratedliquidity.v1beta1.MsgWithdrawPositionResponse
+ */
 export interface MsgWithdrawPositionResponse {
   amount0: string;
   amount1: string;
 }
 export interface MsgWithdrawPositionResponseProtoMsg {
-  typeUrl: "/symphony.concentratedliquidity.v1beta1.MsgWithdrawPositionResponse";
+  typeUrl: '/symphony.concentratedliquidity.v1beta1.MsgWithdrawPositionResponse';
   value: Uint8Array;
 }
+/**
+ * @name MsgWithdrawPositionResponseAmino
+ * @package symphony.concentratedliquidity.v1beta1
+ * @see proto type: symphony.concentratedliquidity.v1beta1.MsgWithdrawPositionResponse
+ */
 export interface MsgWithdrawPositionResponseAmino {
   amount0?: string;
   amount1?: string;
 }
 export interface MsgWithdrawPositionResponseAminoMsg {
-  type: "/symphony.concentratedliquidity.v1beta1.MsgWithdrawPositionResponse";
+  type: '/symphony.concentratedliquidity.v1beta1.MsgWithdrawPositionResponse';
   value: MsgWithdrawPositionResponseAmino;
 }
+/**
+ * @name MsgWithdrawPositionResponseSDKType
+ * @package symphony.concentratedliquidity.v1beta1
+ * @see proto type: symphony.concentratedliquidity.v1beta1.MsgWithdrawPositionResponse
+ */
 export interface MsgWithdrawPositionResponseSDKType {
   amount0: string;
   amount1: string;
 }
-/** ===================== MsgCollectSpreadRewards */
+/**
+ * ===================== MsgCollectSpreadRewards
+ * @name MsgCollectSpreadRewards
+ * @package symphony.concentratedliquidity.v1beta1
+ * @see proto type: symphony.concentratedliquidity.v1beta1.MsgCollectSpreadRewards
+ */
 export interface MsgCollectSpreadRewards {
   positionIds: bigint[];
   sender: string;
 }
 export interface MsgCollectSpreadRewardsProtoMsg {
-  typeUrl: "/symphony.concentratedliquidity.v1beta1.MsgCollectSpreadRewards";
+  typeUrl: '/symphony.concentratedliquidity.v1beta1.MsgCollectSpreadRewards';
   value: Uint8Array;
 }
-/** ===================== MsgCollectSpreadRewards */
+/**
+ * ===================== MsgCollectSpreadRewards
+ * @name MsgCollectSpreadRewardsAmino
+ * @package symphony.concentratedliquidity.v1beta1
+ * @see proto type: symphony.concentratedliquidity.v1beta1.MsgCollectSpreadRewards
+ */
 export interface MsgCollectSpreadRewardsAmino {
   position_ids?: string[];
   sender?: string;
 }
 export interface MsgCollectSpreadRewardsAminoMsg {
-  type: "symphony/cl-col-sp-rewards";
+  type: 'symphony/cl-col-sp-rewards';
   value: MsgCollectSpreadRewardsAmino;
 }
-/** ===================== MsgCollectSpreadRewards */
+/**
+ * ===================== MsgCollectSpreadRewards
+ * @name MsgCollectSpreadRewardsSDKType
+ * @package symphony.concentratedliquidity.v1beta1
+ * @see proto type: symphony.concentratedliquidity.v1beta1.MsgCollectSpreadRewards
+ */
 export interface MsgCollectSpreadRewardsSDKType {
   position_ids: bigint[];
   sender: string;
 }
+/**
+ * @name MsgCollectSpreadRewardsResponse
+ * @package symphony.concentratedliquidity.v1beta1
+ * @see proto type: symphony.concentratedliquidity.v1beta1.MsgCollectSpreadRewardsResponse
+ */
 export interface MsgCollectSpreadRewardsResponse {
   collectedSpreadRewards: Coin[];
 }
 export interface MsgCollectSpreadRewardsResponseProtoMsg {
-  typeUrl: "/symphony.concentratedliquidity.v1beta1.MsgCollectSpreadRewardsResponse";
+  typeUrl: '/symphony.concentratedliquidity.v1beta1.MsgCollectSpreadRewardsResponse';
   value: Uint8Array;
 }
+/**
+ * @name MsgCollectSpreadRewardsResponseAmino
+ * @package symphony.concentratedliquidity.v1beta1
+ * @see proto type: symphony.concentratedliquidity.v1beta1.MsgCollectSpreadRewardsResponse
+ */
 export interface MsgCollectSpreadRewardsResponseAmino {
   collected_spread_rewards?: CoinAmino[];
 }
 export interface MsgCollectSpreadRewardsResponseAminoMsg {
-  type: "/symphony.concentratedliquidity.v1beta1.MsgCollectSpreadRewardsResponse";
+  type: '/symphony.concentratedliquidity.v1beta1.MsgCollectSpreadRewardsResponse';
   value: MsgCollectSpreadRewardsResponseAmino;
 }
+/**
+ * @name MsgCollectSpreadRewardsResponseSDKType
+ * @package symphony.concentratedliquidity.v1beta1
+ * @see proto type: symphony.concentratedliquidity.v1beta1.MsgCollectSpreadRewardsResponse
+ */
 export interface MsgCollectSpreadRewardsResponseSDKType {
   collected_spread_rewards: CoinSDKType[];
 }
-/** ===================== MsgCollectIncentives */
+/**
+ * ===================== MsgCollectIncentives
+ * @name MsgCollectIncentives
+ * @package symphony.concentratedliquidity.v1beta1
+ * @see proto type: symphony.concentratedliquidity.v1beta1.MsgCollectIncentives
+ */
 export interface MsgCollectIncentives {
   positionIds: bigint[];
   sender: string;
 }
 export interface MsgCollectIncentivesProtoMsg {
-  typeUrl: "/symphony.concentratedliquidity.v1beta1.MsgCollectIncentives";
+  typeUrl: '/symphony.concentratedliquidity.v1beta1.MsgCollectIncentives';
   value: Uint8Array;
 }
-/** ===================== MsgCollectIncentives */
+/**
+ * ===================== MsgCollectIncentives
+ * @name MsgCollectIncentivesAmino
+ * @package symphony.concentratedliquidity.v1beta1
+ * @see proto type: symphony.concentratedliquidity.v1beta1.MsgCollectIncentives
+ */
 export interface MsgCollectIncentivesAmino {
   position_ids?: string[];
   sender?: string;
 }
 export interface MsgCollectIncentivesAminoMsg {
-  type: "symphony/cl-collect-incentives";
+  type: 'symphony/cl-collect-incentives';
   value: MsgCollectIncentivesAmino;
 }
-/** ===================== MsgCollectIncentives */
+/**
+ * ===================== MsgCollectIncentives
+ * @name MsgCollectIncentivesSDKType
+ * @package symphony.concentratedliquidity.v1beta1
+ * @see proto type: symphony.concentratedliquidity.v1beta1.MsgCollectIncentives
+ */
 export interface MsgCollectIncentivesSDKType {
   position_ids: bigint[];
   sender: string;
 }
+/**
+ * @name MsgCollectIncentivesResponse
+ * @package symphony.concentratedliquidity.v1beta1
+ * @see proto type: symphony.concentratedliquidity.v1beta1.MsgCollectIncentivesResponse
+ */
 export interface MsgCollectIncentivesResponse {
   collectedIncentives: Coin[];
   forfeitedIncentives: Coin[];
 }
 export interface MsgCollectIncentivesResponseProtoMsg {
-  typeUrl: "/symphony.concentratedliquidity.v1beta1.MsgCollectIncentivesResponse";
+  typeUrl: '/symphony.concentratedliquidity.v1beta1.MsgCollectIncentivesResponse';
   value: Uint8Array;
 }
+/**
+ * @name MsgCollectIncentivesResponseAmino
+ * @package symphony.concentratedliquidity.v1beta1
+ * @see proto type: symphony.concentratedliquidity.v1beta1.MsgCollectIncentivesResponse
+ */
 export interface MsgCollectIncentivesResponseAmino {
   collected_incentives?: CoinAmino[];
   forfeited_incentives?: CoinAmino[];
 }
 export interface MsgCollectIncentivesResponseAminoMsg {
-  type: "/symphony.concentratedliquidity.v1beta1.MsgCollectIncentivesResponse";
+  type: '/symphony.concentratedliquidity.v1beta1.MsgCollectIncentivesResponse';
   value: MsgCollectIncentivesResponseAmino;
 }
+/**
+ * @name MsgCollectIncentivesResponseSDKType
+ * @package symphony.concentratedliquidity.v1beta1
+ * @see proto type: symphony.concentratedliquidity.v1beta1.MsgCollectIncentivesResponse
+ */
 export interface MsgCollectIncentivesResponseSDKType {
   collected_incentives: CoinSDKType[];
   forfeited_incentives: CoinSDKType[];
 }
-/** ===================== MsgFungifyChargedPositions */
+/**
+ * ===================== MsgFungifyChargedPositions
+ * @name MsgFungifyChargedPositions
+ * @package symphony.concentratedliquidity.v1beta1
+ * @see proto type: symphony.concentratedliquidity.v1beta1.MsgFungifyChargedPositions
+ */
 export interface MsgFungifyChargedPositions {
   positionIds: bigint[];
   sender: string;
 }
 export interface MsgFungifyChargedPositionsProtoMsg {
-  typeUrl: "/symphony.concentratedliquidity.v1beta1.MsgFungifyChargedPositions";
+  typeUrl: '/symphony.concentratedliquidity.v1beta1.MsgFungifyChargedPositions';
   value: Uint8Array;
 }
-/** ===================== MsgFungifyChargedPositions */
+/**
+ * ===================== MsgFungifyChargedPositions
+ * @name MsgFungifyChargedPositionsAmino
+ * @package symphony.concentratedliquidity.v1beta1
+ * @see proto type: symphony.concentratedliquidity.v1beta1.MsgFungifyChargedPositions
+ */
 export interface MsgFungifyChargedPositionsAmino {
   position_ids?: string[];
   sender?: string;
 }
 export interface MsgFungifyChargedPositionsAminoMsg {
-  type: "symphony/cl-fungify-charged-positions";
+  type: 'symphony/cl-fungify-charged-positions';
   value: MsgFungifyChargedPositionsAmino;
 }
-/** ===================== MsgFungifyChargedPositions */
+/**
+ * ===================== MsgFungifyChargedPositions
+ * @name MsgFungifyChargedPositionsSDKType
+ * @package symphony.concentratedliquidity.v1beta1
+ * @see proto type: symphony.concentratedliquidity.v1beta1.MsgFungifyChargedPositions
+ */
 export interface MsgFungifyChargedPositionsSDKType {
   position_ids: bigint[];
   sender: string;
 }
+/**
+ * @name MsgFungifyChargedPositionsResponse
+ * @package symphony.concentratedliquidity.v1beta1
+ * @see proto type: symphony.concentratedliquidity.v1beta1.MsgFungifyChargedPositionsResponse
+ */
 export interface MsgFungifyChargedPositionsResponse {
   newPositionId: bigint;
 }
 export interface MsgFungifyChargedPositionsResponseProtoMsg {
-  typeUrl: "/symphony.concentratedliquidity.v1beta1.MsgFungifyChargedPositionsResponse";
+  typeUrl: '/symphony.concentratedliquidity.v1beta1.MsgFungifyChargedPositionsResponse';
   value: Uint8Array;
 }
+/**
+ * @name MsgFungifyChargedPositionsResponseAmino
+ * @package symphony.concentratedliquidity.v1beta1
+ * @see proto type: symphony.concentratedliquidity.v1beta1.MsgFungifyChargedPositionsResponse
+ */
 export interface MsgFungifyChargedPositionsResponseAmino {
   new_position_id?: string;
 }
 export interface MsgFungifyChargedPositionsResponseAminoMsg {
-  type: "/symphony.concentratedliquidity.v1beta1.MsgFungifyChargedPositionsResponse";
+  type: '/symphony.concentratedliquidity.v1beta1.MsgFungifyChargedPositionsResponse';
   value: MsgFungifyChargedPositionsResponseAmino;
 }
+/**
+ * @name MsgFungifyChargedPositionsResponseSDKType
+ * @package symphony.concentratedliquidity.v1beta1
+ * @see proto type: symphony.concentratedliquidity.v1beta1.MsgFungifyChargedPositionsResponse
+ */
 export interface MsgFungifyChargedPositionsResponseSDKType {
   new_position_id: bigint;
 }
-/** ===================== MsgTransferPositions */
+/**
+ * ===================== MsgTransferPositions
+ * @name MsgTransferPositions
+ * @package symphony.concentratedliquidity.v1beta1
+ * @see proto type: symphony.concentratedliquidity.v1beta1.MsgTransferPositions
+ */
 export interface MsgTransferPositions {
   positionIds: bigint[];
   sender: string;
   newOwner: string;
 }
 export interface MsgTransferPositionsProtoMsg {
-  typeUrl: "/symphony.concentratedliquidity.v1beta1.MsgTransferPositions";
+  typeUrl: '/symphony.concentratedliquidity.v1beta1.MsgTransferPositions';
   value: Uint8Array;
 }
-/** ===================== MsgTransferPositions */
+/**
+ * ===================== MsgTransferPositions
+ * @name MsgTransferPositionsAmino
+ * @package symphony.concentratedliquidity.v1beta1
+ * @see proto type: symphony.concentratedliquidity.v1beta1.MsgTransferPositions
+ */
 export interface MsgTransferPositionsAmino {
   position_ids?: string[];
   sender?: string;
   new_owner?: string;
 }
 export interface MsgTransferPositionsAminoMsg {
-  type: "symphony/cl-transfer-positions";
+  type: 'symphony/cl-transfer-positions';
   value: MsgTransferPositionsAmino;
 }
-/** ===================== MsgTransferPositions */
+/**
+ * ===================== MsgTransferPositions
+ * @name MsgTransferPositionsSDKType
+ * @package symphony.concentratedliquidity.v1beta1
+ * @see proto type: symphony.concentratedliquidity.v1beta1.MsgTransferPositions
+ */
 export interface MsgTransferPositionsSDKType {
   position_ids: bigint[];
   sender: string;
   new_owner: string;
 }
+/**
+ * @name MsgTransferPositionsResponse
+ * @package symphony.concentratedliquidity.v1beta1
+ * @see proto type: symphony.concentratedliquidity.v1beta1.MsgTransferPositionsResponse
+ */
 export interface MsgTransferPositionsResponse {}
 export interface MsgTransferPositionsResponseProtoMsg {
-  typeUrl: "/symphony.concentratedliquidity.v1beta1.MsgTransferPositionsResponse";
+  typeUrl: '/symphony.concentratedliquidity.v1beta1.MsgTransferPositionsResponse';
   value: Uint8Array;
 }
+/**
+ * @name MsgTransferPositionsResponseAmino
+ * @package symphony.concentratedliquidity.v1beta1
+ * @see proto type: symphony.concentratedliquidity.v1beta1.MsgTransferPositionsResponse
+ */
 export interface MsgTransferPositionsResponseAmino {}
 export interface MsgTransferPositionsResponseAminoMsg {
-  type: "/symphony.concentratedliquidity.v1beta1.MsgTransferPositionsResponse";
+  type: '/symphony.concentratedliquidity.v1beta1.MsgTransferPositionsResponse';
   value: MsgTransferPositionsResponseAmino;
 }
+/**
+ * @name MsgTransferPositionsResponseSDKType
+ * @package symphony.concentratedliquidity.v1beta1
+ * @see proto type: symphony.concentratedliquidity.v1beta1.MsgTransferPositionsResponse
+ */
 export interface MsgTransferPositionsResponseSDKType {}
 function createBaseMsgCreatePosition(): MsgCreatePosition {
   return {
     poolId: BigInt(0),
-    sender: "",
+    sender: '',
     lowerTick: BigInt(0),
     upperTick: BigInt(0),
     tokensProvided: [],
-    tokenMinAmount0: "",
-    tokenMinAmount1: ""
+    tokenMinAmount0: '',
+    tokenMinAmount1: '',
   };
 }
+/**
+ * ===================== MsgCreatePosition
+ * @name MsgCreatePosition
+ * @package symphony.concentratedliquidity.v1beta1
+ * @see proto type: symphony.concentratedliquidity.v1beta1.MsgCreatePosition
+ */
 export const MsgCreatePosition = {
-  typeUrl: "/symphony.concentratedliquidity.v1beta1.MsgCreatePosition",
-  aminoType: "symphony/cl-create-position",
+  typeUrl: '/symphony.concentratedliquidity.v1beta1.MsgCreatePosition',
+  aminoType: 'symphony/cl-create-position',
   is(o: any): o is MsgCreatePosition {
-    return o && (o.$typeUrl === MsgCreatePosition.typeUrl || typeof o.poolId === "bigint" && typeof o.sender === "string" && typeof o.lowerTick === "bigint" && typeof o.upperTick === "bigint" && Array.isArray(o.tokensProvided) && (!o.tokensProvided.length || Coin.is(o.tokensProvided[0])) && typeof o.tokenMinAmount0 === "string" && typeof o.tokenMinAmount1 === "string");
+    return (
+      o &&
+      (o.$typeUrl === MsgCreatePosition.typeUrl ||
+        (typeof o.poolId === 'bigint' &&
+          typeof o.sender === 'string' &&
+          typeof o.lowerTick === 'bigint' &&
+          typeof o.upperTick === 'bigint' &&
+          Array.isArray(o.tokensProvided) &&
+          (!o.tokensProvided.length || Coin.is(o.tokensProvided[0])) &&
+          typeof o.tokenMinAmount0 === 'string' &&
+          typeof o.tokenMinAmount1 === 'string'))
+    );
   },
   isSDK(o: any): o is MsgCreatePositionSDKType {
-    return o && (o.$typeUrl === MsgCreatePosition.typeUrl || typeof o.pool_id === "bigint" && typeof o.sender === "string" && typeof o.lower_tick === "bigint" && typeof o.upper_tick === "bigint" && Array.isArray(o.tokens_provided) && (!o.tokens_provided.length || Coin.isSDK(o.tokens_provided[0])) && typeof o.token_min_amount0 === "string" && typeof o.token_min_amount1 === "string");
+    return (
+      o &&
+      (o.$typeUrl === MsgCreatePosition.typeUrl ||
+        (typeof o.pool_id === 'bigint' &&
+          typeof o.sender === 'string' &&
+          typeof o.lower_tick === 'bigint' &&
+          typeof o.upper_tick === 'bigint' &&
+          Array.isArray(o.tokens_provided) &&
+          (!o.tokens_provided.length || Coin.isSDK(o.tokens_provided[0])) &&
+          typeof o.token_min_amount0 === 'string' &&
+          typeof o.token_min_amount1 === 'string'))
+    );
   },
   isAmino(o: any): o is MsgCreatePositionAmino {
-    return o && (o.$typeUrl === MsgCreatePosition.typeUrl || typeof o.pool_id === "bigint" && typeof o.sender === "string" && typeof o.lower_tick === "bigint" && typeof o.upper_tick === "bigint" && Array.isArray(o.tokens_provided) && (!o.tokens_provided.length || Coin.isAmino(o.tokens_provided[0])) && typeof o.token_min_amount0 === "string" && typeof o.token_min_amount1 === "string");
+    return (
+      o &&
+      (o.$typeUrl === MsgCreatePosition.typeUrl ||
+        (typeof o.pool_id === 'bigint' &&
+          typeof o.sender === 'string' &&
+          typeof o.lower_tick === 'bigint' &&
+          typeof o.upper_tick === 'bigint' &&
+          Array.isArray(o.tokens_provided) &&
+          (!o.tokens_provided.length || Coin.isAmino(o.tokens_provided[0])) &&
+          typeof o.token_min_amount0 === 'string' &&
+          typeof o.token_min_amount1 === 'string'))
+    );
   },
-  encode(message: MsgCreatePosition, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
+  encode(
+    message: MsgCreatePosition,
+    writer: BinaryWriter = BinaryWriter.create(),
+  ): BinaryWriter {
     if (message.poolId !== BigInt(0)) {
       writer.uint32(8).uint64(message.poolId);
     }
-    if (message.sender !== "") {
+    if (message.sender !== '') {
       writer.uint32(18).string(message.sender);
     }
     if (message.lowerTick !== BigInt(0)) {
@@ -428,16 +692,17 @@ export const MsgCreatePosition = {
     for (const v of message.tokensProvided) {
       Coin.encode(v!, writer.uint32(42).fork()).ldelim();
     }
-    if (message.tokenMinAmount0 !== "") {
+    if (message.tokenMinAmount0 !== '') {
       writer.uint32(50).string(message.tokenMinAmount0);
     }
-    if (message.tokenMinAmount1 !== "") {
+    if (message.tokenMinAmount1 !== '') {
       writer.uint32(58).string(message.tokenMinAmount1);
     }
     return writer;
   },
   decode(input: BinaryReader | Uint8Array, length?: number): MsgCreatePosition {
-    const reader = input instanceof BinaryReader ? input : new BinaryReader(input);
+    const reader =
+      input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseMsgCreatePosition();
     while (reader.pos < end) {
@@ -473,13 +738,23 @@ export const MsgCreatePosition = {
   },
   fromPartial(object: Partial<MsgCreatePosition>): MsgCreatePosition {
     const message = createBaseMsgCreatePosition();
-    message.poolId = object.poolId !== undefined && object.poolId !== null ? BigInt(object.poolId.toString()) : BigInt(0);
-    message.sender = object.sender ?? "";
-    message.lowerTick = object.lowerTick !== undefined && object.lowerTick !== null ? BigInt(object.lowerTick.toString()) : BigInt(0);
-    message.upperTick = object.upperTick !== undefined && object.upperTick !== null ? BigInt(object.upperTick.toString()) : BigInt(0);
-    message.tokensProvided = object.tokensProvided?.map(e => Coin.fromPartial(e)) || [];
-    message.tokenMinAmount0 = object.tokenMinAmount0 ?? "";
-    message.tokenMinAmount1 = object.tokenMinAmount1 ?? "";
+    message.poolId =
+      object.poolId !== undefined && object.poolId !== null
+        ? BigInt(object.poolId.toString())
+        : BigInt(0);
+    message.sender = object.sender ?? '';
+    message.lowerTick =
+      object.lowerTick !== undefined && object.lowerTick !== null
+        ? BigInt(object.lowerTick.toString())
+        : BigInt(0);
+    message.upperTick =
+      object.upperTick !== undefined && object.upperTick !== null
+        ? BigInt(object.upperTick.toString())
+        : BigInt(0);
+    message.tokensProvided =
+      object.tokensProvided?.map(e => Coin.fromPartial(e)) || [];
+    message.tokenMinAmount0 = object.tokenMinAmount0 ?? '';
+    message.tokenMinAmount1 = object.tokenMinAmount1 ?? '';
     return message;
   },
   fromAmino(object: MsgCreatePositionAmino): MsgCreatePosition {
@@ -496,28 +771,46 @@ export const MsgCreatePosition = {
     if (object.upper_tick !== undefined && object.upper_tick !== null) {
       message.upperTick = BigInt(object.upper_tick);
     }
-    message.tokensProvided = object.tokens_provided?.map(e => Coin.fromAmino(e)) || [];
-    if (object.token_min_amount0 !== undefined && object.token_min_amount0 !== null) {
+    message.tokensProvided =
+      object.tokens_provided?.map(e => Coin.fromAmino(e)) || [];
+    if (
+      object.token_min_amount0 !== undefined &&
+      object.token_min_amount0 !== null
+    ) {
       message.tokenMinAmount0 = object.token_min_amount0;
     }
-    if (object.token_min_amount1 !== undefined && object.token_min_amount1 !== null) {
+    if (
+      object.token_min_amount1 !== undefined &&
+      object.token_min_amount1 !== null
+    ) {
       message.tokenMinAmount1 = object.token_min_amount1;
     }
     return message;
   },
   toAmino(message: MsgCreatePosition): MsgCreatePositionAmino {
     const obj: any = {};
-    obj.pool_id = message.poolId !== BigInt(0) ? message.poolId?.toString() : undefined;
-    obj.sender = message.sender === "" ? undefined : message.sender;
-    obj.lower_tick = message.lowerTick !== BigInt(0) ? message.lowerTick?.toString() : undefined;
-    obj.upper_tick = message.upperTick !== BigInt(0) ? message.upperTick?.toString() : undefined;
+    obj.pool_id =
+      message.poolId !== BigInt(0) ? message.poolId?.toString() : undefined;
+    obj.sender = message.sender === '' ? undefined : message.sender;
+    obj.lower_tick =
+      message.lowerTick !== BigInt(0)
+        ? message.lowerTick?.toString()
+        : undefined;
+    obj.upper_tick =
+      message.upperTick !== BigInt(0)
+        ? message.upperTick?.toString()
+        : undefined;
     if (message.tokensProvided) {
-      obj.tokens_provided = message.tokensProvided.map(e => e ? Coin.toAmino(e) : undefined);
+      obj.tokens_provided = message.tokensProvided.map(e =>
+        e ? Coin.toAmino(e) : undefined,
+      );
     } else {
       obj.tokens_provided = message.tokensProvided;
     }
-    obj.token_min_amount0 = message.tokenMinAmount0 === "" ? undefined : message.tokenMinAmount0;
-    obj.token_min_amount1 = message.tokenMinAmount1 === "" ? undefined : message.tokenMinAmount1;
+    obj.token_min_amount0 =
+      message.tokenMinAmount0 === '' ? undefined : message.tokenMinAmount0;
+    obj.token_min_amount1 =
+      message.tokenMinAmount1 === '' ? undefined : message.tokenMinAmount1;
     return obj;
   },
   fromAminoMsg(object: MsgCreatePositionAminoMsg): MsgCreatePosition {
@@ -525,8 +818,8 @@ export const MsgCreatePosition = {
   },
   toAminoMsg(message: MsgCreatePosition): MsgCreatePositionAminoMsg {
     return {
-      type: "symphony/cl-create-position",
-      value: MsgCreatePosition.toAmino(message)
+      type: 'symphony/cl-create-position',
+      value: MsgCreatePosition.toAmino(message),
     };
   },
   fromProtoMsg(message: MsgCreatePositionProtoMsg): MsgCreatePosition {
@@ -537,46 +830,86 @@ export const MsgCreatePosition = {
   },
   toProtoMsg(message: MsgCreatePosition): MsgCreatePositionProtoMsg {
     return {
-      typeUrl: "/symphony.concentratedliquidity.v1beta1.MsgCreatePosition",
-      value: MsgCreatePosition.encode(message).finish()
+      typeUrl: '/symphony.concentratedliquidity.v1beta1.MsgCreatePosition',
+      value: MsgCreatePosition.encode(message).finish(),
     };
-  }
+  },
 };
 GlobalDecoderRegistry.register(MsgCreatePosition.typeUrl, MsgCreatePosition);
-GlobalDecoderRegistry.registerAminoProtoMapping(MsgCreatePosition.aminoType, MsgCreatePosition.typeUrl);
+GlobalDecoderRegistry.registerAminoProtoMapping(
+  MsgCreatePosition.aminoType,
+  MsgCreatePosition.typeUrl,
+);
 function createBaseMsgCreatePositionResponse(): MsgCreatePositionResponse {
   return {
     positionId: BigInt(0),
-    amount0: "",
-    amount1: "",
-    liquidityCreated: "",
+    amount0: '',
+    amount1: '',
+    liquidityCreated: '',
     lowerTick: BigInt(0),
-    upperTick: BigInt(0)
+    upperTick: BigInt(0),
   };
 }
+/**
+ * @name MsgCreatePositionResponse
+ * @package symphony.concentratedliquidity.v1beta1
+ * @see proto type: symphony.concentratedliquidity.v1beta1.MsgCreatePositionResponse
+ */
 export const MsgCreatePositionResponse = {
-  typeUrl: "/symphony.concentratedliquidity.v1beta1.MsgCreatePositionResponse",
+  typeUrl: '/symphony.concentratedliquidity.v1beta1.MsgCreatePositionResponse',
   is(o: any): o is MsgCreatePositionResponse {
-    return o && (o.$typeUrl === MsgCreatePositionResponse.typeUrl || typeof o.positionId === "bigint" && typeof o.amount0 === "string" && typeof o.amount1 === "string" && typeof o.liquidityCreated === "string" && typeof o.lowerTick === "bigint" && typeof o.upperTick === "bigint");
+    return (
+      o &&
+      (o.$typeUrl === MsgCreatePositionResponse.typeUrl ||
+        (typeof o.positionId === 'bigint' &&
+          typeof o.amount0 === 'string' &&
+          typeof o.amount1 === 'string' &&
+          typeof o.liquidityCreated === 'string' &&
+          typeof o.lowerTick === 'bigint' &&
+          typeof o.upperTick === 'bigint'))
+    );
   },
   isSDK(o: any): o is MsgCreatePositionResponseSDKType {
-    return o && (o.$typeUrl === MsgCreatePositionResponse.typeUrl || typeof o.position_id === "bigint" && typeof o.amount0 === "string" && typeof o.amount1 === "string" && typeof o.liquidity_created === "string" && typeof o.lower_tick === "bigint" && typeof o.upper_tick === "bigint");
+    return (
+      o &&
+      (o.$typeUrl === MsgCreatePositionResponse.typeUrl ||
+        (typeof o.position_id === 'bigint' &&
+          typeof o.amount0 === 'string' &&
+          typeof o.amount1 === 'string' &&
+          typeof o.liquidity_created === 'string' &&
+          typeof o.lower_tick === 'bigint' &&
+          typeof o.upper_tick === 'bigint'))
+    );
   },
   isAmino(o: any): o is MsgCreatePositionResponseAmino {
-    return o && (o.$typeUrl === MsgCreatePositionResponse.typeUrl || typeof o.position_id === "bigint" && typeof o.amount0 === "string" && typeof o.amount1 === "string" && typeof o.liquidity_created === "string" && typeof o.lower_tick === "bigint" && typeof o.upper_tick === "bigint");
+    return (
+      o &&
+      (o.$typeUrl === MsgCreatePositionResponse.typeUrl ||
+        (typeof o.position_id === 'bigint' &&
+          typeof o.amount0 === 'string' &&
+          typeof o.amount1 === 'string' &&
+          typeof o.liquidity_created === 'string' &&
+          typeof o.lower_tick === 'bigint' &&
+          typeof o.upper_tick === 'bigint'))
+    );
   },
-  encode(message: MsgCreatePositionResponse, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
+  encode(
+    message: MsgCreatePositionResponse,
+    writer: BinaryWriter = BinaryWriter.create(),
+  ): BinaryWriter {
     if (message.positionId !== BigInt(0)) {
       writer.uint32(8).uint64(message.positionId);
     }
-    if (message.amount0 !== "") {
+    if (message.amount0 !== '') {
       writer.uint32(18).string(message.amount0);
     }
-    if (message.amount1 !== "") {
+    if (message.amount1 !== '') {
       writer.uint32(26).string(message.amount1);
     }
-    if (message.liquidityCreated !== "") {
-      writer.uint32(42).string(Decimal.fromUserInput(message.liquidityCreated, 18).atomics);
+    if (message.liquidityCreated !== '') {
+      writer
+        .uint32(42)
+        .string(Decimal.fromUserInput(message.liquidityCreated, 18).atomics);
     }
     if (message.lowerTick !== BigInt(0)) {
       writer.uint32(48).int64(message.lowerTick);
@@ -586,8 +919,12 @@ export const MsgCreatePositionResponse = {
     }
     return writer;
   },
-  decode(input: BinaryReader | Uint8Array, length?: number): MsgCreatePositionResponse {
-    const reader = input instanceof BinaryReader ? input : new BinaryReader(input);
+  decode(
+    input: BinaryReader | Uint8Array,
+    length?: number,
+  ): MsgCreatePositionResponse {
+    const reader =
+      input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseMsgCreatePositionResponse();
     while (reader.pos < end) {
@@ -603,7 +940,10 @@ export const MsgCreatePositionResponse = {
           message.amount1 = reader.string();
           break;
         case 5:
-          message.liquidityCreated = Decimal.fromAtomics(reader.string(), 18).toString();
+          message.liquidityCreated = Decimal.fromAtomics(
+            reader.string(),
+            18,
+          ).toString();
           break;
         case 6:
           message.lowerTick = reader.int64();
@@ -618,14 +958,25 @@ export const MsgCreatePositionResponse = {
     }
     return message;
   },
-  fromPartial(object: Partial<MsgCreatePositionResponse>): MsgCreatePositionResponse {
+  fromPartial(
+    object: Partial<MsgCreatePositionResponse>,
+  ): MsgCreatePositionResponse {
     const message = createBaseMsgCreatePositionResponse();
-    message.positionId = object.positionId !== undefined && object.positionId !== null ? BigInt(object.positionId.toString()) : BigInt(0);
-    message.amount0 = object.amount0 ?? "";
-    message.amount1 = object.amount1 ?? "";
-    message.liquidityCreated = object.liquidityCreated ?? "";
-    message.lowerTick = object.lowerTick !== undefined && object.lowerTick !== null ? BigInt(object.lowerTick.toString()) : BigInt(0);
-    message.upperTick = object.upperTick !== undefined && object.upperTick !== null ? BigInt(object.upperTick.toString()) : BigInt(0);
+    message.positionId =
+      object.positionId !== undefined && object.positionId !== null
+        ? BigInt(object.positionId.toString())
+        : BigInt(0);
+    message.amount0 = object.amount0 ?? '';
+    message.amount1 = object.amount1 ?? '';
+    message.liquidityCreated = object.liquidityCreated ?? '';
+    message.lowerTick =
+      object.lowerTick !== undefined && object.lowerTick !== null
+        ? BigInt(object.lowerTick.toString())
+        : BigInt(0);
+    message.upperTick =
+      object.upperTick !== undefined && object.upperTick !== null
+        ? BigInt(object.upperTick.toString())
+        : BigInt(0);
     return message;
   },
   fromAmino(object: MsgCreatePositionResponseAmino): MsgCreatePositionResponse {
@@ -639,7 +990,10 @@ export const MsgCreatePositionResponse = {
     if (object.amount1 !== undefined && object.amount1 !== null) {
       message.amount1 = object.amount1;
     }
-    if (object.liquidity_created !== undefined && object.liquidity_created !== null) {
+    if (
+      object.liquidity_created !== undefined &&
+      object.liquidity_created !== null
+    ) {
       message.liquidityCreated = object.liquidity_created;
     }
     if (object.lower_tick !== undefined && object.lower_tick !== null) {
@@ -652,76 +1006,133 @@ export const MsgCreatePositionResponse = {
   },
   toAmino(message: MsgCreatePositionResponse): MsgCreatePositionResponseAmino {
     const obj: any = {};
-    obj.position_id = message.positionId !== BigInt(0) ? message.positionId?.toString() : undefined;
-    obj.amount0 = message.amount0 === "" ? undefined : message.amount0;
-    obj.amount1 = message.amount1 === "" ? undefined : message.amount1;
-    obj.liquidity_created = message.liquidityCreated === "" ? undefined : message.liquidityCreated;
-    obj.lower_tick = message.lowerTick !== BigInt(0) ? message.lowerTick?.toString() : undefined;
-    obj.upper_tick = message.upperTick !== BigInt(0) ? message.upperTick?.toString() : undefined;
+    obj.position_id =
+      message.positionId !== BigInt(0)
+        ? message.positionId?.toString()
+        : undefined;
+    obj.amount0 = message.amount0 === '' ? undefined : message.amount0;
+    obj.amount1 = message.amount1 === '' ? undefined : message.amount1;
+    obj.liquidity_created =
+      message.liquidityCreated === '' ? undefined : message.liquidityCreated;
+    obj.lower_tick =
+      message.lowerTick !== BigInt(0)
+        ? message.lowerTick?.toString()
+        : undefined;
+    obj.upper_tick =
+      message.upperTick !== BigInt(0)
+        ? message.upperTick?.toString()
+        : undefined;
     return obj;
   },
-  fromAminoMsg(object: MsgCreatePositionResponseAminoMsg): MsgCreatePositionResponse {
+  fromAminoMsg(
+    object: MsgCreatePositionResponseAminoMsg,
+  ): MsgCreatePositionResponse {
     return MsgCreatePositionResponse.fromAmino(object.value);
   },
-  fromProtoMsg(message: MsgCreatePositionResponseProtoMsg): MsgCreatePositionResponse {
+  fromProtoMsg(
+    message: MsgCreatePositionResponseProtoMsg,
+  ): MsgCreatePositionResponse {
     return MsgCreatePositionResponse.decode(message.value);
   },
   toProto(message: MsgCreatePositionResponse): Uint8Array {
     return MsgCreatePositionResponse.encode(message).finish();
   },
-  toProtoMsg(message: MsgCreatePositionResponse): MsgCreatePositionResponseProtoMsg {
+  toProtoMsg(
+    message: MsgCreatePositionResponse,
+  ): MsgCreatePositionResponseProtoMsg {
     return {
-      typeUrl: "/symphony.concentratedliquidity.v1beta1.MsgCreatePositionResponse",
-      value: MsgCreatePositionResponse.encode(message).finish()
+      typeUrl:
+        '/symphony.concentratedliquidity.v1beta1.MsgCreatePositionResponse',
+      value: MsgCreatePositionResponse.encode(message).finish(),
     };
-  }
+  },
 };
-GlobalDecoderRegistry.register(MsgCreatePositionResponse.typeUrl, MsgCreatePositionResponse);
+GlobalDecoderRegistry.register(
+  MsgCreatePositionResponse.typeUrl,
+  MsgCreatePositionResponse,
+);
 function createBaseMsgAddToPosition(): MsgAddToPosition {
   return {
     positionId: BigInt(0),
-    sender: "",
-    amount0: "",
-    amount1: "",
-    tokenMinAmount0: "",
-    tokenMinAmount1: ""
+    sender: '',
+    amount0: '',
+    amount1: '',
+    tokenMinAmount0: '',
+    tokenMinAmount1: '',
   };
 }
+/**
+ * ===================== MsgAddToPosition
+ * @name MsgAddToPosition
+ * @package symphony.concentratedliquidity.v1beta1
+ * @see proto type: symphony.concentratedliquidity.v1beta1.MsgAddToPosition
+ */
 export const MsgAddToPosition = {
-  typeUrl: "/symphony.concentratedliquidity.v1beta1.MsgAddToPosition",
-  aminoType: "symphony/cl-add-to-position",
+  typeUrl: '/symphony.concentratedliquidity.v1beta1.MsgAddToPosition',
+  aminoType: 'symphony/cl-add-to-position',
   is(o: any): o is MsgAddToPosition {
-    return o && (o.$typeUrl === MsgAddToPosition.typeUrl || typeof o.positionId === "bigint" && typeof o.sender === "string" && typeof o.amount0 === "string" && typeof o.amount1 === "string" && typeof o.tokenMinAmount0 === "string" && typeof o.tokenMinAmount1 === "string");
+    return (
+      o &&
+      (o.$typeUrl === MsgAddToPosition.typeUrl ||
+        (typeof o.positionId === 'bigint' &&
+          typeof o.sender === 'string' &&
+          typeof o.amount0 === 'string' &&
+          typeof o.amount1 === 'string' &&
+          typeof o.tokenMinAmount0 === 'string' &&
+          typeof o.tokenMinAmount1 === 'string'))
+    );
   },
   isSDK(o: any): o is MsgAddToPositionSDKType {
-    return o && (o.$typeUrl === MsgAddToPosition.typeUrl || typeof o.position_id === "bigint" && typeof o.sender === "string" && typeof o.amount0 === "string" && typeof o.amount1 === "string" && typeof o.token_min_amount0 === "string" && typeof o.token_min_amount1 === "string");
+    return (
+      o &&
+      (o.$typeUrl === MsgAddToPosition.typeUrl ||
+        (typeof o.position_id === 'bigint' &&
+          typeof o.sender === 'string' &&
+          typeof o.amount0 === 'string' &&
+          typeof o.amount1 === 'string' &&
+          typeof o.token_min_amount0 === 'string' &&
+          typeof o.token_min_amount1 === 'string'))
+    );
   },
   isAmino(o: any): o is MsgAddToPositionAmino {
-    return o && (o.$typeUrl === MsgAddToPosition.typeUrl || typeof o.position_id === "bigint" && typeof o.sender === "string" && typeof o.amount0 === "string" && typeof o.amount1 === "string" && typeof o.token_min_amount0 === "string" && typeof o.token_min_amount1 === "string");
+    return (
+      o &&
+      (o.$typeUrl === MsgAddToPosition.typeUrl ||
+        (typeof o.position_id === 'bigint' &&
+          typeof o.sender === 'string' &&
+          typeof o.amount0 === 'string' &&
+          typeof o.amount1 === 'string' &&
+          typeof o.token_min_amount0 === 'string' &&
+          typeof o.token_min_amount1 === 'string'))
+    );
   },
-  encode(message: MsgAddToPosition, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
+  encode(
+    message: MsgAddToPosition,
+    writer: BinaryWriter = BinaryWriter.create(),
+  ): BinaryWriter {
     if (message.positionId !== BigInt(0)) {
       writer.uint32(8).uint64(message.positionId);
     }
-    if (message.sender !== "") {
+    if (message.sender !== '') {
       writer.uint32(18).string(message.sender);
     }
-    if (message.amount0 !== "") {
+    if (message.amount0 !== '') {
       writer.uint32(26).string(message.amount0);
     }
-    if (message.amount1 !== "") {
+    if (message.amount1 !== '') {
       writer.uint32(34).string(message.amount1);
     }
-    if (message.tokenMinAmount0 !== "") {
+    if (message.tokenMinAmount0 !== '') {
       writer.uint32(42).string(message.tokenMinAmount0);
     }
-    if (message.tokenMinAmount1 !== "") {
+    if (message.tokenMinAmount1 !== '') {
       writer.uint32(50).string(message.tokenMinAmount1);
     }
     return writer;
   },
   decode(input: BinaryReader | Uint8Array, length?: number): MsgAddToPosition {
-    const reader = input instanceof BinaryReader ? input : new BinaryReader(input);
+    const reader =
+      input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseMsgAddToPosition();
     while (reader.pos < end) {
@@ -754,12 +1165,15 @@ export const MsgAddToPosition = {
   },
   fromPartial(object: Partial<MsgAddToPosition>): MsgAddToPosition {
     const message = createBaseMsgAddToPosition();
-    message.positionId = object.positionId !== undefined && object.positionId !== null ? BigInt(object.positionId.toString()) : BigInt(0);
-    message.sender = object.sender ?? "";
-    message.amount0 = object.amount0 ?? "";
-    message.amount1 = object.amount1 ?? "";
-    message.tokenMinAmount0 = object.tokenMinAmount0 ?? "";
-    message.tokenMinAmount1 = object.tokenMinAmount1 ?? "";
+    message.positionId =
+      object.positionId !== undefined && object.positionId !== null
+        ? BigInt(object.positionId.toString())
+        : BigInt(0);
+    message.sender = object.sender ?? '';
+    message.amount0 = object.amount0 ?? '';
+    message.amount1 = object.amount1 ?? '';
+    message.tokenMinAmount0 = object.tokenMinAmount0 ?? '';
+    message.tokenMinAmount1 = object.tokenMinAmount1 ?? '';
     return message;
   },
   fromAmino(object: MsgAddToPositionAmino): MsgAddToPosition {
@@ -776,22 +1190,33 @@ export const MsgAddToPosition = {
     if (object.amount1 !== undefined && object.amount1 !== null) {
       message.amount1 = object.amount1;
     }
-    if (object.token_min_amount0 !== undefined && object.token_min_amount0 !== null) {
+    if (
+      object.token_min_amount0 !== undefined &&
+      object.token_min_amount0 !== null
+    ) {
       message.tokenMinAmount0 = object.token_min_amount0;
     }
-    if (object.token_min_amount1 !== undefined && object.token_min_amount1 !== null) {
+    if (
+      object.token_min_amount1 !== undefined &&
+      object.token_min_amount1 !== null
+    ) {
       message.tokenMinAmount1 = object.token_min_amount1;
     }
     return message;
   },
   toAmino(message: MsgAddToPosition): MsgAddToPositionAmino {
     const obj: any = {};
-    obj.position_id = message.positionId !== BigInt(0) ? message.positionId?.toString() : undefined;
-    obj.sender = message.sender === "" ? undefined : message.sender;
-    obj.amount0 = message.amount0 === "" ? undefined : message.amount0;
-    obj.amount1 = message.amount1 === "" ? undefined : message.amount1;
-    obj.token_min_amount0 = message.tokenMinAmount0 === "" ? undefined : message.tokenMinAmount0;
-    obj.token_min_amount1 = message.tokenMinAmount1 === "" ? undefined : message.tokenMinAmount1;
+    obj.position_id =
+      message.positionId !== BigInt(0)
+        ? message.positionId?.toString()
+        : undefined;
+    obj.sender = message.sender === '' ? undefined : message.sender;
+    obj.amount0 = message.amount0 === '' ? undefined : message.amount0;
+    obj.amount1 = message.amount1 === '' ? undefined : message.amount1;
+    obj.token_min_amount0 =
+      message.tokenMinAmount0 === '' ? undefined : message.tokenMinAmount0;
+    obj.token_min_amount1 =
+      message.tokenMinAmount1 === '' ? undefined : message.tokenMinAmount1;
     return obj;
   },
   fromAminoMsg(object: MsgAddToPositionAminoMsg): MsgAddToPosition {
@@ -799,8 +1224,8 @@ export const MsgAddToPosition = {
   },
   toAminoMsg(message: MsgAddToPosition): MsgAddToPositionAminoMsg {
     return {
-      type: "symphony/cl-add-to-position",
-      value: MsgAddToPosition.toAmino(message)
+      type: 'symphony/cl-add-to-position',
+      value: MsgAddToPosition.toAmino(message),
     };
   },
   fromProtoMsg(message: MsgAddToPositionProtoMsg): MsgAddToPosition {
@@ -811,45 +1236,78 @@ export const MsgAddToPosition = {
   },
   toProtoMsg(message: MsgAddToPosition): MsgAddToPositionProtoMsg {
     return {
-      typeUrl: "/symphony.concentratedliquidity.v1beta1.MsgAddToPosition",
-      value: MsgAddToPosition.encode(message).finish()
+      typeUrl: '/symphony.concentratedliquidity.v1beta1.MsgAddToPosition',
+      value: MsgAddToPosition.encode(message).finish(),
     };
-  }
+  },
 };
 GlobalDecoderRegistry.register(MsgAddToPosition.typeUrl, MsgAddToPosition);
-GlobalDecoderRegistry.registerAminoProtoMapping(MsgAddToPosition.aminoType, MsgAddToPosition.typeUrl);
+GlobalDecoderRegistry.registerAminoProtoMapping(
+  MsgAddToPosition.aminoType,
+  MsgAddToPosition.typeUrl,
+);
 function createBaseMsgAddToPositionResponse(): MsgAddToPositionResponse {
   return {
     positionId: BigInt(0),
-    amount0: "",
-    amount1: ""
+    amount0: '',
+    amount1: '',
   };
 }
+/**
+ * @name MsgAddToPositionResponse
+ * @package symphony.concentratedliquidity.v1beta1
+ * @see proto type: symphony.concentratedliquidity.v1beta1.MsgAddToPositionResponse
+ */
 export const MsgAddToPositionResponse = {
-  typeUrl: "/symphony.concentratedliquidity.v1beta1.MsgAddToPositionResponse",
+  typeUrl: '/symphony.concentratedliquidity.v1beta1.MsgAddToPositionResponse',
   is(o: any): o is MsgAddToPositionResponse {
-    return o && (o.$typeUrl === MsgAddToPositionResponse.typeUrl || typeof o.positionId === "bigint" && typeof o.amount0 === "string" && typeof o.amount1 === "string");
+    return (
+      o &&
+      (o.$typeUrl === MsgAddToPositionResponse.typeUrl ||
+        (typeof o.positionId === 'bigint' &&
+          typeof o.amount0 === 'string' &&
+          typeof o.amount1 === 'string'))
+    );
   },
   isSDK(o: any): o is MsgAddToPositionResponseSDKType {
-    return o && (o.$typeUrl === MsgAddToPositionResponse.typeUrl || typeof o.position_id === "bigint" && typeof o.amount0 === "string" && typeof o.amount1 === "string");
+    return (
+      o &&
+      (o.$typeUrl === MsgAddToPositionResponse.typeUrl ||
+        (typeof o.position_id === 'bigint' &&
+          typeof o.amount0 === 'string' &&
+          typeof o.amount1 === 'string'))
+    );
   },
   isAmino(o: any): o is MsgAddToPositionResponseAmino {
-    return o && (o.$typeUrl === MsgAddToPositionResponse.typeUrl || typeof o.position_id === "bigint" && typeof o.amount0 === "string" && typeof o.amount1 === "string");
+    return (
+      o &&
+      (o.$typeUrl === MsgAddToPositionResponse.typeUrl ||
+        (typeof o.position_id === 'bigint' &&
+          typeof o.amount0 === 'string' &&
+          typeof o.amount1 === 'string'))
+    );
   },
-  encode(message: MsgAddToPositionResponse, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
+  encode(
+    message: MsgAddToPositionResponse,
+    writer: BinaryWriter = BinaryWriter.create(),
+  ): BinaryWriter {
     if (message.positionId !== BigInt(0)) {
       writer.uint32(8).uint64(message.positionId);
     }
-    if (message.amount0 !== "") {
+    if (message.amount0 !== '') {
       writer.uint32(18).string(message.amount0);
     }
-    if (message.amount1 !== "") {
+    if (message.amount1 !== '') {
       writer.uint32(26).string(message.amount1);
     }
     return writer;
   },
-  decode(input: BinaryReader | Uint8Array, length?: number): MsgAddToPositionResponse {
-    const reader = input instanceof BinaryReader ? input : new BinaryReader(input);
+  decode(
+    input: BinaryReader | Uint8Array,
+    length?: number,
+  ): MsgAddToPositionResponse {
+    const reader =
+      input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseMsgAddToPositionResponse();
     while (reader.pos < end) {
@@ -871,11 +1329,16 @@ export const MsgAddToPositionResponse = {
     }
     return message;
   },
-  fromPartial(object: Partial<MsgAddToPositionResponse>): MsgAddToPositionResponse {
+  fromPartial(
+    object: Partial<MsgAddToPositionResponse>,
+  ): MsgAddToPositionResponse {
     const message = createBaseMsgAddToPositionResponse();
-    message.positionId = object.positionId !== undefined && object.positionId !== null ? BigInt(object.positionId.toString()) : BigInt(0);
-    message.amount0 = object.amount0 ?? "";
-    message.amount1 = object.amount1 ?? "";
+    message.positionId =
+      object.positionId !== undefined && object.positionId !== null
+        ? BigInt(object.positionId.toString())
+        : BigInt(0);
+    message.amount0 = object.amount0 ?? '';
+    message.amount1 = object.amount1 ?? '';
     return message;
   },
   fromAmino(object: MsgAddToPositionResponseAmino): MsgAddToPositionResponse {
@@ -893,61 +1356,107 @@ export const MsgAddToPositionResponse = {
   },
   toAmino(message: MsgAddToPositionResponse): MsgAddToPositionResponseAmino {
     const obj: any = {};
-    obj.position_id = message.positionId !== BigInt(0) ? message.positionId?.toString() : undefined;
-    obj.amount0 = message.amount0 === "" ? undefined : message.amount0;
-    obj.amount1 = message.amount1 === "" ? undefined : message.amount1;
+    obj.position_id =
+      message.positionId !== BigInt(0)
+        ? message.positionId?.toString()
+        : undefined;
+    obj.amount0 = message.amount0 === '' ? undefined : message.amount0;
+    obj.amount1 = message.amount1 === '' ? undefined : message.amount1;
     return obj;
   },
-  fromAminoMsg(object: MsgAddToPositionResponseAminoMsg): MsgAddToPositionResponse {
+  fromAminoMsg(
+    object: MsgAddToPositionResponseAminoMsg,
+  ): MsgAddToPositionResponse {
     return MsgAddToPositionResponse.fromAmino(object.value);
   },
-  fromProtoMsg(message: MsgAddToPositionResponseProtoMsg): MsgAddToPositionResponse {
+  fromProtoMsg(
+    message: MsgAddToPositionResponseProtoMsg,
+  ): MsgAddToPositionResponse {
     return MsgAddToPositionResponse.decode(message.value);
   },
   toProto(message: MsgAddToPositionResponse): Uint8Array {
     return MsgAddToPositionResponse.encode(message).finish();
   },
-  toProtoMsg(message: MsgAddToPositionResponse): MsgAddToPositionResponseProtoMsg {
+  toProtoMsg(
+    message: MsgAddToPositionResponse,
+  ): MsgAddToPositionResponseProtoMsg {
     return {
-      typeUrl: "/symphony.concentratedliquidity.v1beta1.MsgAddToPositionResponse",
-      value: MsgAddToPositionResponse.encode(message).finish()
+      typeUrl:
+        '/symphony.concentratedliquidity.v1beta1.MsgAddToPositionResponse',
+      value: MsgAddToPositionResponse.encode(message).finish(),
     };
-  }
+  },
 };
-GlobalDecoderRegistry.register(MsgAddToPositionResponse.typeUrl, MsgAddToPositionResponse);
+GlobalDecoderRegistry.register(
+  MsgAddToPositionResponse.typeUrl,
+  MsgAddToPositionResponse,
+);
 function createBaseMsgWithdrawPosition(): MsgWithdrawPosition {
   return {
     positionId: BigInt(0),
-    sender: "",
-    liquidityAmount: ""
+    sender: '',
+    liquidityAmount: '',
   };
 }
+/**
+ * ===================== MsgWithdrawPosition
+ * @name MsgWithdrawPosition
+ * @package symphony.concentratedliquidity.v1beta1
+ * @see proto type: symphony.concentratedliquidity.v1beta1.MsgWithdrawPosition
+ */
 export const MsgWithdrawPosition = {
-  typeUrl: "/symphony.concentratedliquidity.v1beta1.MsgWithdrawPosition",
-  aminoType: "symphony/cl-withdraw-position",
+  typeUrl: '/symphony.concentratedliquidity.v1beta1.MsgWithdrawPosition',
+  aminoType: 'symphony/cl-withdraw-position',
   is(o: any): o is MsgWithdrawPosition {
-    return o && (o.$typeUrl === MsgWithdrawPosition.typeUrl || typeof o.positionId === "bigint" && typeof o.sender === "string" && typeof o.liquidityAmount === "string");
+    return (
+      o &&
+      (o.$typeUrl === MsgWithdrawPosition.typeUrl ||
+        (typeof o.positionId === 'bigint' &&
+          typeof o.sender === 'string' &&
+          typeof o.liquidityAmount === 'string'))
+    );
   },
   isSDK(o: any): o is MsgWithdrawPositionSDKType {
-    return o && (o.$typeUrl === MsgWithdrawPosition.typeUrl || typeof o.position_id === "bigint" && typeof o.sender === "string" && typeof o.liquidity_amount === "string");
+    return (
+      o &&
+      (o.$typeUrl === MsgWithdrawPosition.typeUrl ||
+        (typeof o.position_id === 'bigint' &&
+          typeof o.sender === 'string' &&
+          typeof o.liquidity_amount === 'string'))
+    );
   },
   isAmino(o: any): o is MsgWithdrawPositionAmino {
-    return o && (o.$typeUrl === MsgWithdrawPosition.typeUrl || typeof o.position_id === "bigint" && typeof o.sender === "string" && typeof o.liquidity_amount === "string");
+    return (
+      o &&
+      (o.$typeUrl === MsgWithdrawPosition.typeUrl ||
+        (typeof o.position_id === 'bigint' &&
+          typeof o.sender === 'string' &&
+          typeof o.liquidity_amount === 'string'))
+    );
   },
-  encode(message: MsgWithdrawPosition, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
+  encode(
+    message: MsgWithdrawPosition,
+    writer: BinaryWriter = BinaryWriter.create(),
+  ): BinaryWriter {
     if (message.positionId !== BigInt(0)) {
       writer.uint32(8).uint64(message.positionId);
     }
-    if (message.sender !== "") {
+    if (message.sender !== '') {
       writer.uint32(18).string(message.sender);
     }
-    if (message.liquidityAmount !== "") {
-      writer.uint32(26).string(Decimal.fromUserInput(message.liquidityAmount, 18).atomics);
+    if (message.liquidityAmount !== '') {
+      writer
+        .uint32(26)
+        .string(Decimal.fromUserInput(message.liquidityAmount, 18).atomics);
     }
     return writer;
   },
-  decode(input: BinaryReader | Uint8Array, length?: number): MsgWithdrawPosition {
-    const reader = input instanceof BinaryReader ? input : new BinaryReader(input);
+  decode(
+    input: BinaryReader | Uint8Array,
+    length?: number,
+  ): MsgWithdrawPosition {
+    const reader =
+      input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseMsgWithdrawPosition();
     while (reader.pos < end) {
@@ -960,7 +1469,10 @@ export const MsgWithdrawPosition = {
           message.sender = reader.string();
           break;
         case 3:
-          message.liquidityAmount = Decimal.fromAtomics(reader.string(), 18).toString();
+          message.liquidityAmount = Decimal.fromAtomics(
+            reader.string(),
+            18,
+          ).toString();
           break;
         default:
           reader.skipType(tag & 7);
@@ -971,9 +1483,12 @@ export const MsgWithdrawPosition = {
   },
   fromPartial(object: Partial<MsgWithdrawPosition>): MsgWithdrawPosition {
     const message = createBaseMsgWithdrawPosition();
-    message.positionId = object.positionId !== undefined && object.positionId !== null ? BigInt(object.positionId.toString()) : BigInt(0);
-    message.sender = object.sender ?? "";
-    message.liquidityAmount = object.liquidityAmount ?? "";
+    message.positionId =
+      object.positionId !== undefined && object.positionId !== null
+        ? BigInt(object.positionId.toString())
+        : BigInt(0);
+    message.sender = object.sender ?? '';
+    message.liquidityAmount = object.liquidityAmount ?? '';
     return message;
   },
   fromAmino(object: MsgWithdrawPositionAmino): MsgWithdrawPosition {
@@ -984,16 +1499,23 @@ export const MsgWithdrawPosition = {
     if (object.sender !== undefined && object.sender !== null) {
       message.sender = object.sender;
     }
-    if (object.liquidity_amount !== undefined && object.liquidity_amount !== null) {
+    if (
+      object.liquidity_amount !== undefined &&
+      object.liquidity_amount !== null
+    ) {
       message.liquidityAmount = object.liquidity_amount;
     }
     return message;
   },
   toAmino(message: MsgWithdrawPosition): MsgWithdrawPositionAmino {
     const obj: any = {};
-    obj.position_id = message.positionId !== BigInt(0) ? message.positionId?.toString() : undefined;
-    obj.sender = message.sender === "" ? undefined : message.sender;
-    obj.liquidity_amount = message.liquidityAmount === "" ? undefined : message.liquidityAmount;
+    obj.position_id =
+      message.positionId !== BigInt(0)
+        ? message.positionId?.toString()
+        : undefined;
+    obj.sender = message.sender === '' ? undefined : message.sender;
+    obj.liquidity_amount =
+      message.liquidityAmount === '' ? undefined : message.liquidityAmount;
     return obj;
   },
   fromAminoMsg(object: MsgWithdrawPositionAminoMsg): MsgWithdrawPosition {
@@ -1001,8 +1523,8 @@ export const MsgWithdrawPosition = {
   },
   toAminoMsg(message: MsgWithdrawPosition): MsgWithdrawPositionAminoMsg {
     return {
-      type: "symphony/cl-withdraw-position",
-      value: MsgWithdrawPosition.toAmino(message)
+      type: 'symphony/cl-withdraw-position',
+      value: MsgWithdrawPosition.toAmino(message),
     };
   },
   fromProtoMsg(message: MsgWithdrawPositionProtoMsg): MsgWithdrawPosition {
@@ -1013,41 +1535,72 @@ export const MsgWithdrawPosition = {
   },
   toProtoMsg(message: MsgWithdrawPosition): MsgWithdrawPositionProtoMsg {
     return {
-      typeUrl: "/symphony.concentratedliquidity.v1beta1.MsgWithdrawPosition",
-      value: MsgWithdrawPosition.encode(message).finish()
+      typeUrl: '/symphony.concentratedliquidity.v1beta1.MsgWithdrawPosition',
+      value: MsgWithdrawPosition.encode(message).finish(),
     };
-  }
+  },
 };
-GlobalDecoderRegistry.register(MsgWithdrawPosition.typeUrl, MsgWithdrawPosition);
-GlobalDecoderRegistry.registerAminoProtoMapping(MsgWithdrawPosition.aminoType, MsgWithdrawPosition.typeUrl);
+GlobalDecoderRegistry.register(
+  MsgWithdrawPosition.typeUrl,
+  MsgWithdrawPosition,
+);
+GlobalDecoderRegistry.registerAminoProtoMapping(
+  MsgWithdrawPosition.aminoType,
+  MsgWithdrawPosition.typeUrl,
+);
 function createBaseMsgWithdrawPositionResponse(): MsgWithdrawPositionResponse {
   return {
-    amount0: "",
-    amount1: ""
+    amount0: '',
+    amount1: '',
   };
 }
+/**
+ * @name MsgWithdrawPositionResponse
+ * @package symphony.concentratedliquidity.v1beta1
+ * @see proto type: symphony.concentratedliquidity.v1beta1.MsgWithdrawPositionResponse
+ */
 export const MsgWithdrawPositionResponse = {
-  typeUrl: "/symphony.concentratedliquidity.v1beta1.MsgWithdrawPositionResponse",
+  typeUrl:
+    '/symphony.concentratedliquidity.v1beta1.MsgWithdrawPositionResponse',
   is(o: any): o is MsgWithdrawPositionResponse {
-    return o && (o.$typeUrl === MsgWithdrawPositionResponse.typeUrl || typeof o.amount0 === "string" && typeof o.amount1 === "string");
+    return (
+      o &&
+      (o.$typeUrl === MsgWithdrawPositionResponse.typeUrl ||
+        (typeof o.amount0 === 'string' && typeof o.amount1 === 'string'))
+    );
   },
   isSDK(o: any): o is MsgWithdrawPositionResponseSDKType {
-    return o && (o.$typeUrl === MsgWithdrawPositionResponse.typeUrl || typeof o.amount0 === "string" && typeof o.amount1 === "string");
+    return (
+      o &&
+      (o.$typeUrl === MsgWithdrawPositionResponse.typeUrl ||
+        (typeof o.amount0 === 'string' && typeof o.amount1 === 'string'))
+    );
   },
   isAmino(o: any): o is MsgWithdrawPositionResponseAmino {
-    return o && (o.$typeUrl === MsgWithdrawPositionResponse.typeUrl || typeof o.amount0 === "string" && typeof o.amount1 === "string");
+    return (
+      o &&
+      (o.$typeUrl === MsgWithdrawPositionResponse.typeUrl ||
+        (typeof o.amount0 === 'string' && typeof o.amount1 === 'string'))
+    );
   },
-  encode(message: MsgWithdrawPositionResponse, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
-    if (message.amount0 !== "") {
+  encode(
+    message: MsgWithdrawPositionResponse,
+    writer: BinaryWriter = BinaryWriter.create(),
+  ): BinaryWriter {
+    if (message.amount0 !== '') {
       writer.uint32(10).string(message.amount0);
     }
-    if (message.amount1 !== "") {
+    if (message.amount1 !== '') {
       writer.uint32(18).string(message.amount1);
     }
     return writer;
   },
-  decode(input: BinaryReader | Uint8Array, length?: number): MsgWithdrawPositionResponse {
-    const reader = input instanceof BinaryReader ? input : new BinaryReader(input);
+  decode(
+    input: BinaryReader | Uint8Array,
+    length?: number,
+  ): MsgWithdrawPositionResponse {
+    const reader =
+      input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseMsgWithdrawPositionResponse();
     while (reader.pos < end) {
@@ -1066,13 +1619,17 @@ export const MsgWithdrawPositionResponse = {
     }
     return message;
   },
-  fromPartial(object: Partial<MsgWithdrawPositionResponse>): MsgWithdrawPositionResponse {
+  fromPartial(
+    object: Partial<MsgWithdrawPositionResponse>,
+  ): MsgWithdrawPositionResponse {
     const message = createBaseMsgWithdrawPositionResponse();
-    message.amount0 = object.amount0 ?? "";
-    message.amount1 = object.amount1 ?? "";
+    message.amount0 = object.amount0 ?? '';
+    message.amount1 = object.amount1 ?? '';
     return message;
   },
-  fromAmino(object: MsgWithdrawPositionResponseAmino): MsgWithdrawPositionResponse {
+  fromAmino(
+    object: MsgWithdrawPositionResponseAmino,
+  ): MsgWithdrawPositionResponse {
     const message = createBaseMsgWithdrawPositionResponse();
     if (object.amount0 !== undefined && object.amount0 !== null) {
       message.amount0 = object.amount0;
@@ -1082,60 +1639,103 @@ export const MsgWithdrawPositionResponse = {
     }
     return message;
   },
-  toAmino(message: MsgWithdrawPositionResponse): MsgWithdrawPositionResponseAmino {
+  toAmino(
+    message: MsgWithdrawPositionResponse,
+  ): MsgWithdrawPositionResponseAmino {
     const obj: any = {};
-    obj.amount0 = message.amount0 === "" ? undefined : message.amount0;
-    obj.amount1 = message.amount1 === "" ? undefined : message.amount1;
+    obj.amount0 = message.amount0 === '' ? undefined : message.amount0;
+    obj.amount1 = message.amount1 === '' ? undefined : message.amount1;
     return obj;
   },
-  fromAminoMsg(object: MsgWithdrawPositionResponseAminoMsg): MsgWithdrawPositionResponse {
+  fromAminoMsg(
+    object: MsgWithdrawPositionResponseAminoMsg,
+  ): MsgWithdrawPositionResponse {
     return MsgWithdrawPositionResponse.fromAmino(object.value);
   },
-  fromProtoMsg(message: MsgWithdrawPositionResponseProtoMsg): MsgWithdrawPositionResponse {
+  fromProtoMsg(
+    message: MsgWithdrawPositionResponseProtoMsg,
+  ): MsgWithdrawPositionResponse {
     return MsgWithdrawPositionResponse.decode(message.value);
   },
   toProto(message: MsgWithdrawPositionResponse): Uint8Array {
     return MsgWithdrawPositionResponse.encode(message).finish();
   },
-  toProtoMsg(message: MsgWithdrawPositionResponse): MsgWithdrawPositionResponseProtoMsg {
+  toProtoMsg(
+    message: MsgWithdrawPositionResponse,
+  ): MsgWithdrawPositionResponseProtoMsg {
     return {
-      typeUrl: "/symphony.concentratedliquidity.v1beta1.MsgWithdrawPositionResponse",
-      value: MsgWithdrawPositionResponse.encode(message).finish()
+      typeUrl:
+        '/symphony.concentratedliquidity.v1beta1.MsgWithdrawPositionResponse',
+      value: MsgWithdrawPositionResponse.encode(message).finish(),
     };
-  }
+  },
 };
-GlobalDecoderRegistry.register(MsgWithdrawPositionResponse.typeUrl, MsgWithdrawPositionResponse);
+GlobalDecoderRegistry.register(
+  MsgWithdrawPositionResponse.typeUrl,
+  MsgWithdrawPositionResponse,
+);
 function createBaseMsgCollectSpreadRewards(): MsgCollectSpreadRewards {
   return {
     positionIds: [],
-    sender: ""
+    sender: '',
   };
 }
+/**
+ * ===================== MsgCollectSpreadRewards
+ * @name MsgCollectSpreadRewards
+ * @package symphony.concentratedliquidity.v1beta1
+ * @see proto type: symphony.concentratedliquidity.v1beta1.MsgCollectSpreadRewards
+ */
 export const MsgCollectSpreadRewards = {
-  typeUrl: "/symphony.concentratedliquidity.v1beta1.MsgCollectSpreadRewards",
-  aminoType: "symphony/cl-col-sp-rewards",
+  typeUrl: '/symphony.concentratedliquidity.v1beta1.MsgCollectSpreadRewards',
+  aminoType: 'symphony/cl-col-sp-rewards',
   is(o: any): o is MsgCollectSpreadRewards {
-    return o && (o.$typeUrl === MsgCollectSpreadRewards.typeUrl || Array.isArray(o.positionIds) && (!o.positionIds.length || typeof o.positionIds[0] === "bigint") && typeof o.sender === "string");
+    return (
+      o &&
+      (o.$typeUrl === MsgCollectSpreadRewards.typeUrl ||
+        (Array.isArray(o.positionIds) &&
+          (!o.positionIds.length || typeof o.positionIds[0] === 'bigint') &&
+          typeof o.sender === 'string'))
+    );
   },
   isSDK(o: any): o is MsgCollectSpreadRewardsSDKType {
-    return o && (o.$typeUrl === MsgCollectSpreadRewards.typeUrl || Array.isArray(o.position_ids) && (!o.position_ids.length || typeof o.position_ids[0] === "bigint") && typeof o.sender === "string");
+    return (
+      o &&
+      (o.$typeUrl === MsgCollectSpreadRewards.typeUrl ||
+        (Array.isArray(o.position_ids) &&
+          (!o.position_ids.length || typeof o.position_ids[0] === 'bigint') &&
+          typeof o.sender === 'string'))
+    );
   },
   isAmino(o: any): o is MsgCollectSpreadRewardsAmino {
-    return o && (o.$typeUrl === MsgCollectSpreadRewards.typeUrl || Array.isArray(o.position_ids) && (!o.position_ids.length || typeof o.position_ids[0] === "bigint") && typeof o.sender === "string");
+    return (
+      o &&
+      (o.$typeUrl === MsgCollectSpreadRewards.typeUrl ||
+        (Array.isArray(o.position_ids) &&
+          (!o.position_ids.length || typeof o.position_ids[0] === 'bigint') &&
+          typeof o.sender === 'string'))
+    );
   },
-  encode(message: MsgCollectSpreadRewards, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
+  encode(
+    message: MsgCollectSpreadRewards,
+    writer: BinaryWriter = BinaryWriter.create(),
+  ): BinaryWriter {
     writer.uint32(10).fork();
     for (const v of message.positionIds) {
       writer.uint64(v);
     }
     writer.ldelim();
-    if (message.sender !== "") {
+    if (message.sender !== '') {
       writer.uint32(18).string(message.sender);
     }
     return writer;
   },
-  decode(input: BinaryReader | Uint8Array, length?: number): MsgCollectSpreadRewards {
-    const reader = input instanceof BinaryReader ? input : new BinaryReader(input);
+  decode(
+    input: BinaryReader | Uint8Array,
+    length?: number,
+  ): MsgCollectSpreadRewards {
+    const reader =
+      input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseMsgCollectSpreadRewards();
     while (reader.pos < end) {
@@ -1161,10 +1761,13 @@ export const MsgCollectSpreadRewards = {
     }
     return message;
   },
-  fromPartial(object: Partial<MsgCollectSpreadRewards>): MsgCollectSpreadRewards {
+  fromPartial(
+    object: Partial<MsgCollectSpreadRewards>,
+  ): MsgCollectSpreadRewards {
     const message = createBaseMsgCollectSpreadRewards();
-    message.positionIds = object.positionIds?.map(e => BigInt(e.toString())) || [];
-    message.sender = object.sender ?? "";
+    message.positionIds =
+      object.positionIds?.map(e => BigInt(e.toString())) || [];
+    message.sender = object.sender ?? '';
     return message;
   },
   fromAmino(object: MsgCollectSpreadRewardsAmino): MsgCollectSpreadRewards {
@@ -1182,64 +1785,112 @@ export const MsgCollectSpreadRewards = {
     } else {
       obj.position_ids = message.positionIds;
     }
-    obj.sender = message.sender === "" ? undefined : message.sender;
+    obj.sender = message.sender === '' ? undefined : message.sender;
     return obj;
   },
-  fromAminoMsg(object: MsgCollectSpreadRewardsAminoMsg): MsgCollectSpreadRewards {
+  fromAminoMsg(
+    object: MsgCollectSpreadRewardsAminoMsg,
+  ): MsgCollectSpreadRewards {
     return MsgCollectSpreadRewards.fromAmino(object.value);
   },
-  toAminoMsg(message: MsgCollectSpreadRewards): MsgCollectSpreadRewardsAminoMsg {
+  toAminoMsg(
+    message: MsgCollectSpreadRewards,
+  ): MsgCollectSpreadRewardsAminoMsg {
     return {
-      type: "symphony/cl-col-sp-rewards",
-      value: MsgCollectSpreadRewards.toAmino(message)
+      type: 'symphony/cl-col-sp-rewards',
+      value: MsgCollectSpreadRewards.toAmino(message),
     };
   },
-  fromProtoMsg(message: MsgCollectSpreadRewardsProtoMsg): MsgCollectSpreadRewards {
+  fromProtoMsg(
+    message: MsgCollectSpreadRewardsProtoMsg,
+  ): MsgCollectSpreadRewards {
     return MsgCollectSpreadRewards.decode(message.value);
   },
   toProto(message: MsgCollectSpreadRewards): Uint8Array {
     return MsgCollectSpreadRewards.encode(message).finish();
   },
-  toProtoMsg(message: MsgCollectSpreadRewards): MsgCollectSpreadRewardsProtoMsg {
+  toProtoMsg(
+    message: MsgCollectSpreadRewards,
+  ): MsgCollectSpreadRewardsProtoMsg {
     return {
-      typeUrl: "/symphony.concentratedliquidity.v1beta1.MsgCollectSpreadRewards",
-      value: MsgCollectSpreadRewards.encode(message).finish()
+      typeUrl:
+        '/symphony.concentratedliquidity.v1beta1.MsgCollectSpreadRewards',
+      value: MsgCollectSpreadRewards.encode(message).finish(),
     };
-  }
+  },
 };
-GlobalDecoderRegistry.register(MsgCollectSpreadRewards.typeUrl, MsgCollectSpreadRewards);
-GlobalDecoderRegistry.registerAminoProtoMapping(MsgCollectSpreadRewards.aminoType, MsgCollectSpreadRewards.typeUrl);
+GlobalDecoderRegistry.register(
+  MsgCollectSpreadRewards.typeUrl,
+  MsgCollectSpreadRewards,
+);
+GlobalDecoderRegistry.registerAminoProtoMapping(
+  MsgCollectSpreadRewards.aminoType,
+  MsgCollectSpreadRewards.typeUrl,
+);
 function createBaseMsgCollectSpreadRewardsResponse(): MsgCollectSpreadRewardsResponse {
   return {
-    collectedSpreadRewards: []
+    collectedSpreadRewards: [],
   };
 }
+/**
+ * @name MsgCollectSpreadRewardsResponse
+ * @package symphony.concentratedliquidity.v1beta1
+ * @see proto type: symphony.concentratedliquidity.v1beta1.MsgCollectSpreadRewardsResponse
+ */
 export const MsgCollectSpreadRewardsResponse = {
-  typeUrl: "/symphony.concentratedliquidity.v1beta1.MsgCollectSpreadRewardsResponse",
+  typeUrl:
+    '/symphony.concentratedliquidity.v1beta1.MsgCollectSpreadRewardsResponse',
   is(o: any): o is MsgCollectSpreadRewardsResponse {
-    return o && (o.$typeUrl === MsgCollectSpreadRewardsResponse.typeUrl || Array.isArray(o.collectedSpreadRewards) && (!o.collectedSpreadRewards.length || Coin.is(o.collectedSpreadRewards[0])));
+    return (
+      o &&
+      (o.$typeUrl === MsgCollectSpreadRewardsResponse.typeUrl ||
+        (Array.isArray(o.collectedSpreadRewards) &&
+          (!o.collectedSpreadRewards.length ||
+            Coin.is(o.collectedSpreadRewards[0]))))
+    );
   },
   isSDK(o: any): o is MsgCollectSpreadRewardsResponseSDKType {
-    return o && (o.$typeUrl === MsgCollectSpreadRewardsResponse.typeUrl || Array.isArray(o.collected_spread_rewards) && (!o.collected_spread_rewards.length || Coin.isSDK(o.collected_spread_rewards[0])));
+    return (
+      o &&
+      (o.$typeUrl === MsgCollectSpreadRewardsResponse.typeUrl ||
+        (Array.isArray(o.collected_spread_rewards) &&
+          (!o.collected_spread_rewards.length ||
+            Coin.isSDK(o.collected_spread_rewards[0]))))
+    );
   },
   isAmino(o: any): o is MsgCollectSpreadRewardsResponseAmino {
-    return o && (o.$typeUrl === MsgCollectSpreadRewardsResponse.typeUrl || Array.isArray(o.collected_spread_rewards) && (!o.collected_spread_rewards.length || Coin.isAmino(o.collected_spread_rewards[0])));
+    return (
+      o &&
+      (o.$typeUrl === MsgCollectSpreadRewardsResponse.typeUrl ||
+        (Array.isArray(o.collected_spread_rewards) &&
+          (!o.collected_spread_rewards.length ||
+            Coin.isAmino(o.collected_spread_rewards[0]))))
+    );
   },
-  encode(message: MsgCollectSpreadRewardsResponse, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
+  encode(
+    message: MsgCollectSpreadRewardsResponse,
+    writer: BinaryWriter = BinaryWriter.create(),
+  ): BinaryWriter {
     for (const v of message.collectedSpreadRewards) {
       Coin.encode(v!, writer.uint32(10).fork()).ldelim();
     }
     return writer;
   },
-  decode(input: BinaryReader | Uint8Array, length?: number): MsgCollectSpreadRewardsResponse {
-    const reader = input instanceof BinaryReader ? input : new BinaryReader(input);
+  decode(
+    input: BinaryReader | Uint8Array,
+    length?: number,
+  ): MsgCollectSpreadRewardsResponse {
+    const reader =
+      input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseMsgCollectSpreadRewardsResponse();
     while (reader.pos < end) {
       const tag = reader.uint32();
       switch (tag >>> 3) {
         case 1:
-          message.collectedSpreadRewards.push(Coin.decode(reader, reader.uint32()));
+          message.collectedSpreadRewards.push(
+            Coin.decode(reader, reader.uint32()),
+          );
           break;
         default:
           reader.skipType(tag & 7);
@@ -1248,73 +1899,124 @@ export const MsgCollectSpreadRewardsResponse = {
     }
     return message;
   },
-  fromPartial(object: Partial<MsgCollectSpreadRewardsResponse>): MsgCollectSpreadRewardsResponse {
+  fromPartial(
+    object: Partial<MsgCollectSpreadRewardsResponse>,
+  ): MsgCollectSpreadRewardsResponse {
     const message = createBaseMsgCollectSpreadRewardsResponse();
-    message.collectedSpreadRewards = object.collectedSpreadRewards?.map(e => Coin.fromPartial(e)) || [];
+    message.collectedSpreadRewards =
+      object.collectedSpreadRewards?.map(e => Coin.fromPartial(e)) || [];
     return message;
   },
-  fromAmino(object: MsgCollectSpreadRewardsResponseAmino): MsgCollectSpreadRewardsResponse {
+  fromAmino(
+    object: MsgCollectSpreadRewardsResponseAmino,
+  ): MsgCollectSpreadRewardsResponse {
     const message = createBaseMsgCollectSpreadRewardsResponse();
-    message.collectedSpreadRewards = object.collected_spread_rewards?.map(e => Coin.fromAmino(e)) || [];
+    message.collectedSpreadRewards =
+      object.collected_spread_rewards?.map(e => Coin.fromAmino(e)) || [];
     return message;
   },
-  toAmino(message: MsgCollectSpreadRewardsResponse): MsgCollectSpreadRewardsResponseAmino {
+  toAmino(
+    message: MsgCollectSpreadRewardsResponse,
+  ): MsgCollectSpreadRewardsResponseAmino {
     const obj: any = {};
     if (message.collectedSpreadRewards) {
-      obj.collected_spread_rewards = message.collectedSpreadRewards.map(e => e ? Coin.toAmino(e) : undefined);
+      obj.collected_spread_rewards = message.collectedSpreadRewards.map(e =>
+        e ? Coin.toAmino(e) : undefined,
+      );
     } else {
       obj.collected_spread_rewards = message.collectedSpreadRewards;
     }
     return obj;
   },
-  fromAminoMsg(object: MsgCollectSpreadRewardsResponseAminoMsg): MsgCollectSpreadRewardsResponse {
+  fromAminoMsg(
+    object: MsgCollectSpreadRewardsResponseAminoMsg,
+  ): MsgCollectSpreadRewardsResponse {
     return MsgCollectSpreadRewardsResponse.fromAmino(object.value);
   },
-  fromProtoMsg(message: MsgCollectSpreadRewardsResponseProtoMsg): MsgCollectSpreadRewardsResponse {
+  fromProtoMsg(
+    message: MsgCollectSpreadRewardsResponseProtoMsg,
+  ): MsgCollectSpreadRewardsResponse {
     return MsgCollectSpreadRewardsResponse.decode(message.value);
   },
   toProto(message: MsgCollectSpreadRewardsResponse): Uint8Array {
     return MsgCollectSpreadRewardsResponse.encode(message).finish();
   },
-  toProtoMsg(message: MsgCollectSpreadRewardsResponse): MsgCollectSpreadRewardsResponseProtoMsg {
+  toProtoMsg(
+    message: MsgCollectSpreadRewardsResponse,
+  ): MsgCollectSpreadRewardsResponseProtoMsg {
     return {
-      typeUrl: "/symphony.concentratedliquidity.v1beta1.MsgCollectSpreadRewardsResponse",
-      value: MsgCollectSpreadRewardsResponse.encode(message).finish()
+      typeUrl:
+        '/symphony.concentratedliquidity.v1beta1.MsgCollectSpreadRewardsResponse',
+      value: MsgCollectSpreadRewardsResponse.encode(message).finish(),
     };
-  }
+  },
 };
-GlobalDecoderRegistry.register(MsgCollectSpreadRewardsResponse.typeUrl, MsgCollectSpreadRewardsResponse);
+GlobalDecoderRegistry.register(
+  MsgCollectSpreadRewardsResponse.typeUrl,
+  MsgCollectSpreadRewardsResponse,
+);
 function createBaseMsgCollectIncentives(): MsgCollectIncentives {
   return {
     positionIds: [],
-    sender: ""
+    sender: '',
   };
 }
+/**
+ * ===================== MsgCollectIncentives
+ * @name MsgCollectIncentives
+ * @package symphony.concentratedliquidity.v1beta1
+ * @see proto type: symphony.concentratedliquidity.v1beta1.MsgCollectIncentives
+ */
 export const MsgCollectIncentives = {
-  typeUrl: "/symphony.concentratedliquidity.v1beta1.MsgCollectIncentives",
-  aminoType: "symphony/cl-collect-incentives",
+  typeUrl: '/symphony.concentratedliquidity.v1beta1.MsgCollectIncentives',
+  aminoType: 'symphony/cl-collect-incentives',
   is(o: any): o is MsgCollectIncentives {
-    return o && (o.$typeUrl === MsgCollectIncentives.typeUrl || Array.isArray(o.positionIds) && (!o.positionIds.length || typeof o.positionIds[0] === "bigint") && typeof o.sender === "string");
+    return (
+      o &&
+      (o.$typeUrl === MsgCollectIncentives.typeUrl ||
+        (Array.isArray(o.positionIds) &&
+          (!o.positionIds.length || typeof o.positionIds[0] === 'bigint') &&
+          typeof o.sender === 'string'))
+    );
   },
   isSDK(o: any): o is MsgCollectIncentivesSDKType {
-    return o && (o.$typeUrl === MsgCollectIncentives.typeUrl || Array.isArray(o.position_ids) && (!o.position_ids.length || typeof o.position_ids[0] === "bigint") && typeof o.sender === "string");
+    return (
+      o &&
+      (o.$typeUrl === MsgCollectIncentives.typeUrl ||
+        (Array.isArray(o.position_ids) &&
+          (!o.position_ids.length || typeof o.position_ids[0] === 'bigint') &&
+          typeof o.sender === 'string'))
+    );
   },
   isAmino(o: any): o is MsgCollectIncentivesAmino {
-    return o && (o.$typeUrl === MsgCollectIncentives.typeUrl || Array.isArray(o.position_ids) && (!o.position_ids.length || typeof o.position_ids[0] === "bigint") && typeof o.sender === "string");
+    return (
+      o &&
+      (o.$typeUrl === MsgCollectIncentives.typeUrl ||
+        (Array.isArray(o.position_ids) &&
+          (!o.position_ids.length || typeof o.position_ids[0] === 'bigint') &&
+          typeof o.sender === 'string'))
+    );
   },
-  encode(message: MsgCollectIncentives, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
+  encode(
+    message: MsgCollectIncentives,
+    writer: BinaryWriter = BinaryWriter.create(),
+  ): BinaryWriter {
     writer.uint32(10).fork();
     for (const v of message.positionIds) {
       writer.uint64(v);
     }
     writer.ldelim();
-    if (message.sender !== "") {
+    if (message.sender !== '') {
       writer.uint32(18).string(message.sender);
     }
     return writer;
   },
-  decode(input: BinaryReader | Uint8Array, length?: number): MsgCollectIncentives {
-    const reader = input instanceof BinaryReader ? input : new BinaryReader(input);
+  decode(
+    input: BinaryReader | Uint8Array,
+    length?: number,
+  ): MsgCollectIncentives {
+    const reader =
+      input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseMsgCollectIncentives();
     while (reader.pos < end) {
@@ -1342,8 +2044,9 @@ export const MsgCollectIncentives = {
   },
   fromPartial(object: Partial<MsgCollectIncentives>): MsgCollectIncentives {
     const message = createBaseMsgCollectIncentives();
-    message.positionIds = object.positionIds?.map(e => BigInt(e.toString())) || [];
-    message.sender = object.sender ?? "";
+    message.positionIds =
+      object.positionIds?.map(e => BigInt(e.toString())) || [];
+    message.sender = object.sender ?? '';
     return message;
   },
   fromAmino(object: MsgCollectIncentivesAmino): MsgCollectIncentives {
@@ -1361,7 +2064,7 @@ export const MsgCollectIncentives = {
     } else {
       obj.position_ids = message.positionIds;
     }
-    obj.sender = message.sender === "" ? undefined : message.sender;
+    obj.sender = message.sender === '' ? undefined : message.sender;
     return obj;
   },
   fromAminoMsg(object: MsgCollectIncentivesAminoMsg): MsgCollectIncentives {
@@ -1369,8 +2072,8 @@ export const MsgCollectIncentives = {
   },
   toAminoMsg(message: MsgCollectIncentives): MsgCollectIncentivesAminoMsg {
     return {
-      type: "symphony/cl-collect-incentives",
-      value: MsgCollectIncentives.toAmino(message)
+      type: 'symphony/cl-collect-incentives',
+      value: MsgCollectIncentives.toAmino(message),
     };
   },
   fromProtoMsg(message: MsgCollectIncentivesProtoMsg): MsgCollectIncentives {
@@ -1381,31 +2084,72 @@ export const MsgCollectIncentives = {
   },
   toProtoMsg(message: MsgCollectIncentives): MsgCollectIncentivesProtoMsg {
     return {
-      typeUrl: "/symphony.concentratedliquidity.v1beta1.MsgCollectIncentives",
-      value: MsgCollectIncentives.encode(message).finish()
+      typeUrl: '/symphony.concentratedliquidity.v1beta1.MsgCollectIncentives',
+      value: MsgCollectIncentives.encode(message).finish(),
     };
-  }
+  },
 };
-GlobalDecoderRegistry.register(MsgCollectIncentives.typeUrl, MsgCollectIncentives);
-GlobalDecoderRegistry.registerAminoProtoMapping(MsgCollectIncentives.aminoType, MsgCollectIncentives.typeUrl);
+GlobalDecoderRegistry.register(
+  MsgCollectIncentives.typeUrl,
+  MsgCollectIncentives,
+);
+GlobalDecoderRegistry.registerAminoProtoMapping(
+  MsgCollectIncentives.aminoType,
+  MsgCollectIncentives.typeUrl,
+);
 function createBaseMsgCollectIncentivesResponse(): MsgCollectIncentivesResponse {
   return {
     collectedIncentives: [],
-    forfeitedIncentives: []
+    forfeitedIncentives: [],
   };
 }
+/**
+ * @name MsgCollectIncentivesResponse
+ * @package symphony.concentratedliquidity.v1beta1
+ * @see proto type: symphony.concentratedliquidity.v1beta1.MsgCollectIncentivesResponse
+ */
 export const MsgCollectIncentivesResponse = {
-  typeUrl: "/symphony.concentratedliquidity.v1beta1.MsgCollectIncentivesResponse",
+  typeUrl:
+    '/symphony.concentratedliquidity.v1beta1.MsgCollectIncentivesResponse',
   is(o: any): o is MsgCollectIncentivesResponse {
-    return o && (o.$typeUrl === MsgCollectIncentivesResponse.typeUrl || Array.isArray(o.collectedIncentives) && (!o.collectedIncentives.length || Coin.is(o.collectedIncentives[0])) && Array.isArray(o.forfeitedIncentives) && (!o.forfeitedIncentives.length || Coin.is(o.forfeitedIncentives[0])));
+    return (
+      o &&
+      (o.$typeUrl === MsgCollectIncentivesResponse.typeUrl ||
+        (Array.isArray(o.collectedIncentives) &&
+          (!o.collectedIncentives.length ||
+            Coin.is(o.collectedIncentives[0])) &&
+          Array.isArray(o.forfeitedIncentives) &&
+          (!o.forfeitedIncentives.length || Coin.is(o.forfeitedIncentives[0]))))
+    );
   },
   isSDK(o: any): o is MsgCollectIncentivesResponseSDKType {
-    return o && (o.$typeUrl === MsgCollectIncentivesResponse.typeUrl || Array.isArray(o.collected_incentives) && (!o.collected_incentives.length || Coin.isSDK(o.collected_incentives[0])) && Array.isArray(o.forfeited_incentives) && (!o.forfeited_incentives.length || Coin.isSDK(o.forfeited_incentives[0])));
+    return (
+      o &&
+      (o.$typeUrl === MsgCollectIncentivesResponse.typeUrl ||
+        (Array.isArray(o.collected_incentives) &&
+          (!o.collected_incentives.length ||
+            Coin.isSDK(o.collected_incentives[0])) &&
+          Array.isArray(o.forfeited_incentives) &&
+          (!o.forfeited_incentives.length ||
+            Coin.isSDK(o.forfeited_incentives[0]))))
+    );
   },
   isAmino(o: any): o is MsgCollectIncentivesResponseAmino {
-    return o && (o.$typeUrl === MsgCollectIncentivesResponse.typeUrl || Array.isArray(o.collected_incentives) && (!o.collected_incentives.length || Coin.isAmino(o.collected_incentives[0])) && Array.isArray(o.forfeited_incentives) && (!o.forfeited_incentives.length || Coin.isAmino(o.forfeited_incentives[0])));
+    return (
+      o &&
+      (o.$typeUrl === MsgCollectIncentivesResponse.typeUrl ||
+        (Array.isArray(o.collected_incentives) &&
+          (!o.collected_incentives.length ||
+            Coin.isAmino(o.collected_incentives[0])) &&
+          Array.isArray(o.forfeited_incentives) &&
+          (!o.forfeited_incentives.length ||
+            Coin.isAmino(o.forfeited_incentives[0]))))
+    );
   },
-  encode(message: MsgCollectIncentivesResponse, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
+  encode(
+    message: MsgCollectIncentivesResponse,
+    writer: BinaryWriter = BinaryWriter.create(),
+  ): BinaryWriter {
     for (const v of message.collectedIncentives) {
       Coin.encode(v!, writer.uint32(10).fork()).ldelim();
     }
@@ -1414,18 +2158,26 @@ export const MsgCollectIncentivesResponse = {
     }
     return writer;
   },
-  decode(input: BinaryReader | Uint8Array, length?: number): MsgCollectIncentivesResponse {
-    const reader = input instanceof BinaryReader ? input : new BinaryReader(input);
+  decode(
+    input: BinaryReader | Uint8Array,
+    length?: number,
+  ): MsgCollectIncentivesResponse {
+    const reader =
+      input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseMsgCollectIncentivesResponse();
     while (reader.pos < end) {
       const tag = reader.uint32();
       switch (tag >>> 3) {
         case 1:
-          message.collectedIncentives.push(Coin.decode(reader, reader.uint32()));
+          message.collectedIncentives.push(
+            Coin.decode(reader, reader.uint32()),
+          );
           break;
         case 2:
-          message.forfeitedIncentives.push(Coin.decode(reader, reader.uint32()));
+          message.forfeitedIncentives.push(
+            Coin.decode(reader, reader.uint32()),
+          );
           break;
         default:
           reader.skipType(tag & 7);
@@ -1434,80 +2186,135 @@ export const MsgCollectIncentivesResponse = {
     }
     return message;
   },
-  fromPartial(object: Partial<MsgCollectIncentivesResponse>): MsgCollectIncentivesResponse {
+  fromPartial(
+    object: Partial<MsgCollectIncentivesResponse>,
+  ): MsgCollectIncentivesResponse {
     const message = createBaseMsgCollectIncentivesResponse();
-    message.collectedIncentives = object.collectedIncentives?.map(e => Coin.fromPartial(e)) || [];
-    message.forfeitedIncentives = object.forfeitedIncentives?.map(e => Coin.fromPartial(e)) || [];
+    message.collectedIncentives =
+      object.collectedIncentives?.map(e => Coin.fromPartial(e)) || [];
+    message.forfeitedIncentives =
+      object.forfeitedIncentives?.map(e => Coin.fromPartial(e)) || [];
     return message;
   },
-  fromAmino(object: MsgCollectIncentivesResponseAmino): MsgCollectIncentivesResponse {
+  fromAmino(
+    object: MsgCollectIncentivesResponseAmino,
+  ): MsgCollectIncentivesResponse {
     const message = createBaseMsgCollectIncentivesResponse();
-    message.collectedIncentives = object.collected_incentives?.map(e => Coin.fromAmino(e)) || [];
-    message.forfeitedIncentives = object.forfeited_incentives?.map(e => Coin.fromAmino(e)) || [];
+    message.collectedIncentives =
+      object.collected_incentives?.map(e => Coin.fromAmino(e)) || [];
+    message.forfeitedIncentives =
+      object.forfeited_incentives?.map(e => Coin.fromAmino(e)) || [];
     return message;
   },
-  toAmino(message: MsgCollectIncentivesResponse): MsgCollectIncentivesResponseAmino {
+  toAmino(
+    message: MsgCollectIncentivesResponse,
+  ): MsgCollectIncentivesResponseAmino {
     const obj: any = {};
     if (message.collectedIncentives) {
-      obj.collected_incentives = message.collectedIncentives.map(e => e ? Coin.toAmino(e) : undefined);
+      obj.collected_incentives = message.collectedIncentives.map(e =>
+        e ? Coin.toAmino(e) : undefined,
+      );
     } else {
       obj.collected_incentives = message.collectedIncentives;
     }
     if (message.forfeitedIncentives) {
-      obj.forfeited_incentives = message.forfeitedIncentives.map(e => e ? Coin.toAmino(e) : undefined);
+      obj.forfeited_incentives = message.forfeitedIncentives.map(e =>
+        e ? Coin.toAmino(e) : undefined,
+      );
     } else {
       obj.forfeited_incentives = message.forfeitedIncentives;
     }
     return obj;
   },
-  fromAminoMsg(object: MsgCollectIncentivesResponseAminoMsg): MsgCollectIncentivesResponse {
+  fromAminoMsg(
+    object: MsgCollectIncentivesResponseAminoMsg,
+  ): MsgCollectIncentivesResponse {
     return MsgCollectIncentivesResponse.fromAmino(object.value);
   },
-  fromProtoMsg(message: MsgCollectIncentivesResponseProtoMsg): MsgCollectIncentivesResponse {
+  fromProtoMsg(
+    message: MsgCollectIncentivesResponseProtoMsg,
+  ): MsgCollectIncentivesResponse {
     return MsgCollectIncentivesResponse.decode(message.value);
   },
   toProto(message: MsgCollectIncentivesResponse): Uint8Array {
     return MsgCollectIncentivesResponse.encode(message).finish();
   },
-  toProtoMsg(message: MsgCollectIncentivesResponse): MsgCollectIncentivesResponseProtoMsg {
+  toProtoMsg(
+    message: MsgCollectIncentivesResponse,
+  ): MsgCollectIncentivesResponseProtoMsg {
     return {
-      typeUrl: "/symphony.concentratedliquidity.v1beta1.MsgCollectIncentivesResponse",
-      value: MsgCollectIncentivesResponse.encode(message).finish()
+      typeUrl:
+        '/symphony.concentratedliquidity.v1beta1.MsgCollectIncentivesResponse',
+      value: MsgCollectIncentivesResponse.encode(message).finish(),
     };
-  }
+  },
 };
-GlobalDecoderRegistry.register(MsgCollectIncentivesResponse.typeUrl, MsgCollectIncentivesResponse);
+GlobalDecoderRegistry.register(
+  MsgCollectIncentivesResponse.typeUrl,
+  MsgCollectIncentivesResponse,
+);
 function createBaseMsgFungifyChargedPositions(): MsgFungifyChargedPositions {
   return {
     positionIds: [],
-    sender: ""
+    sender: '',
   };
 }
+/**
+ * ===================== MsgFungifyChargedPositions
+ * @name MsgFungifyChargedPositions
+ * @package symphony.concentratedliquidity.v1beta1
+ * @see proto type: symphony.concentratedliquidity.v1beta1.MsgFungifyChargedPositions
+ */
 export const MsgFungifyChargedPositions = {
-  typeUrl: "/symphony.concentratedliquidity.v1beta1.MsgFungifyChargedPositions",
-  aminoType: "symphony/cl-fungify-charged-positions",
+  typeUrl: '/symphony.concentratedliquidity.v1beta1.MsgFungifyChargedPositions',
+  aminoType: 'symphony/cl-fungify-charged-positions',
   is(o: any): o is MsgFungifyChargedPositions {
-    return o && (o.$typeUrl === MsgFungifyChargedPositions.typeUrl || Array.isArray(o.positionIds) && (!o.positionIds.length || typeof o.positionIds[0] === "bigint") && typeof o.sender === "string");
+    return (
+      o &&
+      (o.$typeUrl === MsgFungifyChargedPositions.typeUrl ||
+        (Array.isArray(o.positionIds) &&
+          (!o.positionIds.length || typeof o.positionIds[0] === 'bigint') &&
+          typeof o.sender === 'string'))
+    );
   },
   isSDK(o: any): o is MsgFungifyChargedPositionsSDKType {
-    return o && (o.$typeUrl === MsgFungifyChargedPositions.typeUrl || Array.isArray(o.position_ids) && (!o.position_ids.length || typeof o.position_ids[0] === "bigint") && typeof o.sender === "string");
+    return (
+      o &&
+      (o.$typeUrl === MsgFungifyChargedPositions.typeUrl ||
+        (Array.isArray(o.position_ids) &&
+          (!o.position_ids.length || typeof o.position_ids[0] === 'bigint') &&
+          typeof o.sender === 'string'))
+    );
   },
   isAmino(o: any): o is MsgFungifyChargedPositionsAmino {
-    return o && (o.$typeUrl === MsgFungifyChargedPositions.typeUrl || Array.isArray(o.position_ids) && (!o.position_ids.length || typeof o.position_ids[0] === "bigint") && typeof o.sender === "string");
+    return (
+      o &&
+      (o.$typeUrl === MsgFungifyChargedPositions.typeUrl ||
+        (Array.isArray(o.position_ids) &&
+          (!o.position_ids.length || typeof o.position_ids[0] === 'bigint') &&
+          typeof o.sender === 'string'))
+    );
   },
-  encode(message: MsgFungifyChargedPositions, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
+  encode(
+    message: MsgFungifyChargedPositions,
+    writer: BinaryWriter = BinaryWriter.create(),
+  ): BinaryWriter {
     writer.uint32(10).fork();
     for (const v of message.positionIds) {
       writer.uint64(v);
     }
     writer.ldelim();
-    if (message.sender !== "") {
+    if (message.sender !== '') {
       writer.uint32(18).string(message.sender);
     }
     return writer;
   },
-  decode(input: BinaryReader | Uint8Array, length?: number): MsgFungifyChargedPositions {
-    const reader = input instanceof BinaryReader ? input : new BinaryReader(input);
+  decode(
+    input: BinaryReader | Uint8Array,
+    length?: number,
+  ): MsgFungifyChargedPositions {
+    const reader =
+      input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseMsgFungifyChargedPositions();
     while (reader.pos < end) {
@@ -1533,13 +2340,18 @@ export const MsgFungifyChargedPositions = {
     }
     return message;
   },
-  fromPartial(object: Partial<MsgFungifyChargedPositions>): MsgFungifyChargedPositions {
+  fromPartial(
+    object: Partial<MsgFungifyChargedPositions>,
+  ): MsgFungifyChargedPositions {
     const message = createBaseMsgFungifyChargedPositions();
-    message.positionIds = object.positionIds?.map(e => BigInt(e.toString())) || [];
-    message.sender = object.sender ?? "";
+    message.positionIds =
+      object.positionIds?.map(e => BigInt(e.toString())) || [];
+    message.sender = object.sender ?? '';
     return message;
   },
-  fromAmino(object: MsgFungifyChargedPositionsAmino): MsgFungifyChargedPositions {
+  fromAmino(
+    object: MsgFungifyChargedPositionsAmino,
+  ): MsgFungifyChargedPositions {
     const message = createBaseMsgFungifyChargedPositions();
     message.positionIds = object.position_ids?.map(e => BigInt(e)) || [];
     if (object.sender !== undefined && object.sender !== null) {
@@ -1547,64 +2359,106 @@ export const MsgFungifyChargedPositions = {
     }
     return message;
   },
-  toAmino(message: MsgFungifyChargedPositions): MsgFungifyChargedPositionsAmino {
+  toAmino(
+    message: MsgFungifyChargedPositions,
+  ): MsgFungifyChargedPositionsAmino {
     const obj: any = {};
     if (message.positionIds) {
       obj.position_ids = message.positionIds.map(e => e.toString());
     } else {
       obj.position_ids = message.positionIds;
     }
-    obj.sender = message.sender === "" ? undefined : message.sender;
+    obj.sender = message.sender === '' ? undefined : message.sender;
     return obj;
   },
-  fromAminoMsg(object: MsgFungifyChargedPositionsAminoMsg): MsgFungifyChargedPositions {
+  fromAminoMsg(
+    object: MsgFungifyChargedPositionsAminoMsg,
+  ): MsgFungifyChargedPositions {
     return MsgFungifyChargedPositions.fromAmino(object.value);
   },
-  toAminoMsg(message: MsgFungifyChargedPositions): MsgFungifyChargedPositionsAminoMsg {
+  toAminoMsg(
+    message: MsgFungifyChargedPositions,
+  ): MsgFungifyChargedPositionsAminoMsg {
     return {
-      type: "symphony/cl-fungify-charged-positions",
-      value: MsgFungifyChargedPositions.toAmino(message)
+      type: 'symphony/cl-fungify-charged-positions',
+      value: MsgFungifyChargedPositions.toAmino(message),
     };
   },
-  fromProtoMsg(message: MsgFungifyChargedPositionsProtoMsg): MsgFungifyChargedPositions {
+  fromProtoMsg(
+    message: MsgFungifyChargedPositionsProtoMsg,
+  ): MsgFungifyChargedPositions {
     return MsgFungifyChargedPositions.decode(message.value);
   },
   toProto(message: MsgFungifyChargedPositions): Uint8Array {
     return MsgFungifyChargedPositions.encode(message).finish();
   },
-  toProtoMsg(message: MsgFungifyChargedPositions): MsgFungifyChargedPositionsProtoMsg {
+  toProtoMsg(
+    message: MsgFungifyChargedPositions,
+  ): MsgFungifyChargedPositionsProtoMsg {
     return {
-      typeUrl: "/symphony.concentratedliquidity.v1beta1.MsgFungifyChargedPositions",
-      value: MsgFungifyChargedPositions.encode(message).finish()
+      typeUrl:
+        '/symphony.concentratedliquidity.v1beta1.MsgFungifyChargedPositions',
+      value: MsgFungifyChargedPositions.encode(message).finish(),
     };
-  }
+  },
 };
-GlobalDecoderRegistry.register(MsgFungifyChargedPositions.typeUrl, MsgFungifyChargedPositions);
-GlobalDecoderRegistry.registerAminoProtoMapping(MsgFungifyChargedPositions.aminoType, MsgFungifyChargedPositions.typeUrl);
+GlobalDecoderRegistry.register(
+  MsgFungifyChargedPositions.typeUrl,
+  MsgFungifyChargedPositions,
+);
+GlobalDecoderRegistry.registerAminoProtoMapping(
+  MsgFungifyChargedPositions.aminoType,
+  MsgFungifyChargedPositions.typeUrl,
+);
 function createBaseMsgFungifyChargedPositionsResponse(): MsgFungifyChargedPositionsResponse {
   return {
-    newPositionId: BigInt(0)
+    newPositionId: BigInt(0),
   };
 }
+/**
+ * @name MsgFungifyChargedPositionsResponse
+ * @package symphony.concentratedliquidity.v1beta1
+ * @see proto type: symphony.concentratedliquidity.v1beta1.MsgFungifyChargedPositionsResponse
+ */
 export const MsgFungifyChargedPositionsResponse = {
-  typeUrl: "/symphony.concentratedliquidity.v1beta1.MsgFungifyChargedPositionsResponse",
+  typeUrl:
+    '/symphony.concentratedliquidity.v1beta1.MsgFungifyChargedPositionsResponse',
   is(o: any): o is MsgFungifyChargedPositionsResponse {
-    return o && (o.$typeUrl === MsgFungifyChargedPositionsResponse.typeUrl || typeof o.newPositionId === "bigint");
+    return (
+      o &&
+      (o.$typeUrl === MsgFungifyChargedPositionsResponse.typeUrl ||
+        typeof o.newPositionId === 'bigint')
+    );
   },
   isSDK(o: any): o is MsgFungifyChargedPositionsResponseSDKType {
-    return o && (o.$typeUrl === MsgFungifyChargedPositionsResponse.typeUrl || typeof o.new_position_id === "bigint");
+    return (
+      o &&
+      (o.$typeUrl === MsgFungifyChargedPositionsResponse.typeUrl ||
+        typeof o.new_position_id === 'bigint')
+    );
   },
   isAmino(o: any): o is MsgFungifyChargedPositionsResponseAmino {
-    return o && (o.$typeUrl === MsgFungifyChargedPositionsResponse.typeUrl || typeof o.new_position_id === "bigint");
+    return (
+      o &&
+      (o.$typeUrl === MsgFungifyChargedPositionsResponse.typeUrl ||
+        typeof o.new_position_id === 'bigint')
+    );
   },
-  encode(message: MsgFungifyChargedPositionsResponse, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
+  encode(
+    message: MsgFungifyChargedPositionsResponse,
+    writer: BinaryWriter = BinaryWriter.create(),
+  ): BinaryWriter {
     if (message.newPositionId !== BigInt(0)) {
       writer.uint32(8).uint64(message.newPositionId);
     }
     return writer;
   },
-  decode(input: BinaryReader | Uint8Array, length?: number): MsgFungifyChargedPositionsResponse {
-    const reader = input instanceof BinaryReader ? input : new BinaryReader(input);
+  decode(
+    input: BinaryReader | Uint8Array,
+    length?: number,
+  ): MsgFungifyChargedPositionsResponse {
+    const reader =
+      input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseMsgFungifyChargedPositionsResponse();
     while (reader.pos < end) {
@@ -1620,75 +2474,134 @@ export const MsgFungifyChargedPositionsResponse = {
     }
     return message;
   },
-  fromPartial(object: Partial<MsgFungifyChargedPositionsResponse>): MsgFungifyChargedPositionsResponse {
+  fromPartial(
+    object: Partial<MsgFungifyChargedPositionsResponse>,
+  ): MsgFungifyChargedPositionsResponse {
     const message = createBaseMsgFungifyChargedPositionsResponse();
-    message.newPositionId = object.newPositionId !== undefined && object.newPositionId !== null ? BigInt(object.newPositionId.toString()) : BigInt(0);
+    message.newPositionId =
+      object.newPositionId !== undefined && object.newPositionId !== null
+        ? BigInt(object.newPositionId.toString())
+        : BigInt(0);
     return message;
   },
-  fromAmino(object: MsgFungifyChargedPositionsResponseAmino): MsgFungifyChargedPositionsResponse {
+  fromAmino(
+    object: MsgFungifyChargedPositionsResponseAmino,
+  ): MsgFungifyChargedPositionsResponse {
     const message = createBaseMsgFungifyChargedPositionsResponse();
-    if (object.new_position_id !== undefined && object.new_position_id !== null) {
+    if (
+      object.new_position_id !== undefined &&
+      object.new_position_id !== null
+    ) {
       message.newPositionId = BigInt(object.new_position_id);
     }
     return message;
   },
-  toAmino(message: MsgFungifyChargedPositionsResponse): MsgFungifyChargedPositionsResponseAmino {
+  toAmino(
+    message: MsgFungifyChargedPositionsResponse,
+  ): MsgFungifyChargedPositionsResponseAmino {
     const obj: any = {};
-    obj.new_position_id = message.newPositionId !== BigInt(0) ? message.newPositionId?.toString() : undefined;
+    obj.new_position_id =
+      message.newPositionId !== BigInt(0)
+        ? message.newPositionId?.toString()
+        : undefined;
     return obj;
   },
-  fromAminoMsg(object: MsgFungifyChargedPositionsResponseAminoMsg): MsgFungifyChargedPositionsResponse {
+  fromAminoMsg(
+    object: MsgFungifyChargedPositionsResponseAminoMsg,
+  ): MsgFungifyChargedPositionsResponse {
     return MsgFungifyChargedPositionsResponse.fromAmino(object.value);
   },
-  fromProtoMsg(message: MsgFungifyChargedPositionsResponseProtoMsg): MsgFungifyChargedPositionsResponse {
+  fromProtoMsg(
+    message: MsgFungifyChargedPositionsResponseProtoMsg,
+  ): MsgFungifyChargedPositionsResponse {
     return MsgFungifyChargedPositionsResponse.decode(message.value);
   },
   toProto(message: MsgFungifyChargedPositionsResponse): Uint8Array {
     return MsgFungifyChargedPositionsResponse.encode(message).finish();
   },
-  toProtoMsg(message: MsgFungifyChargedPositionsResponse): MsgFungifyChargedPositionsResponseProtoMsg {
+  toProtoMsg(
+    message: MsgFungifyChargedPositionsResponse,
+  ): MsgFungifyChargedPositionsResponseProtoMsg {
     return {
-      typeUrl: "/symphony.concentratedliquidity.v1beta1.MsgFungifyChargedPositionsResponse",
-      value: MsgFungifyChargedPositionsResponse.encode(message).finish()
+      typeUrl:
+        '/symphony.concentratedliquidity.v1beta1.MsgFungifyChargedPositionsResponse',
+      value: MsgFungifyChargedPositionsResponse.encode(message).finish(),
     };
-  }
+  },
 };
-GlobalDecoderRegistry.register(MsgFungifyChargedPositionsResponse.typeUrl, MsgFungifyChargedPositionsResponse);
+GlobalDecoderRegistry.register(
+  MsgFungifyChargedPositionsResponse.typeUrl,
+  MsgFungifyChargedPositionsResponse,
+);
 function createBaseMsgTransferPositions(): MsgTransferPositions {
   return {
     positionIds: [],
-    sender: "",
-    newOwner: ""
+    sender: '',
+    newOwner: '',
   };
 }
+/**
+ * ===================== MsgTransferPositions
+ * @name MsgTransferPositions
+ * @package symphony.concentratedliquidity.v1beta1
+ * @see proto type: symphony.concentratedliquidity.v1beta1.MsgTransferPositions
+ */
 export const MsgTransferPositions = {
-  typeUrl: "/symphony.concentratedliquidity.v1beta1.MsgTransferPositions",
-  aminoType: "symphony/cl-transfer-positions",
+  typeUrl: '/symphony.concentratedliquidity.v1beta1.MsgTransferPositions',
+  aminoType: 'symphony/cl-transfer-positions',
   is(o: any): o is MsgTransferPositions {
-    return o && (o.$typeUrl === MsgTransferPositions.typeUrl || Array.isArray(o.positionIds) && (!o.positionIds.length || typeof o.positionIds[0] === "bigint") && typeof o.sender === "string" && typeof o.newOwner === "string");
+    return (
+      o &&
+      (o.$typeUrl === MsgTransferPositions.typeUrl ||
+        (Array.isArray(o.positionIds) &&
+          (!o.positionIds.length || typeof o.positionIds[0] === 'bigint') &&
+          typeof o.sender === 'string' &&
+          typeof o.newOwner === 'string'))
+    );
   },
   isSDK(o: any): o is MsgTransferPositionsSDKType {
-    return o && (o.$typeUrl === MsgTransferPositions.typeUrl || Array.isArray(o.position_ids) && (!o.position_ids.length || typeof o.position_ids[0] === "bigint") && typeof o.sender === "string" && typeof o.new_owner === "string");
+    return (
+      o &&
+      (o.$typeUrl === MsgTransferPositions.typeUrl ||
+        (Array.isArray(o.position_ids) &&
+          (!o.position_ids.length || typeof o.position_ids[0] === 'bigint') &&
+          typeof o.sender === 'string' &&
+          typeof o.new_owner === 'string'))
+    );
   },
   isAmino(o: any): o is MsgTransferPositionsAmino {
-    return o && (o.$typeUrl === MsgTransferPositions.typeUrl || Array.isArray(o.position_ids) && (!o.position_ids.length || typeof o.position_ids[0] === "bigint") && typeof o.sender === "string" && typeof o.new_owner === "string");
+    return (
+      o &&
+      (o.$typeUrl === MsgTransferPositions.typeUrl ||
+        (Array.isArray(o.position_ids) &&
+          (!o.position_ids.length || typeof o.position_ids[0] === 'bigint') &&
+          typeof o.sender === 'string' &&
+          typeof o.new_owner === 'string'))
+    );
   },
-  encode(message: MsgTransferPositions, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
+  encode(
+    message: MsgTransferPositions,
+    writer: BinaryWriter = BinaryWriter.create(),
+  ): BinaryWriter {
     writer.uint32(10).fork();
     for (const v of message.positionIds) {
       writer.uint64(v);
     }
     writer.ldelim();
-    if (message.sender !== "") {
+    if (message.sender !== '') {
       writer.uint32(18).string(message.sender);
     }
-    if (message.newOwner !== "") {
+    if (message.newOwner !== '') {
       writer.uint32(26).string(message.newOwner);
     }
     return writer;
   },
-  decode(input: BinaryReader | Uint8Array, length?: number): MsgTransferPositions {
-    const reader = input instanceof BinaryReader ? input : new BinaryReader(input);
+  decode(
+    input: BinaryReader | Uint8Array,
+    length?: number,
+  ): MsgTransferPositions {
+    const reader =
+      input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseMsgTransferPositions();
     while (reader.pos < end) {
@@ -1719,9 +2632,10 @@ export const MsgTransferPositions = {
   },
   fromPartial(object: Partial<MsgTransferPositions>): MsgTransferPositions {
     const message = createBaseMsgTransferPositions();
-    message.positionIds = object.positionIds?.map(e => BigInt(e.toString())) || [];
-    message.sender = object.sender ?? "";
-    message.newOwner = object.newOwner ?? "";
+    message.positionIds =
+      object.positionIds?.map(e => BigInt(e.toString())) || [];
+    message.sender = object.sender ?? '';
+    message.newOwner = object.newOwner ?? '';
     return message;
   },
   fromAmino(object: MsgTransferPositionsAmino): MsgTransferPositions {
@@ -1742,8 +2656,8 @@ export const MsgTransferPositions = {
     } else {
       obj.position_ids = message.positionIds;
     }
-    obj.sender = message.sender === "" ? undefined : message.sender;
-    obj.new_owner = message.newOwner === "" ? undefined : message.newOwner;
+    obj.sender = message.sender === '' ? undefined : message.sender;
+    obj.new_owner = message.newOwner === '' ? undefined : message.newOwner;
     return obj;
   },
   fromAminoMsg(object: MsgTransferPositionsAminoMsg): MsgTransferPositions {
@@ -1751,8 +2665,8 @@ export const MsgTransferPositions = {
   },
   toAminoMsg(message: MsgTransferPositions): MsgTransferPositionsAminoMsg {
     return {
-      type: "symphony/cl-transfer-positions",
-      value: MsgTransferPositions.toAmino(message)
+      type: 'symphony/cl-transfer-positions',
+      value: MsgTransferPositions.toAmino(message),
     };
   },
   fromProtoMsg(message: MsgTransferPositionsProtoMsg): MsgTransferPositions {
@@ -1763,18 +2677,30 @@ export const MsgTransferPositions = {
   },
   toProtoMsg(message: MsgTransferPositions): MsgTransferPositionsProtoMsg {
     return {
-      typeUrl: "/symphony.concentratedliquidity.v1beta1.MsgTransferPositions",
-      value: MsgTransferPositions.encode(message).finish()
+      typeUrl: '/symphony.concentratedliquidity.v1beta1.MsgTransferPositions',
+      value: MsgTransferPositions.encode(message).finish(),
     };
-  }
+  },
 };
-GlobalDecoderRegistry.register(MsgTransferPositions.typeUrl, MsgTransferPositions);
-GlobalDecoderRegistry.registerAminoProtoMapping(MsgTransferPositions.aminoType, MsgTransferPositions.typeUrl);
+GlobalDecoderRegistry.register(
+  MsgTransferPositions.typeUrl,
+  MsgTransferPositions,
+);
+GlobalDecoderRegistry.registerAminoProtoMapping(
+  MsgTransferPositions.aminoType,
+  MsgTransferPositions.typeUrl,
+);
 function createBaseMsgTransferPositionsResponse(): MsgTransferPositionsResponse {
   return {};
 }
+/**
+ * @name MsgTransferPositionsResponse
+ * @package symphony.concentratedliquidity.v1beta1
+ * @see proto type: symphony.concentratedliquidity.v1beta1.MsgTransferPositionsResponse
+ */
 export const MsgTransferPositionsResponse = {
-  typeUrl: "/symphony.concentratedliquidity.v1beta1.MsgTransferPositionsResponse",
+  typeUrl:
+    '/symphony.concentratedliquidity.v1beta1.MsgTransferPositionsResponse',
   is(o: any): o is MsgTransferPositionsResponse {
     return o && o.$typeUrl === MsgTransferPositionsResponse.typeUrl;
   },
@@ -1784,11 +2710,18 @@ export const MsgTransferPositionsResponse = {
   isAmino(o: any): o is MsgTransferPositionsResponseAmino {
     return o && o.$typeUrl === MsgTransferPositionsResponse.typeUrl;
   },
-  encode(_: MsgTransferPositionsResponse, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
+  encode(
+    _: MsgTransferPositionsResponse,
+    writer: BinaryWriter = BinaryWriter.create(),
+  ): BinaryWriter {
     return writer;
   },
-  decode(input: BinaryReader | Uint8Array, length?: number): MsgTransferPositionsResponse {
-    const reader = input instanceof BinaryReader ? input : new BinaryReader(input);
+  decode(
+    input: BinaryReader | Uint8Array,
+    length?: number,
+  ): MsgTransferPositionsResponse {
+    const reader =
+      input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseMsgTransferPositionsResponse();
     while (reader.pos < end) {
@@ -1801,11 +2734,15 @@ export const MsgTransferPositionsResponse = {
     }
     return message;
   },
-  fromPartial(_: Partial<MsgTransferPositionsResponse>): MsgTransferPositionsResponse {
+  fromPartial(
+    _: Partial<MsgTransferPositionsResponse>,
+  ): MsgTransferPositionsResponse {
     const message = createBaseMsgTransferPositionsResponse();
     return message;
   },
-  fromAmino(_: MsgTransferPositionsResponseAmino): MsgTransferPositionsResponse {
+  fromAmino(
+    _: MsgTransferPositionsResponseAmino,
+  ): MsgTransferPositionsResponse {
     const message = createBaseMsgTransferPositionsResponse();
     return message;
   },
@@ -1813,20 +2750,30 @@ export const MsgTransferPositionsResponse = {
     const obj: any = {};
     return obj;
   },
-  fromAminoMsg(object: MsgTransferPositionsResponseAminoMsg): MsgTransferPositionsResponse {
+  fromAminoMsg(
+    object: MsgTransferPositionsResponseAminoMsg,
+  ): MsgTransferPositionsResponse {
     return MsgTransferPositionsResponse.fromAmino(object.value);
   },
-  fromProtoMsg(message: MsgTransferPositionsResponseProtoMsg): MsgTransferPositionsResponse {
+  fromProtoMsg(
+    message: MsgTransferPositionsResponseProtoMsg,
+  ): MsgTransferPositionsResponse {
     return MsgTransferPositionsResponse.decode(message.value);
   },
   toProto(message: MsgTransferPositionsResponse): Uint8Array {
     return MsgTransferPositionsResponse.encode(message).finish();
   },
-  toProtoMsg(message: MsgTransferPositionsResponse): MsgTransferPositionsResponseProtoMsg {
+  toProtoMsg(
+    message: MsgTransferPositionsResponse,
+  ): MsgTransferPositionsResponseProtoMsg {
     return {
-      typeUrl: "/symphony.concentratedliquidity.v1beta1.MsgTransferPositionsResponse",
-      value: MsgTransferPositionsResponse.encode(message).finish()
+      typeUrl:
+        '/symphony.concentratedliquidity.v1beta1.MsgTransferPositionsResponse',
+      value: MsgTransferPositionsResponse.encode(message).finish(),
     };
-  }
+  },
 };
-GlobalDecoderRegistry.register(MsgTransferPositionsResponse.typeUrl, MsgTransferPositionsResponse);
+GlobalDecoderRegistry.register(
+  MsgTransferPositionsResponse.typeUrl,
+  MsgTransferPositionsResponse,
+);

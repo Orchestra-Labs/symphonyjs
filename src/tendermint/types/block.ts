@@ -1,8 +1,27 @@
 //@ts-nocheck
-import { Header, HeaderAmino, HeaderSDKType, Data, DataAmino, DataSDKType, Commit, CommitAmino, CommitSDKType } from "./types";
-import { EvidenceList, EvidenceListAmino, EvidenceListSDKType } from "./evidence";
-import { BinaryReader, BinaryWriter } from "../../binary";
-import { GlobalDecoderRegistry } from "../../registry";
+import {
+  Header,
+  HeaderAmino,
+  HeaderSDKType,
+  Data,
+  DataAmino,
+  DataSDKType,
+  Commit,
+  CommitAmino,
+  CommitSDKType,
+} from './types';
+import {
+  EvidenceList,
+  EvidenceListAmino,
+  EvidenceListSDKType,
+} from './evidence';
+import { BinaryReader, BinaryWriter } from '../../binary';
+import { GlobalDecoderRegistry } from '../../registry';
+/**
+ * @name Block
+ * @package tendermint.types
+ * @see proto type: tendermint.types.Block
+ */
 export interface Block {
   header: Header;
   data: Data;
@@ -10,9 +29,14 @@ export interface Block {
   lastCommit?: Commit;
 }
 export interface BlockProtoMsg {
-  typeUrl: "/tendermint.types.Block";
+  typeUrl: '/tendermint.types.Block';
   value: Uint8Array;
 }
+/**
+ * @name BlockAmino
+ * @package tendermint.types
+ * @see proto type: tendermint.types.Block
+ */
 export interface BlockAmino {
   header?: HeaderAmino;
   data?: DataAmino;
@@ -20,9 +44,14 @@ export interface BlockAmino {
   last_commit?: CommitAmino;
 }
 export interface BlockAminoMsg {
-  type: "/tendermint.types.Block";
+  type: '/tendermint.types.Block';
   value: BlockAmino;
 }
+/**
+ * @name BlockSDKType
+ * @package tendermint.types
+ * @see proto type: tendermint.types.Block
+ */
 export interface BlockSDKType {
   header: HeaderSDKType;
   data: DataSDKType;
@@ -34,21 +63,45 @@ function createBaseBlock(): Block {
     header: Header.fromPartial({}),
     data: Data.fromPartial({}),
     evidence: EvidenceList.fromPartial({}),
-    lastCommit: undefined
+    lastCommit: undefined,
   };
 }
+/**
+ * @name Block
+ * @package tendermint.types
+ * @see proto type: tendermint.types.Block
+ */
 export const Block = {
-  typeUrl: "/tendermint.types.Block",
+  typeUrl: '/tendermint.types.Block',
   is(o: any): o is Block {
-    return o && (o.$typeUrl === Block.typeUrl || Header.is(o.header) && Data.is(o.data) && EvidenceList.is(o.evidence));
+    return (
+      o &&
+      (o.$typeUrl === Block.typeUrl ||
+        (Header.is(o.header) && Data.is(o.data) && EvidenceList.is(o.evidence)))
+    );
   },
   isSDK(o: any): o is BlockSDKType {
-    return o && (o.$typeUrl === Block.typeUrl || Header.isSDK(o.header) && Data.isSDK(o.data) && EvidenceList.isSDK(o.evidence));
+    return (
+      o &&
+      (o.$typeUrl === Block.typeUrl ||
+        (Header.isSDK(o.header) &&
+          Data.isSDK(o.data) &&
+          EvidenceList.isSDK(o.evidence)))
+    );
   },
   isAmino(o: any): o is BlockAmino {
-    return o && (o.$typeUrl === Block.typeUrl || Header.isAmino(o.header) && Data.isAmino(o.data) && EvidenceList.isAmino(o.evidence));
+    return (
+      o &&
+      (o.$typeUrl === Block.typeUrl ||
+        (Header.isAmino(o.header) &&
+          Data.isAmino(o.data) &&
+          EvidenceList.isAmino(o.evidence)))
+    );
   },
-  encode(message: Block, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
+  encode(
+    message: Block,
+    writer: BinaryWriter = BinaryWriter.create(),
+  ): BinaryWriter {
     if (message.header !== undefined) {
       Header.encode(message.header, writer.uint32(10).fork()).ldelim();
     }
@@ -64,7 +117,8 @@ export const Block = {
     return writer;
   },
   decode(input: BinaryReader | Uint8Array, length?: number): Block {
-    const reader = input instanceof BinaryReader ? input : new BinaryReader(input);
+    const reader =
+      input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseBlock();
     while (reader.pos < end) {
@@ -91,10 +145,22 @@ export const Block = {
   },
   fromPartial(object: Partial<Block>): Block {
     const message = createBaseBlock();
-    message.header = object.header !== undefined && object.header !== null ? Header.fromPartial(object.header) : undefined;
-    message.data = object.data !== undefined && object.data !== null ? Data.fromPartial(object.data) : undefined;
-    message.evidence = object.evidence !== undefined && object.evidence !== null ? EvidenceList.fromPartial(object.evidence) : undefined;
-    message.lastCommit = object.lastCommit !== undefined && object.lastCommit !== null ? Commit.fromPartial(object.lastCommit) : undefined;
+    message.header =
+      object.header !== undefined && object.header !== null
+        ? Header.fromPartial(object.header)
+        : undefined;
+    message.data =
+      object.data !== undefined && object.data !== null
+        ? Data.fromPartial(object.data)
+        : undefined;
+    message.evidence =
+      object.evidence !== undefined && object.evidence !== null
+        ? EvidenceList.fromPartial(object.evidence)
+        : undefined;
+    message.lastCommit =
+      object.lastCommit !== undefined && object.lastCommit !== null
+        ? Commit.fromPartial(object.lastCommit)
+        : undefined;
     return message;
   },
   fromAmino(object: BlockAmino): Block {
@@ -117,8 +183,12 @@ export const Block = {
     const obj: any = {};
     obj.header = message.header ? Header.toAmino(message.header) : undefined;
     obj.data = message.data ? Data.toAmino(message.data) : undefined;
-    obj.evidence = message.evidence ? EvidenceList.toAmino(message.evidence) : undefined;
-    obj.last_commit = message.lastCommit ? Commit.toAmino(message.lastCommit) : undefined;
+    obj.evidence = message.evidence
+      ? EvidenceList.toAmino(message.evidence)
+      : undefined;
+    obj.last_commit = message.lastCommit
+      ? Commit.toAmino(message.lastCommit)
+      : undefined;
     return obj;
   },
   fromAminoMsg(object: BlockAminoMsg): Block {
@@ -132,9 +202,9 @@ export const Block = {
   },
   toProtoMsg(message: Block): BlockProtoMsg {
     return {
-      typeUrl: "/tendermint.types.Block",
-      value: Block.encode(message).finish()
+      typeUrl: '/tendermint.types.Block',
+      value: Block.encode(message).finish(),
     };
-  }
+  },
 };
 GlobalDecoderRegistry.register(Block.typeUrl, Block);

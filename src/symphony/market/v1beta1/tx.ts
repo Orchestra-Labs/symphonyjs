@@ -1,52 +1,86 @@
 //@ts-nocheck
-import { Coin, CoinAmino, CoinSDKType } from "../../../cosmos/base/v1beta1/coin";
-import { BinaryReader, BinaryWriter } from "../../../binary";
-import { GlobalDecoderRegistry } from "../../../registry";
-/** MsgSwap represents a message to swap coin to another denom. */
+import {
+  Coin,
+  CoinAmino,
+  CoinSDKType,
+} from '../../../cosmos/base/v1beta1/coin';
+import { BinaryReader, BinaryWriter } from '../../../binary';
+import { GlobalDecoderRegistry } from '../../../registry';
+/**
+ * MsgSwap represents a message to swap coin to another denom.
+ * @name MsgSwap
+ * @package symphony.market.v1beta1
+ * @see proto type: symphony.market.v1beta1.MsgSwap
+ */
 export interface MsgSwap {
   trader: string;
   offerCoin: Coin;
   askDenom: string;
 }
 export interface MsgSwapProtoMsg {
-  typeUrl: "/symphony.market.v1beta1.MsgSwap";
+  typeUrl: '/symphony.market.v1beta1.MsgSwap';
   value: Uint8Array;
 }
-/** MsgSwap represents a message to swap coin to another denom. */
+/**
+ * MsgSwap represents a message to swap coin to another denom.
+ * @name MsgSwapAmino
+ * @package symphony.market.v1beta1
+ * @see proto type: symphony.market.v1beta1.MsgSwap
+ */
 export interface MsgSwapAmino {
   trader?: string;
   offer_coin?: CoinAmino;
   ask_denom?: string;
 }
 export interface MsgSwapAminoMsg {
-  type: "/symphony.market.v1beta1.MsgSwap";
+  type: '/symphony.market.v1beta1.MsgSwap';
   value: MsgSwapAmino;
 }
-/** MsgSwap represents a message to swap coin to another denom. */
+/**
+ * MsgSwap represents a message to swap coin to another denom.
+ * @name MsgSwapSDKType
+ * @package symphony.market.v1beta1
+ * @see proto type: symphony.market.v1beta1.MsgSwap
+ */
 export interface MsgSwapSDKType {
   trader: string;
   offer_coin: CoinSDKType;
   ask_denom: string;
 }
-/** MsgSwapResponse defines the Msg/Swap response type. */
+/**
+ * MsgSwapResponse defines the Msg/Swap response type.
+ * @name MsgSwapResponse
+ * @package symphony.market.v1beta1
+ * @see proto type: symphony.market.v1beta1.MsgSwapResponse
+ */
 export interface MsgSwapResponse {
   swapCoin: Coin;
   swapFee: Coin;
 }
 export interface MsgSwapResponseProtoMsg {
-  typeUrl: "/symphony.market.v1beta1.MsgSwapResponse";
+  typeUrl: '/symphony.market.v1beta1.MsgSwapResponse';
   value: Uint8Array;
 }
-/** MsgSwapResponse defines the Msg/Swap response type. */
+/**
+ * MsgSwapResponse defines the Msg/Swap response type.
+ * @name MsgSwapResponseAmino
+ * @package symphony.market.v1beta1
+ * @see proto type: symphony.market.v1beta1.MsgSwapResponse
+ */
 export interface MsgSwapResponseAmino {
   swap_coin?: CoinAmino;
   swap_fee?: CoinAmino;
 }
 export interface MsgSwapResponseAminoMsg {
-  type: "/symphony.market.v1beta1.MsgSwapResponse";
+  type: '/symphony.market.v1beta1.MsgSwapResponse';
   value: MsgSwapResponseAmino;
 }
-/** MsgSwapResponse defines the Msg/Swap response type. */
+/**
+ * MsgSwapResponse defines the Msg/Swap response type.
+ * @name MsgSwapResponseSDKType
+ * @package symphony.market.v1beta1
+ * @see proto type: symphony.market.v1beta1.MsgSwapResponse
+ */
 export interface MsgSwapResponseSDKType {
   swap_coin: CoinSDKType;
   swap_fee: CoinSDKType;
@@ -54,6 +88,9 @@ export interface MsgSwapResponseSDKType {
 /**
  * MsgSwapSend represents a message to swap coin and send all result coin to
  * recipient
+ * @name MsgSwapSend
+ * @package symphony.market.v1beta1
+ * @see proto type: symphony.market.v1beta1.MsgSwapSend
  */
 export interface MsgSwapSend {
   fromAddress: string;
@@ -62,12 +99,15 @@ export interface MsgSwapSend {
   askDenom: string;
 }
 export interface MsgSwapSendProtoMsg {
-  typeUrl: "/symphony.market.v1beta1.MsgSwapSend";
+  typeUrl: '/symphony.market.v1beta1.MsgSwapSend';
   value: Uint8Array;
 }
 /**
  * MsgSwapSend represents a message to swap coin and send all result coin to
  * recipient
+ * @name MsgSwapSendAmino
+ * @package symphony.market.v1beta1
+ * @see proto type: symphony.market.v1beta1.MsgSwapSend
  */
 export interface MsgSwapSendAmino {
   from_address?: string;
@@ -76,12 +116,15 @@ export interface MsgSwapSendAmino {
   ask_denom?: string;
 }
 export interface MsgSwapSendAminoMsg {
-  type: "/symphony.market.v1beta1.MsgSwapSend";
+  type: '/symphony.market.v1beta1.MsgSwapSend';
   value: MsgSwapSendAmino;
 }
 /**
  * MsgSwapSend represents a message to swap coin and send all result coin to
  * recipient
+ * @name MsgSwapSendSDKType
+ * @package symphony.market.v1beta1
+ * @see proto type: symphony.market.v1beta1.MsgSwapSend
  */
 export interface MsgSwapSendSDKType {
   from_address: string;
@@ -89,61 +132,104 @@ export interface MsgSwapSendSDKType {
   offer_coin: CoinSDKType;
   ask_denom: string;
 }
-/** MsgSwapSendResponse defines the Msg/SwapSend response type. */
+/**
+ * MsgSwapSendResponse defines the Msg/SwapSend response type.
+ * @name MsgSwapSendResponse
+ * @package symphony.market.v1beta1
+ * @see proto type: symphony.market.v1beta1.MsgSwapSendResponse
+ */
 export interface MsgSwapSendResponse {
   swapCoin: Coin;
   swapFee: Coin;
 }
 export interface MsgSwapSendResponseProtoMsg {
-  typeUrl: "/symphony.market.v1beta1.MsgSwapSendResponse";
+  typeUrl: '/symphony.market.v1beta1.MsgSwapSendResponse';
   value: Uint8Array;
 }
-/** MsgSwapSendResponse defines the Msg/SwapSend response type. */
+/**
+ * MsgSwapSendResponse defines the Msg/SwapSend response type.
+ * @name MsgSwapSendResponseAmino
+ * @package symphony.market.v1beta1
+ * @see proto type: symphony.market.v1beta1.MsgSwapSendResponse
+ */
 export interface MsgSwapSendResponseAmino {
   swap_coin?: CoinAmino;
   swap_fee?: CoinAmino;
 }
 export interface MsgSwapSendResponseAminoMsg {
-  type: "/symphony.market.v1beta1.MsgSwapSendResponse";
+  type: '/symphony.market.v1beta1.MsgSwapSendResponse';
   value: MsgSwapSendResponseAmino;
 }
-/** MsgSwapSendResponse defines the Msg/SwapSend response type. */
+/**
+ * MsgSwapSendResponse defines the Msg/SwapSend response type.
+ * @name MsgSwapSendResponseSDKType
+ * @package symphony.market.v1beta1
+ * @see proto type: symphony.market.v1beta1.MsgSwapSendResponse
+ */
 export interface MsgSwapSendResponseSDKType {
   swap_coin: CoinSDKType;
   swap_fee: CoinSDKType;
 }
 function createBaseMsgSwap(): MsgSwap {
   return {
-    trader: "",
+    trader: '',
     offerCoin: Coin.fromPartial({}),
-    askDenom: ""
+    askDenom: '',
   };
 }
+/**
+ * MsgSwap represents a message to swap coin to another denom.
+ * @name MsgSwap
+ * @package symphony.market.v1beta1
+ * @see proto type: symphony.market.v1beta1.MsgSwap
+ */
 export const MsgSwap = {
-  typeUrl: "/symphony.market.v1beta1.MsgSwap",
+  typeUrl: '/symphony.market.v1beta1.MsgSwap',
   is(o: any): o is MsgSwap {
-    return o && (o.$typeUrl === MsgSwap.typeUrl || typeof o.trader === "string" && Coin.is(o.offerCoin) && typeof o.askDenom === "string");
+    return (
+      o &&
+      (o.$typeUrl === MsgSwap.typeUrl ||
+        (typeof o.trader === 'string' &&
+          Coin.is(o.offerCoin) &&
+          typeof o.askDenom === 'string'))
+    );
   },
   isSDK(o: any): o is MsgSwapSDKType {
-    return o && (o.$typeUrl === MsgSwap.typeUrl || typeof o.trader === "string" && Coin.isSDK(o.offer_coin) && typeof o.ask_denom === "string");
+    return (
+      o &&
+      (o.$typeUrl === MsgSwap.typeUrl ||
+        (typeof o.trader === 'string' &&
+          Coin.isSDK(o.offer_coin) &&
+          typeof o.ask_denom === 'string'))
+    );
   },
   isAmino(o: any): o is MsgSwapAmino {
-    return o && (o.$typeUrl === MsgSwap.typeUrl || typeof o.trader === "string" && Coin.isAmino(o.offer_coin) && typeof o.ask_denom === "string");
+    return (
+      o &&
+      (o.$typeUrl === MsgSwap.typeUrl ||
+        (typeof o.trader === 'string' &&
+          Coin.isAmino(o.offer_coin) &&
+          typeof o.ask_denom === 'string'))
+    );
   },
-  encode(message: MsgSwap, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
-    if (message.trader !== "") {
+  encode(
+    message: MsgSwap,
+    writer: BinaryWriter = BinaryWriter.create(),
+  ): BinaryWriter {
+    if (message.trader !== '') {
       writer.uint32(10).string(message.trader);
     }
     if (message.offerCoin !== undefined) {
       Coin.encode(message.offerCoin, writer.uint32(18).fork()).ldelim();
     }
-    if (message.askDenom !== "") {
+    if (message.askDenom !== '') {
       writer.uint32(26).string(message.askDenom);
     }
     return writer;
   },
   decode(input: BinaryReader | Uint8Array, length?: number): MsgSwap {
-    const reader = input instanceof BinaryReader ? input : new BinaryReader(input);
+    const reader =
+      input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseMsgSwap();
     while (reader.pos < end) {
@@ -167,9 +253,12 @@ export const MsgSwap = {
   },
   fromPartial(object: Partial<MsgSwap>): MsgSwap {
     const message = createBaseMsgSwap();
-    message.trader = object.trader ?? "";
-    message.offerCoin = object.offerCoin !== undefined && object.offerCoin !== null ? Coin.fromPartial(object.offerCoin) : undefined;
-    message.askDenom = object.askDenom ?? "";
+    message.trader = object.trader ?? '';
+    message.offerCoin =
+      object.offerCoin !== undefined && object.offerCoin !== null
+        ? Coin.fromPartial(object.offerCoin)
+        : undefined;
+    message.askDenom = object.askDenom ?? '';
     return message;
   },
   fromAmino(object: MsgSwapAmino): MsgSwap {
@@ -187,9 +276,11 @@ export const MsgSwap = {
   },
   toAmino(message: MsgSwap): MsgSwapAmino {
     const obj: any = {};
-    obj.trader = message.trader === "" ? undefined : message.trader;
-    obj.offer_coin = message.offerCoin ? Coin.toAmino(message.offerCoin) : undefined;
-    obj.ask_denom = message.askDenom === "" ? undefined : message.askDenom;
+    obj.trader = message.trader === '' ? undefined : message.trader;
+    obj.offer_coin = message.offerCoin
+      ? Coin.toAmino(message.offerCoin)
+      : undefined;
+    obj.ask_denom = message.askDenom === '' ? undefined : message.askDenom;
     return obj;
   },
   fromAminoMsg(object: MsgSwapAminoMsg): MsgSwap {
@@ -203,30 +294,51 @@ export const MsgSwap = {
   },
   toProtoMsg(message: MsgSwap): MsgSwapProtoMsg {
     return {
-      typeUrl: "/symphony.market.v1beta1.MsgSwap",
-      value: MsgSwap.encode(message).finish()
+      typeUrl: '/symphony.market.v1beta1.MsgSwap',
+      value: MsgSwap.encode(message).finish(),
     };
-  }
+  },
 };
 GlobalDecoderRegistry.register(MsgSwap.typeUrl, MsgSwap);
 function createBaseMsgSwapResponse(): MsgSwapResponse {
   return {
     swapCoin: Coin.fromPartial({}),
-    swapFee: Coin.fromPartial({})
+    swapFee: Coin.fromPartial({}),
   };
 }
+/**
+ * MsgSwapResponse defines the Msg/Swap response type.
+ * @name MsgSwapResponse
+ * @package symphony.market.v1beta1
+ * @see proto type: symphony.market.v1beta1.MsgSwapResponse
+ */
 export const MsgSwapResponse = {
-  typeUrl: "/symphony.market.v1beta1.MsgSwapResponse",
+  typeUrl: '/symphony.market.v1beta1.MsgSwapResponse',
   is(o: any): o is MsgSwapResponse {
-    return o && (o.$typeUrl === MsgSwapResponse.typeUrl || Coin.is(o.swapCoin) && Coin.is(o.swapFee));
+    return (
+      o &&
+      (o.$typeUrl === MsgSwapResponse.typeUrl ||
+        (Coin.is(o.swapCoin) && Coin.is(o.swapFee)))
+    );
   },
   isSDK(o: any): o is MsgSwapResponseSDKType {
-    return o && (o.$typeUrl === MsgSwapResponse.typeUrl || Coin.isSDK(o.swap_coin) && Coin.isSDK(o.swap_fee));
+    return (
+      o &&
+      (o.$typeUrl === MsgSwapResponse.typeUrl ||
+        (Coin.isSDK(o.swap_coin) && Coin.isSDK(o.swap_fee)))
+    );
   },
   isAmino(o: any): o is MsgSwapResponseAmino {
-    return o && (o.$typeUrl === MsgSwapResponse.typeUrl || Coin.isAmino(o.swap_coin) && Coin.isAmino(o.swap_fee));
+    return (
+      o &&
+      (o.$typeUrl === MsgSwapResponse.typeUrl ||
+        (Coin.isAmino(o.swap_coin) && Coin.isAmino(o.swap_fee)))
+    );
   },
-  encode(message: MsgSwapResponse, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
+  encode(
+    message: MsgSwapResponse,
+    writer: BinaryWriter = BinaryWriter.create(),
+  ): BinaryWriter {
     if (message.swapCoin !== undefined) {
       Coin.encode(message.swapCoin, writer.uint32(10).fork()).ldelim();
     }
@@ -236,7 +348,8 @@ export const MsgSwapResponse = {
     return writer;
   },
   decode(input: BinaryReader | Uint8Array, length?: number): MsgSwapResponse {
-    const reader = input instanceof BinaryReader ? input : new BinaryReader(input);
+    const reader =
+      input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseMsgSwapResponse();
     while (reader.pos < end) {
@@ -257,8 +370,14 @@ export const MsgSwapResponse = {
   },
   fromPartial(object: Partial<MsgSwapResponse>): MsgSwapResponse {
     const message = createBaseMsgSwapResponse();
-    message.swapCoin = object.swapCoin !== undefined && object.swapCoin !== null ? Coin.fromPartial(object.swapCoin) : undefined;
-    message.swapFee = object.swapFee !== undefined && object.swapFee !== null ? Coin.fromPartial(object.swapFee) : undefined;
+    message.swapCoin =
+      object.swapCoin !== undefined && object.swapCoin !== null
+        ? Coin.fromPartial(object.swapCoin)
+        : undefined;
+    message.swapFee =
+      object.swapFee !== undefined && object.swapFee !== null
+        ? Coin.fromPartial(object.swapFee)
+        : undefined;
     return message;
   },
   fromAmino(object: MsgSwapResponseAmino): MsgSwapResponse {
@@ -273,7 +392,9 @@ export const MsgSwapResponse = {
   },
   toAmino(message: MsgSwapResponse): MsgSwapResponseAmino {
     const obj: any = {};
-    obj.swap_coin = message.swapCoin ? Coin.toAmino(message.swapCoin) : undefined;
+    obj.swap_coin = message.swapCoin
+      ? Coin.toAmino(message.swapCoin)
+      : undefined;
     obj.swap_fee = message.swapFee ? Coin.toAmino(message.swapFee) : undefined;
     return obj;
   },
@@ -288,48 +409,80 @@ export const MsgSwapResponse = {
   },
   toProtoMsg(message: MsgSwapResponse): MsgSwapResponseProtoMsg {
     return {
-      typeUrl: "/symphony.market.v1beta1.MsgSwapResponse",
-      value: MsgSwapResponse.encode(message).finish()
+      typeUrl: '/symphony.market.v1beta1.MsgSwapResponse',
+      value: MsgSwapResponse.encode(message).finish(),
     };
-  }
+  },
 };
 GlobalDecoderRegistry.register(MsgSwapResponse.typeUrl, MsgSwapResponse);
 function createBaseMsgSwapSend(): MsgSwapSend {
   return {
-    fromAddress: "",
-    toAddress: "",
+    fromAddress: '',
+    toAddress: '',
     offerCoin: Coin.fromPartial({}),
-    askDenom: ""
+    askDenom: '',
   };
 }
+/**
+ * MsgSwapSend represents a message to swap coin and send all result coin to
+ * recipient
+ * @name MsgSwapSend
+ * @package symphony.market.v1beta1
+ * @see proto type: symphony.market.v1beta1.MsgSwapSend
+ */
 export const MsgSwapSend = {
-  typeUrl: "/symphony.market.v1beta1.MsgSwapSend",
+  typeUrl: '/symphony.market.v1beta1.MsgSwapSend',
   is(o: any): o is MsgSwapSend {
-    return o && (o.$typeUrl === MsgSwapSend.typeUrl || typeof o.fromAddress === "string" && typeof o.toAddress === "string" && Coin.is(o.offerCoin) && typeof o.askDenom === "string");
+    return (
+      o &&
+      (o.$typeUrl === MsgSwapSend.typeUrl ||
+        (typeof o.fromAddress === 'string' &&
+          typeof o.toAddress === 'string' &&
+          Coin.is(o.offerCoin) &&
+          typeof o.askDenom === 'string'))
+    );
   },
   isSDK(o: any): o is MsgSwapSendSDKType {
-    return o && (o.$typeUrl === MsgSwapSend.typeUrl || typeof o.from_address === "string" && typeof o.to_address === "string" && Coin.isSDK(o.offer_coin) && typeof o.ask_denom === "string");
+    return (
+      o &&
+      (o.$typeUrl === MsgSwapSend.typeUrl ||
+        (typeof o.from_address === 'string' &&
+          typeof o.to_address === 'string' &&
+          Coin.isSDK(o.offer_coin) &&
+          typeof o.ask_denom === 'string'))
+    );
   },
   isAmino(o: any): o is MsgSwapSendAmino {
-    return o && (o.$typeUrl === MsgSwapSend.typeUrl || typeof o.from_address === "string" && typeof o.to_address === "string" && Coin.isAmino(o.offer_coin) && typeof o.ask_denom === "string");
+    return (
+      o &&
+      (o.$typeUrl === MsgSwapSend.typeUrl ||
+        (typeof o.from_address === 'string' &&
+          typeof o.to_address === 'string' &&
+          Coin.isAmino(o.offer_coin) &&
+          typeof o.ask_denom === 'string'))
+    );
   },
-  encode(message: MsgSwapSend, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
-    if (message.fromAddress !== "") {
+  encode(
+    message: MsgSwapSend,
+    writer: BinaryWriter = BinaryWriter.create(),
+  ): BinaryWriter {
+    if (message.fromAddress !== '') {
       writer.uint32(10).string(message.fromAddress);
     }
-    if (message.toAddress !== "") {
+    if (message.toAddress !== '') {
       writer.uint32(18).string(message.toAddress);
     }
     if (message.offerCoin !== undefined) {
       Coin.encode(message.offerCoin, writer.uint32(26).fork()).ldelim();
     }
-    if (message.askDenom !== "") {
+    if (message.askDenom !== '') {
       writer.uint32(34).string(message.askDenom);
     }
     return writer;
   },
   decode(input: BinaryReader | Uint8Array, length?: number): MsgSwapSend {
-    const reader = input instanceof BinaryReader ? input : new BinaryReader(input);
+    const reader =
+      input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseMsgSwapSend();
     while (reader.pos < end) {
@@ -356,10 +509,13 @@ export const MsgSwapSend = {
   },
   fromPartial(object: Partial<MsgSwapSend>): MsgSwapSend {
     const message = createBaseMsgSwapSend();
-    message.fromAddress = object.fromAddress ?? "";
-    message.toAddress = object.toAddress ?? "";
-    message.offerCoin = object.offerCoin !== undefined && object.offerCoin !== null ? Coin.fromPartial(object.offerCoin) : undefined;
-    message.askDenom = object.askDenom ?? "";
+    message.fromAddress = object.fromAddress ?? '';
+    message.toAddress = object.toAddress ?? '';
+    message.offerCoin =
+      object.offerCoin !== undefined && object.offerCoin !== null
+        ? Coin.fromPartial(object.offerCoin)
+        : undefined;
+    message.askDenom = object.askDenom ?? '';
     return message;
   },
   fromAmino(object: MsgSwapSendAmino): MsgSwapSend {
@@ -380,10 +536,13 @@ export const MsgSwapSend = {
   },
   toAmino(message: MsgSwapSend): MsgSwapSendAmino {
     const obj: any = {};
-    obj.from_address = message.fromAddress === "" ? undefined : message.fromAddress;
-    obj.to_address = message.toAddress === "" ? undefined : message.toAddress;
-    obj.offer_coin = message.offerCoin ? Coin.toAmino(message.offerCoin) : undefined;
-    obj.ask_denom = message.askDenom === "" ? undefined : message.askDenom;
+    obj.from_address =
+      message.fromAddress === '' ? undefined : message.fromAddress;
+    obj.to_address = message.toAddress === '' ? undefined : message.toAddress;
+    obj.offer_coin = message.offerCoin
+      ? Coin.toAmino(message.offerCoin)
+      : undefined;
+    obj.ask_denom = message.askDenom === '' ? undefined : message.askDenom;
     return obj;
   },
   fromAminoMsg(object: MsgSwapSendAminoMsg): MsgSwapSend {
@@ -397,30 +556,51 @@ export const MsgSwapSend = {
   },
   toProtoMsg(message: MsgSwapSend): MsgSwapSendProtoMsg {
     return {
-      typeUrl: "/symphony.market.v1beta1.MsgSwapSend",
-      value: MsgSwapSend.encode(message).finish()
+      typeUrl: '/symphony.market.v1beta1.MsgSwapSend',
+      value: MsgSwapSend.encode(message).finish(),
     };
-  }
+  },
 };
 GlobalDecoderRegistry.register(MsgSwapSend.typeUrl, MsgSwapSend);
 function createBaseMsgSwapSendResponse(): MsgSwapSendResponse {
   return {
     swapCoin: Coin.fromPartial({}),
-    swapFee: Coin.fromPartial({})
+    swapFee: Coin.fromPartial({}),
   };
 }
+/**
+ * MsgSwapSendResponse defines the Msg/SwapSend response type.
+ * @name MsgSwapSendResponse
+ * @package symphony.market.v1beta1
+ * @see proto type: symphony.market.v1beta1.MsgSwapSendResponse
+ */
 export const MsgSwapSendResponse = {
-  typeUrl: "/symphony.market.v1beta1.MsgSwapSendResponse",
+  typeUrl: '/symphony.market.v1beta1.MsgSwapSendResponse',
   is(o: any): o is MsgSwapSendResponse {
-    return o && (o.$typeUrl === MsgSwapSendResponse.typeUrl || Coin.is(o.swapCoin) && Coin.is(o.swapFee));
+    return (
+      o &&
+      (o.$typeUrl === MsgSwapSendResponse.typeUrl ||
+        (Coin.is(o.swapCoin) && Coin.is(o.swapFee)))
+    );
   },
   isSDK(o: any): o is MsgSwapSendResponseSDKType {
-    return o && (o.$typeUrl === MsgSwapSendResponse.typeUrl || Coin.isSDK(o.swap_coin) && Coin.isSDK(o.swap_fee));
+    return (
+      o &&
+      (o.$typeUrl === MsgSwapSendResponse.typeUrl ||
+        (Coin.isSDK(o.swap_coin) && Coin.isSDK(o.swap_fee)))
+    );
   },
   isAmino(o: any): o is MsgSwapSendResponseAmino {
-    return o && (o.$typeUrl === MsgSwapSendResponse.typeUrl || Coin.isAmino(o.swap_coin) && Coin.isAmino(o.swap_fee));
+    return (
+      o &&
+      (o.$typeUrl === MsgSwapSendResponse.typeUrl ||
+        (Coin.isAmino(o.swap_coin) && Coin.isAmino(o.swap_fee)))
+    );
   },
-  encode(message: MsgSwapSendResponse, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
+  encode(
+    message: MsgSwapSendResponse,
+    writer: BinaryWriter = BinaryWriter.create(),
+  ): BinaryWriter {
     if (message.swapCoin !== undefined) {
       Coin.encode(message.swapCoin, writer.uint32(10).fork()).ldelim();
     }
@@ -429,8 +609,12 @@ export const MsgSwapSendResponse = {
     }
     return writer;
   },
-  decode(input: BinaryReader | Uint8Array, length?: number): MsgSwapSendResponse {
-    const reader = input instanceof BinaryReader ? input : new BinaryReader(input);
+  decode(
+    input: BinaryReader | Uint8Array,
+    length?: number,
+  ): MsgSwapSendResponse {
+    const reader =
+      input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseMsgSwapSendResponse();
     while (reader.pos < end) {
@@ -451,8 +635,14 @@ export const MsgSwapSendResponse = {
   },
   fromPartial(object: Partial<MsgSwapSendResponse>): MsgSwapSendResponse {
     const message = createBaseMsgSwapSendResponse();
-    message.swapCoin = object.swapCoin !== undefined && object.swapCoin !== null ? Coin.fromPartial(object.swapCoin) : undefined;
-    message.swapFee = object.swapFee !== undefined && object.swapFee !== null ? Coin.fromPartial(object.swapFee) : undefined;
+    message.swapCoin =
+      object.swapCoin !== undefined && object.swapCoin !== null
+        ? Coin.fromPartial(object.swapCoin)
+        : undefined;
+    message.swapFee =
+      object.swapFee !== undefined && object.swapFee !== null
+        ? Coin.fromPartial(object.swapFee)
+        : undefined;
     return message;
   },
   fromAmino(object: MsgSwapSendResponseAmino): MsgSwapSendResponse {
@@ -467,7 +657,9 @@ export const MsgSwapSendResponse = {
   },
   toAmino(message: MsgSwapSendResponse): MsgSwapSendResponseAmino {
     const obj: any = {};
-    obj.swap_coin = message.swapCoin ? Coin.toAmino(message.swapCoin) : undefined;
+    obj.swap_coin = message.swapCoin
+      ? Coin.toAmino(message.swapCoin)
+      : undefined;
     obj.swap_fee = message.swapFee ? Coin.toAmino(message.swapFee) : undefined;
     return obj;
   },
@@ -482,9 +674,12 @@ export const MsgSwapSendResponse = {
   },
   toProtoMsg(message: MsgSwapSendResponse): MsgSwapSendResponseProtoMsg {
     return {
-      typeUrl: "/symphony.market.v1beta1.MsgSwapSendResponse",
-      value: MsgSwapSendResponse.encode(message).finish()
+      typeUrl: '/symphony.market.v1beta1.MsgSwapSendResponse',
+      value: MsgSwapSendResponse.encode(message).finish(),
     };
-  }
+  },
 };
-GlobalDecoderRegistry.register(MsgSwapSendResponse.typeUrl, MsgSwapSendResponse);
+GlobalDecoderRegistry.register(
+  MsgSwapSendResponse.typeUrl,
+  MsgSwapSendResponse,
+);

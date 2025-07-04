@@ -1,7 +1,12 @@
 //@ts-nocheck
-import { BinaryReader, BinaryWriter } from "../../../../binary";
-import { GlobalDecoderRegistry } from "../../../../registry";
-/** ===================== InstantiateMsg */
+import { BinaryReader, BinaryWriter } from '../../../../binary';
+import { GlobalDecoderRegistry } from '../../../../registry';
+/**
+ * ===================== InstantiateMsg
+ * @name InstantiateMsg
+ * @package symphony.cosmwasmpool.v1beta1
+ * @see proto type: symphony.cosmwasmpool.v1beta1.InstantiateMsg
+ */
 export interface InstantiateMsg {
   /**
    * pool_asset_denoms is the list of asset denoms that are initialized
@@ -10,10 +15,15 @@ export interface InstantiateMsg {
   poolAssetDenoms: string[];
 }
 export interface InstantiateMsgProtoMsg {
-  typeUrl: "/symphony.cosmwasmpool.v1beta1.InstantiateMsg";
+  typeUrl: '/symphony.cosmwasmpool.v1beta1.InstantiateMsg';
   value: Uint8Array;
 }
-/** ===================== InstantiateMsg */
+/**
+ * ===================== InstantiateMsg
+ * @name InstantiateMsgAmino
+ * @package symphony.cosmwasmpool.v1beta1
+ * @see proto type: symphony.cosmwasmpool.v1beta1.InstantiateMsg
+ */
 export interface InstantiateMsgAmino {
   /**
    * pool_asset_denoms is the list of asset denoms that are initialized
@@ -22,37 +32,70 @@ export interface InstantiateMsgAmino {
   pool_asset_denoms?: string[];
 }
 export interface InstantiateMsgAminoMsg {
-  type: "/symphony.cosmwasmpool.v1beta1.InstantiateMsg";
+  type: '/symphony.cosmwasmpool.v1beta1.InstantiateMsg';
   value: InstantiateMsgAmino;
 }
-/** ===================== InstantiateMsg */
+/**
+ * ===================== InstantiateMsg
+ * @name InstantiateMsgSDKType
+ * @package symphony.cosmwasmpool.v1beta1
+ * @see proto type: symphony.cosmwasmpool.v1beta1.InstantiateMsg
+ */
 export interface InstantiateMsgSDKType {
   pool_asset_denoms: string[];
 }
 function createBaseInstantiateMsg(): InstantiateMsg {
   return {
-    poolAssetDenoms: []
+    poolAssetDenoms: [],
   };
 }
+/**
+ * ===================== InstantiateMsg
+ * @name InstantiateMsg
+ * @package symphony.cosmwasmpool.v1beta1
+ * @see proto type: symphony.cosmwasmpool.v1beta1.InstantiateMsg
+ */
 export const InstantiateMsg = {
-  typeUrl: "/symphony.cosmwasmpool.v1beta1.InstantiateMsg",
+  typeUrl: '/symphony.cosmwasmpool.v1beta1.InstantiateMsg',
   is(o: any): o is InstantiateMsg {
-    return o && (o.$typeUrl === InstantiateMsg.typeUrl || Array.isArray(o.poolAssetDenoms) && (!o.poolAssetDenoms.length || typeof o.poolAssetDenoms[0] === "string"));
+    return (
+      o &&
+      (o.$typeUrl === InstantiateMsg.typeUrl ||
+        (Array.isArray(o.poolAssetDenoms) &&
+          (!o.poolAssetDenoms.length ||
+            typeof o.poolAssetDenoms[0] === 'string')))
+    );
   },
   isSDK(o: any): o is InstantiateMsgSDKType {
-    return o && (o.$typeUrl === InstantiateMsg.typeUrl || Array.isArray(o.pool_asset_denoms) && (!o.pool_asset_denoms.length || typeof o.pool_asset_denoms[0] === "string"));
+    return (
+      o &&
+      (o.$typeUrl === InstantiateMsg.typeUrl ||
+        (Array.isArray(o.pool_asset_denoms) &&
+          (!o.pool_asset_denoms.length ||
+            typeof o.pool_asset_denoms[0] === 'string')))
+    );
   },
   isAmino(o: any): o is InstantiateMsgAmino {
-    return o && (o.$typeUrl === InstantiateMsg.typeUrl || Array.isArray(o.pool_asset_denoms) && (!o.pool_asset_denoms.length || typeof o.pool_asset_denoms[0] === "string"));
+    return (
+      o &&
+      (o.$typeUrl === InstantiateMsg.typeUrl ||
+        (Array.isArray(o.pool_asset_denoms) &&
+          (!o.pool_asset_denoms.length ||
+            typeof o.pool_asset_denoms[0] === 'string')))
+    );
   },
-  encode(message: InstantiateMsg, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
+  encode(
+    message: InstantiateMsg,
+    writer: BinaryWriter = BinaryWriter.create(),
+  ): BinaryWriter {
     for (const v of message.poolAssetDenoms) {
       writer.uint32(10).string(v!);
     }
     return writer;
   },
   decode(input: BinaryReader | Uint8Array, length?: number): InstantiateMsg {
-    const reader = input instanceof BinaryReader ? input : new BinaryReader(input);
+    const reader =
+      input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseInstantiateMsg();
     while (reader.pos < end) {
@@ -98,9 +141,9 @@ export const InstantiateMsg = {
   },
   toProtoMsg(message: InstantiateMsg): InstantiateMsgProtoMsg {
     return {
-      typeUrl: "/symphony.cosmwasmpool.v1beta1.InstantiateMsg",
-      value: InstantiateMsg.encode(message).finish()
+      typeUrl: '/symphony.cosmwasmpool.v1beta1.InstantiateMsg',
+      value: InstantiateMsg.encode(message).finish(),
     };
-  }
+  },
 };
 GlobalDecoderRegistry.register(InstantiateMsg.typeUrl, InstantiateMsg);

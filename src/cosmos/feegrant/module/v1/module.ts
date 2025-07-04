@@ -1,26 +1,47 @@
 //@ts-nocheck
-import { BinaryReader, BinaryWriter } from "../../../../binary";
-import { GlobalDecoderRegistry } from "../../../../registry";
-/** Module is the config object of the feegrant module. */
+import { BinaryReader, BinaryWriter } from '../../../../binary';
+import { GlobalDecoderRegistry } from '../../../../registry';
+/**
+ * Module is the config object of the feegrant module.
+ * @name Module
+ * @package cosmos.feegrant.module.v1
+ * @see proto type: cosmos.feegrant.module.v1.Module
+ */
 export interface Module {}
 export interface ModuleProtoMsg {
-  typeUrl: "/cosmos.feegrant.module.v1.Module";
+  typeUrl: '/cosmos.feegrant.module.v1.Module';
   value: Uint8Array;
 }
-/** Module is the config object of the feegrant module. */
+/**
+ * Module is the config object of the feegrant module.
+ * @name ModuleAmino
+ * @package cosmos.feegrant.module.v1
+ * @see proto type: cosmos.feegrant.module.v1.Module
+ */
 export interface ModuleAmino {}
 export interface ModuleAminoMsg {
-  type: "cosmos-sdk/Module";
+  type: 'cosmos-sdk/Module';
   value: ModuleAmino;
 }
-/** Module is the config object of the feegrant module. */
+/**
+ * Module is the config object of the feegrant module.
+ * @name ModuleSDKType
+ * @package cosmos.feegrant.module.v1
+ * @see proto type: cosmos.feegrant.module.v1.Module
+ */
 export interface ModuleSDKType {}
 function createBaseModule(): Module {
   return {};
 }
+/**
+ * Module is the config object of the feegrant module.
+ * @name Module
+ * @package cosmos.feegrant.module.v1
+ * @see proto type: cosmos.feegrant.module.v1.Module
+ */
 export const Module = {
-  typeUrl: "/cosmos.feegrant.module.v1.Module",
-  aminoType: "cosmos-sdk/Module",
+  typeUrl: '/cosmos.feegrant.module.v1.Module',
+  aminoType: 'cosmos-sdk/Module',
   is(o: any): o is Module {
     return o && o.$typeUrl === Module.typeUrl;
   },
@@ -30,11 +51,15 @@ export const Module = {
   isAmino(o: any): o is ModuleAmino {
     return o && o.$typeUrl === Module.typeUrl;
   },
-  encode(_: Module, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
+  encode(
+    _: Module,
+    writer: BinaryWriter = BinaryWriter.create(),
+  ): BinaryWriter {
     return writer;
   },
   decode(input: BinaryReader | Uint8Array, length?: number): Module {
-    const reader = input instanceof BinaryReader ? input : new BinaryReader(input);
+    const reader =
+      input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseModule();
     while (reader.pos < end) {
@@ -64,8 +89,8 @@ export const Module = {
   },
   toAminoMsg(message: Module): ModuleAminoMsg {
     return {
-      type: "cosmos-sdk/Module",
-      value: Module.toAmino(message)
+      type: 'cosmos-sdk/Module',
+      value: Module.toAmino(message),
     };
   },
   fromProtoMsg(message: ModuleProtoMsg): Module {
@@ -76,10 +101,13 @@ export const Module = {
   },
   toProtoMsg(message: Module): ModuleProtoMsg {
     return {
-      typeUrl: "/cosmos.feegrant.module.v1.Module",
-      value: Module.encode(message).finish()
+      typeUrl: '/cosmos.feegrant.module.v1.Module',
+      value: Module.encode(message).finish(),
     };
-  }
+  },
 };
 GlobalDecoderRegistry.register(Module.typeUrl, Module);
-GlobalDecoderRegistry.registerAminoProtoMapping(Module.aminoType, Module.typeUrl);
+GlobalDecoderRegistry.registerAminoProtoMapping(
+  Module.aminoType,
+  Module.typeUrl,
+);

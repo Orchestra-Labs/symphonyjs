@@ -1,14 +1,19 @@
 //@ts-nocheck
-import { BinaryReader, BinaryWriter } from "../../../binary";
-import { bytesFromBase64, base64FromBytes } from "../../../helpers";
-import { GlobalDecoderRegistry } from "../../../registry";
+import { BinaryReader, BinaryWriter } from '../../../binary';
+import { bytesFromBase64, base64FromBytes } from '../../../helpers';
+import { GlobalDecoderRegistry } from '../../../registry';
 /**
  * AccountAuthenticator represents a foundational model for all authenticators.
  * It provides extensibility by allowing concrete types to interpret and
  * validate transactions based on the encapsulated data.
+ * @name AccountAuthenticator
+ * @package symphony.smartaccount.v1beta1
+ * @see proto type: symphony.smartaccount.v1beta1.AccountAuthenticator
  */
 export interface AccountAuthenticator {
-  /** ID uniquely identifies the authenticator instance. */
+  /**
+   * ID uniquely identifies the authenticator instance.
+   */
   id: bigint;
   /**
    * Type specifies the category of the AccountAuthenticator.
@@ -25,16 +30,21 @@ export interface AccountAuthenticator {
   config: Uint8Array;
 }
 export interface AccountAuthenticatorProtoMsg {
-  typeUrl: "/symphony.smartaccount.v1beta1.AccountAuthenticator";
+  typeUrl: '/symphony.smartaccount.v1beta1.AccountAuthenticator';
   value: Uint8Array;
 }
 /**
  * AccountAuthenticator represents a foundational model for all authenticators.
  * It provides extensibility by allowing concrete types to interpret and
  * validate transactions based on the encapsulated data.
+ * @name AccountAuthenticatorAmino
+ * @package symphony.smartaccount.v1beta1
+ * @see proto type: symphony.smartaccount.v1beta1.AccountAuthenticator
  */
 export interface AccountAuthenticatorAmino {
-  /** ID uniquely identifies the authenticator instance. */
+  /**
+   * ID uniquely identifies the authenticator instance.
+   */
   id?: string;
   /**
    * Type specifies the category of the AccountAuthenticator.
@@ -51,13 +61,16 @@ export interface AccountAuthenticatorAmino {
   config?: string;
 }
 export interface AccountAuthenticatorAminoMsg {
-  type: "/symphony.smartaccount.v1beta1.AccountAuthenticator";
+  type: '/symphony.smartaccount.v1beta1.AccountAuthenticator';
   value: AccountAuthenticatorAmino;
 }
 /**
  * AccountAuthenticator represents a foundational model for all authenticators.
  * It provides extensibility by allowing concrete types to interpret and
  * validate transactions based on the encapsulated data.
+ * @name AccountAuthenticatorSDKType
+ * @package symphony.smartaccount.v1beta1
+ * @see proto type: symphony.smartaccount.v1beta1.AccountAuthenticator
  */
 export interface AccountAuthenticatorSDKType {
   id: bigint;
@@ -67,26 +80,55 @@ export interface AccountAuthenticatorSDKType {
 function createBaseAccountAuthenticator(): AccountAuthenticator {
   return {
     id: BigInt(0),
-    type: "",
-    config: new Uint8Array()
+    type: '',
+    config: new Uint8Array(),
   };
 }
+/**
+ * AccountAuthenticator represents a foundational model for all authenticators.
+ * It provides extensibility by allowing concrete types to interpret and
+ * validate transactions based on the encapsulated data.
+ * @name AccountAuthenticator
+ * @package symphony.smartaccount.v1beta1
+ * @see proto type: symphony.smartaccount.v1beta1.AccountAuthenticator
+ */
 export const AccountAuthenticator = {
-  typeUrl: "/symphony.smartaccount.v1beta1.AccountAuthenticator",
+  typeUrl: '/symphony.smartaccount.v1beta1.AccountAuthenticator',
   is(o: any): o is AccountAuthenticator {
-    return o && (o.$typeUrl === AccountAuthenticator.typeUrl || typeof o.id === "bigint" && typeof o.type === "string" && (o.config instanceof Uint8Array || typeof o.config === "string"));
+    return (
+      o &&
+      (o.$typeUrl === AccountAuthenticator.typeUrl ||
+        (typeof o.id === 'bigint' &&
+          typeof o.type === 'string' &&
+          (o.config instanceof Uint8Array || typeof o.config === 'string')))
+    );
   },
   isSDK(o: any): o is AccountAuthenticatorSDKType {
-    return o && (o.$typeUrl === AccountAuthenticator.typeUrl || typeof o.id === "bigint" && typeof o.type === "string" && (o.config instanceof Uint8Array || typeof o.config === "string"));
+    return (
+      o &&
+      (o.$typeUrl === AccountAuthenticator.typeUrl ||
+        (typeof o.id === 'bigint' &&
+          typeof o.type === 'string' &&
+          (o.config instanceof Uint8Array || typeof o.config === 'string')))
+    );
   },
   isAmino(o: any): o is AccountAuthenticatorAmino {
-    return o && (o.$typeUrl === AccountAuthenticator.typeUrl || typeof o.id === "bigint" && typeof o.type === "string" && (o.config instanceof Uint8Array || typeof o.config === "string"));
+    return (
+      o &&
+      (o.$typeUrl === AccountAuthenticator.typeUrl ||
+        (typeof o.id === 'bigint' &&
+          typeof o.type === 'string' &&
+          (o.config instanceof Uint8Array || typeof o.config === 'string')))
+    );
   },
-  encode(message: AccountAuthenticator, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
+  encode(
+    message: AccountAuthenticator,
+    writer: BinaryWriter = BinaryWriter.create(),
+  ): BinaryWriter {
     if (message.id !== BigInt(0)) {
       writer.uint32(8).uint64(message.id);
     }
-    if (message.type !== "") {
+    if (message.type !== '') {
       writer.uint32(18).string(message.type);
     }
     if (message.config.length !== 0) {
@@ -94,8 +136,12 @@ export const AccountAuthenticator = {
     }
     return writer;
   },
-  decode(input: BinaryReader | Uint8Array, length?: number): AccountAuthenticator {
-    const reader = input instanceof BinaryReader ? input : new BinaryReader(input);
+  decode(
+    input: BinaryReader | Uint8Array,
+    length?: number,
+  ): AccountAuthenticator {
+    const reader =
+      input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseAccountAuthenticator();
     while (reader.pos < end) {
@@ -119,8 +165,11 @@ export const AccountAuthenticator = {
   },
   fromPartial(object: Partial<AccountAuthenticator>): AccountAuthenticator {
     const message = createBaseAccountAuthenticator();
-    message.id = object.id !== undefined && object.id !== null ? BigInt(object.id.toString()) : BigInt(0);
-    message.type = object.type ?? "";
+    message.id =
+      object.id !== undefined && object.id !== null
+        ? BigInt(object.id.toString())
+        : BigInt(0);
+    message.type = object.type ?? '';
     message.config = object.config ?? new Uint8Array();
     return message;
   },
@@ -140,7 +189,7 @@ export const AccountAuthenticator = {
   toAmino(message: AccountAuthenticator): AccountAuthenticatorAmino {
     const obj: any = {};
     obj.id = message.id !== BigInt(0) ? message.id?.toString() : undefined;
-    obj.type = message.type === "" ? undefined : message.type;
+    obj.type = message.type === '' ? undefined : message.type;
     obj.config = message.config ? base64FromBytes(message.config) : undefined;
     return obj;
   },
@@ -155,9 +204,12 @@ export const AccountAuthenticator = {
   },
   toProtoMsg(message: AccountAuthenticator): AccountAuthenticatorProtoMsg {
     return {
-      typeUrl: "/symphony.smartaccount.v1beta1.AccountAuthenticator",
-      value: AccountAuthenticator.encode(message).finish()
+      typeUrl: '/symphony.smartaccount.v1beta1.AccountAuthenticator',
+      value: AccountAuthenticator.encode(message).finish(),
     };
-  }
+  },
 };
-GlobalDecoderRegistry.register(AccountAuthenticator.typeUrl, AccountAuthenticator);
+GlobalDecoderRegistry.register(
+  AccountAuthenticator.typeUrl,
+  AccountAuthenticator,
+);

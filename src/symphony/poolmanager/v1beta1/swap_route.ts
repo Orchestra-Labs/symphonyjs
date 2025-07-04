@@ -1,82 +1,142 @@
 //@ts-nocheck
-import { BinaryReader, BinaryWriter } from "../../../binary";
-import { GlobalDecoderRegistry } from "../../../registry";
+import { BinaryReader, BinaryWriter } from '../../../binary';
+import { GlobalDecoderRegistry } from '../../../registry';
+/**
+ * @name SwapAmountInRoute
+ * @package symphony.poolmanager.v1beta1
+ * @see proto type: symphony.poolmanager.v1beta1.SwapAmountInRoute
+ */
 export interface SwapAmountInRoute {
   poolId: bigint;
   tokenOutDenom: string;
 }
 export interface SwapAmountInRouteProtoMsg {
-  typeUrl: "/symphony.poolmanager.v1beta1.SwapAmountInRoute";
+  typeUrl: '/symphony.poolmanager.v1beta1.SwapAmountInRoute';
   value: Uint8Array;
 }
+/**
+ * @name SwapAmountInRouteAmino
+ * @package symphony.poolmanager.v1beta1
+ * @see proto type: symphony.poolmanager.v1beta1.SwapAmountInRoute
+ */
 export interface SwapAmountInRouteAmino {
   pool_id?: string;
   token_out_denom?: string;
 }
 export interface SwapAmountInRouteAminoMsg {
-  type: "/symphony.poolmanager.v1beta1.SwapAmountInRoute";
+  type: '/symphony.poolmanager.v1beta1.SwapAmountInRoute';
   value: SwapAmountInRouteAmino;
 }
+/**
+ * @name SwapAmountInRouteSDKType
+ * @package symphony.poolmanager.v1beta1
+ * @see proto type: symphony.poolmanager.v1beta1.SwapAmountInRoute
+ */
 export interface SwapAmountInRouteSDKType {
   pool_id: bigint;
   token_out_denom: string;
 }
+/**
+ * @name SwapAmountOutRoute
+ * @package symphony.poolmanager.v1beta1
+ * @see proto type: symphony.poolmanager.v1beta1.SwapAmountOutRoute
+ */
 export interface SwapAmountOutRoute {
   poolId: bigint;
   tokenInDenom: string;
 }
 export interface SwapAmountOutRouteProtoMsg {
-  typeUrl: "/symphony.poolmanager.v1beta1.SwapAmountOutRoute";
+  typeUrl: '/symphony.poolmanager.v1beta1.SwapAmountOutRoute';
   value: Uint8Array;
 }
+/**
+ * @name SwapAmountOutRouteAmino
+ * @package symphony.poolmanager.v1beta1
+ * @see proto type: symphony.poolmanager.v1beta1.SwapAmountOutRoute
+ */
 export interface SwapAmountOutRouteAmino {
   pool_id?: string;
   token_in_denom?: string;
 }
 export interface SwapAmountOutRouteAminoMsg {
-  type: "/symphony.poolmanager.v1beta1.SwapAmountOutRoute";
+  type: '/symphony.poolmanager.v1beta1.SwapAmountOutRoute';
   value: SwapAmountOutRouteAmino;
 }
+/**
+ * @name SwapAmountOutRouteSDKType
+ * @package symphony.poolmanager.v1beta1
+ * @see proto type: symphony.poolmanager.v1beta1.SwapAmountOutRoute
+ */
 export interface SwapAmountOutRouteSDKType {
   pool_id: bigint;
   token_in_denom: string;
 }
+/**
+ * @name SwapAmountInSplitRoute
+ * @package symphony.poolmanager.v1beta1
+ * @see proto type: symphony.poolmanager.v1beta1.SwapAmountInSplitRoute
+ */
 export interface SwapAmountInSplitRoute {
   pools: SwapAmountInRoute[];
   tokenInAmount: string;
 }
 export interface SwapAmountInSplitRouteProtoMsg {
-  typeUrl: "/symphony.poolmanager.v1beta1.SwapAmountInSplitRoute";
+  typeUrl: '/symphony.poolmanager.v1beta1.SwapAmountInSplitRoute';
   value: Uint8Array;
 }
+/**
+ * @name SwapAmountInSplitRouteAmino
+ * @package symphony.poolmanager.v1beta1
+ * @see proto type: symphony.poolmanager.v1beta1.SwapAmountInSplitRoute
+ */
 export interface SwapAmountInSplitRouteAmino {
   pools?: SwapAmountInRouteAmino[];
   token_in_amount?: string;
 }
 export interface SwapAmountInSplitRouteAminoMsg {
-  type: "/symphony.poolmanager.v1beta1.SwapAmountInSplitRoute";
+  type: '/symphony.poolmanager.v1beta1.SwapAmountInSplitRoute';
   value: SwapAmountInSplitRouteAmino;
 }
+/**
+ * @name SwapAmountInSplitRouteSDKType
+ * @package symphony.poolmanager.v1beta1
+ * @see proto type: symphony.poolmanager.v1beta1.SwapAmountInSplitRoute
+ */
 export interface SwapAmountInSplitRouteSDKType {
   pools: SwapAmountInRouteSDKType[];
   token_in_amount: string;
 }
+/**
+ * @name SwapAmountOutSplitRoute
+ * @package symphony.poolmanager.v1beta1
+ * @see proto type: symphony.poolmanager.v1beta1.SwapAmountOutSplitRoute
+ */
 export interface SwapAmountOutSplitRoute {
   pools: SwapAmountOutRoute[];
   tokenOutAmount: string;
 }
 export interface SwapAmountOutSplitRouteProtoMsg {
-  typeUrl: "/symphony.poolmanager.v1beta1.SwapAmountOutSplitRoute";
+  typeUrl: '/symphony.poolmanager.v1beta1.SwapAmountOutSplitRoute';
   value: Uint8Array;
 }
+/**
+ * @name SwapAmountOutSplitRouteAmino
+ * @package symphony.poolmanager.v1beta1
+ * @see proto type: symphony.poolmanager.v1beta1.SwapAmountOutSplitRoute
+ */
 export interface SwapAmountOutSplitRouteAmino {
   pools?: SwapAmountOutRouteAmino[];
   token_out_amount?: string;
 }
 export interface SwapAmountOutSplitRouteAminoMsg {
-  type: "/symphony.poolmanager.v1beta1.SwapAmountOutSplitRoute";
+  type: '/symphony.poolmanager.v1beta1.SwapAmountOutSplitRoute';
   value: SwapAmountOutSplitRouteAmino;
 }
+/**
+ * @name SwapAmountOutSplitRouteSDKType
+ * @package symphony.poolmanager.v1beta1
+ * @see proto type: symphony.poolmanager.v1beta1.SwapAmountOutSplitRoute
+ */
 export interface SwapAmountOutSplitRouteSDKType {
   pools: SwapAmountOutRouteSDKType[];
   token_out_amount: string;
@@ -84,31 +144,54 @@ export interface SwapAmountOutSplitRouteSDKType {
 function createBaseSwapAmountInRoute(): SwapAmountInRoute {
   return {
     poolId: BigInt(0),
-    tokenOutDenom: ""
+    tokenOutDenom: '',
   };
 }
+/**
+ * @name SwapAmountInRoute
+ * @package symphony.poolmanager.v1beta1
+ * @see proto type: symphony.poolmanager.v1beta1.SwapAmountInRoute
+ */
 export const SwapAmountInRoute = {
-  typeUrl: "/symphony.poolmanager.v1beta1.SwapAmountInRoute",
+  typeUrl: '/symphony.poolmanager.v1beta1.SwapAmountInRoute',
   is(o: any): o is SwapAmountInRoute {
-    return o && (o.$typeUrl === SwapAmountInRoute.typeUrl || typeof o.poolId === "bigint" && typeof o.tokenOutDenom === "string");
+    return (
+      o &&
+      (o.$typeUrl === SwapAmountInRoute.typeUrl ||
+        (typeof o.poolId === 'bigint' && typeof o.tokenOutDenom === 'string'))
+    );
   },
   isSDK(o: any): o is SwapAmountInRouteSDKType {
-    return o && (o.$typeUrl === SwapAmountInRoute.typeUrl || typeof o.pool_id === "bigint" && typeof o.token_out_denom === "string");
+    return (
+      o &&
+      (o.$typeUrl === SwapAmountInRoute.typeUrl ||
+        (typeof o.pool_id === 'bigint' &&
+          typeof o.token_out_denom === 'string'))
+    );
   },
   isAmino(o: any): o is SwapAmountInRouteAmino {
-    return o && (o.$typeUrl === SwapAmountInRoute.typeUrl || typeof o.pool_id === "bigint" && typeof o.token_out_denom === "string");
+    return (
+      o &&
+      (o.$typeUrl === SwapAmountInRoute.typeUrl ||
+        (typeof o.pool_id === 'bigint' &&
+          typeof o.token_out_denom === 'string'))
+    );
   },
-  encode(message: SwapAmountInRoute, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
+  encode(
+    message: SwapAmountInRoute,
+    writer: BinaryWriter = BinaryWriter.create(),
+  ): BinaryWriter {
     if (message.poolId !== BigInt(0)) {
       writer.uint32(8).uint64(message.poolId);
     }
-    if (message.tokenOutDenom !== "") {
+    if (message.tokenOutDenom !== '') {
       writer.uint32(18).string(message.tokenOutDenom);
     }
     return writer;
   },
   decode(input: BinaryReader | Uint8Array, length?: number): SwapAmountInRoute {
-    const reader = input instanceof BinaryReader ? input : new BinaryReader(input);
+    const reader =
+      input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseSwapAmountInRoute();
     while (reader.pos < end) {
@@ -129,8 +212,11 @@ export const SwapAmountInRoute = {
   },
   fromPartial(object: Partial<SwapAmountInRoute>): SwapAmountInRoute {
     const message = createBaseSwapAmountInRoute();
-    message.poolId = object.poolId !== undefined && object.poolId !== null ? BigInt(object.poolId.toString()) : BigInt(0);
-    message.tokenOutDenom = object.tokenOutDenom ?? "";
+    message.poolId =
+      object.poolId !== undefined && object.poolId !== null
+        ? BigInt(object.poolId.toString())
+        : BigInt(0);
+    message.tokenOutDenom = object.tokenOutDenom ?? '';
     return message;
   },
   fromAmino(object: SwapAmountInRouteAmino): SwapAmountInRoute {
@@ -138,15 +224,20 @@ export const SwapAmountInRoute = {
     if (object.pool_id !== undefined && object.pool_id !== null) {
       message.poolId = BigInt(object.pool_id);
     }
-    if (object.token_out_denom !== undefined && object.token_out_denom !== null) {
+    if (
+      object.token_out_denom !== undefined &&
+      object.token_out_denom !== null
+    ) {
       message.tokenOutDenom = object.token_out_denom;
     }
     return message;
   },
   toAmino(message: SwapAmountInRoute): SwapAmountInRouteAmino {
     const obj: any = {};
-    obj.pool_id = message.poolId !== BigInt(0) ? message.poolId?.toString() : undefined;
-    obj.token_out_denom = message.tokenOutDenom === "" ? undefined : message.tokenOutDenom;
+    obj.pool_id =
+      message.poolId !== BigInt(0) ? message.poolId?.toString() : undefined;
+    obj.token_out_denom =
+      message.tokenOutDenom === '' ? undefined : message.tokenOutDenom;
     return obj;
   },
   fromAminoMsg(object: SwapAmountInRouteAminoMsg): SwapAmountInRoute {
@@ -160,40 +251,64 @@ export const SwapAmountInRoute = {
   },
   toProtoMsg(message: SwapAmountInRoute): SwapAmountInRouteProtoMsg {
     return {
-      typeUrl: "/symphony.poolmanager.v1beta1.SwapAmountInRoute",
-      value: SwapAmountInRoute.encode(message).finish()
+      typeUrl: '/symphony.poolmanager.v1beta1.SwapAmountInRoute',
+      value: SwapAmountInRoute.encode(message).finish(),
     };
-  }
+  },
 };
 GlobalDecoderRegistry.register(SwapAmountInRoute.typeUrl, SwapAmountInRoute);
 function createBaseSwapAmountOutRoute(): SwapAmountOutRoute {
   return {
     poolId: BigInt(0),
-    tokenInDenom: ""
+    tokenInDenom: '',
   };
 }
+/**
+ * @name SwapAmountOutRoute
+ * @package symphony.poolmanager.v1beta1
+ * @see proto type: symphony.poolmanager.v1beta1.SwapAmountOutRoute
+ */
 export const SwapAmountOutRoute = {
-  typeUrl: "/symphony.poolmanager.v1beta1.SwapAmountOutRoute",
+  typeUrl: '/symphony.poolmanager.v1beta1.SwapAmountOutRoute',
   is(o: any): o is SwapAmountOutRoute {
-    return o && (o.$typeUrl === SwapAmountOutRoute.typeUrl || typeof o.poolId === "bigint" && typeof o.tokenInDenom === "string");
+    return (
+      o &&
+      (o.$typeUrl === SwapAmountOutRoute.typeUrl ||
+        (typeof o.poolId === 'bigint' && typeof o.tokenInDenom === 'string'))
+    );
   },
   isSDK(o: any): o is SwapAmountOutRouteSDKType {
-    return o && (o.$typeUrl === SwapAmountOutRoute.typeUrl || typeof o.pool_id === "bigint" && typeof o.token_in_denom === "string");
+    return (
+      o &&
+      (o.$typeUrl === SwapAmountOutRoute.typeUrl ||
+        (typeof o.pool_id === 'bigint' && typeof o.token_in_denom === 'string'))
+    );
   },
   isAmino(o: any): o is SwapAmountOutRouteAmino {
-    return o && (o.$typeUrl === SwapAmountOutRoute.typeUrl || typeof o.pool_id === "bigint" && typeof o.token_in_denom === "string");
+    return (
+      o &&
+      (o.$typeUrl === SwapAmountOutRoute.typeUrl ||
+        (typeof o.pool_id === 'bigint' && typeof o.token_in_denom === 'string'))
+    );
   },
-  encode(message: SwapAmountOutRoute, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
+  encode(
+    message: SwapAmountOutRoute,
+    writer: BinaryWriter = BinaryWriter.create(),
+  ): BinaryWriter {
     if (message.poolId !== BigInt(0)) {
       writer.uint32(8).uint64(message.poolId);
     }
-    if (message.tokenInDenom !== "") {
+    if (message.tokenInDenom !== '') {
       writer.uint32(18).string(message.tokenInDenom);
     }
     return writer;
   },
-  decode(input: BinaryReader | Uint8Array, length?: number): SwapAmountOutRoute {
-    const reader = input instanceof BinaryReader ? input : new BinaryReader(input);
+  decode(
+    input: BinaryReader | Uint8Array,
+    length?: number,
+  ): SwapAmountOutRoute {
+    const reader =
+      input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseSwapAmountOutRoute();
     while (reader.pos < end) {
@@ -214,8 +329,11 @@ export const SwapAmountOutRoute = {
   },
   fromPartial(object: Partial<SwapAmountOutRoute>): SwapAmountOutRoute {
     const message = createBaseSwapAmountOutRoute();
-    message.poolId = object.poolId !== undefined && object.poolId !== null ? BigInt(object.poolId.toString()) : BigInt(0);
-    message.tokenInDenom = object.tokenInDenom ?? "";
+    message.poolId =
+      object.poolId !== undefined && object.poolId !== null
+        ? BigInt(object.poolId.toString())
+        : BigInt(0);
+    message.tokenInDenom = object.tokenInDenom ?? '';
     return message;
   },
   fromAmino(object: SwapAmountOutRouteAmino): SwapAmountOutRoute {
@@ -230,8 +348,10 @@ export const SwapAmountOutRoute = {
   },
   toAmino(message: SwapAmountOutRoute): SwapAmountOutRouteAmino {
     const obj: any = {};
-    obj.pool_id = message.poolId !== BigInt(0) ? message.poolId?.toString() : undefined;
-    obj.token_in_denom = message.tokenInDenom === "" ? undefined : message.tokenInDenom;
+    obj.pool_id =
+      message.poolId !== BigInt(0) ? message.poolId?.toString() : undefined;
+    obj.token_in_denom =
+      message.tokenInDenom === '' ? undefined : message.tokenInDenom;
     return obj;
   },
   fromAminoMsg(object: SwapAmountOutRouteAminoMsg): SwapAmountOutRoute {
@@ -245,40 +365,70 @@ export const SwapAmountOutRoute = {
   },
   toProtoMsg(message: SwapAmountOutRoute): SwapAmountOutRouteProtoMsg {
     return {
-      typeUrl: "/symphony.poolmanager.v1beta1.SwapAmountOutRoute",
-      value: SwapAmountOutRoute.encode(message).finish()
+      typeUrl: '/symphony.poolmanager.v1beta1.SwapAmountOutRoute',
+      value: SwapAmountOutRoute.encode(message).finish(),
     };
-  }
+  },
 };
 GlobalDecoderRegistry.register(SwapAmountOutRoute.typeUrl, SwapAmountOutRoute);
 function createBaseSwapAmountInSplitRoute(): SwapAmountInSplitRoute {
   return {
     pools: [],
-    tokenInAmount: ""
+    tokenInAmount: '',
   };
 }
+/**
+ * @name SwapAmountInSplitRoute
+ * @package symphony.poolmanager.v1beta1
+ * @see proto type: symphony.poolmanager.v1beta1.SwapAmountInSplitRoute
+ */
 export const SwapAmountInSplitRoute = {
-  typeUrl: "/symphony.poolmanager.v1beta1.SwapAmountInSplitRoute",
+  typeUrl: '/symphony.poolmanager.v1beta1.SwapAmountInSplitRoute',
   is(o: any): o is SwapAmountInSplitRoute {
-    return o && (o.$typeUrl === SwapAmountInSplitRoute.typeUrl || Array.isArray(o.pools) && (!o.pools.length || SwapAmountInRoute.is(o.pools[0])) && typeof o.tokenInAmount === "string");
+    return (
+      o &&
+      (o.$typeUrl === SwapAmountInSplitRoute.typeUrl ||
+        (Array.isArray(o.pools) &&
+          (!o.pools.length || SwapAmountInRoute.is(o.pools[0])) &&
+          typeof o.tokenInAmount === 'string'))
+    );
   },
   isSDK(o: any): o is SwapAmountInSplitRouteSDKType {
-    return o && (o.$typeUrl === SwapAmountInSplitRoute.typeUrl || Array.isArray(o.pools) && (!o.pools.length || SwapAmountInRoute.isSDK(o.pools[0])) && typeof o.token_in_amount === "string");
+    return (
+      o &&
+      (o.$typeUrl === SwapAmountInSplitRoute.typeUrl ||
+        (Array.isArray(o.pools) &&
+          (!o.pools.length || SwapAmountInRoute.isSDK(o.pools[0])) &&
+          typeof o.token_in_amount === 'string'))
+    );
   },
   isAmino(o: any): o is SwapAmountInSplitRouteAmino {
-    return o && (o.$typeUrl === SwapAmountInSplitRoute.typeUrl || Array.isArray(o.pools) && (!o.pools.length || SwapAmountInRoute.isAmino(o.pools[0])) && typeof o.token_in_amount === "string");
+    return (
+      o &&
+      (o.$typeUrl === SwapAmountInSplitRoute.typeUrl ||
+        (Array.isArray(o.pools) &&
+          (!o.pools.length || SwapAmountInRoute.isAmino(o.pools[0])) &&
+          typeof o.token_in_amount === 'string'))
+    );
   },
-  encode(message: SwapAmountInSplitRoute, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
+  encode(
+    message: SwapAmountInSplitRoute,
+    writer: BinaryWriter = BinaryWriter.create(),
+  ): BinaryWriter {
     for (const v of message.pools) {
       SwapAmountInRoute.encode(v!, writer.uint32(10).fork()).ldelim();
     }
-    if (message.tokenInAmount !== "") {
+    if (message.tokenInAmount !== '') {
       writer.uint32(18).string(message.tokenInAmount);
     }
     return writer;
   },
-  decode(input: BinaryReader | Uint8Array, length?: number): SwapAmountInSplitRoute {
-    const reader = input instanceof BinaryReader ? input : new BinaryReader(input);
+  decode(
+    input: BinaryReader | Uint8Array,
+    length?: number,
+  ): SwapAmountInSplitRoute {
+    const reader =
+      input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseSwapAmountInSplitRoute();
     while (reader.pos < end) {
@@ -299,14 +449,19 @@ export const SwapAmountInSplitRoute = {
   },
   fromPartial(object: Partial<SwapAmountInSplitRoute>): SwapAmountInSplitRoute {
     const message = createBaseSwapAmountInSplitRoute();
-    message.pools = object.pools?.map(e => SwapAmountInRoute.fromPartial(e)) || [];
-    message.tokenInAmount = object.tokenInAmount ?? "";
+    message.pools =
+      object.pools?.map(e => SwapAmountInRoute.fromPartial(e)) || [];
+    message.tokenInAmount = object.tokenInAmount ?? '';
     return message;
   },
   fromAmino(object: SwapAmountInSplitRouteAmino): SwapAmountInSplitRoute {
     const message = createBaseSwapAmountInSplitRoute();
-    message.pools = object.pools?.map(e => SwapAmountInRoute.fromAmino(e)) || [];
-    if (object.token_in_amount !== undefined && object.token_in_amount !== null) {
+    message.pools =
+      object.pools?.map(e => SwapAmountInRoute.fromAmino(e)) || [];
+    if (
+      object.token_in_amount !== undefined &&
+      object.token_in_amount !== null
+    ) {
       message.tokenInAmount = object.token_in_amount;
     }
     return message;
@@ -314,17 +469,22 @@ export const SwapAmountInSplitRoute = {
   toAmino(message: SwapAmountInSplitRoute): SwapAmountInSplitRouteAmino {
     const obj: any = {};
     if (message.pools) {
-      obj.pools = message.pools.map(e => e ? SwapAmountInRoute.toAmino(e) : undefined);
+      obj.pools = message.pools.map(e =>
+        e ? SwapAmountInRoute.toAmino(e) : undefined,
+      );
     } else {
       obj.pools = message.pools;
     }
-    obj.token_in_amount = message.tokenInAmount === "" ? undefined : message.tokenInAmount;
+    obj.token_in_amount =
+      message.tokenInAmount === '' ? undefined : message.tokenInAmount;
     return obj;
   },
   fromAminoMsg(object: SwapAmountInSplitRouteAminoMsg): SwapAmountInSplitRoute {
     return SwapAmountInSplitRoute.fromAmino(object.value);
   },
-  fromProtoMsg(message: SwapAmountInSplitRouteProtoMsg): SwapAmountInSplitRoute {
+  fromProtoMsg(
+    message: SwapAmountInSplitRouteProtoMsg,
+  ): SwapAmountInSplitRoute {
     return SwapAmountInSplitRoute.decode(message.value);
   },
   toProto(message: SwapAmountInSplitRoute): Uint8Array {
@@ -332,47 +492,82 @@ export const SwapAmountInSplitRoute = {
   },
   toProtoMsg(message: SwapAmountInSplitRoute): SwapAmountInSplitRouteProtoMsg {
     return {
-      typeUrl: "/symphony.poolmanager.v1beta1.SwapAmountInSplitRoute",
-      value: SwapAmountInSplitRoute.encode(message).finish()
+      typeUrl: '/symphony.poolmanager.v1beta1.SwapAmountInSplitRoute',
+      value: SwapAmountInSplitRoute.encode(message).finish(),
     };
-  }
+  },
 };
-GlobalDecoderRegistry.register(SwapAmountInSplitRoute.typeUrl, SwapAmountInSplitRoute);
+GlobalDecoderRegistry.register(
+  SwapAmountInSplitRoute.typeUrl,
+  SwapAmountInSplitRoute,
+);
 function createBaseSwapAmountOutSplitRoute(): SwapAmountOutSplitRoute {
   return {
     pools: [],
-    tokenOutAmount: ""
+    tokenOutAmount: '',
   };
 }
+/**
+ * @name SwapAmountOutSplitRoute
+ * @package symphony.poolmanager.v1beta1
+ * @see proto type: symphony.poolmanager.v1beta1.SwapAmountOutSplitRoute
+ */
 export const SwapAmountOutSplitRoute = {
-  typeUrl: "/symphony.poolmanager.v1beta1.SwapAmountOutSplitRoute",
+  typeUrl: '/symphony.poolmanager.v1beta1.SwapAmountOutSplitRoute',
   is(o: any): o is SwapAmountOutSplitRoute {
-    return o && (o.$typeUrl === SwapAmountOutSplitRoute.typeUrl || Array.isArray(o.pools) && (!o.pools.length || SwapAmountOutRoute.is(o.pools[0])) && typeof o.tokenOutAmount === "string");
+    return (
+      o &&
+      (o.$typeUrl === SwapAmountOutSplitRoute.typeUrl ||
+        (Array.isArray(o.pools) &&
+          (!o.pools.length || SwapAmountOutRoute.is(o.pools[0])) &&
+          typeof o.tokenOutAmount === 'string'))
+    );
   },
   isSDK(o: any): o is SwapAmountOutSplitRouteSDKType {
-    return o && (o.$typeUrl === SwapAmountOutSplitRoute.typeUrl || Array.isArray(o.pools) && (!o.pools.length || SwapAmountOutRoute.isSDK(o.pools[0])) && typeof o.token_out_amount === "string");
+    return (
+      o &&
+      (o.$typeUrl === SwapAmountOutSplitRoute.typeUrl ||
+        (Array.isArray(o.pools) &&
+          (!o.pools.length || SwapAmountOutRoute.isSDK(o.pools[0])) &&
+          typeof o.token_out_amount === 'string'))
+    );
   },
   isAmino(o: any): o is SwapAmountOutSplitRouteAmino {
-    return o && (o.$typeUrl === SwapAmountOutSplitRoute.typeUrl || Array.isArray(o.pools) && (!o.pools.length || SwapAmountOutRoute.isAmino(o.pools[0])) && typeof o.token_out_amount === "string");
+    return (
+      o &&
+      (o.$typeUrl === SwapAmountOutSplitRoute.typeUrl ||
+        (Array.isArray(o.pools) &&
+          (!o.pools.length || SwapAmountOutRoute.isAmino(o.pools[0])) &&
+          typeof o.token_out_amount === 'string'))
+    );
   },
-  encode(message: SwapAmountOutSplitRoute, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
+  encode(
+    message: SwapAmountOutSplitRoute,
+    writer: BinaryWriter = BinaryWriter.create(),
+  ): BinaryWriter {
     for (const v of message.pools) {
       SwapAmountOutRoute.encode(v!, writer.uint32(10).fork()).ldelim();
     }
-    if (message.tokenOutAmount !== "") {
+    if (message.tokenOutAmount !== '') {
       writer.uint32(18).string(message.tokenOutAmount);
     }
     return writer;
   },
-  decode(input: BinaryReader | Uint8Array, length?: number): SwapAmountOutSplitRoute {
-    const reader = input instanceof BinaryReader ? input : new BinaryReader(input);
+  decode(
+    input: BinaryReader | Uint8Array,
+    length?: number,
+  ): SwapAmountOutSplitRoute {
+    const reader =
+      input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseSwapAmountOutSplitRoute();
     while (reader.pos < end) {
       const tag = reader.uint32();
       switch (tag >>> 3) {
         case 1:
-          message.pools.push(SwapAmountOutRoute.decode(reader, reader.uint32()));
+          message.pools.push(
+            SwapAmountOutRoute.decode(reader, reader.uint32()),
+          );
           break;
         case 2:
           message.tokenOutAmount = reader.string();
@@ -384,16 +579,23 @@ export const SwapAmountOutSplitRoute = {
     }
     return message;
   },
-  fromPartial(object: Partial<SwapAmountOutSplitRoute>): SwapAmountOutSplitRoute {
+  fromPartial(
+    object: Partial<SwapAmountOutSplitRoute>,
+  ): SwapAmountOutSplitRoute {
     const message = createBaseSwapAmountOutSplitRoute();
-    message.pools = object.pools?.map(e => SwapAmountOutRoute.fromPartial(e)) || [];
-    message.tokenOutAmount = object.tokenOutAmount ?? "";
+    message.pools =
+      object.pools?.map(e => SwapAmountOutRoute.fromPartial(e)) || [];
+    message.tokenOutAmount = object.tokenOutAmount ?? '';
     return message;
   },
   fromAmino(object: SwapAmountOutSplitRouteAmino): SwapAmountOutSplitRoute {
     const message = createBaseSwapAmountOutSplitRoute();
-    message.pools = object.pools?.map(e => SwapAmountOutRoute.fromAmino(e)) || [];
-    if (object.token_out_amount !== undefined && object.token_out_amount !== null) {
+    message.pools =
+      object.pools?.map(e => SwapAmountOutRoute.fromAmino(e)) || [];
+    if (
+      object.token_out_amount !== undefined &&
+      object.token_out_amount !== null
+    ) {
       message.tokenOutAmount = object.token_out_amount;
     }
     return message;
@@ -401,27 +603,39 @@ export const SwapAmountOutSplitRoute = {
   toAmino(message: SwapAmountOutSplitRoute): SwapAmountOutSplitRouteAmino {
     const obj: any = {};
     if (message.pools) {
-      obj.pools = message.pools.map(e => e ? SwapAmountOutRoute.toAmino(e) : undefined);
+      obj.pools = message.pools.map(e =>
+        e ? SwapAmountOutRoute.toAmino(e) : undefined,
+      );
     } else {
       obj.pools = message.pools;
     }
-    obj.token_out_amount = message.tokenOutAmount === "" ? undefined : message.tokenOutAmount;
+    obj.token_out_amount =
+      message.tokenOutAmount === '' ? undefined : message.tokenOutAmount;
     return obj;
   },
-  fromAminoMsg(object: SwapAmountOutSplitRouteAminoMsg): SwapAmountOutSplitRoute {
+  fromAminoMsg(
+    object: SwapAmountOutSplitRouteAminoMsg,
+  ): SwapAmountOutSplitRoute {
     return SwapAmountOutSplitRoute.fromAmino(object.value);
   },
-  fromProtoMsg(message: SwapAmountOutSplitRouteProtoMsg): SwapAmountOutSplitRoute {
+  fromProtoMsg(
+    message: SwapAmountOutSplitRouteProtoMsg,
+  ): SwapAmountOutSplitRoute {
     return SwapAmountOutSplitRoute.decode(message.value);
   },
   toProto(message: SwapAmountOutSplitRoute): Uint8Array {
     return SwapAmountOutSplitRoute.encode(message).finish();
   },
-  toProtoMsg(message: SwapAmountOutSplitRoute): SwapAmountOutSplitRouteProtoMsg {
+  toProtoMsg(
+    message: SwapAmountOutSplitRoute,
+  ): SwapAmountOutSplitRouteProtoMsg {
     return {
-      typeUrl: "/symphony.poolmanager.v1beta1.SwapAmountOutSplitRoute",
-      value: SwapAmountOutSplitRoute.encode(message).finish()
+      typeUrl: '/symphony.poolmanager.v1beta1.SwapAmountOutSplitRoute',
+      value: SwapAmountOutSplitRoute.encode(message).finish(),
     };
-  }
+  },
 };
-GlobalDecoderRegistry.register(SwapAmountOutSplitRoute.typeUrl, SwapAmountOutSplitRoute);
+GlobalDecoderRegistry.register(
+  SwapAmountOutSplitRoute.typeUrl,
+  SwapAmountOutSplitRoute,
+);

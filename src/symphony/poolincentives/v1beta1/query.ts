@@ -1,253 +1,498 @@
 //@ts-nocheck
-import { Duration, DurationAmino, DurationSDKType } from "../../../google/protobuf/duration";
-import { DistrInfo, DistrInfoAmino, DistrInfoSDKType, Params, ParamsAmino, ParamsSDKType } from "./incentives";
-import { Gauge, GaugeAmino, GaugeSDKType } from "../../incentives/gauge";
-import { BinaryReader, BinaryWriter } from "../../../binary";
-import { GlobalDecoderRegistry } from "../../../registry";
+import {
+  Duration,
+  DurationAmino,
+  DurationSDKType,
+} from '../../../google/protobuf/duration';
+import {
+  DistrInfo,
+  DistrInfoAmino,
+  DistrInfoSDKType,
+  Params,
+  ParamsAmino,
+  ParamsSDKType,
+} from './incentives';
+import { Gauge, GaugeAmino, GaugeSDKType } from '../../incentives/gauge';
+import { BinaryReader, BinaryWriter } from '../../../binary';
+import { GlobalDecoderRegistry } from '../../../registry';
+/**
+ * @name QueryGaugeIdsRequest
+ * @package symphony.poolincentives.v1beta1
+ * @see proto type: symphony.poolincentives.v1beta1.QueryGaugeIdsRequest
+ */
 export interface QueryGaugeIdsRequest {
   poolId: bigint;
 }
 export interface QueryGaugeIdsRequestProtoMsg {
-  typeUrl: "/symphony.poolincentives.v1beta1.QueryGaugeIdsRequest";
+  typeUrl: '/symphony.poolincentives.v1beta1.QueryGaugeIdsRequest';
   value: Uint8Array;
 }
+/**
+ * @name QueryGaugeIdsRequestAmino
+ * @package symphony.poolincentives.v1beta1
+ * @see proto type: symphony.poolincentives.v1beta1.QueryGaugeIdsRequest
+ */
 export interface QueryGaugeIdsRequestAmino {
   pool_id?: string;
 }
 export interface QueryGaugeIdsRequestAminoMsg {
-  type: "/symphony.poolincentives.v1beta1.QueryGaugeIdsRequest";
+  type: '/symphony.poolincentives.v1beta1.QueryGaugeIdsRequest';
   value: QueryGaugeIdsRequestAmino;
 }
+/**
+ * @name QueryGaugeIdsRequestSDKType
+ * @package symphony.poolincentives.v1beta1
+ * @see proto type: symphony.poolincentives.v1beta1.QueryGaugeIdsRequest
+ */
 export interface QueryGaugeIdsRequestSDKType {
   pool_id: bigint;
 }
+/**
+ * @name QueryGaugeIdsResponse
+ * @package symphony.poolincentives.v1beta1
+ * @see proto type: symphony.poolincentives.v1beta1.QueryGaugeIdsResponse
+ */
 export interface QueryGaugeIdsResponse {
   gaugeIdsWithDuration: QueryGaugeIdsResponse_GaugeIdWithDuration[];
 }
 export interface QueryGaugeIdsResponseProtoMsg {
-  typeUrl: "/symphony.poolincentives.v1beta1.QueryGaugeIdsResponse";
+  typeUrl: '/symphony.poolincentives.v1beta1.QueryGaugeIdsResponse';
   value: Uint8Array;
 }
+/**
+ * @name QueryGaugeIdsResponseAmino
+ * @package symphony.poolincentives.v1beta1
+ * @see proto type: symphony.poolincentives.v1beta1.QueryGaugeIdsResponse
+ */
 export interface QueryGaugeIdsResponseAmino {
   gauge_ids_with_duration?: QueryGaugeIdsResponse_GaugeIdWithDurationAmino[];
 }
 export interface QueryGaugeIdsResponseAminoMsg {
-  type: "/symphony.poolincentives.v1beta1.QueryGaugeIdsResponse";
+  type: '/symphony.poolincentives.v1beta1.QueryGaugeIdsResponse';
   value: QueryGaugeIdsResponseAmino;
 }
+/**
+ * @name QueryGaugeIdsResponseSDKType
+ * @package symphony.poolincentives.v1beta1
+ * @see proto type: symphony.poolincentives.v1beta1.QueryGaugeIdsResponse
+ */
 export interface QueryGaugeIdsResponseSDKType {
   gauge_ids_with_duration: QueryGaugeIdsResponse_GaugeIdWithDurationSDKType[];
 }
+/**
+ * @name QueryGaugeIdsResponse_GaugeIdWithDuration
+ * @package symphony.poolincentives.v1beta1
+ * @see proto type: symphony.poolincentives.v1beta1.GaugeIdWithDuration
+ */
 export interface QueryGaugeIdsResponse_GaugeIdWithDuration {
   gaugeId: bigint;
   duration: Duration;
   gaugeIncentivePercentage: string;
 }
 export interface QueryGaugeIdsResponse_GaugeIdWithDurationProtoMsg {
-  typeUrl: "/symphony.poolincentives.v1beta1.GaugeIdWithDuration";
+  typeUrl: '/symphony.poolincentives.v1beta1.GaugeIdWithDuration';
   value: Uint8Array;
 }
+/**
+ * @name QueryGaugeIdsResponse_GaugeIdWithDurationAmino
+ * @package symphony.poolincentives.v1beta1
+ * @see proto type: symphony.poolincentives.v1beta1.QueryGaugeIdsResponse_GaugeIdWithDuration
+ */
 export interface QueryGaugeIdsResponse_GaugeIdWithDurationAmino {
   gauge_id?: string;
   duration?: DurationAmino;
   gauge_incentive_percentage?: string;
 }
 export interface QueryGaugeIdsResponse_GaugeIdWithDurationAminoMsg {
-  type: "/symphony.poolincentives.v1beta1.GaugeIdWithDuration";
+  type: '/symphony.poolincentives.v1beta1.GaugeIdWithDuration';
   value: QueryGaugeIdsResponse_GaugeIdWithDurationAmino;
 }
+/**
+ * @name QueryGaugeIdsResponse_GaugeIdWithDurationSDKType
+ * @package symphony.poolincentives.v1beta1
+ * @see proto type: symphony.poolincentives.v1beta1.GaugeIdWithDuration
+ */
 export interface QueryGaugeIdsResponse_GaugeIdWithDurationSDKType {
   gauge_id: bigint;
   duration: DurationSDKType;
   gauge_incentive_percentage: string;
 }
+/**
+ * @name QueryDistrInfoRequest
+ * @package symphony.poolincentives.v1beta1
+ * @see proto type: symphony.poolincentives.v1beta1.QueryDistrInfoRequest
+ */
 export interface QueryDistrInfoRequest {}
 export interface QueryDistrInfoRequestProtoMsg {
-  typeUrl: "/symphony.poolincentives.v1beta1.QueryDistrInfoRequest";
+  typeUrl: '/symphony.poolincentives.v1beta1.QueryDistrInfoRequest';
   value: Uint8Array;
 }
+/**
+ * @name QueryDistrInfoRequestAmino
+ * @package symphony.poolincentives.v1beta1
+ * @see proto type: symphony.poolincentives.v1beta1.QueryDistrInfoRequest
+ */
 export interface QueryDistrInfoRequestAmino {}
 export interface QueryDistrInfoRequestAminoMsg {
-  type: "/symphony.poolincentives.v1beta1.QueryDistrInfoRequest";
+  type: '/symphony.poolincentives.v1beta1.QueryDistrInfoRequest';
   value: QueryDistrInfoRequestAmino;
 }
+/**
+ * @name QueryDistrInfoRequestSDKType
+ * @package symphony.poolincentives.v1beta1
+ * @see proto type: symphony.poolincentives.v1beta1.QueryDistrInfoRequest
+ */
 export interface QueryDistrInfoRequestSDKType {}
+/**
+ * @name QueryDistrInfoResponse
+ * @package symphony.poolincentives.v1beta1
+ * @see proto type: symphony.poolincentives.v1beta1.QueryDistrInfoResponse
+ */
 export interface QueryDistrInfoResponse {
   distrInfo: DistrInfo;
 }
 export interface QueryDistrInfoResponseProtoMsg {
-  typeUrl: "/symphony.poolincentives.v1beta1.QueryDistrInfoResponse";
+  typeUrl: '/symphony.poolincentives.v1beta1.QueryDistrInfoResponse';
   value: Uint8Array;
 }
+/**
+ * @name QueryDistrInfoResponseAmino
+ * @package symphony.poolincentives.v1beta1
+ * @see proto type: symphony.poolincentives.v1beta1.QueryDistrInfoResponse
+ */
 export interface QueryDistrInfoResponseAmino {
   distr_info?: DistrInfoAmino;
 }
 export interface QueryDistrInfoResponseAminoMsg {
-  type: "/symphony.poolincentives.v1beta1.QueryDistrInfoResponse";
+  type: '/symphony.poolincentives.v1beta1.QueryDistrInfoResponse';
   value: QueryDistrInfoResponseAmino;
 }
+/**
+ * @name QueryDistrInfoResponseSDKType
+ * @package symphony.poolincentives.v1beta1
+ * @see proto type: symphony.poolincentives.v1beta1.QueryDistrInfoResponse
+ */
 export interface QueryDistrInfoResponseSDKType {
   distr_info: DistrInfoSDKType;
 }
+/**
+ * @name QueryParamsRequest
+ * @package symphony.poolincentives.v1beta1
+ * @see proto type: symphony.poolincentives.v1beta1.QueryParamsRequest
+ */
 export interface QueryParamsRequest {}
 export interface QueryParamsRequestProtoMsg {
-  typeUrl: "/symphony.poolincentives.v1beta1.QueryParamsRequest";
+  typeUrl: '/symphony.poolincentives.v1beta1.QueryParamsRequest';
   value: Uint8Array;
 }
+/**
+ * @name QueryParamsRequestAmino
+ * @package symphony.poolincentives.v1beta1
+ * @see proto type: symphony.poolincentives.v1beta1.QueryParamsRequest
+ */
 export interface QueryParamsRequestAmino {}
 export interface QueryParamsRequestAminoMsg {
-  type: "/symphony.poolincentives.v1beta1.QueryParamsRequest";
+  type: '/symphony.poolincentives.v1beta1.QueryParamsRequest';
   value: QueryParamsRequestAmino;
 }
+/**
+ * @name QueryParamsRequestSDKType
+ * @package symphony.poolincentives.v1beta1
+ * @see proto type: symphony.poolincentives.v1beta1.QueryParamsRequest
+ */
 export interface QueryParamsRequestSDKType {}
+/**
+ * @name QueryParamsResponse
+ * @package symphony.poolincentives.v1beta1
+ * @see proto type: symphony.poolincentives.v1beta1.QueryParamsResponse
+ */
 export interface QueryParamsResponse {
   params: Params;
 }
 export interface QueryParamsResponseProtoMsg {
-  typeUrl: "/symphony.poolincentives.v1beta1.QueryParamsResponse";
+  typeUrl: '/symphony.poolincentives.v1beta1.QueryParamsResponse';
   value: Uint8Array;
 }
+/**
+ * @name QueryParamsResponseAmino
+ * @package symphony.poolincentives.v1beta1
+ * @see proto type: symphony.poolincentives.v1beta1.QueryParamsResponse
+ */
 export interface QueryParamsResponseAmino {
   params?: ParamsAmino;
 }
 export interface QueryParamsResponseAminoMsg {
-  type: "/symphony.poolincentives.v1beta1.QueryParamsResponse";
+  type: '/symphony.poolincentives.v1beta1.QueryParamsResponse';
   value: QueryParamsResponseAmino;
 }
+/**
+ * @name QueryParamsResponseSDKType
+ * @package symphony.poolincentives.v1beta1
+ * @see proto type: symphony.poolincentives.v1beta1.QueryParamsResponse
+ */
 export interface QueryParamsResponseSDKType {
   params: ParamsSDKType;
 }
+/**
+ * @name QueryLockableDurationsRequest
+ * @package symphony.poolincentives.v1beta1
+ * @see proto type: symphony.poolincentives.v1beta1.QueryLockableDurationsRequest
+ */
 export interface QueryLockableDurationsRequest {}
 export interface QueryLockableDurationsRequestProtoMsg {
-  typeUrl: "/symphony.poolincentives.v1beta1.QueryLockableDurationsRequest";
+  typeUrl: '/symphony.poolincentives.v1beta1.QueryLockableDurationsRequest';
   value: Uint8Array;
 }
+/**
+ * @name QueryLockableDurationsRequestAmino
+ * @package symphony.poolincentives.v1beta1
+ * @see proto type: symphony.poolincentives.v1beta1.QueryLockableDurationsRequest
+ */
 export interface QueryLockableDurationsRequestAmino {}
 export interface QueryLockableDurationsRequestAminoMsg {
-  type: "/symphony.poolincentives.v1beta1.QueryLockableDurationsRequest";
+  type: '/symphony.poolincentives.v1beta1.QueryLockableDurationsRequest';
   value: QueryLockableDurationsRequestAmino;
 }
+/**
+ * @name QueryLockableDurationsRequestSDKType
+ * @package symphony.poolincentives.v1beta1
+ * @see proto type: symphony.poolincentives.v1beta1.QueryLockableDurationsRequest
+ */
 export interface QueryLockableDurationsRequestSDKType {}
+/**
+ * @name QueryLockableDurationsResponse
+ * @package symphony.poolincentives.v1beta1
+ * @see proto type: symphony.poolincentives.v1beta1.QueryLockableDurationsResponse
+ */
 export interface QueryLockableDurationsResponse {
   lockableDurations: Duration[];
 }
 export interface QueryLockableDurationsResponseProtoMsg {
-  typeUrl: "/symphony.poolincentives.v1beta1.QueryLockableDurationsResponse";
+  typeUrl: '/symphony.poolincentives.v1beta1.QueryLockableDurationsResponse';
   value: Uint8Array;
 }
+/**
+ * @name QueryLockableDurationsResponseAmino
+ * @package symphony.poolincentives.v1beta1
+ * @see proto type: symphony.poolincentives.v1beta1.QueryLockableDurationsResponse
+ */
 export interface QueryLockableDurationsResponseAmino {
   lockable_durations?: DurationAmino[];
 }
 export interface QueryLockableDurationsResponseAminoMsg {
-  type: "/symphony.poolincentives.v1beta1.QueryLockableDurationsResponse";
+  type: '/symphony.poolincentives.v1beta1.QueryLockableDurationsResponse';
   value: QueryLockableDurationsResponseAmino;
 }
+/**
+ * @name QueryLockableDurationsResponseSDKType
+ * @package symphony.poolincentives.v1beta1
+ * @see proto type: symphony.poolincentives.v1beta1.QueryLockableDurationsResponse
+ */
 export interface QueryLockableDurationsResponseSDKType {
   lockable_durations: DurationSDKType[];
 }
+/**
+ * @name QueryIncentivizedPoolsRequest
+ * @package symphony.poolincentives.v1beta1
+ * @see proto type: symphony.poolincentives.v1beta1.QueryIncentivizedPoolsRequest
+ */
 export interface QueryIncentivizedPoolsRequest {}
 export interface QueryIncentivizedPoolsRequestProtoMsg {
-  typeUrl: "/symphony.poolincentives.v1beta1.QueryIncentivizedPoolsRequest";
+  typeUrl: '/symphony.poolincentives.v1beta1.QueryIncentivizedPoolsRequest';
   value: Uint8Array;
 }
+/**
+ * @name QueryIncentivizedPoolsRequestAmino
+ * @package symphony.poolincentives.v1beta1
+ * @see proto type: symphony.poolincentives.v1beta1.QueryIncentivizedPoolsRequest
+ */
 export interface QueryIncentivizedPoolsRequestAmino {}
 export interface QueryIncentivizedPoolsRequestAminoMsg {
-  type: "/symphony.poolincentives.v1beta1.QueryIncentivizedPoolsRequest";
+  type: '/symphony.poolincentives.v1beta1.QueryIncentivizedPoolsRequest';
   value: QueryIncentivizedPoolsRequestAmino;
 }
+/**
+ * @name QueryIncentivizedPoolsRequestSDKType
+ * @package symphony.poolincentives.v1beta1
+ * @see proto type: symphony.poolincentives.v1beta1.QueryIncentivizedPoolsRequest
+ */
 export interface QueryIncentivizedPoolsRequestSDKType {}
+/**
+ * @name IncentivizedPool
+ * @package symphony.poolincentives.v1beta1
+ * @see proto type: symphony.poolincentives.v1beta1.IncentivizedPool
+ */
 export interface IncentivizedPool {
   poolId: bigint;
   lockableDuration: Duration;
   gaugeId: bigint;
 }
 export interface IncentivizedPoolProtoMsg {
-  typeUrl: "/symphony.poolincentives.v1beta1.IncentivizedPool";
+  typeUrl: '/symphony.poolincentives.v1beta1.IncentivizedPool';
   value: Uint8Array;
 }
+/**
+ * @name IncentivizedPoolAmino
+ * @package symphony.poolincentives.v1beta1
+ * @see proto type: symphony.poolincentives.v1beta1.IncentivizedPool
+ */
 export interface IncentivizedPoolAmino {
   pool_id?: string;
   lockable_duration?: DurationAmino;
   gauge_id?: string;
 }
 export interface IncentivizedPoolAminoMsg {
-  type: "/symphony.poolincentives.v1beta1.IncentivizedPool";
+  type: '/symphony.poolincentives.v1beta1.IncentivizedPool';
   value: IncentivizedPoolAmino;
 }
+/**
+ * @name IncentivizedPoolSDKType
+ * @package symphony.poolincentives.v1beta1
+ * @see proto type: symphony.poolincentives.v1beta1.IncentivizedPool
+ */
 export interface IncentivizedPoolSDKType {
   pool_id: bigint;
   lockable_duration: DurationSDKType;
   gauge_id: bigint;
 }
+/**
+ * @name QueryIncentivizedPoolsResponse
+ * @package symphony.poolincentives.v1beta1
+ * @see proto type: symphony.poolincentives.v1beta1.QueryIncentivizedPoolsResponse
+ */
 export interface QueryIncentivizedPoolsResponse {
   incentivizedPools: IncentivizedPool[];
 }
 export interface QueryIncentivizedPoolsResponseProtoMsg {
-  typeUrl: "/symphony.poolincentives.v1beta1.QueryIncentivizedPoolsResponse";
+  typeUrl: '/symphony.poolincentives.v1beta1.QueryIncentivizedPoolsResponse';
   value: Uint8Array;
 }
+/**
+ * @name QueryIncentivizedPoolsResponseAmino
+ * @package symphony.poolincentives.v1beta1
+ * @see proto type: symphony.poolincentives.v1beta1.QueryIncentivizedPoolsResponse
+ */
 export interface QueryIncentivizedPoolsResponseAmino {
   incentivized_pools?: IncentivizedPoolAmino[];
 }
 export interface QueryIncentivizedPoolsResponseAminoMsg {
-  type: "/symphony.poolincentives.v1beta1.QueryIncentivizedPoolsResponse";
+  type: '/symphony.poolincentives.v1beta1.QueryIncentivizedPoolsResponse';
   value: QueryIncentivizedPoolsResponseAmino;
 }
+/**
+ * @name QueryIncentivizedPoolsResponseSDKType
+ * @package symphony.poolincentives.v1beta1
+ * @see proto type: symphony.poolincentives.v1beta1.QueryIncentivizedPoolsResponse
+ */
 export interface QueryIncentivizedPoolsResponseSDKType {
   incentivized_pools: IncentivizedPoolSDKType[];
 }
+/**
+ * @name QueryExternalIncentiveGaugesRequest
+ * @package symphony.poolincentives.v1beta1
+ * @see proto type: symphony.poolincentives.v1beta1.QueryExternalIncentiveGaugesRequest
+ */
 export interface QueryExternalIncentiveGaugesRequest {}
 export interface QueryExternalIncentiveGaugesRequestProtoMsg {
-  typeUrl: "/symphony.poolincentives.v1beta1.QueryExternalIncentiveGaugesRequest";
+  typeUrl: '/symphony.poolincentives.v1beta1.QueryExternalIncentiveGaugesRequest';
   value: Uint8Array;
 }
+/**
+ * @name QueryExternalIncentiveGaugesRequestAmino
+ * @package symphony.poolincentives.v1beta1
+ * @see proto type: symphony.poolincentives.v1beta1.QueryExternalIncentiveGaugesRequest
+ */
 export interface QueryExternalIncentiveGaugesRequestAmino {}
 export interface QueryExternalIncentiveGaugesRequestAminoMsg {
-  type: "/symphony.poolincentives.v1beta1.QueryExternalIncentiveGaugesRequest";
+  type: '/symphony.poolincentives.v1beta1.QueryExternalIncentiveGaugesRequest';
   value: QueryExternalIncentiveGaugesRequestAmino;
 }
+/**
+ * @name QueryExternalIncentiveGaugesRequestSDKType
+ * @package symphony.poolincentives.v1beta1
+ * @see proto type: symphony.poolincentives.v1beta1.QueryExternalIncentiveGaugesRequest
+ */
 export interface QueryExternalIncentiveGaugesRequestSDKType {}
+/**
+ * @name QueryExternalIncentiveGaugesResponse
+ * @package symphony.poolincentives.v1beta1
+ * @see proto type: symphony.poolincentives.v1beta1.QueryExternalIncentiveGaugesResponse
+ */
 export interface QueryExternalIncentiveGaugesResponse {
   data: Gauge[];
 }
 export interface QueryExternalIncentiveGaugesResponseProtoMsg {
-  typeUrl: "/symphony.poolincentives.v1beta1.QueryExternalIncentiveGaugesResponse";
+  typeUrl: '/symphony.poolincentives.v1beta1.QueryExternalIncentiveGaugesResponse';
   value: Uint8Array;
 }
+/**
+ * @name QueryExternalIncentiveGaugesResponseAmino
+ * @package symphony.poolincentives.v1beta1
+ * @see proto type: symphony.poolincentives.v1beta1.QueryExternalIncentiveGaugesResponse
+ */
 export interface QueryExternalIncentiveGaugesResponseAmino {
   data?: GaugeAmino[];
 }
 export interface QueryExternalIncentiveGaugesResponseAminoMsg {
-  type: "/symphony.poolincentives.v1beta1.QueryExternalIncentiveGaugesResponse";
+  type: '/symphony.poolincentives.v1beta1.QueryExternalIncentiveGaugesResponse';
   value: QueryExternalIncentiveGaugesResponseAmino;
 }
+/**
+ * @name QueryExternalIncentiveGaugesResponseSDKType
+ * @package symphony.poolincentives.v1beta1
+ * @see proto type: symphony.poolincentives.v1beta1.QueryExternalIncentiveGaugesResponse
+ */
 export interface QueryExternalIncentiveGaugesResponseSDKType {
   data: GaugeSDKType[];
 }
 function createBaseQueryGaugeIdsRequest(): QueryGaugeIdsRequest {
   return {
-    poolId: BigInt(0)
+    poolId: BigInt(0),
   };
 }
+/**
+ * @name QueryGaugeIdsRequest
+ * @package symphony.poolincentives.v1beta1
+ * @see proto type: symphony.poolincentives.v1beta1.QueryGaugeIdsRequest
+ */
 export const QueryGaugeIdsRequest = {
-  typeUrl: "/symphony.poolincentives.v1beta1.QueryGaugeIdsRequest",
+  typeUrl: '/symphony.poolincentives.v1beta1.QueryGaugeIdsRequest',
   is(o: any): o is QueryGaugeIdsRequest {
-    return o && (o.$typeUrl === QueryGaugeIdsRequest.typeUrl || typeof o.poolId === "bigint");
+    return (
+      o &&
+      (o.$typeUrl === QueryGaugeIdsRequest.typeUrl ||
+        typeof o.poolId === 'bigint')
+    );
   },
   isSDK(o: any): o is QueryGaugeIdsRequestSDKType {
-    return o && (o.$typeUrl === QueryGaugeIdsRequest.typeUrl || typeof o.pool_id === "bigint");
+    return (
+      o &&
+      (o.$typeUrl === QueryGaugeIdsRequest.typeUrl ||
+        typeof o.pool_id === 'bigint')
+    );
   },
   isAmino(o: any): o is QueryGaugeIdsRequestAmino {
-    return o && (o.$typeUrl === QueryGaugeIdsRequest.typeUrl || typeof o.pool_id === "bigint");
+    return (
+      o &&
+      (o.$typeUrl === QueryGaugeIdsRequest.typeUrl ||
+        typeof o.pool_id === 'bigint')
+    );
   },
-  encode(message: QueryGaugeIdsRequest, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
+  encode(
+    message: QueryGaugeIdsRequest,
+    writer: BinaryWriter = BinaryWriter.create(),
+  ): BinaryWriter {
     if (message.poolId !== BigInt(0)) {
       writer.uint32(8).uint64(message.poolId);
     }
     return writer;
   },
-  decode(input: BinaryReader | Uint8Array, length?: number): QueryGaugeIdsRequest {
-    const reader = input instanceof BinaryReader ? input : new BinaryReader(input);
+  decode(
+    input: BinaryReader | Uint8Array,
+    length?: number,
+  ): QueryGaugeIdsRequest {
+    const reader =
+      input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseQueryGaugeIdsRequest();
     while (reader.pos < end) {
@@ -265,7 +510,10 @@ export const QueryGaugeIdsRequest = {
   },
   fromPartial(object: Partial<QueryGaugeIdsRequest>): QueryGaugeIdsRequest {
     const message = createBaseQueryGaugeIdsRequest();
-    message.poolId = object.poolId !== undefined && object.poolId !== null ? BigInt(object.poolId.toString()) : BigInt(0);
+    message.poolId =
+      object.poolId !== undefined && object.poolId !== null
+        ? BigInt(object.poolId.toString())
+        : BigInt(0);
     return message;
   },
   fromAmino(object: QueryGaugeIdsRequestAmino): QueryGaugeIdsRequest {
@@ -277,7 +525,8 @@ export const QueryGaugeIdsRequest = {
   },
   toAmino(message: QueryGaugeIdsRequest): QueryGaugeIdsRequestAmino {
     const obj: any = {};
-    obj.pool_id = message.poolId !== BigInt(0) ? message.poolId?.toString() : undefined;
+    obj.pool_id =
+      message.poolId !== BigInt(0) ? message.poolId?.toString() : undefined;
     return obj;
   },
   fromAminoMsg(object: QueryGaugeIdsRequestAminoMsg): QueryGaugeIdsRequest {
@@ -291,43 +540,90 @@ export const QueryGaugeIdsRequest = {
   },
   toProtoMsg(message: QueryGaugeIdsRequest): QueryGaugeIdsRequestProtoMsg {
     return {
-      typeUrl: "/symphony.poolincentives.v1beta1.QueryGaugeIdsRequest",
-      value: QueryGaugeIdsRequest.encode(message).finish()
+      typeUrl: '/symphony.poolincentives.v1beta1.QueryGaugeIdsRequest',
+      value: QueryGaugeIdsRequest.encode(message).finish(),
     };
-  }
+  },
 };
-GlobalDecoderRegistry.register(QueryGaugeIdsRequest.typeUrl, QueryGaugeIdsRequest);
+GlobalDecoderRegistry.register(
+  QueryGaugeIdsRequest.typeUrl,
+  QueryGaugeIdsRequest,
+);
 function createBaseQueryGaugeIdsResponse(): QueryGaugeIdsResponse {
   return {
-    gaugeIdsWithDuration: []
+    gaugeIdsWithDuration: [],
   };
 }
+/**
+ * @name QueryGaugeIdsResponse
+ * @package symphony.poolincentives.v1beta1
+ * @see proto type: symphony.poolincentives.v1beta1.QueryGaugeIdsResponse
+ */
 export const QueryGaugeIdsResponse = {
-  typeUrl: "/symphony.poolincentives.v1beta1.QueryGaugeIdsResponse",
+  typeUrl: '/symphony.poolincentives.v1beta1.QueryGaugeIdsResponse',
   is(o: any): o is QueryGaugeIdsResponse {
-    return o && (o.$typeUrl === QueryGaugeIdsResponse.typeUrl || Array.isArray(o.gaugeIdsWithDuration) && (!o.gaugeIdsWithDuration.length || QueryGaugeIdsResponse_GaugeIdWithDuration.is(o.gaugeIdsWithDuration[0])));
+    return (
+      o &&
+      (o.$typeUrl === QueryGaugeIdsResponse.typeUrl ||
+        (Array.isArray(o.gaugeIdsWithDuration) &&
+          (!o.gaugeIdsWithDuration.length ||
+            QueryGaugeIdsResponse_GaugeIdWithDuration.is(
+              o.gaugeIdsWithDuration[0],
+            ))))
+    );
   },
   isSDK(o: any): o is QueryGaugeIdsResponseSDKType {
-    return o && (o.$typeUrl === QueryGaugeIdsResponse.typeUrl || Array.isArray(o.gauge_ids_with_duration) && (!o.gauge_ids_with_duration.length || QueryGaugeIdsResponse_GaugeIdWithDuration.isSDK(o.gauge_ids_with_duration[0])));
+    return (
+      o &&
+      (o.$typeUrl === QueryGaugeIdsResponse.typeUrl ||
+        (Array.isArray(o.gauge_ids_with_duration) &&
+          (!o.gauge_ids_with_duration.length ||
+            QueryGaugeIdsResponse_GaugeIdWithDuration.isSDK(
+              o.gauge_ids_with_duration[0],
+            ))))
+    );
   },
   isAmino(o: any): o is QueryGaugeIdsResponseAmino {
-    return o && (o.$typeUrl === QueryGaugeIdsResponse.typeUrl || Array.isArray(o.gauge_ids_with_duration) && (!o.gauge_ids_with_duration.length || QueryGaugeIdsResponse_GaugeIdWithDuration.isAmino(o.gauge_ids_with_duration[0])));
+    return (
+      o &&
+      (o.$typeUrl === QueryGaugeIdsResponse.typeUrl ||
+        (Array.isArray(o.gauge_ids_with_duration) &&
+          (!o.gauge_ids_with_duration.length ||
+            QueryGaugeIdsResponse_GaugeIdWithDuration.isAmino(
+              o.gauge_ids_with_duration[0],
+            ))))
+    );
   },
-  encode(message: QueryGaugeIdsResponse, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
+  encode(
+    message: QueryGaugeIdsResponse,
+    writer: BinaryWriter = BinaryWriter.create(),
+  ): BinaryWriter {
     for (const v of message.gaugeIdsWithDuration) {
-      QueryGaugeIdsResponse_GaugeIdWithDuration.encode(v!, writer.uint32(10).fork()).ldelim();
+      QueryGaugeIdsResponse_GaugeIdWithDuration.encode(
+        v!,
+        writer.uint32(10).fork(),
+      ).ldelim();
     }
     return writer;
   },
-  decode(input: BinaryReader | Uint8Array, length?: number): QueryGaugeIdsResponse {
-    const reader = input instanceof BinaryReader ? input : new BinaryReader(input);
+  decode(
+    input: BinaryReader | Uint8Array,
+    length?: number,
+  ): QueryGaugeIdsResponse {
+    const reader =
+      input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseQueryGaugeIdsResponse();
     while (reader.pos < end) {
       const tag = reader.uint32();
       switch (tag >>> 3) {
         case 1:
-          message.gaugeIdsWithDuration.push(QueryGaugeIdsResponse_GaugeIdWithDuration.decode(reader, reader.uint32()));
+          message.gaugeIdsWithDuration.push(
+            QueryGaugeIdsResponse_GaugeIdWithDuration.decode(
+              reader,
+              reader.uint32(),
+            ),
+          );
           break;
         default:
           reader.skipType(tag & 7);
@@ -338,18 +634,26 @@ export const QueryGaugeIdsResponse = {
   },
   fromPartial(object: Partial<QueryGaugeIdsResponse>): QueryGaugeIdsResponse {
     const message = createBaseQueryGaugeIdsResponse();
-    message.gaugeIdsWithDuration = object.gaugeIdsWithDuration?.map(e => QueryGaugeIdsResponse_GaugeIdWithDuration.fromPartial(e)) || [];
+    message.gaugeIdsWithDuration =
+      object.gaugeIdsWithDuration?.map(e =>
+        QueryGaugeIdsResponse_GaugeIdWithDuration.fromPartial(e),
+      ) || [];
     return message;
   },
   fromAmino(object: QueryGaugeIdsResponseAmino): QueryGaugeIdsResponse {
     const message = createBaseQueryGaugeIdsResponse();
-    message.gaugeIdsWithDuration = object.gauge_ids_with_duration?.map(e => QueryGaugeIdsResponse_GaugeIdWithDuration.fromAmino(e)) || [];
+    message.gaugeIdsWithDuration =
+      object.gauge_ids_with_duration?.map(e =>
+        QueryGaugeIdsResponse_GaugeIdWithDuration.fromAmino(e),
+      ) || [];
     return message;
   },
   toAmino(message: QueryGaugeIdsResponse): QueryGaugeIdsResponseAmino {
     const obj: any = {};
     if (message.gaugeIdsWithDuration) {
-      obj.gauge_ids_with_duration = message.gaugeIdsWithDuration.map(e => e ? QueryGaugeIdsResponse_GaugeIdWithDuration.toAmino(e) : undefined);
+      obj.gauge_ids_with_duration = message.gaugeIdsWithDuration.map(e =>
+        e ? QueryGaugeIdsResponse_GaugeIdWithDuration.toAmino(e) : undefined,
+      );
     } else {
       obj.gauge_ids_with_duration = message.gaugeIdsWithDuration;
     }
@@ -366,44 +670,77 @@ export const QueryGaugeIdsResponse = {
   },
   toProtoMsg(message: QueryGaugeIdsResponse): QueryGaugeIdsResponseProtoMsg {
     return {
-      typeUrl: "/symphony.poolincentives.v1beta1.QueryGaugeIdsResponse",
-      value: QueryGaugeIdsResponse.encode(message).finish()
+      typeUrl: '/symphony.poolincentives.v1beta1.QueryGaugeIdsResponse',
+      value: QueryGaugeIdsResponse.encode(message).finish(),
     };
-  }
+  },
 };
-GlobalDecoderRegistry.register(QueryGaugeIdsResponse.typeUrl, QueryGaugeIdsResponse);
+GlobalDecoderRegistry.register(
+  QueryGaugeIdsResponse.typeUrl,
+  QueryGaugeIdsResponse,
+);
 function createBaseQueryGaugeIdsResponse_GaugeIdWithDuration(): QueryGaugeIdsResponse_GaugeIdWithDuration {
   return {
     gaugeId: BigInt(0),
     duration: Duration.fromPartial({}),
-    gaugeIncentivePercentage: ""
+    gaugeIncentivePercentage: '',
   };
 }
+/**
+ * @name QueryGaugeIdsResponse_GaugeIdWithDuration
+ * @package symphony.poolincentives.v1beta1
+ * @see proto type: symphony.poolincentives.v1beta1.GaugeIdWithDuration
+ */
 export const QueryGaugeIdsResponse_GaugeIdWithDuration = {
-  typeUrl: "/symphony.poolincentives.v1beta1.GaugeIdWithDuration",
+  typeUrl: '/symphony.poolincentives.v1beta1.GaugeIdWithDuration',
   is(o: any): o is QueryGaugeIdsResponse_GaugeIdWithDuration {
-    return o && (o.$typeUrl === QueryGaugeIdsResponse_GaugeIdWithDuration.typeUrl || typeof o.gaugeId === "bigint" && Duration.is(o.duration) && typeof o.gaugeIncentivePercentage === "string");
+    return (
+      o &&
+      (o.$typeUrl === QueryGaugeIdsResponse_GaugeIdWithDuration.typeUrl ||
+        (typeof o.gaugeId === 'bigint' &&
+          Duration.is(o.duration) &&
+          typeof o.gaugeIncentivePercentage === 'string'))
+    );
   },
   isSDK(o: any): o is QueryGaugeIdsResponse_GaugeIdWithDurationSDKType {
-    return o && (o.$typeUrl === QueryGaugeIdsResponse_GaugeIdWithDuration.typeUrl || typeof o.gauge_id === "bigint" && Duration.isSDK(o.duration) && typeof o.gauge_incentive_percentage === "string");
+    return (
+      o &&
+      (o.$typeUrl === QueryGaugeIdsResponse_GaugeIdWithDuration.typeUrl ||
+        (typeof o.gauge_id === 'bigint' &&
+          Duration.isSDK(o.duration) &&
+          typeof o.gauge_incentive_percentage === 'string'))
+    );
   },
   isAmino(o: any): o is QueryGaugeIdsResponse_GaugeIdWithDurationAmino {
-    return o && (o.$typeUrl === QueryGaugeIdsResponse_GaugeIdWithDuration.typeUrl || typeof o.gauge_id === "bigint" && Duration.isAmino(o.duration) && typeof o.gauge_incentive_percentage === "string");
+    return (
+      o &&
+      (o.$typeUrl === QueryGaugeIdsResponse_GaugeIdWithDuration.typeUrl ||
+        (typeof o.gauge_id === 'bigint' &&
+          Duration.isAmino(o.duration) &&
+          typeof o.gauge_incentive_percentage === 'string'))
+    );
   },
-  encode(message: QueryGaugeIdsResponse_GaugeIdWithDuration, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
+  encode(
+    message: QueryGaugeIdsResponse_GaugeIdWithDuration,
+    writer: BinaryWriter = BinaryWriter.create(),
+  ): BinaryWriter {
     if (message.gaugeId !== BigInt(0)) {
       writer.uint32(8).uint64(message.gaugeId);
     }
     if (message.duration !== undefined) {
       Duration.encode(message.duration, writer.uint32(18).fork()).ldelim();
     }
-    if (message.gaugeIncentivePercentage !== "") {
+    if (message.gaugeIncentivePercentage !== '') {
       writer.uint32(26).string(message.gaugeIncentivePercentage);
     }
     return writer;
   },
-  decode(input: BinaryReader | Uint8Array, length?: number): QueryGaugeIdsResponse_GaugeIdWithDuration {
-    const reader = input instanceof BinaryReader ? input : new BinaryReader(input);
+  decode(
+    input: BinaryReader | Uint8Array,
+    length?: number,
+  ): QueryGaugeIdsResponse_GaugeIdWithDuration {
+    const reader =
+      input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseQueryGaugeIdsResponse_GaugeIdWithDuration();
     while (reader.pos < end) {
@@ -425,14 +762,24 @@ export const QueryGaugeIdsResponse_GaugeIdWithDuration = {
     }
     return message;
   },
-  fromPartial(object: Partial<QueryGaugeIdsResponse_GaugeIdWithDuration>): QueryGaugeIdsResponse_GaugeIdWithDuration {
+  fromPartial(
+    object: Partial<QueryGaugeIdsResponse_GaugeIdWithDuration>,
+  ): QueryGaugeIdsResponse_GaugeIdWithDuration {
     const message = createBaseQueryGaugeIdsResponse_GaugeIdWithDuration();
-    message.gaugeId = object.gaugeId !== undefined && object.gaugeId !== null ? BigInt(object.gaugeId.toString()) : BigInt(0);
-    message.duration = object.duration !== undefined && object.duration !== null ? Duration.fromPartial(object.duration) : undefined;
-    message.gaugeIncentivePercentage = object.gaugeIncentivePercentage ?? "";
+    message.gaugeId =
+      object.gaugeId !== undefined && object.gaugeId !== null
+        ? BigInt(object.gaugeId.toString())
+        : BigInt(0);
+    message.duration =
+      object.duration !== undefined && object.duration !== null
+        ? Duration.fromPartial(object.duration)
+        : undefined;
+    message.gaugeIncentivePercentage = object.gaugeIncentivePercentage ?? '';
     return message;
   },
-  fromAmino(object: QueryGaugeIdsResponse_GaugeIdWithDurationAmino): QueryGaugeIdsResponse_GaugeIdWithDuration {
+  fromAmino(
+    object: QueryGaugeIdsResponse_GaugeIdWithDurationAmino,
+  ): QueryGaugeIdsResponse_GaugeIdWithDuration {
     const message = createBaseQueryGaugeIdsResponse_GaugeIdWithDuration();
     if (object.gauge_id !== undefined && object.gauge_id !== null) {
       message.gaugeId = BigInt(object.gauge_id);
@@ -440,40 +787,65 @@ export const QueryGaugeIdsResponse_GaugeIdWithDuration = {
     if (object.duration !== undefined && object.duration !== null) {
       message.duration = Duration.fromAmino(object.duration);
     }
-    if (object.gauge_incentive_percentage !== undefined && object.gauge_incentive_percentage !== null) {
+    if (
+      object.gauge_incentive_percentage !== undefined &&
+      object.gauge_incentive_percentage !== null
+    ) {
       message.gaugeIncentivePercentage = object.gauge_incentive_percentage;
     }
     return message;
   },
-  toAmino(message: QueryGaugeIdsResponse_GaugeIdWithDuration): QueryGaugeIdsResponse_GaugeIdWithDurationAmino {
+  toAmino(
+    message: QueryGaugeIdsResponse_GaugeIdWithDuration,
+  ): QueryGaugeIdsResponse_GaugeIdWithDurationAmino {
     const obj: any = {};
-    obj.gauge_id = message.gaugeId !== BigInt(0) ? message.gaugeId?.toString() : undefined;
-    obj.duration = message.duration ? Duration.toAmino(message.duration) : undefined;
-    obj.gauge_incentive_percentage = message.gaugeIncentivePercentage === "" ? undefined : message.gaugeIncentivePercentage;
+    obj.gauge_id =
+      message.gaugeId !== BigInt(0) ? message.gaugeId?.toString() : undefined;
+    obj.duration = message.duration
+      ? Duration.toAmino(message.duration)
+      : undefined;
+    obj.gauge_incentive_percentage =
+      message.gaugeIncentivePercentage === ''
+        ? undefined
+        : message.gaugeIncentivePercentage;
     return obj;
   },
-  fromAminoMsg(object: QueryGaugeIdsResponse_GaugeIdWithDurationAminoMsg): QueryGaugeIdsResponse_GaugeIdWithDuration {
+  fromAminoMsg(
+    object: QueryGaugeIdsResponse_GaugeIdWithDurationAminoMsg,
+  ): QueryGaugeIdsResponse_GaugeIdWithDuration {
     return QueryGaugeIdsResponse_GaugeIdWithDuration.fromAmino(object.value);
   },
-  fromProtoMsg(message: QueryGaugeIdsResponse_GaugeIdWithDurationProtoMsg): QueryGaugeIdsResponse_GaugeIdWithDuration {
+  fromProtoMsg(
+    message: QueryGaugeIdsResponse_GaugeIdWithDurationProtoMsg,
+  ): QueryGaugeIdsResponse_GaugeIdWithDuration {
     return QueryGaugeIdsResponse_GaugeIdWithDuration.decode(message.value);
   },
   toProto(message: QueryGaugeIdsResponse_GaugeIdWithDuration): Uint8Array {
     return QueryGaugeIdsResponse_GaugeIdWithDuration.encode(message).finish();
   },
-  toProtoMsg(message: QueryGaugeIdsResponse_GaugeIdWithDuration): QueryGaugeIdsResponse_GaugeIdWithDurationProtoMsg {
+  toProtoMsg(
+    message: QueryGaugeIdsResponse_GaugeIdWithDuration,
+  ): QueryGaugeIdsResponse_GaugeIdWithDurationProtoMsg {
     return {
-      typeUrl: "/symphony.poolincentives.v1beta1.GaugeIdWithDuration",
-      value: QueryGaugeIdsResponse_GaugeIdWithDuration.encode(message).finish()
+      typeUrl: '/symphony.poolincentives.v1beta1.GaugeIdWithDuration',
+      value: QueryGaugeIdsResponse_GaugeIdWithDuration.encode(message).finish(),
     };
-  }
+  },
 };
-GlobalDecoderRegistry.register(QueryGaugeIdsResponse_GaugeIdWithDuration.typeUrl, QueryGaugeIdsResponse_GaugeIdWithDuration);
+GlobalDecoderRegistry.register(
+  QueryGaugeIdsResponse_GaugeIdWithDuration.typeUrl,
+  QueryGaugeIdsResponse_GaugeIdWithDuration,
+);
 function createBaseQueryDistrInfoRequest(): QueryDistrInfoRequest {
   return {};
 }
+/**
+ * @name QueryDistrInfoRequest
+ * @package symphony.poolincentives.v1beta1
+ * @see proto type: symphony.poolincentives.v1beta1.QueryDistrInfoRequest
+ */
 export const QueryDistrInfoRequest = {
-  typeUrl: "/symphony.poolincentives.v1beta1.QueryDistrInfoRequest",
+  typeUrl: '/symphony.poolincentives.v1beta1.QueryDistrInfoRequest',
   is(o: any): o is QueryDistrInfoRequest {
     return o && o.$typeUrl === QueryDistrInfoRequest.typeUrl;
   },
@@ -483,11 +855,18 @@ export const QueryDistrInfoRequest = {
   isAmino(o: any): o is QueryDistrInfoRequestAmino {
     return o && o.$typeUrl === QueryDistrInfoRequest.typeUrl;
   },
-  encode(_: QueryDistrInfoRequest, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
+  encode(
+    _: QueryDistrInfoRequest,
+    writer: BinaryWriter = BinaryWriter.create(),
+  ): BinaryWriter {
     return writer;
   },
-  decode(input: BinaryReader | Uint8Array, length?: number): QueryDistrInfoRequest {
-    const reader = input instanceof BinaryReader ? input : new BinaryReader(input);
+  decode(
+    input: BinaryReader | Uint8Array,
+    length?: number,
+  ): QueryDistrInfoRequest {
+    const reader =
+      input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseQueryDistrInfoRequest();
     while (reader.pos < end) {
@@ -523,36 +902,63 @@ export const QueryDistrInfoRequest = {
   },
   toProtoMsg(message: QueryDistrInfoRequest): QueryDistrInfoRequestProtoMsg {
     return {
-      typeUrl: "/symphony.poolincentives.v1beta1.QueryDistrInfoRequest",
-      value: QueryDistrInfoRequest.encode(message).finish()
+      typeUrl: '/symphony.poolincentives.v1beta1.QueryDistrInfoRequest',
+      value: QueryDistrInfoRequest.encode(message).finish(),
     };
-  }
+  },
 };
-GlobalDecoderRegistry.register(QueryDistrInfoRequest.typeUrl, QueryDistrInfoRequest);
+GlobalDecoderRegistry.register(
+  QueryDistrInfoRequest.typeUrl,
+  QueryDistrInfoRequest,
+);
 function createBaseQueryDistrInfoResponse(): QueryDistrInfoResponse {
   return {
-    distrInfo: DistrInfo.fromPartial({})
+    distrInfo: DistrInfo.fromPartial({}),
   };
 }
+/**
+ * @name QueryDistrInfoResponse
+ * @package symphony.poolincentives.v1beta1
+ * @see proto type: symphony.poolincentives.v1beta1.QueryDistrInfoResponse
+ */
 export const QueryDistrInfoResponse = {
-  typeUrl: "/symphony.poolincentives.v1beta1.QueryDistrInfoResponse",
+  typeUrl: '/symphony.poolincentives.v1beta1.QueryDistrInfoResponse',
   is(o: any): o is QueryDistrInfoResponse {
-    return o && (o.$typeUrl === QueryDistrInfoResponse.typeUrl || DistrInfo.is(o.distrInfo));
+    return (
+      o &&
+      (o.$typeUrl === QueryDistrInfoResponse.typeUrl ||
+        DistrInfo.is(o.distrInfo))
+    );
   },
   isSDK(o: any): o is QueryDistrInfoResponseSDKType {
-    return o && (o.$typeUrl === QueryDistrInfoResponse.typeUrl || DistrInfo.isSDK(o.distr_info));
+    return (
+      o &&
+      (o.$typeUrl === QueryDistrInfoResponse.typeUrl ||
+        DistrInfo.isSDK(o.distr_info))
+    );
   },
   isAmino(o: any): o is QueryDistrInfoResponseAmino {
-    return o && (o.$typeUrl === QueryDistrInfoResponse.typeUrl || DistrInfo.isAmino(o.distr_info));
+    return (
+      o &&
+      (o.$typeUrl === QueryDistrInfoResponse.typeUrl ||
+        DistrInfo.isAmino(o.distr_info))
+    );
   },
-  encode(message: QueryDistrInfoResponse, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
+  encode(
+    message: QueryDistrInfoResponse,
+    writer: BinaryWriter = BinaryWriter.create(),
+  ): BinaryWriter {
     if (message.distrInfo !== undefined) {
       DistrInfo.encode(message.distrInfo, writer.uint32(10).fork()).ldelim();
     }
     return writer;
   },
-  decode(input: BinaryReader | Uint8Array, length?: number): QueryDistrInfoResponse {
-    const reader = input instanceof BinaryReader ? input : new BinaryReader(input);
+  decode(
+    input: BinaryReader | Uint8Array,
+    length?: number,
+  ): QueryDistrInfoResponse {
+    const reader =
+      input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseQueryDistrInfoResponse();
     while (reader.pos < end) {
@@ -570,7 +976,10 @@ export const QueryDistrInfoResponse = {
   },
   fromPartial(object: Partial<QueryDistrInfoResponse>): QueryDistrInfoResponse {
     const message = createBaseQueryDistrInfoResponse();
-    message.distrInfo = object.distrInfo !== undefined && object.distrInfo !== null ? DistrInfo.fromPartial(object.distrInfo) : undefined;
+    message.distrInfo =
+      object.distrInfo !== undefined && object.distrInfo !== null
+        ? DistrInfo.fromPartial(object.distrInfo)
+        : undefined;
     return message;
   },
   fromAmino(object: QueryDistrInfoResponseAmino): QueryDistrInfoResponse {
@@ -582,13 +991,17 @@ export const QueryDistrInfoResponse = {
   },
   toAmino(message: QueryDistrInfoResponse): QueryDistrInfoResponseAmino {
     const obj: any = {};
-    obj.distr_info = message.distrInfo ? DistrInfo.toAmino(message.distrInfo) : undefined;
+    obj.distr_info = message.distrInfo
+      ? DistrInfo.toAmino(message.distrInfo)
+      : undefined;
     return obj;
   },
   fromAminoMsg(object: QueryDistrInfoResponseAminoMsg): QueryDistrInfoResponse {
     return QueryDistrInfoResponse.fromAmino(object.value);
   },
-  fromProtoMsg(message: QueryDistrInfoResponseProtoMsg): QueryDistrInfoResponse {
+  fromProtoMsg(
+    message: QueryDistrInfoResponseProtoMsg,
+  ): QueryDistrInfoResponse {
     return QueryDistrInfoResponse.decode(message.value);
   },
   toProto(message: QueryDistrInfoResponse): Uint8Array {
@@ -596,17 +1009,25 @@ export const QueryDistrInfoResponse = {
   },
   toProtoMsg(message: QueryDistrInfoResponse): QueryDistrInfoResponseProtoMsg {
     return {
-      typeUrl: "/symphony.poolincentives.v1beta1.QueryDistrInfoResponse",
-      value: QueryDistrInfoResponse.encode(message).finish()
+      typeUrl: '/symphony.poolincentives.v1beta1.QueryDistrInfoResponse',
+      value: QueryDistrInfoResponse.encode(message).finish(),
     };
-  }
+  },
 };
-GlobalDecoderRegistry.register(QueryDistrInfoResponse.typeUrl, QueryDistrInfoResponse);
+GlobalDecoderRegistry.register(
+  QueryDistrInfoResponse.typeUrl,
+  QueryDistrInfoResponse,
+);
 function createBaseQueryParamsRequest(): QueryParamsRequest {
   return {};
 }
+/**
+ * @name QueryParamsRequest
+ * @package symphony.poolincentives.v1beta1
+ * @see proto type: symphony.poolincentives.v1beta1.QueryParamsRequest
+ */
 export const QueryParamsRequest = {
-  typeUrl: "/symphony.poolincentives.v1beta1.QueryParamsRequest",
+  typeUrl: '/symphony.poolincentives.v1beta1.QueryParamsRequest',
   is(o: any): o is QueryParamsRequest {
     return o && o.$typeUrl === QueryParamsRequest.typeUrl;
   },
@@ -616,11 +1037,18 @@ export const QueryParamsRequest = {
   isAmino(o: any): o is QueryParamsRequestAmino {
     return o && o.$typeUrl === QueryParamsRequest.typeUrl;
   },
-  encode(_: QueryParamsRequest, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
+  encode(
+    _: QueryParamsRequest,
+    writer: BinaryWriter = BinaryWriter.create(),
+  ): BinaryWriter {
     return writer;
   },
-  decode(input: BinaryReader | Uint8Array, length?: number): QueryParamsRequest {
-    const reader = input instanceof BinaryReader ? input : new BinaryReader(input);
+  decode(
+    input: BinaryReader | Uint8Array,
+    length?: number,
+  ): QueryParamsRequest {
+    const reader =
+      input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseQueryParamsRequest();
     while (reader.pos < end) {
@@ -656,36 +1084,56 @@ export const QueryParamsRequest = {
   },
   toProtoMsg(message: QueryParamsRequest): QueryParamsRequestProtoMsg {
     return {
-      typeUrl: "/symphony.poolincentives.v1beta1.QueryParamsRequest",
-      value: QueryParamsRequest.encode(message).finish()
+      typeUrl: '/symphony.poolincentives.v1beta1.QueryParamsRequest',
+      value: QueryParamsRequest.encode(message).finish(),
     };
-  }
+  },
 };
 GlobalDecoderRegistry.register(QueryParamsRequest.typeUrl, QueryParamsRequest);
 function createBaseQueryParamsResponse(): QueryParamsResponse {
   return {
-    params: Params.fromPartial({})
+    params: Params.fromPartial({}),
   };
 }
+/**
+ * @name QueryParamsResponse
+ * @package symphony.poolincentives.v1beta1
+ * @see proto type: symphony.poolincentives.v1beta1.QueryParamsResponse
+ */
 export const QueryParamsResponse = {
-  typeUrl: "/symphony.poolincentives.v1beta1.QueryParamsResponse",
+  typeUrl: '/symphony.poolincentives.v1beta1.QueryParamsResponse',
   is(o: any): o is QueryParamsResponse {
-    return o && (o.$typeUrl === QueryParamsResponse.typeUrl || Params.is(o.params));
+    return (
+      o && (o.$typeUrl === QueryParamsResponse.typeUrl || Params.is(o.params))
+    );
   },
   isSDK(o: any): o is QueryParamsResponseSDKType {
-    return o && (o.$typeUrl === QueryParamsResponse.typeUrl || Params.isSDK(o.params));
+    return (
+      o &&
+      (o.$typeUrl === QueryParamsResponse.typeUrl || Params.isSDK(o.params))
+    );
   },
   isAmino(o: any): o is QueryParamsResponseAmino {
-    return o && (o.$typeUrl === QueryParamsResponse.typeUrl || Params.isAmino(o.params));
+    return (
+      o &&
+      (o.$typeUrl === QueryParamsResponse.typeUrl || Params.isAmino(o.params))
+    );
   },
-  encode(message: QueryParamsResponse, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
+  encode(
+    message: QueryParamsResponse,
+    writer: BinaryWriter = BinaryWriter.create(),
+  ): BinaryWriter {
     if (message.params !== undefined) {
       Params.encode(message.params, writer.uint32(10).fork()).ldelim();
     }
     return writer;
   },
-  decode(input: BinaryReader | Uint8Array, length?: number): QueryParamsResponse {
-    const reader = input instanceof BinaryReader ? input : new BinaryReader(input);
+  decode(
+    input: BinaryReader | Uint8Array,
+    length?: number,
+  ): QueryParamsResponse {
+    const reader =
+      input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseQueryParamsResponse();
     while (reader.pos < end) {
@@ -703,7 +1151,10 @@ export const QueryParamsResponse = {
   },
   fromPartial(object: Partial<QueryParamsResponse>): QueryParamsResponse {
     const message = createBaseQueryParamsResponse();
-    message.params = object.params !== undefined && object.params !== null ? Params.fromPartial(object.params) : undefined;
+    message.params =
+      object.params !== undefined && object.params !== null
+        ? Params.fromPartial(object.params)
+        : undefined;
     return message;
   },
   fromAmino(object: QueryParamsResponseAmino): QueryParamsResponse {
@@ -729,17 +1180,25 @@ export const QueryParamsResponse = {
   },
   toProtoMsg(message: QueryParamsResponse): QueryParamsResponseProtoMsg {
     return {
-      typeUrl: "/symphony.poolincentives.v1beta1.QueryParamsResponse",
-      value: QueryParamsResponse.encode(message).finish()
+      typeUrl: '/symphony.poolincentives.v1beta1.QueryParamsResponse',
+      value: QueryParamsResponse.encode(message).finish(),
     };
-  }
+  },
 };
-GlobalDecoderRegistry.register(QueryParamsResponse.typeUrl, QueryParamsResponse);
+GlobalDecoderRegistry.register(
+  QueryParamsResponse.typeUrl,
+  QueryParamsResponse,
+);
 function createBaseQueryLockableDurationsRequest(): QueryLockableDurationsRequest {
   return {};
 }
+/**
+ * @name QueryLockableDurationsRequest
+ * @package symphony.poolincentives.v1beta1
+ * @see proto type: symphony.poolincentives.v1beta1.QueryLockableDurationsRequest
+ */
 export const QueryLockableDurationsRequest = {
-  typeUrl: "/symphony.poolincentives.v1beta1.QueryLockableDurationsRequest",
+  typeUrl: '/symphony.poolincentives.v1beta1.QueryLockableDurationsRequest',
   is(o: any): o is QueryLockableDurationsRequest {
     return o && o.$typeUrl === QueryLockableDurationsRequest.typeUrl;
   },
@@ -749,11 +1208,18 @@ export const QueryLockableDurationsRequest = {
   isAmino(o: any): o is QueryLockableDurationsRequestAmino {
     return o && o.$typeUrl === QueryLockableDurationsRequest.typeUrl;
   },
-  encode(_: QueryLockableDurationsRequest, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
+  encode(
+    _: QueryLockableDurationsRequest,
+    writer: BinaryWriter = BinaryWriter.create(),
+  ): BinaryWriter {
     return writer;
   },
-  decode(input: BinaryReader | Uint8Array, length?: number): QueryLockableDurationsRequest {
-    const reader = input instanceof BinaryReader ? input : new BinaryReader(input);
+  decode(
+    input: BinaryReader | Uint8Array,
+    length?: number,
+  ): QueryLockableDurationsRequest {
+    const reader =
+      input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseQueryLockableDurationsRequest();
     while (reader.pos < end) {
@@ -766,66 +1232,112 @@ export const QueryLockableDurationsRequest = {
     }
     return message;
   },
-  fromPartial(_: Partial<QueryLockableDurationsRequest>): QueryLockableDurationsRequest {
+  fromPartial(
+    _: Partial<QueryLockableDurationsRequest>,
+  ): QueryLockableDurationsRequest {
     const message = createBaseQueryLockableDurationsRequest();
     return message;
   },
-  fromAmino(_: QueryLockableDurationsRequestAmino): QueryLockableDurationsRequest {
+  fromAmino(
+    _: QueryLockableDurationsRequestAmino,
+  ): QueryLockableDurationsRequest {
     const message = createBaseQueryLockableDurationsRequest();
     return message;
   },
-  toAmino(_: QueryLockableDurationsRequest): QueryLockableDurationsRequestAmino {
+  toAmino(
+    _: QueryLockableDurationsRequest,
+  ): QueryLockableDurationsRequestAmino {
     const obj: any = {};
     return obj;
   },
-  fromAminoMsg(object: QueryLockableDurationsRequestAminoMsg): QueryLockableDurationsRequest {
+  fromAminoMsg(
+    object: QueryLockableDurationsRequestAminoMsg,
+  ): QueryLockableDurationsRequest {
     return QueryLockableDurationsRequest.fromAmino(object.value);
   },
-  fromProtoMsg(message: QueryLockableDurationsRequestProtoMsg): QueryLockableDurationsRequest {
+  fromProtoMsg(
+    message: QueryLockableDurationsRequestProtoMsg,
+  ): QueryLockableDurationsRequest {
     return QueryLockableDurationsRequest.decode(message.value);
   },
   toProto(message: QueryLockableDurationsRequest): Uint8Array {
     return QueryLockableDurationsRequest.encode(message).finish();
   },
-  toProtoMsg(message: QueryLockableDurationsRequest): QueryLockableDurationsRequestProtoMsg {
+  toProtoMsg(
+    message: QueryLockableDurationsRequest,
+  ): QueryLockableDurationsRequestProtoMsg {
     return {
-      typeUrl: "/symphony.poolincentives.v1beta1.QueryLockableDurationsRequest",
-      value: QueryLockableDurationsRequest.encode(message).finish()
+      typeUrl: '/symphony.poolincentives.v1beta1.QueryLockableDurationsRequest',
+      value: QueryLockableDurationsRequest.encode(message).finish(),
     };
-  }
+  },
 };
-GlobalDecoderRegistry.register(QueryLockableDurationsRequest.typeUrl, QueryLockableDurationsRequest);
+GlobalDecoderRegistry.register(
+  QueryLockableDurationsRequest.typeUrl,
+  QueryLockableDurationsRequest,
+);
 function createBaseQueryLockableDurationsResponse(): QueryLockableDurationsResponse {
   return {
-    lockableDurations: []
+    lockableDurations: [],
   };
 }
+/**
+ * @name QueryLockableDurationsResponse
+ * @package symphony.poolincentives.v1beta1
+ * @see proto type: symphony.poolincentives.v1beta1.QueryLockableDurationsResponse
+ */
 export const QueryLockableDurationsResponse = {
-  typeUrl: "/symphony.poolincentives.v1beta1.QueryLockableDurationsResponse",
+  typeUrl: '/symphony.poolincentives.v1beta1.QueryLockableDurationsResponse',
   is(o: any): o is QueryLockableDurationsResponse {
-    return o && (o.$typeUrl === QueryLockableDurationsResponse.typeUrl || Array.isArray(o.lockableDurations) && (!o.lockableDurations.length || Duration.is(o.lockableDurations[0])));
+    return (
+      o &&
+      (o.$typeUrl === QueryLockableDurationsResponse.typeUrl ||
+        (Array.isArray(o.lockableDurations) &&
+          (!o.lockableDurations.length || Duration.is(o.lockableDurations[0]))))
+    );
   },
   isSDK(o: any): o is QueryLockableDurationsResponseSDKType {
-    return o && (o.$typeUrl === QueryLockableDurationsResponse.typeUrl || Array.isArray(o.lockable_durations) && (!o.lockable_durations.length || Duration.isSDK(o.lockable_durations[0])));
+    return (
+      o &&
+      (o.$typeUrl === QueryLockableDurationsResponse.typeUrl ||
+        (Array.isArray(o.lockable_durations) &&
+          (!o.lockable_durations.length ||
+            Duration.isSDK(o.lockable_durations[0]))))
+    );
   },
   isAmino(o: any): o is QueryLockableDurationsResponseAmino {
-    return o && (o.$typeUrl === QueryLockableDurationsResponse.typeUrl || Array.isArray(o.lockable_durations) && (!o.lockable_durations.length || Duration.isAmino(o.lockable_durations[0])));
+    return (
+      o &&
+      (o.$typeUrl === QueryLockableDurationsResponse.typeUrl ||
+        (Array.isArray(o.lockable_durations) &&
+          (!o.lockable_durations.length ||
+            Duration.isAmino(o.lockable_durations[0]))))
+    );
   },
-  encode(message: QueryLockableDurationsResponse, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
+  encode(
+    message: QueryLockableDurationsResponse,
+    writer: BinaryWriter = BinaryWriter.create(),
+  ): BinaryWriter {
     for (const v of message.lockableDurations) {
       Duration.encode(v!, writer.uint32(10).fork()).ldelim();
     }
     return writer;
   },
-  decode(input: BinaryReader | Uint8Array, length?: number): QueryLockableDurationsResponse {
-    const reader = input instanceof BinaryReader ? input : new BinaryReader(input);
+  decode(
+    input: BinaryReader | Uint8Array,
+    length?: number,
+  ): QueryLockableDurationsResponse {
+    const reader =
+      input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseQueryLockableDurationsResponse();
     while (reader.pos < end) {
       const tag = reader.uint32();
       switch (tag >>> 3) {
         case 1:
-          message.lockableDurations.push(Duration.decode(reader, reader.uint32()));
+          message.lockableDurations.push(
+            Duration.decode(reader, reader.uint32()),
+          );
           break;
         default:
           reader.skipType(tag & 7);
@@ -834,47 +1346,72 @@ export const QueryLockableDurationsResponse = {
     }
     return message;
   },
-  fromPartial(object: Partial<QueryLockableDurationsResponse>): QueryLockableDurationsResponse {
+  fromPartial(
+    object: Partial<QueryLockableDurationsResponse>,
+  ): QueryLockableDurationsResponse {
     const message = createBaseQueryLockableDurationsResponse();
-    message.lockableDurations = object.lockableDurations?.map(e => Duration.fromPartial(e)) || [];
+    message.lockableDurations =
+      object.lockableDurations?.map(e => Duration.fromPartial(e)) || [];
     return message;
   },
-  fromAmino(object: QueryLockableDurationsResponseAmino): QueryLockableDurationsResponse {
+  fromAmino(
+    object: QueryLockableDurationsResponseAmino,
+  ): QueryLockableDurationsResponse {
     const message = createBaseQueryLockableDurationsResponse();
-    message.lockableDurations = object.lockable_durations?.map(e => Duration.fromAmino(e)) || [];
+    message.lockableDurations =
+      object.lockable_durations?.map(e => Duration.fromAmino(e)) || [];
     return message;
   },
-  toAmino(message: QueryLockableDurationsResponse): QueryLockableDurationsResponseAmino {
+  toAmino(
+    message: QueryLockableDurationsResponse,
+  ): QueryLockableDurationsResponseAmino {
     const obj: any = {};
     if (message.lockableDurations) {
-      obj.lockable_durations = message.lockableDurations.map(e => e ? Duration.toAmino(e) : undefined);
+      obj.lockable_durations = message.lockableDurations.map(e =>
+        e ? Duration.toAmino(e) : undefined,
+      );
     } else {
       obj.lockable_durations = message.lockableDurations;
     }
     return obj;
   },
-  fromAminoMsg(object: QueryLockableDurationsResponseAminoMsg): QueryLockableDurationsResponse {
+  fromAminoMsg(
+    object: QueryLockableDurationsResponseAminoMsg,
+  ): QueryLockableDurationsResponse {
     return QueryLockableDurationsResponse.fromAmino(object.value);
   },
-  fromProtoMsg(message: QueryLockableDurationsResponseProtoMsg): QueryLockableDurationsResponse {
+  fromProtoMsg(
+    message: QueryLockableDurationsResponseProtoMsg,
+  ): QueryLockableDurationsResponse {
     return QueryLockableDurationsResponse.decode(message.value);
   },
   toProto(message: QueryLockableDurationsResponse): Uint8Array {
     return QueryLockableDurationsResponse.encode(message).finish();
   },
-  toProtoMsg(message: QueryLockableDurationsResponse): QueryLockableDurationsResponseProtoMsg {
+  toProtoMsg(
+    message: QueryLockableDurationsResponse,
+  ): QueryLockableDurationsResponseProtoMsg {
     return {
-      typeUrl: "/symphony.poolincentives.v1beta1.QueryLockableDurationsResponse",
-      value: QueryLockableDurationsResponse.encode(message).finish()
+      typeUrl:
+        '/symphony.poolincentives.v1beta1.QueryLockableDurationsResponse',
+      value: QueryLockableDurationsResponse.encode(message).finish(),
     };
-  }
+  },
 };
-GlobalDecoderRegistry.register(QueryLockableDurationsResponse.typeUrl, QueryLockableDurationsResponse);
+GlobalDecoderRegistry.register(
+  QueryLockableDurationsResponse.typeUrl,
+  QueryLockableDurationsResponse,
+);
 function createBaseQueryIncentivizedPoolsRequest(): QueryIncentivizedPoolsRequest {
   return {};
 }
+/**
+ * @name QueryIncentivizedPoolsRequest
+ * @package symphony.poolincentives.v1beta1
+ * @see proto type: symphony.poolincentives.v1beta1.QueryIncentivizedPoolsRequest
+ */
 export const QueryIncentivizedPoolsRequest = {
-  typeUrl: "/symphony.poolincentives.v1beta1.QueryIncentivizedPoolsRequest",
+  typeUrl: '/symphony.poolincentives.v1beta1.QueryIncentivizedPoolsRequest',
   is(o: any): o is QueryIncentivizedPoolsRequest {
     return o && o.$typeUrl === QueryIncentivizedPoolsRequest.typeUrl;
   },
@@ -884,11 +1421,18 @@ export const QueryIncentivizedPoolsRequest = {
   isAmino(o: any): o is QueryIncentivizedPoolsRequestAmino {
     return o && o.$typeUrl === QueryIncentivizedPoolsRequest.typeUrl;
   },
-  encode(_: QueryIncentivizedPoolsRequest, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
+  encode(
+    _: QueryIncentivizedPoolsRequest,
+    writer: BinaryWriter = BinaryWriter.create(),
+  ): BinaryWriter {
     return writer;
   },
-  decode(input: BinaryReader | Uint8Array, length?: number): QueryIncentivizedPoolsRequest {
-    const reader = input instanceof BinaryReader ? input : new BinaryReader(input);
+  decode(
+    input: BinaryReader | Uint8Array,
+    length?: number,
+  ): QueryIncentivizedPoolsRequest {
+    const reader =
+      input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseQueryIncentivizedPoolsRequest();
     while (reader.pos < end) {
@@ -901,59 +1445,103 @@ export const QueryIncentivizedPoolsRequest = {
     }
     return message;
   },
-  fromPartial(_: Partial<QueryIncentivizedPoolsRequest>): QueryIncentivizedPoolsRequest {
+  fromPartial(
+    _: Partial<QueryIncentivizedPoolsRequest>,
+  ): QueryIncentivizedPoolsRequest {
     const message = createBaseQueryIncentivizedPoolsRequest();
     return message;
   },
-  fromAmino(_: QueryIncentivizedPoolsRequestAmino): QueryIncentivizedPoolsRequest {
+  fromAmino(
+    _: QueryIncentivizedPoolsRequestAmino,
+  ): QueryIncentivizedPoolsRequest {
     const message = createBaseQueryIncentivizedPoolsRequest();
     return message;
   },
-  toAmino(_: QueryIncentivizedPoolsRequest): QueryIncentivizedPoolsRequestAmino {
+  toAmino(
+    _: QueryIncentivizedPoolsRequest,
+  ): QueryIncentivizedPoolsRequestAmino {
     const obj: any = {};
     return obj;
   },
-  fromAminoMsg(object: QueryIncentivizedPoolsRequestAminoMsg): QueryIncentivizedPoolsRequest {
+  fromAminoMsg(
+    object: QueryIncentivizedPoolsRequestAminoMsg,
+  ): QueryIncentivizedPoolsRequest {
     return QueryIncentivizedPoolsRequest.fromAmino(object.value);
   },
-  fromProtoMsg(message: QueryIncentivizedPoolsRequestProtoMsg): QueryIncentivizedPoolsRequest {
+  fromProtoMsg(
+    message: QueryIncentivizedPoolsRequestProtoMsg,
+  ): QueryIncentivizedPoolsRequest {
     return QueryIncentivizedPoolsRequest.decode(message.value);
   },
   toProto(message: QueryIncentivizedPoolsRequest): Uint8Array {
     return QueryIncentivizedPoolsRequest.encode(message).finish();
   },
-  toProtoMsg(message: QueryIncentivizedPoolsRequest): QueryIncentivizedPoolsRequestProtoMsg {
+  toProtoMsg(
+    message: QueryIncentivizedPoolsRequest,
+  ): QueryIncentivizedPoolsRequestProtoMsg {
     return {
-      typeUrl: "/symphony.poolincentives.v1beta1.QueryIncentivizedPoolsRequest",
-      value: QueryIncentivizedPoolsRequest.encode(message).finish()
+      typeUrl: '/symphony.poolincentives.v1beta1.QueryIncentivizedPoolsRequest',
+      value: QueryIncentivizedPoolsRequest.encode(message).finish(),
     };
-  }
+  },
 };
-GlobalDecoderRegistry.register(QueryIncentivizedPoolsRequest.typeUrl, QueryIncentivizedPoolsRequest);
+GlobalDecoderRegistry.register(
+  QueryIncentivizedPoolsRequest.typeUrl,
+  QueryIncentivizedPoolsRequest,
+);
 function createBaseIncentivizedPool(): IncentivizedPool {
   return {
     poolId: BigInt(0),
     lockableDuration: Duration.fromPartial({}),
-    gaugeId: BigInt(0)
+    gaugeId: BigInt(0),
   };
 }
+/**
+ * @name IncentivizedPool
+ * @package symphony.poolincentives.v1beta1
+ * @see proto type: symphony.poolincentives.v1beta1.IncentivizedPool
+ */
 export const IncentivizedPool = {
-  typeUrl: "/symphony.poolincentives.v1beta1.IncentivizedPool",
+  typeUrl: '/symphony.poolincentives.v1beta1.IncentivizedPool',
   is(o: any): o is IncentivizedPool {
-    return o && (o.$typeUrl === IncentivizedPool.typeUrl || typeof o.poolId === "bigint" && Duration.is(o.lockableDuration) && typeof o.gaugeId === "bigint");
+    return (
+      o &&
+      (o.$typeUrl === IncentivizedPool.typeUrl ||
+        (typeof o.poolId === 'bigint' &&
+          Duration.is(o.lockableDuration) &&
+          typeof o.gaugeId === 'bigint'))
+    );
   },
   isSDK(o: any): o is IncentivizedPoolSDKType {
-    return o && (o.$typeUrl === IncentivizedPool.typeUrl || typeof o.pool_id === "bigint" && Duration.isSDK(o.lockable_duration) && typeof o.gauge_id === "bigint");
+    return (
+      o &&
+      (o.$typeUrl === IncentivizedPool.typeUrl ||
+        (typeof o.pool_id === 'bigint' &&
+          Duration.isSDK(o.lockable_duration) &&
+          typeof o.gauge_id === 'bigint'))
+    );
   },
   isAmino(o: any): o is IncentivizedPoolAmino {
-    return o && (o.$typeUrl === IncentivizedPool.typeUrl || typeof o.pool_id === "bigint" && Duration.isAmino(o.lockable_duration) && typeof o.gauge_id === "bigint");
+    return (
+      o &&
+      (o.$typeUrl === IncentivizedPool.typeUrl ||
+        (typeof o.pool_id === 'bigint' &&
+          Duration.isAmino(o.lockable_duration) &&
+          typeof o.gauge_id === 'bigint'))
+    );
   },
-  encode(message: IncentivizedPool, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
+  encode(
+    message: IncentivizedPool,
+    writer: BinaryWriter = BinaryWriter.create(),
+  ): BinaryWriter {
     if (message.poolId !== BigInt(0)) {
       writer.uint32(8).uint64(message.poolId);
     }
     if (message.lockableDuration !== undefined) {
-      Duration.encode(message.lockableDuration, writer.uint32(18).fork()).ldelim();
+      Duration.encode(
+        message.lockableDuration,
+        writer.uint32(18).fork(),
+      ).ldelim();
     }
     if (message.gaugeId !== BigInt(0)) {
       writer.uint32(24).uint64(message.gaugeId);
@@ -961,7 +1549,8 @@ export const IncentivizedPool = {
     return writer;
   },
   decode(input: BinaryReader | Uint8Array, length?: number): IncentivizedPool {
-    const reader = input instanceof BinaryReader ? input : new BinaryReader(input);
+    const reader =
+      input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseIncentivizedPool();
     while (reader.pos < end) {
@@ -985,9 +1574,18 @@ export const IncentivizedPool = {
   },
   fromPartial(object: Partial<IncentivizedPool>): IncentivizedPool {
     const message = createBaseIncentivizedPool();
-    message.poolId = object.poolId !== undefined && object.poolId !== null ? BigInt(object.poolId.toString()) : BigInt(0);
-    message.lockableDuration = object.lockableDuration !== undefined && object.lockableDuration !== null ? Duration.fromPartial(object.lockableDuration) : undefined;
-    message.gaugeId = object.gaugeId !== undefined && object.gaugeId !== null ? BigInt(object.gaugeId.toString()) : BigInt(0);
+    message.poolId =
+      object.poolId !== undefined && object.poolId !== null
+        ? BigInt(object.poolId.toString())
+        : BigInt(0);
+    message.lockableDuration =
+      object.lockableDuration !== undefined && object.lockableDuration !== null
+        ? Duration.fromPartial(object.lockableDuration)
+        : undefined;
+    message.gaugeId =
+      object.gaugeId !== undefined && object.gaugeId !== null
+        ? BigInt(object.gaugeId.toString())
+        : BigInt(0);
     return message;
   },
   fromAmino(object: IncentivizedPoolAmino): IncentivizedPool {
@@ -995,7 +1593,10 @@ export const IncentivizedPool = {
     if (object.pool_id !== undefined && object.pool_id !== null) {
       message.poolId = BigInt(object.pool_id);
     }
-    if (object.lockable_duration !== undefined && object.lockable_duration !== null) {
+    if (
+      object.lockable_duration !== undefined &&
+      object.lockable_duration !== null
+    ) {
       message.lockableDuration = Duration.fromAmino(object.lockable_duration);
     }
     if (object.gauge_id !== undefined && object.gauge_id !== null) {
@@ -1005,9 +1606,13 @@ export const IncentivizedPool = {
   },
   toAmino(message: IncentivizedPool): IncentivizedPoolAmino {
     const obj: any = {};
-    obj.pool_id = message.poolId !== BigInt(0) ? message.poolId?.toString() : undefined;
-    obj.lockable_duration = message.lockableDuration ? Duration.toAmino(message.lockableDuration) : undefined;
-    obj.gauge_id = message.gaugeId !== BigInt(0) ? message.gaugeId?.toString() : undefined;
+    obj.pool_id =
+      message.poolId !== BigInt(0) ? message.poolId?.toString() : undefined;
+    obj.lockable_duration = message.lockableDuration
+      ? Duration.toAmino(message.lockableDuration)
+      : undefined;
+    obj.gauge_id =
+      message.gaugeId !== BigInt(0) ? message.gaugeId?.toString() : undefined;
     return obj;
   },
   fromAminoMsg(object: IncentivizedPoolAminoMsg): IncentivizedPool {
@@ -1021,43 +1626,75 @@ export const IncentivizedPool = {
   },
   toProtoMsg(message: IncentivizedPool): IncentivizedPoolProtoMsg {
     return {
-      typeUrl: "/symphony.poolincentives.v1beta1.IncentivizedPool",
-      value: IncentivizedPool.encode(message).finish()
+      typeUrl: '/symphony.poolincentives.v1beta1.IncentivizedPool',
+      value: IncentivizedPool.encode(message).finish(),
     };
-  }
+  },
 };
 GlobalDecoderRegistry.register(IncentivizedPool.typeUrl, IncentivizedPool);
 function createBaseQueryIncentivizedPoolsResponse(): QueryIncentivizedPoolsResponse {
   return {
-    incentivizedPools: []
+    incentivizedPools: [],
   };
 }
+/**
+ * @name QueryIncentivizedPoolsResponse
+ * @package symphony.poolincentives.v1beta1
+ * @see proto type: symphony.poolincentives.v1beta1.QueryIncentivizedPoolsResponse
+ */
 export const QueryIncentivizedPoolsResponse = {
-  typeUrl: "/symphony.poolincentives.v1beta1.QueryIncentivizedPoolsResponse",
+  typeUrl: '/symphony.poolincentives.v1beta1.QueryIncentivizedPoolsResponse',
   is(o: any): o is QueryIncentivizedPoolsResponse {
-    return o && (o.$typeUrl === QueryIncentivizedPoolsResponse.typeUrl || Array.isArray(o.incentivizedPools) && (!o.incentivizedPools.length || IncentivizedPool.is(o.incentivizedPools[0])));
+    return (
+      o &&
+      (o.$typeUrl === QueryIncentivizedPoolsResponse.typeUrl ||
+        (Array.isArray(o.incentivizedPools) &&
+          (!o.incentivizedPools.length ||
+            IncentivizedPool.is(o.incentivizedPools[0]))))
+    );
   },
   isSDK(o: any): o is QueryIncentivizedPoolsResponseSDKType {
-    return o && (o.$typeUrl === QueryIncentivizedPoolsResponse.typeUrl || Array.isArray(o.incentivized_pools) && (!o.incentivized_pools.length || IncentivizedPool.isSDK(o.incentivized_pools[0])));
+    return (
+      o &&
+      (o.$typeUrl === QueryIncentivizedPoolsResponse.typeUrl ||
+        (Array.isArray(o.incentivized_pools) &&
+          (!o.incentivized_pools.length ||
+            IncentivizedPool.isSDK(o.incentivized_pools[0]))))
+    );
   },
   isAmino(o: any): o is QueryIncentivizedPoolsResponseAmino {
-    return o && (o.$typeUrl === QueryIncentivizedPoolsResponse.typeUrl || Array.isArray(o.incentivized_pools) && (!o.incentivized_pools.length || IncentivizedPool.isAmino(o.incentivized_pools[0])));
+    return (
+      o &&
+      (o.$typeUrl === QueryIncentivizedPoolsResponse.typeUrl ||
+        (Array.isArray(o.incentivized_pools) &&
+          (!o.incentivized_pools.length ||
+            IncentivizedPool.isAmino(o.incentivized_pools[0]))))
+    );
   },
-  encode(message: QueryIncentivizedPoolsResponse, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
+  encode(
+    message: QueryIncentivizedPoolsResponse,
+    writer: BinaryWriter = BinaryWriter.create(),
+  ): BinaryWriter {
     for (const v of message.incentivizedPools) {
       IncentivizedPool.encode(v!, writer.uint32(10).fork()).ldelim();
     }
     return writer;
   },
-  decode(input: BinaryReader | Uint8Array, length?: number): QueryIncentivizedPoolsResponse {
-    const reader = input instanceof BinaryReader ? input : new BinaryReader(input);
+  decode(
+    input: BinaryReader | Uint8Array,
+    length?: number,
+  ): QueryIncentivizedPoolsResponse {
+    const reader =
+      input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseQueryIncentivizedPoolsResponse();
     while (reader.pos < end) {
       const tag = reader.uint32();
       switch (tag >>> 3) {
         case 1:
-          message.incentivizedPools.push(IncentivizedPool.decode(reader, reader.uint32()));
+          message.incentivizedPools.push(
+            IncentivizedPool.decode(reader, reader.uint32()),
+          );
           break;
         default:
           reader.skipType(tag & 7);
@@ -1066,47 +1703,73 @@ export const QueryIncentivizedPoolsResponse = {
     }
     return message;
   },
-  fromPartial(object: Partial<QueryIncentivizedPoolsResponse>): QueryIncentivizedPoolsResponse {
+  fromPartial(
+    object: Partial<QueryIncentivizedPoolsResponse>,
+  ): QueryIncentivizedPoolsResponse {
     const message = createBaseQueryIncentivizedPoolsResponse();
-    message.incentivizedPools = object.incentivizedPools?.map(e => IncentivizedPool.fromPartial(e)) || [];
+    message.incentivizedPools =
+      object.incentivizedPools?.map(e => IncentivizedPool.fromPartial(e)) || [];
     return message;
   },
-  fromAmino(object: QueryIncentivizedPoolsResponseAmino): QueryIncentivizedPoolsResponse {
+  fromAmino(
+    object: QueryIncentivizedPoolsResponseAmino,
+  ): QueryIncentivizedPoolsResponse {
     const message = createBaseQueryIncentivizedPoolsResponse();
-    message.incentivizedPools = object.incentivized_pools?.map(e => IncentivizedPool.fromAmino(e)) || [];
+    message.incentivizedPools =
+      object.incentivized_pools?.map(e => IncentivizedPool.fromAmino(e)) || [];
     return message;
   },
-  toAmino(message: QueryIncentivizedPoolsResponse): QueryIncentivizedPoolsResponseAmino {
+  toAmino(
+    message: QueryIncentivizedPoolsResponse,
+  ): QueryIncentivizedPoolsResponseAmino {
     const obj: any = {};
     if (message.incentivizedPools) {
-      obj.incentivized_pools = message.incentivizedPools.map(e => e ? IncentivizedPool.toAmino(e) : undefined);
+      obj.incentivized_pools = message.incentivizedPools.map(e =>
+        e ? IncentivizedPool.toAmino(e) : undefined,
+      );
     } else {
       obj.incentivized_pools = message.incentivizedPools;
     }
     return obj;
   },
-  fromAminoMsg(object: QueryIncentivizedPoolsResponseAminoMsg): QueryIncentivizedPoolsResponse {
+  fromAminoMsg(
+    object: QueryIncentivizedPoolsResponseAminoMsg,
+  ): QueryIncentivizedPoolsResponse {
     return QueryIncentivizedPoolsResponse.fromAmino(object.value);
   },
-  fromProtoMsg(message: QueryIncentivizedPoolsResponseProtoMsg): QueryIncentivizedPoolsResponse {
+  fromProtoMsg(
+    message: QueryIncentivizedPoolsResponseProtoMsg,
+  ): QueryIncentivizedPoolsResponse {
     return QueryIncentivizedPoolsResponse.decode(message.value);
   },
   toProto(message: QueryIncentivizedPoolsResponse): Uint8Array {
     return QueryIncentivizedPoolsResponse.encode(message).finish();
   },
-  toProtoMsg(message: QueryIncentivizedPoolsResponse): QueryIncentivizedPoolsResponseProtoMsg {
+  toProtoMsg(
+    message: QueryIncentivizedPoolsResponse,
+  ): QueryIncentivizedPoolsResponseProtoMsg {
     return {
-      typeUrl: "/symphony.poolincentives.v1beta1.QueryIncentivizedPoolsResponse",
-      value: QueryIncentivizedPoolsResponse.encode(message).finish()
+      typeUrl:
+        '/symphony.poolincentives.v1beta1.QueryIncentivizedPoolsResponse',
+      value: QueryIncentivizedPoolsResponse.encode(message).finish(),
     };
-  }
+  },
 };
-GlobalDecoderRegistry.register(QueryIncentivizedPoolsResponse.typeUrl, QueryIncentivizedPoolsResponse);
+GlobalDecoderRegistry.register(
+  QueryIncentivizedPoolsResponse.typeUrl,
+  QueryIncentivizedPoolsResponse,
+);
 function createBaseQueryExternalIncentiveGaugesRequest(): QueryExternalIncentiveGaugesRequest {
   return {};
 }
+/**
+ * @name QueryExternalIncentiveGaugesRequest
+ * @package symphony.poolincentives.v1beta1
+ * @see proto type: symphony.poolincentives.v1beta1.QueryExternalIncentiveGaugesRequest
+ */
 export const QueryExternalIncentiveGaugesRequest = {
-  typeUrl: "/symphony.poolincentives.v1beta1.QueryExternalIncentiveGaugesRequest",
+  typeUrl:
+    '/symphony.poolincentives.v1beta1.QueryExternalIncentiveGaugesRequest',
   is(o: any): o is QueryExternalIncentiveGaugesRequest {
     return o && o.$typeUrl === QueryExternalIncentiveGaugesRequest.typeUrl;
   },
@@ -1116,11 +1779,18 @@ export const QueryExternalIncentiveGaugesRequest = {
   isAmino(o: any): o is QueryExternalIncentiveGaugesRequestAmino {
     return o && o.$typeUrl === QueryExternalIncentiveGaugesRequest.typeUrl;
   },
-  encode(_: QueryExternalIncentiveGaugesRequest, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
+  encode(
+    _: QueryExternalIncentiveGaugesRequest,
+    writer: BinaryWriter = BinaryWriter.create(),
+  ): BinaryWriter {
     return writer;
   },
-  decode(input: BinaryReader | Uint8Array, length?: number): QueryExternalIncentiveGaugesRequest {
-    const reader = input instanceof BinaryReader ? input : new BinaryReader(input);
+  decode(
+    input: BinaryReader | Uint8Array,
+    length?: number,
+  ): QueryExternalIncentiveGaugesRequest {
+    const reader =
+      input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseQueryExternalIncentiveGaugesRequest();
     while (reader.pos < end) {
@@ -1133,59 +1803,100 @@ export const QueryExternalIncentiveGaugesRequest = {
     }
     return message;
   },
-  fromPartial(_: Partial<QueryExternalIncentiveGaugesRequest>): QueryExternalIncentiveGaugesRequest {
+  fromPartial(
+    _: Partial<QueryExternalIncentiveGaugesRequest>,
+  ): QueryExternalIncentiveGaugesRequest {
     const message = createBaseQueryExternalIncentiveGaugesRequest();
     return message;
   },
-  fromAmino(_: QueryExternalIncentiveGaugesRequestAmino): QueryExternalIncentiveGaugesRequest {
+  fromAmino(
+    _: QueryExternalIncentiveGaugesRequestAmino,
+  ): QueryExternalIncentiveGaugesRequest {
     const message = createBaseQueryExternalIncentiveGaugesRequest();
     return message;
   },
-  toAmino(_: QueryExternalIncentiveGaugesRequest): QueryExternalIncentiveGaugesRequestAmino {
+  toAmino(
+    _: QueryExternalIncentiveGaugesRequest,
+  ): QueryExternalIncentiveGaugesRequestAmino {
     const obj: any = {};
     return obj;
   },
-  fromAminoMsg(object: QueryExternalIncentiveGaugesRequestAminoMsg): QueryExternalIncentiveGaugesRequest {
+  fromAminoMsg(
+    object: QueryExternalIncentiveGaugesRequestAminoMsg,
+  ): QueryExternalIncentiveGaugesRequest {
     return QueryExternalIncentiveGaugesRequest.fromAmino(object.value);
   },
-  fromProtoMsg(message: QueryExternalIncentiveGaugesRequestProtoMsg): QueryExternalIncentiveGaugesRequest {
+  fromProtoMsg(
+    message: QueryExternalIncentiveGaugesRequestProtoMsg,
+  ): QueryExternalIncentiveGaugesRequest {
     return QueryExternalIncentiveGaugesRequest.decode(message.value);
   },
   toProto(message: QueryExternalIncentiveGaugesRequest): Uint8Array {
     return QueryExternalIncentiveGaugesRequest.encode(message).finish();
   },
-  toProtoMsg(message: QueryExternalIncentiveGaugesRequest): QueryExternalIncentiveGaugesRequestProtoMsg {
+  toProtoMsg(
+    message: QueryExternalIncentiveGaugesRequest,
+  ): QueryExternalIncentiveGaugesRequestProtoMsg {
     return {
-      typeUrl: "/symphony.poolincentives.v1beta1.QueryExternalIncentiveGaugesRequest",
-      value: QueryExternalIncentiveGaugesRequest.encode(message).finish()
+      typeUrl:
+        '/symphony.poolincentives.v1beta1.QueryExternalIncentiveGaugesRequest',
+      value: QueryExternalIncentiveGaugesRequest.encode(message).finish(),
     };
-  }
+  },
 };
-GlobalDecoderRegistry.register(QueryExternalIncentiveGaugesRequest.typeUrl, QueryExternalIncentiveGaugesRequest);
+GlobalDecoderRegistry.register(
+  QueryExternalIncentiveGaugesRequest.typeUrl,
+  QueryExternalIncentiveGaugesRequest,
+);
 function createBaseQueryExternalIncentiveGaugesResponse(): QueryExternalIncentiveGaugesResponse {
   return {
-    data: []
+    data: [],
   };
 }
+/**
+ * @name QueryExternalIncentiveGaugesResponse
+ * @package symphony.poolincentives.v1beta1
+ * @see proto type: symphony.poolincentives.v1beta1.QueryExternalIncentiveGaugesResponse
+ */
 export const QueryExternalIncentiveGaugesResponse = {
-  typeUrl: "/symphony.poolincentives.v1beta1.QueryExternalIncentiveGaugesResponse",
+  typeUrl:
+    '/symphony.poolincentives.v1beta1.QueryExternalIncentiveGaugesResponse',
   is(o: any): o is QueryExternalIncentiveGaugesResponse {
-    return o && (o.$typeUrl === QueryExternalIncentiveGaugesResponse.typeUrl || Array.isArray(o.data) && (!o.data.length || Gauge.is(o.data[0])));
+    return (
+      o &&
+      (o.$typeUrl === QueryExternalIncentiveGaugesResponse.typeUrl ||
+        (Array.isArray(o.data) && (!o.data.length || Gauge.is(o.data[0]))))
+    );
   },
   isSDK(o: any): o is QueryExternalIncentiveGaugesResponseSDKType {
-    return o && (o.$typeUrl === QueryExternalIncentiveGaugesResponse.typeUrl || Array.isArray(o.data) && (!o.data.length || Gauge.isSDK(o.data[0])));
+    return (
+      o &&
+      (o.$typeUrl === QueryExternalIncentiveGaugesResponse.typeUrl ||
+        (Array.isArray(o.data) && (!o.data.length || Gauge.isSDK(o.data[0]))))
+    );
   },
   isAmino(o: any): o is QueryExternalIncentiveGaugesResponseAmino {
-    return o && (o.$typeUrl === QueryExternalIncentiveGaugesResponse.typeUrl || Array.isArray(o.data) && (!o.data.length || Gauge.isAmino(o.data[0])));
+    return (
+      o &&
+      (o.$typeUrl === QueryExternalIncentiveGaugesResponse.typeUrl ||
+        (Array.isArray(o.data) && (!o.data.length || Gauge.isAmino(o.data[0]))))
+    );
   },
-  encode(message: QueryExternalIncentiveGaugesResponse, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
+  encode(
+    message: QueryExternalIncentiveGaugesResponse,
+    writer: BinaryWriter = BinaryWriter.create(),
+  ): BinaryWriter {
     for (const v of message.data) {
       Gauge.encode(v!, writer.uint32(10).fork()).ldelim();
     }
     return writer;
   },
-  decode(input: BinaryReader | Uint8Array, length?: number): QueryExternalIncentiveGaugesResponse {
-    const reader = input instanceof BinaryReader ? input : new BinaryReader(input);
+  decode(
+    input: BinaryReader | Uint8Array,
+    length?: number,
+  ): QueryExternalIncentiveGaugesResponse {
+    const reader =
+      input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseQueryExternalIncentiveGaugesResponse();
     while (reader.pos < end) {
@@ -1201,39 +1912,55 @@ export const QueryExternalIncentiveGaugesResponse = {
     }
     return message;
   },
-  fromPartial(object: Partial<QueryExternalIncentiveGaugesResponse>): QueryExternalIncentiveGaugesResponse {
+  fromPartial(
+    object: Partial<QueryExternalIncentiveGaugesResponse>,
+  ): QueryExternalIncentiveGaugesResponse {
     const message = createBaseQueryExternalIncentiveGaugesResponse();
     message.data = object.data?.map(e => Gauge.fromPartial(e)) || [];
     return message;
   },
-  fromAmino(object: QueryExternalIncentiveGaugesResponseAmino): QueryExternalIncentiveGaugesResponse {
+  fromAmino(
+    object: QueryExternalIncentiveGaugesResponseAmino,
+  ): QueryExternalIncentiveGaugesResponse {
     const message = createBaseQueryExternalIncentiveGaugesResponse();
     message.data = object.data?.map(e => Gauge.fromAmino(e)) || [];
     return message;
   },
-  toAmino(message: QueryExternalIncentiveGaugesResponse): QueryExternalIncentiveGaugesResponseAmino {
+  toAmino(
+    message: QueryExternalIncentiveGaugesResponse,
+  ): QueryExternalIncentiveGaugesResponseAmino {
     const obj: any = {};
     if (message.data) {
-      obj.data = message.data.map(e => e ? Gauge.toAmino(e) : undefined);
+      obj.data = message.data.map(e => (e ? Gauge.toAmino(e) : undefined));
     } else {
       obj.data = message.data;
     }
     return obj;
   },
-  fromAminoMsg(object: QueryExternalIncentiveGaugesResponseAminoMsg): QueryExternalIncentiveGaugesResponse {
+  fromAminoMsg(
+    object: QueryExternalIncentiveGaugesResponseAminoMsg,
+  ): QueryExternalIncentiveGaugesResponse {
     return QueryExternalIncentiveGaugesResponse.fromAmino(object.value);
   },
-  fromProtoMsg(message: QueryExternalIncentiveGaugesResponseProtoMsg): QueryExternalIncentiveGaugesResponse {
+  fromProtoMsg(
+    message: QueryExternalIncentiveGaugesResponseProtoMsg,
+  ): QueryExternalIncentiveGaugesResponse {
     return QueryExternalIncentiveGaugesResponse.decode(message.value);
   },
   toProto(message: QueryExternalIncentiveGaugesResponse): Uint8Array {
     return QueryExternalIncentiveGaugesResponse.encode(message).finish();
   },
-  toProtoMsg(message: QueryExternalIncentiveGaugesResponse): QueryExternalIncentiveGaugesResponseProtoMsg {
+  toProtoMsg(
+    message: QueryExternalIncentiveGaugesResponse,
+  ): QueryExternalIncentiveGaugesResponseProtoMsg {
     return {
-      typeUrl: "/symphony.poolincentives.v1beta1.QueryExternalIncentiveGaugesResponse",
-      value: QueryExternalIncentiveGaugesResponse.encode(message).finish()
+      typeUrl:
+        '/symphony.poolincentives.v1beta1.QueryExternalIncentiveGaugesResponse',
+      value: QueryExternalIncentiveGaugesResponse.encode(message).finish(),
     };
-  }
+  },
 };
-GlobalDecoderRegistry.register(QueryExternalIncentiveGaugesResponse.typeUrl, QueryExternalIncentiveGaugesResponse);
+GlobalDecoderRegistry.register(
+  QueryExternalIncentiveGaugesResponse.typeUrl,
+  QueryExternalIncentiveGaugesResponse,
+);

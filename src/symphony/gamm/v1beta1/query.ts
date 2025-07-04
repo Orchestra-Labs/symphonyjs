@@ -1,483 +1,864 @@
 //@ts-nocheck
-import { PageRequest, PageRequestAmino, PageRequestSDKType, PageResponse, PageResponseAmino, PageResponseSDKType } from "../../../cosmos/base/query/v1beta1/pagination";
-import { Coin, CoinAmino, CoinSDKType } from "../../../cosmos/base/v1beta1/coin";
-import { SwapAmountInRoute, SwapAmountInRouteAmino, SwapAmountInRouteSDKType, SwapAmountOutRoute, SwapAmountOutRouteAmino, SwapAmountOutRouteSDKType } from "../../poolmanager/v1beta1/swap_route";
-import { Params, ParamsAmino, ParamsSDKType } from "./params";
-import { Any, AnyProtoMsg, AnyAmino, AnySDKType } from "../../../google/protobuf/any";
-import { MigrationRecords, MigrationRecordsAmino, MigrationRecordsSDKType } from "./shared";
-import { Pool as Pool1 } from "../../concentratedliquidity/v1beta1/pool";
-import { PoolProtoMsg as Pool1ProtoMsg } from "../../concentratedliquidity/v1beta1/pool";
-import { PoolSDKType as Pool1SDKType } from "../../concentratedliquidity/v1beta1/pool";
-import { CosmWasmPool, CosmWasmPoolProtoMsg, CosmWasmPoolSDKType } from "../../cosmwasmpool/v1beta1/model/pool";
-import { Pool as Pool2 } from "../poolmodels/stableswap/v1beta1/stableswap_pool";
-import { PoolProtoMsg as Pool2ProtoMsg } from "../poolmodels/stableswap/v1beta1/stableswap_pool";
-import { PoolSDKType as Pool2SDKType } from "../poolmodels/stableswap/v1beta1/stableswap_pool";
-import { Pool as Pool3 } from "./balancerPool";
-import { PoolProtoMsg as Pool3ProtoMsg } from "./balancerPool";
-import { PoolSDKType as Pool3SDKType } from "./balancerPool";
-import { BinaryReader, BinaryWriter } from "../../../binary";
-import { GlobalDecoderRegistry } from "../../../registry";
-/** =============================== Params */
+import {
+  PageRequest,
+  PageRequestAmino,
+  PageRequestSDKType,
+  PageResponse,
+  PageResponseAmino,
+  PageResponseSDKType,
+} from '../../../cosmos/base/query/v1beta1/pagination';
+import {
+  Coin,
+  CoinAmino,
+  CoinSDKType,
+} from '../../../cosmos/base/v1beta1/coin';
+import {
+  SwapAmountInRoute,
+  SwapAmountInRouteAmino,
+  SwapAmountInRouteSDKType,
+  SwapAmountOutRoute,
+  SwapAmountOutRouteAmino,
+  SwapAmountOutRouteSDKType,
+} from '../../poolmanager/v1beta1/swap_route';
+import { Params, ParamsAmino, ParamsSDKType } from './params';
+import {
+  Any,
+  AnyProtoMsg,
+  AnyAmino,
+  AnySDKType,
+} from '../../../google/protobuf/any';
+import {
+  MigrationRecords,
+  MigrationRecordsAmino,
+  MigrationRecordsSDKType,
+} from './shared';
+import { Pool as Pool1 } from '../../concentratedliquidity/v1beta1/pool';
+import { PoolProtoMsg as Pool1ProtoMsg } from '../../concentratedliquidity/v1beta1/pool';
+import { PoolSDKType as Pool1SDKType } from '../../concentratedliquidity/v1beta1/pool';
+import {
+  CosmWasmPool,
+  CosmWasmPoolProtoMsg,
+  CosmWasmPoolSDKType,
+} from '../../cosmwasmpool/v1beta1/model/pool';
+import { Pool as Pool2 } from '../poolmodels/stableswap/v1beta1/stableswap_pool';
+import { PoolProtoMsg as Pool2ProtoMsg } from '../poolmodels/stableswap/v1beta1/stableswap_pool';
+import { PoolSDKType as Pool2SDKType } from '../poolmodels/stableswap/v1beta1/stableswap_pool';
+import { Pool as Pool3 } from './balancerPool';
+import { PoolProtoMsg as Pool3ProtoMsg } from './balancerPool';
+import { PoolSDKType as Pool3SDKType } from './balancerPool';
+import { BinaryReader, BinaryWriter } from '../../../binary';
+import { GlobalDecoderRegistry } from '../../../registry';
+/**
+ * =============================== Params
+ * @name ParamsRequest
+ * @package symphony.gamm.v1beta1
+ * @see proto type: symphony.gamm.v1beta1.ParamsRequest
+ */
 export interface ParamsRequest {}
 export interface ParamsRequestProtoMsg {
-  typeUrl: "/symphony.gamm.v1beta1.ParamsRequest";
+  typeUrl: '/symphony.gamm.v1beta1.ParamsRequest';
   value: Uint8Array;
 }
-/** =============================== Params */
+/**
+ * =============================== Params
+ * @name ParamsRequestAmino
+ * @package symphony.gamm.v1beta1
+ * @see proto type: symphony.gamm.v1beta1.ParamsRequest
+ */
 export interface ParamsRequestAmino {}
 export interface ParamsRequestAminoMsg {
-  type: "/symphony.gamm.v1beta1.ParamsRequest";
+  type: '/symphony.gamm.v1beta1.ParamsRequest';
   value: ParamsRequestAmino;
 }
-/** =============================== Params */
+/**
+ * =============================== Params
+ * @name ParamsRequestSDKType
+ * @package symphony.gamm.v1beta1
+ * @see proto type: symphony.gamm.v1beta1.ParamsRequest
+ */
 export interface ParamsRequestSDKType {}
+/**
+ * @name ParamsResponse
+ * @package symphony.gamm.v1beta1
+ * @see proto type: symphony.gamm.v1beta1.ParamsResponse
+ */
 export interface ParamsResponse {
   params: Params;
 }
 export interface ParamsResponseProtoMsg {
-  typeUrl: "/symphony.gamm.v1beta1.ParamsResponse";
+  typeUrl: '/symphony.gamm.v1beta1.ParamsResponse';
   value: Uint8Array;
 }
+/**
+ * @name ParamsResponseAmino
+ * @package symphony.gamm.v1beta1
+ * @see proto type: symphony.gamm.v1beta1.ParamsResponse
+ */
 export interface ParamsResponseAmino {
   params?: ParamsAmino;
 }
 export interface ParamsResponseAminoMsg {
-  type: "/symphony.gamm.v1beta1.ParamsResponse";
+  type: '/symphony.gamm.v1beta1.ParamsResponse';
   value: ParamsResponseAmino;
 }
+/**
+ * @name ParamsResponseSDKType
+ * @package symphony.gamm.v1beta1
+ * @see proto type: symphony.gamm.v1beta1.ParamsResponse
+ */
 export interface ParamsResponseSDKType {
   params: ParamsSDKType;
 }
 /**
  * =============================== Pool
  * Deprecated: please use the alternative in x/poolmanager
+ * @name QueryPoolRequest
+ * @package symphony.gamm.v1beta1
+ * @see proto type: symphony.gamm.v1beta1.QueryPoolRequest
+ * @deprecated
  */
-/** @deprecated */
 export interface QueryPoolRequest {
   poolId: bigint;
 }
 export interface QueryPoolRequestProtoMsg {
-  typeUrl: "/symphony.gamm.v1beta1.QueryPoolRequest";
+  typeUrl: '/symphony.gamm.v1beta1.QueryPoolRequest';
   value: Uint8Array;
 }
 /**
  * =============================== Pool
  * Deprecated: please use the alternative in x/poolmanager
+ * @name QueryPoolRequestAmino
+ * @package symphony.gamm.v1beta1
+ * @see proto type: symphony.gamm.v1beta1.QueryPoolRequest
+ * @deprecated
  */
-/** @deprecated */
 export interface QueryPoolRequestAmino {
   pool_id?: string;
 }
 export interface QueryPoolRequestAminoMsg {
-  type: "/symphony.gamm.v1beta1.QueryPoolRequest";
+  type: '/symphony.gamm.v1beta1.QueryPoolRequest';
   value: QueryPoolRequestAmino;
 }
 /**
  * =============================== Pool
  * Deprecated: please use the alternative in x/poolmanager
+ * @name QueryPoolRequestSDKType
+ * @package symphony.gamm.v1beta1
+ * @see proto type: symphony.gamm.v1beta1.QueryPoolRequest
+ * @deprecated
  */
-/** @deprecated */
 export interface QueryPoolRequestSDKType {
   pool_id: bigint;
 }
-/** Deprecated: please use the alternative in x/poolmanager */
-/** @deprecated */
+/**
+ * Deprecated: please use the alternative in x/poolmanager
+ * @name QueryPoolResponse
+ * @package symphony.gamm.v1beta1
+ * @see proto type: symphony.gamm.v1beta1.QueryPoolResponse
+ * @deprecated
+ */
 export interface QueryPoolResponse {
   pool?: Pool1 | CosmWasmPool | Pool2 | Pool3 | Any | undefined;
 }
 export interface QueryPoolResponseProtoMsg {
-  typeUrl: "/symphony.gamm.v1beta1.QueryPoolResponse";
+  typeUrl: '/symphony.gamm.v1beta1.QueryPoolResponse';
   value: Uint8Array;
 }
-export type QueryPoolResponseEncoded = Omit<QueryPoolResponse, "pool"> & {
-  pool?: Pool1ProtoMsg | CosmWasmPoolProtoMsg | Pool2ProtoMsg | Pool3ProtoMsg | AnyProtoMsg | undefined;
+export type QueryPoolResponseEncoded = Omit<QueryPoolResponse, 'pool'> & {
+  pool?:
+    | Pool1ProtoMsg
+    | CosmWasmPoolProtoMsg
+    | Pool2ProtoMsg
+    | Pool3ProtoMsg
+    | AnyProtoMsg
+    | undefined;
 };
-/** Deprecated: please use the alternative in x/poolmanager */
-/** @deprecated */
+/**
+ * Deprecated: please use the alternative in x/poolmanager
+ * @name QueryPoolResponseAmino
+ * @package symphony.gamm.v1beta1
+ * @see proto type: symphony.gamm.v1beta1.QueryPoolResponse
+ * @deprecated
+ */
 export interface QueryPoolResponseAmino {
   pool?: AnyAmino;
 }
 export interface QueryPoolResponseAminoMsg {
-  type: "/symphony.gamm.v1beta1.QueryPoolResponse";
+  type: '/symphony.gamm.v1beta1.QueryPoolResponse';
   value: QueryPoolResponseAmino;
 }
-/** Deprecated: please use the alternative in x/poolmanager */
-/** @deprecated */
+/**
+ * Deprecated: please use the alternative in x/poolmanager
+ * @name QueryPoolResponseSDKType
+ * @package symphony.gamm.v1beta1
+ * @see proto type: symphony.gamm.v1beta1.QueryPoolResponse
+ * @deprecated
+ */
 export interface QueryPoolResponseSDKType {
-  pool?: Pool1SDKType | CosmWasmPoolSDKType | Pool2SDKType | Pool3SDKType | AnySDKType | undefined;
+  pool?:
+    | Pool1SDKType
+    | CosmWasmPoolSDKType
+    | Pool2SDKType
+    | Pool3SDKType
+    | AnySDKType
+    | undefined;
 }
-/** =============================== Pools */
+/**
+ * =============================== Pools
+ * @name QueryPoolsRequest
+ * @package symphony.gamm.v1beta1
+ * @see proto type: symphony.gamm.v1beta1.QueryPoolsRequest
+ */
 export interface QueryPoolsRequest {
-  /** pagination defines an optional pagination for the request. */
+  /**
+   * pagination defines an optional pagination for the request.
+   */
   pagination?: PageRequest;
 }
 export interface QueryPoolsRequestProtoMsg {
-  typeUrl: "/symphony.gamm.v1beta1.QueryPoolsRequest";
+  typeUrl: '/symphony.gamm.v1beta1.QueryPoolsRequest';
   value: Uint8Array;
 }
-/** =============================== Pools */
+/**
+ * =============================== Pools
+ * @name QueryPoolsRequestAmino
+ * @package symphony.gamm.v1beta1
+ * @see proto type: symphony.gamm.v1beta1.QueryPoolsRequest
+ */
 export interface QueryPoolsRequestAmino {
-  /** pagination defines an optional pagination for the request. */
+  /**
+   * pagination defines an optional pagination for the request.
+   */
   pagination?: PageRequestAmino;
 }
 export interface QueryPoolsRequestAminoMsg {
-  type: "/symphony.gamm.v1beta1.QueryPoolsRequest";
+  type: '/symphony.gamm.v1beta1.QueryPoolsRequest';
   value: QueryPoolsRequestAmino;
 }
-/** =============================== Pools */
+/**
+ * =============================== Pools
+ * @name QueryPoolsRequestSDKType
+ * @package symphony.gamm.v1beta1
+ * @see proto type: symphony.gamm.v1beta1.QueryPoolsRequest
+ */
 export interface QueryPoolsRequestSDKType {
   pagination?: PageRequestSDKType;
 }
+/**
+ * @name QueryPoolsResponse
+ * @package symphony.gamm.v1beta1
+ * @see proto type: symphony.gamm.v1beta1.QueryPoolsResponse
+ */
 export interface QueryPoolsResponse {
   pools: (Pool1 | CosmWasmPool | Pool2 | Pool3 | Any)[] | Any[];
-  /** pagination defines the pagination in the response. */
+  /**
+   * pagination defines the pagination in the response.
+   */
   pagination?: PageResponse;
 }
 export interface QueryPoolsResponseProtoMsg {
-  typeUrl: "/symphony.gamm.v1beta1.QueryPoolsResponse";
+  typeUrl: '/symphony.gamm.v1beta1.QueryPoolsResponse';
   value: Uint8Array;
 }
-export type QueryPoolsResponseEncoded = Omit<QueryPoolsResponse, "pools"> & {
-  pools: (Pool1ProtoMsg | CosmWasmPoolProtoMsg | Pool2ProtoMsg | Pool3ProtoMsg | AnyProtoMsg)[];
+export type QueryPoolsResponseEncoded = Omit<QueryPoolsResponse, 'pools'> & {
+  pools: (
+    | Pool1ProtoMsg
+    | CosmWasmPoolProtoMsg
+    | Pool2ProtoMsg
+    | Pool3ProtoMsg
+    | AnyProtoMsg
+  )[];
 };
+/**
+ * @name QueryPoolsResponseAmino
+ * @package symphony.gamm.v1beta1
+ * @see proto type: symphony.gamm.v1beta1.QueryPoolsResponse
+ */
 export interface QueryPoolsResponseAmino {
   pools?: AnyAmino[];
-  /** pagination defines the pagination in the response. */
+  /**
+   * pagination defines the pagination in the response.
+   */
   pagination?: PageResponseAmino;
 }
 export interface QueryPoolsResponseAminoMsg {
-  type: "/symphony.gamm.v1beta1.QueryPoolsResponse";
+  type: '/symphony.gamm.v1beta1.QueryPoolsResponse';
   value: QueryPoolsResponseAmino;
 }
+/**
+ * @name QueryPoolsResponseSDKType
+ * @package symphony.gamm.v1beta1
+ * @see proto type: symphony.gamm.v1beta1.QueryPoolsResponse
+ */
 export interface QueryPoolsResponseSDKType {
-  pools: (Pool1SDKType | CosmWasmPoolSDKType | Pool2SDKType | Pool3SDKType | AnySDKType)[];
+  pools: (
+    | Pool1SDKType
+    | CosmWasmPoolSDKType
+    | Pool2SDKType
+    | Pool3SDKType
+    | AnySDKType
+  )[];
   pagination?: PageResponseSDKType;
 }
-/** =============================== NumPools */
-/** @deprecated */
+/**
+ * =============================== NumPools
+ * @name QueryNumPoolsRequest
+ * @package symphony.gamm.v1beta1
+ * @see proto type: symphony.gamm.v1beta1.QueryNumPoolsRequest
+ * @deprecated
+ */
 export interface QueryNumPoolsRequest {}
 export interface QueryNumPoolsRequestProtoMsg {
-  typeUrl: "/symphony.gamm.v1beta1.QueryNumPoolsRequest";
+  typeUrl: '/symphony.gamm.v1beta1.QueryNumPoolsRequest';
   value: Uint8Array;
 }
-/** =============================== NumPools */
-/** @deprecated */
+/**
+ * =============================== NumPools
+ * @name QueryNumPoolsRequestAmino
+ * @package symphony.gamm.v1beta1
+ * @see proto type: symphony.gamm.v1beta1.QueryNumPoolsRequest
+ * @deprecated
+ */
 export interface QueryNumPoolsRequestAmino {}
 export interface QueryNumPoolsRequestAminoMsg {
-  type: "/symphony.gamm.v1beta1.QueryNumPoolsRequest";
+  type: '/symphony.gamm.v1beta1.QueryNumPoolsRequest';
   value: QueryNumPoolsRequestAmino;
 }
-/** =============================== NumPools */
-/** @deprecated */
+/**
+ * =============================== NumPools
+ * @name QueryNumPoolsRequestSDKType
+ * @package symphony.gamm.v1beta1
+ * @see proto type: symphony.gamm.v1beta1.QueryNumPoolsRequest
+ * @deprecated
+ */
 export interface QueryNumPoolsRequestSDKType {}
-/** @deprecated */
+/**
+ * @name QueryNumPoolsResponse
+ * @package symphony.gamm.v1beta1
+ * @see proto type: symphony.gamm.v1beta1.QueryNumPoolsResponse
+ * @deprecated
+ */
 export interface QueryNumPoolsResponse {
   numPools: bigint;
 }
 export interface QueryNumPoolsResponseProtoMsg {
-  typeUrl: "/symphony.gamm.v1beta1.QueryNumPoolsResponse";
+  typeUrl: '/symphony.gamm.v1beta1.QueryNumPoolsResponse';
   value: Uint8Array;
 }
-/** @deprecated */
+/**
+ * @name QueryNumPoolsResponseAmino
+ * @package symphony.gamm.v1beta1
+ * @see proto type: symphony.gamm.v1beta1.QueryNumPoolsResponse
+ * @deprecated
+ */
 export interface QueryNumPoolsResponseAmino {
   num_pools?: string;
 }
 export interface QueryNumPoolsResponseAminoMsg {
-  type: "/symphony.gamm.v1beta1.QueryNumPoolsResponse";
+  type: '/symphony.gamm.v1beta1.QueryNumPoolsResponse';
   value: QueryNumPoolsResponseAmino;
 }
-/** @deprecated */
+/**
+ * @name QueryNumPoolsResponseSDKType
+ * @package symphony.gamm.v1beta1
+ * @see proto type: symphony.gamm.v1beta1.QueryNumPoolsResponse
+ * @deprecated
+ */
 export interface QueryNumPoolsResponseSDKType {
   num_pools: bigint;
 }
-/** =============================== PoolType */
+/**
+ * =============================== PoolType
+ * @name QueryPoolTypeRequest
+ * @package symphony.gamm.v1beta1
+ * @see proto type: symphony.gamm.v1beta1.QueryPoolTypeRequest
+ */
 export interface QueryPoolTypeRequest {
   poolId: bigint;
 }
 export interface QueryPoolTypeRequestProtoMsg {
-  typeUrl: "/symphony.gamm.v1beta1.QueryPoolTypeRequest";
+  typeUrl: '/symphony.gamm.v1beta1.QueryPoolTypeRequest';
   value: Uint8Array;
 }
-/** =============================== PoolType */
+/**
+ * =============================== PoolType
+ * @name QueryPoolTypeRequestAmino
+ * @package symphony.gamm.v1beta1
+ * @see proto type: symphony.gamm.v1beta1.QueryPoolTypeRequest
+ */
 export interface QueryPoolTypeRequestAmino {
   pool_id?: string;
 }
 export interface QueryPoolTypeRequestAminoMsg {
-  type: "/symphony.gamm.v1beta1.QueryPoolTypeRequest";
+  type: '/symphony.gamm.v1beta1.QueryPoolTypeRequest';
   value: QueryPoolTypeRequestAmino;
 }
-/** =============================== PoolType */
+/**
+ * =============================== PoolType
+ * @name QueryPoolTypeRequestSDKType
+ * @package symphony.gamm.v1beta1
+ * @see proto type: symphony.gamm.v1beta1.QueryPoolTypeRequest
+ */
 export interface QueryPoolTypeRequestSDKType {
   pool_id: bigint;
 }
+/**
+ * @name QueryPoolTypeResponse
+ * @package symphony.gamm.v1beta1
+ * @see proto type: symphony.gamm.v1beta1.QueryPoolTypeResponse
+ */
 export interface QueryPoolTypeResponse {
   poolType: string;
 }
 export interface QueryPoolTypeResponseProtoMsg {
-  typeUrl: "/symphony.gamm.v1beta1.QueryPoolTypeResponse";
+  typeUrl: '/symphony.gamm.v1beta1.QueryPoolTypeResponse';
   value: Uint8Array;
 }
+/**
+ * @name QueryPoolTypeResponseAmino
+ * @package symphony.gamm.v1beta1
+ * @see proto type: symphony.gamm.v1beta1.QueryPoolTypeResponse
+ */
 export interface QueryPoolTypeResponseAmino {
   pool_type?: string;
 }
 export interface QueryPoolTypeResponseAminoMsg {
-  type: "/symphony.gamm.v1beta1.QueryPoolTypeResponse";
+  type: '/symphony.gamm.v1beta1.QueryPoolTypeResponse';
   value: QueryPoolTypeResponseAmino;
 }
+/**
+ * @name QueryPoolTypeResponseSDKType
+ * @package symphony.gamm.v1beta1
+ * @see proto type: symphony.gamm.v1beta1.QueryPoolTypeResponse
+ */
 export interface QueryPoolTypeResponseSDKType {
   pool_type: string;
 }
-/** =============================== CalcJoinPoolShares */
+/**
+ * =============================== CalcJoinPoolShares
+ * @name QueryCalcJoinPoolSharesRequest
+ * @package symphony.gamm.v1beta1
+ * @see proto type: symphony.gamm.v1beta1.QueryCalcJoinPoolSharesRequest
+ */
 export interface QueryCalcJoinPoolSharesRequest {
   poolId: bigint;
   tokensIn: Coin[];
 }
 export interface QueryCalcJoinPoolSharesRequestProtoMsg {
-  typeUrl: "/symphony.gamm.v1beta1.QueryCalcJoinPoolSharesRequest";
+  typeUrl: '/symphony.gamm.v1beta1.QueryCalcJoinPoolSharesRequest';
   value: Uint8Array;
 }
-/** =============================== CalcJoinPoolShares */
+/**
+ * =============================== CalcJoinPoolShares
+ * @name QueryCalcJoinPoolSharesRequestAmino
+ * @package symphony.gamm.v1beta1
+ * @see proto type: symphony.gamm.v1beta1.QueryCalcJoinPoolSharesRequest
+ */
 export interface QueryCalcJoinPoolSharesRequestAmino {
   pool_id?: string;
   tokens_in?: CoinAmino[];
 }
 export interface QueryCalcJoinPoolSharesRequestAminoMsg {
-  type: "/symphony.gamm.v1beta1.QueryCalcJoinPoolSharesRequest";
+  type: '/symphony.gamm.v1beta1.QueryCalcJoinPoolSharesRequest';
   value: QueryCalcJoinPoolSharesRequestAmino;
 }
-/** =============================== CalcJoinPoolShares */
+/**
+ * =============================== CalcJoinPoolShares
+ * @name QueryCalcJoinPoolSharesRequestSDKType
+ * @package symphony.gamm.v1beta1
+ * @see proto type: symphony.gamm.v1beta1.QueryCalcJoinPoolSharesRequest
+ */
 export interface QueryCalcJoinPoolSharesRequestSDKType {
   pool_id: bigint;
   tokens_in: CoinSDKType[];
 }
+/**
+ * @name QueryCalcJoinPoolSharesResponse
+ * @package symphony.gamm.v1beta1
+ * @see proto type: symphony.gamm.v1beta1.QueryCalcJoinPoolSharesResponse
+ */
 export interface QueryCalcJoinPoolSharesResponse {
   shareOutAmount: string;
   tokensOut: Coin[];
 }
 export interface QueryCalcJoinPoolSharesResponseProtoMsg {
-  typeUrl: "/symphony.gamm.v1beta1.QueryCalcJoinPoolSharesResponse";
+  typeUrl: '/symphony.gamm.v1beta1.QueryCalcJoinPoolSharesResponse';
   value: Uint8Array;
 }
+/**
+ * @name QueryCalcJoinPoolSharesResponseAmino
+ * @package symphony.gamm.v1beta1
+ * @see proto type: symphony.gamm.v1beta1.QueryCalcJoinPoolSharesResponse
+ */
 export interface QueryCalcJoinPoolSharesResponseAmino {
   share_out_amount?: string;
   tokens_out?: CoinAmino[];
 }
 export interface QueryCalcJoinPoolSharesResponseAminoMsg {
-  type: "/symphony.gamm.v1beta1.QueryCalcJoinPoolSharesResponse";
+  type: '/symphony.gamm.v1beta1.QueryCalcJoinPoolSharesResponse';
   value: QueryCalcJoinPoolSharesResponseAmino;
 }
+/**
+ * @name QueryCalcJoinPoolSharesResponseSDKType
+ * @package symphony.gamm.v1beta1
+ * @see proto type: symphony.gamm.v1beta1.QueryCalcJoinPoolSharesResponse
+ */
 export interface QueryCalcJoinPoolSharesResponseSDKType {
   share_out_amount: string;
   tokens_out: CoinSDKType[];
 }
-/** =============================== CalcExitPoolCoinsFromShares */
+/**
+ * =============================== CalcExitPoolCoinsFromShares
+ * @name QueryCalcExitPoolCoinsFromSharesRequest
+ * @package symphony.gamm.v1beta1
+ * @see proto type: symphony.gamm.v1beta1.QueryCalcExitPoolCoinsFromSharesRequest
+ */
 export interface QueryCalcExitPoolCoinsFromSharesRequest {
   poolId: bigint;
   shareInAmount: string;
 }
 export interface QueryCalcExitPoolCoinsFromSharesRequestProtoMsg {
-  typeUrl: "/symphony.gamm.v1beta1.QueryCalcExitPoolCoinsFromSharesRequest";
+  typeUrl: '/symphony.gamm.v1beta1.QueryCalcExitPoolCoinsFromSharesRequest';
   value: Uint8Array;
 }
-/** =============================== CalcExitPoolCoinsFromShares */
+/**
+ * =============================== CalcExitPoolCoinsFromShares
+ * @name QueryCalcExitPoolCoinsFromSharesRequestAmino
+ * @package symphony.gamm.v1beta1
+ * @see proto type: symphony.gamm.v1beta1.QueryCalcExitPoolCoinsFromSharesRequest
+ */
 export interface QueryCalcExitPoolCoinsFromSharesRequestAmino {
   pool_id?: string;
   share_in_amount?: string;
 }
 export interface QueryCalcExitPoolCoinsFromSharesRequestAminoMsg {
-  type: "/symphony.gamm.v1beta1.QueryCalcExitPoolCoinsFromSharesRequest";
+  type: '/symphony.gamm.v1beta1.QueryCalcExitPoolCoinsFromSharesRequest';
   value: QueryCalcExitPoolCoinsFromSharesRequestAmino;
 }
-/** =============================== CalcExitPoolCoinsFromShares */
+/**
+ * =============================== CalcExitPoolCoinsFromShares
+ * @name QueryCalcExitPoolCoinsFromSharesRequestSDKType
+ * @package symphony.gamm.v1beta1
+ * @see proto type: symphony.gamm.v1beta1.QueryCalcExitPoolCoinsFromSharesRequest
+ */
 export interface QueryCalcExitPoolCoinsFromSharesRequestSDKType {
   pool_id: bigint;
   share_in_amount: string;
 }
+/**
+ * @name QueryCalcExitPoolCoinsFromSharesResponse
+ * @package symphony.gamm.v1beta1
+ * @see proto type: symphony.gamm.v1beta1.QueryCalcExitPoolCoinsFromSharesResponse
+ */
 export interface QueryCalcExitPoolCoinsFromSharesResponse {
   tokensOut: Coin[];
 }
 export interface QueryCalcExitPoolCoinsFromSharesResponseProtoMsg {
-  typeUrl: "/symphony.gamm.v1beta1.QueryCalcExitPoolCoinsFromSharesResponse";
+  typeUrl: '/symphony.gamm.v1beta1.QueryCalcExitPoolCoinsFromSharesResponse';
   value: Uint8Array;
 }
+/**
+ * @name QueryCalcExitPoolCoinsFromSharesResponseAmino
+ * @package symphony.gamm.v1beta1
+ * @see proto type: symphony.gamm.v1beta1.QueryCalcExitPoolCoinsFromSharesResponse
+ */
 export interface QueryCalcExitPoolCoinsFromSharesResponseAmino {
   tokens_out?: CoinAmino[];
 }
 export interface QueryCalcExitPoolCoinsFromSharesResponseAminoMsg {
-  type: "/symphony.gamm.v1beta1.QueryCalcExitPoolCoinsFromSharesResponse";
+  type: '/symphony.gamm.v1beta1.QueryCalcExitPoolCoinsFromSharesResponse';
   value: QueryCalcExitPoolCoinsFromSharesResponseAmino;
 }
+/**
+ * @name QueryCalcExitPoolCoinsFromSharesResponseSDKType
+ * @package symphony.gamm.v1beta1
+ * @see proto type: symphony.gamm.v1beta1.QueryCalcExitPoolCoinsFromSharesResponse
+ */
 export interface QueryCalcExitPoolCoinsFromSharesResponseSDKType {
   tokens_out: CoinSDKType[];
 }
-/** =============================== PoolParams */
+/**
+ * =============================== PoolParams
+ * @name QueryPoolParamsRequest
+ * @package symphony.gamm.v1beta1
+ * @see proto type: symphony.gamm.v1beta1.QueryPoolParamsRequest
+ */
 export interface QueryPoolParamsRequest {
   poolId: bigint;
 }
 export interface QueryPoolParamsRequestProtoMsg {
-  typeUrl: "/symphony.gamm.v1beta1.QueryPoolParamsRequest";
+  typeUrl: '/symphony.gamm.v1beta1.QueryPoolParamsRequest';
   value: Uint8Array;
 }
-/** =============================== PoolParams */
+/**
+ * =============================== PoolParams
+ * @name QueryPoolParamsRequestAmino
+ * @package symphony.gamm.v1beta1
+ * @see proto type: symphony.gamm.v1beta1.QueryPoolParamsRequest
+ */
 export interface QueryPoolParamsRequestAmino {
   pool_id?: string;
 }
 export interface QueryPoolParamsRequestAminoMsg {
-  type: "/symphony.gamm.v1beta1.QueryPoolParamsRequest";
+  type: '/symphony.gamm.v1beta1.QueryPoolParamsRequest';
   value: QueryPoolParamsRequestAmino;
 }
-/** =============================== PoolParams */
+/**
+ * =============================== PoolParams
+ * @name QueryPoolParamsRequestSDKType
+ * @package symphony.gamm.v1beta1
+ * @see proto type: symphony.gamm.v1beta1.QueryPoolParamsRequest
+ */
 export interface QueryPoolParamsRequestSDKType {
   pool_id: bigint;
 }
+/**
+ * @name QueryPoolParamsResponse
+ * @package symphony.gamm.v1beta1
+ * @see proto type: symphony.gamm.v1beta1.QueryPoolParamsResponse
+ */
 export interface QueryPoolParamsResponse {
   params?: Any;
 }
 export interface QueryPoolParamsResponseProtoMsg {
-  typeUrl: "/symphony.gamm.v1beta1.QueryPoolParamsResponse";
+  typeUrl: '/symphony.gamm.v1beta1.QueryPoolParamsResponse';
   value: Uint8Array;
 }
+/**
+ * @name QueryPoolParamsResponseAmino
+ * @package symphony.gamm.v1beta1
+ * @see proto type: symphony.gamm.v1beta1.QueryPoolParamsResponse
+ */
 export interface QueryPoolParamsResponseAmino {
   params?: AnyAmino;
 }
 export interface QueryPoolParamsResponseAminoMsg {
-  type: "/symphony.gamm.v1beta1.QueryPoolParamsResponse";
+  type: '/symphony.gamm.v1beta1.QueryPoolParamsResponse';
   value: QueryPoolParamsResponseAmino;
 }
+/**
+ * @name QueryPoolParamsResponseSDKType
+ * @package symphony.gamm.v1beta1
+ * @see proto type: symphony.gamm.v1beta1.QueryPoolParamsResponse
+ */
 export interface QueryPoolParamsResponseSDKType {
   params?: AnySDKType;
 }
 /**
  * =============================== PoolLiquidity
  * Deprecated: please use the alternative in x/poolmanager
+ * @name QueryTotalPoolLiquidityRequest
+ * @package symphony.gamm.v1beta1
+ * @see proto type: symphony.gamm.v1beta1.QueryTotalPoolLiquidityRequest
+ * @deprecated
  */
-/** @deprecated */
 export interface QueryTotalPoolLiquidityRequest {
   poolId: bigint;
 }
 export interface QueryTotalPoolLiquidityRequestProtoMsg {
-  typeUrl: "/symphony.gamm.v1beta1.QueryTotalPoolLiquidityRequest";
+  typeUrl: '/symphony.gamm.v1beta1.QueryTotalPoolLiquidityRequest';
   value: Uint8Array;
 }
 /**
  * =============================== PoolLiquidity
  * Deprecated: please use the alternative in x/poolmanager
+ * @name QueryTotalPoolLiquidityRequestAmino
+ * @package symphony.gamm.v1beta1
+ * @see proto type: symphony.gamm.v1beta1.QueryTotalPoolLiquidityRequest
+ * @deprecated
  */
-/** @deprecated */
 export interface QueryTotalPoolLiquidityRequestAmino {
   pool_id?: string;
 }
 export interface QueryTotalPoolLiquidityRequestAminoMsg {
-  type: "/symphony.gamm.v1beta1.QueryTotalPoolLiquidityRequest";
+  type: '/symphony.gamm.v1beta1.QueryTotalPoolLiquidityRequest';
   value: QueryTotalPoolLiquidityRequestAmino;
 }
 /**
  * =============================== PoolLiquidity
  * Deprecated: please use the alternative in x/poolmanager
+ * @name QueryTotalPoolLiquidityRequestSDKType
+ * @package symphony.gamm.v1beta1
+ * @see proto type: symphony.gamm.v1beta1.QueryTotalPoolLiquidityRequest
+ * @deprecated
  */
-/** @deprecated */
 export interface QueryTotalPoolLiquidityRequestSDKType {
   pool_id: bigint;
 }
-/** Deprecated: please use the alternative in x/poolmanager */
-/** @deprecated */
+/**
+ * Deprecated: please use the alternative in x/poolmanager
+ * @name QueryTotalPoolLiquidityResponse
+ * @package symphony.gamm.v1beta1
+ * @see proto type: symphony.gamm.v1beta1.QueryTotalPoolLiquidityResponse
+ * @deprecated
+ */
 export interface QueryTotalPoolLiquidityResponse {
   liquidity: Coin[];
 }
 export interface QueryTotalPoolLiquidityResponseProtoMsg {
-  typeUrl: "/symphony.gamm.v1beta1.QueryTotalPoolLiquidityResponse";
+  typeUrl: '/symphony.gamm.v1beta1.QueryTotalPoolLiquidityResponse';
   value: Uint8Array;
 }
-/** Deprecated: please use the alternative in x/poolmanager */
-/** @deprecated */
+/**
+ * Deprecated: please use the alternative in x/poolmanager
+ * @name QueryTotalPoolLiquidityResponseAmino
+ * @package symphony.gamm.v1beta1
+ * @see proto type: symphony.gamm.v1beta1.QueryTotalPoolLiquidityResponse
+ * @deprecated
+ */
 export interface QueryTotalPoolLiquidityResponseAmino {
   liquidity?: CoinAmino[];
 }
 export interface QueryTotalPoolLiquidityResponseAminoMsg {
-  type: "/symphony.gamm.v1beta1.QueryTotalPoolLiquidityResponse";
+  type: '/symphony.gamm.v1beta1.QueryTotalPoolLiquidityResponse';
   value: QueryTotalPoolLiquidityResponseAmino;
 }
-/** Deprecated: please use the alternative in x/poolmanager */
-/** @deprecated */
+/**
+ * Deprecated: please use the alternative in x/poolmanager
+ * @name QueryTotalPoolLiquidityResponseSDKType
+ * @package symphony.gamm.v1beta1
+ * @see proto type: symphony.gamm.v1beta1.QueryTotalPoolLiquidityResponse
+ * @deprecated
+ */
 export interface QueryTotalPoolLiquidityResponseSDKType {
   liquidity: CoinSDKType[];
 }
-/** =============================== TotalShares */
+/**
+ * =============================== TotalShares
+ * @name QueryTotalSharesRequest
+ * @package symphony.gamm.v1beta1
+ * @see proto type: symphony.gamm.v1beta1.QueryTotalSharesRequest
+ */
 export interface QueryTotalSharesRequest {
   poolId: bigint;
 }
 export interface QueryTotalSharesRequestProtoMsg {
-  typeUrl: "/symphony.gamm.v1beta1.QueryTotalSharesRequest";
+  typeUrl: '/symphony.gamm.v1beta1.QueryTotalSharesRequest';
   value: Uint8Array;
 }
-/** =============================== TotalShares */
+/**
+ * =============================== TotalShares
+ * @name QueryTotalSharesRequestAmino
+ * @package symphony.gamm.v1beta1
+ * @see proto type: symphony.gamm.v1beta1.QueryTotalSharesRequest
+ */
 export interface QueryTotalSharesRequestAmino {
   pool_id?: string;
 }
 export interface QueryTotalSharesRequestAminoMsg {
-  type: "/symphony.gamm.v1beta1.QueryTotalSharesRequest";
+  type: '/symphony.gamm.v1beta1.QueryTotalSharesRequest';
   value: QueryTotalSharesRequestAmino;
 }
-/** =============================== TotalShares */
+/**
+ * =============================== TotalShares
+ * @name QueryTotalSharesRequestSDKType
+ * @package symphony.gamm.v1beta1
+ * @see proto type: symphony.gamm.v1beta1.QueryTotalSharesRequest
+ */
 export interface QueryTotalSharesRequestSDKType {
   pool_id: bigint;
 }
+/**
+ * @name QueryTotalSharesResponse
+ * @package symphony.gamm.v1beta1
+ * @see proto type: symphony.gamm.v1beta1.QueryTotalSharesResponse
+ */
 export interface QueryTotalSharesResponse {
   totalShares: Coin;
 }
 export interface QueryTotalSharesResponseProtoMsg {
-  typeUrl: "/symphony.gamm.v1beta1.QueryTotalSharesResponse";
+  typeUrl: '/symphony.gamm.v1beta1.QueryTotalSharesResponse';
   value: Uint8Array;
 }
+/**
+ * @name QueryTotalSharesResponseAmino
+ * @package symphony.gamm.v1beta1
+ * @see proto type: symphony.gamm.v1beta1.QueryTotalSharesResponse
+ */
 export interface QueryTotalSharesResponseAmino {
   total_shares?: CoinAmino;
 }
 export interface QueryTotalSharesResponseAminoMsg {
-  type: "/symphony.gamm.v1beta1.QueryTotalSharesResponse";
+  type: '/symphony.gamm.v1beta1.QueryTotalSharesResponse';
   value: QueryTotalSharesResponseAmino;
 }
+/**
+ * @name QueryTotalSharesResponseSDKType
+ * @package symphony.gamm.v1beta1
+ * @see proto type: symphony.gamm.v1beta1.QueryTotalSharesResponse
+ */
 export interface QueryTotalSharesResponseSDKType {
   total_shares: CoinSDKType;
 }
-/** =============================== CalcJoinPoolNoSwapShares */
+/**
+ * =============================== CalcJoinPoolNoSwapShares
+ * @name QueryCalcJoinPoolNoSwapSharesRequest
+ * @package symphony.gamm.v1beta1
+ * @see proto type: symphony.gamm.v1beta1.QueryCalcJoinPoolNoSwapSharesRequest
+ */
 export interface QueryCalcJoinPoolNoSwapSharesRequest {
   poolId: bigint;
   tokensIn: Coin[];
 }
 export interface QueryCalcJoinPoolNoSwapSharesRequestProtoMsg {
-  typeUrl: "/symphony.gamm.v1beta1.QueryCalcJoinPoolNoSwapSharesRequest";
+  typeUrl: '/symphony.gamm.v1beta1.QueryCalcJoinPoolNoSwapSharesRequest';
   value: Uint8Array;
 }
-/** =============================== CalcJoinPoolNoSwapShares */
+/**
+ * =============================== CalcJoinPoolNoSwapShares
+ * @name QueryCalcJoinPoolNoSwapSharesRequestAmino
+ * @package symphony.gamm.v1beta1
+ * @see proto type: symphony.gamm.v1beta1.QueryCalcJoinPoolNoSwapSharesRequest
+ */
 export interface QueryCalcJoinPoolNoSwapSharesRequestAmino {
   pool_id?: string;
   tokens_in?: CoinAmino[];
 }
 export interface QueryCalcJoinPoolNoSwapSharesRequestAminoMsg {
-  type: "/symphony.gamm.v1beta1.QueryCalcJoinPoolNoSwapSharesRequest";
+  type: '/symphony.gamm.v1beta1.QueryCalcJoinPoolNoSwapSharesRequest';
   value: QueryCalcJoinPoolNoSwapSharesRequestAmino;
 }
-/** =============================== CalcJoinPoolNoSwapShares */
+/**
+ * =============================== CalcJoinPoolNoSwapShares
+ * @name QueryCalcJoinPoolNoSwapSharesRequestSDKType
+ * @package symphony.gamm.v1beta1
+ * @see proto type: symphony.gamm.v1beta1.QueryCalcJoinPoolNoSwapSharesRequest
+ */
 export interface QueryCalcJoinPoolNoSwapSharesRequestSDKType {
   pool_id: bigint;
   tokens_in: CoinSDKType[];
 }
+/**
+ * @name QueryCalcJoinPoolNoSwapSharesResponse
+ * @package symphony.gamm.v1beta1
+ * @see proto type: symphony.gamm.v1beta1.QueryCalcJoinPoolNoSwapSharesResponse
+ */
 export interface QueryCalcJoinPoolNoSwapSharesResponse {
   tokensOut: Coin[];
   sharesOut: string;
 }
 export interface QueryCalcJoinPoolNoSwapSharesResponseProtoMsg {
-  typeUrl: "/symphony.gamm.v1beta1.QueryCalcJoinPoolNoSwapSharesResponse";
+  typeUrl: '/symphony.gamm.v1beta1.QueryCalcJoinPoolNoSwapSharesResponse';
   value: Uint8Array;
 }
+/**
+ * @name QueryCalcJoinPoolNoSwapSharesResponseAmino
+ * @package symphony.gamm.v1beta1
+ * @see proto type: symphony.gamm.v1beta1.QueryCalcJoinPoolNoSwapSharesResponse
+ */
 export interface QueryCalcJoinPoolNoSwapSharesResponseAmino {
   tokens_out?: CoinAmino[];
   shares_out?: string;
 }
 export interface QueryCalcJoinPoolNoSwapSharesResponseAminoMsg {
-  type: "/symphony.gamm.v1beta1.QueryCalcJoinPoolNoSwapSharesResponse";
+  type: '/symphony.gamm.v1beta1.QueryCalcJoinPoolNoSwapSharesResponse';
   value: QueryCalcJoinPoolNoSwapSharesResponseAmino;
 }
+/**
+ * @name QueryCalcJoinPoolNoSwapSharesResponseSDKType
+ * @package symphony.gamm.v1beta1
+ * @see proto type: symphony.gamm.v1beta1.QueryCalcJoinPoolNoSwapSharesResponse
+ */
 export interface QueryCalcJoinPoolNoSwapSharesResponseSDKType {
   tokens_out: CoinSDKType[];
   shares_out: string;
@@ -485,49 +866,69 @@ export interface QueryCalcJoinPoolNoSwapSharesResponseSDKType {
 /**
  * QuerySpotPriceRequest defines the gRPC request structure for a SpotPrice
  * query.
+ * @name QuerySpotPriceRequest
+ * @package symphony.gamm.v1beta1
+ * @see proto type: symphony.gamm.v1beta1.QuerySpotPriceRequest
+ * @deprecated
  */
-/** @deprecated */
 export interface QuerySpotPriceRequest {
   poolId: bigint;
   baseAssetDenom: string;
   quoteAssetDenom: string;
-  /** DEPRECATED */
-  /** @deprecated */
+  /**
+   * DEPRECATED
+   * @deprecated
+   */
   withSwapFee?: boolean;
 }
 export interface QuerySpotPriceRequestProtoMsg {
-  typeUrl: "/symphony.gamm.v1beta1.QuerySpotPriceRequest";
+  typeUrl: '/symphony.gamm.v1beta1.QuerySpotPriceRequest';
   value: Uint8Array;
 }
 /**
  * QuerySpotPriceRequest defines the gRPC request structure for a SpotPrice
  * query.
+ * @name QuerySpotPriceRequestAmino
+ * @package symphony.gamm.v1beta1
+ * @see proto type: symphony.gamm.v1beta1.QuerySpotPriceRequest
+ * @deprecated
  */
-/** @deprecated */
 export interface QuerySpotPriceRequestAmino {
   pool_id?: string;
   base_asset_denom?: string;
   quote_asset_denom?: string;
-  /** DEPRECATED */
-  /** @deprecated */
+  /**
+   * DEPRECATED
+   * @deprecated
+   */
   withSwapFee?: boolean;
 }
 export interface QuerySpotPriceRequestAminoMsg {
-  type: "/symphony.gamm.v1beta1.QuerySpotPriceRequest";
+  type: '/symphony.gamm.v1beta1.QuerySpotPriceRequest';
   value: QuerySpotPriceRequestAmino;
 }
 /**
  * QuerySpotPriceRequest defines the gRPC request structure for a SpotPrice
  * query.
+ * @name QuerySpotPriceRequestSDKType
+ * @package symphony.gamm.v1beta1
+ * @see proto type: symphony.gamm.v1beta1.QuerySpotPriceRequest
+ * @deprecated
  */
-/** @deprecated */
 export interface QuerySpotPriceRequestSDKType {
   pool_id: bigint;
   base_asset_denom: string;
   quote_asset_denom: string;
-  /** @deprecated */
+  /**
+   * @deprecated
+   */
   withSwapFee?: boolean;
 }
+/**
+ * @name QueryPoolsWithFilterRequest
+ * @package symphony.gamm.v1beta1
+ * @see proto type: symphony.gamm.v1beta1.QueryPoolsWithFilterRequest
+ */
 export interface QueryPoolsWithFilterRequest {
   /**
    * String of the coins in single string separated by comma. Ex)
@@ -538,9 +939,14 @@ export interface QueryPoolsWithFilterRequest {
   pagination?: PageRequest;
 }
 export interface QueryPoolsWithFilterRequestProtoMsg {
-  typeUrl: "/symphony.gamm.v1beta1.QueryPoolsWithFilterRequest";
+  typeUrl: '/symphony.gamm.v1beta1.QueryPoolsWithFilterRequest';
   value: Uint8Array;
 }
+/**
+ * @name QueryPoolsWithFilterRequestAmino
+ * @package symphony.gamm.v1beta1
+ * @see proto type: symphony.gamm.v1beta1.QueryPoolsWithFilterRequest
+ */
 export interface QueryPoolsWithFilterRequestAmino {
   /**
    * String of the coins in single string separated by comma. Ex)
@@ -551,75 +957,132 @@ export interface QueryPoolsWithFilterRequestAmino {
   pagination?: PageRequestAmino;
 }
 export interface QueryPoolsWithFilterRequestAminoMsg {
-  type: "/symphony.gamm.v1beta1.QueryPoolsWithFilterRequest";
+  type: '/symphony.gamm.v1beta1.QueryPoolsWithFilterRequest';
   value: QueryPoolsWithFilterRequestAmino;
 }
+/**
+ * @name QueryPoolsWithFilterRequestSDKType
+ * @package symphony.gamm.v1beta1
+ * @see proto type: symphony.gamm.v1beta1.QueryPoolsWithFilterRequest
+ */
 export interface QueryPoolsWithFilterRequestSDKType {
   min_liquidity: string;
   pool_type: string;
   pagination?: PageRequestSDKType;
 }
+/**
+ * @name QueryPoolsWithFilterResponse
+ * @package symphony.gamm.v1beta1
+ * @see proto type: symphony.gamm.v1beta1.QueryPoolsWithFilterResponse
+ */
 export interface QueryPoolsWithFilterResponse {
   pools: (Pool1 | CosmWasmPool | Pool2 | Pool3 | Any)[] | Any[];
-  /** pagination defines the pagination in the response. */
+  /**
+   * pagination defines the pagination in the response.
+   */
   pagination?: PageResponse;
 }
 export interface QueryPoolsWithFilterResponseProtoMsg {
-  typeUrl: "/symphony.gamm.v1beta1.QueryPoolsWithFilterResponse";
+  typeUrl: '/symphony.gamm.v1beta1.QueryPoolsWithFilterResponse';
   value: Uint8Array;
 }
-export type QueryPoolsWithFilterResponseEncoded = Omit<QueryPoolsWithFilterResponse, "pools"> & {
-  pools: (Pool1ProtoMsg | CosmWasmPoolProtoMsg | Pool2ProtoMsg | Pool3ProtoMsg | AnyProtoMsg)[];
+export type QueryPoolsWithFilterResponseEncoded = Omit<
+  QueryPoolsWithFilterResponse,
+  'pools'
+> & {
+  pools: (
+    | Pool1ProtoMsg
+    | CosmWasmPoolProtoMsg
+    | Pool2ProtoMsg
+    | Pool3ProtoMsg
+    | AnyProtoMsg
+  )[];
 };
+/**
+ * @name QueryPoolsWithFilterResponseAmino
+ * @package symphony.gamm.v1beta1
+ * @see proto type: symphony.gamm.v1beta1.QueryPoolsWithFilterResponse
+ */
 export interface QueryPoolsWithFilterResponseAmino {
   pools?: AnyAmino[];
-  /** pagination defines the pagination in the response. */
+  /**
+   * pagination defines the pagination in the response.
+   */
   pagination?: PageResponseAmino;
 }
 export interface QueryPoolsWithFilterResponseAminoMsg {
-  type: "/symphony.gamm.v1beta1.QueryPoolsWithFilterResponse";
+  type: '/symphony.gamm.v1beta1.QueryPoolsWithFilterResponse';
   value: QueryPoolsWithFilterResponseAmino;
 }
+/**
+ * @name QueryPoolsWithFilterResponseSDKType
+ * @package symphony.gamm.v1beta1
+ * @see proto type: symphony.gamm.v1beta1.QueryPoolsWithFilterResponse
+ */
 export interface QueryPoolsWithFilterResponseSDKType {
-  pools: (Pool1SDKType | CosmWasmPoolSDKType | Pool2SDKType | Pool3SDKType | AnySDKType)[];
+  pools: (
+    | Pool1SDKType
+    | CosmWasmPoolSDKType
+    | Pool2SDKType
+    | Pool3SDKType
+    | AnySDKType
+  )[];
   pagination?: PageResponseSDKType;
 }
 /**
  * QuerySpotPriceResponse defines the gRPC response structure for a SpotPrice
  * query.
+ * @name QuerySpotPriceResponse
+ * @package symphony.gamm.v1beta1
+ * @see proto type: symphony.gamm.v1beta1.QuerySpotPriceResponse
+ * @deprecated
  */
-/** @deprecated */
 export interface QuerySpotPriceResponse {
-  /** String of the Dec. Ex) 10.203uatom */
+  /**
+   * String of the Dec. Ex) 10.203uatom
+   */
   spotPrice: string;
 }
 export interface QuerySpotPriceResponseProtoMsg {
-  typeUrl: "/symphony.gamm.v1beta1.QuerySpotPriceResponse";
+  typeUrl: '/symphony.gamm.v1beta1.QuerySpotPriceResponse';
   value: Uint8Array;
 }
 /**
  * QuerySpotPriceResponse defines the gRPC response structure for a SpotPrice
  * query.
+ * @name QuerySpotPriceResponseAmino
+ * @package symphony.gamm.v1beta1
+ * @see proto type: symphony.gamm.v1beta1.QuerySpotPriceResponse
+ * @deprecated
  */
-/** @deprecated */
 export interface QuerySpotPriceResponseAmino {
-  /** String of the Dec. Ex) 10.203uatom */
+  /**
+   * String of the Dec. Ex) 10.203uatom
+   */
   spot_price?: string;
 }
 export interface QuerySpotPriceResponseAminoMsg {
-  type: "/symphony.gamm.v1beta1.QuerySpotPriceResponse";
+  type: '/symphony.gamm.v1beta1.QuerySpotPriceResponse';
   value: QuerySpotPriceResponseAmino;
 }
 /**
  * QuerySpotPriceResponse defines the gRPC response structure for a SpotPrice
  * query.
+ * @name QuerySpotPriceResponseSDKType
+ * @package symphony.gamm.v1beta1
+ * @see proto type: symphony.gamm.v1beta1.QuerySpotPriceResponse
+ * @deprecated
  */
-/** @deprecated */
 export interface QuerySpotPriceResponseSDKType {
   spot_price: string;
 }
-/** =============================== EstimateSwapExactAmountIn */
-/** @deprecated */
+/**
+ * =============================== EstimateSwapExactAmountIn
+ * @name QuerySwapExactAmountInRequest
+ * @package symphony.gamm.v1beta1
+ * @see proto type: symphony.gamm.v1beta1.QuerySwapExactAmountInRequest
+ * @deprecated
+ */
 export interface QuerySwapExactAmountInRequest {
   sender: string;
   poolId: bigint;
@@ -627,11 +1090,16 @@ export interface QuerySwapExactAmountInRequest {
   routes: SwapAmountInRoute[];
 }
 export interface QuerySwapExactAmountInRequestProtoMsg {
-  typeUrl: "/symphony.gamm.v1beta1.QuerySwapExactAmountInRequest";
+  typeUrl: '/symphony.gamm.v1beta1.QuerySwapExactAmountInRequest';
   value: Uint8Array;
 }
-/** =============================== EstimateSwapExactAmountIn */
-/** @deprecated */
+/**
+ * =============================== EstimateSwapExactAmountIn
+ * @name QuerySwapExactAmountInRequestAmino
+ * @package symphony.gamm.v1beta1
+ * @see proto type: symphony.gamm.v1beta1.QuerySwapExactAmountInRequest
+ * @deprecated
+ */
 export interface QuerySwapExactAmountInRequestAmino {
   sender?: string;
   pool_id?: string;
@@ -639,39 +1107,64 @@ export interface QuerySwapExactAmountInRequestAmino {
   routes?: SwapAmountInRouteAmino[];
 }
 export interface QuerySwapExactAmountInRequestAminoMsg {
-  type: "/symphony.gamm.v1beta1.QuerySwapExactAmountInRequest";
+  type: '/symphony.gamm.v1beta1.QuerySwapExactAmountInRequest';
   value: QuerySwapExactAmountInRequestAmino;
 }
-/** =============================== EstimateSwapExactAmountIn */
-/** @deprecated */
+/**
+ * =============================== EstimateSwapExactAmountIn
+ * @name QuerySwapExactAmountInRequestSDKType
+ * @package symphony.gamm.v1beta1
+ * @see proto type: symphony.gamm.v1beta1.QuerySwapExactAmountInRequest
+ * @deprecated
+ */
 export interface QuerySwapExactAmountInRequestSDKType {
   sender: string;
   pool_id: bigint;
   token_in: string;
   routes: SwapAmountInRouteSDKType[];
 }
-/** @deprecated */
+/**
+ * @name QuerySwapExactAmountInResponse
+ * @package symphony.gamm.v1beta1
+ * @see proto type: symphony.gamm.v1beta1.QuerySwapExactAmountInResponse
+ * @deprecated
+ */
 export interface QuerySwapExactAmountInResponse {
   tokenOutAmount: string;
 }
 export interface QuerySwapExactAmountInResponseProtoMsg {
-  typeUrl: "/symphony.gamm.v1beta1.QuerySwapExactAmountInResponse";
+  typeUrl: '/symphony.gamm.v1beta1.QuerySwapExactAmountInResponse';
   value: Uint8Array;
 }
-/** @deprecated */
+/**
+ * @name QuerySwapExactAmountInResponseAmino
+ * @package symphony.gamm.v1beta1
+ * @see proto type: symphony.gamm.v1beta1.QuerySwapExactAmountInResponse
+ * @deprecated
+ */
 export interface QuerySwapExactAmountInResponseAmino {
   token_out_amount?: string;
 }
 export interface QuerySwapExactAmountInResponseAminoMsg {
-  type: "/symphony.gamm.v1beta1.QuerySwapExactAmountInResponse";
+  type: '/symphony.gamm.v1beta1.QuerySwapExactAmountInResponse';
   value: QuerySwapExactAmountInResponseAmino;
 }
-/** @deprecated */
+/**
+ * @name QuerySwapExactAmountInResponseSDKType
+ * @package symphony.gamm.v1beta1
+ * @see proto type: symphony.gamm.v1beta1.QuerySwapExactAmountInResponse
+ * @deprecated
+ */
 export interface QuerySwapExactAmountInResponseSDKType {
   token_out_amount: string;
 }
-/** =============================== EstimateSwapExactAmountOut */
-/** @deprecated */
+/**
+ * =============================== EstimateSwapExactAmountOut
+ * @name QuerySwapExactAmountOutRequest
+ * @package symphony.gamm.v1beta1
+ * @see proto type: symphony.gamm.v1beta1.QuerySwapExactAmountOutRequest
+ * @deprecated
+ */
 export interface QuerySwapExactAmountOutRequest {
   sender: string;
   poolId: bigint;
@@ -679,11 +1172,16 @@ export interface QuerySwapExactAmountOutRequest {
   tokenOut: string;
 }
 export interface QuerySwapExactAmountOutRequestProtoMsg {
-  typeUrl: "/symphony.gamm.v1beta1.QuerySwapExactAmountOutRequest";
+  typeUrl: '/symphony.gamm.v1beta1.QuerySwapExactAmountOutRequest';
   value: Uint8Array;
 }
-/** =============================== EstimateSwapExactAmountOut */
-/** @deprecated */
+/**
+ * =============================== EstimateSwapExactAmountOut
+ * @name QuerySwapExactAmountOutRequestAmino
+ * @package symphony.gamm.v1beta1
+ * @see proto type: symphony.gamm.v1beta1.QuerySwapExactAmountOutRequest
+ * @deprecated
+ */
 export interface QuerySwapExactAmountOutRequestAmino {
   sender?: string;
   pool_id?: string;
@@ -691,138 +1189,254 @@ export interface QuerySwapExactAmountOutRequestAmino {
   token_out?: string;
 }
 export interface QuerySwapExactAmountOutRequestAminoMsg {
-  type: "/symphony.gamm.v1beta1.QuerySwapExactAmountOutRequest";
+  type: '/symphony.gamm.v1beta1.QuerySwapExactAmountOutRequest';
   value: QuerySwapExactAmountOutRequestAmino;
 }
-/** =============================== EstimateSwapExactAmountOut */
-/** @deprecated */
+/**
+ * =============================== EstimateSwapExactAmountOut
+ * @name QuerySwapExactAmountOutRequestSDKType
+ * @package symphony.gamm.v1beta1
+ * @see proto type: symphony.gamm.v1beta1.QuerySwapExactAmountOutRequest
+ * @deprecated
+ */
 export interface QuerySwapExactAmountOutRequestSDKType {
   sender: string;
   pool_id: bigint;
   routes: SwapAmountOutRouteSDKType[];
   token_out: string;
 }
-/** @deprecated */
+/**
+ * @name QuerySwapExactAmountOutResponse
+ * @package symphony.gamm.v1beta1
+ * @see proto type: symphony.gamm.v1beta1.QuerySwapExactAmountOutResponse
+ * @deprecated
+ */
 export interface QuerySwapExactAmountOutResponse {
   tokenInAmount: string;
 }
 export interface QuerySwapExactAmountOutResponseProtoMsg {
-  typeUrl: "/symphony.gamm.v1beta1.QuerySwapExactAmountOutResponse";
+  typeUrl: '/symphony.gamm.v1beta1.QuerySwapExactAmountOutResponse';
   value: Uint8Array;
 }
-/** @deprecated */
+/**
+ * @name QuerySwapExactAmountOutResponseAmino
+ * @package symphony.gamm.v1beta1
+ * @see proto type: symphony.gamm.v1beta1.QuerySwapExactAmountOutResponse
+ * @deprecated
+ */
 export interface QuerySwapExactAmountOutResponseAmino {
   token_in_amount?: string;
 }
 export interface QuerySwapExactAmountOutResponseAminoMsg {
-  type: "/symphony.gamm.v1beta1.QuerySwapExactAmountOutResponse";
+  type: '/symphony.gamm.v1beta1.QuerySwapExactAmountOutResponse';
   value: QuerySwapExactAmountOutResponseAmino;
 }
-/** @deprecated */
+/**
+ * @name QuerySwapExactAmountOutResponseSDKType
+ * @package symphony.gamm.v1beta1
+ * @see proto type: symphony.gamm.v1beta1.QuerySwapExactAmountOutResponse
+ * @deprecated
+ */
 export interface QuerySwapExactAmountOutResponseSDKType {
   token_in_amount: string;
 }
+/**
+ * @name QueryTotalLiquidityRequest
+ * @package symphony.gamm.v1beta1
+ * @see proto type: symphony.gamm.v1beta1.QueryTotalLiquidityRequest
+ */
 export interface QueryTotalLiquidityRequest {}
 export interface QueryTotalLiquidityRequestProtoMsg {
-  typeUrl: "/symphony.gamm.v1beta1.QueryTotalLiquidityRequest";
+  typeUrl: '/symphony.gamm.v1beta1.QueryTotalLiquidityRequest';
   value: Uint8Array;
 }
+/**
+ * @name QueryTotalLiquidityRequestAmino
+ * @package symphony.gamm.v1beta1
+ * @see proto type: symphony.gamm.v1beta1.QueryTotalLiquidityRequest
+ */
 export interface QueryTotalLiquidityRequestAmino {}
 export interface QueryTotalLiquidityRequestAminoMsg {
-  type: "/symphony.gamm.v1beta1.QueryTotalLiquidityRequest";
+  type: '/symphony.gamm.v1beta1.QueryTotalLiquidityRequest';
   value: QueryTotalLiquidityRequestAmino;
 }
+/**
+ * @name QueryTotalLiquidityRequestSDKType
+ * @package symphony.gamm.v1beta1
+ * @see proto type: symphony.gamm.v1beta1.QueryTotalLiquidityRequest
+ */
 export interface QueryTotalLiquidityRequestSDKType {}
+/**
+ * @name QueryTotalLiquidityResponse
+ * @package symphony.gamm.v1beta1
+ * @see proto type: symphony.gamm.v1beta1.QueryTotalLiquidityResponse
+ */
 export interface QueryTotalLiquidityResponse {
   liquidity: Coin[];
 }
 export interface QueryTotalLiquidityResponseProtoMsg {
-  typeUrl: "/symphony.gamm.v1beta1.QueryTotalLiquidityResponse";
+  typeUrl: '/symphony.gamm.v1beta1.QueryTotalLiquidityResponse';
   value: Uint8Array;
 }
+/**
+ * @name QueryTotalLiquidityResponseAmino
+ * @package symphony.gamm.v1beta1
+ * @see proto type: symphony.gamm.v1beta1.QueryTotalLiquidityResponse
+ */
 export interface QueryTotalLiquidityResponseAmino {
   liquidity?: CoinAmino[];
 }
 export interface QueryTotalLiquidityResponseAminoMsg {
-  type: "/symphony.gamm.v1beta1.QueryTotalLiquidityResponse";
+  type: '/symphony.gamm.v1beta1.QueryTotalLiquidityResponse';
   value: QueryTotalLiquidityResponseAmino;
 }
+/**
+ * @name QueryTotalLiquidityResponseSDKType
+ * @package symphony.gamm.v1beta1
+ * @see proto type: symphony.gamm.v1beta1.QueryTotalLiquidityResponse
+ */
 export interface QueryTotalLiquidityResponseSDKType {
   liquidity: CoinSDKType[];
 }
-/** =============================== QueryConcentratedPoolIdLinkFromCFMM */
+/**
+ * =============================== QueryConcentratedPoolIdLinkFromCFMM
+ * @name QueryConcentratedPoolIdLinkFromCFMMRequest
+ * @package symphony.gamm.v1beta1
+ * @see proto type: symphony.gamm.v1beta1.QueryConcentratedPoolIdLinkFromCFMMRequest
+ */
 export interface QueryConcentratedPoolIdLinkFromCFMMRequest {
   cfmmPoolId: bigint;
 }
 export interface QueryConcentratedPoolIdLinkFromCFMMRequestProtoMsg {
-  typeUrl: "/symphony.gamm.v1beta1.QueryConcentratedPoolIdLinkFromCFMMRequest";
+  typeUrl: '/symphony.gamm.v1beta1.QueryConcentratedPoolIdLinkFromCFMMRequest';
   value: Uint8Array;
 }
-/** =============================== QueryConcentratedPoolIdLinkFromCFMM */
+/**
+ * =============================== QueryConcentratedPoolIdLinkFromCFMM
+ * @name QueryConcentratedPoolIdLinkFromCFMMRequestAmino
+ * @package symphony.gamm.v1beta1
+ * @see proto type: symphony.gamm.v1beta1.QueryConcentratedPoolIdLinkFromCFMMRequest
+ */
 export interface QueryConcentratedPoolIdLinkFromCFMMRequestAmino {
   cfmm_pool_id?: string;
 }
 export interface QueryConcentratedPoolIdLinkFromCFMMRequestAminoMsg {
-  type: "/symphony.gamm.v1beta1.QueryConcentratedPoolIdLinkFromCFMMRequest";
+  type: '/symphony.gamm.v1beta1.QueryConcentratedPoolIdLinkFromCFMMRequest';
   value: QueryConcentratedPoolIdLinkFromCFMMRequestAmino;
 }
-/** =============================== QueryConcentratedPoolIdLinkFromCFMM */
+/**
+ * =============================== QueryConcentratedPoolIdLinkFromCFMM
+ * @name QueryConcentratedPoolIdLinkFromCFMMRequestSDKType
+ * @package symphony.gamm.v1beta1
+ * @see proto type: symphony.gamm.v1beta1.QueryConcentratedPoolIdLinkFromCFMMRequest
+ */
 export interface QueryConcentratedPoolIdLinkFromCFMMRequestSDKType {
   cfmm_pool_id: bigint;
 }
+/**
+ * @name QueryConcentratedPoolIdLinkFromCFMMResponse
+ * @package symphony.gamm.v1beta1
+ * @see proto type: symphony.gamm.v1beta1.QueryConcentratedPoolIdLinkFromCFMMResponse
+ */
 export interface QueryConcentratedPoolIdLinkFromCFMMResponse {
   concentratedPoolId: bigint;
 }
 export interface QueryConcentratedPoolIdLinkFromCFMMResponseProtoMsg {
-  typeUrl: "/symphony.gamm.v1beta1.QueryConcentratedPoolIdLinkFromCFMMResponse";
+  typeUrl: '/symphony.gamm.v1beta1.QueryConcentratedPoolIdLinkFromCFMMResponse';
   value: Uint8Array;
 }
+/**
+ * @name QueryConcentratedPoolIdLinkFromCFMMResponseAmino
+ * @package symphony.gamm.v1beta1
+ * @see proto type: symphony.gamm.v1beta1.QueryConcentratedPoolIdLinkFromCFMMResponse
+ */
 export interface QueryConcentratedPoolIdLinkFromCFMMResponseAmino {
   concentrated_pool_id?: string;
 }
 export interface QueryConcentratedPoolIdLinkFromCFMMResponseAminoMsg {
-  type: "/symphony.gamm.v1beta1.QueryConcentratedPoolIdLinkFromCFMMResponse";
+  type: '/symphony.gamm.v1beta1.QueryConcentratedPoolIdLinkFromCFMMResponse';
   value: QueryConcentratedPoolIdLinkFromCFMMResponseAmino;
 }
+/**
+ * @name QueryConcentratedPoolIdLinkFromCFMMResponseSDKType
+ * @package symphony.gamm.v1beta1
+ * @see proto type: symphony.gamm.v1beta1.QueryConcentratedPoolIdLinkFromCFMMResponse
+ */
 export interface QueryConcentratedPoolIdLinkFromCFMMResponseSDKType {
   concentrated_pool_id: bigint;
 }
-/** =============================== QueryCFMMConcentratedPoolLinks */
+/**
+ * =============================== QueryCFMMConcentratedPoolLinks
+ * @name QueryCFMMConcentratedPoolLinksRequest
+ * @package symphony.gamm.v1beta1
+ * @see proto type: symphony.gamm.v1beta1.QueryCFMMConcentratedPoolLinksRequest
+ */
 export interface QueryCFMMConcentratedPoolLinksRequest {}
 export interface QueryCFMMConcentratedPoolLinksRequestProtoMsg {
-  typeUrl: "/symphony.gamm.v1beta1.QueryCFMMConcentratedPoolLinksRequest";
+  typeUrl: '/symphony.gamm.v1beta1.QueryCFMMConcentratedPoolLinksRequest';
   value: Uint8Array;
 }
-/** =============================== QueryCFMMConcentratedPoolLinks */
+/**
+ * =============================== QueryCFMMConcentratedPoolLinks
+ * @name QueryCFMMConcentratedPoolLinksRequestAmino
+ * @package symphony.gamm.v1beta1
+ * @see proto type: symphony.gamm.v1beta1.QueryCFMMConcentratedPoolLinksRequest
+ */
 export interface QueryCFMMConcentratedPoolLinksRequestAmino {}
 export interface QueryCFMMConcentratedPoolLinksRequestAminoMsg {
-  type: "/symphony.gamm.v1beta1.QueryCFMMConcentratedPoolLinksRequest";
+  type: '/symphony.gamm.v1beta1.QueryCFMMConcentratedPoolLinksRequest';
   value: QueryCFMMConcentratedPoolLinksRequestAmino;
 }
-/** =============================== QueryCFMMConcentratedPoolLinks */
+/**
+ * =============================== QueryCFMMConcentratedPoolLinks
+ * @name QueryCFMMConcentratedPoolLinksRequestSDKType
+ * @package symphony.gamm.v1beta1
+ * @see proto type: symphony.gamm.v1beta1.QueryCFMMConcentratedPoolLinksRequest
+ */
 export interface QueryCFMMConcentratedPoolLinksRequestSDKType {}
+/**
+ * @name QueryCFMMConcentratedPoolLinksResponse
+ * @package symphony.gamm.v1beta1
+ * @see proto type: symphony.gamm.v1beta1.QueryCFMMConcentratedPoolLinksResponse
+ */
 export interface QueryCFMMConcentratedPoolLinksResponse {
   migrationRecords?: MigrationRecords;
 }
 export interface QueryCFMMConcentratedPoolLinksResponseProtoMsg {
-  typeUrl: "/symphony.gamm.v1beta1.QueryCFMMConcentratedPoolLinksResponse";
+  typeUrl: '/symphony.gamm.v1beta1.QueryCFMMConcentratedPoolLinksResponse';
   value: Uint8Array;
 }
+/**
+ * @name QueryCFMMConcentratedPoolLinksResponseAmino
+ * @package symphony.gamm.v1beta1
+ * @see proto type: symphony.gamm.v1beta1.QueryCFMMConcentratedPoolLinksResponse
+ */
 export interface QueryCFMMConcentratedPoolLinksResponseAmino {
   migration_records?: MigrationRecordsAmino;
 }
 export interface QueryCFMMConcentratedPoolLinksResponseAminoMsg {
-  type: "/symphony.gamm.v1beta1.QueryCFMMConcentratedPoolLinksResponse";
+  type: '/symphony.gamm.v1beta1.QueryCFMMConcentratedPoolLinksResponse';
   value: QueryCFMMConcentratedPoolLinksResponseAmino;
 }
+/**
+ * @name QueryCFMMConcentratedPoolLinksResponseSDKType
+ * @package symphony.gamm.v1beta1
+ * @see proto type: symphony.gamm.v1beta1.QueryCFMMConcentratedPoolLinksResponse
+ */
 export interface QueryCFMMConcentratedPoolLinksResponseSDKType {
   migration_records?: MigrationRecordsSDKType;
 }
 function createBaseParamsRequest(): ParamsRequest {
   return {};
 }
+/**
+ * =============================== Params
+ * @name ParamsRequest
+ * @package symphony.gamm.v1beta1
+ * @see proto type: symphony.gamm.v1beta1.ParamsRequest
+ */
 export const ParamsRequest = {
-  typeUrl: "/symphony.gamm.v1beta1.ParamsRequest",
+  typeUrl: '/symphony.gamm.v1beta1.ParamsRequest',
   is(o: any): o is ParamsRequest {
     return o && o.$typeUrl === ParamsRequest.typeUrl;
   },
@@ -832,11 +1446,15 @@ export const ParamsRequest = {
   isAmino(o: any): o is ParamsRequestAmino {
     return o && o.$typeUrl === ParamsRequest.typeUrl;
   },
-  encode(_: ParamsRequest, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
+  encode(
+    _: ParamsRequest,
+    writer: BinaryWriter = BinaryWriter.create(),
+  ): BinaryWriter {
     return writer;
   },
   decode(input: BinaryReader | Uint8Array, length?: number): ParamsRequest {
-    const reader = input instanceof BinaryReader ? input : new BinaryReader(input);
+    const reader =
+      input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseParamsRequest();
     while (reader.pos < end) {
@@ -872,36 +1490,49 @@ export const ParamsRequest = {
   },
   toProtoMsg(message: ParamsRequest): ParamsRequestProtoMsg {
     return {
-      typeUrl: "/symphony.gamm.v1beta1.ParamsRequest",
-      value: ParamsRequest.encode(message).finish()
+      typeUrl: '/symphony.gamm.v1beta1.ParamsRequest',
+      value: ParamsRequest.encode(message).finish(),
     };
-  }
+  },
 };
 GlobalDecoderRegistry.register(ParamsRequest.typeUrl, ParamsRequest);
 function createBaseParamsResponse(): ParamsResponse {
   return {
-    params: Params.fromPartial({})
+    params: Params.fromPartial({}),
   };
 }
+/**
+ * @name ParamsResponse
+ * @package symphony.gamm.v1beta1
+ * @see proto type: symphony.gamm.v1beta1.ParamsResponse
+ */
 export const ParamsResponse = {
-  typeUrl: "/symphony.gamm.v1beta1.ParamsResponse",
+  typeUrl: '/symphony.gamm.v1beta1.ParamsResponse',
   is(o: any): o is ParamsResponse {
     return o && (o.$typeUrl === ParamsResponse.typeUrl || Params.is(o.params));
   },
   isSDK(o: any): o is ParamsResponseSDKType {
-    return o && (o.$typeUrl === ParamsResponse.typeUrl || Params.isSDK(o.params));
+    return (
+      o && (o.$typeUrl === ParamsResponse.typeUrl || Params.isSDK(o.params))
+    );
   },
   isAmino(o: any): o is ParamsResponseAmino {
-    return o && (o.$typeUrl === ParamsResponse.typeUrl || Params.isAmino(o.params));
+    return (
+      o && (o.$typeUrl === ParamsResponse.typeUrl || Params.isAmino(o.params))
+    );
   },
-  encode(message: ParamsResponse, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
+  encode(
+    message: ParamsResponse,
+    writer: BinaryWriter = BinaryWriter.create(),
+  ): BinaryWriter {
     if (message.params !== undefined) {
       Params.encode(message.params, writer.uint32(10).fork()).ldelim();
     }
     return writer;
   },
   decode(input: BinaryReader | Uint8Array, length?: number): ParamsResponse {
-    const reader = input instanceof BinaryReader ? input : new BinaryReader(input);
+    const reader =
+      input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseParamsResponse();
     while (reader.pos < end) {
@@ -919,7 +1550,10 @@ export const ParamsResponse = {
   },
   fromPartial(object: Partial<ParamsResponse>): ParamsResponse {
     const message = createBaseParamsResponse();
-    message.params = object.params !== undefined && object.params !== null ? Params.fromPartial(object.params) : undefined;
+    message.params =
+      object.params !== undefined && object.params !== null
+        ? Params.fromPartial(object.params)
+        : undefined;
     return message;
   },
   fromAmino(object: ParamsResponseAmino): ParamsResponse {
@@ -945,36 +1579,57 @@ export const ParamsResponse = {
   },
   toProtoMsg(message: ParamsResponse): ParamsResponseProtoMsg {
     return {
-      typeUrl: "/symphony.gamm.v1beta1.ParamsResponse",
-      value: ParamsResponse.encode(message).finish()
+      typeUrl: '/symphony.gamm.v1beta1.ParamsResponse',
+      value: ParamsResponse.encode(message).finish(),
     };
-  }
+  },
 };
 GlobalDecoderRegistry.register(ParamsResponse.typeUrl, ParamsResponse);
 function createBaseQueryPoolRequest(): QueryPoolRequest {
   return {
-    poolId: BigInt(0)
+    poolId: BigInt(0),
   };
 }
+/**
+ * =============================== Pool
+ * Deprecated: please use the alternative in x/poolmanager
+ * @name QueryPoolRequest
+ * @package symphony.gamm.v1beta1
+ * @see proto type: symphony.gamm.v1beta1.QueryPoolRequest
+ * @deprecated
+ */
 export const QueryPoolRequest = {
-  typeUrl: "/symphony.gamm.v1beta1.QueryPoolRequest",
+  typeUrl: '/symphony.gamm.v1beta1.QueryPoolRequest',
   is(o: any): o is QueryPoolRequest {
-    return o && (o.$typeUrl === QueryPoolRequest.typeUrl || typeof o.poolId === "bigint");
+    return (
+      o &&
+      (o.$typeUrl === QueryPoolRequest.typeUrl || typeof o.poolId === 'bigint')
+    );
   },
   isSDK(o: any): o is QueryPoolRequestSDKType {
-    return o && (o.$typeUrl === QueryPoolRequest.typeUrl || typeof o.pool_id === "bigint");
+    return (
+      o &&
+      (o.$typeUrl === QueryPoolRequest.typeUrl || typeof o.pool_id === 'bigint')
+    );
   },
   isAmino(o: any): o is QueryPoolRequestAmino {
-    return o && (o.$typeUrl === QueryPoolRequest.typeUrl || typeof o.pool_id === "bigint");
+    return (
+      o &&
+      (o.$typeUrl === QueryPoolRequest.typeUrl || typeof o.pool_id === 'bigint')
+    );
   },
-  encode(message: QueryPoolRequest, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
+  encode(
+    message: QueryPoolRequest,
+    writer: BinaryWriter = BinaryWriter.create(),
+  ): BinaryWriter {
     if (message.poolId !== BigInt(0)) {
       writer.uint32(8).uint64(message.poolId);
     }
     return writer;
   },
   decode(input: BinaryReader | Uint8Array, length?: number): QueryPoolRequest {
-    const reader = input instanceof BinaryReader ? input : new BinaryReader(input);
+    const reader =
+      input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseQueryPoolRequest();
     while (reader.pos < end) {
@@ -992,7 +1647,10 @@ export const QueryPoolRequest = {
   },
   fromPartial(object: Partial<QueryPoolRequest>): QueryPoolRequest {
     const message = createBaseQueryPoolRequest();
-    message.poolId = object.poolId !== undefined && object.poolId !== null ? BigInt(object.poolId.toString()) : BigInt(0);
+    message.poolId =
+      object.poolId !== undefined && object.poolId !== null
+        ? BigInt(object.poolId.toString())
+        : BigInt(0);
     return message;
   },
   fromAmino(object: QueryPoolRequestAmino): QueryPoolRequest {
@@ -1004,7 +1662,8 @@ export const QueryPoolRequest = {
   },
   toAmino(message: QueryPoolRequest): QueryPoolRequestAmino {
     const obj: any = {};
-    obj.pool_id = message.poolId !== BigInt(0) ? message.poolId?.toString() : undefined;
+    obj.pool_id =
+      message.poolId !== BigInt(0) ? message.poolId?.toString() : undefined;
     return obj;
   },
   fromAminoMsg(object: QueryPoolRequestAminoMsg): QueryPoolRequest {
@@ -1018,19 +1677,26 @@ export const QueryPoolRequest = {
   },
   toProtoMsg(message: QueryPoolRequest): QueryPoolRequestProtoMsg {
     return {
-      typeUrl: "/symphony.gamm.v1beta1.QueryPoolRequest",
-      value: QueryPoolRequest.encode(message).finish()
+      typeUrl: '/symphony.gamm.v1beta1.QueryPoolRequest',
+      value: QueryPoolRequest.encode(message).finish(),
     };
-  }
+  },
 };
 GlobalDecoderRegistry.register(QueryPoolRequest.typeUrl, QueryPoolRequest);
 function createBaseQueryPoolResponse(): QueryPoolResponse {
   return {
-    pool: undefined
+    pool: undefined,
   };
 }
+/**
+ * Deprecated: please use the alternative in x/poolmanager
+ * @name QueryPoolResponse
+ * @package symphony.gamm.v1beta1
+ * @see proto type: symphony.gamm.v1beta1.QueryPoolResponse
+ * @deprecated
+ */
 export const QueryPoolResponse = {
-  typeUrl: "/symphony.gamm.v1beta1.QueryPoolResponse",
+  typeUrl: '/symphony.gamm.v1beta1.QueryPoolResponse',
   is(o: any): o is QueryPoolResponse {
     return o && o.$typeUrl === QueryPoolResponse.typeUrl;
   },
@@ -1040,14 +1706,21 @@ export const QueryPoolResponse = {
   isAmino(o: any): o is QueryPoolResponseAmino {
     return o && o.$typeUrl === QueryPoolResponse.typeUrl;
   },
-  encode(message: QueryPoolResponse, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
+  encode(
+    message: QueryPoolResponse,
+    writer: BinaryWriter = BinaryWriter.create(),
+  ): BinaryWriter {
     if (message.pool !== undefined) {
-      Any.encode(GlobalDecoderRegistry.wrapAny(message.pool), writer.uint32(10).fork()).ldelim();
+      Any.encode(
+        GlobalDecoderRegistry.wrapAny(message.pool),
+        writer.uint32(10).fork(),
+      ).ldelim();
     }
     return writer;
   },
   decode(input: BinaryReader | Uint8Array, length?: number): QueryPoolResponse {
-    const reader = input instanceof BinaryReader ? input : new BinaryReader(input);
+    const reader =
+      input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseQueryPoolResponse();
     while (reader.pos < end) {
@@ -1065,7 +1738,10 @@ export const QueryPoolResponse = {
   },
   fromPartial(object: Partial<QueryPoolResponse>): QueryPoolResponse {
     const message = createBaseQueryPoolResponse();
-    message.pool = object.pool !== undefined && object.pool !== null ? GlobalDecoderRegistry.fromPartial(object.pool) : undefined;
+    message.pool =
+      object.pool !== undefined && object.pool !== null
+        ? GlobalDecoderRegistry.fromPartial(object.pool)
+        : undefined;
     return message;
   },
   fromAmino(object: QueryPoolResponseAmino): QueryPoolResponse {
@@ -1077,7 +1753,9 @@ export const QueryPoolResponse = {
   },
   toAmino(message: QueryPoolResponse): QueryPoolResponseAmino {
     const obj: any = {};
-    obj.pool = message.pool ? GlobalDecoderRegistry.toAminoMsg(message.pool) : undefined;
+    obj.pool = message.pool
+      ? GlobalDecoderRegistry.toAminoMsg(message.pool)
+      : undefined;
     return obj;
   },
   fromAminoMsg(object: QueryPoolResponseAminoMsg): QueryPoolResponse {
@@ -1091,19 +1769,25 @@ export const QueryPoolResponse = {
   },
   toProtoMsg(message: QueryPoolResponse): QueryPoolResponseProtoMsg {
     return {
-      typeUrl: "/symphony.gamm.v1beta1.QueryPoolResponse",
-      value: QueryPoolResponse.encode(message).finish()
+      typeUrl: '/symphony.gamm.v1beta1.QueryPoolResponse',
+      value: QueryPoolResponse.encode(message).finish(),
     };
-  }
+  },
 };
 GlobalDecoderRegistry.register(QueryPoolResponse.typeUrl, QueryPoolResponse);
 function createBaseQueryPoolsRequest(): QueryPoolsRequest {
   return {
-    pagination: undefined
+    pagination: undefined,
   };
 }
+/**
+ * =============================== Pools
+ * @name QueryPoolsRequest
+ * @package symphony.gamm.v1beta1
+ * @see proto type: symphony.gamm.v1beta1.QueryPoolsRequest
+ */
 export const QueryPoolsRequest = {
-  typeUrl: "/symphony.gamm.v1beta1.QueryPoolsRequest",
+  typeUrl: '/symphony.gamm.v1beta1.QueryPoolsRequest',
   is(o: any): o is QueryPoolsRequest {
     return o && o.$typeUrl === QueryPoolsRequest.typeUrl;
   },
@@ -1113,14 +1797,18 @@ export const QueryPoolsRequest = {
   isAmino(o: any): o is QueryPoolsRequestAmino {
     return o && o.$typeUrl === QueryPoolsRequest.typeUrl;
   },
-  encode(message: QueryPoolsRequest, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
+  encode(
+    message: QueryPoolsRequest,
+    writer: BinaryWriter = BinaryWriter.create(),
+  ): BinaryWriter {
     if (message.pagination !== undefined) {
       PageRequest.encode(message.pagination, writer.uint32(18).fork()).ldelim();
     }
     return writer;
   },
   decode(input: BinaryReader | Uint8Array, length?: number): QueryPoolsRequest {
-    const reader = input instanceof BinaryReader ? input : new BinaryReader(input);
+    const reader =
+      input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseQueryPoolsRequest();
     while (reader.pos < end) {
@@ -1138,7 +1826,10 @@ export const QueryPoolsRequest = {
   },
   fromPartial(object: Partial<QueryPoolsRequest>): QueryPoolsRequest {
     const message = createBaseQueryPoolsRequest();
-    message.pagination = object.pagination !== undefined && object.pagination !== null ? PageRequest.fromPartial(object.pagination) : undefined;
+    message.pagination =
+      object.pagination !== undefined && object.pagination !== null
+        ? PageRequest.fromPartial(object.pagination)
+        : undefined;
     return message;
   },
   fromAmino(object: QueryPoolsRequestAmino): QueryPoolsRequest {
@@ -1150,7 +1841,9 @@ export const QueryPoolsRequest = {
   },
   toAmino(message: QueryPoolsRequest): QueryPoolsRequestAmino {
     const obj: any = {};
-    obj.pagination = message.pagination ? PageRequest.toAmino(message.pagination) : undefined;
+    obj.pagination = message.pagination
+      ? PageRequest.toAmino(message.pagination)
+      : undefined;
     return obj;
   },
   fromAminoMsg(object: QueryPoolsRequestAminoMsg): QueryPoolsRequest {
@@ -1164,40 +1857,88 @@ export const QueryPoolsRequest = {
   },
   toProtoMsg(message: QueryPoolsRequest): QueryPoolsRequestProtoMsg {
     return {
-      typeUrl: "/symphony.gamm.v1beta1.QueryPoolsRequest",
-      value: QueryPoolsRequest.encode(message).finish()
+      typeUrl: '/symphony.gamm.v1beta1.QueryPoolsRequest',
+      value: QueryPoolsRequest.encode(message).finish(),
     };
-  }
+  },
 };
 GlobalDecoderRegistry.register(QueryPoolsRequest.typeUrl, QueryPoolsRequest);
 function createBaseQueryPoolsResponse(): QueryPoolsResponse {
   return {
     pools: [],
-    pagination: undefined
+    pagination: undefined,
   };
 }
+/**
+ * @name QueryPoolsResponse
+ * @package symphony.gamm.v1beta1
+ * @see proto type: symphony.gamm.v1beta1.QueryPoolsResponse
+ */
 export const QueryPoolsResponse = {
-  typeUrl: "/symphony.gamm.v1beta1.QueryPoolsResponse",
+  typeUrl: '/symphony.gamm.v1beta1.QueryPoolsResponse',
   is(o: any): o is QueryPoolsResponse {
-    return o && (o.$typeUrl === QueryPoolsResponse.typeUrl || Array.isArray(o.pools) && (!o.pools.length || Pool1.is(o.pools[0]) || CosmWasmPool.is(o.pools[0]) || Pool2.is(o.pools[0]) || Pool3.is(o.pools[0]) || Any.is(o.pools[0])));
+    return (
+      o &&
+      (o.$typeUrl === QueryPoolsResponse.typeUrl ||
+        (Array.isArray(o.pools) &&
+          (!o.pools.length ||
+            Pool1.is(o.pools[0]) ||
+            CosmWasmPool.is(o.pools[0]) ||
+            Pool2.is(o.pools[0]) ||
+            Pool3.is(o.pools[0]) ||
+            Any.is(o.pools[0]))))
+    );
   },
   isSDK(o: any): o is QueryPoolsResponseSDKType {
-    return o && (o.$typeUrl === QueryPoolsResponse.typeUrl || Array.isArray(o.pools) && (!o.pools.length || Pool1.isSDK(o.pools[0]) || CosmWasmPool.isSDK(o.pools[0]) || Pool2.isSDK(o.pools[0]) || Pool3.isSDK(o.pools[0]) || Any.isSDK(o.pools[0])));
+    return (
+      o &&
+      (o.$typeUrl === QueryPoolsResponse.typeUrl ||
+        (Array.isArray(o.pools) &&
+          (!o.pools.length ||
+            Pool1.isSDK(o.pools[0]) ||
+            CosmWasmPool.isSDK(o.pools[0]) ||
+            Pool2.isSDK(o.pools[0]) ||
+            Pool3.isSDK(o.pools[0]) ||
+            Any.isSDK(o.pools[0]))))
+    );
   },
   isAmino(o: any): o is QueryPoolsResponseAmino {
-    return o && (o.$typeUrl === QueryPoolsResponse.typeUrl || Array.isArray(o.pools) && (!o.pools.length || Pool1.isAmino(o.pools[0]) || CosmWasmPool.isAmino(o.pools[0]) || Pool2.isAmino(o.pools[0]) || Pool3.isAmino(o.pools[0]) || Any.isAmino(o.pools[0])));
+    return (
+      o &&
+      (o.$typeUrl === QueryPoolsResponse.typeUrl ||
+        (Array.isArray(o.pools) &&
+          (!o.pools.length ||
+            Pool1.isAmino(o.pools[0]) ||
+            CosmWasmPool.isAmino(o.pools[0]) ||
+            Pool2.isAmino(o.pools[0]) ||
+            Pool3.isAmino(o.pools[0]) ||
+            Any.isAmino(o.pools[0]))))
+    );
   },
-  encode(message: QueryPoolsResponse, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
+  encode(
+    message: QueryPoolsResponse,
+    writer: BinaryWriter = BinaryWriter.create(),
+  ): BinaryWriter {
     for (const v of message.pools) {
-      Any.encode(GlobalDecoderRegistry.wrapAny(v!), writer.uint32(10).fork()).ldelim();
+      Any.encode(
+        GlobalDecoderRegistry.wrapAny(v!),
+        writer.uint32(10).fork(),
+      ).ldelim();
     }
     if (message.pagination !== undefined) {
-      PageResponse.encode(message.pagination, writer.uint32(18).fork()).ldelim();
+      PageResponse.encode(
+        message.pagination,
+        writer.uint32(18).fork(),
+      ).ldelim();
     }
     return writer;
   },
-  decode(input: BinaryReader | Uint8Array, length?: number): QueryPoolsResponse {
-    const reader = input instanceof BinaryReader ? input : new BinaryReader(input);
+  decode(
+    input: BinaryReader | Uint8Array,
+    length?: number,
+  ): QueryPoolsResponse {
+    const reader =
+      input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseQueryPoolsResponse();
     while (reader.pos < end) {
@@ -1218,13 +1959,18 @@ export const QueryPoolsResponse = {
   },
   fromPartial(object: Partial<QueryPoolsResponse>): QueryPoolsResponse {
     const message = createBaseQueryPoolsResponse();
-    message.pools = object.pools?.map(e => GlobalDecoderRegistry.fromPartial(e) as any) || [];
-    message.pagination = object.pagination !== undefined && object.pagination !== null ? PageResponse.fromPartial(object.pagination) : undefined;
+    message.pools =
+      object.pools?.map(e => GlobalDecoderRegistry.fromPartial(e) as any) || [];
+    message.pagination =
+      object.pagination !== undefined && object.pagination !== null
+        ? PageResponse.fromPartial(object.pagination)
+        : undefined;
     return message;
   },
   fromAmino(object: QueryPoolsResponseAmino): QueryPoolsResponse {
     const message = createBaseQueryPoolsResponse();
-    message.pools = object.pools?.map(e => GlobalDecoderRegistry.fromAminoMsg(e)) || [];
+    message.pools =
+      object.pools?.map(e => GlobalDecoderRegistry.fromAminoMsg(e)) || [];
     if (object.pagination !== undefined && object.pagination !== null) {
       message.pagination = PageResponse.fromAmino(object.pagination);
     }
@@ -1233,11 +1979,15 @@ export const QueryPoolsResponse = {
   toAmino(message: QueryPoolsResponse): QueryPoolsResponseAmino {
     const obj: any = {};
     if (message.pools) {
-      obj.pools = message.pools.map(e => e ? GlobalDecoderRegistry.toAminoMsg(e) : undefined);
+      obj.pools = message.pools.map(e =>
+        e ? GlobalDecoderRegistry.toAminoMsg(e) : undefined,
+      );
     } else {
       obj.pools = message.pools;
     }
-    obj.pagination = message.pagination ? PageResponse.toAmino(message.pagination) : undefined;
+    obj.pagination = message.pagination
+      ? PageResponse.toAmino(message.pagination)
+      : undefined;
     return obj;
   },
   fromAminoMsg(object: QueryPoolsResponseAminoMsg): QueryPoolsResponse {
@@ -1251,17 +2001,24 @@ export const QueryPoolsResponse = {
   },
   toProtoMsg(message: QueryPoolsResponse): QueryPoolsResponseProtoMsg {
     return {
-      typeUrl: "/symphony.gamm.v1beta1.QueryPoolsResponse",
-      value: QueryPoolsResponse.encode(message).finish()
+      typeUrl: '/symphony.gamm.v1beta1.QueryPoolsResponse',
+      value: QueryPoolsResponse.encode(message).finish(),
     };
-  }
+  },
 };
 GlobalDecoderRegistry.register(QueryPoolsResponse.typeUrl, QueryPoolsResponse);
 function createBaseQueryNumPoolsRequest(): QueryNumPoolsRequest {
   return {};
 }
+/**
+ * =============================== NumPools
+ * @name QueryNumPoolsRequest
+ * @package symphony.gamm.v1beta1
+ * @see proto type: symphony.gamm.v1beta1.QueryNumPoolsRequest
+ * @deprecated
+ */
 export const QueryNumPoolsRequest = {
-  typeUrl: "/symphony.gamm.v1beta1.QueryNumPoolsRequest",
+  typeUrl: '/symphony.gamm.v1beta1.QueryNumPoolsRequest',
   is(o: any): o is QueryNumPoolsRequest {
     return o && o.$typeUrl === QueryNumPoolsRequest.typeUrl;
   },
@@ -1271,11 +2028,18 @@ export const QueryNumPoolsRequest = {
   isAmino(o: any): o is QueryNumPoolsRequestAmino {
     return o && o.$typeUrl === QueryNumPoolsRequest.typeUrl;
   },
-  encode(_: QueryNumPoolsRequest, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
+  encode(
+    _: QueryNumPoolsRequest,
+    writer: BinaryWriter = BinaryWriter.create(),
+  ): BinaryWriter {
     return writer;
   },
-  decode(input: BinaryReader | Uint8Array, length?: number): QueryNumPoolsRequest {
-    const reader = input instanceof BinaryReader ? input : new BinaryReader(input);
+  decode(
+    input: BinaryReader | Uint8Array,
+    length?: number,
+  ): QueryNumPoolsRequest {
+    const reader =
+      input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseQueryNumPoolsRequest();
     while (reader.pos < end) {
@@ -1311,36 +2075,64 @@ export const QueryNumPoolsRequest = {
   },
   toProtoMsg(message: QueryNumPoolsRequest): QueryNumPoolsRequestProtoMsg {
     return {
-      typeUrl: "/symphony.gamm.v1beta1.QueryNumPoolsRequest",
-      value: QueryNumPoolsRequest.encode(message).finish()
+      typeUrl: '/symphony.gamm.v1beta1.QueryNumPoolsRequest',
+      value: QueryNumPoolsRequest.encode(message).finish(),
     };
-  }
+  },
 };
-GlobalDecoderRegistry.register(QueryNumPoolsRequest.typeUrl, QueryNumPoolsRequest);
+GlobalDecoderRegistry.register(
+  QueryNumPoolsRequest.typeUrl,
+  QueryNumPoolsRequest,
+);
 function createBaseQueryNumPoolsResponse(): QueryNumPoolsResponse {
   return {
-    numPools: BigInt(0)
+    numPools: BigInt(0),
   };
 }
+/**
+ * @name QueryNumPoolsResponse
+ * @package symphony.gamm.v1beta1
+ * @see proto type: symphony.gamm.v1beta1.QueryNumPoolsResponse
+ * @deprecated
+ */
 export const QueryNumPoolsResponse = {
-  typeUrl: "/symphony.gamm.v1beta1.QueryNumPoolsResponse",
+  typeUrl: '/symphony.gamm.v1beta1.QueryNumPoolsResponse',
   is(o: any): o is QueryNumPoolsResponse {
-    return o && (o.$typeUrl === QueryNumPoolsResponse.typeUrl || typeof o.numPools === "bigint");
+    return (
+      o &&
+      (o.$typeUrl === QueryNumPoolsResponse.typeUrl ||
+        typeof o.numPools === 'bigint')
+    );
   },
   isSDK(o: any): o is QueryNumPoolsResponseSDKType {
-    return o && (o.$typeUrl === QueryNumPoolsResponse.typeUrl || typeof o.num_pools === "bigint");
+    return (
+      o &&
+      (o.$typeUrl === QueryNumPoolsResponse.typeUrl ||
+        typeof o.num_pools === 'bigint')
+    );
   },
   isAmino(o: any): o is QueryNumPoolsResponseAmino {
-    return o && (o.$typeUrl === QueryNumPoolsResponse.typeUrl || typeof o.num_pools === "bigint");
+    return (
+      o &&
+      (o.$typeUrl === QueryNumPoolsResponse.typeUrl ||
+        typeof o.num_pools === 'bigint')
+    );
   },
-  encode(message: QueryNumPoolsResponse, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
+  encode(
+    message: QueryNumPoolsResponse,
+    writer: BinaryWriter = BinaryWriter.create(),
+  ): BinaryWriter {
     if (message.numPools !== BigInt(0)) {
       writer.uint32(8).uint64(message.numPools);
     }
     return writer;
   },
-  decode(input: BinaryReader | Uint8Array, length?: number): QueryNumPoolsResponse {
-    const reader = input instanceof BinaryReader ? input : new BinaryReader(input);
+  decode(
+    input: BinaryReader | Uint8Array,
+    length?: number,
+  ): QueryNumPoolsResponse {
+    const reader =
+      input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseQueryNumPoolsResponse();
     while (reader.pos < end) {
@@ -1358,7 +2150,10 @@ export const QueryNumPoolsResponse = {
   },
   fromPartial(object: Partial<QueryNumPoolsResponse>): QueryNumPoolsResponse {
     const message = createBaseQueryNumPoolsResponse();
-    message.numPools = object.numPools !== undefined && object.numPools !== null ? BigInt(object.numPools.toString()) : BigInt(0);
+    message.numPools =
+      object.numPools !== undefined && object.numPools !== null
+        ? BigInt(object.numPools.toString())
+        : BigInt(0);
     return message;
   },
   fromAmino(object: QueryNumPoolsResponseAmino): QueryNumPoolsResponse {
@@ -1370,7 +2165,8 @@ export const QueryNumPoolsResponse = {
   },
   toAmino(message: QueryNumPoolsResponse): QueryNumPoolsResponseAmino {
     const obj: any = {};
-    obj.num_pools = message.numPools !== BigInt(0) ? message.numPools?.toString() : undefined;
+    obj.num_pools =
+      message.numPools !== BigInt(0) ? message.numPools?.toString() : undefined;
     return obj;
   },
   fromAminoMsg(object: QueryNumPoolsResponseAminoMsg): QueryNumPoolsResponse {
@@ -1384,36 +2180,64 @@ export const QueryNumPoolsResponse = {
   },
   toProtoMsg(message: QueryNumPoolsResponse): QueryNumPoolsResponseProtoMsg {
     return {
-      typeUrl: "/symphony.gamm.v1beta1.QueryNumPoolsResponse",
-      value: QueryNumPoolsResponse.encode(message).finish()
+      typeUrl: '/symphony.gamm.v1beta1.QueryNumPoolsResponse',
+      value: QueryNumPoolsResponse.encode(message).finish(),
     };
-  }
+  },
 };
-GlobalDecoderRegistry.register(QueryNumPoolsResponse.typeUrl, QueryNumPoolsResponse);
+GlobalDecoderRegistry.register(
+  QueryNumPoolsResponse.typeUrl,
+  QueryNumPoolsResponse,
+);
 function createBaseQueryPoolTypeRequest(): QueryPoolTypeRequest {
   return {
-    poolId: BigInt(0)
+    poolId: BigInt(0),
   };
 }
+/**
+ * =============================== PoolType
+ * @name QueryPoolTypeRequest
+ * @package symphony.gamm.v1beta1
+ * @see proto type: symphony.gamm.v1beta1.QueryPoolTypeRequest
+ */
 export const QueryPoolTypeRequest = {
-  typeUrl: "/symphony.gamm.v1beta1.QueryPoolTypeRequest",
+  typeUrl: '/symphony.gamm.v1beta1.QueryPoolTypeRequest',
   is(o: any): o is QueryPoolTypeRequest {
-    return o && (o.$typeUrl === QueryPoolTypeRequest.typeUrl || typeof o.poolId === "bigint");
+    return (
+      o &&
+      (o.$typeUrl === QueryPoolTypeRequest.typeUrl ||
+        typeof o.poolId === 'bigint')
+    );
   },
   isSDK(o: any): o is QueryPoolTypeRequestSDKType {
-    return o && (o.$typeUrl === QueryPoolTypeRequest.typeUrl || typeof o.pool_id === "bigint");
+    return (
+      o &&
+      (o.$typeUrl === QueryPoolTypeRequest.typeUrl ||
+        typeof o.pool_id === 'bigint')
+    );
   },
   isAmino(o: any): o is QueryPoolTypeRequestAmino {
-    return o && (o.$typeUrl === QueryPoolTypeRequest.typeUrl || typeof o.pool_id === "bigint");
+    return (
+      o &&
+      (o.$typeUrl === QueryPoolTypeRequest.typeUrl ||
+        typeof o.pool_id === 'bigint')
+    );
   },
-  encode(message: QueryPoolTypeRequest, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
+  encode(
+    message: QueryPoolTypeRequest,
+    writer: BinaryWriter = BinaryWriter.create(),
+  ): BinaryWriter {
     if (message.poolId !== BigInt(0)) {
       writer.uint32(8).uint64(message.poolId);
     }
     return writer;
   },
-  decode(input: BinaryReader | Uint8Array, length?: number): QueryPoolTypeRequest {
-    const reader = input instanceof BinaryReader ? input : new BinaryReader(input);
+  decode(
+    input: BinaryReader | Uint8Array,
+    length?: number,
+  ): QueryPoolTypeRequest {
+    const reader =
+      input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseQueryPoolTypeRequest();
     while (reader.pos < end) {
@@ -1431,7 +2255,10 @@ export const QueryPoolTypeRequest = {
   },
   fromPartial(object: Partial<QueryPoolTypeRequest>): QueryPoolTypeRequest {
     const message = createBaseQueryPoolTypeRequest();
-    message.poolId = object.poolId !== undefined && object.poolId !== null ? BigInt(object.poolId.toString()) : BigInt(0);
+    message.poolId =
+      object.poolId !== undefined && object.poolId !== null
+        ? BigInt(object.poolId.toString())
+        : BigInt(0);
     return message;
   },
   fromAmino(object: QueryPoolTypeRequestAmino): QueryPoolTypeRequest {
@@ -1443,7 +2270,8 @@ export const QueryPoolTypeRequest = {
   },
   toAmino(message: QueryPoolTypeRequest): QueryPoolTypeRequestAmino {
     const obj: any = {};
-    obj.pool_id = message.poolId !== BigInt(0) ? message.poolId?.toString() : undefined;
+    obj.pool_id =
+      message.poolId !== BigInt(0) ? message.poolId?.toString() : undefined;
     return obj;
   },
   fromAminoMsg(object: QueryPoolTypeRequestAminoMsg): QueryPoolTypeRequest {
@@ -1457,36 +2285,63 @@ export const QueryPoolTypeRequest = {
   },
   toProtoMsg(message: QueryPoolTypeRequest): QueryPoolTypeRequestProtoMsg {
     return {
-      typeUrl: "/symphony.gamm.v1beta1.QueryPoolTypeRequest",
-      value: QueryPoolTypeRequest.encode(message).finish()
+      typeUrl: '/symphony.gamm.v1beta1.QueryPoolTypeRequest',
+      value: QueryPoolTypeRequest.encode(message).finish(),
     };
-  }
+  },
 };
-GlobalDecoderRegistry.register(QueryPoolTypeRequest.typeUrl, QueryPoolTypeRequest);
+GlobalDecoderRegistry.register(
+  QueryPoolTypeRequest.typeUrl,
+  QueryPoolTypeRequest,
+);
 function createBaseQueryPoolTypeResponse(): QueryPoolTypeResponse {
   return {
-    poolType: ""
+    poolType: '',
   };
 }
+/**
+ * @name QueryPoolTypeResponse
+ * @package symphony.gamm.v1beta1
+ * @see proto type: symphony.gamm.v1beta1.QueryPoolTypeResponse
+ */
 export const QueryPoolTypeResponse = {
-  typeUrl: "/symphony.gamm.v1beta1.QueryPoolTypeResponse",
+  typeUrl: '/symphony.gamm.v1beta1.QueryPoolTypeResponse',
   is(o: any): o is QueryPoolTypeResponse {
-    return o && (o.$typeUrl === QueryPoolTypeResponse.typeUrl || typeof o.poolType === "string");
+    return (
+      o &&
+      (o.$typeUrl === QueryPoolTypeResponse.typeUrl ||
+        typeof o.poolType === 'string')
+    );
   },
   isSDK(o: any): o is QueryPoolTypeResponseSDKType {
-    return o && (o.$typeUrl === QueryPoolTypeResponse.typeUrl || typeof o.pool_type === "string");
+    return (
+      o &&
+      (o.$typeUrl === QueryPoolTypeResponse.typeUrl ||
+        typeof o.pool_type === 'string')
+    );
   },
   isAmino(o: any): o is QueryPoolTypeResponseAmino {
-    return o && (o.$typeUrl === QueryPoolTypeResponse.typeUrl || typeof o.pool_type === "string");
+    return (
+      o &&
+      (o.$typeUrl === QueryPoolTypeResponse.typeUrl ||
+        typeof o.pool_type === 'string')
+    );
   },
-  encode(message: QueryPoolTypeResponse, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
-    if (message.poolType !== "") {
+  encode(
+    message: QueryPoolTypeResponse,
+    writer: BinaryWriter = BinaryWriter.create(),
+  ): BinaryWriter {
+    if (message.poolType !== '') {
       writer.uint32(10).string(message.poolType);
     }
     return writer;
   },
-  decode(input: BinaryReader | Uint8Array, length?: number): QueryPoolTypeResponse {
-    const reader = input instanceof BinaryReader ? input : new BinaryReader(input);
+  decode(
+    input: BinaryReader | Uint8Array,
+    length?: number,
+  ): QueryPoolTypeResponse {
+    const reader =
+      input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseQueryPoolTypeResponse();
     while (reader.pos < end) {
@@ -1504,7 +2359,7 @@ export const QueryPoolTypeResponse = {
   },
   fromPartial(object: Partial<QueryPoolTypeResponse>): QueryPoolTypeResponse {
     const message = createBaseQueryPoolTypeResponse();
-    message.poolType = object.poolType ?? "";
+    message.poolType = object.poolType ?? '';
     return message;
   },
   fromAmino(object: QueryPoolTypeResponseAmino): QueryPoolTypeResponse {
@@ -1516,7 +2371,7 @@ export const QueryPoolTypeResponse = {
   },
   toAmino(message: QueryPoolTypeResponse): QueryPoolTypeResponseAmino {
     const obj: any = {};
-    obj.pool_type = message.poolType === "" ? undefined : message.poolType;
+    obj.pool_type = message.poolType === '' ? undefined : message.poolType;
     return obj;
   },
   fromAminoMsg(object: QueryPoolTypeResponseAminoMsg): QueryPoolTypeResponse {
@@ -1530,30 +2385,60 @@ export const QueryPoolTypeResponse = {
   },
   toProtoMsg(message: QueryPoolTypeResponse): QueryPoolTypeResponseProtoMsg {
     return {
-      typeUrl: "/symphony.gamm.v1beta1.QueryPoolTypeResponse",
-      value: QueryPoolTypeResponse.encode(message).finish()
+      typeUrl: '/symphony.gamm.v1beta1.QueryPoolTypeResponse',
+      value: QueryPoolTypeResponse.encode(message).finish(),
     };
-  }
+  },
 };
-GlobalDecoderRegistry.register(QueryPoolTypeResponse.typeUrl, QueryPoolTypeResponse);
+GlobalDecoderRegistry.register(
+  QueryPoolTypeResponse.typeUrl,
+  QueryPoolTypeResponse,
+);
 function createBaseQueryCalcJoinPoolSharesRequest(): QueryCalcJoinPoolSharesRequest {
   return {
     poolId: BigInt(0),
-    tokensIn: []
+    tokensIn: [],
   };
 }
+/**
+ * =============================== CalcJoinPoolShares
+ * @name QueryCalcJoinPoolSharesRequest
+ * @package symphony.gamm.v1beta1
+ * @see proto type: symphony.gamm.v1beta1.QueryCalcJoinPoolSharesRequest
+ */
 export const QueryCalcJoinPoolSharesRequest = {
-  typeUrl: "/symphony.gamm.v1beta1.QueryCalcJoinPoolSharesRequest",
+  typeUrl: '/symphony.gamm.v1beta1.QueryCalcJoinPoolSharesRequest',
   is(o: any): o is QueryCalcJoinPoolSharesRequest {
-    return o && (o.$typeUrl === QueryCalcJoinPoolSharesRequest.typeUrl || typeof o.poolId === "bigint" && Array.isArray(o.tokensIn) && (!o.tokensIn.length || Coin.is(o.tokensIn[0])));
+    return (
+      o &&
+      (o.$typeUrl === QueryCalcJoinPoolSharesRequest.typeUrl ||
+        (typeof o.poolId === 'bigint' &&
+          Array.isArray(o.tokensIn) &&
+          (!o.tokensIn.length || Coin.is(o.tokensIn[0]))))
+    );
   },
   isSDK(o: any): o is QueryCalcJoinPoolSharesRequestSDKType {
-    return o && (o.$typeUrl === QueryCalcJoinPoolSharesRequest.typeUrl || typeof o.pool_id === "bigint" && Array.isArray(o.tokens_in) && (!o.tokens_in.length || Coin.isSDK(o.tokens_in[0])));
+    return (
+      o &&
+      (o.$typeUrl === QueryCalcJoinPoolSharesRequest.typeUrl ||
+        (typeof o.pool_id === 'bigint' &&
+          Array.isArray(o.tokens_in) &&
+          (!o.tokens_in.length || Coin.isSDK(o.tokens_in[0]))))
+    );
   },
   isAmino(o: any): o is QueryCalcJoinPoolSharesRequestAmino {
-    return o && (o.$typeUrl === QueryCalcJoinPoolSharesRequest.typeUrl || typeof o.pool_id === "bigint" && Array.isArray(o.tokens_in) && (!o.tokens_in.length || Coin.isAmino(o.tokens_in[0])));
+    return (
+      o &&
+      (o.$typeUrl === QueryCalcJoinPoolSharesRequest.typeUrl ||
+        (typeof o.pool_id === 'bigint' &&
+          Array.isArray(o.tokens_in) &&
+          (!o.tokens_in.length || Coin.isAmino(o.tokens_in[0]))))
+    );
   },
-  encode(message: QueryCalcJoinPoolSharesRequest, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
+  encode(
+    message: QueryCalcJoinPoolSharesRequest,
+    writer: BinaryWriter = BinaryWriter.create(),
+  ): BinaryWriter {
     if (message.poolId !== BigInt(0)) {
       writer.uint32(8).uint64(message.poolId);
     }
@@ -1562,8 +2447,12 @@ export const QueryCalcJoinPoolSharesRequest = {
     }
     return writer;
   },
-  decode(input: BinaryReader | Uint8Array, length?: number): QueryCalcJoinPoolSharesRequest {
-    const reader = input instanceof BinaryReader ? input : new BinaryReader(input);
+  decode(
+    input: BinaryReader | Uint8Array,
+    length?: number,
+  ): QueryCalcJoinPoolSharesRequest {
+    const reader =
+      input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseQueryCalcJoinPoolSharesRequest();
     while (reader.pos < end) {
@@ -1582,13 +2471,20 @@ export const QueryCalcJoinPoolSharesRequest = {
     }
     return message;
   },
-  fromPartial(object: Partial<QueryCalcJoinPoolSharesRequest>): QueryCalcJoinPoolSharesRequest {
+  fromPartial(
+    object: Partial<QueryCalcJoinPoolSharesRequest>,
+  ): QueryCalcJoinPoolSharesRequest {
     const message = createBaseQueryCalcJoinPoolSharesRequest();
-    message.poolId = object.poolId !== undefined && object.poolId !== null ? BigInt(object.poolId.toString()) : BigInt(0);
+    message.poolId =
+      object.poolId !== undefined && object.poolId !== null
+        ? BigInt(object.poolId.toString())
+        : BigInt(0);
     message.tokensIn = object.tokensIn?.map(e => Coin.fromPartial(e)) || [];
     return message;
   },
-  fromAmino(object: QueryCalcJoinPoolSharesRequestAmino): QueryCalcJoinPoolSharesRequest {
+  fromAmino(
+    object: QueryCalcJoinPoolSharesRequestAmino,
+  ): QueryCalcJoinPoolSharesRequest {
     const message = createBaseQueryCalcJoinPoolSharesRequest();
     if (object.pool_id !== undefined && object.pool_id !== null) {
       message.poolId = BigInt(object.pool_id);
@@ -1596,52 +2492,92 @@ export const QueryCalcJoinPoolSharesRequest = {
     message.tokensIn = object.tokens_in?.map(e => Coin.fromAmino(e)) || [];
     return message;
   },
-  toAmino(message: QueryCalcJoinPoolSharesRequest): QueryCalcJoinPoolSharesRequestAmino {
+  toAmino(
+    message: QueryCalcJoinPoolSharesRequest,
+  ): QueryCalcJoinPoolSharesRequestAmino {
     const obj: any = {};
-    obj.pool_id = message.poolId !== BigInt(0) ? message.poolId?.toString() : undefined;
+    obj.pool_id =
+      message.poolId !== BigInt(0) ? message.poolId?.toString() : undefined;
     if (message.tokensIn) {
-      obj.tokens_in = message.tokensIn.map(e => e ? Coin.toAmino(e) : undefined);
+      obj.tokens_in = message.tokensIn.map(e =>
+        e ? Coin.toAmino(e) : undefined,
+      );
     } else {
       obj.tokens_in = message.tokensIn;
     }
     return obj;
   },
-  fromAminoMsg(object: QueryCalcJoinPoolSharesRequestAminoMsg): QueryCalcJoinPoolSharesRequest {
+  fromAminoMsg(
+    object: QueryCalcJoinPoolSharesRequestAminoMsg,
+  ): QueryCalcJoinPoolSharesRequest {
     return QueryCalcJoinPoolSharesRequest.fromAmino(object.value);
   },
-  fromProtoMsg(message: QueryCalcJoinPoolSharesRequestProtoMsg): QueryCalcJoinPoolSharesRequest {
+  fromProtoMsg(
+    message: QueryCalcJoinPoolSharesRequestProtoMsg,
+  ): QueryCalcJoinPoolSharesRequest {
     return QueryCalcJoinPoolSharesRequest.decode(message.value);
   },
   toProto(message: QueryCalcJoinPoolSharesRequest): Uint8Array {
     return QueryCalcJoinPoolSharesRequest.encode(message).finish();
   },
-  toProtoMsg(message: QueryCalcJoinPoolSharesRequest): QueryCalcJoinPoolSharesRequestProtoMsg {
+  toProtoMsg(
+    message: QueryCalcJoinPoolSharesRequest,
+  ): QueryCalcJoinPoolSharesRequestProtoMsg {
     return {
-      typeUrl: "/symphony.gamm.v1beta1.QueryCalcJoinPoolSharesRequest",
-      value: QueryCalcJoinPoolSharesRequest.encode(message).finish()
+      typeUrl: '/symphony.gamm.v1beta1.QueryCalcJoinPoolSharesRequest',
+      value: QueryCalcJoinPoolSharesRequest.encode(message).finish(),
     };
-  }
+  },
 };
-GlobalDecoderRegistry.register(QueryCalcJoinPoolSharesRequest.typeUrl, QueryCalcJoinPoolSharesRequest);
+GlobalDecoderRegistry.register(
+  QueryCalcJoinPoolSharesRequest.typeUrl,
+  QueryCalcJoinPoolSharesRequest,
+);
 function createBaseQueryCalcJoinPoolSharesResponse(): QueryCalcJoinPoolSharesResponse {
   return {
-    shareOutAmount: "",
-    tokensOut: []
+    shareOutAmount: '',
+    tokensOut: [],
   };
 }
+/**
+ * @name QueryCalcJoinPoolSharesResponse
+ * @package symphony.gamm.v1beta1
+ * @see proto type: symphony.gamm.v1beta1.QueryCalcJoinPoolSharesResponse
+ */
 export const QueryCalcJoinPoolSharesResponse = {
-  typeUrl: "/symphony.gamm.v1beta1.QueryCalcJoinPoolSharesResponse",
+  typeUrl: '/symphony.gamm.v1beta1.QueryCalcJoinPoolSharesResponse',
   is(o: any): o is QueryCalcJoinPoolSharesResponse {
-    return o && (o.$typeUrl === QueryCalcJoinPoolSharesResponse.typeUrl || typeof o.shareOutAmount === "string" && Array.isArray(o.tokensOut) && (!o.tokensOut.length || Coin.is(o.tokensOut[0])));
+    return (
+      o &&
+      (o.$typeUrl === QueryCalcJoinPoolSharesResponse.typeUrl ||
+        (typeof o.shareOutAmount === 'string' &&
+          Array.isArray(o.tokensOut) &&
+          (!o.tokensOut.length || Coin.is(o.tokensOut[0]))))
+    );
   },
   isSDK(o: any): o is QueryCalcJoinPoolSharesResponseSDKType {
-    return o && (o.$typeUrl === QueryCalcJoinPoolSharesResponse.typeUrl || typeof o.share_out_amount === "string" && Array.isArray(o.tokens_out) && (!o.tokens_out.length || Coin.isSDK(o.tokens_out[0])));
+    return (
+      o &&
+      (o.$typeUrl === QueryCalcJoinPoolSharesResponse.typeUrl ||
+        (typeof o.share_out_amount === 'string' &&
+          Array.isArray(o.tokens_out) &&
+          (!o.tokens_out.length || Coin.isSDK(o.tokens_out[0]))))
+    );
   },
   isAmino(o: any): o is QueryCalcJoinPoolSharesResponseAmino {
-    return o && (o.$typeUrl === QueryCalcJoinPoolSharesResponse.typeUrl || typeof o.share_out_amount === "string" && Array.isArray(o.tokens_out) && (!o.tokens_out.length || Coin.isAmino(o.tokens_out[0])));
+    return (
+      o &&
+      (o.$typeUrl === QueryCalcJoinPoolSharesResponse.typeUrl ||
+        (typeof o.share_out_amount === 'string' &&
+          Array.isArray(o.tokens_out) &&
+          (!o.tokens_out.length || Coin.isAmino(o.tokens_out[0]))))
+    );
   },
-  encode(message: QueryCalcJoinPoolSharesResponse, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
-    if (message.shareOutAmount !== "") {
+  encode(
+    message: QueryCalcJoinPoolSharesResponse,
+    writer: BinaryWriter = BinaryWriter.create(),
+  ): BinaryWriter {
+    if (message.shareOutAmount !== '') {
       writer.uint32(10).string(message.shareOutAmount);
     }
     for (const v of message.tokensOut) {
@@ -1649,8 +2585,12 @@ export const QueryCalcJoinPoolSharesResponse = {
     }
     return writer;
   },
-  decode(input: BinaryReader | Uint8Array, length?: number): QueryCalcJoinPoolSharesResponse {
-    const reader = input instanceof BinaryReader ? input : new BinaryReader(input);
+  decode(
+    input: BinaryReader | Uint8Array,
+    length?: number,
+  ): QueryCalcJoinPoolSharesResponse {
+    const reader =
+      input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseQueryCalcJoinPoolSharesResponse();
     while (reader.pos < end) {
@@ -1669,75 +2609,123 @@ export const QueryCalcJoinPoolSharesResponse = {
     }
     return message;
   },
-  fromPartial(object: Partial<QueryCalcJoinPoolSharesResponse>): QueryCalcJoinPoolSharesResponse {
+  fromPartial(
+    object: Partial<QueryCalcJoinPoolSharesResponse>,
+  ): QueryCalcJoinPoolSharesResponse {
     const message = createBaseQueryCalcJoinPoolSharesResponse();
-    message.shareOutAmount = object.shareOutAmount ?? "";
+    message.shareOutAmount = object.shareOutAmount ?? '';
     message.tokensOut = object.tokensOut?.map(e => Coin.fromPartial(e)) || [];
     return message;
   },
-  fromAmino(object: QueryCalcJoinPoolSharesResponseAmino): QueryCalcJoinPoolSharesResponse {
+  fromAmino(
+    object: QueryCalcJoinPoolSharesResponseAmino,
+  ): QueryCalcJoinPoolSharesResponse {
     const message = createBaseQueryCalcJoinPoolSharesResponse();
-    if (object.share_out_amount !== undefined && object.share_out_amount !== null) {
+    if (
+      object.share_out_amount !== undefined &&
+      object.share_out_amount !== null
+    ) {
       message.shareOutAmount = object.share_out_amount;
     }
     message.tokensOut = object.tokens_out?.map(e => Coin.fromAmino(e)) || [];
     return message;
   },
-  toAmino(message: QueryCalcJoinPoolSharesResponse): QueryCalcJoinPoolSharesResponseAmino {
+  toAmino(
+    message: QueryCalcJoinPoolSharesResponse,
+  ): QueryCalcJoinPoolSharesResponseAmino {
     const obj: any = {};
-    obj.share_out_amount = message.shareOutAmount === "" ? undefined : message.shareOutAmount;
+    obj.share_out_amount =
+      message.shareOutAmount === '' ? undefined : message.shareOutAmount;
     if (message.tokensOut) {
-      obj.tokens_out = message.tokensOut.map(e => e ? Coin.toAmino(e) : undefined);
+      obj.tokens_out = message.tokensOut.map(e =>
+        e ? Coin.toAmino(e) : undefined,
+      );
     } else {
       obj.tokens_out = message.tokensOut;
     }
     return obj;
   },
-  fromAminoMsg(object: QueryCalcJoinPoolSharesResponseAminoMsg): QueryCalcJoinPoolSharesResponse {
+  fromAminoMsg(
+    object: QueryCalcJoinPoolSharesResponseAminoMsg,
+  ): QueryCalcJoinPoolSharesResponse {
     return QueryCalcJoinPoolSharesResponse.fromAmino(object.value);
   },
-  fromProtoMsg(message: QueryCalcJoinPoolSharesResponseProtoMsg): QueryCalcJoinPoolSharesResponse {
+  fromProtoMsg(
+    message: QueryCalcJoinPoolSharesResponseProtoMsg,
+  ): QueryCalcJoinPoolSharesResponse {
     return QueryCalcJoinPoolSharesResponse.decode(message.value);
   },
   toProto(message: QueryCalcJoinPoolSharesResponse): Uint8Array {
     return QueryCalcJoinPoolSharesResponse.encode(message).finish();
   },
-  toProtoMsg(message: QueryCalcJoinPoolSharesResponse): QueryCalcJoinPoolSharesResponseProtoMsg {
+  toProtoMsg(
+    message: QueryCalcJoinPoolSharesResponse,
+  ): QueryCalcJoinPoolSharesResponseProtoMsg {
     return {
-      typeUrl: "/symphony.gamm.v1beta1.QueryCalcJoinPoolSharesResponse",
-      value: QueryCalcJoinPoolSharesResponse.encode(message).finish()
+      typeUrl: '/symphony.gamm.v1beta1.QueryCalcJoinPoolSharesResponse',
+      value: QueryCalcJoinPoolSharesResponse.encode(message).finish(),
     };
-  }
+  },
 };
-GlobalDecoderRegistry.register(QueryCalcJoinPoolSharesResponse.typeUrl, QueryCalcJoinPoolSharesResponse);
+GlobalDecoderRegistry.register(
+  QueryCalcJoinPoolSharesResponse.typeUrl,
+  QueryCalcJoinPoolSharesResponse,
+);
 function createBaseQueryCalcExitPoolCoinsFromSharesRequest(): QueryCalcExitPoolCoinsFromSharesRequest {
   return {
     poolId: BigInt(0),
-    shareInAmount: ""
+    shareInAmount: '',
   };
 }
+/**
+ * =============================== CalcExitPoolCoinsFromShares
+ * @name QueryCalcExitPoolCoinsFromSharesRequest
+ * @package symphony.gamm.v1beta1
+ * @see proto type: symphony.gamm.v1beta1.QueryCalcExitPoolCoinsFromSharesRequest
+ */
 export const QueryCalcExitPoolCoinsFromSharesRequest = {
-  typeUrl: "/symphony.gamm.v1beta1.QueryCalcExitPoolCoinsFromSharesRequest",
+  typeUrl: '/symphony.gamm.v1beta1.QueryCalcExitPoolCoinsFromSharesRequest',
   is(o: any): o is QueryCalcExitPoolCoinsFromSharesRequest {
-    return o && (o.$typeUrl === QueryCalcExitPoolCoinsFromSharesRequest.typeUrl || typeof o.poolId === "bigint" && typeof o.shareInAmount === "string");
+    return (
+      o &&
+      (o.$typeUrl === QueryCalcExitPoolCoinsFromSharesRequest.typeUrl ||
+        (typeof o.poolId === 'bigint' && typeof o.shareInAmount === 'string'))
+    );
   },
   isSDK(o: any): o is QueryCalcExitPoolCoinsFromSharesRequestSDKType {
-    return o && (o.$typeUrl === QueryCalcExitPoolCoinsFromSharesRequest.typeUrl || typeof o.pool_id === "bigint" && typeof o.share_in_amount === "string");
+    return (
+      o &&
+      (o.$typeUrl === QueryCalcExitPoolCoinsFromSharesRequest.typeUrl ||
+        (typeof o.pool_id === 'bigint' &&
+          typeof o.share_in_amount === 'string'))
+    );
   },
   isAmino(o: any): o is QueryCalcExitPoolCoinsFromSharesRequestAmino {
-    return o && (o.$typeUrl === QueryCalcExitPoolCoinsFromSharesRequest.typeUrl || typeof o.pool_id === "bigint" && typeof o.share_in_amount === "string");
+    return (
+      o &&
+      (o.$typeUrl === QueryCalcExitPoolCoinsFromSharesRequest.typeUrl ||
+        (typeof o.pool_id === 'bigint' &&
+          typeof o.share_in_amount === 'string'))
+    );
   },
-  encode(message: QueryCalcExitPoolCoinsFromSharesRequest, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
+  encode(
+    message: QueryCalcExitPoolCoinsFromSharesRequest,
+    writer: BinaryWriter = BinaryWriter.create(),
+  ): BinaryWriter {
     if (message.poolId !== BigInt(0)) {
       writer.uint32(8).uint64(message.poolId);
     }
-    if (message.shareInAmount !== "") {
+    if (message.shareInAmount !== '') {
       writer.uint32(18).string(message.shareInAmount);
     }
     return writer;
   },
-  decode(input: BinaryReader | Uint8Array, length?: number): QueryCalcExitPoolCoinsFromSharesRequest {
-    const reader = input instanceof BinaryReader ? input : new BinaryReader(input);
+  decode(
+    input: BinaryReader | Uint8Array,
+    length?: number,
+  ): QueryCalcExitPoolCoinsFromSharesRequest {
+    const reader =
+      input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseQueryCalcExitPoolCoinsFromSharesRequest();
     while (reader.pos < end) {
@@ -1756,69 +2744,119 @@ export const QueryCalcExitPoolCoinsFromSharesRequest = {
     }
     return message;
   },
-  fromPartial(object: Partial<QueryCalcExitPoolCoinsFromSharesRequest>): QueryCalcExitPoolCoinsFromSharesRequest {
+  fromPartial(
+    object: Partial<QueryCalcExitPoolCoinsFromSharesRequest>,
+  ): QueryCalcExitPoolCoinsFromSharesRequest {
     const message = createBaseQueryCalcExitPoolCoinsFromSharesRequest();
-    message.poolId = object.poolId !== undefined && object.poolId !== null ? BigInt(object.poolId.toString()) : BigInt(0);
-    message.shareInAmount = object.shareInAmount ?? "";
+    message.poolId =
+      object.poolId !== undefined && object.poolId !== null
+        ? BigInt(object.poolId.toString())
+        : BigInt(0);
+    message.shareInAmount = object.shareInAmount ?? '';
     return message;
   },
-  fromAmino(object: QueryCalcExitPoolCoinsFromSharesRequestAmino): QueryCalcExitPoolCoinsFromSharesRequest {
+  fromAmino(
+    object: QueryCalcExitPoolCoinsFromSharesRequestAmino,
+  ): QueryCalcExitPoolCoinsFromSharesRequest {
     const message = createBaseQueryCalcExitPoolCoinsFromSharesRequest();
     if (object.pool_id !== undefined && object.pool_id !== null) {
       message.poolId = BigInt(object.pool_id);
     }
-    if (object.share_in_amount !== undefined && object.share_in_amount !== null) {
+    if (
+      object.share_in_amount !== undefined &&
+      object.share_in_amount !== null
+    ) {
       message.shareInAmount = object.share_in_amount;
     }
     return message;
   },
-  toAmino(message: QueryCalcExitPoolCoinsFromSharesRequest): QueryCalcExitPoolCoinsFromSharesRequestAmino {
+  toAmino(
+    message: QueryCalcExitPoolCoinsFromSharesRequest,
+  ): QueryCalcExitPoolCoinsFromSharesRequestAmino {
     const obj: any = {};
-    obj.pool_id = message.poolId !== BigInt(0) ? message.poolId?.toString() : undefined;
-    obj.share_in_amount = message.shareInAmount === "" ? undefined : message.shareInAmount;
+    obj.pool_id =
+      message.poolId !== BigInt(0) ? message.poolId?.toString() : undefined;
+    obj.share_in_amount =
+      message.shareInAmount === '' ? undefined : message.shareInAmount;
     return obj;
   },
-  fromAminoMsg(object: QueryCalcExitPoolCoinsFromSharesRequestAminoMsg): QueryCalcExitPoolCoinsFromSharesRequest {
+  fromAminoMsg(
+    object: QueryCalcExitPoolCoinsFromSharesRequestAminoMsg,
+  ): QueryCalcExitPoolCoinsFromSharesRequest {
     return QueryCalcExitPoolCoinsFromSharesRequest.fromAmino(object.value);
   },
-  fromProtoMsg(message: QueryCalcExitPoolCoinsFromSharesRequestProtoMsg): QueryCalcExitPoolCoinsFromSharesRequest {
+  fromProtoMsg(
+    message: QueryCalcExitPoolCoinsFromSharesRequestProtoMsg,
+  ): QueryCalcExitPoolCoinsFromSharesRequest {
     return QueryCalcExitPoolCoinsFromSharesRequest.decode(message.value);
   },
   toProto(message: QueryCalcExitPoolCoinsFromSharesRequest): Uint8Array {
     return QueryCalcExitPoolCoinsFromSharesRequest.encode(message).finish();
   },
-  toProtoMsg(message: QueryCalcExitPoolCoinsFromSharesRequest): QueryCalcExitPoolCoinsFromSharesRequestProtoMsg {
+  toProtoMsg(
+    message: QueryCalcExitPoolCoinsFromSharesRequest,
+  ): QueryCalcExitPoolCoinsFromSharesRequestProtoMsg {
     return {
-      typeUrl: "/symphony.gamm.v1beta1.QueryCalcExitPoolCoinsFromSharesRequest",
-      value: QueryCalcExitPoolCoinsFromSharesRequest.encode(message).finish()
+      typeUrl: '/symphony.gamm.v1beta1.QueryCalcExitPoolCoinsFromSharesRequest',
+      value: QueryCalcExitPoolCoinsFromSharesRequest.encode(message).finish(),
     };
-  }
+  },
 };
-GlobalDecoderRegistry.register(QueryCalcExitPoolCoinsFromSharesRequest.typeUrl, QueryCalcExitPoolCoinsFromSharesRequest);
+GlobalDecoderRegistry.register(
+  QueryCalcExitPoolCoinsFromSharesRequest.typeUrl,
+  QueryCalcExitPoolCoinsFromSharesRequest,
+);
 function createBaseQueryCalcExitPoolCoinsFromSharesResponse(): QueryCalcExitPoolCoinsFromSharesResponse {
   return {
-    tokensOut: []
+    tokensOut: [],
   };
 }
+/**
+ * @name QueryCalcExitPoolCoinsFromSharesResponse
+ * @package symphony.gamm.v1beta1
+ * @see proto type: symphony.gamm.v1beta1.QueryCalcExitPoolCoinsFromSharesResponse
+ */
 export const QueryCalcExitPoolCoinsFromSharesResponse = {
-  typeUrl: "/symphony.gamm.v1beta1.QueryCalcExitPoolCoinsFromSharesResponse",
+  typeUrl: '/symphony.gamm.v1beta1.QueryCalcExitPoolCoinsFromSharesResponse',
   is(o: any): o is QueryCalcExitPoolCoinsFromSharesResponse {
-    return o && (o.$typeUrl === QueryCalcExitPoolCoinsFromSharesResponse.typeUrl || Array.isArray(o.tokensOut) && (!o.tokensOut.length || Coin.is(o.tokensOut[0])));
+    return (
+      o &&
+      (o.$typeUrl === QueryCalcExitPoolCoinsFromSharesResponse.typeUrl ||
+        (Array.isArray(o.tokensOut) &&
+          (!o.tokensOut.length || Coin.is(o.tokensOut[0]))))
+    );
   },
   isSDK(o: any): o is QueryCalcExitPoolCoinsFromSharesResponseSDKType {
-    return o && (o.$typeUrl === QueryCalcExitPoolCoinsFromSharesResponse.typeUrl || Array.isArray(o.tokens_out) && (!o.tokens_out.length || Coin.isSDK(o.tokens_out[0])));
+    return (
+      o &&
+      (o.$typeUrl === QueryCalcExitPoolCoinsFromSharesResponse.typeUrl ||
+        (Array.isArray(o.tokens_out) &&
+          (!o.tokens_out.length || Coin.isSDK(o.tokens_out[0]))))
+    );
   },
   isAmino(o: any): o is QueryCalcExitPoolCoinsFromSharesResponseAmino {
-    return o && (o.$typeUrl === QueryCalcExitPoolCoinsFromSharesResponse.typeUrl || Array.isArray(o.tokens_out) && (!o.tokens_out.length || Coin.isAmino(o.tokens_out[0])));
+    return (
+      o &&
+      (o.$typeUrl === QueryCalcExitPoolCoinsFromSharesResponse.typeUrl ||
+        (Array.isArray(o.tokens_out) &&
+          (!o.tokens_out.length || Coin.isAmino(o.tokens_out[0]))))
+    );
   },
-  encode(message: QueryCalcExitPoolCoinsFromSharesResponse, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
+  encode(
+    message: QueryCalcExitPoolCoinsFromSharesResponse,
+    writer: BinaryWriter = BinaryWriter.create(),
+  ): BinaryWriter {
     for (const v of message.tokensOut) {
       Coin.encode(v!, writer.uint32(10).fork()).ldelim();
     }
     return writer;
   },
-  decode(input: BinaryReader | Uint8Array, length?: number): QueryCalcExitPoolCoinsFromSharesResponse {
-    const reader = input instanceof BinaryReader ? input : new BinaryReader(input);
+  decode(
+    input: BinaryReader | Uint8Array,
+    length?: number,
+  ): QueryCalcExitPoolCoinsFromSharesResponse {
+    const reader =
+      input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseQueryCalcExitPoolCoinsFromSharesResponse();
     while (reader.pos < end) {
@@ -1834,66 +2872,109 @@ export const QueryCalcExitPoolCoinsFromSharesResponse = {
     }
     return message;
   },
-  fromPartial(object: Partial<QueryCalcExitPoolCoinsFromSharesResponse>): QueryCalcExitPoolCoinsFromSharesResponse {
+  fromPartial(
+    object: Partial<QueryCalcExitPoolCoinsFromSharesResponse>,
+  ): QueryCalcExitPoolCoinsFromSharesResponse {
     const message = createBaseQueryCalcExitPoolCoinsFromSharesResponse();
     message.tokensOut = object.tokensOut?.map(e => Coin.fromPartial(e)) || [];
     return message;
   },
-  fromAmino(object: QueryCalcExitPoolCoinsFromSharesResponseAmino): QueryCalcExitPoolCoinsFromSharesResponse {
+  fromAmino(
+    object: QueryCalcExitPoolCoinsFromSharesResponseAmino,
+  ): QueryCalcExitPoolCoinsFromSharesResponse {
     const message = createBaseQueryCalcExitPoolCoinsFromSharesResponse();
     message.tokensOut = object.tokens_out?.map(e => Coin.fromAmino(e)) || [];
     return message;
   },
-  toAmino(message: QueryCalcExitPoolCoinsFromSharesResponse): QueryCalcExitPoolCoinsFromSharesResponseAmino {
+  toAmino(
+    message: QueryCalcExitPoolCoinsFromSharesResponse,
+  ): QueryCalcExitPoolCoinsFromSharesResponseAmino {
     const obj: any = {};
     if (message.tokensOut) {
-      obj.tokens_out = message.tokensOut.map(e => e ? Coin.toAmino(e) : undefined);
+      obj.tokens_out = message.tokensOut.map(e =>
+        e ? Coin.toAmino(e) : undefined,
+      );
     } else {
       obj.tokens_out = message.tokensOut;
     }
     return obj;
   },
-  fromAminoMsg(object: QueryCalcExitPoolCoinsFromSharesResponseAminoMsg): QueryCalcExitPoolCoinsFromSharesResponse {
+  fromAminoMsg(
+    object: QueryCalcExitPoolCoinsFromSharesResponseAminoMsg,
+  ): QueryCalcExitPoolCoinsFromSharesResponse {
     return QueryCalcExitPoolCoinsFromSharesResponse.fromAmino(object.value);
   },
-  fromProtoMsg(message: QueryCalcExitPoolCoinsFromSharesResponseProtoMsg): QueryCalcExitPoolCoinsFromSharesResponse {
+  fromProtoMsg(
+    message: QueryCalcExitPoolCoinsFromSharesResponseProtoMsg,
+  ): QueryCalcExitPoolCoinsFromSharesResponse {
     return QueryCalcExitPoolCoinsFromSharesResponse.decode(message.value);
   },
   toProto(message: QueryCalcExitPoolCoinsFromSharesResponse): Uint8Array {
     return QueryCalcExitPoolCoinsFromSharesResponse.encode(message).finish();
   },
-  toProtoMsg(message: QueryCalcExitPoolCoinsFromSharesResponse): QueryCalcExitPoolCoinsFromSharesResponseProtoMsg {
+  toProtoMsg(
+    message: QueryCalcExitPoolCoinsFromSharesResponse,
+  ): QueryCalcExitPoolCoinsFromSharesResponseProtoMsg {
     return {
-      typeUrl: "/symphony.gamm.v1beta1.QueryCalcExitPoolCoinsFromSharesResponse",
-      value: QueryCalcExitPoolCoinsFromSharesResponse.encode(message).finish()
+      typeUrl:
+        '/symphony.gamm.v1beta1.QueryCalcExitPoolCoinsFromSharesResponse',
+      value: QueryCalcExitPoolCoinsFromSharesResponse.encode(message).finish(),
     };
-  }
+  },
 };
-GlobalDecoderRegistry.register(QueryCalcExitPoolCoinsFromSharesResponse.typeUrl, QueryCalcExitPoolCoinsFromSharesResponse);
+GlobalDecoderRegistry.register(
+  QueryCalcExitPoolCoinsFromSharesResponse.typeUrl,
+  QueryCalcExitPoolCoinsFromSharesResponse,
+);
 function createBaseQueryPoolParamsRequest(): QueryPoolParamsRequest {
   return {
-    poolId: BigInt(0)
+    poolId: BigInt(0),
   };
 }
+/**
+ * =============================== PoolParams
+ * @name QueryPoolParamsRequest
+ * @package symphony.gamm.v1beta1
+ * @see proto type: symphony.gamm.v1beta1.QueryPoolParamsRequest
+ */
 export const QueryPoolParamsRequest = {
-  typeUrl: "/symphony.gamm.v1beta1.QueryPoolParamsRequest",
+  typeUrl: '/symphony.gamm.v1beta1.QueryPoolParamsRequest',
   is(o: any): o is QueryPoolParamsRequest {
-    return o && (o.$typeUrl === QueryPoolParamsRequest.typeUrl || typeof o.poolId === "bigint");
+    return (
+      o &&
+      (o.$typeUrl === QueryPoolParamsRequest.typeUrl ||
+        typeof o.poolId === 'bigint')
+    );
   },
   isSDK(o: any): o is QueryPoolParamsRequestSDKType {
-    return o && (o.$typeUrl === QueryPoolParamsRequest.typeUrl || typeof o.pool_id === "bigint");
+    return (
+      o &&
+      (o.$typeUrl === QueryPoolParamsRequest.typeUrl ||
+        typeof o.pool_id === 'bigint')
+    );
   },
   isAmino(o: any): o is QueryPoolParamsRequestAmino {
-    return o && (o.$typeUrl === QueryPoolParamsRequest.typeUrl || typeof o.pool_id === "bigint");
+    return (
+      o &&
+      (o.$typeUrl === QueryPoolParamsRequest.typeUrl ||
+        typeof o.pool_id === 'bigint')
+    );
   },
-  encode(message: QueryPoolParamsRequest, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
+  encode(
+    message: QueryPoolParamsRequest,
+    writer: BinaryWriter = BinaryWriter.create(),
+  ): BinaryWriter {
     if (message.poolId !== BigInt(0)) {
       writer.uint32(8).uint64(message.poolId);
     }
     return writer;
   },
-  decode(input: BinaryReader | Uint8Array, length?: number): QueryPoolParamsRequest {
-    const reader = input instanceof BinaryReader ? input : new BinaryReader(input);
+  decode(
+    input: BinaryReader | Uint8Array,
+    length?: number,
+  ): QueryPoolParamsRequest {
+    const reader =
+      input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseQueryPoolParamsRequest();
     while (reader.pos < end) {
@@ -1911,7 +2992,10 @@ export const QueryPoolParamsRequest = {
   },
   fromPartial(object: Partial<QueryPoolParamsRequest>): QueryPoolParamsRequest {
     const message = createBaseQueryPoolParamsRequest();
-    message.poolId = object.poolId !== undefined && object.poolId !== null ? BigInt(object.poolId.toString()) : BigInt(0);
+    message.poolId =
+      object.poolId !== undefined && object.poolId !== null
+        ? BigInt(object.poolId.toString())
+        : BigInt(0);
     return message;
   },
   fromAmino(object: QueryPoolParamsRequestAmino): QueryPoolParamsRequest {
@@ -1923,13 +3007,16 @@ export const QueryPoolParamsRequest = {
   },
   toAmino(message: QueryPoolParamsRequest): QueryPoolParamsRequestAmino {
     const obj: any = {};
-    obj.pool_id = message.poolId !== BigInt(0) ? message.poolId?.toString() : undefined;
+    obj.pool_id =
+      message.poolId !== BigInt(0) ? message.poolId?.toString() : undefined;
     return obj;
   },
   fromAminoMsg(object: QueryPoolParamsRequestAminoMsg): QueryPoolParamsRequest {
     return QueryPoolParamsRequest.fromAmino(object.value);
   },
-  fromProtoMsg(message: QueryPoolParamsRequestProtoMsg): QueryPoolParamsRequest {
+  fromProtoMsg(
+    message: QueryPoolParamsRequestProtoMsg,
+  ): QueryPoolParamsRequest {
     return QueryPoolParamsRequest.decode(message.value);
   },
   toProto(message: QueryPoolParamsRequest): Uint8Array {
@@ -1937,19 +3024,27 @@ export const QueryPoolParamsRequest = {
   },
   toProtoMsg(message: QueryPoolParamsRequest): QueryPoolParamsRequestProtoMsg {
     return {
-      typeUrl: "/symphony.gamm.v1beta1.QueryPoolParamsRequest",
-      value: QueryPoolParamsRequest.encode(message).finish()
+      typeUrl: '/symphony.gamm.v1beta1.QueryPoolParamsRequest',
+      value: QueryPoolParamsRequest.encode(message).finish(),
     };
-  }
+  },
 };
-GlobalDecoderRegistry.register(QueryPoolParamsRequest.typeUrl, QueryPoolParamsRequest);
+GlobalDecoderRegistry.register(
+  QueryPoolParamsRequest.typeUrl,
+  QueryPoolParamsRequest,
+);
 function createBaseQueryPoolParamsResponse(): QueryPoolParamsResponse {
   return {
-    params: undefined
+    params: undefined,
   };
 }
+/**
+ * @name QueryPoolParamsResponse
+ * @package symphony.gamm.v1beta1
+ * @see proto type: symphony.gamm.v1beta1.QueryPoolParamsResponse
+ */
 export const QueryPoolParamsResponse = {
-  typeUrl: "/symphony.gamm.v1beta1.QueryPoolParamsResponse",
+  typeUrl: '/symphony.gamm.v1beta1.QueryPoolParamsResponse',
   is(o: any): o is QueryPoolParamsResponse {
     return o && o.$typeUrl === QueryPoolParamsResponse.typeUrl;
   },
@@ -1959,14 +3054,21 @@ export const QueryPoolParamsResponse = {
   isAmino(o: any): o is QueryPoolParamsResponseAmino {
     return o && o.$typeUrl === QueryPoolParamsResponse.typeUrl;
   },
-  encode(message: QueryPoolParamsResponse, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
+  encode(
+    message: QueryPoolParamsResponse,
+    writer: BinaryWriter = BinaryWriter.create(),
+  ): BinaryWriter {
     if (message.params !== undefined) {
       Any.encode(message.params, writer.uint32(10).fork()).ldelim();
     }
     return writer;
   },
-  decode(input: BinaryReader | Uint8Array, length?: number): QueryPoolParamsResponse {
-    const reader = input instanceof BinaryReader ? input : new BinaryReader(input);
+  decode(
+    input: BinaryReader | Uint8Array,
+    length?: number,
+  ): QueryPoolParamsResponse {
+    const reader =
+      input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseQueryPoolParamsResponse();
     while (reader.pos < end) {
@@ -1982,9 +3084,14 @@ export const QueryPoolParamsResponse = {
     }
     return message;
   },
-  fromPartial(object: Partial<QueryPoolParamsResponse>): QueryPoolParamsResponse {
+  fromPartial(
+    object: Partial<QueryPoolParamsResponse>,
+  ): QueryPoolParamsResponse {
     const message = createBaseQueryPoolParamsResponse();
-    message.params = object.params !== undefined && object.params !== null ? Any.fromPartial(object.params) : undefined;
+    message.params =
+      object.params !== undefined && object.params !== null
+        ? Any.fromPartial(object.params)
+        : undefined;
     return message;
   },
   fromAmino(object: QueryPoolParamsResponseAmino): QueryPoolParamsResponse {
@@ -1999,47 +3106,83 @@ export const QueryPoolParamsResponse = {
     obj.params = message.params ? Any.toAmino(message.params) : undefined;
     return obj;
   },
-  fromAminoMsg(object: QueryPoolParamsResponseAminoMsg): QueryPoolParamsResponse {
+  fromAminoMsg(
+    object: QueryPoolParamsResponseAminoMsg,
+  ): QueryPoolParamsResponse {
     return QueryPoolParamsResponse.fromAmino(object.value);
   },
-  fromProtoMsg(message: QueryPoolParamsResponseProtoMsg): QueryPoolParamsResponse {
+  fromProtoMsg(
+    message: QueryPoolParamsResponseProtoMsg,
+  ): QueryPoolParamsResponse {
     return QueryPoolParamsResponse.decode(message.value);
   },
   toProto(message: QueryPoolParamsResponse): Uint8Array {
     return QueryPoolParamsResponse.encode(message).finish();
   },
-  toProtoMsg(message: QueryPoolParamsResponse): QueryPoolParamsResponseProtoMsg {
+  toProtoMsg(
+    message: QueryPoolParamsResponse,
+  ): QueryPoolParamsResponseProtoMsg {
     return {
-      typeUrl: "/symphony.gamm.v1beta1.QueryPoolParamsResponse",
-      value: QueryPoolParamsResponse.encode(message).finish()
+      typeUrl: '/symphony.gamm.v1beta1.QueryPoolParamsResponse',
+      value: QueryPoolParamsResponse.encode(message).finish(),
     };
-  }
+  },
 };
-GlobalDecoderRegistry.register(QueryPoolParamsResponse.typeUrl, QueryPoolParamsResponse);
+GlobalDecoderRegistry.register(
+  QueryPoolParamsResponse.typeUrl,
+  QueryPoolParamsResponse,
+);
 function createBaseQueryTotalPoolLiquidityRequest(): QueryTotalPoolLiquidityRequest {
   return {
-    poolId: BigInt(0)
+    poolId: BigInt(0),
   };
 }
+/**
+ * =============================== PoolLiquidity
+ * Deprecated: please use the alternative in x/poolmanager
+ * @name QueryTotalPoolLiquidityRequest
+ * @package symphony.gamm.v1beta1
+ * @see proto type: symphony.gamm.v1beta1.QueryTotalPoolLiquidityRequest
+ * @deprecated
+ */
 export const QueryTotalPoolLiquidityRequest = {
-  typeUrl: "/symphony.gamm.v1beta1.QueryTotalPoolLiquidityRequest",
+  typeUrl: '/symphony.gamm.v1beta1.QueryTotalPoolLiquidityRequest',
   is(o: any): o is QueryTotalPoolLiquidityRequest {
-    return o && (o.$typeUrl === QueryTotalPoolLiquidityRequest.typeUrl || typeof o.poolId === "bigint");
+    return (
+      o &&
+      (o.$typeUrl === QueryTotalPoolLiquidityRequest.typeUrl ||
+        typeof o.poolId === 'bigint')
+    );
   },
   isSDK(o: any): o is QueryTotalPoolLiquidityRequestSDKType {
-    return o && (o.$typeUrl === QueryTotalPoolLiquidityRequest.typeUrl || typeof o.pool_id === "bigint");
+    return (
+      o &&
+      (o.$typeUrl === QueryTotalPoolLiquidityRequest.typeUrl ||
+        typeof o.pool_id === 'bigint')
+    );
   },
   isAmino(o: any): o is QueryTotalPoolLiquidityRequestAmino {
-    return o && (o.$typeUrl === QueryTotalPoolLiquidityRequest.typeUrl || typeof o.pool_id === "bigint");
+    return (
+      o &&
+      (o.$typeUrl === QueryTotalPoolLiquidityRequest.typeUrl ||
+        typeof o.pool_id === 'bigint')
+    );
   },
-  encode(message: QueryTotalPoolLiquidityRequest, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
+  encode(
+    message: QueryTotalPoolLiquidityRequest,
+    writer: BinaryWriter = BinaryWriter.create(),
+  ): BinaryWriter {
     if (message.poolId !== BigInt(0)) {
       writer.uint32(8).uint64(message.poolId);
     }
     return writer;
   },
-  decode(input: BinaryReader | Uint8Array, length?: number): QueryTotalPoolLiquidityRequest {
-    const reader = input instanceof BinaryReader ? input : new BinaryReader(input);
+  decode(
+    input: BinaryReader | Uint8Array,
+    length?: number,
+  ): QueryTotalPoolLiquidityRequest {
+    const reader =
+      input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseQueryTotalPoolLiquidityRequest();
     while (reader.pos < end) {
@@ -2055,64 +3198,112 @@ export const QueryTotalPoolLiquidityRequest = {
     }
     return message;
   },
-  fromPartial(object: Partial<QueryTotalPoolLiquidityRequest>): QueryTotalPoolLiquidityRequest {
+  fromPartial(
+    object: Partial<QueryTotalPoolLiquidityRequest>,
+  ): QueryTotalPoolLiquidityRequest {
     const message = createBaseQueryTotalPoolLiquidityRequest();
-    message.poolId = object.poolId !== undefined && object.poolId !== null ? BigInt(object.poolId.toString()) : BigInt(0);
+    message.poolId =
+      object.poolId !== undefined && object.poolId !== null
+        ? BigInt(object.poolId.toString())
+        : BigInt(0);
     return message;
   },
-  fromAmino(object: QueryTotalPoolLiquidityRequestAmino): QueryTotalPoolLiquidityRequest {
+  fromAmino(
+    object: QueryTotalPoolLiquidityRequestAmino,
+  ): QueryTotalPoolLiquidityRequest {
     const message = createBaseQueryTotalPoolLiquidityRequest();
     if (object.pool_id !== undefined && object.pool_id !== null) {
       message.poolId = BigInt(object.pool_id);
     }
     return message;
   },
-  toAmino(message: QueryTotalPoolLiquidityRequest): QueryTotalPoolLiquidityRequestAmino {
+  toAmino(
+    message: QueryTotalPoolLiquidityRequest,
+  ): QueryTotalPoolLiquidityRequestAmino {
     const obj: any = {};
-    obj.pool_id = message.poolId !== BigInt(0) ? message.poolId?.toString() : undefined;
+    obj.pool_id =
+      message.poolId !== BigInt(0) ? message.poolId?.toString() : undefined;
     return obj;
   },
-  fromAminoMsg(object: QueryTotalPoolLiquidityRequestAminoMsg): QueryTotalPoolLiquidityRequest {
+  fromAminoMsg(
+    object: QueryTotalPoolLiquidityRequestAminoMsg,
+  ): QueryTotalPoolLiquidityRequest {
     return QueryTotalPoolLiquidityRequest.fromAmino(object.value);
   },
-  fromProtoMsg(message: QueryTotalPoolLiquidityRequestProtoMsg): QueryTotalPoolLiquidityRequest {
+  fromProtoMsg(
+    message: QueryTotalPoolLiquidityRequestProtoMsg,
+  ): QueryTotalPoolLiquidityRequest {
     return QueryTotalPoolLiquidityRequest.decode(message.value);
   },
   toProto(message: QueryTotalPoolLiquidityRequest): Uint8Array {
     return QueryTotalPoolLiquidityRequest.encode(message).finish();
   },
-  toProtoMsg(message: QueryTotalPoolLiquidityRequest): QueryTotalPoolLiquidityRequestProtoMsg {
+  toProtoMsg(
+    message: QueryTotalPoolLiquidityRequest,
+  ): QueryTotalPoolLiquidityRequestProtoMsg {
     return {
-      typeUrl: "/symphony.gamm.v1beta1.QueryTotalPoolLiquidityRequest",
-      value: QueryTotalPoolLiquidityRequest.encode(message).finish()
+      typeUrl: '/symphony.gamm.v1beta1.QueryTotalPoolLiquidityRequest',
+      value: QueryTotalPoolLiquidityRequest.encode(message).finish(),
     };
-  }
+  },
 };
-GlobalDecoderRegistry.register(QueryTotalPoolLiquidityRequest.typeUrl, QueryTotalPoolLiquidityRequest);
+GlobalDecoderRegistry.register(
+  QueryTotalPoolLiquidityRequest.typeUrl,
+  QueryTotalPoolLiquidityRequest,
+);
 function createBaseQueryTotalPoolLiquidityResponse(): QueryTotalPoolLiquidityResponse {
   return {
-    liquidity: []
+    liquidity: [],
   };
 }
+/**
+ * Deprecated: please use the alternative in x/poolmanager
+ * @name QueryTotalPoolLiquidityResponse
+ * @package symphony.gamm.v1beta1
+ * @see proto type: symphony.gamm.v1beta1.QueryTotalPoolLiquidityResponse
+ * @deprecated
+ */
 export const QueryTotalPoolLiquidityResponse = {
-  typeUrl: "/symphony.gamm.v1beta1.QueryTotalPoolLiquidityResponse",
+  typeUrl: '/symphony.gamm.v1beta1.QueryTotalPoolLiquidityResponse',
   is(o: any): o is QueryTotalPoolLiquidityResponse {
-    return o && (o.$typeUrl === QueryTotalPoolLiquidityResponse.typeUrl || Array.isArray(o.liquidity) && (!o.liquidity.length || Coin.is(o.liquidity[0])));
+    return (
+      o &&
+      (o.$typeUrl === QueryTotalPoolLiquidityResponse.typeUrl ||
+        (Array.isArray(o.liquidity) &&
+          (!o.liquidity.length || Coin.is(o.liquidity[0]))))
+    );
   },
   isSDK(o: any): o is QueryTotalPoolLiquidityResponseSDKType {
-    return o && (o.$typeUrl === QueryTotalPoolLiquidityResponse.typeUrl || Array.isArray(o.liquidity) && (!o.liquidity.length || Coin.isSDK(o.liquidity[0])));
+    return (
+      o &&
+      (o.$typeUrl === QueryTotalPoolLiquidityResponse.typeUrl ||
+        (Array.isArray(o.liquidity) &&
+          (!o.liquidity.length || Coin.isSDK(o.liquidity[0]))))
+    );
   },
   isAmino(o: any): o is QueryTotalPoolLiquidityResponseAmino {
-    return o && (o.$typeUrl === QueryTotalPoolLiquidityResponse.typeUrl || Array.isArray(o.liquidity) && (!o.liquidity.length || Coin.isAmino(o.liquidity[0])));
+    return (
+      o &&
+      (o.$typeUrl === QueryTotalPoolLiquidityResponse.typeUrl ||
+        (Array.isArray(o.liquidity) &&
+          (!o.liquidity.length || Coin.isAmino(o.liquidity[0]))))
+    );
   },
-  encode(message: QueryTotalPoolLiquidityResponse, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
+  encode(
+    message: QueryTotalPoolLiquidityResponse,
+    writer: BinaryWriter = BinaryWriter.create(),
+  ): BinaryWriter {
     for (const v of message.liquidity) {
       Coin.encode(v!, writer.uint32(10).fork()).ldelim();
     }
     return writer;
   },
-  decode(input: BinaryReader | Uint8Array, length?: number): QueryTotalPoolLiquidityResponse {
-    const reader = input instanceof BinaryReader ? input : new BinaryReader(input);
+  decode(
+    input: BinaryReader | Uint8Array,
+    length?: number,
+  ): QueryTotalPoolLiquidityResponse {
+    const reader =
+      input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseQueryTotalPoolLiquidityResponse();
     while (reader.pos < end) {
@@ -2128,66 +3319,108 @@ export const QueryTotalPoolLiquidityResponse = {
     }
     return message;
   },
-  fromPartial(object: Partial<QueryTotalPoolLiquidityResponse>): QueryTotalPoolLiquidityResponse {
+  fromPartial(
+    object: Partial<QueryTotalPoolLiquidityResponse>,
+  ): QueryTotalPoolLiquidityResponse {
     const message = createBaseQueryTotalPoolLiquidityResponse();
     message.liquidity = object.liquidity?.map(e => Coin.fromPartial(e)) || [];
     return message;
   },
-  fromAmino(object: QueryTotalPoolLiquidityResponseAmino): QueryTotalPoolLiquidityResponse {
+  fromAmino(
+    object: QueryTotalPoolLiquidityResponseAmino,
+  ): QueryTotalPoolLiquidityResponse {
     const message = createBaseQueryTotalPoolLiquidityResponse();
     message.liquidity = object.liquidity?.map(e => Coin.fromAmino(e)) || [];
     return message;
   },
-  toAmino(message: QueryTotalPoolLiquidityResponse): QueryTotalPoolLiquidityResponseAmino {
+  toAmino(
+    message: QueryTotalPoolLiquidityResponse,
+  ): QueryTotalPoolLiquidityResponseAmino {
     const obj: any = {};
     if (message.liquidity) {
-      obj.liquidity = message.liquidity.map(e => e ? Coin.toAmino(e) : undefined);
+      obj.liquidity = message.liquidity.map(e =>
+        e ? Coin.toAmino(e) : undefined,
+      );
     } else {
       obj.liquidity = message.liquidity;
     }
     return obj;
   },
-  fromAminoMsg(object: QueryTotalPoolLiquidityResponseAminoMsg): QueryTotalPoolLiquidityResponse {
+  fromAminoMsg(
+    object: QueryTotalPoolLiquidityResponseAminoMsg,
+  ): QueryTotalPoolLiquidityResponse {
     return QueryTotalPoolLiquidityResponse.fromAmino(object.value);
   },
-  fromProtoMsg(message: QueryTotalPoolLiquidityResponseProtoMsg): QueryTotalPoolLiquidityResponse {
+  fromProtoMsg(
+    message: QueryTotalPoolLiquidityResponseProtoMsg,
+  ): QueryTotalPoolLiquidityResponse {
     return QueryTotalPoolLiquidityResponse.decode(message.value);
   },
   toProto(message: QueryTotalPoolLiquidityResponse): Uint8Array {
     return QueryTotalPoolLiquidityResponse.encode(message).finish();
   },
-  toProtoMsg(message: QueryTotalPoolLiquidityResponse): QueryTotalPoolLiquidityResponseProtoMsg {
+  toProtoMsg(
+    message: QueryTotalPoolLiquidityResponse,
+  ): QueryTotalPoolLiquidityResponseProtoMsg {
     return {
-      typeUrl: "/symphony.gamm.v1beta1.QueryTotalPoolLiquidityResponse",
-      value: QueryTotalPoolLiquidityResponse.encode(message).finish()
+      typeUrl: '/symphony.gamm.v1beta1.QueryTotalPoolLiquidityResponse',
+      value: QueryTotalPoolLiquidityResponse.encode(message).finish(),
     };
-  }
+  },
 };
-GlobalDecoderRegistry.register(QueryTotalPoolLiquidityResponse.typeUrl, QueryTotalPoolLiquidityResponse);
+GlobalDecoderRegistry.register(
+  QueryTotalPoolLiquidityResponse.typeUrl,
+  QueryTotalPoolLiquidityResponse,
+);
 function createBaseQueryTotalSharesRequest(): QueryTotalSharesRequest {
   return {
-    poolId: BigInt(0)
+    poolId: BigInt(0),
   };
 }
+/**
+ * =============================== TotalShares
+ * @name QueryTotalSharesRequest
+ * @package symphony.gamm.v1beta1
+ * @see proto type: symphony.gamm.v1beta1.QueryTotalSharesRequest
+ */
 export const QueryTotalSharesRequest = {
-  typeUrl: "/symphony.gamm.v1beta1.QueryTotalSharesRequest",
+  typeUrl: '/symphony.gamm.v1beta1.QueryTotalSharesRequest',
   is(o: any): o is QueryTotalSharesRequest {
-    return o && (o.$typeUrl === QueryTotalSharesRequest.typeUrl || typeof o.poolId === "bigint");
+    return (
+      o &&
+      (o.$typeUrl === QueryTotalSharesRequest.typeUrl ||
+        typeof o.poolId === 'bigint')
+    );
   },
   isSDK(o: any): o is QueryTotalSharesRequestSDKType {
-    return o && (o.$typeUrl === QueryTotalSharesRequest.typeUrl || typeof o.pool_id === "bigint");
+    return (
+      o &&
+      (o.$typeUrl === QueryTotalSharesRequest.typeUrl ||
+        typeof o.pool_id === 'bigint')
+    );
   },
   isAmino(o: any): o is QueryTotalSharesRequestAmino {
-    return o && (o.$typeUrl === QueryTotalSharesRequest.typeUrl || typeof o.pool_id === "bigint");
+    return (
+      o &&
+      (o.$typeUrl === QueryTotalSharesRequest.typeUrl ||
+        typeof o.pool_id === 'bigint')
+    );
   },
-  encode(message: QueryTotalSharesRequest, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
+  encode(
+    message: QueryTotalSharesRequest,
+    writer: BinaryWriter = BinaryWriter.create(),
+  ): BinaryWriter {
     if (message.poolId !== BigInt(0)) {
       writer.uint32(8).uint64(message.poolId);
     }
     return writer;
   },
-  decode(input: BinaryReader | Uint8Array, length?: number): QueryTotalSharesRequest {
-    const reader = input instanceof BinaryReader ? input : new BinaryReader(input);
+  decode(
+    input: BinaryReader | Uint8Array,
+    length?: number,
+  ): QueryTotalSharesRequest {
+    const reader =
+      input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseQueryTotalSharesRequest();
     while (reader.pos < end) {
@@ -2203,9 +3436,14 @@ export const QueryTotalSharesRequest = {
     }
     return message;
   },
-  fromPartial(object: Partial<QueryTotalSharesRequest>): QueryTotalSharesRequest {
+  fromPartial(
+    object: Partial<QueryTotalSharesRequest>,
+  ): QueryTotalSharesRequest {
     const message = createBaseQueryTotalSharesRequest();
-    message.poolId = object.poolId !== undefined && object.poolId !== null ? BigInt(object.poolId.toString()) : BigInt(0);
+    message.poolId =
+      object.poolId !== undefined && object.poolId !== null
+        ? BigInt(object.poolId.toString())
+        : BigInt(0);
     return message;
   },
   fromAmino(object: QueryTotalSharesRequestAmino): QueryTotalSharesRequest {
@@ -2217,50 +3455,84 @@ export const QueryTotalSharesRequest = {
   },
   toAmino(message: QueryTotalSharesRequest): QueryTotalSharesRequestAmino {
     const obj: any = {};
-    obj.pool_id = message.poolId !== BigInt(0) ? message.poolId?.toString() : undefined;
+    obj.pool_id =
+      message.poolId !== BigInt(0) ? message.poolId?.toString() : undefined;
     return obj;
   },
-  fromAminoMsg(object: QueryTotalSharesRequestAminoMsg): QueryTotalSharesRequest {
+  fromAminoMsg(
+    object: QueryTotalSharesRequestAminoMsg,
+  ): QueryTotalSharesRequest {
     return QueryTotalSharesRequest.fromAmino(object.value);
   },
-  fromProtoMsg(message: QueryTotalSharesRequestProtoMsg): QueryTotalSharesRequest {
+  fromProtoMsg(
+    message: QueryTotalSharesRequestProtoMsg,
+  ): QueryTotalSharesRequest {
     return QueryTotalSharesRequest.decode(message.value);
   },
   toProto(message: QueryTotalSharesRequest): Uint8Array {
     return QueryTotalSharesRequest.encode(message).finish();
   },
-  toProtoMsg(message: QueryTotalSharesRequest): QueryTotalSharesRequestProtoMsg {
+  toProtoMsg(
+    message: QueryTotalSharesRequest,
+  ): QueryTotalSharesRequestProtoMsg {
     return {
-      typeUrl: "/symphony.gamm.v1beta1.QueryTotalSharesRequest",
-      value: QueryTotalSharesRequest.encode(message).finish()
+      typeUrl: '/symphony.gamm.v1beta1.QueryTotalSharesRequest',
+      value: QueryTotalSharesRequest.encode(message).finish(),
     };
-  }
+  },
 };
-GlobalDecoderRegistry.register(QueryTotalSharesRequest.typeUrl, QueryTotalSharesRequest);
+GlobalDecoderRegistry.register(
+  QueryTotalSharesRequest.typeUrl,
+  QueryTotalSharesRequest,
+);
 function createBaseQueryTotalSharesResponse(): QueryTotalSharesResponse {
   return {
-    totalShares: Coin.fromPartial({})
+    totalShares: Coin.fromPartial({}),
   };
 }
+/**
+ * @name QueryTotalSharesResponse
+ * @package symphony.gamm.v1beta1
+ * @see proto type: symphony.gamm.v1beta1.QueryTotalSharesResponse
+ */
 export const QueryTotalSharesResponse = {
-  typeUrl: "/symphony.gamm.v1beta1.QueryTotalSharesResponse",
+  typeUrl: '/symphony.gamm.v1beta1.QueryTotalSharesResponse',
   is(o: any): o is QueryTotalSharesResponse {
-    return o && (o.$typeUrl === QueryTotalSharesResponse.typeUrl || Coin.is(o.totalShares));
+    return (
+      o &&
+      (o.$typeUrl === QueryTotalSharesResponse.typeUrl ||
+        Coin.is(o.totalShares))
+    );
   },
   isSDK(o: any): o is QueryTotalSharesResponseSDKType {
-    return o && (o.$typeUrl === QueryTotalSharesResponse.typeUrl || Coin.isSDK(o.total_shares));
+    return (
+      o &&
+      (o.$typeUrl === QueryTotalSharesResponse.typeUrl ||
+        Coin.isSDK(o.total_shares))
+    );
   },
   isAmino(o: any): o is QueryTotalSharesResponseAmino {
-    return o && (o.$typeUrl === QueryTotalSharesResponse.typeUrl || Coin.isAmino(o.total_shares));
+    return (
+      o &&
+      (o.$typeUrl === QueryTotalSharesResponse.typeUrl ||
+        Coin.isAmino(o.total_shares))
+    );
   },
-  encode(message: QueryTotalSharesResponse, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
+  encode(
+    message: QueryTotalSharesResponse,
+    writer: BinaryWriter = BinaryWriter.create(),
+  ): BinaryWriter {
     if (message.totalShares !== undefined) {
       Coin.encode(message.totalShares, writer.uint32(10).fork()).ldelim();
     }
     return writer;
   },
-  decode(input: BinaryReader | Uint8Array, length?: number): QueryTotalSharesResponse {
-    const reader = input instanceof BinaryReader ? input : new BinaryReader(input);
+  decode(
+    input: BinaryReader | Uint8Array,
+    length?: number,
+  ): QueryTotalSharesResponse {
+    const reader =
+      input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseQueryTotalSharesResponse();
     while (reader.pos < end) {
@@ -2276,9 +3548,14 @@ export const QueryTotalSharesResponse = {
     }
     return message;
   },
-  fromPartial(object: Partial<QueryTotalSharesResponse>): QueryTotalSharesResponse {
+  fromPartial(
+    object: Partial<QueryTotalSharesResponse>,
+  ): QueryTotalSharesResponse {
     const message = createBaseQueryTotalSharesResponse();
-    message.totalShares = object.totalShares !== undefined && object.totalShares !== null ? Coin.fromPartial(object.totalShares) : undefined;
+    message.totalShares =
+      object.totalShares !== undefined && object.totalShares !== null
+        ? Coin.fromPartial(object.totalShares)
+        : undefined;
     return message;
   },
   fromAmino(object: QueryTotalSharesResponseAmino): QueryTotalSharesResponse {
@@ -2290,44 +3567,82 @@ export const QueryTotalSharesResponse = {
   },
   toAmino(message: QueryTotalSharesResponse): QueryTotalSharesResponseAmino {
     const obj: any = {};
-    obj.total_shares = message.totalShares ? Coin.toAmino(message.totalShares) : undefined;
+    obj.total_shares = message.totalShares
+      ? Coin.toAmino(message.totalShares)
+      : undefined;
     return obj;
   },
-  fromAminoMsg(object: QueryTotalSharesResponseAminoMsg): QueryTotalSharesResponse {
+  fromAminoMsg(
+    object: QueryTotalSharesResponseAminoMsg,
+  ): QueryTotalSharesResponse {
     return QueryTotalSharesResponse.fromAmino(object.value);
   },
-  fromProtoMsg(message: QueryTotalSharesResponseProtoMsg): QueryTotalSharesResponse {
+  fromProtoMsg(
+    message: QueryTotalSharesResponseProtoMsg,
+  ): QueryTotalSharesResponse {
     return QueryTotalSharesResponse.decode(message.value);
   },
   toProto(message: QueryTotalSharesResponse): Uint8Array {
     return QueryTotalSharesResponse.encode(message).finish();
   },
-  toProtoMsg(message: QueryTotalSharesResponse): QueryTotalSharesResponseProtoMsg {
+  toProtoMsg(
+    message: QueryTotalSharesResponse,
+  ): QueryTotalSharesResponseProtoMsg {
     return {
-      typeUrl: "/symphony.gamm.v1beta1.QueryTotalSharesResponse",
-      value: QueryTotalSharesResponse.encode(message).finish()
+      typeUrl: '/symphony.gamm.v1beta1.QueryTotalSharesResponse',
+      value: QueryTotalSharesResponse.encode(message).finish(),
     };
-  }
+  },
 };
-GlobalDecoderRegistry.register(QueryTotalSharesResponse.typeUrl, QueryTotalSharesResponse);
+GlobalDecoderRegistry.register(
+  QueryTotalSharesResponse.typeUrl,
+  QueryTotalSharesResponse,
+);
 function createBaseQueryCalcJoinPoolNoSwapSharesRequest(): QueryCalcJoinPoolNoSwapSharesRequest {
   return {
     poolId: BigInt(0),
-    tokensIn: []
+    tokensIn: [],
   };
 }
+/**
+ * =============================== CalcJoinPoolNoSwapShares
+ * @name QueryCalcJoinPoolNoSwapSharesRequest
+ * @package symphony.gamm.v1beta1
+ * @see proto type: symphony.gamm.v1beta1.QueryCalcJoinPoolNoSwapSharesRequest
+ */
 export const QueryCalcJoinPoolNoSwapSharesRequest = {
-  typeUrl: "/symphony.gamm.v1beta1.QueryCalcJoinPoolNoSwapSharesRequest",
+  typeUrl: '/symphony.gamm.v1beta1.QueryCalcJoinPoolNoSwapSharesRequest',
   is(o: any): o is QueryCalcJoinPoolNoSwapSharesRequest {
-    return o && (o.$typeUrl === QueryCalcJoinPoolNoSwapSharesRequest.typeUrl || typeof o.poolId === "bigint" && Array.isArray(o.tokensIn) && (!o.tokensIn.length || Coin.is(o.tokensIn[0])));
+    return (
+      o &&
+      (o.$typeUrl === QueryCalcJoinPoolNoSwapSharesRequest.typeUrl ||
+        (typeof o.poolId === 'bigint' &&
+          Array.isArray(o.tokensIn) &&
+          (!o.tokensIn.length || Coin.is(o.tokensIn[0]))))
+    );
   },
   isSDK(o: any): o is QueryCalcJoinPoolNoSwapSharesRequestSDKType {
-    return o && (o.$typeUrl === QueryCalcJoinPoolNoSwapSharesRequest.typeUrl || typeof o.pool_id === "bigint" && Array.isArray(o.tokens_in) && (!o.tokens_in.length || Coin.isSDK(o.tokens_in[0])));
+    return (
+      o &&
+      (o.$typeUrl === QueryCalcJoinPoolNoSwapSharesRequest.typeUrl ||
+        (typeof o.pool_id === 'bigint' &&
+          Array.isArray(o.tokens_in) &&
+          (!o.tokens_in.length || Coin.isSDK(o.tokens_in[0]))))
+    );
   },
   isAmino(o: any): o is QueryCalcJoinPoolNoSwapSharesRequestAmino {
-    return o && (o.$typeUrl === QueryCalcJoinPoolNoSwapSharesRequest.typeUrl || typeof o.pool_id === "bigint" && Array.isArray(o.tokens_in) && (!o.tokens_in.length || Coin.isAmino(o.tokens_in[0])));
+    return (
+      o &&
+      (o.$typeUrl === QueryCalcJoinPoolNoSwapSharesRequest.typeUrl ||
+        (typeof o.pool_id === 'bigint' &&
+          Array.isArray(o.tokens_in) &&
+          (!o.tokens_in.length || Coin.isAmino(o.tokens_in[0]))))
+    );
   },
-  encode(message: QueryCalcJoinPoolNoSwapSharesRequest, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
+  encode(
+    message: QueryCalcJoinPoolNoSwapSharesRequest,
+    writer: BinaryWriter = BinaryWriter.create(),
+  ): BinaryWriter {
     if (message.poolId !== BigInt(0)) {
       writer.uint32(8).uint64(message.poolId);
     }
@@ -2336,8 +3651,12 @@ export const QueryCalcJoinPoolNoSwapSharesRequest = {
     }
     return writer;
   },
-  decode(input: BinaryReader | Uint8Array, length?: number): QueryCalcJoinPoolNoSwapSharesRequest {
-    const reader = input instanceof BinaryReader ? input : new BinaryReader(input);
+  decode(
+    input: BinaryReader | Uint8Array,
+    length?: number,
+  ): QueryCalcJoinPoolNoSwapSharesRequest {
+    const reader =
+      input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseQueryCalcJoinPoolNoSwapSharesRequest();
     while (reader.pos < end) {
@@ -2356,13 +3675,20 @@ export const QueryCalcJoinPoolNoSwapSharesRequest = {
     }
     return message;
   },
-  fromPartial(object: Partial<QueryCalcJoinPoolNoSwapSharesRequest>): QueryCalcJoinPoolNoSwapSharesRequest {
+  fromPartial(
+    object: Partial<QueryCalcJoinPoolNoSwapSharesRequest>,
+  ): QueryCalcJoinPoolNoSwapSharesRequest {
     const message = createBaseQueryCalcJoinPoolNoSwapSharesRequest();
-    message.poolId = object.poolId !== undefined && object.poolId !== null ? BigInt(object.poolId.toString()) : BigInt(0);
+    message.poolId =
+      object.poolId !== undefined && object.poolId !== null
+        ? BigInt(object.poolId.toString())
+        : BigInt(0);
     message.tokensIn = object.tokensIn?.map(e => Coin.fromPartial(e)) || [];
     return message;
   },
-  fromAmino(object: QueryCalcJoinPoolNoSwapSharesRequestAmino): QueryCalcJoinPoolNoSwapSharesRequest {
+  fromAmino(
+    object: QueryCalcJoinPoolNoSwapSharesRequestAmino,
+  ): QueryCalcJoinPoolNoSwapSharesRequest {
     const message = createBaseQueryCalcJoinPoolNoSwapSharesRequest();
     if (object.pool_id !== undefined && object.pool_id !== null) {
       message.poolId = BigInt(object.pool_id);
@@ -2370,61 +3696,105 @@ export const QueryCalcJoinPoolNoSwapSharesRequest = {
     message.tokensIn = object.tokens_in?.map(e => Coin.fromAmino(e)) || [];
     return message;
   },
-  toAmino(message: QueryCalcJoinPoolNoSwapSharesRequest): QueryCalcJoinPoolNoSwapSharesRequestAmino {
+  toAmino(
+    message: QueryCalcJoinPoolNoSwapSharesRequest,
+  ): QueryCalcJoinPoolNoSwapSharesRequestAmino {
     const obj: any = {};
-    obj.pool_id = message.poolId !== BigInt(0) ? message.poolId?.toString() : undefined;
+    obj.pool_id =
+      message.poolId !== BigInt(0) ? message.poolId?.toString() : undefined;
     if (message.tokensIn) {
-      obj.tokens_in = message.tokensIn.map(e => e ? Coin.toAmino(e) : undefined);
+      obj.tokens_in = message.tokensIn.map(e =>
+        e ? Coin.toAmino(e) : undefined,
+      );
     } else {
       obj.tokens_in = message.tokensIn;
     }
     return obj;
   },
-  fromAminoMsg(object: QueryCalcJoinPoolNoSwapSharesRequestAminoMsg): QueryCalcJoinPoolNoSwapSharesRequest {
+  fromAminoMsg(
+    object: QueryCalcJoinPoolNoSwapSharesRequestAminoMsg,
+  ): QueryCalcJoinPoolNoSwapSharesRequest {
     return QueryCalcJoinPoolNoSwapSharesRequest.fromAmino(object.value);
   },
-  fromProtoMsg(message: QueryCalcJoinPoolNoSwapSharesRequestProtoMsg): QueryCalcJoinPoolNoSwapSharesRequest {
+  fromProtoMsg(
+    message: QueryCalcJoinPoolNoSwapSharesRequestProtoMsg,
+  ): QueryCalcJoinPoolNoSwapSharesRequest {
     return QueryCalcJoinPoolNoSwapSharesRequest.decode(message.value);
   },
   toProto(message: QueryCalcJoinPoolNoSwapSharesRequest): Uint8Array {
     return QueryCalcJoinPoolNoSwapSharesRequest.encode(message).finish();
   },
-  toProtoMsg(message: QueryCalcJoinPoolNoSwapSharesRequest): QueryCalcJoinPoolNoSwapSharesRequestProtoMsg {
+  toProtoMsg(
+    message: QueryCalcJoinPoolNoSwapSharesRequest,
+  ): QueryCalcJoinPoolNoSwapSharesRequestProtoMsg {
     return {
-      typeUrl: "/symphony.gamm.v1beta1.QueryCalcJoinPoolNoSwapSharesRequest",
-      value: QueryCalcJoinPoolNoSwapSharesRequest.encode(message).finish()
+      typeUrl: '/symphony.gamm.v1beta1.QueryCalcJoinPoolNoSwapSharesRequest',
+      value: QueryCalcJoinPoolNoSwapSharesRequest.encode(message).finish(),
     };
-  }
+  },
 };
-GlobalDecoderRegistry.register(QueryCalcJoinPoolNoSwapSharesRequest.typeUrl, QueryCalcJoinPoolNoSwapSharesRequest);
+GlobalDecoderRegistry.register(
+  QueryCalcJoinPoolNoSwapSharesRequest.typeUrl,
+  QueryCalcJoinPoolNoSwapSharesRequest,
+);
 function createBaseQueryCalcJoinPoolNoSwapSharesResponse(): QueryCalcJoinPoolNoSwapSharesResponse {
   return {
     tokensOut: [],
-    sharesOut: ""
+    sharesOut: '',
   };
 }
+/**
+ * @name QueryCalcJoinPoolNoSwapSharesResponse
+ * @package symphony.gamm.v1beta1
+ * @see proto type: symphony.gamm.v1beta1.QueryCalcJoinPoolNoSwapSharesResponse
+ */
 export const QueryCalcJoinPoolNoSwapSharesResponse = {
-  typeUrl: "/symphony.gamm.v1beta1.QueryCalcJoinPoolNoSwapSharesResponse",
+  typeUrl: '/symphony.gamm.v1beta1.QueryCalcJoinPoolNoSwapSharesResponse',
   is(o: any): o is QueryCalcJoinPoolNoSwapSharesResponse {
-    return o && (o.$typeUrl === QueryCalcJoinPoolNoSwapSharesResponse.typeUrl || Array.isArray(o.tokensOut) && (!o.tokensOut.length || Coin.is(o.tokensOut[0])) && typeof o.sharesOut === "string");
+    return (
+      o &&
+      (o.$typeUrl === QueryCalcJoinPoolNoSwapSharesResponse.typeUrl ||
+        (Array.isArray(o.tokensOut) &&
+          (!o.tokensOut.length || Coin.is(o.tokensOut[0])) &&
+          typeof o.sharesOut === 'string'))
+    );
   },
   isSDK(o: any): o is QueryCalcJoinPoolNoSwapSharesResponseSDKType {
-    return o && (o.$typeUrl === QueryCalcJoinPoolNoSwapSharesResponse.typeUrl || Array.isArray(o.tokens_out) && (!o.tokens_out.length || Coin.isSDK(o.tokens_out[0])) && typeof o.shares_out === "string");
+    return (
+      o &&
+      (o.$typeUrl === QueryCalcJoinPoolNoSwapSharesResponse.typeUrl ||
+        (Array.isArray(o.tokens_out) &&
+          (!o.tokens_out.length || Coin.isSDK(o.tokens_out[0])) &&
+          typeof o.shares_out === 'string'))
+    );
   },
   isAmino(o: any): o is QueryCalcJoinPoolNoSwapSharesResponseAmino {
-    return o && (o.$typeUrl === QueryCalcJoinPoolNoSwapSharesResponse.typeUrl || Array.isArray(o.tokens_out) && (!o.tokens_out.length || Coin.isAmino(o.tokens_out[0])) && typeof o.shares_out === "string");
+    return (
+      o &&
+      (o.$typeUrl === QueryCalcJoinPoolNoSwapSharesResponse.typeUrl ||
+        (Array.isArray(o.tokens_out) &&
+          (!o.tokens_out.length || Coin.isAmino(o.tokens_out[0])) &&
+          typeof o.shares_out === 'string'))
+    );
   },
-  encode(message: QueryCalcJoinPoolNoSwapSharesResponse, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
+  encode(
+    message: QueryCalcJoinPoolNoSwapSharesResponse,
+    writer: BinaryWriter = BinaryWriter.create(),
+  ): BinaryWriter {
     for (const v of message.tokensOut) {
       Coin.encode(v!, writer.uint32(10).fork()).ldelim();
     }
-    if (message.sharesOut !== "") {
+    if (message.sharesOut !== '') {
       writer.uint32(18).string(message.sharesOut);
     }
     return writer;
   },
-  decode(input: BinaryReader | Uint8Array, length?: number): QueryCalcJoinPoolNoSwapSharesResponse {
-    const reader = input instanceof BinaryReader ? input : new BinaryReader(input);
+  decode(
+    input: BinaryReader | Uint8Array,
+    length?: number,
+  ): QueryCalcJoinPoolNoSwapSharesResponse {
+    const reader =
+      input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseQueryCalcJoinPoolNoSwapSharesResponse();
     while (reader.pos < end) {
@@ -2443,13 +3813,17 @@ export const QueryCalcJoinPoolNoSwapSharesResponse = {
     }
     return message;
   },
-  fromPartial(object: Partial<QueryCalcJoinPoolNoSwapSharesResponse>): QueryCalcJoinPoolNoSwapSharesResponse {
+  fromPartial(
+    object: Partial<QueryCalcJoinPoolNoSwapSharesResponse>,
+  ): QueryCalcJoinPoolNoSwapSharesResponse {
     const message = createBaseQueryCalcJoinPoolNoSwapSharesResponse();
     message.tokensOut = object.tokensOut?.map(e => Coin.fromPartial(e)) || [];
-    message.sharesOut = object.sharesOut ?? "";
+    message.sharesOut = object.sharesOut ?? '';
     return message;
   },
-  fromAmino(object: QueryCalcJoinPoolNoSwapSharesResponseAmino): QueryCalcJoinPoolNoSwapSharesResponse {
+  fromAmino(
+    object: QueryCalcJoinPoolNoSwapSharesResponseAmino,
+  ): QueryCalcJoinPoolNoSwapSharesResponse {
     const message = createBaseQueryCalcJoinPoolNoSwapSharesResponse();
     message.tokensOut = object.tokens_out?.map(e => Coin.fromAmino(e)) || [];
     if (object.shares_out !== undefined && object.shares_out !== null) {
@@ -2457,60 +3831,102 @@ export const QueryCalcJoinPoolNoSwapSharesResponse = {
     }
     return message;
   },
-  toAmino(message: QueryCalcJoinPoolNoSwapSharesResponse): QueryCalcJoinPoolNoSwapSharesResponseAmino {
+  toAmino(
+    message: QueryCalcJoinPoolNoSwapSharesResponse,
+  ): QueryCalcJoinPoolNoSwapSharesResponseAmino {
     const obj: any = {};
     if (message.tokensOut) {
-      obj.tokens_out = message.tokensOut.map(e => e ? Coin.toAmino(e) : undefined);
+      obj.tokens_out = message.tokensOut.map(e =>
+        e ? Coin.toAmino(e) : undefined,
+      );
     } else {
       obj.tokens_out = message.tokensOut;
     }
-    obj.shares_out = message.sharesOut === "" ? undefined : message.sharesOut;
+    obj.shares_out = message.sharesOut === '' ? undefined : message.sharesOut;
     return obj;
   },
-  fromAminoMsg(object: QueryCalcJoinPoolNoSwapSharesResponseAminoMsg): QueryCalcJoinPoolNoSwapSharesResponse {
+  fromAminoMsg(
+    object: QueryCalcJoinPoolNoSwapSharesResponseAminoMsg,
+  ): QueryCalcJoinPoolNoSwapSharesResponse {
     return QueryCalcJoinPoolNoSwapSharesResponse.fromAmino(object.value);
   },
-  fromProtoMsg(message: QueryCalcJoinPoolNoSwapSharesResponseProtoMsg): QueryCalcJoinPoolNoSwapSharesResponse {
+  fromProtoMsg(
+    message: QueryCalcJoinPoolNoSwapSharesResponseProtoMsg,
+  ): QueryCalcJoinPoolNoSwapSharesResponse {
     return QueryCalcJoinPoolNoSwapSharesResponse.decode(message.value);
   },
   toProto(message: QueryCalcJoinPoolNoSwapSharesResponse): Uint8Array {
     return QueryCalcJoinPoolNoSwapSharesResponse.encode(message).finish();
   },
-  toProtoMsg(message: QueryCalcJoinPoolNoSwapSharesResponse): QueryCalcJoinPoolNoSwapSharesResponseProtoMsg {
+  toProtoMsg(
+    message: QueryCalcJoinPoolNoSwapSharesResponse,
+  ): QueryCalcJoinPoolNoSwapSharesResponseProtoMsg {
     return {
-      typeUrl: "/symphony.gamm.v1beta1.QueryCalcJoinPoolNoSwapSharesResponse",
-      value: QueryCalcJoinPoolNoSwapSharesResponse.encode(message).finish()
+      typeUrl: '/symphony.gamm.v1beta1.QueryCalcJoinPoolNoSwapSharesResponse',
+      value: QueryCalcJoinPoolNoSwapSharesResponse.encode(message).finish(),
     };
-  }
+  },
 };
-GlobalDecoderRegistry.register(QueryCalcJoinPoolNoSwapSharesResponse.typeUrl, QueryCalcJoinPoolNoSwapSharesResponse);
+GlobalDecoderRegistry.register(
+  QueryCalcJoinPoolNoSwapSharesResponse.typeUrl,
+  QueryCalcJoinPoolNoSwapSharesResponse,
+);
 function createBaseQuerySpotPriceRequest(): QuerySpotPriceRequest {
   return {
     poolId: BigInt(0),
-    baseAssetDenom: "",
-    quoteAssetDenom: "",
-    withSwapFee: undefined
+    baseAssetDenom: '',
+    quoteAssetDenom: '',
+    withSwapFee: undefined,
   };
 }
+/**
+ * QuerySpotPriceRequest defines the gRPC request structure for a SpotPrice
+ * query.
+ * @name QuerySpotPriceRequest
+ * @package symphony.gamm.v1beta1
+ * @see proto type: symphony.gamm.v1beta1.QuerySpotPriceRequest
+ * @deprecated
+ */
 export const QuerySpotPriceRequest = {
-  typeUrl: "/symphony.gamm.v1beta1.QuerySpotPriceRequest",
+  typeUrl: '/symphony.gamm.v1beta1.QuerySpotPriceRequest',
   is(o: any): o is QuerySpotPriceRequest {
-    return o && (o.$typeUrl === QuerySpotPriceRequest.typeUrl || typeof o.poolId === "bigint" && typeof o.baseAssetDenom === "string" && typeof o.quoteAssetDenom === "string");
+    return (
+      o &&
+      (o.$typeUrl === QuerySpotPriceRequest.typeUrl ||
+        (typeof o.poolId === 'bigint' &&
+          typeof o.baseAssetDenom === 'string' &&
+          typeof o.quoteAssetDenom === 'string'))
+    );
   },
   isSDK(o: any): o is QuerySpotPriceRequestSDKType {
-    return o && (o.$typeUrl === QuerySpotPriceRequest.typeUrl || typeof o.pool_id === "bigint" && typeof o.base_asset_denom === "string" && typeof o.quote_asset_denom === "string");
+    return (
+      o &&
+      (o.$typeUrl === QuerySpotPriceRequest.typeUrl ||
+        (typeof o.pool_id === 'bigint' &&
+          typeof o.base_asset_denom === 'string' &&
+          typeof o.quote_asset_denom === 'string'))
+    );
   },
   isAmino(o: any): o is QuerySpotPriceRequestAmino {
-    return o && (o.$typeUrl === QuerySpotPriceRequest.typeUrl || typeof o.pool_id === "bigint" && typeof o.base_asset_denom === "string" && typeof o.quote_asset_denom === "string");
+    return (
+      o &&
+      (o.$typeUrl === QuerySpotPriceRequest.typeUrl ||
+        (typeof o.pool_id === 'bigint' &&
+          typeof o.base_asset_denom === 'string' &&
+          typeof o.quote_asset_denom === 'string'))
+    );
   },
-  encode(message: QuerySpotPriceRequest, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
+  encode(
+    message: QuerySpotPriceRequest,
+    writer: BinaryWriter = BinaryWriter.create(),
+  ): BinaryWriter {
     if (message.poolId !== BigInt(0)) {
       writer.uint32(8).uint64(message.poolId);
     }
-    if (message.baseAssetDenom !== "") {
+    if (message.baseAssetDenom !== '') {
       writer.uint32(18).string(message.baseAssetDenom);
     }
-    if (message.quoteAssetDenom !== "") {
+    if (message.quoteAssetDenom !== '') {
       writer.uint32(26).string(message.quoteAssetDenom);
     }
     if (message.withSwapFee !== undefined) {
@@ -2518,8 +3934,12 @@ export const QuerySpotPriceRequest = {
     }
     return writer;
   },
-  decode(input: BinaryReader | Uint8Array, length?: number): QuerySpotPriceRequest {
-    const reader = input instanceof BinaryReader ? input : new BinaryReader(input);
+  decode(
+    input: BinaryReader | Uint8Array,
+    length?: number,
+  ): QuerySpotPriceRequest {
+    const reader =
+      input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseQuerySpotPriceRequest();
     while (reader.pos < end) {
@@ -2546,9 +3966,12 @@ export const QuerySpotPriceRequest = {
   },
   fromPartial(object: Partial<QuerySpotPriceRequest>): QuerySpotPriceRequest {
     const message = createBaseQuerySpotPriceRequest();
-    message.poolId = object.poolId !== undefined && object.poolId !== null ? BigInt(object.poolId.toString()) : BigInt(0);
-    message.baseAssetDenom = object.baseAssetDenom ?? "";
-    message.quoteAssetDenom = object.quoteAssetDenom ?? "";
+    message.poolId =
+      object.poolId !== undefined && object.poolId !== null
+        ? BigInt(object.poolId.toString())
+        : BigInt(0);
+    message.baseAssetDenom = object.baseAssetDenom ?? '';
+    message.quoteAssetDenom = object.quoteAssetDenom ?? '';
     message.withSwapFee = object.withSwapFee ?? undefined;
     return message;
   },
@@ -2557,10 +3980,16 @@ export const QuerySpotPriceRequest = {
     if (object.pool_id !== undefined && object.pool_id !== null) {
       message.poolId = BigInt(object.pool_id);
     }
-    if (object.base_asset_denom !== undefined && object.base_asset_denom !== null) {
+    if (
+      object.base_asset_denom !== undefined &&
+      object.base_asset_denom !== null
+    ) {
       message.baseAssetDenom = object.base_asset_denom;
     }
-    if (object.quote_asset_denom !== undefined && object.quote_asset_denom !== null) {
+    if (
+      object.quote_asset_denom !== undefined &&
+      object.quote_asset_denom !== null
+    ) {
       message.quoteAssetDenom = object.quote_asset_denom;
     }
     if (object.withSwapFee !== undefined && object.withSwapFee !== null) {
@@ -2570,10 +3999,14 @@ export const QuerySpotPriceRequest = {
   },
   toAmino(message: QuerySpotPriceRequest): QuerySpotPriceRequestAmino {
     const obj: any = {};
-    obj.pool_id = message.poolId !== BigInt(0) ? message.poolId?.toString() : undefined;
-    obj.base_asset_denom = message.baseAssetDenom === "" ? undefined : message.baseAssetDenom;
-    obj.quote_asset_denom = message.quoteAssetDenom === "" ? undefined : message.quoteAssetDenom;
-    obj.withSwapFee = message.withSwapFee === null ? undefined : message.withSwapFee;
+    obj.pool_id =
+      message.poolId !== BigInt(0) ? message.poolId?.toString() : undefined;
+    obj.base_asset_denom =
+      message.baseAssetDenom === '' ? undefined : message.baseAssetDenom;
+    obj.quote_asset_denom =
+      message.quoteAssetDenom === '' ? undefined : message.quoteAssetDenom;
+    obj.withSwapFee =
+      message.withSwapFee === null ? undefined : message.withSwapFee;
     return obj;
   },
   fromAminoMsg(object: QuerySpotPriceRequestAminoMsg): QuerySpotPriceRequest {
@@ -2587,35 +4020,60 @@ export const QuerySpotPriceRequest = {
   },
   toProtoMsg(message: QuerySpotPriceRequest): QuerySpotPriceRequestProtoMsg {
     return {
-      typeUrl: "/symphony.gamm.v1beta1.QuerySpotPriceRequest",
-      value: QuerySpotPriceRequest.encode(message).finish()
+      typeUrl: '/symphony.gamm.v1beta1.QuerySpotPriceRequest',
+      value: QuerySpotPriceRequest.encode(message).finish(),
     };
-  }
+  },
 };
-GlobalDecoderRegistry.register(QuerySpotPriceRequest.typeUrl, QuerySpotPriceRequest);
+GlobalDecoderRegistry.register(
+  QuerySpotPriceRequest.typeUrl,
+  QuerySpotPriceRequest,
+);
 function createBaseQueryPoolsWithFilterRequest(): QueryPoolsWithFilterRequest {
   return {
-    minLiquidity: "",
-    poolType: "",
-    pagination: undefined
+    minLiquidity: '',
+    poolType: '',
+    pagination: undefined,
   };
 }
+/**
+ * @name QueryPoolsWithFilterRequest
+ * @package symphony.gamm.v1beta1
+ * @see proto type: symphony.gamm.v1beta1.QueryPoolsWithFilterRequest
+ */
 export const QueryPoolsWithFilterRequest = {
-  typeUrl: "/symphony.gamm.v1beta1.QueryPoolsWithFilterRequest",
+  typeUrl: '/symphony.gamm.v1beta1.QueryPoolsWithFilterRequest',
   is(o: any): o is QueryPoolsWithFilterRequest {
-    return o && (o.$typeUrl === QueryPoolsWithFilterRequest.typeUrl || typeof o.minLiquidity === "string" && typeof o.poolType === "string");
+    return (
+      o &&
+      (o.$typeUrl === QueryPoolsWithFilterRequest.typeUrl ||
+        (typeof o.minLiquidity === 'string' && typeof o.poolType === 'string'))
+    );
   },
   isSDK(o: any): o is QueryPoolsWithFilterRequestSDKType {
-    return o && (o.$typeUrl === QueryPoolsWithFilterRequest.typeUrl || typeof o.min_liquidity === "string" && typeof o.pool_type === "string");
+    return (
+      o &&
+      (o.$typeUrl === QueryPoolsWithFilterRequest.typeUrl ||
+        (typeof o.min_liquidity === 'string' &&
+          typeof o.pool_type === 'string'))
+    );
   },
   isAmino(o: any): o is QueryPoolsWithFilterRequestAmino {
-    return o && (o.$typeUrl === QueryPoolsWithFilterRequest.typeUrl || typeof o.min_liquidity === "string" && typeof o.pool_type === "string");
+    return (
+      o &&
+      (o.$typeUrl === QueryPoolsWithFilterRequest.typeUrl ||
+        (typeof o.min_liquidity === 'string' &&
+          typeof o.pool_type === 'string'))
+    );
   },
-  encode(message: QueryPoolsWithFilterRequest, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
-    if (message.minLiquidity !== "") {
+  encode(
+    message: QueryPoolsWithFilterRequest,
+    writer: BinaryWriter = BinaryWriter.create(),
+  ): BinaryWriter {
+    if (message.minLiquidity !== '') {
       writer.uint32(10).string(message.minLiquidity);
     }
-    if (message.poolType !== "") {
+    if (message.poolType !== '') {
       writer.uint32(18).string(message.poolType);
     }
     if (message.pagination !== undefined) {
@@ -2623,8 +4081,12 @@ export const QueryPoolsWithFilterRequest = {
     }
     return writer;
   },
-  decode(input: BinaryReader | Uint8Array, length?: number): QueryPoolsWithFilterRequest {
-    const reader = input instanceof BinaryReader ? input : new BinaryReader(input);
+  decode(
+    input: BinaryReader | Uint8Array,
+    length?: number,
+  ): QueryPoolsWithFilterRequest {
+    const reader =
+      input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseQueryPoolsWithFilterRequest();
     while (reader.pos < end) {
@@ -2646,14 +4108,21 @@ export const QueryPoolsWithFilterRequest = {
     }
     return message;
   },
-  fromPartial(object: Partial<QueryPoolsWithFilterRequest>): QueryPoolsWithFilterRequest {
+  fromPartial(
+    object: Partial<QueryPoolsWithFilterRequest>,
+  ): QueryPoolsWithFilterRequest {
     const message = createBaseQueryPoolsWithFilterRequest();
-    message.minLiquidity = object.minLiquidity ?? "";
-    message.poolType = object.poolType ?? "";
-    message.pagination = object.pagination !== undefined && object.pagination !== null ? PageRequest.fromPartial(object.pagination) : undefined;
+    message.minLiquidity = object.minLiquidity ?? '';
+    message.poolType = object.poolType ?? '';
+    message.pagination =
+      object.pagination !== undefined && object.pagination !== null
+        ? PageRequest.fromPartial(object.pagination)
+        : undefined;
     return message;
   },
-  fromAmino(object: QueryPoolsWithFilterRequestAmino): QueryPoolsWithFilterRequest {
+  fromAmino(
+    object: QueryPoolsWithFilterRequestAmino,
+  ): QueryPoolsWithFilterRequest {
     const message = createBaseQueryPoolsWithFilterRequest();
     if (object.min_liquidity !== undefined && object.min_liquidity !== null) {
       message.minLiquidity = object.min_liquidity;
@@ -2666,58 +4135,120 @@ export const QueryPoolsWithFilterRequest = {
     }
     return message;
   },
-  toAmino(message: QueryPoolsWithFilterRequest): QueryPoolsWithFilterRequestAmino {
+  toAmino(
+    message: QueryPoolsWithFilterRequest,
+  ): QueryPoolsWithFilterRequestAmino {
     const obj: any = {};
-    obj.min_liquidity = message.minLiquidity === "" ? undefined : message.minLiquidity;
-    obj.pool_type = message.poolType === "" ? undefined : message.poolType;
-    obj.pagination = message.pagination ? PageRequest.toAmino(message.pagination) : undefined;
+    obj.min_liquidity =
+      message.minLiquidity === '' ? undefined : message.minLiquidity;
+    obj.pool_type = message.poolType === '' ? undefined : message.poolType;
+    obj.pagination = message.pagination
+      ? PageRequest.toAmino(message.pagination)
+      : undefined;
     return obj;
   },
-  fromAminoMsg(object: QueryPoolsWithFilterRequestAminoMsg): QueryPoolsWithFilterRequest {
+  fromAminoMsg(
+    object: QueryPoolsWithFilterRequestAminoMsg,
+  ): QueryPoolsWithFilterRequest {
     return QueryPoolsWithFilterRequest.fromAmino(object.value);
   },
-  fromProtoMsg(message: QueryPoolsWithFilterRequestProtoMsg): QueryPoolsWithFilterRequest {
+  fromProtoMsg(
+    message: QueryPoolsWithFilterRequestProtoMsg,
+  ): QueryPoolsWithFilterRequest {
     return QueryPoolsWithFilterRequest.decode(message.value);
   },
   toProto(message: QueryPoolsWithFilterRequest): Uint8Array {
     return QueryPoolsWithFilterRequest.encode(message).finish();
   },
-  toProtoMsg(message: QueryPoolsWithFilterRequest): QueryPoolsWithFilterRequestProtoMsg {
+  toProtoMsg(
+    message: QueryPoolsWithFilterRequest,
+  ): QueryPoolsWithFilterRequestProtoMsg {
     return {
-      typeUrl: "/symphony.gamm.v1beta1.QueryPoolsWithFilterRequest",
-      value: QueryPoolsWithFilterRequest.encode(message).finish()
+      typeUrl: '/symphony.gamm.v1beta1.QueryPoolsWithFilterRequest',
+      value: QueryPoolsWithFilterRequest.encode(message).finish(),
     };
-  }
+  },
 };
-GlobalDecoderRegistry.register(QueryPoolsWithFilterRequest.typeUrl, QueryPoolsWithFilterRequest);
+GlobalDecoderRegistry.register(
+  QueryPoolsWithFilterRequest.typeUrl,
+  QueryPoolsWithFilterRequest,
+);
 function createBaseQueryPoolsWithFilterResponse(): QueryPoolsWithFilterResponse {
   return {
     pools: [],
-    pagination: undefined
+    pagination: undefined,
   };
 }
+/**
+ * @name QueryPoolsWithFilterResponse
+ * @package symphony.gamm.v1beta1
+ * @see proto type: symphony.gamm.v1beta1.QueryPoolsWithFilterResponse
+ */
 export const QueryPoolsWithFilterResponse = {
-  typeUrl: "/symphony.gamm.v1beta1.QueryPoolsWithFilterResponse",
+  typeUrl: '/symphony.gamm.v1beta1.QueryPoolsWithFilterResponse',
   is(o: any): o is QueryPoolsWithFilterResponse {
-    return o && (o.$typeUrl === QueryPoolsWithFilterResponse.typeUrl || Array.isArray(o.pools) && (!o.pools.length || Pool1.is(o.pools[0]) || CosmWasmPool.is(o.pools[0]) || Pool2.is(o.pools[0]) || Pool3.is(o.pools[0]) || Any.is(o.pools[0])));
+    return (
+      o &&
+      (o.$typeUrl === QueryPoolsWithFilterResponse.typeUrl ||
+        (Array.isArray(o.pools) &&
+          (!o.pools.length ||
+            Pool1.is(o.pools[0]) ||
+            CosmWasmPool.is(o.pools[0]) ||
+            Pool2.is(o.pools[0]) ||
+            Pool3.is(o.pools[0]) ||
+            Any.is(o.pools[0]))))
+    );
   },
   isSDK(o: any): o is QueryPoolsWithFilterResponseSDKType {
-    return o && (o.$typeUrl === QueryPoolsWithFilterResponse.typeUrl || Array.isArray(o.pools) && (!o.pools.length || Pool1.isSDK(o.pools[0]) || CosmWasmPool.isSDK(o.pools[0]) || Pool2.isSDK(o.pools[0]) || Pool3.isSDK(o.pools[0]) || Any.isSDK(o.pools[0])));
+    return (
+      o &&
+      (o.$typeUrl === QueryPoolsWithFilterResponse.typeUrl ||
+        (Array.isArray(o.pools) &&
+          (!o.pools.length ||
+            Pool1.isSDK(o.pools[0]) ||
+            CosmWasmPool.isSDK(o.pools[0]) ||
+            Pool2.isSDK(o.pools[0]) ||
+            Pool3.isSDK(o.pools[0]) ||
+            Any.isSDK(o.pools[0]))))
+    );
   },
   isAmino(o: any): o is QueryPoolsWithFilterResponseAmino {
-    return o && (o.$typeUrl === QueryPoolsWithFilterResponse.typeUrl || Array.isArray(o.pools) && (!o.pools.length || Pool1.isAmino(o.pools[0]) || CosmWasmPool.isAmino(o.pools[0]) || Pool2.isAmino(o.pools[0]) || Pool3.isAmino(o.pools[0]) || Any.isAmino(o.pools[0])));
+    return (
+      o &&
+      (o.$typeUrl === QueryPoolsWithFilterResponse.typeUrl ||
+        (Array.isArray(o.pools) &&
+          (!o.pools.length ||
+            Pool1.isAmino(o.pools[0]) ||
+            CosmWasmPool.isAmino(o.pools[0]) ||
+            Pool2.isAmino(o.pools[0]) ||
+            Pool3.isAmino(o.pools[0]) ||
+            Any.isAmino(o.pools[0]))))
+    );
   },
-  encode(message: QueryPoolsWithFilterResponse, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
+  encode(
+    message: QueryPoolsWithFilterResponse,
+    writer: BinaryWriter = BinaryWriter.create(),
+  ): BinaryWriter {
     for (const v of message.pools) {
-      Any.encode(GlobalDecoderRegistry.wrapAny(v!), writer.uint32(10).fork()).ldelim();
+      Any.encode(
+        GlobalDecoderRegistry.wrapAny(v!),
+        writer.uint32(10).fork(),
+      ).ldelim();
     }
     if (message.pagination !== undefined) {
-      PageResponse.encode(message.pagination, writer.uint32(18).fork()).ldelim();
+      PageResponse.encode(
+        message.pagination,
+        writer.uint32(18).fork(),
+      ).ldelim();
     }
     return writer;
   },
-  decode(input: BinaryReader | Uint8Array, length?: number): QueryPoolsWithFilterResponse {
-    const reader = input instanceof BinaryReader ? input : new BinaryReader(input);
+  decode(
+    input: BinaryReader | Uint8Array,
+    length?: number,
+  ): QueryPoolsWithFilterResponse {
+    const reader =
+      input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseQueryPoolsWithFilterResponse();
     while (reader.pos < end) {
@@ -2736,71 +4267,122 @@ export const QueryPoolsWithFilterResponse = {
     }
     return message;
   },
-  fromPartial(object: Partial<QueryPoolsWithFilterResponse>): QueryPoolsWithFilterResponse {
+  fromPartial(
+    object: Partial<QueryPoolsWithFilterResponse>,
+  ): QueryPoolsWithFilterResponse {
     const message = createBaseQueryPoolsWithFilterResponse();
-    message.pools = object.pools?.map(e => GlobalDecoderRegistry.fromPartial(e) as any) || [];
-    message.pagination = object.pagination !== undefined && object.pagination !== null ? PageResponse.fromPartial(object.pagination) : undefined;
+    message.pools =
+      object.pools?.map(e => GlobalDecoderRegistry.fromPartial(e) as any) || [];
+    message.pagination =
+      object.pagination !== undefined && object.pagination !== null
+        ? PageResponse.fromPartial(object.pagination)
+        : undefined;
     return message;
   },
-  fromAmino(object: QueryPoolsWithFilterResponseAmino): QueryPoolsWithFilterResponse {
+  fromAmino(
+    object: QueryPoolsWithFilterResponseAmino,
+  ): QueryPoolsWithFilterResponse {
     const message = createBaseQueryPoolsWithFilterResponse();
-    message.pools = object.pools?.map(e => GlobalDecoderRegistry.fromAminoMsg(e)) || [];
+    message.pools =
+      object.pools?.map(e => GlobalDecoderRegistry.fromAminoMsg(e)) || [];
     if (object.pagination !== undefined && object.pagination !== null) {
       message.pagination = PageResponse.fromAmino(object.pagination);
     }
     return message;
   },
-  toAmino(message: QueryPoolsWithFilterResponse): QueryPoolsWithFilterResponseAmino {
+  toAmino(
+    message: QueryPoolsWithFilterResponse,
+  ): QueryPoolsWithFilterResponseAmino {
     const obj: any = {};
     if (message.pools) {
-      obj.pools = message.pools.map(e => e ? GlobalDecoderRegistry.toAminoMsg(e) : undefined);
+      obj.pools = message.pools.map(e =>
+        e ? GlobalDecoderRegistry.toAminoMsg(e) : undefined,
+      );
     } else {
       obj.pools = message.pools;
     }
-    obj.pagination = message.pagination ? PageResponse.toAmino(message.pagination) : undefined;
+    obj.pagination = message.pagination
+      ? PageResponse.toAmino(message.pagination)
+      : undefined;
     return obj;
   },
-  fromAminoMsg(object: QueryPoolsWithFilterResponseAminoMsg): QueryPoolsWithFilterResponse {
+  fromAminoMsg(
+    object: QueryPoolsWithFilterResponseAminoMsg,
+  ): QueryPoolsWithFilterResponse {
     return QueryPoolsWithFilterResponse.fromAmino(object.value);
   },
-  fromProtoMsg(message: QueryPoolsWithFilterResponseProtoMsg): QueryPoolsWithFilterResponse {
+  fromProtoMsg(
+    message: QueryPoolsWithFilterResponseProtoMsg,
+  ): QueryPoolsWithFilterResponse {
     return QueryPoolsWithFilterResponse.decode(message.value);
   },
   toProto(message: QueryPoolsWithFilterResponse): Uint8Array {
     return QueryPoolsWithFilterResponse.encode(message).finish();
   },
-  toProtoMsg(message: QueryPoolsWithFilterResponse): QueryPoolsWithFilterResponseProtoMsg {
+  toProtoMsg(
+    message: QueryPoolsWithFilterResponse,
+  ): QueryPoolsWithFilterResponseProtoMsg {
     return {
-      typeUrl: "/symphony.gamm.v1beta1.QueryPoolsWithFilterResponse",
-      value: QueryPoolsWithFilterResponse.encode(message).finish()
+      typeUrl: '/symphony.gamm.v1beta1.QueryPoolsWithFilterResponse',
+      value: QueryPoolsWithFilterResponse.encode(message).finish(),
     };
-  }
+  },
 };
-GlobalDecoderRegistry.register(QueryPoolsWithFilterResponse.typeUrl, QueryPoolsWithFilterResponse);
+GlobalDecoderRegistry.register(
+  QueryPoolsWithFilterResponse.typeUrl,
+  QueryPoolsWithFilterResponse,
+);
 function createBaseQuerySpotPriceResponse(): QuerySpotPriceResponse {
   return {
-    spotPrice: ""
+    spotPrice: '',
   };
 }
+/**
+ * QuerySpotPriceResponse defines the gRPC response structure for a SpotPrice
+ * query.
+ * @name QuerySpotPriceResponse
+ * @package symphony.gamm.v1beta1
+ * @see proto type: symphony.gamm.v1beta1.QuerySpotPriceResponse
+ * @deprecated
+ */
 export const QuerySpotPriceResponse = {
-  typeUrl: "/symphony.gamm.v1beta1.QuerySpotPriceResponse",
+  typeUrl: '/symphony.gamm.v1beta1.QuerySpotPriceResponse',
   is(o: any): o is QuerySpotPriceResponse {
-    return o && (o.$typeUrl === QuerySpotPriceResponse.typeUrl || typeof o.spotPrice === "string");
+    return (
+      o &&
+      (o.$typeUrl === QuerySpotPriceResponse.typeUrl ||
+        typeof o.spotPrice === 'string')
+    );
   },
   isSDK(o: any): o is QuerySpotPriceResponseSDKType {
-    return o && (o.$typeUrl === QuerySpotPriceResponse.typeUrl || typeof o.spot_price === "string");
+    return (
+      o &&
+      (o.$typeUrl === QuerySpotPriceResponse.typeUrl ||
+        typeof o.spot_price === 'string')
+    );
   },
   isAmino(o: any): o is QuerySpotPriceResponseAmino {
-    return o && (o.$typeUrl === QuerySpotPriceResponse.typeUrl || typeof o.spot_price === "string");
+    return (
+      o &&
+      (o.$typeUrl === QuerySpotPriceResponse.typeUrl ||
+        typeof o.spot_price === 'string')
+    );
   },
-  encode(message: QuerySpotPriceResponse, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
-    if (message.spotPrice !== "") {
+  encode(
+    message: QuerySpotPriceResponse,
+    writer: BinaryWriter = BinaryWriter.create(),
+  ): BinaryWriter {
+    if (message.spotPrice !== '') {
       writer.uint32(10).string(message.spotPrice);
     }
     return writer;
   },
-  decode(input: BinaryReader | Uint8Array, length?: number): QuerySpotPriceResponse {
-    const reader = input instanceof BinaryReader ? input : new BinaryReader(input);
+  decode(
+    input: BinaryReader | Uint8Array,
+    length?: number,
+  ): QuerySpotPriceResponse {
+    const reader =
+      input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseQuerySpotPriceResponse();
     while (reader.pos < end) {
@@ -2818,7 +4400,7 @@ export const QuerySpotPriceResponse = {
   },
   fromPartial(object: Partial<QuerySpotPriceResponse>): QuerySpotPriceResponse {
     const message = createBaseQuerySpotPriceResponse();
-    message.spotPrice = object.spotPrice ?? "";
+    message.spotPrice = object.spotPrice ?? '';
     return message;
   },
   fromAmino(object: QuerySpotPriceResponseAmino): QuerySpotPriceResponse {
@@ -2830,13 +4412,15 @@ export const QuerySpotPriceResponse = {
   },
   toAmino(message: QuerySpotPriceResponse): QuerySpotPriceResponseAmino {
     const obj: any = {};
-    obj.spot_price = message.spotPrice === "" ? undefined : message.spotPrice;
+    obj.spot_price = message.spotPrice === '' ? undefined : message.spotPrice;
     return obj;
   },
   fromAminoMsg(object: QuerySpotPriceResponseAminoMsg): QuerySpotPriceResponse {
     return QuerySpotPriceResponse.fromAmino(object.value);
   },
-  fromProtoMsg(message: QuerySpotPriceResponseProtoMsg): QuerySpotPriceResponse {
+  fromProtoMsg(
+    message: QuerySpotPriceResponseProtoMsg,
+  ): QuerySpotPriceResponse {
     return QuerySpotPriceResponse.decode(message.value);
   },
   toProto(message: QuerySpotPriceResponse): Uint8Array {
@@ -2844,39 +4428,76 @@ export const QuerySpotPriceResponse = {
   },
   toProtoMsg(message: QuerySpotPriceResponse): QuerySpotPriceResponseProtoMsg {
     return {
-      typeUrl: "/symphony.gamm.v1beta1.QuerySpotPriceResponse",
-      value: QuerySpotPriceResponse.encode(message).finish()
+      typeUrl: '/symphony.gamm.v1beta1.QuerySpotPriceResponse',
+      value: QuerySpotPriceResponse.encode(message).finish(),
     };
-  }
+  },
 };
-GlobalDecoderRegistry.register(QuerySpotPriceResponse.typeUrl, QuerySpotPriceResponse);
+GlobalDecoderRegistry.register(
+  QuerySpotPriceResponse.typeUrl,
+  QuerySpotPriceResponse,
+);
 function createBaseQuerySwapExactAmountInRequest(): QuerySwapExactAmountInRequest {
   return {
-    sender: "",
+    sender: '',
     poolId: BigInt(0),
-    tokenIn: "",
-    routes: []
+    tokenIn: '',
+    routes: [],
   };
 }
+/**
+ * =============================== EstimateSwapExactAmountIn
+ * @name QuerySwapExactAmountInRequest
+ * @package symphony.gamm.v1beta1
+ * @see proto type: symphony.gamm.v1beta1.QuerySwapExactAmountInRequest
+ * @deprecated
+ */
 export const QuerySwapExactAmountInRequest = {
-  typeUrl: "/symphony.gamm.v1beta1.QuerySwapExactAmountInRequest",
+  typeUrl: '/symphony.gamm.v1beta1.QuerySwapExactAmountInRequest',
   is(o: any): o is QuerySwapExactAmountInRequest {
-    return o && (o.$typeUrl === QuerySwapExactAmountInRequest.typeUrl || typeof o.sender === "string" && typeof o.poolId === "bigint" && typeof o.tokenIn === "string" && Array.isArray(o.routes) && (!o.routes.length || SwapAmountInRoute.is(o.routes[0])));
+    return (
+      o &&
+      (o.$typeUrl === QuerySwapExactAmountInRequest.typeUrl ||
+        (typeof o.sender === 'string' &&
+          typeof o.poolId === 'bigint' &&
+          typeof o.tokenIn === 'string' &&
+          Array.isArray(o.routes) &&
+          (!o.routes.length || SwapAmountInRoute.is(o.routes[0]))))
+    );
   },
   isSDK(o: any): o is QuerySwapExactAmountInRequestSDKType {
-    return o && (o.$typeUrl === QuerySwapExactAmountInRequest.typeUrl || typeof o.sender === "string" && typeof o.pool_id === "bigint" && typeof o.token_in === "string" && Array.isArray(o.routes) && (!o.routes.length || SwapAmountInRoute.isSDK(o.routes[0])));
+    return (
+      o &&
+      (o.$typeUrl === QuerySwapExactAmountInRequest.typeUrl ||
+        (typeof o.sender === 'string' &&
+          typeof o.pool_id === 'bigint' &&
+          typeof o.token_in === 'string' &&
+          Array.isArray(o.routes) &&
+          (!o.routes.length || SwapAmountInRoute.isSDK(o.routes[0]))))
+    );
   },
   isAmino(o: any): o is QuerySwapExactAmountInRequestAmino {
-    return o && (o.$typeUrl === QuerySwapExactAmountInRequest.typeUrl || typeof o.sender === "string" && typeof o.pool_id === "bigint" && typeof o.token_in === "string" && Array.isArray(o.routes) && (!o.routes.length || SwapAmountInRoute.isAmino(o.routes[0])));
+    return (
+      o &&
+      (o.$typeUrl === QuerySwapExactAmountInRequest.typeUrl ||
+        (typeof o.sender === 'string' &&
+          typeof o.pool_id === 'bigint' &&
+          typeof o.token_in === 'string' &&
+          Array.isArray(o.routes) &&
+          (!o.routes.length || SwapAmountInRoute.isAmino(o.routes[0]))))
+    );
   },
-  encode(message: QuerySwapExactAmountInRequest, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
-    if (message.sender !== "") {
+  encode(
+    message: QuerySwapExactAmountInRequest,
+    writer: BinaryWriter = BinaryWriter.create(),
+  ): BinaryWriter {
+    if (message.sender !== '') {
       writer.uint32(10).string(message.sender);
     }
     if (message.poolId !== BigInt(0)) {
       writer.uint32(16).uint64(message.poolId);
     }
-    if (message.tokenIn !== "") {
+    if (message.tokenIn !== '') {
       writer.uint32(26).string(message.tokenIn);
     }
     for (const v of message.routes) {
@@ -2884,8 +4505,12 @@ export const QuerySwapExactAmountInRequest = {
     }
     return writer;
   },
-  decode(input: BinaryReader | Uint8Array, length?: number): QuerySwapExactAmountInRequest {
-    const reader = input instanceof BinaryReader ? input : new BinaryReader(input);
+  decode(
+    input: BinaryReader | Uint8Array,
+    length?: number,
+  ): QuerySwapExactAmountInRequest {
+    const reader =
+      input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseQuerySwapExactAmountInRequest();
     while (reader.pos < end) {
@@ -2901,7 +4526,9 @@ export const QuerySwapExactAmountInRequest = {
           message.tokenIn = reader.string();
           break;
         case 4:
-          message.routes.push(SwapAmountInRoute.decode(reader, reader.uint32()));
+          message.routes.push(
+            SwapAmountInRoute.decode(reader, reader.uint32()),
+          );
           break;
         default:
           reader.skipType(tag & 7);
@@ -2910,15 +4537,23 @@ export const QuerySwapExactAmountInRequest = {
     }
     return message;
   },
-  fromPartial(object: Partial<QuerySwapExactAmountInRequest>): QuerySwapExactAmountInRequest {
+  fromPartial(
+    object: Partial<QuerySwapExactAmountInRequest>,
+  ): QuerySwapExactAmountInRequest {
     const message = createBaseQuerySwapExactAmountInRequest();
-    message.sender = object.sender ?? "";
-    message.poolId = object.poolId !== undefined && object.poolId !== null ? BigInt(object.poolId.toString()) : BigInt(0);
-    message.tokenIn = object.tokenIn ?? "";
-    message.routes = object.routes?.map(e => SwapAmountInRoute.fromPartial(e)) || [];
+    message.sender = object.sender ?? '';
+    message.poolId =
+      object.poolId !== undefined && object.poolId !== null
+        ? BigInt(object.poolId.toString())
+        : BigInt(0);
+    message.tokenIn = object.tokenIn ?? '';
+    message.routes =
+      object.routes?.map(e => SwapAmountInRoute.fromPartial(e)) || [];
     return message;
   },
-  fromAmino(object: QuerySwapExactAmountInRequestAmino): QuerySwapExactAmountInRequest {
+  fromAmino(
+    object: QuerySwapExactAmountInRequestAmino,
+  ): QuerySwapExactAmountInRequest {
     const message = createBaseQuerySwapExactAmountInRequest();
     if (object.sender !== undefined && object.sender !== null) {
       message.sender = object.sender;
@@ -2929,62 +4564,102 @@ export const QuerySwapExactAmountInRequest = {
     if (object.token_in !== undefined && object.token_in !== null) {
       message.tokenIn = object.token_in;
     }
-    message.routes = object.routes?.map(e => SwapAmountInRoute.fromAmino(e)) || [];
+    message.routes =
+      object.routes?.map(e => SwapAmountInRoute.fromAmino(e)) || [];
     return message;
   },
-  toAmino(message: QuerySwapExactAmountInRequest): QuerySwapExactAmountInRequestAmino {
+  toAmino(
+    message: QuerySwapExactAmountInRequest,
+  ): QuerySwapExactAmountInRequestAmino {
     const obj: any = {};
-    obj.sender = message.sender === "" ? undefined : message.sender;
-    obj.pool_id = message.poolId !== BigInt(0) ? message.poolId?.toString() : undefined;
-    obj.token_in = message.tokenIn === "" ? undefined : message.tokenIn;
+    obj.sender = message.sender === '' ? undefined : message.sender;
+    obj.pool_id =
+      message.poolId !== BigInt(0) ? message.poolId?.toString() : undefined;
+    obj.token_in = message.tokenIn === '' ? undefined : message.tokenIn;
     if (message.routes) {
-      obj.routes = message.routes.map(e => e ? SwapAmountInRoute.toAmino(e) : undefined);
+      obj.routes = message.routes.map(e =>
+        e ? SwapAmountInRoute.toAmino(e) : undefined,
+      );
     } else {
       obj.routes = message.routes;
     }
     return obj;
   },
-  fromAminoMsg(object: QuerySwapExactAmountInRequestAminoMsg): QuerySwapExactAmountInRequest {
+  fromAminoMsg(
+    object: QuerySwapExactAmountInRequestAminoMsg,
+  ): QuerySwapExactAmountInRequest {
     return QuerySwapExactAmountInRequest.fromAmino(object.value);
   },
-  fromProtoMsg(message: QuerySwapExactAmountInRequestProtoMsg): QuerySwapExactAmountInRequest {
+  fromProtoMsg(
+    message: QuerySwapExactAmountInRequestProtoMsg,
+  ): QuerySwapExactAmountInRequest {
     return QuerySwapExactAmountInRequest.decode(message.value);
   },
   toProto(message: QuerySwapExactAmountInRequest): Uint8Array {
     return QuerySwapExactAmountInRequest.encode(message).finish();
   },
-  toProtoMsg(message: QuerySwapExactAmountInRequest): QuerySwapExactAmountInRequestProtoMsg {
+  toProtoMsg(
+    message: QuerySwapExactAmountInRequest,
+  ): QuerySwapExactAmountInRequestProtoMsg {
     return {
-      typeUrl: "/symphony.gamm.v1beta1.QuerySwapExactAmountInRequest",
-      value: QuerySwapExactAmountInRequest.encode(message).finish()
+      typeUrl: '/symphony.gamm.v1beta1.QuerySwapExactAmountInRequest',
+      value: QuerySwapExactAmountInRequest.encode(message).finish(),
     };
-  }
+  },
 };
-GlobalDecoderRegistry.register(QuerySwapExactAmountInRequest.typeUrl, QuerySwapExactAmountInRequest);
+GlobalDecoderRegistry.register(
+  QuerySwapExactAmountInRequest.typeUrl,
+  QuerySwapExactAmountInRequest,
+);
 function createBaseQuerySwapExactAmountInResponse(): QuerySwapExactAmountInResponse {
   return {
-    tokenOutAmount: ""
+    tokenOutAmount: '',
   };
 }
+/**
+ * @name QuerySwapExactAmountInResponse
+ * @package symphony.gamm.v1beta1
+ * @see proto type: symphony.gamm.v1beta1.QuerySwapExactAmountInResponse
+ * @deprecated
+ */
 export const QuerySwapExactAmountInResponse = {
-  typeUrl: "/symphony.gamm.v1beta1.QuerySwapExactAmountInResponse",
+  typeUrl: '/symphony.gamm.v1beta1.QuerySwapExactAmountInResponse',
   is(o: any): o is QuerySwapExactAmountInResponse {
-    return o && (o.$typeUrl === QuerySwapExactAmountInResponse.typeUrl || typeof o.tokenOutAmount === "string");
+    return (
+      o &&
+      (o.$typeUrl === QuerySwapExactAmountInResponse.typeUrl ||
+        typeof o.tokenOutAmount === 'string')
+    );
   },
   isSDK(o: any): o is QuerySwapExactAmountInResponseSDKType {
-    return o && (o.$typeUrl === QuerySwapExactAmountInResponse.typeUrl || typeof o.token_out_amount === "string");
+    return (
+      o &&
+      (o.$typeUrl === QuerySwapExactAmountInResponse.typeUrl ||
+        typeof o.token_out_amount === 'string')
+    );
   },
   isAmino(o: any): o is QuerySwapExactAmountInResponseAmino {
-    return o && (o.$typeUrl === QuerySwapExactAmountInResponse.typeUrl || typeof o.token_out_amount === "string");
+    return (
+      o &&
+      (o.$typeUrl === QuerySwapExactAmountInResponse.typeUrl ||
+        typeof o.token_out_amount === 'string')
+    );
   },
-  encode(message: QuerySwapExactAmountInResponse, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
-    if (message.tokenOutAmount !== "") {
+  encode(
+    message: QuerySwapExactAmountInResponse,
+    writer: BinaryWriter = BinaryWriter.create(),
+  ): BinaryWriter {
+    if (message.tokenOutAmount !== '') {
       writer.uint32(10).string(message.tokenOutAmount);
     }
     return writer;
   },
-  decode(input: BinaryReader | Uint8Array, length?: number): QuerySwapExactAmountInResponse {
-    const reader = input instanceof BinaryReader ? input : new BinaryReader(input);
+  decode(
+    input: BinaryReader | Uint8Array,
+    length?: number,
+  ): QuerySwapExactAmountInResponse {
+    const reader =
+      input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseQuerySwapExactAmountInResponse();
     while (reader.pos < end) {
@@ -3000,61 +4675,114 @@ export const QuerySwapExactAmountInResponse = {
     }
     return message;
   },
-  fromPartial(object: Partial<QuerySwapExactAmountInResponse>): QuerySwapExactAmountInResponse {
+  fromPartial(
+    object: Partial<QuerySwapExactAmountInResponse>,
+  ): QuerySwapExactAmountInResponse {
     const message = createBaseQuerySwapExactAmountInResponse();
-    message.tokenOutAmount = object.tokenOutAmount ?? "";
+    message.tokenOutAmount = object.tokenOutAmount ?? '';
     return message;
   },
-  fromAmino(object: QuerySwapExactAmountInResponseAmino): QuerySwapExactAmountInResponse {
+  fromAmino(
+    object: QuerySwapExactAmountInResponseAmino,
+  ): QuerySwapExactAmountInResponse {
     const message = createBaseQuerySwapExactAmountInResponse();
-    if (object.token_out_amount !== undefined && object.token_out_amount !== null) {
+    if (
+      object.token_out_amount !== undefined &&
+      object.token_out_amount !== null
+    ) {
       message.tokenOutAmount = object.token_out_amount;
     }
     return message;
   },
-  toAmino(message: QuerySwapExactAmountInResponse): QuerySwapExactAmountInResponseAmino {
+  toAmino(
+    message: QuerySwapExactAmountInResponse,
+  ): QuerySwapExactAmountInResponseAmino {
     const obj: any = {};
-    obj.token_out_amount = message.tokenOutAmount === "" ? undefined : message.tokenOutAmount;
+    obj.token_out_amount =
+      message.tokenOutAmount === '' ? undefined : message.tokenOutAmount;
     return obj;
   },
-  fromAminoMsg(object: QuerySwapExactAmountInResponseAminoMsg): QuerySwapExactAmountInResponse {
+  fromAminoMsg(
+    object: QuerySwapExactAmountInResponseAminoMsg,
+  ): QuerySwapExactAmountInResponse {
     return QuerySwapExactAmountInResponse.fromAmino(object.value);
   },
-  fromProtoMsg(message: QuerySwapExactAmountInResponseProtoMsg): QuerySwapExactAmountInResponse {
+  fromProtoMsg(
+    message: QuerySwapExactAmountInResponseProtoMsg,
+  ): QuerySwapExactAmountInResponse {
     return QuerySwapExactAmountInResponse.decode(message.value);
   },
   toProto(message: QuerySwapExactAmountInResponse): Uint8Array {
     return QuerySwapExactAmountInResponse.encode(message).finish();
   },
-  toProtoMsg(message: QuerySwapExactAmountInResponse): QuerySwapExactAmountInResponseProtoMsg {
+  toProtoMsg(
+    message: QuerySwapExactAmountInResponse,
+  ): QuerySwapExactAmountInResponseProtoMsg {
     return {
-      typeUrl: "/symphony.gamm.v1beta1.QuerySwapExactAmountInResponse",
-      value: QuerySwapExactAmountInResponse.encode(message).finish()
+      typeUrl: '/symphony.gamm.v1beta1.QuerySwapExactAmountInResponse',
+      value: QuerySwapExactAmountInResponse.encode(message).finish(),
     };
-  }
+  },
 };
-GlobalDecoderRegistry.register(QuerySwapExactAmountInResponse.typeUrl, QuerySwapExactAmountInResponse);
+GlobalDecoderRegistry.register(
+  QuerySwapExactAmountInResponse.typeUrl,
+  QuerySwapExactAmountInResponse,
+);
 function createBaseQuerySwapExactAmountOutRequest(): QuerySwapExactAmountOutRequest {
   return {
-    sender: "",
+    sender: '',
     poolId: BigInt(0),
     routes: [],
-    tokenOut: ""
+    tokenOut: '',
   };
 }
+/**
+ * =============================== EstimateSwapExactAmountOut
+ * @name QuerySwapExactAmountOutRequest
+ * @package symphony.gamm.v1beta1
+ * @see proto type: symphony.gamm.v1beta1.QuerySwapExactAmountOutRequest
+ * @deprecated
+ */
 export const QuerySwapExactAmountOutRequest = {
-  typeUrl: "/symphony.gamm.v1beta1.QuerySwapExactAmountOutRequest",
+  typeUrl: '/symphony.gamm.v1beta1.QuerySwapExactAmountOutRequest',
   is(o: any): o is QuerySwapExactAmountOutRequest {
-    return o && (o.$typeUrl === QuerySwapExactAmountOutRequest.typeUrl || typeof o.sender === "string" && typeof o.poolId === "bigint" && Array.isArray(o.routes) && (!o.routes.length || SwapAmountOutRoute.is(o.routes[0])) && typeof o.tokenOut === "string");
+    return (
+      o &&
+      (o.$typeUrl === QuerySwapExactAmountOutRequest.typeUrl ||
+        (typeof o.sender === 'string' &&
+          typeof o.poolId === 'bigint' &&
+          Array.isArray(o.routes) &&
+          (!o.routes.length || SwapAmountOutRoute.is(o.routes[0])) &&
+          typeof o.tokenOut === 'string'))
+    );
   },
   isSDK(o: any): o is QuerySwapExactAmountOutRequestSDKType {
-    return o && (o.$typeUrl === QuerySwapExactAmountOutRequest.typeUrl || typeof o.sender === "string" && typeof o.pool_id === "bigint" && Array.isArray(o.routes) && (!o.routes.length || SwapAmountOutRoute.isSDK(o.routes[0])) && typeof o.token_out === "string");
+    return (
+      o &&
+      (o.$typeUrl === QuerySwapExactAmountOutRequest.typeUrl ||
+        (typeof o.sender === 'string' &&
+          typeof o.pool_id === 'bigint' &&
+          Array.isArray(o.routes) &&
+          (!o.routes.length || SwapAmountOutRoute.isSDK(o.routes[0])) &&
+          typeof o.token_out === 'string'))
+    );
   },
   isAmino(o: any): o is QuerySwapExactAmountOutRequestAmino {
-    return o && (o.$typeUrl === QuerySwapExactAmountOutRequest.typeUrl || typeof o.sender === "string" && typeof o.pool_id === "bigint" && Array.isArray(o.routes) && (!o.routes.length || SwapAmountOutRoute.isAmino(o.routes[0])) && typeof o.token_out === "string");
+    return (
+      o &&
+      (o.$typeUrl === QuerySwapExactAmountOutRequest.typeUrl ||
+        (typeof o.sender === 'string' &&
+          typeof o.pool_id === 'bigint' &&
+          Array.isArray(o.routes) &&
+          (!o.routes.length || SwapAmountOutRoute.isAmino(o.routes[0])) &&
+          typeof o.token_out === 'string'))
+    );
   },
-  encode(message: QuerySwapExactAmountOutRequest, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
-    if (message.sender !== "") {
+  encode(
+    message: QuerySwapExactAmountOutRequest,
+    writer: BinaryWriter = BinaryWriter.create(),
+  ): BinaryWriter {
+    if (message.sender !== '') {
       writer.uint32(10).string(message.sender);
     }
     if (message.poolId !== BigInt(0)) {
@@ -3063,13 +4791,17 @@ export const QuerySwapExactAmountOutRequest = {
     for (const v of message.routes) {
       SwapAmountOutRoute.encode(v!, writer.uint32(26).fork()).ldelim();
     }
-    if (message.tokenOut !== "") {
+    if (message.tokenOut !== '') {
       writer.uint32(34).string(message.tokenOut);
     }
     return writer;
   },
-  decode(input: BinaryReader | Uint8Array, length?: number): QuerySwapExactAmountOutRequest {
-    const reader = input instanceof BinaryReader ? input : new BinaryReader(input);
+  decode(
+    input: BinaryReader | Uint8Array,
+    length?: number,
+  ): QuerySwapExactAmountOutRequest {
+    const reader =
+      input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseQuerySwapExactAmountOutRequest();
     while (reader.pos < end) {
@@ -3082,7 +4814,9 @@ export const QuerySwapExactAmountOutRequest = {
           message.poolId = reader.uint64();
           break;
         case 3:
-          message.routes.push(SwapAmountOutRoute.decode(reader, reader.uint32()));
+          message.routes.push(
+            SwapAmountOutRoute.decode(reader, reader.uint32()),
+          );
           break;
         case 4:
           message.tokenOut = reader.string();
@@ -3094,15 +4828,23 @@ export const QuerySwapExactAmountOutRequest = {
     }
     return message;
   },
-  fromPartial(object: Partial<QuerySwapExactAmountOutRequest>): QuerySwapExactAmountOutRequest {
+  fromPartial(
+    object: Partial<QuerySwapExactAmountOutRequest>,
+  ): QuerySwapExactAmountOutRequest {
     const message = createBaseQuerySwapExactAmountOutRequest();
-    message.sender = object.sender ?? "";
-    message.poolId = object.poolId !== undefined && object.poolId !== null ? BigInt(object.poolId.toString()) : BigInt(0);
-    message.routes = object.routes?.map(e => SwapAmountOutRoute.fromPartial(e)) || [];
-    message.tokenOut = object.tokenOut ?? "";
+    message.sender = object.sender ?? '';
+    message.poolId =
+      object.poolId !== undefined && object.poolId !== null
+        ? BigInt(object.poolId.toString())
+        : BigInt(0);
+    message.routes =
+      object.routes?.map(e => SwapAmountOutRoute.fromPartial(e)) || [];
+    message.tokenOut = object.tokenOut ?? '';
     return message;
   },
-  fromAmino(object: QuerySwapExactAmountOutRequestAmino): QuerySwapExactAmountOutRequest {
+  fromAmino(
+    object: QuerySwapExactAmountOutRequestAmino,
+  ): QuerySwapExactAmountOutRequest {
     const message = createBaseQuerySwapExactAmountOutRequest();
     if (object.sender !== undefined && object.sender !== null) {
       message.sender = object.sender;
@@ -3110,65 +4852,105 @@ export const QuerySwapExactAmountOutRequest = {
     if (object.pool_id !== undefined && object.pool_id !== null) {
       message.poolId = BigInt(object.pool_id);
     }
-    message.routes = object.routes?.map(e => SwapAmountOutRoute.fromAmino(e)) || [];
+    message.routes =
+      object.routes?.map(e => SwapAmountOutRoute.fromAmino(e)) || [];
     if (object.token_out !== undefined && object.token_out !== null) {
       message.tokenOut = object.token_out;
     }
     return message;
   },
-  toAmino(message: QuerySwapExactAmountOutRequest): QuerySwapExactAmountOutRequestAmino {
+  toAmino(
+    message: QuerySwapExactAmountOutRequest,
+  ): QuerySwapExactAmountOutRequestAmino {
     const obj: any = {};
-    obj.sender = message.sender === "" ? undefined : message.sender;
-    obj.pool_id = message.poolId !== BigInt(0) ? message.poolId?.toString() : undefined;
+    obj.sender = message.sender === '' ? undefined : message.sender;
+    obj.pool_id =
+      message.poolId !== BigInt(0) ? message.poolId?.toString() : undefined;
     if (message.routes) {
-      obj.routes = message.routes.map(e => e ? SwapAmountOutRoute.toAmino(e) : undefined);
+      obj.routes = message.routes.map(e =>
+        e ? SwapAmountOutRoute.toAmino(e) : undefined,
+      );
     } else {
       obj.routes = message.routes;
     }
-    obj.token_out = message.tokenOut === "" ? undefined : message.tokenOut;
+    obj.token_out = message.tokenOut === '' ? undefined : message.tokenOut;
     return obj;
   },
-  fromAminoMsg(object: QuerySwapExactAmountOutRequestAminoMsg): QuerySwapExactAmountOutRequest {
+  fromAminoMsg(
+    object: QuerySwapExactAmountOutRequestAminoMsg,
+  ): QuerySwapExactAmountOutRequest {
     return QuerySwapExactAmountOutRequest.fromAmino(object.value);
   },
-  fromProtoMsg(message: QuerySwapExactAmountOutRequestProtoMsg): QuerySwapExactAmountOutRequest {
+  fromProtoMsg(
+    message: QuerySwapExactAmountOutRequestProtoMsg,
+  ): QuerySwapExactAmountOutRequest {
     return QuerySwapExactAmountOutRequest.decode(message.value);
   },
   toProto(message: QuerySwapExactAmountOutRequest): Uint8Array {
     return QuerySwapExactAmountOutRequest.encode(message).finish();
   },
-  toProtoMsg(message: QuerySwapExactAmountOutRequest): QuerySwapExactAmountOutRequestProtoMsg {
+  toProtoMsg(
+    message: QuerySwapExactAmountOutRequest,
+  ): QuerySwapExactAmountOutRequestProtoMsg {
     return {
-      typeUrl: "/symphony.gamm.v1beta1.QuerySwapExactAmountOutRequest",
-      value: QuerySwapExactAmountOutRequest.encode(message).finish()
+      typeUrl: '/symphony.gamm.v1beta1.QuerySwapExactAmountOutRequest',
+      value: QuerySwapExactAmountOutRequest.encode(message).finish(),
     };
-  }
+  },
 };
-GlobalDecoderRegistry.register(QuerySwapExactAmountOutRequest.typeUrl, QuerySwapExactAmountOutRequest);
+GlobalDecoderRegistry.register(
+  QuerySwapExactAmountOutRequest.typeUrl,
+  QuerySwapExactAmountOutRequest,
+);
 function createBaseQuerySwapExactAmountOutResponse(): QuerySwapExactAmountOutResponse {
   return {
-    tokenInAmount: ""
+    tokenInAmount: '',
   };
 }
+/**
+ * @name QuerySwapExactAmountOutResponse
+ * @package symphony.gamm.v1beta1
+ * @see proto type: symphony.gamm.v1beta1.QuerySwapExactAmountOutResponse
+ * @deprecated
+ */
 export const QuerySwapExactAmountOutResponse = {
-  typeUrl: "/symphony.gamm.v1beta1.QuerySwapExactAmountOutResponse",
+  typeUrl: '/symphony.gamm.v1beta1.QuerySwapExactAmountOutResponse',
   is(o: any): o is QuerySwapExactAmountOutResponse {
-    return o && (o.$typeUrl === QuerySwapExactAmountOutResponse.typeUrl || typeof o.tokenInAmount === "string");
+    return (
+      o &&
+      (o.$typeUrl === QuerySwapExactAmountOutResponse.typeUrl ||
+        typeof o.tokenInAmount === 'string')
+    );
   },
   isSDK(o: any): o is QuerySwapExactAmountOutResponseSDKType {
-    return o && (o.$typeUrl === QuerySwapExactAmountOutResponse.typeUrl || typeof o.token_in_amount === "string");
+    return (
+      o &&
+      (o.$typeUrl === QuerySwapExactAmountOutResponse.typeUrl ||
+        typeof o.token_in_amount === 'string')
+    );
   },
   isAmino(o: any): o is QuerySwapExactAmountOutResponseAmino {
-    return o && (o.$typeUrl === QuerySwapExactAmountOutResponse.typeUrl || typeof o.token_in_amount === "string");
+    return (
+      o &&
+      (o.$typeUrl === QuerySwapExactAmountOutResponse.typeUrl ||
+        typeof o.token_in_amount === 'string')
+    );
   },
-  encode(message: QuerySwapExactAmountOutResponse, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
-    if (message.tokenInAmount !== "") {
+  encode(
+    message: QuerySwapExactAmountOutResponse,
+    writer: BinaryWriter = BinaryWriter.create(),
+  ): BinaryWriter {
+    if (message.tokenInAmount !== '') {
       writer.uint32(10).string(message.tokenInAmount);
     }
     return writer;
   },
-  decode(input: BinaryReader | Uint8Array, length?: number): QuerySwapExactAmountOutResponse {
-    const reader = input instanceof BinaryReader ? input : new BinaryReader(input);
+  decode(
+    input: BinaryReader | Uint8Array,
+    length?: number,
+  ): QuerySwapExactAmountOutResponse {
+    const reader =
+      input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseQuerySwapExactAmountOutResponse();
     while (reader.pos < end) {
@@ -3184,45 +4966,69 @@ export const QuerySwapExactAmountOutResponse = {
     }
     return message;
   },
-  fromPartial(object: Partial<QuerySwapExactAmountOutResponse>): QuerySwapExactAmountOutResponse {
+  fromPartial(
+    object: Partial<QuerySwapExactAmountOutResponse>,
+  ): QuerySwapExactAmountOutResponse {
     const message = createBaseQuerySwapExactAmountOutResponse();
-    message.tokenInAmount = object.tokenInAmount ?? "";
+    message.tokenInAmount = object.tokenInAmount ?? '';
     return message;
   },
-  fromAmino(object: QuerySwapExactAmountOutResponseAmino): QuerySwapExactAmountOutResponse {
+  fromAmino(
+    object: QuerySwapExactAmountOutResponseAmino,
+  ): QuerySwapExactAmountOutResponse {
     const message = createBaseQuerySwapExactAmountOutResponse();
-    if (object.token_in_amount !== undefined && object.token_in_amount !== null) {
+    if (
+      object.token_in_amount !== undefined &&
+      object.token_in_amount !== null
+    ) {
       message.tokenInAmount = object.token_in_amount;
     }
     return message;
   },
-  toAmino(message: QuerySwapExactAmountOutResponse): QuerySwapExactAmountOutResponseAmino {
+  toAmino(
+    message: QuerySwapExactAmountOutResponse,
+  ): QuerySwapExactAmountOutResponseAmino {
     const obj: any = {};
-    obj.token_in_amount = message.tokenInAmount === "" ? undefined : message.tokenInAmount;
+    obj.token_in_amount =
+      message.tokenInAmount === '' ? undefined : message.tokenInAmount;
     return obj;
   },
-  fromAminoMsg(object: QuerySwapExactAmountOutResponseAminoMsg): QuerySwapExactAmountOutResponse {
+  fromAminoMsg(
+    object: QuerySwapExactAmountOutResponseAminoMsg,
+  ): QuerySwapExactAmountOutResponse {
     return QuerySwapExactAmountOutResponse.fromAmino(object.value);
   },
-  fromProtoMsg(message: QuerySwapExactAmountOutResponseProtoMsg): QuerySwapExactAmountOutResponse {
+  fromProtoMsg(
+    message: QuerySwapExactAmountOutResponseProtoMsg,
+  ): QuerySwapExactAmountOutResponse {
     return QuerySwapExactAmountOutResponse.decode(message.value);
   },
   toProto(message: QuerySwapExactAmountOutResponse): Uint8Array {
     return QuerySwapExactAmountOutResponse.encode(message).finish();
   },
-  toProtoMsg(message: QuerySwapExactAmountOutResponse): QuerySwapExactAmountOutResponseProtoMsg {
+  toProtoMsg(
+    message: QuerySwapExactAmountOutResponse,
+  ): QuerySwapExactAmountOutResponseProtoMsg {
     return {
-      typeUrl: "/symphony.gamm.v1beta1.QuerySwapExactAmountOutResponse",
-      value: QuerySwapExactAmountOutResponse.encode(message).finish()
+      typeUrl: '/symphony.gamm.v1beta1.QuerySwapExactAmountOutResponse',
+      value: QuerySwapExactAmountOutResponse.encode(message).finish(),
     };
-  }
+  },
 };
-GlobalDecoderRegistry.register(QuerySwapExactAmountOutResponse.typeUrl, QuerySwapExactAmountOutResponse);
+GlobalDecoderRegistry.register(
+  QuerySwapExactAmountOutResponse.typeUrl,
+  QuerySwapExactAmountOutResponse,
+);
 function createBaseQueryTotalLiquidityRequest(): QueryTotalLiquidityRequest {
   return {};
 }
+/**
+ * @name QueryTotalLiquidityRequest
+ * @package symphony.gamm.v1beta1
+ * @see proto type: symphony.gamm.v1beta1.QueryTotalLiquidityRequest
+ */
 export const QueryTotalLiquidityRequest = {
-  typeUrl: "/symphony.gamm.v1beta1.QueryTotalLiquidityRequest",
+  typeUrl: '/symphony.gamm.v1beta1.QueryTotalLiquidityRequest',
   is(o: any): o is QueryTotalLiquidityRequest {
     return o && o.$typeUrl === QueryTotalLiquidityRequest.typeUrl;
   },
@@ -3232,11 +5038,18 @@ export const QueryTotalLiquidityRequest = {
   isAmino(o: any): o is QueryTotalLiquidityRequestAmino {
     return o && o.$typeUrl === QueryTotalLiquidityRequest.typeUrl;
   },
-  encode(_: QueryTotalLiquidityRequest, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
+  encode(
+    _: QueryTotalLiquidityRequest,
+    writer: BinaryWriter = BinaryWriter.create(),
+  ): BinaryWriter {
     return writer;
   },
-  decode(input: BinaryReader | Uint8Array, length?: number): QueryTotalLiquidityRequest {
-    const reader = input instanceof BinaryReader ? input : new BinaryReader(input);
+  decode(
+    input: BinaryReader | Uint8Array,
+    length?: number,
+  ): QueryTotalLiquidityRequest {
+    const reader =
+      input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseQueryTotalLiquidityRequest();
     while (reader.pos < end) {
@@ -3249,7 +5062,9 @@ export const QueryTotalLiquidityRequest = {
     }
     return message;
   },
-  fromPartial(_: Partial<QueryTotalLiquidityRequest>): QueryTotalLiquidityRequest {
+  fromPartial(
+    _: Partial<QueryTotalLiquidityRequest>,
+  ): QueryTotalLiquidityRequest {
     const message = createBaseQueryTotalLiquidityRequest();
     return message;
   },
@@ -3261,47 +5076,83 @@ export const QueryTotalLiquidityRequest = {
     const obj: any = {};
     return obj;
   },
-  fromAminoMsg(object: QueryTotalLiquidityRequestAminoMsg): QueryTotalLiquidityRequest {
+  fromAminoMsg(
+    object: QueryTotalLiquidityRequestAminoMsg,
+  ): QueryTotalLiquidityRequest {
     return QueryTotalLiquidityRequest.fromAmino(object.value);
   },
-  fromProtoMsg(message: QueryTotalLiquidityRequestProtoMsg): QueryTotalLiquidityRequest {
+  fromProtoMsg(
+    message: QueryTotalLiquidityRequestProtoMsg,
+  ): QueryTotalLiquidityRequest {
     return QueryTotalLiquidityRequest.decode(message.value);
   },
   toProto(message: QueryTotalLiquidityRequest): Uint8Array {
     return QueryTotalLiquidityRequest.encode(message).finish();
   },
-  toProtoMsg(message: QueryTotalLiquidityRequest): QueryTotalLiquidityRequestProtoMsg {
+  toProtoMsg(
+    message: QueryTotalLiquidityRequest,
+  ): QueryTotalLiquidityRequestProtoMsg {
     return {
-      typeUrl: "/symphony.gamm.v1beta1.QueryTotalLiquidityRequest",
-      value: QueryTotalLiquidityRequest.encode(message).finish()
+      typeUrl: '/symphony.gamm.v1beta1.QueryTotalLiquidityRequest',
+      value: QueryTotalLiquidityRequest.encode(message).finish(),
     };
-  }
+  },
 };
-GlobalDecoderRegistry.register(QueryTotalLiquidityRequest.typeUrl, QueryTotalLiquidityRequest);
+GlobalDecoderRegistry.register(
+  QueryTotalLiquidityRequest.typeUrl,
+  QueryTotalLiquidityRequest,
+);
 function createBaseQueryTotalLiquidityResponse(): QueryTotalLiquidityResponse {
   return {
-    liquidity: []
+    liquidity: [],
   };
 }
+/**
+ * @name QueryTotalLiquidityResponse
+ * @package symphony.gamm.v1beta1
+ * @see proto type: symphony.gamm.v1beta1.QueryTotalLiquidityResponse
+ */
 export const QueryTotalLiquidityResponse = {
-  typeUrl: "/symphony.gamm.v1beta1.QueryTotalLiquidityResponse",
+  typeUrl: '/symphony.gamm.v1beta1.QueryTotalLiquidityResponse',
   is(o: any): o is QueryTotalLiquidityResponse {
-    return o && (o.$typeUrl === QueryTotalLiquidityResponse.typeUrl || Array.isArray(o.liquidity) && (!o.liquidity.length || Coin.is(o.liquidity[0])));
+    return (
+      o &&
+      (o.$typeUrl === QueryTotalLiquidityResponse.typeUrl ||
+        (Array.isArray(o.liquidity) &&
+          (!o.liquidity.length || Coin.is(o.liquidity[0]))))
+    );
   },
   isSDK(o: any): o is QueryTotalLiquidityResponseSDKType {
-    return o && (o.$typeUrl === QueryTotalLiquidityResponse.typeUrl || Array.isArray(o.liquidity) && (!o.liquidity.length || Coin.isSDK(o.liquidity[0])));
+    return (
+      o &&
+      (o.$typeUrl === QueryTotalLiquidityResponse.typeUrl ||
+        (Array.isArray(o.liquidity) &&
+          (!o.liquidity.length || Coin.isSDK(o.liquidity[0]))))
+    );
   },
   isAmino(o: any): o is QueryTotalLiquidityResponseAmino {
-    return o && (o.$typeUrl === QueryTotalLiquidityResponse.typeUrl || Array.isArray(o.liquidity) && (!o.liquidity.length || Coin.isAmino(o.liquidity[0])));
+    return (
+      o &&
+      (o.$typeUrl === QueryTotalLiquidityResponse.typeUrl ||
+        (Array.isArray(o.liquidity) &&
+          (!o.liquidity.length || Coin.isAmino(o.liquidity[0]))))
+    );
   },
-  encode(message: QueryTotalLiquidityResponse, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
+  encode(
+    message: QueryTotalLiquidityResponse,
+    writer: BinaryWriter = BinaryWriter.create(),
+  ): BinaryWriter {
     for (const v of message.liquidity) {
       Coin.encode(v!, writer.uint32(10).fork()).ldelim();
     }
     return writer;
   },
-  decode(input: BinaryReader | Uint8Array, length?: number): QueryTotalLiquidityResponse {
-    const reader = input instanceof BinaryReader ? input : new BinaryReader(input);
+  decode(
+    input: BinaryReader | Uint8Array,
+    length?: number,
+  ): QueryTotalLiquidityResponse {
+    const reader =
+      input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseQueryTotalLiquidityResponse();
     while (reader.pos < end) {
@@ -3317,66 +5168,108 @@ export const QueryTotalLiquidityResponse = {
     }
     return message;
   },
-  fromPartial(object: Partial<QueryTotalLiquidityResponse>): QueryTotalLiquidityResponse {
+  fromPartial(
+    object: Partial<QueryTotalLiquidityResponse>,
+  ): QueryTotalLiquidityResponse {
     const message = createBaseQueryTotalLiquidityResponse();
     message.liquidity = object.liquidity?.map(e => Coin.fromPartial(e)) || [];
     return message;
   },
-  fromAmino(object: QueryTotalLiquidityResponseAmino): QueryTotalLiquidityResponse {
+  fromAmino(
+    object: QueryTotalLiquidityResponseAmino,
+  ): QueryTotalLiquidityResponse {
     const message = createBaseQueryTotalLiquidityResponse();
     message.liquidity = object.liquidity?.map(e => Coin.fromAmino(e)) || [];
     return message;
   },
-  toAmino(message: QueryTotalLiquidityResponse): QueryTotalLiquidityResponseAmino {
+  toAmino(
+    message: QueryTotalLiquidityResponse,
+  ): QueryTotalLiquidityResponseAmino {
     const obj: any = {};
     if (message.liquidity) {
-      obj.liquidity = message.liquidity.map(e => e ? Coin.toAmino(e) : undefined);
+      obj.liquidity = message.liquidity.map(e =>
+        e ? Coin.toAmino(e) : undefined,
+      );
     } else {
       obj.liquidity = message.liquidity;
     }
     return obj;
   },
-  fromAminoMsg(object: QueryTotalLiquidityResponseAminoMsg): QueryTotalLiquidityResponse {
+  fromAminoMsg(
+    object: QueryTotalLiquidityResponseAminoMsg,
+  ): QueryTotalLiquidityResponse {
     return QueryTotalLiquidityResponse.fromAmino(object.value);
   },
-  fromProtoMsg(message: QueryTotalLiquidityResponseProtoMsg): QueryTotalLiquidityResponse {
+  fromProtoMsg(
+    message: QueryTotalLiquidityResponseProtoMsg,
+  ): QueryTotalLiquidityResponse {
     return QueryTotalLiquidityResponse.decode(message.value);
   },
   toProto(message: QueryTotalLiquidityResponse): Uint8Array {
     return QueryTotalLiquidityResponse.encode(message).finish();
   },
-  toProtoMsg(message: QueryTotalLiquidityResponse): QueryTotalLiquidityResponseProtoMsg {
+  toProtoMsg(
+    message: QueryTotalLiquidityResponse,
+  ): QueryTotalLiquidityResponseProtoMsg {
     return {
-      typeUrl: "/symphony.gamm.v1beta1.QueryTotalLiquidityResponse",
-      value: QueryTotalLiquidityResponse.encode(message).finish()
+      typeUrl: '/symphony.gamm.v1beta1.QueryTotalLiquidityResponse',
+      value: QueryTotalLiquidityResponse.encode(message).finish(),
     };
-  }
+  },
 };
-GlobalDecoderRegistry.register(QueryTotalLiquidityResponse.typeUrl, QueryTotalLiquidityResponse);
+GlobalDecoderRegistry.register(
+  QueryTotalLiquidityResponse.typeUrl,
+  QueryTotalLiquidityResponse,
+);
 function createBaseQueryConcentratedPoolIdLinkFromCFMMRequest(): QueryConcentratedPoolIdLinkFromCFMMRequest {
   return {
-    cfmmPoolId: BigInt(0)
+    cfmmPoolId: BigInt(0),
   };
 }
+/**
+ * =============================== QueryConcentratedPoolIdLinkFromCFMM
+ * @name QueryConcentratedPoolIdLinkFromCFMMRequest
+ * @package symphony.gamm.v1beta1
+ * @see proto type: symphony.gamm.v1beta1.QueryConcentratedPoolIdLinkFromCFMMRequest
+ */
 export const QueryConcentratedPoolIdLinkFromCFMMRequest = {
-  typeUrl: "/symphony.gamm.v1beta1.QueryConcentratedPoolIdLinkFromCFMMRequest",
+  typeUrl: '/symphony.gamm.v1beta1.QueryConcentratedPoolIdLinkFromCFMMRequest',
   is(o: any): o is QueryConcentratedPoolIdLinkFromCFMMRequest {
-    return o && (o.$typeUrl === QueryConcentratedPoolIdLinkFromCFMMRequest.typeUrl || typeof o.cfmmPoolId === "bigint");
+    return (
+      o &&
+      (o.$typeUrl === QueryConcentratedPoolIdLinkFromCFMMRequest.typeUrl ||
+        typeof o.cfmmPoolId === 'bigint')
+    );
   },
   isSDK(o: any): o is QueryConcentratedPoolIdLinkFromCFMMRequestSDKType {
-    return o && (o.$typeUrl === QueryConcentratedPoolIdLinkFromCFMMRequest.typeUrl || typeof o.cfmm_pool_id === "bigint");
+    return (
+      o &&
+      (o.$typeUrl === QueryConcentratedPoolIdLinkFromCFMMRequest.typeUrl ||
+        typeof o.cfmm_pool_id === 'bigint')
+    );
   },
   isAmino(o: any): o is QueryConcentratedPoolIdLinkFromCFMMRequestAmino {
-    return o && (o.$typeUrl === QueryConcentratedPoolIdLinkFromCFMMRequest.typeUrl || typeof o.cfmm_pool_id === "bigint");
+    return (
+      o &&
+      (o.$typeUrl === QueryConcentratedPoolIdLinkFromCFMMRequest.typeUrl ||
+        typeof o.cfmm_pool_id === 'bigint')
+    );
   },
-  encode(message: QueryConcentratedPoolIdLinkFromCFMMRequest, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
+  encode(
+    message: QueryConcentratedPoolIdLinkFromCFMMRequest,
+    writer: BinaryWriter = BinaryWriter.create(),
+  ): BinaryWriter {
     if (message.cfmmPoolId !== BigInt(0)) {
       writer.uint32(8).uint64(message.cfmmPoolId);
     }
     return writer;
   },
-  decode(input: BinaryReader | Uint8Array, length?: number): QueryConcentratedPoolIdLinkFromCFMMRequest {
-    const reader = input instanceof BinaryReader ? input : new BinaryReader(input);
+  decode(
+    input: BinaryReader | Uint8Array,
+    length?: number,
+  ): QueryConcentratedPoolIdLinkFromCFMMRequest {
+    const reader =
+      input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseQueryConcentratedPoolIdLinkFromCFMMRequest();
     while (reader.pos < end) {
@@ -3392,64 +5285,111 @@ export const QueryConcentratedPoolIdLinkFromCFMMRequest = {
     }
     return message;
   },
-  fromPartial(object: Partial<QueryConcentratedPoolIdLinkFromCFMMRequest>): QueryConcentratedPoolIdLinkFromCFMMRequest {
+  fromPartial(
+    object: Partial<QueryConcentratedPoolIdLinkFromCFMMRequest>,
+  ): QueryConcentratedPoolIdLinkFromCFMMRequest {
     const message = createBaseQueryConcentratedPoolIdLinkFromCFMMRequest();
-    message.cfmmPoolId = object.cfmmPoolId !== undefined && object.cfmmPoolId !== null ? BigInt(object.cfmmPoolId.toString()) : BigInt(0);
+    message.cfmmPoolId =
+      object.cfmmPoolId !== undefined && object.cfmmPoolId !== null
+        ? BigInt(object.cfmmPoolId.toString())
+        : BigInt(0);
     return message;
   },
-  fromAmino(object: QueryConcentratedPoolIdLinkFromCFMMRequestAmino): QueryConcentratedPoolIdLinkFromCFMMRequest {
+  fromAmino(
+    object: QueryConcentratedPoolIdLinkFromCFMMRequestAmino,
+  ): QueryConcentratedPoolIdLinkFromCFMMRequest {
     const message = createBaseQueryConcentratedPoolIdLinkFromCFMMRequest();
     if (object.cfmm_pool_id !== undefined && object.cfmm_pool_id !== null) {
       message.cfmmPoolId = BigInt(object.cfmm_pool_id);
     }
     return message;
   },
-  toAmino(message: QueryConcentratedPoolIdLinkFromCFMMRequest): QueryConcentratedPoolIdLinkFromCFMMRequestAmino {
+  toAmino(
+    message: QueryConcentratedPoolIdLinkFromCFMMRequest,
+  ): QueryConcentratedPoolIdLinkFromCFMMRequestAmino {
     const obj: any = {};
-    obj.cfmm_pool_id = message.cfmmPoolId !== BigInt(0) ? message.cfmmPoolId?.toString() : undefined;
+    obj.cfmm_pool_id =
+      message.cfmmPoolId !== BigInt(0)
+        ? message.cfmmPoolId?.toString()
+        : undefined;
     return obj;
   },
-  fromAminoMsg(object: QueryConcentratedPoolIdLinkFromCFMMRequestAminoMsg): QueryConcentratedPoolIdLinkFromCFMMRequest {
+  fromAminoMsg(
+    object: QueryConcentratedPoolIdLinkFromCFMMRequestAminoMsg,
+  ): QueryConcentratedPoolIdLinkFromCFMMRequest {
     return QueryConcentratedPoolIdLinkFromCFMMRequest.fromAmino(object.value);
   },
-  fromProtoMsg(message: QueryConcentratedPoolIdLinkFromCFMMRequestProtoMsg): QueryConcentratedPoolIdLinkFromCFMMRequest {
+  fromProtoMsg(
+    message: QueryConcentratedPoolIdLinkFromCFMMRequestProtoMsg,
+  ): QueryConcentratedPoolIdLinkFromCFMMRequest {
     return QueryConcentratedPoolIdLinkFromCFMMRequest.decode(message.value);
   },
   toProto(message: QueryConcentratedPoolIdLinkFromCFMMRequest): Uint8Array {
     return QueryConcentratedPoolIdLinkFromCFMMRequest.encode(message).finish();
   },
-  toProtoMsg(message: QueryConcentratedPoolIdLinkFromCFMMRequest): QueryConcentratedPoolIdLinkFromCFMMRequestProtoMsg {
+  toProtoMsg(
+    message: QueryConcentratedPoolIdLinkFromCFMMRequest,
+  ): QueryConcentratedPoolIdLinkFromCFMMRequestProtoMsg {
     return {
-      typeUrl: "/symphony.gamm.v1beta1.QueryConcentratedPoolIdLinkFromCFMMRequest",
-      value: QueryConcentratedPoolIdLinkFromCFMMRequest.encode(message).finish()
+      typeUrl:
+        '/symphony.gamm.v1beta1.QueryConcentratedPoolIdLinkFromCFMMRequest',
+      value:
+        QueryConcentratedPoolIdLinkFromCFMMRequest.encode(message).finish(),
     };
-  }
+  },
 };
-GlobalDecoderRegistry.register(QueryConcentratedPoolIdLinkFromCFMMRequest.typeUrl, QueryConcentratedPoolIdLinkFromCFMMRequest);
+GlobalDecoderRegistry.register(
+  QueryConcentratedPoolIdLinkFromCFMMRequest.typeUrl,
+  QueryConcentratedPoolIdLinkFromCFMMRequest,
+);
 function createBaseQueryConcentratedPoolIdLinkFromCFMMResponse(): QueryConcentratedPoolIdLinkFromCFMMResponse {
   return {
-    concentratedPoolId: BigInt(0)
+    concentratedPoolId: BigInt(0),
   };
 }
+/**
+ * @name QueryConcentratedPoolIdLinkFromCFMMResponse
+ * @package symphony.gamm.v1beta1
+ * @see proto type: symphony.gamm.v1beta1.QueryConcentratedPoolIdLinkFromCFMMResponse
+ */
 export const QueryConcentratedPoolIdLinkFromCFMMResponse = {
-  typeUrl: "/symphony.gamm.v1beta1.QueryConcentratedPoolIdLinkFromCFMMResponse",
+  typeUrl: '/symphony.gamm.v1beta1.QueryConcentratedPoolIdLinkFromCFMMResponse',
   is(o: any): o is QueryConcentratedPoolIdLinkFromCFMMResponse {
-    return o && (o.$typeUrl === QueryConcentratedPoolIdLinkFromCFMMResponse.typeUrl || typeof o.concentratedPoolId === "bigint");
+    return (
+      o &&
+      (o.$typeUrl === QueryConcentratedPoolIdLinkFromCFMMResponse.typeUrl ||
+        typeof o.concentratedPoolId === 'bigint')
+    );
   },
   isSDK(o: any): o is QueryConcentratedPoolIdLinkFromCFMMResponseSDKType {
-    return o && (o.$typeUrl === QueryConcentratedPoolIdLinkFromCFMMResponse.typeUrl || typeof o.concentrated_pool_id === "bigint");
+    return (
+      o &&
+      (o.$typeUrl === QueryConcentratedPoolIdLinkFromCFMMResponse.typeUrl ||
+        typeof o.concentrated_pool_id === 'bigint')
+    );
   },
   isAmino(o: any): o is QueryConcentratedPoolIdLinkFromCFMMResponseAmino {
-    return o && (o.$typeUrl === QueryConcentratedPoolIdLinkFromCFMMResponse.typeUrl || typeof o.concentrated_pool_id === "bigint");
+    return (
+      o &&
+      (o.$typeUrl === QueryConcentratedPoolIdLinkFromCFMMResponse.typeUrl ||
+        typeof o.concentrated_pool_id === 'bigint')
+    );
   },
-  encode(message: QueryConcentratedPoolIdLinkFromCFMMResponse, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
+  encode(
+    message: QueryConcentratedPoolIdLinkFromCFMMResponse,
+    writer: BinaryWriter = BinaryWriter.create(),
+  ): BinaryWriter {
     if (message.concentratedPoolId !== BigInt(0)) {
       writer.uint32(8).uint64(message.concentratedPoolId);
     }
     return writer;
   },
-  decode(input: BinaryReader | Uint8Array, length?: number): QueryConcentratedPoolIdLinkFromCFMMResponse {
-    const reader = input instanceof BinaryReader ? input : new BinaryReader(input);
+  decode(
+    input: BinaryReader | Uint8Array,
+    length?: number,
+  ): QueryConcentratedPoolIdLinkFromCFMMResponse {
+    const reader =
+      input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseQueryConcentratedPoolIdLinkFromCFMMResponse();
     while (reader.pos < end) {
@@ -3465,45 +5405,78 @@ export const QueryConcentratedPoolIdLinkFromCFMMResponse = {
     }
     return message;
   },
-  fromPartial(object: Partial<QueryConcentratedPoolIdLinkFromCFMMResponse>): QueryConcentratedPoolIdLinkFromCFMMResponse {
+  fromPartial(
+    object: Partial<QueryConcentratedPoolIdLinkFromCFMMResponse>,
+  ): QueryConcentratedPoolIdLinkFromCFMMResponse {
     const message = createBaseQueryConcentratedPoolIdLinkFromCFMMResponse();
-    message.concentratedPoolId = object.concentratedPoolId !== undefined && object.concentratedPoolId !== null ? BigInt(object.concentratedPoolId.toString()) : BigInt(0);
+    message.concentratedPoolId =
+      object.concentratedPoolId !== undefined &&
+      object.concentratedPoolId !== null
+        ? BigInt(object.concentratedPoolId.toString())
+        : BigInt(0);
     return message;
   },
-  fromAmino(object: QueryConcentratedPoolIdLinkFromCFMMResponseAmino): QueryConcentratedPoolIdLinkFromCFMMResponse {
+  fromAmino(
+    object: QueryConcentratedPoolIdLinkFromCFMMResponseAmino,
+  ): QueryConcentratedPoolIdLinkFromCFMMResponse {
     const message = createBaseQueryConcentratedPoolIdLinkFromCFMMResponse();
-    if (object.concentrated_pool_id !== undefined && object.concentrated_pool_id !== null) {
+    if (
+      object.concentrated_pool_id !== undefined &&
+      object.concentrated_pool_id !== null
+    ) {
       message.concentratedPoolId = BigInt(object.concentrated_pool_id);
     }
     return message;
   },
-  toAmino(message: QueryConcentratedPoolIdLinkFromCFMMResponse): QueryConcentratedPoolIdLinkFromCFMMResponseAmino {
+  toAmino(
+    message: QueryConcentratedPoolIdLinkFromCFMMResponse,
+  ): QueryConcentratedPoolIdLinkFromCFMMResponseAmino {
     const obj: any = {};
-    obj.concentrated_pool_id = message.concentratedPoolId !== BigInt(0) ? message.concentratedPoolId?.toString() : undefined;
+    obj.concentrated_pool_id =
+      message.concentratedPoolId !== BigInt(0)
+        ? message.concentratedPoolId?.toString()
+        : undefined;
     return obj;
   },
-  fromAminoMsg(object: QueryConcentratedPoolIdLinkFromCFMMResponseAminoMsg): QueryConcentratedPoolIdLinkFromCFMMResponse {
+  fromAminoMsg(
+    object: QueryConcentratedPoolIdLinkFromCFMMResponseAminoMsg,
+  ): QueryConcentratedPoolIdLinkFromCFMMResponse {
     return QueryConcentratedPoolIdLinkFromCFMMResponse.fromAmino(object.value);
   },
-  fromProtoMsg(message: QueryConcentratedPoolIdLinkFromCFMMResponseProtoMsg): QueryConcentratedPoolIdLinkFromCFMMResponse {
+  fromProtoMsg(
+    message: QueryConcentratedPoolIdLinkFromCFMMResponseProtoMsg,
+  ): QueryConcentratedPoolIdLinkFromCFMMResponse {
     return QueryConcentratedPoolIdLinkFromCFMMResponse.decode(message.value);
   },
   toProto(message: QueryConcentratedPoolIdLinkFromCFMMResponse): Uint8Array {
     return QueryConcentratedPoolIdLinkFromCFMMResponse.encode(message).finish();
   },
-  toProtoMsg(message: QueryConcentratedPoolIdLinkFromCFMMResponse): QueryConcentratedPoolIdLinkFromCFMMResponseProtoMsg {
+  toProtoMsg(
+    message: QueryConcentratedPoolIdLinkFromCFMMResponse,
+  ): QueryConcentratedPoolIdLinkFromCFMMResponseProtoMsg {
     return {
-      typeUrl: "/symphony.gamm.v1beta1.QueryConcentratedPoolIdLinkFromCFMMResponse",
-      value: QueryConcentratedPoolIdLinkFromCFMMResponse.encode(message).finish()
+      typeUrl:
+        '/symphony.gamm.v1beta1.QueryConcentratedPoolIdLinkFromCFMMResponse',
+      value:
+        QueryConcentratedPoolIdLinkFromCFMMResponse.encode(message).finish(),
     };
-  }
+  },
 };
-GlobalDecoderRegistry.register(QueryConcentratedPoolIdLinkFromCFMMResponse.typeUrl, QueryConcentratedPoolIdLinkFromCFMMResponse);
+GlobalDecoderRegistry.register(
+  QueryConcentratedPoolIdLinkFromCFMMResponse.typeUrl,
+  QueryConcentratedPoolIdLinkFromCFMMResponse,
+);
 function createBaseQueryCFMMConcentratedPoolLinksRequest(): QueryCFMMConcentratedPoolLinksRequest {
   return {};
 }
+/**
+ * =============================== QueryCFMMConcentratedPoolLinks
+ * @name QueryCFMMConcentratedPoolLinksRequest
+ * @package symphony.gamm.v1beta1
+ * @see proto type: symphony.gamm.v1beta1.QueryCFMMConcentratedPoolLinksRequest
+ */
 export const QueryCFMMConcentratedPoolLinksRequest = {
-  typeUrl: "/symphony.gamm.v1beta1.QueryCFMMConcentratedPoolLinksRequest",
+  typeUrl: '/symphony.gamm.v1beta1.QueryCFMMConcentratedPoolLinksRequest',
   is(o: any): o is QueryCFMMConcentratedPoolLinksRequest {
     return o && o.$typeUrl === QueryCFMMConcentratedPoolLinksRequest.typeUrl;
   },
@@ -3513,11 +5486,18 @@ export const QueryCFMMConcentratedPoolLinksRequest = {
   isAmino(o: any): o is QueryCFMMConcentratedPoolLinksRequestAmino {
     return o && o.$typeUrl === QueryCFMMConcentratedPoolLinksRequest.typeUrl;
   },
-  encode(_: QueryCFMMConcentratedPoolLinksRequest, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
+  encode(
+    _: QueryCFMMConcentratedPoolLinksRequest,
+    writer: BinaryWriter = BinaryWriter.create(),
+  ): BinaryWriter {
     return writer;
   },
-  decode(input: BinaryReader | Uint8Array, length?: number): QueryCFMMConcentratedPoolLinksRequest {
-    const reader = input instanceof BinaryReader ? input : new BinaryReader(input);
+  decode(
+    input: BinaryReader | Uint8Array,
+    length?: number,
+  ): QueryCFMMConcentratedPoolLinksRequest {
+    const reader =
+      input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseQueryCFMMConcentratedPoolLinksRequest();
     while (reader.pos < end) {
@@ -3530,42 +5510,62 @@ export const QueryCFMMConcentratedPoolLinksRequest = {
     }
     return message;
   },
-  fromPartial(_: Partial<QueryCFMMConcentratedPoolLinksRequest>): QueryCFMMConcentratedPoolLinksRequest {
+  fromPartial(
+    _: Partial<QueryCFMMConcentratedPoolLinksRequest>,
+  ): QueryCFMMConcentratedPoolLinksRequest {
     const message = createBaseQueryCFMMConcentratedPoolLinksRequest();
     return message;
   },
-  fromAmino(_: QueryCFMMConcentratedPoolLinksRequestAmino): QueryCFMMConcentratedPoolLinksRequest {
+  fromAmino(
+    _: QueryCFMMConcentratedPoolLinksRequestAmino,
+  ): QueryCFMMConcentratedPoolLinksRequest {
     const message = createBaseQueryCFMMConcentratedPoolLinksRequest();
     return message;
   },
-  toAmino(_: QueryCFMMConcentratedPoolLinksRequest): QueryCFMMConcentratedPoolLinksRequestAmino {
+  toAmino(
+    _: QueryCFMMConcentratedPoolLinksRequest,
+  ): QueryCFMMConcentratedPoolLinksRequestAmino {
     const obj: any = {};
     return obj;
   },
-  fromAminoMsg(object: QueryCFMMConcentratedPoolLinksRequestAminoMsg): QueryCFMMConcentratedPoolLinksRequest {
+  fromAminoMsg(
+    object: QueryCFMMConcentratedPoolLinksRequestAminoMsg,
+  ): QueryCFMMConcentratedPoolLinksRequest {
     return QueryCFMMConcentratedPoolLinksRequest.fromAmino(object.value);
   },
-  fromProtoMsg(message: QueryCFMMConcentratedPoolLinksRequestProtoMsg): QueryCFMMConcentratedPoolLinksRequest {
+  fromProtoMsg(
+    message: QueryCFMMConcentratedPoolLinksRequestProtoMsg,
+  ): QueryCFMMConcentratedPoolLinksRequest {
     return QueryCFMMConcentratedPoolLinksRequest.decode(message.value);
   },
   toProto(message: QueryCFMMConcentratedPoolLinksRequest): Uint8Array {
     return QueryCFMMConcentratedPoolLinksRequest.encode(message).finish();
   },
-  toProtoMsg(message: QueryCFMMConcentratedPoolLinksRequest): QueryCFMMConcentratedPoolLinksRequestProtoMsg {
+  toProtoMsg(
+    message: QueryCFMMConcentratedPoolLinksRequest,
+  ): QueryCFMMConcentratedPoolLinksRequestProtoMsg {
     return {
-      typeUrl: "/symphony.gamm.v1beta1.QueryCFMMConcentratedPoolLinksRequest",
-      value: QueryCFMMConcentratedPoolLinksRequest.encode(message).finish()
+      typeUrl: '/symphony.gamm.v1beta1.QueryCFMMConcentratedPoolLinksRequest',
+      value: QueryCFMMConcentratedPoolLinksRequest.encode(message).finish(),
     };
-  }
+  },
 };
-GlobalDecoderRegistry.register(QueryCFMMConcentratedPoolLinksRequest.typeUrl, QueryCFMMConcentratedPoolLinksRequest);
+GlobalDecoderRegistry.register(
+  QueryCFMMConcentratedPoolLinksRequest.typeUrl,
+  QueryCFMMConcentratedPoolLinksRequest,
+);
 function createBaseQueryCFMMConcentratedPoolLinksResponse(): QueryCFMMConcentratedPoolLinksResponse {
   return {
-    migrationRecords: undefined
+    migrationRecords: undefined,
   };
 }
+/**
+ * @name QueryCFMMConcentratedPoolLinksResponse
+ * @package symphony.gamm.v1beta1
+ * @see proto type: symphony.gamm.v1beta1.QueryCFMMConcentratedPoolLinksResponse
+ */
 export const QueryCFMMConcentratedPoolLinksResponse = {
-  typeUrl: "/symphony.gamm.v1beta1.QueryCFMMConcentratedPoolLinksResponse",
+  typeUrl: '/symphony.gamm.v1beta1.QueryCFMMConcentratedPoolLinksResponse',
   is(o: any): o is QueryCFMMConcentratedPoolLinksResponse {
     return o && o.$typeUrl === QueryCFMMConcentratedPoolLinksResponse.typeUrl;
   },
@@ -3575,21 +5575,34 @@ export const QueryCFMMConcentratedPoolLinksResponse = {
   isAmino(o: any): o is QueryCFMMConcentratedPoolLinksResponseAmino {
     return o && o.$typeUrl === QueryCFMMConcentratedPoolLinksResponse.typeUrl;
   },
-  encode(message: QueryCFMMConcentratedPoolLinksResponse, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
+  encode(
+    message: QueryCFMMConcentratedPoolLinksResponse,
+    writer: BinaryWriter = BinaryWriter.create(),
+  ): BinaryWriter {
     if (message.migrationRecords !== undefined) {
-      MigrationRecords.encode(message.migrationRecords, writer.uint32(10).fork()).ldelim();
+      MigrationRecords.encode(
+        message.migrationRecords,
+        writer.uint32(10).fork(),
+      ).ldelim();
     }
     return writer;
   },
-  decode(input: BinaryReader | Uint8Array, length?: number): QueryCFMMConcentratedPoolLinksResponse {
-    const reader = input instanceof BinaryReader ? input : new BinaryReader(input);
+  decode(
+    input: BinaryReader | Uint8Array,
+    length?: number,
+  ): QueryCFMMConcentratedPoolLinksResponse {
+    const reader =
+      input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseQueryCFMMConcentratedPoolLinksResponse();
     while (reader.pos < end) {
       const tag = reader.uint32();
       switch (tag >>> 3) {
         case 1:
-          message.migrationRecords = MigrationRecords.decode(reader, reader.uint32());
+          message.migrationRecords = MigrationRecords.decode(
+            reader,
+            reader.uint32(),
+          );
           break;
         default:
           reader.skipType(tag & 7);
@@ -3598,37 +5611,62 @@ export const QueryCFMMConcentratedPoolLinksResponse = {
     }
     return message;
   },
-  fromPartial(object: Partial<QueryCFMMConcentratedPoolLinksResponse>): QueryCFMMConcentratedPoolLinksResponse {
+  fromPartial(
+    object: Partial<QueryCFMMConcentratedPoolLinksResponse>,
+  ): QueryCFMMConcentratedPoolLinksResponse {
     const message = createBaseQueryCFMMConcentratedPoolLinksResponse();
-    message.migrationRecords = object.migrationRecords !== undefined && object.migrationRecords !== null ? MigrationRecords.fromPartial(object.migrationRecords) : undefined;
+    message.migrationRecords =
+      object.migrationRecords !== undefined && object.migrationRecords !== null
+        ? MigrationRecords.fromPartial(object.migrationRecords)
+        : undefined;
     return message;
   },
-  fromAmino(object: QueryCFMMConcentratedPoolLinksResponseAmino): QueryCFMMConcentratedPoolLinksResponse {
+  fromAmino(
+    object: QueryCFMMConcentratedPoolLinksResponseAmino,
+  ): QueryCFMMConcentratedPoolLinksResponse {
     const message = createBaseQueryCFMMConcentratedPoolLinksResponse();
-    if (object.migration_records !== undefined && object.migration_records !== null) {
-      message.migrationRecords = MigrationRecords.fromAmino(object.migration_records);
+    if (
+      object.migration_records !== undefined &&
+      object.migration_records !== null
+    ) {
+      message.migrationRecords = MigrationRecords.fromAmino(
+        object.migration_records,
+      );
     }
     return message;
   },
-  toAmino(message: QueryCFMMConcentratedPoolLinksResponse): QueryCFMMConcentratedPoolLinksResponseAmino {
+  toAmino(
+    message: QueryCFMMConcentratedPoolLinksResponse,
+  ): QueryCFMMConcentratedPoolLinksResponseAmino {
     const obj: any = {};
-    obj.migration_records = message.migrationRecords ? MigrationRecords.toAmino(message.migrationRecords) : undefined;
+    obj.migration_records = message.migrationRecords
+      ? MigrationRecords.toAmino(message.migrationRecords)
+      : undefined;
     return obj;
   },
-  fromAminoMsg(object: QueryCFMMConcentratedPoolLinksResponseAminoMsg): QueryCFMMConcentratedPoolLinksResponse {
+  fromAminoMsg(
+    object: QueryCFMMConcentratedPoolLinksResponseAminoMsg,
+  ): QueryCFMMConcentratedPoolLinksResponse {
     return QueryCFMMConcentratedPoolLinksResponse.fromAmino(object.value);
   },
-  fromProtoMsg(message: QueryCFMMConcentratedPoolLinksResponseProtoMsg): QueryCFMMConcentratedPoolLinksResponse {
+  fromProtoMsg(
+    message: QueryCFMMConcentratedPoolLinksResponseProtoMsg,
+  ): QueryCFMMConcentratedPoolLinksResponse {
     return QueryCFMMConcentratedPoolLinksResponse.decode(message.value);
   },
   toProto(message: QueryCFMMConcentratedPoolLinksResponse): Uint8Array {
     return QueryCFMMConcentratedPoolLinksResponse.encode(message).finish();
   },
-  toProtoMsg(message: QueryCFMMConcentratedPoolLinksResponse): QueryCFMMConcentratedPoolLinksResponseProtoMsg {
+  toProtoMsg(
+    message: QueryCFMMConcentratedPoolLinksResponse,
+  ): QueryCFMMConcentratedPoolLinksResponseProtoMsg {
     return {
-      typeUrl: "/symphony.gamm.v1beta1.QueryCFMMConcentratedPoolLinksResponse",
-      value: QueryCFMMConcentratedPoolLinksResponse.encode(message).finish()
+      typeUrl: '/symphony.gamm.v1beta1.QueryCFMMConcentratedPoolLinksResponse',
+      value: QueryCFMMConcentratedPoolLinksResponse.encode(message).finish(),
     };
-  }
+  },
 };
-GlobalDecoderRegistry.register(QueryCFMMConcentratedPoolLinksResponse.typeUrl, QueryCFMMConcentratedPoolLinksResponse);
+GlobalDecoderRegistry.register(
+  QueryCFMMConcentratedPoolLinksResponse.typeUrl,
+  QueryCFMMConcentratedPoolLinksResponse,
+);

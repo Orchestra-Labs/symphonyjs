@@ -1,10 +1,32 @@
 //@ts-nocheck
-import { SwapAmountInRoute, SwapAmountInRouteAmino, SwapAmountInRouteSDKType, SwapAmountOutRoute, SwapAmountOutRouteAmino, SwapAmountOutRouteSDKType, SwapAmountInSplitRoute, SwapAmountInSplitRouteAmino, SwapAmountInSplitRouteSDKType, SwapAmountOutSplitRoute, SwapAmountOutSplitRouteAmino, SwapAmountOutSplitRouteSDKType } from "./swap_route";
-import { Coin, CoinAmino, CoinSDKType } from "../../../cosmos/base/v1beta1/coin";
-import { BinaryReader, BinaryWriter } from "../../../binary";
-import { GlobalDecoderRegistry } from "../../../registry";
-import { Decimal } from "@cosmjs/math";
-/** ===================== MsgSwapExactAmountIn */
+import {
+  SwapAmountInRoute,
+  SwapAmountInRouteAmino,
+  SwapAmountInRouteSDKType,
+  SwapAmountOutRoute,
+  SwapAmountOutRouteAmino,
+  SwapAmountOutRouteSDKType,
+  SwapAmountInSplitRoute,
+  SwapAmountInSplitRouteAmino,
+  SwapAmountInSplitRouteSDKType,
+  SwapAmountOutSplitRoute,
+  SwapAmountOutSplitRouteAmino,
+  SwapAmountOutSplitRouteSDKType,
+} from './swap_route';
+import {
+  Coin,
+  CoinAmino,
+  CoinSDKType,
+} from '../../../cosmos/base/v1beta1/coin';
+import { BinaryReader, BinaryWriter } from '../../../binary';
+import { GlobalDecoderRegistry } from '../../../registry';
+import { Decimal } from '@cosmjs/math';
+/**
+ * ===================== MsgSwapExactAmountIn
+ * @name MsgSwapExactAmountIn
+ * @package symphony.poolmanager.v1beta1
+ * @see proto type: symphony.poolmanager.v1beta1.MsgSwapExactAmountIn
+ */
 export interface MsgSwapExactAmountIn {
   sender: string;
   routes: SwapAmountInRoute[];
@@ -12,10 +34,15 @@ export interface MsgSwapExactAmountIn {
   tokenOutMinAmount: string;
 }
 export interface MsgSwapExactAmountInProtoMsg {
-  typeUrl: "/symphony.poolmanager.v1beta1.MsgSwapExactAmountIn";
+  typeUrl: '/symphony.poolmanager.v1beta1.MsgSwapExactAmountIn';
   value: Uint8Array;
 }
-/** ===================== MsgSwapExactAmountIn */
+/**
+ * ===================== MsgSwapExactAmountIn
+ * @name MsgSwapExactAmountInAmino
+ * @package symphony.poolmanager.v1beta1
+ * @see proto type: symphony.poolmanager.v1beta1.MsgSwapExactAmountIn
+ */
 export interface MsgSwapExactAmountInAmino {
   sender?: string;
   routes?: SwapAmountInRouteAmino[];
@@ -23,34 +50,59 @@ export interface MsgSwapExactAmountInAmino {
   token_out_min_amount?: string;
 }
 export interface MsgSwapExactAmountInAminoMsg {
-  type: "symphony/poolmanager/swap-exact-amount-in";
+  type: 'symphony/poolmanager/swap-exact-amount-in';
   value: MsgSwapExactAmountInAmino;
 }
-/** ===================== MsgSwapExactAmountIn */
+/**
+ * ===================== MsgSwapExactAmountIn
+ * @name MsgSwapExactAmountInSDKType
+ * @package symphony.poolmanager.v1beta1
+ * @see proto type: symphony.poolmanager.v1beta1.MsgSwapExactAmountIn
+ */
 export interface MsgSwapExactAmountInSDKType {
   sender: string;
   routes: SwapAmountInRouteSDKType[];
   token_in: CoinSDKType;
   token_out_min_amount: string;
 }
+/**
+ * @name MsgSwapExactAmountInResponse
+ * @package symphony.poolmanager.v1beta1
+ * @see proto type: symphony.poolmanager.v1beta1.MsgSwapExactAmountInResponse
+ */
 export interface MsgSwapExactAmountInResponse {
   tokenOutAmount: string;
 }
 export interface MsgSwapExactAmountInResponseProtoMsg {
-  typeUrl: "/symphony.poolmanager.v1beta1.MsgSwapExactAmountInResponse";
+  typeUrl: '/symphony.poolmanager.v1beta1.MsgSwapExactAmountInResponse';
   value: Uint8Array;
 }
+/**
+ * @name MsgSwapExactAmountInResponseAmino
+ * @package symphony.poolmanager.v1beta1
+ * @see proto type: symphony.poolmanager.v1beta1.MsgSwapExactAmountInResponse
+ */
 export interface MsgSwapExactAmountInResponseAmino {
   token_out_amount?: string;
 }
 export interface MsgSwapExactAmountInResponseAminoMsg {
-  type: "/symphony.poolmanager.v1beta1.MsgSwapExactAmountInResponse";
+  type: '/symphony.poolmanager.v1beta1.MsgSwapExactAmountInResponse';
   value: MsgSwapExactAmountInResponseAmino;
 }
+/**
+ * @name MsgSwapExactAmountInResponseSDKType
+ * @package symphony.poolmanager.v1beta1
+ * @see proto type: symphony.poolmanager.v1beta1.MsgSwapExactAmountInResponse
+ */
 export interface MsgSwapExactAmountInResponseSDKType {
   token_out_amount: string;
 }
-/** ===================== MsgSplitRouteSwapExactAmountIn */
+/**
+ * ===================== MsgSplitRouteSwapExactAmountIn
+ * @name MsgSplitRouteSwapExactAmountIn
+ * @package symphony.poolmanager.v1beta1
+ * @see proto type: symphony.poolmanager.v1beta1.MsgSplitRouteSwapExactAmountIn
+ */
 export interface MsgSplitRouteSwapExactAmountIn {
   sender: string;
   routes: SwapAmountInSplitRoute[];
@@ -58,10 +110,15 @@ export interface MsgSplitRouteSwapExactAmountIn {
   tokenOutMinAmount: string;
 }
 export interface MsgSplitRouteSwapExactAmountInProtoMsg {
-  typeUrl: "/symphony.poolmanager.v1beta1.MsgSplitRouteSwapExactAmountIn";
+  typeUrl: '/symphony.poolmanager.v1beta1.MsgSplitRouteSwapExactAmountIn';
   value: Uint8Array;
 }
-/** ===================== MsgSplitRouteSwapExactAmountIn */
+/**
+ * ===================== MsgSplitRouteSwapExactAmountIn
+ * @name MsgSplitRouteSwapExactAmountInAmino
+ * @package symphony.poolmanager.v1beta1
+ * @see proto type: symphony.poolmanager.v1beta1.MsgSplitRouteSwapExactAmountIn
+ */
 export interface MsgSplitRouteSwapExactAmountInAmino {
   sender?: string;
   routes?: SwapAmountInSplitRouteAmino[];
@@ -69,34 +126,59 @@ export interface MsgSplitRouteSwapExactAmountInAmino {
   token_out_min_amount?: string;
 }
 export interface MsgSplitRouteSwapExactAmountInAminoMsg {
-  type: "symphony/poolmanager/split-amount-in";
+  type: 'symphony/poolmanager/split-amount-in';
   value: MsgSplitRouteSwapExactAmountInAmino;
 }
-/** ===================== MsgSplitRouteSwapExactAmountIn */
+/**
+ * ===================== MsgSplitRouteSwapExactAmountIn
+ * @name MsgSplitRouteSwapExactAmountInSDKType
+ * @package symphony.poolmanager.v1beta1
+ * @see proto type: symphony.poolmanager.v1beta1.MsgSplitRouteSwapExactAmountIn
+ */
 export interface MsgSplitRouteSwapExactAmountInSDKType {
   sender: string;
   routes: SwapAmountInSplitRouteSDKType[];
   token_in_denom: string;
   token_out_min_amount: string;
 }
+/**
+ * @name MsgSplitRouteSwapExactAmountInResponse
+ * @package symphony.poolmanager.v1beta1
+ * @see proto type: symphony.poolmanager.v1beta1.MsgSplitRouteSwapExactAmountInResponse
+ */
 export interface MsgSplitRouteSwapExactAmountInResponse {
   tokenOutAmount: string;
 }
 export interface MsgSplitRouteSwapExactAmountInResponseProtoMsg {
-  typeUrl: "/symphony.poolmanager.v1beta1.MsgSplitRouteSwapExactAmountInResponse";
+  typeUrl: '/symphony.poolmanager.v1beta1.MsgSplitRouteSwapExactAmountInResponse';
   value: Uint8Array;
 }
+/**
+ * @name MsgSplitRouteSwapExactAmountInResponseAmino
+ * @package symphony.poolmanager.v1beta1
+ * @see proto type: symphony.poolmanager.v1beta1.MsgSplitRouteSwapExactAmountInResponse
+ */
 export interface MsgSplitRouteSwapExactAmountInResponseAmino {
   token_out_amount?: string;
 }
 export interface MsgSplitRouteSwapExactAmountInResponseAminoMsg {
-  type: "/symphony.poolmanager.v1beta1.MsgSplitRouteSwapExactAmountInResponse";
+  type: '/symphony.poolmanager.v1beta1.MsgSplitRouteSwapExactAmountInResponse';
   value: MsgSplitRouteSwapExactAmountInResponseAmino;
 }
+/**
+ * @name MsgSplitRouteSwapExactAmountInResponseSDKType
+ * @package symphony.poolmanager.v1beta1
+ * @see proto type: symphony.poolmanager.v1beta1.MsgSplitRouteSwapExactAmountInResponse
+ */
 export interface MsgSplitRouteSwapExactAmountInResponseSDKType {
   token_out_amount: string;
 }
-/** ===================== MsgSwapExactAmountOut */
+/**
+ * ===================== MsgSwapExactAmountOut
+ * @name MsgSwapExactAmountOut
+ * @package symphony.poolmanager.v1beta1
+ * @see proto type: symphony.poolmanager.v1beta1.MsgSwapExactAmountOut
+ */
 export interface MsgSwapExactAmountOut {
   sender: string;
   routes: SwapAmountOutRoute[];
@@ -104,10 +186,15 @@ export interface MsgSwapExactAmountOut {
   tokenOut: Coin;
 }
 export interface MsgSwapExactAmountOutProtoMsg {
-  typeUrl: "/symphony.poolmanager.v1beta1.MsgSwapExactAmountOut";
+  typeUrl: '/symphony.poolmanager.v1beta1.MsgSwapExactAmountOut';
   value: Uint8Array;
 }
-/** ===================== MsgSwapExactAmountOut */
+/**
+ * ===================== MsgSwapExactAmountOut
+ * @name MsgSwapExactAmountOutAmino
+ * @package symphony.poolmanager.v1beta1
+ * @see proto type: symphony.poolmanager.v1beta1.MsgSwapExactAmountOut
+ */
 export interface MsgSwapExactAmountOutAmino {
   sender?: string;
   routes?: SwapAmountOutRouteAmino[];
@@ -115,34 +202,59 @@ export interface MsgSwapExactAmountOutAmino {
   token_out?: CoinAmino;
 }
 export interface MsgSwapExactAmountOutAminoMsg {
-  type: "symphony/poolmanager/swap-exact-amount-out";
+  type: 'symphony/poolmanager/swap-exact-amount-out';
   value: MsgSwapExactAmountOutAmino;
 }
-/** ===================== MsgSwapExactAmountOut */
+/**
+ * ===================== MsgSwapExactAmountOut
+ * @name MsgSwapExactAmountOutSDKType
+ * @package symphony.poolmanager.v1beta1
+ * @see proto type: symphony.poolmanager.v1beta1.MsgSwapExactAmountOut
+ */
 export interface MsgSwapExactAmountOutSDKType {
   sender: string;
   routes: SwapAmountOutRouteSDKType[];
   token_in_max_amount: string;
   token_out: CoinSDKType;
 }
+/**
+ * @name MsgSwapExactAmountOutResponse
+ * @package symphony.poolmanager.v1beta1
+ * @see proto type: symphony.poolmanager.v1beta1.MsgSwapExactAmountOutResponse
+ */
 export interface MsgSwapExactAmountOutResponse {
   tokenInAmount: string;
 }
 export interface MsgSwapExactAmountOutResponseProtoMsg {
-  typeUrl: "/symphony.poolmanager.v1beta1.MsgSwapExactAmountOutResponse";
+  typeUrl: '/symphony.poolmanager.v1beta1.MsgSwapExactAmountOutResponse';
   value: Uint8Array;
 }
+/**
+ * @name MsgSwapExactAmountOutResponseAmino
+ * @package symphony.poolmanager.v1beta1
+ * @see proto type: symphony.poolmanager.v1beta1.MsgSwapExactAmountOutResponse
+ */
 export interface MsgSwapExactAmountOutResponseAmino {
   token_in_amount?: string;
 }
 export interface MsgSwapExactAmountOutResponseAminoMsg {
-  type: "/symphony.poolmanager.v1beta1.MsgSwapExactAmountOutResponse";
+  type: '/symphony.poolmanager.v1beta1.MsgSwapExactAmountOutResponse';
   value: MsgSwapExactAmountOutResponseAmino;
 }
+/**
+ * @name MsgSwapExactAmountOutResponseSDKType
+ * @package symphony.poolmanager.v1beta1
+ * @see proto type: symphony.poolmanager.v1beta1.MsgSwapExactAmountOutResponse
+ */
 export interface MsgSwapExactAmountOutResponseSDKType {
   token_in_amount: string;
 }
-/** ===================== MsgSplitRouteSwapExactAmountOut */
+/**
+ * ===================== MsgSplitRouteSwapExactAmountOut
+ * @name MsgSplitRouteSwapExactAmountOut
+ * @package symphony.poolmanager.v1beta1
+ * @see proto type: symphony.poolmanager.v1beta1.MsgSplitRouteSwapExactAmountOut
+ */
 export interface MsgSplitRouteSwapExactAmountOut {
   sender: string;
   routes: SwapAmountOutSplitRoute[];
@@ -150,10 +262,15 @@ export interface MsgSplitRouteSwapExactAmountOut {
   tokenInMaxAmount: string;
 }
 export interface MsgSplitRouteSwapExactAmountOutProtoMsg {
-  typeUrl: "/symphony.poolmanager.v1beta1.MsgSplitRouteSwapExactAmountOut";
+  typeUrl: '/symphony.poolmanager.v1beta1.MsgSplitRouteSwapExactAmountOut';
   value: Uint8Array;
 }
-/** ===================== MsgSplitRouteSwapExactAmountOut */
+/**
+ * ===================== MsgSplitRouteSwapExactAmountOut
+ * @name MsgSplitRouteSwapExactAmountOutAmino
+ * @package symphony.poolmanager.v1beta1
+ * @see proto type: symphony.poolmanager.v1beta1.MsgSplitRouteSwapExactAmountOut
+ */
 export interface MsgSplitRouteSwapExactAmountOutAmino {
   sender?: string;
   routes?: SwapAmountOutSplitRouteAmino[];
@@ -161,74 +278,129 @@ export interface MsgSplitRouteSwapExactAmountOutAmino {
   token_in_max_amount?: string;
 }
 export interface MsgSplitRouteSwapExactAmountOutAminoMsg {
-  type: "symphony/poolmanager/split-amount-out";
+  type: 'symphony/poolmanager/split-amount-out';
   value: MsgSplitRouteSwapExactAmountOutAmino;
 }
-/** ===================== MsgSplitRouteSwapExactAmountOut */
+/**
+ * ===================== MsgSplitRouteSwapExactAmountOut
+ * @name MsgSplitRouteSwapExactAmountOutSDKType
+ * @package symphony.poolmanager.v1beta1
+ * @see proto type: symphony.poolmanager.v1beta1.MsgSplitRouteSwapExactAmountOut
+ */
 export interface MsgSplitRouteSwapExactAmountOutSDKType {
   sender: string;
   routes: SwapAmountOutSplitRouteSDKType[];
   token_out_denom: string;
   token_in_max_amount: string;
 }
+/**
+ * @name MsgSplitRouteSwapExactAmountOutResponse
+ * @package symphony.poolmanager.v1beta1
+ * @see proto type: symphony.poolmanager.v1beta1.MsgSplitRouteSwapExactAmountOutResponse
+ */
 export interface MsgSplitRouteSwapExactAmountOutResponse {
   tokenInAmount: string;
 }
 export interface MsgSplitRouteSwapExactAmountOutResponseProtoMsg {
-  typeUrl: "/symphony.poolmanager.v1beta1.MsgSplitRouteSwapExactAmountOutResponse";
+  typeUrl: '/symphony.poolmanager.v1beta1.MsgSplitRouteSwapExactAmountOutResponse';
   value: Uint8Array;
 }
+/**
+ * @name MsgSplitRouteSwapExactAmountOutResponseAmino
+ * @package symphony.poolmanager.v1beta1
+ * @see proto type: symphony.poolmanager.v1beta1.MsgSplitRouteSwapExactAmountOutResponse
+ */
 export interface MsgSplitRouteSwapExactAmountOutResponseAmino {
   token_in_amount?: string;
 }
 export interface MsgSplitRouteSwapExactAmountOutResponseAminoMsg {
-  type: "/symphony.poolmanager.v1beta1.MsgSplitRouteSwapExactAmountOutResponse";
+  type: '/symphony.poolmanager.v1beta1.MsgSplitRouteSwapExactAmountOutResponse';
   value: MsgSplitRouteSwapExactAmountOutResponseAmino;
 }
+/**
+ * @name MsgSplitRouteSwapExactAmountOutResponseSDKType
+ * @package symphony.poolmanager.v1beta1
+ * @see proto type: symphony.poolmanager.v1beta1.MsgSplitRouteSwapExactAmountOutResponse
+ */
 export interface MsgSplitRouteSwapExactAmountOutResponseSDKType {
   token_in_amount: string;
 }
-/** ===================== MsgSetDenomPairTakerFee */
+/**
+ * ===================== MsgSetDenomPairTakerFee
+ * @name MsgSetDenomPairTakerFee
+ * @package symphony.poolmanager.v1beta1
+ * @see proto type: symphony.poolmanager.v1beta1.MsgSetDenomPairTakerFee
+ */
 export interface MsgSetDenomPairTakerFee {
   sender: string;
   denomPairTakerFee: DenomPairTakerFee[];
 }
 export interface MsgSetDenomPairTakerFeeProtoMsg {
-  typeUrl: "/symphony.poolmanager.v1beta1.MsgSetDenomPairTakerFee";
+  typeUrl: '/symphony.poolmanager.v1beta1.MsgSetDenomPairTakerFee';
   value: Uint8Array;
 }
-/** ===================== MsgSetDenomPairTakerFee */
+/**
+ * ===================== MsgSetDenomPairTakerFee
+ * @name MsgSetDenomPairTakerFeeAmino
+ * @package symphony.poolmanager.v1beta1
+ * @see proto type: symphony.poolmanager.v1beta1.MsgSetDenomPairTakerFee
+ */
 export interface MsgSetDenomPairTakerFeeAmino {
   sender?: string;
   denom_pair_taker_fee?: DenomPairTakerFeeAmino[];
 }
 export interface MsgSetDenomPairTakerFeeAminoMsg {
-  type: "symphony/poolmanager/set-denom-pair-taker-fee";
+  type: 'symphony/poolmanager/set-denom-pair-taker-fee';
   value: MsgSetDenomPairTakerFeeAmino;
 }
-/** ===================== MsgSetDenomPairTakerFee */
+/**
+ * ===================== MsgSetDenomPairTakerFee
+ * @name MsgSetDenomPairTakerFeeSDKType
+ * @package symphony.poolmanager.v1beta1
+ * @see proto type: symphony.poolmanager.v1beta1.MsgSetDenomPairTakerFee
+ */
 export interface MsgSetDenomPairTakerFeeSDKType {
   sender: string;
   denom_pair_taker_fee: DenomPairTakerFeeSDKType[];
 }
+/**
+ * @name MsgSetDenomPairTakerFeeResponse
+ * @package symphony.poolmanager.v1beta1
+ * @see proto type: symphony.poolmanager.v1beta1.MsgSetDenomPairTakerFeeResponse
+ */
 export interface MsgSetDenomPairTakerFeeResponse {
   success: boolean;
 }
 export interface MsgSetDenomPairTakerFeeResponseProtoMsg {
-  typeUrl: "/symphony.poolmanager.v1beta1.MsgSetDenomPairTakerFeeResponse";
+  typeUrl: '/symphony.poolmanager.v1beta1.MsgSetDenomPairTakerFeeResponse';
   value: Uint8Array;
 }
+/**
+ * @name MsgSetDenomPairTakerFeeResponseAmino
+ * @package symphony.poolmanager.v1beta1
+ * @see proto type: symphony.poolmanager.v1beta1.MsgSetDenomPairTakerFeeResponse
+ */
 export interface MsgSetDenomPairTakerFeeResponseAmino {
   success?: boolean;
 }
 export interface MsgSetDenomPairTakerFeeResponseAminoMsg {
-  type: "/symphony.poolmanager.v1beta1.MsgSetDenomPairTakerFeeResponse";
+  type: '/symphony.poolmanager.v1beta1.MsgSetDenomPairTakerFeeResponse';
   value: MsgSetDenomPairTakerFeeResponseAmino;
 }
+/**
+ * @name MsgSetDenomPairTakerFeeResponseSDKType
+ * @package symphony.poolmanager.v1beta1
+ * @see proto type: symphony.poolmanager.v1beta1.MsgSetDenomPairTakerFeeResponse
+ */
 export interface MsgSetDenomPairTakerFeeResponseSDKType {
   success: boolean;
 }
-/** ===================== MsgSetTakerFeeShareAgreementForDenom */
+/**
+ * ===================== MsgSetTakerFeeShareAgreementForDenom
+ * @name MsgSetTakerFeeShareAgreementForDenom
+ * @package symphony.poolmanager.v1beta1
+ * @see proto type: symphony.poolmanager.v1beta1.MsgSetTakerFeeShareAgreementForDenom
+ */
 export interface MsgSetTakerFeeShareAgreementForDenom {
   sender: string;
   /**
@@ -251,10 +423,15 @@ export interface MsgSetTakerFeeShareAgreementForDenom {
   skimAddress: string;
 }
 export interface MsgSetTakerFeeShareAgreementForDenomProtoMsg {
-  typeUrl: "/symphony.poolmanager.v1beta1.MsgSetTakerFeeShareAgreementForDenom";
+  typeUrl: '/symphony.poolmanager.v1beta1.MsgSetTakerFeeShareAgreementForDenom';
   value: Uint8Array;
 }
-/** ===================== MsgSetTakerFeeShareAgreementForDenom */
+/**
+ * ===================== MsgSetTakerFeeShareAgreementForDenom
+ * @name MsgSetTakerFeeShareAgreementForDenomAmino
+ * @package symphony.poolmanager.v1beta1
+ * @see proto type: symphony.poolmanager.v1beta1.MsgSetTakerFeeShareAgreementForDenom
+ */
 export interface MsgSetTakerFeeShareAgreementForDenomAmino {
   sender?: string;
   /**
@@ -277,28 +454,53 @@ export interface MsgSetTakerFeeShareAgreementForDenomAmino {
   skim_address?: string;
 }
 export interface MsgSetTakerFeeShareAgreementForDenomAminoMsg {
-  type: "symphony/poolmanager/set-taker-fee-share-agreement-for-denom";
+  type: 'symphony/poolmanager/set-taker-fee-share-agreement-for-denom';
   value: MsgSetTakerFeeShareAgreementForDenomAmino;
 }
-/** ===================== MsgSetTakerFeeShareAgreementForDenom */
+/**
+ * ===================== MsgSetTakerFeeShareAgreementForDenom
+ * @name MsgSetTakerFeeShareAgreementForDenomSDKType
+ * @package symphony.poolmanager.v1beta1
+ * @see proto type: symphony.poolmanager.v1beta1.MsgSetTakerFeeShareAgreementForDenom
+ */
 export interface MsgSetTakerFeeShareAgreementForDenomSDKType {
   sender: string;
   denom: string;
   skim_percent: string;
   skim_address: string;
 }
+/**
+ * @name MsgSetTakerFeeShareAgreementForDenomResponse
+ * @package symphony.poolmanager.v1beta1
+ * @see proto type: symphony.poolmanager.v1beta1.MsgSetTakerFeeShareAgreementForDenomResponse
+ */
 export interface MsgSetTakerFeeShareAgreementForDenomResponse {}
 export interface MsgSetTakerFeeShareAgreementForDenomResponseProtoMsg {
-  typeUrl: "/symphony.poolmanager.v1beta1.MsgSetTakerFeeShareAgreementForDenomResponse";
+  typeUrl: '/symphony.poolmanager.v1beta1.MsgSetTakerFeeShareAgreementForDenomResponse';
   value: Uint8Array;
 }
+/**
+ * @name MsgSetTakerFeeShareAgreementForDenomResponseAmino
+ * @package symphony.poolmanager.v1beta1
+ * @see proto type: symphony.poolmanager.v1beta1.MsgSetTakerFeeShareAgreementForDenomResponse
+ */
 export interface MsgSetTakerFeeShareAgreementForDenomResponseAmino {}
 export interface MsgSetTakerFeeShareAgreementForDenomResponseAminoMsg {
-  type: "/symphony.poolmanager.v1beta1.MsgSetTakerFeeShareAgreementForDenomResponse";
+  type: '/symphony.poolmanager.v1beta1.MsgSetTakerFeeShareAgreementForDenomResponse';
   value: MsgSetTakerFeeShareAgreementForDenomResponseAmino;
 }
+/**
+ * @name MsgSetTakerFeeShareAgreementForDenomResponseSDKType
+ * @package symphony.poolmanager.v1beta1
+ * @see proto type: symphony.poolmanager.v1beta1.MsgSetTakerFeeShareAgreementForDenomResponse
+ */
 export interface MsgSetTakerFeeShareAgreementForDenomResponseSDKType {}
-/** ===================== MsgSetRegisteredAlloyedPool */
+/**
+ * ===================== MsgSetRegisteredAlloyedPool
+ * @name MsgSetRegisteredAlloyedPool
+ * @package symphony.poolmanager.v1beta1
+ * @see proto type: symphony.poolmanager.v1beta1.MsgSetRegisteredAlloyedPool
+ */
 export interface MsgSetRegisteredAlloyedPool {
   sender: string;
   /**
@@ -309,10 +511,15 @@ export interface MsgSetRegisteredAlloyedPool {
   poolId: bigint;
 }
 export interface MsgSetRegisteredAlloyedPoolProtoMsg {
-  typeUrl: "/symphony.poolmanager.v1beta1.MsgSetRegisteredAlloyedPool";
+  typeUrl: '/symphony.poolmanager.v1beta1.MsgSetRegisteredAlloyedPool';
   value: Uint8Array;
 }
-/** ===================== MsgSetRegisteredAlloyedPool */
+/**
+ * ===================== MsgSetRegisteredAlloyedPool
+ * @name MsgSetRegisteredAlloyedPoolAmino
+ * @package symphony.poolmanager.v1beta1
+ * @see proto type: symphony.poolmanager.v1beta1.MsgSetRegisteredAlloyedPool
+ */
 export interface MsgSetRegisteredAlloyedPoolAmino {
   sender?: string;
   /**
@@ -323,65 +530,108 @@ export interface MsgSetRegisteredAlloyedPoolAmino {
   pool_id?: string;
 }
 export interface MsgSetRegisteredAlloyedPoolAminoMsg {
-  type: "symphony/poolmanager/set-registered-alloyed-pool";
+  type: 'symphony/poolmanager/set-registered-alloyed-pool';
   value: MsgSetRegisteredAlloyedPoolAmino;
 }
-/** ===================== MsgSetRegisteredAlloyedPool */
+/**
+ * ===================== MsgSetRegisteredAlloyedPool
+ * @name MsgSetRegisteredAlloyedPoolSDKType
+ * @package symphony.poolmanager.v1beta1
+ * @see proto type: symphony.poolmanager.v1beta1.MsgSetRegisteredAlloyedPool
+ */
 export interface MsgSetRegisteredAlloyedPoolSDKType {
   sender: string;
   pool_id: bigint;
 }
+/**
+ * @name MsgSetRegisteredAlloyedPoolResponse
+ * @package symphony.poolmanager.v1beta1
+ * @see proto type: symphony.poolmanager.v1beta1.MsgSetRegisteredAlloyedPoolResponse
+ */
 export interface MsgSetRegisteredAlloyedPoolResponse {}
 export interface MsgSetRegisteredAlloyedPoolResponseProtoMsg {
-  typeUrl: "/symphony.poolmanager.v1beta1.MsgSetRegisteredAlloyedPoolResponse";
+  typeUrl: '/symphony.poolmanager.v1beta1.MsgSetRegisteredAlloyedPoolResponse';
   value: Uint8Array;
 }
+/**
+ * @name MsgSetRegisteredAlloyedPoolResponseAmino
+ * @package symphony.poolmanager.v1beta1
+ * @see proto type: symphony.poolmanager.v1beta1.MsgSetRegisteredAlloyedPoolResponse
+ */
 export interface MsgSetRegisteredAlloyedPoolResponseAmino {}
 export interface MsgSetRegisteredAlloyedPoolResponseAminoMsg {
-  type: "/symphony.poolmanager.v1beta1.MsgSetRegisteredAlloyedPoolResponse";
+  type: '/symphony.poolmanager.v1beta1.MsgSetRegisteredAlloyedPoolResponse';
   value: MsgSetRegisteredAlloyedPoolResponseAmino;
 }
+/**
+ * @name MsgSetRegisteredAlloyedPoolResponseSDKType
+ * @package symphony.poolmanager.v1beta1
+ * @see proto type: symphony.poolmanager.v1beta1.MsgSetRegisteredAlloyedPoolResponse
+ */
 export interface MsgSetRegisteredAlloyedPoolResponseSDKType {}
+/**
+ * @name DenomPairTakerFee
+ * @package symphony.poolmanager.v1beta1
+ * @see proto type: symphony.poolmanager.v1beta1.DenomPairTakerFee
+ */
 export interface DenomPairTakerFee {
   /**
    * DEPRECATED: Now that we are using uni-directional trading pairs, we are
    * using tokenInDenom and tokenOutDenom instead of denom0 and denom1 to
    * prevent confusion.
+   * @deprecated
    */
-  /** @deprecated */
   denom0?: string;
-  /** @deprecated */
+  /**
+   * @deprecated
+   */
   denom1?: string;
   takerFee: string;
   tokenInDenom: string;
   tokenOutDenom: string;
 }
 export interface DenomPairTakerFeeProtoMsg {
-  typeUrl: "/symphony.poolmanager.v1beta1.DenomPairTakerFee";
+  typeUrl: '/symphony.poolmanager.v1beta1.DenomPairTakerFee';
   value: Uint8Array;
 }
+/**
+ * @name DenomPairTakerFeeAmino
+ * @package symphony.poolmanager.v1beta1
+ * @see proto type: symphony.poolmanager.v1beta1.DenomPairTakerFee
+ */
 export interface DenomPairTakerFeeAmino {
   /**
    * DEPRECATED: Now that we are using uni-directional trading pairs, we are
    * using tokenInDenom and tokenOutDenom instead of denom0 and denom1 to
    * prevent confusion.
+   * @deprecated
    */
-  /** @deprecated */
   denom0?: string;
-  /** @deprecated */
+  /**
+   * @deprecated
+   */
   denom1?: string;
   taker_fee?: string;
   tokenInDenom?: string;
   tokenOutDenom?: string;
 }
 export interface DenomPairTakerFeeAminoMsg {
-  type: "/symphony.poolmanager.v1beta1.DenomPairTakerFee";
+  type: '/symphony.poolmanager.v1beta1.DenomPairTakerFee';
   value: DenomPairTakerFeeAmino;
 }
+/**
+ * @name DenomPairTakerFeeSDKType
+ * @package symphony.poolmanager.v1beta1
+ * @see proto type: symphony.poolmanager.v1beta1.DenomPairTakerFee
+ */
 export interface DenomPairTakerFeeSDKType {
-  /** @deprecated */
+  /**
+   * @deprecated
+   */
   denom0?: string;
-  /** @deprecated */
+  /**
+   * @deprecated
+   */
   denom1?: string;
   taker_fee: string;
   tokenInDenom: string;
@@ -389,26 +639,59 @@ export interface DenomPairTakerFeeSDKType {
 }
 function createBaseMsgSwapExactAmountIn(): MsgSwapExactAmountIn {
   return {
-    sender: "",
+    sender: '',
     routes: [],
     tokenIn: Coin.fromPartial({}),
-    tokenOutMinAmount: ""
+    tokenOutMinAmount: '',
   };
 }
+/**
+ * ===================== MsgSwapExactAmountIn
+ * @name MsgSwapExactAmountIn
+ * @package symphony.poolmanager.v1beta1
+ * @see proto type: symphony.poolmanager.v1beta1.MsgSwapExactAmountIn
+ */
 export const MsgSwapExactAmountIn = {
-  typeUrl: "/symphony.poolmanager.v1beta1.MsgSwapExactAmountIn",
-  aminoType: "symphony/poolmanager/swap-exact-amount-in",
+  typeUrl: '/symphony.poolmanager.v1beta1.MsgSwapExactAmountIn',
+  aminoType: 'symphony/poolmanager/swap-exact-amount-in',
   is(o: any): o is MsgSwapExactAmountIn {
-    return o && (o.$typeUrl === MsgSwapExactAmountIn.typeUrl || typeof o.sender === "string" && Array.isArray(o.routes) && (!o.routes.length || SwapAmountInRoute.is(o.routes[0])) && Coin.is(o.tokenIn) && typeof o.tokenOutMinAmount === "string");
+    return (
+      o &&
+      (o.$typeUrl === MsgSwapExactAmountIn.typeUrl ||
+        (typeof o.sender === 'string' &&
+          Array.isArray(o.routes) &&
+          (!o.routes.length || SwapAmountInRoute.is(o.routes[0])) &&
+          Coin.is(o.tokenIn) &&
+          typeof o.tokenOutMinAmount === 'string'))
+    );
   },
   isSDK(o: any): o is MsgSwapExactAmountInSDKType {
-    return o && (o.$typeUrl === MsgSwapExactAmountIn.typeUrl || typeof o.sender === "string" && Array.isArray(o.routes) && (!o.routes.length || SwapAmountInRoute.isSDK(o.routes[0])) && Coin.isSDK(o.token_in) && typeof o.token_out_min_amount === "string");
+    return (
+      o &&
+      (o.$typeUrl === MsgSwapExactAmountIn.typeUrl ||
+        (typeof o.sender === 'string' &&
+          Array.isArray(o.routes) &&
+          (!o.routes.length || SwapAmountInRoute.isSDK(o.routes[0])) &&
+          Coin.isSDK(o.token_in) &&
+          typeof o.token_out_min_amount === 'string'))
+    );
   },
   isAmino(o: any): o is MsgSwapExactAmountInAmino {
-    return o && (o.$typeUrl === MsgSwapExactAmountIn.typeUrl || typeof o.sender === "string" && Array.isArray(o.routes) && (!o.routes.length || SwapAmountInRoute.isAmino(o.routes[0])) && Coin.isAmino(o.token_in) && typeof o.token_out_min_amount === "string");
+    return (
+      o &&
+      (o.$typeUrl === MsgSwapExactAmountIn.typeUrl ||
+        (typeof o.sender === 'string' &&
+          Array.isArray(o.routes) &&
+          (!o.routes.length || SwapAmountInRoute.isAmino(o.routes[0])) &&
+          Coin.isAmino(o.token_in) &&
+          typeof o.token_out_min_amount === 'string'))
+    );
   },
-  encode(message: MsgSwapExactAmountIn, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
-    if (message.sender !== "") {
+  encode(
+    message: MsgSwapExactAmountIn,
+    writer: BinaryWriter = BinaryWriter.create(),
+  ): BinaryWriter {
+    if (message.sender !== '') {
       writer.uint32(10).string(message.sender);
     }
     for (const v of message.routes) {
@@ -417,13 +700,17 @@ export const MsgSwapExactAmountIn = {
     if (message.tokenIn !== undefined) {
       Coin.encode(message.tokenIn, writer.uint32(26).fork()).ldelim();
     }
-    if (message.tokenOutMinAmount !== "") {
+    if (message.tokenOutMinAmount !== '') {
       writer.uint32(34).string(message.tokenOutMinAmount);
     }
     return writer;
   },
-  decode(input: BinaryReader | Uint8Array, length?: number): MsgSwapExactAmountIn {
-    const reader = input instanceof BinaryReader ? input : new BinaryReader(input);
+  decode(
+    input: BinaryReader | Uint8Array,
+    length?: number,
+  ): MsgSwapExactAmountIn {
+    const reader =
+      input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseMsgSwapExactAmountIn();
     while (reader.pos < end) {
@@ -433,7 +720,9 @@ export const MsgSwapExactAmountIn = {
           message.sender = reader.string();
           break;
         case 2:
-          message.routes.push(SwapAmountInRoute.decode(reader, reader.uint32()));
+          message.routes.push(
+            SwapAmountInRoute.decode(reader, reader.uint32()),
+          );
           break;
         case 3:
           message.tokenIn = Coin.decode(reader, reader.uint32());
@@ -450,10 +739,14 @@ export const MsgSwapExactAmountIn = {
   },
   fromPartial(object: Partial<MsgSwapExactAmountIn>): MsgSwapExactAmountIn {
     const message = createBaseMsgSwapExactAmountIn();
-    message.sender = object.sender ?? "";
-    message.routes = object.routes?.map(e => SwapAmountInRoute.fromPartial(e)) || [];
-    message.tokenIn = object.tokenIn !== undefined && object.tokenIn !== null ? Coin.fromPartial(object.tokenIn) : undefined;
-    message.tokenOutMinAmount = object.tokenOutMinAmount ?? "";
+    message.sender = object.sender ?? '';
+    message.routes =
+      object.routes?.map(e => SwapAmountInRoute.fromPartial(e)) || [];
+    message.tokenIn =
+      object.tokenIn !== undefined && object.tokenIn !== null
+        ? Coin.fromPartial(object.tokenIn)
+        : undefined;
+    message.tokenOutMinAmount = object.tokenOutMinAmount ?? '';
     return message;
   },
   fromAmino(object: MsgSwapExactAmountInAmino): MsgSwapExactAmountIn {
@@ -461,25 +754,32 @@ export const MsgSwapExactAmountIn = {
     if (object.sender !== undefined && object.sender !== null) {
       message.sender = object.sender;
     }
-    message.routes = object.routes?.map(e => SwapAmountInRoute.fromAmino(e)) || [];
+    message.routes =
+      object.routes?.map(e => SwapAmountInRoute.fromAmino(e)) || [];
     if (object.token_in !== undefined && object.token_in !== null) {
       message.tokenIn = Coin.fromAmino(object.token_in);
     }
-    if (object.token_out_min_amount !== undefined && object.token_out_min_amount !== null) {
+    if (
+      object.token_out_min_amount !== undefined &&
+      object.token_out_min_amount !== null
+    ) {
       message.tokenOutMinAmount = object.token_out_min_amount;
     }
     return message;
   },
   toAmino(message: MsgSwapExactAmountIn): MsgSwapExactAmountInAmino {
     const obj: any = {};
-    obj.sender = message.sender === "" ? undefined : message.sender;
+    obj.sender = message.sender === '' ? undefined : message.sender;
     if (message.routes) {
-      obj.routes = message.routes.map(e => e ? SwapAmountInRoute.toAmino(e) : undefined);
+      obj.routes = message.routes.map(e =>
+        e ? SwapAmountInRoute.toAmino(e) : undefined,
+      );
     } else {
       obj.routes = message.routes;
     }
     obj.token_in = message.tokenIn ? Coin.toAmino(message.tokenIn) : undefined;
-    obj.token_out_min_amount = message.tokenOutMinAmount === "" ? undefined : message.tokenOutMinAmount;
+    obj.token_out_min_amount =
+      message.tokenOutMinAmount === '' ? undefined : message.tokenOutMinAmount;
     return obj;
   },
   fromAminoMsg(object: MsgSwapExactAmountInAminoMsg): MsgSwapExactAmountIn {
@@ -487,8 +787,8 @@ export const MsgSwapExactAmountIn = {
   },
   toAminoMsg(message: MsgSwapExactAmountIn): MsgSwapExactAmountInAminoMsg {
     return {
-      type: "symphony/poolmanager/swap-exact-amount-in",
-      value: MsgSwapExactAmountIn.toAmino(message)
+      type: 'symphony/poolmanager/swap-exact-amount-in',
+      value: MsgSwapExactAmountIn.toAmino(message),
     };
   },
   fromProtoMsg(message: MsgSwapExactAmountInProtoMsg): MsgSwapExactAmountIn {
@@ -499,37 +799,67 @@ export const MsgSwapExactAmountIn = {
   },
   toProtoMsg(message: MsgSwapExactAmountIn): MsgSwapExactAmountInProtoMsg {
     return {
-      typeUrl: "/symphony.poolmanager.v1beta1.MsgSwapExactAmountIn",
-      value: MsgSwapExactAmountIn.encode(message).finish()
+      typeUrl: '/symphony.poolmanager.v1beta1.MsgSwapExactAmountIn',
+      value: MsgSwapExactAmountIn.encode(message).finish(),
     };
-  }
+  },
 };
-GlobalDecoderRegistry.register(MsgSwapExactAmountIn.typeUrl, MsgSwapExactAmountIn);
-GlobalDecoderRegistry.registerAminoProtoMapping(MsgSwapExactAmountIn.aminoType, MsgSwapExactAmountIn.typeUrl);
+GlobalDecoderRegistry.register(
+  MsgSwapExactAmountIn.typeUrl,
+  MsgSwapExactAmountIn,
+);
+GlobalDecoderRegistry.registerAminoProtoMapping(
+  MsgSwapExactAmountIn.aminoType,
+  MsgSwapExactAmountIn.typeUrl,
+);
 function createBaseMsgSwapExactAmountInResponse(): MsgSwapExactAmountInResponse {
   return {
-    tokenOutAmount: ""
+    tokenOutAmount: '',
   };
 }
+/**
+ * @name MsgSwapExactAmountInResponse
+ * @package symphony.poolmanager.v1beta1
+ * @see proto type: symphony.poolmanager.v1beta1.MsgSwapExactAmountInResponse
+ */
 export const MsgSwapExactAmountInResponse = {
-  typeUrl: "/symphony.poolmanager.v1beta1.MsgSwapExactAmountInResponse",
+  typeUrl: '/symphony.poolmanager.v1beta1.MsgSwapExactAmountInResponse',
   is(o: any): o is MsgSwapExactAmountInResponse {
-    return o && (o.$typeUrl === MsgSwapExactAmountInResponse.typeUrl || typeof o.tokenOutAmount === "string");
+    return (
+      o &&
+      (o.$typeUrl === MsgSwapExactAmountInResponse.typeUrl ||
+        typeof o.tokenOutAmount === 'string')
+    );
   },
   isSDK(o: any): o is MsgSwapExactAmountInResponseSDKType {
-    return o && (o.$typeUrl === MsgSwapExactAmountInResponse.typeUrl || typeof o.token_out_amount === "string");
+    return (
+      o &&
+      (o.$typeUrl === MsgSwapExactAmountInResponse.typeUrl ||
+        typeof o.token_out_amount === 'string')
+    );
   },
   isAmino(o: any): o is MsgSwapExactAmountInResponseAmino {
-    return o && (o.$typeUrl === MsgSwapExactAmountInResponse.typeUrl || typeof o.token_out_amount === "string");
+    return (
+      o &&
+      (o.$typeUrl === MsgSwapExactAmountInResponse.typeUrl ||
+        typeof o.token_out_amount === 'string')
+    );
   },
-  encode(message: MsgSwapExactAmountInResponse, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
-    if (message.tokenOutAmount !== "") {
+  encode(
+    message: MsgSwapExactAmountInResponse,
+    writer: BinaryWriter = BinaryWriter.create(),
+  ): BinaryWriter {
+    if (message.tokenOutAmount !== '') {
       writer.uint32(10).string(message.tokenOutAmount);
     }
     return writer;
   },
-  decode(input: BinaryReader | Uint8Array, length?: number): MsgSwapExactAmountInResponse {
-    const reader = input instanceof BinaryReader ? input : new BinaryReader(input);
+  decode(
+    input: BinaryReader | Uint8Array,
+    length?: number,
+  ): MsgSwapExactAmountInResponse {
+    const reader =
+      input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseMsgSwapExactAmountInResponse();
     while (reader.pos < end) {
@@ -545,77 +875,133 @@ export const MsgSwapExactAmountInResponse = {
     }
     return message;
   },
-  fromPartial(object: Partial<MsgSwapExactAmountInResponse>): MsgSwapExactAmountInResponse {
+  fromPartial(
+    object: Partial<MsgSwapExactAmountInResponse>,
+  ): MsgSwapExactAmountInResponse {
     const message = createBaseMsgSwapExactAmountInResponse();
-    message.tokenOutAmount = object.tokenOutAmount ?? "";
+    message.tokenOutAmount = object.tokenOutAmount ?? '';
     return message;
   },
-  fromAmino(object: MsgSwapExactAmountInResponseAmino): MsgSwapExactAmountInResponse {
+  fromAmino(
+    object: MsgSwapExactAmountInResponseAmino,
+  ): MsgSwapExactAmountInResponse {
     const message = createBaseMsgSwapExactAmountInResponse();
-    if (object.token_out_amount !== undefined && object.token_out_amount !== null) {
+    if (
+      object.token_out_amount !== undefined &&
+      object.token_out_amount !== null
+    ) {
       message.tokenOutAmount = object.token_out_amount;
     }
     return message;
   },
-  toAmino(message: MsgSwapExactAmountInResponse): MsgSwapExactAmountInResponseAmino {
+  toAmino(
+    message: MsgSwapExactAmountInResponse,
+  ): MsgSwapExactAmountInResponseAmino {
     const obj: any = {};
-    obj.token_out_amount = message.tokenOutAmount === "" ? undefined : message.tokenOutAmount;
+    obj.token_out_amount =
+      message.tokenOutAmount === '' ? undefined : message.tokenOutAmount;
     return obj;
   },
-  fromAminoMsg(object: MsgSwapExactAmountInResponseAminoMsg): MsgSwapExactAmountInResponse {
+  fromAminoMsg(
+    object: MsgSwapExactAmountInResponseAminoMsg,
+  ): MsgSwapExactAmountInResponse {
     return MsgSwapExactAmountInResponse.fromAmino(object.value);
   },
-  fromProtoMsg(message: MsgSwapExactAmountInResponseProtoMsg): MsgSwapExactAmountInResponse {
+  fromProtoMsg(
+    message: MsgSwapExactAmountInResponseProtoMsg,
+  ): MsgSwapExactAmountInResponse {
     return MsgSwapExactAmountInResponse.decode(message.value);
   },
   toProto(message: MsgSwapExactAmountInResponse): Uint8Array {
     return MsgSwapExactAmountInResponse.encode(message).finish();
   },
-  toProtoMsg(message: MsgSwapExactAmountInResponse): MsgSwapExactAmountInResponseProtoMsg {
+  toProtoMsg(
+    message: MsgSwapExactAmountInResponse,
+  ): MsgSwapExactAmountInResponseProtoMsg {
     return {
-      typeUrl: "/symphony.poolmanager.v1beta1.MsgSwapExactAmountInResponse",
-      value: MsgSwapExactAmountInResponse.encode(message).finish()
+      typeUrl: '/symphony.poolmanager.v1beta1.MsgSwapExactAmountInResponse',
+      value: MsgSwapExactAmountInResponse.encode(message).finish(),
     };
-  }
+  },
 };
-GlobalDecoderRegistry.register(MsgSwapExactAmountInResponse.typeUrl, MsgSwapExactAmountInResponse);
+GlobalDecoderRegistry.register(
+  MsgSwapExactAmountInResponse.typeUrl,
+  MsgSwapExactAmountInResponse,
+);
 function createBaseMsgSplitRouteSwapExactAmountIn(): MsgSplitRouteSwapExactAmountIn {
   return {
-    sender: "",
+    sender: '',
     routes: [],
-    tokenInDenom: "",
-    tokenOutMinAmount: ""
+    tokenInDenom: '',
+    tokenOutMinAmount: '',
   };
 }
+/**
+ * ===================== MsgSplitRouteSwapExactAmountIn
+ * @name MsgSplitRouteSwapExactAmountIn
+ * @package symphony.poolmanager.v1beta1
+ * @see proto type: symphony.poolmanager.v1beta1.MsgSplitRouteSwapExactAmountIn
+ */
 export const MsgSplitRouteSwapExactAmountIn = {
-  typeUrl: "/symphony.poolmanager.v1beta1.MsgSplitRouteSwapExactAmountIn",
-  aminoType: "symphony/poolmanager/split-amount-in",
+  typeUrl: '/symphony.poolmanager.v1beta1.MsgSplitRouteSwapExactAmountIn',
+  aminoType: 'symphony/poolmanager/split-amount-in',
   is(o: any): o is MsgSplitRouteSwapExactAmountIn {
-    return o && (o.$typeUrl === MsgSplitRouteSwapExactAmountIn.typeUrl || typeof o.sender === "string" && Array.isArray(o.routes) && (!o.routes.length || SwapAmountInSplitRoute.is(o.routes[0])) && typeof o.tokenInDenom === "string" && typeof o.tokenOutMinAmount === "string");
+    return (
+      o &&
+      (o.$typeUrl === MsgSplitRouteSwapExactAmountIn.typeUrl ||
+        (typeof o.sender === 'string' &&
+          Array.isArray(o.routes) &&
+          (!o.routes.length || SwapAmountInSplitRoute.is(o.routes[0])) &&
+          typeof o.tokenInDenom === 'string' &&
+          typeof o.tokenOutMinAmount === 'string'))
+    );
   },
   isSDK(o: any): o is MsgSplitRouteSwapExactAmountInSDKType {
-    return o && (o.$typeUrl === MsgSplitRouteSwapExactAmountIn.typeUrl || typeof o.sender === "string" && Array.isArray(o.routes) && (!o.routes.length || SwapAmountInSplitRoute.isSDK(o.routes[0])) && typeof o.token_in_denom === "string" && typeof o.token_out_min_amount === "string");
+    return (
+      o &&
+      (o.$typeUrl === MsgSplitRouteSwapExactAmountIn.typeUrl ||
+        (typeof o.sender === 'string' &&
+          Array.isArray(o.routes) &&
+          (!o.routes.length || SwapAmountInSplitRoute.isSDK(o.routes[0])) &&
+          typeof o.token_in_denom === 'string' &&
+          typeof o.token_out_min_amount === 'string'))
+    );
   },
   isAmino(o: any): o is MsgSplitRouteSwapExactAmountInAmino {
-    return o && (o.$typeUrl === MsgSplitRouteSwapExactAmountIn.typeUrl || typeof o.sender === "string" && Array.isArray(o.routes) && (!o.routes.length || SwapAmountInSplitRoute.isAmino(o.routes[0])) && typeof o.token_in_denom === "string" && typeof o.token_out_min_amount === "string");
+    return (
+      o &&
+      (o.$typeUrl === MsgSplitRouteSwapExactAmountIn.typeUrl ||
+        (typeof o.sender === 'string' &&
+          Array.isArray(o.routes) &&
+          (!o.routes.length || SwapAmountInSplitRoute.isAmino(o.routes[0])) &&
+          typeof o.token_in_denom === 'string' &&
+          typeof o.token_out_min_amount === 'string'))
+    );
   },
-  encode(message: MsgSplitRouteSwapExactAmountIn, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
-    if (message.sender !== "") {
+  encode(
+    message: MsgSplitRouteSwapExactAmountIn,
+    writer: BinaryWriter = BinaryWriter.create(),
+  ): BinaryWriter {
+    if (message.sender !== '') {
       writer.uint32(10).string(message.sender);
     }
     for (const v of message.routes) {
       SwapAmountInSplitRoute.encode(v!, writer.uint32(18).fork()).ldelim();
     }
-    if (message.tokenInDenom !== "") {
+    if (message.tokenInDenom !== '') {
       writer.uint32(26).string(message.tokenInDenom);
     }
-    if (message.tokenOutMinAmount !== "") {
+    if (message.tokenOutMinAmount !== '') {
       writer.uint32(34).string(message.tokenOutMinAmount);
     }
     return writer;
   },
-  decode(input: BinaryReader | Uint8Array, length?: number): MsgSplitRouteSwapExactAmountIn {
-    const reader = input instanceof BinaryReader ? input : new BinaryReader(input);
+  decode(
+    input: BinaryReader | Uint8Array,
+    length?: number,
+  ): MsgSplitRouteSwapExactAmountIn {
+    const reader =
+      input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseMsgSplitRouteSwapExactAmountIn();
     while (reader.pos < end) {
@@ -625,7 +1011,9 @@ export const MsgSplitRouteSwapExactAmountIn = {
           message.sender = reader.string();
           break;
         case 2:
-          message.routes.push(SwapAmountInSplitRoute.decode(reader, reader.uint32()));
+          message.routes.push(
+            SwapAmountInSplitRoute.decode(reader, reader.uint32()),
+          );
           break;
         case 3:
           message.tokenInDenom = reader.string();
@@ -640,88 +1028,142 @@ export const MsgSplitRouteSwapExactAmountIn = {
     }
     return message;
   },
-  fromPartial(object: Partial<MsgSplitRouteSwapExactAmountIn>): MsgSplitRouteSwapExactAmountIn {
+  fromPartial(
+    object: Partial<MsgSplitRouteSwapExactAmountIn>,
+  ): MsgSplitRouteSwapExactAmountIn {
     const message = createBaseMsgSplitRouteSwapExactAmountIn();
-    message.sender = object.sender ?? "";
-    message.routes = object.routes?.map(e => SwapAmountInSplitRoute.fromPartial(e)) || [];
-    message.tokenInDenom = object.tokenInDenom ?? "";
-    message.tokenOutMinAmount = object.tokenOutMinAmount ?? "";
+    message.sender = object.sender ?? '';
+    message.routes =
+      object.routes?.map(e => SwapAmountInSplitRoute.fromPartial(e)) || [];
+    message.tokenInDenom = object.tokenInDenom ?? '';
+    message.tokenOutMinAmount = object.tokenOutMinAmount ?? '';
     return message;
   },
-  fromAmino(object: MsgSplitRouteSwapExactAmountInAmino): MsgSplitRouteSwapExactAmountIn {
+  fromAmino(
+    object: MsgSplitRouteSwapExactAmountInAmino,
+  ): MsgSplitRouteSwapExactAmountIn {
     const message = createBaseMsgSplitRouteSwapExactAmountIn();
     if (object.sender !== undefined && object.sender !== null) {
       message.sender = object.sender;
     }
-    message.routes = object.routes?.map(e => SwapAmountInSplitRoute.fromAmino(e)) || [];
+    message.routes =
+      object.routes?.map(e => SwapAmountInSplitRoute.fromAmino(e)) || [];
     if (object.token_in_denom !== undefined && object.token_in_denom !== null) {
       message.tokenInDenom = object.token_in_denom;
     }
-    if (object.token_out_min_amount !== undefined && object.token_out_min_amount !== null) {
+    if (
+      object.token_out_min_amount !== undefined &&
+      object.token_out_min_amount !== null
+    ) {
       message.tokenOutMinAmount = object.token_out_min_amount;
     }
     return message;
   },
-  toAmino(message: MsgSplitRouteSwapExactAmountIn): MsgSplitRouteSwapExactAmountInAmino {
+  toAmino(
+    message: MsgSplitRouteSwapExactAmountIn,
+  ): MsgSplitRouteSwapExactAmountInAmino {
     const obj: any = {};
-    obj.sender = message.sender === "" ? undefined : message.sender;
+    obj.sender = message.sender === '' ? undefined : message.sender;
     if (message.routes) {
-      obj.routes = message.routes.map(e => e ? SwapAmountInSplitRoute.toAmino(e) : undefined);
+      obj.routes = message.routes.map(e =>
+        e ? SwapAmountInSplitRoute.toAmino(e) : undefined,
+      );
     } else {
       obj.routes = message.routes;
     }
-    obj.token_in_denom = message.tokenInDenom === "" ? undefined : message.tokenInDenom;
-    obj.token_out_min_amount = message.tokenOutMinAmount === "" ? undefined : message.tokenOutMinAmount;
+    obj.token_in_denom =
+      message.tokenInDenom === '' ? undefined : message.tokenInDenom;
+    obj.token_out_min_amount =
+      message.tokenOutMinAmount === '' ? undefined : message.tokenOutMinAmount;
     return obj;
   },
-  fromAminoMsg(object: MsgSplitRouteSwapExactAmountInAminoMsg): MsgSplitRouteSwapExactAmountIn {
+  fromAminoMsg(
+    object: MsgSplitRouteSwapExactAmountInAminoMsg,
+  ): MsgSplitRouteSwapExactAmountIn {
     return MsgSplitRouteSwapExactAmountIn.fromAmino(object.value);
   },
-  toAminoMsg(message: MsgSplitRouteSwapExactAmountIn): MsgSplitRouteSwapExactAmountInAminoMsg {
+  toAminoMsg(
+    message: MsgSplitRouteSwapExactAmountIn,
+  ): MsgSplitRouteSwapExactAmountInAminoMsg {
     return {
-      type: "symphony/poolmanager/split-amount-in",
-      value: MsgSplitRouteSwapExactAmountIn.toAmino(message)
+      type: 'symphony/poolmanager/split-amount-in',
+      value: MsgSplitRouteSwapExactAmountIn.toAmino(message),
     };
   },
-  fromProtoMsg(message: MsgSplitRouteSwapExactAmountInProtoMsg): MsgSplitRouteSwapExactAmountIn {
+  fromProtoMsg(
+    message: MsgSplitRouteSwapExactAmountInProtoMsg,
+  ): MsgSplitRouteSwapExactAmountIn {
     return MsgSplitRouteSwapExactAmountIn.decode(message.value);
   },
   toProto(message: MsgSplitRouteSwapExactAmountIn): Uint8Array {
     return MsgSplitRouteSwapExactAmountIn.encode(message).finish();
   },
-  toProtoMsg(message: MsgSplitRouteSwapExactAmountIn): MsgSplitRouteSwapExactAmountInProtoMsg {
+  toProtoMsg(
+    message: MsgSplitRouteSwapExactAmountIn,
+  ): MsgSplitRouteSwapExactAmountInProtoMsg {
     return {
-      typeUrl: "/symphony.poolmanager.v1beta1.MsgSplitRouteSwapExactAmountIn",
-      value: MsgSplitRouteSwapExactAmountIn.encode(message).finish()
+      typeUrl: '/symphony.poolmanager.v1beta1.MsgSplitRouteSwapExactAmountIn',
+      value: MsgSplitRouteSwapExactAmountIn.encode(message).finish(),
     };
-  }
+  },
 };
-GlobalDecoderRegistry.register(MsgSplitRouteSwapExactAmountIn.typeUrl, MsgSplitRouteSwapExactAmountIn);
-GlobalDecoderRegistry.registerAminoProtoMapping(MsgSplitRouteSwapExactAmountIn.aminoType, MsgSplitRouteSwapExactAmountIn.typeUrl);
+GlobalDecoderRegistry.register(
+  MsgSplitRouteSwapExactAmountIn.typeUrl,
+  MsgSplitRouteSwapExactAmountIn,
+);
+GlobalDecoderRegistry.registerAminoProtoMapping(
+  MsgSplitRouteSwapExactAmountIn.aminoType,
+  MsgSplitRouteSwapExactAmountIn.typeUrl,
+);
 function createBaseMsgSplitRouteSwapExactAmountInResponse(): MsgSplitRouteSwapExactAmountInResponse {
   return {
-    tokenOutAmount: ""
+    tokenOutAmount: '',
   };
 }
+/**
+ * @name MsgSplitRouteSwapExactAmountInResponse
+ * @package symphony.poolmanager.v1beta1
+ * @see proto type: symphony.poolmanager.v1beta1.MsgSplitRouteSwapExactAmountInResponse
+ */
 export const MsgSplitRouteSwapExactAmountInResponse = {
-  typeUrl: "/symphony.poolmanager.v1beta1.MsgSplitRouteSwapExactAmountInResponse",
+  typeUrl:
+    '/symphony.poolmanager.v1beta1.MsgSplitRouteSwapExactAmountInResponse',
   is(o: any): o is MsgSplitRouteSwapExactAmountInResponse {
-    return o && (o.$typeUrl === MsgSplitRouteSwapExactAmountInResponse.typeUrl || typeof o.tokenOutAmount === "string");
+    return (
+      o &&
+      (o.$typeUrl === MsgSplitRouteSwapExactAmountInResponse.typeUrl ||
+        typeof o.tokenOutAmount === 'string')
+    );
   },
   isSDK(o: any): o is MsgSplitRouteSwapExactAmountInResponseSDKType {
-    return o && (o.$typeUrl === MsgSplitRouteSwapExactAmountInResponse.typeUrl || typeof o.token_out_amount === "string");
+    return (
+      o &&
+      (o.$typeUrl === MsgSplitRouteSwapExactAmountInResponse.typeUrl ||
+        typeof o.token_out_amount === 'string')
+    );
   },
   isAmino(o: any): o is MsgSplitRouteSwapExactAmountInResponseAmino {
-    return o && (o.$typeUrl === MsgSplitRouteSwapExactAmountInResponse.typeUrl || typeof o.token_out_amount === "string");
+    return (
+      o &&
+      (o.$typeUrl === MsgSplitRouteSwapExactAmountInResponse.typeUrl ||
+        typeof o.token_out_amount === 'string')
+    );
   },
-  encode(message: MsgSplitRouteSwapExactAmountInResponse, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
-    if (message.tokenOutAmount !== "") {
+  encode(
+    message: MsgSplitRouteSwapExactAmountInResponse,
+    writer: BinaryWriter = BinaryWriter.create(),
+  ): BinaryWriter {
+    if (message.tokenOutAmount !== '') {
       writer.uint32(10).string(message.tokenOutAmount);
     }
     return writer;
   },
-  decode(input: BinaryReader | Uint8Array, length?: number): MsgSplitRouteSwapExactAmountInResponse {
-    const reader = input instanceof BinaryReader ? input : new BinaryReader(input);
+  decode(
+    input: BinaryReader | Uint8Array,
+    length?: number,
+  ): MsgSplitRouteSwapExactAmountInResponse {
+    const reader =
+      input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseMsgSplitRouteSwapExactAmountInResponse();
     while (reader.pos < end) {
@@ -737,68 +1179,121 @@ export const MsgSplitRouteSwapExactAmountInResponse = {
     }
     return message;
   },
-  fromPartial(object: Partial<MsgSplitRouteSwapExactAmountInResponse>): MsgSplitRouteSwapExactAmountInResponse {
+  fromPartial(
+    object: Partial<MsgSplitRouteSwapExactAmountInResponse>,
+  ): MsgSplitRouteSwapExactAmountInResponse {
     const message = createBaseMsgSplitRouteSwapExactAmountInResponse();
-    message.tokenOutAmount = object.tokenOutAmount ?? "";
+    message.tokenOutAmount = object.tokenOutAmount ?? '';
     return message;
   },
-  fromAmino(object: MsgSplitRouteSwapExactAmountInResponseAmino): MsgSplitRouteSwapExactAmountInResponse {
+  fromAmino(
+    object: MsgSplitRouteSwapExactAmountInResponseAmino,
+  ): MsgSplitRouteSwapExactAmountInResponse {
     const message = createBaseMsgSplitRouteSwapExactAmountInResponse();
-    if (object.token_out_amount !== undefined && object.token_out_amount !== null) {
+    if (
+      object.token_out_amount !== undefined &&
+      object.token_out_amount !== null
+    ) {
       message.tokenOutAmount = object.token_out_amount;
     }
     return message;
   },
-  toAmino(message: MsgSplitRouteSwapExactAmountInResponse): MsgSplitRouteSwapExactAmountInResponseAmino {
+  toAmino(
+    message: MsgSplitRouteSwapExactAmountInResponse,
+  ): MsgSplitRouteSwapExactAmountInResponseAmino {
     const obj: any = {};
-    obj.token_out_amount = message.tokenOutAmount === "" ? undefined : message.tokenOutAmount;
+    obj.token_out_amount =
+      message.tokenOutAmount === '' ? undefined : message.tokenOutAmount;
     return obj;
   },
-  fromAminoMsg(object: MsgSplitRouteSwapExactAmountInResponseAminoMsg): MsgSplitRouteSwapExactAmountInResponse {
+  fromAminoMsg(
+    object: MsgSplitRouteSwapExactAmountInResponseAminoMsg,
+  ): MsgSplitRouteSwapExactAmountInResponse {
     return MsgSplitRouteSwapExactAmountInResponse.fromAmino(object.value);
   },
-  fromProtoMsg(message: MsgSplitRouteSwapExactAmountInResponseProtoMsg): MsgSplitRouteSwapExactAmountInResponse {
+  fromProtoMsg(
+    message: MsgSplitRouteSwapExactAmountInResponseProtoMsg,
+  ): MsgSplitRouteSwapExactAmountInResponse {
     return MsgSplitRouteSwapExactAmountInResponse.decode(message.value);
   },
   toProto(message: MsgSplitRouteSwapExactAmountInResponse): Uint8Array {
     return MsgSplitRouteSwapExactAmountInResponse.encode(message).finish();
   },
-  toProtoMsg(message: MsgSplitRouteSwapExactAmountInResponse): MsgSplitRouteSwapExactAmountInResponseProtoMsg {
+  toProtoMsg(
+    message: MsgSplitRouteSwapExactAmountInResponse,
+  ): MsgSplitRouteSwapExactAmountInResponseProtoMsg {
     return {
-      typeUrl: "/symphony.poolmanager.v1beta1.MsgSplitRouteSwapExactAmountInResponse",
-      value: MsgSplitRouteSwapExactAmountInResponse.encode(message).finish()
+      typeUrl:
+        '/symphony.poolmanager.v1beta1.MsgSplitRouteSwapExactAmountInResponse',
+      value: MsgSplitRouteSwapExactAmountInResponse.encode(message).finish(),
     };
-  }
+  },
 };
-GlobalDecoderRegistry.register(MsgSplitRouteSwapExactAmountInResponse.typeUrl, MsgSplitRouteSwapExactAmountInResponse);
+GlobalDecoderRegistry.register(
+  MsgSplitRouteSwapExactAmountInResponse.typeUrl,
+  MsgSplitRouteSwapExactAmountInResponse,
+);
 function createBaseMsgSwapExactAmountOut(): MsgSwapExactAmountOut {
   return {
-    sender: "",
+    sender: '',
     routes: [],
-    tokenInMaxAmount: "",
-    tokenOut: Coin.fromPartial({})
+    tokenInMaxAmount: '',
+    tokenOut: Coin.fromPartial({}),
   };
 }
+/**
+ * ===================== MsgSwapExactAmountOut
+ * @name MsgSwapExactAmountOut
+ * @package symphony.poolmanager.v1beta1
+ * @see proto type: symphony.poolmanager.v1beta1.MsgSwapExactAmountOut
+ */
 export const MsgSwapExactAmountOut = {
-  typeUrl: "/symphony.poolmanager.v1beta1.MsgSwapExactAmountOut",
-  aminoType: "symphony/poolmanager/swap-exact-amount-out",
+  typeUrl: '/symphony.poolmanager.v1beta1.MsgSwapExactAmountOut',
+  aminoType: 'symphony/poolmanager/swap-exact-amount-out',
   is(o: any): o is MsgSwapExactAmountOut {
-    return o && (o.$typeUrl === MsgSwapExactAmountOut.typeUrl || typeof o.sender === "string" && Array.isArray(o.routes) && (!o.routes.length || SwapAmountOutRoute.is(o.routes[0])) && typeof o.tokenInMaxAmount === "string" && Coin.is(o.tokenOut));
+    return (
+      o &&
+      (o.$typeUrl === MsgSwapExactAmountOut.typeUrl ||
+        (typeof o.sender === 'string' &&
+          Array.isArray(o.routes) &&
+          (!o.routes.length || SwapAmountOutRoute.is(o.routes[0])) &&
+          typeof o.tokenInMaxAmount === 'string' &&
+          Coin.is(o.tokenOut)))
+    );
   },
   isSDK(o: any): o is MsgSwapExactAmountOutSDKType {
-    return o && (o.$typeUrl === MsgSwapExactAmountOut.typeUrl || typeof o.sender === "string" && Array.isArray(o.routes) && (!o.routes.length || SwapAmountOutRoute.isSDK(o.routes[0])) && typeof o.token_in_max_amount === "string" && Coin.isSDK(o.token_out));
+    return (
+      o &&
+      (o.$typeUrl === MsgSwapExactAmountOut.typeUrl ||
+        (typeof o.sender === 'string' &&
+          Array.isArray(o.routes) &&
+          (!o.routes.length || SwapAmountOutRoute.isSDK(o.routes[0])) &&
+          typeof o.token_in_max_amount === 'string' &&
+          Coin.isSDK(o.token_out)))
+    );
   },
   isAmino(o: any): o is MsgSwapExactAmountOutAmino {
-    return o && (o.$typeUrl === MsgSwapExactAmountOut.typeUrl || typeof o.sender === "string" && Array.isArray(o.routes) && (!o.routes.length || SwapAmountOutRoute.isAmino(o.routes[0])) && typeof o.token_in_max_amount === "string" && Coin.isAmino(o.token_out));
+    return (
+      o &&
+      (o.$typeUrl === MsgSwapExactAmountOut.typeUrl ||
+        (typeof o.sender === 'string' &&
+          Array.isArray(o.routes) &&
+          (!o.routes.length || SwapAmountOutRoute.isAmino(o.routes[0])) &&
+          typeof o.token_in_max_amount === 'string' &&
+          Coin.isAmino(o.token_out)))
+    );
   },
-  encode(message: MsgSwapExactAmountOut, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
-    if (message.sender !== "") {
+  encode(
+    message: MsgSwapExactAmountOut,
+    writer: BinaryWriter = BinaryWriter.create(),
+  ): BinaryWriter {
+    if (message.sender !== '') {
       writer.uint32(10).string(message.sender);
     }
     for (const v of message.routes) {
       SwapAmountOutRoute.encode(v!, writer.uint32(18).fork()).ldelim();
     }
-    if (message.tokenInMaxAmount !== "") {
+    if (message.tokenInMaxAmount !== '') {
       writer.uint32(26).string(message.tokenInMaxAmount);
     }
     if (message.tokenOut !== undefined) {
@@ -806,8 +1301,12 @@ export const MsgSwapExactAmountOut = {
     }
     return writer;
   },
-  decode(input: BinaryReader | Uint8Array, length?: number): MsgSwapExactAmountOut {
-    const reader = input instanceof BinaryReader ? input : new BinaryReader(input);
+  decode(
+    input: BinaryReader | Uint8Array,
+    length?: number,
+  ): MsgSwapExactAmountOut {
+    const reader =
+      input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseMsgSwapExactAmountOut();
     while (reader.pos < end) {
@@ -817,7 +1316,9 @@ export const MsgSwapExactAmountOut = {
           message.sender = reader.string();
           break;
         case 2:
-          message.routes.push(SwapAmountOutRoute.decode(reader, reader.uint32()));
+          message.routes.push(
+            SwapAmountOutRoute.decode(reader, reader.uint32()),
+          );
           break;
         case 3:
           message.tokenInMaxAmount = reader.string();
@@ -834,10 +1335,14 @@ export const MsgSwapExactAmountOut = {
   },
   fromPartial(object: Partial<MsgSwapExactAmountOut>): MsgSwapExactAmountOut {
     const message = createBaseMsgSwapExactAmountOut();
-    message.sender = object.sender ?? "";
-    message.routes = object.routes?.map(e => SwapAmountOutRoute.fromPartial(e)) || [];
-    message.tokenInMaxAmount = object.tokenInMaxAmount ?? "";
-    message.tokenOut = object.tokenOut !== undefined && object.tokenOut !== null ? Coin.fromPartial(object.tokenOut) : undefined;
+    message.sender = object.sender ?? '';
+    message.routes =
+      object.routes?.map(e => SwapAmountOutRoute.fromPartial(e)) || [];
+    message.tokenInMaxAmount = object.tokenInMaxAmount ?? '';
+    message.tokenOut =
+      object.tokenOut !== undefined && object.tokenOut !== null
+        ? Coin.fromPartial(object.tokenOut)
+        : undefined;
     return message;
   },
   fromAmino(object: MsgSwapExactAmountOutAmino): MsgSwapExactAmountOut {
@@ -845,8 +1350,12 @@ export const MsgSwapExactAmountOut = {
     if (object.sender !== undefined && object.sender !== null) {
       message.sender = object.sender;
     }
-    message.routes = object.routes?.map(e => SwapAmountOutRoute.fromAmino(e)) || [];
-    if (object.token_in_max_amount !== undefined && object.token_in_max_amount !== null) {
+    message.routes =
+      object.routes?.map(e => SwapAmountOutRoute.fromAmino(e)) || [];
+    if (
+      object.token_in_max_amount !== undefined &&
+      object.token_in_max_amount !== null
+    ) {
       message.tokenInMaxAmount = object.token_in_max_amount;
     }
     if (object.token_out !== undefined && object.token_out !== null) {
@@ -856,14 +1365,19 @@ export const MsgSwapExactAmountOut = {
   },
   toAmino(message: MsgSwapExactAmountOut): MsgSwapExactAmountOutAmino {
     const obj: any = {};
-    obj.sender = message.sender === "" ? undefined : message.sender;
+    obj.sender = message.sender === '' ? undefined : message.sender;
     if (message.routes) {
-      obj.routes = message.routes.map(e => e ? SwapAmountOutRoute.toAmino(e) : undefined);
+      obj.routes = message.routes.map(e =>
+        e ? SwapAmountOutRoute.toAmino(e) : undefined,
+      );
     } else {
       obj.routes = message.routes;
     }
-    obj.token_in_max_amount = message.tokenInMaxAmount === "" ? undefined : message.tokenInMaxAmount;
-    obj.token_out = message.tokenOut ? Coin.toAmino(message.tokenOut) : undefined;
+    obj.token_in_max_amount =
+      message.tokenInMaxAmount === '' ? undefined : message.tokenInMaxAmount;
+    obj.token_out = message.tokenOut
+      ? Coin.toAmino(message.tokenOut)
+      : undefined;
     return obj;
   },
   fromAminoMsg(object: MsgSwapExactAmountOutAminoMsg): MsgSwapExactAmountOut {
@@ -871,8 +1385,8 @@ export const MsgSwapExactAmountOut = {
   },
   toAminoMsg(message: MsgSwapExactAmountOut): MsgSwapExactAmountOutAminoMsg {
     return {
-      type: "symphony/poolmanager/swap-exact-amount-out",
-      value: MsgSwapExactAmountOut.toAmino(message)
+      type: 'symphony/poolmanager/swap-exact-amount-out',
+      value: MsgSwapExactAmountOut.toAmino(message),
     };
   },
   fromProtoMsg(message: MsgSwapExactAmountOutProtoMsg): MsgSwapExactAmountOut {
@@ -883,37 +1397,67 @@ export const MsgSwapExactAmountOut = {
   },
   toProtoMsg(message: MsgSwapExactAmountOut): MsgSwapExactAmountOutProtoMsg {
     return {
-      typeUrl: "/symphony.poolmanager.v1beta1.MsgSwapExactAmountOut",
-      value: MsgSwapExactAmountOut.encode(message).finish()
+      typeUrl: '/symphony.poolmanager.v1beta1.MsgSwapExactAmountOut',
+      value: MsgSwapExactAmountOut.encode(message).finish(),
     };
-  }
+  },
 };
-GlobalDecoderRegistry.register(MsgSwapExactAmountOut.typeUrl, MsgSwapExactAmountOut);
-GlobalDecoderRegistry.registerAminoProtoMapping(MsgSwapExactAmountOut.aminoType, MsgSwapExactAmountOut.typeUrl);
+GlobalDecoderRegistry.register(
+  MsgSwapExactAmountOut.typeUrl,
+  MsgSwapExactAmountOut,
+);
+GlobalDecoderRegistry.registerAminoProtoMapping(
+  MsgSwapExactAmountOut.aminoType,
+  MsgSwapExactAmountOut.typeUrl,
+);
 function createBaseMsgSwapExactAmountOutResponse(): MsgSwapExactAmountOutResponse {
   return {
-    tokenInAmount: ""
+    tokenInAmount: '',
   };
 }
+/**
+ * @name MsgSwapExactAmountOutResponse
+ * @package symphony.poolmanager.v1beta1
+ * @see proto type: symphony.poolmanager.v1beta1.MsgSwapExactAmountOutResponse
+ */
 export const MsgSwapExactAmountOutResponse = {
-  typeUrl: "/symphony.poolmanager.v1beta1.MsgSwapExactAmountOutResponse",
+  typeUrl: '/symphony.poolmanager.v1beta1.MsgSwapExactAmountOutResponse',
   is(o: any): o is MsgSwapExactAmountOutResponse {
-    return o && (o.$typeUrl === MsgSwapExactAmountOutResponse.typeUrl || typeof o.tokenInAmount === "string");
+    return (
+      o &&
+      (o.$typeUrl === MsgSwapExactAmountOutResponse.typeUrl ||
+        typeof o.tokenInAmount === 'string')
+    );
   },
   isSDK(o: any): o is MsgSwapExactAmountOutResponseSDKType {
-    return o && (o.$typeUrl === MsgSwapExactAmountOutResponse.typeUrl || typeof o.token_in_amount === "string");
+    return (
+      o &&
+      (o.$typeUrl === MsgSwapExactAmountOutResponse.typeUrl ||
+        typeof o.token_in_amount === 'string')
+    );
   },
   isAmino(o: any): o is MsgSwapExactAmountOutResponseAmino {
-    return o && (o.$typeUrl === MsgSwapExactAmountOutResponse.typeUrl || typeof o.token_in_amount === "string");
+    return (
+      o &&
+      (o.$typeUrl === MsgSwapExactAmountOutResponse.typeUrl ||
+        typeof o.token_in_amount === 'string')
+    );
   },
-  encode(message: MsgSwapExactAmountOutResponse, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
-    if (message.tokenInAmount !== "") {
+  encode(
+    message: MsgSwapExactAmountOutResponse,
+    writer: BinaryWriter = BinaryWriter.create(),
+  ): BinaryWriter {
+    if (message.tokenInAmount !== '') {
       writer.uint32(10).string(message.tokenInAmount);
     }
     return writer;
   },
-  decode(input: BinaryReader | Uint8Array, length?: number): MsgSwapExactAmountOutResponse {
-    const reader = input instanceof BinaryReader ? input : new BinaryReader(input);
+  decode(
+    input: BinaryReader | Uint8Array,
+    length?: number,
+  ): MsgSwapExactAmountOutResponse {
+    const reader =
+      input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseMsgSwapExactAmountOutResponse();
     while (reader.pos < end) {
@@ -929,77 +1473,133 @@ export const MsgSwapExactAmountOutResponse = {
     }
     return message;
   },
-  fromPartial(object: Partial<MsgSwapExactAmountOutResponse>): MsgSwapExactAmountOutResponse {
+  fromPartial(
+    object: Partial<MsgSwapExactAmountOutResponse>,
+  ): MsgSwapExactAmountOutResponse {
     const message = createBaseMsgSwapExactAmountOutResponse();
-    message.tokenInAmount = object.tokenInAmount ?? "";
+    message.tokenInAmount = object.tokenInAmount ?? '';
     return message;
   },
-  fromAmino(object: MsgSwapExactAmountOutResponseAmino): MsgSwapExactAmountOutResponse {
+  fromAmino(
+    object: MsgSwapExactAmountOutResponseAmino,
+  ): MsgSwapExactAmountOutResponse {
     const message = createBaseMsgSwapExactAmountOutResponse();
-    if (object.token_in_amount !== undefined && object.token_in_amount !== null) {
+    if (
+      object.token_in_amount !== undefined &&
+      object.token_in_amount !== null
+    ) {
       message.tokenInAmount = object.token_in_amount;
     }
     return message;
   },
-  toAmino(message: MsgSwapExactAmountOutResponse): MsgSwapExactAmountOutResponseAmino {
+  toAmino(
+    message: MsgSwapExactAmountOutResponse,
+  ): MsgSwapExactAmountOutResponseAmino {
     const obj: any = {};
-    obj.token_in_amount = message.tokenInAmount === "" ? undefined : message.tokenInAmount;
+    obj.token_in_amount =
+      message.tokenInAmount === '' ? undefined : message.tokenInAmount;
     return obj;
   },
-  fromAminoMsg(object: MsgSwapExactAmountOutResponseAminoMsg): MsgSwapExactAmountOutResponse {
+  fromAminoMsg(
+    object: MsgSwapExactAmountOutResponseAminoMsg,
+  ): MsgSwapExactAmountOutResponse {
     return MsgSwapExactAmountOutResponse.fromAmino(object.value);
   },
-  fromProtoMsg(message: MsgSwapExactAmountOutResponseProtoMsg): MsgSwapExactAmountOutResponse {
+  fromProtoMsg(
+    message: MsgSwapExactAmountOutResponseProtoMsg,
+  ): MsgSwapExactAmountOutResponse {
     return MsgSwapExactAmountOutResponse.decode(message.value);
   },
   toProto(message: MsgSwapExactAmountOutResponse): Uint8Array {
     return MsgSwapExactAmountOutResponse.encode(message).finish();
   },
-  toProtoMsg(message: MsgSwapExactAmountOutResponse): MsgSwapExactAmountOutResponseProtoMsg {
+  toProtoMsg(
+    message: MsgSwapExactAmountOutResponse,
+  ): MsgSwapExactAmountOutResponseProtoMsg {
     return {
-      typeUrl: "/symphony.poolmanager.v1beta1.MsgSwapExactAmountOutResponse",
-      value: MsgSwapExactAmountOutResponse.encode(message).finish()
+      typeUrl: '/symphony.poolmanager.v1beta1.MsgSwapExactAmountOutResponse',
+      value: MsgSwapExactAmountOutResponse.encode(message).finish(),
     };
-  }
+  },
 };
-GlobalDecoderRegistry.register(MsgSwapExactAmountOutResponse.typeUrl, MsgSwapExactAmountOutResponse);
+GlobalDecoderRegistry.register(
+  MsgSwapExactAmountOutResponse.typeUrl,
+  MsgSwapExactAmountOutResponse,
+);
 function createBaseMsgSplitRouteSwapExactAmountOut(): MsgSplitRouteSwapExactAmountOut {
   return {
-    sender: "",
+    sender: '',
     routes: [],
-    tokenOutDenom: "",
-    tokenInMaxAmount: ""
+    tokenOutDenom: '',
+    tokenInMaxAmount: '',
   };
 }
+/**
+ * ===================== MsgSplitRouteSwapExactAmountOut
+ * @name MsgSplitRouteSwapExactAmountOut
+ * @package symphony.poolmanager.v1beta1
+ * @see proto type: symphony.poolmanager.v1beta1.MsgSplitRouteSwapExactAmountOut
+ */
 export const MsgSplitRouteSwapExactAmountOut = {
-  typeUrl: "/symphony.poolmanager.v1beta1.MsgSplitRouteSwapExactAmountOut",
-  aminoType: "symphony/poolmanager/split-amount-out",
+  typeUrl: '/symphony.poolmanager.v1beta1.MsgSplitRouteSwapExactAmountOut',
+  aminoType: 'symphony/poolmanager/split-amount-out',
   is(o: any): o is MsgSplitRouteSwapExactAmountOut {
-    return o && (o.$typeUrl === MsgSplitRouteSwapExactAmountOut.typeUrl || typeof o.sender === "string" && Array.isArray(o.routes) && (!o.routes.length || SwapAmountOutSplitRoute.is(o.routes[0])) && typeof o.tokenOutDenom === "string" && typeof o.tokenInMaxAmount === "string");
+    return (
+      o &&
+      (o.$typeUrl === MsgSplitRouteSwapExactAmountOut.typeUrl ||
+        (typeof o.sender === 'string' &&
+          Array.isArray(o.routes) &&
+          (!o.routes.length || SwapAmountOutSplitRoute.is(o.routes[0])) &&
+          typeof o.tokenOutDenom === 'string' &&
+          typeof o.tokenInMaxAmount === 'string'))
+    );
   },
   isSDK(o: any): o is MsgSplitRouteSwapExactAmountOutSDKType {
-    return o && (o.$typeUrl === MsgSplitRouteSwapExactAmountOut.typeUrl || typeof o.sender === "string" && Array.isArray(o.routes) && (!o.routes.length || SwapAmountOutSplitRoute.isSDK(o.routes[0])) && typeof o.token_out_denom === "string" && typeof o.token_in_max_amount === "string");
+    return (
+      o &&
+      (o.$typeUrl === MsgSplitRouteSwapExactAmountOut.typeUrl ||
+        (typeof o.sender === 'string' &&
+          Array.isArray(o.routes) &&
+          (!o.routes.length || SwapAmountOutSplitRoute.isSDK(o.routes[0])) &&
+          typeof o.token_out_denom === 'string' &&
+          typeof o.token_in_max_amount === 'string'))
+    );
   },
   isAmino(o: any): o is MsgSplitRouteSwapExactAmountOutAmino {
-    return o && (o.$typeUrl === MsgSplitRouteSwapExactAmountOut.typeUrl || typeof o.sender === "string" && Array.isArray(o.routes) && (!o.routes.length || SwapAmountOutSplitRoute.isAmino(o.routes[0])) && typeof o.token_out_denom === "string" && typeof o.token_in_max_amount === "string");
+    return (
+      o &&
+      (o.$typeUrl === MsgSplitRouteSwapExactAmountOut.typeUrl ||
+        (typeof o.sender === 'string' &&
+          Array.isArray(o.routes) &&
+          (!o.routes.length || SwapAmountOutSplitRoute.isAmino(o.routes[0])) &&
+          typeof o.token_out_denom === 'string' &&
+          typeof o.token_in_max_amount === 'string'))
+    );
   },
-  encode(message: MsgSplitRouteSwapExactAmountOut, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
-    if (message.sender !== "") {
+  encode(
+    message: MsgSplitRouteSwapExactAmountOut,
+    writer: BinaryWriter = BinaryWriter.create(),
+  ): BinaryWriter {
+    if (message.sender !== '') {
       writer.uint32(10).string(message.sender);
     }
     for (const v of message.routes) {
       SwapAmountOutSplitRoute.encode(v!, writer.uint32(18).fork()).ldelim();
     }
-    if (message.tokenOutDenom !== "") {
+    if (message.tokenOutDenom !== '') {
       writer.uint32(26).string(message.tokenOutDenom);
     }
-    if (message.tokenInMaxAmount !== "") {
+    if (message.tokenInMaxAmount !== '') {
       writer.uint32(34).string(message.tokenInMaxAmount);
     }
     return writer;
   },
-  decode(input: BinaryReader | Uint8Array, length?: number): MsgSplitRouteSwapExactAmountOut {
-    const reader = input instanceof BinaryReader ? input : new BinaryReader(input);
+  decode(
+    input: BinaryReader | Uint8Array,
+    length?: number,
+  ): MsgSplitRouteSwapExactAmountOut {
+    const reader =
+      input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseMsgSplitRouteSwapExactAmountOut();
     while (reader.pos < end) {
@@ -1009,7 +1609,9 @@ export const MsgSplitRouteSwapExactAmountOut = {
           message.sender = reader.string();
           break;
         case 2:
-          message.routes.push(SwapAmountOutSplitRoute.decode(reader, reader.uint32()));
+          message.routes.push(
+            SwapAmountOutSplitRoute.decode(reader, reader.uint32()),
+          );
           break;
         case 3:
           message.tokenOutDenom = reader.string();
@@ -1024,88 +1626,145 @@ export const MsgSplitRouteSwapExactAmountOut = {
     }
     return message;
   },
-  fromPartial(object: Partial<MsgSplitRouteSwapExactAmountOut>): MsgSplitRouteSwapExactAmountOut {
+  fromPartial(
+    object: Partial<MsgSplitRouteSwapExactAmountOut>,
+  ): MsgSplitRouteSwapExactAmountOut {
     const message = createBaseMsgSplitRouteSwapExactAmountOut();
-    message.sender = object.sender ?? "";
-    message.routes = object.routes?.map(e => SwapAmountOutSplitRoute.fromPartial(e)) || [];
-    message.tokenOutDenom = object.tokenOutDenom ?? "";
-    message.tokenInMaxAmount = object.tokenInMaxAmount ?? "";
+    message.sender = object.sender ?? '';
+    message.routes =
+      object.routes?.map(e => SwapAmountOutSplitRoute.fromPartial(e)) || [];
+    message.tokenOutDenom = object.tokenOutDenom ?? '';
+    message.tokenInMaxAmount = object.tokenInMaxAmount ?? '';
     return message;
   },
-  fromAmino(object: MsgSplitRouteSwapExactAmountOutAmino): MsgSplitRouteSwapExactAmountOut {
+  fromAmino(
+    object: MsgSplitRouteSwapExactAmountOutAmino,
+  ): MsgSplitRouteSwapExactAmountOut {
     const message = createBaseMsgSplitRouteSwapExactAmountOut();
     if (object.sender !== undefined && object.sender !== null) {
       message.sender = object.sender;
     }
-    message.routes = object.routes?.map(e => SwapAmountOutSplitRoute.fromAmino(e)) || [];
-    if (object.token_out_denom !== undefined && object.token_out_denom !== null) {
+    message.routes =
+      object.routes?.map(e => SwapAmountOutSplitRoute.fromAmino(e)) || [];
+    if (
+      object.token_out_denom !== undefined &&
+      object.token_out_denom !== null
+    ) {
       message.tokenOutDenom = object.token_out_denom;
     }
-    if (object.token_in_max_amount !== undefined && object.token_in_max_amount !== null) {
+    if (
+      object.token_in_max_amount !== undefined &&
+      object.token_in_max_amount !== null
+    ) {
       message.tokenInMaxAmount = object.token_in_max_amount;
     }
     return message;
   },
-  toAmino(message: MsgSplitRouteSwapExactAmountOut): MsgSplitRouteSwapExactAmountOutAmino {
+  toAmino(
+    message: MsgSplitRouteSwapExactAmountOut,
+  ): MsgSplitRouteSwapExactAmountOutAmino {
     const obj: any = {};
-    obj.sender = message.sender === "" ? undefined : message.sender;
+    obj.sender = message.sender === '' ? undefined : message.sender;
     if (message.routes) {
-      obj.routes = message.routes.map(e => e ? SwapAmountOutSplitRoute.toAmino(e) : undefined);
+      obj.routes = message.routes.map(e =>
+        e ? SwapAmountOutSplitRoute.toAmino(e) : undefined,
+      );
     } else {
       obj.routes = message.routes;
     }
-    obj.token_out_denom = message.tokenOutDenom === "" ? undefined : message.tokenOutDenom;
-    obj.token_in_max_amount = message.tokenInMaxAmount === "" ? undefined : message.tokenInMaxAmount;
+    obj.token_out_denom =
+      message.tokenOutDenom === '' ? undefined : message.tokenOutDenom;
+    obj.token_in_max_amount =
+      message.tokenInMaxAmount === '' ? undefined : message.tokenInMaxAmount;
     return obj;
   },
-  fromAminoMsg(object: MsgSplitRouteSwapExactAmountOutAminoMsg): MsgSplitRouteSwapExactAmountOut {
+  fromAminoMsg(
+    object: MsgSplitRouteSwapExactAmountOutAminoMsg,
+  ): MsgSplitRouteSwapExactAmountOut {
     return MsgSplitRouteSwapExactAmountOut.fromAmino(object.value);
   },
-  toAminoMsg(message: MsgSplitRouteSwapExactAmountOut): MsgSplitRouteSwapExactAmountOutAminoMsg {
+  toAminoMsg(
+    message: MsgSplitRouteSwapExactAmountOut,
+  ): MsgSplitRouteSwapExactAmountOutAminoMsg {
     return {
-      type: "symphony/poolmanager/split-amount-out",
-      value: MsgSplitRouteSwapExactAmountOut.toAmino(message)
+      type: 'symphony/poolmanager/split-amount-out',
+      value: MsgSplitRouteSwapExactAmountOut.toAmino(message),
     };
   },
-  fromProtoMsg(message: MsgSplitRouteSwapExactAmountOutProtoMsg): MsgSplitRouteSwapExactAmountOut {
+  fromProtoMsg(
+    message: MsgSplitRouteSwapExactAmountOutProtoMsg,
+  ): MsgSplitRouteSwapExactAmountOut {
     return MsgSplitRouteSwapExactAmountOut.decode(message.value);
   },
   toProto(message: MsgSplitRouteSwapExactAmountOut): Uint8Array {
     return MsgSplitRouteSwapExactAmountOut.encode(message).finish();
   },
-  toProtoMsg(message: MsgSplitRouteSwapExactAmountOut): MsgSplitRouteSwapExactAmountOutProtoMsg {
+  toProtoMsg(
+    message: MsgSplitRouteSwapExactAmountOut,
+  ): MsgSplitRouteSwapExactAmountOutProtoMsg {
     return {
-      typeUrl: "/symphony.poolmanager.v1beta1.MsgSplitRouteSwapExactAmountOut",
-      value: MsgSplitRouteSwapExactAmountOut.encode(message).finish()
+      typeUrl: '/symphony.poolmanager.v1beta1.MsgSplitRouteSwapExactAmountOut',
+      value: MsgSplitRouteSwapExactAmountOut.encode(message).finish(),
     };
-  }
+  },
 };
-GlobalDecoderRegistry.register(MsgSplitRouteSwapExactAmountOut.typeUrl, MsgSplitRouteSwapExactAmountOut);
-GlobalDecoderRegistry.registerAminoProtoMapping(MsgSplitRouteSwapExactAmountOut.aminoType, MsgSplitRouteSwapExactAmountOut.typeUrl);
+GlobalDecoderRegistry.register(
+  MsgSplitRouteSwapExactAmountOut.typeUrl,
+  MsgSplitRouteSwapExactAmountOut,
+);
+GlobalDecoderRegistry.registerAminoProtoMapping(
+  MsgSplitRouteSwapExactAmountOut.aminoType,
+  MsgSplitRouteSwapExactAmountOut.typeUrl,
+);
 function createBaseMsgSplitRouteSwapExactAmountOutResponse(): MsgSplitRouteSwapExactAmountOutResponse {
   return {
-    tokenInAmount: ""
+    tokenInAmount: '',
   };
 }
+/**
+ * @name MsgSplitRouteSwapExactAmountOutResponse
+ * @package symphony.poolmanager.v1beta1
+ * @see proto type: symphony.poolmanager.v1beta1.MsgSplitRouteSwapExactAmountOutResponse
+ */
 export const MsgSplitRouteSwapExactAmountOutResponse = {
-  typeUrl: "/symphony.poolmanager.v1beta1.MsgSplitRouteSwapExactAmountOutResponse",
+  typeUrl:
+    '/symphony.poolmanager.v1beta1.MsgSplitRouteSwapExactAmountOutResponse',
   is(o: any): o is MsgSplitRouteSwapExactAmountOutResponse {
-    return o && (o.$typeUrl === MsgSplitRouteSwapExactAmountOutResponse.typeUrl || typeof o.tokenInAmount === "string");
+    return (
+      o &&
+      (o.$typeUrl === MsgSplitRouteSwapExactAmountOutResponse.typeUrl ||
+        typeof o.tokenInAmount === 'string')
+    );
   },
   isSDK(o: any): o is MsgSplitRouteSwapExactAmountOutResponseSDKType {
-    return o && (o.$typeUrl === MsgSplitRouteSwapExactAmountOutResponse.typeUrl || typeof o.token_in_amount === "string");
+    return (
+      o &&
+      (o.$typeUrl === MsgSplitRouteSwapExactAmountOutResponse.typeUrl ||
+        typeof o.token_in_amount === 'string')
+    );
   },
   isAmino(o: any): o is MsgSplitRouteSwapExactAmountOutResponseAmino {
-    return o && (o.$typeUrl === MsgSplitRouteSwapExactAmountOutResponse.typeUrl || typeof o.token_in_amount === "string");
+    return (
+      o &&
+      (o.$typeUrl === MsgSplitRouteSwapExactAmountOutResponse.typeUrl ||
+        typeof o.token_in_amount === 'string')
+    );
   },
-  encode(message: MsgSplitRouteSwapExactAmountOutResponse, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
-    if (message.tokenInAmount !== "") {
+  encode(
+    message: MsgSplitRouteSwapExactAmountOutResponse,
+    writer: BinaryWriter = BinaryWriter.create(),
+  ): BinaryWriter {
+    if (message.tokenInAmount !== '') {
       writer.uint32(10).string(message.tokenInAmount);
     }
     return writer;
   },
-  decode(input: BinaryReader | Uint8Array, length?: number): MsgSplitRouteSwapExactAmountOutResponse {
-    const reader = input instanceof BinaryReader ? input : new BinaryReader(input);
+  decode(
+    input: BinaryReader | Uint8Array,
+    length?: number,
+  ): MsgSplitRouteSwapExactAmountOutResponse {
+    const reader =
+      input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseMsgSplitRouteSwapExactAmountOutResponse();
     while (reader.pos < end) {
@@ -1121,60 +1780,110 @@ export const MsgSplitRouteSwapExactAmountOutResponse = {
     }
     return message;
   },
-  fromPartial(object: Partial<MsgSplitRouteSwapExactAmountOutResponse>): MsgSplitRouteSwapExactAmountOutResponse {
+  fromPartial(
+    object: Partial<MsgSplitRouteSwapExactAmountOutResponse>,
+  ): MsgSplitRouteSwapExactAmountOutResponse {
     const message = createBaseMsgSplitRouteSwapExactAmountOutResponse();
-    message.tokenInAmount = object.tokenInAmount ?? "";
+    message.tokenInAmount = object.tokenInAmount ?? '';
     return message;
   },
-  fromAmino(object: MsgSplitRouteSwapExactAmountOutResponseAmino): MsgSplitRouteSwapExactAmountOutResponse {
+  fromAmino(
+    object: MsgSplitRouteSwapExactAmountOutResponseAmino,
+  ): MsgSplitRouteSwapExactAmountOutResponse {
     const message = createBaseMsgSplitRouteSwapExactAmountOutResponse();
-    if (object.token_in_amount !== undefined && object.token_in_amount !== null) {
+    if (
+      object.token_in_amount !== undefined &&
+      object.token_in_amount !== null
+    ) {
       message.tokenInAmount = object.token_in_amount;
     }
     return message;
   },
-  toAmino(message: MsgSplitRouteSwapExactAmountOutResponse): MsgSplitRouteSwapExactAmountOutResponseAmino {
+  toAmino(
+    message: MsgSplitRouteSwapExactAmountOutResponse,
+  ): MsgSplitRouteSwapExactAmountOutResponseAmino {
     const obj: any = {};
-    obj.token_in_amount = message.tokenInAmount === "" ? undefined : message.tokenInAmount;
+    obj.token_in_amount =
+      message.tokenInAmount === '' ? undefined : message.tokenInAmount;
     return obj;
   },
-  fromAminoMsg(object: MsgSplitRouteSwapExactAmountOutResponseAminoMsg): MsgSplitRouteSwapExactAmountOutResponse {
+  fromAminoMsg(
+    object: MsgSplitRouteSwapExactAmountOutResponseAminoMsg,
+  ): MsgSplitRouteSwapExactAmountOutResponse {
     return MsgSplitRouteSwapExactAmountOutResponse.fromAmino(object.value);
   },
-  fromProtoMsg(message: MsgSplitRouteSwapExactAmountOutResponseProtoMsg): MsgSplitRouteSwapExactAmountOutResponse {
+  fromProtoMsg(
+    message: MsgSplitRouteSwapExactAmountOutResponseProtoMsg,
+  ): MsgSplitRouteSwapExactAmountOutResponse {
     return MsgSplitRouteSwapExactAmountOutResponse.decode(message.value);
   },
   toProto(message: MsgSplitRouteSwapExactAmountOutResponse): Uint8Array {
     return MsgSplitRouteSwapExactAmountOutResponse.encode(message).finish();
   },
-  toProtoMsg(message: MsgSplitRouteSwapExactAmountOutResponse): MsgSplitRouteSwapExactAmountOutResponseProtoMsg {
+  toProtoMsg(
+    message: MsgSplitRouteSwapExactAmountOutResponse,
+  ): MsgSplitRouteSwapExactAmountOutResponseProtoMsg {
     return {
-      typeUrl: "/symphony.poolmanager.v1beta1.MsgSplitRouteSwapExactAmountOutResponse",
-      value: MsgSplitRouteSwapExactAmountOutResponse.encode(message).finish()
+      typeUrl:
+        '/symphony.poolmanager.v1beta1.MsgSplitRouteSwapExactAmountOutResponse',
+      value: MsgSplitRouteSwapExactAmountOutResponse.encode(message).finish(),
     };
-  }
+  },
 };
-GlobalDecoderRegistry.register(MsgSplitRouteSwapExactAmountOutResponse.typeUrl, MsgSplitRouteSwapExactAmountOutResponse);
+GlobalDecoderRegistry.register(
+  MsgSplitRouteSwapExactAmountOutResponse.typeUrl,
+  MsgSplitRouteSwapExactAmountOutResponse,
+);
 function createBaseMsgSetDenomPairTakerFee(): MsgSetDenomPairTakerFee {
   return {
-    sender: "",
-    denomPairTakerFee: []
+    sender: '',
+    denomPairTakerFee: [],
   };
 }
+/**
+ * ===================== MsgSetDenomPairTakerFee
+ * @name MsgSetDenomPairTakerFee
+ * @package symphony.poolmanager.v1beta1
+ * @see proto type: symphony.poolmanager.v1beta1.MsgSetDenomPairTakerFee
+ */
 export const MsgSetDenomPairTakerFee = {
-  typeUrl: "/symphony.poolmanager.v1beta1.MsgSetDenomPairTakerFee",
-  aminoType: "symphony/poolmanager/set-denom-pair-taker-fee",
+  typeUrl: '/symphony.poolmanager.v1beta1.MsgSetDenomPairTakerFee',
+  aminoType: 'symphony/poolmanager/set-denom-pair-taker-fee',
   is(o: any): o is MsgSetDenomPairTakerFee {
-    return o && (o.$typeUrl === MsgSetDenomPairTakerFee.typeUrl || typeof o.sender === "string" && Array.isArray(o.denomPairTakerFee) && (!o.denomPairTakerFee.length || DenomPairTakerFee.is(o.denomPairTakerFee[0])));
+    return (
+      o &&
+      (o.$typeUrl === MsgSetDenomPairTakerFee.typeUrl ||
+        (typeof o.sender === 'string' &&
+          Array.isArray(o.denomPairTakerFee) &&
+          (!o.denomPairTakerFee.length ||
+            DenomPairTakerFee.is(o.denomPairTakerFee[0]))))
+    );
   },
   isSDK(o: any): o is MsgSetDenomPairTakerFeeSDKType {
-    return o && (o.$typeUrl === MsgSetDenomPairTakerFee.typeUrl || typeof o.sender === "string" && Array.isArray(o.denom_pair_taker_fee) && (!o.denom_pair_taker_fee.length || DenomPairTakerFee.isSDK(o.denom_pair_taker_fee[0])));
+    return (
+      o &&
+      (o.$typeUrl === MsgSetDenomPairTakerFee.typeUrl ||
+        (typeof o.sender === 'string' &&
+          Array.isArray(o.denom_pair_taker_fee) &&
+          (!o.denom_pair_taker_fee.length ||
+            DenomPairTakerFee.isSDK(o.denom_pair_taker_fee[0]))))
+    );
   },
   isAmino(o: any): o is MsgSetDenomPairTakerFeeAmino {
-    return o && (o.$typeUrl === MsgSetDenomPairTakerFee.typeUrl || typeof o.sender === "string" && Array.isArray(o.denom_pair_taker_fee) && (!o.denom_pair_taker_fee.length || DenomPairTakerFee.isAmino(o.denom_pair_taker_fee[0])));
+    return (
+      o &&
+      (o.$typeUrl === MsgSetDenomPairTakerFee.typeUrl ||
+        (typeof o.sender === 'string' &&
+          Array.isArray(o.denom_pair_taker_fee) &&
+          (!o.denom_pair_taker_fee.length ||
+            DenomPairTakerFee.isAmino(o.denom_pair_taker_fee[0]))))
+    );
   },
-  encode(message: MsgSetDenomPairTakerFee, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
-    if (message.sender !== "") {
+  encode(
+    message: MsgSetDenomPairTakerFee,
+    writer: BinaryWriter = BinaryWriter.create(),
+  ): BinaryWriter {
+    if (message.sender !== '') {
       writer.uint32(10).string(message.sender);
     }
     for (const v of message.denomPairTakerFee) {
@@ -1182,8 +1891,12 @@ export const MsgSetDenomPairTakerFee = {
     }
     return writer;
   },
-  decode(input: BinaryReader | Uint8Array, length?: number): MsgSetDenomPairTakerFee {
-    const reader = input instanceof BinaryReader ? input : new BinaryReader(input);
+  decode(
+    input: BinaryReader | Uint8Array,
+    length?: number,
+  ): MsgSetDenomPairTakerFee {
+    const reader =
+      input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseMsgSetDenomPairTakerFee();
     while (reader.pos < end) {
@@ -1193,7 +1906,9 @@ export const MsgSetDenomPairTakerFee = {
           message.sender = reader.string();
           break;
         case 2:
-          message.denomPairTakerFee.push(DenomPairTakerFee.decode(reader, reader.uint32()));
+          message.denomPairTakerFee.push(
+            DenomPairTakerFee.decode(reader, reader.uint32()),
+          );
           break;
         default:
           reader.skipType(tag & 7);
@@ -1202,10 +1917,14 @@ export const MsgSetDenomPairTakerFee = {
     }
     return message;
   },
-  fromPartial(object: Partial<MsgSetDenomPairTakerFee>): MsgSetDenomPairTakerFee {
+  fromPartial(
+    object: Partial<MsgSetDenomPairTakerFee>,
+  ): MsgSetDenomPairTakerFee {
     const message = createBaseMsgSetDenomPairTakerFee();
-    message.sender = object.sender ?? "";
-    message.denomPairTakerFee = object.denomPairTakerFee?.map(e => DenomPairTakerFee.fromPartial(e)) || [];
+    message.sender = object.sender ?? '';
+    message.denomPairTakerFee =
+      object.denomPairTakerFee?.map(e => DenomPairTakerFee.fromPartial(e)) ||
+      [];
     return message;
   },
   fromAmino(object: MsgSetDenomPairTakerFeeAmino): MsgSetDenomPairTakerFee {
@@ -1213,67 +1932,109 @@ export const MsgSetDenomPairTakerFee = {
     if (object.sender !== undefined && object.sender !== null) {
       message.sender = object.sender;
     }
-    message.denomPairTakerFee = object.denom_pair_taker_fee?.map(e => DenomPairTakerFee.fromAmino(e)) || [];
+    message.denomPairTakerFee =
+      object.denom_pair_taker_fee?.map(e => DenomPairTakerFee.fromAmino(e)) ||
+      [];
     return message;
   },
   toAmino(message: MsgSetDenomPairTakerFee): MsgSetDenomPairTakerFeeAmino {
     const obj: any = {};
-    obj.sender = message.sender === "" ? undefined : message.sender;
+    obj.sender = message.sender === '' ? undefined : message.sender;
     if (message.denomPairTakerFee) {
-      obj.denom_pair_taker_fee = message.denomPairTakerFee.map(e => e ? DenomPairTakerFee.toAmino(e) : undefined);
+      obj.denom_pair_taker_fee = message.denomPairTakerFee.map(e =>
+        e ? DenomPairTakerFee.toAmino(e) : undefined,
+      );
     } else {
       obj.denom_pair_taker_fee = message.denomPairTakerFee;
     }
     return obj;
   },
-  fromAminoMsg(object: MsgSetDenomPairTakerFeeAminoMsg): MsgSetDenomPairTakerFee {
+  fromAminoMsg(
+    object: MsgSetDenomPairTakerFeeAminoMsg,
+  ): MsgSetDenomPairTakerFee {
     return MsgSetDenomPairTakerFee.fromAmino(object.value);
   },
-  toAminoMsg(message: MsgSetDenomPairTakerFee): MsgSetDenomPairTakerFeeAminoMsg {
+  toAminoMsg(
+    message: MsgSetDenomPairTakerFee,
+  ): MsgSetDenomPairTakerFeeAminoMsg {
     return {
-      type: "symphony/poolmanager/set-denom-pair-taker-fee",
-      value: MsgSetDenomPairTakerFee.toAmino(message)
+      type: 'symphony/poolmanager/set-denom-pair-taker-fee',
+      value: MsgSetDenomPairTakerFee.toAmino(message),
     };
   },
-  fromProtoMsg(message: MsgSetDenomPairTakerFeeProtoMsg): MsgSetDenomPairTakerFee {
+  fromProtoMsg(
+    message: MsgSetDenomPairTakerFeeProtoMsg,
+  ): MsgSetDenomPairTakerFee {
     return MsgSetDenomPairTakerFee.decode(message.value);
   },
   toProto(message: MsgSetDenomPairTakerFee): Uint8Array {
     return MsgSetDenomPairTakerFee.encode(message).finish();
   },
-  toProtoMsg(message: MsgSetDenomPairTakerFee): MsgSetDenomPairTakerFeeProtoMsg {
+  toProtoMsg(
+    message: MsgSetDenomPairTakerFee,
+  ): MsgSetDenomPairTakerFeeProtoMsg {
     return {
-      typeUrl: "/symphony.poolmanager.v1beta1.MsgSetDenomPairTakerFee",
-      value: MsgSetDenomPairTakerFee.encode(message).finish()
+      typeUrl: '/symphony.poolmanager.v1beta1.MsgSetDenomPairTakerFee',
+      value: MsgSetDenomPairTakerFee.encode(message).finish(),
     };
-  }
+  },
 };
-GlobalDecoderRegistry.register(MsgSetDenomPairTakerFee.typeUrl, MsgSetDenomPairTakerFee);
-GlobalDecoderRegistry.registerAminoProtoMapping(MsgSetDenomPairTakerFee.aminoType, MsgSetDenomPairTakerFee.typeUrl);
+GlobalDecoderRegistry.register(
+  MsgSetDenomPairTakerFee.typeUrl,
+  MsgSetDenomPairTakerFee,
+);
+GlobalDecoderRegistry.registerAminoProtoMapping(
+  MsgSetDenomPairTakerFee.aminoType,
+  MsgSetDenomPairTakerFee.typeUrl,
+);
 function createBaseMsgSetDenomPairTakerFeeResponse(): MsgSetDenomPairTakerFeeResponse {
   return {
-    success: false
+    success: false,
   };
 }
+/**
+ * @name MsgSetDenomPairTakerFeeResponse
+ * @package symphony.poolmanager.v1beta1
+ * @see proto type: symphony.poolmanager.v1beta1.MsgSetDenomPairTakerFeeResponse
+ */
 export const MsgSetDenomPairTakerFeeResponse = {
-  typeUrl: "/symphony.poolmanager.v1beta1.MsgSetDenomPairTakerFeeResponse",
+  typeUrl: '/symphony.poolmanager.v1beta1.MsgSetDenomPairTakerFeeResponse',
   is(o: any): o is MsgSetDenomPairTakerFeeResponse {
-    return o && (o.$typeUrl === MsgSetDenomPairTakerFeeResponse.typeUrl || typeof o.success === "boolean");
+    return (
+      o &&
+      (o.$typeUrl === MsgSetDenomPairTakerFeeResponse.typeUrl ||
+        typeof o.success === 'boolean')
+    );
   },
   isSDK(o: any): o is MsgSetDenomPairTakerFeeResponseSDKType {
-    return o && (o.$typeUrl === MsgSetDenomPairTakerFeeResponse.typeUrl || typeof o.success === "boolean");
+    return (
+      o &&
+      (o.$typeUrl === MsgSetDenomPairTakerFeeResponse.typeUrl ||
+        typeof o.success === 'boolean')
+    );
   },
   isAmino(o: any): o is MsgSetDenomPairTakerFeeResponseAmino {
-    return o && (o.$typeUrl === MsgSetDenomPairTakerFeeResponse.typeUrl || typeof o.success === "boolean");
+    return (
+      o &&
+      (o.$typeUrl === MsgSetDenomPairTakerFeeResponse.typeUrl ||
+        typeof o.success === 'boolean')
+    );
   },
-  encode(message: MsgSetDenomPairTakerFeeResponse, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
+  encode(
+    message: MsgSetDenomPairTakerFeeResponse,
+    writer: BinaryWriter = BinaryWriter.create(),
+  ): BinaryWriter {
     if (message.success === true) {
       writer.uint32(8).bool(message.success);
     }
     return writer;
   },
-  decode(input: BinaryReader | Uint8Array, length?: number): MsgSetDenomPairTakerFeeResponse {
-    const reader = input instanceof BinaryReader ? input : new BinaryReader(input);
+  decode(
+    input: BinaryReader | Uint8Array,
+    length?: number,
+  ): MsgSetDenomPairTakerFeeResponse {
+    const reader =
+      input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseMsgSetDenomPairTakerFeeResponse();
     while (reader.pos < end) {
@@ -1289,77 +2050,128 @@ export const MsgSetDenomPairTakerFeeResponse = {
     }
     return message;
   },
-  fromPartial(object: Partial<MsgSetDenomPairTakerFeeResponse>): MsgSetDenomPairTakerFeeResponse {
+  fromPartial(
+    object: Partial<MsgSetDenomPairTakerFeeResponse>,
+  ): MsgSetDenomPairTakerFeeResponse {
     const message = createBaseMsgSetDenomPairTakerFeeResponse();
     message.success = object.success ?? false;
     return message;
   },
-  fromAmino(object: MsgSetDenomPairTakerFeeResponseAmino): MsgSetDenomPairTakerFeeResponse {
+  fromAmino(
+    object: MsgSetDenomPairTakerFeeResponseAmino,
+  ): MsgSetDenomPairTakerFeeResponse {
     const message = createBaseMsgSetDenomPairTakerFeeResponse();
     if (object.success !== undefined && object.success !== null) {
       message.success = object.success;
     }
     return message;
   },
-  toAmino(message: MsgSetDenomPairTakerFeeResponse): MsgSetDenomPairTakerFeeResponseAmino {
+  toAmino(
+    message: MsgSetDenomPairTakerFeeResponse,
+  ): MsgSetDenomPairTakerFeeResponseAmino {
     const obj: any = {};
     obj.success = message.success === false ? undefined : message.success;
     return obj;
   },
-  fromAminoMsg(object: MsgSetDenomPairTakerFeeResponseAminoMsg): MsgSetDenomPairTakerFeeResponse {
+  fromAminoMsg(
+    object: MsgSetDenomPairTakerFeeResponseAminoMsg,
+  ): MsgSetDenomPairTakerFeeResponse {
     return MsgSetDenomPairTakerFeeResponse.fromAmino(object.value);
   },
-  fromProtoMsg(message: MsgSetDenomPairTakerFeeResponseProtoMsg): MsgSetDenomPairTakerFeeResponse {
+  fromProtoMsg(
+    message: MsgSetDenomPairTakerFeeResponseProtoMsg,
+  ): MsgSetDenomPairTakerFeeResponse {
     return MsgSetDenomPairTakerFeeResponse.decode(message.value);
   },
   toProto(message: MsgSetDenomPairTakerFeeResponse): Uint8Array {
     return MsgSetDenomPairTakerFeeResponse.encode(message).finish();
   },
-  toProtoMsg(message: MsgSetDenomPairTakerFeeResponse): MsgSetDenomPairTakerFeeResponseProtoMsg {
+  toProtoMsg(
+    message: MsgSetDenomPairTakerFeeResponse,
+  ): MsgSetDenomPairTakerFeeResponseProtoMsg {
     return {
-      typeUrl: "/symphony.poolmanager.v1beta1.MsgSetDenomPairTakerFeeResponse",
-      value: MsgSetDenomPairTakerFeeResponse.encode(message).finish()
+      typeUrl: '/symphony.poolmanager.v1beta1.MsgSetDenomPairTakerFeeResponse',
+      value: MsgSetDenomPairTakerFeeResponse.encode(message).finish(),
     };
-  }
+  },
 };
-GlobalDecoderRegistry.register(MsgSetDenomPairTakerFeeResponse.typeUrl, MsgSetDenomPairTakerFeeResponse);
+GlobalDecoderRegistry.register(
+  MsgSetDenomPairTakerFeeResponse.typeUrl,
+  MsgSetDenomPairTakerFeeResponse,
+);
 function createBaseMsgSetTakerFeeShareAgreementForDenom(): MsgSetTakerFeeShareAgreementForDenom {
   return {
-    sender: "",
-    denom: "",
-    skimPercent: "",
-    skimAddress: ""
+    sender: '',
+    denom: '',
+    skimPercent: '',
+    skimAddress: '',
   };
 }
+/**
+ * ===================== MsgSetTakerFeeShareAgreementForDenom
+ * @name MsgSetTakerFeeShareAgreementForDenom
+ * @package symphony.poolmanager.v1beta1
+ * @see proto type: symphony.poolmanager.v1beta1.MsgSetTakerFeeShareAgreementForDenom
+ */
 export const MsgSetTakerFeeShareAgreementForDenom = {
-  typeUrl: "/symphony.poolmanager.v1beta1.MsgSetTakerFeeShareAgreementForDenom",
-  aminoType: "symphony/poolmanager/set-taker-fee-share-agreement-for-denom",
+  typeUrl: '/symphony.poolmanager.v1beta1.MsgSetTakerFeeShareAgreementForDenom',
+  aminoType: 'symphony/poolmanager/set-taker-fee-share-agreement-for-denom',
   is(o: any): o is MsgSetTakerFeeShareAgreementForDenom {
-    return o && (o.$typeUrl === MsgSetTakerFeeShareAgreementForDenom.typeUrl || typeof o.sender === "string" && typeof o.denom === "string" && typeof o.skimPercent === "string" && typeof o.skimAddress === "string");
+    return (
+      o &&
+      (o.$typeUrl === MsgSetTakerFeeShareAgreementForDenom.typeUrl ||
+        (typeof o.sender === 'string' &&
+          typeof o.denom === 'string' &&
+          typeof o.skimPercent === 'string' &&
+          typeof o.skimAddress === 'string'))
+    );
   },
   isSDK(o: any): o is MsgSetTakerFeeShareAgreementForDenomSDKType {
-    return o && (o.$typeUrl === MsgSetTakerFeeShareAgreementForDenom.typeUrl || typeof o.sender === "string" && typeof o.denom === "string" && typeof o.skim_percent === "string" && typeof o.skim_address === "string");
+    return (
+      o &&
+      (o.$typeUrl === MsgSetTakerFeeShareAgreementForDenom.typeUrl ||
+        (typeof o.sender === 'string' &&
+          typeof o.denom === 'string' &&
+          typeof o.skim_percent === 'string' &&
+          typeof o.skim_address === 'string'))
+    );
   },
   isAmino(o: any): o is MsgSetTakerFeeShareAgreementForDenomAmino {
-    return o && (o.$typeUrl === MsgSetTakerFeeShareAgreementForDenom.typeUrl || typeof o.sender === "string" && typeof o.denom === "string" && typeof o.skim_percent === "string" && typeof o.skim_address === "string");
+    return (
+      o &&
+      (o.$typeUrl === MsgSetTakerFeeShareAgreementForDenom.typeUrl ||
+        (typeof o.sender === 'string' &&
+          typeof o.denom === 'string' &&
+          typeof o.skim_percent === 'string' &&
+          typeof o.skim_address === 'string'))
+    );
   },
-  encode(message: MsgSetTakerFeeShareAgreementForDenom, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
-    if (message.sender !== "") {
+  encode(
+    message: MsgSetTakerFeeShareAgreementForDenom,
+    writer: BinaryWriter = BinaryWriter.create(),
+  ): BinaryWriter {
+    if (message.sender !== '') {
       writer.uint32(10).string(message.sender);
     }
-    if (message.denom !== "") {
+    if (message.denom !== '') {
       writer.uint32(18).string(message.denom);
     }
-    if (message.skimPercent !== "") {
-      writer.uint32(26).string(Decimal.fromUserInput(message.skimPercent, 18).atomics);
+    if (message.skimPercent !== '') {
+      writer
+        .uint32(26)
+        .string(Decimal.fromUserInput(message.skimPercent, 18).atomics);
     }
-    if (message.skimAddress !== "") {
+    if (message.skimAddress !== '') {
       writer.uint32(34).string(message.skimAddress);
     }
     return writer;
   },
-  decode(input: BinaryReader | Uint8Array, length?: number): MsgSetTakerFeeShareAgreementForDenom {
-    const reader = input instanceof BinaryReader ? input : new BinaryReader(input);
+  decode(
+    input: BinaryReader | Uint8Array,
+    length?: number,
+  ): MsgSetTakerFeeShareAgreementForDenom {
+    const reader =
+      input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseMsgSetTakerFeeShareAgreementForDenom();
     while (reader.pos < end) {
@@ -1372,7 +2184,10 @@ export const MsgSetTakerFeeShareAgreementForDenom = {
           message.denom = reader.string();
           break;
         case 3:
-          message.skimPercent = Decimal.fromAtomics(reader.string(), 18).toString();
+          message.skimPercent = Decimal.fromAtomics(
+            reader.string(),
+            18,
+          ).toString();
           break;
         case 4:
           message.skimAddress = reader.string();
@@ -1384,15 +2199,19 @@ export const MsgSetTakerFeeShareAgreementForDenom = {
     }
     return message;
   },
-  fromPartial(object: Partial<MsgSetTakerFeeShareAgreementForDenom>): MsgSetTakerFeeShareAgreementForDenom {
+  fromPartial(
+    object: Partial<MsgSetTakerFeeShareAgreementForDenom>,
+  ): MsgSetTakerFeeShareAgreementForDenom {
     const message = createBaseMsgSetTakerFeeShareAgreementForDenom();
-    message.sender = object.sender ?? "";
-    message.denom = object.denom ?? "";
-    message.skimPercent = object.skimPercent ?? "";
-    message.skimAddress = object.skimAddress ?? "";
+    message.sender = object.sender ?? '';
+    message.denom = object.denom ?? '';
+    message.skimPercent = object.skimPercent ?? '';
+    message.skimAddress = object.skimAddress ?? '';
     return message;
   },
-  fromAmino(object: MsgSetTakerFeeShareAgreementForDenomAmino): MsgSetTakerFeeShareAgreementForDenom {
+  fromAmino(
+    object: MsgSetTakerFeeShareAgreementForDenomAmino,
+  ): MsgSetTakerFeeShareAgreementForDenom {
     const message = createBaseMsgSetTakerFeeShareAgreementForDenom();
     if (object.sender !== undefined && object.sender !== null) {
       message.sender = object.sender;
@@ -1408,57 +2227,95 @@ export const MsgSetTakerFeeShareAgreementForDenom = {
     }
     return message;
   },
-  toAmino(message: MsgSetTakerFeeShareAgreementForDenom): MsgSetTakerFeeShareAgreementForDenomAmino {
+  toAmino(
+    message: MsgSetTakerFeeShareAgreementForDenom,
+  ): MsgSetTakerFeeShareAgreementForDenomAmino {
     const obj: any = {};
-    obj.sender = message.sender === "" ? undefined : message.sender;
-    obj.denom = message.denom === "" ? undefined : message.denom;
-    obj.skim_percent = message.skimPercent === "" ? undefined : message.skimPercent;
-    obj.skim_address = message.skimAddress === "" ? undefined : message.skimAddress;
+    obj.sender = message.sender === '' ? undefined : message.sender;
+    obj.denom = message.denom === '' ? undefined : message.denom;
+    obj.skim_percent =
+      message.skimPercent === '' ? undefined : message.skimPercent;
+    obj.skim_address =
+      message.skimAddress === '' ? undefined : message.skimAddress;
     return obj;
   },
-  fromAminoMsg(object: MsgSetTakerFeeShareAgreementForDenomAminoMsg): MsgSetTakerFeeShareAgreementForDenom {
+  fromAminoMsg(
+    object: MsgSetTakerFeeShareAgreementForDenomAminoMsg,
+  ): MsgSetTakerFeeShareAgreementForDenom {
     return MsgSetTakerFeeShareAgreementForDenom.fromAmino(object.value);
   },
-  toAminoMsg(message: MsgSetTakerFeeShareAgreementForDenom): MsgSetTakerFeeShareAgreementForDenomAminoMsg {
+  toAminoMsg(
+    message: MsgSetTakerFeeShareAgreementForDenom,
+  ): MsgSetTakerFeeShareAgreementForDenomAminoMsg {
     return {
-      type: "symphony/poolmanager/set-taker-fee-share-agreement-for-denom",
-      value: MsgSetTakerFeeShareAgreementForDenom.toAmino(message)
+      type: 'symphony/poolmanager/set-taker-fee-share-agreement-for-denom',
+      value: MsgSetTakerFeeShareAgreementForDenom.toAmino(message),
     };
   },
-  fromProtoMsg(message: MsgSetTakerFeeShareAgreementForDenomProtoMsg): MsgSetTakerFeeShareAgreementForDenom {
+  fromProtoMsg(
+    message: MsgSetTakerFeeShareAgreementForDenomProtoMsg,
+  ): MsgSetTakerFeeShareAgreementForDenom {
     return MsgSetTakerFeeShareAgreementForDenom.decode(message.value);
   },
   toProto(message: MsgSetTakerFeeShareAgreementForDenom): Uint8Array {
     return MsgSetTakerFeeShareAgreementForDenom.encode(message).finish();
   },
-  toProtoMsg(message: MsgSetTakerFeeShareAgreementForDenom): MsgSetTakerFeeShareAgreementForDenomProtoMsg {
+  toProtoMsg(
+    message: MsgSetTakerFeeShareAgreementForDenom,
+  ): MsgSetTakerFeeShareAgreementForDenomProtoMsg {
     return {
-      typeUrl: "/symphony.poolmanager.v1beta1.MsgSetTakerFeeShareAgreementForDenom",
-      value: MsgSetTakerFeeShareAgreementForDenom.encode(message).finish()
+      typeUrl:
+        '/symphony.poolmanager.v1beta1.MsgSetTakerFeeShareAgreementForDenom',
+      value: MsgSetTakerFeeShareAgreementForDenom.encode(message).finish(),
     };
-  }
+  },
 };
-GlobalDecoderRegistry.register(MsgSetTakerFeeShareAgreementForDenom.typeUrl, MsgSetTakerFeeShareAgreementForDenom);
-GlobalDecoderRegistry.registerAminoProtoMapping(MsgSetTakerFeeShareAgreementForDenom.aminoType, MsgSetTakerFeeShareAgreementForDenom.typeUrl);
+GlobalDecoderRegistry.register(
+  MsgSetTakerFeeShareAgreementForDenom.typeUrl,
+  MsgSetTakerFeeShareAgreementForDenom,
+);
+GlobalDecoderRegistry.registerAminoProtoMapping(
+  MsgSetTakerFeeShareAgreementForDenom.aminoType,
+  MsgSetTakerFeeShareAgreementForDenom.typeUrl,
+);
 function createBaseMsgSetTakerFeeShareAgreementForDenomResponse(): MsgSetTakerFeeShareAgreementForDenomResponse {
   return {};
 }
+/**
+ * @name MsgSetTakerFeeShareAgreementForDenomResponse
+ * @package symphony.poolmanager.v1beta1
+ * @see proto type: symphony.poolmanager.v1beta1.MsgSetTakerFeeShareAgreementForDenomResponse
+ */
 export const MsgSetTakerFeeShareAgreementForDenomResponse = {
-  typeUrl: "/symphony.poolmanager.v1beta1.MsgSetTakerFeeShareAgreementForDenomResponse",
+  typeUrl:
+    '/symphony.poolmanager.v1beta1.MsgSetTakerFeeShareAgreementForDenomResponse',
   is(o: any): o is MsgSetTakerFeeShareAgreementForDenomResponse {
-    return o && o.$typeUrl === MsgSetTakerFeeShareAgreementForDenomResponse.typeUrl;
+    return (
+      o && o.$typeUrl === MsgSetTakerFeeShareAgreementForDenomResponse.typeUrl
+    );
   },
   isSDK(o: any): o is MsgSetTakerFeeShareAgreementForDenomResponseSDKType {
-    return o && o.$typeUrl === MsgSetTakerFeeShareAgreementForDenomResponse.typeUrl;
+    return (
+      o && o.$typeUrl === MsgSetTakerFeeShareAgreementForDenomResponse.typeUrl
+    );
   },
   isAmino(o: any): o is MsgSetTakerFeeShareAgreementForDenomResponseAmino {
-    return o && o.$typeUrl === MsgSetTakerFeeShareAgreementForDenomResponse.typeUrl;
+    return (
+      o && o.$typeUrl === MsgSetTakerFeeShareAgreementForDenomResponse.typeUrl
+    );
   },
-  encode(_: MsgSetTakerFeeShareAgreementForDenomResponse, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
+  encode(
+    _: MsgSetTakerFeeShareAgreementForDenomResponse,
+    writer: BinaryWriter = BinaryWriter.create(),
+  ): BinaryWriter {
     return writer;
   },
-  decode(input: BinaryReader | Uint8Array, length?: number): MsgSetTakerFeeShareAgreementForDenomResponse {
-    const reader = input instanceof BinaryReader ? input : new BinaryReader(input);
+  decode(
+    input: BinaryReader | Uint8Array,
+    length?: number,
+  ): MsgSetTakerFeeShareAgreementForDenomResponse {
+    const reader =
+      input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseMsgSetTakerFeeShareAgreementForDenomResponse();
     while (reader.pos < end) {
@@ -1471,55 +2328,95 @@ export const MsgSetTakerFeeShareAgreementForDenomResponse = {
     }
     return message;
   },
-  fromPartial(_: Partial<MsgSetTakerFeeShareAgreementForDenomResponse>): MsgSetTakerFeeShareAgreementForDenomResponse {
+  fromPartial(
+    _: Partial<MsgSetTakerFeeShareAgreementForDenomResponse>,
+  ): MsgSetTakerFeeShareAgreementForDenomResponse {
     const message = createBaseMsgSetTakerFeeShareAgreementForDenomResponse();
     return message;
   },
-  fromAmino(_: MsgSetTakerFeeShareAgreementForDenomResponseAmino): MsgSetTakerFeeShareAgreementForDenomResponse {
+  fromAmino(
+    _: MsgSetTakerFeeShareAgreementForDenomResponseAmino,
+  ): MsgSetTakerFeeShareAgreementForDenomResponse {
     const message = createBaseMsgSetTakerFeeShareAgreementForDenomResponse();
     return message;
   },
-  toAmino(_: MsgSetTakerFeeShareAgreementForDenomResponse): MsgSetTakerFeeShareAgreementForDenomResponseAmino {
+  toAmino(
+    _: MsgSetTakerFeeShareAgreementForDenomResponse,
+  ): MsgSetTakerFeeShareAgreementForDenomResponseAmino {
     const obj: any = {};
     return obj;
   },
-  fromAminoMsg(object: MsgSetTakerFeeShareAgreementForDenomResponseAminoMsg): MsgSetTakerFeeShareAgreementForDenomResponse {
+  fromAminoMsg(
+    object: MsgSetTakerFeeShareAgreementForDenomResponseAminoMsg,
+  ): MsgSetTakerFeeShareAgreementForDenomResponse {
     return MsgSetTakerFeeShareAgreementForDenomResponse.fromAmino(object.value);
   },
-  fromProtoMsg(message: MsgSetTakerFeeShareAgreementForDenomResponseProtoMsg): MsgSetTakerFeeShareAgreementForDenomResponse {
+  fromProtoMsg(
+    message: MsgSetTakerFeeShareAgreementForDenomResponseProtoMsg,
+  ): MsgSetTakerFeeShareAgreementForDenomResponse {
     return MsgSetTakerFeeShareAgreementForDenomResponse.decode(message.value);
   },
   toProto(message: MsgSetTakerFeeShareAgreementForDenomResponse): Uint8Array {
-    return MsgSetTakerFeeShareAgreementForDenomResponse.encode(message).finish();
+    return MsgSetTakerFeeShareAgreementForDenomResponse.encode(
+      message,
+    ).finish();
   },
-  toProtoMsg(message: MsgSetTakerFeeShareAgreementForDenomResponse): MsgSetTakerFeeShareAgreementForDenomResponseProtoMsg {
+  toProtoMsg(
+    message: MsgSetTakerFeeShareAgreementForDenomResponse,
+  ): MsgSetTakerFeeShareAgreementForDenomResponseProtoMsg {
     return {
-      typeUrl: "/symphony.poolmanager.v1beta1.MsgSetTakerFeeShareAgreementForDenomResponse",
-      value: MsgSetTakerFeeShareAgreementForDenomResponse.encode(message).finish()
+      typeUrl:
+        '/symphony.poolmanager.v1beta1.MsgSetTakerFeeShareAgreementForDenomResponse',
+      value:
+        MsgSetTakerFeeShareAgreementForDenomResponse.encode(message).finish(),
     };
-  }
+  },
 };
-GlobalDecoderRegistry.register(MsgSetTakerFeeShareAgreementForDenomResponse.typeUrl, MsgSetTakerFeeShareAgreementForDenomResponse);
+GlobalDecoderRegistry.register(
+  MsgSetTakerFeeShareAgreementForDenomResponse.typeUrl,
+  MsgSetTakerFeeShareAgreementForDenomResponse,
+);
 function createBaseMsgSetRegisteredAlloyedPool(): MsgSetRegisteredAlloyedPool {
   return {
-    sender: "",
-    poolId: BigInt(0)
+    sender: '',
+    poolId: BigInt(0),
   };
 }
+/**
+ * ===================== MsgSetRegisteredAlloyedPool
+ * @name MsgSetRegisteredAlloyedPool
+ * @package symphony.poolmanager.v1beta1
+ * @see proto type: symphony.poolmanager.v1beta1.MsgSetRegisteredAlloyedPool
+ */
 export const MsgSetRegisteredAlloyedPool = {
-  typeUrl: "/symphony.poolmanager.v1beta1.MsgSetRegisteredAlloyedPool",
-  aminoType: "symphony/poolmanager/set-registered-alloyed-pool",
+  typeUrl: '/symphony.poolmanager.v1beta1.MsgSetRegisteredAlloyedPool',
+  aminoType: 'symphony/poolmanager/set-registered-alloyed-pool',
   is(o: any): o is MsgSetRegisteredAlloyedPool {
-    return o && (o.$typeUrl === MsgSetRegisteredAlloyedPool.typeUrl || typeof o.sender === "string" && typeof o.poolId === "bigint");
+    return (
+      o &&
+      (o.$typeUrl === MsgSetRegisteredAlloyedPool.typeUrl ||
+        (typeof o.sender === 'string' && typeof o.poolId === 'bigint'))
+    );
   },
   isSDK(o: any): o is MsgSetRegisteredAlloyedPoolSDKType {
-    return o && (o.$typeUrl === MsgSetRegisteredAlloyedPool.typeUrl || typeof o.sender === "string" && typeof o.pool_id === "bigint");
+    return (
+      o &&
+      (o.$typeUrl === MsgSetRegisteredAlloyedPool.typeUrl ||
+        (typeof o.sender === 'string' && typeof o.pool_id === 'bigint'))
+    );
   },
   isAmino(o: any): o is MsgSetRegisteredAlloyedPoolAmino {
-    return o && (o.$typeUrl === MsgSetRegisteredAlloyedPool.typeUrl || typeof o.sender === "string" && typeof o.pool_id === "bigint");
+    return (
+      o &&
+      (o.$typeUrl === MsgSetRegisteredAlloyedPool.typeUrl ||
+        (typeof o.sender === 'string' && typeof o.pool_id === 'bigint'))
+    );
   },
-  encode(message: MsgSetRegisteredAlloyedPool, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
-    if (message.sender !== "") {
+  encode(
+    message: MsgSetRegisteredAlloyedPool,
+    writer: BinaryWriter = BinaryWriter.create(),
+  ): BinaryWriter {
+    if (message.sender !== '') {
       writer.uint32(10).string(message.sender);
     }
     if (message.poolId !== BigInt(0)) {
@@ -1527,8 +2424,12 @@ export const MsgSetRegisteredAlloyedPool = {
     }
     return writer;
   },
-  decode(input: BinaryReader | Uint8Array, length?: number): MsgSetRegisteredAlloyedPool {
-    const reader = input instanceof BinaryReader ? input : new BinaryReader(input);
+  decode(
+    input: BinaryReader | Uint8Array,
+    length?: number,
+  ): MsgSetRegisteredAlloyedPool {
+    const reader =
+      input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseMsgSetRegisteredAlloyedPool();
     while (reader.pos < end) {
@@ -1547,13 +2448,20 @@ export const MsgSetRegisteredAlloyedPool = {
     }
     return message;
   },
-  fromPartial(object: Partial<MsgSetRegisteredAlloyedPool>): MsgSetRegisteredAlloyedPool {
+  fromPartial(
+    object: Partial<MsgSetRegisteredAlloyedPool>,
+  ): MsgSetRegisteredAlloyedPool {
     const message = createBaseMsgSetRegisteredAlloyedPool();
-    message.sender = object.sender ?? "";
-    message.poolId = object.poolId !== undefined && object.poolId !== null ? BigInt(object.poolId.toString()) : BigInt(0);
+    message.sender = object.sender ?? '';
+    message.poolId =
+      object.poolId !== undefined && object.poolId !== null
+        ? BigInt(object.poolId.toString())
+        : BigInt(0);
     return message;
   },
-  fromAmino(object: MsgSetRegisteredAlloyedPoolAmino): MsgSetRegisteredAlloyedPool {
+  fromAmino(
+    object: MsgSetRegisteredAlloyedPoolAmino,
+  ): MsgSetRegisteredAlloyedPool {
     const message = createBaseMsgSetRegisteredAlloyedPool();
     if (object.sender !== undefined && object.sender !== null) {
       message.sender = object.sender;
@@ -1563,41 +2471,63 @@ export const MsgSetRegisteredAlloyedPool = {
     }
     return message;
   },
-  toAmino(message: MsgSetRegisteredAlloyedPool): MsgSetRegisteredAlloyedPoolAmino {
+  toAmino(
+    message: MsgSetRegisteredAlloyedPool,
+  ): MsgSetRegisteredAlloyedPoolAmino {
     const obj: any = {};
-    obj.sender = message.sender === "" ? undefined : message.sender;
-    obj.pool_id = message.poolId !== BigInt(0) ? message.poolId?.toString() : undefined;
+    obj.sender = message.sender === '' ? undefined : message.sender;
+    obj.pool_id =
+      message.poolId !== BigInt(0) ? message.poolId?.toString() : undefined;
     return obj;
   },
-  fromAminoMsg(object: MsgSetRegisteredAlloyedPoolAminoMsg): MsgSetRegisteredAlloyedPool {
+  fromAminoMsg(
+    object: MsgSetRegisteredAlloyedPoolAminoMsg,
+  ): MsgSetRegisteredAlloyedPool {
     return MsgSetRegisteredAlloyedPool.fromAmino(object.value);
   },
-  toAminoMsg(message: MsgSetRegisteredAlloyedPool): MsgSetRegisteredAlloyedPoolAminoMsg {
+  toAminoMsg(
+    message: MsgSetRegisteredAlloyedPool,
+  ): MsgSetRegisteredAlloyedPoolAminoMsg {
     return {
-      type: "symphony/poolmanager/set-registered-alloyed-pool",
-      value: MsgSetRegisteredAlloyedPool.toAmino(message)
+      type: 'symphony/poolmanager/set-registered-alloyed-pool',
+      value: MsgSetRegisteredAlloyedPool.toAmino(message),
     };
   },
-  fromProtoMsg(message: MsgSetRegisteredAlloyedPoolProtoMsg): MsgSetRegisteredAlloyedPool {
+  fromProtoMsg(
+    message: MsgSetRegisteredAlloyedPoolProtoMsg,
+  ): MsgSetRegisteredAlloyedPool {
     return MsgSetRegisteredAlloyedPool.decode(message.value);
   },
   toProto(message: MsgSetRegisteredAlloyedPool): Uint8Array {
     return MsgSetRegisteredAlloyedPool.encode(message).finish();
   },
-  toProtoMsg(message: MsgSetRegisteredAlloyedPool): MsgSetRegisteredAlloyedPoolProtoMsg {
+  toProtoMsg(
+    message: MsgSetRegisteredAlloyedPool,
+  ): MsgSetRegisteredAlloyedPoolProtoMsg {
     return {
-      typeUrl: "/symphony.poolmanager.v1beta1.MsgSetRegisteredAlloyedPool",
-      value: MsgSetRegisteredAlloyedPool.encode(message).finish()
+      typeUrl: '/symphony.poolmanager.v1beta1.MsgSetRegisteredAlloyedPool',
+      value: MsgSetRegisteredAlloyedPool.encode(message).finish(),
     };
-  }
+  },
 };
-GlobalDecoderRegistry.register(MsgSetRegisteredAlloyedPool.typeUrl, MsgSetRegisteredAlloyedPool);
-GlobalDecoderRegistry.registerAminoProtoMapping(MsgSetRegisteredAlloyedPool.aminoType, MsgSetRegisteredAlloyedPool.typeUrl);
+GlobalDecoderRegistry.register(
+  MsgSetRegisteredAlloyedPool.typeUrl,
+  MsgSetRegisteredAlloyedPool,
+);
+GlobalDecoderRegistry.registerAminoProtoMapping(
+  MsgSetRegisteredAlloyedPool.aminoType,
+  MsgSetRegisteredAlloyedPool.typeUrl,
+);
 function createBaseMsgSetRegisteredAlloyedPoolResponse(): MsgSetRegisteredAlloyedPoolResponse {
   return {};
 }
+/**
+ * @name MsgSetRegisteredAlloyedPoolResponse
+ * @package symphony.poolmanager.v1beta1
+ * @see proto type: symphony.poolmanager.v1beta1.MsgSetRegisteredAlloyedPoolResponse
+ */
 export const MsgSetRegisteredAlloyedPoolResponse = {
-  typeUrl: "/symphony.poolmanager.v1beta1.MsgSetRegisteredAlloyedPoolResponse",
+  typeUrl: '/symphony.poolmanager.v1beta1.MsgSetRegisteredAlloyedPoolResponse',
   is(o: any): o is MsgSetRegisteredAlloyedPoolResponse {
     return o && o.$typeUrl === MsgSetRegisteredAlloyedPoolResponse.typeUrl;
   },
@@ -1607,11 +2537,18 @@ export const MsgSetRegisteredAlloyedPoolResponse = {
   isAmino(o: any): o is MsgSetRegisteredAlloyedPoolResponseAmino {
     return o && o.$typeUrl === MsgSetRegisteredAlloyedPoolResponse.typeUrl;
   },
-  encode(_: MsgSetRegisteredAlloyedPoolResponse, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
+  encode(
+    _: MsgSetRegisteredAlloyedPoolResponse,
+    writer: BinaryWriter = BinaryWriter.create(),
+  ): BinaryWriter {
     return writer;
   },
-  decode(input: BinaryReader | Uint8Array, length?: number): MsgSetRegisteredAlloyedPoolResponse {
-    const reader = input instanceof BinaryReader ? input : new BinaryReader(input);
+  decode(
+    input: BinaryReader | Uint8Array,
+    length?: number,
+  ): MsgSetRegisteredAlloyedPoolResponse {
+    const reader =
+      input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseMsgSetRegisteredAlloyedPoolResponse();
     while (reader.pos < end) {
@@ -1624,75 +2561,120 @@ export const MsgSetRegisteredAlloyedPoolResponse = {
     }
     return message;
   },
-  fromPartial(_: Partial<MsgSetRegisteredAlloyedPoolResponse>): MsgSetRegisteredAlloyedPoolResponse {
+  fromPartial(
+    _: Partial<MsgSetRegisteredAlloyedPoolResponse>,
+  ): MsgSetRegisteredAlloyedPoolResponse {
     const message = createBaseMsgSetRegisteredAlloyedPoolResponse();
     return message;
   },
-  fromAmino(_: MsgSetRegisteredAlloyedPoolResponseAmino): MsgSetRegisteredAlloyedPoolResponse {
+  fromAmino(
+    _: MsgSetRegisteredAlloyedPoolResponseAmino,
+  ): MsgSetRegisteredAlloyedPoolResponse {
     const message = createBaseMsgSetRegisteredAlloyedPoolResponse();
     return message;
   },
-  toAmino(_: MsgSetRegisteredAlloyedPoolResponse): MsgSetRegisteredAlloyedPoolResponseAmino {
+  toAmino(
+    _: MsgSetRegisteredAlloyedPoolResponse,
+  ): MsgSetRegisteredAlloyedPoolResponseAmino {
     const obj: any = {};
     return obj;
   },
-  fromAminoMsg(object: MsgSetRegisteredAlloyedPoolResponseAminoMsg): MsgSetRegisteredAlloyedPoolResponse {
+  fromAminoMsg(
+    object: MsgSetRegisteredAlloyedPoolResponseAminoMsg,
+  ): MsgSetRegisteredAlloyedPoolResponse {
     return MsgSetRegisteredAlloyedPoolResponse.fromAmino(object.value);
   },
-  fromProtoMsg(message: MsgSetRegisteredAlloyedPoolResponseProtoMsg): MsgSetRegisteredAlloyedPoolResponse {
+  fromProtoMsg(
+    message: MsgSetRegisteredAlloyedPoolResponseProtoMsg,
+  ): MsgSetRegisteredAlloyedPoolResponse {
     return MsgSetRegisteredAlloyedPoolResponse.decode(message.value);
   },
   toProto(message: MsgSetRegisteredAlloyedPoolResponse): Uint8Array {
     return MsgSetRegisteredAlloyedPoolResponse.encode(message).finish();
   },
-  toProtoMsg(message: MsgSetRegisteredAlloyedPoolResponse): MsgSetRegisteredAlloyedPoolResponseProtoMsg {
+  toProtoMsg(
+    message: MsgSetRegisteredAlloyedPoolResponse,
+  ): MsgSetRegisteredAlloyedPoolResponseProtoMsg {
     return {
-      typeUrl: "/symphony.poolmanager.v1beta1.MsgSetRegisteredAlloyedPoolResponse",
-      value: MsgSetRegisteredAlloyedPoolResponse.encode(message).finish()
+      typeUrl:
+        '/symphony.poolmanager.v1beta1.MsgSetRegisteredAlloyedPoolResponse',
+      value: MsgSetRegisteredAlloyedPoolResponse.encode(message).finish(),
     };
-  }
+  },
 };
-GlobalDecoderRegistry.register(MsgSetRegisteredAlloyedPoolResponse.typeUrl, MsgSetRegisteredAlloyedPoolResponse);
+GlobalDecoderRegistry.register(
+  MsgSetRegisteredAlloyedPoolResponse.typeUrl,
+  MsgSetRegisteredAlloyedPoolResponse,
+);
 function createBaseDenomPairTakerFee(): DenomPairTakerFee {
   return {
     denom0: undefined,
     denom1: undefined,
-    takerFee: "",
-    tokenInDenom: "",
-    tokenOutDenom: ""
+    takerFee: '',
+    tokenInDenom: '',
+    tokenOutDenom: '',
   };
 }
+/**
+ * @name DenomPairTakerFee
+ * @package symphony.poolmanager.v1beta1
+ * @see proto type: symphony.poolmanager.v1beta1.DenomPairTakerFee
+ */
 export const DenomPairTakerFee = {
-  typeUrl: "/symphony.poolmanager.v1beta1.DenomPairTakerFee",
+  typeUrl: '/symphony.poolmanager.v1beta1.DenomPairTakerFee',
   is(o: any): o is DenomPairTakerFee {
-    return o && (o.$typeUrl === DenomPairTakerFee.typeUrl || typeof o.takerFee === "string" && typeof o.tokenInDenom === "string" && typeof o.tokenOutDenom === "string");
+    return (
+      o &&
+      (o.$typeUrl === DenomPairTakerFee.typeUrl ||
+        (typeof o.takerFee === 'string' &&
+          typeof o.tokenInDenom === 'string' &&
+          typeof o.tokenOutDenom === 'string'))
+    );
   },
   isSDK(o: any): o is DenomPairTakerFeeSDKType {
-    return o && (o.$typeUrl === DenomPairTakerFee.typeUrl || typeof o.taker_fee === "string" && typeof o.tokenInDenom === "string" && typeof o.tokenOutDenom === "string");
+    return (
+      o &&
+      (o.$typeUrl === DenomPairTakerFee.typeUrl ||
+        (typeof o.taker_fee === 'string' &&
+          typeof o.tokenInDenom === 'string' &&
+          typeof o.tokenOutDenom === 'string'))
+    );
   },
   isAmino(o: any): o is DenomPairTakerFeeAmino {
-    return o && (o.$typeUrl === DenomPairTakerFee.typeUrl || typeof o.taker_fee === "string" && typeof o.tokenInDenom === "string" && typeof o.tokenOutDenom === "string");
+    return (
+      o &&
+      (o.$typeUrl === DenomPairTakerFee.typeUrl ||
+        (typeof o.taker_fee === 'string' &&
+          typeof o.tokenInDenom === 'string' &&
+          typeof o.tokenOutDenom === 'string'))
+    );
   },
-  encode(message: DenomPairTakerFee, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
+  encode(
+    message: DenomPairTakerFee,
+    writer: BinaryWriter = BinaryWriter.create(),
+  ): BinaryWriter {
     if (message.denom0 !== undefined) {
       writer.uint32(10).string(message.denom0);
     }
     if (message.denom1 !== undefined) {
       writer.uint32(18).string(message.denom1);
     }
-    if (message.takerFee !== "") {
-      writer.uint32(26).string(Decimal.fromUserInput(message.takerFee, 18).atomics);
+    if (message.takerFee !== '') {
+      writer
+        .uint32(26)
+        .string(Decimal.fromUserInput(message.takerFee, 18).atomics);
     }
-    if (message.tokenInDenom !== "") {
+    if (message.tokenInDenom !== '') {
       writer.uint32(34).string(message.tokenInDenom);
     }
-    if (message.tokenOutDenom !== "") {
+    if (message.tokenOutDenom !== '') {
       writer.uint32(42).string(message.tokenOutDenom);
     }
     return writer;
   },
   decode(input: BinaryReader | Uint8Array, length?: number): DenomPairTakerFee {
-    const reader = input instanceof BinaryReader ? input : new BinaryReader(input);
+    const reader =
+      input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseDenomPairTakerFee();
     while (reader.pos < end) {
@@ -1705,7 +2687,10 @@ export const DenomPairTakerFee = {
           message.denom1 = reader.string();
           break;
         case 3:
-          message.takerFee = Decimal.fromAtomics(reader.string(), 18).toString();
+          message.takerFee = Decimal.fromAtomics(
+            reader.string(),
+            18,
+          ).toString();
           break;
         case 4:
           message.tokenInDenom = reader.string();
@@ -1724,9 +2709,9 @@ export const DenomPairTakerFee = {
     const message = createBaseDenomPairTakerFee();
     message.denom0 = object.denom0 ?? undefined;
     message.denom1 = object.denom1 ?? undefined;
-    message.takerFee = object.takerFee ?? "";
-    message.tokenInDenom = object.tokenInDenom ?? "";
-    message.tokenOutDenom = object.tokenOutDenom ?? "";
+    message.takerFee = object.takerFee ?? '';
+    message.tokenInDenom = object.tokenInDenom ?? '';
+    message.tokenOutDenom = object.tokenOutDenom ?? '';
     return message;
   },
   fromAmino(object: DenomPairTakerFeeAmino): DenomPairTakerFee {
@@ -1752,9 +2737,11 @@ export const DenomPairTakerFee = {
     const obj: any = {};
     obj.denom0 = message.denom0 === null ? undefined : message.denom0;
     obj.denom1 = message.denom1 === null ? undefined : message.denom1;
-    obj.taker_fee = message.takerFee === "" ? undefined : message.takerFee;
-    obj.tokenInDenom = message.tokenInDenom === "" ? undefined : message.tokenInDenom;
-    obj.tokenOutDenom = message.tokenOutDenom === "" ? undefined : message.tokenOutDenom;
+    obj.taker_fee = message.takerFee === '' ? undefined : message.takerFee;
+    obj.tokenInDenom =
+      message.tokenInDenom === '' ? undefined : message.tokenInDenom;
+    obj.tokenOutDenom =
+      message.tokenOutDenom === '' ? undefined : message.tokenOutDenom;
     return obj;
   },
   fromAminoMsg(object: DenomPairTakerFeeAminoMsg): DenomPairTakerFee {
@@ -1768,9 +2755,9 @@ export const DenomPairTakerFee = {
   },
   toProtoMsg(message: DenomPairTakerFee): DenomPairTakerFeeProtoMsg {
     return {
-      typeUrl: "/symphony.poolmanager.v1beta1.DenomPairTakerFee",
-      value: DenomPairTakerFee.encode(message).finish()
+      typeUrl: '/symphony.poolmanager.v1beta1.DenomPairTakerFee',
+      value: DenomPairTakerFee.encode(message).finish(),
     };
-  }
+  },
 };
 GlobalDecoderRegistry.register(DenomPairTakerFee.typeUrl, DenomPairTakerFee);

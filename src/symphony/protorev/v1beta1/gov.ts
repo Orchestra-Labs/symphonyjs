@@ -1,23 +1,29 @@
 //@ts-nocheck
-import { BinaryReader, BinaryWriter } from "../../../binary";
-import { GlobalDecoderRegistry } from "../../../registry";
+import { BinaryReader, BinaryWriter } from '../../../binary';
+import { GlobalDecoderRegistry } from '../../../registry';
 /**
  * SetProtoRevEnabledProposal is a gov Content type to update whether the
  * protorev module is enabled
+ * @name SetProtoRevEnabledProposal
+ * @package symphony.protorev.v1beta1
+ * @see proto type: symphony.protorev.v1beta1.SetProtoRevEnabledProposal
  */
 export interface SetProtoRevEnabledProposal {
-  $typeUrl?: "/symphony.protorev.v1beta1.SetProtoRevEnabledProposal";
+  $typeUrl?: '/symphony.protorev.v1beta1.SetProtoRevEnabledProposal';
   title: string;
   description: string;
   enabled: boolean;
 }
 export interface SetProtoRevEnabledProposalProtoMsg {
-  typeUrl: "/symphony.protorev.v1beta1.SetProtoRevEnabledProposal";
+  typeUrl: '/symphony.protorev.v1beta1.SetProtoRevEnabledProposal';
   value: Uint8Array;
 }
 /**
  * SetProtoRevEnabledProposal is a gov Content type to update whether the
  * protorev module is enabled
+ * @name SetProtoRevEnabledProposalAmino
+ * @package symphony.protorev.v1beta1
+ * @see proto type: symphony.protorev.v1beta1.SetProtoRevEnabledProposal
  */
 export interface SetProtoRevEnabledProposalAmino {
   title?: string;
@@ -25,15 +31,18 @@ export interface SetProtoRevEnabledProposalAmino {
   enabled?: boolean;
 }
 export interface SetProtoRevEnabledProposalAminoMsg {
-  type: "symphony/SetProtoRevEnabledProposal";
+  type: 'symphony/SetProtoRevEnabledProposal';
   value: SetProtoRevEnabledProposalAmino;
 }
 /**
  * SetProtoRevEnabledProposal is a gov Content type to update whether the
  * protorev module is enabled
+ * @name SetProtoRevEnabledProposalSDKType
+ * @package symphony.protorev.v1beta1
+ * @see proto type: symphony.protorev.v1beta1.SetProtoRevEnabledProposal
  */
 export interface SetProtoRevEnabledProposalSDKType {
-  $typeUrl?: "/symphony.protorev.v1beta1.SetProtoRevEnabledProposal";
+  $typeUrl?: '/symphony.protorev.v1beta1.SetProtoRevEnabledProposal';
   title: string;
   description: string;
   enabled: boolean;
@@ -42,21 +51,27 @@ export interface SetProtoRevEnabledProposalSDKType {
  * SetProtoRevAdminAccountProposal is a gov Content type to set the admin
  * account that will receive permissions to alter hot routes and set the
  * developer address that will be receiving a share of profits from the module
+ * @name SetProtoRevAdminAccountProposal
+ * @package symphony.protorev.v1beta1
+ * @see proto type: symphony.protorev.v1beta1.SetProtoRevAdminAccountProposal
  */
 export interface SetProtoRevAdminAccountProposal {
-  $typeUrl?: "/symphony.protorev.v1beta1.SetProtoRevAdminAccountProposal";
+  $typeUrl?: '/symphony.protorev.v1beta1.SetProtoRevAdminAccountProposal';
   title: string;
   description: string;
   account: string;
 }
 export interface SetProtoRevAdminAccountProposalProtoMsg {
-  typeUrl: "/symphony.protorev.v1beta1.SetProtoRevAdminAccountProposal";
+  typeUrl: '/symphony.protorev.v1beta1.SetProtoRevAdminAccountProposal';
   value: Uint8Array;
 }
 /**
  * SetProtoRevAdminAccountProposal is a gov Content type to set the admin
  * account that will receive permissions to alter hot routes and set the
  * developer address that will be receiving a share of profits from the module
+ * @name SetProtoRevAdminAccountProposalAmino
+ * @package symphony.protorev.v1beta1
+ * @see proto type: symphony.protorev.v1beta1.SetProtoRevAdminAccountProposal
  */
 export interface SetProtoRevAdminAccountProposalAmino {
   title?: string;
@@ -64,45 +79,76 @@ export interface SetProtoRevAdminAccountProposalAmino {
   account?: string;
 }
 export interface SetProtoRevAdminAccountProposalAminoMsg {
-  type: "symphony/SetProtoRevAdminAccountProposal";
+  type: 'symphony/SetProtoRevAdminAccountProposal';
   value: SetProtoRevAdminAccountProposalAmino;
 }
 /**
  * SetProtoRevAdminAccountProposal is a gov Content type to set the admin
  * account that will receive permissions to alter hot routes and set the
  * developer address that will be receiving a share of profits from the module
+ * @name SetProtoRevAdminAccountProposalSDKType
+ * @package symphony.protorev.v1beta1
+ * @see proto type: symphony.protorev.v1beta1.SetProtoRevAdminAccountProposal
  */
 export interface SetProtoRevAdminAccountProposalSDKType {
-  $typeUrl?: "/symphony.protorev.v1beta1.SetProtoRevAdminAccountProposal";
+  $typeUrl?: '/symphony.protorev.v1beta1.SetProtoRevAdminAccountProposal';
   title: string;
   description: string;
   account: string;
 }
 function createBaseSetProtoRevEnabledProposal(): SetProtoRevEnabledProposal {
   return {
-    $typeUrl: "/symphony.protorev.v1beta1.SetProtoRevEnabledProposal",
-    title: "",
-    description: "",
-    enabled: false
+    $typeUrl: '/symphony.protorev.v1beta1.SetProtoRevEnabledProposal',
+    title: '',
+    description: '',
+    enabled: false,
   };
 }
+/**
+ * SetProtoRevEnabledProposal is a gov Content type to update whether the
+ * protorev module is enabled
+ * @name SetProtoRevEnabledProposal
+ * @package symphony.protorev.v1beta1
+ * @see proto type: symphony.protorev.v1beta1.SetProtoRevEnabledProposal
+ */
 export const SetProtoRevEnabledProposal = {
-  typeUrl: "/symphony.protorev.v1beta1.SetProtoRevEnabledProposal",
-  aminoType: "symphony/SetProtoRevEnabledProposal",
+  typeUrl: '/symphony.protorev.v1beta1.SetProtoRevEnabledProposal',
+  aminoType: 'symphony/SetProtoRevEnabledProposal',
   is(o: any): o is SetProtoRevEnabledProposal {
-    return o && (o.$typeUrl === SetProtoRevEnabledProposal.typeUrl || typeof o.title === "string" && typeof o.description === "string" && typeof o.enabled === "boolean");
+    return (
+      o &&
+      (o.$typeUrl === SetProtoRevEnabledProposal.typeUrl ||
+        (typeof o.title === 'string' &&
+          typeof o.description === 'string' &&
+          typeof o.enabled === 'boolean'))
+    );
   },
   isSDK(o: any): o is SetProtoRevEnabledProposalSDKType {
-    return o && (o.$typeUrl === SetProtoRevEnabledProposal.typeUrl || typeof o.title === "string" && typeof o.description === "string" && typeof o.enabled === "boolean");
+    return (
+      o &&
+      (o.$typeUrl === SetProtoRevEnabledProposal.typeUrl ||
+        (typeof o.title === 'string' &&
+          typeof o.description === 'string' &&
+          typeof o.enabled === 'boolean'))
+    );
   },
   isAmino(o: any): o is SetProtoRevEnabledProposalAmino {
-    return o && (o.$typeUrl === SetProtoRevEnabledProposal.typeUrl || typeof o.title === "string" && typeof o.description === "string" && typeof o.enabled === "boolean");
+    return (
+      o &&
+      (o.$typeUrl === SetProtoRevEnabledProposal.typeUrl ||
+        (typeof o.title === 'string' &&
+          typeof o.description === 'string' &&
+          typeof o.enabled === 'boolean'))
+    );
   },
-  encode(message: SetProtoRevEnabledProposal, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
-    if (message.title !== "") {
+  encode(
+    message: SetProtoRevEnabledProposal,
+    writer: BinaryWriter = BinaryWriter.create(),
+  ): BinaryWriter {
+    if (message.title !== '') {
       writer.uint32(10).string(message.title);
     }
-    if (message.description !== "") {
+    if (message.description !== '') {
       writer.uint32(18).string(message.description);
     }
     if (message.enabled === true) {
@@ -110,8 +156,12 @@ export const SetProtoRevEnabledProposal = {
     }
     return writer;
   },
-  decode(input: BinaryReader | Uint8Array, length?: number): SetProtoRevEnabledProposal {
-    const reader = input instanceof BinaryReader ? input : new BinaryReader(input);
+  decode(
+    input: BinaryReader | Uint8Array,
+    length?: number,
+  ): SetProtoRevEnabledProposal {
+    const reader =
+      input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseSetProtoRevEnabledProposal();
     while (reader.pos < end) {
@@ -133,14 +183,18 @@ export const SetProtoRevEnabledProposal = {
     }
     return message;
   },
-  fromPartial(object: Partial<SetProtoRevEnabledProposal>): SetProtoRevEnabledProposal {
+  fromPartial(
+    object: Partial<SetProtoRevEnabledProposal>,
+  ): SetProtoRevEnabledProposal {
     const message = createBaseSetProtoRevEnabledProposal();
-    message.title = object.title ?? "";
-    message.description = object.description ?? "";
+    message.title = object.title ?? '';
+    message.description = object.description ?? '';
     message.enabled = object.enabled ?? false;
     return message;
   },
-  fromAmino(object: SetProtoRevEnabledProposalAmino): SetProtoRevEnabledProposal {
+  fromAmino(
+    object: SetProtoRevEnabledProposalAmino,
+  ): SetProtoRevEnabledProposal {
     const message = createBaseSetProtoRevEnabledProposal();
     if (object.title !== undefined && object.title !== null) {
       message.title = object.title;
@@ -153,71 +207,121 @@ export const SetProtoRevEnabledProposal = {
     }
     return message;
   },
-  toAmino(message: SetProtoRevEnabledProposal): SetProtoRevEnabledProposalAmino {
+  toAmino(
+    message: SetProtoRevEnabledProposal,
+  ): SetProtoRevEnabledProposalAmino {
     const obj: any = {};
-    obj.title = message.title === "" ? undefined : message.title;
-    obj.description = message.description === "" ? undefined : message.description;
+    obj.title = message.title === '' ? undefined : message.title;
+    obj.description =
+      message.description === '' ? undefined : message.description;
     obj.enabled = message.enabled === false ? undefined : message.enabled;
     return obj;
   },
-  fromAminoMsg(object: SetProtoRevEnabledProposalAminoMsg): SetProtoRevEnabledProposal {
+  fromAminoMsg(
+    object: SetProtoRevEnabledProposalAminoMsg,
+  ): SetProtoRevEnabledProposal {
     return SetProtoRevEnabledProposal.fromAmino(object.value);
   },
-  toAminoMsg(message: SetProtoRevEnabledProposal): SetProtoRevEnabledProposalAminoMsg {
+  toAminoMsg(
+    message: SetProtoRevEnabledProposal,
+  ): SetProtoRevEnabledProposalAminoMsg {
     return {
-      type: "symphony/SetProtoRevEnabledProposal",
-      value: SetProtoRevEnabledProposal.toAmino(message)
+      type: 'symphony/SetProtoRevEnabledProposal',
+      value: SetProtoRevEnabledProposal.toAmino(message),
     };
   },
-  fromProtoMsg(message: SetProtoRevEnabledProposalProtoMsg): SetProtoRevEnabledProposal {
+  fromProtoMsg(
+    message: SetProtoRevEnabledProposalProtoMsg,
+  ): SetProtoRevEnabledProposal {
     return SetProtoRevEnabledProposal.decode(message.value);
   },
   toProto(message: SetProtoRevEnabledProposal): Uint8Array {
     return SetProtoRevEnabledProposal.encode(message).finish();
   },
-  toProtoMsg(message: SetProtoRevEnabledProposal): SetProtoRevEnabledProposalProtoMsg {
+  toProtoMsg(
+    message: SetProtoRevEnabledProposal,
+  ): SetProtoRevEnabledProposalProtoMsg {
     return {
-      typeUrl: "/symphony.protorev.v1beta1.SetProtoRevEnabledProposal",
-      value: SetProtoRevEnabledProposal.encode(message).finish()
+      typeUrl: '/symphony.protorev.v1beta1.SetProtoRevEnabledProposal',
+      value: SetProtoRevEnabledProposal.encode(message).finish(),
     };
-  }
+  },
 };
-GlobalDecoderRegistry.register(SetProtoRevEnabledProposal.typeUrl, SetProtoRevEnabledProposal);
-GlobalDecoderRegistry.registerAminoProtoMapping(SetProtoRevEnabledProposal.aminoType, SetProtoRevEnabledProposal.typeUrl);
+GlobalDecoderRegistry.register(
+  SetProtoRevEnabledProposal.typeUrl,
+  SetProtoRevEnabledProposal,
+);
+GlobalDecoderRegistry.registerAminoProtoMapping(
+  SetProtoRevEnabledProposal.aminoType,
+  SetProtoRevEnabledProposal.typeUrl,
+);
 function createBaseSetProtoRevAdminAccountProposal(): SetProtoRevAdminAccountProposal {
   return {
-    $typeUrl: "/symphony.protorev.v1beta1.SetProtoRevAdminAccountProposal",
-    title: "",
-    description: "",
-    account: ""
+    $typeUrl: '/symphony.protorev.v1beta1.SetProtoRevAdminAccountProposal',
+    title: '',
+    description: '',
+    account: '',
   };
 }
+/**
+ * SetProtoRevAdminAccountProposal is a gov Content type to set the admin
+ * account that will receive permissions to alter hot routes and set the
+ * developer address that will be receiving a share of profits from the module
+ * @name SetProtoRevAdminAccountProposal
+ * @package symphony.protorev.v1beta1
+ * @see proto type: symphony.protorev.v1beta1.SetProtoRevAdminAccountProposal
+ */
 export const SetProtoRevAdminAccountProposal = {
-  typeUrl: "/symphony.protorev.v1beta1.SetProtoRevAdminAccountProposal",
-  aminoType: "symphony/SetProtoRevAdminAccountProposal",
+  typeUrl: '/symphony.protorev.v1beta1.SetProtoRevAdminAccountProposal',
+  aminoType: 'symphony/SetProtoRevAdminAccountProposal',
   is(o: any): o is SetProtoRevAdminAccountProposal {
-    return o && (o.$typeUrl === SetProtoRevAdminAccountProposal.typeUrl || typeof o.title === "string" && typeof o.description === "string" && typeof o.account === "string");
+    return (
+      o &&
+      (o.$typeUrl === SetProtoRevAdminAccountProposal.typeUrl ||
+        (typeof o.title === 'string' &&
+          typeof o.description === 'string' &&
+          typeof o.account === 'string'))
+    );
   },
   isSDK(o: any): o is SetProtoRevAdminAccountProposalSDKType {
-    return o && (o.$typeUrl === SetProtoRevAdminAccountProposal.typeUrl || typeof o.title === "string" && typeof o.description === "string" && typeof o.account === "string");
+    return (
+      o &&
+      (o.$typeUrl === SetProtoRevAdminAccountProposal.typeUrl ||
+        (typeof o.title === 'string' &&
+          typeof o.description === 'string' &&
+          typeof o.account === 'string'))
+    );
   },
   isAmino(o: any): o is SetProtoRevAdminAccountProposalAmino {
-    return o && (o.$typeUrl === SetProtoRevAdminAccountProposal.typeUrl || typeof o.title === "string" && typeof o.description === "string" && typeof o.account === "string");
+    return (
+      o &&
+      (o.$typeUrl === SetProtoRevAdminAccountProposal.typeUrl ||
+        (typeof o.title === 'string' &&
+          typeof o.description === 'string' &&
+          typeof o.account === 'string'))
+    );
   },
-  encode(message: SetProtoRevAdminAccountProposal, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
-    if (message.title !== "") {
+  encode(
+    message: SetProtoRevAdminAccountProposal,
+    writer: BinaryWriter = BinaryWriter.create(),
+  ): BinaryWriter {
+    if (message.title !== '') {
       writer.uint32(10).string(message.title);
     }
-    if (message.description !== "") {
+    if (message.description !== '') {
       writer.uint32(18).string(message.description);
     }
-    if (message.account !== "") {
+    if (message.account !== '') {
       writer.uint32(26).string(message.account);
     }
     return writer;
   },
-  decode(input: BinaryReader | Uint8Array, length?: number): SetProtoRevAdminAccountProposal {
-    const reader = input instanceof BinaryReader ? input : new BinaryReader(input);
+  decode(
+    input: BinaryReader | Uint8Array,
+    length?: number,
+  ): SetProtoRevAdminAccountProposal {
+    const reader =
+      input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseSetProtoRevAdminAccountProposal();
     while (reader.pos < end) {
@@ -239,14 +343,18 @@ export const SetProtoRevAdminAccountProposal = {
     }
     return message;
   },
-  fromPartial(object: Partial<SetProtoRevAdminAccountProposal>): SetProtoRevAdminAccountProposal {
+  fromPartial(
+    object: Partial<SetProtoRevAdminAccountProposal>,
+  ): SetProtoRevAdminAccountProposal {
     const message = createBaseSetProtoRevAdminAccountProposal();
-    message.title = object.title ?? "";
-    message.description = object.description ?? "";
-    message.account = object.account ?? "";
+    message.title = object.title ?? '';
+    message.description = object.description ?? '';
+    message.account = object.account ?? '';
     return message;
   },
-  fromAmino(object: SetProtoRevAdminAccountProposalAmino): SetProtoRevAdminAccountProposal {
+  fromAmino(
+    object: SetProtoRevAdminAccountProposalAmino,
+  ): SetProtoRevAdminAccountProposal {
     const message = createBaseSetProtoRevAdminAccountProposal();
     if (object.title !== undefined && object.title !== null) {
       message.title = object.title;
@@ -259,34 +367,51 @@ export const SetProtoRevAdminAccountProposal = {
     }
     return message;
   },
-  toAmino(message: SetProtoRevAdminAccountProposal): SetProtoRevAdminAccountProposalAmino {
+  toAmino(
+    message: SetProtoRevAdminAccountProposal,
+  ): SetProtoRevAdminAccountProposalAmino {
     const obj: any = {};
-    obj.title = message.title === "" ? undefined : message.title;
-    obj.description = message.description === "" ? undefined : message.description;
-    obj.account = message.account === "" ? undefined : message.account;
+    obj.title = message.title === '' ? undefined : message.title;
+    obj.description =
+      message.description === '' ? undefined : message.description;
+    obj.account = message.account === '' ? undefined : message.account;
     return obj;
   },
-  fromAminoMsg(object: SetProtoRevAdminAccountProposalAminoMsg): SetProtoRevAdminAccountProposal {
+  fromAminoMsg(
+    object: SetProtoRevAdminAccountProposalAminoMsg,
+  ): SetProtoRevAdminAccountProposal {
     return SetProtoRevAdminAccountProposal.fromAmino(object.value);
   },
-  toAminoMsg(message: SetProtoRevAdminAccountProposal): SetProtoRevAdminAccountProposalAminoMsg {
+  toAminoMsg(
+    message: SetProtoRevAdminAccountProposal,
+  ): SetProtoRevAdminAccountProposalAminoMsg {
     return {
-      type: "symphony/SetProtoRevAdminAccountProposal",
-      value: SetProtoRevAdminAccountProposal.toAmino(message)
+      type: 'symphony/SetProtoRevAdminAccountProposal',
+      value: SetProtoRevAdminAccountProposal.toAmino(message),
     };
   },
-  fromProtoMsg(message: SetProtoRevAdminAccountProposalProtoMsg): SetProtoRevAdminAccountProposal {
+  fromProtoMsg(
+    message: SetProtoRevAdminAccountProposalProtoMsg,
+  ): SetProtoRevAdminAccountProposal {
     return SetProtoRevAdminAccountProposal.decode(message.value);
   },
   toProto(message: SetProtoRevAdminAccountProposal): Uint8Array {
     return SetProtoRevAdminAccountProposal.encode(message).finish();
   },
-  toProtoMsg(message: SetProtoRevAdminAccountProposal): SetProtoRevAdminAccountProposalProtoMsg {
+  toProtoMsg(
+    message: SetProtoRevAdminAccountProposal,
+  ): SetProtoRevAdminAccountProposalProtoMsg {
     return {
-      typeUrl: "/symphony.protorev.v1beta1.SetProtoRevAdminAccountProposal",
-      value: SetProtoRevAdminAccountProposal.encode(message).finish()
+      typeUrl: '/symphony.protorev.v1beta1.SetProtoRevAdminAccountProposal',
+      value: SetProtoRevAdminAccountProposal.encode(message).finish(),
     };
-  }
+  },
 };
-GlobalDecoderRegistry.register(SetProtoRevAdminAccountProposal.typeUrl, SetProtoRevAdminAccountProposal);
-GlobalDecoderRegistry.registerAminoProtoMapping(SetProtoRevAdminAccountProposal.aminoType, SetProtoRevAdminAccountProposal.typeUrl);
+GlobalDecoderRegistry.register(
+  SetProtoRevAdminAccountProposal.typeUrl,
+  SetProtoRevAdminAccountProposal,
+);
+GlobalDecoderRegistry.registerAminoProtoMapping(
+  SetProtoRevAdminAccountProposal.aminoType,
+  SetProtoRevAdminAccountProposal.typeUrl,
+);

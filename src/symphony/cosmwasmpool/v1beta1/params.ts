@@ -1,6 +1,11 @@
 //@ts-nocheck
-import { BinaryReader, BinaryWriter } from "../../../binary";
-import { GlobalDecoderRegistry } from "../../../registry";
+import { BinaryReader, BinaryWriter } from '../../../binary';
+import { GlobalDecoderRegistry } from '../../../registry';
+/**
+ * @name Params
+ * @package symphony.cosmwasmpool.v1beta1
+ * @see proto type: symphony.cosmwasmpool.v1beta1.Params
+ */
 export interface Params {
   /**
    * code_ide_whitelist contains the list of code ids that are allowed to be
@@ -16,9 +21,14 @@ export interface Params {
   poolMigrationLimit: bigint;
 }
 export interface ParamsProtoMsg {
-  typeUrl: "/symphony.cosmwasmpool.v1beta1.Params";
+  typeUrl: '/symphony.cosmwasmpool.v1beta1.Params';
   value: Uint8Array;
 }
+/**
+ * @name ParamsAmino
+ * @package symphony.cosmwasmpool.v1beta1
+ * @see proto type: symphony.cosmwasmpool.v1beta1.Params
+ */
 export interface ParamsAmino {
   /**
    * code_ide_whitelist contains the list of code ids that are allowed to be
@@ -34,9 +44,14 @@ export interface ParamsAmino {
   pool_migration_limit?: string;
 }
 export interface ParamsAminoMsg {
-  type: "/symphony.cosmwasmpool.v1beta1.Params";
+  type: '/symphony.cosmwasmpool.v1beta1.Params';
   value: ParamsAmino;
 }
+/**
+ * @name ParamsSDKType
+ * @package symphony.cosmwasmpool.v1beta1
+ * @see proto type: symphony.cosmwasmpool.v1beta1.Params
+ */
 export interface ParamsSDKType {
   code_id_whitelist: bigint[];
   pool_migration_limit: bigint;
@@ -44,21 +59,50 @@ export interface ParamsSDKType {
 function createBaseParams(): Params {
   return {
     codeIdWhitelist: [],
-    poolMigrationLimit: BigInt(0)
+    poolMigrationLimit: BigInt(0),
   };
 }
+/**
+ * @name Params
+ * @package symphony.cosmwasmpool.v1beta1
+ * @see proto type: symphony.cosmwasmpool.v1beta1.Params
+ */
 export const Params = {
-  typeUrl: "/symphony.cosmwasmpool.v1beta1.Params",
+  typeUrl: '/symphony.cosmwasmpool.v1beta1.Params',
   is(o: any): o is Params {
-    return o && (o.$typeUrl === Params.typeUrl || Array.isArray(o.codeIdWhitelist) && (!o.codeIdWhitelist.length || typeof o.codeIdWhitelist[0] === "bigint") && typeof o.poolMigrationLimit === "bigint");
+    return (
+      o &&
+      (o.$typeUrl === Params.typeUrl ||
+        (Array.isArray(o.codeIdWhitelist) &&
+          (!o.codeIdWhitelist.length ||
+            typeof o.codeIdWhitelist[0] === 'bigint') &&
+          typeof o.poolMigrationLimit === 'bigint'))
+    );
   },
   isSDK(o: any): o is ParamsSDKType {
-    return o && (o.$typeUrl === Params.typeUrl || Array.isArray(o.code_id_whitelist) && (!o.code_id_whitelist.length || typeof o.code_id_whitelist[0] === "bigint") && typeof o.pool_migration_limit === "bigint");
+    return (
+      o &&
+      (o.$typeUrl === Params.typeUrl ||
+        (Array.isArray(o.code_id_whitelist) &&
+          (!o.code_id_whitelist.length ||
+            typeof o.code_id_whitelist[0] === 'bigint') &&
+          typeof o.pool_migration_limit === 'bigint'))
+    );
   },
   isAmino(o: any): o is ParamsAmino {
-    return o && (o.$typeUrl === Params.typeUrl || Array.isArray(o.code_id_whitelist) && (!o.code_id_whitelist.length || typeof o.code_id_whitelist[0] === "bigint") && typeof o.pool_migration_limit === "bigint");
+    return (
+      o &&
+      (o.$typeUrl === Params.typeUrl ||
+        (Array.isArray(o.code_id_whitelist) &&
+          (!o.code_id_whitelist.length ||
+            typeof o.code_id_whitelist[0] === 'bigint') &&
+          typeof o.pool_migration_limit === 'bigint'))
+    );
   },
-  encode(message: Params, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
+  encode(
+    message: Params,
+    writer: BinaryWriter = BinaryWriter.create(),
+  ): BinaryWriter {
     writer.uint32(10).fork();
     for (const v of message.codeIdWhitelist) {
       writer.uint64(v);
@@ -70,7 +114,8 @@ export const Params = {
     return writer;
   },
   decode(input: BinaryReader | Uint8Array, length?: number): Params {
-    const reader = input instanceof BinaryReader ? input : new BinaryReader(input);
+    const reader =
+      input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseParams();
     while (reader.pos < end) {
@@ -98,14 +143,23 @@ export const Params = {
   },
   fromPartial(object: Partial<Params>): Params {
     const message = createBaseParams();
-    message.codeIdWhitelist = object.codeIdWhitelist?.map(e => BigInt(e.toString())) || [];
-    message.poolMigrationLimit = object.poolMigrationLimit !== undefined && object.poolMigrationLimit !== null ? BigInt(object.poolMigrationLimit.toString()) : BigInt(0);
+    message.codeIdWhitelist =
+      object.codeIdWhitelist?.map(e => BigInt(e.toString())) || [];
+    message.poolMigrationLimit =
+      object.poolMigrationLimit !== undefined &&
+      object.poolMigrationLimit !== null
+        ? BigInt(object.poolMigrationLimit.toString())
+        : BigInt(0);
     return message;
   },
   fromAmino(object: ParamsAmino): Params {
     const message = createBaseParams();
-    message.codeIdWhitelist = object.code_id_whitelist?.map(e => BigInt(e)) || [];
-    if (object.pool_migration_limit !== undefined && object.pool_migration_limit !== null) {
+    message.codeIdWhitelist =
+      object.code_id_whitelist?.map(e => BigInt(e)) || [];
+    if (
+      object.pool_migration_limit !== undefined &&
+      object.pool_migration_limit !== null
+    ) {
       message.poolMigrationLimit = BigInt(object.pool_migration_limit);
     }
     return message;
@@ -117,7 +171,10 @@ export const Params = {
     } else {
       obj.code_id_whitelist = message.codeIdWhitelist;
     }
-    obj.pool_migration_limit = message.poolMigrationLimit !== BigInt(0) ? message.poolMigrationLimit?.toString() : undefined;
+    obj.pool_migration_limit =
+      message.poolMigrationLimit !== BigInt(0)
+        ? message.poolMigrationLimit?.toString()
+        : undefined;
     return obj;
   },
   fromAminoMsg(object: ParamsAminoMsg): Params {
@@ -131,9 +188,9 @@ export const Params = {
   },
   toProtoMsg(message: Params): ParamsProtoMsg {
     return {
-      typeUrl: "/symphony.cosmwasmpool.v1beta1.Params",
-      value: Params.encode(message).finish()
+      typeUrl: '/symphony.cosmwasmpool.v1beta1.Params',
+      value: Params.encode(message).finish(),
     };
-  }
+  },
 };
 GlobalDecoderRegistry.register(Params.typeUrl, Params);

@@ -1,197 +1,332 @@
 //@ts-nocheck
-import { Coin, CoinAmino, CoinSDKType } from "../../../cosmos/base/v1beta1/coin";
-import { Params, ParamsAmino, ParamsSDKType } from "./market";
-import { BinaryReader, BinaryWriter } from "../../../binary";
-import { GlobalDecoderRegistry } from "../../../registry";
-import { Decimal } from "@cosmjs/math";
-/** QuerySwapRequest is the request type for the Query/Swap RPC method. */
+import {
+  Coin,
+  CoinAmino,
+  CoinSDKType,
+} from '../../../cosmos/base/v1beta1/coin';
+import { Params, ParamsAmino, ParamsSDKType } from './market';
+import { BinaryReader, BinaryWriter } from '../../../binary';
+import { GlobalDecoderRegistry } from '../../../registry';
+import { Decimal } from '@cosmjs/math';
+/**
+ * QuerySwapRequest is the request type for the Query/Swap RPC method.
+ * @name QuerySwapRequest
+ * @package symphony.market.v1beta1
+ * @see proto type: symphony.market.v1beta1.QuerySwapRequest
+ */
 export interface QuerySwapRequest {
-  /** offer_coin defines the coin being offered (i.e. 1000000uluna) */
+  /**
+   * offer_coin defines the coin being offered (i.e. 1000000uluna)
+   */
   offerCoin: string;
-  /** ask_denom defines the denom of the coin to swap to */
+  /**
+   * ask_denom defines the denom of the coin to swap to
+   */
   askDenom: string;
 }
 export interface QuerySwapRequestProtoMsg {
-  typeUrl: "/symphony.market.v1beta1.QuerySwapRequest";
+  typeUrl: '/symphony.market.v1beta1.QuerySwapRequest';
   value: Uint8Array;
 }
-/** QuerySwapRequest is the request type for the Query/Swap RPC method. */
+/**
+ * QuerySwapRequest is the request type for the Query/Swap RPC method.
+ * @name QuerySwapRequestAmino
+ * @package symphony.market.v1beta1
+ * @see proto type: symphony.market.v1beta1.QuerySwapRequest
+ */
 export interface QuerySwapRequestAmino {
-  /** offer_coin defines the coin being offered (i.e. 1000000uluna) */
+  /**
+   * offer_coin defines the coin being offered (i.e. 1000000uluna)
+   */
   offer_coin?: string;
-  /** ask_denom defines the denom of the coin to swap to */
+  /**
+   * ask_denom defines the denom of the coin to swap to
+   */
   ask_denom?: string;
 }
 export interface QuerySwapRequestAminoMsg {
-  type: "/symphony.market.v1beta1.QuerySwapRequest";
+  type: '/symphony.market.v1beta1.QuerySwapRequest';
   value: QuerySwapRequestAmino;
 }
-/** QuerySwapRequest is the request type for the Query/Swap RPC method. */
+/**
+ * QuerySwapRequest is the request type for the Query/Swap RPC method.
+ * @name QuerySwapRequestSDKType
+ * @package symphony.market.v1beta1
+ * @see proto type: symphony.market.v1beta1.QuerySwapRequest
+ */
 export interface QuerySwapRequestSDKType {
   offer_coin: string;
   ask_denom: string;
 }
-/** QuerySwapResponse is the response type for the Query/Swap RPC method. */
+/**
+ * QuerySwapResponse is the response type for the Query/Swap RPC method.
+ * @name QuerySwapResponse
+ * @package symphony.market.v1beta1
+ * @see proto type: symphony.market.v1beta1.QuerySwapResponse
+ */
 export interface QuerySwapResponse {
-  /** return_coin defines the coin returned as a result of the swap simulation. */
+  /**
+   * return_coin defines the coin returned as a result of the swap simulation.
+   */
   returnCoin: Coin;
 }
 export interface QuerySwapResponseProtoMsg {
-  typeUrl: "/symphony.market.v1beta1.QuerySwapResponse";
+  typeUrl: '/symphony.market.v1beta1.QuerySwapResponse';
   value: Uint8Array;
 }
-/** QuerySwapResponse is the response type for the Query/Swap RPC method. */
+/**
+ * QuerySwapResponse is the response type for the Query/Swap RPC method.
+ * @name QuerySwapResponseAmino
+ * @package symphony.market.v1beta1
+ * @see proto type: symphony.market.v1beta1.QuerySwapResponse
+ */
 export interface QuerySwapResponseAmino {
-  /** return_coin defines the coin returned as a result of the swap simulation. */
+  /**
+   * return_coin defines the coin returned as a result of the swap simulation.
+   */
   return_coin?: CoinAmino;
 }
 export interface QuerySwapResponseAminoMsg {
-  type: "/symphony.market.v1beta1.QuerySwapResponse";
+  type: '/symphony.market.v1beta1.QuerySwapResponse';
   value: QuerySwapResponseAmino;
 }
-/** QuerySwapResponse is the response type for the Query/Swap RPC method. */
+/**
+ * QuerySwapResponse is the response type for the Query/Swap RPC method.
+ * @name QuerySwapResponseSDKType
+ * @package symphony.market.v1beta1
+ * @see proto type: symphony.market.v1beta1.QuerySwapResponse
+ */
 export interface QuerySwapResponseSDKType {
   return_coin: CoinSDKType;
 }
-/** QueryParamsRequest is the request type for the Query/Params RPC method. */
+/**
+ * QueryParamsRequest is the request type for the Query/Params RPC method.
+ * @name QueryParamsRequest
+ * @package symphony.market.v1beta1
+ * @see proto type: symphony.market.v1beta1.QueryParamsRequest
+ */
 export interface QueryParamsRequest {}
 export interface QueryParamsRequestProtoMsg {
-  typeUrl: "/symphony.market.v1beta1.QueryParamsRequest";
+  typeUrl: '/symphony.market.v1beta1.QueryParamsRequest';
   value: Uint8Array;
 }
-/** QueryParamsRequest is the request type for the Query/Params RPC method. */
+/**
+ * QueryParamsRequest is the request type for the Query/Params RPC method.
+ * @name QueryParamsRequestAmino
+ * @package symphony.market.v1beta1
+ * @see proto type: symphony.market.v1beta1.QueryParamsRequest
+ */
 export interface QueryParamsRequestAmino {}
 export interface QueryParamsRequestAminoMsg {
-  type: "/symphony.market.v1beta1.QueryParamsRequest";
+  type: '/symphony.market.v1beta1.QueryParamsRequest';
   value: QueryParamsRequestAmino;
 }
-/** QueryParamsRequest is the request type for the Query/Params RPC method. */
+/**
+ * QueryParamsRequest is the request type for the Query/Params RPC method.
+ * @name QueryParamsRequestSDKType
+ * @package symphony.market.v1beta1
+ * @see proto type: symphony.market.v1beta1.QueryParamsRequest
+ */
 export interface QueryParamsRequestSDKType {}
-/** QueryParamsResponse is the response type for the Query/Params RPC method. */
+/**
+ * QueryParamsResponse is the response type for the Query/Params RPC method.
+ * @name QueryParamsResponse
+ * @package symphony.market.v1beta1
+ * @see proto type: symphony.market.v1beta1.QueryParamsResponse
+ */
 export interface QueryParamsResponse {
-  /** params defines the parameters of the module. */
+  /**
+   * params defines the parameters of the module.
+   */
   params: Params;
 }
 export interface QueryParamsResponseProtoMsg {
-  typeUrl: "/symphony.market.v1beta1.QueryParamsResponse";
+  typeUrl: '/symphony.market.v1beta1.QueryParamsResponse';
   value: Uint8Array;
 }
-/** QueryParamsResponse is the response type for the Query/Params RPC method. */
+/**
+ * QueryParamsResponse is the response type for the Query/Params RPC method.
+ * @name QueryParamsResponseAmino
+ * @package symphony.market.v1beta1
+ * @see proto type: symphony.market.v1beta1.QueryParamsResponse
+ */
 export interface QueryParamsResponseAmino {
-  /** params defines the parameters of the module. */
+  /**
+   * params defines the parameters of the module.
+   */
   params?: ParamsAmino;
 }
 export interface QueryParamsResponseAminoMsg {
-  type: "/symphony.market.v1beta1.QueryParamsResponse";
+  type: '/symphony.market.v1beta1.QueryParamsResponse';
   value: QueryParamsResponseAmino;
 }
-/** QueryParamsResponse is the response type for the Query/Params RPC method. */
+/**
+ * QueryParamsResponse is the response type for the Query/Params RPC method.
+ * @name QueryParamsResponseSDKType
+ * @package symphony.market.v1beta1
+ * @see proto type: symphony.market.v1beta1.QueryParamsResponse
+ */
 export interface QueryParamsResponseSDKType {
   params: ParamsSDKType;
 }
 /**
  * QueryExchangeRequirementsRequest is the request type for the
  * Query/ExchangeRequirements RPC method.
+ * @name QueryExchangeRequirementsRequest
+ * @package symphony.market.v1beta1
+ * @see proto type: symphony.market.v1beta1.QueryExchangeRequirementsRequest
  */
 export interface QueryExchangeRequirementsRequest {}
 export interface QueryExchangeRequirementsRequestProtoMsg {
-  typeUrl: "/symphony.market.v1beta1.QueryExchangeRequirementsRequest";
+  typeUrl: '/symphony.market.v1beta1.QueryExchangeRequirementsRequest';
   value: Uint8Array;
 }
 /**
  * QueryExchangeRequirementsRequest is the request type for the
  * Query/ExchangeRequirements RPC method.
+ * @name QueryExchangeRequirementsRequestAmino
+ * @package symphony.market.v1beta1
+ * @see proto type: symphony.market.v1beta1.QueryExchangeRequirementsRequest
  */
 export interface QueryExchangeRequirementsRequestAmino {}
 export interface QueryExchangeRequirementsRequestAminoMsg {
-  type: "/symphony.market.v1beta1.QueryExchangeRequirementsRequest";
+  type: '/symphony.market.v1beta1.QueryExchangeRequirementsRequest';
   value: QueryExchangeRequirementsRequestAmino;
 }
 /**
  * QueryExchangeRequirementsRequest is the request type for the
  * Query/ExchangeRequirements RPC method.
+ * @name QueryExchangeRequirementsRequestSDKType
+ * @package symphony.market.v1beta1
+ * @see proto type: symphony.market.v1beta1.QueryExchangeRequirementsRequest
  */
 export interface QueryExchangeRequirementsRequestSDKType {}
 /**
  * QueryExchangeRequirementsResponse is the response type for the
  * Query/ExchangeRequirements RPC method.
+ * @name QueryExchangeRequirementsResponse
+ * @package symphony.market.v1beta1
+ * @see proto type: symphony.market.v1beta1.QueryExchangeRequirementsResponse
  */
 export interface QueryExchangeRequirementsResponse {
   exchangeRequirements: ExchangeRequirement[];
   total: Coin;
 }
 export interface QueryExchangeRequirementsResponseProtoMsg {
-  typeUrl: "/symphony.market.v1beta1.QueryExchangeRequirementsResponse";
+  typeUrl: '/symphony.market.v1beta1.QueryExchangeRequirementsResponse';
   value: Uint8Array;
 }
 /**
  * QueryExchangeRequirementsResponse is the response type for the
  * Query/ExchangeRequirements RPC method.
+ * @name QueryExchangeRequirementsResponseAmino
+ * @package symphony.market.v1beta1
+ * @see proto type: symphony.market.v1beta1.QueryExchangeRequirementsResponse
  */
 export interface QueryExchangeRequirementsResponseAmino {
   exchange_requirements?: ExchangeRequirementAmino[];
   total?: CoinAmino;
 }
 export interface QueryExchangeRequirementsResponseAminoMsg {
-  type: "/symphony.market.v1beta1.QueryExchangeRequirementsResponse";
+  type: '/symphony.market.v1beta1.QueryExchangeRequirementsResponse';
   value: QueryExchangeRequirementsResponseAmino;
 }
 /**
  * QueryExchangeRequirementsResponse is the response type for the
  * Query/ExchangeRequirements RPC method.
+ * @name QueryExchangeRequirementsResponseSDKType
+ * @package symphony.market.v1beta1
+ * @see proto type: symphony.market.v1beta1.QueryExchangeRequirementsResponse
  */
 export interface QueryExchangeRequirementsResponseSDKType {
   exchange_requirements: ExchangeRequirementSDKType[];
   total: CoinSDKType;
 }
+/**
+ * @name ExchangeRequirement
+ * @package symphony.market.v1beta1
+ * @see proto type: symphony.market.v1beta1.ExchangeRequirement
+ */
 export interface ExchangeRequirement {
   baseCurrency: Coin;
   exchangeRate: string;
 }
 export interface ExchangeRequirementProtoMsg {
-  typeUrl: "/symphony.market.v1beta1.ExchangeRequirement";
+  typeUrl: '/symphony.market.v1beta1.ExchangeRequirement';
   value: Uint8Array;
 }
+/**
+ * @name ExchangeRequirementAmino
+ * @package symphony.market.v1beta1
+ * @see proto type: symphony.market.v1beta1.ExchangeRequirement
+ */
 export interface ExchangeRequirementAmino {
   base_currency?: CoinAmino;
   exchange_rate?: string;
 }
 export interface ExchangeRequirementAminoMsg {
-  type: "/symphony.market.v1beta1.ExchangeRequirement";
+  type: '/symphony.market.v1beta1.ExchangeRequirement';
   value: ExchangeRequirementAmino;
 }
+/**
+ * @name ExchangeRequirementSDKType
+ * @package symphony.market.v1beta1
+ * @see proto type: symphony.market.v1beta1.ExchangeRequirement
+ */
 export interface ExchangeRequirementSDKType {
   base_currency: CoinSDKType;
   exchange_rate: string;
 }
 function createBaseQuerySwapRequest(): QuerySwapRequest {
   return {
-    offerCoin: "",
-    askDenom: ""
+    offerCoin: '',
+    askDenom: '',
   };
 }
+/**
+ * QuerySwapRequest is the request type for the Query/Swap RPC method.
+ * @name QuerySwapRequest
+ * @package symphony.market.v1beta1
+ * @see proto type: symphony.market.v1beta1.QuerySwapRequest
+ */
 export const QuerySwapRequest = {
-  typeUrl: "/symphony.market.v1beta1.QuerySwapRequest",
+  typeUrl: '/symphony.market.v1beta1.QuerySwapRequest',
   is(o: any): o is QuerySwapRequest {
-    return o && (o.$typeUrl === QuerySwapRequest.typeUrl || typeof o.offerCoin === "string" && typeof o.askDenom === "string");
+    return (
+      o &&
+      (o.$typeUrl === QuerySwapRequest.typeUrl ||
+        (typeof o.offerCoin === 'string' && typeof o.askDenom === 'string'))
+    );
   },
   isSDK(o: any): o is QuerySwapRequestSDKType {
-    return o && (o.$typeUrl === QuerySwapRequest.typeUrl || typeof o.offer_coin === "string" && typeof o.ask_denom === "string");
+    return (
+      o &&
+      (o.$typeUrl === QuerySwapRequest.typeUrl ||
+        (typeof o.offer_coin === 'string' && typeof o.ask_denom === 'string'))
+    );
   },
   isAmino(o: any): o is QuerySwapRequestAmino {
-    return o && (o.$typeUrl === QuerySwapRequest.typeUrl || typeof o.offer_coin === "string" && typeof o.ask_denom === "string");
+    return (
+      o &&
+      (o.$typeUrl === QuerySwapRequest.typeUrl ||
+        (typeof o.offer_coin === 'string' && typeof o.ask_denom === 'string'))
+    );
   },
-  encode(message: QuerySwapRequest, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
-    if (message.offerCoin !== "") {
+  encode(
+    message: QuerySwapRequest,
+    writer: BinaryWriter = BinaryWriter.create(),
+  ): BinaryWriter {
+    if (message.offerCoin !== '') {
       writer.uint32(10).string(message.offerCoin);
     }
-    if (message.askDenom !== "") {
+    if (message.askDenom !== '') {
       writer.uint32(18).string(message.askDenom);
     }
     return writer;
   },
   decode(input: BinaryReader | Uint8Array, length?: number): QuerySwapRequest {
-    const reader = input instanceof BinaryReader ? input : new BinaryReader(input);
+    const reader =
+      input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseQuerySwapRequest();
     while (reader.pos < end) {
@@ -212,8 +347,8 @@ export const QuerySwapRequest = {
   },
   fromPartial(object: Partial<QuerySwapRequest>): QuerySwapRequest {
     const message = createBaseQuerySwapRequest();
-    message.offerCoin = object.offerCoin ?? "";
-    message.askDenom = object.askDenom ?? "";
+    message.offerCoin = object.offerCoin ?? '';
+    message.askDenom = object.askDenom ?? '';
     return message;
   },
   fromAmino(object: QuerySwapRequestAmino): QuerySwapRequest {
@@ -228,8 +363,8 @@ export const QuerySwapRequest = {
   },
   toAmino(message: QuerySwapRequest): QuerySwapRequestAmino {
     const obj: any = {};
-    obj.offer_coin = message.offerCoin === "" ? undefined : message.offerCoin;
-    obj.ask_denom = message.askDenom === "" ? undefined : message.askDenom;
+    obj.offer_coin = message.offerCoin === '' ? undefined : message.offerCoin;
+    obj.ask_denom = message.askDenom === '' ? undefined : message.askDenom;
     return obj;
   },
   fromAminoMsg(object: QuerySwapRequestAminoMsg): QuerySwapRequest {
@@ -243,36 +378,54 @@ export const QuerySwapRequest = {
   },
   toProtoMsg(message: QuerySwapRequest): QuerySwapRequestProtoMsg {
     return {
-      typeUrl: "/symphony.market.v1beta1.QuerySwapRequest",
-      value: QuerySwapRequest.encode(message).finish()
+      typeUrl: '/symphony.market.v1beta1.QuerySwapRequest',
+      value: QuerySwapRequest.encode(message).finish(),
     };
-  }
+  },
 };
 GlobalDecoderRegistry.register(QuerySwapRequest.typeUrl, QuerySwapRequest);
 function createBaseQuerySwapResponse(): QuerySwapResponse {
   return {
-    returnCoin: Coin.fromPartial({})
+    returnCoin: Coin.fromPartial({}),
   };
 }
+/**
+ * QuerySwapResponse is the response type for the Query/Swap RPC method.
+ * @name QuerySwapResponse
+ * @package symphony.market.v1beta1
+ * @see proto type: symphony.market.v1beta1.QuerySwapResponse
+ */
 export const QuerySwapResponse = {
-  typeUrl: "/symphony.market.v1beta1.QuerySwapResponse",
+  typeUrl: '/symphony.market.v1beta1.QuerySwapResponse',
   is(o: any): o is QuerySwapResponse {
-    return o && (o.$typeUrl === QuerySwapResponse.typeUrl || Coin.is(o.returnCoin));
+    return (
+      o && (o.$typeUrl === QuerySwapResponse.typeUrl || Coin.is(o.returnCoin))
+    );
   },
   isSDK(o: any): o is QuerySwapResponseSDKType {
-    return o && (o.$typeUrl === QuerySwapResponse.typeUrl || Coin.isSDK(o.return_coin));
+    return (
+      o &&
+      (o.$typeUrl === QuerySwapResponse.typeUrl || Coin.isSDK(o.return_coin))
+    );
   },
   isAmino(o: any): o is QuerySwapResponseAmino {
-    return o && (o.$typeUrl === QuerySwapResponse.typeUrl || Coin.isAmino(o.return_coin));
+    return (
+      o &&
+      (o.$typeUrl === QuerySwapResponse.typeUrl || Coin.isAmino(o.return_coin))
+    );
   },
-  encode(message: QuerySwapResponse, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
+  encode(
+    message: QuerySwapResponse,
+    writer: BinaryWriter = BinaryWriter.create(),
+  ): BinaryWriter {
     if (message.returnCoin !== undefined) {
       Coin.encode(message.returnCoin, writer.uint32(10).fork()).ldelim();
     }
     return writer;
   },
   decode(input: BinaryReader | Uint8Array, length?: number): QuerySwapResponse {
-    const reader = input instanceof BinaryReader ? input : new BinaryReader(input);
+    const reader =
+      input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseQuerySwapResponse();
     while (reader.pos < end) {
@@ -290,7 +443,10 @@ export const QuerySwapResponse = {
   },
   fromPartial(object: Partial<QuerySwapResponse>): QuerySwapResponse {
     const message = createBaseQuerySwapResponse();
-    message.returnCoin = object.returnCoin !== undefined && object.returnCoin !== null ? Coin.fromPartial(object.returnCoin) : undefined;
+    message.returnCoin =
+      object.returnCoin !== undefined && object.returnCoin !== null
+        ? Coin.fromPartial(object.returnCoin)
+        : undefined;
     return message;
   },
   fromAmino(object: QuerySwapResponseAmino): QuerySwapResponse {
@@ -302,7 +458,9 @@ export const QuerySwapResponse = {
   },
   toAmino(message: QuerySwapResponse): QuerySwapResponseAmino {
     const obj: any = {};
-    obj.return_coin = message.returnCoin ? Coin.toAmino(message.returnCoin) : undefined;
+    obj.return_coin = message.returnCoin
+      ? Coin.toAmino(message.returnCoin)
+      : undefined;
     return obj;
   },
   fromAminoMsg(object: QuerySwapResponseAminoMsg): QuerySwapResponse {
@@ -316,17 +474,23 @@ export const QuerySwapResponse = {
   },
   toProtoMsg(message: QuerySwapResponse): QuerySwapResponseProtoMsg {
     return {
-      typeUrl: "/symphony.market.v1beta1.QuerySwapResponse",
-      value: QuerySwapResponse.encode(message).finish()
+      typeUrl: '/symphony.market.v1beta1.QuerySwapResponse',
+      value: QuerySwapResponse.encode(message).finish(),
     };
-  }
+  },
 };
 GlobalDecoderRegistry.register(QuerySwapResponse.typeUrl, QuerySwapResponse);
 function createBaseQueryParamsRequest(): QueryParamsRequest {
   return {};
 }
+/**
+ * QueryParamsRequest is the request type for the Query/Params RPC method.
+ * @name QueryParamsRequest
+ * @package symphony.market.v1beta1
+ * @see proto type: symphony.market.v1beta1.QueryParamsRequest
+ */
 export const QueryParamsRequest = {
-  typeUrl: "/symphony.market.v1beta1.QueryParamsRequest",
+  typeUrl: '/symphony.market.v1beta1.QueryParamsRequest',
   is(o: any): o is QueryParamsRequest {
     return o && o.$typeUrl === QueryParamsRequest.typeUrl;
   },
@@ -336,11 +500,18 @@ export const QueryParamsRequest = {
   isAmino(o: any): o is QueryParamsRequestAmino {
     return o && o.$typeUrl === QueryParamsRequest.typeUrl;
   },
-  encode(_: QueryParamsRequest, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
+  encode(
+    _: QueryParamsRequest,
+    writer: BinaryWriter = BinaryWriter.create(),
+  ): BinaryWriter {
     return writer;
   },
-  decode(input: BinaryReader | Uint8Array, length?: number): QueryParamsRequest {
-    const reader = input instanceof BinaryReader ? input : new BinaryReader(input);
+  decode(
+    input: BinaryReader | Uint8Array,
+    length?: number,
+  ): QueryParamsRequest {
+    const reader =
+      input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseQueryParamsRequest();
     while (reader.pos < end) {
@@ -376,36 +547,57 @@ export const QueryParamsRequest = {
   },
   toProtoMsg(message: QueryParamsRequest): QueryParamsRequestProtoMsg {
     return {
-      typeUrl: "/symphony.market.v1beta1.QueryParamsRequest",
-      value: QueryParamsRequest.encode(message).finish()
+      typeUrl: '/symphony.market.v1beta1.QueryParamsRequest',
+      value: QueryParamsRequest.encode(message).finish(),
     };
-  }
+  },
 };
 GlobalDecoderRegistry.register(QueryParamsRequest.typeUrl, QueryParamsRequest);
 function createBaseQueryParamsResponse(): QueryParamsResponse {
   return {
-    params: Params.fromPartial({})
+    params: Params.fromPartial({}),
   };
 }
+/**
+ * QueryParamsResponse is the response type for the Query/Params RPC method.
+ * @name QueryParamsResponse
+ * @package symphony.market.v1beta1
+ * @see proto type: symphony.market.v1beta1.QueryParamsResponse
+ */
 export const QueryParamsResponse = {
-  typeUrl: "/symphony.market.v1beta1.QueryParamsResponse",
+  typeUrl: '/symphony.market.v1beta1.QueryParamsResponse',
   is(o: any): o is QueryParamsResponse {
-    return o && (o.$typeUrl === QueryParamsResponse.typeUrl || Params.is(o.params));
+    return (
+      o && (o.$typeUrl === QueryParamsResponse.typeUrl || Params.is(o.params))
+    );
   },
   isSDK(o: any): o is QueryParamsResponseSDKType {
-    return o && (o.$typeUrl === QueryParamsResponse.typeUrl || Params.isSDK(o.params));
+    return (
+      o &&
+      (o.$typeUrl === QueryParamsResponse.typeUrl || Params.isSDK(o.params))
+    );
   },
   isAmino(o: any): o is QueryParamsResponseAmino {
-    return o && (o.$typeUrl === QueryParamsResponse.typeUrl || Params.isAmino(o.params));
+    return (
+      o &&
+      (o.$typeUrl === QueryParamsResponse.typeUrl || Params.isAmino(o.params))
+    );
   },
-  encode(message: QueryParamsResponse, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
+  encode(
+    message: QueryParamsResponse,
+    writer: BinaryWriter = BinaryWriter.create(),
+  ): BinaryWriter {
     if (message.params !== undefined) {
       Params.encode(message.params, writer.uint32(10).fork()).ldelim();
     }
     return writer;
   },
-  decode(input: BinaryReader | Uint8Array, length?: number): QueryParamsResponse {
-    const reader = input instanceof BinaryReader ? input : new BinaryReader(input);
+  decode(
+    input: BinaryReader | Uint8Array,
+    length?: number,
+  ): QueryParamsResponse {
+    const reader =
+      input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseQueryParamsResponse();
     while (reader.pos < end) {
@@ -423,7 +615,10 @@ export const QueryParamsResponse = {
   },
   fromPartial(object: Partial<QueryParamsResponse>): QueryParamsResponse {
     const message = createBaseQueryParamsResponse();
-    message.params = object.params !== undefined && object.params !== null ? Params.fromPartial(object.params) : undefined;
+    message.params =
+      object.params !== undefined && object.params !== null
+        ? Params.fromPartial(object.params)
+        : undefined;
     return message;
   },
   fromAmino(object: QueryParamsResponseAmino): QueryParamsResponse {
@@ -449,17 +644,27 @@ export const QueryParamsResponse = {
   },
   toProtoMsg(message: QueryParamsResponse): QueryParamsResponseProtoMsg {
     return {
-      typeUrl: "/symphony.market.v1beta1.QueryParamsResponse",
-      value: QueryParamsResponse.encode(message).finish()
+      typeUrl: '/symphony.market.v1beta1.QueryParamsResponse',
+      value: QueryParamsResponse.encode(message).finish(),
     };
-  }
+  },
 };
-GlobalDecoderRegistry.register(QueryParamsResponse.typeUrl, QueryParamsResponse);
+GlobalDecoderRegistry.register(
+  QueryParamsResponse.typeUrl,
+  QueryParamsResponse,
+);
 function createBaseQueryExchangeRequirementsRequest(): QueryExchangeRequirementsRequest {
   return {};
 }
+/**
+ * QueryExchangeRequirementsRequest is the request type for the
+ * Query/ExchangeRequirements RPC method.
+ * @name QueryExchangeRequirementsRequest
+ * @package symphony.market.v1beta1
+ * @see proto type: symphony.market.v1beta1.QueryExchangeRequirementsRequest
+ */
 export const QueryExchangeRequirementsRequest = {
-  typeUrl: "/symphony.market.v1beta1.QueryExchangeRequirementsRequest",
+  typeUrl: '/symphony.market.v1beta1.QueryExchangeRequirementsRequest',
   is(o: any): o is QueryExchangeRequirementsRequest {
     return o && o.$typeUrl === QueryExchangeRequirementsRequest.typeUrl;
   },
@@ -469,11 +674,18 @@ export const QueryExchangeRequirementsRequest = {
   isAmino(o: any): o is QueryExchangeRequirementsRequestAmino {
     return o && o.$typeUrl === QueryExchangeRequirementsRequest.typeUrl;
   },
-  encode(_: QueryExchangeRequirementsRequest, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
+  encode(
+    _: QueryExchangeRequirementsRequest,
+    writer: BinaryWriter = BinaryWriter.create(),
+  ): BinaryWriter {
     return writer;
   },
-  decode(input: BinaryReader | Uint8Array, length?: number): QueryExchangeRequirementsRequest {
-    const reader = input instanceof BinaryReader ? input : new BinaryReader(input);
+  decode(
+    input: BinaryReader | Uint8Array,
+    length?: number,
+  ): QueryExchangeRequirementsRequest {
+    const reader =
+      input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseQueryExchangeRequirementsRequest();
     while (reader.pos < end) {
@@ -486,53 +698,99 @@ export const QueryExchangeRequirementsRequest = {
     }
     return message;
   },
-  fromPartial(_: Partial<QueryExchangeRequirementsRequest>): QueryExchangeRequirementsRequest {
+  fromPartial(
+    _: Partial<QueryExchangeRequirementsRequest>,
+  ): QueryExchangeRequirementsRequest {
     const message = createBaseQueryExchangeRequirementsRequest();
     return message;
   },
-  fromAmino(_: QueryExchangeRequirementsRequestAmino): QueryExchangeRequirementsRequest {
+  fromAmino(
+    _: QueryExchangeRequirementsRequestAmino,
+  ): QueryExchangeRequirementsRequest {
     const message = createBaseQueryExchangeRequirementsRequest();
     return message;
   },
-  toAmino(_: QueryExchangeRequirementsRequest): QueryExchangeRequirementsRequestAmino {
+  toAmino(
+    _: QueryExchangeRequirementsRequest,
+  ): QueryExchangeRequirementsRequestAmino {
     const obj: any = {};
     return obj;
   },
-  fromAminoMsg(object: QueryExchangeRequirementsRequestAminoMsg): QueryExchangeRequirementsRequest {
+  fromAminoMsg(
+    object: QueryExchangeRequirementsRequestAminoMsg,
+  ): QueryExchangeRequirementsRequest {
     return QueryExchangeRequirementsRequest.fromAmino(object.value);
   },
-  fromProtoMsg(message: QueryExchangeRequirementsRequestProtoMsg): QueryExchangeRequirementsRequest {
+  fromProtoMsg(
+    message: QueryExchangeRequirementsRequestProtoMsg,
+  ): QueryExchangeRequirementsRequest {
     return QueryExchangeRequirementsRequest.decode(message.value);
   },
   toProto(message: QueryExchangeRequirementsRequest): Uint8Array {
     return QueryExchangeRequirementsRequest.encode(message).finish();
   },
-  toProtoMsg(message: QueryExchangeRequirementsRequest): QueryExchangeRequirementsRequestProtoMsg {
+  toProtoMsg(
+    message: QueryExchangeRequirementsRequest,
+  ): QueryExchangeRequirementsRequestProtoMsg {
     return {
-      typeUrl: "/symphony.market.v1beta1.QueryExchangeRequirementsRequest",
-      value: QueryExchangeRequirementsRequest.encode(message).finish()
+      typeUrl: '/symphony.market.v1beta1.QueryExchangeRequirementsRequest',
+      value: QueryExchangeRequirementsRequest.encode(message).finish(),
     };
-  }
+  },
 };
-GlobalDecoderRegistry.register(QueryExchangeRequirementsRequest.typeUrl, QueryExchangeRequirementsRequest);
+GlobalDecoderRegistry.register(
+  QueryExchangeRequirementsRequest.typeUrl,
+  QueryExchangeRequirementsRequest,
+);
 function createBaseQueryExchangeRequirementsResponse(): QueryExchangeRequirementsResponse {
   return {
     exchangeRequirements: [],
-    total: Coin.fromPartial({})
+    total: Coin.fromPartial({}),
   };
 }
+/**
+ * QueryExchangeRequirementsResponse is the response type for the
+ * Query/ExchangeRequirements RPC method.
+ * @name QueryExchangeRequirementsResponse
+ * @package symphony.market.v1beta1
+ * @see proto type: symphony.market.v1beta1.QueryExchangeRequirementsResponse
+ */
 export const QueryExchangeRequirementsResponse = {
-  typeUrl: "/symphony.market.v1beta1.QueryExchangeRequirementsResponse",
+  typeUrl: '/symphony.market.v1beta1.QueryExchangeRequirementsResponse',
   is(o: any): o is QueryExchangeRequirementsResponse {
-    return o && (o.$typeUrl === QueryExchangeRequirementsResponse.typeUrl || Array.isArray(o.exchangeRequirements) && (!o.exchangeRequirements.length || ExchangeRequirement.is(o.exchangeRequirements[0])) && Coin.is(o.total));
+    return (
+      o &&
+      (o.$typeUrl === QueryExchangeRequirementsResponse.typeUrl ||
+        (Array.isArray(o.exchangeRequirements) &&
+          (!o.exchangeRequirements.length ||
+            ExchangeRequirement.is(o.exchangeRequirements[0])) &&
+          Coin.is(o.total)))
+    );
   },
   isSDK(o: any): o is QueryExchangeRequirementsResponseSDKType {
-    return o && (o.$typeUrl === QueryExchangeRequirementsResponse.typeUrl || Array.isArray(o.exchange_requirements) && (!o.exchange_requirements.length || ExchangeRequirement.isSDK(o.exchange_requirements[0])) && Coin.isSDK(o.total));
+    return (
+      o &&
+      (o.$typeUrl === QueryExchangeRequirementsResponse.typeUrl ||
+        (Array.isArray(o.exchange_requirements) &&
+          (!o.exchange_requirements.length ||
+            ExchangeRequirement.isSDK(o.exchange_requirements[0])) &&
+          Coin.isSDK(o.total)))
+    );
   },
   isAmino(o: any): o is QueryExchangeRequirementsResponseAmino {
-    return o && (o.$typeUrl === QueryExchangeRequirementsResponse.typeUrl || Array.isArray(o.exchange_requirements) && (!o.exchange_requirements.length || ExchangeRequirement.isAmino(o.exchange_requirements[0])) && Coin.isAmino(o.total));
+    return (
+      o &&
+      (o.$typeUrl === QueryExchangeRequirementsResponse.typeUrl ||
+        (Array.isArray(o.exchange_requirements) &&
+          (!o.exchange_requirements.length ||
+            ExchangeRequirement.isAmino(o.exchange_requirements[0])) &&
+          Coin.isAmino(o.total)))
+    );
   },
-  encode(message: QueryExchangeRequirementsResponse, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
+  encode(
+    message: QueryExchangeRequirementsResponse,
+    writer: BinaryWriter = BinaryWriter.create(),
+  ): BinaryWriter {
     for (const v of message.exchangeRequirements) {
       ExchangeRequirement.encode(v!, writer.uint32(10).fork()).ldelim();
     }
@@ -541,15 +799,21 @@ export const QueryExchangeRequirementsResponse = {
     }
     return writer;
   },
-  decode(input: BinaryReader | Uint8Array, length?: number): QueryExchangeRequirementsResponse {
-    const reader = input instanceof BinaryReader ? input : new BinaryReader(input);
+  decode(
+    input: BinaryReader | Uint8Array,
+    length?: number,
+  ): QueryExchangeRequirementsResponse {
+    const reader =
+      input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseQueryExchangeRequirementsResponse();
     while (reader.pos < end) {
       const tag = reader.uint32();
       switch (tag >>> 3) {
         case 1:
-          message.exchangeRequirements.push(ExchangeRequirement.decode(reader, reader.uint32()));
+          message.exchangeRequirements.push(
+            ExchangeRequirement.decode(reader, reader.uint32()),
+          );
           break;
         case 2:
           message.total = Coin.decode(reader, reader.uint32());
@@ -561,75 +825,127 @@ export const QueryExchangeRequirementsResponse = {
     }
     return message;
   },
-  fromPartial(object: Partial<QueryExchangeRequirementsResponse>): QueryExchangeRequirementsResponse {
+  fromPartial(
+    object: Partial<QueryExchangeRequirementsResponse>,
+  ): QueryExchangeRequirementsResponse {
     const message = createBaseQueryExchangeRequirementsResponse();
-    message.exchangeRequirements = object.exchangeRequirements?.map(e => ExchangeRequirement.fromPartial(e)) || [];
-    message.total = object.total !== undefined && object.total !== null ? Coin.fromPartial(object.total) : undefined;
+    message.exchangeRequirements =
+      object.exchangeRequirements?.map(e =>
+        ExchangeRequirement.fromPartial(e),
+      ) || [];
+    message.total =
+      object.total !== undefined && object.total !== null
+        ? Coin.fromPartial(object.total)
+        : undefined;
     return message;
   },
-  fromAmino(object: QueryExchangeRequirementsResponseAmino): QueryExchangeRequirementsResponse {
+  fromAmino(
+    object: QueryExchangeRequirementsResponseAmino,
+  ): QueryExchangeRequirementsResponse {
     const message = createBaseQueryExchangeRequirementsResponse();
-    message.exchangeRequirements = object.exchange_requirements?.map(e => ExchangeRequirement.fromAmino(e)) || [];
+    message.exchangeRequirements =
+      object.exchange_requirements?.map(e =>
+        ExchangeRequirement.fromAmino(e),
+      ) || [];
     if (object.total !== undefined && object.total !== null) {
       message.total = Coin.fromAmino(object.total);
     }
     return message;
   },
-  toAmino(message: QueryExchangeRequirementsResponse): QueryExchangeRequirementsResponseAmino {
+  toAmino(
+    message: QueryExchangeRequirementsResponse,
+  ): QueryExchangeRequirementsResponseAmino {
     const obj: any = {};
     if (message.exchangeRequirements) {
-      obj.exchange_requirements = message.exchangeRequirements.map(e => e ? ExchangeRequirement.toAmino(e) : undefined);
+      obj.exchange_requirements = message.exchangeRequirements.map(e =>
+        e ? ExchangeRequirement.toAmino(e) : undefined,
+      );
     } else {
       obj.exchange_requirements = message.exchangeRequirements;
     }
     obj.total = message.total ? Coin.toAmino(message.total) : undefined;
     return obj;
   },
-  fromAminoMsg(object: QueryExchangeRequirementsResponseAminoMsg): QueryExchangeRequirementsResponse {
+  fromAminoMsg(
+    object: QueryExchangeRequirementsResponseAminoMsg,
+  ): QueryExchangeRequirementsResponse {
     return QueryExchangeRequirementsResponse.fromAmino(object.value);
   },
-  fromProtoMsg(message: QueryExchangeRequirementsResponseProtoMsg): QueryExchangeRequirementsResponse {
+  fromProtoMsg(
+    message: QueryExchangeRequirementsResponseProtoMsg,
+  ): QueryExchangeRequirementsResponse {
     return QueryExchangeRequirementsResponse.decode(message.value);
   },
   toProto(message: QueryExchangeRequirementsResponse): Uint8Array {
     return QueryExchangeRequirementsResponse.encode(message).finish();
   },
-  toProtoMsg(message: QueryExchangeRequirementsResponse): QueryExchangeRequirementsResponseProtoMsg {
+  toProtoMsg(
+    message: QueryExchangeRequirementsResponse,
+  ): QueryExchangeRequirementsResponseProtoMsg {
     return {
-      typeUrl: "/symphony.market.v1beta1.QueryExchangeRequirementsResponse",
-      value: QueryExchangeRequirementsResponse.encode(message).finish()
+      typeUrl: '/symphony.market.v1beta1.QueryExchangeRequirementsResponse',
+      value: QueryExchangeRequirementsResponse.encode(message).finish(),
     };
-  }
+  },
 };
-GlobalDecoderRegistry.register(QueryExchangeRequirementsResponse.typeUrl, QueryExchangeRequirementsResponse);
+GlobalDecoderRegistry.register(
+  QueryExchangeRequirementsResponse.typeUrl,
+  QueryExchangeRequirementsResponse,
+);
 function createBaseExchangeRequirement(): ExchangeRequirement {
   return {
     baseCurrency: Coin.fromPartial({}),
-    exchangeRate: ""
+    exchangeRate: '',
   };
 }
+/**
+ * @name ExchangeRequirement
+ * @package symphony.market.v1beta1
+ * @see proto type: symphony.market.v1beta1.ExchangeRequirement
+ */
 export const ExchangeRequirement = {
-  typeUrl: "/symphony.market.v1beta1.ExchangeRequirement",
+  typeUrl: '/symphony.market.v1beta1.ExchangeRequirement',
   is(o: any): o is ExchangeRequirement {
-    return o && (o.$typeUrl === ExchangeRequirement.typeUrl || Coin.is(o.baseCurrency) && typeof o.exchangeRate === "string");
+    return (
+      o &&
+      (o.$typeUrl === ExchangeRequirement.typeUrl ||
+        (Coin.is(o.baseCurrency) && typeof o.exchangeRate === 'string'))
+    );
   },
   isSDK(o: any): o is ExchangeRequirementSDKType {
-    return o && (o.$typeUrl === ExchangeRequirement.typeUrl || Coin.isSDK(o.base_currency) && typeof o.exchange_rate === "string");
+    return (
+      o &&
+      (o.$typeUrl === ExchangeRequirement.typeUrl ||
+        (Coin.isSDK(o.base_currency) && typeof o.exchange_rate === 'string'))
+    );
   },
   isAmino(o: any): o is ExchangeRequirementAmino {
-    return o && (o.$typeUrl === ExchangeRequirement.typeUrl || Coin.isAmino(o.base_currency) && typeof o.exchange_rate === "string");
+    return (
+      o &&
+      (o.$typeUrl === ExchangeRequirement.typeUrl ||
+        (Coin.isAmino(o.base_currency) && typeof o.exchange_rate === 'string'))
+    );
   },
-  encode(message: ExchangeRequirement, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
+  encode(
+    message: ExchangeRequirement,
+    writer: BinaryWriter = BinaryWriter.create(),
+  ): BinaryWriter {
     if (message.baseCurrency !== undefined) {
       Coin.encode(message.baseCurrency, writer.uint32(10).fork()).ldelim();
     }
-    if (message.exchangeRate !== "") {
-      writer.uint32(18).string(Decimal.fromUserInput(message.exchangeRate, 18).atomics);
+    if (message.exchangeRate !== '') {
+      writer
+        .uint32(18)
+        .string(Decimal.fromUserInput(message.exchangeRate, 18).atomics);
     }
     return writer;
   },
-  decode(input: BinaryReader | Uint8Array, length?: number): ExchangeRequirement {
-    const reader = input instanceof BinaryReader ? input : new BinaryReader(input);
+  decode(
+    input: BinaryReader | Uint8Array,
+    length?: number,
+  ): ExchangeRequirement {
+    const reader =
+      input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseExchangeRequirement();
     while (reader.pos < end) {
@@ -639,7 +955,10 @@ export const ExchangeRequirement = {
           message.baseCurrency = Coin.decode(reader, reader.uint32());
           break;
         case 2:
-          message.exchangeRate = Decimal.fromAtomics(reader.string(), 18).toString();
+          message.exchangeRate = Decimal.fromAtomics(
+            reader.string(),
+            18,
+          ).toString();
           break;
         default:
           reader.skipType(tag & 7);
@@ -650,8 +969,11 @@ export const ExchangeRequirement = {
   },
   fromPartial(object: Partial<ExchangeRequirement>): ExchangeRequirement {
     const message = createBaseExchangeRequirement();
-    message.baseCurrency = object.baseCurrency !== undefined && object.baseCurrency !== null ? Coin.fromPartial(object.baseCurrency) : undefined;
-    message.exchangeRate = object.exchangeRate ?? "";
+    message.baseCurrency =
+      object.baseCurrency !== undefined && object.baseCurrency !== null
+        ? Coin.fromPartial(object.baseCurrency)
+        : undefined;
+    message.exchangeRate = object.exchangeRate ?? '';
     return message;
   },
   fromAmino(object: ExchangeRequirementAmino): ExchangeRequirement {
@@ -666,8 +988,11 @@ export const ExchangeRequirement = {
   },
   toAmino(message: ExchangeRequirement): ExchangeRequirementAmino {
     const obj: any = {};
-    obj.base_currency = message.baseCurrency ? Coin.toAmino(message.baseCurrency) : undefined;
-    obj.exchange_rate = message.exchangeRate === "" ? undefined : message.exchangeRate;
+    obj.base_currency = message.baseCurrency
+      ? Coin.toAmino(message.baseCurrency)
+      : undefined;
+    obj.exchange_rate =
+      message.exchangeRate === '' ? undefined : message.exchangeRate;
     return obj;
   },
   fromAminoMsg(object: ExchangeRequirementAminoMsg): ExchangeRequirement {
@@ -681,9 +1006,12 @@ export const ExchangeRequirement = {
   },
   toProtoMsg(message: ExchangeRequirement): ExchangeRequirementProtoMsg {
     return {
-      typeUrl: "/symphony.market.v1beta1.ExchangeRequirement",
-      value: ExchangeRequirement.encode(message).finish()
+      typeUrl: '/symphony.market.v1beta1.ExchangeRequirement',
+      value: ExchangeRequirement.encode(message).finish(),
     };
-  }
+  },
 };
-GlobalDecoderRegistry.register(ExchangeRequirement.typeUrl, ExchangeRequirement);
+GlobalDecoderRegistry.register(
+  ExchangeRequirement.typeUrl,
+  ExchangeRequirement,
+);

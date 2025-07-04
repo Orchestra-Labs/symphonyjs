@@ -1,712 +1,1328 @@
 //@ts-nocheck
-import { Timestamp } from "../../google/protobuf/timestamp";
-import { Duration, DurationAmino, DurationSDKType } from "../../google/protobuf/duration";
-import { Coin, CoinAmino, CoinSDKType } from "../../cosmos/base/v1beta1/coin";
-import { PeriodLock, PeriodLockAmino, PeriodLockSDKType, SyntheticLock, SyntheticLockAmino, SyntheticLockSDKType } from "./lock";
-import { Params, ParamsAmino, ParamsSDKType } from "./params";
-import { BinaryReader, BinaryWriter } from "../../binary";
-import { GlobalDecoderRegistry } from "../../registry";
-import { toTimestamp, fromTimestamp } from "../../helpers";
+import { Timestamp } from '../../google/protobuf/timestamp';
+import {
+  Duration,
+  DurationAmino,
+  DurationSDKType,
+} from '../../google/protobuf/duration';
+import { Coin, CoinAmino, CoinSDKType } from '../../cosmos/base/v1beta1/coin';
+import {
+  PeriodLock,
+  PeriodLockAmino,
+  PeriodLockSDKType,
+  SyntheticLock,
+  SyntheticLockAmino,
+  SyntheticLockSDKType,
+} from './lock';
+import { Params, ParamsAmino, ParamsSDKType } from './params';
+import { BinaryReader, BinaryWriter } from '../../binary';
+import { GlobalDecoderRegistry } from '../../registry';
+import { toTimestamp, fromTimestamp } from '../../helpers';
+/**
+ * @name ModuleBalanceRequest
+ * @package symphony.lockup
+ * @see proto type: symphony.lockup.ModuleBalanceRequest
+ */
 export interface ModuleBalanceRequest {}
 export interface ModuleBalanceRequestProtoMsg {
-  typeUrl: "/symphony.lockup.ModuleBalanceRequest";
+  typeUrl: '/symphony.lockup.ModuleBalanceRequest';
   value: Uint8Array;
 }
+/**
+ * @name ModuleBalanceRequestAmino
+ * @package symphony.lockup
+ * @see proto type: symphony.lockup.ModuleBalanceRequest
+ */
 export interface ModuleBalanceRequestAmino {}
 export interface ModuleBalanceRequestAminoMsg {
-  type: "/symphony.lockup.ModuleBalanceRequest";
+  type: '/symphony.lockup.ModuleBalanceRequest';
   value: ModuleBalanceRequestAmino;
 }
+/**
+ * @name ModuleBalanceRequestSDKType
+ * @package symphony.lockup
+ * @see proto type: symphony.lockup.ModuleBalanceRequest
+ */
 export interface ModuleBalanceRequestSDKType {}
+/**
+ * @name ModuleBalanceResponse
+ * @package symphony.lockup
+ * @see proto type: symphony.lockup.ModuleBalanceResponse
+ */
 export interface ModuleBalanceResponse {
   coins: Coin[];
 }
 export interface ModuleBalanceResponseProtoMsg {
-  typeUrl: "/symphony.lockup.ModuleBalanceResponse";
+  typeUrl: '/symphony.lockup.ModuleBalanceResponse';
   value: Uint8Array;
 }
+/**
+ * @name ModuleBalanceResponseAmino
+ * @package symphony.lockup
+ * @see proto type: symphony.lockup.ModuleBalanceResponse
+ */
 export interface ModuleBalanceResponseAmino {
   coins?: CoinAmino[];
 }
 export interface ModuleBalanceResponseAminoMsg {
-  type: "/symphony.lockup.ModuleBalanceResponse";
+  type: '/symphony.lockup.ModuleBalanceResponse';
   value: ModuleBalanceResponseAmino;
 }
+/**
+ * @name ModuleBalanceResponseSDKType
+ * @package symphony.lockup
+ * @see proto type: symphony.lockup.ModuleBalanceResponse
+ */
 export interface ModuleBalanceResponseSDKType {
   coins: CoinSDKType[];
 }
+/**
+ * @name ModuleLockedAmountRequest
+ * @package symphony.lockup
+ * @see proto type: symphony.lockup.ModuleLockedAmountRequest
+ */
 export interface ModuleLockedAmountRequest {}
 export interface ModuleLockedAmountRequestProtoMsg {
-  typeUrl: "/symphony.lockup.ModuleLockedAmountRequest";
+  typeUrl: '/symphony.lockup.ModuleLockedAmountRequest';
   value: Uint8Array;
 }
+/**
+ * @name ModuleLockedAmountRequestAmino
+ * @package symphony.lockup
+ * @see proto type: symphony.lockup.ModuleLockedAmountRequest
+ */
 export interface ModuleLockedAmountRequestAmino {}
 export interface ModuleLockedAmountRequestAminoMsg {
-  type: "/symphony.lockup.ModuleLockedAmountRequest";
+  type: '/symphony.lockup.ModuleLockedAmountRequest';
   value: ModuleLockedAmountRequestAmino;
 }
+/**
+ * @name ModuleLockedAmountRequestSDKType
+ * @package symphony.lockup
+ * @see proto type: symphony.lockup.ModuleLockedAmountRequest
+ */
 export interface ModuleLockedAmountRequestSDKType {}
+/**
+ * @name ModuleLockedAmountResponse
+ * @package symphony.lockup
+ * @see proto type: symphony.lockup.ModuleLockedAmountResponse
+ */
 export interface ModuleLockedAmountResponse {
   coins: Coin[];
 }
 export interface ModuleLockedAmountResponseProtoMsg {
-  typeUrl: "/symphony.lockup.ModuleLockedAmountResponse";
+  typeUrl: '/symphony.lockup.ModuleLockedAmountResponse';
   value: Uint8Array;
 }
+/**
+ * @name ModuleLockedAmountResponseAmino
+ * @package symphony.lockup
+ * @see proto type: symphony.lockup.ModuleLockedAmountResponse
+ */
 export interface ModuleLockedAmountResponseAmino {
   coins?: CoinAmino[];
 }
 export interface ModuleLockedAmountResponseAminoMsg {
-  type: "/symphony.lockup.ModuleLockedAmountResponse";
+  type: '/symphony.lockup.ModuleLockedAmountResponse';
   value: ModuleLockedAmountResponseAmino;
 }
+/**
+ * @name ModuleLockedAmountResponseSDKType
+ * @package symphony.lockup
+ * @see proto type: symphony.lockup.ModuleLockedAmountResponse
+ */
 export interface ModuleLockedAmountResponseSDKType {
   coins: CoinSDKType[];
 }
+/**
+ * @name AccountUnlockableCoinsRequest
+ * @package symphony.lockup
+ * @see proto type: symphony.lockup.AccountUnlockableCoinsRequest
+ */
 export interface AccountUnlockableCoinsRequest {
   owner: string;
 }
 export interface AccountUnlockableCoinsRequestProtoMsg {
-  typeUrl: "/symphony.lockup.AccountUnlockableCoinsRequest";
+  typeUrl: '/symphony.lockup.AccountUnlockableCoinsRequest';
   value: Uint8Array;
 }
+/**
+ * @name AccountUnlockableCoinsRequestAmino
+ * @package symphony.lockup
+ * @see proto type: symphony.lockup.AccountUnlockableCoinsRequest
+ */
 export interface AccountUnlockableCoinsRequestAmino {
   owner?: string;
 }
 export interface AccountUnlockableCoinsRequestAminoMsg {
-  type: "/symphony.lockup.AccountUnlockableCoinsRequest";
+  type: '/symphony.lockup.AccountUnlockableCoinsRequest';
   value: AccountUnlockableCoinsRequestAmino;
 }
+/**
+ * @name AccountUnlockableCoinsRequestSDKType
+ * @package symphony.lockup
+ * @see proto type: symphony.lockup.AccountUnlockableCoinsRequest
+ */
 export interface AccountUnlockableCoinsRequestSDKType {
   owner: string;
 }
+/**
+ * @name AccountUnlockableCoinsResponse
+ * @package symphony.lockup
+ * @see proto type: symphony.lockup.AccountUnlockableCoinsResponse
+ */
 export interface AccountUnlockableCoinsResponse {
   coins: Coin[];
 }
 export interface AccountUnlockableCoinsResponseProtoMsg {
-  typeUrl: "/symphony.lockup.AccountUnlockableCoinsResponse";
+  typeUrl: '/symphony.lockup.AccountUnlockableCoinsResponse';
   value: Uint8Array;
 }
+/**
+ * @name AccountUnlockableCoinsResponseAmino
+ * @package symphony.lockup
+ * @see proto type: symphony.lockup.AccountUnlockableCoinsResponse
+ */
 export interface AccountUnlockableCoinsResponseAmino {
   coins?: CoinAmino[];
 }
 export interface AccountUnlockableCoinsResponseAminoMsg {
-  type: "/symphony.lockup.AccountUnlockableCoinsResponse";
+  type: '/symphony.lockup.AccountUnlockableCoinsResponse';
   value: AccountUnlockableCoinsResponseAmino;
 }
+/**
+ * @name AccountUnlockableCoinsResponseSDKType
+ * @package symphony.lockup
+ * @see proto type: symphony.lockup.AccountUnlockableCoinsResponse
+ */
 export interface AccountUnlockableCoinsResponseSDKType {
   coins: CoinSDKType[];
 }
+/**
+ * @name AccountUnlockingCoinsRequest
+ * @package symphony.lockup
+ * @see proto type: symphony.lockup.AccountUnlockingCoinsRequest
+ */
 export interface AccountUnlockingCoinsRequest {
   owner: string;
 }
 export interface AccountUnlockingCoinsRequestProtoMsg {
-  typeUrl: "/symphony.lockup.AccountUnlockingCoinsRequest";
+  typeUrl: '/symphony.lockup.AccountUnlockingCoinsRequest';
   value: Uint8Array;
 }
+/**
+ * @name AccountUnlockingCoinsRequestAmino
+ * @package symphony.lockup
+ * @see proto type: symphony.lockup.AccountUnlockingCoinsRequest
+ */
 export interface AccountUnlockingCoinsRequestAmino {
   owner?: string;
 }
 export interface AccountUnlockingCoinsRequestAminoMsg {
-  type: "/symphony.lockup.AccountUnlockingCoinsRequest";
+  type: '/symphony.lockup.AccountUnlockingCoinsRequest';
   value: AccountUnlockingCoinsRequestAmino;
 }
+/**
+ * @name AccountUnlockingCoinsRequestSDKType
+ * @package symphony.lockup
+ * @see proto type: symphony.lockup.AccountUnlockingCoinsRequest
+ */
 export interface AccountUnlockingCoinsRequestSDKType {
   owner: string;
 }
+/**
+ * @name AccountUnlockingCoinsResponse
+ * @package symphony.lockup
+ * @see proto type: symphony.lockup.AccountUnlockingCoinsResponse
+ */
 export interface AccountUnlockingCoinsResponse {
   coins: Coin[];
 }
 export interface AccountUnlockingCoinsResponseProtoMsg {
-  typeUrl: "/symphony.lockup.AccountUnlockingCoinsResponse";
+  typeUrl: '/symphony.lockup.AccountUnlockingCoinsResponse';
   value: Uint8Array;
 }
+/**
+ * @name AccountUnlockingCoinsResponseAmino
+ * @package symphony.lockup
+ * @see proto type: symphony.lockup.AccountUnlockingCoinsResponse
+ */
 export interface AccountUnlockingCoinsResponseAmino {
   coins?: CoinAmino[];
 }
 export interface AccountUnlockingCoinsResponseAminoMsg {
-  type: "/symphony.lockup.AccountUnlockingCoinsResponse";
+  type: '/symphony.lockup.AccountUnlockingCoinsResponse';
   value: AccountUnlockingCoinsResponseAmino;
 }
+/**
+ * @name AccountUnlockingCoinsResponseSDKType
+ * @package symphony.lockup
+ * @see proto type: symphony.lockup.AccountUnlockingCoinsResponse
+ */
 export interface AccountUnlockingCoinsResponseSDKType {
   coins: CoinSDKType[];
 }
+/**
+ * @name AccountLockedCoinsRequest
+ * @package symphony.lockup
+ * @see proto type: symphony.lockup.AccountLockedCoinsRequest
+ */
 export interface AccountLockedCoinsRequest {
   owner: string;
 }
 export interface AccountLockedCoinsRequestProtoMsg {
-  typeUrl: "/symphony.lockup.AccountLockedCoinsRequest";
+  typeUrl: '/symphony.lockup.AccountLockedCoinsRequest';
   value: Uint8Array;
 }
+/**
+ * @name AccountLockedCoinsRequestAmino
+ * @package symphony.lockup
+ * @see proto type: symphony.lockup.AccountLockedCoinsRequest
+ */
 export interface AccountLockedCoinsRequestAmino {
   owner?: string;
 }
 export interface AccountLockedCoinsRequestAminoMsg {
-  type: "/symphony.lockup.AccountLockedCoinsRequest";
+  type: '/symphony.lockup.AccountLockedCoinsRequest';
   value: AccountLockedCoinsRequestAmino;
 }
+/**
+ * @name AccountLockedCoinsRequestSDKType
+ * @package symphony.lockup
+ * @see proto type: symphony.lockup.AccountLockedCoinsRequest
+ */
 export interface AccountLockedCoinsRequestSDKType {
   owner: string;
 }
+/**
+ * @name AccountLockedCoinsResponse
+ * @package symphony.lockup
+ * @see proto type: symphony.lockup.AccountLockedCoinsResponse
+ */
 export interface AccountLockedCoinsResponse {
   coins: Coin[];
 }
 export interface AccountLockedCoinsResponseProtoMsg {
-  typeUrl: "/symphony.lockup.AccountLockedCoinsResponse";
+  typeUrl: '/symphony.lockup.AccountLockedCoinsResponse';
   value: Uint8Array;
 }
+/**
+ * @name AccountLockedCoinsResponseAmino
+ * @package symphony.lockup
+ * @see proto type: symphony.lockup.AccountLockedCoinsResponse
+ */
 export interface AccountLockedCoinsResponseAmino {
   coins?: CoinAmino[];
 }
 export interface AccountLockedCoinsResponseAminoMsg {
-  type: "/symphony.lockup.AccountLockedCoinsResponse";
+  type: '/symphony.lockup.AccountLockedCoinsResponse';
   value: AccountLockedCoinsResponseAmino;
 }
+/**
+ * @name AccountLockedCoinsResponseSDKType
+ * @package symphony.lockup
+ * @see proto type: symphony.lockup.AccountLockedCoinsResponse
+ */
 export interface AccountLockedCoinsResponseSDKType {
   coins: CoinSDKType[];
 }
+/**
+ * @name AccountLockedPastTimeRequest
+ * @package symphony.lockup
+ * @see proto type: symphony.lockup.AccountLockedPastTimeRequest
+ */
 export interface AccountLockedPastTimeRequest {
   owner: string;
   timestamp: Date;
 }
 export interface AccountLockedPastTimeRequestProtoMsg {
-  typeUrl: "/symphony.lockup.AccountLockedPastTimeRequest";
+  typeUrl: '/symphony.lockup.AccountLockedPastTimeRequest';
   value: Uint8Array;
 }
+/**
+ * @name AccountLockedPastTimeRequestAmino
+ * @package symphony.lockup
+ * @see proto type: symphony.lockup.AccountLockedPastTimeRequest
+ */
 export interface AccountLockedPastTimeRequestAmino {
   owner?: string;
   timestamp?: string;
 }
 export interface AccountLockedPastTimeRequestAminoMsg {
-  type: "/symphony.lockup.AccountLockedPastTimeRequest";
+  type: '/symphony.lockup.AccountLockedPastTimeRequest';
   value: AccountLockedPastTimeRequestAmino;
 }
+/**
+ * @name AccountLockedPastTimeRequestSDKType
+ * @package symphony.lockup
+ * @see proto type: symphony.lockup.AccountLockedPastTimeRequest
+ */
 export interface AccountLockedPastTimeRequestSDKType {
   owner: string;
   timestamp: Date;
 }
+/**
+ * @name AccountLockedPastTimeResponse
+ * @package symphony.lockup
+ * @see proto type: symphony.lockup.AccountLockedPastTimeResponse
+ */
 export interface AccountLockedPastTimeResponse {
   locks: PeriodLock[];
 }
 export interface AccountLockedPastTimeResponseProtoMsg {
-  typeUrl: "/symphony.lockup.AccountLockedPastTimeResponse";
+  typeUrl: '/symphony.lockup.AccountLockedPastTimeResponse';
   value: Uint8Array;
 }
+/**
+ * @name AccountLockedPastTimeResponseAmino
+ * @package symphony.lockup
+ * @see proto type: symphony.lockup.AccountLockedPastTimeResponse
+ */
 export interface AccountLockedPastTimeResponseAmino {
   locks?: PeriodLockAmino[];
 }
 export interface AccountLockedPastTimeResponseAminoMsg {
-  type: "/symphony.lockup.AccountLockedPastTimeResponse";
+  type: '/symphony.lockup.AccountLockedPastTimeResponse';
   value: AccountLockedPastTimeResponseAmino;
 }
+/**
+ * @name AccountLockedPastTimeResponseSDKType
+ * @package symphony.lockup
+ * @see proto type: symphony.lockup.AccountLockedPastTimeResponse
+ */
 export interface AccountLockedPastTimeResponseSDKType {
   locks: PeriodLockSDKType[];
 }
+/**
+ * @name AccountLockedPastTimeNotUnlockingOnlyRequest
+ * @package symphony.lockup
+ * @see proto type: symphony.lockup.AccountLockedPastTimeNotUnlockingOnlyRequest
+ */
 export interface AccountLockedPastTimeNotUnlockingOnlyRequest {
   owner: string;
   timestamp: Date;
 }
 export interface AccountLockedPastTimeNotUnlockingOnlyRequestProtoMsg {
-  typeUrl: "/symphony.lockup.AccountLockedPastTimeNotUnlockingOnlyRequest";
+  typeUrl: '/symphony.lockup.AccountLockedPastTimeNotUnlockingOnlyRequest';
   value: Uint8Array;
 }
+/**
+ * @name AccountLockedPastTimeNotUnlockingOnlyRequestAmino
+ * @package symphony.lockup
+ * @see proto type: symphony.lockup.AccountLockedPastTimeNotUnlockingOnlyRequest
+ */
 export interface AccountLockedPastTimeNotUnlockingOnlyRequestAmino {
   owner?: string;
   timestamp?: string;
 }
 export interface AccountLockedPastTimeNotUnlockingOnlyRequestAminoMsg {
-  type: "/symphony.lockup.AccountLockedPastTimeNotUnlockingOnlyRequest";
+  type: '/symphony.lockup.AccountLockedPastTimeNotUnlockingOnlyRequest';
   value: AccountLockedPastTimeNotUnlockingOnlyRequestAmino;
 }
+/**
+ * @name AccountLockedPastTimeNotUnlockingOnlyRequestSDKType
+ * @package symphony.lockup
+ * @see proto type: symphony.lockup.AccountLockedPastTimeNotUnlockingOnlyRequest
+ */
 export interface AccountLockedPastTimeNotUnlockingOnlyRequestSDKType {
   owner: string;
   timestamp: Date;
 }
+/**
+ * @name AccountLockedPastTimeNotUnlockingOnlyResponse
+ * @package symphony.lockup
+ * @see proto type: symphony.lockup.AccountLockedPastTimeNotUnlockingOnlyResponse
+ */
 export interface AccountLockedPastTimeNotUnlockingOnlyResponse {
   locks: PeriodLock[];
 }
 export interface AccountLockedPastTimeNotUnlockingOnlyResponseProtoMsg {
-  typeUrl: "/symphony.lockup.AccountLockedPastTimeNotUnlockingOnlyResponse";
+  typeUrl: '/symphony.lockup.AccountLockedPastTimeNotUnlockingOnlyResponse';
   value: Uint8Array;
 }
+/**
+ * @name AccountLockedPastTimeNotUnlockingOnlyResponseAmino
+ * @package symphony.lockup
+ * @see proto type: symphony.lockup.AccountLockedPastTimeNotUnlockingOnlyResponse
+ */
 export interface AccountLockedPastTimeNotUnlockingOnlyResponseAmino {
   locks?: PeriodLockAmino[];
 }
 export interface AccountLockedPastTimeNotUnlockingOnlyResponseAminoMsg {
-  type: "/symphony.lockup.AccountLockedPastTimeNotUnlockingOnlyResponse";
+  type: '/symphony.lockup.AccountLockedPastTimeNotUnlockingOnlyResponse';
   value: AccountLockedPastTimeNotUnlockingOnlyResponseAmino;
 }
+/**
+ * @name AccountLockedPastTimeNotUnlockingOnlyResponseSDKType
+ * @package symphony.lockup
+ * @see proto type: symphony.lockup.AccountLockedPastTimeNotUnlockingOnlyResponse
+ */
 export interface AccountLockedPastTimeNotUnlockingOnlyResponseSDKType {
   locks: PeriodLockSDKType[];
 }
+/**
+ * @name AccountUnlockedBeforeTimeRequest
+ * @package symphony.lockup
+ * @see proto type: symphony.lockup.AccountUnlockedBeforeTimeRequest
+ */
 export interface AccountUnlockedBeforeTimeRequest {
   owner: string;
   timestamp: Date;
 }
 export interface AccountUnlockedBeforeTimeRequestProtoMsg {
-  typeUrl: "/symphony.lockup.AccountUnlockedBeforeTimeRequest";
+  typeUrl: '/symphony.lockup.AccountUnlockedBeforeTimeRequest';
   value: Uint8Array;
 }
+/**
+ * @name AccountUnlockedBeforeTimeRequestAmino
+ * @package symphony.lockup
+ * @see proto type: symphony.lockup.AccountUnlockedBeforeTimeRequest
+ */
 export interface AccountUnlockedBeforeTimeRequestAmino {
   owner?: string;
   timestamp?: string;
 }
 export interface AccountUnlockedBeforeTimeRequestAminoMsg {
-  type: "/symphony.lockup.AccountUnlockedBeforeTimeRequest";
+  type: '/symphony.lockup.AccountUnlockedBeforeTimeRequest';
   value: AccountUnlockedBeforeTimeRequestAmino;
 }
+/**
+ * @name AccountUnlockedBeforeTimeRequestSDKType
+ * @package symphony.lockup
+ * @see proto type: symphony.lockup.AccountUnlockedBeforeTimeRequest
+ */
 export interface AccountUnlockedBeforeTimeRequestSDKType {
   owner: string;
   timestamp: Date;
 }
+/**
+ * @name AccountUnlockedBeforeTimeResponse
+ * @package symphony.lockup
+ * @see proto type: symphony.lockup.AccountUnlockedBeforeTimeResponse
+ */
 export interface AccountUnlockedBeforeTimeResponse {
   locks: PeriodLock[];
 }
 export interface AccountUnlockedBeforeTimeResponseProtoMsg {
-  typeUrl: "/symphony.lockup.AccountUnlockedBeforeTimeResponse";
+  typeUrl: '/symphony.lockup.AccountUnlockedBeforeTimeResponse';
   value: Uint8Array;
 }
+/**
+ * @name AccountUnlockedBeforeTimeResponseAmino
+ * @package symphony.lockup
+ * @see proto type: symphony.lockup.AccountUnlockedBeforeTimeResponse
+ */
 export interface AccountUnlockedBeforeTimeResponseAmino {
   locks?: PeriodLockAmino[];
 }
 export interface AccountUnlockedBeforeTimeResponseAminoMsg {
-  type: "/symphony.lockup.AccountUnlockedBeforeTimeResponse";
+  type: '/symphony.lockup.AccountUnlockedBeforeTimeResponse';
   value: AccountUnlockedBeforeTimeResponseAmino;
 }
+/**
+ * @name AccountUnlockedBeforeTimeResponseSDKType
+ * @package symphony.lockup
+ * @see proto type: symphony.lockup.AccountUnlockedBeforeTimeResponse
+ */
 export interface AccountUnlockedBeforeTimeResponseSDKType {
   locks: PeriodLockSDKType[];
 }
+/**
+ * @name AccountLockedPastTimeDenomRequest
+ * @package symphony.lockup
+ * @see proto type: symphony.lockup.AccountLockedPastTimeDenomRequest
+ */
 export interface AccountLockedPastTimeDenomRequest {
   owner: string;
   timestamp: Date;
   denom: string;
 }
 export interface AccountLockedPastTimeDenomRequestProtoMsg {
-  typeUrl: "/symphony.lockup.AccountLockedPastTimeDenomRequest";
+  typeUrl: '/symphony.lockup.AccountLockedPastTimeDenomRequest';
   value: Uint8Array;
 }
+/**
+ * @name AccountLockedPastTimeDenomRequestAmino
+ * @package symphony.lockup
+ * @see proto type: symphony.lockup.AccountLockedPastTimeDenomRequest
+ */
 export interface AccountLockedPastTimeDenomRequestAmino {
   owner?: string;
   timestamp?: string;
   denom?: string;
 }
 export interface AccountLockedPastTimeDenomRequestAminoMsg {
-  type: "/symphony.lockup.AccountLockedPastTimeDenomRequest";
+  type: '/symphony.lockup.AccountLockedPastTimeDenomRequest';
   value: AccountLockedPastTimeDenomRequestAmino;
 }
+/**
+ * @name AccountLockedPastTimeDenomRequestSDKType
+ * @package symphony.lockup
+ * @see proto type: symphony.lockup.AccountLockedPastTimeDenomRequest
+ */
 export interface AccountLockedPastTimeDenomRequestSDKType {
   owner: string;
   timestamp: Date;
   denom: string;
 }
+/**
+ * @name AccountLockedPastTimeDenomResponse
+ * @package symphony.lockup
+ * @see proto type: symphony.lockup.AccountLockedPastTimeDenomResponse
+ */
 export interface AccountLockedPastTimeDenomResponse {
   locks: PeriodLock[];
 }
 export interface AccountLockedPastTimeDenomResponseProtoMsg {
-  typeUrl: "/symphony.lockup.AccountLockedPastTimeDenomResponse";
+  typeUrl: '/symphony.lockup.AccountLockedPastTimeDenomResponse';
   value: Uint8Array;
 }
+/**
+ * @name AccountLockedPastTimeDenomResponseAmino
+ * @package symphony.lockup
+ * @see proto type: symphony.lockup.AccountLockedPastTimeDenomResponse
+ */
 export interface AccountLockedPastTimeDenomResponseAmino {
   locks?: PeriodLockAmino[];
 }
 export interface AccountLockedPastTimeDenomResponseAminoMsg {
-  type: "/symphony.lockup.AccountLockedPastTimeDenomResponse";
+  type: '/symphony.lockup.AccountLockedPastTimeDenomResponse';
   value: AccountLockedPastTimeDenomResponseAmino;
 }
+/**
+ * @name AccountLockedPastTimeDenomResponseSDKType
+ * @package symphony.lockup
+ * @see proto type: symphony.lockup.AccountLockedPastTimeDenomResponse
+ */
 export interface AccountLockedPastTimeDenomResponseSDKType {
   locks: PeriodLockSDKType[];
 }
+/**
+ * @name LockedDenomRequest
+ * @package symphony.lockup
+ * @see proto type: symphony.lockup.LockedDenomRequest
+ */
 export interface LockedDenomRequest {
   denom: string;
   duration: Duration;
 }
 export interface LockedDenomRequestProtoMsg {
-  typeUrl: "/symphony.lockup.LockedDenomRequest";
+  typeUrl: '/symphony.lockup.LockedDenomRequest';
   value: Uint8Array;
 }
+/**
+ * @name LockedDenomRequestAmino
+ * @package symphony.lockup
+ * @see proto type: symphony.lockup.LockedDenomRequest
+ */
 export interface LockedDenomRequestAmino {
   denom?: string;
   duration?: DurationAmino;
 }
 export interface LockedDenomRequestAminoMsg {
-  type: "/symphony.lockup.LockedDenomRequest";
+  type: '/symphony.lockup.LockedDenomRequest';
   value: LockedDenomRequestAmino;
 }
+/**
+ * @name LockedDenomRequestSDKType
+ * @package symphony.lockup
+ * @see proto type: symphony.lockup.LockedDenomRequest
+ */
 export interface LockedDenomRequestSDKType {
   denom: string;
   duration: DurationSDKType;
 }
+/**
+ * @name LockedDenomResponse
+ * @package symphony.lockup
+ * @see proto type: symphony.lockup.LockedDenomResponse
+ */
 export interface LockedDenomResponse {
   amount: string;
 }
 export interface LockedDenomResponseProtoMsg {
-  typeUrl: "/symphony.lockup.LockedDenomResponse";
+  typeUrl: '/symphony.lockup.LockedDenomResponse';
   value: Uint8Array;
 }
+/**
+ * @name LockedDenomResponseAmino
+ * @package symphony.lockup
+ * @see proto type: symphony.lockup.LockedDenomResponse
+ */
 export interface LockedDenomResponseAmino {
   amount?: string;
 }
 export interface LockedDenomResponseAminoMsg {
-  type: "/symphony.lockup.LockedDenomResponse";
+  type: '/symphony.lockup.LockedDenomResponse';
   value: LockedDenomResponseAmino;
 }
+/**
+ * @name LockedDenomResponseSDKType
+ * @package symphony.lockup
+ * @see proto type: symphony.lockup.LockedDenomResponse
+ */
 export interface LockedDenomResponseSDKType {
   amount: string;
 }
+/**
+ * @name LockedRequest
+ * @package symphony.lockup
+ * @see proto type: symphony.lockup.LockedRequest
+ */
 export interface LockedRequest {
   lockId: bigint;
 }
 export interface LockedRequestProtoMsg {
-  typeUrl: "/symphony.lockup.LockedRequest";
+  typeUrl: '/symphony.lockup.LockedRequest';
   value: Uint8Array;
 }
+/**
+ * @name LockedRequestAmino
+ * @package symphony.lockup
+ * @see proto type: symphony.lockup.LockedRequest
+ */
 export interface LockedRequestAmino {
   lock_id?: string;
 }
 export interface LockedRequestAminoMsg {
-  type: "/symphony.lockup.LockedRequest";
+  type: '/symphony.lockup.LockedRequest';
   value: LockedRequestAmino;
 }
+/**
+ * @name LockedRequestSDKType
+ * @package symphony.lockup
+ * @see proto type: symphony.lockup.LockedRequest
+ */
 export interface LockedRequestSDKType {
   lock_id: bigint;
 }
+/**
+ * @name LockedResponse
+ * @package symphony.lockup
+ * @see proto type: symphony.lockup.LockedResponse
+ */
 export interface LockedResponse {
   lock?: PeriodLock;
 }
 export interface LockedResponseProtoMsg {
-  typeUrl: "/symphony.lockup.LockedResponse";
+  typeUrl: '/symphony.lockup.LockedResponse';
   value: Uint8Array;
 }
+/**
+ * @name LockedResponseAmino
+ * @package symphony.lockup
+ * @see proto type: symphony.lockup.LockedResponse
+ */
 export interface LockedResponseAmino {
   lock?: PeriodLockAmino;
 }
 export interface LockedResponseAminoMsg {
-  type: "/symphony.lockup.LockedResponse";
+  type: '/symphony.lockup.LockedResponse';
   value: LockedResponseAmino;
 }
+/**
+ * @name LockedResponseSDKType
+ * @package symphony.lockup
+ * @see proto type: symphony.lockup.LockedResponse
+ */
 export interface LockedResponseSDKType {
   lock?: PeriodLockSDKType;
 }
+/**
+ * @name LockRewardReceiverRequest
+ * @package symphony.lockup
+ * @see proto type: symphony.lockup.LockRewardReceiverRequest
+ */
 export interface LockRewardReceiverRequest {
   lockId: bigint;
 }
 export interface LockRewardReceiverRequestProtoMsg {
-  typeUrl: "/symphony.lockup.LockRewardReceiverRequest";
+  typeUrl: '/symphony.lockup.LockRewardReceiverRequest';
   value: Uint8Array;
 }
+/**
+ * @name LockRewardReceiverRequestAmino
+ * @package symphony.lockup
+ * @see proto type: symphony.lockup.LockRewardReceiverRequest
+ */
 export interface LockRewardReceiverRequestAmino {
   lock_id?: string;
 }
 export interface LockRewardReceiverRequestAminoMsg {
-  type: "/symphony.lockup.LockRewardReceiverRequest";
+  type: '/symphony.lockup.LockRewardReceiverRequest';
   value: LockRewardReceiverRequestAmino;
 }
+/**
+ * @name LockRewardReceiverRequestSDKType
+ * @package symphony.lockup
+ * @see proto type: symphony.lockup.LockRewardReceiverRequest
+ */
 export interface LockRewardReceiverRequestSDKType {
   lock_id: bigint;
 }
+/**
+ * @name LockRewardReceiverResponse
+ * @package symphony.lockup
+ * @see proto type: symphony.lockup.LockRewardReceiverResponse
+ */
 export interface LockRewardReceiverResponse {
   rewardReceiver: string;
 }
 export interface LockRewardReceiverResponseProtoMsg {
-  typeUrl: "/symphony.lockup.LockRewardReceiverResponse";
+  typeUrl: '/symphony.lockup.LockRewardReceiverResponse';
   value: Uint8Array;
 }
+/**
+ * @name LockRewardReceiverResponseAmino
+ * @package symphony.lockup
+ * @see proto type: symphony.lockup.LockRewardReceiverResponse
+ */
 export interface LockRewardReceiverResponseAmino {
   reward_receiver?: string;
 }
 export interface LockRewardReceiverResponseAminoMsg {
-  type: "/symphony.lockup.LockRewardReceiverResponse";
+  type: '/symphony.lockup.LockRewardReceiverResponse';
   value: LockRewardReceiverResponseAmino;
 }
+/**
+ * @name LockRewardReceiverResponseSDKType
+ * @package symphony.lockup
+ * @see proto type: symphony.lockup.LockRewardReceiverResponse
+ */
 export interface LockRewardReceiverResponseSDKType {
   reward_receiver: string;
 }
+/**
+ * @name NextLockIDRequest
+ * @package symphony.lockup
+ * @see proto type: symphony.lockup.NextLockIDRequest
+ */
 export interface NextLockIDRequest {}
 export interface NextLockIDRequestProtoMsg {
-  typeUrl: "/symphony.lockup.NextLockIDRequest";
+  typeUrl: '/symphony.lockup.NextLockIDRequest';
   value: Uint8Array;
 }
+/**
+ * @name NextLockIDRequestAmino
+ * @package symphony.lockup
+ * @see proto type: symphony.lockup.NextLockIDRequest
+ */
 export interface NextLockIDRequestAmino {}
 export interface NextLockIDRequestAminoMsg {
-  type: "/symphony.lockup.NextLockIDRequest";
+  type: '/symphony.lockup.NextLockIDRequest';
   value: NextLockIDRequestAmino;
 }
+/**
+ * @name NextLockIDRequestSDKType
+ * @package symphony.lockup
+ * @see proto type: symphony.lockup.NextLockIDRequest
+ */
 export interface NextLockIDRequestSDKType {}
+/**
+ * @name NextLockIDResponse
+ * @package symphony.lockup
+ * @see proto type: symphony.lockup.NextLockIDResponse
+ */
 export interface NextLockIDResponse {
   lockId: bigint;
 }
 export interface NextLockIDResponseProtoMsg {
-  typeUrl: "/symphony.lockup.NextLockIDResponse";
+  typeUrl: '/symphony.lockup.NextLockIDResponse';
   value: Uint8Array;
 }
+/**
+ * @name NextLockIDResponseAmino
+ * @package symphony.lockup
+ * @see proto type: symphony.lockup.NextLockIDResponse
+ */
 export interface NextLockIDResponseAmino {
   lock_id?: string;
 }
 export interface NextLockIDResponseAminoMsg {
-  type: "/symphony.lockup.NextLockIDResponse";
+  type: '/symphony.lockup.NextLockIDResponse';
   value: NextLockIDResponseAmino;
 }
+/**
+ * @name NextLockIDResponseSDKType
+ * @package symphony.lockup
+ * @see proto type: symphony.lockup.NextLockIDResponse
+ */
 export interface NextLockIDResponseSDKType {
   lock_id: bigint;
 }
-/** @deprecated */
+/**
+ * @name SyntheticLockupsByLockupIDRequest
+ * @package symphony.lockup
+ * @see proto type: symphony.lockup.SyntheticLockupsByLockupIDRequest
+ * @deprecated
+ */
 export interface SyntheticLockupsByLockupIDRequest {
   lockId: bigint;
 }
 export interface SyntheticLockupsByLockupIDRequestProtoMsg {
-  typeUrl: "/symphony.lockup.SyntheticLockupsByLockupIDRequest";
+  typeUrl: '/symphony.lockup.SyntheticLockupsByLockupIDRequest';
   value: Uint8Array;
 }
-/** @deprecated */
+/**
+ * @name SyntheticLockupsByLockupIDRequestAmino
+ * @package symphony.lockup
+ * @see proto type: symphony.lockup.SyntheticLockupsByLockupIDRequest
+ * @deprecated
+ */
 export interface SyntheticLockupsByLockupIDRequestAmino {
   lock_id?: string;
 }
 export interface SyntheticLockupsByLockupIDRequestAminoMsg {
-  type: "/symphony.lockup.SyntheticLockupsByLockupIDRequest";
+  type: '/symphony.lockup.SyntheticLockupsByLockupIDRequest';
   value: SyntheticLockupsByLockupIDRequestAmino;
 }
-/** @deprecated */
+/**
+ * @name SyntheticLockupsByLockupIDRequestSDKType
+ * @package symphony.lockup
+ * @see proto type: symphony.lockup.SyntheticLockupsByLockupIDRequest
+ * @deprecated
+ */
 export interface SyntheticLockupsByLockupIDRequestSDKType {
   lock_id: bigint;
 }
-/** @deprecated */
+/**
+ * @name SyntheticLockupsByLockupIDResponse
+ * @package symphony.lockup
+ * @see proto type: symphony.lockup.SyntheticLockupsByLockupIDResponse
+ * @deprecated
+ */
 export interface SyntheticLockupsByLockupIDResponse {
   syntheticLocks: SyntheticLock[];
 }
 export interface SyntheticLockupsByLockupIDResponseProtoMsg {
-  typeUrl: "/symphony.lockup.SyntheticLockupsByLockupIDResponse";
+  typeUrl: '/symphony.lockup.SyntheticLockupsByLockupIDResponse';
   value: Uint8Array;
 }
-/** @deprecated */
+/**
+ * @name SyntheticLockupsByLockupIDResponseAmino
+ * @package symphony.lockup
+ * @see proto type: symphony.lockup.SyntheticLockupsByLockupIDResponse
+ * @deprecated
+ */
 export interface SyntheticLockupsByLockupIDResponseAmino {
   synthetic_locks?: SyntheticLockAmino[];
 }
 export interface SyntheticLockupsByLockupIDResponseAminoMsg {
-  type: "/symphony.lockup.SyntheticLockupsByLockupIDResponse";
+  type: '/symphony.lockup.SyntheticLockupsByLockupIDResponse';
   value: SyntheticLockupsByLockupIDResponseAmino;
 }
-/** @deprecated */
+/**
+ * @name SyntheticLockupsByLockupIDResponseSDKType
+ * @package symphony.lockup
+ * @see proto type: symphony.lockup.SyntheticLockupsByLockupIDResponse
+ * @deprecated
+ */
 export interface SyntheticLockupsByLockupIDResponseSDKType {
   synthetic_locks: SyntheticLockSDKType[];
 }
+/**
+ * @name SyntheticLockupByLockupIDRequest
+ * @package symphony.lockup
+ * @see proto type: symphony.lockup.SyntheticLockupByLockupIDRequest
+ */
 export interface SyntheticLockupByLockupIDRequest {
   lockId: bigint;
 }
 export interface SyntheticLockupByLockupIDRequestProtoMsg {
-  typeUrl: "/symphony.lockup.SyntheticLockupByLockupIDRequest";
+  typeUrl: '/symphony.lockup.SyntheticLockupByLockupIDRequest';
   value: Uint8Array;
 }
+/**
+ * @name SyntheticLockupByLockupIDRequestAmino
+ * @package symphony.lockup
+ * @see proto type: symphony.lockup.SyntheticLockupByLockupIDRequest
+ */
 export interface SyntheticLockupByLockupIDRequestAmino {
   lock_id?: string;
 }
 export interface SyntheticLockupByLockupIDRequestAminoMsg {
-  type: "/symphony.lockup.SyntheticLockupByLockupIDRequest";
+  type: '/symphony.lockup.SyntheticLockupByLockupIDRequest';
   value: SyntheticLockupByLockupIDRequestAmino;
 }
+/**
+ * @name SyntheticLockupByLockupIDRequestSDKType
+ * @package symphony.lockup
+ * @see proto type: symphony.lockup.SyntheticLockupByLockupIDRequest
+ */
 export interface SyntheticLockupByLockupIDRequestSDKType {
   lock_id: bigint;
 }
+/**
+ * @name SyntheticLockupByLockupIDResponse
+ * @package symphony.lockup
+ * @see proto type: symphony.lockup.SyntheticLockupByLockupIDResponse
+ */
 export interface SyntheticLockupByLockupIDResponse {
   syntheticLock: SyntheticLock;
 }
 export interface SyntheticLockupByLockupIDResponseProtoMsg {
-  typeUrl: "/symphony.lockup.SyntheticLockupByLockupIDResponse";
+  typeUrl: '/symphony.lockup.SyntheticLockupByLockupIDResponse';
   value: Uint8Array;
 }
+/**
+ * @name SyntheticLockupByLockupIDResponseAmino
+ * @package symphony.lockup
+ * @see proto type: symphony.lockup.SyntheticLockupByLockupIDResponse
+ */
 export interface SyntheticLockupByLockupIDResponseAmino {
   synthetic_lock?: SyntheticLockAmino;
 }
 export interface SyntheticLockupByLockupIDResponseAminoMsg {
-  type: "/symphony.lockup.SyntheticLockupByLockupIDResponse";
+  type: '/symphony.lockup.SyntheticLockupByLockupIDResponse';
   value: SyntheticLockupByLockupIDResponseAmino;
 }
+/**
+ * @name SyntheticLockupByLockupIDResponseSDKType
+ * @package symphony.lockup
+ * @see proto type: symphony.lockup.SyntheticLockupByLockupIDResponse
+ */
 export interface SyntheticLockupByLockupIDResponseSDKType {
   synthetic_lock: SyntheticLockSDKType;
 }
+/**
+ * @name AccountLockedLongerDurationRequest
+ * @package symphony.lockup
+ * @see proto type: symphony.lockup.AccountLockedLongerDurationRequest
+ */
 export interface AccountLockedLongerDurationRequest {
   owner: string;
   duration: Duration;
 }
 export interface AccountLockedLongerDurationRequestProtoMsg {
-  typeUrl: "/symphony.lockup.AccountLockedLongerDurationRequest";
+  typeUrl: '/symphony.lockup.AccountLockedLongerDurationRequest';
   value: Uint8Array;
 }
+/**
+ * @name AccountLockedLongerDurationRequestAmino
+ * @package symphony.lockup
+ * @see proto type: symphony.lockup.AccountLockedLongerDurationRequest
+ */
 export interface AccountLockedLongerDurationRequestAmino {
   owner?: string;
   duration?: DurationAmino;
 }
 export interface AccountLockedLongerDurationRequestAminoMsg {
-  type: "/symphony.lockup.AccountLockedLongerDurationRequest";
+  type: '/symphony.lockup.AccountLockedLongerDurationRequest';
   value: AccountLockedLongerDurationRequestAmino;
 }
+/**
+ * @name AccountLockedLongerDurationRequestSDKType
+ * @package symphony.lockup
+ * @see proto type: symphony.lockup.AccountLockedLongerDurationRequest
+ */
 export interface AccountLockedLongerDurationRequestSDKType {
   owner: string;
   duration: DurationSDKType;
 }
+/**
+ * @name AccountLockedLongerDurationResponse
+ * @package symphony.lockup
+ * @see proto type: symphony.lockup.AccountLockedLongerDurationResponse
+ */
 export interface AccountLockedLongerDurationResponse {
   locks: PeriodLock[];
 }
 export interface AccountLockedLongerDurationResponseProtoMsg {
-  typeUrl: "/symphony.lockup.AccountLockedLongerDurationResponse";
+  typeUrl: '/symphony.lockup.AccountLockedLongerDurationResponse';
   value: Uint8Array;
 }
+/**
+ * @name AccountLockedLongerDurationResponseAmino
+ * @package symphony.lockup
+ * @see proto type: symphony.lockup.AccountLockedLongerDurationResponse
+ */
 export interface AccountLockedLongerDurationResponseAmino {
   locks?: PeriodLockAmino[];
 }
 export interface AccountLockedLongerDurationResponseAminoMsg {
-  type: "/symphony.lockup.AccountLockedLongerDurationResponse";
+  type: '/symphony.lockup.AccountLockedLongerDurationResponse';
   value: AccountLockedLongerDurationResponseAmino;
 }
+/**
+ * @name AccountLockedLongerDurationResponseSDKType
+ * @package symphony.lockup
+ * @see proto type: symphony.lockup.AccountLockedLongerDurationResponse
+ */
 export interface AccountLockedLongerDurationResponseSDKType {
   locks: PeriodLockSDKType[];
 }
+/**
+ * @name AccountLockedDurationRequest
+ * @package symphony.lockup
+ * @see proto type: symphony.lockup.AccountLockedDurationRequest
+ */
 export interface AccountLockedDurationRequest {
   owner: string;
   duration: Duration;
 }
 export interface AccountLockedDurationRequestProtoMsg {
-  typeUrl: "/symphony.lockup.AccountLockedDurationRequest";
+  typeUrl: '/symphony.lockup.AccountLockedDurationRequest';
   value: Uint8Array;
 }
+/**
+ * @name AccountLockedDurationRequestAmino
+ * @package symphony.lockup
+ * @see proto type: symphony.lockup.AccountLockedDurationRequest
+ */
 export interface AccountLockedDurationRequestAmino {
   owner?: string;
   duration?: DurationAmino;
 }
 export interface AccountLockedDurationRequestAminoMsg {
-  type: "/symphony.lockup.AccountLockedDurationRequest";
+  type: '/symphony.lockup.AccountLockedDurationRequest';
   value: AccountLockedDurationRequestAmino;
 }
+/**
+ * @name AccountLockedDurationRequestSDKType
+ * @package symphony.lockup
+ * @see proto type: symphony.lockup.AccountLockedDurationRequest
+ */
 export interface AccountLockedDurationRequestSDKType {
   owner: string;
   duration: DurationSDKType;
 }
+/**
+ * @name AccountLockedDurationResponse
+ * @package symphony.lockup
+ * @see proto type: symphony.lockup.AccountLockedDurationResponse
+ */
 export interface AccountLockedDurationResponse {
   locks: PeriodLock[];
 }
 export interface AccountLockedDurationResponseProtoMsg {
-  typeUrl: "/symphony.lockup.AccountLockedDurationResponse";
+  typeUrl: '/symphony.lockup.AccountLockedDurationResponse';
   value: Uint8Array;
 }
+/**
+ * @name AccountLockedDurationResponseAmino
+ * @package symphony.lockup
+ * @see proto type: symphony.lockup.AccountLockedDurationResponse
+ */
 export interface AccountLockedDurationResponseAmino {
   locks?: PeriodLockAmino[];
 }
 export interface AccountLockedDurationResponseAminoMsg {
-  type: "/symphony.lockup.AccountLockedDurationResponse";
+  type: '/symphony.lockup.AccountLockedDurationResponse';
   value: AccountLockedDurationResponseAmino;
 }
+/**
+ * @name AccountLockedDurationResponseSDKType
+ * @package symphony.lockup
+ * @see proto type: symphony.lockup.AccountLockedDurationResponse
+ */
 export interface AccountLockedDurationResponseSDKType {
   locks: PeriodLockSDKType[];
 }
+/**
+ * @name AccountLockedLongerDurationNotUnlockingOnlyRequest
+ * @package symphony.lockup
+ * @see proto type: symphony.lockup.AccountLockedLongerDurationNotUnlockingOnlyRequest
+ */
 export interface AccountLockedLongerDurationNotUnlockingOnlyRequest {
   owner: string;
   duration: Duration;
 }
 export interface AccountLockedLongerDurationNotUnlockingOnlyRequestProtoMsg {
-  typeUrl: "/symphony.lockup.AccountLockedLongerDurationNotUnlockingOnlyRequest";
+  typeUrl: '/symphony.lockup.AccountLockedLongerDurationNotUnlockingOnlyRequest';
   value: Uint8Array;
 }
+/**
+ * @name AccountLockedLongerDurationNotUnlockingOnlyRequestAmino
+ * @package symphony.lockup
+ * @see proto type: symphony.lockup.AccountLockedLongerDurationNotUnlockingOnlyRequest
+ */
 export interface AccountLockedLongerDurationNotUnlockingOnlyRequestAmino {
   owner?: string;
   duration?: DurationAmino;
 }
 export interface AccountLockedLongerDurationNotUnlockingOnlyRequestAminoMsg {
-  type: "/symphony.lockup.AccountLockedLongerDurationNotUnlockingOnlyRequest";
+  type: '/symphony.lockup.AccountLockedLongerDurationNotUnlockingOnlyRequest';
   value: AccountLockedLongerDurationNotUnlockingOnlyRequestAmino;
 }
+/**
+ * @name AccountLockedLongerDurationNotUnlockingOnlyRequestSDKType
+ * @package symphony.lockup
+ * @see proto type: symphony.lockup.AccountLockedLongerDurationNotUnlockingOnlyRequest
+ */
 export interface AccountLockedLongerDurationNotUnlockingOnlyRequestSDKType {
   owner: string;
   duration: DurationSDKType;
 }
+/**
+ * @name AccountLockedLongerDurationNotUnlockingOnlyResponse
+ * @package symphony.lockup
+ * @see proto type: symphony.lockup.AccountLockedLongerDurationNotUnlockingOnlyResponse
+ */
 export interface AccountLockedLongerDurationNotUnlockingOnlyResponse {
   locks: PeriodLock[];
 }
 export interface AccountLockedLongerDurationNotUnlockingOnlyResponseProtoMsg {
-  typeUrl: "/symphony.lockup.AccountLockedLongerDurationNotUnlockingOnlyResponse";
+  typeUrl: '/symphony.lockup.AccountLockedLongerDurationNotUnlockingOnlyResponse';
   value: Uint8Array;
 }
+/**
+ * @name AccountLockedLongerDurationNotUnlockingOnlyResponseAmino
+ * @package symphony.lockup
+ * @see proto type: symphony.lockup.AccountLockedLongerDurationNotUnlockingOnlyResponse
+ */
 export interface AccountLockedLongerDurationNotUnlockingOnlyResponseAmino {
   locks?: PeriodLockAmino[];
 }
 export interface AccountLockedLongerDurationNotUnlockingOnlyResponseAminoMsg {
-  type: "/symphony.lockup.AccountLockedLongerDurationNotUnlockingOnlyResponse";
+  type: '/symphony.lockup.AccountLockedLongerDurationNotUnlockingOnlyResponse';
   value: AccountLockedLongerDurationNotUnlockingOnlyResponseAmino;
 }
+/**
+ * @name AccountLockedLongerDurationNotUnlockingOnlyResponseSDKType
+ * @package symphony.lockup
+ * @see proto type: symphony.lockup.AccountLockedLongerDurationNotUnlockingOnlyResponse
+ */
 export interface AccountLockedLongerDurationNotUnlockingOnlyResponseSDKType {
   locks: PeriodLockSDKType[];
 }
+/**
+ * @name AccountLockedLongerDurationDenomRequest
+ * @package symphony.lockup
+ * @see proto type: symphony.lockup.AccountLockedLongerDurationDenomRequest
+ */
 export interface AccountLockedLongerDurationDenomRequest {
   owner: string;
   duration: Duration;
   denom: string;
 }
 export interface AccountLockedLongerDurationDenomRequestProtoMsg {
-  typeUrl: "/symphony.lockup.AccountLockedLongerDurationDenomRequest";
+  typeUrl: '/symphony.lockup.AccountLockedLongerDurationDenomRequest';
   value: Uint8Array;
 }
+/**
+ * @name AccountLockedLongerDurationDenomRequestAmino
+ * @package symphony.lockup
+ * @see proto type: symphony.lockup.AccountLockedLongerDurationDenomRequest
+ */
 export interface AccountLockedLongerDurationDenomRequestAmino {
   owner?: string;
   duration?: DurationAmino;
   denom?: string;
 }
 export interface AccountLockedLongerDurationDenomRequestAminoMsg {
-  type: "/symphony.lockup.AccountLockedLongerDurationDenomRequest";
+  type: '/symphony.lockup.AccountLockedLongerDurationDenomRequest';
   value: AccountLockedLongerDurationDenomRequestAmino;
 }
+/**
+ * @name AccountLockedLongerDurationDenomRequestSDKType
+ * @package symphony.lockup
+ * @see proto type: symphony.lockup.AccountLockedLongerDurationDenomRequest
+ */
 export interface AccountLockedLongerDurationDenomRequestSDKType {
   owner: string;
   duration: DurationSDKType;
   denom: string;
 }
+/**
+ * @name AccountLockedLongerDurationDenomResponse
+ * @package symphony.lockup
+ * @see proto type: symphony.lockup.AccountLockedLongerDurationDenomResponse
+ */
 export interface AccountLockedLongerDurationDenomResponse {
   locks: PeriodLock[];
 }
 export interface AccountLockedLongerDurationDenomResponseProtoMsg {
-  typeUrl: "/symphony.lockup.AccountLockedLongerDurationDenomResponse";
+  typeUrl: '/symphony.lockup.AccountLockedLongerDurationDenomResponse';
   value: Uint8Array;
 }
+/**
+ * @name AccountLockedLongerDurationDenomResponseAmino
+ * @package symphony.lockup
+ * @see proto type: symphony.lockup.AccountLockedLongerDurationDenomResponse
+ */
 export interface AccountLockedLongerDurationDenomResponseAmino {
   locks?: PeriodLockAmino[];
 }
 export interface AccountLockedLongerDurationDenomResponseAminoMsg {
-  type: "/symphony.lockup.AccountLockedLongerDurationDenomResponse";
+  type: '/symphony.lockup.AccountLockedLongerDurationDenomResponse';
   value: AccountLockedLongerDurationDenomResponseAmino;
 }
+/**
+ * @name AccountLockedLongerDurationDenomResponseSDKType
+ * @package symphony.lockup
+ * @see proto type: symphony.lockup.AccountLockedLongerDurationDenomResponse
+ */
 export interface AccountLockedLongerDurationDenomResponseSDKType {
   locks: PeriodLockSDKType[];
 }
+/**
+ * @name QueryParamsRequest
+ * @package symphony.lockup
+ * @see proto type: symphony.lockup.QueryParamsRequest
+ */
 export interface QueryParamsRequest {}
 export interface QueryParamsRequestProtoMsg {
-  typeUrl: "/symphony.lockup.QueryParamsRequest";
+  typeUrl: '/symphony.lockup.QueryParamsRequest';
   value: Uint8Array;
 }
+/**
+ * @name QueryParamsRequestAmino
+ * @package symphony.lockup
+ * @see proto type: symphony.lockup.QueryParamsRequest
+ */
 export interface QueryParamsRequestAmino {}
 export interface QueryParamsRequestAminoMsg {
-  type: "/symphony.lockup.QueryParamsRequest";
+  type: '/symphony.lockup.QueryParamsRequest';
   value: QueryParamsRequestAmino;
 }
+/**
+ * @name QueryParamsRequestSDKType
+ * @package symphony.lockup
+ * @see proto type: symphony.lockup.QueryParamsRequest
+ */
 export interface QueryParamsRequestSDKType {}
+/**
+ * @name QueryParamsResponse
+ * @package symphony.lockup
+ * @see proto type: symphony.lockup.QueryParamsResponse
+ */
 export interface QueryParamsResponse {
   params: Params;
 }
 export interface QueryParamsResponseProtoMsg {
-  typeUrl: "/symphony.lockup.QueryParamsResponse";
+  typeUrl: '/symphony.lockup.QueryParamsResponse';
   value: Uint8Array;
 }
+/**
+ * @name QueryParamsResponseAmino
+ * @package symphony.lockup
+ * @see proto type: symphony.lockup.QueryParamsResponse
+ */
 export interface QueryParamsResponseAmino {
   params?: ParamsAmino;
 }
 export interface QueryParamsResponseAminoMsg {
-  type: "/symphony.lockup.QueryParamsResponse";
+  type: '/symphony.lockup.QueryParamsResponse';
   value: QueryParamsResponseAmino;
 }
+/**
+ * @name QueryParamsResponseSDKType
+ * @package symphony.lockup
+ * @see proto type: symphony.lockup.QueryParamsResponse
+ */
 export interface QueryParamsResponseSDKType {
   params: ParamsSDKType;
 }
 function createBaseModuleBalanceRequest(): ModuleBalanceRequest {
   return {};
 }
+/**
+ * @name ModuleBalanceRequest
+ * @package symphony.lockup
+ * @see proto type: symphony.lockup.ModuleBalanceRequest
+ */
 export const ModuleBalanceRequest = {
-  typeUrl: "/symphony.lockup.ModuleBalanceRequest",
+  typeUrl: '/symphony.lockup.ModuleBalanceRequest',
   is(o: any): o is ModuleBalanceRequest {
     return o && o.$typeUrl === ModuleBalanceRequest.typeUrl;
   },
@@ -716,11 +1332,18 @@ export const ModuleBalanceRequest = {
   isAmino(o: any): o is ModuleBalanceRequestAmino {
     return o && o.$typeUrl === ModuleBalanceRequest.typeUrl;
   },
-  encode(_: ModuleBalanceRequest, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
+  encode(
+    _: ModuleBalanceRequest,
+    writer: BinaryWriter = BinaryWriter.create(),
+  ): BinaryWriter {
     return writer;
   },
-  decode(input: BinaryReader | Uint8Array, length?: number): ModuleBalanceRequest {
-    const reader = input instanceof BinaryReader ? input : new BinaryReader(input);
+  decode(
+    input: BinaryReader | Uint8Array,
+    length?: number,
+  ): ModuleBalanceRequest {
+    const reader =
+      input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseModuleBalanceRequest();
     while (reader.pos < end) {
@@ -756,36 +1379,64 @@ export const ModuleBalanceRequest = {
   },
   toProtoMsg(message: ModuleBalanceRequest): ModuleBalanceRequestProtoMsg {
     return {
-      typeUrl: "/symphony.lockup.ModuleBalanceRequest",
-      value: ModuleBalanceRequest.encode(message).finish()
+      typeUrl: '/symphony.lockup.ModuleBalanceRequest',
+      value: ModuleBalanceRequest.encode(message).finish(),
     };
-  }
+  },
 };
-GlobalDecoderRegistry.register(ModuleBalanceRequest.typeUrl, ModuleBalanceRequest);
+GlobalDecoderRegistry.register(
+  ModuleBalanceRequest.typeUrl,
+  ModuleBalanceRequest,
+);
 function createBaseModuleBalanceResponse(): ModuleBalanceResponse {
   return {
-    coins: []
+    coins: [],
   };
 }
+/**
+ * @name ModuleBalanceResponse
+ * @package symphony.lockup
+ * @see proto type: symphony.lockup.ModuleBalanceResponse
+ */
 export const ModuleBalanceResponse = {
-  typeUrl: "/symphony.lockup.ModuleBalanceResponse",
+  typeUrl: '/symphony.lockup.ModuleBalanceResponse',
   is(o: any): o is ModuleBalanceResponse {
-    return o && (o.$typeUrl === ModuleBalanceResponse.typeUrl || Array.isArray(o.coins) && (!o.coins.length || Coin.is(o.coins[0])));
+    return (
+      o &&
+      (o.$typeUrl === ModuleBalanceResponse.typeUrl ||
+        (Array.isArray(o.coins) && (!o.coins.length || Coin.is(o.coins[0]))))
+    );
   },
   isSDK(o: any): o is ModuleBalanceResponseSDKType {
-    return o && (o.$typeUrl === ModuleBalanceResponse.typeUrl || Array.isArray(o.coins) && (!o.coins.length || Coin.isSDK(o.coins[0])));
+    return (
+      o &&
+      (o.$typeUrl === ModuleBalanceResponse.typeUrl ||
+        (Array.isArray(o.coins) && (!o.coins.length || Coin.isSDK(o.coins[0]))))
+    );
   },
   isAmino(o: any): o is ModuleBalanceResponseAmino {
-    return o && (o.$typeUrl === ModuleBalanceResponse.typeUrl || Array.isArray(o.coins) && (!o.coins.length || Coin.isAmino(o.coins[0])));
+    return (
+      o &&
+      (o.$typeUrl === ModuleBalanceResponse.typeUrl ||
+        (Array.isArray(o.coins) &&
+          (!o.coins.length || Coin.isAmino(o.coins[0]))))
+    );
   },
-  encode(message: ModuleBalanceResponse, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
+  encode(
+    message: ModuleBalanceResponse,
+    writer: BinaryWriter = BinaryWriter.create(),
+  ): BinaryWriter {
     for (const v of message.coins) {
       Coin.encode(v!, writer.uint32(10).fork()).ldelim();
     }
     return writer;
   },
-  decode(input: BinaryReader | Uint8Array, length?: number): ModuleBalanceResponse {
-    const reader = input instanceof BinaryReader ? input : new BinaryReader(input);
+  decode(
+    input: BinaryReader | Uint8Array,
+    length?: number,
+  ): ModuleBalanceResponse {
+    const reader =
+      input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseModuleBalanceResponse();
     while (reader.pos < end) {
@@ -814,7 +1465,7 @@ export const ModuleBalanceResponse = {
   toAmino(message: ModuleBalanceResponse): ModuleBalanceResponseAmino {
     const obj: any = {};
     if (message.coins) {
-      obj.coins = message.coins.map(e => e ? Coin.toAmino(e) : undefined);
+      obj.coins = message.coins.map(e => (e ? Coin.toAmino(e) : undefined));
     } else {
       obj.coins = message.coins;
     }
@@ -831,17 +1482,25 @@ export const ModuleBalanceResponse = {
   },
   toProtoMsg(message: ModuleBalanceResponse): ModuleBalanceResponseProtoMsg {
     return {
-      typeUrl: "/symphony.lockup.ModuleBalanceResponse",
-      value: ModuleBalanceResponse.encode(message).finish()
+      typeUrl: '/symphony.lockup.ModuleBalanceResponse',
+      value: ModuleBalanceResponse.encode(message).finish(),
     };
-  }
+  },
 };
-GlobalDecoderRegistry.register(ModuleBalanceResponse.typeUrl, ModuleBalanceResponse);
+GlobalDecoderRegistry.register(
+  ModuleBalanceResponse.typeUrl,
+  ModuleBalanceResponse,
+);
 function createBaseModuleLockedAmountRequest(): ModuleLockedAmountRequest {
   return {};
 }
+/**
+ * @name ModuleLockedAmountRequest
+ * @package symphony.lockup
+ * @see proto type: symphony.lockup.ModuleLockedAmountRequest
+ */
 export const ModuleLockedAmountRequest = {
-  typeUrl: "/symphony.lockup.ModuleLockedAmountRequest",
+  typeUrl: '/symphony.lockup.ModuleLockedAmountRequest',
   is(o: any): o is ModuleLockedAmountRequest {
     return o && o.$typeUrl === ModuleLockedAmountRequest.typeUrl;
   },
@@ -851,11 +1510,18 @@ export const ModuleLockedAmountRequest = {
   isAmino(o: any): o is ModuleLockedAmountRequestAmino {
     return o && o.$typeUrl === ModuleLockedAmountRequest.typeUrl;
   },
-  encode(_: ModuleLockedAmountRequest, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
+  encode(
+    _: ModuleLockedAmountRequest,
+    writer: BinaryWriter = BinaryWriter.create(),
+  ): BinaryWriter {
     return writer;
   },
-  decode(input: BinaryReader | Uint8Array, length?: number): ModuleLockedAmountRequest {
-    const reader = input instanceof BinaryReader ? input : new BinaryReader(input);
+  decode(
+    input: BinaryReader | Uint8Array,
+    length?: number,
+  ): ModuleLockedAmountRequest {
+    const reader =
+      input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseModuleLockedAmountRequest();
     while (reader.pos < end) {
@@ -868,7 +1534,9 @@ export const ModuleLockedAmountRequest = {
     }
     return message;
   },
-  fromPartial(_: Partial<ModuleLockedAmountRequest>): ModuleLockedAmountRequest {
+  fromPartial(
+    _: Partial<ModuleLockedAmountRequest>,
+  ): ModuleLockedAmountRequest {
     const message = createBaseModuleLockedAmountRequest();
     return message;
   },
@@ -880,47 +1548,81 @@ export const ModuleLockedAmountRequest = {
     const obj: any = {};
     return obj;
   },
-  fromAminoMsg(object: ModuleLockedAmountRequestAminoMsg): ModuleLockedAmountRequest {
+  fromAminoMsg(
+    object: ModuleLockedAmountRequestAminoMsg,
+  ): ModuleLockedAmountRequest {
     return ModuleLockedAmountRequest.fromAmino(object.value);
   },
-  fromProtoMsg(message: ModuleLockedAmountRequestProtoMsg): ModuleLockedAmountRequest {
+  fromProtoMsg(
+    message: ModuleLockedAmountRequestProtoMsg,
+  ): ModuleLockedAmountRequest {
     return ModuleLockedAmountRequest.decode(message.value);
   },
   toProto(message: ModuleLockedAmountRequest): Uint8Array {
     return ModuleLockedAmountRequest.encode(message).finish();
   },
-  toProtoMsg(message: ModuleLockedAmountRequest): ModuleLockedAmountRequestProtoMsg {
+  toProtoMsg(
+    message: ModuleLockedAmountRequest,
+  ): ModuleLockedAmountRequestProtoMsg {
     return {
-      typeUrl: "/symphony.lockup.ModuleLockedAmountRequest",
-      value: ModuleLockedAmountRequest.encode(message).finish()
+      typeUrl: '/symphony.lockup.ModuleLockedAmountRequest',
+      value: ModuleLockedAmountRequest.encode(message).finish(),
     };
-  }
+  },
 };
-GlobalDecoderRegistry.register(ModuleLockedAmountRequest.typeUrl, ModuleLockedAmountRequest);
+GlobalDecoderRegistry.register(
+  ModuleLockedAmountRequest.typeUrl,
+  ModuleLockedAmountRequest,
+);
 function createBaseModuleLockedAmountResponse(): ModuleLockedAmountResponse {
   return {
-    coins: []
+    coins: [],
   };
 }
+/**
+ * @name ModuleLockedAmountResponse
+ * @package symphony.lockup
+ * @see proto type: symphony.lockup.ModuleLockedAmountResponse
+ */
 export const ModuleLockedAmountResponse = {
-  typeUrl: "/symphony.lockup.ModuleLockedAmountResponse",
+  typeUrl: '/symphony.lockup.ModuleLockedAmountResponse',
   is(o: any): o is ModuleLockedAmountResponse {
-    return o && (o.$typeUrl === ModuleLockedAmountResponse.typeUrl || Array.isArray(o.coins) && (!o.coins.length || Coin.is(o.coins[0])));
+    return (
+      o &&
+      (o.$typeUrl === ModuleLockedAmountResponse.typeUrl ||
+        (Array.isArray(o.coins) && (!o.coins.length || Coin.is(o.coins[0]))))
+    );
   },
   isSDK(o: any): o is ModuleLockedAmountResponseSDKType {
-    return o && (o.$typeUrl === ModuleLockedAmountResponse.typeUrl || Array.isArray(o.coins) && (!o.coins.length || Coin.isSDK(o.coins[0])));
+    return (
+      o &&
+      (o.$typeUrl === ModuleLockedAmountResponse.typeUrl ||
+        (Array.isArray(o.coins) && (!o.coins.length || Coin.isSDK(o.coins[0]))))
+    );
   },
   isAmino(o: any): o is ModuleLockedAmountResponseAmino {
-    return o && (o.$typeUrl === ModuleLockedAmountResponse.typeUrl || Array.isArray(o.coins) && (!o.coins.length || Coin.isAmino(o.coins[0])));
+    return (
+      o &&
+      (o.$typeUrl === ModuleLockedAmountResponse.typeUrl ||
+        (Array.isArray(o.coins) &&
+          (!o.coins.length || Coin.isAmino(o.coins[0]))))
+    );
   },
-  encode(message: ModuleLockedAmountResponse, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
+  encode(
+    message: ModuleLockedAmountResponse,
+    writer: BinaryWriter = BinaryWriter.create(),
+  ): BinaryWriter {
     for (const v of message.coins) {
       Coin.encode(v!, writer.uint32(10).fork()).ldelim();
     }
     return writer;
   },
-  decode(input: BinaryReader | Uint8Array, length?: number): ModuleLockedAmountResponse {
-    const reader = input instanceof BinaryReader ? input : new BinaryReader(input);
+  decode(
+    input: BinaryReader | Uint8Array,
+    length?: number,
+  ): ModuleLockedAmountResponse {
+    const reader =
+      input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseModuleLockedAmountResponse();
     while (reader.pos < end) {
@@ -936,66 +1638,105 @@ export const ModuleLockedAmountResponse = {
     }
     return message;
   },
-  fromPartial(object: Partial<ModuleLockedAmountResponse>): ModuleLockedAmountResponse {
+  fromPartial(
+    object: Partial<ModuleLockedAmountResponse>,
+  ): ModuleLockedAmountResponse {
     const message = createBaseModuleLockedAmountResponse();
     message.coins = object.coins?.map(e => Coin.fromPartial(e)) || [];
     return message;
   },
-  fromAmino(object: ModuleLockedAmountResponseAmino): ModuleLockedAmountResponse {
+  fromAmino(
+    object: ModuleLockedAmountResponseAmino,
+  ): ModuleLockedAmountResponse {
     const message = createBaseModuleLockedAmountResponse();
     message.coins = object.coins?.map(e => Coin.fromAmino(e)) || [];
     return message;
   },
-  toAmino(message: ModuleLockedAmountResponse): ModuleLockedAmountResponseAmino {
+  toAmino(
+    message: ModuleLockedAmountResponse,
+  ): ModuleLockedAmountResponseAmino {
     const obj: any = {};
     if (message.coins) {
-      obj.coins = message.coins.map(e => e ? Coin.toAmino(e) : undefined);
+      obj.coins = message.coins.map(e => (e ? Coin.toAmino(e) : undefined));
     } else {
       obj.coins = message.coins;
     }
     return obj;
   },
-  fromAminoMsg(object: ModuleLockedAmountResponseAminoMsg): ModuleLockedAmountResponse {
+  fromAminoMsg(
+    object: ModuleLockedAmountResponseAminoMsg,
+  ): ModuleLockedAmountResponse {
     return ModuleLockedAmountResponse.fromAmino(object.value);
   },
-  fromProtoMsg(message: ModuleLockedAmountResponseProtoMsg): ModuleLockedAmountResponse {
+  fromProtoMsg(
+    message: ModuleLockedAmountResponseProtoMsg,
+  ): ModuleLockedAmountResponse {
     return ModuleLockedAmountResponse.decode(message.value);
   },
   toProto(message: ModuleLockedAmountResponse): Uint8Array {
     return ModuleLockedAmountResponse.encode(message).finish();
   },
-  toProtoMsg(message: ModuleLockedAmountResponse): ModuleLockedAmountResponseProtoMsg {
+  toProtoMsg(
+    message: ModuleLockedAmountResponse,
+  ): ModuleLockedAmountResponseProtoMsg {
     return {
-      typeUrl: "/symphony.lockup.ModuleLockedAmountResponse",
-      value: ModuleLockedAmountResponse.encode(message).finish()
+      typeUrl: '/symphony.lockup.ModuleLockedAmountResponse',
+      value: ModuleLockedAmountResponse.encode(message).finish(),
     };
-  }
+  },
 };
-GlobalDecoderRegistry.register(ModuleLockedAmountResponse.typeUrl, ModuleLockedAmountResponse);
+GlobalDecoderRegistry.register(
+  ModuleLockedAmountResponse.typeUrl,
+  ModuleLockedAmountResponse,
+);
 function createBaseAccountUnlockableCoinsRequest(): AccountUnlockableCoinsRequest {
   return {
-    owner: ""
+    owner: '',
   };
 }
+/**
+ * @name AccountUnlockableCoinsRequest
+ * @package symphony.lockup
+ * @see proto type: symphony.lockup.AccountUnlockableCoinsRequest
+ */
 export const AccountUnlockableCoinsRequest = {
-  typeUrl: "/symphony.lockup.AccountUnlockableCoinsRequest",
+  typeUrl: '/symphony.lockup.AccountUnlockableCoinsRequest',
   is(o: any): o is AccountUnlockableCoinsRequest {
-    return o && (o.$typeUrl === AccountUnlockableCoinsRequest.typeUrl || typeof o.owner === "string");
+    return (
+      o &&
+      (o.$typeUrl === AccountUnlockableCoinsRequest.typeUrl ||
+        typeof o.owner === 'string')
+    );
   },
   isSDK(o: any): o is AccountUnlockableCoinsRequestSDKType {
-    return o && (o.$typeUrl === AccountUnlockableCoinsRequest.typeUrl || typeof o.owner === "string");
+    return (
+      o &&
+      (o.$typeUrl === AccountUnlockableCoinsRequest.typeUrl ||
+        typeof o.owner === 'string')
+    );
   },
   isAmino(o: any): o is AccountUnlockableCoinsRequestAmino {
-    return o && (o.$typeUrl === AccountUnlockableCoinsRequest.typeUrl || typeof o.owner === "string");
+    return (
+      o &&
+      (o.$typeUrl === AccountUnlockableCoinsRequest.typeUrl ||
+        typeof o.owner === 'string')
+    );
   },
-  encode(message: AccountUnlockableCoinsRequest, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
-    if (message.owner !== "") {
+  encode(
+    message: AccountUnlockableCoinsRequest,
+    writer: BinaryWriter = BinaryWriter.create(),
+  ): BinaryWriter {
+    if (message.owner !== '') {
       writer.uint32(10).string(message.owner);
     }
     return writer;
   },
-  decode(input: BinaryReader | Uint8Array, length?: number): AccountUnlockableCoinsRequest {
-    const reader = input instanceof BinaryReader ? input : new BinaryReader(input);
+  decode(
+    input: BinaryReader | Uint8Array,
+    length?: number,
+  ): AccountUnlockableCoinsRequest {
+    const reader =
+      input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseAccountUnlockableCoinsRequest();
     while (reader.pos < end) {
@@ -1011,64 +1752,104 @@ export const AccountUnlockableCoinsRequest = {
     }
     return message;
   },
-  fromPartial(object: Partial<AccountUnlockableCoinsRequest>): AccountUnlockableCoinsRequest {
+  fromPartial(
+    object: Partial<AccountUnlockableCoinsRequest>,
+  ): AccountUnlockableCoinsRequest {
     const message = createBaseAccountUnlockableCoinsRequest();
-    message.owner = object.owner ?? "";
+    message.owner = object.owner ?? '';
     return message;
   },
-  fromAmino(object: AccountUnlockableCoinsRequestAmino): AccountUnlockableCoinsRequest {
+  fromAmino(
+    object: AccountUnlockableCoinsRequestAmino,
+  ): AccountUnlockableCoinsRequest {
     const message = createBaseAccountUnlockableCoinsRequest();
     if (object.owner !== undefined && object.owner !== null) {
       message.owner = object.owner;
     }
     return message;
   },
-  toAmino(message: AccountUnlockableCoinsRequest): AccountUnlockableCoinsRequestAmino {
+  toAmino(
+    message: AccountUnlockableCoinsRequest,
+  ): AccountUnlockableCoinsRequestAmino {
     const obj: any = {};
-    obj.owner = message.owner === "" ? undefined : message.owner;
+    obj.owner = message.owner === '' ? undefined : message.owner;
     return obj;
   },
-  fromAminoMsg(object: AccountUnlockableCoinsRequestAminoMsg): AccountUnlockableCoinsRequest {
+  fromAminoMsg(
+    object: AccountUnlockableCoinsRequestAminoMsg,
+  ): AccountUnlockableCoinsRequest {
     return AccountUnlockableCoinsRequest.fromAmino(object.value);
   },
-  fromProtoMsg(message: AccountUnlockableCoinsRequestProtoMsg): AccountUnlockableCoinsRequest {
+  fromProtoMsg(
+    message: AccountUnlockableCoinsRequestProtoMsg,
+  ): AccountUnlockableCoinsRequest {
     return AccountUnlockableCoinsRequest.decode(message.value);
   },
   toProto(message: AccountUnlockableCoinsRequest): Uint8Array {
     return AccountUnlockableCoinsRequest.encode(message).finish();
   },
-  toProtoMsg(message: AccountUnlockableCoinsRequest): AccountUnlockableCoinsRequestProtoMsg {
+  toProtoMsg(
+    message: AccountUnlockableCoinsRequest,
+  ): AccountUnlockableCoinsRequestProtoMsg {
     return {
-      typeUrl: "/symphony.lockup.AccountUnlockableCoinsRequest",
-      value: AccountUnlockableCoinsRequest.encode(message).finish()
+      typeUrl: '/symphony.lockup.AccountUnlockableCoinsRequest',
+      value: AccountUnlockableCoinsRequest.encode(message).finish(),
     };
-  }
+  },
 };
-GlobalDecoderRegistry.register(AccountUnlockableCoinsRequest.typeUrl, AccountUnlockableCoinsRequest);
+GlobalDecoderRegistry.register(
+  AccountUnlockableCoinsRequest.typeUrl,
+  AccountUnlockableCoinsRequest,
+);
 function createBaseAccountUnlockableCoinsResponse(): AccountUnlockableCoinsResponse {
   return {
-    coins: []
+    coins: [],
   };
 }
+/**
+ * @name AccountUnlockableCoinsResponse
+ * @package symphony.lockup
+ * @see proto type: symphony.lockup.AccountUnlockableCoinsResponse
+ */
 export const AccountUnlockableCoinsResponse = {
-  typeUrl: "/symphony.lockup.AccountUnlockableCoinsResponse",
+  typeUrl: '/symphony.lockup.AccountUnlockableCoinsResponse',
   is(o: any): o is AccountUnlockableCoinsResponse {
-    return o && (o.$typeUrl === AccountUnlockableCoinsResponse.typeUrl || Array.isArray(o.coins) && (!o.coins.length || Coin.is(o.coins[0])));
+    return (
+      o &&
+      (o.$typeUrl === AccountUnlockableCoinsResponse.typeUrl ||
+        (Array.isArray(o.coins) && (!o.coins.length || Coin.is(o.coins[0]))))
+    );
   },
   isSDK(o: any): o is AccountUnlockableCoinsResponseSDKType {
-    return o && (o.$typeUrl === AccountUnlockableCoinsResponse.typeUrl || Array.isArray(o.coins) && (!o.coins.length || Coin.isSDK(o.coins[0])));
+    return (
+      o &&
+      (o.$typeUrl === AccountUnlockableCoinsResponse.typeUrl ||
+        (Array.isArray(o.coins) && (!o.coins.length || Coin.isSDK(o.coins[0]))))
+    );
   },
   isAmino(o: any): o is AccountUnlockableCoinsResponseAmino {
-    return o && (o.$typeUrl === AccountUnlockableCoinsResponse.typeUrl || Array.isArray(o.coins) && (!o.coins.length || Coin.isAmino(o.coins[0])));
+    return (
+      o &&
+      (o.$typeUrl === AccountUnlockableCoinsResponse.typeUrl ||
+        (Array.isArray(o.coins) &&
+          (!o.coins.length || Coin.isAmino(o.coins[0]))))
+    );
   },
-  encode(message: AccountUnlockableCoinsResponse, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
+  encode(
+    message: AccountUnlockableCoinsResponse,
+    writer: BinaryWriter = BinaryWriter.create(),
+  ): BinaryWriter {
     for (const v of message.coins) {
       Coin.encode(v!, writer.uint32(10).fork()).ldelim();
     }
     return writer;
   },
-  decode(input: BinaryReader | Uint8Array, length?: number): AccountUnlockableCoinsResponse {
-    const reader = input instanceof BinaryReader ? input : new BinaryReader(input);
+  decode(
+    input: BinaryReader | Uint8Array,
+    length?: number,
+  ): AccountUnlockableCoinsResponse {
+    const reader =
+      input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseAccountUnlockableCoinsResponse();
     while (reader.pos < end) {
@@ -1084,66 +1865,105 @@ export const AccountUnlockableCoinsResponse = {
     }
     return message;
   },
-  fromPartial(object: Partial<AccountUnlockableCoinsResponse>): AccountUnlockableCoinsResponse {
+  fromPartial(
+    object: Partial<AccountUnlockableCoinsResponse>,
+  ): AccountUnlockableCoinsResponse {
     const message = createBaseAccountUnlockableCoinsResponse();
     message.coins = object.coins?.map(e => Coin.fromPartial(e)) || [];
     return message;
   },
-  fromAmino(object: AccountUnlockableCoinsResponseAmino): AccountUnlockableCoinsResponse {
+  fromAmino(
+    object: AccountUnlockableCoinsResponseAmino,
+  ): AccountUnlockableCoinsResponse {
     const message = createBaseAccountUnlockableCoinsResponse();
     message.coins = object.coins?.map(e => Coin.fromAmino(e)) || [];
     return message;
   },
-  toAmino(message: AccountUnlockableCoinsResponse): AccountUnlockableCoinsResponseAmino {
+  toAmino(
+    message: AccountUnlockableCoinsResponse,
+  ): AccountUnlockableCoinsResponseAmino {
     const obj: any = {};
     if (message.coins) {
-      obj.coins = message.coins.map(e => e ? Coin.toAmino(e) : undefined);
+      obj.coins = message.coins.map(e => (e ? Coin.toAmino(e) : undefined));
     } else {
       obj.coins = message.coins;
     }
     return obj;
   },
-  fromAminoMsg(object: AccountUnlockableCoinsResponseAminoMsg): AccountUnlockableCoinsResponse {
+  fromAminoMsg(
+    object: AccountUnlockableCoinsResponseAminoMsg,
+  ): AccountUnlockableCoinsResponse {
     return AccountUnlockableCoinsResponse.fromAmino(object.value);
   },
-  fromProtoMsg(message: AccountUnlockableCoinsResponseProtoMsg): AccountUnlockableCoinsResponse {
+  fromProtoMsg(
+    message: AccountUnlockableCoinsResponseProtoMsg,
+  ): AccountUnlockableCoinsResponse {
     return AccountUnlockableCoinsResponse.decode(message.value);
   },
   toProto(message: AccountUnlockableCoinsResponse): Uint8Array {
     return AccountUnlockableCoinsResponse.encode(message).finish();
   },
-  toProtoMsg(message: AccountUnlockableCoinsResponse): AccountUnlockableCoinsResponseProtoMsg {
+  toProtoMsg(
+    message: AccountUnlockableCoinsResponse,
+  ): AccountUnlockableCoinsResponseProtoMsg {
     return {
-      typeUrl: "/symphony.lockup.AccountUnlockableCoinsResponse",
-      value: AccountUnlockableCoinsResponse.encode(message).finish()
+      typeUrl: '/symphony.lockup.AccountUnlockableCoinsResponse',
+      value: AccountUnlockableCoinsResponse.encode(message).finish(),
     };
-  }
+  },
 };
-GlobalDecoderRegistry.register(AccountUnlockableCoinsResponse.typeUrl, AccountUnlockableCoinsResponse);
+GlobalDecoderRegistry.register(
+  AccountUnlockableCoinsResponse.typeUrl,
+  AccountUnlockableCoinsResponse,
+);
 function createBaseAccountUnlockingCoinsRequest(): AccountUnlockingCoinsRequest {
   return {
-    owner: ""
+    owner: '',
   };
 }
+/**
+ * @name AccountUnlockingCoinsRequest
+ * @package symphony.lockup
+ * @see proto type: symphony.lockup.AccountUnlockingCoinsRequest
+ */
 export const AccountUnlockingCoinsRequest = {
-  typeUrl: "/symphony.lockup.AccountUnlockingCoinsRequest",
+  typeUrl: '/symphony.lockup.AccountUnlockingCoinsRequest',
   is(o: any): o is AccountUnlockingCoinsRequest {
-    return o && (o.$typeUrl === AccountUnlockingCoinsRequest.typeUrl || typeof o.owner === "string");
+    return (
+      o &&
+      (o.$typeUrl === AccountUnlockingCoinsRequest.typeUrl ||
+        typeof o.owner === 'string')
+    );
   },
   isSDK(o: any): o is AccountUnlockingCoinsRequestSDKType {
-    return o && (o.$typeUrl === AccountUnlockingCoinsRequest.typeUrl || typeof o.owner === "string");
+    return (
+      o &&
+      (o.$typeUrl === AccountUnlockingCoinsRequest.typeUrl ||
+        typeof o.owner === 'string')
+    );
   },
   isAmino(o: any): o is AccountUnlockingCoinsRequestAmino {
-    return o && (o.$typeUrl === AccountUnlockingCoinsRequest.typeUrl || typeof o.owner === "string");
+    return (
+      o &&
+      (o.$typeUrl === AccountUnlockingCoinsRequest.typeUrl ||
+        typeof o.owner === 'string')
+    );
   },
-  encode(message: AccountUnlockingCoinsRequest, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
-    if (message.owner !== "") {
+  encode(
+    message: AccountUnlockingCoinsRequest,
+    writer: BinaryWriter = BinaryWriter.create(),
+  ): BinaryWriter {
+    if (message.owner !== '') {
       writer.uint32(10).string(message.owner);
     }
     return writer;
   },
-  decode(input: BinaryReader | Uint8Array, length?: number): AccountUnlockingCoinsRequest {
-    const reader = input instanceof BinaryReader ? input : new BinaryReader(input);
+  decode(
+    input: BinaryReader | Uint8Array,
+    length?: number,
+  ): AccountUnlockingCoinsRequest {
+    const reader =
+      input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseAccountUnlockingCoinsRequest();
     while (reader.pos < end) {
@@ -1159,64 +1979,104 @@ export const AccountUnlockingCoinsRequest = {
     }
     return message;
   },
-  fromPartial(object: Partial<AccountUnlockingCoinsRequest>): AccountUnlockingCoinsRequest {
+  fromPartial(
+    object: Partial<AccountUnlockingCoinsRequest>,
+  ): AccountUnlockingCoinsRequest {
     const message = createBaseAccountUnlockingCoinsRequest();
-    message.owner = object.owner ?? "";
+    message.owner = object.owner ?? '';
     return message;
   },
-  fromAmino(object: AccountUnlockingCoinsRequestAmino): AccountUnlockingCoinsRequest {
+  fromAmino(
+    object: AccountUnlockingCoinsRequestAmino,
+  ): AccountUnlockingCoinsRequest {
     const message = createBaseAccountUnlockingCoinsRequest();
     if (object.owner !== undefined && object.owner !== null) {
       message.owner = object.owner;
     }
     return message;
   },
-  toAmino(message: AccountUnlockingCoinsRequest): AccountUnlockingCoinsRequestAmino {
+  toAmino(
+    message: AccountUnlockingCoinsRequest,
+  ): AccountUnlockingCoinsRequestAmino {
     const obj: any = {};
-    obj.owner = message.owner === "" ? undefined : message.owner;
+    obj.owner = message.owner === '' ? undefined : message.owner;
     return obj;
   },
-  fromAminoMsg(object: AccountUnlockingCoinsRequestAminoMsg): AccountUnlockingCoinsRequest {
+  fromAminoMsg(
+    object: AccountUnlockingCoinsRequestAminoMsg,
+  ): AccountUnlockingCoinsRequest {
     return AccountUnlockingCoinsRequest.fromAmino(object.value);
   },
-  fromProtoMsg(message: AccountUnlockingCoinsRequestProtoMsg): AccountUnlockingCoinsRequest {
+  fromProtoMsg(
+    message: AccountUnlockingCoinsRequestProtoMsg,
+  ): AccountUnlockingCoinsRequest {
     return AccountUnlockingCoinsRequest.decode(message.value);
   },
   toProto(message: AccountUnlockingCoinsRequest): Uint8Array {
     return AccountUnlockingCoinsRequest.encode(message).finish();
   },
-  toProtoMsg(message: AccountUnlockingCoinsRequest): AccountUnlockingCoinsRequestProtoMsg {
+  toProtoMsg(
+    message: AccountUnlockingCoinsRequest,
+  ): AccountUnlockingCoinsRequestProtoMsg {
     return {
-      typeUrl: "/symphony.lockup.AccountUnlockingCoinsRequest",
-      value: AccountUnlockingCoinsRequest.encode(message).finish()
+      typeUrl: '/symphony.lockup.AccountUnlockingCoinsRequest',
+      value: AccountUnlockingCoinsRequest.encode(message).finish(),
     };
-  }
+  },
 };
-GlobalDecoderRegistry.register(AccountUnlockingCoinsRequest.typeUrl, AccountUnlockingCoinsRequest);
+GlobalDecoderRegistry.register(
+  AccountUnlockingCoinsRequest.typeUrl,
+  AccountUnlockingCoinsRequest,
+);
 function createBaseAccountUnlockingCoinsResponse(): AccountUnlockingCoinsResponse {
   return {
-    coins: []
+    coins: [],
   };
 }
+/**
+ * @name AccountUnlockingCoinsResponse
+ * @package symphony.lockup
+ * @see proto type: symphony.lockup.AccountUnlockingCoinsResponse
+ */
 export const AccountUnlockingCoinsResponse = {
-  typeUrl: "/symphony.lockup.AccountUnlockingCoinsResponse",
+  typeUrl: '/symphony.lockup.AccountUnlockingCoinsResponse',
   is(o: any): o is AccountUnlockingCoinsResponse {
-    return o && (o.$typeUrl === AccountUnlockingCoinsResponse.typeUrl || Array.isArray(o.coins) && (!o.coins.length || Coin.is(o.coins[0])));
+    return (
+      o &&
+      (o.$typeUrl === AccountUnlockingCoinsResponse.typeUrl ||
+        (Array.isArray(o.coins) && (!o.coins.length || Coin.is(o.coins[0]))))
+    );
   },
   isSDK(o: any): o is AccountUnlockingCoinsResponseSDKType {
-    return o && (o.$typeUrl === AccountUnlockingCoinsResponse.typeUrl || Array.isArray(o.coins) && (!o.coins.length || Coin.isSDK(o.coins[0])));
+    return (
+      o &&
+      (o.$typeUrl === AccountUnlockingCoinsResponse.typeUrl ||
+        (Array.isArray(o.coins) && (!o.coins.length || Coin.isSDK(o.coins[0]))))
+    );
   },
   isAmino(o: any): o is AccountUnlockingCoinsResponseAmino {
-    return o && (o.$typeUrl === AccountUnlockingCoinsResponse.typeUrl || Array.isArray(o.coins) && (!o.coins.length || Coin.isAmino(o.coins[0])));
+    return (
+      o &&
+      (o.$typeUrl === AccountUnlockingCoinsResponse.typeUrl ||
+        (Array.isArray(o.coins) &&
+          (!o.coins.length || Coin.isAmino(o.coins[0]))))
+    );
   },
-  encode(message: AccountUnlockingCoinsResponse, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
+  encode(
+    message: AccountUnlockingCoinsResponse,
+    writer: BinaryWriter = BinaryWriter.create(),
+  ): BinaryWriter {
     for (const v of message.coins) {
       Coin.encode(v!, writer.uint32(10).fork()).ldelim();
     }
     return writer;
   },
-  decode(input: BinaryReader | Uint8Array, length?: number): AccountUnlockingCoinsResponse {
-    const reader = input instanceof BinaryReader ? input : new BinaryReader(input);
+  decode(
+    input: BinaryReader | Uint8Array,
+    length?: number,
+  ): AccountUnlockingCoinsResponse {
+    const reader =
+      input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseAccountUnlockingCoinsResponse();
     while (reader.pos < end) {
@@ -1232,66 +2092,105 @@ export const AccountUnlockingCoinsResponse = {
     }
     return message;
   },
-  fromPartial(object: Partial<AccountUnlockingCoinsResponse>): AccountUnlockingCoinsResponse {
+  fromPartial(
+    object: Partial<AccountUnlockingCoinsResponse>,
+  ): AccountUnlockingCoinsResponse {
     const message = createBaseAccountUnlockingCoinsResponse();
     message.coins = object.coins?.map(e => Coin.fromPartial(e)) || [];
     return message;
   },
-  fromAmino(object: AccountUnlockingCoinsResponseAmino): AccountUnlockingCoinsResponse {
+  fromAmino(
+    object: AccountUnlockingCoinsResponseAmino,
+  ): AccountUnlockingCoinsResponse {
     const message = createBaseAccountUnlockingCoinsResponse();
     message.coins = object.coins?.map(e => Coin.fromAmino(e)) || [];
     return message;
   },
-  toAmino(message: AccountUnlockingCoinsResponse): AccountUnlockingCoinsResponseAmino {
+  toAmino(
+    message: AccountUnlockingCoinsResponse,
+  ): AccountUnlockingCoinsResponseAmino {
     const obj: any = {};
     if (message.coins) {
-      obj.coins = message.coins.map(e => e ? Coin.toAmino(e) : undefined);
+      obj.coins = message.coins.map(e => (e ? Coin.toAmino(e) : undefined));
     } else {
       obj.coins = message.coins;
     }
     return obj;
   },
-  fromAminoMsg(object: AccountUnlockingCoinsResponseAminoMsg): AccountUnlockingCoinsResponse {
+  fromAminoMsg(
+    object: AccountUnlockingCoinsResponseAminoMsg,
+  ): AccountUnlockingCoinsResponse {
     return AccountUnlockingCoinsResponse.fromAmino(object.value);
   },
-  fromProtoMsg(message: AccountUnlockingCoinsResponseProtoMsg): AccountUnlockingCoinsResponse {
+  fromProtoMsg(
+    message: AccountUnlockingCoinsResponseProtoMsg,
+  ): AccountUnlockingCoinsResponse {
     return AccountUnlockingCoinsResponse.decode(message.value);
   },
   toProto(message: AccountUnlockingCoinsResponse): Uint8Array {
     return AccountUnlockingCoinsResponse.encode(message).finish();
   },
-  toProtoMsg(message: AccountUnlockingCoinsResponse): AccountUnlockingCoinsResponseProtoMsg {
+  toProtoMsg(
+    message: AccountUnlockingCoinsResponse,
+  ): AccountUnlockingCoinsResponseProtoMsg {
     return {
-      typeUrl: "/symphony.lockup.AccountUnlockingCoinsResponse",
-      value: AccountUnlockingCoinsResponse.encode(message).finish()
+      typeUrl: '/symphony.lockup.AccountUnlockingCoinsResponse',
+      value: AccountUnlockingCoinsResponse.encode(message).finish(),
     };
-  }
+  },
 };
-GlobalDecoderRegistry.register(AccountUnlockingCoinsResponse.typeUrl, AccountUnlockingCoinsResponse);
+GlobalDecoderRegistry.register(
+  AccountUnlockingCoinsResponse.typeUrl,
+  AccountUnlockingCoinsResponse,
+);
 function createBaseAccountLockedCoinsRequest(): AccountLockedCoinsRequest {
   return {
-    owner: ""
+    owner: '',
   };
 }
+/**
+ * @name AccountLockedCoinsRequest
+ * @package symphony.lockup
+ * @see proto type: symphony.lockup.AccountLockedCoinsRequest
+ */
 export const AccountLockedCoinsRequest = {
-  typeUrl: "/symphony.lockup.AccountLockedCoinsRequest",
+  typeUrl: '/symphony.lockup.AccountLockedCoinsRequest',
   is(o: any): o is AccountLockedCoinsRequest {
-    return o && (o.$typeUrl === AccountLockedCoinsRequest.typeUrl || typeof o.owner === "string");
+    return (
+      o &&
+      (o.$typeUrl === AccountLockedCoinsRequest.typeUrl ||
+        typeof o.owner === 'string')
+    );
   },
   isSDK(o: any): o is AccountLockedCoinsRequestSDKType {
-    return o && (o.$typeUrl === AccountLockedCoinsRequest.typeUrl || typeof o.owner === "string");
+    return (
+      o &&
+      (o.$typeUrl === AccountLockedCoinsRequest.typeUrl ||
+        typeof o.owner === 'string')
+    );
   },
   isAmino(o: any): o is AccountLockedCoinsRequestAmino {
-    return o && (o.$typeUrl === AccountLockedCoinsRequest.typeUrl || typeof o.owner === "string");
+    return (
+      o &&
+      (o.$typeUrl === AccountLockedCoinsRequest.typeUrl ||
+        typeof o.owner === 'string')
+    );
   },
-  encode(message: AccountLockedCoinsRequest, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
-    if (message.owner !== "") {
+  encode(
+    message: AccountLockedCoinsRequest,
+    writer: BinaryWriter = BinaryWriter.create(),
+  ): BinaryWriter {
+    if (message.owner !== '') {
       writer.uint32(10).string(message.owner);
     }
     return writer;
   },
-  decode(input: BinaryReader | Uint8Array, length?: number): AccountLockedCoinsRequest {
-    const reader = input instanceof BinaryReader ? input : new BinaryReader(input);
+  decode(
+    input: BinaryReader | Uint8Array,
+    length?: number,
+  ): AccountLockedCoinsRequest {
+    const reader =
+      input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseAccountLockedCoinsRequest();
     while (reader.pos < end) {
@@ -1307,9 +2206,11 @@ export const AccountLockedCoinsRequest = {
     }
     return message;
   },
-  fromPartial(object: Partial<AccountLockedCoinsRequest>): AccountLockedCoinsRequest {
+  fromPartial(
+    object: Partial<AccountLockedCoinsRequest>,
+  ): AccountLockedCoinsRequest {
     const message = createBaseAccountLockedCoinsRequest();
-    message.owner = object.owner ?? "";
+    message.owner = object.owner ?? '';
     return message;
   },
   fromAmino(object: AccountLockedCoinsRequestAmino): AccountLockedCoinsRequest {
@@ -1321,50 +2222,84 @@ export const AccountLockedCoinsRequest = {
   },
   toAmino(message: AccountLockedCoinsRequest): AccountLockedCoinsRequestAmino {
     const obj: any = {};
-    obj.owner = message.owner === "" ? undefined : message.owner;
+    obj.owner = message.owner === '' ? undefined : message.owner;
     return obj;
   },
-  fromAminoMsg(object: AccountLockedCoinsRequestAminoMsg): AccountLockedCoinsRequest {
+  fromAminoMsg(
+    object: AccountLockedCoinsRequestAminoMsg,
+  ): AccountLockedCoinsRequest {
     return AccountLockedCoinsRequest.fromAmino(object.value);
   },
-  fromProtoMsg(message: AccountLockedCoinsRequestProtoMsg): AccountLockedCoinsRequest {
+  fromProtoMsg(
+    message: AccountLockedCoinsRequestProtoMsg,
+  ): AccountLockedCoinsRequest {
     return AccountLockedCoinsRequest.decode(message.value);
   },
   toProto(message: AccountLockedCoinsRequest): Uint8Array {
     return AccountLockedCoinsRequest.encode(message).finish();
   },
-  toProtoMsg(message: AccountLockedCoinsRequest): AccountLockedCoinsRequestProtoMsg {
+  toProtoMsg(
+    message: AccountLockedCoinsRequest,
+  ): AccountLockedCoinsRequestProtoMsg {
     return {
-      typeUrl: "/symphony.lockup.AccountLockedCoinsRequest",
-      value: AccountLockedCoinsRequest.encode(message).finish()
+      typeUrl: '/symphony.lockup.AccountLockedCoinsRequest',
+      value: AccountLockedCoinsRequest.encode(message).finish(),
     };
-  }
+  },
 };
-GlobalDecoderRegistry.register(AccountLockedCoinsRequest.typeUrl, AccountLockedCoinsRequest);
+GlobalDecoderRegistry.register(
+  AccountLockedCoinsRequest.typeUrl,
+  AccountLockedCoinsRequest,
+);
 function createBaseAccountLockedCoinsResponse(): AccountLockedCoinsResponse {
   return {
-    coins: []
+    coins: [],
   };
 }
+/**
+ * @name AccountLockedCoinsResponse
+ * @package symphony.lockup
+ * @see proto type: symphony.lockup.AccountLockedCoinsResponse
+ */
 export const AccountLockedCoinsResponse = {
-  typeUrl: "/symphony.lockup.AccountLockedCoinsResponse",
+  typeUrl: '/symphony.lockup.AccountLockedCoinsResponse',
   is(o: any): o is AccountLockedCoinsResponse {
-    return o && (o.$typeUrl === AccountLockedCoinsResponse.typeUrl || Array.isArray(o.coins) && (!o.coins.length || Coin.is(o.coins[0])));
+    return (
+      o &&
+      (o.$typeUrl === AccountLockedCoinsResponse.typeUrl ||
+        (Array.isArray(o.coins) && (!o.coins.length || Coin.is(o.coins[0]))))
+    );
   },
   isSDK(o: any): o is AccountLockedCoinsResponseSDKType {
-    return o && (o.$typeUrl === AccountLockedCoinsResponse.typeUrl || Array.isArray(o.coins) && (!o.coins.length || Coin.isSDK(o.coins[0])));
+    return (
+      o &&
+      (o.$typeUrl === AccountLockedCoinsResponse.typeUrl ||
+        (Array.isArray(o.coins) && (!o.coins.length || Coin.isSDK(o.coins[0]))))
+    );
   },
   isAmino(o: any): o is AccountLockedCoinsResponseAmino {
-    return o && (o.$typeUrl === AccountLockedCoinsResponse.typeUrl || Array.isArray(o.coins) && (!o.coins.length || Coin.isAmino(o.coins[0])));
+    return (
+      o &&
+      (o.$typeUrl === AccountLockedCoinsResponse.typeUrl ||
+        (Array.isArray(o.coins) &&
+          (!o.coins.length || Coin.isAmino(o.coins[0]))))
+    );
   },
-  encode(message: AccountLockedCoinsResponse, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
+  encode(
+    message: AccountLockedCoinsResponse,
+    writer: BinaryWriter = BinaryWriter.create(),
+  ): BinaryWriter {
     for (const v of message.coins) {
       Coin.encode(v!, writer.uint32(10).fork()).ldelim();
     }
     return writer;
   },
-  decode(input: BinaryReader | Uint8Array, length?: number): AccountLockedCoinsResponse {
-    const reader = input instanceof BinaryReader ? input : new BinaryReader(input);
+  decode(
+    input: BinaryReader | Uint8Array,
+    length?: number,
+  ): AccountLockedCoinsResponse {
+    const reader =
+      input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseAccountLockedCoinsResponse();
     while (reader.pos < end) {
@@ -1380,70 +2315,112 @@ export const AccountLockedCoinsResponse = {
     }
     return message;
   },
-  fromPartial(object: Partial<AccountLockedCoinsResponse>): AccountLockedCoinsResponse {
+  fromPartial(
+    object: Partial<AccountLockedCoinsResponse>,
+  ): AccountLockedCoinsResponse {
     const message = createBaseAccountLockedCoinsResponse();
     message.coins = object.coins?.map(e => Coin.fromPartial(e)) || [];
     return message;
   },
-  fromAmino(object: AccountLockedCoinsResponseAmino): AccountLockedCoinsResponse {
+  fromAmino(
+    object: AccountLockedCoinsResponseAmino,
+  ): AccountLockedCoinsResponse {
     const message = createBaseAccountLockedCoinsResponse();
     message.coins = object.coins?.map(e => Coin.fromAmino(e)) || [];
     return message;
   },
-  toAmino(message: AccountLockedCoinsResponse): AccountLockedCoinsResponseAmino {
+  toAmino(
+    message: AccountLockedCoinsResponse,
+  ): AccountLockedCoinsResponseAmino {
     const obj: any = {};
     if (message.coins) {
-      obj.coins = message.coins.map(e => e ? Coin.toAmino(e) : undefined);
+      obj.coins = message.coins.map(e => (e ? Coin.toAmino(e) : undefined));
     } else {
       obj.coins = message.coins;
     }
     return obj;
   },
-  fromAminoMsg(object: AccountLockedCoinsResponseAminoMsg): AccountLockedCoinsResponse {
+  fromAminoMsg(
+    object: AccountLockedCoinsResponseAminoMsg,
+  ): AccountLockedCoinsResponse {
     return AccountLockedCoinsResponse.fromAmino(object.value);
   },
-  fromProtoMsg(message: AccountLockedCoinsResponseProtoMsg): AccountLockedCoinsResponse {
+  fromProtoMsg(
+    message: AccountLockedCoinsResponseProtoMsg,
+  ): AccountLockedCoinsResponse {
     return AccountLockedCoinsResponse.decode(message.value);
   },
   toProto(message: AccountLockedCoinsResponse): Uint8Array {
     return AccountLockedCoinsResponse.encode(message).finish();
   },
-  toProtoMsg(message: AccountLockedCoinsResponse): AccountLockedCoinsResponseProtoMsg {
+  toProtoMsg(
+    message: AccountLockedCoinsResponse,
+  ): AccountLockedCoinsResponseProtoMsg {
     return {
-      typeUrl: "/symphony.lockup.AccountLockedCoinsResponse",
-      value: AccountLockedCoinsResponse.encode(message).finish()
+      typeUrl: '/symphony.lockup.AccountLockedCoinsResponse',
+      value: AccountLockedCoinsResponse.encode(message).finish(),
     };
-  }
+  },
 };
-GlobalDecoderRegistry.register(AccountLockedCoinsResponse.typeUrl, AccountLockedCoinsResponse);
+GlobalDecoderRegistry.register(
+  AccountLockedCoinsResponse.typeUrl,
+  AccountLockedCoinsResponse,
+);
 function createBaseAccountLockedPastTimeRequest(): AccountLockedPastTimeRequest {
   return {
-    owner: "",
-    timestamp: new Date()
+    owner: '',
+    timestamp: new Date(),
   };
 }
+/**
+ * @name AccountLockedPastTimeRequest
+ * @package symphony.lockup
+ * @see proto type: symphony.lockup.AccountLockedPastTimeRequest
+ */
 export const AccountLockedPastTimeRequest = {
-  typeUrl: "/symphony.lockup.AccountLockedPastTimeRequest",
+  typeUrl: '/symphony.lockup.AccountLockedPastTimeRequest',
   is(o: any): o is AccountLockedPastTimeRequest {
-    return o && (o.$typeUrl === AccountLockedPastTimeRequest.typeUrl || typeof o.owner === "string" && Timestamp.is(o.timestamp));
+    return (
+      o &&
+      (o.$typeUrl === AccountLockedPastTimeRequest.typeUrl ||
+        (typeof o.owner === 'string' && Timestamp.is(o.timestamp)))
+    );
   },
   isSDK(o: any): o is AccountLockedPastTimeRequestSDKType {
-    return o && (o.$typeUrl === AccountLockedPastTimeRequest.typeUrl || typeof o.owner === "string" && Timestamp.isSDK(o.timestamp));
+    return (
+      o &&
+      (o.$typeUrl === AccountLockedPastTimeRequest.typeUrl ||
+        (typeof o.owner === 'string' && Timestamp.isSDK(o.timestamp)))
+    );
   },
   isAmino(o: any): o is AccountLockedPastTimeRequestAmino {
-    return o && (o.$typeUrl === AccountLockedPastTimeRequest.typeUrl || typeof o.owner === "string" && Timestamp.isAmino(o.timestamp));
+    return (
+      o &&
+      (o.$typeUrl === AccountLockedPastTimeRequest.typeUrl ||
+        (typeof o.owner === 'string' && Timestamp.isAmino(o.timestamp)))
+    );
   },
-  encode(message: AccountLockedPastTimeRequest, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
-    if (message.owner !== "") {
+  encode(
+    message: AccountLockedPastTimeRequest,
+    writer: BinaryWriter = BinaryWriter.create(),
+  ): BinaryWriter {
+    if (message.owner !== '') {
       writer.uint32(10).string(message.owner);
     }
     if (message.timestamp !== undefined) {
-      Timestamp.encode(toTimestamp(message.timestamp), writer.uint32(18).fork()).ldelim();
+      Timestamp.encode(
+        toTimestamp(message.timestamp),
+        writer.uint32(18).fork(),
+      ).ldelim();
     }
     return writer;
   },
-  decode(input: BinaryReader | Uint8Array, length?: number): AccountLockedPastTimeRequest {
-    const reader = input instanceof BinaryReader ? input : new BinaryReader(input);
+  decode(
+    input: BinaryReader | Uint8Array,
+    length?: number,
+  ): AccountLockedPastTimeRequest {
+    const reader =
+      input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseAccountLockedPastTimeRequest();
     while (reader.pos < end) {
@@ -1453,7 +2430,9 @@ export const AccountLockedPastTimeRequest = {
           message.owner = reader.string();
           break;
         case 2:
-          message.timestamp = fromTimestamp(Timestamp.decode(reader, reader.uint32()));
+          message.timestamp = fromTimestamp(
+            Timestamp.decode(reader, reader.uint32()),
+          );
           break;
         default:
           reader.skipType(tag & 7);
@@ -1462,13 +2441,17 @@ export const AccountLockedPastTimeRequest = {
     }
     return message;
   },
-  fromPartial(object: Partial<AccountLockedPastTimeRequest>): AccountLockedPastTimeRequest {
+  fromPartial(
+    object: Partial<AccountLockedPastTimeRequest>,
+  ): AccountLockedPastTimeRequest {
     const message = createBaseAccountLockedPastTimeRequest();
-    message.owner = object.owner ?? "";
+    message.owner = object.owner ?? '';
     message.timestamp = object.timestamp ?? undefined;
     return message;
   },
-  fromAmino(object: AccountLockedPastTimeRequestAmino): AccountLockedPastTimeRequest {
+  fromAmino(
+    object: AccountLockedPastTimeRequestAmino,
+  ): AccountLockedPastTimeRequest {
     const message = createBaseAccountLockedPastTimeRequest();
     if (object.owner !== undefined && object.owner !== null) {
       message.owner = object.owner;
@@ -1478,53 +2461,93 @@ export const AccountLockedPastTimeRequest = {
     }
     return message;
   },
-  toAmino(message: AccountLockedPastTimeRequest): AccountLockedPastTimeRequestAmino {
+  toAmino(
+    message: AccountLockedPastTimeRequest,
+  ): AccountLockedPastTimeRequestAmino {
     const obj: any = {};
-    obj.owner = message.owner === "" ? undefined : message.owner;
-    obj.timestamp = message.timestamp ? Timestamp.toAmino(toTimestamp(message.timestamp)) : undefined;
+    obj.owner = message.owner === '' ? undefined : message.owner;
+    obj.timestamp = message.timestamp
+      ? Timestamp.toAmino(toTimestamp(message.timestamp))
+      : undefined;
     return obj;
   },
-  fromAminoMsg(object: AccountLockedPastTimeRequestAminoMsg): AccountLockedPastTimeRequest {
+  fromAminoMsg(
+    object: AccountLockedPastTimeRequestAminoMsg,
+  ): AccountLockedPastTimeRequest {
     return AccountLockedPastTimeRequest.fromAmino(object.value);
   },
-  fromProtoMsg(message: AccountLockedPastTimeRequestProtoMsg): AccountLockedPastTimeRequest {
+  fromProtoMsg(
+    message: AccountLockedPastTimeRequestProtoMsg,
+  ): AccountLockedPastTimeRequest {
     return AccountLockedPastTimeRequest.decode(message.value);
   },
   toProto(message: AccountLockedPastTimeRequest): Uint8Array {
     return AccountLockedPastTimeRequest.encode(message).finish();
   },
-  toProtoMsg(message: AccountLockedPastTimeRequest): AccountLockedPastTimeRequestProtoMsg {
+  toProtoMsg(
+    message: AccountLockedPastTimeRequest,
+  ): AccountLockedPastTimeRequestProtoMsg {
     return {
-      typeUrl: "/symphony.lockup.AccountLockedPastTimeRequest",
-      value: AccountLockedPastTimeRequest.encode(message).finish()
+      typeUrl: '/symphony.lockup.AccountLockedPastTimeRequest',
+      value: AccountLockedPastTimeRequest.encode(message).finish(),
     };
-  }
+  },
 };
-GlobalDecoderRegistry.register(AccountLockedPastTimeRequest.typeUrl, AccountLockedPastTimeRequest);
+GlobalDecoderRegistry.register(
+  AccountLockedPastTimeRequest.typeUrl,
+  AccountLockedPastTimeRequest,
+);
 function createBaseAccountLockedPastTimeResponse(): AccountLockedPastTimeResponse {
   return {
-    locks: []
+    locks: [],
   };
 }
+/**
+ * @name AccountLockedPastTimeResponse
+ * @package symphony.lockup
+ * @see proto type: symphony.lockup.AccountLockedPastTimeResponse
+ */
 export const AccountLockedPastTimeResponse = {
-  typeUrl: "/symphony.lockup.AccountLockedPastTimeResponse",
+  typeUrl: '/symphony.lockup.AccountLockedPastTimeResponse',
   is(o: any): o is AccountLockedPastTimeResponse {
-    return o && (o.$typeUrl === AccountLockedPastTimeResponse.typeUrl || Array.isArray(o.locks) && (!o.locks.length || PeriodLock.is(o.locks[0])));
+    return (
+      o &&
+      (o.$typeUrl === AccountLockedPastTimeResponse.typeUrl ||
+        (Array.isArray(o.locks) &&
+          (!o.locks.length || PeriodLock.is(o.locks[0]))))
+    );
   },
   isSDK(o: any): o is AccountLockedPastTimeResponseSDKType {
-    return o && (o.$typeUrl === AccountLockedPastTimeResponse.typeUrl || Array.isArray(o.locks) && (!o.locks.length || PeriodLock.isSDK(o.locks[0])));
+    return (
+      o &&
+      (o.$typeUrl === AccountLockedPastTimeResponse.typeUrl ||
+        (Array.isArray(o.locks) &&
+          (!o.locks.length || PeriodLock.isSDK(o.locks[0]))))
+    );
   },
   isAmino(o: any): o is AccountLockedPastTimeResponseAmino {
-    return o && (o.$typeUrl === AccountLockedPastTimeResponse.typeUrl || Array.isArray(o.locks) && (!o.locks.length || PeriodLock.isAmino(o.locks[0])));
+    return (
+      o &&
+      (o.$typeUrl === AccountLockedPastTimeResponse.typeUrl ||
+        (Array.isArray(o.locks) &&
+          (!o.locks.length || PeriodLock.isAmino(o.locks[0]))))
+    );
   },
-  encode(message: AccountLockedPastTimeResponse, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
+  encode(
+    message: AccountLockedPastTimeResponse,
+    writer: BinaryWriter = BinaryWriter.create(),
+  ): BinaryWriter {
     for (const v of message.locks) {
       PeriodLock.encode(v!, writer.uint32(10).fork()).ldelim();
     }
     return writer;
   },
-  decode(input: BinaryReader | Uint8Array, length?: number): AccountLockedPastTimeResponse {
-    const reader = input instanceof BinaryReader ? input : new BinaryReader(input);
+  decode(
+    input: BinaryReader | Uint8Array,
+    length?: number,
+  ): AccountLockedPastTimeResponse {
+    const reader =
+      input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseAccountLockedPastTimeResponse();
     while (reader.pos < end) {
@@ -1540,70 +2563,114 @@ export const AccountLockedPastTimeResponse = {
     }
     return message;
   },
-  fromPartial(object: Partial<AccountLockedPastTimeResponse>): AccountLockedPastTimeResponse {
+  fromPartial(
+    object: Partial<AccountLockedPastTimeResponse>,
+  ): AccountLockedPastTimeResponse {
     const message = createBaseAccountLockedPastTimeResponse();
     message.locks = object.locks?.map(e => PeriodLock.fromPartial(e)) || [];
     return message;
   },
-  fromAmino(object: AccountLockedPastTimeResponseAmino): AccountLockedPastTimeResponse {
+  fromAmino(
+    object: AccountLockedPastTimeResponseAmino,
+  ): AccountLockedPastTimeResponse {
     const message = createBaseAccountLockedPastTimeResponse();
     message.locks = object.locks?.map(e => PeriodLock.fromAmino(e)) || [];
     return message;
   },
-  toAmino(message: AccountLockedPastTimeResponse): AccountLockedPastTimeResponseAmino {
+  toAmino(
+    message: AccountLockedPastTimeResponse,
+  ): AccountLockedPastTimeResponseAmino {
     const obj: any = {};
     if (message.locks) {
-      obj.locks = message.locks.map(e => e ? PeriodLock.toAmino(e) : undefined);
+      obj.locks = message.locks.map(e =>
+        e ? PeriodLock.toAmino(e) : undefined,
+      );
     } else {
       obj.locks = message.locks;
     }
     return obj;
   },
-  fromAminoMsg(object: AccountLockedPastTimeResponseAminoMsg): AccountLockedPastTimeResponse {
+  fromAminoMsg(
+    object: AccountLockedPastTimeResponseAminoMsg,
+  ): AccountLockedPastTimeResponse {
     return AccountLockedPastTimeResponse.fromAmino(object.value);
   },
-  fromProtoMsg(message: AccountLockedPastTimeResponseProtoMsg): AccountLockedPastTimeResponse {
+  fromProtoMsg(
+    message: AccountLockedPastTimeResponseProtoMsg,
+  ): AccountLockedPastTimeResponse {
     return AccountLockedPastTimeResponse.decode(message.value);
   },
   toProto(message: AccountLockedPastTimeResponse): Uint8Array {
     return AccountLockedPastTimeResponse.encode(message).finish();
   },
-  toProtoMsg(message: AccountLockedPastTimeResponse): AccountLockedPastTimeResponseProtoMsg {
+  toProtoMsg(
+    message: AccountLockedPastTimeResponse,
+  ): AccountLockedPastTimeResponseProtoMsg {
     return {
-      typeUrl: "/symphony.lockup.AccountLockedPastTimeResponse",
-      value: AccountLockedPastTimeResponse.encode(message).finish()
+      typeUrl: '/symphony.lockup.AccountLockedPastTimeResponse',
+      value: AccountLockedPastTimeResponse.encode(message).finish(),
     };
-  }
+  },
 };
-GlobalDecoderRegistry.register(AccountLockedPastTimeResponse.typeUrl, AccountLockedPastTimeResponse);
+GlobalDecoderRegistry.register(
+  AccountLockedPastTimeResponse.typeUrl,
+  AccountLockedPastTimeResponse,
+);
 function createBaseAccountLockedPastTimeNotUnlockingOnlyRequest(): AccountLockedPastTimeNotUnlockingOnlyRequest {
   return {
-    owner: "",
-    timestamp: new Date()
+    owner: '',
+    timestamp: new Date(),
   };
 }
+/**
+ * @name AccountLockedPastTimeNotUnlockingOnlyRequest
+ * @package symphony.lockup
+ * @see proto type: symphony.lockup.AccountLockedPastTimeNotUnlockingOnlyRequest
+ */
 export const AccountLockedPastTimeNotUnlockingOnlyRequest = {
-  typeUrl: "/symphony.lockup.AccountLockedPastTimeNotUnlockingOnlyRequest",
+  typeUrl: '/symphony.lockup.AccountLockedPastTimeNotUnlockingOnlyRequest',
   is(o: any): o is AccountLockedPastTimeNotUnlockingOnlyRequest {
-    return o && (o.$typeUrl === AccountLockedPastTimeNotUnlockingOnlyRequest.typeUrl || typeof o.owner === "string" && Timestamp.is(o.timestamp));
+    return (
+      o &&
+      (o.$typeUrl === AccountLockedPastTimeNotUnlockingOnlyRequest.typeUrl ||
+        (typeof o.owner === 'string' && Timestamp.is(o.timestamp)))
+    );
   },
   isSDK(o: any): o is AccountLockedPastTimeNotUnlockingOnlyRequestSDKType {
-    return o && (o.$typeUrl === AccountLockedPastTimeNotUnlockingOnlyRequest.typeUrl || typeof o.owner === "string" && Timestamp.isSDK(o.timestamp));
+    return (
+      o &&
+      (o.$typeUrl === AccountLockedPastTimeNotUnlockingOnlyRequest.typeUrl ||
+        (typeof o.owner === 'string' && Timestamp.isSDK(o.timestamp)))
+    );
   },
   isAmino(o: any): o is AccountLockedPastTimeNotUnlockingOnlyRequestAmino {
-    return o && (o.$typeUrl === AccountLockedPastTimeNotUnlockingOnlyRequest.typeUrl || typeof o.owner === "string" && Timestamp.isAmino(o.timestamp));
+    return (
+      o &&
+      (o.$typeUrl === AccountLockedPastTimeNotUnlockingOnlyRequest.typeUrl ||
+        (typeof o.owner === 'string' && Timestamp.isAmino(o.timestamp)))
+    );
   },
-  encode(message: AccountLockedPastTimeNotUnlockingOnlyRequest, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
-    if (message.owner !== "") {
+  encode(
+    message: AccountLockedPastTimeNotUnlockingOnlyRequest,
+    writer: BinaryWriter = BinaryWriter.create(),
+  ): BinaryWriter {
+    if (message.owner !== '') {
       writer.uint32(10).string(message.owner);
     }
     if (message.timestamp !== undefined) {
-      Timestamp.encode(toTimestamp(message.timestamp), writer.uint32(18).fork()).ldelim();
+      Timestamp.encode(
+        toTimestamp(message.timestamp),
+        writer.uint32(18).fork(),
+      ).ldelim();
     }
     return writer;
   },
-  decode(input: BinaryReader | Uint8Array, length?: number): AccountLockedPastTimeNotUnlockingOnlyRequest {
-    const reader = input instanceof BinaryReader ? input : new BinaryReader(input);
+  decode(
+    input: BinaryReader | Uint8Array,
+    length?: number,
+  ): AccountLockedPastTimeNotUnlockingOnlyRequest {
+    const reader =
+      input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseAccountLockedPastTimeNotUnlockingOnlyRequest();
     while (reader.pos < end) {
@@ -1613,7 +2680,9 @@ export const AccountLockedPastTimeNotUnlockingOnlyRequest = {
           message.owner = reader.string();
           break;
         case 2:
-          message.timestamp = fromTimestamp(Timestamp.decode(reader, reader.uint32()));
+          message.timestamp = fromTimestamp(
+            Timestamp.decode(reader, reader.uint32()),
+          );
           break;
         default:
           reader.skipType(tag & 7);
@@ -1622,13 +2691,17 @@ export const AccountLockedPastTimeNotUnlockingOnlyRequest = {
     }
     return message;
   },
-  fromPartial(object: Partial<AccountLockedPastTimeNotUnlockingOnlyRequest>): AccountLockedPastTimeNotUnlockingOnlyRequest {
+  fromPartial(
+    object: Partial<AccountLockedPastTimeNotUnlockingOnlyRequest>,
+  ): AccountLockedPastTimeNotUnlockingOnlyRequest {
     const message = createBaseAccountLockedPastTimeNotUnlockingOnlyRequest();
-    message.owner = object.owner ?? "";
+    message.owner = object.owner ?? '';
     message.timestamp = object.timestamp ?? undefined;
     return message;
   },
-  fromAmino(object: AccountLockedPastTimeNotUnlockingOnlyRequestAmino): AccountLockedPastTimeNotUnlockingOnlyRequest {
+  fromAmino(
+    object: AccountLockedPastTimeNotUnlockingOnlyRequestAmino,
+  ): AccountLockedPastTimeNotUnlockingOnlyRequest {
     const message = createBaseAccountLockedPastTimeNotUnlockingOnlyRequest();
     if (object.owner !== undefined && object.owner !== null) {
       message.owner = object.owner;
@@ -1638,53 +2711,96 @@ export const AccountLockedPastTimeNotUnlockingOnlyRequest = {
     }
     return message;
   },
-  toAmino(message: AccountLockedPastTimeNotUnlockingOnlyRequest): AccountLockedPastTimeNotUnlockingOnlyRequestAmino {
+  toAmino(
+    message: AccountLockedPastTimeNotUnlockingOnlyRequest,
+  ): AccountLockedPastTimeNotUnlockingOnlyRequestAmino {
     const obj: any = {};
-    obj.owner = message.owner === "" ? undefined : message.owner;
-    obj.timestamp = message.timestamp ? Timestamp.toAmino(toTimestamp(message.timestamp)) : undefined;
+    obj.owner = message.owner === '' ? undefined : message.owner;
+    obj.timestamp = message.timestamp
+      ? Timestamp.toAmino(toTimestamp(message.timestamp))
+      : undefined;
     return obj;
   },
-  fromAminoMsg(object: AccountLockedPastTimeNotUnlockingOnlyRequestAminoMsg): AccountLockedPastTimeNotUnlockingOnlyRequest {
+  fromAminoMsg(
+    object: AccountLockedPastTimeNotUnlockingOnlyRequestAminoMsg,
+  ): AccountLockedPastTimeNotUnlockingOnlyRequest {
     return AccountLockedPastTimeNotUnlockingOnlyRequest.fromAmino(object.value);
   },
-  fromProtoMsg(message: AccountLockedPastTimeNotUnlockingOnlyRequestProtoMsg): AccountLockedPastTimeNotUnlockingOnlyRequest {
+  fromProtoMsg(
+    message: AccountLockedPastTimeNotUnlockingOnlyRequestProtoMsg,
+  ): AccountLockedPastTimeNotUnlockingOnlyRequest {
     return AccountLockedPastTimeNotUnlockingOnlyRequest.decode(message.value);
   },
   toProto(message: AccountLockedPastTimeNotUnlockingOnlyRequest): Uint8Array {
-    return AccountLockedPastTimeNotUnlockingOnlyRequest.encode(message).finish();
+    return AccountLockedPastTimeNotUnlockingOnlyRequest.encode(
+      message,
+    ).finish();
   },
-  toProtoMsg(message: AccountLockedPastTimeNotUnlockingOnlyRequest): AccountLockedPastTimeNotUnlockingOnlyRequestProtoMsg {
+  toProtoMsg(
+    message: AccountLockedPastTimeNotUnlockingOnlyRequest,
+  ): AccountLockedPastTimeNotUnlockingOnlyRequestProtoMsg {
     return {
-      typeUrl: "/symphony.lockup.AccountLockedPastTimeNotUnlockingOnlyRequest",
-      value: AccountLockedPastTimeNotUnlockingOnlyRequest.encode(message).finish()
+      typeUrl: '/symphony.lockup.AccountLockedPastTimeNotUnlockingOnlyRequest',
+      value:
+        AccountLockedPastTimeNotUnlockingOnlyRequest.encode(message).finish(),
     };
-  }
+  },
 };
-GlobalDecoderRegistry.register(AccountLockedPastTimeNotUnlockingOnlyRequest.typeUrl, AccountLockedPastTimeNotUnlockingOnlyRequest);
+GlobalDecoderRegistry.register(
+  AccountLockedPastTimeNotUnlockingOnlyRequest.typeUrl,
+  AccountLockedPastTimeNotUnlockingOnlyRequest,
+);
 function createBaseAccountLockedPastTimeNotUnlockingOnlyResponse(): AccountLockedPastTimeNotUnlockingOnlyResponse {
   return {
-    locks: []
+    locks: [],
   };
 }
+/**
+ * @name AccountLockedPastTimeNotUnlockingOnlyResponse
+ * @package symphony.lockup
+ * @see proto type: symphony.lockup.AccountLockedPastTimeNotUnlockingOnlyResponse
+ */
 export const AccountLockedPastTimeNotUnlockingOnlyResponse = {
-  typeUrl: "/symphony.lockup.AccountLockedPastTimeNotUnlockingOnlyResponse",
+  typeUrl: '/symphony.lockup.AccountLockedPastTimeNotUnlockingOnlyResponse',
   is(o: any): o is AccountLockedPastTimeNotUnlockingOnlyResponse {
-    return o && (o.$typeUrl === AccountLockedPastTimeNotUnlockingOnlyResponse.typeUrl || Array.isArray(o.locks) && (!o.locks.length || PeriodLock.is(o.locks[0])));
+    return (
+      o &&
+      (o.$typeUrl === AccountLockedPastTimeNotUnlockingOnlyResponse.typeUrl ||
+        (Array.isArray(o.locks) &&
+          (!o.locks.length || PeriodLock.is(o.locks[0]))))
+    );
   },
   isSDK(o: any): o is AccountLockedPastTimeNotUnlockingOnlyResponseSDKType {
-    return o && (o.$typeUrl === AccountLockedPastTimeNotUnlockingOnlyResponse.typeUrl || Array.isArray(o.locks) && (!o.locks.length || PeriodLock.isSDK(o.locks[0])));
+    return (
+      o &&
+      (o.$typeUrl === AccountLockedPastTimeNotUnlockingOnlyResponse.typeUrl ||
+        (Array.isArray(o.locks) &&
+          (!o.locks.length || PeriodLock.isSDK(o.locks[0]))))
+    );
   },
   isAmino(o: any): o is AccountLockedPastTimeNotUnlockingOnlyResponseAmino {
-    return o && (o.$typeUrl === AccountLockedPastTimeNotUnlockingOnlyResponse.typeUrl || Array.isArray(o.locks) && (!o.locks.length || PeriodLock.isAmino(o.locks[0])));
+    return (
+      o &&
+      (o.$typeUrl === AccountLockedPastTimeNotUnlockingOnlyResponse.typeUrl ||
+        (Array.isArray(o.locks) &&
+          (!o.locks.length || PeriodLock.isAmino(o.locks[0]))))
+    );
   },
-  encode(message: AccountLockedPastTimeNotUnlockingOnlyResponse, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
+  encode(
+    message: AccountLockedPastTimeNotUnlockingOnlyResponse,
+    writer: BinaryWriter = BinaryWriter.create(),
+  ): BinaryWriter {
     for (const v of message.locks) {
       PeriodLock.encode(v!, writer.uint32(10).fork()).ldelim();
     }
     return writer;
   },
-  decode(input: BinaryReader | Uint8Array, length?: number): AccountLockedPastTimeNotUnlockingOnlyResponse {
-    const reader = input instanceof BinaryReader ? input : new BinaryReader(input);
+  decode(
+    input: BinaryReader | Uint8Array,
+    length?: number,
+  ): AccountLockedPastTimeNotUnlockingOnlyResponse {
+    const reader =
+      input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseAccountLockedPastTimeNotUnlockingOnlyResponse();
     while (reader.pos < end) {
@@ -1700,70 +2816,119 @@ export const AccountLockedPastTimeNotUnlockingOnlyResponse = {
     }
     return message;
   },
-  fromPartial(object: Partial<AccountLockedPastTimeNotUnlockingOnlyResponse>): AccountLockedPastTimeNotUnlockingOnlyResponse {
+  fromPartial(
+    object: Partial<AccountLockedPastTimeNotUnlockingOnlyResponse>,
+  ): AccountLockedPastTimeNotUnlockingOnlyResponse {
     const message = createBaseAccountLockedPastTimeNotUnlockingOnlyResponse();
     message.locks = object.locks?.map(e => PeriodLock.fromPartial(e)) || [];
     return message;
   },
-  fromAmino(object: AccountLockedPastTimeNotUnlockingOnlyResponseAmino): AccountLockedPastTimeNotUnlockingOnlyResponse {
+  fromAmino(
+    object: AccountLockedPastTimeNotUnlockingOnlyResponseAmino,
+  ): AccountLockedPastTimeNotUnlockingOnlyResponse {
     const message = createBaseAccountLockedPastTimeNotUnlockingOnlyResponse();
     message.locks = object.locks?.map(e => PeriodLock.fromAmino(e)) || [];
     return message;
   },
-  toAmino(message: AccountLockedPastTimeNotUnlockingOnlyResponse): AccountLockedPastTimeNotUnlockingOnlyResponseAmino {
+  toAmino(
+    message: AccountLockedPastTimeNotUnlockingOnlyResponse,
+  ): AccountLockedPastTimeNotUnlockingOnlyResponseAmino {
     const obj: any = {};
     if (message.locks) {
-      obj.locks = message.locks.map(e => e ? PeriodLock.toAmino(e) : undefined);
+      obj.locks = message.locks.map(e =>
+        e ? PeriodLock.toAmino(e) : undefined,
+      );
     } else {
       obj.locks = message.locks;
     }
     return obj;
   },
-  fromAminoMsg(object: AccountLockedPastTimeNotUnlockingOnlyResponseAminoMsg): AccountLockedPastTimeNotUnlockingOnlyResponse {
-    return AccountLockedPastTimeNotUnlockingOnlyResponse.fromAmino(object.value);
+  fromAminoMsg(
+    object: AccountLockedPastTimeNotUnlockingOnlyResponseAminoMsg,
+  ): AccountLockedPastTimeNotUnlockingOnlyResponse {
+    return AccountLockedPastTimeNotUnlockingOnlyResponse.fromAmino(
+      object.value,
+    );
   },
-  fromProtoMsg(message: AccountLockedPastTimeNotUnlockingOnlyResponseProtoMsg): AccountLockedPastTimeNotUnlockingOnlyResponse {
+  fromProtoMsg(
+    message: AccountLockedPastTimeNotUnlockingOnlyResponseProtoMsg,
+  ): AccountLockedPastTimeNotUnlockingOnlyResponse {
     return AccountLockedPastTimeNotUnlockingOnlyResponse.decode(message.value);
   },
   toProto(message: AccountLockedPastTimeNotUnlockingOnlyResponse): Uint8Array {
-    return AccountLockedPastTimeNotUnlockingOnlyResponse.encode(message).finish();
+    return AccountLockedPastTimeNotUnlockingOnlyResponse.encode(
+      message,
+    ).finish();
   },
-  toProtoMsg(message: AccountLockedPastTimeNotUnlockingOnlyResponse): AccountLockedPastTimeNotUnlockingOnlyResponseProtoMsg {
+  toProtoMsg(
+    message: AccountLockedPastTimeNotUnlockingOnlyResponse,
+  ): AccountLockedPastTimeNotUnlockingOnlyResponseProtoMsg {
     return {
-      typeUrl: "/symphony.lockup.AccountLockedPastTimeNotUnlockingOnlyResponse",
-      value: AccountLockedPastTimeNotUnlockingOnlyResponse.encode(message).finish()
+      typeUrl: '/symphony.lockup.AccountLockedPastTimeNotUnlockingOnlyResponse',
+      value:
+        AccountLockedPastTimeNotUnlockingOnlyResponse.encode(message).finish(),
     };
-  }
+  },
 };
-GlobalDecoderRegistry.register(AccountLockedPastTimeNotUnlockingOnlyResponse.typeUrl, AccountLockedPastTimeNotUnlockingOnlyResponse);
+GlobalDecoderRegistry.register(
+  AccountLockedPastTimeNotUnlockingOnlyResponse.typeUrl,
+  AccountLockedPastTimeNotUnlockingOnlyResponse,
+);
 function createBaseAccountUnlockedBeforeTimeRequest(): AccountUnlockedBeforeTimeRequest {
   return {
-    owner: "",
-    timestamp: new Date()
+    owner: '',
+    timestamp: new Date(),
   };
 }
+/**
+ * @name AccountUnlockedBeforeTimeRequest
+ * @package symphony.lockup
+ * @see proto type: symphony.lockup.AccountUnlockedBeforeTimeRequest
+ */
 export const AccountUnlockedBeforeTimeRequest = {
-  typeUrl: "/symphony.lockup.AccountUnlockedBeforeTimeRequest",
+  typeUrl: '/symphony.lockup.AccountUnlockedBeforeTimeRequest',
   is(o: any): o is AccountUnlockedBeforeTimeRequest {
-    return o && (o.$typeUrl === AccountUnlockedBeforeTimeRequest.typeUrl || typeof o.owner === "string" && Timestamp.is(o.timestamp));
+    return (
+      o &&
+      (o.$typeUrl === AccountUnlockedBeforeTimeRequest.typeUrl ||
+        (typeof o.owner === 'string' && Timestamp.is(o.timestamp)))
+    );
   },
   isSDK(o: any): o is AccountUnlockedBeforeTimeRequestSDKType {
-    return o && (o.$typeUrl === AccountUnlockedBeforeTimeRequest.typeUrl || typeof o.owner === "string" && Timestamp.isSDK(o.timestamp));
+    return (
+      o &&
+      (o.$typeUrl === AccountUnlockedBeforeTimeRequest.typeUrl ||
+        (typeof o.owner === 'string' && Timestamp.isSDK(o.timestamp)))
+    );
   },
   isAmino(o: any): o is AccountUnlockedBeforeTimeRequestAmino {
-    return o && (o.$typeUrl === AccountUnlockedBeforeTimeRequest.typeUrl || typeof o.owner === "string" && Timestamp.isAmino(o.timestamp));
+    return (
+      o &&
+      (o.$typeUrl === AccountUnlockedBeforeTimeRequest.typeUrl ||
+        (typeof o.owner === 'string' && Timestamp.isAmino(o.timestamp)))
+    );
   },
-  encode(message: AccountUnlockedBeforeTimeRequest, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
-    if (message.owner !== "") {
+  encode(
+    message: AccountUnlockedBeforeTimeRequest,
+    writer: BinaryWriter = BinaryWriter.create(),
+  ): BinaryWriter {
+    if (message.owner !== '') {
       writer.uint32(10).string(message.owner);
     }
     if (message.timestamp !== undefined) {
-      Timestamp.encode(toTimestamp(message.timestamp), writer.uint32(18).fork()).ldelim();
+      Timestamp.encode(
+        toTimestamp(message.timestamp),
+        writer.uint32(18).fork(),
+      ).ldelim();
     }
     return writer;
   },
-  decode(input: BinaryReader | Uint8Array, length?: number): AccountUnlockedBeforeTimeRequest {
-    const reader = input instanceof BinaryReader ? input : new BinaryReader(input);
+  decode(
+    input: BinaryReader | Uint8Array,
+    length?: number,
+  ): AccountUnlockedBeforeTimeRequest {
+    const reader =
+      input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseAccountUnlockedBeforeTimeRequest();
     while (reader.pos < end) {
@@ -1773,7 +2938,9 @@ export const AccountUnlockedBeforeTimeRequest = {
           message.owner = reader.string();
           break;
         case 2:
-          message.timestamp = fromTimestamp(Timestamp.decode(reader, reader.uint32()));
+          message.timestamp = fromTimestamp(
+            Timestamp.decode(reader, reader.uint32()),
+          );
           break;
         default:
           reader.skipType(tag & 7);
@@ -1782,13 +2949,17 @@ export const AccountUnlockedBeforeTimeRequest = {
     }
     return message;
   },
-  fromPartial(object: Partial<AccountUnlockedBeforeTimeRequest>): AccountUnlockedBeforeTimeRequest {
+  fromPartial(
+    object: Partial<AccountUnlockedBeforeTimeRequest>,
+  ): AccountUnlockedBeforeTimeRequest {
     const message = createBaseAccountUnlockedBeforeTimeRequest();
-    message.owner = object.owner ?? "";
+    message.owner = object.owner ?? '';
     message.timestamp = object.timestamp ?? undefined;
     return message;
   },
-  fromAmino(object: AccountUnlockedBeforeTimeRequestAmino): AccountUnlockedBeforeTimeRequest {
+  fromAmino(
+    object: AccountUnlockedBeforeTimeRequestAmino,
+  ): AccountUnlockedBeforeTimeRequest {
     const message = createBaseAccountUnlockedBeforeTimeRequest();
     if (object.owner !== undefined && object.owner !== null) {
       message.owner = object.owner;
@@ -1798,53 +2969,93 @@ export const AccountUnlockedBeforeTimeRequest = {
     }
     return message;
   },
-  toAmino(message: AccountUnlockedBeforeTimeRequest): AccountUnlockedBeforeTimeRequestAmino {
+  toAmino(
+    message: AccountUnlockedBeforeTimeRequest,
+  ): AccountUnlockedBeforeTimeRequestAmino {
     const obj: any = {};
-    obj.owner = message.owner === "" ? undefined : message.owner;
-    obj.timestamp = message.timestamp ? Timestamp.toAmino(toTimestamp(message.timestamp)) : undefined;
+    obj.owner = message.owner === '' ? undefined : message.owner;
+    obj.timestamp = message.timestamp
+      ? Timestamp.toAmino(toTimestamp(message.timestamp))
+      : undefined;
     return obj;
   },
-  fromAminoMsg(object: AccountUnlockedBeforeTimeRequestAminoMsg): AccountUnlockedBeforeTimeRequest {
+  fromAminoMsg(
+    object: AccountUnlockedBeforeTimeRequestAminoMsg,
+  ): AccountUnlockedBeforeTimeRequest {
     return AccountUnlockedBeforeTimeRequest.fromAmino(object.value);
   },
-  fromProtoMsg(message: AccountUnlockedBeforeTimeRequestProtoMsg): AccountUnlockedBeforeTimeRequest {
+  fromProtoMsg(
+    message: AccountUnlockedBeforeTimeRequestProtoMsg,
+  ): AccountUnlockedBeforeTimeRequest {
     return AccountUnlockedBeforeTimeRequest.decode(message.value);
   },
   toProto(message: AccountUnlockedBeforeTimeRequest): Uint8Array {
     return AccountUnlockedBeforeTimeRequest.encode(message).finish();
   },
-  toProtoMsg(message: AccountUnlockedBeforeTimeRequest): AccountUnlockedBeforeTimeRequestProtoMsg {
+  toProtoMsg(
+    message: AccountUnlockedBeforeTimeRequest,
+  ): AccountUnlockedBeforeTimeRequestProtoMsg {
     return {
-      typeUrl: "/symphony.lockup.AccountUnlockedBeforeTimeRequest",
-      value: AccountUnlockedBeforeTimeRequest.encode(message).finish()
+      typeUrl: '/symphony.lockup.AccountUnlockedBeforeTimeRequest',
+      value: AccountUnlockedBeforeTimeRequest.encode(message).finish(),
     };
-  }
+  },
 };
-GlobalDecoderRegistry.register(AccountUnlockedBeforeTimeRequest.typeUrl, AccountUnlockedBeforeTimeRequest);
+GlobalDecoderRegistry.register(
+  AccountUnlockedBeforeTimeRequest.typeUrl,
+  AccountUnlockedBeforeTimeRequest,
+);
 function createBaseAccountUnlockedBeforeTimeResponse(): AccountUnlockedBeforeTimeResponse {
   return {
-    locks: []
+    locks: [],
   };
 }
+/**
+ * @name AccountUnlockedBeforeTimeResponse
+ * @package symphony.lockup
+ * @see proto type: symphony.lockup.AccountUnlockedBeforeTimeResponse
+ */
 export const AccountUnlockedBeforeTimeResponse = {
-  typeUrl: "/symphony.lockup.AccountUnlockedBeforeTimeResponse",
+  typeUrl: '/symphony.lockup.AccountUnlockedBeforeTimeResponse',
   is(o: any): o is AccountUnlockedBeforeTimeResponse {
-    return o && (o.$typeUrl === AccountUnlockedBeforeTimeResponse.typeUrl || Array.isArray(o.locks) && (!o.locks.length || PeriodLock.is(o.locks[0])));
+    return (
+      o &&
+      (o.$typeUrl === AccountUnlockedBeforeTimeResponse.typeUrl ||
+        (Array.isArray(o.locks) &&
+          (!o.locks.length || PeriodLock.is(o.locks[0]))))
+    );
   },
   isSDK(o: any): o is AccountUnlockedBeforeTimeResponseSDKType {
-    return o && (o.$typeUrl === AccountUnlockedBeforeTimeResponse.typeUrl || Array.isArray(o.locks) && (!o.locks.length || PeriodLock.isSDK(o.locks[0])));
+    return (
+      o &&
+      (o.$typeUrl === AccountUnlockedBeforeTimeResponse.typeUrl ||
+        (Array.isArray(o.locks) &&
+          (!o.locks.length || PeriodLock.isSDK(o.locks[0]))))
+    );
   },
   isAmino(o: any): o is AccountUnlockedBeforeTimeResponseAmino {
-    return o && (o.$typeUrl === AccountUnlockedBeforeTimeResponse.typeUrl || Array.isArray(o.locks) && (!o.locks.length || PeriodLock.isAmino(o.locks[0])));
+    return (
+      o &&
+      (o.$typeUrl === AccountUnlockedBeforeTimeResponse.typeUrl ||
+        (Array.isArray(o.locks) &&
+          (!o.locks.length || PeriodLock.isAmino(o.locks[0]))))
+    );
   },
-  encode(message: AccountUnlockedBeforeTimeResponse, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
+  encode(
+    message: AccountUnlockedBeforeTimeResponse,
+    writer: BinaryWriter = BinaryWriter.create(),
+  ): BinaryWriter {
     for (const v of message.locks) {
       PeriodLock.encode(v!, writer.uint32(10).fork()).ldelim();
     }
     return writer;
   },
-  decode(input: BinaryReader | Uint8Array, length?: number): AccountUnlockedBeforeTimeResponse {
-    const reader = input instanceof BinaryReader ? input : new BinaryReader(input);
+  decode(
+    input: BinaryReader | Uint8Array,
+    length?: number,
+  ): AccountUnlockedBeforeTimeResponse {
+    const reader =
+      input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseAccountUnlockedBeforeTimeResponse();
     while (reader.pos < end) {
@@ -1860,74 +3071,124 @@ export const AccountUnlockedBeforeTimeResponse = {
     }
     return message;
   },
-  fromPartial(object: Partial<AccountUnlockedBeforeTimeResponse>): AccountUnlockedBeforeTimeResponse {
+  fromPartial(
+    object: Partial<AccountUnlockedBeforeTimeResponse>,
+  ): AccountUnlockedBeforeTimeResponse {
     const message = createBaseAccountUnlockedBeforeTimeResponse();
     message.locks = object.locks?.map(e => PeriodLock.fromPartial(e)) || [];
     return message;
   },
-  fromAmino(object: AccountUnlockedBeforeTimeResponseAmino): AccountUnlockedBeforeTimeResponse {
+  fromAmino(
+    object: AccountUnlockedBeforeTimeResponseAmino,
+  ): AccountUnlockedBeforeTimeResponse {
     const message = createBaseAccountUnlockedBeforeTimeResponse();
     message.locks = object.locks?.map(e => PeriodLock.fromAmino(e)) || [];
     return message;
   },
-  toAmino(message: AccountUnlockedBeforeTimeResponse): AccountUnlockedBeforeTimeResponseAmino {
+  toAmino(
+    message: AccountUnlockedBeforeTimeResponse,
+  ): AccountUnlockedBeforeTimeResponseAmino {
     const obj: any = {};
     if (message.locks) {
-      obj.locks = message.locks.map(e => e ? PeriodLock.toAmino(e) : undefined);
+      obj.locks = message.locks.map(e =>
+        e ? PeriodLock.toAmino(e) : undefined,
+      );
     } else {
       obj.locks = message.locks;
     }
     return obj;
   },
-  fromAminoMsg(object: AccountUnlockedBeforeTimeResponseAminoMsg): AccountUnlockedBeforeTimeResponse {
+  fromAminoMsg(
+    object: AccountUnlockedBeforeTimeResponseAminoMsg,
+  ): AccountUnlockedBeforeTimeResponse {
     return AccountUnlockedBeforeTimeResponse.fromAmino(object.value);
   },
-  fromProtoMsg(message: AccountUnlockedBeforeTimeResponseProtoMsg): AccountUnlockedBeforeTimeResponse {
+  fromProtoMsg(
+    message: AccountUnlockedBeforeTimeResponseProtoMsg,
+  ): AccountUnlockedBeforeTimeResponse {
     return AccountUnlockedBeforeTimeResponse.decode(message.value);
   },
   toProto(message: AccountUnlockedBeforeTimeResponse): Uint8Array {
     return AccountUnlockedBeforeTimeResponse.encode(message).finish();
   },
-  toProtoMsg(message: AccountUnlockedBeforeTimeResponse): AccountUnlockedBeforeTimeResponseProtoMsg {
+  toProtoMsg(
+    message: AccountUnlockedBeforeTimeResponse,
+  ): AccountUnlockedBeforeTimeResponseProtoMsg {
     return {
-      typeUrl: "/symphony.lockup.AccountUnlockedBeforeTimeResponse",
-      value: AccountUnlockedBeforeTimeResponse.encode(message).finish()
+      typeUrl: '/symphony.lockup.AccountUnlockedBeforeTimeResponse',
+      value: AccountUnlockedBeforeTimeResponse.encode(message).finish(),
     };
-  }
+  },
 };
-GlobalDecoderRegistry.register(AccountUnlockedBeforeTimeResponse.typeUrl, AccountUnlockedBeforeTimeResponse);
+GlobalDecoderRegistry.register(
+  AccountUnlockedBeforeTimeResponse.typeUrl,
+  AccountUnlockedBeforeTimeResponse,
+);
 function createBaseAccountLockedPastTimeDenomRequest(): AccountLockedPastTimeDenomRequest {
   return {
-    owner: "",
+    owner: '',
     timestamp: new Date(),
-    denom: ""
+    denom: '',
   };
 }
+/**
+ * @name AccountLockedPastTimeDenomRequest
+ * @package symphony.lockup
+ * @see proto type: symphony.lockup.AccountLockedPastTimeDenomRequest
+ */
 export const AccountLockedPastTimeDenomRequest = {
-  typeUrl: "/symphony.lockup.AccountLockedPastTimeDenomRequest",
+  typeUrl: '/symphony.lockup.AccountLockedPastTimeDenomRequest',
   is(o: any): o is AccountLockedPastTimeDenomRequest {
-    return o && (o.$typeUrl === AccountLockedPastTimeDenomRequest.typeUrl || typeof o.owner === "string" && Timestamp.is(o.timestamp) && typeof o.denom === "string");
+    return (
+      o &&
+      (o.$typeUrl === AccountLockedPastTimeDenomRequest.typeUrl ||
+        (typeof o.owner === 'string' &&
+          Timestamp.is(o.timestamp) &&
+          typeof o.denom === 'string'))
+    );
   },
   isSDK(o: any): o is AccountLockedPastTimeDenomRequestSDKType {
-    return o && (o.$typeUrl === AccountLockedPastTimeDenomRequest.typeUrl || typeof o.owner === "string" && Timestamp.isSDK(o.timestamp) && typeof o.denom === "string");
+    return (
+      o &&
+      (o.$typeUrl === AccountLockedPastTimeDenomRequest.typeUrl ||
+        (typeof o.owner === 'string' &&
+          Timestamp.isSDK(o.timestamp) &&
+          typeof o.denom === 'string'))
+    );
   },
   isAmino(o: any): o is AccountLockedPastTimeDenomRequestAmino {
-    return o && (o.$typeUrl === AccountLockedPastTimeDenomRequest.typeUrl || typeof o.owner === "string" && Timestamp.isAmino(o.timestamp) && typeof o.denom === "string");
+    return (
+      o &&
+      (o.$typeUrl === AccountLockedPastTimeDenomRequest.typeUrl ||
+        (typeof o.owner === 'string' &&
+          Timestamp.isAmino(o.timestamp) &&
+          typeof o.denom === 'string'))
+    );
   },
-  encode(message: AccountLockedPastTimeDenomRequest, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
-    if (message.owner !== "") {
+  encode(
+    message: AccountLockedPastTimeDenomRequest,
+    writer: BinaryWriter = BinaryWriter.create(),
+  ): BinaryWriter {
+    if (message.owner !== '') {
       writer.uint32(10).string(message.owner);
     }
     if (message.timestamp !== undefined) {
-      Timestamp.encode(toTimestamp(message.timestamp), writer.uint32(18).fork()).ldelim();
+      Timestamp.encode(
+        toTimestamp(message.timestamp),
+        writer.uint32(18).fork(),
+      ).ldelim();
     }
-    if (message.denom !== "") {
+    if (message.denom !== '') {
       writer.uint32(26).string(message.denom);
     }
     return writer;
   },
-  decode(input: BinaryReader | Uint8Array, length?: number): AccountLockedPastTimeDenomRequest {
-    const reader = input instanceof BinaryReader ? input : new BinaryReader(input);
+  decode(
+    input: BinaryReader | Uint8Array,
+    length?: number,
+  ): AccountLockedPastTimeDenomRequest {
+    const reader =
+      input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseAccountLockedPastTimeDenomRequest();
     while (reader.pos < end) {
@@ -1937,7 +3198,9 @@ export const AccountLockedPastTimeDenomRequest = {
           message.owner = reader.string();
           break;
         case 2:
-          message.timestamp = fromTimestamp(Timestamp.decode(reader, reader.uint32()));
+          message.timestamp = fromTimestamp(
+            Timestamp.decode(reader, reader.uint32()),
+          );
           break;
         case 3:
           message.denom = reader.string();
@@ -1949,14 +3212,18 @@ export const AccountLockedPastTimeDenomRequest = {
     }
     return message;
   },
-  fromPartial(object: Partial<AccountLockedPastTimeDenomRequest>): AccountLockedPastTimeDenomRequest {
+  fromPartial(
+    object: Partial<AccountLockedPastTimeDenomRequest>,
+  ): AccountLockedPastTimeDenomRequest {
     const message = createBaseAccountLockedPastTimeDenomRequest();
-    message.owner = object.owner ?? "";
+    message.owner = object.owner ?? '';
     message.timestamp = object.timestamp ?? undefined;
-    message.denom = object.denom ?? "";
+    message.denom = object.denom ?? '';
     return message;
   },
-  fromAmino(object: AccountLockedPastTimeDenomRequestAmino): AccountLockedPastTimeDenomRequest {
+  fromAmino(
+    object: AccountLockedPastTimeDenomRequestAmino,
+  ): AccountLockedPastTimeDenomRequest {
     const message = createBaseAccountLockedPastTimeDenomRequest();
     if (object.owner !== undefined && object.owner !== null) {
       message.owner = object.owner;
@@ -1969,54 +3236,94 @@ export const AccountLockedPastTimeDenomRequest = {
     }
     return message;
   },
-  toAmino(message: AccountLockedPastTimeDenomRequest): AccountLockedPastTimeDenomRequestAmino {
+  toAmino(
+    message: AccountLockedPastTimeDenomRequest,
+  ): AccountLockedPastTimeDenomRequestAmino {
     const obj: any = {};
-    obj.owner = message.owner === "" ? undefined : message.owner;
-    obj.timestamp = message.timestamp ? Timestamp.toAmino(toTimestamp(message.timestamp)) : undefined;
-    obj.denom = message.denom === "" ? undefined : message.denom;
+    obj.owner = message.owner === '' ? undefined : message.owner;
+    obj.timestamp = message.timestamp
+      ? Timestamp.toAmino(toTimestamp(message.timestamp))
+      : undefined;
+    obj.denom = message.denom === '' ? undefined : message.denom;
     return obj;
   },
-  fromAminoMsg(object: AccountLockedPastTimeDenomRequestAminoMsg): AccountLockedPastTimeDenomRequest {
+  fromAminoMsg(
+    object: AccountLockedPastTimeDenomRequestAminoMsg,
+  ): AccountLockedPastTimeDenomRequest {
     return AccountLockedPastTimeDenomRequest.fromAmino(object.value);
   },
-  fromProtoMsg(message: AccountLockedPastTimeDenomRequestProtoMsg): AccountLockedPastTimeDenomRequest {
+  fromProtoMsg(
+    message: AccountLockedPastTimeDenomRequestProtoMsg,
+  ): AccountLockedPastTimeDenomRequest {
     return AccountLockedPastTimeDenomRequest.decode(message.value);
   },
   toProto(message: AccountLockedPastTimeDenomRequest): Uint8Array {
     return AccountLockedPastTimeDenomRequest.encode(message).finish();
   },
-  toProtoMsg(message: AccountLockedPastTimeDenomRequest): AccountLockedPastTimeDenomRequestProtoMsg {
+  toProtoMsg(
+    message: AccountLockedPastTimeDenomRequest,
+  ): AccountLockedPastTimeDenomRequestProtoMsg {
     return {
-      typeUrl: "/symphony.lockup.AccountLockedPastTimeDenomRequest",
-      value: AccountLockedPastTimeDenomRequest.encode(message).finish()
+      typeUrl: '/symphony.lockup.AccountLockedPastTimeDenomRequest',
+      value: AccountLockedPastTimeDenomRequest.encode(message).finish(),
     };
-  }
+  },
 };
-GlobalDecoderRegistry.register(AccountLockedPastTimeDenomRequest.typeUrl, AccountLockedPastTimeDenomRequest);
+GlobalDecoderRegistry.register(
+  AccountLockedPastTimeDenomRequest.typeUrl,
+  AccountLockedPastTimeDenomRequest,
+);
 function createBaseAccountLockedPastTimeDenomResponse(): AccountLockedPastTimeDenomResponse {
   return {
-    locks: []
+    locks: [],
   };
 }
+/**
+ * @name AccountLockedPastTimeDenomResponse
+ * @package symphony.lockup
+ * @see proto type: symphony.lockup.AccountLockedPastTimeDenomResponse
+ */
 export const AccountLockedPastTimeDenomResponse = {
-  typeUrl: "/symphony.lockup.AccountLockedPastTimeDenomResponse",
+  typeUrl: '/symphony.lockup.AccountLockedPastTimeDenomResponse',
   is(o: any): o is AccountLockedPastTimeDenomResponse {
-    return o && (o.$typeUrl === AccountLockedPastTimeDenomResponse.typeUrl || Array.isArray(o.locks) && (!o.locks.length || PeriodLock.is(o.locks[0])));
+    return (
+      o &&
+      (o.$typeUrl === AccountLockedPastTimeDenomResponse.typeUrl ||
+        (Array.isArray(o.locks) &&
+          (!o.locks.length || PeriodLock.is(o.locks[0]))))
+    );
   },
   isSDK(o: any): o is AccountLockedPastTimeDenomResponseSDKType {
-    return o && (o.$typeUrl === AccountLockedPastTimeDenomResponse.typeUrl || Array.isArray(o.locks) && (!o.locks.length || PeriodLock.isSDK(o.locks[0])));
+    return (
+      o &&
+      (o.$typeUrl === AccountLockedPastTimeDenomResponse.typeUrl ||
+        (Array.isArray(o.locks) &&
+          (!o.locks.length || PeriodLock.isSDK(o.locks[0]))))
+    );
   },
   isAmino(o: any): o is AccountLockedPastTimeDenomResponseAmino {
-    return o && (o.$typeUrl === AccountLockedPastTimeDenomResponse.typeUrl || Array.isArray(o.locks) && (!o.locks.length || PeriodLock.isAmino(o.locks[0])));
+    return (
+      o &&
+      (o.$typeUrl === AccountLockedPastTimeDenomResponse.typeUrl ||
+        (Array.isArray(o.locks) &&
+          (!o.locks.length || PeriodLock.isAmino(o.locks[0]))))
+    );
   },
-  encode(message: AccountLockedPastTimeDenomResponse, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
+  encode(
+    message: AccountLockedPastTimeDenomResponse,
+    writer: BinaryWriter = BinaryWriter.create(),
+  ): BinaryWriter {
     for (const v of message.locks) {
       PeriodLock.encode(v!, writer.uint32(10).fork()).ldelim();
     }
     return writer;
   },
-  decode(input: BinaryReader | Uint8Array, length?: number): AccountLockedPastTimeDenomResponse {
-    const reader = input instanceof BinaryReader ? input : new BinaryReader(input);
+  decode(
+    input: BinaryReader | Uint8Array,
+    length?: number,
+  ): AccountLockedPastTimeDenomResponse {
+    const reader =
+      input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseAccountLockedPastTimeDenomResponse();
     while (reader.pos < end) {
@@ -2032,61 +3339,98 @@ export const AccountLockedPastTimeDenomResponse = {
     }
     return message;
   },
-  fromPartial(object: Partial<AccountLockedPastTimeDenomResponse>): AccountLockedPastTimeDenomResponse {
+  fromPartial(
+    object: Partial<AccountLockedPastTimeDenomResponse>,
+  ): AccountLockedPastTimeDenomResponse {
     const message = createBaseAccountLockedPastTimeDenomResponse();
     message.locks = object.locks?.map(e => PeriodLock.fromPartial(e)) || [];
     return message;
   },
-  fromAmino(object: AccountLockedPastTimeDenomResponseAmino): AccountLockedPastTimeDenomResponse {
+  fromAmino(
+    object: AccountLockedPastTimeDenomResponseAmino,
+  ): AccountLockedPastTimeDenomResponse {
     const message = createBaseAccountLockedPastTimeDenomResponse();
     message.locks = object.locks?.map(e => PeriodLock.fromAmino(e)) || [];
     return message;
   },
-  toAmino(message: AccountLockedPastTimeDenomResponse): AccountLockedPastTimeDenomResponseAmino {
+  toAmino(
+    message: AccountLockedPastTimeDenomResponse,
+  ): AccountLockedPastTimeDenomResponseAmino {
     const obj: any = {};
     if (message.locks) {
-      obj.locks = message.locks.map(e => e ? PeriodLock.toAmino(e) : undefined);
+      obj.locks = message.locks.map(e =>
+        e ? PeriodLock.toAmino(e) : undefined,
+      );
     } else {
       obj.locks = message.locks;
     }
     return obj;
   },
-  fromAminoMsg(object: AccountLockedPastTimeDenomResponseAminoMsg): AccountLockedPastTimeDenomResponse {
+  fromAminoMsg(
+    object: AccountLockedPastTimeDenomResponseAminoMsg,
+  ): AccountLockedPastTimeDenomResponse {
     return AccountLockedPastTimeDenomResponse.fromAmino(object.value);
   },
-  fromProtoMsg(message: AccountLockedPastTimeDenomResponseProtoMsg): AccountLockedPastTimeDenomResponse {
+  fromProtoMsg(
+    message: AccountLockedPastTimeDenomResponseProtoMsg,
+  ): AccountLockedPastTimeDenomResponse {
     return AccountLockedPastTimeDenomResponse.decode(message.value);
   },
   toProto(message: AccountLockedPastTimeDenomResponse): Uint8Array {
     return AccountLockedPastTimeDenomResponse.encode(message).finish();
   },
-  toProtoMsg(message: AccountLockedPastTimeDenomResponse): AccountLockedPastTimeDenomResponseProtoMsg {
+  toProtoMsg(
+    message: AccountLockedPastTimeDenomResponse,
+  ): AccountLockedPastTimeDenomResponseProtoMsg {
     return {
-      typeUrl: "/symphony.lockup.AccountLockedPastTimeDenomResponse",
-      value: AccountLockedPastTimeDenomResponse.encode(message).finish()
+      typeUrl: '/symphony.lockup.AccountLockedPastTimeDenomResponse',
+      value: AccountLockedPastTimeDenomResponse.encode(message).finish(),
     };
-  }
+  },
 };
-GlobalDecoderRegistry.register(AccountLockedPastTimeDenomResponse.typeUrl, AccountLockedPastTimeDenomResponse);
+GlobalDecoderRegistry.register(
+  AccountLockedPastTimeDenomResponse.typeUrl,
+  AccountLockedPastTimeDenomResponse,
+);
 function createBaseLockedDenomRequest(): LockedDenomRequest {
   return {
-    denom: "",
-    duration: Duration.fromPartial({})
+    denom: '',
+    duration: Duration.fromPartial({}),
   };
 }
+/**
+ * @name LockedDenomRequest
+ * @package symphony.lockup
+ * @see proto type: symphony.lockup.LockedDenomRequest
+ */
 export const LockedDenomRequest = {
-  typeUrl: "/symphony.lockup.LockedDenomRequest",
+  typeUrl: '/symphony.lockup.LockedDenomRequest',
   is(o: any): o is LockedDenomRequest {
-    return o && (o.$typeUrl === LockedDenomRequest.typeUrl || typeof o.denom === "string" && Duration.is(o.duration));
+    return (
+      o &&
+      (o.$typeUrl === LockedDenomRequest.typeUrl ||
+        (typeof o.denom === 'string' && Duration.is(o.duration)))
+    );
   },
   isSDK(o: any): o is LockedDenomRequestSDKType {
-    return o && (o.$typeUrl === LockedDenomRequest.typeUrl || typeof o.denom === "string" && Duration.isSDK(o.duration));
+    return (
+      o &&
+      (o.$typeUrl === LockedDenomRequest.typeUrl ||
+        (typeof o.denom === 'string' && Duration.isSDK(o.duration)))
+    );
   },
   isAmino(o: any): o is LockedDenomRequestAmino {
-    return o && (o.$typeUrl === LockedDenomRequest.typeUrl || typeof o.denom === "string" && Duration.isAmino(o.duration));
+    return (
+      o &&
+      (o.$typeUrl === LockedDenomRequest.typeUrl ||
+        (typeof o.denom === 'string' && Duration.isAmino(o.duration)))
+    );
   },
-  encode(message: LockedDenomRequest, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
-    if (message.denom !== "") {
+  encode(
+    message: LockedDenomRequest,
+    writer: BinaryWriter = BinaryWriter.create(),
+  ): BinaryWriter {
+    if (message.denom !== '') {
       writer.uint32(10).string(message.denom);
     }
     if (message.duration !== undefined) {
@@ -2094,8 +3438,12 @@ export const LockedDenomRequest = {
     }
     return writer;
   },
-  decode(input: BinaryReader | Uint8Array, length?: number): LockedDenomRequest {
-    const reader = input instanceof BinaryReader ? input : new BinaryReader(input);
+  decode(
+    input: BinaryReader | Uint8Array,
+    length?: number,
+  ): LockedDenomRequest {
+    const reader =
+      input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseLockedDenomRequest();
     while (reader.pos < end) {
@@ -2116,8 +3464,11 @@ export const LockedDenomRequest = {
   },
   fromPartial(object: Partial<LockedDenomRequest>): LockedDenomRequest {
     const message = createBaseLockedDenomRequest();
-    message.denom = object.denom ?? "";
-    message.duration = object.duration !== undefined && object.duration !== null ? Duration.fromPartial(object.duration) : undefined;
+    message.denom = object.denom ?? '';
+    message.duration =
+      object.duration !== undefined && object.duration !== null
+        ? Duration.fromPartial(object.duration)
+        : undefined;
     return message;
   },
   fromAmino(object: LockedDenomRequestAmino): LockedDenomRequest {
@@ -2132,8 +3483,10 @@ export const LockedDenomRequest = {
   },
   toAmino(message: LockedDenomRequest): LockedDenomRequestAmino {
     const obj: any = {};
-    obj.denom = message.denom === "" ? undefined : message.denom;
-    obj.duration = message.duration ? Duration.toAmino(message.duration) : undefined;
+    obj.denom = message.denom === '' ? undefined : message.denom;
+    obj.duration = message.duration
+      ? Duration.toAmino(message.duration)
+      : undefined;
     return obj;
   },
   fromAminoMsg(object: LockedDenomRequestAminoMsg): LockedDenomRequest {
@@ -2147,36 +3500,60 @@ export const LockedDenomRequest = {
   },
   toProtoMsg(message: LockedDenomRequest): LockedDenomRequestProtoMsg {
     return {
-      typeUrl: "/symphony.lockup.LockedDenomRequest",
-      value: LockedDenomRequest.encode(message).finish()
+      typeUrl: '/symphony.lockup.LockedDenomRequest',
+      value: LockedDenomRequest.encode(message).finish(),
     };
-  }
+  },
 };
 GlobalDecoderRegistry.register(LockedDenomRequest.typeUrl, LockedDenomRequest);
 function createBaseLockedDenomResponse(): LockedDenomResponse {
   return {
-    amount: ""
+    amount: '',
   };
 }
+/**
+ * @name LockedDenomResponse
+ * @package symphony.lockup
+ * @see proto type: symphony.lockup.LockedDenomResponse
+ */
 export const LockedDenomResponse = {
-  typeUrl: "/symphony.lockup.LockedDenomResponse",
+  typeUrl: '/symphony.lockup.LockedDenomResponse',
   is(o: any): o is LockedDenomResponse {
-    return o && (o.$typeUrl === LockedDenomResponse.typeUrl || typeof o.amount === "string");
+    return (
+      o &&
+      (o.$typeUrl === LockedDenomResponse.typeUrl ||
+        typeof o.amount === 'string')
+    );
   },
   isSDK(o: any): o is LockedDenomResponseSDKType {
-    return o && (o.$typeUrl === LockedDenomResponse.typeUrl || typeof o.amount === "string");
+    return (
+      o &&
+      (o.$typeUrl === LockedDenomResponse.typeUrl ||
+        typeof o.amount === 'string')
+    );
   },
   isAmino(o: any): o is LockedDenomResponseAmino {
-    return o && (o.$typeUrl === LockedDenomResponse.typeUrl || typeof o.amount === "string");
+    return (
+      o &&
+      (o.$typeUrl === LockedDenomResponse.typeUrl ||
+        typeof o.amount === 'string')
+    );
   },
-  encode(message: LockedDenomResponse, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
-    if (message.amount !== "") {
+  encode(
+    message: LockedDenomResponse,
+    writer: BinaryWriter = BinaryWriter.create(),
+  ): BinaryWriter {
+    if (message.amount !== '') {
       writer.uint32(10).string(message.amount);
     }
     return writer;
   },
-  decode(input: BinaryReader | Uint8Array, length?: number): LockedDenomResponse {
-    const reader = input instanceof BinaryReader ? input : new BinaryReader(input);
+  decode(
+    input: BinaryReader | Uint8Array,
+    length?: number,
+  ): LockedDenomResponse {
+    const reader =
+      input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseLockedDenomResponse();
     while (reader.pos < end) {
@@ -2194,7 +3571,7 @@ export const LockedDenomResponse = {
   },
   fromPartial(object: Partial<LockedDenomResponse>): LockedDenomResponse {
     const message = createBaseLockedDenomResponse();
-    message.amount = object.amount ?? "";
+    message.amount = object.amount ?? '';
     return message;
   },
   fromAmino(object: LockedDenomResponseAmino): LockedDenomResponse {
@@ -2206,7 +3583,7 @@ export const LockedDenomResponse = {
   },
   toAmino(message: LockedDenomResponse): LockedDenomResponseAmino {
     const obj: any = {};
-    obj.amount = message.amount === "" ? undefined : message.amount;
+    obj.amount = message.amount === '' ? undefined : message.amount;
     return obj;
   },
   fromAminoMsg(object: LockedDenomResponseAminoMsg): LockedDenomResponse {
@@ -2220,36 +3597,57 @@ export const LockedDenomResponse = {
   },
   toProtoMsg(message: LockedDenomResponse): LockedDenomResponseProtoMsg {
     return {
-      typeUrl: "/symphony.lockup.LockedDenomResponse",
-      value: LockedDenomResponse.encode(message).finish()
+      typeUrl: '/symphony.lockup.LockedDenomResponse',
+      value: LockedDenomResponse.encode(message).finish(),
     };
-  }
+  },
 };
-GlobalDecoderRegistry.register(LockedDenomResponse.typeUrl, LockedDenomResponse);
+GlobalDecoderRegistry.register(
+  LockedDenomResponse.typeUrl,
+  LockedDenomResponse,
+);
 function createBaseLockedRequest(): LockedRequest {
   return {
-    lockId: BigInt(0)
+    lockId: BigInt(0),
   };
 }
+/**
+ * @name LockedRequest
+ * @package symphony.lockup
+ * @see proto type: symphony.lockup.LockedRequest
+ */
 export const LockedRequest = {
-  typeUrl: "/symphony.lockup.LockedRequest",
+  typeUrl: '/symphony.lockup.LockedRequest',
   is(o: any): o is LockedRequest {
-    return o && (o.$typeUrl === LockedRequest.typeUrl || typeof o.lockId === "bigint");
+    return (
+      o &&
+      (o.$typeUrl === LockedRequest.typeUrl || typeof o.lockId === 'bigint')
+    );
   },
   isSDK(o: any): o is LockedRequestSDKType {
-    return o && (o.$typeUrl === LockedRequest.typeUrl || typeof o.lock_id === "bigint");
+    return (
+      o &&
+      (o.$typeUrl === LockedRequest.typeUrl || typeof o.lock_id === 'bigint')
+    );
   },
   isAmino(o: any): o is LockedRequestAmino {
-    return o && (o.$typeUrl === LockedRequest.typeUrl || typeof o.lock_id === "bigint");
+    return (
+      o &&
+      (o.$typeUrl === LockedRequest.typeUrl || typeof o.lock_id === 'bigint')
+    );
   },
-  encode(message: LockedRequest, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
+  encode(
+    message: LockedRequest,
+    writer: BinaryWriter = BinaryWriter.create(),
+  ): BinaryWriter {
     if (message.lockId !== BigInt(0)) {
       writer.uint32(8).uint64(message.lockId);
     }
     return writer;
   },
   decode(input: BinaryReader | Uint8Array, length?: number): LockedRequest {
-    const reader = input instanceof BinaryReader ? input : new BinaryReader(input);
+    const reader =
+      input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseLockedRequest();
     while (reader.pos < end) {
@@ -2267,7 +3665,10 @@ export const LockedRequest = {
   },
   fromPartial(object: Partial<LockedRequest>): LockedRequest {
     const message = createBaseLockedRequest();
-    message.lockId = object.lockId !== undefined && object.lockId !== null ? BigInt(object.lockId.toString()) : BigInt(0);
+    message.lockId =
+      object.lockId !== undefined && object.lockId !== null
+        ? BigInt(object.lockId.toString())
+        : BigInt(0);
     return message;
   },
   fromAmino(object: LockedRequestAmino): LockedRequest {
@@ -2279,7 +3680,8 @@ export const LockedRequest = {
   },
   toAmino(message: LockedRequest): LockedRequestAmino {
     const obj: any = {};
-    obj.lock_id = message.lockId !== BigInt(0) ? message.lockId?.toString() : undefined;
+    obj.lock_id =
+      message.lockId !== BigInt(0) ? message.lockId?.toString() : undefined;
     return obj;
   },
   fromAminoMsg(object: LockedRequestAminoMsg): LockedRequest {
@@ -2293,19 +3695,24 @@ export const LockedRequest = {
   },
   toProtoMsg(message: LockedRequest): LockedRequestProtoMsg {
     return {
-      typeUrl: "/symphony.lockup.LockedRequest",
-      value: LockedRequest.encode(message).finish()
+      typeUrl: '/symphony.lockup.LockedRequest',
+      value: LockedRequest.encode(message).finish(),
     };
-  }
+  },
 };
 GlobalDecoderRegistry.register(LockedRequest.typeUrl, LockedRequest);
 function createBaseLockedResponse(): LockedResponse {
   return {
-    lock: undefined
+    lock: undefined,
   };
 }
+/**
+ * @name LockedResponse
+ * @package symphony.lockup
+ * @see proto type: symphony.lockup.LockedResponse
+ */
 export const LockedResponse = {
-  typeUrl: "/symphony.lockup.LockedResponse",
+  typeUrl: '/symphony.lockup.LockedResponse',
   is(o: any): o is LockedResponse {
     return o && o.$typeUrl === LockedResponse.typeUrl;
   },
@@ -2315,14 +3722,18 @@ export const LockedResponse = {
   isAmino(o: any): o is LockedResponseAmino {
     return o && o.$typeUrl === LockedResponse.typeUrl;
   },
-  encode(message: LockedResponse, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
+  encode(
+    message: LockedResponse,
+    writer: BinaryWriter = BinaryWriter.create(),
+  ): BinaryWriter {
     if (message.lock !== undefined) {
       PeriodLock.encode(message.lock, writer.uint32(10).fork()).ldelim();
     }
     return writer;
   },
   decode(input: BinaryReader | Uint8Array, length?: number): LockedResponse {
-    const reader = input instanceof BinaryReader ? input : new BinaryReader(input);
+    const reader =
+      input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseLockedResponse();
     while (reader.pos < end) {
@@ -2340,7 +3751,10 @@ export const LockedResponse = {
   },
   fromPartial(object: Partial<LockedResponse>): LockedResponse {
     const message = createBaseLockedResponse();
-    message.lock = object.lock !== undefined && object.lock !== null ? PeriodLock.fromPartial(object.lock) : undefined;
+    message.lock =
+      object.lock !== undefined && object.lock !== null
+        ? PeriodLock.fromPartial(object.lock)
+        : undefined;
     return message;
   },
   fromAmino(object: LockedResponseAmino): LockedResponse {
@@ -2366,36 +3780,60 @@ export const LockedResponse = {
   },
   toProtoMsg(message: LockedResponse): LockedResponseProtoMsg {
     return {
-      typeUrl: "/symphony.lockup.LockedResponse",
-      value: LockedResponse.encode(message).finish()
+      typeUrl: '/symphony.lockup.LockedResponse',
+      value: LockedResponse.encode(message).finish(),
     };
-  }
+  },
 };
 GlobalDecoderRegistry.register(LockedResponse.typeUrl, LockedResponse);
 function createBaseLockRewardReceiverRequest(): LockRewardReceiverRequest {
   return {
-    lockId: BigInt(0)
+    lockId: BigInt(0),
   };
 }
+/**
+ * @name LockRewardReceiverRequest
+ * @package symphony.lockup
+ * @see proto type: symphony.lockup.LockRewardReceiverRequest
+ */
 export const LockRewardReceiverRequest = {
-  typeUrl: "/symphony.lockup.LockRewardReceiverRequest",
+  typeUrl: '/symphony.lockup.LockRewardReceiverRequest',
   is(o: any): o is LockRewardReceiverRequest {
-    return o && (o.$typeUrl === LockRewardReceiverRequest.typeUrl || typeof o.lockId === "bigint");
+    return (
+      o &&
+      (o.$typeUrl === LockRewardReceiverRequest.typeUrl ||
+        typeof o.lockId === 'bigint')
+    );
   },
   isSDK(o: any): o is LockRewardReceiverRequestSDKType {
-    return o && (o.$typeUrl === LockRewardReceiverRequest.typeUrl || typeof o.lock_id === "bigint");
+    return (
+      o &&
+      (o.$typeUrl === LockRewardReceiverRequest.typeUrl ||
+        typeof o.lock_id === 'bigint')
+    );
   },
   isAmino(o: any): o is LockRewardReceiverRequestAmino {
-    return o && (o.$typeUrl === LockRewardReceiverRequest.typeUrl || typeof o.lock_id === "bigint");
+    return (
+      o &&
+      (o.$typeUrl === LockRewardReceiverRequest.typeUrl ||
+        typeof o.lock_id === 'bigint')
+    );
   },
-  encode(message: LockRewardReceiverRequest, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
+  encode(
+    message: LockRewardReceiverRequest,
+    writer: BinaryWriter = BinaryWriter.create(),
+  ): BinaryWriter {
     if (message.lockId !== BigInt(0)) {
       writer.uint32(8).uint64(message.lockId);
     }
     return writer;
   },
-  decode(input: BinaryReader | Uint8Array, length?: number): LockRewardReceiverRequest {
-    const reader = input instanceof BinaryReader ? input : new BinaryReader(input);
+  decode(
+    input: BinaryReader | Uint8Array,
+    length?: number,
+  ): LockRewardReceiverRequest {
+    const reader =
+      input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseLockRewardReceiverRequest();
     while (reader.pos < end) {
@@ -2411,9 +3849,14 @@ export const LockRewardReceiverRequest = {
     }
     return message;
   },
-  fromPartial(object: Partial<LockRewardReceiverRequest>): LockRewardReceiverRequest {
+  fromPartial(
+    object: Partial<LockRewardReceiverRequest>,
+  ): LockRewardReceiverRequest {
     const message = createBaseLockRewardReceiverRequest();
-    message.lockId = object.lockId !== undefined && object.lockId !== null ? BigInt(object.lockId.toString()) : BigInt(0);
+    message.lockId =
+      object.lockId !== undefined && object.lockId !== null
+        ? BigInt(object.lockId.toString())
+        : BigInt(0);
     return message;
   },
   fromAmino(object: LockRewardReceiverRequestAmino): LockRewardReceiverRequest {
@@ -2425,50 +3868,84 @@ export const LockRewardReceiverRequest = {
   },
   toAmino(message: LockRewardReceiverRequest): LockRewardReceiverRequestAmino {
     const obj: any = {};
-    obj.lock_id = message.lockId !== BigInt(0) ? message.lockId?.toString() : undefined;
+    obj.lock_id =
+      message.lockId !== BigInt(0) ? message.lockId?.toString() : undefined;
     return obj;
   },
-  fromAminoMsg(object: LockRewardReceiverRequestAminoMsg): LockRewardReceiverRequest {
+  fromAminoMsg(
+    object: LockRewardReceiverRequestAminoMsg,
+  ): LockRewardReceiverRequest {
     return LockRewardReceiverRequest.fromAmino(object.value);
   },
-  fromProtoMsg(message: LockRewardReceiverRequestProtoMsg): LockRewardReceiverRequest {
+  fromProtoMsg(
+    message: LockRewardReceiverRequestProtoMsg,
+  ): LockRewardReceiverRequest {
     return LockRewardReceiverRequest.decode(message.value);
   },
   toProto(message: LockRewardReceiverRequest): Uint8Array {
     return LockRewardReceiverRequest.encode(message).finish();
   },
-  toProtoMsg(message: LockRewardReceiverRequest): LockRewardReceiverRequestProtoMsg {
+  toProtoMsg(
+    message: LockRewardReceiverRequest,
+  ): LockRewardReceiverRequestProtoMsg {
     return {
-      typeUrl: "/symphony.lockup.LockRewardReceiverRequest",
-      value: LockRewardReceiverRequest.encode(message).finish()
+      typeUrl: '/symphony.lockup.LockRewardReceiverRequest',
+      value: LockRewardReceiverRequest.encode(message).finish(),
     };
-  }
+  },
 };
-GlobalDecoderRegistry.register(LockRewardReceiverRequest.typeUrl, LockRewardReceiverRequest);
+GlobalDecoderRegistry.register(
+  LockRewardReceiverRequest.typeUrl,
+  LockRewardReceiverRequest,
+);
 function createBaseLockRewardReceiverResponse(): LockRewardReceiverResponse {
   return {
-    rewardReceiver: ""
+    rewardReceiver: '',
   };
 }
+/**
+ * @name LockRewardReceiverResponse
+ * @package symphony.lockup
+ * @see proto type: symphony.lockup.LockRewardReceiverResponse
+ */
 export const LockRewardReceiverResponse = {
-  typeUrl: "/symphony.lockup.LockRewardReceiverResponse",
+  typeUrl: '/symphony.lockup.LockRewardReceiverResponse',
   is(o: any): o is LockRewardReceiverResponse {
-    return o && (o.$typeUrl === LockRewardReceiverResponse.typeUrl || typeof o.rewardReceiver === "string");
+    return (
+      o &&
+      (o.$typeUrl === LockRewardReceiverResponse.typeUrl ||
+        typeof o.rewardReceiver === 'string')
+    );
   },
   isSDK(o: any): o is LockRewardReceiverResponseSDKType {
-    return o && (o.$typeUrl === LockRewardReceiverResponse.typeUrl || typeof o.reward_receiver === "string");
+    return (
+      o &&
+      (o.$typeUrl === LockRewardReceiverResponse.typeUrl ||
+        typeof o.reward_receiver === 'string')
+    );
   },
   isAmino(o: any): o is LockRewardReceiverResponseAmino {
-    return o && (o.$typeUrl === LockRewardReceiverResponse.typeUrl || typeof o.reward_receiver === "string");
+    return (
+      o &&
+      (o.$typeUrl === LockRewardReceiverResponse.typeUrl ||
+        typeof o.reward_receiver === 'string')
+    );
   },
-  encode(message: LockRewardReceiverResponse, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
-    if (message.rewardReceiver !== "") {
+  encode(
+    message: LockRewardReceiverResponse,
+    writer: BinaryWriter = BinaryWriter.create(),
+  ): BinaryWriter {
+    if (message.rewardReceiver !== '') {
       writer.uint32(10).string(message.rewardReceiver);
     }
     return writer;
   },
-  decode(input: BinaryReader | Uint8Array, length?: number): LockRewardReceiverResponse {
-    const reader = input instanceof BinaryReader ? input : new BinaryReader(input);
+  decode(
+    input: BinaryReader | Uint8Array,
+    length?: number,
+  ): LockRewardReceiverResponse {
+    const reader =
+      input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseLockRewardReceiverResponse();
     while (reader.pos < end) {
@@ -2484,45 +3961,69 @@ export const LockRewardReceiverResponse = {
     }
     return message;
   },
-  fromPartial(object: Partial<LockRewardReceiverResponse>): LockRewardReceiverResponse {
+  fromPartial(
+    object: Partial<LockRewardReceiverResponse>,
+  ): LockRewardReceiverResponse {
     const message = createBaseLockRewardReceiverResponse();
-    message.rewardReceiver = object.rewardReceiver ?? "";
+    message.rewardReceiver = object.rewardReceiver ?? '';
     return message;
   },
-  fromAmino(object: LockRewardReceiverResponseAmino): LockRewardReceiverResponse {
+  fromAmino(
+    object: LockRewardReceiverResponseAmino,
+  ): LockRewardReceiverResponse {
     const message = createBaseLockRewardReceiverResponse();
-    if (object.reward_receiver !== undefined && object.reward_receiver !== null) {
+    if (
+      object.reward_receiver !== undefined &&
+      object.reward_receiver !== null
+    ) {
       message.rewardReceiver = object.reward_receiver;
     }
     return message;
   },
-  toAmino(message: LockRewardReceiverResponse): LockRewardReceiverResponseAmino {
+  toAmino(
+    message: LockRewardReceiverResponse,
+  ): LockRewardReceiverResponseAmino {
     const obj: any = {};
-    obj.reward_receiver = message.rewardReceiver === "" ? undefined : message.rewardReceiver;
+    obj.reward_receiver =
+      message.rewardReceiver === '' ? undefined : message.rewardReceiver;
     return obj;
   },
-  fromAminoMsg(object: LockRewardReceiverResponseAminoMsg): LockRewardReceiverResponse {
+  fromAminoMsg(
+    object: LockRewardReceiverResponseAminoMsg,
+  ): LockRewardReceiverResponse {
     return LockRewardReceiverResponse.fromAmino(object.value);
   },
-  fromProtoMsg(message: LockRewardReceiverResponseProtoMsg): LockRewardReceiverResponse {
+  fromProtoMsg(
+    message: LockRewardReceiverResponseProtoMsg,
+  ): LockRewardReceiverResponse {
     return LockRewardReceiverResponse.decode(message.value);
   },
   toProto(message: LockRewardReceiverResponse): Uint8Array {
     return LockRewardReceiverResponse.encode(message).finish();
   },
-  toProtoMsg(message: LockRewardReceiverResponse): LockRewardReceiverResponseProtoMsg {
+  toProtoMsg(
+    message: LockRewardReceiverResponse,
+  ): LockRewardReceiverResponseProtoMsg {
     return {
-      typeUrl: "/symphony.lockup.LockRewardReceiverResponse",
-      value: LockRewardReceiverResponse.encode(message).finish()
+      typeUrl: '/symphony.lockup.LockRewardReceiverResponse',
+      value: LockRewardReceiverResponse.encode(message).finish(),
     };
-  }
+  },
 };
-GlobalDecoderRegistry.register(LockRewardReceiverResponse.typeUrl, LockRewardReceiverResponse);
+GlobalDecoderRegistry.register(
+  LockRewardReceiverResponse.typeUrl,
+  LockRewardReceiverResponse,
+);
 function createBaseNextLockIDRequest(): NextLockIDRequest {
   return {};
 }
+/**
+ * @name NextLockIDRequest
+ * @package symphony.lockup
+ * @see proto type: symphony.lockup.NextLockIDRequest
+ */
 export const NextLockIDRequest = {
-  typeUrl: "/symphony.lockup.NextLockIDRequest",
+  typeUrl: '/symphony.lockup.NextLockIDRequest',
   is(o: any): o is NextLockIDRequest {
     return o && o.$typeUrl === NextLockIDRequest.typeUrl;
   },
@@ -2532,11 +4033,15 @@ export const NextLockIDRequest = {
   isAmino(o: any): o is NextLockIDRequestAmino {
     return o && o.$typeUrl === NextLockIDRequest.typeUrl;
   },
-  encode(_: NextLockIDRequest, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
+  encode(
+    _: NextLockIDRequest,
+    writer: BinaryWriter = BinaryWriter.create(),
+  ): BinaryWriter {
     return writer;
   },
   decode(input: BinaryReader | Uint8Array, length?: number): NextLockIDRequest {
-    const reader = input instanceof BinaryReader ? input : new BinaryReader(input);
+    const reader =
+      input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseNextLockIDRequest();
     while (reader.pos < end) {
@@ -2572,36 +4077,60 @@ export const NextLockIDRequest = {
   },
   toProtoMsg(message: NextLockIDRequest): NextLockIDRequestProtoMsg {
     return {
-      typeUrl: "/symphony.lockup.NextLockIDRequest",
-      value: NextLockIDRequest.encode(message).finish()
+      typeUrl: '/symphony.lockup.NextLockIDRequest',
+      value: NextLockIDRequest.encode(message).finish(),
     };
-  }
+  },
 };
 GlobalDecoderRegistry.register(NextLockIDRequest.typeUrl, NextLockIDRequest);
 function createBaseNextLockIDResponse(): NextLockIDResponse {
   return {
-    lockId: BigInt(0)
+    lockId: BigInt(0),
   };
 }
+/**
+ * @name NextLockIDResponse
+ * @package symphony.lockup
+ * @see proto type: symphony.lockup.NextLockIDResponse
+ */
 export const NextLockIDResponse = {
-  typeUrl: "/symphony.lockup.NextLockIDResponse",
+  typeUrl: '/symphony.lockup.NextLockIDResponse',
   is(o: any): o is NextLockIDResponse {
-    return o && (o.$typeUrl === NextLockIDResponse.typeUrl || typeof o.lockId === "bigint");
+    return (
+      o &&
+      (o.$typeUrl === NextLockIDResponse.typeUrl ||
+        typeof o.lockId === 'bigint')
+    );
   },
   isSDK(o: any): o is NextLockIDResponseSDKType {
-    return o && (o.$typeUrl === NextLockIDResponse.typeUrl || typeof o.lock_id === "bigint");
+    return (
+      o &&
+      (o.$typeUrl === NextLockIDResponse.typeUrl ||
+        typeof o.lock_id === 'bigint')
+    );
   },
   isAmino(o: any): o is NextLockIDResponseAmino {
-    return o && (o.$typeUrl === NextLockIDResponse.typeUrl || typeof o.lock_id === "bigint");
+    return (
+      o &&
+      (o.$typeUrl === NextLockIDResponse.typeUrl ||
+        typeof o.lock_id === 'bigint')
+    );
   },
-  encode(message: NextLockIDResponse, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
+  encode(
+    message: NextLockIDResponse,
+    writer: BinaryWriter = BinaryWriter.create(),
+  ): BinaryWriter {
     if (message.lockId !== BigInt(0)) {
       writer.uint32(8).uint64(message.lockId);
     }
     return writer;
   },
-  decode(input: BinaryReader | Uint8Array, length?: number): NextLockIDResponse {
-    const reader = input instanceof BinaryReader ? input : new BinaryReader(input);
+  decode(
+    input: BinaryReader | Uint8Array,
+    length?: number,
+  ): NextLockIDResponse {
+    const reader =
+      input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseNextLockIDResponse();
     while (reader.pos < end) {
@@ -2619,7 +4148,10 @@ export const NextLockIDResponse = {
   },
   fromPartial(object: Partial<NextLockIDResponse>): NextLockIDResponse {
     const message = createBaseNextLockIDResponse();
-    message.lockId = object.lockId !== undefined && object.lockId !== null ? BigInt(object.lockId.toString()) : BigInt(0);
+    message.lockId =
+      object.lockId !== undefined && object.lockId !== null
+        ? BigInt(object.lockId.toString())
+        : BigInt(0);
     return message;
   },
   fromAmino(object: NextLockIDResponseAmino): NextLockIDResponse {
@@ -2631,7 +4163,8 @@ export const NextLockIDResponse = {
   },
   toAmino(message: NextLockIDResponse): NextLockIDResponseAmino {
     const obj: any = {};
-    obj.lock_id = message.lockId !== BigInt(0) ? message.lockId?.toString() : undefined;
+    obj.lock_id =
+      message.lockId !== BigInt(0) ? message.lockId?.toString() : undefined;
     return obj;
   },
   fromAminoMsg(object: NextLockIDResponseAminoMsg): NextLockIDResponse {
@@ -2645,36 +4178,61 @@ export const NextLockIDResponse = {
   },
   toProtoMsg(message: NextLockIDResponse): NextLockIDResponseProtoMsg {
     return {
-      typeUrl: "/symphony.lockup.NextLockIDResponse",
-      value: NextLockIDResponse.encode(message).finish()
+      typeUrl: '/symphony.lockup.NextLockIDResponse',
+      value: NextLockIDResponse.encode(message).finish(),
     };
-  }
+  },
 };
 GlobalDecoderRegistry.register(NextLockIDResponse.typeUrl, NextLockIDResponse);
 function createBaseSyntheticLockupsByLockupIDRequest(): SyntheticLockupsByLockupIDRequest {
   return {
-    lockId: BigInt(0)
+    lockId: BigInt(0),
   };
 }
+/**
+ * @name SyntheticLockupsByLockupIDRequest
+ * @package symphony.lockup
+ * @see proto type: symphony.lockup.SyntheticLockupsByLockupIDRequest
+ * @deprecated
+ */
 export const SyntheticLockupsByLockupIDRequest = {
-  typeUrl: "/symphony.lockup.SyntheticLockupsByLockupIDRequest",
+  typeUrl: '/symphony.lockup.SyntheticLockupsByLockupIDRequest',
   is(o: any): o is SyntheticLockupsByLockupIDRequest {
-    return o && (o.$typeUrl === SyntheticLockupsByLockupIDRequest.typeUrl || typeof o.lockId === "bigint");
+    return (
+      o &&
+      (o.$typeUrl === SyntheticLockupsByLockupIDRequest.typeUrl ||
+        typeof o.lockId === 'bigint')
+    );
   },
   isSDK(o: any): o is SyntheticLockupsByLockupIDRequestSDKType {
-    return o && (o.$typeUrl === SyntheticLockupsByLockupIDRequest.typeUrl || typeof o.lock_id === "bigint");
+    return (
+      o &&
+      (o.$typeUrl === SyntheticLockupsByLockupIDRequest.typeUrl ||
+        typeof o.lock_id === 'bigint')
+    );
   },
   isAmino(o: any): o is SyntheticLockupsByLockupIDRequestAmino {
-    return o && (o.$typeUrl === SyntheticLockupsByLockupIDRequest.typeUrl || typeof o.lock_id === "bigint");
+    return (
+      o &&
+      (o.$typeUrl === SyntheticLockupsByLockupIDRequest.typeUrl ||
+        typeof o.lock_id === 'bigint')
+    );
   },
-  encode(message: SyntheticLockupsByLockupIDRequest, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
+  encode(
+    message: SyntheticLockupsByLockupIDRequest,
+    writer: BinaryWriter = BinaryWriter.create(),
+  ): BinaryWriter {
     if (message.lockId !== BigInt(0)) {
       writer.uint32(8).uint64(message.lockId);
     }
     return writer;
   },
-  decode(input: BinaryReader | Uint8Array, length?: number): SyntheticLockupsByLockupIDRequest {
-    const reader = input instanceof BinaryReader ? input : new BinaryReader(input);
+  decode(
+    input: BinaryReader | Uint8Array,
+    length?: number,
+  ): SyntheticLockupsByLockupIDRequest {
+    const reader =
+      input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseSyntheticLockupsByLockupIDRequest();
     while (reader.pos < end) {
@@ -2690,71 +4248,122 @@ export const SyntheticLockupsByLockupIDRequest = {
     }
     return message;
   },
-  fromPartial(object: Partial<SyntheticLockupsByLockupIDRequest>): SyntheticLockupsByLockupIDRequest {
+  fromPartial(
+    object: Partial<SyntheticLockupsByLockupIDRequest>,
+  ): SyntheticLockupsByLockupIDRequest {
     const message = createBaseSyntheticLockupsByLockupIDRequest();
-    message.lockId = object.lockId !== undefined && object.lockId !== null ? BigInt(object.lockId.toString()) : BigInt(0);
+    message.lockId =
+      object.lockId !== undefined && object.lockId !== null
+        ? BigInt(object.lockId.toString())
+        : BigInt(0);
     return message;
   },
-  fromAmino(object: SyntheticLockupsByLockupIDRequestAmino): SyntheticLockupsByLockupIDRequest {
+  fromAmino(
+    object: SyntheticLockupsByLockupIDRequestAmino,
+  ): SyntheticLockupsByLockupIDRequest {
     const message = createBaseSyntheticLockupsByLockupIDRequest();
     if (object.lock_id !== undefined && object.lock_id !== null) {
       message.lockId = BigInt(object.lock_id);
     }
     return message;
   },
-  toAmino(message: SyntheticLockupsByLockupIDRequest): SyntheticLockupsByLockupIDRequestAmino {
+  toAmino(
+    message: SyntheticLockupsByLockupIDRequest,
+  ): SyntheticLockupsByLockupIDRequestAmino {
     const obj: any = {};
-    obj.lock_id = message.lockId !== BigInt(0) ? message.lockId?.toString() : undefined;
+    obj.lock_id =
+      message.lockId !== BigInt(0) ? message.lockId?.toString() : undefined;
     return obj;
   },
-  fromAminoMsg(object: SyntheticLockupsByLockupIDRequestAminoMsg): SyntheticLockupsByLockupIDRequest {
+  fromAminoMsg(
+    object: SyntheticLockupsByLockupIDRequestAminoMsg,
+  ): SyntheticLockupsByLockupIDRequest {
     return SyntheticLockupsByLockupIDRequest.fromAmino(object.value);
   },
-  fromProtoMsg(message: SyntheticLockupsByLockupIDRequestProtoMsg): SyntheticLockupsByLockupIDRequest {
+  fromProtoMsg(
+    message: SyntheticLockupsByLockupIDRequestProtoMsg,
+  ): SyntheticLockupsByLockupIDRequest {
     return SyntheticLockupsByLockupIDRequest.decode(message.value);
   },
   toProto(message: SyntheticLockupsByLockupIDRequest): Uint8Array {
     return SyntheticLockupsByLockupIDRequest.encode(message).finish();
   },
-  toProtoMsg(message: SyntheticLockupsByLockupIDRequest): SyntheticLockupsByLockupIDRequestProtoMsg {
+  toProtoMsg(
+    message: SyntheticLockupsByLockupIDRequest,
+  ): SyntheticLockupsByLockupIDRequestProtoMsg {
     return {
-      typeUrl: "/symphony.lockup.SyntheticLockupsByLockupIDRequest",
-      value: SyntheticLockupsByLockupIDRequest.encode(message).finish()
+      typeUrl: '/symphony.lockup.SyntheticLockupsByLockupIDRequest',
+      value: SyntheticLockupsByLockupIDRequest.encode(message).finish(),
     };
-  }
+  },
 };
-GlobalDecoderRegistry.register(SyntheticLockupsByLockupIDRequest.typeUrl, SyntheticLockupsByLockupIDRequest);
+GlobalDecoderRegistry.register(
+  SyntheticLockupsByLockupIDRequest.typeUrl,
+  SyntheticLockupsByLockupIDRequest,
+);
 function createBaseSyntheticLockupsByLockupIDResponse(): SyntheticLockupsByLockupIDResponse {
   return {
-    syntheticLocks: []
+    syntheticLocks: [],
   };
 }
+/**
+ * @name SyntheticLockupsByLockupIDResponse
+ * @package symphony.lockup
+ * @see proto type: symphony.lockup.SyntheticLockupsByLockupIDResponse
+ * @deprecated
+ */
 export const SyntheticLockupsByLockupIDResponse = {
-  typeUrl: "/symphony.lockup.SyntheticLockupsByLockupIDResponse",
+  typeUrl: '/symphony.lockup.SyntheticLockupsByLockupIDResponse',
   is(o: any): o is SyntheticLockupsByLockupIDResponse {
-    return o && (o.$typeUrl === SyntheticLockupsByLockupIDResponse.typeUrl || Array.isArray(o.syntheticLocks) && (!o.syntheticLocks.length || SyntheticLock.is(o.syntheticLocks[0])));
+    return (
+      o &&
+      (o.$typeUrl === SyntheticLockupsByLockupIDResponse.typeUrl ||
+        (Array.isArray(o.syntheticLocks) &&
+          (!o.syntheticLocks.length || SyntheticLock.is(o.syntheticLocks[0]))))
+    );
   },
   isSDK(o: any): o is SyntheticLockupsByLockupIDResponseSDKType {
-    return o && (o.$typeUrl === SyntheticLockupsByLockupIDResponse.typeUrl || Array.isArray(o.synthetic_locks) && (!o.synthetic_locks.length || SyntheticLock.isSDK(o.synthetic_locks[0])));
+    return (
+      o &&
+      (o.$typeUrl === SyntheticLockupsByLockupIDResponse.typeUrl ||
+        (Array.isArray(o.synthetic_locks) &&
+          (!o.synthetic_locks.length ||
+            SyntheticLock.isSDK(o.synthetic_locks[0]))))
+    );
   },
   isAmino(o: any): o is SyntheticLockupsByLockupIDResponseAmino {
-    return o && (o.$typeUrl === SyntheticLockupsByLockupIDResponse.typeUrl || Array.isArray(o.synthetic_locks) && (!o.synthetic_locks.length || SyntheticLock.isAmino(o.synthetic_locks[0])));
+    return (
+      o &&
+      (o.$typeUrl === SyntheticLockupsByLockupIDResponse.typeUrl ||
+        (Array.isArray(o.synthetic_locks) &&
+          (!o.synthetic_locks.length ||
+            SyntheticLock.isAmino(o.synthetic_locks[0]))))
+    );
   },
-  encode(message: SyntheticLockupsByLockupIDResponse, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
+  encode(
+    message: SyntheticLockupsByLockupIDResponse,
+    writer: BinaryWriter = BinaryWriter.create(),
+  ): BinaryWriter {
     for (const v of message.syntheticLocks) {
       SyntheticLock.encode(v!, writer.uint32(10).fork()).ldelim();
     }
     return writer;
   },
-  decode(input: BinaryReader | Uint8Array, length?: number): SyntheticLockupsByLockupIDResponse {
-    const reader = input instanceof BinaryReader ? input : new BinaryReader(input);
+  decode(
+    input: BinaryReader | Uint8Array,
+    length?: number,
+  ): SyntheticLockupsByLockupIDResponse {
+    const reader =
+      input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseSyntheticLockupsByLockupIDResponse();
     while (reader.pos < end) {
       const tag = reader.uint32();
       switch (tag >>> 3) {
         case 1:
-          message.syntheticLocks.push(SyntheticLock.decode(reader, reader.uint32()));
+          message.syntheticLocks.push(
+            SyntheticLock.decode(reader, reader.uint32()),
+          );
           break;
         default:
           reader.skipType(tag & 7);
@@ -2763,66 +4372,109 @@ export const SyntheticLockupsByLockupIDResponse = {
     }
     return message;
   },
-  fromPartial(object: Partial<SyntheticLockupsByLockupIDResponse>): SyntheticLockupsByLockupIDResponse {
+  fromPartial(
+    object: Partial<SyntheticLockupsByLockupIDResponse>,
+  ): SyntheticLockupsByLockupIDResponse {
     const message = createBaseSyntheticLockupsByLockupIDResponse();
-    message.syntheticLocks = object.syntheticLocks?.map(e => SyntheticLock.fromPartial(e)) || [];
+    message.syntheticLocks =
+      object.syntheticLocks?.map(e => SyntheticLock.fromPartial(e)) || [];
     return message;
   },
-  fromAmino(object: SyntheticLockupsByLockupIDResponseAmino): SyntheticLockupsByLockupIDResponse {
+  fromAmino(
+    object: SyntheticLockupsByLockupIDResponseAmino,
+  ): SyntheticLockupsByLockupIDResponse {
     const message = createBaseSyntheticLockupsByLockupIDResponse();
-    message.syntheticLocks = object.synthetic_locks?.map(e => SyntheticLock.fromAmino(e)) || [];
+    message.syntheticLocks =
+      object.synthetic_locks?.map(e => SyntheticLock.fromAmino(e)) || [];
     return message;
   },
-  toAmino(message: SyntheticLockupsByLockupIDResponse): SyntheticLockupsByLockupIDResponseAmino {
+  toAmino(
+    message: SyntheticLockupsByLockupIDResponse,
+  ): SyntheticLockupsByLockupIDResponseAmino {
     const obj: any = {};
     if (message.syntheticLocks) {
-      obj.synthetic_locks = message.syntheticLocks.map(e => e ? SyntheticLock.toAmino(e) : undefined);
+      obj.synthetic_locks = message.syntheticLocks.map(e =>
+        e ? SyntheticLock.toAmino(e) : undefined,
+      );
     } else {
       obj.synthetic_locks = message.syntheticLocks;
     }
     return obj;
   },
-  fromAminoMsg(object: SyntheticLockupsByLockupIDResponseAminoMsg): SyntheticLockupsByLockupIDResponse {
+  fromAminoMsg(
+    object: SyntheticLockupsByLockupIDResponseAminoMsg,
+  ): SyntheticLockupsByLockupIDResponse {
     return SyntheticLockupsByLockupIDResponse.fromAmino(object.value);
   },
-  fromProtoMsg(message: SyntheticLockupsByLockupIDResponseProtoMsg): SyntheticLockupsByLockupIDResponse {
+  fromProtoMsg(
+    message: SyntheticLockupsByLockupIDResponseProtoMsg,
+  ): SyntheticLockupsByLockupIDResponse {
     return SyntheticLockupsByLockupIDResponse.decode(message.value);
   },
   toProto(message: SyntheticLockupsByLockupIDResponse): Uint8Array {
     return SyntheticLockupsByLockupIDResponse.encode(message).finish();
   },
-  toProtoMsg(message: SyntheticLockupsByLockupIDResponse): SyntheticLockupsByLockupIDResponseProtoMsg {
+  toProtoMsg(
+    message: SyntheticLockupsByLockupIDResponse,
+  ): SyntheticLockupsByLockupIDResponseProtoMsg {
     return {
-      typeUrl: "/symphony.lockup.SyntheticLockupsByLockupIDResponse",
-      value: SyntheticLockupsByLockupIDResponse.encode(message).finish()
+      typeUrl: '/symphony.lockup.SyntheticLockupsByLockupIDResponse',
+      value: SyntheticLockupsByLockupIDResponse.encode(message).finish(),
     };
-  }
+  },
 };
-GlobalDecoderRegistry.register(SyntheticLockupsByLockupIDResponse.typeUrl, SyntheticLockupsByLockupIDResponse);
+GlobalDecoderRegistry.register(
+  SyntheticLockupsByLockupIDResponse.typeUrl,
+  SyntheticLockupsByLockupIDResponse,
+);
 function createBaseSyntheticLockupByLockupIDRequest(): SyntheticLockupByLockupIDRequest {
   return {
-    lockId: BigInt(0)
+    lockId: BigInt(0),
   };
 }
+/**
+ * @name SyntheticLockupByLockupIDRequest
+ * @package symphony.lockup
+ * @see proto type: symphony.lockup.SyntheticLockupByLockupIDRequest
+ */
 export const SyntheticLockupByLockupIDRequest = {
-  typeUrl: "/symphony.lockup.SyntheticLockupByLockupIDRequest",
+  typeUrl: '/symphony.lockup.SyntheticLockupByLockupIDRequest',
   is(o: any): o is SyntheticLockupByLockupIDRequest {
-    return o && (o.$typeUrl === SyntheticLockupByLockupIDRequest.typeUrl || typeof o.lockId === "bigint");
+    return (
+      o &&
+      (o.$typeUrl === SyntheticLockupByLockupIDRequest.typeUrl ||
+        typeof o.lockId === 'bigint')
+    );
   },
   isSDK(o: any): o is SyntheticLockupByLockupIDRequestSDKType {
-    return o && (o.$typeUrl === SyntheticLockupByLockupIDRequest.typeUrl || typeof o.lock_id === "bigint");
+    return (
+      o &&
+      (o.$typeUrl === SyntheticLockupByLockupIDRequest.typeUrl ||
+        typeof o.lock_id === 'bigint')
+    );
   },
   isAmino(o: any): o is SyntheticLockupByLockupIDRequestAmino {
-    return o && (o.$typeUrl === SyntheticLockupByLockupIDRequest.typeUrl || typeof o.lock_id === "bigint");
+    return (
+      o &&
+      (o.$typeUrl === SyntheticLockupByLockupIDRequest.typeUrl ||
+        typeof o.lock_id === 'bigint')
+    );
   },
-  encode(message: SyntheticLockupByLockupIDRequest, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
+  encode(
+    message: SyntheticLockupByLockupIDRequest,
+    writer: BinaryWriter = BinaryWriter.create(),
+  ): BinaryWriter {
     if (message.lockId !== BigInt(0)) {
       writer.uint32(8).uint64(message.lockId);
     }
     return writer;
   },
-  decode(input: BinaryReader | Uint8Array, length?: number): SyntheticLockupByLockupIDRequest {
-    const reader = input instanceof BinaryReader ? input : new BinaryReader(input);
+  decode(
+    input: BinaryReader | Uint8Array,
+    length?: number,
+  ): SyntheticLockupByLockupIDRequest {
+    const reader =
+      input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseSyntheticLockupByLockupIDRequest();
     while (reader.pos < end) {
@@ -2838,64 +4490,110 @@ export const SyntheticLockupByLockupIDRequest = {
     }
     return message;
   },
-  fromPartial(object: Partial<SyntheticLockupByLockupIDRequest>): SyntheticLockupByLockupIDRequest {
+  fromPartial(
+    object: Partial<SyntheticLockupByLockupIDRequest>,
+  ): SyntheticLockupByLockupIDRequest {
     const message = createBaseSyntheticLockupByLockupIDRequest();
-    message.lockId = object.lockId !== undefined && object.lockId !== null ? BigInt(object.lockId.toString()) : BigInt(0);
+    message.lockId =
+      object.lockId !== undefined && object.lockId !== null
+        ? BigInt(object.lockId.toString())
+        : BigInt(0);
     return message;
   },
-  fromAmino(object: SyntheticLockupByLockupIDRequestAmino): SyntheticLockupByLockupIDRequest {
+  fromAmino(
+    object: SyntheticLockupByLockupIDRequestAmino,
+  ): SyntheticLockupByLockupIDRequest {
     const message = createBaseSyntheticLockupByLockupIDRequest();
     if (object.lock_id !== undefined && object.lock_id !== null) {
       message.lockId = BigInt(object.lock_id);
     }
     return message;
   },
-  toAmino(message: SyntheticLockupByLockupIDRequest): SyntheticLockupByLockupIDRequestAmino {
+  toAmino(
+    message: SyntheticLockupByLockupIDRequest,
+  ): SyntheticLockupByLockupIDRequestAmino {
     const obj: any = {};
-    obj.lock_id = message.lockId !== BigInt(0) ? message.lockId?.toString() : undefined;
+    obj.lock_id =
+      message.lockId !== BigInt(0) ? message.lockId?.toString() : undefined;
     return obj;
   },
-  fromAminoMsg(object: SyntheticLockupByLockupIDRequestAminoMsg): SyntheticLockupByLockupIDRequest {
+  fromAminoMsg(
+    object: SyntheticLockupByLockupIDRequestAminoMsg,
+  ): SyntheticLockupByLockupIDRequest {
     return SyntheticLockupByLockupIDRequest.fromAmino(object.value);
   },
-  fromProtoMsg(message: SyntheticLockupByLockupIDRequestProtoMsg): SyntheticLockupByLockupIDRequest {
+  fromProtoMsg(
+    message: SyntheticLockupByLockupIDRequestProtoMsg,
+  ): SyntheticLockupByLockupIDRequest {
     return SyntheticLockupByLockupIDRequest.decode(message.value);
   },
   toProto(message: SyntheticLockupByLockupIDRequest): Uint8Array {
     return SyntheticLockupByLockupIDRequest.encode(message).finish();
   },
-  toProtoMsg(message: SyntheticLockupByLockupIDRequest): SyntheticLockupByLockupIDRequestProtoMsg {
+  toProtoMsg(
+    message: SyntheticLockupByLockupIDRequest,
+  ): SyntheticLockupByLockupIDRequestProtoMsg {
     return {
-      typeUrl: "/symphony.lockup.SyntheticLockupByLockupIDRequest",
-      value: SyntheticLockupByLockupIDRequest.encode(message).finish()
+      typeUrl: '/symphony.lockup.SyntheticLockupByLockupIDRequest',
+      value: SyntheticLockupByLockupIDRequest.encode(message).finish(),
     };
-  }
+  },
 };
-GlobalDecoderRegistry.register(SyntheticLockupByLockupIDRequest.typeUrl, SyntheticLockupByLockupIDRequest);
+GlobalDecoderRegistry.register(
+  SyntheticLockupByLockupIDRequest.typeUrl,
+  SyntheticLockupByLockupIDRequest,
+);
 function createBaseSyntheticLockupByLockupIDResponse(): SyntheticLockupByLockupIDResponse {
   return {
-    syntheticLock: SyntheticLock.fromPartial({})
+    syntheticLock: SyntheticLock.fromPartial({}),
   };
 }
+/**
+ * @name SyntheticLockupByLockupIDResponse
+ * @package symphony.lockup
+ * @see proto type: symphony.lockup.SyntheticLockupByLockupIDResponse
+ */
 export const SyntheticLockupByLockupIDResponse = {
-  typeUrl: "/symphony.lockup.SyntheticLockupByLockupIDResponse",
+  typeUrl: '/symphony.lockup.SyntheticLockupByLockupIDResponse',
   is(o: any): o is SyntheticLockupByLockupIDResponse {
-    return o && (o.$typeUrl === SyntheticLockupByLockupIDResponse.typeUrl || SyntheticLock.is(o.syntheticLock));
+    return (
+      o &&
+      (o.$typeUrl === SyntheticLockupByLockupIDResponse.typeUrl ||
+        SyntheticLock.is(o.syntheticLock))
+    );
   },
   isSDK(o: any): o is SyntheticLockupByLockupIDResponseSDKType {
-    return o && (o.$typeUrl === SyntheticLockupByLockupIDResponse.typeUrl || SyntheticLock.isSDK(o.synthetic_lock));
+    return (
+      o &&
+      (o.$typeUrl === SyntheticLockupByLockupIDResponse.typeUrl ||
+        SyntheticLock.isSDK(o.synthetic_lock))
+    );
   },
   isAmino(o: any): o is SyntheticLockupByLockupIDResponseAmino {
-    return o && (o.$typeUrl === SyntheticLockupByLockupIDResponse.typeUrl || SyntheticLock.isAmino(o.synthetic_lock));
+    return (
+      o &&
+      (o.$typeUrl === SyntheticLockupByLockupIDResponse.typeUrl ||
+        SyntheticLock.isAmino(o.synthetic_lock))
+    );
   },
-  encode(message: SyntheticLockupByLockupIDResponse, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
+  encode(
+    message: SyntheticLockupByLockupIDResponse,
+    writer: BinaryWriter = BinaryWriter.create(),
+  ): BinaryWriter {
     if (message.syntheticLock !== undefined) {
-      SyntheticLock.encode(message.syntheticLock, writer.uint32(10).fork()).ldelim();
+      SyntheticLock.encode(
+        message.syntheticLock,
+        writer.uint32(10).fork(),
+      ).ldelim();
     }
     return writer;
   },
-  decode(input: BinaryReader | Uint8Array, length?: number): SyntheticLockupByLockupIDResponse {
-    const reader = input instanceof BinaryReader ? input : new BinaryReader(input);
+  decode(
+    input: BinaryReader | Uint8Array,
+    length?: number,
+  ): SyntheticLockupByLockupIDResponse {
+    const reader =
+      input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseSyntheticLockupByLockupIDResponse();
     while (reader.pos < end) {
@@ -2911,59 +4609,99 @@ export const SyntheticLockupByLockupIDResponse = {
     }
     return message;
   },
-  fromPartial(object: Partial<SyntheticLockupByLockupIDResponse>): SyntheticLockupByLockupIDResponse {
+  fromPartial(
+    object: Partial<SyntheticLockupByLockupIDResponse>,
+  ): SyntheticLockupByLockupIDResponse {
     const message = createBaseSyntheticLockupByLockupIDResponse();
-    message.syntheticLock = object.syntheticLock !== undefined && object.syntheticLock !== null ? SyntheticLock.fromPartial(object.syntheticLock) : undefined;
+    message.syntheticLock =
+      object.syntheticLock !== undefined && object.syntheticLock !== null
+        ? SyntheticLock.fromPartial(object.syntheticLock)
+        : undefined;
     return message;
   },
-  fromAmino(object: SyntheticLockupByLockupIDResponseAmino): SyntheticLockupByLockupIDResponse {
+  fromAmino(
+    object: SyntheticLockupByLockupIDResponseAmino,
+  ): SyntheticLockupByLockupIDResponse {
     const message = createBaseSyntheticLockupByLockupIDResponse();
     if (object.synthetic_lock !== undefined && object.synthetic_lock !== null) {
       message.syntheticLock = SyntheticLock.fromAmino(object.synthetic_lock);
     }
     return message;
   },
-  toAmino(message: SyntheticLockupByLockupIDResponse): SyntheticLockupByLockupIDResponseAmino {
+  toAmino(
+    message: SyntheticLockupByLockupIDResponse,
+  ): SyntheticLockupByLockupIDResponseAmino {
     const obj: any = {};
-    obj.synthetic_lock = message.syntheticLock ? SyntheticLock.toAmino(message.syntheticLock) : undefined;
+    obj.synthetic_lock = message.syntheticLock
+      ? SyntheticLock.toAmino(message.syntheticLock)
+      : undefined;
     return obj;
   },
-  fromAminoMsg(object: SyntheticLockupByLockupIDResponseAminoMsg): SyntheticLockupByLockupIDResponse {
+  fromAminoMsg(
+    object: SyntheticLockupByLockupIDResponseAminoMsg,
+  ): SyntheticLockupByLockupIDResponse {
     return SyntheticLockupByLockupIDResponse.fromAmino(object.value);
   },
-  fromProtoMsg(message: SyntheticLockupByLockupIDResponseProtoMsg): SyntheticLockupByLockupIDResponse {
+  fromProtoMsg(
+    message: SyntheticLockupByLockupIDResponseProtoMsg,
+  ): SyntheticLockupByLockupIDResponse {
     return SyntheticLockupByLockupIDResponse.decode(message.value);
   },
   toProto(message: SyntheticLockupByLockupIDResponse): Uint8Array {
     return SyntheticLockupByLockupIDResponse.encode(message).finish();
   },
-  toProtoMsg(message: SyntheticLockupByLockupIDResponse): SyntheticLockupByLockupIDResponseProtoMsg {
+  toProtoMsg(
+    message: SyntheticLockupByLockupIDResponse,
+  ): SyntheticLockupByLockupIDResponseProtoMsg {
     return {
-      typeUrl: "/symphony.lockup.SyntheticLockupByLockupIDResponse",
-      value: SyntheticLockupByLockupIDResponse.encode(message).finish()
+      typeUrl: '/symphony.lockup.SyntheticLockupByLockupIDResponse',
+      value: SyntheticLockupByLockupIDResponse.encode(message).finish(),
     };
-  }
+  },
 };
-GlobalDecoderRegistry.register(SyntheticLockupByLockupIDResponse.typeUrl, SyntheticLockupByLockupIDResponse);
+GlobalDecoderRegistry.register(
+  SyntheticLockupByLockupIDResponse.typeUrl,
+  SyntheticLockupByLockupIDResponse,
+);
 function createBaseAccountLockedLongerDurationRequest(): AccountLockedLongerDurationRequest {
   return {
-    owner: "",
-    duration: Duration.fromPartial({})
+    owner: '',
+    duration: Duration.fromPartial({}),
   };
 }
+/**
+ * @name AccountLockedLongerDurationRequest
+ * @package symphony.lockup
+ * @see proto type: symphony.lockup.AccountLockedLongerDurationRequest
+ */
 export const AccountLockedLongerDurationRequest = {
-  typeUrl: "/symphony.lockup.AccountLockedLongerDurationRequest",
+  typeUrl: '/symphony.lockup.AccountLockedLongerDurationRequest',
   is(o: any): o is AccountLockedLongerDurationRequest {
-    return o && (o.$typeUrl === AccountLockedLongerDurationRequest.typeUrl || typeof o.owner === "string" && Duration.is(o.duration));
+    return (
+      o &&
+      (o.$typeUrl === AccountLockedLongerDurationRequest.typeUrl ||
+        (typeof o.owner === 'string' && Duration.is(o.duration)))
+    );
   },
   isSDK(o: any): o is AccountLockedLongerDurationRequestSDKType {
-    return o && (o.$typeUrl === AccountLockedLongerDurationRequest.typeUrl || typeof o.owner === "string" && Duration.isSDK(o.duration));
+    return (
+      o &&
+      (o.$typeUrl === AccountLockedLongerDurationRequest.typeUrl ||
+        (typeof o.owner === 'string' && Duration.isSDK(o.duration)))
+    );
   },
   isAmino(o: any): o is AccountLockedLongerDurationRequestAmino {
-    return o && (o.$typeUrl === AccountLockedLongerDurationRequest.typeUrl || typeof o.owner === "string" && Duration.isAmino(o.duration));
+    return (
+      o &&
+      (o.$typeUrl === AccountLockedLongerDurationRequest.typeUrl ||
+        (typeof o.owner === 'string' && Duration.isAmino(o.duration)))
+    );
   },
-  encode(message: AccountLockedLongerDurationRequest, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
-    if (message.owner !== "") {
+  encode(
+    message: AccountLockedLongerDurationRequest,
+    writer: BinaryWriter = BinaryWriter.create(),
+  ): BinaryWriter {
+    if (message.owner !== '') {
       writer.uint32(10).string(message.owner);
     }
     if (message.duration !== undefined) {
@@ -2971,8 +4709,12 @@ export const AccountLockedLongerDurationRequest = {
     }
     return writer;
   },
-  decode(input: BinaryReader | Uint8Array, length?: number): AccountLockedLongerDurationRequest {
-    const reader = input instanceof BinaryReader ? input : new BinaryReader(input);
+  decode(
+    input: BinaryReader | Uint8Array,
+    length?: number,
+  ): AccountLockedLongerDurationRequest {
+    const reader =
+      input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseAccountLockedLongerDurationRequest();
     while (reader.pos < end) {
@@ -2991,13 +4733,20 @@ export const AccountLockedLongerDurationRequest = {
     }
     return message;
   },
-  fromPartial(object: Partial<AccountLockedLongerDurationRequest>): AccountLockedLongerDurationRequest {
+  fromPartial(
+    object: Partial<AccountLockedLongerDurationRequest>,
+  ): AccountLockedLongerDurationRequest {
     const message = createBaseAccountLockedLongerDurationRequest();
-    message.owner = object.owner ?? "";
-    message.duration = object.duration !== undefined && object.duration !== null ? Duration.fromPartial(object.duration) : undefined;
+    message.owner = object.owner ?? '';
+    message.duration =
+      object.duration !== undefined && object.duration !== null
+        ? Duration.fromPartial(object.duration)
+        : undefined;
     return message;
   },
-  fromAmino(object: AccountLockedLongerDurationRequestAmino): AccountLockedLongerDurationRequest {
+  fromAmino(
+    object: AccountLockedLongerDurationRequestAmino,
+  ): AccountLockedLongerDurationRequest {
     const message = createBaseAccountLockedLongerDurationRequest();
     if (object.owner !== undefined && object.owner !== null) {
       message.owner = object.owner;
@@ -3007,53 +4756,93 @@ export const AccountLockedLongerDurationRequest = {
     }
     return message;
   },
-  toAmino(message: AccountLockedLongerDurationRequest): AccountLockedLongerDurationRequestAmino {
+  toAmino(
+    message: AccountLockedLongerDurationRequest,
+  ): AccountLockedLongerDurationRequestAmino {
     const obj: any = {};
-    obj.owner = message.owner === "" ? undefined : message.owner;
-    obj.duration = message.duration ? Duration.toAmino(message.duration) : undefined;
+    obj.owner = message.owner === '' ? undefined : message.owner;
+    obj.duration = message.duration
+      ? Duration.toAmino(message.duration)
+      : undefined;
     return obj;
   },
-  fromAminoMsg(object: AccountLockedLongerDurationRequestAminoMsg): AccountLockedLongerDurationRequest {
+  fromAminoMsg(
+    object: AccountLockedLongerDurationRequestAminoMsg,
+  ): AccountLockedLongerDurationRequest {
     return AccountLockedLongerDurationRequest.fromAmino(object.value);
   },
-  fromProtoMsg(message: AccountLockedLongerDurationRequestProtoMsg): AccountLockedLongerDurationRequest {
+  fromProtoMsg(
+    message: AccountLockedLongerDurationRequestProtoMsg,
+  ): AccountLockedLongerDurationRequest {
     return AccountLockedLongerDurationRequest.decode(message.value);
   },
   toProto(message: AccountLockedLongerDurationRequest): Uint8Array {
     return AccountLockedLongerDurationRequest.encode(message).finish();
   },
-  toProtoMsg(message: AccountLockedLongerDurationRequest): AccountLockedLongerDurationRequestProtoMsg {
+  toProtoMsg(
+    message: AccountLockedLongerDurationRequest,
+  ): AccountLockedLongerDurationRequestProtoMsg {
     return {
-      typeUrl: "/symphony.lockup.AccountLockedLongerDurationRequest",
-      value: AccountLockedLongerDurationRequest.encode(message).finish()
+      typeUrl: '/symphony.lockup.AccountLockedLongerDurationRequest',
+      value: AccountLockedLongerDurationRequest.encode(message).finish(),
     };
-  }
+  },
 };
-GlobalDecoderRegistry.register(AccountLockedLongerDurationRequest.typeUrl, AccountLockedLongerDurationRequest);
+GlobalDecoderRegistry.register(
+  AccountLockedLongerDurationRequest.typeUrl,
+  AccountLockedLongerDurationRequest,
+);
 function createBaseAccountLockedLongerDurationResponse(): AccountLockedLongerDurationResponse {
   return {
-    locks: []
+    locks: [],
   };
 }
+/**
+ * @name AccountLockedLongerDurationResponse
+ * @package symphony.lockup
+ * @see proto type: symphony.lockup.AccountLockedLongerDurationResponse
+ */
 export const AccountLockedLongerDurationResponse = {
-  typeUrl: "/symphony.lockup.AccountLockedLongerDurationResponse",
+  typeUrl: '/symphony.lockup.AccountLockedLongerDurationResponse',
   is(o: any): o is AccountLockedLongerDurationResponse {
-    return o && (o.$typeUrl === AccountLockedLongerDurationResponse.typeUrl || Array.isArray(o.locks) && (!o.locks.length || PeriodLock.is(o.locks[0])));
+    return (
+      o &&
+      (o.$typeUrl === AccountLockedLongerDurationResponse.typeUrl ||
+        (Array.isArray(o.locks) &&
+          (!o.locks.length || PeriodLock.is(o.locks[0]))))
+    );
   },
   isSDK(o: any): o is AccountLockedLongerDurationResponseSDKType {
-    return o && (o.$typeUrl === AccountLockedLongerDurationResponse.typeUrl || Array.isArray(o.locks) && (!o.locks.length || PeriodLock.isSDK(o.locks[0])));
+    return (
+      o &&
+      (o.$typeUrl === AccountLockedLongerDurationResponse.typeUrl ||
+        (Array.isArray(o.locks) &&
+          (!o.locks.length || PeriodLock.isSDK(o.locks[0]))))
+    );
   },
   isAmino(o: any): o is AccountLockedLongerDurationResponseAmino {
-    return o && (o.$typeUrl === AccountLockedLongerDurationResponse.typeUrl || Array.isArray(o.locks) && (!o.locks.length || PeriodLock.isAmino(o.locks[0])));
+    return (
+      o &&
+      (o.$typeUrl === AccountLockedLongerDurationResponse.typeUrl ||
+        (Array.isArray(o.locks) &&
+          (!o.locks.length || PeriodLock.isAmino(o.locks[0]))))
+    );
   },
-  encode(message: AccountLockedLongerDurationResponse, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
+  encode(
+    message: AccountLockedLongerDurationResponse,
+    writer: BinaryWriter = BinaryWriter.create(),
+  ): BinaryWriter {
     for (const v of message.locks) {
       PeriodLock.encode(v!, writer.uint32(10).fork()).ldelim();
     }
     return writer;
   },
-  decode(input: BinaryReader | Uint8Array, length?: number): AccountLockedLongerDurationResponse {
-    const reader = input instanceof BinaryReader ? input : new BinaryReader(input);
+  decode(
+    input: BinaryReader | Uint8Array,
+    length?: number,
+  ): AccountLockedLongerDurationResponse {
+    const reader =
+      input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseAccountLockedLongerDurationResponse();
     while (reader.pos < end) {
@@ -3069,61 +4858,98 @@ export const AccountLockedLongerDurationResponse = {
     }
     return message;
   },
-  fromPartial(object: Partial<AccountLockedLongerDurationResponse>): AccountLockedLongerDurationResponse {
+  fromPartial(
+    object: Partial<AccountLockedLongerDurationResponse>,
+  ): AccountLockedLongerDurationResponse {
     const message = createBaseAccountLockedLongerDurationResponse();
     message.locks = object.locks?.map(e => PeriodLock.fromPartial(e)) || [];
     return message;
   },
-  fromAmino(object: AccountLockedLongerDurationResponseAmino): AccountLockedLongerDurationResponse {
+  fromAmino(
+    object: AccountLockedLongerDurationResponseAmino,
+  ): AccountLockedLongerDurationResponse {
     const message = createBaseAccountLockedLongerDurationResponse();
     message.locks = object.locks?.map(e => PeriodLock.fromAmino(e)) || [];
     return message;
   },
-  toAmino(message: AccountLockedLongerDurationResponse): AccountLockedLongerDurationResponseAmino {
+  toAmino(
+    message: AccountLockedLongerDurationResponse,
+  ): AccountLockedLongerDurationResponseAmino {
     const obj: any = {};
     if (message.locks) {
-      obj.locks = message.locks.map(e => e ? PeriodLock.toAmino(e) : undefined);
+      obj.locks = message.locks.map(e =>
+        e ? PeriodLock.toAmino(e) : undefined,
+      );
     } else {
       obj.locks = message.locks;
     }
     return obj;
   },
-  fromAminoMsg(object: AccountLockedLongerDurationResponseAminoMsg): AccountLockedLongerDurationResponse {
+  fromAminoMsg(
+    object: AccountLockedLongerDurationResponseAminoMsg,
+  ): AccountLockedLongerDurationResponse {
     return AccountLockedLongerDurationResponse.fromAmino(object.value);
   },
-  fromProtoMsg(message: AccountLockedLongerDurationResponseProtoMsg): AccountLockedLongerDurationResponse {
+  fromProtoMsg(
+    message: AccountLockedLongerDurationResponseProtoMsg,
+  ): AccountLockedLongerDurationResponse {
     return AccountLockedLongerDurationResponse.decode(message.value);
   },
   toProto(message: AccountLockedLongerDurationResponse): Uint8Array {
     return AccountLockedLongerDurationResponse.encode(message).finish();
   },
-  toProtoMsg(message: AccountLockedLongerDurationResponse): AccountLockedLongerDurationResponseProtoMsg {
+  toProtoMsg(
+    message: AccountLockedLongerDurationResponse,
+  ): AccountLockedLongerDurationResponseProtoMsg {
     return {
-      typeUrl: "/symphony.lockup.AccountLockedLongerDurationResponse",
-      value: AccountLockedLongerDurationResponse.encode(message).finish()
+      typeUrl: '/symphony.lockup.AccountLockedLongerDurationResponse',
+      value: AccountLockedLongerDurationResponse.encode(message).finish(),
     };
-  }
+  },
 };
-GlobalDecoderRegistry.register(AccountLockedLongerDurationResponse.typeUrl, AccountLockedLongerDurationResponse);
+GlobalDecoderRegistry.register(
+  AccountLockedLongerDurationResponse.typeUrl,
+  AccountLockedLongerDurationResponse,
+);
 function createBaseAccountLockedDurationRequest(): AccountLockedDurationRequest {
   return {
-    owner: "",
-    duration: Duration.fromPartial({})
+    owner: '',
+    duration: Duration.fromPartial({}),
   };
 }
+/**
+ * @name AccountLockedDurationRequest
+ * @package symphony.lockup
+ * @see proto type: symphony.lockup.AccountLockedDurationRequest
+ */
 export const AccountLockedDurationRequest = {
-  typeUrl: "/symphony.lockup.AccountLockedDurationRequest",
+  typeUrl: '/symphony.lockup.AccountLockedDurationRequest',
   is(o: any): o is AccountLockedDurationRequest {
-    return o && (o.$typeUrl === AccountLockedDurationRequest.typeUrl || typeof o.owner === "string" && Duration.is(o.duration));
+    return (
+      o &&
+      (o.$typeUrl === AccountLockedDurationRequest.typeUrl ||
+        (typeof o.owner === 'string' && Duration.is(o.duration)))
+    );
   },
   isSDK(o: any): o is AccountLockedDurationRequestSDKType {
-    return o && (o.$typeUrl === AccountLockedDurationRequest.typeUrl || typeof o.owner === "string" && Duration.isSDK(o.duration));
+    return (
+      o &&
+      (o.$typeUrl === AccountLockedDurationRequest.typeUrl ||
+        (typeof o.owner === 'string' && Duration.isSDK(o.duration)))
+    );
   },
   isAmino(o: any): o is AccountLockedDurationRequestAmino {
-    return o && (o.$typeUrl === AccountLockedDurationRequest.typeUrl || typeof o.owner === "string" && Duration.isAmino(o.duration));
+    return (
+      o &&
+      (o.$typeUrl === AccountLockedDurationRequest.typeUrl ||
+        (typeof o.owner === 'string' && Duration.isAmino(o.duration)))
+    );
   },
-  encode(message: AccountLockedDurationRequest, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
-    if (message.owner !== "") {
+  encode(
+    message: AccountLockedDurationRequest,
+    writer: BinaryWriter = BinaryWriter.create(),
+  ): BinaryWriter {
+    if (message.owner !== '') {
       writer.uint32(10).string(message.owner);
     }
     if (message.duration !== undefined) {
@@ -3131,8 +4957,12 @@ export const AccountLockedDurationRequest = {
     }
     return writer;
   },
-  decode(input: BinaryReader | Uint8Array, length?: number): AccountLockedDurationRequest {
-    const reader = input instanceof BinaryReader ? input : new BinaryReader(input);
+  decode(
+    input: BinaryReader | Uint8Array,
+    length?: number,
+  ): AccountLockedDurationRequest {
+    const reader =
+      input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseAccountLockedDurationRequest();
     while (reader.pos < end) {
@@ -3151,13 +4981,20 @@ export const AccountLockedDurationRequest = {
     }
     return message;
   },
-  fromPartial(object: Partial<AccountLockedDurationRequest>): AccountLockedDurationRequest {
+  fromPartial(
+    object: Partial<AccountLockedDurationRequest>,
+  ): AccountLockedDurationRequest {
     const message = createBaseAccountLockedDurationRequest();
-    message.owner = object.owner ?? "";
-    message.duration = object.duration !== undefined && object.duration !== null ? Duration.fromPartial(object.duration) : undefined;
+    message.owner = object.owner ?? '';
+    message.duration =
+      object.duration !== undefined && object.duration !== null
+        ? Duration.fromPartial(object.duration)
+        : undefined;
     return message;
   },
-  fromAmino(object: AccountLockedDurationRequestAmino): AccountLockedDurationRequest {
+  fromAmino(
+    object: AccountLockedDurationRequestAmino,
+  ): AccountLockedDurationRequest {
     const message = createBaseAccountLockedDurationRequest();
     if (object.owner !== undefined && object.owner !== null) {
       message.owner = object.owner;
@@ -3167,53 +5004,93 @@ export const AccountLockedDurationRequest = {
     }
     return message;
   },
-  toAmino(message: AccountLockedDurationRequest): AccountLockedDurationRequestAmino {
+  toAmino(
+    message: AccountLockedDurationRequest,
+  ): AccountLockedDurationRequestAmino {
     const obj: any = {};
-    obj.owner = message.owner === "" ? undefined : message.owner;
-    obj.duration = message.duration ? Duration.toAmino(message.duration) : undefined;
+    obj.owner = message.owner === '' ? undefined : message.owner;
+    obj.duration = message.duration
+      ? Duration.toAmino(message.duration)
+      : undefined;
     return obj;
   },
-  fromAminoMsg(object: AccountLockedDurationRequestAminoMsg): AccountLockedDurationRequest {
+  fromAminoMsg(
+    object: AccountLockedDurationRequestAminoMsg,
+  ): AccountLockedDurationRequest {
     return AccountLockedDurationRequest.fromAmino(object.value);
   },
-  fromProtoMsg(message: AccountLockedDurationRequestProtoMsg): AccountLockedDurationRequest {
+  fromProtoMsg(
+    message: AccountLockedDurationRequestProtoMsg,
+  ): AccountLockedDurationRequest {
     return AccountLockedDurationRequest.decode(message.value);
   },
   toProto(message: AccountLockedDurationRequest): Uint8Array {
     return AccountLockedDurationRequest.encode(message).finish();
   },
-  toProtoMsg(message: AccountLockedDurationRequest): AccountLockedDurationRequestProtoMsg {
+  toProtoMsg(
+    message: AccountLockedDurationRequest,
+  ): AccountLockedDurationRequestProtoMsg {
     return {
-      typeUrl: "/symphony.lockup.AccountLockedDurationRequest",
-      value: AccountLockedDurationRequest.encode(message).finish()
+      typeUrl: '/symphony.lockup.AccountLockedDurationRequest',
+      value: AccountLockedDurationRequest.encode(message).finish(),
     };
-  }
+  },
 };
-GlobalDecoderRegistry.register(AccountLockedDurationRequest.typeUrl, AccountLockedDurationRequest);
+GlobalDecoderRegistry.register(
+  AccountLockedDurationRequest.typeUrl,
+  AccountLockedDurationRequest,
+);
 function createBaseAccountLockedDurationResponse(): AccountLockedDurationResponse {
   return {
-    locks: []
+    locks: [],
   };
 }
+/**
+ * @name AccountLockedDurationResponse
+ * @package symphony.lockup
+ * @see proto type: symphony.lockup.AccountLockedDurationResponse
+ */
 export const AccountLockedDurationResponse = {
-  typeUrl: "/symphony.lockup.AccountLockedDurationResponse",
+  typeUrl: '/symphony.lockup.AccountLockedDurationResponse',
   is(o: any): o is AccountLockedDurationResponse {
-    return o && (o.$typeUrl === AccountLockedDurationResponse.typeUrl || Array.isArray(o.locks) && (!o.locks.length || PeriodLock.is(o.locks[0])));
+    return (
+      o &&
+      (o.$typeUrl === AccountLockedDurationResponse.typeUrl ||
+        (Array.isArray(o.locks) &&
+          (!o.locks.length || PeriodLock.is(o.locks[0]))))
+    );
   },
   isSDK(o: any): o is AccountLockedDurationResponseSDKType {
-    return o && (o.$typeUrl === AccountLockedDurationResponse.typeUrl || Array.isArray(o.locks) && (!o.locks.length || PeriodLock.isSDK(o.locks[0])));
+    return (
+      o &&
+      (o.$typeUrl === AccountLockedDurationResponse.typeUrl ||
+        (Array.isArray(o.locks) &&
+          (!o.locks.length || PeriodLock.isSDK(o.locks[0]))))
+    );
   },
   isAmino(o: any): o is AccountLockedDurationResponseAmino {
-    return o && (o.$typeUrl === AccountLockedDurationResponse.typeUrl || Array.isArray(o.locks) && (!o.locks.length || PeriodLock.isAmino(o.locks[0])));
+    return (
+      o &&
+      (o.$typeUrl === AccountLockedDurationResponse.typeUrl ||
+        (Array.isArray(o.locks) &&
+          (!o.locks.length || PeriodLock.isAmino(o.locks[0]))))
+    );
   },
-  encode(message: AccountLockedDurationResponse, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
+  encode(
+    message: AccountLockedDurationResponse,
+    writer: BinaryWriter = BinaryWriter.create(),
+  ): BinaryWriter {
     for (const v of message.locks) {
       PeriodLock.encode(v!, writer.uint32(10).fork()).ldelim();
     }
     return writer;
   },
-  decode(input: BinaryReader | Uint8Array, length?: number): AccountLockedDurationResponse {
-    const reader = input instanceof BinaryReader ? input : new BinaryReader(input);
+  decode(
+    input: BinaryReader | Uint8Array,
+    length?: number,
+  ): AccountLockedDurationResponse {
+    const reader =
+      input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseAccountLockedDurationResponse();
     while (reader.pos < end) {
@@ -3229,61 +5106,106 @@ export const AccountLockedDurationResponse = {
     }
     return message;
   },
-  fromPartial(object: Partial<AccountLockedDurationResponse>): AccountLockedDurationResponse {
+  fromPartial(
+    object: Partial<AccountLockedDurationResponse>,
+  ): AccountLockedDurationResponse {
     const message = createBaseAccountLockedDurationResponse();
     message.locks = object.locks?.map(e => PeriodLock.fromPartial(e)) || [];
     return message;
   },
-  fromAmino(object: AccountLockedDurationResponseAmino): AccountLockedDurationResponse {
+  fromAmino(
+    object: AccountLockedDurationResponseAmino,
+  ): AccountLockedDurationResponse {
     const message = createBaseAccountLockedDurationResponse();
     message.locks = object.locks?.map(e => PeriodLock.fromAmino(e)) || [];
     return message;
   },
-  toAmino(message: AccountLockedDurationResponse): AccountLockedDurationResponseAmino {
+  toAmino(
+    message: AccountLockedDurationResponse,
+  ): AccountLockedDurationResponseAmino {
     const obj: any = {};
     if (message.locks) {
-      obj.locks = message.locks.map(e => e ? PeriodLock.toAmino(e) : undefined);
+      obj.locks = message.locks.map(e =>
+        e ? PeriodLock.toAmino(e) : undefined,
+      );
     } else {
       obj.locks = message.locks;
     }
     return obj;
   },
-  fromAminoMsg(object: AccountLockedDurationResponseAminoMsg): AccountLockedDurationResponse {
+  fromAminoMsg(
+    object: AccountLockedDurationResponseAminoMsg,
+  ): AccountLockedDurationResponse {
     return AccountLockedDurationResponse.fromAmino(object.value);
   },
-  fromProtoMsg(message: AccountLockedDurationResponseProtoMsg): AccountLockedDurationResponse {
+  fromProtoMsg(
+    message: AccountLockedDurationResponseProtoMsg,
+  ): AccountLockedDurationResponse {
     return AccountLockedDurationResponse.decode(message.value);
   },
   toProto(message: AccountLockedDurationResponse): Uint8Array {
     return AccountLockedDurationResponse.encode(message).finish();
   },
-  toProtoMsg(message: AccountLockedDurationResponse): AccountLockedDurationResponseProtoMsg {
+  toProtoMsg(
+    message: AccountLockedDurationResponse,
+  ): AccountLockedDurationResponseProtoMsg {
     return {
-      typeUrl: "/symphony.lockup.AccountLockedDurationResponse",
-      value: AccountLockedDurationResponse.encode(message).finish()
+      typeUrl: '/symphony.lockup.AccountLockedDurationResponse',
+      value: AccountLockedDurationResponse.encode(message).finish(),
     };
-  }
+  },
 };
-GlobalDecoderRegistry.register(AccountLockedDurationResponse.typeUrl, AccountLockedDurationResponse);
+GlobalDecoderRegistry.register(
+  AccountLockedDurationResponse.typeUrl,
+  AccountLockedDurationResponse,
+);
 function createBaseAccountLockedLongerDurationNotUnlockingOnlyRequest(): AccountLockedLongerDurationNotUnlockingOnlyRequest {
   return {
-    owner: "",
-    duration: Duration.fromPartial({})
+    owner: '',
+    duration: Duration.fromPartial({}),
   };
 }
+/**
+ * @name AccountLockedLongerDurationNotUnlockingOnlyRequest
+ * @package symphony.lockup
+ * @see proto type: symphony.lockup.AccountLockedLongerDurationNotUnlockingOnlyRequest
+ */
 export const AccountLockedLongerDurationNotUnlockingOnlyRequest = {
-  typeUrl: "/symphony.lockup.AccountLockedLongerDurationNotUnlockingOnlyRequest",
+  typeUrl:
+    '/symphony.lockup.AccountLockedLongerDurationNotUnlockingOnlyRequest',
   is(o: any): o is AccountLockedLongerDurationNotUnlockingOnlyRequest {
-    return o && (o.$typeUrl === AccountLockedLongerDurationNotUnlockingOnlyRequest.typeUrl || typeof o.owner === "string" && Duration.is(o.duration));
+    return (
+      o &&
+      (o.$typeUrl ===
+        AccountLockedLongerDurationNotUnlockingOnlyRequest.typeUrl ||
+        (typeof o.owner === 'string' && Duration.is(o.duration)))
+    );
   },
-  isSDK(o: any): o is AccountLockedLongerDurationNotUnlockingOnlyRequestSDKType {
-    return o && (o.$typeUrl === AccountLockedLongerDurationNotUnlockingOnlyRequest.typeUrl || typeof o.owner === "string" && Duration.isSDK(o.duration));
+  isSDK(
+    o: any,
+  ): o is AccountLockedLongerDurationNotUnlockingOnlyRequestSDKType {
+    return (
+      o &&
+      (o.$typeUrl ===
+        AccountLockedLongerDurationNotUnlockingOnlyRequest.typeUrl ||
+        (typeof o.owner === 'string' && Duration.isSDK(o.duration)))
+    );
   },
-  isAmino(o: any): o is AccountLockedLongerDurationNotUnlockingOnlyRequestAmino {
-    return o && (o.$typeUrl === AccountLockedLongerDurationNotUnlockingOnlyRequest.typeUrl || typeof o.owner === "string" && Duration.isAmino(o.duration));
+  isAmino(
+    o: any,
+  ): o is AccountLockedLongerDurationNotUnlockingOnlyRequestAmino {
+    return (
+      o &&
+      (o.$typeUrl ===
+        AccountLockedLongerDurationNotUnlockingOnlyRequest.typeUrl ||
+        (typeof o.owner === 'string' && Duration.isAmino(o.duration)))
+    );
   },
-  encode(message: AccountLockedLongerDurationNotUnlockingOnlyRequest, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
-    if (message.owner !== "") {
+  encode(
+    message: AccountLockedLongerDurationNotUnlockingOnlyRequest,
+    writer: BinaryWriter = BinaryWriter.create(),
+  ): BinaryWriter {
+    if (message.owner !== '') {
       writer.uint32(10).string(message.owner);
     }
     if (message.duration !== undefined) {
@@ -3291,10 +5213,15 @@ export const AccountLockedLongerDurationNotUnlockingOnlyRequest = {
     }
     return writer;
   },
-  decode(input: BinaryReader | Uint8Array, length?: number): AccountLockedLongerDurationNotUnlockingOnlyRequest {
-    const reader = input instanceof BinaryReader ? input : new BinaryReader(input);
+  decode(
+    input: BinaryReader | Uint8Array,
+    length?: number,
+  ): AccountLockedLongerDurationNotUnlockingOnlyRequest {
+    const reader =
+      input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
-    const message = createBaseAccountLockedLongerDurationNotUnlockingOnlyRequest();
+    const message =
+      createBaseAccountLockedLongerDurationNotUnlockingOnlyRequest();
     while (reader.pos < end) {
       const tag = reader.uint32();
       switch (tag >>> 3) {
@@ -3311,14 +5238,23 @@ export const AccountLockedLongerDurationNotUnlockingOnlyRequest = {
     }
     return message;
   },
-  fromPartial(object: Partial<AccountLockedLongerDurationNotUnlockingOnlyRequest>): AccountLockedLongerDurationNotUnlockingOnlyRequest {
-    const message = createBaseAccountLockedLongerDurationNotUnlockingOnlyRequest();
-    message.owner = object.owner ?? "";
-    message.duration = object.duration !== undefined && object.duration !== null ? Duration.fromPartial(object.duration) : undefined;
+  fromPartial(
+    object: Partial<AccountLockedLongerDurationNotUnlockingOnlyRequest>,
+  ): AccountLockedLongerDurationNotUnlockingOnlyRequest {
+    const message =
+      createBaseAccountLockedLongerDurationNotUnlockingOnlyRequest();
+    message.owner = object.owner ?? '';
+    message.duration =
+      object.duration !== undefined && object.duration !== null
+        ? Duration.fromPartial(object.duration)
+        : undefined;
     return message;
   },
-  fromAmino(object: AccountLockedLongerDurationNotUnlockingOnlyRequestAmino): AccountLockedLongerDurationNotUnlockingOnlyRequest {
-    const message = createBaseAccountLockedLongerDurationNotUnlockingOnlyRequest();
+  fromAmino(
+    object: AccountLockedLongerDurationNotUnlockingOnlyRequestAmino,
+  ): AccountLockedLongerDurationNotUnlockingOnlyRequest {
+    const message =
+      createBaseAccountLockedLongerDurationNotUnlockingOnlyRequest();
     if (object.owner !== undefined && object.owner !== null) {
       message.owner = object.owner;
     }
@@ -3327,55 +5263,116 @@ export const AccountLockedLongerDurationNotUnlockingOnlyRequest = {
     }
     return message;
   },
-  toAmino(message: AccountLockedLongerDurationNotUnlockingOnlyRequest): AccountLockedLongerDurationNotUnlockingOnlyRequestAmino {
+  toAmino(
+    message: AccountLockedLongerDurationNotUnlockingOnlyRequest,
+  ): AccountLockedLongerDurationNotUnlockingOnlyRequestAmino {
     const obj: any = {};
-    obj.owner = message.owner === "" ? undefined : message.owner;
-    obj.duration = message.duration ? Duration.toAmino(message.duration) : undefined;
+    obj.owner = message.owner === '' ? undefined : message.owner;
+    obj.duration = message.duration
+      ? Duration.toAmino(message.duration)
+      : undefined;
     return obj;
   },
-  fromAminoMsg(object: AccountLockedLongerDurationNotUnlockingOnlyRequestAminoMsg): AccountLockedLongerDurationNotUnlockingOnlyRequest {
-    return AccountLockedLongerDurationNotUnlockingOnlyRequest.fromAmino(object.value);
+  fromAminoMsg(
+    object: AccountLockedLongerDurationNotUnlockingOnlyRequestAminoMsg,
+  ): AccountLockedLongerDurationNotUnlockingOnlyRequest {
+    return AccountLockedLongerDurationNotUnlockingOnlyRequest.fromAmino(
+      object.value,
+    );
   },
-  fromProtoMsg(message: AccountLockedLongerDurationNotUnlockingOnlyRequestProtoMsg): AccountLockedLongerDurationNotUnlockingOnlyRequest {
-    return AccountLockedLongerDurationNotUnlockingOnlyRequest.decode(message.value);
+  fromProtoMsg(
+    message: AccountLockedLongerDurationNotUnlockingOnlyRequestProtoMsg,
+  ): AccountLockedLongerDurationNotUnlockingOnlyRequest {
+    return AccountLockedLongerDurationNotUnlockingOnlyRequest.decode(
+      message.value,
+    );
   },
-  toProto(message: AccountLockedLongerDurationNotUnlockingOnlyRequest): Uint8Array {
-    return AccountLockedLongerDurationNotUnlockingOnlyRequest.encode(message).finish();
+  toProto(
+    message: AccountLockedLongerDurationNotUnlockingOnlyRequest,
+  ): Uint8Array {
+    return AccountLockedLongerDurationNotUnlockingOnlyRequest.encode(
+      message,
+    ).finish();
   },
-  toProtoMsg(message: AccountLockedLongerDurationNotUnlockingOnlyRequest): AccountLockedLongerDurationNotUnlockingOnlyRequestProtoMsg {
+  toProtoMsg(
+    message: AccountLockedLongerDurationNotUnlockingOnlyRequest,
+  ): AccountLockedLongerDurationNotUnlockingOnlyRequestProtoMsg {
     return {
-      typeUrl: "/symphony.lockup.AccountLockedLongerDurationNotUnlockingOnlyRequest",
-      value: AccountLockedLongerDurationNotUnlockingOnlyRequest.encode(message).finish()
+      typeUrl:
+        '/symphony.lockup.AccountLockedLongerDurationNotUnlockingOnlyRequest',
+      value:
+        AccountLockedLongerDurationNotUnlockingOnlyRequest.encode(
+          message,
+        ).finish(),
     };
-  }
+  },
 };
-GlobalDecoderRegistry.register(AccountLockedLongerDurationNotUnlockingOnlyRequest.typeUrl, AccountLockedLongerDurationNotUnlockingOnlyRequest);
+GlobalDecoderRegistry.register(
+  AccountLockedLongerDurationNotUnlockingOnlyRequest.typeUrl,
+  AccountLockedLongerDurationNotUnlockingOnlyRequest,
+);
 function createBaseAccountLockedLongerDurationNotUnlockingOnlyResponse(): AccountLockedLongerDurationNotUnlockingOnlyResponse {
   return {
-    locks: []
+    locks: [],
   };
 }
+/**
+ * @name AccountLockedLongerDurationNotUnlockingOnlyResponse
+ * @package symphony.lockup
+ * @see proto type: symphony.lockup.AccountLockedLongerDurationNotUnlockingOnlyResponse
+ */
 export const AccountLockedLongerDurationNotUnlockingOnlyResponse = {
-  typeUrl: "/symphony.lockup.AccountLockedLongerDurationNotUnlockingOnlyResponse",
+  typeUrl:
+    '/symphony.lockup.AccountLockedLongerDurationNotUnlockingOnlyResponse',
   is(o: any): o is AccountLockedLongerDurationNotUnlockingOnlyResponse {
-    return o && (o.$typeUrl === AccountLockedLongerDurationNotUnlockingOnlyResponse.typeUrl || Array.isArray(o.locks) && (!o.locks.length || PeriodLock.is(o.locks[0])));
+    return (
+      o &&
+      (o.$typeUrl ===
+        AccountLockedLongerDurationNotUnlockingOnlyResponse.typeUrl ||
+        (Array.isArray(o.locks) &&
+          (!o.locks.length || PeriodLock.is(o.locks[0]))))
+    );
   },
-  isSDK(o: any): o is AccountLockedLongerDurationNotUnlockingOnlyResponseSDKType {
-    return o && (o.$typeUrl === AccountLockedLongerDurationNotUnlockingOnlyResponse.typeUrl || Array.isArray(o.locks) && (!o.locks.length || PeriodLock.isSDK(o.locks[0])));
+  isSDK(
+    o: any,
+  ): o is AccountLockedLongerDurationNotUnlockingOnlyResponseSDKType {
+    return (
+      o &&
+      (o.$typeUrl ===
+        AccountLockedLongerDurationNotUnlockingOnlyResponse.typeUrl ||
+        (Array.isArray(o.locks) &&
+          (!o.locks.length || PeriodLock.isSDK(o.locks[0]))))
+    );
   },
-  isAmino(o: any): o is AccountLockedLongerDurationNotUnlockingOnlyResponseAmino {
-    return o && (o.$typeUrl === AccountLockedLongerDurationNotUnlockingOnlyResponse.typeUrl || Array.isArray(o.locks) && (!o.locks.length || PeriodLock.isAmino(o.locks[0])));
+  isAmino(
+    o: any,
+  ): o is AccountLockedLongerDurationNotUnlockingOnlyResponseAmino {
+    return (
+      o &&
+      (o.$typeUrl ===
+        AccountLockedLongerDurationNotUnlockingOnlyResponse.typeUrl ||
+        (Array.isArray(o.locks) &&
+          (!o.locks.length || PeriodLock.isAmino(o.locks[0]))))
+    );
   },
-  encode(message: AccountLockedLongerDurationNotUnlockingOnlyResponse, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
+  encode(
+    message: AccountLockedLongerDurationNotUnlockingOnlyResponse,
+    writer: BinaryWriter = BinaryWriter.create(),
+  ): BinaryWriter {
     for (const v of message.locks) {
       PeriodLock.encode(v!, writer.uint32(10).fork()).ldelim();
     }
     return writer;
   },
-  decode(input: BinaryReader | Uint8Array, length?: number): AccountLockedLongerDurationNotUnlockingOnlyResponse {
-    const reader = input instanceof BinaryReader ? input : new BinaryReader(input);
+  decode(
+    input: BinaryReader | Uint8Array,
+    length?: number,
+  ): AccountLockedLongerDurationNotUnlockingOnlyResponse {
+    const reader =
+      input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
-    const message = createBaseAccountLockedLongerDurationNotUnlockingOnlyResponse();
+    const message =
+      createBaseAccountLockedLongerDurationNotUnlockingOnlyResponse();
     while (reader.pos < end) {
       const tag = reader.uint32();
       switch (tag >>> 3) {
@@ -3389,74 +5386,135 @@ export const AccountLockedLongerDurationNotUnlockingOnlyResponse = {
     }
     return message;
   },
-  fromPartial(object: Partial<AccountLockedLongerDurationNotUnlockingOnlyResponse>): AccountLockedLongerDurationNotUnlockingOnlyResponse {
-    const message = createBaseAccountLockedLongerDurationNotUnlockingOnlyResponse();
+  fromPartial(
+    object: Partial<AccountLockedLongerDurationNotUnlockingOnlyResponse>,
+  ): AccountLockedLongerDurationNotUnlockingOnlyResponse {
+    const message =
+      createBaseAccountLockedLongerDurationNotUnlockingOnlyResponse();
     message.locks = object.locks?.map(e => PeriodLock.fromPartial(e)) || [];
     return message;
   },
-  fromAmino(object: AccountLockedLongerDurationNotUnlockingOnlyResponseAmino): AccountLockedLongerDurationNotUnlockingOnlyResponse {
-    const message = createBaseAccountLockedLongerDurationNotUnlockingOnlyResponse();
+  fromAmino(
+    object: AccountLockedLongerDurationNotUnlockingOnlyResponseAmino,
+  ): AccountLockedLongerDurationNotUnlockingOnlyResponse {
+    const message =
+      createBaseAccountLockedLongerDurationNotUnlockingOnlyResponse();
     message.locks = object.locks?.map(e => PeriodLock.fromAmino(e)) || [];
     return message;
   },
-  toAmino(message: AccountLockedLongerDurationNotUnlockingOnlyResponse): AccountLockedLongerDurationNotUnlockingOnlyResponseAmino {
+  toAmino(
+    message: AccountLockedLongerDurationNotUnlockingOnlyResponse,
+  ): AccountLockedLongerDurationNotUnlockingOnlyResponseAmino {
     const obj: any = {};
     if (message.locks) {
-      obj.locks = message.locks.map(e => e ? PeriodLock.toAmino(e) : undefined);
+      obj.locks = message.locks.map(e =>
+        e ? PeriodLock.toAmino(e) : undefined,
+      );
     } else {
       obj.locks = message.locks;
     }
     return obj;
   },
-  fromAminoMsg(object: AccountLockedLongerDurationNotUnlockingOnlyResponseAminoMsg): AccountLockedLongerDurationNotUnlockingOnlyResponse {
-    return AccountLockedLongerDurationNotUnlockingOnlyResponse.fromAmino(object.value);
+  fromAminoMsg(
+    object: AccountLockedLongerDurationNotUnlockingOnlyResponseAminoMsg,
+  ): AccountLockedLongerDurationNotUnlockingOnlyResponse {
+    return AccountLockedLongerDurationNotUnlockingOnlyResponse.fromAmino(
+      object.value,
+    );
   },
-  fromProtoMsg(message: AccountLockedLongerDurationNotUnlockingOnlyResponseProtoMsg): AccountLockedLongerDurationNotUnlockingOnlyResponse {
-    return AccountLockedLongerDurationNotUnlockingOnlyResponse.decode(message.value);
+  fromProtoMsg(
+    message: AccountLockedLongerDurationNotUnlockingOnlyResponseProtoMsg,
+  ): AccountLockedLongerDurationNotUnlockingOnlyResponse {
+    return AccountLockedLongerDurationNotUnlockingOnlyResponse.decode(
+      message.value,
+    );
   },
-  toProto(message: AccountLockedLongerDurationNotUnlockingOnlyResponse): Uint8Array {
-    return AccountLockedLongerDurationNotUnlockingOnlyResponse.encode(message).finish();
+  toProto(
+    message: AccountLockedLongerDurationNotUnlockingOnlyResponse,
+  ): Uint8Array {
+    return AccountLockedLongerDurationNotUnlockingOnlyResponse.encode(
+      message,
+    ).finish();
   },
-  toProtoMsg(message: AccountLockedLongerDurationNotUnlockingOnlyResponse): AccountLockedLongerDurationNotUnlockingOnlyResponseProtoMsg {
+  toProtoMsg(
+    message: AccountLockedLongerDurationNotUnlockingOnlyResponse,
+  ): AccountLockedLongerDurationNotUnlockingOnlyResponseProtoMsg {
     return {
-      typeUrl: "/symphony.lockup.AccountLockedLongerDurationNotUnlockingOnlyResponse",
-      value: AccountLockedLongerDurationNotUnlockingOnlyResponse.encode(message).finish()
+      typeUrl:
+        '/symphony.lockup.AccountLockedLongerDurationNotUnlockingOnlyResponse',
+      value:
+        AccountLockedLongerDurationNotUnlockingOnlyResponse.encode(
+          message,
+        ).finish(),
     };
-  }
+  },
 };
-GlobalDecoderRegistry.register(AccountLockedLongerDurationNotUnlockingOnlyResponse.typeUrl, AccountLockedLongerDurationNotUnlockingOnlyResponse);
+GlobalDecoderRegistry.register(
+  AccountLockedLongerDurationNotUnlockingOnlyResponse.typeUrl,
+  AccountLockedLongerDurationNotUnlockingOnlyResponse,
+);
 function createBaseAccountLockedLongerDurationDenomRequest(): AccountLockedLongerDurationDenomRequest {
   return {
-    owner: "",
+    owner: '',
     duration: Duration.fromPartial({}),
-    denom: ""
+    denom: '',
   };
 }
+/**
+ * @name AccountLockedLongerDurationDenomRequest
+ * @package symphony.lockup
+ * @see proto type: symphony.lockup.AccountLockedLongerDurationDenomRequest
+ */
 export const AccountLockedLongerDurationDenomRequest = {
-  typeUrl: "/symphony.lockup.AccountLockedLongerDurationDenomRequest",
+  typeUrl: '/symphony.lockup.AccountLockedLongerDurationDenomRequest',
   is(o: any): o is AccountLockedLongerDurationDenomRequest {
-    return o && (o.$typeUrl === AccountLockedLongerDurationDenomRequest.typeUrl || typeof o.owner === "string" && Duration.is(o.duration) && typeof o.denom === "string");
+    return (
+      o &&
+      (o.$typeUrl === AccountLockedLongerDurationDenomRequest.typeUrl ||
+        (typeof o.owner === 'string' &&
+          Duration.is(o.duration) &&
+          typeof o.denom === 'string'))
+    );
   },
   isSDK(o: any): o is AccountLockedLongerDurationDenomRequestSDKType {
-    return o && (o.$typeUrl === AccountLockedLongerDurationDenomRequest.typeUrl || typeof o.owner === "string" && Duration.isSDK(o.duration) && typeof o.denom === "string");
+    return (
+      o &&
+      (o.$typeUrl === AccountLockedLongerDurationDenomRequest.typeUrl ||
+        (typeof o.owner === 'string' &&
+          Duration.isSDK(o.duration) &&
+          typeof o.denom === 'string'))
+    );
   },
   isAmino(o: any): o is AccountLockedLongerDurationDenomRequestAmino {
-    return o && (o.$typeUrl === AccountLockedLongerDurationDenomRequest.typeUrl || typeof o.owner === "string" && Duration.isAmino(o.duration) && typeof o.denom === "string");
+    return (
+      o &&
+      (o.$typeUrl === AccountLockedLongerDurationDenomRequest.typeUrl ||
+        (typeof o.owner === 'string' &&
+          Duration.isAmino(o.duration) &&
+          typeof o.denom === 'string'))
+    );
   },
-  encode(message: AccountLockedLongerDurationDenomRequest, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
-    if (message.owner !== "") {
+  encode(
+    message: AccountLockedLongerDurationDenomRequest,
+    writer: BinaryWriter = BinaryWriter.create(),
+  ): BinaryWriter {
+    if (message.owner !== '') {
       writer.uint32(10).string(message.owner);
     }
     if (message.duration !== undefined) {
       Duration.encode(message.duration, writer.uint32(18).fork()).ldelim();
     }
-    if (message.denom !== "") {
+    if (message.denom !== '') {
       writer.uint32(26).string(message.denom);
     }
     return writer;
   },
-  decode(input: BinaryReader | Uint8Array, length?: number): AccountLockedLongerDurationDenomRequest {
-    const reader = input instanceof BinaryReader ? input : new BinaryReader(input);
+  decode(
+    input: BinaryReader | Uint8Array,
+    length?: number,
+  ): AccountLockedLongerDurationDenomRequest {
+    const reader =
+      input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseAccountLockedLongerDurationDenomRequest();
     while (reader.pos < end) {
@@ -3478,14 +5536,21 @@ export const AccountLockedLongerDurationDenomRequest = {
     }
     return message;
   },
-  fromPartial(object: Partial<AccountLockedLongerDurationDenomRequest>): AccountLockedLongerDurationDenomRequest {
+  fromPartial(
+    object: Partial<AccountLockedLongerDurationDenomRequest>,
+  ): AccountLockedLongerDurationDenomRequest {
     const message = createBaseAccountLockedLongerDurationDenomRequest();
-    message.owner = object.owner ?? "";
-    message.duration = object.duration !== undefined && object.duration !== null ? Duration.fromPartial(object.duration) : undefined;
-    message.denom = object.denom ?? "";
+    message.owner = object.owner ?? '';
+    message.duration =
+      object.duration !== undefined && object.duration !== null
+        ? Duration.fromPartial(object.duration)
+        : undefined;
+    message.denom = object.denom ?? '';
     return message;
   },
-  fromAmino(object: AccountLockedLongerDurationDenomRequestAmino): AccountLockedLongerDurationDenomRequest {
+  fromAmino(
+    object: AccountLockedLongerDurationDenomRequestAmino,
+  ): AccountLockedLongerDurationDenomRequest {
     const message = createBaseAccountLockedLongerDurationDenomRequest();
     if (object.owner !== undefined && object.owner !== null) {
       message.owner = object.owner;
@@ -3498,54 +5563,94 @@ export const AccountLockedLongerDurationDenomRequest = {
     }
     return message;
   },
-  toAmino(message: AccountLockedLongerDurationDenomRequest): AccountLockedLongerDurationDenomRequestAmino {
+  toAmino(
+    message: AccountLockedLongerDurationDenomRequest,
+  ): AccountLockedLongerDurationDenomRequestAmino {
     const obj: any = {};
-    obj.owner = message.owner === "" ? undefined : message.owner;
-    obj.duration = message.duration ? Duration.toAmino(message.duration) : undefined;
-    obj.denom = message.denom === "" ? undefined : message.denom;
+    obj.owner = message.owner === '' ? undefined : message.owner;
+    obj.duration = message.duration
+      ? Duration.toAmino(message.duration)
+      : undefined;
+    obj.denom = message.denom === '' ? undefined : message.denom;
     return obj;
   },
-  fromAminoMsg(object: AccountLockedLongerDurationDenomRequestAminoMsg): AccountLockedLongerDurationDenomRequest {
+  fromAminoMsg(
+    object: AccountLockedLongerDurationDenomRequestAminoMsg,
+  ): AccountLockedLongerDurationDenomRequest {
     return AccountLockedLongerDurationDenomRequest.fromAmino(object.value);
   },
-  fromProtoMsg(message: AccountLockedLongerDurationDenomRequestProtoMsg): AccountLockedLongerDurationDenomRequest {
+  fromProtoMsg(
+    message: AccountLockedLongerDurationDenomRequestProtoMsg,
+  ): AccountLockedLongerDurationDenomRequest {
     return AccountLockedLongerDurationDenomRequest.decode(message.value);
   },
   toProto(message: AccountLockedLongerDurationDenomRequest): Uint8Array {
     return AccountLockedLongerDurationDenomRequest.encode(message).finish();
   },
-  toProtoMsg(message: AccountLockedLongerDurationDenomRequest): AccountLockedLongerDurationDenomRequestProtoMsg {
+  toProtoMsg(
+    message: AccountLockedLongerDurationDenomRequest,
+  ): AccountLockedLongerDurationDenomRequestProtoMsg {
     return {
-      typeUrl: "/symphony.lockup.AccountLockedLongerDurationDenomRequest",
-      value: AccountLockedLongerDurationDenomRequest.encode(message).finish()
+      typeUrl: '/symphony.lockup.AccountLockedLongerDurationDenomRequest',
+      value: AccountLockedLongerDurationDenomRequest.encode(message).finish(),
     };
-  }
+  },
 };
-GlobalDecoderRegistry.register(AccountLockedLongerDurationDenomRequest.typeUrl, AccountLockedLongerDurationDenomRequest);
+GlobalDecoderRegistry.register(
+  AccountLockedLongerDurationDenomRequest.typeUrl,
+  AccountLockedLongerDurationDenomRequest,
+);
 function createBaseAccountLockedLongerDurationDenomResponse(): AccountLockedLongerDurationDenomResponse {
   return {
-    locks: []
+    locks: [],
   };
 }
+/**
+ * @name AccountLockedLongerDurationDenomResponse
+ * @package symphony.lockup
+ * @see proto type: symphony.lockup.AccountLockedLongerDurationDenomResponse
+ */
 export const AccountLockedLongerDurationDenomResponse = {
-  typeUrl: "/symphony.lockup.AccountLockedLongerDurationDenomResponse",
+  typeUrl: '/symphony.lockup.AccountLockedLongerDurationDenomResponse',
   is(o: any): o is AccountLockedLongerDurationDenomResponse {
-    return o && (o.$typeUrl === AccountLockedLongerDurationDenomResponse.typeUrl || Array.isArray(o.locks) && (!o.locks.length || PeriodLock.is(o.locks[0])));
+    return (
+      o &&
+      (o.$typeUrl === AccountLockedLongerDurationDenomResponse.typeUrl ||
+        (Array.isArray(o.locks) &&
+          (!o.locks.length || PeriodLock.is(o.locks[0]))))
+    );
   },
   isSDK(o: any): o is AccountLockedLongerDurationDenomResponseSDKType {
-    return o && (o.$typeUrl === AccountLockedLongerDurationDenomResponse.typeUrl || Array.isArray(o.locks) && (!o.locks.length || PeriodLock.isSDK(o.locks[0])));
+    return (
+      o &&
+      (o.$typeUrl === AccountLockedLongerDurationDenomResponse.typeUrl ||
+        (Array.isArray(o.locks) &&
+          (!o.locks.length || PeriodLock.isSDK(o.locks[0]))))
+    );
   },
   isAmino(o: any): o is AccountLockedLongerDurationDenomResponseAmino {
-    return o && (o.$typeUrl === AccountLockedLongerDurationDenomResponse.typeUrl || Array.isArray(o.locks) && (!o.locks.length || PeriodLock.isAmino(o.locks[0])));
+    return (
+      o &&
+      (o.$typeUrl === AccountLockedLongerDurationDenomResponse.typeUrl ||
+        (Array.isArray(o.locks) &&
+          (!o.locks.length || PeriodLock.isAmino(o.locks[0]))))
+    );
   },
-  encode(message: AccountLockedLongerDurationDenomResponse, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
+  encode(
+    message: AccountLockedLongerDurationDenomResponse,
+    writer: BinaryWriter = BinaryWriter.create(),
+  ): BinaryWriter {
     for (const v of message.locks) {
       PeriodLock.encode(v!, writer.uint32(10).fork()).ldelim();
     }
     return writer;
   },
-  decode(input: BinaryReader | Uint8Array, length?: number): AccountLockedLongerDurationDenomResponse {
-    const reader = input instanceof BinaryReader ? input : new BinaryReader(input);
+  decode(
+    input: BinaryReader | Uint8Array,
+    length?: number,
+  ): AccountLockedLongerDurationDenomResponse {
+    const reader =
+      input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseAccountLockedLongerDurationDenomResponse();
     while (reader.pos < end) {
@@ -3561,47 +5666,69 @@ export const AccountLockedLongerDurationDenomResponse = {
     }
     return message;
   },
-  fromPartial(object: Partial<AccountLockedLongerDurationDenomResponse>): AccountLockedLongerDurationDenomResponse {
+  fromPartial(
+    object: Partial<AccountLockedLongerDurationDenomResponse>,
+  ): AccountLockedLongerDurationDenomResponse {
     const message = createBaseAccountLockedLongerDurationDenomResponse();
     message.locks = object.locks?.map(e => PeriodLock.fromPartial(e)) || [];
     return message;
   },
-  fromAmino(object: AccountLockedLongerDurationDenomResponseAmino): AccountLockedLongerDurationDenomResponse {
+  fromAmino(
+    object: AccountLockedLongerDurationDenomResponseAmino,
+  ): AccountLockedLongerDurationDenomResponse {
     const message = createBaseAccountLockedLongerDurationDenomResponse();
     message.locks = object.locks?.map(e => PeriodLock.fromAmino(e)) || [];
     return message;
   },
-  toAmino(message: AccountLockedLongerDurationDenomResponse): AccountLockedLongerDurationDenomResponseAmino {
+  toAmino(
+    message: AccountLockedLongerDurationDenomResponse,
+  ): AccountLockedLongerDurationDenomResponseAmino {
     const obj: any = {};
     if (message.locks) {
-      obj.locks = message.locks.map(e => e ? PeriodLock.toAmino(e) : undefined);
+      obj.locks = message.locks.map(e =>
+        e ? PeriodLock.toAmino(e) : undefined,
+      );
     } else {
       obj.locks = message.locks;
     }
     return obj;
   },
-  fromAminoMsg(object: AccountLockedLongerDurationDenomResponseAminoMsg): AccountLockedLongerDurationDenomResponse {
+  fromAminoMsg(
+    object: AccountLockedLongerDurationDenomResponseAminoMsg,
+  ): AccountLockedLongerDurationDenomResponse {
     return AccountLockedLongerDurationDenomResponse.fromAmino(object.value);
   },
-  fromProtoMsg(message: AccountLockedLongerDurationDenomResponseProtoMsg): AccountLockedLongerDurationDenomResponse {
+  fromProtoMsg(
+    message: AccountLockedLongerDurationDenomResponseProtoMsg,
+  ): AccountLockedLongerDurationDenomResponse {
     return AccountLockedLongerDurationDenomResponse.decode(message.value);
   },
   toProto(message: AccountLockedLongerDurationDenomResponse): Uint8Array {
     return AccountLockedLongerDurationDenomResponse.encode(message).finish();
   },
-  toProtoMsg(message: AccountLockedLongerDurationDenomResponse): AccountLockedLongerDurationDenomResponseProtoMsg {
+  toProtoMsg(
+    message: AccountLockedLongerDurationDenomResponse,
+  ): AccountLockedLongerDurationDenomResponseProtoMsg {
     return {
-      typeUrl: "/symphony.lockup.AccountLockedLongerDurationDenomResponse",
-      value: AccountLockedLongerDurationDenomResponse.encode(message).finish()
+      typeUrl: '/symphony.lockup.AccountLockedLongerDurationDenomResponse',
+      value: AccountLockedLongerDurationDenomResponse.encode(message).finish(),
     };
-  }
+  },
 };
-GlobalDecoderRegistry.register(AccountLockedLongerDurationDenomResponse.typeUrl, AccountLockedLongerDurationDenomResponse);
+GlobalDecoderRegistry.register(
+  AccountLockedLongerDurationDenomResponse.typeUrl,
+  AccountLockedLongerDurationDenomResponse,
+);
 function createBaseQueryParamsRequest(): QueryParamsRequest {
   return {};
 }
+/**
+ * @name QueryParamsRequest
+ * @package symphony.lockup
+ * @see proto type: symphony.lockup.QueryParamsRequest
+ */
 export const QueryParamsRequest = {
-  typeUrl: "/symphony.lockup.QueryParamsRequest",
+  typeUrl: '/symphony.lockup.QueryParamsRequest',
   is(o: any): o is QueryParamsRequest {
     return o && o.$typeUrl === QueryParamsRequest.typeUrl;
   },
@@ -3611,11 +5738,18 @@ export const QueryParamsRequest = {
   isAmino(o: any): o is QueryParamsRequestAmino {
     return o && o.$typeUrl === QueryParamsRequest.typeUrl;
   },
-  encode(_: QueryParamsRequest, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
+  encode(
+    _: QueryParamsRequest,
+    writer: BinaryWriter = BinaryWriter.create(),
+  ): BinaryWriter {
     return writer;
   },
-  decode(input: BinaryReader | Uint8Array, length?: number): QueryParamsRequest {
-    const reader = input instanceof BinaryReader ? input : new BinaryReader(input);
+  decode(
+    input: BinaryReader | Uint8Array,
+    length?: number,
+  ): QueryParamsRequest {
+    const reader =
+      input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseQueryParamsRequest();
     while (reader.pos < end) {
@@ -3651,36 +5785,56 @@ export const QueryParamsRequest = {
   },
   toProtoMsg(message: QueryParamsRequest): QueryParamsRequestProtoMsg {
     return {
-      typeUrl: "/symphony.lockup.QueryParamsRequest",
-      value: QueryParamsRequest.encode(message).finish()
+      typeUrl: '/symphony.lockup.QueryParamsRequest',
+      value: QueryParamsRequest.encode(message).finish(),
     };
-  }
+  },
 };
 GlobalDecoderRegistry.register(QueryParamsRequest.typeUrl, QueryParamsRequest);
 function createBaseQueryParamsResponse(): QueryParamsResponse {
   return {
-    params: Params.fromPartial({})
+    params: Params.fromPartial({}),
   };
 }
+/**
+ * @name QueryParamsResponse
+ * @package symphony.lockup
+ * @see proto type: symphony.lockup.QueryParamsResponse
+ */
 export const QueryParamsResponse = {
-  typeUrl: "/symphony.lockup.QueryParamsResponse",
+  typeUrl: '/symphony.lockup.QueryParamsResponse',
   is(o: any): o is QueryParamsResponse {
-    return o && (o.$typeUrl === QueryParamsResponse.typeUrl || Params.is(o.params));
+    return (
+      o && (o.$typeUrl === QueryParamsResponse.typeUrl || Params.is(o.params))
+    );
   },
   isSDK(o: any): o is QueryParamsResponseSDKType {
-    return o && (o.$typeUrl === QueryParamsResponse.typeUrl || Params.isSDK(o.params));
+    return (
+      o &&
+      (o.$typeUrl === QueryParamsResponse.typeUrl || Params.isSDK(o.params))
+    );
   },
   isAmino(o: any): o is QueryParamsResponseAmino {
-    return o && (o.$typeUrl === QueryParamsResponse.typeUrl || Params.isAmino(o.params));
+    return (
+      o &&
+      (o.$typeUrl === QueryParamsResponse.typeUrl || Params.isAmino(o.params))
+    );
   },
-  encode(message: QueryParamsResponse, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
+  encode(
+    message: QueryParamsResponse,
+    writer: BinaryWriter = BinaryWriter.create(),
+  ): BinaryWriter {
     if (message.params !== undefined) {
       Params.encode(message.params, writer.uint32(10).fork()).ldelim();
     }
     return writer;
   },
-  decode(input: BinaryReader | Uint8Array, length?: number): QueryParamsResponse {
-    const reader = input instanceof BinaryReader ? input : new BinaryReader(input);
+  decode(
+    input: BinaryReader | Uint8Array,
+    length?: number,
+  ): QueryParamsResponse {
+    const reader =
+      input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseQueryParamsResponse();
     while (reader.pos < end) {
@@ -3698,7 +5852,10 @@ export const QueryParamsResponse = {
   },
   fromPartial(object: Partial<QueryParamsResponse>): QueryParamsResponse {
     const message = createBaseQueryParamsResponse();
-    message.params = object.params !== undefined && object.params !== null ? Params.fromPartial(object.params) : undefined;
+    message.params =
+      object.params !== undefined && object.params !== null
+        ? Params.fromPartial(object.params)
+        : undefined;
     return message;
   },
   fromAmino(object: QueryParamsResponseAmino): QueryParamsResponse {
@@ -3724,9 +5881,12 @@ export const QueryParamsResponse = {
   },
   toProtoMsg(message: QueryParamsResponse): QueryParamsResponseProtoMsg {
     return {
-      typeUrl: "/symphony.lockup.QueryParamsResponse",
-      value: QueryParamsResponse.encode(message).finish()
+      typeUrl: '/symphony.lockup.QueryParamsResponse',
+      value: QueryParamsResponse.encode(message).finish(),
     };
-  }
+  },
 };
-GlobalDecoderRegistry.register(QueryParamsResponse.typeUrl, QueryParamsResponse);
+GlobalDecoderRegistry.register(
+  QueryParamsResponse.typeUrl,
+  QueryParamsResponse,
+);

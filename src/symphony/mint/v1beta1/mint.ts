@@ -1,26 +1,45 @@
 //@ts-nocheck
-import { BinaryReader, BinaryWriter } from "../../../binary";
-import { Decimal } from "@cosmjs/math";
-import { GlobalDecoderRegistry } from "../../../registry";
-/** Minter represents the minting state. */
+import { BinaryReader, BinaryWriter } from '../../../binary';
+import { Decimal } from '@cosmjs/math';
+import { GlobalDecoderRegistry } from '../../../registry';
+/**
+ * Minter represents the minting state.
+ * @name Minter
+ * @package symphony.mint.v1beta1
+ * @see proto type: symphony.mint.v1beta1.Minter
+ */
 export interface Minter {
-  /** epoch_provisions represent rewards for the current epoch. */
+  /**
+   * epoch_provisions represent rewards for the current epoch.
+   */
   epochProvisions: string;
 }
 export interface MinterProtoMsg {
-  typeUrl: "/symphony.mint.v1beta1.Minter";
+  typeUrl: '/symphony.mint.v1beta1.Minter';
   value: Uint8Array;
 }
-/** Minter represents the minting state. */
+/**
+ * Minter represents the minting state.
+ * @name MinterAmino
+ * @package symphony.mint.v1beta1
+ * @see proto type: symphony.mint.v1beta1.Minter
+ */
 export interface MinterAmino {
-  /** epoch_provisions represent rewards for the current epoch. */
+  /**
+   * epoch_provisions represent rewards for the current epoch.
+   */
   epoch_provisions?: string;
 }
 export interface MinterAminoMsg {
-  type: "/symphony.mint.v1beta1.Minter";
+  type: '/symphony.mint.v1beta1.Minter';
   value: MinterAmino;
 }
-/** Minter represents the minting state. */
+/**
+ * Minter represents the minting state.
+ * @name MinterSDKType
+ * @package symphony.mint.v1beta1
+ * @see proto type: symphony.mint.v1beta1.Minter
+ */
 export interface MinterSDKType {
   epoch_provisions: string;
 }
@@ -28,32 +47,41 @@ export interface MinterSDKType {
  * WeightedAddress represents an address with a weight assigned to it.
  * The weight is used to determine the proportion of the total minted
  * tokens to be minted to the address.
+ * @name WeightedAddress
+ * @package symphony.mint.v1beta1
+ * @see proto type: symphony.mint.v1beta1.WeightedAddress
  */
 export interface WeightedAddress {
   address: string;
   weight: string;
 }
 export interface WeightedAddressProtoMsg {
-  typeUrl: "/symphony.mint.v1beta1.WeightedAddress";
+  typeUrl: '/symphony.mint.v1beta1.WeightedAddress';
   value: Uint8Array;
 }
 /**
  * WeightedAddress represents an address with a weight assigned to it.
  * The weight is used to determine the proportion of the total minted
  * tokens to be minted to the address.
+ * @name WeightedAddressAmino
+ * @package symphony.mint.v1beta1
+ * @see proto type: symphony.mint.v1beta1.WeightedAddress
  */
 export interface WeightedAddressAmino {
   address?: string;
   weight?: string;
 }
 export interface WeightedAddressAminoMsg {
-  type: "/symphony.mint.v1beta1.WeightedAddress";
+  type: '/symphony.mint.v1beta1.WeightedAddress';
   value: WeightedAddressAmino;
 }
 /**
  * WeightedAddress represents an address with a weight assigned to it.
  * The weight is used to determine the proportion of the total minted
  * tokens to be minted to the address.
+ * @name WeightedAddressSDKType
+ * @package symphony.mint.v1beta1
+ * @see proto type: symphony.mint.v1beta1.WeightedAddress
  */
 export interface WeightedAddressSDKType {
   address: string;
@@ -63,6 +91,9 @@ export interface WeightedAddressSDKType {
  * DistributionProportions defines the distribution proportions of the minted
  * denom. In other words, defines which stakeholders will receive the minted
  * denoms and how much.
+ * @name DistributionProportions
+ * @package symphony.mint.v1beta1
+ * @see proto type: symphony.mint.v1beta1.DistributionProportions
  */
 export interface DistributionProportions {
   /**
@@ -87,13 +118,16 @@ export interface DistributionProportions {
   communityPool: string;
 }
 export interface DistributionProportionsProtoMsg {
-  typeUrl: "/symphony.mint.v1beta1.DistributionProportions";
+  typeUrl: '/symphony.mint.v1beta1.DistributionProportions';
   value: Uint8Array;
 }
 /**
  * DistributionProportions defines the distribution proportions of the minted
  * denom. In other words, defines which stakeholders will receive the minted
  * denoms and how much.
+ * @name DistributionProportionsAmino
+ * @package symphony.mint.v1beta1
+ * @see proto type: symphony.mint.v1beta1.DistributionProportions
  */
 export interface DistributionProportionsAmino {
   /**
@@ -118,13 +152,16 @@ export interface DistributionProportionsAmino {
   community_pool?: string;
 }
 export interface DistributionProportionsAminoMsg {
-  type: "/symphony.mint.v1beta1.DistributionProportions";
+  type: '/symphony.mint.v1beta1.DistributionProportions';
   value: DistributionProportionsAmino;
 }
 /**
  * DistributionProportions defines the distribution proportions of the minted
  * denom. In other words, defines which stakeholders will receive the minted
  * denoms and how much.
+ * @name DistributionProportionsSDKType
+ * @package symphony.mint.v1beta1
+ * @see proto type: symphony.mint.v1beta1.DistributionProportions
  */
 export interface DistributionProportionsSDKType {
   staking: string;
@@ -132,13 +169,24 @@ export interface DistributionProportionsSDKType {
   developer_rewards: string;
   community_pool: string;
 }
-/** Params holds parameters for the x/mint module. */
+/**
+ * Params holds parameters for the x/mint module.
+ * @name Params
+ * @package symphony.mint.v1beta1
+ * @see proto type: symphony.mint.v1beta1.Params
+ */
 export interface Params {
-  /** mint_denom is the denom of the coin to mint. */
+  /**
+   * mint_denom is the denom of the coin to mint.
+   */
   mintDenom: string;
-  /** genesis_epoch_provisions epoch provisions from the first epoch. */
+  /**
+   * genesis_epoch_provisions epoch provisions from the first epoch.
+   */
   genesisEpochProvisions: string;
-  /** epoch_identifier mint epoch identifier e.g. (day, week). */
+  /**
+   * epoch_identifier mint epoch identifier e.g. (day, week).
+   */
   epochIdentifier: string;
   /**
    * reduction_period_in_epochs the number of epochs it takes
@@ -170,16 +218,27 @@ export interface Params {
   mintingRewardsDistributionStartEpoch: bigint;
 }
 export interface ParamsProtoMsg {
-  typeUrl: "/symphony.mint.v1beta1.Params";
+  typeUrl: '/symphony.mint.v1beta1.Params';
   value: Uint8Array;
 }
-/** Params holds parameters for the x/mint module. */
+/**
+ * Params holds parameters for the x/mint module.
+ * @name ParamsAmino
+ * @package symphony.mint.v1beta1
+ * @see proto type: symphony.mint.v1beta1.Params
+ */
 export interface ParamsAmino {
-  /** mint_denom is the denom of the coin to mint. */
+  /**
+   * mint_denom is the denom of the coin to mint.
+   */
   mint_denom?: string;
-  /** genesis_epoch_provisions epoch provisions from the first epoch. */
+  /**
+   * genesis_epoch_provisions epoch provisions from the first epoch.
+   */
   genesis_epoch_provisions?: string;
-  /** epoch_identifier mint epoch identifier e.g. (day, week). */
+  /**
+   * epoch_identifier mint epoch identifier e.g. (day, week).
+   */
   epoch_identifier?: string;
   /**
    * reduction_period_in_epochs the number of epochs it takes
@@ -211,10 +270,15 @@ export interface ParamsAmino {
   minting_rewards_distribution_start_epoch?: string;
 }
 export interface ParamsAminoMsg {
-  type: "/symphony.mint.v1beta1.Params";
+  type: '/symphony.mint.v1beta1.Params';
   value: ParamsAmino;
 }
-/** Params holds parameters for the x/mint module. */
+/**
+ * Params holds parameters for the x/mint module.
+ * @name ParamsSDKType
+ * @package symphony.mint.v1beta1
+ * @see proto type: symphony.mint.v1beta1.Params
+ */
 export interface ParamsSDKType {
   mint_denom: string;
   genesis_epoch_provisions: string;
@@ -227,35 +291,59 @@ export interface ParamsSDKType {
 }
 function createBaseMinter(): Minter {
   return {
-    epochProvisions: ""
+    epochProvisions: '',
   };
 }
+/**
+ * Minter represents the minting state.
+ * @name Minter
+ * @package symphony.mint.v1beta1
+ * @see proto type: symphony.mint.v1beta1.Minter
+ */
 export const Minter = {
-  typeUrl: "/symphony.mint.v1beta1.Minter",
+  typeUrl: '/symphony.mint.v1beta1.Minter',
   is(o: any): o is Minter {
-    return o && (o.$typeUrl === Minter.typeUrl || typeof o.epochProvisions === "string");
+    return (
+      o &&
+      (o.$typeUrl === Minter.typeUrl || typeof o.epochProvisions === 'string')
+    );
   },
   isSDK(o: any): o is MinterSDKType {
-    return o && (o.$typeUrl === Minter.typeUrl || typeof o.epoch_provisions === "string");
+    return (
+      o &&
+      (o.$typeUrl === Minter.typeUrl || typeof o.epoch_provisions === 'string')
+    );
   },
   isAmino(o: any): o is MinterAmino {
-    return o && (o.$typeUrl === Minter.typeUrl || typeof o.epoch_provisions === "string");
+    return (
+      o &&
+      (o.$typeUrl === Minter.typeUrl || typeof o.epoch_provisions === 'string')
+    );
   },
-  encode(message: Minter, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
-    if (message.epochProvisions !== "") {
-      writer.uint32(10).string(Decimal.fromUserInput(message.epochProvisions, 18).atomics);
+  encode(
+    message: Minter,
+    writer: BinaryWriter = BinaryWriter.create(),
+  ): BinaryWriter {
+    if (message.epochProvisions !== '') {
+      writer
+        .uint32(10)
+        .string(Decimal.fromUserInput(message.epochProvisions, 18).atomics);
     }
     return writer;
   },
   decode(input: BinaryReader | Uint8Array, length?: number): Minter {
-    const reader = input instanceof BinaryReader ? input : new BinaryReader(input);
+    const reader =
+      input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseMinter();
     while (reader.pos < end) {
       const tag = reader.uint32();
       switch (tag >>> 3) {
         case 1:
-          message.epochProvisions = Decimal.fromAtomics(reader.string(), 18).toString();
+          message.epochProvisions = Decimal.fromAtomics(
+            reader.string(),
+            18,
+          ).toString();
           break;
         default:
           reader.skipType(tag & 7);
@@ -266,19 +354,23 @@ export const Minter = {
   },
   fromPartial(object: Partial<Minter>): Minter {
     const message = createBaseMinter();
-    message.epochProvisions = object.epochProvisions ?? "";
+    message.epochProvisions = object.epochProvisions ?? '';
     return message;
   },
   fromAmino(object: MinterAmino): Minter {
     const message = createBaseMinter();
-    if (object.epoch_provisions !== undefined && object.epoch_provisions !== null) {
+    if (
+      object.epoch_provisions !== undefined &&
+      object.epoch_provisions !== null
+    ) {
       message.epochProvisions = object.epoch_provisions;
     }
     return message;
   },
   toAmino(message: Minter): MinterAmino {
     const obj: any = {};
-    obj.epoch_provisions = message.epochProvisions === "" ? undefined : message.epochProvisions;
+    obj.epoch_provisions =
+      message.epochProvisions === '' ? undefined : message.epochProvisions;
     return obj;
   },
   fromAminoMsg(object: MinterAminoMsg): Minter {
@@ -292,40 +384,66 @@ export const Minter = {
   },
   toProtoMsg(message: Minter): MinterProtoMsg {
     return {
-      typeUrl: "/symphony.mint.v1beta1.Minter",
-      value: Minter.encode(message).finish()
+      typeUrl: '/symphony.mint.v1beta1.Minter',
+      value: Minter.encode(message).finish(),
     };
-  }
+  },
 };
 GlobalDecoderRegistry.register(Minter.typeUrl, Minter);
 function createBaseWeightedAddress(): WeightedAddress {
   return {
-    address: "",
-    weight: ""
+    address: '',
+    weight: '',
   };
 }
+/**
+ * WeightedAddress represents an address with a weight assigned to it.
+ * The weight is used to determine the proportion of the total minted
+ * tokens to be minted to the address.
+ * @name WeightedAddress
+ * @package symphony.mint.v1beta1
+ * @see proto type: symphony.mint.v1beta1.WeightedAddress
+ */
 export const WeightedAddress = {
-  typeUrl: "/symphony.mint.v1beta1.WeightedAddress",
+  typeUrl: '/symphony.mint.v1beta1.WeightedAddress',
   is(o: any): o is WeightedAddress {
-    return o && (o.$typeUrl === WeightedAddress.typeUrl || typeof o.address === "string" && typeof o.weight === "string");
+    return (
+      o &&
+      (o.$typeUrl === WeightedAddress.typeUrl ||
+        (typeof o.address === 'string' && typeof o.weight === 'string'))
+    );
   },
   isSDK(o: any): o is WeightedAddressSDKType {
-    return o && (o.$typeUrl === WeightedAddress.typeUrl || typeof o.address === "string" && typeof o.weight === "string");
+    return (
+      o &&
+      (o.$typeUrl === WeightedAddress.typeUrl ||
+        (typeof o.address === 'string' && typeof o.weight === 'string'))
+    );
   },
   isAmino(o: any): o is WeightedAddressAmino {
-    return o && (o.$typeUrl === WeightedAddress.typeUrl || typeof o.address === "string" && typeof o.weight === "string");
+    return (
+      o &&
+      (o.$typeUrl === WeightedAddress.typeUrl ||
+        (typeof o.address === 'string' && typeof o.weight === 'string'))
+    );
   },
-  encode(message: WeightedAddress, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
-    if (message.address !== "") {
+  encode(
+    message: WeightedAddress,
+    writer: BinaryWriter = BinaryWriter.create(),
+  ): BinaryWriter {
+    if (message.address !== '') {
       writer.uint32(10).string(message.address);
     }
-    if (message.weight !== "") {
-      writer.uint32(18).string(Decimal.fromUserInput(message.weight, 18).atomics);
+    if (message.weight !== '') {
+      writer
+        .uint32(18)
+        .string(Decimal.fromUserInput(message.weight, 18).atomics);
     }
     return writer;
   },
   decode(input: BinaryReader | Uint8Array, length?: number): WeightedAddress {
-    const reader = input instanceof BinaryReader ? input : new BinaryReader(input);
+    const reader =
+      input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseWeightedAddress();
     while (reader.pos < end) {
@@ -346,8 +464,8 @@ export const WeightedAddress = {
   },
   fromPartial(object: Partial<WeightedAddress>): WeightedAddress {
     const message = createBaseWeightedAddress();
-    message.address = object.address ?? "";
-    message.weight = object.weight ?? "";
+    message.address = object.address ?? '';
+    message.weight = object.weight ?? '';
     return message;
   },
   fromAmino(object: WeightedAddressAmino): WeightedAddress {
@@ -362,8 +480,8 @@ export const WeightedAddress = {
   },
   toAmino(message: WeightedAddress): WeightedAddressAmino {
     const obj: any = {};
-    obj.address = message.address === "" ? undefined : message.address;
-    obj.weight = message.weight === "" ? undefined : message.weight;
+    obj.address = message.address === '' ? undefined : message.address;
+    obj.weight = message.weight === '' ? undefined : message.weight;
     return obj;
   },
   fromAminoMsg(object: WeightedAddressAminoMsg): WeightedAddress {
@@ -377,48 +495,92 @@ export const WeightedAddress = {
   },
   toProtoMsg(message: WeightedAddress): WeightedAddressProtoMsg {
     return {
-      typeUrl: "/symphony.mint.v1beta1.WeightedAddress",
-      value: WeightedAddress.encode(message).finish()
+      typeUrl: '/symphony.mint.v1beta1.WeightedAddress',
+      value: WeightedAddress.encode(message).finish(),
     };
-  }
+  },
 };
 GlobalDecoderRegistry.register(WeightedAddress.typeUrl, WeightedAddress);
 function createBaseDistributionProportions(): DistributionProportions {
   return {
-    staking: "",
-    poolIncentives: "",
-    developerRewards: "",
-    communityPool: ""
+    staking: '',
+    poolIncentives: '',
+    developerRewards: '',
+    communityPool: '',
   };
 }
+/**
+ * DistributionProportions defines the distribution proportions of the minted
+ * denom. In other words, defines which stakeholders will receive the minted
+ * denoms and how much.
+ * @name DistributionProportions
+ * @package symphony.mint.v1beta1
+ * @see proto type: symphony.mint.v1beta1.DistributionProportions
+ */
 export const DistributionProportions = {
-  typeUrl: "/symphony.mint.v1beta1.DistributionProportions",
+  typeUrl: '/symphony.mint.v1beta1.DistributionProportions',
   is(o: any): o is DistributionProportions {
-    return o && (o.$typeUrl === DistributionProportions.typeUrl || typeof o.staking === "string" && typeof o.poolIncentives === "string" && typeof o.developerRewards === "string" && typeof o.communityPool === "string");
+    return (
+      o &&
+      (o.$typeUrl === DistributionProportions.typeUrl ||
+        (typeof o.staking === 'string' &&
+          typeof o.poolIncentives === 'string' &&
+          typeof o.developerRewards === 'string' &&
+          typeof o.communityPool === 'string'))
+    );
   },
   isSDK(o: any): o is DistributionProportionsSDKType {
-    return o && (o.$typeUrl === DistributionProportions.typeUrl || typeof o.staking === "string" && typeof o.pool_incentives === "string" && typeof o.developer_rewards === "string" && typeof o.community_pool === "string");
+    return (
+      o &&
+      (o.$typeUrl === DistributionProportions.typeUrl ||
+        (typeof o.staking === 'string' &&
+          typeof o.pool_incentives === 'string' &&
+          typeof o.developer_rewards === 'string' &&
+          typeof o.community_pool === 'string'))
+    );
   },
   isAmino(o: any): o is DistributionProportionsAmino {
-    return o && (o.$typeUrl === DistributionProportions.typeUrl || typeof o.staking === "string" && typeof o.pool_incentives === "string" && typeof o.developer_rewards === "string" && typeof o.community_pool === "string");
+    return (
+      o &&
+      (o.$typeUrl === DistributionProportions.typeUrl ||
+        (typeof o.staking === 'string' &&
+          typeof o.pool_incentives === 'string' &&
+          typeof o.developer_rewards === 'string' &&
+          typeof o.community_pool === 'string'))
+    );
   },
-  encode(message: DistributionProportions, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
-    if (message.staking !== "") {
-      writer.uint32(10).string(Decimal.fromUserInput(message.staking, 18).atomics);
+  encode(
+    message: DistributionProportions,
+    writer: BinaryWriter = BinaryWriter.create(),
+  ): BinaryWriter {
+    if (message.staking !== '') {
+      writer
+        .uint32(10)
+        .string(Decimal.fromUserInput(message.staking, 18).atomics);
     }
-    if (message.poolIncentives !== "") {
-      writer.uint32(18).string(Decimal.fromUserInput(message.poolIncentives, 18).atomics);
+    if (message.poolIncentives !== '') {
+      writer
+        .uint32(18)
+        .string(Decimal.fromUserInput(message.poolIncentives, 18).atomics);
     }
-    if (message.developerRewards !== "") {
-      writer.uint32(26).string(Decimal.fromUserInput(message.developerRewards, 18).atomics);
+    if (message.developerRewards !== '') {
+      writer
+        .uint32(26)
+        .string(Decimal.fromUserInput(message.developerRewards, 18).atomics);
     }
-    if (message.communityPool !== "") {
-      writer.uint32(34).string(Decimal.fromUserInput(message.communityPool, 18).atomics);
+    if (message.communityPool !== '') {
+      writer
+        .uint32(34)
+        .string(Decimal.fromUserInput(message.communityPool, 18).atomics);
     }
     return writer;
   },
-  decode(input: BinaryReader | Uint8Array, length?: number): DistributionProportions {
-    const reader = input instanceof BinaryReader ? input : new BinaryReader(input);
+  decode(
+    input: BinaryReader | Uint8Array,
+    length?: number,
+  ): DistributionProportions {
+    const reader =
+      input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseDistributionProportions();
     while (reader.pos < end) {
@@ -428,13 +590,22 @@ export const DistributionProportions = {
           message.staking = Decimal.fromAtomics(reader.string(), 18).toString();
           break;
         case 2:
-          message.poolIncentives = Decimal.fromAtomics(reader.string(), 18).toString();
+          message.poolIncentives = Decimal.fromAtomics(
+            reader.string(),
+            18,
+          ).toString();
           break;
         case 3:
-          message.developerRewards = Decimal.fromAtomics(reader.string(), 18).toString();
+          message.developerRewards = Decimal.fromAtomics(
+            reader.string(),
+            18,
+          ).toString();
           break;
         case 4:
-          message.communityPool = Decimal.fromAtomics(reader.string(), 18).toString();
+          message.communityPool = Decimal.fromAtomics(
+            reader.string(),
+            18,
+          ).toString();
           break;
         default:
           reader.skipType(tag & 7);
@@ -443,12 +614,14 @@ export const DistributionProportions = {
     }
     return message;
   },
-  fromPartial(object: Partial<DistributionProportions>): DistributionProportions {
+  fromPartial(
+    object: Partial<DistributionProportions>,
+  ): DistributionProportions {
     const message = createBaseDistributionProportions();
-    message.staking = object.staking ?? "";
-    message.poolIncentives = object.poolIncentives ?? "";
-    message.developerRewards = object.developerRewards ?? "";
-    message.communityPool = object.communityPool ?? "";
+    message.staking = object.staking ?? '';
+    message.poolIncentives = object.poolIncentives ?? '';
+    message.developerRewards = object.developerRewards ?? '';
+    message.communityPool = object.communityPool ?? '';
     return message;
   },
   fromAmino(object: DistributionProportionsAmino): DistributionProportions {
@@ -456,10 +629,16 @@ export const DistributionProportions = {
     if (object.staking !== undefined && object.staking !== null) {
       message.staking = object.staking;
     }
-    if (object.pool_incentives !== undefined && object.pool_incentives !== null) {
+    if (
+      object.pool_incentives !== undefined &&
+      object.pool_incentives !== null
+    ) {
       message.poolIncentives = object.pool_incentives;
     }
-    if (object.developer_rewards !== undefined && object.developer_rewards !== null) {
+    if (
+      object.developer_rewards !== undefined &&
+      object.developer_rewards !== null
+    ) {
       message.developerRewards = object.developer_rewards;
     }
     if (object.community_pool !== undefined && object.community_pool !== null) {
@@ -469,70 +648,141 @@ export const DistributionProportions = {
   },
   toAmino(message: DistributionProportions): DistributionProportionsAmino {
     const obj: any = {};
-    obj.staking = message.staking === "" ? undefined : message.staking;
-    obj.pool_incentives = message.poolIncentives === "" ? undefined : message.poolIncentives;
-    obj.developer_rewards = message.developerRewards === "" ? undefined : message.developerRewards;
-    obj.community_pool = message.communityPool === "" ? undefined : message.communityPool;
+    obj.staking = message.staking === '' ? undefined : message.staking;
+    obj.pool_incentives =
+      message.poolIncentives === '' ? undefined : message.poolIncentives;
+    obj.developer_rewards =
+      message.developerRewards === '' ? undefined : message.developerRewards;
+    obj.community_pool =
+      message.communityPool === '' ? undefined : message.communityPool;
     return obj;
   },
-  fromAminoMsg(object: DistributionProportionsAminoMsg): DistributionProportions {
+  fromAminoMsg(
+    object: DistributionProportionsAminoMsg,
+  ): DistributionProportions {
     return DistributionProportions.fromAmino(object.value);
   },
-  fromProtoMsg(message: DistributionProportionsProtoMsg): DistributionProportions {
+  fromProtoMsg(
+    message: DistributionProportionsProtoMsg,
+  ): DistributionProportions {
     return DistributionProportions.decode(message.value);
   },
   toProto(message: DistributionProportions): Uint8Array {
     return DistributionProportions.encode(message).finish();
   },
-  toProtoMsg(message: DistributionProportions): DistributionProportionsProtoMsg {
+  toProtoMsg(
+    message: DistributionProportions,
+  ): DistributionProportionsProtoMsg {
     return {
-      typeUrl: "/symphony.mint.v1beta1.DistributionProportions",
-      value: DistributionProportions.encode(message).finish()
+      typeUrl: '/symphony.mint.v1beta1.DistributionProportions',
+      value: DistributionProportions.encode(message).finish(),
     };
-  }
+  },
 };
-GlobalDecoderRegistry.register(DistributionProportions.typeUrl, DistributionProportions);
+GlobalDecoderRegistry.register(
+  DistributionProportions.typeUrl,
+  DistributionProportions,
+);
 function createBaseParams(): Params {
   return {
-    mintDenom: "",
-    genesisEpochProvisions: "",
-    epochIdentifier: "",
+    mintDenom: '',
+    genesisEpochProvisions: '',
+    epochIdentifier: '',
     reductionPeriodInEpochs: BigInt(0),
-    reductionFactor: "",
+    reductionFactor: '',
     distributionProportions: DistributionProportions.fromPartial({}),
     weightedDeveloperRewardsReceivers: [],
-    mintingRewardsDistributionStartEpoch: BigInt(0)
+    mintingRewardsDistributionStartEpoch: BigInt(0),
   };
 }
+/**
+ * Params holds parameters for the x/mint module.
+ * @name Params
+ * @package symphony.mint.v1beta1
+ * @see proto type: symphony.mint.v1beta1.Params
+ */
 export const Params = {
-  typeUrl: "/symphony.mint.v1beta1.Params",
+  typeUrl: '/symphony.mint.v1beta1.Params',
   is(o: any): o is Params {
-    return o && (o.$typeUrl === Params.typeUrl || typeof o.mintDenom === "string" && typeof o.genesisEpochProvisions === "string" && typeof o.epochIdentifier === "string" && typeof o.reductionPeriodInEpochs === "bigint" && typeof o.reductionFactor === "string" && DistributionProportions.is(o.distributionProportions) && Array.isArray(o.weightedDeveloperRewardsReceivers) && (!o.weightedDeveloperRewardsReceivers.length || WeightedAddress.is(o.weightedDeveloperRewardsReceivers[0])) && typeof o.mintingRewardsDistributionStartEpoch === "bigint");
+    return (
+      o &&
+      (o.$typeUrl === Params.typeUrl ||
+        (typeof o.mintDenom === 'string' &&
+          typeof o.genesisEpochProvisions === 'string' &&
+          typeof o.epochIdentifier === 'string' &&
+          typeof o.reductionPeriodInEpochs === 'bigint' &&
+          typeof o.reductionFactor === 'string' &&
+          DistributionProportions.is(o.distributionProportions) &&
+          Array.isArray(o.weightedDeveloperRewardsReceivers) &&
+          (!o.weightedDeveloperRewardsReceivers.length ||
+            WeightedAddress.is(o.weightedDeveloperRewardsReceivers[0])) &&
+          typeof o.mintingRewardsDistributionStartEpoch === 'bigint'))
+    );
   },
   isSDK(o: any): o is ParamsSDKType {
-    return o && (o.$typeUrl === Params.typeUrl || typeof o.mint_denom === "string" && typeof o.genesis_epoch_provisions === "string" && typeof o.epoch_identifier === "string" && typeof o.reduction_period_in_epochs === "bigint" && typeof o.reduction_factor === "string" && DistributionProportions.isSDK(o.distribution_proportions) && Array.isArray(o.weighted_developer_rewards_receivers) && (!o.weighted_developer_rewards_receivers.length || WeightedAddress.isSDK(o.weighted_developer_rewards_receivers[0])) && typeof o.minting_rewards_distribution_start_epoch === "bigint");
+    return (
+      o &&
+      (o.$typeUrl === Params.typeUrl ||
+        (typeof o.mint_denom === 'string' &&
+          typeof o.genesis_epoch_provisions === 'string' &&
+          typeof o.epoch_identifier === 'string' &&
+          typeof o.reduction_period_in_epochs === 'bigint' &&
+          typeof o.reduction_factor === 'string' &&
+          DistributionProportions.isSDK(o.distribution_proportions) &&
+          Array.isArray(o.weighted_developer_rewards_receivers) &&
+          (!o.weighted_developer_rewards_receivers.length ||
+            WeightedAddress.isSDK(o.weighted_developer_rewards_receivers[0])) &&
+          typeof o.minting_rewards_distribution_start_epoch === 'bigint'))
+    );
   },
   isAmino(o: any): o is ParamsAmino {
-    return o && (o.$typeUrl === Params.typeUrl || typeof o.mint_denom === "string" && typeof o.genesis_epoch_provisions === "string" && typeof o.epoch_identifier === "string" && typeof o.reduction_period_in_epochs === "bigint" && typeof o.reduction_factor === "string" && DistributionProportions.isAmino(o.distribution_proportions) && Array.isArray(o.weighted_developer_rewards_receivers) && (!o.weighted_developer_rewards_receivers.length || WeightedAddress.isAmino(o.weighted_developer_rewards_receivers[0])) && typeof o.minting_rewards_distribution_start_epoch === "bigint");
+    return (
+      o &&
+      (o.$typeUrl === Params.typeUrl ||
+        (typeof o.mint_denom === 'string' &&
+          typeof o.genesis_epoch_provisions === 'string' &&
+          typeof o.epoch_identifier === 'string' &&
+          typeof o.reduction_period_in_epochs === 'bigint' &&
+          typeof o.reduction_factor === 'string' &&
+          DistributionProportions.isAmino(o.distribution_proportions) &&
+          Array.isArray(o.weighted_developer_rewards_receivers) &&
+          (!o.weighted_developer_rewards_receivers.length ||
+            WeightedAddress.isAmino(
+              o.weighted_developer_rewards_receivers[0],
+            )) &&
+          typeof o.minting_rewards_distribution_start_epoch === 'bigint'))
+    );
   },
-  encode(message: Params, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
-    if (message.mintDenom !== "") {
+  encode(
+    message: Params,
+    writer: BinaryWriter = BinaryWriter.create(),
+  ): BinaryWriter {
+    if (message.mintDenom !== '') {
       writer.uint32(10).string(message.mintDenom);
     }
-    if (message.genesisEpochProvisions !== "") {
-      writer.uint32(18).string(Decimal.fromUserInput(message.genesisEpochProvisions, 18).atomics);
+    if (message.genesisEpochProvisions !== '') {
+      writer
+        .uint32(18)
+        .string(
+          Decimal.fromUserInput(message.genesisEpochProvisions, 18).atomics,
+        );
     }
-    if (message.epochIdentifier !== "") {
+    if (message.epochIdentifier !== '') {
       writer.uint32(26).string(message.epochIdentifier);
     }
     if (message.reductionPeriodInEpochs !== BigInt(0)) {
       writer.uint32(32).int64(message.reductionPeriodInEpochs);
     }
-    if (message.reductionFactor !== "") {
-      writer.uint32(42).string(Decimal.fromUserInput(message.reductionFactor, 18).atomics);
+    if (message.reductionFactor !== '') {
+      writer
+        .uint32(42)
+        .string(Decimal.fromUserInput(message.reductionFactor, 18).atomics);
     }
     if (message.distributionProportions !== undefined) {
-      DistributionProportions.encode(message.distributionProportions, writer.uint32(50).fork()).ldelim();
+      DistributionProportions.encode(
+        message.distributionProportions,
+        writer.uint32(50).fork(),
+      ).ldelim();
     }
     for (const v of message.weightedDeveloperRewardsReceivers) {
       WeightedAddress.encode(v!, writer.uint32(58).fork()).ldelim();
@@ -543,7 +793,8 @@ export const Params = {
     return writer;
   },
   decode(input: BinaryReader | Uint8Array, length?: number): Params {
-    const reader = input instanceof BinaryReader ? input : new BinaryReader(input);
+    const reader =
+      input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseParams();
     while (reader.pos < end) {
@@ -553,7 +804,10 @@ export const Params = {
           message.mintDenom = reader.string();
           break;
         case 2:
-          message.genesisEpochProvisions = Decimal.fromAtomics(reader.string(), 18).toString();
+          message.genesisEpochProvisions = Decimal.fromAtomics(
+            reader.string(),
+            18,
+          ).toString();
           break;
         case 3:
           message.epochIdentifier = reader.string();
@@ -562,13 +816,21 @@ export const Params = {
           message.reductionPeriodInEpochs = reader.int64();
           break;
         case 5:
-          message.reductionFactor = Decimal.fromAtomics(reader.string(), 18).toString();
+          message.reductionFactor = Decimal.fromAtomics(
+            reader.string(),
+            18,
+          ).toString();
           break;
         case 6:
-          message.distributionProportions = DistributionProportions.decode(reader, reader.uint32());
+          message.distributionProportions = DistributionProportions.decode(
+            reader,
+            reader.uint32(),
+          );
           break;
         case 7:
-          message.weightedDeveloperRewardsReceivers.push(WeightedAddress.decode(reader, reader.uint32()));
+          message.weightedDeveloperRewardsReceivers.push(
+            WeightedAddress.decode(reader, reader.uint32()),
+          );
           break;
         case 8:
           message.mintingRewardsDistributionStartEpoch = reader.int64();
@@ -582,14 +844,29 @@ export const Params = {
   },
   fromPartial(object: Partial<Params>): Params {
     const message = createBaseParams();
-    message.mintDenom = object.mintDenom ?? "";
-    message.genesisEpochProvisions = object.genesisEpochProvisions ?? "";
-    message.epochIdentifier = object.epochIdentifier ?? "";
-    message.reductionPeriodInEpochs = object.reductionPeriodInEpochs !== undefined && object.reductionPeriodInEpochs !== null ? BigInt(object.reductionPeriodInEpochs.toString()) : BigInt(0);
-    message.reductionFactor = object.reductionFactor ?? "";
-    message.distributionProportions = object.distributionProportions !== undefined && object.distributionProportions !== null ? DistributionProportions.fromPartial(object.distributionProportions) : undefined;
-    message.weightedDeveloperRewardsReceivers = object.weightedDeveloperRewardsReceivers?.map(e => WeightedAddress.fromPartial(e)) || [];
-    message.mintingRewardsDistributionStartEpoch = object.mintingRewardsDistributionStartEpoch !== undefined && object.mintingRewardsDistributionStartEpoch !== null ? BigInt(object.mintingRewardsDistributionStartEpoch.toString()) : BigInt(0);
+    message.mintDenom = object.mintDenom ?? '';
+    message.genesisEpochProvisions = object.genesisEpochProvisions ?? '';
+    message.epochIdentifier = object.epochIdentifier ?? '';
+    message.reductionPeriodInEpochs =
+      object.reductionPeriodInEpochs !== undefined &&
+      object.reductionPeriodInEpochs !== null
+        ? BigInt(object.reductionPeriodInEpochs.toString())
+        : BigInt(0);
+    message.reductionFactor = object.reductionFactor ?? '';
+    message.distributionProportions =
+      object.distributionProportions !== undefined &&
+      object.distributionProportions !== null
+        ? DistributionProportions.fromPartial(object.distributionProportions)
+        : undefined;
+    message.weightedDeveloperRewardsReceivers =
+      object.weightedDeveloperRewardsReceivers?.map(e =>
+        WeightedAddress.fromPartial(e),
+      ) || [];
+    message.mintingRewardsDistributionStartEpoch =
+      object.mintingRewardsDistributionStartEpoch !== undefined &&
+      object.mintingRewardsDistributionStartEpoch !== null
+        ? BigInt(object.mintingRewardsDistributionStartEpoch.toString())
+        : BigInt(0);
     return message;
   },
   fromAmino(object: ParamsAmino): Params {
@@ -597,41 +874,85 @@ export const Params = {
     if (object.mint_denom !== undefined && object.mint_denom !== null) {
       message.mintDenom = object.mint_denom;
     }
-    if (object.genesis_epoch_provisions !== undefined && object.genesis_epoch_provisions !== null) {
+    if (
+      object.genesis_epoch_provisions !== undefined &&
+      object.genesis_epoch_provisions !== null
+    ) {
       message.genesisEpochProvisions = object.genesis_epoch_provisions;
     }
-    if (object.epoch_identifier !== undefined && object.epoch_identifier !== null) {
+    if (
+      object.epoch_identifier !== undefined &&
+      object.epoch_identifier !== null
+    ) {
       message.epochIdentifier = object.epoch_identifier;
     }
-    if (object.reduction_period_in_epochs !== undefined && object.reduction_period_in_epochs !== null) {
-      message.reductionPeriodInEpochs = BigInt(object.reduction_period_in_epochs);
+    if (
+      object.reduction_period_in_epochs !== undefined &&
+      object.reduction_period_in_epochs !== null
+    ) {
+      message.reductionPeriodInEpochs = BigInt(
+        object.reduction_period_in_epochs,
+      );
     }
-    if (object.reduction_factor !== undefined && object.reduction_factor !== null) {
+    if (
+      object.reduction_factor !== undefined &&
+      object.reduction_factor !== null
+    ) {
       message.reductionFactor = object.reduction_factor;
     }
-    if (object.distribution_proportions !== undefined && object.distribution_proportions !== null) {
-      message.distributionProportions = DistributionProportions.fromAmino(object.distribution_proportions);
+    if (
+      object.distribution_proportions !== undefined &&
+      object.distribution_proportions !== null
+    ) {
+      message.distributionProportions = DistributionProportions.fromAmino(
+        object.distribution_proportions,
+      );
     }
-    message.weightedDeveloperRewardsReceivers = object.weighted_developer_rewards_receivers?.map(e => WeightedAddress.fromAmino(e)) || [];
-    if (object.minting_rewards_distribution_start_epoch !== undefined && object.minting_rewards_distribution_start_epoch !== null) {
-      message.mintingRewardsDistributionStartEpoch = BigInt(object.minting_rewards_distribution_start_epoch);
+    message.weightedDeveloperRewardsReceivers =
+      object.weighted_developer_rewards_receivers?.map(e =>
+        WeightedAddress.fromAmino(e),
+      ) || [];
+    if (
+      object.minting_rewards_distribution_start_epoch !== undefined &&
+      object.minting_rewards_distribution_start_epoch !== null
+    ) {
+      message.mintingRewardsDistributionStartEpoch = BigInt(
+        object.minting_rewards_distribution_start_epoch,
+      );
     }
     return message;
   },
   toAmino(message: Params): ParamsAmino {
     const obj: any = {};
-    obj.mint_denom = message.mintDenom === "" ? undefined : message.mintDenom;
-    obj.genesis_epoch_provisions = message.genesisEpochProvisions === "" ? undefined : message.genesisEpochProvisions;
-    obj.epoch_identifier = message.epochIdentifier === "" ? undefined : message.epochIdentifier;
-    obj.reduction_period_in_epochs = message.reductionPeriodInEpochs !== BigInt(0) ? message.reductionPeriodInEpochs?.toString() : undefined;
-    obj.reduction_factor = message.reductionFactor === "" ? undefined : message.reductionFactor;
-    obj.distribution_proportions = message.distributionProportions ? DistributionProportions.toAmino(message.distributionProportions) : undefined;
+    obj.mint_denom = message.mintDenom === '' ? undefined : message.mintDenom;
+    obj.genesis_epoch_provisions =
+      message.genesisEpochProvisions === ''
+        ? undefined
+        : message.genesisEpochProvisions;
+    obj.epoch_identifier =
+      message.epochIdentifier === '' ? undefined : message.epochIdentifier;
+    obj.reduction_period_in_epochs =
+      message.reductionPeriodInEpochs !== BigInt(0)
+        ? message.reductionPeriodInEpochs?.toString()
+        : undefined;
+    obj.reduction_factor =
+      message.reductionFactor === '' ? undefined : message.reductionFactor;
+    obj.distribution_proportions = message.distributionProportions
+      ? DistributionProportions.toAmino(message.distributionProportions)
+      : undefined;
     if (message.weightedDeveloperRewardsReceivers) {
-      obj.weighted_developer_rewards_receivers = message.weightedDeveloperRewardsReceivers.map(e => e ? WeightedAddress.toAmino(e) : undefined);
+      obj.weighted_developer_rewards_receivers =
+        message.weightedDeveloperRewardsReceivers.map(e =>
+          e ? WeightedAddress.toAmino(e) : undefined,
+        );
     } else {
-      obj.weighted_developer_rewards_receivers = message.weightedDeveloperRewardsReceivers;
+      obj.weighted_developer_rewards_receivers =
+        message.weightedDeveloperRewardsReceivers;
     }
-    obj.minting_rewards_distribution_start_epoch = message.mintingRewardsDistributionStartEpoch !== BigInt(0) ? message.mintingRewardsDistributionStartEpoch?.toString() : undefined;
+    obj.minting_rewards_distribution_start_epoch =
+      message.mintingRewardsDistributionStartEpoch !== BigInt(0)
+        ? message.mintingRewardsDistributionStartEpoch?.toString()
+        : undefined;
     return obj;
   },
   fromAminoMsg(object: ParamsAminoMsg): Params {
@@ -645,9 +966,9 @@ export const Params = {
   },
   toProtoMsg(message: Params): ParamsProtoMsg {
     return {
-      typeUrl: "/symphony.mint.v1beta1.Params",
-      value: Params.encode(message).finish()
+      typeUrl: '/symphony.mint.v1beta1.Params',
+      value: Params.encode(message).finish(),
     };
-  }
+  },
 };
 GlobalDecoderRegistry.register(Params.typeUrl, Params);

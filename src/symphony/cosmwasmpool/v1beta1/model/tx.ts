@@ -1,50 +1,80 @@
 //@ts-nocheck
-import { BinaryReader, BinaryWriter } from "../../../../binary";
-import { bytesFromBase64, base64FromBytes } from "../../../../helpers";
-import { GlobalDecoderRegistry } from "../../../../registry";
-/** ===================== MsgCreateCosmwasmPool */
+import { BinaryReader, BinaryWriter } from '../../../../binary';
+import { bytesFromBase64, base64FromBytes } from '../../../../helpers';
+import { GlobalDecoderRegistry } from '../../../../registry';
+/**
+ * ===================== MsgCreateCosmwasmPool
+ * @name MsgCreateCosmWasmPool
+ * @package symphony.cosmwasmpool.v1beta1
+ * @see proto type: symphony.cosmwasmpool.v1beta1.MsgCreateCosmWasmPool
+ */
 export interface MsgCreateCosmWasmPool {
   codeId: bigint;
   instantiateMsg: Uint8Array;
   sender: string;
 }
 export interface MsgCreateCosmWasmPoolProtoMsg {
-  typeUrl: "/symphony.cosmwasmpool.v1beta1.MsgCreateCosmWasmPool";
+  typeUrl: '/symphony.cosmwasmpool.v1beta1.MsgCreateCosmWasmPool';
   value: Uint8Array;
 }
-/** ===================== MsgCreateCosmwasmPool */
+/**
+ * ===================== MsgCreateCosmwasmPool
+ * @name MsgCreateCosmWasmPoolAmino
+ * @package symphony.cosmwasmpool.v1beta1
+ * @see proto type: symphony.cosmwasmpool.v1beta1.MsgCreateCosmWasmPool
+ */
 export interface MsgCreateCosmWasmPoolAmino {
   code_id?: string;
   instantiate_msg?: string;
   sender?: string;
 }
 export interface MsgCreateCosmWasmPoolAminoMsg {
-  type: "symphony/MsgCreateCosmWasmPool";
+  type: 'symphony/MsgCreateCosmWasmPool';
   value: MsgCreateCosmWasmPoolAmino;
 }
-/** ===================== MsgCreateCosmwasmPool */
+/**
+ * ===================== MsgCreateCosmwasmPool
+ * @name MsgCreateCosmWasmPoolSDKType
+ * @package symphony.cosmwasmpool.v1beta1
+ * @see proto type: symphony.cosmwasmpool.v1beta1.MsgCreateCosmWasmPool
+ */
 export interface MsgCreateCosmWasmPoolSDKType {
   code_id: bigint;
   instantiate_msg: Uint8Array;
   sender: string;
 }
-/** Returns a unique poolID to identify the pool with. */
+/**
+ * Returns a unique poolID to identify the pool with.
+ * @name MsgCreateCosmWasmPoolResponse
+ * @package symphony.cosmwasmpool.v1beta1
+ * @see proto type: symphony.cosmwasmpool.v1beta1.MsgCreateCosmWasmPoolResponse
+ */
 export interface MsgCreateCosmWasmPoolResponse {
   poolId: bigint;
 }
 export interface MsgCreateCosmWasmPoolResponseProtoMsg {
-  typeUrl: "/symphony.cosmwasmpool.v1beta1.MsgCreateCosmWasmPoolResponse";
+  typeUrl: '/symphony.cosmwasmpool.v1beta1.MsgCreateCosmWasmPoolResponse';
   value: Uint8Array;
 }
-/** Returns a unique poolID to identify the pool with. */
+/**
+ * Returns a unique poolID to identify the pool with.
+ * @name MsgCreateCosmWasmPoolResponseAmino
+ * @package symphony.cosmwasmpool.v1beta1
+ * @see proto type: symphony.cosmwasmpool.v1beta1.MsgCreateCosmWasmPoolResponse
+ */
 export interface MsgCreateCosmWasmPoolResponseAmino {
   pool_id?: string;
 }
 export interface MsgCreateCosmWasmPoolResponseAminoMsg {
-  type: "/symphony.cosmwasmpool.v1beta1.MsgCreateCosmWasmPoolResponse";
+  type: '/symphony.cosmwasmpool.v1beta1.MsgCreateCosmWasmPoolResponse';
   value: MsgCreateCosmWasmPoolResponseAmino;
 }
-/** Returns a unique poolID to identify the pool with. */
+/**
+ * Returns a unique poolID to identify the pool with.
+ * @name MsgCreateCosmWasmPoolResponseSDKType
+ * @package symphony.cosmwasmpool.v1beta1
+ * @see proto type: symphony.cosmwasmpool.v1beta1.MsgCreateCosmWasmPoolResponse
+ */
 export interface MsgCreateCosmWasmPoolResponseSDKType {
   pool_id: bigint;
 }
@@ -52,35 +82,69 @@ function createBaseMsgCreateCosmWasmPool(): MsgCreateCosmWasmPool {
   return {
     codeId: BigInt(0),
     instantiateMsg: new Uint8Array(),
-    sender: ""
+    sender: '',
   };
 }
+/**
+ * ===================== MsgCreateCosmwasmPool
+ * @name MsgCreateCosmWasmPool
+ * @package symphony.cosmwasmpool.v1beta1
+ * @see proto type: symphony.cosmwasmpool.v1beta1.MsgCreateCosmWasmPool
+ */
 export const MsgCreateCosmWasmPool = {
-  typeUrl: "/symphony.cosmwasmpool.v1beta1.MsgCreateCosmWasmPool",
-  aminoType: "symphony/MsgCreateCosmWasmPool",
+  typeUrl: '/symphony.cosmwasmpool.v1beta1.MsgCreateCosmWasmPool',
+  aminoType: 'symphony/MsgCreateCosmWasmPool',
   is(o: any): o is MsgCreateCosmWasmPool {
-    return o && (o.$typeUrl === MsgCreateCosmWasmPool.typeUrl || typeof o.codeId === "bigint" && (o.instantiateMsg instanceof Uint8Array || typeof o.instantiateMsg === "string") && typeof o.sender === "string");
+    return (
+      o &&
+      (o.$typeUrl === MsgCreateCosmWasmPool.typeUrl ||
+        (typeof o.codeId === 'bigint' &&
+          (o.instantiateMsg instanceof Uint8Array ||
+            typeof o.instantiateMsg === 'string') &&
+          typeof o.sender === 'string'))
+    );
   },
   isSDK(o: any): o is MsgCreateCosmWasmPoolSDKType {
-    return o && (o.$typeUrl === MsgCreateCosmWasmPool.typeUrl || typeof o.code_id === "bigint" && (o.instantiate_msg instanceof Uint8Array || typeof o.instantiate_msg === "string") && typeof o.sender === "string");
+    return (
+      o &&
+      (o.$typeUrl === MsgCreateCosmWasmPool.typeUrl ||
+        (typeof o.code_id === 'bigint' &&
+          (o.instantiate_msg instanceof Uint8Array ||
+            typeof o.instantiate_msg === 'string') &&
+          typeof o.sender === 'string'))
+    );
   },
   isAmino(o: any): o is MsgCreateCosmWasmPoolAmino {
-    return o && (o.$typeUrl === MsgCreateCosmWasmPool.typeUrl || typeof o.code_id === "bigint" && (o.instantiate_msg instanceof Uint8Array || typeof o.instantiate_msg === "string") && typeof o.sender === "string");
+    return (
+      o &&
+      (o.$typeUrl === MsgCreateCosmWasmPool.typeUrl ||
+        (typeof o.code_id === 'bigint' &&
+          (o.instantiate_msg instanceof Uint8Array ||
+            typeof o.instantiate_msg === 'string') &&
+          typeof o.sender === 'string'))
+    );
   },
-  encode(message: MsgCreateCosmWasmPool, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
+  encode(
+    message: MsgCreateCosmWasmPool,
+    writer: BinaryWriter = BinaryWriter.create(),
+  ): BinaryWriter {
     if (message.codeId !== BigInt(0)) {
       writer.uint32(8).uint64(message.codeId);
     }
     if (message.instantiateMsg.length !== 0) {
       writer.uint32(18).bytes(message.instantiateMsg);
     }
-    if (message.sender !== "") {
+    if (message.sender !== '') {
       writer.uint32(26).string(message.sender);
     }
     return writer;
   },
-  decode(input: BinaryReader | Uint8Array, length?: number): MsgCreateCosmWasmPool {
-    const reader = input instanceof BinaryReader ? input : new BinaryReader(input);
+  decode(
+    input: BinaryReader | Uint8Array,
+    length?: number,
+  ): MsgCreateCosmWasmPool {
+    const reader =
+      input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseMsgCreateCosmWasmPool();
     while (reader.pos < end) {
@@ -104,9 +168,12 @@ export const MsgCreateCosmWasmPool = {
   },
   fromPartial(object: Partial<MsgCreateCosmWasmPool>): MsgCreateCosmWasmPool {
     const message = createBaseMsgCreateCosmWasmPool();
-    message.codeId = object.codeId !== undefined && object.codeId !== null ? BigInt(object.codeId.toString()) : BigInt(0);
+    message.codeId =
+      object.codeId !== undefined && object.codeId !== null
+        ? BigInt(object.codeId.toString())
+        : BigInt(0);
     message.instantiateMsg = object.instantiateMsg ?? new Uint8Array();
-    message.sender = object.sender ?? "";
+    message.sender = object.sender ?? '';
     return message;
   },
   fromAmino(object: MsgCreateCosmWasmPoolAmino): MsgCreateCosmWasmPool {
@@ -114,7 +181,10 @@ export const MsgCreateCosmWasmPool = {
     if (object.code_id !== undefined && object.code_id !== null) {
       message.codeId = BigInt(object.code_id);
     }
-    if (object.instantiate_msg !== undefined && object.instantiate_msg !== null) {
+    if (
+      object.instantiate_msg !== undefined &&
+      object.instantiate_msg !== null
+    ) {
       message.instantiateMsg = bytesFromBase64(object.instantiate_msg);
     }
     if (object.sender !== undefined && object.sender !== null) {
@@ -124,9 +194,12 @@ export const MsgCreateCosmWasmPool = {
   },
   toAmino(message: MsgCreateCosmWasmPool): MsgCreateCosmWasmPoolAmino {
     const obj: any = {};
-    obj.code_id = message.codeId !== BigInt(0) ? message.codeId?.toString() : undefined;
-    obj.instantiate_msg = message.instantiateMsg ? base64FromBytes(message.instantiateMsg) : undefined;
-    obj.sender = message.sender === "" ? undefined : message.sender;
+    obj.code_id =
+      message.codeId !== BigInt(0) ? message.codeId?.toString() : undefined;
+    obj.instantiate_msg = message.instantiateMsg
+      ? base64FromBytes(message.instantiateMsg)
+      : undefined;
+    obj.sender = message.sender === '' ? undefined : message.sender;
     return obj;
   },
   fromAminoMsg(object: MsgCreateCosmWasmPoolAminoMsg): MsgCreateCosmWasmPool {
@@ -134,8 +207,8 @@ export const MsgCreateCosmWasmPool = {
   },
   toAminoMsg(message: MsgCreateCosmWasmPool): MsgCreateCosmWasmPoolAminoMsg {
     return {
-      type: "symphony/MsgCreateCosmWasmPool",
-      value: MsgCreateCosmWasmPool.toAmino(message)
+      type: 'symphony/MsgCreateCosmWasmPool',
+      value: MsgCreateCosmWasmPool.toAmino(message),
     };
   },
   fromProtoMsg(message: MsgCreateCosmWasmPoolProtoMsg): MsgCreateCosmWasmPool {
@@ -146,37 +219,68 @@ export const MsgCreateCosmWasmPool = {
   },
   toProtoMsg(message: MsgCreateCosmWasmPool): MsgCreateCosmWasmPoolProtoMsg {
     return {
-      typeUrl: "/symphony.cosmwasmpool.v1beta1.MsgCreateCosmWasmPool",
-      value: MsgCreateCosmWasmPool.encode(message).finish()
+      typeUrl: '/symphony.cosmwasmpool.v1beta1.MsgCreateCosmWasmPool',
+      value: MsgCreateCosmWasmPool.encode(message).finish(),
     };
-  }
+  },
 };
-GlobalDecoderRegistry.register(MsgCreateCosmWasmPool.typeUrl, MsgCreateCosmWasmPool);
-GlobalDecoderRegistry.registerAminoProtoMapping(MsgCreateCosmWasmPool.aminoType, MsgCreateCosmWasmPool.typeUrl);
+GlobalDecoderRegistry.register(
+  MsgCreateCosmWasmPool.typeUrl,
+  MsgCreateCosmWasmPool,
+);
+GlobalDecoderRegistry.registerAminoProtoMapping(
+  MsgCreateCosmWasmPool.aminoType,
+  MsgCreateCosmWasmPool.typeUrl,
+);
 function createBaseMsgCreateCosmWasmPoolResponse(): MsgCreateCosmWasmPoolResponse {
   return {
-    poolId: BigInt(0)
+    poolId: BigInt(0),
   };
 }
+/**
+ * Returns a unique poolID to identify the pool with.
+ * @name MsgCreateCosmWasmPoolResponse
+ * @package symphony.cosmwasmpool.v1beta1
+ * @see proto type: symphony.cosmwasmpool.v1beta1.MsgCreateCosmWasmPoolResponse
+ */
 export const MsgCreateCosmWasmPoolResponse = {
-  typeUrl: "/symphony.cosmwasmpool.v1beta1.MsgCreateCosmWasmPoolResponse",
+  typeUrl: '/symphony.cosmwasmpool.v1beta1.MsgCreateCosmWasmPoolResponse',
   is(o: any): o is MsgCreateCosmWasmPoolResponse {
-    return o && (o.$typeUrl === MsgCreateCosmWasmPoolResponse.typeUrl || typeof o.poolId === "bigint");
+    return (
+      o &&
+      (o.$typeUrl === MsgCreateCosmWasmPoolResponse.typeUrl ||
+        typeof o.poolId === 'bigint')
+    );
   },
   isSDK(o: any): o is MsgCreateCosmWasmPoolResponseSDKType {
-    return o && (o.$typeUrl === MsgCreateCosmWasmPoolResponse.typeUrl || typeof o.pool_id === "bigint");
+    return (
+      o &&
+      (o.$typeUrl === MsgCreateCosmWasmPoolResponse.typeUrl ||
+        typeof o.pool_id === 'bigint')
+    );
   },
   isAmino(o: any): o is MsgCreateCosmWasmPoolResponseAmino {
-    return o && (o.$typeUrl === MsgCreateCosmWasmPoolResponse.typeUrl || typeof o.pool_id === "bigint");
+    return (
+      o &&
+      (o.$typeUrl === MsgCreateCosmWasmPoolResponse.typeUrl ||
+        typeof o.pool_id === 'bigint')
+    );
   },
-  encode(message: MsgCreateCosmWasmPoolResponse, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
+  encode(
+    message: MsgCreateCosmWasmPoolResponse,
+    writer: BinaryWriter = BinaryWriter.create(),
+  ): BinaryWriter {
     if (message.poolId !== BigInt(0)) {
       writer.uint32(8).uint64(message.poolId);
     }
     return writer;
   },
-  decode(input: BinaryReader | Uint8Array, length?: number): MsgCreateCosmWasmPoolResponse {
-    const reader = input instanceof BinaryReader ? input : new BinaryReader(input);
+  decode(
+    input: BinaryReader | Uint8Array,
+    length?: number,
+  ): MsgCreateCosmWasmPoolResponse {
+    const reader =
+      input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseMsgCreateCosmWasmPoolResponse();
     while (reader.pos < end) {
@@ -192,37 +296,56 @@ export const MsgCreateCosmWasmPoolResponse = {
     }
     return message;
   },
-  fromPartial(object: Partial<MsgCreateCosmWasmPoolResponse>): MsgCreateCosmWasmPoolResponse {
+  fromPartial(
+    object: Partial<MsgCreateCosmWasmPoolResponse>,
+  ): MsgCreateCosmWasmPoolResponse {
     const message = createBaseMsgCreateCosmWasmPoolResponse();
-    message.poolId = object.poolId !== undefined && object.poolId !== null ? BigInt(object.poolId.toString()) : BigInt(0);
+    message.poolId =
+      object.poolId !== undefined && object.poolId !== null
+        ? BigInt(object.poolId.toString())
+        : BigInt(0);
     return message;
   },
-  fromAmino(object: MsgCreateCosmWasmPoolResponseAmino): MsgCreateCosmWasmPoolResponse {
+  fromAmino(
+    object: MsgCreateCosmWasmPoolResponseAmino,
+  ): MsgCreateCosmWasmPoolResponse {
     const message = createBaseMsgCreateCosmWasmPoolResponse();
     if (object.pool_id !== undefined && object.pool_id !== null) {
       message.poolId = BigInt(object.pool_id);
     }
     return message;
   },
-  toAmino(message: MsgCreateCosmWasmPoolResponse): MsgCreateCosmWasmPoolResponseAmino {
+  toAmino(
+    message: MsgCreateCosmWasmPoolResponse,
+  ): MsgCreateCosmWasmPoolResponseAmino {
     const obj: any = {};
-    obj.pool_id = message.poolId !== BigInt(0) ? message.poolId?.toString() : undefined;
+    obj.pool_id =
+      message.poolId !== BigInt(0) ? message.poolId?.toString() : undefined;
     return obj;
   },
-  fromAminoMsg(object: MsgCreateCosmWasmPoolResponseAminoMsg): MsgCreateCosmWasmPoolResponse {
+  fromAminoMsg(
+    object: MsgCreateCosmWasmPoolResponseAminoMsg,
+  ): MsgCreateCosmWasmPoolResponse {
     return MsgCreateCosmWasmPoolResponse.fromAmino(object.value);
   },
-  fromProtoMsg(message: MsgCreateCosmWasmPoolResponseProtoMsg): MsgCreateCosmWasmPoolResponse {
+  fromProtoMsg(
+    message: MsgCreateCosmWasmPoolResponseProtoMsg,
+  ): MsgCreateCosmWasmPoolResponse {
     return MsgCreateCosmWasmPoolResponse.decode(message.value);
   },
   toProto(message: MsgCreateCosmWasmPoolResponse): Uint8Array {
     return MsgCreateCosmWasmPoolResponse.encode(message).finish();
   },
-  toProtoMsg(message: MsgCreateCosmWasmPoolResponse): MsgCreateCosmWasmPoolResponseProtoMsg {
+  toProtoMsg(
+    message: MsgCreateCosmWasmPoolResponse,
+  ): MsgCreateCosmWasmPoolResponseProtoMsg {
     return {
-      typeUrl: "/symphony.cosmwasmpool.v1beta1.MsgCreateCosmWasmPoolResponse",
-      value: MsgCreateCosmWasmPoolResponse.encode(message).finish()
+      typeUrl: '/symphony.cosmwasmpool.v1beta1.MsgCreateCosmWasmPoolResponse',
+      value: MsgCreateCosmWasmPoolResponse.encode(message).finish(),
     };
-  }
+  },
 };
-GlobalDecoderRegistry.register(MsgCreateCosmWasmPoolResponse.typeUrl, MsgCreateCosmWasmPoolResponse);
+GlobalDecoderRegistry.register(
+  MsgCreateCosmWasmPoolResponse.typeUrl,
+  MsgCreateCosmWasmPoolResponse,
+);

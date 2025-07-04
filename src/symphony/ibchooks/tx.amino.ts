@@ -1,9 +1,9 @@
 //@ts-nocheck
-import { MsgEmitIBCAck } from "./tx";
+import { MsgEmitIBCAck } from './tx';
 export const AminoConverter = {
-  "/symphony.ibchooks.MsgEmitIBCAck": {
-    aminoType: "symphony/MsgEmitIBCAck",
+  '/symphony.ibchooks.MsgEmitIBCAck': {
+    aminoType: 'symphony/MsgEmitIBCAck',
     toAmino: MsgEmitIBCAck.toAmino,
-    fromAmino: MsgEmitIBCAck.fromAmino
-  }
+    fromAmino: MsgEmitIBCAck.fromAmino,
+  },
 };
